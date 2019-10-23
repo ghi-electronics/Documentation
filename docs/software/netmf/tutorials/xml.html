@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>XML </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="XML ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="xml">XML</h1>
+
+<hr>
+<h2 id="introduction">Introduction</h2>
+<p>Extensible Markup Language (XML) is a standard for containing data. When you want to transfer some info between two devices, you can set some rules on how the data is to be packed and sent from device A. On the other side, device B receives the data and knows how to unpack it. Before XML, this created some difficulties. What if you were sending the data to a system implemented by a different designer? You would have to explain how you packed your data so the other designer can unpack it. With XML, the design is transmitted with the data.</p>
+<p>XML is extensively used. For example, when a website&#39;s shopping cart wants to know the shipping cost on a certain package, it will pack the shipment details in XML format and then send to FedEx. The FedEx website will read the info and send the cost info back in XML format as well.</p>
+<p>The usefulness of XML can also be utilized in other ways. Let&#39;s say you are designing a data logger. Let&#39;s also assume the end users will need to configure the data logger to fit their needs. When a user configures the device, you need to store the info internally somehow. You can save the data with your own format which requires extra coding and debugging, or better just use XML. All GHI Electronics NETMF devices have a built-in XML reader and writer (packer and un-packer ).</p>
+<p>Here is an example XML file that will help in our data logger design.</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;NETMF_DataLogger&gt;
+  &lt;FileName&gt;Data&lt;/FileName&gt;
+  &lt;FileExt&gt;txt&lt;/FileExt&gt;
+  &lt;SampleFreq&gt;10&lt;/SampleFreq&gt;
+&lt;/NETMF_DataLogger&gt;
+</code></pre><p>This XML example includes a root element and three child elements. XML is very flexible, for instance all info in the example could have been defined as root elements. The root element &quot;NETMF_DataLogger&quot; contains three pieces of info that are important for our logger. It contains the file name, the file extension and a frequency of our saved data. With this example, the logger will create a file called Data.txt and then will log data into that file 10 times every second.</p>
+<p>Spaces and layout do not mean anything to XML, we (humans) need them to make things easier to read. The previous example can be stored without the spaces and layout like this.</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;&lt;NETMF_DataLogger&gt;&lt;FileName&gt;Data&lt;/FileName&gt;
+&lt;FileExt&gt;txt&lt;/FileExt&gt;&lt;SampleFreq&gt;10&lt;/SampleFreq&gt;&lt;/NETMF_DataLogger&gt;
+</code></pre><p>See why spaces are important to us human being! You can also add comments inside XML files, comments do not mean anything to XML but can help in manual reading of the files</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!--This is just a comment--&gt;
+&lt;NETMF_DataLogger&gt;
+  &lt;FileName&gt;Data&lt;/FileName&gt;
+  &lt;FileExt&gt;txt&lt;/FileExt&gt;
+  &lt;SampleFreq&gt;10&lt;/SampleFreq&gt;
+&lt;/NETMF_DataLogger&gt;
+</code></pre><p>Finally, XML support attributes. An attribute is an extra info given to an element. Alternatively, you can add another element to describe the extra information. The choice is yours. Attributes are not explained in this document; there are many excellent tutorials and examples on the internet.</p>
+<p>GHI Electronics&#39; NETMF devices support reading and writing XML format. Reading and writing XML files work over streams which means any stream you already have or implement can work with XML. For example, we will use the built-in MemoryStream and FileStream.</p>
+<p> The examples shown below require the following assemblies: System.IO, System.Xml, MFDpwsExtensions.</p>
+<h2 id="xml-in-memory">XML in Memory</h2>
+<p>This code shows how to make an XML document in memory, it implements the XML presented above.</p>
+<pre><code class="lang-cs">using System.IO;
+using System.Xml;
+using System.Ext.Xml;
+using Microsoft.SPOT;
+
+public class Program
+{
+    public static void Main()
+    {
+        MemoryStream ms = new MemoryStream();
+
+        XmlWriter xmlwrite = XmlWriter.Create(ms);
+
+        xmlwrite.WriteProcessingInstruction(&quot;xml&quot;,
+              &quot;version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;&quot;);
+        xmlwrite.WriteComment(&quot;This is just a comment&quot;);
+        xmlwrite.WriteStartElement(&quot;NETMF_DataLogger&quot;);//root element
+        xmlwrite.WriteStartElement(&quot;FileName&quot;);//child element
+        xmlwrite.WriteString(&quot;Data&quot;);
+        xmlwrite.WriteEndElement();
+        xmlwrite.WriteStartElement(&quot;FileExt&quot;);
+        xmlwrite.WriteString(&quot;txt&quot;);
+        xmlwrite.WriteEndElement();
+        xmlwrite.WriteStartElement(&quot;SampleFeq&quot;);
+        xmlwrite.WriteString(&quot;10&quot;);
+        xmlwrite.WriteEndElement();
+        xmlwrite.WriteEndElement();//end the root element
+
+        xmlwrite.Flush();
+        xmlwrite.Close();
+        //////// display the XML data ///////////
+        byte[] byteArray = ms.ToArray();
+        char[] cc = System.Text.UTF8Encoding.UTF8.GetChars(byteArray);
+        string str = new string(cc);
+        Debug.Print(str);
+    }
+}
+</code></pre><p>When you try to add an assembly you will notice that there are two assemblies for XML, the &quot;System.Xml&quot; and &quot;System.Xml.Legacy&quot;. Do not use the &quot;legacy&quot; driver, it is there for older NETMF devices with systems that did not have built-in support for XML.</p>
+<p>If  the &quot;Unsupported Exception&quot; is raised on an older device, replace the System.Xml assembly with System.Xml.Legacy</p>
+<h2 id="readable-output">Readable Output</h2>
+<p>When running the example above, we will see the output XML data at the end. The data is correct but it is not formatted to be &quot;human&quot; friendly. Note that we are reading and writing XML files on a very small system so the less info (spaces/formatting) the better it is. So it is actually better not to have any extra spaces or formatting but for the sake of making things look pretty, we will add new lines as follows</p>
+<pre><code class="lang-cs">using System.IO;
+using System.Xml;
+using System.Ext.Xml;
+using Microsoft.SPOT;
+
+public class Program
+{
+    public static void Main()
+    {
+        MemoryStream ms = new MemoryStream();
+
+        XmlWriter xmlwrite = XmlWriter.Create(ms);
+
+        xmlwrite.WriteProcessingInstruction(&quot;xml&quot;,
+            &quot;version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;&quot;);
+        xmlwrite.WriteComment(&quot;This is just a comment&quot;);
+        xmlwrite.WriteRaw(&quot;\r\n&quot;);
+        xmlwrite.WriteStartElement(&quot;NETMF_DataLogger&quot;);//root element
+        xmlwrite.WriteString(&quot;\r\n\t&quot;);
+        xmlwrite.WriteStartElement(&quot;FileName&quot;);//child element
+        xmlwrite.WriteString(&quot;Data&quot;);
+        xmlwrite.WriteEndElement();
+        xmlwrite.WriteRaw(&quot;\r\n\t&quot;);
+        xmlwrite.WriteStartElement(&quot;FileExt&quot;);
+        xmlwrite.WriteString(&quot;txt&quot;);
+        xmlwrite.WriteEndElement();
+        xmlwrite.WriteRaw(&quot;\r\n\t&quot;);
+        xmlwrite.WriteStartElement(&quot;SampleFeq&quot;);
+        xmlwrite.WriteString(&quot;10&quot;);
+        xmlwrite.WriteEndElement();
+        xmlwrite.WriteRaw(&quot;\r\n&quot;);
+        xmlwrite.WriteEndElement();//end the root element
+
+        xmlwrite.Flush();
+        xmlwrite.Close();
+
+        //////// display the XML data ///////////
+        byte[] byteArray = ms.ToArray();
+        char[] cc = System.Text.UTF8Encoding.UTF8.GetChars(byteArray);
+        string str = new string(cc);
+        Debug.Print(str);
+    }
+}
+</code></pre><h2 id="reading-and-parsing">Reading and Parsing</h2>
+<p>Creating XML files is actually easier than parsing (reading) them. There are many ways to read the XML file but basically you can just go through the file and read one piece at the time till you reach the end. This code example creates an XML data and it reads it back.</p>
+<pre><code class="lang-cs">using System.IO;
+using System.Xml;
+using System.Ext.Xml;
+using Microsoft.SPOT;
+
+public class Program
+{
+    public static void Main()
+    {
+        MemoryStream ms = new MemoryStream();
+
+        XmlWriter xmlwrite = XmlWriter.Create(ms);
+
+        xmlwrite.WriteProcessingInstruction(&quot;xml&quot;, 
+           &quot;version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;&quot;);
+        xmlwrite.WriteComment(&quot;This is just a comment&quot;);
+        xmlwrite.WriteRaw(&quot;\r\n&quot;);
+        xmlwrite.WriteStartElement(&quot;NETMF_DataLogger&quot;);//root element
+        xmlwrite.WriteString(&quot;\r\n\t&quot;);
+        xmlwrite.WriteStartElement(&quot;FileName&quot;);//child element
+        xmlwrite.WriteString(&quot;Data&quot;);
+        xmlwrite.WriteEndElement();
+        xmlwrite.WriteRaw(&quot;\r\n\t&quot;);
+        xmlwrite.WriteStartElement(&quot;FileExt&quot;);
+        xmlwrite.WriteString(&quot;txt&quot;);
+        xmlwrite.WriteEndElement();
+        xmlwrite.WriteRaw(&quot;\r\n\t&quot;);
+        xmlwrite.WriteStartElement(&quot;SampleFeq&quot;);
+        xmlwrite.WriteString(&quot;10&quot;);
+        xmlwrite.WriteEndElement();
+        xmlwrite.WriteRaw(&quot;\r\n&quot;);
+        xmlwrite.WriteEndElement();//end the root element
+
+        xmlwrite.Flush();
+        xmlwrite.Close();
+
+        //////// display the XML data ///////////
+        byte[] byteArray = ms.ToArray();
+        char[] cc = System.Text.UTF8Encoding.UTF8.GetChars(byteArray);
+        string str = new string(cc);
+        Debug.Print(str);
+
+        ///////////read xml
+        MemoryStream rms = new MemoryStream(byteArray);
+
+        XmlReaderSettings ss = new XmlReaderSettings();
+        ss.IgnoreWhitespace = true;
+        ss.IgnoreComments = false;
+        //XmlException.XmlExceptionErrorCode.
+        XmlReader xmlr = XmlReader.Create(rms,ss);
+        while (!xmlr.EOF)
+        {
+            xmlr.Read();
+            switch (xmlr.NodeType)
+            {
+                case XmlNodeType.Element:
+                    Debug.Print(&quot;element: &quot; + xmlr.Name);
+                    break;
+                case XmlNodeType.Text:
+                    Debug.Print(&quot;text: &quot; + xmlr.Value);
+                    break;
+                case XmlNodeType.XmlDeclaration:
+                    Debug.Print(&quot;decl: &quot; + xmlr.Name + &quot;, &quot; + xmlr.Value);
+                    break;
+                case XmlNodeType.Comment:
+                    Debug.Print(&quot;comment &quot; +xmlr.Value);
+                    break;
+                case XmlNodeType.EndElement:
+                    Debug.Print(&quot;end element&quot;);
+                    break;
+                case XmlNodeType.Whitespace:
+                    Debug.Print(&quot;white space&quot;);
+                    break;
+                case XmlNodeType.None:
+                    Debug.Print(&quot;none&quot;);
+                    break;
+                default:
+                    Debug.Print(xmlr.NodeType.ToString());
+                    break;
+            }
+        }
+    }
+}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/netmf/tutorials/xml.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2019 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
