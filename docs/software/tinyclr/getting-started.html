@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Getting Started </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Getting Started ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="getting-started">Getting Started</h1>
+
+<hr>
+<p><img src="images/getting-started-noborder.jpg" alt="Getting Started"></p>
+<p>This page explains how to set up the TinyCLR programming environment.  It covers device and computer setup and deployment of a &quot;hello world&quot; program.</p>
+<div class="TIP"><h5>Tip</h5><p>If you&#39;re an existing user of NETMF and still want to use it in addition to TinyCLR OS, don&#39;t worry. TinyCLR is completely independent of NETMF and works side-by-side with no issues.</p>
+</div>
+<h2 id="tinyclr-device-setup">TinyCLR Device Setup</h2>
+<p>To use TinyCLR with a device you must first install the latest versions of the GHI bootloader and TinyCLR firmware on the device.  The bootloader is installed first and provides a way to install the firmware and to execute programs which are uploaded to the device.</p>
+<p>The TinyCLR firmware includes the Common Language Runtime (CLR) which converts compiled code into machine instructions and manages program execution.  The TinyCLR firmware is also responsible for interacting with Microsoft Visual Studio to load and debug your application programs.</p>
+<p>Instructions for installing the bootloader and firmware are provided on the documentation page for each device.  If you want to use your own device, visit our <a href="native/porting.html">porting guide</a> for information on how to get started.</p>
+<h2 id="tinyclr-computer-setup">TinyCLR Computer Setup</h2>
+<h3 id="download-and-install-visual-studio-and-the-tinyclr-extension">Download and Install Visual Studio and the TinyCLR Extension</h3>
+<ol>
+<li>If you don&#39;t already have Visual Studio 2017, download and install the free version from here:  <a href="https://www.visualstudio.com/downloads/">Visual Studio Community 2017</a>.</li>
+<li>Make sure to select the <code>.NET desktop development</code> workload when installing Visual Studio.</li>
+<li><p>Download and install the newest TinyCLR Visual Studio Project System by going to <code>Tools</code> &gt; <code>Extensions and Updates...</code>. In the <code>Extensions and Updates</code> dialog box select <code>Online</code> in the left panel. Type <code>tinyclr</code> into the <code>Search</code> text box in the upper right of the window to search for and install the <code>TinyCLR OS Project System</code>. You&#39;ll need to restart Visual Studio to let the extension installer complete the installation.
+ <img src="images/Install-tinyclr-extension.gif" alt="Install TinyCLR Extension"></p>
+<p> You can also find the <a href="downloads.html#visual-studio-project-system">TinyCLR OS Project System</a> on our <a href="downloads.html">Downloads</a> page if you want to download the file and install it from your hard drive.</p>
+</li>
+</ol>
+<h3 id="install-the-tinyclr-nuget-packages">Install the TinyCLR Nuget Packages</h3>
+<ol>
+<li>Connect your device to your PC using a USB cable (make sure your device has the latest firmware installed).</li>
+<li>Start Visual Studio and create a new <code>TinyCLR Application</code> under <code>C# &gt; TinyCLR</code>. New to Visual Studio or C#? Take a look at the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/with-visual-studio">getting started guide from Microsoft</a>.</li>
+<li><p>Right click on your Project in the Solution Explorer panel and select <code>Manage NuGet Packages</code>.  If the Solution Explorer window is not visible, open it by selecting <code>Solution Explorer</code> in the <code>View</code> menu. You can also select <code>Manage NuGet Packages...</code> in the <code>Project</code> menu of Visual Studio.
+<img src="images/select-manage-nuget-packages.gif" alt="View Show Solution Explorer"></p>
+</li>
+<li><p>Make sure the package source is set to &quot;Package source&quot; or &quot;All.&quot;
+<img src="images/package-source.png" alt="Set package source"></p>
+</li>
+<li><p>In the search box type &quot;tinyclr&quot;
+<img src="images/search-for-tinyclr.png" alt="Search for TinyCLR"></p>
+</li>
+<li><p>Selecting the <code>Browse</code> tab will show all the TinyCLR NuGet packages. Those installed are noted with a green down arrow in front of the name. 
+<img src="images/browse-nuget-feed.gif" alt="Browse NuGet Feed"></p>
+</li>
+<li><p>To install one of the packages click on the down arrow to the right of the package version.
+<img src="images/add-nuget-package.gif" alt="Add Nuget Package"></p>
+</li>
+</ol>
+<p>You can also select the package and click on the <code>Install</code> button in the center panel.
+<img src="images/nuget-install-button.gif" alt="Nuget-package-install-button"></p>
+<ol>
+<li><p>Click <code>OK</code> to accept the proposed changes.
+<img src="images/accept-changes.gif" alt="Accept changes"></p>
+</li>
+<li><p>Accept the licensing agreement to install the package.
+<img src="images/accept-agreement-for-nuget.gif" alt="Accept Agreement for NuGet"></p>
+</li>
+</ol>
+<p>And, that&#39;s it! You&#39;re now ready to start programming using TinyCLR OS.</p>
+<h2 id="starting-a-new-project">Starting a New Project</h2>
+<p>Let&#39;s make a &quot;hello world&quot; program and deploy it on the FEZ Cobra III.</p>
+<p>Open Visual Studio and select <code>File &gt; New &gt; Project</code>. </p>
+<p>There should be a <code>TinyCLR</code> option under <code>Visual C#</code>.  Click on <code>TinyCLR</code> in the left panel, and <code>TinyCLR Application</code> in the center panel.  Name the project and hit the <code>OK</code> button to create a new project. </p>
+<p><img src="images/new-project.png" alt="New TinyCLR Project"></p>
+<p>The project will have a single C# file named <code>Program.cs</code> whose contents are shown below.</p>
+<p><img src="images/program-cs.png" alt="Program.cs"></p>
+<p>C# source files are listed in the <code>Solution Explorer</code> window.  If the <code>Solution Explorer</code> window is not visible, click on <code>View &gt; Solution Explorer</code> to open it.</p>
+<p><img src="images/solution-explorer.png" alt="Solution Explorer"></p>
+<p>If you right click on the project name in the Solution Explorer window, a drop down menu will appear.  Select <code>Manage NuGet Packages...</code> from the menu.</p>
+<p><img src="images/manage-nuget-packages-menu.png" alt="View Show Solution Explorer"> </p>
+<p>Now you should see the installed TinyCLR NuGet library (GHIElectronics.TinyCLR.Core).  This is the only library we will need for our &quot;hello world&quot; program.</p>
+<p><img src="images/installed-nuget.png" alt="Installed NuGet"></p>
+<p>Close the <code>NuGet...</code> tab or click on the <code>Program.cs</code> tab to edit the source code.  Change the contents as shown below.</p>
+<p><img src="images/hello-world-program.png" alt="Hello World Program"></p>
+<p>Make sure your device is plugged into the computer&#39;s USB port.  Now hit the start button as shown on the above image (or hit the <code>F5</code> key).  If you&#39;ve done everything correctly the program will compile and deploy to your device.  The message &quot;Hello World!&quot; should appear in the output window as shown below.</p>
+<p><img src="images/output-window.png" alt="Output Window"></p>
+<p>Congratulations!  You&#39;re on your way to becoming a TinyCLR embedded developer!</p>
+<hr>
+<p>To learn more about TinyCLR embedded programming check out our <a href="tutorials/intro.html"><strong>tutorials</strong></a>.</p>
+<p>You can also visit our main website at <a href="http://www.ghielectronics.com"><strong>www.ghielectronics.com</strong></a> and our community forums at <a href="https://forums.ghielectronics.com/"><strong>forums.ghielectronics.com</strong></a>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/getting-started.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2019 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SPWF04Sx WiFi Module </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="SPWF04Sx WiFi Module ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="spwf04sx-wifi-module">SPWF04Sx WiFi Module</h1>
+
+<hr>
+<p>First introduced over twenty years ago, WiFi has become the most popular wireless networking technology. The SPWF04Sx family of modules from STMicroelectronics have an easy-to-use AT command based socket API that allow applications to quickly connect to the Internet. They also support Transport Layer Security, which is vital in an IoT environment.</p>
+<p>Take a look at the <a href="https://github.com/ghi-electronics/TinyCLR-Samples/">FEZ WiFi sample</a> for a working example to get going quickly.</p>
+<p>The <a href="https://github.com/ghi-electronics/TinyCLR-Drivers">TinyCLR Driver repo</a> includes the complete source code.</p>
+<h2 id="hardware">Hardware</h2>
+<h3 id="firmware-updating">Firmware Updating</h3>
+<p>To update the firmware, please see this <a href="../../../../hardware/components/spwf04sa.html">page</a>.</p>
+<h2 id="software">Software</h2>
+<h3 id="constructors">Constructors</h3>
+<h4 id="spwf04sxinterface">SPWF04SxInterface()</h4>
+<p><code>SPWF04SxInterface(SpiDevice spi, GpioPin irq, GpioPin reset)</code>. Used to create a new instance of the WiFi driver. Takes the SPI device and the IRQ and RESET GPIO pins as arguments. Has no return value. You must also set the mode pin but the constructor does not yet do this for you. Be sure to see the <a href="https://github.com/ghi-electronics/TinyCLR-Samples/blob/master/FEZ/FEZWiFi/Program.cs">sample</a> for the correct setup or your device will not work.</p>
+<h3 id="methods">Methods</h3>
+<h4 id="cleartlsserverrootcertificate">ClearTlsServerRootCertificate()</h4>
+<p><code>ClearTlsServerRootCertificate()</code>. Erases the currently loaded root certificates from the WiFi module&#39;s flash memory. Takes no arguments and has no return value.</p>
+<h4 id="closesocket">CloseSocket()</h4>
+<p><code>CloseSocket(int id)</code>. Closes the socket specified by the id parameter. The socket id is assigned by the <code>OpenSocket()</code> method when the socket is created. Has no return value.</p>
+<h4 id="disableradio">DisableRadio()</h4>
+<p><code>DisableRadio()</code>. Disables the WiFi radio. Takes no arguments and has no return value.</p>
+<h4 id="dispose">Dispose()</h4>
+<p><code>Dispose()</code>. Disposes of the WiFi instance. Takes no arguments and has no return value.</p>
+<h4 id="enableradio">EnableRadio()</h4>
+<p><code>EnableRadio()</code>. Enables the WiFi radio. Takes no arguments and has no return value.</p>
+<h4 id="getconnectionsettings">GetConnectionSettings()</h4>
+<p><code>GetConnectionSettings(SpiChipSelectType chipSelectType, int chipSelectLine)</code>. Returns the SPI connection settings used to open an SPI port for communication with the WiFi module. The first parameter taken by this function specifies the type of chip select used -- only <code>SpiChipSelectType.Gpio</code> is supported at this time. The second parameter specifies the GPIO pin that controls the WiFi module&#39;s chip select pin.</p>
+<h4 id="joinnetwork">JoinNetwork()</h4>
+<p><code>JoinNetwork(string ssid, string password)</code>. Attempts to join the WiFi network specified by the ssid and password values. Has no return value.</p>
+<h4 id="listsocket">ListSocket()</h4>
+<p><code>ListSocket()</code>. Returns a string that lists all open socket clients in the format <code>AT-S.List::&lt;id&gt;:&lt;connected&gt;:&lt;kind&gt;:&lt;len&gt;:&lt;IP&gt;:&lt;port&gt;</code>. Takes no arguments.</p>
+<h4 id="opensocket">OpenSocket()</h4>
+<p><code>OpenSocket(string host, int port, SPWF04SxConnectionType connectionType, SPWF04SxConnectionSecurityType connectionSecurity, string commonName)</code>. Opens a socket client. Arguments are a string host name, an integer port number, an SPWF04SxConnectionType connection type, and a connection security type of <code>none</code> or <code>Tls</code>. Returns an integer ID number for the socket.</p>
+<h4 id="querysocket">QuerySocket()</h4>
+<p><code>QuerySocket(int socket)</code>. Queries a socket client for pending data. Returns an integer number of bytes that are waiting on the socket. Takes the socket id as its only argument. The socket id is returned by the <code>OpenSocket()</code> method when the socket is created.</p>
+<h4 id="readhttpresponse">ReadHttpResponse()</h4>
+<p><code>ReadHttpResponse(byte[] buffer, int offset, int count)</code>. Reads the response to the currently active HTTP command. Arguments are a byte array buffer to store the incoming data, an integer offset into the array, and an integer count of the size in bytes of available buffer. Returns an integer value of the number of bytes read.</p>
+<h4 id="readsocket">ReadSocket()</h4>
+<p><code>ReadSocket(int socket, byte[] buffer, int offset, int count)</code>. Reads data from a socket client. Arguments are an integer socket ID, an input buffer byte array, an integer offset into the array, and an integer count of how many bytes can be read into the buffer array. The socket id is returned by the <code>OpenSocket()</code> method when the socket is created. Returns an integer number of bytes received.</p>
+<h4 id="resetconfiguration">ResetConfiguration()</h4>
+<p><code>ResetConfiguration()</code>. Restores the factory configuration variables to the flash of the WiFi module. It is necessary to perform a hardware or software reset of the WiFi module after a factory restore. Takes no arguments and has no return value.</p>
+<h4 id="sendhttpget">SendHttpGet()</h4>
+<p><code>SendHttpGet(string host, string path, int port, SPWF04SxConnectionSecurityType connectionSecurity)</code>. Sends a single http get request to the given host and path to retrieve information from a server. Arguments are a string host name, a string host path, an integer port number, and a connection security type of <code>none</code> or <code>Tls</code>. Returns an integer HTTP server status code.</p>
+<h4 id="sendhttppost">SendHttpPost()</h4>
+<p><code>SendHttpPost(string host, string path, int port, SPWF04SxConnectionSecurityType connectionSecurity)</code>. Sends an HTTP post request to a remote host. Arguments are a string host name, a string host path, an integer port number, and a connection security type of <code>none</code> or <code>Tls</code>. Returns an integer HTTP server status code.</p>
+<h4 id="settlsserverrootcertificate">SetTlsServerRootCertificate()</h4>
+<p><code>SetTlsServerRootCertificate(byte[] certificate)</code>. Loads a TLS certificate into the flash memory of the WiFi module. Accepts a byte array containing the certificate as its only argument. Returns a string containing the Subject Key Identifier (SKI) of the certificate. The certificate must be loaded into your application as part of a resources file, be DER encoded, and have the extension .cer.</p>
+<p>You can use your web browser to obtain a website&#39;s root certificate. In Chrome, click on the lock icon to the left of the web address. Then click on <code>Certificate</code> and select the <code>Details</code> tab. In <code>Details</code> click on the <code>Copy to File...</code> button. The <code>Certificate Export Wizard</code> will appear. Export the certificate as <code>DER encoded binary X.509 (.CER)</code>.</p>
+<p>In Micorosoft Edge click on the lock icon to the left of the web address and then select <code>View certificate.</code> Click on the <code>Export to file</code> button and save the file with a .cer extension.</p>
+<h4 id="turnoff">TurnOff()</h4>
+<p><code>TurnOff()</code>. Turns off the WiFi module. Takes no arguments and has no return value.</p>
+<h4 id="turnon">TurnOn()</h4>
+<p><code>TurnOn()</code>. Turns on the WiFi module. Takes no arguments and has no return value.</p>
+<h4 id="writesocket">WriteSocket()</h4>
+<p><code>WriteSocket(int socket, byte[] data)</code>. Writes data to a socket client. Arguments are an integer ID number for the socket and a byte array of data. The socket id is returned by the <code>OpenSocket()</code> method when the socket is created.</p>
+<p><code>WriteSocket(int socket, byte[] data, int offset, int count)</code>. Same as above but also takes integer arguments for the offset into the data array and a count for the number bytes to send.</p>
+<h3 id="events">Events</h3>
+<h4 id="indicationreceived">IndicationReceived</h4>
+<p>Fires an event when a WiFi indication (WIND) message is received.</p>
+<h4 id="errorreceived">ErrorReceived</h4>
+<p>Fires an event when a WiFi error message is received.</p>
+<h3 id="properties">Properties</h3>
+<h4 id="forcesocketstls">ForceSocketsTls</h4>
+<p>Boolean property that can be used to ensure a socket is opened as a secure TLS socket. For example, executing <code>wifi.ForceSocketsTls = true;</code> before <code>OpenSocket()</code> will cause the socket to be opened as a TLS Socket.</p>
+<h4 id="forcesocketstlscommonname">ForceSocketsTlsCommonName</h4>
+<p>String property used to specify the common name as found in the websites certificate. The common name is listed in the <code>Subject Alternative Name</code> field of the certificate.</p>
+<h4 id="state">State</h4>
+<p>Read only property of type <code>SPWF04SxWiFiState</code> that reflects the current state of the WiFi module. For example:</p>
+<p><code>if (wifi.State == SPWF04SxWiFiState.HardwareFailure) Debug.WriteLine(&quot;Hardware Failure&quot;);</code></p>
+<p>The possible states are: <code>HardwarePowerUp</code>, <code>HardwareFailure</code>, <code>RadioTerminatedByUser</code>, <code>RadioIdle</code>, <code>ScanInProgress</code>, <code>ScanComplete</code>, <code>JoinInProgress</code>, <code>Joined</code>, <code>AccessPointStarted</code>, <code>HandshakeComplete</code>, and <code>ReadyToTransmit</code>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/networking/spwf04sx.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2019 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>
