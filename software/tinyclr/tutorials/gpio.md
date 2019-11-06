@@ -174,7 +174,7 @@ class Program {
 > Once you type += after the event, hit the tab key and Visual Studio will automatically create the event for you.
 
 ## UCM Standard Pins
-The [UCM Standard](../../../hardware/ucm/standard.md) provides a consistent mapping of pins to enable easily swapping out the underlying SoM. While the standard assigns a consistent name to each pin, the underlying pin on the processor is different, so it is helpful to use the `UCMStandard` class available in the `GHIElectronics.TinyCLR.Pins.UCM` library. Once you specify the device model to use, it will map the pins for you automatically. For example:
+The [UCM Standard](../../../hardware/core/standard.md) provides a consistent mapping of pins to enable easily swapping out the underlying SoM. While the standard assigns a consistent name to each pin, the underlying pin on the processor is different, so it is helpful to use the `UCMStandard` class available in the `GHIElectronics.TinyCLR.Pins.UCM` library. Once you specify the device model to use, it will map the pins for you automatically. For example:
 
 ```csharp
 using GHIElectronics.TinyCLR.Pins;

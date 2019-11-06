@@ -1,6 +1,6 @@
 # G120HDR Modules
 ---
-The G120HDR Module is a through-hole version of the [G120 Module](../scm/g120.md)
+The G120HDR Module is a through-hole version of the [G120 Module](../core/g120.md)
 
 ## G120HDR
 

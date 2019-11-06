@@ -4,7 +4,7 @@
 
 FEZ Reaper is a .NET Gadgeteer product that utilizes .NET Micro Frameworks (NETMF). The core of FEZ Reaper is the G80 System on Chip (SoC).
 
-Follow the instructions on the [G80 page](../scm/g80.md) to learn how to use FEZ Raptor with NETMF and TinyCLR OS.
+Follow the instructions on the [G80 page](../core/g80.md) to learn how to use FEZ Raptor with NETMF and TinyCLR OS.
 
 ## Resources
 * [Schematic](http://files.ghielectronics.com/downloads/Schematics/FEZ/FEZ%20Reaper%20Schematic.pdf)

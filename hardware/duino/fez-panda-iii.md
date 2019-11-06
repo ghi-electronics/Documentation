@@ -11,4 +11,4 @@ An Arduino-pinout compatible single board computer.
 
 ## Software
 
-For information on programming the FEZ Panda II, please go to the [G80](../scm/g80.md) page.
+For information on programming the FEZ Panda II, please go to the [G80](../core/g80.md) page.

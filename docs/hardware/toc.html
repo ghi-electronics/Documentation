@@ -4,6 +4,7 @@
     <div class="sidefilter">
       <form class="toc-filter">
         <span class="glyphicon glyphicon-filter filter-icon"></span>
+        <span class="glyphicon glyphicon-remove clear-icon" id="toc_filter_clear"></span>
         <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
       </form>
     </div>
@@ -15,51 +16,32 @@
                     <a href="intro.html" name="" title="Hardware">Hardware</a>
                 </li>
                 <li>
-                    <span class="expand-stub"></span>
-                    <a href="ucm/intro.html" name="" title="Universal Modules">Universal Modules</a>
-                    
-                    <ul class="nav level2">
-                          <li>
-                              <a href="ucm/standard.html" name="" title="The UCM Standard">The UCM Standard</a>
-                          </li>
-                          <li>
-                              <a href="ucm/uc2550.html" name="" title="UC2550">UC2550</a>
-                          </li>
-                          <li>
-                              <a href="ucm/uc5550.html" name="" title="UC5550">UC5550</a>
-                          </li>
-                          <li>
-                              <a href="ucm/g400d.html" name="" title="G400D">G400D</a>
-                          </li>
-                          <li>
-                              <a href="ucm/development-options.html" name="" title="Development Options">Development Options</a>
-                          </li>
-                    </ul>
+                    <a href="core/intro.html" name="" title="gCube Modules">gCube Modules</a>
                 </li>
                 <li>
                     <span class="expand-stub"></span>
-                    <a href="scm/intro.html" name="" title="Surface Mount Modules">Surface Mount Modules</a>
+                    <a href="core/netmf-modules.html" name="" title="NETMF Modules">NETMF Modules</a>
                     
                     <ul class="nav level2">
                           <li>
-                              <a href="scm/g30.html" name="" title="G30">G30</a>
+                              <a href="core/g30.html" name="" title="G30">G30</a>
                           </li>
                           <li>
-                              <a href="scm/g80.html" name="" title="G80">G80</a>
+                              <a href="core/g80.html" name="" title="G80">G80</a>
                           </li>
                           <li>
-                              <a href="scm/g120.html" name="" title="G120">G120</a>
+                              <a href="core/g120.html" name="" title="G120">G120</a>
                           </li>
                           <li>
-                              <a href="scm/g120e.html" name="" title="G120E">G120E</a>
+                              <a href="core/g120e.html" name="" title="G120E">G120E</a>
                           </li>
                           <li>
-                              <a href="scm/g400s.html" name="" title="G400S">G400S</a>
+                              <a href="core/g400s.html" name="" title="G400S">G400S</a>
+                          </li>
+                          <li>
+                              <a href="core/g400d.html" name="" title="G400D">G400D</a>
                           </li>
                     </ul>
-                </li>
-                <li>
-                    <a href="fez/intro.html" name="" title="FEZ">FEZ</a>
                 </li>
                 <li>
                     <a href="filesystem/intro.html" name="" title="File System">File System</a>
@@ -91,16 +73,35 @@
                               
                               <ul class="nav level3">
                                     <li>
-                                        <a href="ucm/chipworkx.html" name="" title="ChipworkX">ChipworkX</a>
+                                        <a href="core/chipworkx.html" name="" title="ChipworkX">ChipworkX</a>
                                     </li>
                                     <li>
-                                        <a href="scm/embedded-master.html" name="" title="Embedded Master">Embedded Master</a>
+                                        <a href="core/embedded-master.html" name="" title="Embedded Master">Embedded Master</a>
                                     </li>
                                     <li>
-                                        <a href="scm/emx.html" name="" title="EMX">EMX</a>
+                                        <a href="core/emx.html" name="" title="EMX">EMX</a>
                                     </li>
                                     <li>
-                                        <a href="scm/usbizi.html" name="" title="USBizi">USBizi</a>
+                                        <a href="core/usbizi.html" name="" title="USBizi">USBizi</a>
+                                    </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <span class="expand-stub"></span>
+                              <a href="core/intro.html" name="" title="Universal Modules">Universal Modules</a>
+                              
+                              <ul class="nav level3">
+                                    <li>
+                                        <a href="core/standard.html" name="" title="The UCM Standard">The UCM Standard</a>
+                                    </li>
+                                    <li>
+                                        <a href="core/uc2550.html" name="" title="UC2550">UC2550</a>
+                                    </li>
+                                    <li>
+                                        <a href="core/uc5550.html" name="" title="UC5550">UC5550</a>
+                                    </li>
+                                    <li>
+                                        <a href="core/development-options.html" name="" title="Development Options">Development Options</a>
                                     </li>
                               </ul>
                           </li>
@@ -143,6 +144,9 @@
                               <a href="duino/intro.html" name="" title="Duino">Duino</a>
                               
                               <ul class="nav level3">
+                                    <li>
+                                        <a href="duino/fez-t18.html" name="" title="FEZ T18">FEZ T18</a>
+                                    </li>
                                     <li>
                                         <a href="duino/fez-cerbuino-bee.html" name="" title="FEZ Cerbuino Bee">FEZ Cerbuino Bee</a>
                                     </li>

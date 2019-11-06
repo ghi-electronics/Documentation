@@ -10,4 +10,4 @@ A through-hole version of the G80.
 
 ## Software
 
-For information on programming the G80 TH Module, please go to the [G80](../scm/g80.md) page.
+For information on programming the G80 TH Module, please go to the [G80](../core/g80.md) page.

@@ -9,4 +9,4 @@ An Arduino-pinout compatible board.
 
 ## Software
 
-For information on programming the FEZ Panda, please go to the [USBizi](../scm/usbizi.md) page.
+For information on programming the FEZ Panda, please go to the [USBizi](../core/usbizi.md) page.
