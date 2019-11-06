@@ -8,7 +8,7 @@
     <title>General Purpose Input Output (GPIO) </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="General Purpose Input Output (GPIO) ">
-    <meta name="generator" content="docfx 2.45.1.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -217,7 +217,7 @@ class Program {
 </code></pre><div class="TIP"><h5>Tip</h5><p>Once you type += after the event, hit the tab key and Visual Studio will automatically create the event for you.</p>
 </div>
 <h2 id="ucm-standard-pins">UCM Standard Pins</h2>
-<p>The <a href="../../../hardware/ucm/standard.html">UCM Standard</a> provides a consistent mapping of pins to enable easily swapping out the underlying SoM. While the standard assigns a consistent name to each pin, the underlying pin on the processor is different, so it is helpful to use the <code>UCMStandard</code> class available in the <code>GHIElectronics.TinyCLR.Pins.UCM</code> library. Once you specify the device model to use, it will map the pins for you automatically. For example:</p>
+<p>The <a href="../../../hardware/core/standard.html">UCM Standard</a> provides a consistent mapping of pins to enable easily swapping out the underlying SoM. While the standard assigns a consistent name to each pin, the underlying pin on the processor is different, so it is helpful to use the <code>UCMStandard</code> class available in the <code>GHIElectronics.TinyCLR.Pins.UCM</code> library. Once you specify the device model to use, it will map the pins for you automatically. For example:</p>
 <pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Pins;
 using GHIElectronics.TinyCLR.Devices.Gpio;
 

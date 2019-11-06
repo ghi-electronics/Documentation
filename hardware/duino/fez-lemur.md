@@ -10,4 +10,4 @@ A Arduino-pinout compatible single board computer.
 
 ## Software
 
-For information on programming the FEZ Lemur, please go to the [G30](../scm/g30.md) page.
+For information on programming the FEZ Lemur, please go to the [G30](../core/g30.md) page.

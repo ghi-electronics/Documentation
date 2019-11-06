@@ -8,4 +8,4 @@
 
 ## Software
 
-For information about programming the FEZ Rhino, please visit our [USBizi](../scm/usbizi.md) page.
+For information about programming the FEZ Rhino, please visit our [USBizi](../core/usbizi.md) page.

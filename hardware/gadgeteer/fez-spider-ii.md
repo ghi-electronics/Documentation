@@ -10,6 +10,6 @@ To use with NETMF/Gadgeteer, follow these [setup instructions](../../software/ne
 * [Schematic](http://files.ghielectronics.com/downloads/Schematics/FEZ/FEZ%20Spider%20II%20Schematic.pdf)
 
 ## Using TinyCLR OS
-Follow the instructions on the [G120 page](../scm/g120.md) to learn how to use FEZ Spider II TinyCLR OS.
+Follow the instructions on the [G120 page](../core/g120.md) to learn how to use FEZ Spider II TinyCLR OS.
 
 The instructions are the same as G120. LDR0 and LDR1 signals are available on switches #1 and #2. The schematic above has all details.

@@ -1,20 +1,17 @@
 # [Hardware](intro.md)
 
-# [Universal Modules](ucm/intro.md)
-## [The UCM Standard](ucm/standard.md)
-## [UC2550](ucm/uc2550.md)
-## [UC5550](ucm/uc5550.md)
-## [G400D](ucm/g400d.md)
-## [Development Options](ucm/development-options.md)
 
-# [Surface Mount Modules](scm/intro.md)
-## [G30](scm/g30.md)
-## [G80](scm/g80.md)
-## [G120](scm/g120.md)
-## [G120E](scm/g120e.md)
-## [G400S](scm/g400s.md)
 
-# [FEZ](fez/intro.md)
+# [gCube Modules](core/intro.md)
+
+
+# [NETMF Modules](core/netmf-modules.md)
+## [G30](core/g30.md)
+## [G80](core/g80.md)
+## [G120](core/g120.md)
+## [G120E](core/g120e.md)
+## [G400S](core/g400s.md)
+## [G400D](core/g400d.md)
 
 # [File System](filesystem/intro.md)
 
@@ -26,10 +23,16 @@
 # [Legacy](legacy/intro.md)
 
 ## [SoMs](legacy/som.md)
-### [ChipworkX](ucm/chipworkx.md)
-### [Embedded Master](scm/embedded-master.md)
-### [EMX](scm/emx.md)
-### [USBizi](scm/usbizi.md)
+### [ChipworkX](core/chipworkx.md)
+### [Embedded Master](core/embedded-master.md)
+### [EMX](core/emx.md)
+### [USBizi](core/usbizi.md)
+
+## [Universal Modules](core/intro.md)
+### [The UCM Standard](core/standard.md)
+### [UC2550](core/uc2550.md)
+### [UC5550](core/uc5550.md)
+### [Development Options](core/development-options.md)
 
 ## [Gadgeteer](gadgeteer/intro.md)
 ### [FEZ Cerberus](gadgeteer/fez-cerberus.md)
@@ -43,6 +46,7 @@
 ### [Modules](gadgeteer/modules.md)
 
 ## [Duino](duino/intro.md)
+### [FEZ T18](duino/fez-t18.md)
 ### [FEZ Cerbuino Bee](duino/fez-cerbuino-bee.md)
 ### [FEZ Cerbuino Net](duino/fez-cerbuino-net.md)
 ### [FEZ Cobra III](duino/fez-cobra-iii.md)
