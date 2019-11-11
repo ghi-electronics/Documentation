@@ -9,7 +9,7 @@ Here you will find GHI Electronic's product documentation. For more information 
 ***
 
 ## Product Sections
-to be addded
+to be added
 
 ***
 
