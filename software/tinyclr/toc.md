@@ -3,7 +3,7 @@
 # [Getting Started](getting-started.md)
 
 # [Tutorials](tutorials/intro.md)
-## Ease of Development
+## Productivity Enhancements
 ### [USB Debugging](tutorials/usb-debugging.md)
 ### [Garbage Collection](tutorials/garbage-collection.md)
 ### [NuGet Based Libraries](tutorials/nuget-based-libraries.md)
@@ -16,12 +16,12 @@
 ### [Data Types](tutorials/data-types.md)
 ### [Collections](tutorials/collections.md)
 ### [Globalization](tutorials/globalization.md)
-### [Serializaton](tutorials/serialization.md)
+### [Serialization](tutorials/serialization.md)
 ### [Time Management](tutorials/time-management.md)
 ### [Text Encoding](tutorials/text-encoding.md)
 ### [Configuration Storage](tutorials/configuration-storage.md)
 
-## Rich Multimedia
+## Multimedia
 ### [Displays](tutorials/displays.md)
 ### [User Interface](tutorials/user-interface.md)
 ### [Graphics](tutorials/graphics.md)
@@ -73,7 +73,7 @@
 ### [Servos](tutorials/servos.md)
 ### [Signal Generation and Capture](tutorials/signal-generation-capture.md)
 
-## Communication Busses
+## Data Busses
 ### [SPI](tutorials/spi.md)
 ### [I2C](tutorials/i2c.md)
 ### [UART](tutorials/uart.md)
