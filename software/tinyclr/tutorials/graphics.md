@@ -1,6 +1,4 @@
 # Graphics
-
-# Drawing
 ---
 The `GHIElectronics.TinyCLR.Drawing` NuGet package includes the backbone for all graphics needs. It includes support for shapes, fonts and bitmaps.
 
@@ -68,11 +66,11 @@ The `DisplayController.ActiveConfiguration` can be used to read the configuratio
 screen.DrawLine(redPen, 0, 0, displayController.ActiveConfiguration.Width-1, displayController.ActiveConfiguration.Height-1);
 ```
 
-It is important to note that drawing functions process graphics in RAM independently from any display. The display driver then transfers the pixels from the internal memory to the display, through `Graphics.Flush`. Learn more about the [display](display.md) support.
+It is important to note that drawing functions process graphics in RAM independently from any display. The display driver then transfers the pixels from the internal memory to the display, through `Graphics.Flush`. Learn more about the [display](displays.md) support.
 
 ## Images
 
-TinyCLR OS supports BMP, GIF, and JPG. Depending on your hardware's limitation, one or more of these image formats maybe supported. Images can be loaded from a `stream` or simply load from [resources](../resources.md). 
+TinyCLR OS supports BMP, GIF, and JPG. Depending on your hardware's limitation, one or more of these image formats maybe supported. Images can be loaded from a `stream` or simply load from [resources](resources.md). 
 
 > [!Tip]
 > BMP supports 256 colors and 24bit.
@@ -87,4 +85,4 @@ screen.Flush();
 
 ## Fonts
 
-Fonts are well supported. They are covered [here](font.md).
+Fonts are well supported. They are covered [here](font-support.md).

@@ -1,0 +1,2 @@
+# MJPEG Video
+---

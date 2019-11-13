@@ -1,5 +1,5 @@
-# Web services
-
+# Cloud Support
+---
 We offer different ways to get your device connected to the Internet. Below are the available options we support. 
 
 ## Microsoft Azure

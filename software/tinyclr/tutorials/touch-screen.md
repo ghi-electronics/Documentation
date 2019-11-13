@@ -1,12 +1,12 @@
 # Touch Screen
 ---
 
-# Introduction
+## Introduction
 Displays may optionally include a touch sensitive screen to detect user touch input. Touch Screens can be resistive or capacitive.
 
 ![UD435](../images/ucm-touch-display.jpg)
 
-# Resistive Touch
+## Resistive Touch
 
 A resistive touch screen measures the resistance across X and Y to determine the touch position. While it is possible to use GPIO and ADC, it is better to use dedicated chips. The only advantage of resistive touch over capacitive is that they work through pressure, meaning you can use it while wearing gloves. But, resistive touch is not very accurate and requires calibration.
 
@@ -68,7 +68,7 @@ private void TouchReader() {
 }
 ```
 
-# Capacitive Touch
+## Capacitive Touch
 
 Capacitive touch screens are used on most modern devices, including phones. They are very accurate and capable of detecting multiple simultaneous touches.
 

@@ -1,10 +1,10 @@
 # Signal Generation and Capture
-
-# Pulse Feedback
 ---
+## Pulse Feedback
+
 The PulseFeedback class can be used in three different modes. The below image shows an example pin capture for each of the modes. It is not drawn to scale. The area marked by the arrows is the time measured for each mode. Remember that the pulse and echo may be on separate pins.
 
-![Pulse feedback timing](images/pulse-feedback.jpg)
+![Pulse feedback timing](/images/pulse-feedback.jpg)
 
 The first mode is EchoDuration. This mode sends a pulse of a given length and state over the provided pin. It then waits for an echo on the other specified pin and measures how long that echo pulse was. The echo and pulse pin can be the same if desired. 
 
@@ -12,7 +12,7 @@ The next mode is DurationUntilEcho. It is very similar to EchoDuration, although
 
 The final mode is DrainDuration. This mode is often used in capacitive touch. When calling Read, the pulse line will be held in the specified state for the specified time and then set to an input. When a resistor and capacitor are connected to this pin and ground, the pin will fall to ground after a short period of time dependent on the capacitance on the pin. The below image shows a sample circuit. Do note that this mode can only be used with a single pin.
 
-![Capacitive touch schematic](images/capacitive-touch-schematic.jpg)
+![Capacitive touch schematic](/images/capacitive-touch-schematic.jpg)
 
 The below example illustrates sending a pulse of 10us and reading an echo on a second pin where both the pulse and echo are high, without using any pull-up or pull-down resistors. It prints out the total duration of the echo. It repeats every 250ms.
 
@@ -46,8 +46,8 @@ public static class Program {
 
 ```
 
-# Signal Capture
----
+## Signal Capture
+
 The SignalCapture class monitors a pin and records any changes (high-low or low-high transitions) of the pin into an array. It is a digital waveform recorder. Each array element is the number of microseconds between each signal change.
 
 When calling Read, it blocks other code from executing until it either fills the input buffer or it has captured the number of transitions specified by the count argument. If your signal is shorter than that, the call will never return. Make sure to request only what you plan to capture.
@@ -80,8 +80,8 @@ public static class Program {
 
 ```
 
-# Signal Generator
----
+## Signal Generator
+
 SignalGenerator is a digital waveform generator. SignalGenerator works by comparing an internal counter to an array of time values, one by one. When the value of the argument matches the counter, the output pin is changed. The time values are in microseconds.
 
 SignalGenerator can also be used to generate PWM. Unlike the PWM class, SignalGenerator can be used to generate PWM on any available output pin. It does use processor time -- the higher the frequency the more processor time it uses.

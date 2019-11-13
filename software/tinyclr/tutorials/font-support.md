@@ -1,8 +1,6 @@
 # Font Support
-
-# Fonts
-
-Fonts can be included in your TinyCLR application by adding them as a [resource](../resources.md). Any TrueType font can be used after being converted to the .tcfnt format with the FontConverter tool. The Font Converter tool (found under [downloads](../../downloads.md) is a command line utility which does just that. Make sure to use this tool for any fonts you need, using old fonts from NETMF will not work.
+---
+Fonts can be included in your TinyCLR application by adding them as a [resource](resources.md). Any TrueType font can be used after being converted to the .tcfnt format with the FontConverter tool. The Font Converter tool (found under [downloads](../downloads.md) is a command line utility which does just that. Make sure to use this tool for any fonts you need, using old fonts from NETMF will not work.
 
 ```cs
 var screen = Graphics.FromHdc(displayController.Hdc);
@@ -34,7 +32,7 @@ ImportRange 32 126
 > [!TIP]
 > This [third-party tool](http://informatix.miloush.net/microframework/Utilities/TinyFontTool.aspx) can be handy for generating compatible fonts.
 
-## Font Defenition
+## Font Definition
 The .fntdef file options are as follows:
 
 > [!Note]
@@ -132,20 +130,8 @@ The .fntdef file options are as follows:
 Syntax for running FontConverter is GHIElectronics.TinyCLR.FontConverter.exe *input-font* *output-font*. For example `GHIElectronics.TinyCLR.FontConverter.exe Arial.fntdef Arial.tcfnt`.
 
 
-# Resources
+## Resources
 ---
 
-From fonts and bitmaps to lookup tables and binary files, TinyCLR OS lets you add resources right into the program to access later. 
-
-Right-click on your project and `Add->New Item...`. From here select `Resource File`.
-
-You can now drag resources right into the file.
-
-![Resources](images/resources.jpg)
-
-In the background, a file is generated to reflect the added resources. Using the resource will look similar to `var resourceData = Resource.GetBytes(Resource.BinaryResources.data);`
-
-
-> [!Tip]
-> If you are copying an example code that uses resource, some minor changes are needed to match the resources' names in your project.
+Fonts can be added to your application as a resource. [Click here](resources.md) for more information.
 

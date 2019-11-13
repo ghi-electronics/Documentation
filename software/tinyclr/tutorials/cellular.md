@@ -1,2 +1,3 @@
 # Cellular
-You can add a cellular capability with a modem. Your modem will have documentation on what commands you need to send but will we make it usable with TinyCLR
+---
+Most mobile modems expose AT serial commands for an easy network access. They simply become a serial-to-mobile gateway. Some modems expose AT commands for socket handling, which can be used in an interface driver for TinyCLR networking support, similar to the SPWF045x drivers.

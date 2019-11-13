@@ -27,10 +27,11 @@
 ### [Graphics](tutorials/graphics.md)
 ### [Touch Screen](tutorials/touch-screen.md)
 ### [Hardware JPEG](tutorials/hardware-jpeg.md)
-### [Jpeg, GIF, BMP image decoding](tutorials/jpeg-gif-bmp-image-decoding.md)
+### [JPEG, GIF, BMP image decoding](tutorials/jpeg-gif-bmp-image-decoding.md)
 ### [Font Support](tutorials/font-support.md)
 ### [Camera and Audio](tutorials/camera-and-audio.md)
 ### [MJPEG Video](tutorials/mjpeg-video.md)
+### [Resources](tutorials/resources.md)
 
 ## Core Networking Protocols
 ### [HTTP, HTTPS, DHCP, DNS, TLS 1.3](tutorials/http-https-dhcp-dns-tls.md)
@@ -70,7 +71,7 @@
 ### [PWM](tutorials/pwm.md)
 ### [Analog In](tutorials/analog-in.md)
 ### [Analog Out](tutorials/analog-out.md)
-### [Servos](tutorials/servos.md)
+### [Servo Motors](tutorials/servo-motors.md)
 ### [Signal Generation and Capture](tutorials/signal-generation-capture.md)
 
 ## Data Busses
@@ -84,30 +85,30 @@
 
 
 # Old Tutorial Menu
-## [GPIO](tutorials/gpio.md)
-## [UART](tutorials/uart.md)
-## [I2C](tutorials/i2c.md)
-## [SPI](tutorials/spi.md)
-## [PWM](tutorials/pwm.md)
-## [ADC](tutorials/adc.md)
-## [DAC](tutorials/dac.md)
-## [CAN](tutorials/can.md)
-## [File System](tutorials/filesystem.md)
-## [Time](tutorials/time.md)
-## [Timer](tutorials/timer.md)
-## [Signal Generator](tutorials/signal-generator.md)
-## [Signal Capture](tutorials/signal-capture.md)
-## [Pulse Feedback](tutorials/pulse-feedback.md)
-## [Memory Management](tutorials/memory.md)
-## [Resources](tutorials/resources.md)
-## [Graphics](tutorials/graphics/intro.md)
-### [Display](tutorials/graphics/display.md)
-### [Drawing](tutorials/graphics/drawing.md)
-### [Fonts](tutorials/graphics/font.md)
-### [User Interface](tutorials/graphics/user-interface.md)
-### [Touch](tutorials/graphics/touch.md)
-## [Networking](tutorials/networking/intro.md)
-### [SPWF04Sx](tutorials/networking/spwf04sx.md)
+## GPIO
+## UART
+## I2C
+## SPI
+## PWM
+## ADC
+## DAC
+## CAN
+## File System
+## Time
+## Timer
+## Signal Generator
+## Signal Capture
+## Pulse Feedback
+## [Memory Management](old-tutorials/memory.md)
+## Resources
+## Graphics
+### Display
+### Drawing
+### Fonts
+### User Interface
+### Touch
+## Networking
+### SPWF04Sx
 
 # [Native Code](native/intro.md)
 ## [Interops](native/interops.md)

@@ -3,7 +3,7 @@
 # [Sitcore](core/intro.md)
 ## [System on Chip](core/system-on-chip.md)
 ## [System on Modules](core/system-on-modules.md)
-## [Development Boards](core/development-boards.com)
+## [Development Boards](core/development-boards.md)
 
 # [NETMF Modules](core/netmf-modules.md)
 ## [G30](core/g30.md)

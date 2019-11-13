@@ -1,8 +1,9 @@
 # User Interface
+---
 You can use the `GHIElectronics.TinyCLR.UI` library to create user interfaces for your application. It is inspired by WPF on the desktop.
 
 ## Application Management
-There is no special requirements when simply [drawing](drawing.md). However, the user interface has internal management requirements, that is handled by the application class. Your starting point will look like the following code. Do not forget to add the `GHIElectronics.TinyCLR.UI` NuGet package.
+There is no special requirements when simply [graphics](graphics.md). However, the user interface has internal management requirements, that is handled by the application class. Your starting point will look like the following code. Do not forget to add the `GHIElectronics.TinyCLR.UI` NuGet package.
 
 ```cs
 using GHIElectronics.TinyCLR.UI;
@@ -100,7 +101,7 @@ For the sake of simplifying the rest of this tutorial, we will add `private stat
 
 
 > [!Tip]
-> This example needs a [font](font.md).
+> This example needs a [font](font-support.md).
 
 ```cs
 private static UIElement Elements() {
@@ -406,4 +407,4 @@ app.InputProvider.RaiseTouch(x, y, touchState, DateTime.UtcNow);
 app.InputProvider.RaiseButton(btn, btnState, DateTime.UtcNow);
 ```
 
-The [touch](touch.md) tutorial has further details.
+The [touch](touch-screen.md) tutorial has further details.

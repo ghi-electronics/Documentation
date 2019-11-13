@@ -1,3 +1,3 @@
 # Code Security
-
-Code is all stored in internal flash where you can lock the memory being used.
+---
+Designed with security as a top priority, your intellectual property is protected through device code protection, secure encrypted in-field and OTA update, and secure booting.

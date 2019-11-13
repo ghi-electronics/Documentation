@@ -1,6 +1,5 @@
 # Time Management
 ---
-
 ## Built-in Time Service
 
 You can simply get the current time using `DateTime.Now`. The system starts counting at a fixed time on every power up, meaning the time ticks every second correctly but the time will be off. If the correct time is needed, the time needs to be set to the current true time (and date). This is accomplished using `GHIElectronics.TinyCLR.Native.SystemTime.SetTime(DateTime utcTime)`
@@ -37,7 +36,6 @@ Current Time: 01/01/2019 11:11:14
 
 # Timers
 ---
-
 A timer is used to call a method at a specific time. This example will call (invoke) Ticker initially after 3 seconds and then it will repeat once a second indefinitely.
 
 ```cs
