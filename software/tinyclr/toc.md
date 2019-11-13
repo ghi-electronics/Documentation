@@ -54,7 +54,7 @@
 ### [Secure Boot](tutorials/secure-boot.md)
 
 ## Cloud Security
-### [Latest TLS](tutorials/tls.md)
+### [TLS](tutorials/tls.md)
 ### [Encryption](tutorials/encryption.md)
 ### [Hashing](tutorials/hashing.md)
 
@@ -81,34 +81,8 @@
 ### [USB](tutorials/usb.md)
 ### [CAN](tutorials/can.md)
 
-
-
-
 # Old Tutorial Menu
-## GPIO
-## UART
-## I2C
-## SPI
-## PWM
-## ADC
-## DAC
-## CAN
-## File System
-## Time
-## Timer
-## Signal Generator
-## Signal Capture
-## Pulse Feedback
 ## [Memory Management](old-tutorials/memory.md)
-## Resources
-## Graphics
-### Display
-### Drawing
-### Fonts
-### User Interface
-### Touch
-## Networking
-### SPWF04Sx
 
 # [Native Code](native/intro.md)
 ## [Interops](native/interops.md)
