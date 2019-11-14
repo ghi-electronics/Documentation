@@ -1,6 +1,7 @@
 # Resources
 ---
-Resource files can be used to store strings, images, audio files, and other binary or text files that will be used by your application.
+
+From fonts and bitmaps to lookup tables and binary files, TinyCLR OS lets you add resources right into the program to access later. 
 
 Right-click on your project and `Add->New Item...`. From here select `Resource File`.
 
