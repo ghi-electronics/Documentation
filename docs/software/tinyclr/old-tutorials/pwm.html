@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PWM </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="PWM ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="pwm">PWM</h1>
+
+<hr>
+<p>Pulse Width Modulation (PWM) is a very useful feature found on most microcontrollers. PWM is a method of generating a square wave signal of uniform frequency with variable duty cycle. PWM is often used to generate analog voltages, but has many other uses such as generating digital pulses for driving servo motors or driving infrared LEDs for communication. The ratio of the pulse width to it&#39;s period is called the duty cycle. Through software, you can control both the PWM frequency and duty cycle.</p>
+<div class="TIP"><h5>Tip</h5><p>We usually use GetDefault() for most peripherals. For example, there is only one GPIO controller on most systems. This is not the case with PWM. Never use the Default controller and always select the proper channel on the corresponding controller.</p>
+</div>
+<div class="TIP"><h5>Tip</h5><p>PWM2.3 is channel 3 on controller 2</p>
+</div>
+<h2 id="energy-level">Energy Level</h2>
+<p>PWM is perfect for dimming an LED or controlling the speed of a motor. When the duty cycle is 50%, half the energy is transferred to the attached load.</p>
+<p>This demo will fade the FEZ LED1 in and out</p>
+<pre><code class="lang-csharp">using System.Threading;
+using GHIElectronics.TinyCLR.Devices.Pwm;
+using GHIElectronics.TinyCLR.Pins;
+
+class Program {
+    private static void Main() {
+        var controller = PwmController.FromName(FEZ.PwmChannel.Controller4.Id);
+        var led = controller.OpenChannel(FEZ.PwmChannel.Controller4.Led1);
+        controller.SetDesiredFrequency(10000);
+        double duty = 0.5, speed = 0.01;
+        led.Start();
+        while (true) {
+            if (duty &lt;= 0 || duty &gt;= 1.0) {
+                speed *= -1;    //Invert direction.
+                duty += speed;
+            }
+
+            led.SetActiveDutyCyclePercentage(duty);
+            duty += speed;
+
+            Thread.Sleep(10);   //Always give the system time to think!
+        }
+    }
+}
+</code></pre><h2 id="musical-tones">Musical Tones</h2>
+<p>Musical notes have specific frequencies; C for example is about 261Hz. Plugging these numbers into an array and knowing the length of each tone is all that is needed to play some simple music. When playing notes by changing the frequency, keep the duty cycle set to 0.5.</p>
+<pre><code class="lang-csharp">using System.Threading;
+using GHIElectronics.TinyCLR.Devices.Pwm;
+using GHIElectronics.TinyCLR.Pins;
+
+class Program {
+    const int NOTE_C = 261;
+    const int NOTE_D = 294;
+    const int NOTE_E = 330;
+    const int NOTE_F = 349;
+    const int NOTE_G = 392;
+
+    const int WHOLE_DURATION = 1000;
+    const int EIGHTH = WHOLE_DURATION / 8;
+    const int QUARTER = WHOLE_DURATION / 4;
+    const int QUARTERDOT = WHOLE_DURATION / 3;
+    const int HALF = WHOLE_DURATION / 2;
+    const int WHOLE = WHOLE_DURATION;
+
+    //Make sure the two below arrays match in length. Each duration element corresponds to
+    //  one note element.
+    private static int[] note = { NOTE_E, NOTE_E, NOTE_F, NOTE_G, NOTE_G, NOTE_F, NOTE_E,
+                          NOTE_D, NOTE_C, NOTE_C, NOTE_D, NOTE_E, NOTE_E, NOTE_D,
+                          NOTE_D, NOTE_E, NOTE_E, NOTE_F, NOTE_G, NOTE_G, NOTE_F,
+                          NOTE_E, NOTE_D, NOTE_C, NOTE_C, NOTE_D, NOTE_E, NOTE_D,
+                          NOTE_C, NOTE_C};
+
+    private static int[] duration = { QUARTER, QUARTER, QUARTER, QUARTER, QUARTER, QUARTER,    QUARTER,
+                              QUARTER, QUARTER, QUARTER, QUARTER, QUARTER, QUARTERDOT, EIGHTH,
+                              HALF,    QUARTER, QUARTER, QUARTER, QUARTER, QUARTER,    QUARTER,
+                              QUARTER, QUARTER, QUARTER, QUARTER, QUARTER, QUARTER,    QUARTERDOT,
+                              EIGHTH,  WHOLE};
+    private static void Main() {
+        var controller = PwmController.FromName(FEZ.PwmChannel.Controller1.Id);
+        var toneOut = controller.OpenChannel(FEZ.PwmChannel.Controller1.D0);
+        toneOut.SetActiveDutyCyclePercentage(0.5);
+        toneOut.Start();
+        while (true) {
+            for (int i = 0; i &lt; note.Length; i++) {
+                controller.SetDesiredFrequency(note[i]);
+                Thread.Sleep(duration[i]);
+            }
+            Thread.Sleep(100);
+        }
+    }
+}
+</code></pre><h2 id="servo-motors">Servo Motors</h2>
+<p>A servo motor is basically a motor that has a small internal circuit allowing you to control it using electrical pulses. Servo motors are available as either continuous or positional servos. While they look identical, a positional servo only turns to a given position and then holds that position until you tell it to move to another position. A continuous servo motor will rotate continuously in one direction until it is told to either stop or reverse direction.</p>
+<p>The pulse that controls servos is sent every 20 ms. This pulse will usually have a width between 1 ms and 2 ms but varies depending on the make and model of the motor. The position of a positional servo is based on the width of the pulse, with a 1.5 ms pulse moving to the middle of travel (90 degree position). With a rotational servo, 1.5ms will stop the motor, 1 ms is full speed, and 2 ms is full speed in the opposite direction. </p>
+<div class="TIP"><h5>Tip</h5><p>As a rule, servos have three wires. Be sure the central wire is connected to 5V. The lighter color wire on one side of the connector is a signal and should be connected to a PWM pin. The third one, which is usually a darker color, is ground.</p>
+</div>
+<p>This example will turn the positional servo to the zero degree position, wait half a second, and then turn it to 180 degrees. It will then rotate the continuous servo at maximum speed for half a second, and then reverse direction for half a second. You must add add the servo class (the code below this example) to your project for it to work.</p>
+<div class="TIP"><h5>Tip</h5><p>Most servos will have a 1 ms minimum pulse width and a 2 ms maximum pulse width, but check the specs of the motor to be sure.</p>
+</div>
+<pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Pins;
+using GHIElectronics.TinyCLR.Devices.Pwm;
+using GHIElectronics.TinyCLR.Devices.Servo;
+using System.Threading;
+
+class Program {
+    private static void Main() {
+        ServoMotor servo1 = new ServoMotor(ServoMotor.ServoType.Positional,
+        PwmController.FromName(FEZ.PwmChannel.Controller1.Id),
+        FEZ.PwmChannel.Controller1.D0);
+
+        servo1.ConfigurePulseParameters(0.5, 2.4);  //Settings for TowerPro SG90 micro servo.
+
+        ServoMotor servo2 = new ServoMotor(ServoMotor.ServoType.Continuous,
+        PwmController.FromName(FEZ.PwmChannel.Controller3.Id),
+        FEZ.PwmChannel.Controller3.D6);
+
+        servo1.Set(0);
+        Thread.Sleep(500);
+        servo1.Set(180);
+        Thread.Sleep(500);
+        servo1.Stop();
+
+        servo2.Set(100);
+        Thread.Sleep(500);
+        servo2.Set(-100);
+        Thread.Sleep(500);
+        servo2.Stop();
+
+        Thread.Sleep(-1);
+    }
+}
+</code></pre><p>This is the servo.cs class that provides the methods used in the above code to control the servos:</p>
+<pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Devices.Pwm;
+using System;
+
+namespace GHIElectronics.TinyCLR.Devices.Servo {
+    public class ServoMotor {
+        private PwmChannel servo;
+        private ServoType type;
+
+        private double minPulseLength;
+        private double maxPulseLength;
+        public double position { get; set; }
+
+        public enum ServoType {
+            Positional,
+            Continuous
+        }
+
+        public ServoMotor(ServoType type, PwmController controller, int PwmPin) {
+            this.servo = controller.OpenChannel(PwmPin);
+            this.ConfigurePulseParameters(1.0, 2.0);
+            controller.SetDesiredFrequency(50);
+
+            this.type = type;
+            this.position = 0;
+        }
+
+        public void ConfigurePulseParameters(double minimumPulseWidth, double maximumPulseWidth) {
+            if (minimumPulseWidth &gt; 1.5 || minimumPulseWidth &lt; 0.1) throw new ArgumentOutOfRangeException(&quot;Must be between 0.1 and 1.5 ms&quot;);
+            if (maximumPulseWidth &gt; 3 || maximumPulseWidth &lt; 1.6) throw new ArgumentOutOfRangeException(&quot;Must be between 1.6 and 3 ms&quot;);
+
+            this.minPulseLength = minimumPulseWidth;
+            this.maxPulseLength = maximumPulseWidth;
+        }
+
+        public void Set(double value) {
+            if (this.type == ServoType.Positional) {
+                this.PositionalSetPosition(value);
+                this.position = value;
+            }
+            else
+                this.ContinousSetSpeed(value);
+        }
+
+        private void PositionalSetPosition(double angle) {
+            if (angle &lt; 0 || angle &gt; 180) throw new ArgumentOutOfRangeException(&quot;degrees&quot;, &quot;degrees must be between 0 and 180.&quot;);
+
+            var duty = ((angle / 180.0 * (this.maxPulseLength - this.minPulseLength)) + this.minPulseLength) / 20;
+            this.servo.SetActiveDutyCyclePercentage(duty);
+            this.servo.Start();
+        }
+
+        private void ContinousSetSpeed(double speed) {
+            if (speed &lt; -100 || speed &gt; 100) throw new ArgumentOutOfRangeException(&quot;speed&quot;, &quot;speed must be between -100 and 100.&quot;);
+
+            PositionalSetPosition(speed / 100 * 90 + 90);
+        }
+
+        public void Stop() =&gt; this.servo.Stop();
+    }
+}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/old-tutorials/pwm.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2019 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

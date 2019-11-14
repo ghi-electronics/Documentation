@@ -1,0 +1,337 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>UCM Development Options </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="UCM Development Options ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="ucm-development-options">UCM Development Options</h1>
+
+<hr>
+<p><img src="images/development-options.jpg" alt="Development Options"></p>
+<p>These options are provided to speed the development of your product and make it possible to start programming your application within minutes without designing or building new hardware.</p>
+<p>You may also use these products as quick drop-in options into your design as well.</p>
+<h2 id="code-samples">Code Samples</h2>
+<p>For some examples of using the development options in TinyCLR, take a look at the <a href="https://github.com/ghi-electronics/TinyCLR-Samples">TinyCLR Samples repo</a>. You may also find the <a href="../../software/tinyclr/tutorials/intro.html">TinyCLR tutorials</a> useful.</p>
+<h2 id="ucm-dev-board">UCM Dev Board</h2>
+<p><img src="images/ucm-dev.jpg" alt="UCM Dev board"></p>
+<p>Ordering Part Number: UCD-DEV-E </p>
+<p><a href="http://files.ghielectronics.com/downloads/Schematics/Systems/UCM%20Dev%20Board%20Rev%20E%20Schematic.pdf">Schematic</a></p>
+<p>The UCM Dev Board is the fastest and easiest way to start using our Universal Compute Modules. This board provides a socket for the UCM, standard connectors for input/output, and three 40 pin socket headers for connecting peripherals and a display. Peripheral connectors include external power, Ethernet, CAN, USB host and client, RTC backup battery, DCMI interface and an SD card slot.  It also has a buzzer, LEDs, a reset button, and user programmable boot buttons.</p>
+<p>To start development using the UCM Dev Board, just plug a UCM into the socket on the board and connect the board&#39;s USB Client port to a host computer using a micro USB. Go to the documentation page for the particular UCM you are using for instructions.</p>
+<p>For power, the board can be powered through either USB connectors or the barrel jack. Always use the barrel jack for power when using displays, especially the larger ones. USB does not provide sufficient power needed for displays.</p>
+<div class="TIP"><h5>Tip</h5><p>The barrel jack is pin positive, sleeve negative, 2.1mm. It is capable of anywhere 7V to 30V. 1A of power should be enough for most needs.</p>
+</div>
+<h2 id="ucm-breakout-board">UCM Breakout Board</h2>
+<p><img src="images/ucm-breakout.jpg" alt="UCM Breakout"></p>
+<p>Ordering Part Number: UCD-BKT-C </p>
+<p><a href="http://files.ghielectronics.com/downloads/Schematics/Systems/UCM%20Breakout%20Rev%20C%20Schematic.pdf">Schematic</a></p>
+<p>The UCM Breakout Board provides a socket for UCMs, and both through hole and surface mount edge connections for soldering the Breakout Board to your own circuit board. You can solder pin headers to the Breakout Board and use traditional breadboarding techniques to build your prototype as well. This board makes it easier to use UCMs in prototypes or products without the need to solder the fine pitch 200 pin SO-DIMM socket.</p>
+<p>For added convenience, it also includes USB Client connector, a reset button, four user programmable boot buttons, and a micro SD card slot. </p>
+<p>Please note that this is a <strong>Breakout Board</strong> and it does not have any power supplies. You will need to add 3.3V or 5V as needed to power up your modules. However, the power from USB is available on one of the pins (5V USB) so it is possible to wire a 3.3V regulator.</p>
+<div class="TIP"><h5>Tip</h5><p>There are 2 LEDs by the USB connector, for 3.3V and 5V. They are useful to check that you have supplied the necessary power.</p>
+</div>
+<p><img src="images/ucm-breakout-regulator.jpg" alt="UCM Breakout Power Pins"></p>
+<p>A simple board can be designed and hand soldered to host the Breakout Board. You can turn an idea into a product prototype in days!</p>
+<p>This example board example (in green) is made to be the exact same size as the 4.3&quot; universal display board.</p>
+<p>It can be designed with the display connector conveniently located in the right place.  </p>
+<p><img src="images/ucm-breakout-demo.jpg" alt="UCM Breakout Demo"></p>
+<p>To start using the breakout board, plug one of the UCMs into the socket on the board and wire in 3.3V (you may also need 5V) and plug in USB into your PC. Go to the documentation page for the particular UCM you are using for instructions.</p>
+<h2 id="universal-displays">Universal Displays</h2>
+<p><img src="images/display-options.jpg" alt="Display Options"></p>
+<p>Available displays work directly with the options above, just make sure you are using a SoM supporting the needed peripherals. The Universal Displays can be connected directly or wired though a 40-pin IDE extension ribbon cable, similar to the old-style IDE hard drive cable extender, with a Male connector on one end and a Female connector on the other. </p>
+<p><img src="images/ide-cable.jpg" alt="IDE Extender Cable"></p>
+<p>To connect a display with the Dev Board, simply plug it on top.</p>
+<p><img src="images/connect-display.jpg" alt="Connecting a Display"></p>
+<p>The display can be larger than the board but it will still use the same connector (HDR C).</p>
+<p><img src="images/large-display.jpg" alt="Large Display"></p>
+<p>When using the Breakout Board you need to add a female header. Make sure the header is placed on the back of the Breakout Board.</p>
+<p>Note how the Breakout Board, and potentially your host board, hide behind the display. This is a good advantage when mounting the display inside a product.</p>
+<p><img src="images/ucm-breakout-female-header.jpg" alt="UCM Breakout with Female Header"></p>
+<p>Adding a ribbon cable allows for further flexibility on where and how far the display is mounted. The length of the cable is determined by clock frequency used with the display. If the image on the display is not stable, lower the clock or shorten the cable. In our testing, our display have worked perfectly with 10&quot; cable.</p>
+<p><img src="images/ucm-display-cable.jpg" alt="UCM Display Extended with IDE Cable"></p>
+<h3 id="ucd-d43-a">UCD-D43-A</h3>
+<p><img src="images/ud435.jpg" alt="UD435"></p>
+<ul>
+<li>Ordering Part Number: UCD-D43-A</li>
+<li>Display Module: <a href="https://www.buydisplay.com/">ER-TFT043-3</a></li>
+<li>Touch Panel: <a href="https://www.buydisplay.com/">ER-TPC043-2</a></li>
+</ul>
+<p><a href="http://files.ghielectronics.com/downloads/Schematics/Systems/UD435%20Rev%20A%20Schematic.pdf">Schematic</a></p>
+<p>This display module has a 4.3&quot; 480x272 TFT display with capacitive touch screen. The display needs a UCM with TFT display support and needs I2C for the capacitive touch. The backlight is controllable through GPIO A. The capacitive touch controller is connected I2C A with the interrupt pin on GPIO B.</p>
+<p>The <a href="https://github.com/ghi-electronics/TinyCLR-Samples">TinyCLR Samples repo</a> has usage examples. Learn more about the <a href="../../software/tinyclr/old-tutorials/graphics/intro.html">graphics</a> support.</p>
+<p>See below for the display configuration values:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Width</td>
+<td>480</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>272</td>
+</tr>
+<tr>
+<td>DataFormat</td>
+<td>RGB565</td>
+</tr>
+<tr>
+<td>Pixel Clock Rate</td>
+<td>8 MHz &lt;= x &lt;= 16MHz</td>
+</tr>
+<tr>
+<td>Pixel Polarity</td>
+<td>low</td>
+</tr>
+<tr>
+<td>DataEnable Is Fixed</td>
+<td>false</td>
+</tr>
+<tr>
+<td>DataEnable Polarity</td>
+<td>low</td>
+</tr>
+<tr>
+<td>Horizontal Back Porch</td>
+<td>46</td>
+</tr>
+<tr>
+<td>Horizontal Front Porch</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Horizontal Sync Polarity</td>
+<td>low</td>
+</tr>
+<tr>
+<td>Horizontal Sync Pulse Width</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Vertical Back Porch</td>
+<td>23</td>
+</tr>
+<tr>
+<td>Vertical Front Porch</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Vertical Sync Polarity</td>
+<td>low</td>
+</tr>
+<tr>
+<td>Vertical Sync Pulse Width</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ucd-d70-a">UCD-D70-A</h3>
+<p><img src="images/ud700.jpg" alt="UD700"></p>
+<ul>
+<li>Ordering Part Number: UCD-D70-A</li>
+<li>Display Module: <a href="https://www.buydisplay.com/">ER-TFT070-4</a></li>
+<li>Touch Panel: <a href="https://www.buydisplay.com/">ER-TPC070-6</a></li>
+</ul>
+<p><a href="http://files.ghielectronics.com/downloads/Schematics/Systems/UD700%20Rev%20A%20Schematic.pdf">Schematic</a></p>
+<p>This display module has a 7&quot; 800x480 TFT display with capacitive touch screen. The display needs a UCM with TFT display support and needs I2C for the capacitive touch. The backlight is controllable through GPIO A. The capacitive touch controller is connected I2C A with the interrupt pin on GPIO B.</p>
+<p>The display is exactly the same size as the Dev Board. They can be nicely mounted back to back with stand offs. A ribbon cable will be needed for the display signals.</p>
+<p><img src="images/ucm-display-connected-ide.jpg" alt="UCM Breakout with Display Connected to IDE"></p>
+<p>The <a href="https://github.com/ghi-electronics/TinyCLR-Samples">TinyCLR Samples repo</a> has usage examples. Learn more about the <a href="../../software/tinyclr/old-tutorials/graphics/intro.html">graphics</a> support.</p>
+<p>See below for the display configuration values:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Width</td>
+<td>800</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>480</td>
+</tr>
+<tr>
+<td>DataFormat</td>
+<td>RGB565</td>
+</tr>
+<tr>
+<td>Pixel Clock Rate</td>
+<td>23 MHz &lt;= x &lt;= 46MHz</td>
+</tr>
+<tr>
+<td>Pixel Polarity</td>
+<td>low</td>
+</tr>
+<tr>
+<td>Data Enable Is Fixed</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Data Enable Polarity</td>
+<td>low</td>
+</tr>
+<tr>
+<td>Horizontal Back Porch</td>
+<td>46</td>
+</tr>
+<tr>
+<td>Horizontal Front Porch</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Horizontal Sync Polarity</td>
+<td>low</td>
+</tr>
+<tr>
+<td>Horizontal Sync Pulse Width</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Vertical Back Porch</td>
+<td>23</td>
+</tr>
+<tr>
+<td>Vertical Front Porch</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Vertical Sync Polarity</td>
+<td>low</td>
+</tr>
+<tr>
+<td>Vertical Sync Pulse Width</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="custom-boards">Custom Boards</h2>
+<p>The &quot;Display Interface&quot; utilized on development options include TFT parallel 16bit/24bit bus, I2C bus, SPI, bus and 2 GPIOs. It is possible to design a custom display to utilize the UCM mainboards, or design a mainboard to utilize the available displays. Additionally, the designs of the development options can be used as a reference to start a UCMbased design. GHI Electronics&#39; engineering/manufacturing is available for such designs.</p>
+<hr>
+<h2 id="legal">Legal</h2>
+<h3 id="license">License</h3>
+<p>This product with its accompanying firmware are licensed royalty-free for commercial and noncommercial use. Using the provided firmware on non-official product requires additional licensing. The provided documentation/schematics/libraries/sources are not to be used in any manner outside for the benefit of implementing and using this GHI Electronics product into your design.</p>
+<h3 id="disclaimer">Disclaimer</h3>
+<p>IN NO EVENT SHALL GHI ELECTRONICS, LLC BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS PRODUCT, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. GHI ELECTRONICS LINE OF PRODUCTS ARE NOT DESIGNED FOR LIFE SUPPORT APPLICATIONS. SPECIFICATIONS, PRICE AND AVAILABILITY ARE SUBJECT TO CHANGE WITHOUT ANY NOTICE.</p>
+<hr>
+<p>You can visit our main website at <a href="http://www.ghielectronics.com"><strong>www.ghielectronics.com</strong></a> and our community forums at <a href="https://forums.ghielectronics.com/"><strong>forums.ghielectronics.com</strong></a>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/hardware/core/development-options.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2019 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
