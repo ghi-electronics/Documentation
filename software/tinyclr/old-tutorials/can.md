@@ -20,7 +20,7 @@ CAN bus is generally a two wire bus, but sometimes additional power and ground l
 
 High speed CAN is set up as a linear bus of 120 ohm nominal twisted pair wiring with two or more nodes.  Termination resistors are used at each end of the bus as shown below.
 
-![CAN linear bus](../images/can-bus.png)
+![CAN linear bus](images/can-bus.png)
 
 > [!TIP]
 > Some CAN devices including our own development boards have built in termination resistors. If you are using more than two nodes on a high speed CAN bus you must disable the termination resistors on all nodes except for the two end nodes. 

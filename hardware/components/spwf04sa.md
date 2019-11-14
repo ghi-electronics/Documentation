@@ -6,7 +6,7 @@ The SPWF04SA WiFi module from STMicroelectronics is an inexpensive option to bri
 
 ## Using the SPWF04SA WiFi Module
 
-On the this [page](../../software/tinyclr/tutorials/networking/spwf04sx.md), you will find examples on how to access the SPWF04SA WiFi module via the [TinyCLR OS](../../software/tinyclr/intro.md).
+On the this [page](../../software/tinyclr/old-tutorials/networking/spwf04sx.md), you will find examples on how to access the SPWF04SA WiFi module via the [TinyCLR OS](../../software/tinyclr/intro.md).
 
 ## Updating the SPWF04SA WiFi Module Firmware
 
