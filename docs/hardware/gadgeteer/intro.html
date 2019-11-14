@@ -1,0 +1,506 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>.NET Gadgeteer Intro </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content=".NET Gadgeteer Intro ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="net-gadgeteer-intro">.NET Gadgeteer Intro</h1>
+
+<hr>
+<p><img src="images/gadgeteer.jpg" alt="Gadgeteer"></p>
+<p>.NET Gadgeteer is a discontinued technology that was initiated by Microsoft Research and taken to production by GHI Electronics in the year 2011. .NET Gadgeteer had a great few year run, where it was loved for its plug-and-play mainboard and modules.</p>
+<div class="TIP"><h5>Tip</h5><p>We will refer to .NET Gadgeteer as Gadgeteer throughout the rest of the documentation.</p>
+</div>
+<p>The core of .NET Gadgeteer is .NET Micro Framework (NETMF). Like Gadgeteer, NETMF is no longer evolved by Microsoft and left for the community. <a href="../../software/netmf/intro.html">Learn more about NETMF</a></p>
+<p>Sadly, and after 5 years of building modules and mainboards, GHI Electronics had to <a href="https://forums.ghielectronics.com/t/the-future-of-gadgeteer/197">announce</a> the EOL for Gadgeteer; however, most of the Gadgeteer hardware can still be used <a href="#with-tinyclr-os">with TinyCLR OS</a>.</p>
+<p>External resources:</p>
+<ul>
+<li>Microsoft&#39;s .NET Gadgeteer website (down) <a href="http://www.gadgeteer.com/">http://www.gadgeteer.com/</a></li>
+<li>Microsoft&#39;s NETMF website (outdated) <a href="http://www.netmf.com/">http://www.netmf.com/</a></li>
+</ul>
+<p>Most of the Gadgeteer ecosystem is open-source:</p>
+<ul>
+<li>Microsoft&#39;s <a href="http://gadgeteer.codeplex.com/">.NET Gadgeteer Core</a></li>
+<li>GHI Electronics&#39; <a href="https://github.com/ghi-electronics/NETMF-Gadgeteer">Software sources and Hardware design files</a></li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wQlTLNOCl90" frameborder="0" allowfullscreen=""></iframe>
+
+<h2 id="socket-map">Socket Map</h2>
+<p>The magic of Gadgeteer is in its socket map</p>
+<table>
+<thead>
+<tr>
+<th>Socket</th>
+<th>Pin1</th>
+<th>Pin2</th>
+<th>Pin3</th>
+<th>Pin4</th>
+<th>Pin5</th>
+<th>Pin6</th>
+<th>Pin7</th>
+<th>Pin8</th>
+<th>Pin9</th>
+<th>Pin10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>AIN (G!)</td>
+<td>AIN (G)</td>
+<td>AIN</td>
+<td>GPIO</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>B</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>LCD B0</td>
+<td>LCD B1</td>
+<td>LCD B2</td>
+<td>LCD B3</td>
+<td>LCD B4</td>
+<td>LCD ENABLE</td>
+<td>LCD CLK</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>C</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>GPIO!</td>
+<td>CAN TD (G)</td>
+<td>CAN RD (G)</td>
+<td>GPIO</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>D</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>GPIO!</td>
+<td>D-</td>
+<td>D+</td>
+<td>GPIO</td>
+<td>GPIO</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>E</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>[UN]</td>
+<td>LED1 (OPT)</td>
+<td>LED2 (OPT)</td>
+<td>TX D-</td>
+<td>TX D+</td>
+<td>RX D-</td>
+<td>RX D+</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>F</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>GPIO!</td>
+<td>DAT0</td>
+<td>DAT1</td>
+<td>CMD</td>
+<td>DAT2</td>
+<td>DAT3</td>
+<td>CLK</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>G</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>LCD G0</td>
+<td>LCD G1</td>
+<td>LCD G2</td>
+<td>LCD G3</td>
+<td>LCD G4</td>
+<td>LCD G5</td>
+<td>LCD BACKLIGHT</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>H</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>GPIO!</td>
+<td>D-</td>
+<td>D+</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>I</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>GPIO!</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>GPIO</td>
+<td>[UN]</td>
+<td>SDA</td>
+<td>SCL</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>K</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>GPIO!</td>
+<td>TX (G)</td>
+<td>RX (G)</td>
+<td>RTS</td>
+<td>CTS</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>O</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>GPIO!</td>
+<td>GPIO</td>
+<td>AOUT</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>P</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>GPIO!</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>GPIO</td>
+<td>PWM (G)</td>
+<td>PWM (G)</td>
+<td>PWM</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>R</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>LCD R0</td>
+<td>LCD R1</td>
+<td>LCD R2</td>
+<td>LCD R3</td>
+<td>LCD R4</td>
+<td>LCD VSYNC</td>
+<td>LCD HSYNC</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>S</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>GPIO!</td>
+<td>GPIO</td>
+<td>GPIO</td>
+<td>CS</td>
+<td>MOSI</td>
+<td>MISO</td>
+<td>SCK</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>T</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>[UN]</td>
+<td>YU</td>
+<td>XL</td>
+<td>YD</td>
+<td>XR</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>U</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>GPIO!</td>
+<td>TX (G)</td>
+<td>RX (G)</td>
+<td>GPIO</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>X</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>GPIO!</td>
+<td>GPIO</td>
+<td>GPIO</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>[UN]</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>GPIO!</td>
+<td>GPIO</td>
+<td>GPIO</td>
+<td>GPIO</td>
+<td>GPIO</td>
+<td>GPIO</td>
+<td>GPIO</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>[MS]</td>
+<td>[MS]</td>
+<td>[MS]</td>
+<td>[MS]</td>
+<td>[MS]</td>
+<td>[MS]</td>
+<td>[MS]</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>*</td>
+<td>+3.3V</td>
+<td>+5V</td>
+<td>GPIO!</td>
+<td>GPIO</td>
+<td>GPIO</td>
+<td>[MS]</td>
+<td>[MS]</td>
+<td>[MS]</td>
+<td>[MS]</td>
+<td>GND</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AIN</td>
+<td>Analog input pin.</td>
+</tr>
+<tr>
+<td>GPIO</td>
+<td>A general-purpose digital input/output pin, operating at 3.3 volts.</td>
+</tr>
+<tr>
+<td>(G)</td>
+<td>In addition to another functionality, a pin that is also usable as a GPIO.</td>
+</tr>
+<tr>
+<td>[UN]</td>
+<td>Modules must not connect to this pin if using this socket type. Mainboards can support multiple socket types on one socket, as long as individual pin functionalities overlap in a compatible manner, so that a pin from one socket type can overlap with a [UN] pin of another.</td>
+</tr>
+<tr>
+<td>!</td>
+<td>Interrupt-capable and software pull-up capable GPIO (the pull-up is switchable and in the range of 10,000 to 100,000 ohms).</td>
+</tr>
+<tr>
+<td>+3.3V</td>
+<td>Connection to the +3.3 V power net.</td>
+</tr>
+<tr>
+<td>+5V</td>
+<td>Connection to the +5 V power net.</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>Connection the power ground net.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="using-net-gadgeteer">Using .NET Gadgeteer</h2>
+<p>To use .NET Gadgeteer&#39;s legacy software, install:</p>
+<ol>
+<li><a href="https://www.visualstudio.com/vs/older-downloads/">Visual Studio 20013</a> (community edition is also supported)</li>
+<li>Unzip and install netmfvs2013.vsix and MicroFramewrokSDK.msi from <a href="http://netmf.codeplex.com/downloads/get/1423115">here</a> </li>
+<li>Microsoft&#39;s <a href="http://gadgeteer.codeplex.com/downloads/get/1519812">Gadgeteer Core</a></li>
+<li>GHI Electronics&#39; <a href="../../software/netmf/downloads.html">NETMF SDK</a>. The latest is recommended.</li>
+</ol>
+<p>The <a href="http://files.ghielectronics.com/downloads/Documents/Guides/NET%20Gadgeteer%20for%20Beginners.pdf">Gadgeteer for Beginners</a> guide is a good starting point.</p>
+<div class="TIP"><h5>Tip</h5><p>You can only use Visual Studio 2013, not a newer edition, unless you are using your Gadgeteer hardware <a href="#with-tinyclr-os">with TinyCLR OS</a>.</p>
+</div>
+<h2 id="with-tinyclr-os">With TinyCLR OS</h2>
+<p>Most of the .NET Gadgeteer devices are still usable today, and with the latest technologies, thanks to efforts by GHI Electronics and the community. </p>
+<p>It all started in this video!</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5n6-FzcgJJM" frameborder="0" allowfullscreen=""></iframe>
+
+<p>This means you can still use all your beloved .NET Gadgeteer gear with <a href="../../software/tinyclr/intro.html">TinyCLR OS</a>.</p>
+<p>The first step needed to use TinyCLR OS is to load the GHI Bootloader v2 onto your mainboard, then use that to load the TinyCLR OS firmware. Each mainboard product page includes the needed instructions. Once those are loaded, you can start blinking the debug LED, detailed in the next section.</p>
+<h2 id="blinking-the-led">Blinking the LED</h2>
+<div class="TIP"><h5>Tip</h5><p>If you have never used TinyCLR OS before, <a href="../../software/tinyclr/tutorials/intro.html">start here</a></p>
+</div>
+<p>This example will blink the debug LED. You only need to add a power module to your mainboard.</p>
+<pre><code>using System.Threading;
+using GHIElectronics.TinyCLR.Devices.Gpio;
+using GHIElectronics.TinyCLR.Pins;
+
+class Program {
+    static void Main() {
+        var led = GpioController.GetDefault().OpenPin(FEZSpider.GpioPin.DebugLed);
+        led.SetDriveMode(GpioPinDriveMode.Output);
+
+        while(true) {
+            led.Write(GpioPinValue.High);
+            Thread.Sleep(200);
+            led.Write(GpioPinValue.Low);
+            Thread.Sleep(200);
+        }
+    }
+}
+</code></pre><div class="TIP"><h5>Tip</h5><p>The complete pin mapping is made available through <code>GHIElectronics.TinyCLR.Pins</code>. You should not need to use any schematics.
+Replace <code>FEZSpider</code> with your mainboard&#39;s name.</p>
+</div>
+<h2 id="adding-gadgeteer-modules">Adding Gadgeteer Modules</h2>
+<p>You are now ready to start adding <a href="modules.html">modules</a>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/hardware/gadgeteer/intro.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2019 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

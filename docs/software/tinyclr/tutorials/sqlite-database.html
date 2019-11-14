@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SQLite Database </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="SQLite Database ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="sqlite-database">SQLite Database</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>According to the SQLite homepage, &quot;SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine. SQLite is the most widely deployed SQL database engine in the world&quot;. GHI provides a driver for SQLite so that you can have access to a SQL database that resides entirely in a simple file on a persistant storage device.</p>
+<p>The below code is a simple example where a database file is created in RAM (using SD cards and USB drives is possible as well). A table is created that is filled with some initial rows and then this data is read from the database. This data is then iterated over and printed out. ColumnOriginNames returns the names of each of the columns.</p>
+<pre><code class="lang-charp">using System.Collections;
+using System.Diagnostics;
+using GHIElectronics.TinyCLR.Data.SQLite;
+
+namespace TinyCLRDocTesting
+{
+    class Program
+    {
+        static void Main()
+        {
+            using (var db = new SQLiteDatabase())
+            {
+                Debug.WriteLine(&quot;Executig 1...&quot;);
+                db.ExecuteNonQuery(&quot;CREATE Table Test (Var1 TEXT, Var2 INTEGER, Var3 DOUBLE);&quot;);
+
+                Debug.WriteLine(&quot;Executig 2...&quot;);
+                db.ExecuteNonQuery(&quot;INSERT INTO Test (Var1, Var2, Var3) VALUES (&#39;Hello, World!&#39;, 25, 3.14);&quot;);
+
+                Debug.WriteLine(&quot;Executig 3...&quot;);
+                db.ExecuteNonQuery(&quot;INSERT INTO Test (Var1, Var2, Var3) VALUES (&#39;Goodbye, World!&#39;, 15, 6.28);&quot;);
+
+                Debug.WriteLine(&quot;Executig 4...&quot;);
+                var result = db.ExecuteQuery(&quot;SELECT Var1, Var2, Var3 FROM Test WHERE Var2 &gt; 10;&quot;);
+
+                Debug.WriteLine(&quot;Executig 5...&quot;);
+                Debug.WriteLine(result.ColumnCount.ToString() + &quot; &quot; + result.RowCount.ToString());
+
+                var str = &quot;&quot;;
+
+                //foreach (var j in result.ColumnNames)
+                //    str += j + &quot; &quot;;
+
+                //Debug.WriteLine(str);
+
+                foreach (ArrayList i in result.Data)
+                {
+                    str = &quot;&quot;;
+
+                    foreach (object j in i)
+                        str += j.ToString() + &quot; &quot;;
+
+                    Debug.WriteLine(str);
+                }
+            }
+        }
+    }
+}
+
+</code></pre><h3 id="the-details-on-sqlite">The details on SQLite</h3>
+<p>All details on SQLite are found at the offcial SQLite website <a href="http://www.sqlite.org/">http://www.sqlite.org/</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/sqlite-database.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2019 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

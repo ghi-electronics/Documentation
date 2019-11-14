@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SPI </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="SPI ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="spi">SPI</h1>
+
+<hr>
+<p>SPI uses three, sometimes four, wires for transferring data. The bus on SPI consists of one master and one or more slaves. The master will send clock to the salves along with data and will read back using the same clock. This clock is used to determine how fast the data is moved. If you know electronics, this is a shift register.</p>
+<p>So, the master will transmit a clock on a SCK (serial clock) pin and will simultaneously transmit the data on MOSI (Master Out Slave In) pin. The slave will read the clock on SCK pin and simultaneously read the data from MOSI pin. So far, this is a one way communication. While data is transmitted in one direction using MOSI another set of data is sent back on MISO (Master In Slave Out) pin. Other data sizes are possible but bytes are most common. NETMF supports 8-bit (byte) and 16-bit (short) data transfers.</p>
+<p>Because of this master/slave scheme, we can add multiple slaves on the same bus where the master selects which slave it will swap the data with. Note I am using the word swap because you can never send or receive but you always send and receive (swap) data. The master selects one of the slaves using SSEL (Slave Select) pin. This pin can be called CS (Chip Select) as well. In theory, the master can have unlimited slaves but it can only select one of them at any given time. The master will only need 3 wires (SCK, MISO, MOSI) to connect to all slaves on the bus but then it needs a separate SSEL pin for each one of the slaves.</p>
+<p>Some SPI devices (slaves) can have more than one select pin, like VS1053 MP3 decoder chip that uses one pin for data and one pin for commands but both share the 3 data transfer pins (SCK, MOSI, MISO).</p>
+<p>SPI needs more wires than other similar buses but it can transfer data very fast. A 50Mhz clock is possible on SPI, that is 50 million bits in one second. Note that NETMF devices are always SPI masters, not slaves.</p>
+<p>Before creating a SPI object, we would need a SPI configuration object. The configuration object is used to set the states of the SPI pins and some timing parameters. In most cases, you need the clock to be idle low (false) with clocking on rising edge (true) and with zero for select setup and hold time. The only thing you would need to set is the clock frequency. Some devices may accept high frequencies but others do not. Setting the clock to 1000Khz (1Mhz) should be okay for a starter</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>This example is sending/receiving 10 bytes of data on SPI channel 1.</p>
+<p>Note: NETMF start numbering SPI channels (module) from 1, but on processors the channels start from 0 typically. So, using SPI1 in code is actually using SPI0 on the processor.</p>
+<pre><code class="lang-cs">using System.Threading;
+using Microsoft.SPOT.Hardware;
+
+public class Program
+{
+    public static void Main()
+    {
+        SPI.Configuration MyConfig =
+             new SPI.Configuration(Cpu.Pin.GPIO_Pin1,
+             false, 0, 0, false, true, 1000, SPI.SPI_module.SPI1);
+        SPI MySPI = new SPI(MyConfig);
+
+        byte[] tx_data = new byte[10];
+        byte[] rx_data = new byte[10];
+
+        MySPI.WriteRead(tx_data, rx_data);
+
+        Thread.Sleep(100);
+    }
+}
+</code></pre><h2 id="accessing-multiple-devices">Accessing Multiple Devices</h2>
+<p>The SPI object on NETMF is a representation of the &quot;bus&quot; and not the &quot;device&quot;, so you can&#39;t construct multiple SPI objects, unless it uses a different SPI bus. To access multiple SPI devices you need to have multiple configurations and then when accessing device &quot;A&quot; we need to use configuration &quot;A&quot; and when accessing device &quot;B&quot; we need to use configuration &quot;B&quot;.</p>
+<pre><code class="lang-cs">using Microsoft.SPOT.Hardware;
+
+public class Program
+{
+    public static void Main()
+    {
+        SPI.Configuration ConfigDeviceA =
+             new SPI.Configuration(Cpu.Pin.GPIO_Pin1,
+             false, 0, 0, false, true, 1000, SPI.SPI_module.SPI1);
+        SPI.Configuration ConfigDeviceB =
+             new SPI.Configuration(Cpu.Pin.GPIO_Pin4,
+             false, 0, 0, false, true, 1000, SPI.SPI_module.SPI1);
+        SPI MySPI = new SPI(ConfigDeviceA);
+
+        byte[] tx_data = new byte[10];
+        byte[] rx_data = new byte[10];
+        // accessing device A
+        MySPI.Config = ConfigDeviceA;
+        MySPI.WriteRead(tx_data, rx_data);
+
+        // accessing device B
+        MySPI.Config = ConfigDeviceB;
+        MySPI.WriteRead(tx_data, rx_data);
+    }
+}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/netmf/tutorials/spi.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2019 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

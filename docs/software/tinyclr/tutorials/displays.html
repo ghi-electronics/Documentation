@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Display </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Display ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="display">Display</h1>
+
+<hr>
+<p>Graphical Displays can be grouped into two distinct interface categories, parallel TFT displays and serial (SPI/I2C) displays. There are also non-graphical character displays.</p>
+<p>The display drivers are meant to transfer the pixel data from memory to the actual display. The <a href="graphics.html">graphics</a> tutorial shows how drawing is done, in memory.</p>
+<h2 id="parallel-tft-displays">Parallel TFT Displays</h2>
+<p>These displays connect to special dedicated pins on the processor. Internally, the display controller automatically transfers (refreshes) the display directly from memory without any processor interaction, using DMA. When the system needs to update the display, it simply writes to memory. Neither the operating system nor the application program are burdened with display processing. The down side to this is that the system needs to have enough RAM to handle the display. An 800x600 display with 16bpp needs 960,000 bytes!</p>
+<h2 id="serial-spii2c-displays">Serial SPI/I2C Displays</h2>
+<p>The internal graphics services can be mapped to work with serial displays. This is done by having access directly to the graphics memory, which then can be transfered to the desired display.</p>
+<p>As each display has its own pixel format and color depth, you also have access to the way pixels are written in the graphics memory.</p>
+<p>This <a href="https://forums.ghielectronics.com/t/managed-graphics-for-non-tft-displays-in-tinyclr/21887">blog</a> details how this can be accomplished.</p>
+<h2 id="character-displays">Character Displays</h2>
+<p><img src="../images/character-display.jpg" alt="Character Display"></p>
+<p>These displays are capable of only showing characters. The most commonly use the HD44780 controller. They are available in different sizes but 2x16 character is most common. These displays only require GPIO pins and can be used with TinyCLR.</p>
+<h2 id="low-level-display-access">Low Level Display Access</h2>
+<p>TinyCLR also provides low level display access as part of the <code>GHIElectronics.TinyCLR.Devices.Display</code> library. These methods provide a simple way to write to a display without need for the <code>System.Drawing</code> library or an added font resource file.</p>
+<p>The following example is written for the G120E Dev Board and will paint the screen as shown in the picture beneath the code. Note that low level display access requires that you to use the data format required by your display as configured. The G120E Dev Board used in this example expects each pixel to have 16 bits (two bytes per pixel) of color information in RGB565 format.</p>
+<pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Display;
+
+class Program {
+    private static void Main() {
+        var displayController = DisplayController.GetDefault();
+
+        // Enter the proper display configurations
+        displayController.SetConfiguration(new ParallelDisplayControllerSettings {
+            Width = 320,
+            Height = 240,
+            DataFormat = DisplayDataFormat.Rgb565,
+            HorizontalBackPorch = 29,
+            HorizontalFrontPorch = 51,
+            HorizontalSyncPolarity = false,
+            HorizontalSyncPulseWidth = 41,
+            DataEnableIsFixed = true,
+            DataEnablePolarity = true,
+            PixelClockRate = 15000000,
+            PixelPolarity = true,
+            VerticalBackPorch = 3,
+            VerticalFrontPorch = 16,
+            VerticalSyncPolarity = false,
+            VerticalSyncPulseWidth = 10
+        });
+
+        displayController.Enable();
+
+        byte[] myPic = new byte[320 * 240 * 2];
+        for (var i = 0; i &lt; myPic.Length; i++) {
+            myPic[i] = (byte)(((i % 2) == 0) ? ((i / 2400) &amp; 0b00000111) &lt;&lt; 5 : i / 19200);
+        }
+
+        displayController.DrawString(&quot;\f&quot;);
+        displayController.DrawBuffer(0, 0, 320, 240, myPic, 0);
+        displayController.DrawString(&quot;GHI Electronics\n&quot;);
+        displayController.DrawString(&quot;Low Level Display Demo.&quot;);
+
+        for (var x = 20; x &lt; 300; x++) {
+            displayController.DrawPixel(x, 50, 0xF800);     //Color is 31,0,0 (RGB565).
+            displayController.DrawPixel(x, 51, 0xF800);
+        }
+    }
+}
+</code></pre><p>G120E Dev Board display after running the sample code:</p>
+<p><img src="../images/low-level-display-sample.jpg" alt="Low Level Display Sample"></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/displays.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2019 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
