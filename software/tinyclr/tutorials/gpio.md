@@ -15,74 +15,38 @@ If the processor is powered from 3.3V, then the state high means that there is 3
 > [!Warning]
 > Digital pins on microcontrollers are weak. They can only be used to control small LEDs or transistors. Those transistors can, in turn, control devices with high power needs like a motor.
 
-This example will blink an LED on the FEZ.
+This example will blink the right most LED (PG7) on the board.
 
 ```csharp
 using System.Threading;
-using GHIElectronics.TinyCLR.Devices.Gpio;
-
-class Program {
-    private static void Main() {
-        var led = GpioController.GetDefault().OpenPin(
-            GHIElectronics.TinyCLR.Pins.FEZ.GpioPin.Led1);
-        led.SetDriveMode(GpioPinDriveMode.Output);
-
-        while (true) {
-            led.Write(GpioPinValue.High);
-            Thread.Sleep(100);
-            led.Write(GpioPinValue.Low);
-            Thread.Sleep(100);
-        }
-    }
-}
-
-```
-
-The previous example uses the FEZ pins class that enumerates all pins available on the FEZ. To blink an LED on hardware that does not have a pins class, you must use the GPIO pin's number to refer to it. This example can work on any STM32 chip.  As every port has 16 pins, we calculate the pin number as shown.
-
-```csharp
-using System;
-using System.Threading;
-using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
+using GHIElectronics.TinyCLR.Devices.Gpio;
 
-class Program {
-    private static void Main() {
-        var led = GpioController.GetDefault().OpenPin(
-        //PinNumber('E', 2));     //Buggy bot right flash
-        //PinNumber('C', 4));     //Buggy bot left flash
-        //PinNumber('C', 12));    //mini M4
-        //PinNumber('B', 2));     //Cerbuino
-        //PinNumber('A', 1));     //clicker
-        //PinNumber('E', 12));    //clicker2
-        //PinNumber('E', 15));    //Quail
-        //PinNumber('A', 10));    //netduino 3
-        //PinNumber('D', 5));     //411 red Discovery
-        //PinNumber('D', 15));    //411 blue Discovery
-        PinNumber('B', 9));     //FEZ LED1 (same as below)
-        //STM32F4.GpioPin.PB9);   //FEZ LED1
+namespace GPIOExample
+{
+    class Program
+    {
+        static void Main()
+        {
+            var led = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PG7);
 
-        led.SetDriveMode(GpioPinDriveMode.Output);
+            led.SetDriveMode(GpioPinDriveMode.Output);
 
-        while (true) {
-            led.Write(GpioPinValue.High);
-            Thread.Sleep(100);
-            led.Write(GpioPinValue.Low);
-            Thread.Sleep(100);
+            while (true)
+            {
+                led.Write(GpioPinValue.High);
+                Thread.Sleep(100);
+                led.Write(GpioPinValue.Low);
+                Thread.Sleep(100);
+            }
         }
-    }
-
-    private static int PinNumber(char port, byte pin) {
-        if (port < 'A' || port > 'E') throw new ArgumentException();
-
-        return ((port - 'A') * 16) + pin;
     }
 }
 
 ```
 
 ## Digital Inputs
-Digital inputs sense the state of an input pin based on its voltage. The pin can be high or low. Every pin has a maximum and minimum supported voltage. For example, the typical minimum voltage on most pins is 0 volts; a negative voltage may damage the pin or the processor. Also, the maximum that can be applied to most pins must be less than or equal to the processor's power supply voltage. Since most processors run on 3.3V, the highest voltage a pin should see is 3.3V. However, some processors that are powered by 3.3V are 5V tolerant -- they can withstand up to 5V on their inputs. The FEZ is 5V tolerant.
+Digital inputs sense the state of an input pin based on its voltage. The pin can be high or low. Every pin has a maximum and minimum supported voltage. For example, the typical minimum voltage on most pins is 0 volts; a negative voltage may damage the pin or the processor. Also, the maximum that can be applied to most pins must be less than or equal to the processor's power supply voltage. Since most processors run on 3.3V, the highest voltage a pin should see is 3.3V. However, some processors that are powered by 3.3V are 5V tolerant -- they can withstand up to 5V on their inputs. The SITCore is 5V tolerant.
 
 > [!Warning] 
 > 5V tolerant doesn't mean the processor can be powered by 5V, only that the input pins can tolerate 5V.
@@ -99,21 +63,26 @@ using System.Threading;
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
 
-class Program {
-    private static void Main() {
+class Program
+{
+    private static void Main()
+    {
         var gpio = GpioController.GetDefault();
-        var led = gpio.OpenPin(FEZ.GpioPin.Led1);
+        var led = gpio.OpenPin(SC20260.GpioPin.PG7);
         led.SetDriveMode(GpioPinDriveMode.Output);
 
-        var button = gpio.OpenPin(FEZ.GpioPin.Btn1);
+        var button = gpio.OpenPin(SC20260.GpioPin.PA0);
         button.SetDriveMode(GpioPinDriveMode.InputPullUp);
 
-        while (true) {
-            if (button.Read() == GpioPinValue.Low) {
+        while (true)
+        {
+            if (button.Read() == GpioPinValue.Low)
+            {
                 //Button is pressed.
                 led.Write(GpioPinValue.Low);
             }
-            else {
+            else
+            {
                 led.Write(GpioPinValue.High);
             }
             Thread.Sleep(10);   //Always give the system time to think!
@@ -150,10 +119,10 @@ class Program {
     private static void Main() {
         var gpio = GpioController.GetDefault();
 
-        led = gpio.OpenPin(FEZ.GpioPin.Led1);
+        led = gpio.OpenPin(SC20260.GpioPin.PG7);
         led.SetDriveMode(GpioPinDriveMode.Output);
 
-        var button = gpio.OpenPin(FEZ.GpioPin.Btn1);
+        var button = gpio.OpenPin(SC20260.GpioPin.PA0);
         button.SetDriveMode(GpioPinDriveMode.InputPullUp);
         button.ValueChanged += Button_ValueChanged;
 
@@ -173,19 +142,3 @@ class Program {
 > [!Tip] 
 > Once you type += after the event, hit the tab key and Visual Studio will automatically create the event for you.
 
-## UCM Standard Pins
-The [UCM Standard](../../../hardware/core/standard.md) provides a consistent mapping of pins to enable easily swapping out the underlying SoM. While the standard assigns a consistent name to each pin, the underlying pin on the processor is different, so it is helpful to use the `UCMStandard` class available in the `GHIElectronics.TinyCLR.Pins.UCM` library. Once you specify the device model to use, it will map the pins for you automatically. For example:
-
-```csharp
-using GHIElectronics.TinyCLR.Pins;
-using GHIElectronics.TinyCLR.Devices.Gpio;
-
-class Program {
-    private static void Main() {
-        UCMStandard.SetModel(UCMModel.UC5550);
-
-        var controller = GpioController.GetDefault();
-        var pin = controller.OpenPin(UCMStandard.GpioPin.A);
-    }
-}
-```
