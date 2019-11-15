@@ -81,7 +81,7 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 The SITCore is held in reset when the reset pin is low. Releasing it will begin the system startup process.
 
 There are three different components of the device firmware:
-1. GHI Bootloader: initializes the system, updates TinyCLR when needed, and executes TinyCLR.
+1. GHI Bootloader: Initializes the system, updates TinyCLR when needed, and executes TinyCLR.
 2. TinyCLR: loads, debugs, and executes the managed application.
 3. Managed application: the program developed by the customer.
 
@@ -97,7 +97,7 @@ The above discussed functions of LDR0, LDR1, and MODE are only during startup. A
 default GPIO state and are available to use as GPIO in the user application
 
 ## TinyCLR OS
-TinyCLR OS provides a way to program the G80 in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the G80 (instructions below) and then go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.
+TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.
 
 ### Loading the Firmware
 
@@ -136,8 +136,9 @@ The memory area reserved for native code in TinyCLR OS on SITCore starts at 0xC1
 
 ## Design Considerations
 
-### Footprint
+### Footprints
 The SC20100 is a standard LQFP100 14 x 14 mm. See the STM32H743VIT6 datasheet for the exact footprint.
+
 The SC20260 is a standard 265-TFBGA 14 x 14 mm. See the STM32H743XIH6 datasheet for the exact footprint.
 
 ### Required Pins
@@ -154,8 +155,8 @@ least 10% of the specified voltage. Decoupling capacitors of 0.1 uF are needed n
 large capacitor, typically 47 uF, should be near the G80 if the power supply is more than few inches away.
 
 ### Crystals
-The SITCore requires an external 8 MHz crystal and associated circuitry to function. For the RTC to function, a 32,768
-Hz crystal and circuitry are required. Please see the processor's documentation for advanced information.
+The SITCore requires an external 8 MHz crystal and associated circuitry to function. For the RTC to function, a 32.768
+kHz crystal and circuitry are required. Please see the processor's documentation for advanced information.
 
 ### Reset
 The reset pin is not pulled in any direction. Designs must be sure to use an appropriate pull-up resistor.

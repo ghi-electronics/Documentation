@@ -98,7 +98,7 @@ The above discussed functions of LDR0, LDR1, and MODE are only during startup. A
 default GPIO state and are available to use as GPIO in the user application
 
 ## TinyCLR OS
-TinyCLR OS provides a way to program the G80 in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the G80 (instructions below) and then go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.
+TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.
 
 ### Loading the Firmware
 
@@ -176,8 +176,8 @@ least 10% of the specified voltage. Decoupling capacitors of 0.1 uF are needed n
 large capacitor, typically 47 uF, should be near the G80 if the power supply is more than few inches away.
 
 ### Crystals
-The SITCore requires an external 8 MHz crystal and associated circuitry to function. For the RTC to function, a 32,768
-Hz crystal and circuitry are required. Please see the processor's documentation for advanced information.
+The SITCore requires an external 8 MHz crystal and associated circuitry to function. For the RTC to function, a 32.768
+kHz crystal and circuitry are required. Please see the processor's documentation for advanced information.
 
 ### Reset
 The reset pin is not pulled in any direction. Designs must be sure to use an appropriate pull-up resistor.
