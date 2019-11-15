@@ -66,3 +66,17 @@ public class Program
     }
 }
 ```
+
+## CAN Bit Timing Settings
+The following CAN bit timing parameters were calculated for a SITCore driving the SN65HVD230 CAN transceiver chip. See the [CAN Tutorial](can.md) for more information.
+
+| Baud | Propagation | Phase1 | Phase2 | Baudrate Prescaler | Synchronization Jump Width | Use Multi Bit Sampling | Sample Point | Max Osc. Tolerance | Max Cable Length
+|---|---|---|---|---|---|---|---|---|---
+| 33.333K | ? | ? | ? | ? | ? | False | 86.7% | 0.33% | 2145M
+| 83.333K | ? | ? | ? | ?  | 1 | False | 88.9% | 0.28% | 879M
+| 125K    | ? | ? | ? | ?  | 1 | False | 87.5% | 0.31% | 545M
+| 250K    | ? | ? | ? | ?  | 1 | False | 88.9% | 0.28% | 257M
+| 500K    | ? | ? | ? | ?   | 1 | False | 88.9% | 0.28% | 101M
+| 1M      | ? | ? | ? | ?   | 1 | False | 88.9% | 0.28% | 23M
+
+*Note: Maximum Oscillator Tolerance and Maximum Cable Length are theoretical maximums and must be tested to ensure reliability.*
