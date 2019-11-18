@@ -1,8 +1,7 @@
 # MQTT, IFTTT
 ---
-# If This Then That IOT Example.
----
-If This Then That (IFTTT) is a free service allowing users to automate tasks by using simple conditional statements to create scripts or Applets (previously called "recipes"). Some similar platforms you might want to check out include [Twilio](https://www.twilio.com/), [ThingSpeak](https://thingspeak.com/), [Stringify](https://www.stringify.com/), [Yonomi](https://www.yonomi.co/), and [Home Assistant](https://www.home-assistant.io/). IFTTT can be used to respond to both events on websites and events from devices. Some uses include:
+## If This Then That IOT Example.
+If This Then That (IFTTT) is a free service allowing users to automate tasks by using simple conditional statements to create scripts or Applets (previously called "recipes"). Some similar platforms you might want to check out include [Twilio](https://www.twilio.com/), [ThingSpeak](https://thingspeak.com/), [Yonomi](https://www.yonomi.co/), and [Home Assistant](https://www.home-assistant.io/). IFTTT can be used to respond to both events on websites and events from devices. Some uses include:
 
 * Turn on the lights when you come home.
 * Send a text message if rain is forecast.
@@ -17,15 +16,15 @@ If This Then That (IFTTT) is a free service allowing users to automate tasks by 
 
 The possibilities are almost endless. Here we will take you step by step through the process of making a simple FEZ based temperature alarm the will send a text message when the temperature drops below ten degrees celsius. First we will set up an IFTTT account, then create and test the needed applets, and finally program the FEZ to trigger the IFTTT applet.
 
-## Create an IFTTT Account
+### Create an IFTTT Account
 
 Signing up for IFTTT is easy and free -- just go to [IFTTT.com](https://ifttt.com) and click on the `Sign up` button in the upper right hand corner of the screen. You can sign up using your Google or Facebook account, or use an e-mail address and password to sign in. You'll want to get past where IFTTT is asking you to pick sites you use regularly or is introducing applets and get to the main screen. You can either select some sites/applets your just hit the "X" in the upper right corner.
 
-## Create the IFTTT Applets
+### Create the IFTTT Applets
 
 Three IFTTT applets will be needed for this project. An SMS Applet will be used to send the text message to your phone. A Webhooks Applet will be used to receive an HTTP GET request from the FEZ when the temperature goes below ten degrees. Finally, an If This Then That Applet will call the SMS Applet when triggered by the Webhooks Applet.
 
-### Create an SMS Applet
+#### Create an SMS Applet
 
 This is the Applet that will send a text message to your phone.
 
@@ -35,7 +34,7 @@ In the search box, search for "sms" and click on `Services` in the results page,
 
 Now click on the `Connect` button. You will be taken to a screen asking for your phone number. This is the number the text message will be sent to. Enter your phone number and click on the `Send PIN` button. IFTTT will send a PIN to your phone that is used to verify that the phone number is correct. After entering the four digit PIN and hitting the `Connect` button, you will be sent back to the SMS screen. The `Connect SMS` applet is now configured and tied to your phone number.
 
-### Create a Webhooks Applet
+#### Create a Webhooks Applet
 
 This is the Applet that will receive an HTTP GET command from the FEZ when the temperature goes below ten degrees.
 
@@ -47,7 +46,7 @@ Click on the `Documentation` button. A page with your key and instructions for t
 
 There is a `Test It` button on the screen, but the Webhooks Applet is not yet connected to the SMS Applet, so clicking on this button will not send a text to your phone.
 
-### Create an If This Then That Applet
+#### Create an If This Then That Applet
 
 We now have to create an applet that will use the Webhooks Applet as a trigger (if this) to call the SMS Applet (then that). In other words, if the Webhooks Applet receives the correct HTTP GET request, then the SMS Applet will send a text.
 
@@ -71,7 +70,7 @@ Now click on `+that`.
 
 You will be asked to choose an action service. Click on the green `SMS` box (search for "sms" if you don't see it), and then click on the green `Send me an SMS` box. You will be asked to complete action fields. We want to include the temperature reading as part of the text message, so click on the `Add Ingredient` button and select `Value1`. Now click the `Create action` button. You will now be asked to review and finish. If everything looks good hit the `Finish` button.
 
-### Testing Your IFTTT Applets
+#### Testing Your IFTTT Applets
 
 Let's test the Applets. Click on `My Applets` at the top left of the screen. Click on `Services` and then `Webhooks`. Click on the `Documentation` button. In the `{event}` field in the POST/GET URL, type in "FEZ_Temp_Alert" as shown below.
 
@@ -81,11 +80,11 @@ If you cut and past the resulting URL into your web browser and hit the `Enter` 
 
 ![Event Fired](images/event-fired.png)
 
-## Setup the FEZ
+### Setup the FEZ
 
 To setup the FEZ we will have to connect a temperature sensor and then program the FEZ to send the proper HTTP GET request when the temperature drops below 10 degrees.
 
-### Connect the Temperature Sensor
+#### Connect the Temperature Sensor
 
 For this demo we programmed the FEZ to act as a temperature alarm, but the same principles can be applied to any sensor that can be connected to the FEZ. You can also test the program without any sensor at all - just call SendSmsAlert() to simulate an alarm condition.
 
@@ -95,7 +94,7 @@ For our temperature sensor we used an NPN transistor (2N2222A) and an 8.2K resis
 
 The transistor is wired with its base and collector connected together so it is acting as a diode. When a constant current passes through this diode the voltage drop is a linear function with a temperature coefficient of about two millivolts per degree celsius. While a series resistor does not provide a true constant current source, it will be plenty accurate for this demo.
 
-### Programming the FEZ
+#### Programming the FEZ
 
 Start a new C# project. You will need to add the following NuGet packages:
 
