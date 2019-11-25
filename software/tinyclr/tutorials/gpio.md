@@ -85,9 +85,6 @@ class Program {
 
 ```
 
-> [!Tip]
-> if you are not using a FEZ, see the Output Port example above to see how to determine the pin number.
-
 ## Digital Input Events
 
 In the previous example the program loops forever.  The input attached to the button is checked during each iteration of the loop. The pin may be checked millions of times before the button is pressed! This method of checking inputs is called "polled input."
