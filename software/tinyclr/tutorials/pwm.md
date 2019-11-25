@@ -11,23 +11,26 @@ Pulse Width Modulation (PWM) is a very useful feature found on most microcontrol
 ## Energy Level
 PWM is perfect for dimming an LED or controlling the speed of a motor. When the duty cycle is 50%, half the energy is transferred to the attached load.
 
-This demo will fade the FEZ LED1 in and out
+This works on both the SITCore 20100 and 20260D dev boards. The left most LED on the board (PB0) will fade in and out.
 
 ```csharp
-using System.Threading;
 using GHIElectronics.TinyCLR.Devices.Pwm;
 using GHIElectronics.TinyCLR.Pins;
+using System.Threading;
 
 class Program {
     private static void Main() {
-        var controller = PwmController.FromName(FEZ.PwmChannel.Controller4.Id);
-        var led = controller.OpenChannel(FEZ.PwmChannel.Controller4.Led1);
+        var controller = PwmController.FromName(SC20260.PwmChannel.Controller3.Id);
+        var led = controller.OpenChannel(SC20260.PwmChannel.Controller3.PB0);
         controller.SetDesiredFrequency(10000);
+
         double duty = 0.5, speed = 0.01;
+        
         led.Start();
+        
         while (true) {
             if (duty <= 0 || duty >= 1.0) {
-                speed *= -1;    //Invert direction.
+                speed *= -1;    //Reverse direction.
                 duty += speed;
             }
 
@@ -38,6 +41,7 @@ class Program {
         }
     }
 }
+
    
 ```
 
