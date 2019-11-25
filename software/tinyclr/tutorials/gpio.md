@@ -15,30 +15,24 @@ If the processor is powered from 3.3V, then the state high means that there is 3
 > [!Warning]
 > Digital pins on microcontrollers are weak. They can only be used to control small LEDs or transistors. Those transistors can, in turn, control devices with high power needs like a motor.
 
-This example will blink the right most LED (PG7) on the board.
+This example will blink the left most LED (PB0) on the either the SC20100 or SC20260D dev board.
 
 ```csharp
-using System.Threading;
-using GHIElectronics.TinyCLR.Pins;
 using GHIElectronics.TinyCLR.Devices.Gpio;
+using GHIElectronics.TinyCLR.Pins;
+using System.Threading;
 
-namespace GPIOExample
-{
-    class Program
-    {
-        static void Main()
-        {
-            var led = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PG7);
+class Program {
+    static void Main() {
+        var led = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PH11);
+        led.SetDriveMode(GpioPinDriveMode.Output);
 
-            led.SetDriveMode(GpioPinDriveMode.Output);
+        while (true) {
+            led.Write(GpioPinValue.High);
+            Thread.Sleep(100);
 
-            while (true)
-            {
-                led.Write(GpioPinValue.High);
-                Thread.Sleep(100);
-                led.Write(GpioPinValue.Low);
-                Thread.Sleep(100);
-            }
+            led.Write(GpioPinValue.Low);
+            Thread.Sleep(100);
         }
     }
 }
@@ -58,37 +52,36 @@ In this example, a button is connected between ground and an input pin. We will 
 > [!Tip]
 > Never use an infinite loop without giving the system time to think. Add a short sleep to the loop or use events instead.
 
+This example will works with both the SC20100 and SC20260D dev boards. The left most LED (PB0) will light when the right most button (PD7/MODE) is pressed.
+
 ```csharp
-using System.Threading;
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
+using System.Threading;
 
-class Program
-{
-    private static void Main()
-    {
+class Program {
+    private static void Main() {
         var gpio = GpioController.GetDefault();
-        var led = gpio.OpenPin(SC20260.GpioPin.PG7);
+        var led = gpio.OpenPin(SC20260.GpioPin.PB0);
         led.SetDriveMode(GpioPinDriveMode.Output);
 
-        var button = gpio.OpenPin(SC20260.GpioPin.PA0);
+        var button = gpio.OpenPin(SC20260.GpioPin.PD7);
         button.SetDriveMode(GpioPinDriveMode.InputPullUp);
 
-        while (true)
-        {
-            if (button.Read() == GpioPinValue.Low)
-            {
+        while (true) {
+            if (button.Read() == GpioPinValue.Low) {
                 //Button is pressed.
-                led.Write(GpioPinValue.Low);
-            }
-            else
-            {
                 led.Write(GpioPinValue.High);
             }
+            else {
+                led.Write(GpioPinValue.Low);
+            }
+
             Thread.Sleep(10);   //Always give the system time to think!
         }
     }
 }
+
 
 ```
 
@@ -97,7 +90,7 @@ class Program
 
 ## Digital Input Events
 
-In the previous example the program looped forever.  The input attached to the button was checked during each iteration of the loop. The pin may be checked millions of times before the button is pressed! This method of checking inputs is called "polled input."
+In the previous example the program loops forever.  The input attached to the button is checked during each iteration of the loop. The pin may be checked millions of times before the button is pressed! This method of checking inputs is called "polled input."
 
 Using events to check an input instead of polling the input is often preferred. Once an event is set up it will automatically check the input on its own, freeing up the program to do other things. Also, it is possible to miss a change in input if you don't check (or poll) the input often enough. Events use interrupts to check inputs so you don't have to worry about missing anything.
 
@@ -107,33 +100,35 @@ Let's use event driven programming to respond to a button and turn an LED on and
 
 You will see a reference to a "falling edge" in the following code. A falling edge occurs when the state of a pin goes from high to low. A rising edge is just the opposite -- it occurs when a pin goes from low to high.
 
-This is a button controlled LED using events.
+This example works on both the SC20100 and SC20260D dev boards exactly the same as the above example, but uses events instead of polling.
 
 ```csharp
-using System.Threading;
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
+using System.Threading;
 
 class Program {
     private static GpioPin led;
     private static void Main() {
         var gpio = GpioController.GetDefault();
 
-        led = gpio.OpenPin(SC20260.GpioPin.PG7);
+        led = gpio.OpenPin(SC20260.GpioPin.PB0);
         led.SetDriveMode(GpioPinDriveMode.Output);
 
-        var button = gpio.OpenPin(SC20260.GpioPin.PA0);
+        var button = gpio.OpenPin(SC20260.GpioPin.PD7);
         button.SetDriveMode(GpioPinDriveMode.InputPullUp);
+
         button.ValueChanged += Button_ValueChanged;
 
-        Thread.Sleep(-1);   //Sleep to reduce power use and allow system to do other tasks.
+        //Sleep "forever" to reduce power use and allow the system to do other tasks.
+        Thread.Sleep(-1);
     }
 
     private static void Button_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e) {
         if (e.Edge == GpioPinEdge.FallingEdge)
-            led.Write(GpioPinValue.Low);
-        else
             led.Write(GpioPinValue.High);
+        else
+            led.Write(GpioPinValue.Low);
     }
 }
 
