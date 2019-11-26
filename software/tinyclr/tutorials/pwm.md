@@ -11,7 +11,7 @@ Pulse Width Modulation (PWM) is a very useful feature found on most microcontrol
 ## Energy Level
 PWM is perfect for dimming an LED or controlling the speed of a motor. When the duty cycle is 50%, half the energy is transferred to the attached load.
 
-This works on both the SITCore 20100 and 20260D dev boards. The left most LED on the board (PB0) will fade in and out.
+This example is written for the SC20260D dev board, but will run unchanged on the SC20100 dev board. The left most LED on the board (PB0) will fade in and out.
 
 ```csharp
 using GHIElectronics.TinyCLR.Devices.Pwm;
