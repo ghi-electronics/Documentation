@@ -18,29 +18,19 @@ using GHIElectronics.TinyCLR.Devices.Pwm;
 using GHIElectronics.TinyCLR.Devices.Servo;
 using System.Threading;
 
-class Program {
-    private static void Main() {
+class Program
+{
+    private static void Main()
+    {
         ServoMotor servo1 = new ServoMotor(ServoMotor.ServoType.Positional,
-        PwmController.FromName(FEZ.PwmChannel.Controller1.Id),
-        FEZ.PwmChannel.Controller1.D0);
-
-        servo1.ConfigurePulseParameters(0.5, 2.4);  //Settings for TowerPro SG90 micro servo.
-
-        ServoMotor servo2 = new ServoMotor(ServoMotor.ServoType.Continuous,
-        PwmController.FromName(FEZ.PwmChannel.Controller3.Id),
-        FEZ.PwmChannel.Controller3.D6);
+        PwmController.FromName(SC20260.PwmChannel.Controller3.Id),
+        SC20260.PwmChannel.Controller3.PB0);
 
         servo1.Set(0);
         Thread.Sleep(500);
         servo1.Set(180);
         Thread.Sleep(500);
         servo1.Stop();
-
-        servo2.Set(100);
-        Thread.Sleep(500);
-        servo2.Set(-100);
-        Thread.Sleep(500);
-        servo2.Stop();
 
         Thread.Sleep(-1);
     }

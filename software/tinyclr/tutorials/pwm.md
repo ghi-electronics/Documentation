@@ -81,8 +81,8 @@ class Program {
                               QUARTER, QUARTER, QUARTER, QUARTER, QUARTER, QUARTER,    QUARTERDOT,
                               EIGHTH,  WHOLE};
     private static void Main() {
-        var controller = PwmController.FromName(FEZ.PwmChannel.Controller1.Id);
-        var toneOut = controller.OpenChannel(FEZ.PwmChannel.Controller1.D0);
+        var controller = PwmController.FromName(SC20260.PwmChannel.Controller2.Id);
+        var toneOut = controller.OpenChannel(SC20260.PwmChannel.Controller2.PA15);
         toneOut.SetActiveDutyCyclePercentage(0.5);
         toneOut.Start();
         while (true) {
