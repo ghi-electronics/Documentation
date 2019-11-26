@@ -48,10 +48,12 @@ class Program {
 ## Musical Tones
 Musical notes have specific frequencies; C for example is about 261Hz. Plugging these numbers into an array and knowing the length of each tone is all that is needed to play some simple music. When playing notes by changing the frequency, keep the duty cycle set to 0.5.
 
+The following example is written for the SC20100 dev board.
+
 ```csharp
-using System.Threading;
 using GHIElectronics.TinyCLR.Devices.Pwm;
 using GHIElectronics.TinyCLR.Pins;
+using System.Threading;
 
 class Program {
     const int NOTE_C = 261;
@@ -60,7 +62,7 @@ class Program {
     const int NOTE_F = 349;
     const int NOTE_G = 392;
 
-    const int WHOLE_DURATION = 1000;
+    const int WHOLE_DURATION = 24;
     const int EIGHTH = WHOLE_DURATION / 8;
     const int QUARTER = WHOLE_DURATION / 4;
     const int QUARTERDOT = WHOLE_DURATION / 3;
@@ -75,22 +77,28 @@ class Program {
                           NOTE_E, NOTE_D, NOTE_C, NOTE_C, NOTE_D, NOTE_E, NOTE_D,
                           NOTE_C, NOTE_C};
 
-    private static int[] duration = { QUARTER, QUARTER, QUARTER, QUARTER, QUARTER, QUARTER,    QUARTER,
-                              QUARTER, QUARTER, QUARTER, QUARTER, QUARTER, QUARTERDOT, EIGHTH,
-                              HALF,    QUARTER, QUARTER, QUARTER, QUARTER, QUARTER,    QUARTER,
-                              QUARTER, QUARTER, QUARTER, QUARTER, QUARTER, QUARTER,    QUARTERDOT,
-                              EIGHTH,  WHOLE};
+    private static int[] duration = { QUARTER, QUARTER, QUARTER, QUARTER, QUARTER, QUARTER,
+                              QUARTER, QUARTER, QUARTER, QUARTER, QUARTER, QUARTER,
+                              QUARTERDOT, EIGHTH, HALF, QUARTER, QUARTER, QUARTER, QUARTER,
+                              QUARTER, QUARTER, QUARTER, QUARTER, QUARTER, QUARTER,
+                              QUARTER, QUARTER, QUARTERDOT, EIGHTH, WHOLE};
+
     private static void Main() {
-        var controller = PwmController.FromName(SC20260.PwmChannel.Controller2.Id);
-        var toneOut = controller.OpenChannel(SC20260.PwmChannel.Controller2.PA15);
+        var controller = PwmController.FromName(SC20100.PwmChannel.Controller14.Id);
+        var toneOut = controller.OpenChannel(SC20100.PwmChannel.Controller14.PA7);
         toneOut.SetActiveDutyCyclePercentage(0.5);
-        toneOut.Start();
+
         while (true) {
+            toneOut.Start();
+
             for (int i = 0; i < note.Length; i++) {
                 controller.SetDesiredFrequency(note[i]);
                 Thread.Sleep(duration[i]);
             }
-            Thread.Sleep(100);
+
+            toneOut.Stop();
+
+            Thread.Sleep(1000);
         }
     }
 }
