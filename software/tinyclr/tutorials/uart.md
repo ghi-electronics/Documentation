@@ -5,7 +5,7 @@ Serial data ports, called UARTs, transfer data between devices using two pins: T
 > [!Tip]
 > the TXD on one end (output) goes to the RXD on the other side (input) and vice versa.
 
-The easiest way to test a UART is by wiring a device's TXD to its RXD so any transmitted data is received by the same device. This is called a "loopback" test. The following code performs a simple loopback test on the FEZ. If you connect the TX pin directly to the RX pin, you will see "ABCDEF" in the output window when running this code.
+The easiest way to test a UART is by wiring a device's TXD to its RXD so any transmitted data is received by the same device. This is called a "loopback" test. The following code performs a simple loopback test on the SITCore SC20100 Dev Board. If you connect PE7, the COM7 RX pin, directly to the PE8, the COM7 TX pin, you will see "ABCDEF" in the output window when running this code.
 
 > [!Tip]
 > Don't forget to add the GHIElectronics.TinyCLR.Devices.Uart NuGet package!
@@ -19,12 +19,14 @@ using GHIElectronics.TinyCLR.Pins;
 
 class Program {
     private static void Main() {
-        var txBuffer = new byte[] { 0x41, 0x42, 0x43, 0x44, 0x45, 0x46 };    //A, B, C, D, E, F
+        var txBuffer = new byte[] { 0x41, 0x42, 0x43, 0x44, 0x45, 0x46 }; //A, B, C, D, E, F
         var rxBuffer = new byte[txBuffer.Length];
 
-        var myUart = UartController.FromName(FEZ.UartPort.Usart1);
+        var myUart = UartController.FromName(SC20100.UartPort.Uart7);
 
-        myUart.SetActiveSettings(9600, 8, UartParity.None, UartStopBitCount.One, UartHandshake.None);
+        myUart.SetActiveSettings(9600, 8, UartParity.None, UartStopBitCount.One,
+            UartHandshake.None);
+
         myUart.Enable();
         myUart.Write(txBuffer, 0, txBuffer.Length);
 
@@ -33,6 +35,7 @@ class Program {
                 var bytesReceived = myUart.Read(rxBuffer, 0, myUart.BytesToRead);
                 Debug.WriteLine(Encoding.UTF8.GetString(rxBuffer, 0, bytesReceived));
             }
+
             Thread.Sleep(20);
         }
     }
