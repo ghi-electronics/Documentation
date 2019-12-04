@@ -44,13 +44,14 @@ class Program {
 ```
 
 ## Event Handlers
-TinyCLR's UART API included the following event watchers:
+TinyCLR's UART API included the following event listeners:
 
 * ClearToSendChanged
 * DataReceived
 * ErrorReceived
 
-The following example demonstrates the DateReceived event.
+The following example is written for the SC20100 Dev Board. It works the same as the previous example, except it uses the DateReceived event. If you connect PE7, the COM7 RX pin, directly to the PE8, the COM7 TX pin, you will see "ABCDEF" in the output window when running this code.
+
 ```csharp
 using System.Diagnostics;
 using System.Text;
@@ -64,20 +65,22 @@ class Program {
     private static UartController myUart;
 
     private static void Main() {
-        txBuffer = new byte[] { 0x41, 0x42, 0x43, 0x44, 0x45, 0x46 };    //A, B, C, D, E, F
+        txBuffer = new byte[] { 0x41, 0x42, 0x43, 0x44, 0x45, 0x46 }; //A, B, C, D, E, F
         rxBuffer = new byte[txBuffer.Length];
-        myUart = UartController.FromName(FEZ.UartPort.Usart1);
 
-        myUart.SetActiveSettings(9600, 8, UartParity.None, UartStopBitCount.One, UartHandshake.None);
+        myUart = UartController.FromName(SC20100.UartPort.Uart7);
+
+        myUart.SetActiveSettings(9600, 8, UartParity.None, UartStopBitCount.One,
+            UartHandshake.None);
+
         myUart.Enable();
 
         myUart.DataReceived += MyUart_DataReceived;
 
         myUart.Write(txBuffer, 0, txBuffer.Length);
 
-        while (true) {
+        while (true)
             Thread.Sleep(20);
-        }
     }
 
     private static void MyUart_DataReceived(UartController sender, DataReceivedEventArgs e) {
@@ -91,7 +94,7 @@ class Program {
 > Once you type += after the event, hit the tab key and Visual Studio will automatically create the event for you.
 
 ## RS232
-UART uses the processor's voltage levels (logic levels) for transferring data. On the FEZ this is 0 to 3.3 volts. In the early days of computers UARTs used -12 to 12 volts to communicate reliably over longer distances. This is known as the RS232 standard.
+UART uses the processor's voltage levels (logic levels) for transferring data. On the SITCore this is 0 to 3.3 volts. In the early days of computers UARTs used -12 to 12 volts to communicate reliably over longer distances. This is known as the RS232 standard.
 
 Some PCs still include serial ports, but those are RS232 serial ports. A voltage level shifter is needed to properly connect a logic level UART to an RS232 device.
 
