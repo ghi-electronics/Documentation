@@ -61,12 +61,12 @@ The following CAN bit timing parameters were calculated for our SITCore Dev Boar
 
 | Baud | Propagation | Phase1 | Phase2 | Baudrate Prescaler | Synchronization Jump Width | Use Multi Bit Sampling | Sample Point | Max Osc. Tolerance | Max Cable Length
 |---|---|---|---|---|---|---|---|---|---
-| 33.333K | 1 | 13 | 2 | 90 | 1 | False | 87.5% | 0.31% | 2200M
-| 83.333K | 1 | 13 | 2 | 36 | 1 | False | 87.5% | 0.31% | 850M
-| 125K    | 1 | 13 | 2 | 24 | 1 | False | 87.5% | 0.31% | 550M
-| 250K    | 1 | 13 | 2 | 12 | 1 | False | 87.5% | 0.31% | 250M
-| 500K    | 1 | 13 | 2 | 6  | 1 | False | 87.5% | 0.31% | 100M
-| 1M      | 1 | 13 | 2 | 3  | 1 | False | 87.5% | 0.31% | 40M
+| 33.333K | 1 | 12 | 2 | 90 | 1 | False | 87.5% | 0.31% | 2200M
+| 83.333K | 1 | 12 | 2 | 36 | 1 | False | 87.5% | 0.31% | 850M
+| 125K    | 1 | 12 | 2 | 24 | 1 | False | 87.5% | 0.31% | 550M
+| 250K    | 1 | 12 | 2 | 12 | 1 | False | 87.5% | 0.31% | 250M
+| 500K    | 1 | 12 | 2 | 6  | 1 | False | 87.5% | 0.31% | 100M
+| 1M      | 1 | 12 | 2 | 3  | 1 | False | 87.5% | 0.31% | 40M
 
 *Note: Maximum Oscillator Tolerance and Maximum Cable Length are theoretical maximums and must be tested to ensure reliability.*
 
