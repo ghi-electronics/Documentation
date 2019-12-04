@@ -57,7 +57,7 @@ In the sample code below, the CAN bus is communicating at one Megabit per second
 
 ### CAN Bit Timing Settings
 
-The following CAN bit timing parameters were calculated for a SITCore driving a SN65HVD230 CAN driver chip.
+The following CAN bit timing parameters were calculated for our SITCore Dev Boards, but will work with any SITCore driving a SN65HVD230 CAN driver chip. When using a different CAN driver chip, the maximum cable length may be affected.
 
 | Baud | Propagation | Phase1 | Phase2 | Baudrate Prescaler | Synchronization Jump Width | Use Multi Bit Sampling | Sample Point | Max Osc. Tolerance | Max Cable Length
 |---|---|---|---|---|---|---|---|---|---
