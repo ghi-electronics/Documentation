@@ -92,7 +92,7 @@ The `WriteMessages()` method is used to send an array of CAN messages.  The argu
 `SetExplicitFilter()` takes an array argument which specifies individual arbitration IDs that will be accepted regardless of the group filter settings.  In the sample code below, CAN messages with arbitration IDs of `0x11` and `0x5678` will be accepted, in addition to the arbitration IDs specified by the group filters.
 
 ## Sample Code
-The following sample code is written for our G120E Dev Board.  It requires installation of the `GHIElectronics.TinyCLR.Core`, `GHIElectronics.TinyCLR.Devices` and `GHIElectronics.TinyCLR.Pins` Nuget packages.
+The following sample code is written for our SITCore SC20100 Dev Board.  It requires installation of the `GHIElectronics.TinyCLR.Core`, `GHIElectronics.TinyCLR.Devices` and `GHIElectronics.TinyCLR.Pins` NuGet packages.
  
 ```csharp
 using System;
@@ -104,19 +104,21 @@ using GHIElectronics.TinyCLR.Pins;
 
 class Program {
     private static void Main() {
-        var downButton = GpioController.GetDefault().OpenPin(G120E.GpioPin.P0_22);
-        downButton.SetDriveMode(GpioPinDriveMode.InputPullUp);
+        var Ldr0Button = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE3);
+        Ldr0Button.SetDriveMode(GpioPinDriveMode.InputPullUp);
 
-        var can = CanController.FromName(G120E.CanBus.Can1);
+        var can = CanController.FromName(SC20100.CanBus.Can1);
 
         var propagation = 1;
         var phase1 = 12;
         var phase2 = 2;
-        var baudratePrescaler = 4;
+        var baudratePrescaler = 12;
         var synchronizationJumpWidth = 1;
         var useMultiBitSampling = false;
 
-        can.SetBitTiming(new CanBitTiming(propagation, phase1, phase2, baudratePrescaler, synchronizationJumpWidth, useMultiBitSampling));
+        can.SetBitTiming(new CanBitTiming(propagation, phase1, phase2, baudratePrescaler,
+            synchronizationJumpWidth, useMultiBitSampling));
+
         can.Enable();
 
         var message = new CanMessage() {
@@ -138,18 +140,24 @@ class Program {
         can.ErrorReceived += Can_ErrorReceived;
 
         while (true) {
-            if (downButton.Read() == GpioPinValue.Low) can.WriteMessage(message);
+            if (Ldr0Button.Read() == GpioPinValue.Low)
+                can.WriteMessage(message);
+
             Thread.Sleep(100);
         }
     }
 
-    private static void Can_MessageReceived(CanController sender, MessageReceivedEventArgs e) {
+    private static void Can_MessageReceived(CanController sender,
+        MessageReceivedEventArgs e) {
+
         sender.ReadMessage(out var message);
 
         Debug.WriteLine("Arbitration ID: 0x" + message.ArbitrationId.ToString("X8"));
         Debug.WriteLine("Is extended ID: " + message.IsExtendedId.ToString());
-        Debug.WriteLine("Is remote transmission request: " + message.IsRemoteTransmissionRequest.ToString());
-        Debug.WriteLine("Time stamp: " + message.TimeStamp.ToString());
+        Debug.WriteLine("Is remote transmission request: "
+            + message.IsRemoteTransmissionRequest.ToString());
+
+        Debug.WriteLine("Time stamp: " + message.Timestamp.ToString());
 
         var data = "";
         for (var i = 0; i < message.Length; i++) data += Convert.ToChar(message.Data[i]);
@@ -157,7 +165,7 @@ class Program {
         Debug.WriteLine("Data: " + data);
     }
 
-    private static void Can_ErrorReceived(CanController sender, ErrorReceivedEventArgs e) => Debug.WriteLine("Error " + e.ToString());
+    private static void Can_ErrorReceived(CanController sender, ErrorReceivedEventArgs e)
+        => Debug.WriteLine("Error " + e.ToString());
 }
-
 ```
