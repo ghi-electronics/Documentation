@@ -57,18 +57,26 @@ In the sample code below, the CAN bus is communicating at one Megabit per second
 
 ### CAN Bit Timing Settings
 
-The following CAN bit timing parameters were calculated for our SITCore Dev Boards, but will work with any SITCore driving a SN65HVD230 CAN driver chip. When using a different CAN driver chip, the maximum cable length may be affected.
+The following CAN bit timing parameters were calculated for our SITCore Dev Boards and provide a good starting point for setting CAN timing. These values will work with any SITCore driving a SN65HVD230 CAN driver chip. When using a different CAN driver chip, the maximum cable length may be affected.
 
-| Baud | Propagation | Phase1 | Phase2 | Baudrate Prescaler | Synchronization Jump Width | Use Multi Bit Sampling | Sample Point | Max Osc. Tolerance | Max Cable Length
+| Baud | PropagationPhase1 | Phase2 | Baudrate Prescaler | Synchronization Jump Width | Use Multi Bit Sampling | Sample Point | Max Osc. Tolerance | Max Cable Length
 |---|---|---|---|---|---|---|---|---|---
-| 33.333K | 1 | 12 | 2 | 90 | 1 | False | 87.5% | 0.31% | 2200M
-| 83.333K | 1 | 12 | 2 | 36 | 1 | False | 87.5% | 0.31% | 850M
-| 125K    | 1 | 12 | 2 | 24 | 1 | False | 87.5% | 0.31% | 550M
-| 250K    | 1 | 12 | 2 | 12 | 1 | False | 87.5% | 0.31% | 250M
-| 500K    | 1 | 12 | 2 | 6  | 1 | False | 87.5% | 0.31% | 100M
-| 1M      | 1 | 12 | 2 | 3  | 1 | False | 87.5% | 0.31% | 40M
+| 33.333K | 13 | 2 | 90 | 1 | False | 87.5% | 0.31% | 2200M
+| 83.333K | 13 | 2 | 36 | 1 | False | 87.5% | 0.31% | 850M
+| 125K    | 13 | 2 | 24 | 1 | False | 87.5% | 0.31% | 550M
+| 250K    | 13 | 2 | 12 | 1 | False | 87.5% | 0.31% | 250M
+| 500K    | 13 | 2 | 6  | 1 | False | 87.5% | 0.31% | 100M
+| 1M      | 13 | 2 | 3  | 1 | False | 87.5% | 0.31% | 40M
 
 *Note: Maximum Oscillator Tolerance and Maximum Cable Length are theoretical maximums and must be tested to ensure reliability.*
+
+### Calculating Your Own CAN Bit Timing
+
+There are many online CAN calculators that can be used to help you with CAN timing. One of the better ones is here: [http://www.bittiming.can-wiki.info/](http://www.bittiming.can-wiki.info/). This page also has a lot of useful information about CAN including this helpful visualization of the time segments that comprise one bit of CAN data:
+
+![CAN bit segments](images/can-bit-segments.png)
+
+To use a CAN calculator, you will need to know the microcontroller's CAN clock speed. For the SITCore series of chips and SoMs this is 48 MHz, and can easily be found with the SourceClock property. For example, if your CAN controller is named "can," `Debug.WriteLine(can.SourceClock.ToString());` will display the CAN clock frequency in Hertz in the output window. 
 
 ### Sending CAN Messages
 
@@ -109,14 +117,13 @@ class Program {
 
         var can = CanController.FromName(SC20100.CanBus.Can1);
 
-        var propagation = 1;
-        var phase1 = 12;
+        var propagationPhase1 = 13;
         var phase2 = 2;
         var baudratePrescaler = 12;
         var synchronizationJumpWidth = 1;
         var useMultiBitSampling = false;
 
-        can.SetBitTiming(new CanBitTiming(propagation, phase1, phase2, baudratePrescaler,
+        can.SetBitTiming(new CanBitTiming(propagationPhase1, phase2, baudratePrescaler,
             synchronizationJumpWidth, useMultiBitSampling));
 
         can.Enable();
