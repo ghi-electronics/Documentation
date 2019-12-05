@@ -8,7 +8,7 @@
     <title>Analog In </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Analog In ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.23.1.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,11 +16,10 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix">
     <div id="wrapper">
       <header>
         
@@ -60,9 +59,7 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
-          </div>
+          <div class="sr-items"></div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -84,7 +81,7 @@
 <p>The resolution of the ADC determines its accuracy. An 8bit ADC has 256 steps to work with, 3.3V/256=0.013V. This means an increase of 0.013V will increase the value by one. In other words, a voltage change of less than 0.013V has no effect. The ADC on FEZ is 12bit and should fit most needs.</p>
 <div class="TIP"><h5>Tip</h5><p>Note that the analog channel number is not the pin number. We have these easily enumerated for FEZ, but you need to determine the channel number on a specific pin using your system&#39;s documentation.</p>
 </div>
-<p>This example will read the ratio, that is 0 to 1, of an analog input. After running the program, connect a wire from the analog pin to ground and you should see a zero or something really close to zero. Connect to 3.3V and you will see 1 or something close, like 0.99.</p>
+<p>This example is written for the SC20100 Dev Board, but will work unchanged on the SC20260 Dev Board as well. It will read the ratio, that is 0 to 1, of an analog input (PA0). After running the program, connect a wire from the analog pin to ground and you should see a zero or something really close to zero. Connect to 3.3V and you will see 1 or something close, like 0.99.</p>
 <pre><code class="lang-csharp">using System.Diagnostics;
 using System.Threading;
 using GHIElectronics.TinyCLR.Devices.Adc;
@@ -93,7 +90,8 @@ using GHIElectronics.TinyCLR.Pins;
 class Program {
     private static void Main() {
         var adc = AdcController.GetDefault();
-        var analog = adc.OpenChannel(FEZ.AdcChannel.A0);
+        var analog = adc.OpenChannel(SC20100.AdcChannel.Controller1.PA0);
+
         while (true) {
             double d = analog.ReadRatio();
             Debug.WriteLine(&quot;An-&gt; &quot; + d.ToString(&quot;N2&quot;));
@@ -109,7 +107,7 @@ class Program {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/analog-in.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/tinyclr/tutorials/analog-in.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -8,7 +8,7 @@
     <title>Release Notes </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Release Notes ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.23.1.0">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -16,11 +16,10 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    
     <meta property="docfx:rel" content="../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix">
     <div id="wrapper">
       <header>
         
@@ -60,9 +59,7 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
-          </div>
+          <div class="sr-items"></div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -95,11 +92,11 @@
 <li>SPWF04Sx Wi-Fi on the FEZ does not work unless PA0 is manually set low before initialization <a href="https://github.com/ghi-electronics/TinyCLR-Drivers/issues/28">#28</a>.</li>
 </ul>
 <h3 id="firmware">Firmware</h3>
-<h4 id="changes-1">Changes</h4>
+<h4 id="changes">Changes</h4>
 <ul>
 <li>None.</li>
 </ul>
-<h4 id="known-issues-1">Known Issues</h4>
+<h4 id="known-issues">Known Issues</h4>
 <ul>
 <li>Testing <code>NaN</code>s for equality gives unexpected results <a href="https://github.com/ghi-electronics/TinyCLR-Core/issues/231">#231</a>.</li>
 <li>The <code>.constrained</code> IL prefix is not supported and throws <code>UnsupportedInstructionException</code> <a href="https://github.com/ghi-electronics/TinyCLR-Core/issues/76">#76</a>.</li>
@@ -113,39 +110,39 @@
 <li>When not debugging the application may slow down <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/584">#584</a>.</li>
 </ul>
 <h3 id="tinyclr-config">TinyCLR Config</h3>
-<h4 id="changes-2">Changes</h4>
+<h4 id="changes">Changes</h4>
 <ul>
 <li>None.</li>
 </ul>
-<h4 id="known-issues-2">Known Issues</h4>
+<h4 id="known-issues">Known Issues</h4>
 <ul>
 <li>None.</li>
 </ul>
 <h3 id="extension">Extension</h3>
-<h4 id="changes-3">Changes</h4>
+<h4 id="changes">Changes</h4>
 <ul>
 <li>None.</li>
 </ul>
-<h4 id="known-issues-3">Known Issues</h4>
+<h4 id="known-issues">Known Issues</h4>
 <ul>
 <li>When adding an image or font to a resx file, a reference to the drawing assembly is not automatically added <a href="https://github.com/ghi-electronics/TinyCLR-SDK/issues/90">#90</a>.</li>
 </ul>
 <h3 id="porting">Porting</h3>
-<h4 id="changes-4">Changes</h4>
+<h4 id="changes">Changes</h4>
 <ul>
 <li>None.</li>
 </ul>
-<h4 id="known-issues-4">Known Issues</h4>
+<h4 id="known-issues">Known Issues</h4>
 <ul>
 <li>None.</li>
 </ul>
 <h2 id="100-preview3-on-2018-11-30">1.0.0-preview3 on 2018-11-30</h2>
-<h3 id="notes-1">Notes</h3>
+<h3 id="notes">Notes</h3>
 <p>This release is the third and final planned preview of the 1.0 release for TinyCLR. There have been no major changes in this release -- its entire focus was bug fixing. We&#39;ll wait a few weeks to ensure no major issues are discovered before rebuilding with the final release version numbers and doing the final release.</p>
 <p>We are also maintaining our decision to keep throwing an exception when <code>.constrained</code> is encountered instead of potentially allowing silent and incorrect behavior. It is currently known to be used when accessing overridden members on structs, particularly those from object like <code>ToString</code>, <code>Equals</code>, and <code>GetHashCode</code>. You&#39;ll encounter it on <code>enum</code> and <code>TimeSpan</code>, among others.</p>
 <p>The libraries, extension, and firmwares are all uploaded to their online sources so you can update your firmware using TinyCLR Config, update your packages using the NuGet package manager with the NuGet.org source, and update the VSIX from the extensions area of Visual Studio (make sure to include pre-releases for NuGet as this is still a preview). We will still make these binaries available on our own hosting as well, but the expected workflow remains the usual NuGet/marketplace search and download process you have for other packages and extensions. You can find all downloads in their respective sections on the <a href="downloads.html">downloads</a> page.</p>
-<h3 id="libraries-1">Libraries</h3>
-<h4 id="changes-5">Changes</h4>
+<h3 id="libraries">Libraries</h3>
+<h4 id="changes">Changes</h4>
 <ul>
 <li>Fixed cases where SPWF04Sx will sometimes lose writes <a href="https://github.com/ghi-electronics/TinyCLR-Drivers/issues/14">#14</a>.</li>
 <li>Fixed <code>SPWF04SxConnectionType</code> being misspelled <a href="https://github.com/ghi-electronics/TinyCLR-Drivers/issues/26">#26</a>.</li>
@@ -161,13 +158,13 @@
 <li>Changed <code>DrawPixel</code> in display controller to use the format of the display controller <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/543">#543</a>.</li>
 <li>Removed setter from <code>IDriveProvider.Name</code> in place of an <code>Initialize</code> method <a href="https://github.com/ghi-electronics/TinyCLR-Libraries/issues/297">#297</a>.</li>
 </ul>
-<h4 id="known-issues-5">Known Issues</h4>
+<h4 id="known-issues">Known Issues</h4>
 <ul>
 <li>Support for the embedded Visual Basic runtime is incomplete and some uses may throw cryptic compile errors <a href="https://github.com/ghi-electronics/TinyCLR-Libraries/issues/51">#51</a>.</li>
 <li>SPWF04Sx Wi-Fi on the FEZ does not work unless PA0 is manually set low before initialization <a href="https://github.com/ghi-electronics/TinyCLR-Drivers/issues/28">#28</a>.</li>
 </ul>
-<h3 id="firmware-1">Firmware</h3>
-<h4 id="changes-6">Changes</h4>
+<h3 id="firmware">Firmware</h3>
+<h4 id="changes">Changes</h4>
 <ul>
 <li>Fixed PWM jittering when decreasing the pulse width <a href="https://github.com/ghi-electronics/TinyCLR-Devices/issues/102">#102</a>.</li>
 <li>Fixed the reported messages received on CAN being incorrect <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/527">#527</a>.</li>
@@ -206,7 +203,7 @@
 <li>Improved performance of flushing the display on STM32F7 <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/487">#487</a>.</li>
 <li>Changed pins to default pull-up <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/563">#563</a>.</li>
 </ul>
-<h4 id="known-issues-6">Known Issues</h4>
+<h4 id="known-issues">Known Issues</h4>
 <ul>
 <li>Testing <code>NaN</code>s for equality gives unexpected results <a href="https://github.com/ghi-electronics/TinyCLR-Core/issues/231">#231</a>.</li>
 <li>The <code>.constrained</code> IL prefix is not supported <a href="https://github.com/ghi-electronics/TinyCLR-Core/issues/76">#76</a>.</li>
@@ -218,28 +215,28 @@
 <li>PWM polarity is opposite from what it should be on G120 and G400 <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/581">#581</a>.</li>
 <li>The first clock for signal generator is the same as idle state <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/582">#582</a>.</li>
 </ul>
-<h3 id="tinyclr-config-1">TinyCLR Config</h3>
-<h4 id="changes-7">Changes</h4>
+<h3 id="tinyclr-config">TinyCLR Config</h3>
+<h4 id="changes">Changes</h4>
 <ul>
 <li>Added a version field to the UI <a href="https://github.com/ghi-electronics/TinyCLR-Config/issues/24">#24</a>.</li>
 </ul>
-<h4 id="known-issues-7">Known Issues</h4>
+<h4 id="known-issues">Known Issues</h4>
 <ul>
 <li>None.</li>
 </ul>
-<h3 id="extension-1">Extension</h3>
-<h4 id="changes-8">Changes</h4>
+<h3 id="extension">Extension</h3>
+<h4 id="changes">Changes</h4>
 <ul>
 <li>Fixed deploying a project using fewer sectors than a previous project leaving old assemblies on the device <a href="https://github.com/ghi-electronics/TinyCLR-SDK/issues/151">#151</a>.</li>
 <li>Fixed inspecting certain variables in the debugger locking up the device <a href="https://github.com/ghi-electronics/TinyCLR-SDK/issues/152">#152</a>.</li>
 <li>Fixed rebooting TinyCLR sometimes throwing when trying to connect to the USB stream <a href="https://github.com/ghi-electronics/TinyCLR-SDK/issues/155">#155</a>.</li>
 </ul>
-<h4 id="known-issues-8">Known Issues</h4>
+<h4 id="known-issues">Known Issues</h4>
 <ul>
 <li>When adding an image or font to a resx file, a reference to the drawing assembly is not automatically added <a href="https://github.com/ghi-electronics/TinyCLR-SDK/issues/90">#90</a>.</li>
 </ul>
-<h3 id="porting-1">Porting</h3>
-<h4 id="changes-9">Changes</h4>
+<h3 id="porting">Porting</h3>
+<h4 id="changes">Changes</h4>
 <ul>
 <li>Fixed product version string showing the version numbers and not the friendly string <a href="https://github.com/ghi-electronics/TinyCLR-Core/issues/356">#356</a>.</li>
 <li>Fixed some API IDs and target names not matching <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/292">#292</a>.</li>
@@ -250,20 +247,20 @@
 <li>Added USB connection event and property <a href="https://github.com/ghi-electronics/TinyCLR-Core/issues/367">#367</a>.</li>
 <li>Removed the presence event and property from storage <a href="https://github.com/ghi-electronics/TinyCLR-Core/issues/361">#361</a>.</li>
 </ul>
-<h4 id="known-issues-9">Known Issues</h4>
+<h4 id="known-issues">Known Issues</h4>
 <ul>
 <li>None.</li>
 </ul>
 <h2 id="100-preview2-on-2018-09-28">1.0.0-preview2 on 2018-09-28</h2>
-<h3 id="notes-2">Notes</h3>
+<h3 id="notes">Notes</h3>
 <p>This release is the second preview of the 1.0 release for TinyCLR. It also marks the point where we are feature complete for 1.0! If we do another preview release, it&#39;ll just be a bug fix release. The biggest change in this release is the addition of a managed graphics provider and the initial release of some drivers for common chips (like the one on our old N18 display). There are also several usability tweaks to SPI and the three signals classes.</p>
 <p>To support uploading to the Visual Studio gallery, we had to change the package ID used by the project system extension. This means the old one will not get uninstalled when installing this release, so please uninstall the preview1 or older extensions manually.</p>
 <p>We&#39;re also releasing a tool to convert desktop TrueType fonts to the format used by TinyCLR. Keep in mind there are legal implications to using and distributing fonts and that we cannot provide advice on that. The tool used to convert binary files to <code>glb</code> and <code>ghi</code> files was also updated to support generating <code>UF2</code> files used by the BrainPad (which has its own new firmware in this release as well, available on <a href="https://brainpad.com/">https://brainpad.com/</a>).</p>
 <p>The UC2550 and UC5550 now come in a <code>glb</code> format instead of the old <code>ghi</code> format and you can find their device definitions in the ports repo as well. There is also a new bootloader for the UC5550 available on the <a href="../../hardware/loaders/ghi-bootloader.html">bootloader page</a>.</p>
 <p>We have decided to keep throwing an exception when <code>.constrained</code> is encountered instead of potentially allowing silent and incorrect behavior. It is currently known to be used when accessing overridden members on structs, particularly those from object like <code>ToString</code>, <code>Equals</code>, and <code>GetHashCode</code>. You&#39;ll encounter it on <code>enum</code> and <code>TimeSpan</code>, among others.</p>
 <p>The libraries are once again uploaded to our <a href="https://www.nuget.org/profiles/ghielectronics">NuGet account</a>. Make sure to enable finding prereleases in the NuGet package manager. We&#39;ve also uploaded the extension to the <a href="https://marketplace.visualstudio.com/items?itemName=ghielectronics.tinyclr-projectsystem">Visual Studio Marketplace</a> so you can download and install it from there and then keep it up to date with Visual Studio. We will still make them available on our own hosting as well, but the expected workflow remains the usual NuGet/marketplace search and download process you have for other packages and extensions. You can find all downloads in their respective sections on the <a href="downloads.html">downloads</a> page. As before, you can update your firmware using TinyCLR Config and now you can update your packages using the NuGet package manager from the online source.</p>
-<h3 id="libraries-2">Libraries</h3>
-<h4 id="changes-10">Changes</h4>
+<h3 id="libraries">Libraries</h3>
+<h4 id="changes">Changes</h4>
 <ul>
 <li>Added chip select setup time, hold time, and polarity to SPI settings.</li>
 <li>Added <code>Now</code> to <code>RtcController</code> that takes a <code>DataTime</code>.</li>
@@ -284,15 +281,15 @@
 <li>Removed <code>UseControllerChipSelect</code> from <code>SpiConnectionSettings</code>.</li>
 <li>Removed the constructor from <code>SpiConnectionSettings</code>.</li>
 </ul>
-<h4 id="known-issues-10">Known Issues</h4>
+<h4 id="known-issues">Known Issues</h4>
 <ul>
 <li>SPWF04Sx may sometimes lose writes <a href="https://github.com/ghi-electronics/TinyCLR-Drivers/issues/14">#14</a>.</li>
 <li>Support for the embedded Visual Basic runtime is incomplete and some uses may throw cryptic compile errors.</li>
 <li>A number of API names are missing from pins, notably RTC and SD.</li>
 <li>Carrier frequency does not work on signal generator.</li>
 </ul>
-<h3 id="firmware-2">Firmware</h3>
-<h4 id="changes-11">Changes</h4>
+<h3 id="firmware">Firmware</h3>
+<h4 id="changes">Changes</h4>
 <ul>
 <li>Added new BrainPad BP2 firmware.</li>
 <li>Added signals to UC2550 and UC5550.</li>
@@ -316,7 +313,7 @@
 <li>Implemented all of signal capture and pulse feedback and most of signal generator <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/357">#357</a>.</li>
 <li>Implemented many functions missing on USB client <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/398">#398</a>.</li>
 </ul>
-<h4 id="known-issues-11">Known Issues</h4>
+<h4 id="known-issues">Known Issues</h4>
 <ul>
 <li>PWM may jitter when decreasing the pulse length while enabled.</li>
 <li>Testing <code>NaN</code>s for equality gives unexpected results.</li>
@@ -331,26 +328,26 @@
 <li>G400 signal generator generates incorrect timings <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/461">#461</a>.</li>
 <li>UART handshaking behaves inconsistently <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/462">#462</a>.</li>
 </ul>
-<h3 id="tinyclr-config-2">TinyCLR Config</h3>
-<h4 id="changes-12">Changes</h4>
+<h3 id="tinyclr-config">TinyCLR Config</h3>
+<h4 id="changes">Changes</h4>
 <ul>
 <li>Fixed help URLs.</li>
 </ul>
-<h4 id="known-issues-12">Known Issues</h4>
+<h4 id="known-issues">Known Issues</h4>
 <ul>
 <li>None.</li>
 </ul>
-<h3 id="extension-2">Extension</h3>
-<h4 id="changes-13">Changes</h4>
+<h3 id="extension">Extension</h3>
+<h4 id="changes">Changes</h4>
 <ul>
 <li>Updated the package ID of the VSIX.</li>
 </ul>
-<h4 id="known-issues-13">Known Issues</h4>
+<h4 id="known-issues">Known Issues</h4>
 <ul>
 <li>When adding an image or font to a resx file, a reference to the drawing assembly is not automatically added.</li>
 </ul>
-<h3 id="porting-2">Porting</h3>
-<h4 id="changes-14">Changes</h4>
+<h3 id="porting">Porting</h3>
+<h4 id="changes">Changes</h4>
 <ul>
 <li>Added timestamps to many device event handlers <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/388">#388</a> <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/368">#368</a>.</li>
 <li>Added <code>IsValid</code> to <code>TinyCLR_Rtc_Controller</code>.</li>
@@ -373,12 +370,12 @@
 <li>Changed <code>RegionsRepeat</code> into contiguous and equal-sized in storage.</li>
 <li>Fixed the linker not always complaining when regions overflow <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/30">#30</a>.</li>
 </ul>
-<h4 id="known-issues-14">Known Issues</h4>
+<h4 id="known-issues">Known Issues</h4>
 <ul>
 <li>None.</li>
 </ul>
 <h2 id="100-preview1-on-2018-08-15">1.0.0-preview1 on 2018-08-15</h2>
-<h3 id="notes-3">Notes</h3>
+<h3 id="notes">Notes</h3>
 <p>This release is the first preview of the 1.0 release for TinyCLR. We will have at least one other preview after this one. The biggest change in this release is the rework and simplification of the devices library. It was divided into one library per peripheral to reduce deployment size for apps that don&#39;t require all libraries. We did keep the devices package as a metapackage that depends on the other packages so you can easily bring them all into your project if desired.</p>
 <p>Many of the devices did keep a familiar API like ADC, DAC, and GPIO. Others like I2C and SPI did keep a similar device API but the controller was reworked. Previously you&#39;d be able to call <code>FromId</code> on the device or controller object. Now you must call <code>FromName</code> on the controller and then call <code>GetDevice</code>. A few others had minor tweaks to names and members. Of particular note are that you must now call <code>Enable</code> to turn the display on and mounting with <code>FileSystem</code> now requires the <code>Hdc</code> property from the <code>SdCardController</code> instead of the controller instance itself.</p>
 <p>UART saw a lot of changes in this release. The entire storage library was removed and the <code>SerialCommunication</code> class was changed into <code>UartController</code> to mirror the pattern used with all of the other devices. <code>DataReader</code> and <code>DataWriter</code> are gone as well, so reading and writing to UART can only be done with a byte array.</p>
@@ -386,8 +383,8 @@
 <p>Given the amount of changes in the HAL layer we do expect a few more bugs in this release, but we are working to iron them all out before 1.0.</p>
 <p><code>.constrained</code> continues to throw in this release as we gather more data. It is currently known to be used when accessing overridden members on structs, particularly those from object like <code>ToString</code>, <code>Equals</code>, and <code>GetHashCode</code>. You&#39;ll encounter it on <code>enum</code> and <code>TimeSpan</code>, among others. We will be making a decision soon on whether or not to revert the exception before the final release.</p>
 <p>In preparation for the official 1.0 release we are no longer building the firmwares for older unsupported devices. Please see <a href="http://docs.ghielectronics.com/software/tinyclr/supported-devices.html">this doc</a> for more information. The source code remains available though so we invite you to contribute to it and build your own firmware. We have also uploaded the libraries to our <a href="https://www.nuget.org/profiles/ghielectronics">NuGet account</a>. Make sure to enable finding prereleases in the NuGet package manager. We will still make them available on our own hosting as well, but the expected workflow going forward is the usual NuGet search and download process you have for other packages and extensions. You can find all downloads in their respective sections on the <a href="downloads.html">downloads</a> page. As before you, can update your firmware using TinyCLR Config and now you can update your packages using the NuGet package manager from the online source. There are no new bootloaders in this release.</p>
-<h3 id="libraries-3">Libraries</h3>
-<h4 id="changes-15">Changes</h4>
+<h3 id="libraries">Libraries</h3>
+<h4 id="changes">Changes</h4>
 <ul>
 <li>Reworked the APIs of many of the peripherals in <code>GHIElectronics.TinyCLR.Devices</code> library, particularly UART.</li>
 <li>Split up the <code>GHIElectronics.TinyCLR.Devices</code> into one library per peripheral.</li>
@@ -405,7 +402,7 @@
 <li>Fixed <code>GetDirectories</code> always throwing <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/343">#343</a>.</li>
 <li>Reduced the default brightness of the light bulb on the BrainPad.</li>
 </ul>
-<h4 id="known-issues-15">Known Issues</h4>
+<h4 id="known-issues">Known Issues</h4>
 <ul>
 <li>SPWF04Sx may sometimes lose writes.</li>
 <li>Support for the embedded Visual Basic runtime is incomplete and some uses may throw cryptic compile errors.</li>
@@ -418,8 +415,8 @@
 <li><code>DisplayController.DrawPixel</code> draws the incorrect color.</li>
 <li>The timestamp is incorrect when creating a new file.</li>
 </ul>
-<h3 id="firmware-3">Firmware</h3>
-<h4 id="changes-16">Changes</h4>
+<h3 id="firmware">Firmware</h3>
+<h4 id="changes">Changes</h4>
 <ul>
 <li>Fixed I2C sharing conflicts incorrectly throwing <code>OutOfMemoryException</code> <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/298">#298</a>.</li>
 <li>Fixed <code>OutputEnablePolarity</code> being inverted on UC5550 <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/315">#315</a>.</li>
@@ -431,7 +428,7 @@
 <li>Fixed the display on the G400 reserving PC26 <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/336">#336</a>.</li>
 <li>Removed the SPI display controller implementation.</li>
 </ul>
-<h4 id="known-issues-16">Known Issues</h4>
+<h4 id="known-issues">Known Issues</h4>
 <ul>
 <li>PWM may jitter when decreasing the pulse length while enabled.</li>
 <li>UART handshaking may miss data on STM32F4.</li>
@@ -447,26 +444,26 @@
 <li>Many of the non-essential functions of USB client are not implemented <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/398">#398</a>.</li>
 <li>Using UART may eventually lockup the UC5550 <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/411">#411</a>.</li>
 </ul>
-<h3 id="tinyclr-config-3">TinyCLR Config</h3>
-<h4 id="changes-17">Changes</h4>
+<h3 id="tinyclr-config">TinyCLR Config</h3>
+<h4 id="changes">Changes</h4>
 <ul>
 <li>Allowed the app to be resized.</li>
 </ul>
-<h4 id="known-issues-17">Known Issues</h4>
+<h4 id="known-issues">Known Issues</h4>
 <ul>
 <li>None.</li>
 </ul>
-<h3 id="extension-3">Extension</h3>
-<h4 id="changes-18">Changes</h4>
+<h3 id="extension">Extension</h3>
+<h4 id="changes">Changes</h4>
 <ul>
 <li>None.</li>
 </ul>
-<h4 id="known-issues-18">Known Issues</h4>
+<h4 id="known-issues">Known Issues</h4>
 <ul>
 <li>When adding an image or font to a resx file a reference to the drawing assembly is not automatically added.</li>
 </ul>
-<h3 id="porting-3">Porting</h3>
-<h4 id="changes-19">Changes</h4>
+<h3 id="porting">Porting</h3>
+<h4 id="changes">Changes</h4>
 <ul>
 <li>Simplified many of the controller APIs.</li>
 <li>Removed the controller number from the various controllers.</li>
@@ -479,7 +476,7 @@
 <li>Changed specifying the deployment API to a dedicated function call.</li>
 <li>Changed <code>InteropManager::GetArgument</code> to start at index 0 for all arguments, regardless of instance or static.</li>
 </ul>
-<h4 id="known-issues-19">Known Issues</h4>
+<h4 id="known-issues">Known Issues</h4>
 <ul>
 <li>The linker will not error when regions overflow or overlap <a href="https://github.com/ghi-electronics/TinyCLR-Ports/issues/30">#30</a>.</li>
 </ul>
@@ -493,7 +490,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/release-notes.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/tinyclr/release-notes.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

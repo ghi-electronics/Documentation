@@ -8,7 +8,7 @@
     <title>Servo Motors </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Servo Motors ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.23.1.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,11 +16,10 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix">
     <div id="wrapper">
       <header>
         
@@ -60,9 +59,7 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
-          </div>
+          <div class="sr-items"></div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -80,11 +77,11 @@
 <h1 id="servo-motors">Servo Motors</h1>
 
 <hr>
-<p>A servo motor is basically a motor that has a small internal circuit allowing you to control it using electrical pulses. Servo motors are available as either continuous or positional servos. While they look identical, a positional servo only turns to a given position and then holds that position until you tell it to move to another position. A continuous servo motor will rotate continuously in one direction until it is told to either stop or reverse direction.</p>
-<p>The pulse that controls servos is sent every 20 ms. This pulse will usually have a width between 1 ms and 2 ms but varies depending on the make and model of the motor. The position of a positional servo is based on the width of the pulse, with a 1.5 ms pulse moving to the middle of travel (90 degree position). With a rotational servo, 1.5ms will stop the motor, 1 ms is full speed, and 2 ms is full speed in the opposite direction. </p>
+<p>A servo motor is a motor that has a small internal circuit allowing you to control it using electrical pulses. Servo motors are available as either continuous or positional servos. While they look identical, a positional servo only turns to a given position and then holds that position until you tell it to move to another position. A continuous servo motor will rotate continuously in one direction until it is told to either stop or reverse direction.</p>
+<p>The pulse that controls servos is sent every 20 ms. This pulse will usually have a width between 1 ms and 2 ms which varies depending on the make and model of the motor. The position of a positional servo is based on the width of the pulse, with a 1.5 ms pulse moving to the middle of travel (90 degree position). With a rotational servo, 1.5ms will stop the motor, 1 ms is full speed, and 2 ms is full speed in the opposite direction. </p>
 <div class="TIP"><h5>Tip</h5><p>As a rule, servos have three wires. Be sure the central wire is connected to 5V. The lighter color wire on one side of the connector is a signal and should be connected to a PWM pin. The third one, which is usually a darker color, is ground.</p>
 </div>
-<p>This example will turn the positional servo to the zero degree position, wait half a second, and then turn it to 180 degrees. It will then rotate the continuous servo at maximum speed for half a second, and then reverse direction for half a second. You must add add the servo class (the code below this example) to your project for it to work.</p>
+<p>This example is written for the SC20100 Dev Board. It will turn the positional servo (servo1) to the zero degree position, wait a second, and then turn it to 180 degrees. It will then rotate the continuous servo (servo2) at maximum speed for five seconds, and then reverse direction for five seconds. You must add the servo class (the code below this example) to your project for it to work.</p>
 <div class="TIP"><h5>Tip</h5><p>Most servos will have a 1 ms minimum pulse width and a 2 ms maximum pulse width, but check the specs of the motor to be sure.</p>
 </div>
 <pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Pins;
@@ -95,25 +92,25 @@ using System.Threading;
 class Program {
     private static void Main() {
         ServoMotor servo1 = new ServoMotor(ServoMotor.ServoType.Positional,
-        PwmController.FromName(FEZ.PwmChannel.Controller1.Id),
-        FEZ.PwmChannel.Controller1.D0);
+            PwmController.FromName(SC20100.PwmChannel.Controller15.Id),
+            SC20100.PwmChannel.Controller15.PE6);
 
         servo1.ConfigurePulseParameters(0.5, 2.4);  //Settings for TowerPro SG90 micro servo.
 
         ServoMotor servo2 = new ServoMotor(ServoMotor.ServoType.Continuous,
-        PwmController.FromName(FEZ.PwmChannel.Controller3.Id),
-        FEZ.PwmChannel.Controller3.D6);
+            PwmController.FromName(SC20100.PwmChannel.Controller2.Id),
+            SC20100.PwmChannel.Controller2.PA3);
 
         servo1.Set(0);
-        Thread.Sleep(500);
+        Thread.Sleep(1000);
         servo1.Set(180);
-        Thread.Sleep(500);
+        Thread.Sleep(1000);
         servo1.Stop();
 
         servo2.Set(100);
-        Thread.Sleep(500);
+        Thread.Sleep(5000);
         servo2.Set(-100);
-        Thread.Sleep(500);
+        Thread.Sleep(5000);
         servo2.Stop();
 
         Thread.Sleep(-1);
@@ -146,9 +143,14 @@ namespace GHIElectronics.TinyCLR.Devices.Servo {
             this.position = 0;
         }
 
-        public void ConfigurePulseParameters(double minimumPulseWidth, double maximumPulseWidth) {
-            if (minimumPulseWidth &gt; 1.5 || minimumPulseWidth &lt; 0.1) throw new ArgumentOutOfRangeException(&quot;Must be between 0.1 and 1.5 ms&quot;);
-            if (maximumPulseWidth &gt; 3 || maximumPulseWidth &lt; 1.6) throw new ArgumentOutOfRangeException(&quot;Must be between 1.6 and 3 ms&quot;);
+        public void ConfigurePulseParameters(double minimumPulseWidth,
+            double maximumPulseWidth) {
+
+            if (minimumPulseWidth &gt; 1.5 || minimumPulseWidth &lt; 0.1)
+                throw new ArgumentOutOfRangeException(&quot;Must be between 0.1 and 1.5 ms&quot;);
+
+            if (maximumPulseWidth &gt; 3 || maximumPulseWidth &lt; 1.6)
+                throw new ArgumentOutOfRangeException(&quot;Must be between 1.6 and 3 ms&quot;);
 
             this.minPulseLength = minimumPulseWidth;
             this.maxPulseLength = maximumPulseWidth;
@@ -159,20 +161,27 @@ namespace GHIElectronics.TinyCLR.Devices.Servo {
                 this.PositionalSetPosition(value);
                 this.position = value;
             }
-            else
+            else {
                 this.ContinousSetSpeed(value);
+            }
         }
 
         private void PositionalSetPosition(double angle) {
-            if (angle &lt; 0 || angle &gt; 180) throw new ArgumentOutOfRangeException(&quot;degrees&quot;, &quot;degrees must be between 0 and 180.&quot;);
+            if (angle &lt; 0 || angle &gt; 180)
+                throw new ArgumentOutOfRangeException(&quot;degrees&quot;,
+                    &quot;degrees must be between 0 and 180.&quot;);
 
-            var duty = ((angle / 180.0 * (this.maxPulseLength - this.minPulseLength)) + this.minPulseLength) / 20;
+            var duty = ((angle / 180.0 * (this.maxPulseLength - this.minPulseLength))
+                + this.minPulseLength) / 20;
+
             this.servo.SetActiveDutyCyclePercentage(duty);
             this.servo.Start();
         }
 
         private void ContinousSetSpeed(double speed) {
-            if (speed &lt; -100 || speed &gt; 100) throw new ArgumentOutOfRangeException(&quot;speed&quot;, &quot;speed must be between -100 and 100.&quot;);
+            if (speed &lt; -100 || speed &gt; 100)
+                throw new ArgumentOutOfRangeException(&quot;speed&quot;,
+                    &quot;speed must be between -100 and 100.&quot;);
 
             PositionalSetPosition(speed / 100 * 90 + 90);
         }
@@ -188,7 +197,7 @@ namespace GHIElectronics.TinyCLR.Devices.Servo {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/servo-motors.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/tinyclr/tutorials/servo-motors.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

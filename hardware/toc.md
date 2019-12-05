@@ -1,6 +1,6 @@
 # [Hardware](intro.md)
 
-# [Sitcore](core/intro.md)
+# [SITCore](core/intro.md)
 ## [System on Chip](core/system-on-chip.md)
 ## [System on Modules](core/system-on-modules.md)
 ## [Development Boards](core/development-boards.md)
@@ -72,3 +72,5 @@
 ## [Imaging](imaging.md)
 ## [Raspberry PI Hats](raspberrypi-hats.md)
 ## [mBuino](mbuino.md)
+
+# [Legal](../legal.md)

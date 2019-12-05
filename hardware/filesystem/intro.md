@@ -97,15 +97,6 @@ This is a legacy product, replaced by F40.
 * [User Manual](http://files.ghielectronics.com/downloads/Documents/Manuals/USBwiz%20User%20Manual.pdf)
 * [Firmware v2.29](http://files.ghielectronics.com/downloads/ALFAT/Firmwares/USBwiz%20Firmware%20v2.29.ghi)
 
-## Legal
-### License
-
-This product and its firmware and libraries are licensed royalty-free for commercial and noncommercial use. None of the provided documentation/schematics/libraries/sources are to be used in any manner outside for the benefit of implementing and using this product into your design.
-
-### Disclaimer
-
-IN NO EVENT SHALL GHI ELECTRONICS, LLC BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS PRODUCT, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. GHI ELECTRONICS, LLC LINE OF PRODUCTS ARE NOT DESIGNED FOR LIFE SUPPORT APPLICATIONS. SPECIFICATIONS, PRICE AND AVAILABILITY ARE SUBJECT TO CHANGE WITHOUT ANY NOTICE.
-
 ***
 
 Visit our main website at [**www.ghielectronics.com**](https://www.ghielectronics.com) and our community forums at [**forums.ghielectronics.com**](https://forums.ghielectronics.com/).

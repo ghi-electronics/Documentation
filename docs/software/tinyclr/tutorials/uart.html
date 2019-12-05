@@ -8,7 +8,7 @@
     <title>UART </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UART ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.23.1.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,11 +16,10 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix">
     <div id="wrapper">
       <header>
         
@@ -60,9 +59,7 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
-          </div>
+          <div class="sr-items"></div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -83,7 +80,7 @@
 <p>Serial data ports, called UARTs, transfer data between devices using two pins: TXD (transmit data) and RXD (receive data). UART stands for Universal Asynchronous Receiver Transmitter. Asynchronous means there is no clock signal to synchronize the two devices. The devices agree on a data rate, called the baud rate, and send a start bit the beginning of each transmitted character to keep the devices synchronized. </p>
 <div class="TIP"><h5>Tip</h5><p>the TXD on one end (output) goes to the RXD on the other side (input) and vice versa.</p>
 </div>
-<p>The easiest way to test a UART is by wiring a device&#39;s TXD to its RXD so any transmitted data is received by the same device. This is called a &quot;loopback&quot; test. The following code performs a simple loopback test on the FEZ. If you connect the TX pin directly to the RX pin, you will see &quot;ABCDEF&quot; in the output window when running this code.</p>
+<p>The easiest way to test a UART is by wiring a device&#39;s TXD to its RXD so any transmitted data is received by the same device. This is called a &quot;loopback&quot; test. The following code performs a simple loopback test on the SITCore SC20100 Dev Board. If you connect PE7, the COM7 RX pin, directly to the PE8, the COM7 TX pin, you will see &quot;ABCDEF&quot; in the output window when running this code.</p>
 <div class="TIP"><h5>Tip</h5><p>Don&#39;t forget to add the GHIElectronics.TinyCLR.Devices.Uart NuGet package!</p>
 </div>
 <pre><code class="lang-csharp">using System.Diagnostics;
@@ -94,12 +91,14 @@ using GHIElectronics.TinyCLR.Pins;
 
 class Program {
     private static void Main() {
-        var txBuffer = new byte[] { 0x41, 0x42, 0x43, 0x44, 0x45, 0x46 };    //A, B, C, D, E, F
+        var txBuffer = new byte[] { 0x41, 0x42, 0x43, 0x44, 0x45, 0x46 }; //A, B, C, D, E, F
         var rxBuffer = new byte[txBuffer.Length];
 
-        var myUart = UartController.FromName(FEZ.UartPort.Usart1);
+        var myUart = UartController.FromName(SC20100.UartPort.Uart7);
 
-        myUart.SetActiveSettings(9600, 8, UartParity.None, UartStopBitCount.One, UartHandshake.None);
+        myUart.SetActiveSettings(9600, 8, UartParity.None, UartStopBitCount.One,
+            UartHandshake.None);
+
         myUart.Enable();
         myUart.Write(txBuffer, 0, txBuffer.Length);
 
@@ -108,18 +107,19 @@ class Program {
                 var bytesReceived = myUart.Read(rxBuffer, 0, myUart.BytesToRead);
                 Debug.WriteLine(Encoding.UTF8.GetString(rxBuffer, 0, bytesReceived));
             }
+
             Thread.Sleep(20);
         }
     }
 }
 </code></pre><h2 id="event-handlers">Event Handlers</h2>
-<p>TinyCLR&#39;s UART API included the following event watchers:</p>
+<p>TinyCLR&#39;s UART API included the following event listeners:</p>
 <ul>
 <li>ClearToSendChanged</li>
 <li>DataReceived</li>
 <li>ErrorReceived</li>
 </ul>
-<p>The following example demonstrates the DateReceived event.</p>
+<p>The following example is written for the SC20100 Dev Board. It works the same as the previous example, except it uses the DateReceived event. If you connect PE7, the COM7 RX pin, directly to the PE8, the COM7 TX pin, you will see &quot;ABCDEF&quot; in the output window when running this code.</p>
 <pre><code class="lang-csharp">using System.Diagnostics;
 using System.Text;
 using System.Threading;
@@ -132,20 +132,22 @@ class Program {
     private static UartController myUart;
 
     private static void Main() {
-        txBuffer = new byte[] { 0x41, 0x42, 0x43, 0x44, 0x45, 0x46 };    //A, B, C, D, E, F
+        txBuffer = new byte[] { 0x41, 0x42, 0x43, 0x44, 0x45, 0x46 }; //A, B, C, D, E, F
         rxBuffer = new byte[txBuffer.Length];
-        myUart = UartController.FromName(FEZ.UartPort.Usart1);
 
-        myUart.SetActiveSettings(9600, 8, UartParity.None, UartStopBitCount.One, UartHandshake.None);
+        myUart = UartController.FromName(SC20100.UartPort.Uart7);
+
+        myUart.SetActiveSettings(9600, 8, UartParity.None, UartStopBitCount.One,
+            UartHandshake.None);
+
         myUart.Enable();
 
         myUart.DataReceived += MyUart_DataReceived;
 
         myUart.Write(txBuffer, 0, txBuffer.Length);
 
-        while (true) {
+        while (true)
             Thread.Sleep(20);
-        }
     }
 
     private static void MyUart_DataReceived(UartController sender, DataReceivedEventArgs e) {
@@ -156,7 +158,7 @@ class Program {
 </code></pre><div class="TIP"><h5>Tip</h5><p>Once you type += after the event, hit the tab key and Visual Studio will automatically create the event for you.</p>
 </div>
 <h2 id="rs232">RS232</h2>
-<p>UART uses the processor&#39;s voltage levels (logic levels) for transferring data. On the FEZ this is 0 to 3.3 volts. In the early days of computers UARTs used -12 to 12 volts to communicate reliably over longer distances. This is known as the RS232 standard.</p>
+<p>UART uses the processor&#39;s voltage levels (logic levels) for transferring data. On the SITCore this is 0 to 3.3 volts. In the early days of computers UARTs used -12 to 12 volts to communicate reliably over longer distances. This is known as the RS232 standard.</p>
 <p>Some PCs still include serial ports, but those are RS232 serial ports. A voltage level shifter is needed to properly connect a logic level UART to an RS232 device.</p>
 <div class="WARNING"><h5>Warning</h5><p>Connecting your device to an RS232 port without a proper voltage level shifter can damage your device.</p>
 </div>
@@ -168,7 +170,7 @@ class Program {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/uart.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/tinyclr/tutorials/uart.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

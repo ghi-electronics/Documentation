@@ -74,7 +74,7 @@
 ### [Servo Motors](tutorials/servo-motors.md)
 ### [Signal Generation and Capture](tutorials/signal-generation-capture.md)
 
-## Data Busses
+## Data Buses
 ### [SPI](tutorials/spi.md)
 ### [I2C](tutorials/i2c.md)
 ### [UART](tutorials/uart.md)

@@ -8,7 +8,7 @@
     <title>General Purpose Input Output (GPIO) </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="General Purpose Input Output (GPIO) ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.23.1.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,11 +16,10 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix">
     <div id="wrapper">
       <header>
         
@@ -60,9 +59,7 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
-          </div>
+          <div class="sr-items"></div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -90,146 +87,98 @@ If the processor is powered from 3.3V, then the state high means that there is 3
 </div>
 <div class="WARNING"><h5>Warning</h5><p>Digital pins on microcontrollers are weak. They can only be used to control small LEDs or transistors. Those transistors can, in turn, control devices with high power needs like a motor.</p>
 </div>
-<p>This example will blink an LED on the FEZ.</p>
-<pre><code class="lang-csharp">using System.Threading;
-using GHIElectronics.TinyCLR.Devices.Gpio;
-
-class Program {
-    private static void Main() {
-        var led = GpioController.GetDefault().OpenPin(
-            GHIElectronics.TinyCLR.Pins.FEZ.GpioPin.Led1);
-        led.SetDriveMode(GpioPinDriveMode.Output);
-
-        while (true) {
-            led.Write(GpioPinValue.High);
-            Thread.Sleep(100);
-            led.Write(GpioPinValue.Low);
-            Thread.Sleep(100);
-        }
-    }
-}
-</code></pre><p>The previous example uses the FEZ pins class that enumerates all pins available on the FEZ. To blink an LED on hardware that does not have a pins class, you must use the GPIO pin&#39;s number to refer to it. This example can work on any STM32 chip.  As every port has 16 pins, we calculate the pin number as shown.</p>
-<pre><code class="lang-csharp">using System;
-using System.Threading;
-using GHIElectronics.TinyCLR.Devices.Gpio;
+<p>While written for the SC20260D dev board, this example will work unchanged on the SC20100 dev board as well, blinking the left most LED (PB0).</p>
+<pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
+using System.Threading;
 
 class Program {
-    private static void Main() {
-        var led = GpioController.GetDefault().OpenPin(
-        //PinNumber(&#39;E&#39;, 2));     //Buggy bot right flash
-        //PinNumber(&#39;C&#39;, 4));     //Buggy bot left flash
-        //PinNumber(&#39;C&#39;, 12));    //mini M4
-        //PinNumber(&#39;B&#39;, 2));     //Cerbuino
-        //PinNumber(&#39;A&#39;, 1));     //clicker
-        //PinNumber(&#39;E&#39;, 12));    //clicker2
-        //PinNumber(&#39;E&#39;, 15));    //Quail
-        //PinNumber(&#39;A&#39;, 10));    //netduino 3
-        //PinNumber(&#39;D&#39;, 5));     //411 red Discovery
-        //PinNumber(&#39;D&#39;, 15));    //411 blue Discovery
-        PinNumber(&#39;B&#39;, 9));     //FEZ LED1 (same as below)
-        //STM32F4.GpioPin.PB9);   //FEZ LED1
-
+    static void Main() {
+        var led = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PH11);
         led.SetDriveMode(GpioPinDriveMode.Output);
 
         while (true) {
             led.Write(GpioPinValue.High);
             Thread.Sleep(100);
+
             led.Write(GpioPinValue.Low);
             Thread.Sleep(100);
         }
-    }
-
-    private static int PinNumber(char port, byte pin) {
-        if (port &lt; &#39;A&#39; || port &gt; &#39;E&#39;) throw new ArgumentException();
-
-        return ((port - &#39;A&#39;) * 16) + pin;
     }
 }
 </code></pre><h2 id="digital-inputs">Digital Inputs</h2>
-<p>Digital inputs sense the state of an input pin based on its voltage. The pin can be high or low. Every pin has a maximum and minimum supported voltage. For example, the typical minimum voltage on most pins is 0 volts; a negative voltage may damage the pin or the processor. Also, the maximum that can be applied to most pins must be less than or equal to the processor&#39;s power supply voltage. Since most processors run on 3.3V, the highest voltage a pin should see is 3.3V. However, some processors that are powered by 3.3V are 5V tolerant -- they can withstand up to 5V on their inputs. The FEZ is 5V tolerant.</p>
+<p>Digital inputs sense the state of an input pin based on its voltage. The pin can be high or low. Every pin has a maximum and minimum supported voltage. For example, the typical minimum voltage on most pins is 0 volts; a negative voltage may damage the pin or the processor. Also, the maximum that can be applied to most pins must be less than or equal to the processor&#39;s power supply voltage. Since most processors run on 3.3V, the highest voltage a pin should see is 3.3V. However, some processors that are powered by 3.3V are 5V tolerant -- they can withstand up to 5V on their inputs. The SITCore is 5V tolerant.</p>
 <div class="WARNING"><h5>Warning</h5><p>5V tolerant doesn&#39;t mean the processor can be powered by 5V, only that the input pins can tolerate 5V.</p>
 </div>
 <p>Unconnected input pins are called &quot;floating.&quot; They are in a high impedance state and are susceptible to surrounding noise which can make the pin read high or low. A resistor can be added to pull the pin high or low. Modern processors include internal pull-down or pull-up resistors that are controlled by software. Note that a pull-up resistor doesn&#39;t necessarily make a pin high -- something connected to the pin can still pull it low.</p>
 <p>In this example, a button is connected between ground and an input pin. We will enable the pull-up resistor making that pin high when the button is not pressed.  When the button is pressed it will overpower the pull-up and make the input low. We will read the status of the button and pass its state to an LED. </p>
 <div class="TIP"><h5>Tip</h5><p>Never use an infinite loop without giving the system time to think. Add a short sleep to the loop or use events instead.</p>
 </div>
-<pre><code class="lang-csharp">using System.Threading;
-using GHIElectronics.TinyCLR.Devices.Gpio;
+<p>While written for the SC20260D dev board, this example will work unchanged with the SC20100 dev board as well. The left most LED (PB0) will light when the right most button (PD7/MODE) is pressed.</p>
+<pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
+using System.Threading;
 
 class Program {
     private static void Main() {
         var gpio = GpioController.GetDefault();
-        var led = gpio.OpenPin(FEZ.GpioPin.Led1);
+        var led = gpio.OpenPin(SC20260.GpioPin.PB0);
         led.SetDriveMode(GpioPinDriveMode.Output);
 
-        var button = gpio.OpenPin(FEZ.GpioPin.Btn1);
+        var button = gpio.OpenPin(SC20260.GpioPin.PD7);
         button.SetDriveMode(GpioPinDriveMode.InputPullUp);
 
         while (true) {
             if (button.Read() == GpioPinValue.Low) {
                 //Button is pressed.
-                led.Write(GpioPinValue.Low);
-            }
-            else {
                 led.Write(GpioPinValue.High);
             }
+            else {
+                led.Write(GpioPinValue.Low);
+            }
+
             Thread.Sleep(10);   //Always give the system time to think!
         }
     }
 }
-</code></pre><div class="TIP"><h5>Tip</h5><p>if you are not using a FEZ, see the Output Port example above to see how to determine the pin number.</p>
-</div>
-<h2 id="digital-input-events">Digital Input Events</h2>
-<p>In the previous example the program looped forever.  The input attached to the button was checked during each iteration of the loop. The pin may be checked millions of times before the button is pressed! This method of checking inputs is called &quot;polled input.&quot;</p>
+</code></pre><h2 id="digital-input-events">Digital Input Events</h2>
+<p>In the previous example the program loops forever.  The input attached to the button is checked during each iteration of the loop. The pin may be checked millions of times before the button is pressed! This method of checking inputs is called &quot;polled input.&quot;</p>
 <p>Using events to check an input instead of polling the input is often preferred. Once an event is set up it will automatically check the input on its own, freeing up the program to do other things. Also, it is possible to miss a change in input if you don&#39;t check (or poll) the input often enough. Events use interrupts to check inputs so you don&#39;t have to worry about missing anything.</p>
 <p>When an event occurs, the program stops what it is doing and control is transferred to an event handler. An event handler is code you write that responds to the event. </p>
 <p>Let&#39;s use event driven programming to respond to a button and turn an LED on and off. We will raise an event when the value on the button&#39;s input pin changes because the button is pressed or released.</p>
 <p>You will see a reference to a &quot;falling edge&quot; in the following code. A falling edge occurs when the state of a pin goes from high to low. A rising edge is just the opposite -- it occurs when a pin goes from low to high.</p>
-<p>This is a button controlled LED using events.</p>
-<pre><code class="lang-csharp">using System.Threading;
-using GHIElectronics.TinyCLR.Devices.Gpio;
+<p>This example is written for the SC20260D dev board, but will also run unchanged on the SC20100 dev board. It works exactly the same as the above example, but uses events instead of polling.</p>
+<pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
+using System.Threading;
 
 class Program {
     private static GpioPin led;
     private static void Main() {
         var gpio = GpioController.GetDefault();
 
-        led = gpio.OpenPin(FEZ.GpioPin.Led1);
+        led = gpio.OpenPin(SC20260.GpioPin.PB0);
         led.SetDriveMode(GpioPinDriveMode.Output);
 
-        var button = gpio.OpenPin(FEZ.GpioPin.Btn1);
+        var button = gpio.OpenPin(SC20260.GpioPin.PD7);
         button.SetDriveMode(GpioPinDriveMode.InputPullUp);
+
         button.ValueChanged += Button_ValueChanged;
 
-        Thread.Sleep(-1);   //Sleep to reduce power use and allow system to do other tasks.
+        //Sleep &quot;forever&quot; to reduce power use and allow the system to do other tasks.
+        Thread.Sleep(-1);
     }
 
     private static void Button_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e) {
         if (e.Edge == GpioPinEdge.FallingEdge)
-            led.Write(GpioPinValue.Low);
-        else
             led.Write(GpioPinValue.High);
+        else
+            led.Write(GpioPinValue.Low);
     }
 }
 </code></pre><div class="TIP"><h5>Tip</h5><p>Once you type += after the event, hit the tab key and Visual Studio will automatically create the event for you.</p>
 </div>
-<h2 id="ucm-standard-pins">UCM Standard Pins</h2>
-<p>The <a href="../../../hardware/core/standard.html">UCM Standard</a> provides a consistent mapping of pins to enable easily swapping out the underlying SoM. While the standard assigns a consistent name to each pin, the underlying pin on the processor is different, so it is helpful to use the <code>UCMStandard</code> class available in the <code>GHIElectronics.TinyCLR.Pins.UCM</code> library. Once you specify the device model to use, it will map the pins for you automatically. For example:</p>
-<pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Pins;
-using GHIElectronics.TinyCLR.Devices.Gpio;
-
-class Program {
-    private static void Main() {
-        UCMStandard.SetModel(UCMModel.UC5550);
-
-        var controller = GpioController.GetDefault();
-        var pin = controller.OpenPin(UCMStandard.GpioPin.A);
-    }
-}
-</code></pre></article>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -237,7 +186,7 @@ class Program {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/gpio.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/tinyclr/tutorials/gpio.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
