@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Native Interops in TinyCLR </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Native Interops in TinyCLR ">
+    <meta name="generator" content="docfx 2.23.1.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="native-interops-in-tinyclr">Native Interops in TinyCLR</h1>
+
+<hr>
+<p>Interops allow you to write a class in managed code that is partially or entirely implemented in native code. This is useful for time critical tasks, things that would take too long in managed code, or interacting with native functionality not exposed through managed code. Keep in mind that while native code executes, all managed threads are blocked and if you crash in native code, managed code also crashes.</p>
+<p>To get started, create a TinyCLR project called <code>InteropTest</code>. In the project properties window, go to the <code>TinyCLR OS</code> tab. Check both the <code>Generate native stubs for internal methods</code> and the <code>Generate bare native stubs</code> checkboxes. Next, define your native API. Any method that you plan to implement in native code must be declared extern and be decorated with the <code>System.Runtime.CompilerServices.MethodImpl</code> attribute that is constructed with <code>MethodImplOptions.InternalCall</code>. Static and instance functions, static and instance constructors, finalizers, and property set and get bodies can all be implemented natively. They can have any visibility, can take any number or types of parameters, and can return any type. For example:</p>
+<pre><code class="lang-csharp">class MyNativeClass {
+    private int field = 5;
+
+    [MethodImpl(MethodImplOptions.InternalCall)]
+    public extern int MyNativeFunc(int arg0);
+
+    public extern int MyNativeProperty {
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        get;
+    }
+}
+</code></pre><p>Once you have your native API defined, build your project. In the output folder, find and open <code>pe</code> and then <code>Interop</code>. In there are three files that let TinyCLR connect the managed methods to the native methods. There are two main files that have the same name as your project. These define the entire API. Importantly, there is an object that has the assembly name, its checksum, and an array of its methods. The remaining file contains function stubs for each native method you need to implement from the <code>MyNativeClass</code> class. Each function has a single parameter of type <code>TinyCLR_Interop_MethodData</code> that can be found in the <code>TinyCLR.h</code> file. This type has two memebers: an opaque stack type that you pass to other interop functions and the <a href="apis.html">API provider</a> that gives you access to the runtime. You can use this API provider to find the interop provider. The interop provider allows you to read and write object fields, read arguments passed to the function, write to reference arguments, set the return value, raise other events, and create new managed objects. The following code shows reading from a field and setting it as the return value of the property:</p>
+<pre><code class="lang-cpp">TinyCLR_Result InteropTest_InteropTest_MyNativeClass::MyNativeFunc___I4__I4(const TinyCLR_Interop_MethodData md) {
+    auto ip = md.InteropManager;
+
+    TinyCLR_Interop_ClrValue arg;
+    TinyCLR_Interop_ClrValue ret;
+
+    ip-&gt;GetArgument(ip, 0, arg);
+    ip-&gt;GetReturn(ip, md.Stack, ret);
+
+    ret.Data.Numeric-&gt;I4 = arg.Data.Numeric-&gt;I4 * arg.Data.Numeric-&gt;I4;
+
+    return TinyCLR_Result::Success;
+}
+
+TinyCLR_Result InteropTest_InteropTest_MyNativeClass::MyNativeProperty___I4(const TinyCLR_Interop_MethodData md) {
+    auto ip = md.InteropManager;
+
+    const TinyCLR_Interop_ClrObject* self;
+    TinyCLR_Interop_ClrValue field;
+    TinyCLR_Interop_ClrValue ret;
+
+    ip-&gt;GetThisObject(ip, md.Stack, self);
+    ip-&gt;GetField(ip, self, InteropTest_InteropTest_MyNativeClass::FIELD___field___I4, field);
+    ip-&gt;GetReturn(ip, md.Stack, ret);
+
+    ret.Data.Numeric-&gt;I4 = field.Data.Numeric-&gt;I4;
+
+    return TinyCLR_Result::Success;
+}
+</code></pre><p>Now you need to compile these files. You can use free GCC compiler for example.</p>
+<ol>
+<li>Download and install <a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads">GCC</a>. The latest version we have tested is <code>7-2018-q2-update</code>.</li>
+<li>Download and extract the latest <a href="https://github.com/ghi-electronics/TinyCLR-Ports/releases">TinyCLR OS Core Library</a>. This is where you will find TinyLCR.h.</li>
+</ol>
+<p>To compile using GCC, the easiest way is to use a makefile and a scatterfile. We&#39;ve provided samples of each below.</p>
+<p>The makefile is setup to compile all cpp in the same directory it is and to do using for a Cortex M4 architecture. If you&#39;re not on CortexM4, change the <code>MCU_FLAGS</code> parameter accordingly. The output file is <code>InteropTest.bin</code>. You can change that with the <code>OUTPUT_NAME</code> property.</p>
+<pre><code class="lang-makefile" name="makefile">OUTPUT_NAME = InteropTest
+LINKERSCRIPT_NAME = scatterfile
+
+MCU_FLAGS = -mcpu=cortex-m4 -mthumb
+INC_DIRS = -I.
+
+CC = arm-none-eabi-g++.exe
+LD = arm-none-eabi-g++.exe
+OC = arm-none-eabi-objcopy.exe
+
+CC_FLAGS = $(INC_DIRS) $(MCU_FLAGS) -Os -std=c++11 -xc++ -Wall -Wabi -w -mabi=aapcs -fPIC -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics
+LD_FLAGS = $(MCU_FLAGS) -nostartfiles -lc -lgcc -T $(LINKERSCRIPT_NAME) -Wl,-Map,$(OUTPUT_NAME).map -Wl,--oformat -Wl,elf32-littlearm
+OC_FLAGS = -S -O binary
+
+SRC_FILES = $(wildcard *.cpp)
+OBJ_FILES = $(patsubst %.cpp, %.obj, $(SRC_FILES))
+ 
+rebuild: clean build
+
+clean:
+	del $(OBJ_FILES) $(OUTPUT_NAME).bin $(OUTPUT_NAME).elf $(OUTPUT_NAME).map
+
+build: $(OBJ_FILES)
+	$(LD) $(LD_FLAGS) -o $(OUTPUT_NAME).elf $^
+	$(OC) $(OC_FLAGS) $(OUTPUT_NAME).elf $(OUTPUT_NAME).bin
+
+%.obj: %.cpp
+	$(CC) -c $(CC_FLAGS) -o $@ $^
+</code></pre><p>You will need to adjust the file with the correct memory regions reserved for interops in the scatterfile by changing the <code>INTEROP_BASE</code> and <code>INTEROP_LENGTH</code> placeholders. You can find the interop region for your device, if it has one, in the device&#39;s documentation.</p>
+<pre><code name="scatterfile">MEMORY {
+    SDRAM (wx) : ORIGIN = INTEROP_BASE, LENGTH = INTEROP_LENGTH
+}
+
+SECTIONS {
+    . = ALIGN(4);
+
+    .text : {
+        *(.text)
+    }
+
+    .rodata ALIGN(4): {
+        *(.rodata )
+    }
+
+    .data ALIGN(4): {
+        *(.data)
+    }
+
+    .bss ALIGN(4): {
+        *(.bss)
+    }
+}
+</code></pre><p>Lastly, make sure that you place <code>TinyCLR.h</code> in the folder so that the interop files can see it. You need to use the file that corresponds to the release of the firmware you are running.</p>
+<p>To execute the makefile, you&#39;ll need to have make installed. You can get it from a toolkit like <a href="http://mingw.org/">MinGW</a> or, if you&#39;re on Windows 10, the Windows Subsystem for Linux. Once you have make installed, just navigate to the folder with the makefile and interop files in a shell and execute <code>make build</code>.</p>
+<div class="TIP"><h5>Tip</h5><p>If you use the Windows Subsystem for Linux, you&#39;ll need to change <code>del</code> in the makefile to <code>rm</code>.</p>
+</div>
+<p>You can also <strong>build interops in Visual Studio.</strong> This is a 3-part step-by-step <a href="https://forums.ghielectronics.com/t/the-power-of-interops-in-tinyclr-part-1/21855">tutorial</a>.</p>
+<p>Once you have a compiled image, look in the map file to find out where the interop definition variable <code>Interop_InteropTest</code> (if you&#39;re using the default names) got placed. You&#39;ll need to pass this address to the managed function that registers the interop. In managed code, add the compiled binary image as a resource and use the <code>Marshal</code> class to copy it into the correct location in memory. Then call <code>System.Runtime.InteropServices.Interop.Add</code> and pass it the address of the <code>Interop_InteropTest</code> object from the map file. You need to do this every time your program runs and before you call any of the native methods in your interop class.</p>
+<pre><code class="lang-csharp">var interop = Resources.GetBytes(Resources.BinaryResources.InteropTest);
+
+Marshal.Copy(interop, 0, new IntPtr(0x20016000), interop.Length);
+
+Interop.Add(new IntPtr(0x2001607C));
+
+var cls = new MyNativeClass();
+var prop = cls.MyNativeProperty;
+var func = cls.MyNativeFunc(2);
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/tinyclr/native/interops.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2019 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

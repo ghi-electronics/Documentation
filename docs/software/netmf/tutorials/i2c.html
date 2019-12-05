@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>I2C </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="I2C ">
+    <meta name="generator" content="docfx 2.23.1.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="i2c">I2C</h1>
+
+<hr>
+<p>I2C (pronounced eye-squared-sea, or eye-two-sea) was originally developed by Phillips to allow multiple chipsets to communicate on a 2-wire bus in home consumer devices. It has a master and one or more slaves sharing the same data bus. Instead of selecting the slaves using a digital pin like SPI (consuming an additional I/O pin), I2C uses an addressing mechanism to communicate to the selected device.</p>
+<p>Before data is transferred, the master sends out a 7-bit address address of the slave device it wants to communicate with. It also sends one bit indicating whether it wants to send data to the device or receive data from the device. When a slave sees its address on the bus, it will acknowledge its presence. At this point, the master can send or receive data. The master will start data transfers with a &quot;start&quot; condition before it sends any address or data and then end it with &quot;stop&quot; condition.</p>
+<p>The I2C uses two wires to communicate between the I2C Master and the I2C device. These two wires are known as the SDA and SCL lines. SDA stands for Serial Data, and SCL is Serial Clock.</p>
+<p>The I2C NETMF driver is based on transactions. If we want to read from a register on a sensor, we would first need to send it the register number we wish to read from, and then we need to read the register. Those are two transactions; a write followed by a read.</p>
+<h2 id="addressing">Addressing</h2>
+<p>One very important point about I2C is that I2C devices have a 7-bit address, but 8-bits are sent on the wire in the &quot;control byte&quot; when communicating with the I2C bus. The 8th bit tells the device whether the operation will be a read operation (the 8th bit is a 1) or a write operation (the 8th bit is a 0). When discussing I2C you should always make sure you are clear about the 7-bit address that your device uses, rather than stating your 8-bit read or write address.</p>
+<h2 id="software-i2c">Software I2C</h2>
+<p>When using I2C, it is highly recommended that you use the built-in hardware support for I2C. In some cases though it may be necessary to have another I2C bus or it is necessary to use specific pins that are not I2C pins. In this case, I2C can be handled completely in software, though performance will be lower.</p>
+<p>The GHI libraries include a software I2C implementation in the GHI.Hardware assembly (GHI.IO.SoftwareI2CBus).</p>
+<h2 id="an-i2c-example">An I2C Example</h2>
+<p>This example will read the value of the register on an I2C device with the 7-bit address of 0x38. As discussed above, you first have to write the register number you want to read, two in this case, and then read the value back.</p>
+<pre><code class="lang-cs">using Microsoft.SPOT;
+using Microsoft.SPOT.Hardware;
+
+public class Program
+{
+    public static void Main()
+    {
+        //create I2C object
+        //note that the netmf i2cdevice configuration requires a 7-bit address! It set the 8th R/W bit automatically.
+        I2CDevice.Configuration con =
+           new I2CDevice.Configuration(0x38, 400);
+        I2CDevice MyI2C = new I2CDevice(con);
+
+        // Create transactions
+        // We need 2 in this example, we are reading from the device
+        // First transaction is writing the &quot;read command&quot;
+        // Second transaction is reading the data
+        I2CDevice.I2CTransaction[] xActions =
+           new I2CDevice.I2CTransaction[2];
+
+        // create write buffer (we need one byte)
+        byte[] RegisterNum = new byte[1] { 2 };
+        xActions[0] = I2CDevice.CreateWriteTransaction(RegisterNum);
+        // create read buffer to read the register
+        byte[] RegisterValue = new byte[1];
+        xActions[1] = I2CDevice.CreateReadTransaction(RegisterValue);
+
+        // Now we access the I2C bus using a timeout of one second 
+        // if the execute command returns zero, the transaction failed (this 
+        // is a good check to make sure that you are communicating with the device correctly
+        // and don�t have a wiring issue or other problem with the I2C device)
+        if (MyI2C.Execute(xActions, 1000) == 0)
+        {
+            Debug.Print(&quot;Failed to perform I2C transaction&quot;);
+        }
+        else
+        {
+            Debug.Print(&quot;Register value: &quot; + RegisterValue[0].ToString());
+        }
+    }
+}
+</code></pre><h2 id="multiple-devices">Multiple Devices</h2>
+<p>The I2C object on NETMF is a representation of the &quot;bus&quot; and not the &quot;device&quot; so you can&#39;t construct multiple I2C objects. To access multiple I2C devices you need to have multiple configurations and then when accessing device &quot;A&quot; we need to use configuration &quot;A&quot; and when accessing device &quot;B&quot; we need to use configuration &quot;B&quot;.</p>
+<pre><code class="lang-cs">using Microsoft.SPOT;
+using Microsoft.SPOT.Hardware;
+
+public class Program
+{
+    public static void Main()
+    {
+        //create I2C Device object representing both devices on our bus
+        I2CDevice.Configuration conDeviceA =
+           new I2CDevice.Configuration(0x38, 400);
+        I2CDevice.Configuration conDeviceB =
+           new I2CDevice.Configuration(0x48, 400);
+
+        //create I2C Bus object using one of the devices on the bus
+        I2CDevice MyI2C = new I2CDevice(conDeviceA);
+        // Note you could have chosen to create the bus using the conDeviceB parameter, which ever you choose it will be the &quot;selected&quot; device on the bus to start with. Here&#39;s how you would do that:
+        // I2CDevice MyI2C = new I2CDevice(conDeviceB);
+
+        //create transactions (we need 2 in this example)
+        I2CDevice.I2CTransaction[] xActions =
+           new I2CDevice.I2CTransaction[2];
+
+        // create write buffer (we need one byte)
+        byte[] RegisterNum = new byte[1] { 2 };
+        xActions[0] = I2CDevice.CreateWriteTransaction(RegisterNum);
+        // create read buffer to read the register
+        byte[] RegisterValue = new byte[1];
+        xActions[1] = I2CDevice.CreateReadTransaction(RegisterValue);
+
+        // Explicitly set the I2C bus to access device A by setting the I2C Config to the Device A&#39;s config.
+        MyI2C.Config = conDeviceA;
+        if (MyI2C.Execute(xActions, 1000) == 0)
+        {
+            Debug.Print(&quot;Failed to perform I2C transaction&quot;);
+        }
+        else
+        {
+            Debug.Print(&quot;Register value: &quot; + RegisterValue[0].ToString());
+        }
+
+        // Explicitly set the I2C bus to access device B by setting the I2C Config to the Device B&#39;s config.
+        MyI2C.Config = conDeviceB;
+        if (MyI2C.Execute(xActions, 1000) == 0)
+        {
+            Debug.Print(&quot;Failed to perform I2C transaction&quot;);
+        }
+        else
+        {
+            Debug.Print(&quot;Register value: &quot; + RegisterValue[0].ToString());
+        }
+    }
+}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/netmf/tutorials/i2c.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2019 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

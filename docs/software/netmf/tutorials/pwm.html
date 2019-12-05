@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PWM </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="PWM ">
+    <meta name="generator" content="docfx 2.23.1.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="pwm">PWM</h1>
+
+<hr>
+<p>PWM is used to control of the ratio of a pin&#39;s high and low state, the &quot;duty cycle.&quot; This can be done using software or using built-in PWM pins on the processor. PWM pins have the advantage over Software PWM because the toggling is independent of the CPU. Software PWM is performed using the SignalGenerator class.</p>
+<p>PWM objects are constructed with the period and duration of the pulse.  The duration is how long the pin is high or active while the period is the time between one duration and the next. &quot;Duty Cycle&quot; is the ratio of the duration and the period -- as a convenience, a scale can be set. The scale is applied to the numbers assigned to the PWM&#39;s properties.</p>
+<p>A pin with duty cycle 0.5 will be high half the time and low the other half.</p>
+<p>Some common uses of PWM:</p>
+<ul>
+<li>control the intensity of lights and the speed of motors by changing the duty-cycle.</li>
+<li>generate audio tones by keeping the duty-cycle at 50% and changing the frequency.</li>
+<li>positioning of a servo by using a pulse with a specific duration or width.</li>
+</ul>
+<h2 id="net-micro-framework-pwm-channels">.NET Micro Framework PWM Channels</h2>
+<p>In NETMF, the PWM pins are defined in the &quot;Cpu.PWMChannel&quot; enumeration. As the enumeration has a limited number of members, the number of PWM pins may exceed the members. Casting can be used for those extra PWMs.</p>
+<pre><code class="lang-cs">// Using the enumeration
+PWM MyServo = new PWM(Cpu.PWMChannel.PWM_3, 2175, 175,
+                      PWM.ScaleFactor.Microseconds, false);
+
+// Lots of PWMs on processor, use a cast to access an extra PWM
+PWM LED = new PWM((Cpu.PWMChannel)9, 10000, 0.10, false);
+
+&gt; [!Tip]
+&gt; The examples shown below require the Microsoft.SPOT.Hardware.PWM assembly; 
+
+&gt; [!Warning]
+&gt; Some or all PWM pins share the same timers internally. This means the changing frequency on one pin will also effect the others. However, the duty cycle can be different on all pins. Users needing to determine which pins share the same timer have two options. Either use trial and error on all PWM pins or check the processor manual.
+
+## Controlling LEDs Brightness
+
+This example starts the LED at 0% intensity then slowly steps up to full intensity, after which it reverts to 0% and starts over.
+
+```cs
+using System.Threading;
+using Microsoft.SPOT.Hardware;
+
+public class Program
+{
+    static PWM MyFader = new PWM(Cpu.PWMChannel.PWM_0, 10000, 0.1, false);
+
+    public static void Main()
+    {
+        double i = 0.0;
+        while (true)
+        {
+            MyFader.DutyCycle = i;
+            /* DutyCycle is not dynamic so make a call to
+             * Start() to refresh the object */
+            MyFader.Start();
+
+            if ((i += 0.1) &gt;= 1.0)
+            {
+                i = 0.0;
+            }
+
+            Thread.Sleep(10);
+        }
+    }
+}
+</code></pre><h2 id="musical-tones">Musical Tones</h2>
+<p>Music notes have specific frequencies, for example C is about 261Hz. Plugging these numbers into an array and knowing the length of each tone is all that is needed to play some simple music.</p>
+<pre><code class="lang-cs">using System.Threading;
+using Microsoft.SPOT.Hardware;
+
+public class Program
+{
+    const int NOTE_C = 261;
+    const int NOTE_D = 294;
+    const int NOTE_E = 330;
+    const int NOTE_F = 349;
+    const int NOTE_G = 392;
+
+    const int WHOLE_DURATION = 1000;
+    const int EIGHTH = WHOLE_DURATION / 8;
+    const int QUARTER = WHOLE_DURATION / 4;
+    const int QUARTERDOT = WHOLE_DURATION / 3;
+    const int HALF = WHOLE_DURATION / 2;
+    const int WHOLE = WHOLE_DURATION;
+
+    //make sure the two below arrays match in length. each duration element corresponds to
+    //one note element.
+    static int[] note = { NOTE_E, NOTE_E, NOTE_F, NOTE_G, NOTE_G, NOTE_F, NOTE_E,
+                          NOTE_D, NOTE_C, NOTE_C, NOTE_D, NOTE_E, NOTE_E, NOTE_D,
+                          NOTE_D, NOTE_E, NOTE_E, NOTE_F, NOTE_G, NOTE_G, NOTE_F,
+                          NOTE_E, NOTE_D, NOTE_C, NOTE_C, NOTE_D, NOTE_E, NOTE_D,
+                          NOTE_C, NOTE_C};
+
+    static int[] duration = { QUARTER, QUARTER, QUARTER, QUARTER, QUARTER, QUARTER,    QUARTER,
+                              QUARTER, QUARTER, QUARTER, QUARTER, QUARTER, QUARTERDOT, EIGHTH,
+                              HALF,    QUARTER, QUARTER, QUARTER, QUARTER, QUARTER,    QUARTER,
+                              QUARTER, QUARTER, QUARTER, QUARTER, QUARTER, QUARTER,    QUARTERDOT,
+                              EIGHTH,  WHOLE};
+
+    public static void Main()
+    {
+        PWM MyPWM = new PWM(Cpu.PWMChannel.PWM_3, 261, 0.50, false);
+        while (true)
+        {
+            for (int i = 0; i &lt; note.Length; i++)
+            {
+                MyPWM.Stop();
+                MyPWM.Frequency = note[i];
+                MyPWM.Start();
+                Thread.Sleep(duration[i]);
+            }
+            Thread.Sleep(100);
+        }
+    }
+}
+</code></pre><h2 id="servos">Servos</h2>
+<p>For the servo in this example, if the pulse width is about 1.25ms then the servo is at 0 degrees. Increasing the pulse width to 1.50ms will move the servo to 90 degrees (neutral). A wider pulse of 1.75ms will move the servo to 180 degrees.</p>
+<p>Servos expect a pulse every 20ms to 30ms.</p>
+<p>It is important for the high pulse to be between 1.25ms and 1.75ms so that the servo&#39;s position is set properly.</p>
+<p>The code below will move the position of the servo to 180 degrees (using a pulse of 1.75ms). It uses a pause time between pulses of 20ms. So the period is 21.75ms and a duration of 1.75ms. Note the use of &quot;scale&quot;.</p>
+<pre><code class="lang-cs">using System.Threading;
+using Microsoft.SPOT.Hardware;
+
+public class Program
+{
+    public static void Main()
+    {
+        PWM MyServo = new PWM(Cpu.PWMChannel.PWM_3, 2175, 1750, PWM.ScaleFactor.Microseconds, false);
+
+        while (true)
+        {
+            // 0 degrees. 20ms period and 1.25ms high pulse
+            MyServo.Duration = 1250;
+            MyServo.Period = 20000;
+            MyServo.Start();
+            Thread.Sleep(1000);
+
+            // 90 degrees. 20ms period and 1.50ms high pulse
+            MyServo.Duration = 1500;
+            MyServo.Period = 20000;
+            MyServo.Start();
+            Thread.Sleep(1000);
+
+            // 180 degrees. 20ms period and 1.75ms high pulse
+            MyServo.Duration = 1750;
+            MyServo.Period = 20000;
+            MyServo.Start();
+            Thread.Sleep(1000);
+        }
+    }
+}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/netmf/tutorials/pwm.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2019 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

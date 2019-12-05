@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Watchdog </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Watchdog ">
+    <meta name="generator" content="docfx 2.23.1.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="watchdog">Watchdog</h1>
+
+<hr>
+<h2 id="introduction">Introduction</h2>
+<p>In the embedded system world, devices are usually always running and with no user interaction. So if something went wrong, it would be very beneficial if we have an automatic reset button. Watchdog is your reset button!</p>
+<p>Assume you are making a smart vending machine that reports its inventory over the network. If your code raises an exception that wasn&#39;t handled properly then your program will end. Program ended means the vending machine will no longer work. Someone will have to drive to the vending machine to reset it! The alternative is to use the watchdog.</p>
+<p>When watchdog is enabled, it is given a timeout where it will reset the system if the time reached without resetting the timeout. This is like saying &quot;reset the system in 5 seconds&quot; then the program goes on to do something. The program needs to come back and reset the time and say &quot;reset in 5 seconds&quot;. If the program keeps doing this, the system will never reset. But if the program got stuck somewhere, the 5 seconds will end causing the system to reset.</p>
+<div class="TIP"><h5>Tip</h5><p>GHI does not use the NETMF&#39;s built in services for watchdog, but uses its own.</p>
+</div>
+<p>Use the GHI.Hardware assembly when using watchdog.</p>
+<div class="WARNING"><h5>Warning</h5><p>Do NOT set the Watchdog reset time too short during the debug phase. If it is shorter than the time taken to deploy your code then your device will reboot and the new code never gets loaded. The only way to get out of the problem is to erase the device and reflash the firmware.</p>
+</div>
+<p>We advice not to use watchdog during development and debugging.</p>
+<h2 id="max-timeouts">Max Timeouts</h2>
+<p>The following lists shows the max timeout value for watchdog on our various devices in milliseconds. Do note that for G120 and EMX, there is roughly a 30% margin of error around the max value where the device may still reset.</p>
+<ul>
+<li>G400: 15,995</li>
+<li>G120: 134,217</li>
+<li>EMX: 4,294,967</li>
+<li>Cerberus: 32768</li>
+</ul>
+<h2 id="five-second-watchdog">Five Second Watchdog</h2>
+<p>This example shows how to set the watchdog to 5 seconds timeout and create a thread to clear the watchdog every 3 seconds. Should anything go wrong and the thread that clears the watchdog isn&#39;t able the run due to another thread using all of the available resources, the device will reset in 5 seconds.</p>
+<div class="TIP"><h5>Tip</h5><p>Once you enable the Watchdog, it cannot be disabled. So you have to keep resetting the timeout. This is done to assure that no system corruption will disable watchdog accidentally.</p>
+</div>
+<pre><code class="lang-cs">using System;
+using System.Threading;
+using GHI.Processor;
+
+public class Program
+{
+    public static void Main()
+    {
+        // Timeout 5 seconds
+        int timeout = 1000 * 5;
+
+        // Enable Watchdog
+        Watchdog.Enable(timeout);
+
+        // Start a time counter reset thread
+        WDTCounterReset = new Thread(WDTCounterResetLoop);
+        WDTCounterReset.Start();
+
+        // ....
+        // your program starts here
+
+        // If we exit the program, 
+        // the thread will stop working and the system will reset!
+        Thread.Sleep(Timeout.Infinite);
+    }
+
+    static Thread WDTCounterReset;
+    static void WDTCounterResetLoop()
+    {
+        while (true)
+        {
+            // reset time counter every 3 seconds
+            Thread.Sleep(3000);
+
+            Watchdog.ResetCounter();
+        }
+    }
+}
+</code></pre><p>You may be thinking, if the software locked up then how would the code that handles watchdog ever run?  It works because the watchdog is supported in hardware not software. This means that the counter and the reset mechanism are done inside the processor, without the need for any software.</p>
+<h2 id="detecting-watchdog">Detecting Watchdog</h2>
+<p>In some cases, you need to know if the system did reset because of a watchdog to log this info or run some recovery procedures. This is how it works</p>
+<pre><code>using System;
+using System.Threading;
+using Microsoft.SPOT;
+using GHI.Processor;
+
+
+public class Program
+{
+    public static void Main()
+    {
+        // Normally, you can read this flag ***ONLY ONCE*** on power up
+        if (Watchdog.LastResetCause == Watchdog.ResetCause.Watchdog)
+        {
+            Debug.Print(&quot;Watchdog did Reset&quot;);
+        }
+        else
+        {
+            Debug.Print(&quot;Reset switch or system power&quot;);
+        }
+    }
+}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/netmf/tutorials/watchdog.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2019 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>In-Field Update </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="In-Field Update ">
+    <meta name="generator" content="docfx 2.23.1.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="in-field-update">In-Field Update</h1>
+
+<hr>
+<p>One of GHI Electronics&#39;s additions to NETMF includes the In-Field Update (IFU) class allowing devices to be updated in the field. Updates can be obtained over the network or via USB memory, an SD card, or even through a serial port. File encryption and integrity checking can be implemented if desired.</p>
+<p>Once the data is available, it is passed on to IFU and then stored internally in RAM. Once all of the data is received and loaded by the developer, a single call will wipe the flash and write the new files. Only the regions that are being updated are erased.</p>
+<div class="WARNING"><h5>Warning</h5><p>The final stage will erase the flash and write the new data. This can take some time depending on the board. Losing power during this process will cause the update to fail and require the device to be updated manually.</p>
+</div>
+<h2 id="extracting-an-existing-application">Extracting an Existing Application</h2>
+<p>Creating a hex file to flash to your deployed board is easy. For example, if you have a board in the field (mall kiosk, traffic signal, etc) that is difficult to access, just deploy the new version of your program to another board of the same type. Then open MFDeploy, select USB, and select <code>Target</code> &gt; <code>Application Deployment</code> &gt; <code>Create Application Deployment</code> as shown below.</p>
+<div class="TIP"><h5>Tip</h5><p>If you would like the next version of your application to have the same update ability, be sure to include the update code in it as well.</p>
+</div>
+<p><img src="images/netmf-deployment-tool.jpg" alt="NETMF Deployment Tool"></p>
+<p>Now select the name of the file that you would like to use and where to save it.</p>
+<p><img src="images/create-application-deployment.jpg" alt="Create Application Deployment"></p>
+<p>Once this is done, you can place this file on an SD card and insert it into your device, or you can send it to you device over a network. The next section will demonstrate how to load the files and perform the update.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>The following example shows you how to load data into IFU and then flash the device. It requires the GHI.Hardware assembly and assumes that you have already mounted an SD card. Since firmware files can large and often cannot be held in entirely in memory we only load portions of the file at a time.</p>
+<pre><code class="lang-cs">using GHI.Processor;
+using System.IO;
+
+public class Program {
+    public const int BLOCK_SIZE = 65536;
+
+    public static void FlashFirmware() {
+        // Reserve the memory needed to buffer the update.
+        // A lot of RAM is needed so it is recommended to do this at the program start.
+        InFieldUpdate.Initialize(InFieldUpdate.Types.Firmware | InFieldUpdate.Types.Configuration);
+
+        // Start loading the new firmware on the RAM reserved in last step.
+        // Nothing is written to FLASH in this stage. Power loss and failures are okay.
+        // Simply abort this stage any way you like!
+        // Files can come from storage, from network, from serial bus or any other way.
+        LoadFile(&quot;\\SD\\Config.hex&quot;, InFieldUpdate.Types.Configuration);
+        LoadFile(&quot;\\SD\\Firmware.hex&quot;, InFieldUpdate.Types.Firmware);
+        LoadFile(&quot;\\SD\\Firmware2.hex&quot;, InFieldUpdate.Types.Firmware); //Only if your device has two firmware files.
+
+        // This method will copy The new firmware from RAM to FLASH.
+        // This function will not return but will reset the system when done.
+        // Power loss before this function resets the system will result in corrupted firmware.
+        // A manual update will be needed if this method fails (due to power loss for example).
+        InFieldUpdate.FlashAndReset();
+    }
+
+    public static void LoadFile(string filename, InFieldUpdate.Types type) {
+        using (var stream = new FileStream(filename, FileMode.Open)) {
+            var data = new byte[BLOCK_SIZE];
+
+            for (int i = 0; i &lt; stream.Length / BLOCK_SIZE; i++) {
+                stream.Read(data, 0, BLOCK_SIZE);
+                InFieldUpdate.Load(type, data, BLOCK_SIZE);
+            }
+
+            stream.Read(data, 0, (int)stream.Length % BLOCK_SIZE);
+            InFieldUpdate.Load(type, data, (int)stream.Length % BLOCK_SIZE);
+        }
+    }
+}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/netmf/tutorials/in-field-update.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2019 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

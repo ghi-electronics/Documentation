@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Graphics </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Graphics ">
+    <meta name="generator" content="docfx 2.23.1.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="graphics">Graphics</h1>
+
+<hr>
+<h2 id="introduction">Introduction</h2>
+<p>NETMF provides excellent support for graphics through the Bitmap class (that we also supplement with our Glide library). It can draw various shapes, text, and images from BMPs, JPGs, and GIFs -- which can be obtained from the file system, network, or resources.</p>
+<p>When drawing on a bitmap, everything is rendered on an in-memory object that can be quite large depending on your screen size. To transfer a bitmap object from memory to the screen, we need to call Flush on the bitmap object. Flush will only work if the size of the bitmap is exactly the size of the screen. If it is any other size, no image will be displayed.</p>
+<h2 id="non-native-support">Non-Native Support</h2>
+<p>Some smaller devices do not have a built in LCD controller. As a result, they can only use displays through a different type of bus, often SPI. Depending on your exact display, you may need to call a display specific function in its driver to draw on the scree. However, some SPI displays do support the Flush method on bitmaps, so be sure to consult your display documentation.</p>
+<h2 id="display-configuration">Display Configuration</h2>
+<p>In order to use a display, you must configure it. You can select the display type from FEZ Config on the LCD Configuration tab or you can execute the below code (make sure to select your actual display). After you set the configuration, the device must reboot for it to take effect. The Save method returns whether or not a reboot is needed.</p>
+<p>If you are using a display that is not present under GHIDisplay, you will need to configure the properties on the Display object instead of calling the Populate method.</p>
+<pre><code class="lang-cs">using GHI.Processor;
+using Microsoft.SPOT.Hardware;
+
+public class Program
+{
+    public static void Main()
+    {
+        Display.Populate(Display.GHIDisplay.DisplayCP7);
+
+        if (Display.Save())
+            PowerState.RebootDevice(false);
+
+        //Display is now configured.
+    }
+}
+</code></pre><h2 id="drawing">Drawing</h2>
+<p>The following example draws a line and an ellipse on the screen. The assemblies Microsoft.SPOT.Graphics and Microsoft.SPOT.TinyCore are required.</p>
+<pre><code class="lang-cs">using Microsoft.SPOT;
+using Microsoft.SPOT.Presentation;
+using Microsoft.SPOT.Presentation.Media;
+
+public class Program
+{
+    public static void Main()
+    {
+        Bitmap lcd = new Bitmap(SystemMetrics.ScreenWidth, SystemMetrics.ScreenHeight);
+
+        lcd.DrawLine(Colors.Green, 1, 20, 20, 40, 40);
+        lcd.DrawEllipse(Colors.Blue, 5, 5, 5, 5);
+
+        lcd.Flush();
+    }
+}
+</code></pre><h2 id="text">Text</h2>
+<p>The following code shows how to display text using NETMF. Since resources depend on your project&#39;s default namespace, make sure that you change the namespace in this example to match your namespace. If you do not currently have a font resource in your project, NETMF ships with two default fonts that you can add as a resource found in C:\Program Files (x86)\Microsoft .NET Micro Framework\v4.3\Fonts. You can find the NinaB font that we use below in that folder.</p>
+<pre><code class="lang-cs">using Microsoft.SPOT;
+using Microsoft.SPOT.Presentation;
+using Microsoft.SPOT.Presentation.Media;
+
+namespace your_namespace
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            Font font = Resources.GetFont(Resources.FontResources.NinaB);
+            Bitmap lcd = new Bitmap(SystemMetrics.ScreenWidth, SystemMetrics.ScreenHeight);
+
+            lcd.DrawText(&quot;Hello, World!&quot;, font, Colors.White, 0, 0);
+
+            lcd.Flush();
+        }
+    }
+}
+</code></pre><p>Adding new fonts to your application is very easy. TTL fonts can be converted to the simple font format used in NETMF using the TinyFont tool</p>
+<h2 id="spi-displays">SPI Displays</h2>
+<p>If you are using a G80 or Cerb based device and a SPI display, you can configure the device so that when you call Flush on a bitmap, it is automatically sent to the display.</p>
+<p>If the ControlPin is provided, the draw window will automatically be set, the data byte will be sent, and the ControlPin will be set high for you when you call Flush. The display will also be initialized on the first call to Flush. Additionally, the backlight pin will automatically be set high if provided on the first call to Flush. Lastly, if ResetPin is provided, it will be toggled before initialization.</p>
+<p>If your device does not have enough memory to create a bitmap for the entire screen, you can create a smaller one and only draw to a subset of the display. You can set the draw window on the display to match that new size and pick which position it is drawn at. Doing this multiple times allows you to draw the entire screen by moving the draw window around and redrawing the bitmap.</p>
+<p>The below example shows how to do this on the FEZ Cerberus and requires the GHI.Hardware, Microsoft.SPOT.Graphics, and Microsoft.SPOT.Hardware assemblies. Make sure you properly set any pins other configuration below for your actual device bearing in mind the above considerations. If you are not using the DisplayN18, you must configure the display before first use and set the draw window before you call Flush every time.</p>
+<pre><code class="lang-cs">using GHI.Pins;
+using GHI.Processor;
+using GHI.Utilities;
+using Microsoft.SPOT;
+using Microsoft.SPOT.Hardware;
+using Microsoft.SPOT.Presentation.Media;
+
+public class Program {
+    public static void Main() {
+        Display.Width = 128;
+        Display.Height = 160;
+        Display.Type = Display.DisplayType.Spi;
+        Display.CurrentRotation = Display.Rotation.Normal;
+        Display.BitmapFormat = Bitmaps.Format.Bpp16BgrLe;
+        Display.SpiModule = FEZCerberus.Socket5.SpiModule;
+        Display.ChipSelectPin = FEZCerberus.Socket5.Pin6;
+        Display.ResetPin = FEZCerberus.Socket5.Pin3;
+        Display.BacklightPin = FEZCerberus.Socket5.Pin4;
+        Display.ControlPin = FEZCerberus.Socket5.Pin5;
+        Display.Save();
+
+        var bmp = new Bitmap(Display.Width, Display.Height);
+        bmp.DrawEllipse(Colors.Red, 5, 5, 5, 5);
+        bmp.DrawEllipse(Colors.Green, 15, 5, 5, 5);
+        bmp.DrawEllipse(Colors.Blue, 25, 5, 5, 5);
+    }
+}
+</code></pre><h2 id="gadgeteer">Gadgeteer</h2>
+<p>When using Gadgeteer display modules, the SimpleGraphics interface is provided for you. It provides an API that is a bit easier to use than regular NETMF bitmaps. It is available as the SimpleGraphics property on every display.</p>
+<p>The below example shows how to display an ellipse, line, and some text. Make sure that you change the namespace to match yours. Gadgeteer programs automatically add the NinaB font to your project so you do not need to worry about adding it yourself.</p>
+<pre><code class="lang-cs">using GT = Gadgeteer;
+
+namespace your_namespace
+{
+    public partial class Program
+    {
+        void ProgramStarted()
+        {
+            this.displayCP7.SimpleGraphics.DisplayEllipse(GT.Color.Red, 1, GT.Color.Red, 5, 5, 5, 5);
+            this.displayCP7.SimpleGraphics.DisplayLine(GT.Color.Blue, 1, 20, 20, 40, 40);
+            this.displayCP7.SimpleGraphics.DisplayText(&quot;Hello, World!&quot;, Resources.GetFont(Resources.FontResources.NinaB), GT.Color.Green, 60, 60);
+        }
+    }
+}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/netmf/tutorials/graphics.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2019 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

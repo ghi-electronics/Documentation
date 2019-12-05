@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CAN </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="CAN ">
+    <meta name="generator" content="docfx 2.23.1.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="can">CAN</h1>
+
+<hr>
+<p>Controller Area Network (CAN) is a very common interface in industrial and automotive control. CAN is very robust and works very well in noisy environments at high speeds. All error checking and recovery methods are done automatically on the hardware. TD (Transmit Data) and RD (Receive Date) are the only two pins needed.</p>
+<p>There is no master/slave relationship in CAN. All nodes are equal and can both transmit and receive. CAN includes a protocal which easily allows for a node to claim a slice of time for its use so that collisions do not occur. You must have at least two nodes on the bus, however, or CAN will not work.</p>
+<p>There are many kinds of physical layers, but the most commonly used is a high-speed-dual wire that uses a twisted pair for noise immunity. This transceiver can run at up to 1 Mbit/s and can transfer data on very long wires if a low bit rate is used. Data can be transferred between nodes on the bus where any node can transfer at any time and all other nodes are required to successfully receive the data. All nodes must have a predefined bit timing criteria. This is much more complicated than calculating a simple baud rate for UART. For this reason, many CAN bit rate calculators are available which you can find using a simple internet search.</p>
+<p>We provide a few precalculated speeds that you can use but you can create more precise custom timings if you wish. There is an informative CAN guide in our downloads.</p>
+<p><img src="images/can-bus.jpg" alt="Can Bus"></p>
+<p>The above image shows two CAN nodes connected over a bus with the 120 ohm resistors required on these transceivers.</p>
+<div class="TIP"><h5>Tip</h5><p>Make sure to check the datasheet from the tranceiver. Most CAN controllers will divide the frequency by 2 before actually using it.</p>
+</div>
+<p><strong>Getting Started</strong></p>
+<p>The code below sends a message over the CAN bus and prints out every message it receives to the debug window. It requires the GHI.Hardware assembly be added to the resources in your Visual Studio project.</p>
+<pre><code class="lang-cs">using GHI.IO;
+using Microsoft.SPOT;
+using System.Threading;
+
+public class Program
+{
+    public static void Main()
+    {
+        var can = new ControllerAreaNetwork(ControllerAreaNetwork.Channel.One, ControllerAreaNetwork.Speed.Kbps1000);
+
+        can.ErrorReceived += can_ErrorReceived;
+        can.MessageAvailable += can_MessageAvailable;
+
+        can.Enabled = true;
+
+        can.SendMessage(new ControllerAreaNetwork.Message() { Data = new byte[] { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08 }, ArbitrationId = 0x12345678, Length = 8, IsRemoteTransmissionRequest = false, IsExtendedId = true });
+
+        Thread.Sleep(-1);
+    }
+
+    private static void can_MessageAvailable(ControllerAreaNetwork sender, ControllerAreaNetwork.MessageAvailableEventArgs e)
+    {
+        var received = sender.ReadMessage();
+
+        var data = string.Empty;
+        for (int i = 0; i &lt; received.Length; i++)
+            data += &quot;0x&quot; + received.Data[i].ToString(&quot;x2&quot;) + &quot; &quot;;
+
+        Debug.Print(&quot;   CAN Message   &quot;);
+        Debug.Print(&quot;-----------------&quot;);
+        Debug.Print(&quot;    ID: &quot; + received.ArbitrationId.ToString());
+        Debug.Print(&quot;  Time: &quot; + received.TimeStamp.ToString());
+        Debug.Print(&quot;   RTR: &quot; + received.IsRemoteTransmissionRequest.ToString());
+        Debug.Print(&quot;   EID: &quot; + received.IsExtendedId.ToString());
+        Debug.Print(&quot;Length: &quot; + received.Length.ToString());
+        Debug.Print(&quot;  Data: &quot; + data);
+        Debug.Print(&quot;&quot;); 
+    }
+
+    private static void can_ErrorReceived(ControllerAreaNetwork sender, ControllerAreaNetwork.ErrorReceivedEventArgs e)
+    {
+        Debug.Print(&quot;Error on CAN: &quot; + e.Error.ToString());
+    }
+}
+</code></pre><h2 id="can-bit-timing-settings">CAN Bit Timing Settings</h2>
+<p>The following CAN bit timing parameters were calculated for a SITCore driving the SN65HVD230 CAN transceiver chip. See the <a href="can.html">CAN Tutorial</a> for more information.</p>
+<table>
+<thead>
+<tr>
+<th>Baud</th>
+<th>Propagation</th>
+<th>Phase1</th>
+<th>Phase2</th>
+<th>Baudrate Prescaler</th>
+<th>Synchronization Jump Width</th>
+<th>Use Multi Bit Sampling</th>
+<th>Sample Point</th>
+<th>Max Osc. Tolerance</th>
+<th>Max Cable Length</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>33.333K</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>False</td>
+<td>86.7%</td>
+<td>0.33%</td>
+<td>2145M</td>
+</tr>
+<tr>
+<td>83.333K</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>1</td>
+<td>False</td>
+<td>88.9%</td>
+<td>0.28%</td>
+<td>879M</td>
+</tr>
+<tr>
+<td>125K</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>1</td>
+<td>False</td>
+<td>87.5%</td>
+<td>0.31%</td>
+<td>545M</td>
+</tr>
+<tr>
+<td>250K</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>1</td>
+<td>False</td>
+<td>88.9%</td>
+<td>0.28%</td>
+<td>257M</td>
+</tr>
+<tr>
+<td>500K</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>1</td>
+<td>False</td>
+<td>88.9%</td>
+<td>0.28%</td>
+<td>101M</td>
+</tr>
+<tr>
+<td>1M</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>1</td>
+<td>False</td>
+<td>88.9%</td>
+<td>0.28%</td>
+<td>23M</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: Maximum Oscillator Tolerance and Maximum Cable Length are theoretical maximums and must be tested to ensure reliability.</em></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/netmf/tutorials/can.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2019 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
