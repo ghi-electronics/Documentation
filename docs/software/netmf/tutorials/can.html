@@ -8,7 +8,7 @@
     <title>CAN </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="CAN ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.23.1.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,11 +16,10 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix">
     <div id="wrapper">
       <header>
         
@@ -60,9 +59,7 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
-          </div>
+          <div class="sr-items"></div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -134,7 +131,100 @@ public class Program
         Debug.Print(&quot;Error on CAN: &quot; + e.Error.ToString());
     }
 }
-</code></pre></article>
+</code></pre><h2 id="can-bit-timing-settings">CAN Bit Timing Settings</h2>
+<p>The following CAN bit timing parameters were calculated for a SITCore driving the SN65HVD230 CAN transceiver chip. See the <a href="can.html">CAN Tutorial</a> for more information.</p>
+<table>
+<thead>
+<tr>
+<th>Baud</th>
+<th>Propagation</th>
+<th>Phase1</th>
+<th>Phase2</th>
+<th>Baudrate Prescaler</th>
+<th>Synchronization Jump Width</th>
+<th>Use Multi Bit Sampling</th>
+<th>Sample Point</th>
+<th>Max Osc. Tolerance</th>
+<th>Max Cable Length</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>33.333K</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>False</td>
+<td>86.7%</td>
+<td>0.33%</td>
+<td>2145M</td>
+</tr>
+<tr>
+<td>83.333K</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>1</td>
+<td>False</td>
+<td>88.9%</td>
+<td>0.28%</td>
+<td>879M</td>
+</tr>
+<tr>
+<td>125K</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>1</td>
+<td>False</td>
+<td>87.5%</td>
+<td>0.31%</td>
+<td>545M</td>
+</tr>
+<tr>
+<td>250K</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>1</td>
+<td>False</td>
+<td>88.9%</td>
+<td>0.28%</td>
+<td>257M</td>
+</tr>
+<tr>
+<td>500K</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>1</td>
+<td>False</td>
+<td>88.9%</td>
+<td>0.28%</td>
+<td>101M</td>
+</tr>
+<tr>
+<td>1M</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>1</td>
+<td>False</td>
+<td>88.9%</td>
+<td>0.28%</td>
+<td>23M</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: Maximum Oscillator Tolerance and Maximum Cable Length are theoretical maximums and must be tested to ensure reliability.</em></p>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -142,7 +232,7 @@ public class Program
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/netmf/tutorials/can.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/netmf/tutorials/can.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

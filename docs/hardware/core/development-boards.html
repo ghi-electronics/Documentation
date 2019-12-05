@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Sitcore Development Boards </title>
+    <title>SITCore Development Boards </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Sitcore Development Boards ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="title" content="SITCore Development Boards ">
+    <meta name="generator" content="docfx 2.23.1.0">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -16,11 +16,10 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
     <meta property="docfx:rel" content="../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix">
     <div id="wrapper">
       <header>
         
@@ -60,9 +59,7 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
-          </div>
+          <div class="sr-items"></div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -77,9 +74,112 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="sitcore-development-boards">Sitcore Development Boards</h1>
+<h1 id="sitcore-development-boards">SITCore Development Boards</h1>
 
 <hr>
+<p><img src="images/sitcore-dev-board.jpg" alt="Development Options"></p>
+<p>We offer two development boards making it possible to start programming your application within minutes without designing or building new hardware. These boards are not only suitable for prototypes, but for short production runs of products as well.</p>
+<h2 id="sitcore-sc20260-development-board">SITCore SC20260 Development Board</h2>
+<p>Ordering Part Number:</p>
+<p><a href="">Schematic</a></p>
+<p>The SC20260 Dev Board is the fastest and easiest way to start developing with the SC20260 DIMM module. This board comes with a 4.3 inch capacitive touch display. It provides a socket for the SC20260D/SC20260DW, standard connectors for input/output, and three 40 pin socket headers for connecting peripherals and a display. Peripheral connectors include external power, Ethernet, CAN, USB host and client, RTC backup battery, DCMI interface and an SD card slot.  It also has a buzzer, LEDs, a reset button, and user programmable boot buttons.</p>
+<p>To start development using the SC20260 Dev Board, just plug a SC20260D or SC20260DW DIMM into the socket on the board, plug in the display if needed, and connect the board&#39;s USB Client port to a host computer using a micro USB cable. Go to the <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page in the TinyCLR section of the documentation page for further instructions.</p>
+<p>The board can be powered through either the USB connectors or the barrel jack. Always use the barrel jack for power when using displays, especially the larger ones. USB does not provide sufficient power needed for displays.</p>
+<div class="TIP"><h5>Tip</h5><p>The barrel jack is pin positive, sleeve negative, 2.1mm. It is capable of anywhere 7V to 30V. 1A of power should be enough for most needs.</p>
+</div>
+<h3 id="ucd-d43-a-included-with-sc20260-development-board">UCD-D43-A (Included with SC20260 Development Board)</h3>
+<p><img src="images/ud435.jpg" alt="UD435"></p>
+<ul>
+<li>Display Module: <a href="https://www.buydisplay.com/">ER-TFT043-3</a></li>
+<li>Touch Panel: <a href="https://www.buydisplay.com/">ER-TPC043-2</a></li>
+</ul>
+<p><a href="http://files.ghielectronics.com/downloads/Schematics/Systems/UD435%20Rev%20A%20Schematic.pdf">Schematic</a></p>
+<p>This display module has a 4.3&quot; 480x272 TFT display with capacitive touch screen. It plugs directly into the SC20260 Dev Board and uses I2C for capacitive touch. The backlight is controllable through ?. The capacitive touch controller is connected to I2C ? with the interrupt pin on ?.</p>
+<p>The <a href="https://github.com/ghi-electronics/TinyCLR-Samples">TinyCLR Samples repo</a> has usage examples. You can learn more in the <a href="../../software/tinyclr/tutorials/graphics.html">Graphics</a> and <a href="../../software/tinyclr/tutorials/displays.html">Display</a> sections of the TinyCLR tutorials.</p>
+<p>See below for the display configuration values:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Width</td>
+<td>480</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>272</td>
+</tr>
+<tr>
+<td>DataFormat</td>
+<td>RGB565</td>
+</tr>
+<tr>
+<td>Pixel Clock Rate</td>
+<td>8 MHz &lt;= x &lt;= 16MHz</td>
+</tr>
+<tr>
+<td>Pixel Polarity</td>
+<td>low</td>
+</tr>
+<tr>
+<td>DataEnable Is Fixed</td>
+<td>false</td>
+</tr>
+<tr>
+<td>DataEnable Polarity</td>
+<td>low</td>
+</tr>
+<tr>
+<td>Horizontal Back Porch</td>
+<td>46</td>
+</tr>
+<tr>
+<td>Horizontal Front Porch</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Horizontal Sync Polarity</td>
+<td>low</td>
+</tr>
+<tr>
+<td>Horizontal Sync Pulse Width</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Vertical Back Porch</td>
+<td>23</td>
+</tr>
+<tr>
+<td>Vertical Front Porch</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Vertical Sync Polarity</td>
+<td>low</td>
+</tr>
+<tr>
+<td>Vertical Sync Pulse Width</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sitcore-sc20100-development-board">SITCore SC20100 Development Board</h2>
+<p><img src="images/sitcore-dev-board.jpg" alt="Development Options"></p>
+<p>Ordering Part Number:</p>
+<p><a href="">Schematic</a></p>
+<p>The SC20100 Dev Board includes a SC20100 soldered to the board and a built in 1.8 inch color serial display. It has three 40 pin socket headers for connecting peripherals and a display. Peripheral connectors include external power, Ethernet, CAN, USB host and client, RTC backup battery, DCMI interface and an SD card slot.  It also has a buzzer, LEDs, a reset button, and user programmable boot buttons.</p>
+<p>To start development using the SC20100 Dev Board, just connect the board&#39;s USB Client port to a host computer using a micro USB cable. Go to the <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page in the TinyCLR section of the documentation page for further instructions.</p>
+<p>The board can be powered through either the USB connectors or the barrel jack. Always use the barrel jack for power when using displays, especially the larger ones. USB does not provide sufficient power needed for displays.</p>
+<div class="TIP"><h5>Tip</h5><p>The barrel jack is pin positive, sleeve negative, 2.1mm. It is capable of anywhere 7V to 30V. 1A of power should be enough for most needs.</p>
+</div>
+<div class="TIP"><h5>Tip</h5><p>There are 2 LEDs by the USB connector, for 3.3V and 5V. They are useful to check that you have supplied the necessary power.</p>
+</div>
+<hr>
+<p>You can visit our main website at <a href="http://www.ghielectronics.com"><strong>www.ghielectronics.com</strong></a> and our community forums at <a href="https://forums.ghielectronics.com/"><strong>forums.ghielectronics.com</strong></a>.</p>
 </article>
           </div>
           
@@ -88,7 +188,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/hardware/core/development-boards.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/hardware/core/development-boards.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
