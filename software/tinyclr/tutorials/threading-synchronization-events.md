@@ -1,2 +1,0 @@
-# Threading, Synchronization, and Events
----

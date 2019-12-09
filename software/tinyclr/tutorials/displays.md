@@ -1,4 +1,4 @@
-# Display
+# Displays
 ---
 Graphical Displays can be grouped into two distinct interface categories, parallel TFT displays and serial (SPI/I2C) displays. There are also non-graphical character displays.
 
