@@ -12,6 +12,7 @@
 ## [G120E](core/g120e.md)
 ## [G400S](core/g400s.md)
 ## [G400D](core/g400d.md)
+## [Upgrading to SITCore](core/upgrade.md)
 
 # [File System](filesystem/intro.md)
 
