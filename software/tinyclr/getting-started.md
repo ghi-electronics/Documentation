@@ -11,7 +11,7 @@ To use TinyCLR with a device you must first install the latest versions of the G
 
 The TinyCLR firmware includes the Common Language Runtime (CLR) which converts compiled code into machine instructions and manages program execution.  The TinyCLR firmware is also responsible for interacting with Microsoft Visual Studio to load and debug your application programs.
 
-Instructions for installing the bootloader and firmware are provided on the documentation page for each device.  If you want to use your own device, visit our [porting guide](native/porting.md) for information on how to get started.
+Instructions for installing the bootloader and firmware are provided on the documentation page for each device.
 
 ## TinyCLR Computer Setup
 ### Download and Install Visual Studio and the TinyCLR Extension

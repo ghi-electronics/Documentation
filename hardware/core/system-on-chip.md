@@ -127,11 +127,6 @@ You can also update the firmware manually. Download the [firmware](../../softwar
 ### Start Coding
 Now that you have installed the bootloader and firmware on the SITCore, you can setup your host computer and start programming.  Go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.
 
-### Native Code
-You have the choice of loading the module with your preferred RTOS. Also, you can load [Native Code](../../software/tinyclr/native/intro.md) in TinyCLR OS at runtime that works alongside your managed application. Native code can be used to provide improved performance or access to advanced features.
-
-The memory area reserved for native code in TinyCLR OS on SITCore starts at 0xC1F00000???? and its length is 0xFFFF8????.
-
 ## Datasheet
 
 ## Design Considerations

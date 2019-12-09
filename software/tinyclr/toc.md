@@ -83,11 +83,6 @@
 ### [USB](tutorials/usb.md)
 ### [CAN](tutorials/can.md)
 
-# [Native Code](native/intro.md)
-## [Interops](native/interops.md)
-## [APIs](native/apis.md)
-## [Porting](native/porting.md)
-
 # [Downloads](downloads.md)
 # [Release Notes](release-notes.md)
 # [TinyCLR Config](tinyclr-config.md)

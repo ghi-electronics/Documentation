@@ -8,10 +8,10 @@ TinyCLR OS started with Microsoft's .NET Micro Framework and continues to enable
 |--|--|
 |  **Getting Started** </br> Deploy your first TinyCLR program. [**Learn more...**](getting-started.md)  |  **Tutorials** </br> Learn TinyCLR embedded programming. [**Learn more...**](tutorials/intro.md)   |
 |  [![Getting Started](images/getting-started.jpg)](getting-started.md)   |  [![Tutorials](images/tutorials.jpg)](tutorials/intro.md)  |
-|   **Native** </br> Run native code on your device. [**Learn more...**](native/intro.md)  |  **Release Notes** </br> Find the latest changes to TinyCLR. [**Learn more...**](release-notes.md)  |
-|  [![TinyCLR Logo](images/tinyclr-logo.jpg)](native/intro.md)   |  [![Release Notes](images/tinyclr-logo.jpg)](release-notes.md)   |
-|  **Downloads** </br> Visual Studio and device downloads. [**Learn more...**](downloads.md)   | **TinyCLR Config** </br> Our device configuration program. [**Learn more...**](tinyclr-config.md) |
-|  [![Download](images/download.jpg)](downloads.md) | [![TinyCLR Config](images/tinyclr-config-sm.png)](tinyclr-config.md) |
+|  **Release Notes** </br> Find the latest changes to TinyCLR. [**Learn more...**](release-notes.md)  |  **Downloads** </br> Visual Studio and device downloads. [**Learn more...**](downloads.md)  |
+|  [![Release Notes](images/tinyclr-logo.jpg)](release-notes.md)  |  [![Download](images/download.jpg)](downloads.md) | 
+|  **TinyCLR Config** </br> Our device configuration program. [**Learn more...**](tinyclr-config.md)  |   |
+|  [![TinyCLR Config](images/tinyclr-config-sm.png)](tinyclr-config.md)  |   |
 
 
 ***

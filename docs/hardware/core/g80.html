@@ -79,8 +79,9 @@
 <hr>
 <p><img src="images/g80-noborder.jpg" alt="G80"></p>
 <h2 id="overview">Overview</h2>
-<p>The G80 SoC is a low-cost System on Chip part of the GHI Electronics SurfaceMount Compute Modules (SCM) line. This modules can be programmed in .NET C# and Visual Basic using TinyCLR OS or .NET Micro Framework.</p>
-<p>Pricing, purchasing and other information can be found on the <a href="http://www.ghielectronics.com/products/scm/g80">G80 Page</a> on our main website.</p>
+<p>The G80 SoC is a low-cost System on Chip part of the GHI Electronics SurfaceMount Compute Modules (SCM) line. This modules can be programmed in .NET C# and Visual Basic using .NET Micro Framework.</p>
+<div class="TIP"><h5>Tip</h5><p>Not recommended for new designs, consider SITCore <a href="system-on-chip.html">System on Chip</a>.</p>
+</div>
 <h2 id="ordering-part-number">Ordering Part Number</h2>
 <ul>
 <li>G80 SoC: G80SC-SM-501</li>
@@ -122,9 +123,8 @@
 </tbody>
 </table>
 <p><em>Note: Resources are shared between your application and the operating system.</em></p>
-<h2 id="peripherals">Peripherals</h2>
+<h2 id="features">Features</h2>
 <ul>
-<li>TinyCLR OS ready</li>
 <li>.NET Micro Framework</li>
 <li>RoHS Lead Free</li>
 <li>180 MHz ARM Cortex-M4 STM32F427VGT6</li>
@@ -185,8 +185,8 @@
 <p>The G80 is held in reset when the reset pin is low. Releasing it will begin the system startup process.</p>
 <p>There are three different components of the device firmware:</p>
 <ol>
-<li>GHI Bootloader: initializes the system, updates TinyCLR when needed, and executes TinyCLR.</li>
-<li>TinyCLR: loads, debugs, and executes the managed application.</li>
+<li>GHI Bootloader: initializes the system, updates NETMF firmware when needed, and executes NETMF.</li>
+<li>NETMF Firmware: loads, debugs, and executes the managed application.</li>
 <li>Managed application: the program developed by the customer.</li>
 </ol>
 <p>Which components get executed on startup can be control by manipulating the LDR0 pin. It is pulled high on
@@ -197,30 +197,20 @@ MODE pin, which is pulled high on startup. The USB interface is selected when MO
 when MODE is low.</p>
 <p>The above discussed functions of LDR0, LDR1, and MODE are only during startup. After startup, they return to the
 default GPIO state and are available to use as GPIO in the user application</p>
-<h2 id="tinyclr-os">TinyCLR OS</h2>
-<p>TinyCLR OS provides a way to program the G80 in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the G80 (instructions below) and then go to the TinyCLR <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page for instructions.</p>
+<h2 id="net-micro-framework">.NET Micro Framework</h2>
+<p>NETMF provides a way to program the G80 in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the G80 (instructions below) and then go to the NETMF <a href="../../software/netmf/getting-started.html">Getting Started</a> page for instructions.</p>
 <h3 id="loading-the-firmware">Loading the Firmware</h3>
 <ol>
 <li>Activate the bootloader, hold the LDR0 signal low while resetting the board.</li>
-<li>Open <a href="../../software/tinyclr/tinyclr-config.html">TinyCLR Config</a> tool.</li>
-<li>Click the loader tab.</li>
-<li>Select the correct COM port. If you are not seeing it then the device is not in the loader mode.</li>
-<li>Click the <code>Update to Latest</code> button.</li>
+<li>Open the FEZ Config tool and follow the instructions.</li>
 </ol>
-<p>You can also update the firmware manually. Download the <a href="../../software/tinyclr/downloads.html">firmware</a> and learn how to use the <a href="../loaders/ghi-bootloader.html">GHI Bootloader</a> manually.</p>
+<p>You can also update the firmware manually. See <a href="../loaders/ghi-bootloader.html">GHI Bootloader</a> manually.</p>
 <h3 id="start-coding">Start Coding</h3>
-<p>Now that you have installed the firmware on the G80, you can setup your host computer and start programming.  Go to the TinyCLR <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page for instructions.</p>
-<h3 id="code-samples">Code Samples</h3>
-<p>For some examples of using TinyCLR, take a look at the <a href="https://github.com/ghi-electronics/TinyCLR-Samples">TinyCLR Samples repo</a>. You may also find the <a href="../../software/tinyclr/tutorials/intro.html">TinyCLR tutorials</a> useful.</p>
-<h3 id="native-code">Native Code</h3>
-<p>TinyCLR OS also lets you use native code that works alongside your managed application. Native code can be used to provide improved performance or access to advanced features not exposed through TinyCLR. For more information check out <a href="../../software/tinyclr/native/intro.html">Native Code on TinyCLR</a>.</p>
-<p>The memory area reserved for native code in TinyCLR OS on G80 starts at 0x2002F000 and its length is 0xFF8.</p>
-<h2 id="net-micro-framework">.NET Micro Framework</h2>
-<p>It is possible to still use .NET Micro Framework (NETMF). Details are on the <a href="../../software/netmf/intro.html">NETMF Introduction</a> page.  The <a href="../../software/netmf/getting-started.html">NETMF Getting Started</a> page covers NETMF from setup of the host computer to program deployment on both an emulator and target device.</p>
+<p>Now that you have installed the firmware on the G80, you can setup your host computer and start programming.  Go to the NETMF <a href="../../software/netmf/getting-started.html">Getting Started</a> page for instructions.</p>
 <h2 id="datasheet">Datasheet</h2>
 <p>This documentation page replaced the legacy datasheet PDF but it is <a href="http://files.ghielectronics.com/downloads/Documents/Datasheets/G80%20Datasheet.pdf">here</a> for reference.</p>
 <h2 id="can-bit-timing-settings">CAN Bit Timing Settings</h2>
-<p>The following CAN bit timing parameters were calculated for a G80 driving the TJA1050T CAN driver chip. See the <a href="../../software/tinyclr/tutorials/can.html#configuring-the-bus">Configuring the Bus</a> section of the <a href="../../software/tinyclr/tutorials/can.html">CAN Tutorial</a> for more information.</p>
+<p>The following CAN bit timing parameters were calculated for a G80 driving the TJA1050T CAN driver chip. See the <a href="../../software/netmf/tutorials/can.html">CAN Tutorial</a> for more information.</p>
 <table>
 <thead>
 <tr>
@@ -339,7 +329,6 @@ example: PA1 and PB1 cannot both be used as interrupts at the same time, but PA1
 <p><img src="images/g80dev.jpg" alt="G80 Dev Board"></p>
 <ul>
 <li><a href="http://files.ghielectronics.com/downloads/Schematics/Systems/G80%20Dev%20Board%20Rev%201.2%20Schematic.pdf">Schematics</a></li>
-<li><a href="https://github.com/ghi-electronics/TinyCLR-Samples">TinyCLR Samples repo</a></li>
 </ul>
 <hr>
 <p>You can also visit our main website at <a href="http://www.ghielectronics.com"><strong>www.ghielectronics.com</strong></a> and our community forums at <a href="https://forums.ghielectronics.com/"><strong>forums.ghielectronics.com</strong></a>.</p>
