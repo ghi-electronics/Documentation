@@ -15,12 +15,12 @@ Instructions for installing the bootloader and firmware are provided on the docu
 
 ## TinyCLR Computer Setup
 ### Download and Install Visual Studio and the TinyCLR Extension
-1. If you don't already have Visual Studio 2017, download and install the free version from here:  [Visual Studio Community 2017](https://www.visualstudio.com/downloads/).
+1. If you don't already have Visual Studio 2019, download and install the free version from here:  [Visual Studio Community 2019](https://www.visualstudio.com/downloads/).
 2. Make sure to select the `.NET desktop development` workload when installing Visual Studio.
 3. Download and install the newest TinyCLR Visual Studio Project System by going to `Tools` > `Extensions and Updates...`. In the `Extensions and Updates` dialog box select `Online` in the left panel. Type `tinyclr` into the `Search` text box in the upper right of the window to search for and install the `TinyCLR OS Project System`. You'll need to restart Visual Studio to let the extension installer complete the installation.
     ![Install TinyCLR Extension](images/install-tinyclr-extension.gif)
 
-    You can also find the [TinyCLR OS Project System](downloads.md#visual-studio-project-system) on our [Downloads](downloads.md) page if you want to download the file and install it from your hard drive.
+    You can also find the [TinyCLR OS Project System](downloads.md) on our [Downloads](downloads.md) page if you want to download the file and install it from your hard drive.
 
 ### Install the TinyCLR Nuget Packages
 

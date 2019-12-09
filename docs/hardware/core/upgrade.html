@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Release Notes </title>
+    <title>Upgrading From Earlier GHI Hardware </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Release Notes ">
+    <meta name="title" content="Upgrading From Earlier GHI Hardware ">
     <meta name="generator" content="docfx 2.23.1.0">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../../styles/docfx.css">
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
     <meta property="docfx:rel" content="../../">
     <meta property="docfx:newtab" content="true">
   </head>
@@ -74,9 +74,36 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="release-notes">Release Notes</h1>
+<h1 id="upgrading-from-earlier-ghi-hardware">Upgrading From Earlier GHI Hardware</h1>
 
-<hr>
+<p>To complement our ten year Longevity Promise, we provide SITCore products that are drop in replacements for most of our more mature SoMs and chipsets -- even though they are still in production. We strive to keep your product viable as long as possible with no or minimal changes to your hardware.</p>
+<h2 id="upgrading-from-g30-and-g80-to-sitcore">Upgrading from G30 and G80 to SITCore</h2>
+<p>Unfortunately the LQFP100 version of the SITCore processor is unavailable in a version that is pin compatible with the G30 and G80, so changes to your circuit board will be needed. While many of the pins on the SC20100 have the same function, other pins are shifted to a location one over from their previous location. Our experience has shown that these changes are much easier than a complete redesign as most of your circuit board will work without changes. (is this true for G30, or just G80??)</p>
+<h2 id="upgrading-from-g120-to-sitcore">Upgrading from G120 to SITCore</h2>
+<p>Our SC20260B is a 99% drop in replacement for the G120. When replacing a G120 with a SC20260B, the following differences may affect your design.</p>
+<ul>
+<li>Some pins with PWM on the G120 do not have PWM on the SC20260B, but software PWM can be used instead.</li>
+<li>The LCD pins do not have UART functionality as on the G120, but this is not often used.</li>
+<li>Pad 15 on the G120 has both UART CTS and SPI. The SC20260B provides SPI and an optional zero ohm resistor connected to a UART CTS pin.</li>
+<li>There is no JTAG exposed on the SC20260B pads, so we provide JTAG through test points on the SoM.</li>
+</ul>
+<h2 id="upgrading-from-g120e-to-sitcore">Upgrading from G120E to SITCore</h2>
+<p>Our SC20260E is a 99% drop in replacement for the G120E. When replacing the G120E with the SITCore you may encounter the following issues.</p>
+<ul>
+<li>A few pins that support PWM on the G120E do not support PWM on the SITCore SC20260E. Software based PWM can be used instead.</li>
+<li>The LCD pins do not support UART, but this will rarely be an issue.</li>
+<li>Pad 10 on the G120E supports both UART and DAC, so on the SC20260E we support UART and added DAC through an optional zero ohm resistor.</li>
+</ul>
+<h2 id="upgrading-from-g400s-to-sitcore">Upgrading from G400S to SITCore</h2>
+<p>Unfortunately we do not currently offer a SITCore replacement for the G400S. Significant PCB changes will be needed.</p>
+<h2 id="upgrading-from-g400d-to-sitcore">Upgrading from G400D to SITCore</h2>
+<p>Our SC20260D is a 99% drop in replacement for the G400D.</p>
+<ul>
+<li>The LCD pins do not have UART functionality, like some do on the G400D, but this is rarely a problem.</li>
+<li>There is not a second USB host controller on the SITCore SC20260D like there is on the G400D.</li>
+</ul>
+<h2 id="upgrading-from-uc2550-and-uc5500-to-sitcore">Upgrading from UC2550 and UC5500 to SITCore</h2>
+<p>These are close, but not completely compatible. Some PCB changes will be needed.</p>
 </article>
           </div>
           
@@ -85,7 +112,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/tinyclr/release-notes.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/hardware/core/upgrade.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
