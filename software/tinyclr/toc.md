@@ -37,7 +37,7 @@
 ### [TLS](tutorials/tls.md)
 
 ## Networking Interfaces
-### [Wi-Fi](tutorials/wifi.md)
+### [WiFi](tutorials/wifi.md)
 ### [Ethernet](tutorials/ethernet.md)
 ### [Cellular](tutorials/cellular.md)
 

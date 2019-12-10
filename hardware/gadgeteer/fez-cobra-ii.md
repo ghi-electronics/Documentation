@@ -1,4 +1,4 @@
-# FEZ Cobra II Eco and Wi-Fi
+# FEZ Cobra II Eco and WiFi
 ---
 ![FEZ Cobra II Eco](images/fez-cobra-ii.jpg) ![FEZ Cobra II WiFi](images/fez-cobra-ii-wifi.jpg) ![FEZ Cobra II](images/fez-cobra-ii-net.jpg)
 

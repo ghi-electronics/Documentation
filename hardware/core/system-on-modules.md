@@ -3,13 +3,13 @@
 ![G400S](images/uc5550.jpg)
 
 ## Overview
-The SITCore SoMs provide a low cost way to add .NET computing power to any embedded product. They are available as a 200 pin SO-DIMM with and without Wi-Fi (G400 compatible), a 91 pad surface mount module (G120 compatible), or a 105 pad surface mount module (G120E compatible). The SITCore SoMs let's you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more. The surface mount versions are great for harsh or high vibration environments.
+The SITCore SoMs provide a low cost way to add .NET computing power to any embedded product. They are available as a 200 pin SO-DIMM with and without WiFi (G400 compatible), a 91 pad surface mount module (G120 compatible), or a 105 pad surface mount module (G120E compatible). The SITCore SoMs let's you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more. The surface mount versions are great for harsh or high vibration environments.
 
 ## Ordering Part Number
 * 91 Pad Surface Mount: SC20260N
 * 105 Pad Surface Mount: SC20260E
 * 200 Pin SO-DIMM: SC20260D
-* 200 Pin SO-DIMM with Wi-Fi: SC20260DW
+* 200 Pin SO-DIMM with WiFi: SC20260DW
 
 ## Specifications
 
@@ -148,7 +148,7 @@ We recommend no traces or vias under the module. Dimensions are in inches.
 The SC20260D and SC20260W use the same 200 pin SO-DIMM socket that was originally made for DDR2 memory modules. You can make a custom SO-DIMM SITCore circuit board by adding the appropriate SO-DIMM socket to your circuit board.
 
 > [!Tip]
-> Make sure to expose the required pins in your design. Specific pins are needed for device programming, updates, recovery, and Wi-Fi firmware updates. See device specifications for details.
+> Make sure to expose the required pins in your design. Specific pins are needed for device programming, updates, recovery, and WiFi firmware updates. See device specifications for details.
 
 SO-DIMM stands for Small Outline Dual Inline Memory Module. There are two different 200 pin SO-DIMM sockets, those made for DDR memory and those made for DDR2 memory. They are identical except for the orientation notch which is in a slightly different position. These sockets are not interchangeable. There is also a 204 pin SO-DIMM socket for DDR3 memory with the notch positioned closer to the center of the module.
 

@@ -6,7 +6,7 @@ If This Then That (IFTTT) is a free service allowing users to automate tasks by 
 * Turn on the lights when you come home.
 * Send a text message if rain is forecast.
 * Turn on your lights if your Ring doorbell senses motion.
-* Turn off your Wi-Fi when you aren't home.
+* Turn off your WiFi when you aren't home.
 * Send you an e-mail when the New York Times publishes a new article in its science section.
 * Automatically back up your smart phone photos to the cloud.
 * Automate GitHub tasks.
@@ -107,7 +107,7 @@ Start a new C# project. You will need to add the following NuGet packages:
 * GHIElectronics.TinyCLR.Networking.Http
 * GHIElectronics.TinyCLR.Pins
 
-Cut and paste the following code into the `Program.cs` window. You will have to change the Wi-Fi SSID and password (line 50) and cut and paste your IFTTT key into line 53 near the end of the program (replace `Paste_IFTTT_Key_Here`). To copy your key, click on `My Applets` on the IFTTT website, then click on `Services`, click on the `Webhooks` box, and click on the `Documentation` button.
+Cut and paste the following code into the `Program.cs` window. You will have to change the WiFi SSID and password (line 50) and cut and paste your IFTTT key into line 53 near the end of the program (replace `Paste_IFTTT_Key_Here`). To copy your key, click on `My Applets` on the IFTTT website, then click on `Services`, click on the `Webhooks` box, and click on the `Documentation` button.
 
 ```csharp
 using GHIElectronics.TinyCLR.Devices.Adc;
