@@ -8,4 +8,4 @@
 
 ## Software
 
-For information on programming the FEZ Domino, please go to the [USBizi](../core/usbizi.md) page.
+For information on programming the FEZ Domino, please go to the [USBizi](../netmf/usbizi.md) page.

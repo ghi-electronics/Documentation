@@ -86,3 +86,5 @@
 # [Downloads](downloads.md)
 # [Release Notes](release-notes.md)
 # [TinyCLR Config](tinyclr-config.md)
+
+# [Legal](../../legal.md)
