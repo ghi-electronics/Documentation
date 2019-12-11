@@ -9,7 +9,6 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 * 91 Pad Surface Mount: SC20260N
 * 105 Pad Surface Mount: SC20260E
 * 200 Pin SO-DIMM: SC20260D
-* 200 Pin SO-DIMM with WiFi: SC20260DW
 
 ## Specifications
 
@@ -28,30 +27,28 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 
 ## Peripherals
 
-| Peripheral            | SC2026N     | SC20260E    | SC20260D    | SC20260DW   |
-|-----------------------|-------------|-------------|-------------|-------------|
-| GPIO (all support IRQ)|             |             |             |             |
-| SPI                   |             |             |             |             |
-| I2C                   |             |             |             |             |
-| UART                  |             |             |             |             |
-| USART                 |             |             |             |             |
-| CAN                   |             |             |             |             |
-| PWM                   |             |             |             |             |
-| ADC                   |             |             |             |             |
-| DAC                   |             |             |             |             |
-| SD/SDIP/MMC           |             |             |             |             |
-| Quad SPI              |             |             |             |             |
-| SAI                   |             |             |             |             |
-| USB Host              |             |             |             |             |
-| USB Client            |             |             |             |             |
-| Ethernet              |             |             |             |             |
-| LCD TFT               |             |             |             |             |
-| Camera                |             |             |             |             |
+| Peripheral            | SC20260N               | SC20260E               | SC20260D               |
+|-----------------------|------------------------|------------------------|------------------------|
+| GPIO (all support IRQ)|                        |                        |                        |
+| SPI                   | 3                      | 3                      | 3                      |
+| I2C                   | 2                      | 3                      | 3                      |
+| UART/USART            | 7 (4 with handshaking) | 8 (4 with handshaking) | 8 (4 with handshaking) |
+| CAN                   | 2                      | 2                      | 2                      |
+| PWM                   | 21                     | 23                     | 27                     |
+| ADC                   | 21                     | 21                     | 21                     |
+| DAC                   | 2                      | 2                      | 2                      |
+| SD/SDIP/MMC           | 1                      | 1                      | 1                      |
+| Quad SPI              | 1                      | 1                      | 1                      |
+| I2S                   |                        |                        | 1                      |
+| USB Host              |                        |                        |                        |
+| USB Client            |                        |                        |                        |
+| Ethernet              | 1                      | 1                      | 1                      |
+| LCD TFT               | 1                      | 1                      | 1                      |
+| Camera                | 1                      | 1                      | 1                      |
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
 
 ## Features
-
 * Low power modes including three independently controllable power domains
 * RTC
 * Watchdog

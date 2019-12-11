@@ -82,16 +82,17 @@
 <p>The SITCore SoCs provide a low cost way to add .NET computing power to any embedded product. Available as either a 100 pin LQFP or a 265 ball BGA, the SITCore SoCs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more.</p>
 <h2 id="ordering-part-number">Ordering Part Number</h2>
 <ul>
-<li>100 Pin LQFP: SC20100</li>
-<li>265 Ball BGA: SC20260</li>
+<li>100 Pin LQFP: SC20100S</li>
+<li>100 Ball BGA: SC20100B</li>
+<li>265 Ball BGA: SC20260B</li>
 </ul>
 <h2 id="specifications">Specifications</h2>
 <table>
 <thead>
 <tr>
 <th>Spec</th>
-<th>SC20100</th>
-<th>SC20260</th>
+<th>SC20100x</th>
+<th>SC20260B</th>
 </tr>
 </thead>
 <tbody>
@@ -160,83 +161,73 @@
 </tr>
 <tr>
 <td>SPI</td>
-<td></td>
-<td></td>
+<td>4</td>
+<td>3</td>
 </tr>
 <tr>
 <td>I2C</td>
-<td></td>
-<td></td>
+<td>3</td>
+<td>3</td>
 </tr>
 <tr>
-<td>UART</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>USART</td>
-<td></td>
-<td></td>
+<td>UART/USART</td>
+<td>8 (4 with handshaking)</td>
+<td>8 (4 with handshaking)</td>
 </tr>
 <tr>
 <td>CAN</td>
-<td></td>
-<td></td>
+<td>2</td>
+<td>2</td>
 </tr>
 <tr>
 <td>PWM</td>
-<td></td>
-<td></td>
+<td>19</td>
+<td>27</td>
 </tr>
 <tr>
 <td>ADC</td>
-<td></td>
-<td></td>
+<td>11</td>
+<td>21</td>
 </tr>
 <tr>
 <td>DAC</td>
-<td></td>
-<td></td>
+<td>2</td>
+<td>2</td>
 </tr>
 <tr>
 <td>SD/SDIP/MMC</td>
-<td></td>
-<td></td>
+<td>1</td>
+<td>1</td>
 </tr>
 <tr>
 <td>Quad SPI</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>SAI</td>
-<td></td>
-<td></td>
+<td>1</td>
+<td>1</td>
 </tr>
 <tr>
 <td>USB Host</td>
-<td></td>
-<td></td>
+<td>1</td>
+<td>1</td>
 </tr>
 <tr>
 <td>USB Client</td>
-<td></td>
-<td></td>
+<td>1</td>
+<td>1</td>
 </tr>
 <tr>
 <td>Ethernet</td>
-<td></td>
-<td></td>
+<td>1</td>
+<td>1</td>
 </tr>
 <tr>
 <td>LCD TFT</td>
-<td></td>
-<td></td>
+<td>0</td>
+<td>1</td>
 </tr>
 <tr>
 <td>Camera</td>
-<td></td>
-<td></td>
+<td>0</td>
+<td>1</td>
 </tr>
 </tbody>
 </table>
@@ -326,16 +317,21 @@ default GPIO state and are available to use as GPIO in the user application</p>
 <h2 id="datasheet">Datasheet</h2>
 <h2 id="design-considerations">Design Considerations</h2>
 <h3 id="footprints">Footprints</h3>
-<p>The SC20100 is a standard LQFP100 14 x 14 mm. See the STM32H743VIT6 datasheet for the exact footprint.</p>
-<p>The SC20260 is a standard 265-TFBGA 14 x 14 mm. See the STM32H743XIH6 datasheet for the exact footprint.</p>
+<h4 id="this-is-the-recommened-footprint-for-the-sc20100s">This is the recommened footprint for the SC20100S:</h4>
+<p><img src="images/sc20100s-footprint.gif" alt="SC20100S Footprint"></p>
+<h4 id="this-is-the-recommended-footprint-and-pcb-design-rules-for-the-sc20100b">This is the recommended footprint and PCB design rules for the SC20100B:</h4>
+<p><img src="images/sc20100b-footprint.gif" alt="SC20100B Footprint">
+<img src="images/sc20100b-design-rules.gif" alt="SC20100B Design Rules"></p>
+<h4 id="this-is-the-recommended-footprint-and-pcb-design-rules-for-the-sc20260b">This is the recommended footprint and PCB design rules for the SC20260B:</h4>
+<p><img src="images/sc20260b-footprint.gif" alt="SC20260B Footprint">
+<img src="images/sc20260b-design-rules.gif" alt="SC20260B Design Rules"></p>
 <h3 id="required-pins">Required Pins</h3>
 <p>Exposing the following pins is required in every design to enable device programming, updates, and recovery:</p>
 <ul>
-<li>LDR0</li>
-<li>LDR1</li>
-<li>Reset</li>
-<li>Desired debug interface(s)</li>
-<li>MODE if required to select a debug interface</li>
+<li>LDR</li>
+<li>APP</li>
+<li>RESET</li>
+<li>MOD (if required to select a debug interface)</li>
 </ul>
 <h3 id="power-supply">Power Supply</h3>
 <p>A typical clean power source, suited for digital circuitry, is needed to power the SITCore SoCs. Voltages should be within at

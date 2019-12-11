@@ -2799,6 +2799,61 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/sc20100b-design-rules.gif",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/sc20100b-design-rules.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/sc20100b-footprint.gif",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/sc20100b-footprint.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/sc20100s-footprint.gif",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/sc20100s-footprint.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/sc20260b-design-rules.gif",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/sc20260b-design-rules.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/sc20260b-footprint.gif",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/sc20260b-footprint.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "hardware/sitcore/images/sitcore-dev-board.jpg",
       "output": {
         "resource": {
@@ -2848,7 +2903,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/soc.html",
-          "hash": "fdbtGpNJVNxHpiq+xHyHOg=="
+          "hash": "El5KSAZvJI5elts3mx8WpA=="
         }
       },
       "is_incremental": false,
@@ -2860,7 +2915,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/som.html",
-          "hash": "C3yF3V3+aEjr/sa3sNCfqw=="
+          "hash": "JqKbuxt8/ywZuqFm5bAM+Q=="
         }
       },
       "is_incremental": false,
@@ -5374,7 +5429,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/wifi.html",
-          "hash": "CsK08XDGXFK//5d4e3ogHw=="
+          "hash": "x4wInz/xiCthz0+Qfo/37Q=="
         }
       },
       "is_incremental": false,
@@ -5410,16 +5465,16 @@
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         }

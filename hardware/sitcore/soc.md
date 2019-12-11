@@ -6,12 +6,13 @@
 The SITCore SoCs provide a low cost way to add .NET computing power to any embedded product. Available as either a 100 pin LQFP or a 265 ball BGA, the SITCore SoCs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more.
 
 ## Ordering Part Number
-* 100 Pin LQFP: SC20100
-* 265 Ball BGA: SC20260
+* 100 Pin LQFP: SC20100S
+* 100 Ball BGA: SC20100B
+* 265 Ball BGA: SC20260B
 
 ## Specifications
 
-| Spec               | SC20100                   | SC20260              |
+| Spec               | SC20100x                  | SC20260B             |
 |--------------------|---------------------------|----------------------|
 | Processor          | STM32H743VIT6             | STM32H743XIH6        |
 | Core               | ARM Cortex-M7 32 bit      | ARM Cortex-M7 32 bit |
@@ -27,25 +28,23 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 
 ## Peripherals
 
-| Peripheral            | SC20100                   | SC20260              |
-|-----------------------|---------------------------|----------------------|
-| GPIO (all support IRQ)|                           |                      |
-| SPI                   |                           |                      |
-| I2C                   |                           |                      |
-| UART                  |                           |                      |
-| USART                 |                           |                      |
-| CAN                   |                           |                      |
-| PWM                   |                           |                      |
-| ADC                   |                           |                      |
-| DAC                   |                           |                      |
-| SD/SDIP/MMC           |                           |                      |
-| Quad SPI              |                           |                      |
-| SAI                   |                           |                      |
-| USB Host              |                           |                      |
-| USB Client            |                           |                      |
-| Ethernet              |                           |                      |
-| LCD TFT               |                           |                      |
-| Camera                |                           |                      |
+| Peripheral            | SC20100                   | SC20260               |
+|-----------------------|---------------------------|-----------------------|
+| GPIO (all support IRQ)|                           |                       |
+| SPI                   | 4                         | 3                     |
+| I2C                   | 3                         | 3                     |
+| UART/USART            | 8 (4 with handshaking)    | 8 (4 with handshaking)|
+| CAN                   | 2                         | 2                     |
+| PWM                   | 19                        | 27                    |
+| ADC                   | 11                        | 21                    |
+| DAC                   | 2                         | 2                     |
+| SD/SDIP/MMC           | 1                         | 1                     |
+| Quad SPI              | 1                         | 1                     |
+| USB Host              | 1                         | 1                     |
+| USB Client            | 1                         | 1                     |
+| Ethernet              | 1                         | 1                     |
+| LCD TFT               | 0                         | 1                     |
+| Camera                | 0                         | 1                     |
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
 
@@ -132,17 +131,24 @@ Now that you have installed the bootloader and firmware on the SITCore, you can 
 ## Design Considerations
 
 ### Footprints
-The SC20100 is a standard LQFP100 14 x 14 mm. See the STM32H743VIT6 datasheet for the exact footprint.
+####This is the recommened footprint for the SC20100S:
+![SC20100S Footprint](images/sc20100s-footprint.gif)
 
-The SC20260 is a standard 265-TFBGA 14 x 14 mm. See the STM32H743XIH6 datasheet for the exact footprint.
+####This is the recommended footprint and PCB design rules for the SC20100B:
+![SC20100B Footprint](images/sc20100b-footprint.gif)
+![SC20100B Design Rules](images/sc20100b-design-rules.gif)
+
+####This is the recommended footprint and PCB design rules for the SC20260B:
+![SC20260B Footprint](images/sc20260b-footprint.gif)
+![SC20260B Design Rules](images/sc20260b-design-rules.gif)
+
 
 ### Required Pins
 Exposing the following pins is required in every design to enable device programming, updates, and recovery:
-* LDR0
-* LDR1
-* Reset
-* Desired debug interface(s)
-* MODE if required to select a debug interface
+* LDR
+* APP
+* RESET
+* MOD (if required to select a debug interface)
 
 ### Power Supply
 A typical clean power source, suited for digital circuitry, is needed to power the SITCore SoCs. Voltages should be within at
