@@ -73,7 +73,7 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
   * Capture
   * Pulse measurement
     
-## SC20260D Pinout
+## SCM20260D Pinout
 
 | SO-DIMM Pin   | Function Name                                    |
 |---------------|--------------------------------------------------|
