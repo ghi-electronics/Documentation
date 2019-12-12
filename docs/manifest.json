@@ -2854,6 +2854,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/scm20260e-footprint.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/scm20260e-footprint.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "hardware/sitcore/images/sitcore-dev-board.jpg",
       "output": {
         "resource": {
@@ -2903,7 +2914,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/soc.html",
-          "hash": "01UzO3COldLHGM/f4Plkbw=="
+          "hash": "v6HT2DUOE6lBhcAHDzXjTA=="
         }
       },
       "is_incremental": false,
@@ -2915,7 +2926,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/som.html",
-          "hash": "W8gskxoGmB8mmAJui18xzA=="
+          "hash": "RJNRzBBnvr61hRvYY01qEw=="
         }
       },
       "is_incremental": false,
@@ -5429,7 +5440,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/wifi.html",
-          "hash": "CsK08XDGXFK//5d4e3ogHw=="
+          "hash": "x4wInz/xiCthz0+Qfo/37Q=="
         }
       },
       "is_incremental": false,
@@ -5455,27 +5466,27 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "RestApiDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build"
         }
       }

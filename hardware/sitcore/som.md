@@ -7,14 +7,12 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 
 ## Ordering Part Number
 * 91 Pad Surface Mount: SC20260N
-* 105 Pad Surface Mount: SC20260E
 * 200 Pin SO-DIMM: SC20260D
 
 ## Specifications
 
 | Spec               | All SITCore SoMs          |
 |--------------------|---------------------------|
-| Processor          | STM32H743XIH6             |
 | Processor Type     | ARM Coretex-M7 32 Bit     |
 | Speed              | 480 MHz                   |
 | Internal RAM       | 1 MByte                   |
@@ -340,7 +338,7 @@ We recommend no traces or vias under the module. Dimensions are in inches.
 ![SC20260N Pinout](images/g120-footprint.jpg)
 
 ### SC20260E Recommended Footprint
-![SC20260E Footprint](images/g120e-footprint.jpg)
+![SC20260E Footprint](images/scm20260e-footprint.jpg)
 
 ### SC20260D SO-DIMM Socket
 ![200 pin DDR2 SO-DIMM socket](images/200-pin-ddr2-so-dimm.jpg)

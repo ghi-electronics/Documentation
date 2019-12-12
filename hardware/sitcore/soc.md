@@ -7,14 +7,12 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 
 ## Ordering Part Number
 * 100 Pin LQFP: SC20100S
-* 100 Ball BGA: SC20100B
 * 265 Ball BGA: SC20260B
 
 ## Specifications
 
 | Spec               | SC20100x                  | SC20260B             |
 |--------------------|---------------------------|----------------------|
-| Processor          | STM32H743VIT6             | STM32H743XIH6        |
 | Core               | ARM Cortex-M7 32 bit      | ARM Cortex-M7 32 bit |
 | Speed              | 480 MHz                   | 480 MHz              |
 | Internal RAM       | 1 MByte                   | 1 MByte              |

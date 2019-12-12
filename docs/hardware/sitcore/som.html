@@ -83,7 +83,6 @@
 <h2 id="ordering-part-number">Ordering Part Number</h2>
 <ul>
 <li>91 Pad Surface Mount: SC20260N</li>
-<li>105 Pad Surface Mount: SC20260E</li>
 <li>200 Pin SO-DIMM: SC20260D</li>
 </ul>
 <h2 id="specifications">Specifications</h2>
@@ -95,10 +94,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Processor</td>
-<td>STM32H743XIH6</td>
-</tr>
 <tr>
 <td>Processor Type</td>
 <td>ARM Coretex-M7 32 Bit</td>
@@ -202,22 +197,16 @@
 <td>1</td>
 </tr>
 <tr>
-<td>I2S</td>
-<td></td>
-<td></td>
+<td>USB Host</td>
+<td>1</td>
+<td>1</td>
 <td>1</td>
 </tr>
 <tr>
-<td>USB Host</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td>USB Client</td>
-<td></td>
-<td></td>
-<td></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
 </tr>
 <tr>
 <td>Ethernet</td>
@@ -727,7 +716,7 @@
 </tr>
 <tr>
 <td>111</td>
-<td>PB7/TIM4 CH2</td>
+<td>PB7/TIM4 CH2/APP</td>
 </tr>
 <tr>
 <td>112</td>
@@ -811,7 +800,7 @@
 </tr>
 <tr>
 <td>132</td>
-<td>PC13/WKUP2</td>
+<td>PC13/WKUP2/TAMPER</td>
 </tr>
 <tr>
 <td>133</td>
@@ -819,11 +808,11 @@
 </tr>
 <tr>
 <td>134</td>
-<td>PE3</td>
+<td>PE3/LDR</td>
 </tr>
 <tr>
 <td>135</td>
-<td>PD7</td>
+<td>PD7/MOD</td>
 </tr>
 <tr>
 <td>136</td>
@@ -1031,7 +1020,7 @@
 </tr>
 <tr>
 <td>187</td>
-<td>USBH P</td>
+<td>RESET</td>
 </tr>
 <tr>
 <td>188</td>
@@ -1139,7 +1128,7 @@ default GPIO state and are available to use as GPIO in the user application</p>
 <h3 id="sc20260n-recommended-footprint">SC20260N Recommended Footprint</h3>
 <p><img src="images/g120-footprint.jpg" alt="SC20260N Pinout"></p>
 <h3 id="sc20260e-recommended-footprint">SC20260E Recommended Footprint</h3>
-<p><img src="images/g120e-footprint.jpg" alt="SC20260E Footprint"></p>
+<p><img src="images/scm20260e-footprint.jpg" alt="SC20260E Footprint"></p>
 <h3 id="sc20260d-so-dimm-socket">SC20260D SO-DIMM Socket</h3>
 <p><img src="images/200-pin-ddr2-so-dimm.jpg" alt="200 pin DDR2 SO-DIMM socket"></p>
 <p>The SC20260D and SC20260W use the same 200 pin SO-DIMM socket that was originally made for DDR2 memory modules. You can make a custom SO-DIMM SITCore circuit board by adding the appropriate SO-DIMM socket to your circuit board.</p>
