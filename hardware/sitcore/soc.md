@@ -99,7 +99,7 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 | 19            | Vssa                                                  |
 | 20            | Vref+                                                 |
 | 21            | Vdda                                                  |
-| 22            | PA0 C/ADC12 INP0                                      |
+| 22            | PA0 C/ADC12 INP0/WKUP                                 |
 | 23            | PA1/ETH MII RX CLK                                    |
 | 24            | PA2/ETH MDIO                                          |
 | 25            | PA3/OTG HS ULPI D0/TIM2 CH4/ADC12 INP15               |

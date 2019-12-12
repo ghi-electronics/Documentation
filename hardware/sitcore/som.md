@@ -39,9 +39,8 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 | DAC                   | 2                      | 2                      | 2                      |
 | SD/SDIP/MMC           | 1                      | 1                      | 1                      |
 | Quad SPI              | 1                      | 1                      | 1                      |
-| I2S                   |                        |                        | 1                      |
-| USB Host              |                        |                        |                        |
-| USB Client            |                        |                        |                        |
+| USB Host              | 1                      | 1                      | 1                      |
+| USB Client            | 1                      | 1                      | 1                      |
 | Ethernet              | 1                      | 1                      | 1                      |
 | LCD TFT               | 1                      | 1                      | 1                      |
 | Camera                | 1                      | 1                      | 1                      |
@@ -187,7 +186,7 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 | 108           | PB5/SPI3 MOSI/I2S3 SDO/OTG HS ULPI D7            |
 | 109           | PB3/SPI3 SCK/I2S3 SCK/TIM2 CH2                   |
 | 110           | PC0/OTG HS ULPI STP/ADC123 INP10                 |
-| 111           | PB7/TIM4 CH2                                     |
+| 111           | PB7/TIM4 CH2/APP                                 |
 | 112           | PI5/TIM8 CH1                                     |
 | 113           | GND                                              |
 | 114           | PB1/OTG HS ULPI D2/TIM3 CH4/ADC12 INP5           |
@@ -208,10 +207,10 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 | 129           | PC11/SDMMC1 D3/USART3 RX                         |
 | 130           | PI7/TIM8 CH3                                     |
 | 131           | GND                                              |
-| 132           | PC13/WKUP2                                       |
+| 132           | PC13/WKUP2/TAMPER                                |
 | 133           | PI6/TIM8 CH2                                     |
-| 134           | PE3                                              |
-| 135           | PD7                                              |
+| 134           | PE3/LDR                                          |
+| 135           | PD7/MOD                                          |
 | 136           | PI11                                             |
 | 137           | PI8                                              |
 | 138           | PJ13                                             |
@@ -263,7 +262,7 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 | 184           | NC                                               |
 | 185           | GND                                              |
 | 186           | GND                                              |
-| 187           | USBH P                                           |
+| 187           | RESET                                            |
 | 188           | USBH P                                           |
 | 189           | NC                                               |
 | 190           | USBH N                                           |
