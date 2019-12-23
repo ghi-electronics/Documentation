@@ -2909,12 +2909,67 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/pdfs/sc20100s.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/pdfs/sc20100s.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/pdfs/sc20260b.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/pdfs/sc20260b.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/pdfs/scm20260d.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/pdfs/scm20260d.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/pdfs/scm20260e.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/pdfs/scm20260e.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/pdfs/scm20260n.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/pdfs/scm20260n.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "hardware/sitcore/soc.md",
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/soc.html",
-          "hash": "v6HT2DUOE6lBhcAHDzXjTA=="
+          "hash": "kTu7WqIv9rpNE/E9sDeOoQ=="
         }
       },
       "is_incremental": false,
@@ -2926,7 +2981,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/som.html",
-          "hash": "RJNRzBBnvr61hRvYY01qEw=="
+          "hash": "LHU2+aa9D6aOd3CybC2emQ=="
         }
       },
       "is_incremental": false,
@@ -4623,7 +4678,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/toc.html",
-          "hash": "JCs99wPa/iRWw1emfOkOqA=="
+          "hash": "qMunbZiY+spRBKf2RkWF6w=="
         }
       },
       "is_incremental": false,
@@ -5088,6 +5143,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "software/tinyclr/tutorials/limitations.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/tinyclr/tutorials/limitations.html",
+          "hash": "A8SGBSmsERrGNlG6NbM/Bw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/mass-production-tools.md",
       "output": {
         ".html": {
@@ -5466,6 +5533,11 @@
         "incrementalPhase": "build"
       },
       "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -5474,11 +5546,6 @@
         "RestApiDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {

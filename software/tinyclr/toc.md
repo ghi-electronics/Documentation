@@ -83,6 +83,8 @@
 ### [USB](tutorials/usb.md)
 ### [CAN](tutorials/can.md)
 
+## [Limitations](tutorials/limitations.md)
+
 # [Downloads](downloads.md)
 # [Release Notes](release-notes.md)
 # [TinyCLR Config](tinyclr-config.md)
