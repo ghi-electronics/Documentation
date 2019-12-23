@@ -11,4 +11,4 @@ An Arduino-pinout compatible single board computer.
 
 ## Software
 
-For information on programming the FEZ Panda II, please go to the [USBizi](../core/usbizi.md) page.
+For information on programming the FEZ Panda II, please go to the [USBizi](../netmf/usbizi.md) page.

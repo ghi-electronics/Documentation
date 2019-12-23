@@ -37,7 +37,7 @@
 ### [TLS](tutorials/tls.md)
 
 ## Networking Interfaces
-### [Wi-Fi](tutorials/wifi.md)
+### [WiFi](tutorials/wifi.md)
 ### [Ethernet](tutorials/ethernet.md)
 ### [Cellular](tutorials/cellular.md)
 
@@ -83,6 +83,10 @@
 ### [USB](tutorials/usb.md)
 ### [CAN](tutorials/can.md)
 
+## [Limitations](tutorials/limitations.md)
+
 # [Downloads](downloads.md)
 # [Release Notes](release-notes.md)
 # [TinyCLR Config](tinyclr-config.md)
+
+# [Legal](../../legal.md)

@@ -11,4 +11,4 @@ A through-hole version of G30.
 
 ## Software
 
-For information on programming the G30 TH Module, please go to the [G30](../core/g30.md) page.
+For information on programming the G30 TH Module, please go to the [G30](../netmf/g30.md) page.

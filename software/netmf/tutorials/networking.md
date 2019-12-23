@@ -1,7 +1,7 @@
 # Networking
 ---
 Introduction
-Networks are an essential part of our everyday lives. Almost every home is connected to a network (the Internet) and most businesses can't function without an internal network (LAN or Wi-Fi) that is connected to an external network (the Internet). All these networks have a standard for communication: TCP/IP. There are actually a few protocols that handle different tasks in the network: DNS, DHCP, IP, ICMP, TCP, UDP, PPP, and others.
+Networks are an essential part of our everyday lives. Almost every home is connected to a network (the Internet) and most businesses can't function without an internal network (LAN or WiFi) that is connected to an external network (the Internet). All these networks have a standard for communication: TCP/IP. There are actually a few protocols that handle different tasks in the network: DNS, DHCP, IP, ICMP, TCP, UDP, PPP, and others.
 
 In code, you create what is called a socket. A socket allows communication between your computer and one or more other endpoints (usually remote computers). Sockets can be TCP, UDP, and others. Socket support in NETMF is very similar to the full .NET Framework.
  

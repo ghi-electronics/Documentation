@@ -11,4 +11,4 @@ An Arduino-pinout compatible single board computer.
 
 ## Software
 
-For information on programming the FEZ Cerbuino Bee, please go to the [G120](../core/g120.md) page.
+For information on programming the FEZ Cerbuino Bee, please go to the [G120](../netmf/g120.md) page.
