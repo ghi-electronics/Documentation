@@ -8,8 +8,8 @@
     ],
     "resource": [
       {
-        "files": [ "**/*.png", "**/*.gif", "**/*.jpg", "**/*.ico" ],
-        "exclude": [ "obj/**", "docs/**", "pdf/**" ]
+        "files": [ "**/*.png", "**/*.gif", "**/*.jpg", "**/*.ico", "**/*.pdf" ],
+        "exclude": [ "obj/**", "docs/**" ]
       }
     ],
     "dest": "docs",

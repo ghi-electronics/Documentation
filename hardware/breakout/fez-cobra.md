@@ -8,4 +8,4 @@
 
 ## Software
 
-For information about programming the FEZ Cobra, please visit our [EMX](../core/emx.md) page.
+For information about programming the FEZ Cobra, please visit our [EMX](../netmf/emx.md) page.

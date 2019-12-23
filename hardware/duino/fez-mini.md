@@ -7,4 +7,4 @@
 
 ## Software
 
-For information on programming the FEZ Mini, please go to the [USBizi](../core/usbizi.md) page.
+For information on programming the FEZ Mini, please go to the [USBizi](../netmf/usbizi.md) page.
