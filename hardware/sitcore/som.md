@@ -7,6 +7,7 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 
 ## Ordering Part Number
 * 91 Pad Surface Mount: SC20260N
+* 105 Pad Surface Mount: SC20260E
 * 200 Pin SO-DIMM: SC20260D
 
 ## Specifications
