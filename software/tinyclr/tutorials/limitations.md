@@ -6,6 +6,6 @@ Assembly limit, use multi assembly
  
 Subset of full .NET framework to accommodate the small size
  
-No genetics
+No generics
  
 No async
