@@ -77,7 +77,14 @@
 <h1 id="power-management">Power Management</h1>
 
 <hr>
-</article>
+<p>TinyCLR OS currently supports Hibernate and Shutdown.</p>
+<h2 id="hibernate">Hibernate</h2>
+<p>In this mode, the system, goes into sleep low power mode and only wakes up and resumes from a specified pin.</p>
+<pre><code>// sleep and wakeup using APP pin
+</code></pre><h2 id="shutdown">Shutdown</h2>
+<p>In this mode, the system completely shuts down. It can only be woken up by reset, power cycle or by toggling the WAKEUP pin. Note that the system will always reset when it wakes up from this mode.</p>
+<pre><code>// Showdown
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

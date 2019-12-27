@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Encrypted In-Field Update </title>
+    <title>In-Field Update </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Encrypted In-Field Update ">
+    <meta name="title" content="In-Field Update ">
     <meta name="generator" content="docfx 2.23.1.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -74,10 +74,26 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="encrypted-in-field-update">Encrypted In-Field Update</h1>
+<h1 id="in-field-update">In-Field Update</h1>
 
 <hr>
-</article>
+<p>This feature allows the system to do a secure and encrypted In-Field software updates, IFU for short. The updates can be done from buffers or from file system.</p>
+<h2 id="buffer-updater">Buffer Updater</h2>
+<p>Systems with external memory can use the buffer updater, which loads the new update from anywhere (files, network or a bus) into a buffer. When the entire system updated is in memory, the IFU will then checks the buffer for authenticity and only then it will decrypts the data and flash it internally.</p>
+<p>This is the recommended update mode; however, this will only work on systems with external memories.</p>
+<blockquote><p>Warning
+No power interruption can happen when the system class �Update�. This only takes about 2 seconds. A power interruption will fail the update and then manual update becomes necessary.</p>
+</blockquote>
+<pre><code>```
+
+## File Updater
+
+The file updater reads files from a memory storage, SD or USB and then handles the updated directly without the need for external memories. This update will of course still work on systems with or without external mamory.
+</code></pre><pre><code>
+## Firmware and Application matching
+It is important to keep the right versions when doing firmware update. It is best to always update both, application and firmware, simultaneously if this is an option.
+
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

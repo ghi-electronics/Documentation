@@ -76,7 +76,17 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="usb">USB</h1>
 
-<hr>
+<p>TinyCLR OS supports both USB Client and USB Host</p>
+<h2 id="usb-client">USB Client</h2>
+<p>The USB client support is mainly used for deploying and debugging applications. It can also be used to transfer data between the IoT device and a PC. See <a href="usb-cdc-winusb.html">USB CDC &amp; WinUSB</a> for details.</p>
+<h2 id="usb-host">USB Host</h2>
+<p>USB MSC (Mass Storage Class) allows file access on USB memory devices.</p>
+<pre><code>// Initialize a USB MSC device
+
+// List files found on a USB memory device.
+</code></pre><blockquote><p>Note 
+USB Hubs are not currently supported. Special USB memory devices that have multiple interface or built in hubs will not work.</p>
+</blockquote>
 </article>
           </div>
           

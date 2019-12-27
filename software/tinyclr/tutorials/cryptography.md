@@ -1,3 +1,3 @@
 # Cryptography
 ---
-TinyClr supports both symmetric and asymmetric encryption.
+Libraries are only supported through [TLS](tls.md) currently. We are still planning how to securely expose the functionality.
