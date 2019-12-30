@@ -78,8 +78,14 @@
 <h1 id="ethernet">Ethernet</h1>
 
 <hr>
-<p>Supporting built-in Ethernet or the use of SPI-based ENC28J60 require TinyCLR to host is own TCP/IP and TLS stacks. This is currently still in development. Another option is to use a C# TCP/IP implementation, such us <a href="https://archive.codeplex.com/?p=mip">mIP</a>. Or use a chip with built in TCP/IP, like <a href="https://www.wiznet.io/product-item/w5500/">Wiznet W5500</a>.</p>
-</article>
+<p>Ethernet connection is supported through the internal MAC, by adding an external PHY (100BASE), and also supported through ENC28J60 through <a href="spi.html">SPI</a> bus (10BASE). Some of the available modules include the necessary PHY so the user will only need to add an Ethernet connector with magnets.</p>
+<h2 id="built-in-ethernet">Built-in Ethernet</h2>
+<p>This example �</p>
+<pre><code>// example
+</code></pre><h2 id="enc28j60">ENC28J60</h2>
+<p>This example uses the ENC28J60 click on our dev board.</p>
+<pre><code>// �
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

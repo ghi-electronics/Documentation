@@ -78,7 +78,25 @@
 <h1 id="unmanaged-heap">Unmanaged Heap</h1>
 
 <hr>
-</article>
+<p>The built in <a href="memory-management.md">memory management</a> system takes care of everything in an internal secure memory; however, TinyCLR OS also supports external unsecure memories through a special unmanaged heap. This memory is used in 2 different ways, in Large Buffer and for the Graphics system.</p>
+<h2 id="unsecure-large-buffers-what-is-it-called-in-code">Unsecure Large Buffers (what is it called in code?)</h2>
+<p>This is an easy way to create buffers that resides in external memories, which is typically much larger than internal memory.</p>
+<pre><code>// example code
+</code></pre><h2 id="graphical-memory">Graphical Memory</h2>
+<p>When the <a href="graphics.html">graphics</a> engine detects an available external memory, it automatically switches to it.</p>
+<h2 id="disposing-objects">Disposing Objects</h2>
+<p>As the name implies, this memory is unmanaged! You are responsible for disposing these any allocated objects. The garbage collector does not handle this special memory.</p>
+<blockquote><p>!Note
+The graphics system will automatically use the unmanaged heap. Remember to manually dispose of any unneeded objects</p>
+</blockquote>
+<pre><code>// make it
+// dispose
+Bitmap.Dispose();
+</code></pre><h2 id="helper-methods">Helper Methods</h2>
+<pre><code>// Get free memory size
+�.
+// Get total available memory
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

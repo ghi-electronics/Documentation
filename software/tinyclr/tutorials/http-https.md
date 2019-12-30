@@ -1,5 +1,12 @@
 # HTTP/HTTPS
 ---
-TinyCLR provides support for the most widely used and important application layer networking protocols including the latest version of TLS. The latest version of TLS abandons backward compatibility in exchange for much better security and improved overall performance.
+Hyper Text Transport Protocol (HTTP) builds on top of the [Core Protocols](core-protocols.md) to provide a standard way to work with web servers.
 
-TinyCLR has the features needed to provide secure, reliable, Internet communication with end to end encryption keeping your code and data safe from prying eyes.
+```
+// fetch www.google.com home page
+…
+```
+
+Secure connections similarly work, through the built in [TLS](tls.md) support.
+
+HTTPS can also be used to send data to a cloud, such as [Azure](azure.md).

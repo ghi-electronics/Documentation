@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>SD/MMC Cards </title>
+    <title>Camera Interface </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="SD/MMC Cards ">
-    <meta name="generator" content="docfx 2.29.1.0">
+    <meta name="title" content="Camera Interface ">
+    <meta name="generator" content="docfx 2.23.1.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
@@ -75,33 +74,12 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="sdmmc-cards">SD/MMC Cards</h1>
+<h1 id="camera-interface">Camera Interface</h1>
 
 <hr>
-<p>The below example requires the <code>GHIElectronics.TinyCLR.IO</code> and <code>GHIElectronics.TinyCLR.Storage</code> libraries and a device with an SD card.</p>
-<pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Devices.Storage;
-using GHIElectronics.TinyCLR.IO;
-using System;
-using System.IO;
-using System.Text;
-
-namespace FileSystem {
-    public class Program {
-        private static void Main() {
-            var sd = StorageController.FromName(@&quot;GHIElectronics.TinyCLR.NativeApis.STM32F4.SdCardStorageController\0&quot;);
-            var drive = FileSystem.Mount(sd.Hdc);
-
-            var file = new FileStream($@&quot;{drive.Name}Test.txt&quot;, FileMode.OpenOrCreate);
-            var bytes = Encoding.UTF8.GetBytes(DateTime.UtcNow.ToString() + Environment.NewLine);
-
-            file.Write(bytes, 0, bytes.Length);
-
-            file.Flush();
-
-            FileSystem.Flush(sd.Hdc);
-        }
-    }
-}
+<p>For devices with digital camera interface, sometimes called DCMI or DCI, TinyCLR OS includes the necessary drivers. Typically, cameras need to be configured using <a href="i2c.html">I2C bus</a>. Please refer to the camera�s manuals to determine the needed configuration.</p>
+<p>This example configures and shows the camera on the display on the SCM20260D Dev board.</p>
+<pre><code>// get from Dat!
 </code></pre></article>
           </div>
           
@@ -110,7 +88,7 @@ namespace FileSystem {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/tinyclr/tutorials/sd-mmc-cards.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/tinyclr/tutorials/camera.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -5,10 +5,15 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Watchdog Timer </title>
+    <title>Watchdog </title>
     <meta name="viewport" content="width=device-width">
+<<<<<<< HEAD
+    <meta name="title" content="Watchdog ">
+    <meta name="generator" content="docfx 2.23.1.0">
+=======
     <meta name="title" content="Watchdog Timer ">
     <meta name="generator" content="docfx 2.29.1.0">
+>>>>>>> c1db28d6ca44b19d1c53ac9e567305a19902dd62
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -75,9 +80,24 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="watchdog-timer">Watchdog Timer</h1>
+<h1 id="watchdog">Watchdog</h1>
 
 <hr>
+<p>The watchdog is a feature to keep checking that the system is functional by regularly �checking in�, or by �kicking the dog�! First, there is a countdown timer that is set to a specific time. When the timer reaches zero, the system will completely reset. A normally operating software will always regularly reset the timer so it will never reach zero, and so the system never resets under normal conditions. However, when the system fails or locks up, the timer will end up reaching zero and the system will reset.</p>
+<blockquote><p>Note
+Once Watchdog is enabled it can�t be disabled without resetting the system or a power cycle.</p>
+</blockquote>
+<pre><code>// Set watchdog to 5 seconds and reset it every 4 seconds
+Watchdog.Enable(5000);
+While(true)
+{
+              // reset the timer
+Watchdog.Reset()
+              Thread.Sleep(4000);
+}
+</code></pre><blockquote><p>Note
+Enabling Watchdog when debugging is a bad idea since the system will probably reset when stepping through code.</p>
+</blockquote>
 </article>
           </div>
           
