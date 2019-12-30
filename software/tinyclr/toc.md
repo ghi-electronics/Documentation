@@ -4,10 +4,10 @@
 
 # [Tutorials](tutorials/intro.md)
 ## Productivity Enhancements
-### [USB Debugging](tutorials/usb-debugging.md)
+### [USB Debugging](tutorials/debugging.md)
 ### [Memory Management](tutorials/memory.md)
 ### [Unmanaged Heap](tutorials/unmanaged-heap.md)
-### [NuGet Based Libraries](tutorials/nuget-based-libraries.md)
+### [NuGet Based Libraries](tutorials/nuget.md)
 ### [Mass Production Tools](tutorials/mass-production-tools.md)
 
 ## Modern OS Features
@@ -25,7 +25,7 @@
 ### [Graphics](tutorials/graphics.md)
 ### [Image Decoders](tutorials/image-decoders.md)
 ### [Font Support](tutorials/font-support.md)
-### [Camera and Audio](tutorials/camera-and-audio.md)
+### [Camera and Audio](tutorials/camera.md)
 ### [MJPEG Video](tutorials/mjpeg-video.md)
 ### [Audio Playback](tutorials/audio-playback.md)
 
@@ -82,11 +82,10 @@
 ### [UART](tutorials/uart.md)
 ### [USB](tutorials/usb.md)
 ### [CAN](tutorials/can.md)
-
-## [Limitations](tutorials/limitations.md)
+### [Modbus](tutorials/modbus.md)
 
 # [Downloads](downloads.md)
 # [Release Notes](release-notes.md)
 # [TinyCLR Config](tinyclr-config.md)
-
+# [Limitations](limitations.md)
 # [Legal](../../legal.md)

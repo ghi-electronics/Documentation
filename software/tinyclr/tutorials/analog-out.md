@@ -34,3 +34,7 @@ class Program {
 
 ## PWM
 PWM can also be used to output an analog voltage. [Click here](pwm.md) for details.
+
+## Audio Playback
+WAV audio playback can be done an analog output pin. See [Audio Playback](audio-playback.md).
+
