@@ -5,15 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>USB CDC &amp; WinUSB (rename) </title>
+    <title>USB CDC &amp; WinUSB </title>
     <meta name="viewport" content="width=device-width">
-<<<<<<< HEAD
-    <meta name="title" content="USB CDC &amp; WinUSB (rename) ">
+    <meta name="title" content="USB CDC &amp; WinUSB ">
     <meta name="generator" content="docfx 2.23.1.0">
-=======
-    <meta name="title" content="USB CDC and WinUSB ">
-    <meta name="generator" content="docfx 2.29.1.0">
->>>>>>> c1db28d6ca44b19d1c53ac9e567305a19902dd62
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -21,7 +16,6 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
@@ -80,15 +74,15 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="usb-cdc--winusb-rename">USB CDC &amp; WinUSB (rename)</h1>
+<h1 id="usb-cdc--winusb">USB CDC &amp; WinUSB</h1>
 
 <p>This feature is for devices that needs to transfer data to a PC. Note that the debug interface need to be switched to serial to free up the USB Client port for this feature. This is accomplished though the MODE pin, details in the device�s documentations.</p>
 <h2 id="usb-cdc">USB CDC</h2>
-<p>The CDC class is natively supported by Windows and Linux. It is a way for the PC to see a virtual serial port. Once loaded, the PC will can use this port like any other serial port (COM port). Windows 10 works without the need for any drivers. Earlier operating systems needs a driver, which we provide <a href="link is dead">here</a>. While it works with most operating systems, CDC is typically limited to 64KB/sec.</p>
+<p>The CDC class is natively supported by Windows and Linux. It is a way for the PC to see a virtual serial port. Once loaded, the PC will can use this port like any other serial port (COM port). Windows 10 works without the need for any drivers. Earlier operating systems needs a driver. While it works with most operating systems, CDC is typically limited to 64KB/sec.</p>
 <pre><code>```
 
 ## WinUSB
-The WinUSB drivers are unique to Windows and they do take advantage of the power and speed of USB, meaning they are faster then CDC at data transfers. The speed is limited by the data processing on the IoT devices. Windows 10 loads the drivers automatically, Windows 7 requires drivers, which are provided [here](bad link). 
+The WinUSB drivers are unique to Windows and they do take advantage of the power and speed of USB, meaning they are faster then CDC at data transfers. The speed is limited by the data processing on the IoT devices. Windows 10 loads the drivers automatically, Windows 7 requires drivers.
 </code></pre><pre><code>A disadvantage to WinUSB is that fact that it requires a special code on the PC side to read and write to the device. Fear not, we are providing an example as well.
 </code></pre><p>// or we should give them github link? Probably github!</p>
 <pre><code>
