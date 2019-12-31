@@ -8,7 +8,7 @@
     <title>SITCore System on Modules </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="SITCore System on Modules ">
-    <meta name="generator" content="docfx 2.29.1.0">
+    <meta name="generator" content="docfx 2.23.1.0">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
     <meta property="docfx:rel" content="../../">
     <meta property="docfx:newtab" content="true">
   </head>
@@ -281,41 +280,25 @@
 <li>TinyCLR: loads, debugs, and executes the managed application.</li>
 <li>Managed application: the program developed by the customer.</li>
 </ol>
-<p>Which components get executed on startup can be control by manipulating the LDR0 pin. It is pulled high on
-startup. When low, the device waits in the GHI Bootloader. Otherwise, the managed application is executed. LDR1
+<p>Which components get executed on startup can be control by manipulating the LDR pin. It is pulled high on
+startup. When low, the device waits in the GHI Bootloader. Otherwise, the managed application is executed. APP
 is reserved for future use.</p>
 <p>Additionally, the communications interface between the host PC and the SITCore is selected on startup through the
 MODE pin, which is pulled high on startup. The USB interface is selected when MODE is high and COM1 is selected
 when MODE is low.</p>
-<p>The above discussed functions of LDR0, LDR1, and MODE are only during startup. After startup, they return to the
-default GPIO state and are available to use as GPIO in the user application</p>
+<p>The above discussed functions of LDR, APP, and MODE are only during startup. After startup, they return to the
+default GPIO state and are available to use as GPIO in the your application.</p>
 <h2 id="tinyclr-os">TinyCLR OS</h2>
 <p>TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page for instructions.</p>
 <h3 id="loading-the-firmware">Loading the Firmware</h3>
 <ol>
-<li>Activate the bootloader, hold the LDR0 signal low while resetting the board.</li>
+<li>Activate the bootloader, hold the LDR signal low while resetting the board.</li>
 <li>Open <a href="../../software/tinyclr/tinyclr-config.html">TinyCLR Config</a> tool.</li>
 <li>Click the loader tab.</li>
 <li>Select the correct COM port. If you are not seeing it then the device is not in the loader mode.</li>
 <li>Click the <code>Update to Latest</code> button.</li>
 </ol>
 <p>You can also update the firmware manually. Download the <a href="../../software/tinyclr/downloads.html">firmware</a> and learn how to use the <a href="../loaders/ghi-bootloader.html">GHI Bootloader</a> manually</p>
-<h3 id="loading-the-bootloader">Loading the Bootloader</h3>
-<ol>
-<li>Download the SITCore bootloader <a href="../loaders/ghi-bootloader.html">here</a>.</li>
-<li>Connect your device to the USB client port.</li>
-<li>Put the board in DFU mode: Hold the SYS A pin low and press/release the reset button. Wait for a second then release SYS A. Windows <em>Device Manager</em> will now show &quot;STM Device in DFU Mode&quot; under the &#39;Universal Serial Bus controller&#39; TAB.</li>
-<li>Go to the <a href="../loaders/stm32-bootloader.html">STM32 Bootloader</a> to learn how to upload DFU files.</li>
-</ol>
-<h3 id="loading-the-firmware-1">Loading the Firmware</h3>
-<ol>
-<li>Activate the bootloader, hold the LDR0 signal (SYS B) low while resetting the board.</li>
-<li>Open <a href="../../software/tinyclr/tinyclr-config.html">TinyCLR Config</a> tool.</li>
-<li>Click the loader tab.</li>
-<li>Select the correct COM port. If you are not seeing it then the device is not in the loader mode.</li>
-<li>Click the <code>Update to Latest</code> button.</li>
-</ol>
-<p>You can also update the firmware manually. Download the <a href="../../software/tinyclr/downloads.html">firmware</a> and learn how to use the <a href="../loaders/ghi-bootloader.html">GHI Bootloader</a> manually.</p>
 <h3 id="start-coding">Start Coding</h3>
 <p>Now that you have installed the bootloader and firmware on the SITCore, you can setup your host computer and start programming.  Go to the TinyCLR <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page for instructions.</p>
 <h2 id="datasheet">Datasheet</h2>
@@ -338,23 +321,22 @@ default GPIO state and are available to use as GPIO in the user application</p>
 <h3 id="required-pins">Required Pins</h3>
 <p>Exposing the following pins is required in every design to enable device programming, updates, and recovery:</p>
 <ul>
-<li>LDR0</li>
-<li>LDR1</li>
+<li>LDR</li>
+<li>APP</li>
 <li>Reset</li>
 <li>Desired debug interface(s)</li>
 <li>MODE if required to select a debug interface</li>
 </ul>
 <h3 id="power-supply">Power Supply</h3>
-<p>A typical clean power source, suited for digital circuitry, is needed to power the SITCore SoCs. Voltages should be within at
-least 10% of the specified voltage. Decoupling capacitors of 0.1 uF are needed near every power pin. Additionally, a
-large capacitor, typically 47 uF, should be near the G80 if the power supply is more than few inches away.</p>
-<h3 id="crystals">Crystals</h3>
-<p>The SITCore requires an external 8 MHz crystal and associated circuitry to function. For the RTC to function, a 32.768
-kHz crystal and circuitry are required. Please see the processor&#39;s documentation for advanced information.</p>
+<p>A typical clean power source, suited for digital circuitry, is needed to power the SITCore SoMs. The voltage should be within 10% of 3.3 volts.</p>
 <h3 id="reset">Reset</h3>
 <p>The reset pin is not pulled in any direction. Designs must be sure to use an appropriate pull-up resistor.</p>
 <h3 id="oven-reflow-profile">Oven Reflow Profile</h3>
-<h2 id="sitcore-development-board">SITCore Development Board</h2>
+<p>SITCore SoMs are not sealed for moisture. Baking modules before reflow is recommended and required in a humid environment. The process of reflow can damage the SoM if the temperature is too high or exposure is too long.</p>
+<p>The lead-free reflow profiles used by GHI Electronics are shown below. The profiles are based on AIM SAC 305 solder (3% silver, 0.5% copper). The thermal mass of the assembled board and the sensitivity of the components on it affect the total dwell time. Differences in the two profiles are where they reach their respective peak temperatures as well as the time above liquids (TAL). The shorter profile applies to smaller assemblies, whereas the longer profile applies to larger assemblies such as back-planes or high-density boards. The process window is described by the shaded area. These profiles are only starting-points and general guidance. The particulars of the oven and the assembly will determine the final process.</p>
+<p><a href="http://files.ghielectronics.com/downloads/Documents/Datasheets/WS483%20SAC305%20Solder%20Paste%20Datasheet.pdf"><img src="../netmf/images/reflow-profile.gif" alt="Reflow Chart"></a></p>
+<h2 id="sitcore-dev-boards">SITCore Dev Boards</h2>
+<p>We offer SITCore development boards to get you started as quickly and easily as possible. These boards allow you to start programming in minutes, and are suitable for both prototypes and production. Click <a href="dev.html">here</a> for details.</p>
 </article>
           </div>
           
@@ -382,7 +364,7 @@ kHz crystal and circuitry are required. Please see the processor&#39;s documenta
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2019 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            <span>Copyright © 2020 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
             
           </div>
         </div>
