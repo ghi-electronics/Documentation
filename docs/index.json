@@ -229,11 +229,6 @@
     "title": "Debugging",
     "keywords": "Debugging Debug a tiny IoT device just like you would on a full PC. You can easily debug your code from within Visual Studio over USB or Serial. Set breakpoints, step through code, and examine variables without the need for specialized hardware or software. On power up, the system checks a pin called MODE to determine select the debug interface, USB vs Serial. Information on using the debugger can be found in Microsoft's documentation here ."
   },
-  "software/tinyclr/tutorials/modbus.html": {
-    "href": "software/tinyclr/tutorials/modbus.html",
-    "title": "Modbus",
-    "keywords": "Modbus"
-  },
   "software/tinyclr/tutorials/touch-screen.html": {
     "href": "software/tinyclr/tutorials/touch-screen.html",
     "title": "Touch Screen",
@@ -823,5 +818,10 @@
     "href": "software/tinyclr/tutorials/usb.html",
     "title": "USB",
     "keywords": "USB TinyCLR OS supports both USB Client and USB Host USB Client The USB client support is mainly used for deploying and debugging applications. It can also be used to transfer data between the IoT device and a PC. See USB CDC & WinUSB for details. USB Host USB MSC (Mass Storage Class) allows file access on USB memory devices. // Initialize a USB MSC device // List files found on a USB memory device. Note USB Hubs are not currently supported. Special USB memory devices that have multiple interface or built in hubs will not work."
+  },
+  "software/tinyclr/tutorials/modbus.html": {
+    "href": "software/tinyclr/tutorials/modbus.html",
+    "title": "Modbus",
+    "keywords": "Modbus Under construction. Read more about Modbus on Wikipedia ."
   }
 }
