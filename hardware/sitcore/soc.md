@@ -73,6 +73,7 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
   * Pulse measurement
     
 ## Pinouts
+
 ### SC20100S Pinout
 [SC20100S Pinout](pdfs/sc20100s.pdf)
 
@@ -87,23 +88,23 @@ There are three different components of the device firmware:
 2. TinyCLR: loads, debugs, and executes the managed application.
 3. Managed application: the program developed by the customer.
 
-Which components get executed on startup can be control by manipulating the LDR0 pin. It is pulled high on
-startup. When low, the device waits in the GHI Bootloader. Otherwise, the managed application is executed. LDR1
+Which components get executed on startup can be control by manipulating the LDR pin. It is pulled high on
+startup. When low, the device waits in the GHI Bootloader. Otherwise, the managed application is executed. APP
 is reserved for future use.
 
 Additionally, the communications interface between the host PC and the SITCore is selected on startup through the
 MODE pin, which is pulled high on startup. The USB interface is selected when MODE is high and COM1 is selected
 when MODE is low.
 
-The above discussed functions of LDR0, LDR1, and MODE are only during startup. After startup, they return to the
-default GPIO state and are available to use as GPIO in the user application
+The above discussed functions of the LDR, APP, and MODE pins are only available during startup. After startup, the pins return to the
+default GPIO state and are available as GPIO in your application.
 
 ## TinyCLR OS
 TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.
 
 ### Loading the Firmware
 
-1. Activate the bootloader, hold the LDR0 signal low while resetting the board.
+1. Activate the bootloader, hold the LDR signal low while resetting the board.
 2. Open [TinyCLR Config](../../software/tinyclr/tinyclr-config.md) tool.
 3. Click the loader tab.
 4. Select the correct COM port. If you are not seeing it then the device is not in the loader mode.
@@ -118,7 +119,7 @@ You can also update the firmware manually. Download the [firmware](../../softwar
 4. Go to the [STM32 Bootloader](../../hardware/loaders/stm32-bootloader.md) to learn how to upload DFU files.
 
 ### Loading the Firmware
-1. Activate the bootloader, hold the LDR0 signal (SYS B) low while resetting the board.
+1. Activate the bootloader, hold the LDR signal (SYS B) low while resetting the board.
 2. Open [TinyCLR Config](../../software/tinyclr/tinyclr-config.md) tool.
 3. Click the loader tab.
 4. Select the correct COM port. If you are not seeing it then the device is not in the loader mode.
