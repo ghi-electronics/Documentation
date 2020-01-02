@@ -49,7 +49,7 @@ public class Program
 
         while (true)
         {
-            // we want to do it every sometime randomely
+            // we want to do it every sometime randomly
             i = rnd.Next(5000) + 5000;//between 5 and 10 seconds
             Debug.Print("Delaying for " + i + " ms");
             Thread.Sleep(i);

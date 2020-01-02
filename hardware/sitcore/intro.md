@@ -5,9 +5,9 @@ Our SITCore line of products provides an easy way to create secure IoT and embed
 |  |  |
 |---|---|
 | **System on Chip** </br> Secure IoT chips that run C# and support debugging over USB. [**Learn More...**](soc.md) | **System on Modules** </br> Available as a surface mount module and a 200 pin SO-DIMM module. [**Learn More...**](soc.md) |
-| [![SITCore SC20260](images/sc20100-board.jpg)](soc.md) | [![G400S](images/uc5550.jpg)](soc.md) |
+| [![SITCore SC20100S](images/sc20100-board.jpg)](soc.md) | [![G400S](images/uc5550.jpg)](soc.md) |
 | **Development Boards** </br> Get started quickly with one of our development boards -- you'll be programming in minutes! [**Learn More...**](dev.md)| |
-| [![FEZ](images/sitcore-dev-board.jpg)](dev.md) | |
+| [![SITCore Dev Board](images/sitcore-dev-board.jpg)](dev.md) | |
  
 ***
 

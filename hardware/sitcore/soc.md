@@ -1,6 +1,6 @@
 # SITCore System on Chip
 ---
-![SITCore SC20260](images/sc20100-board.jpg)
+![SITCore SC20100S](images/sc20100-board.jpg)
 
 ## Overview
 The SITCore SoCs provide a low cost way to add .NET computing power to any embedded product. Available as either a 100 pin LQFP or a 265 ball BGA, the SITCore SoCs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more.
@@ -11,7 +11,7 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 
 ## Specifications
 
-| Spec               | SC20100x                  | SC20260B             |
+| Spec               | SC20100S                  | SC20260B             |
 |--------------------|---------------------------|----------------------|
 | Core               | ARM Cortex-M7 32 bit      | ARM Cortex-M7 32 bit |
 | Speed              | 480 MHz                   | 480 MHz              |
@@ -26,7 +26,7 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 
 ## Peripherals
 
-| Peripheral            | SC20100                   | SC20260               |
+| Peripheral            | SC20100S                  | SC20260B              |
 |-----------------------|---------------------------|-----------------------|
 | GPIO (all support IRQ)|                           |                       |
 | SPI                   | 4                         | 3                     |
@@ -45,6 +45,10 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 | Camera                | 0                         | 1                     |
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
+
+> [!Note]
+> Interrupts (IRQs) are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
+example: PA1 and PB1 cannot both be used as interrupts at the same time, but PA1 and PB2 can.
 
 ## Features
 
@@ -77,8 +81,8 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 ### SC20100S Pinout
 [SC20100S Pinout](pdfs/sc20100s.pdf)
 
-### SC20260B Ballout
-[SC20260B Ballout](pdfs/sc20260b.pdf)
+### SC20260B Pinout
+[SC20260B Pinout](pdfs/sc20260b.pdf)
 
 ## Device Startup
 The SITCore is held in reset when the reset pin is low. Releasing it will begin the system startup process.
@@ -135,17 +139,12 @@ Now that you have installed the bootloader and firmware on the SITCore, you can 
 ## Design Considerations
 
 ### Footprints
-####This is the recommened footprint for the SC20100S:
+####This is the recommended footprint for the SC20100S:
 ![SC20100S Footprint](images/sc20100s-footprint.gif)
-
-####This is the recommended footprint and PCB design rules for the SC20100B:
-![SC20100B Footprint](images/sc20100b-footprint.gif)
-![SC20100B Design Rules](images/sc20100b-design-rules.gif)
 
 ####This is the recommended footprint and PCB design rules for the SC20260B:
 ![SC20260B Footprint](images/sc20260b-footprint.gif)
 ![SC20260B Design Rules](images/sc20260b-design-rules.gif)
-
 
 ### Required Pins
 Exposing the following pins is required in every design to enable device programming, updates, and recovery:
@@ -168,4 +167,13 @@ The reset pin is not pulled in any direction. Designs must be sure to use an app
 
 ### Oven Reflow Profile
 
-## SITCore Development Board
+SITCore SoCs are not sealed for moisture. Baking SoCs before reflow is recommended and required in a humid environment. The process of reflow can damage the SoC if the temperature is too high or exposure is too long.
+
+The lead-free reflow profiles used by GHI Electronics are shown below. The profiles are based on AIM SAC 305 solder (3% silver, 0.5% copper). The thermal mass of the assembled board and the sensitivity of the components on it affect the total dwell time. Differences in the two profiles are where they reach their respective peak temperatures as well as the time above liquids (TAL). The shorter profile applies to smaller assemblies, whereas the longer profile applies to larger assemblies such as back-planes or high-density boards. The process window is described by the shaded area. These profiles are only starting-points and general guidance. The particulars of the oven and the assembly will determine the final process.
+
+[![Reflow Chart](../netmf/images/reflow-profile.gif)](http://files.ghielectronics.com/downloads/Documents/Datasheets/WS483%20SAC305%20Solder%20Paste%20Datasheet.pdf)
+
+
+## SITCore Dev Boards
+
+We offer SITCore development boards to get you started as quickly and easily as possible. These boards allow you to start programming in minutes, and are suitable for both prototypes and production. Click [here](dev.md) for details.

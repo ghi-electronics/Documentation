@@ -6,9 +6,9 @@
 The SITCore SoMs provide a low cost way to add .NET computing power to any embedded product. They are available as a 200 pin SO-DIMM with and without WiFi (G400 compatible), a 91 pad surface mount module (G120 compatible), or a 105 pad surface mount module (G120E compatible). The SITCore SoMs let's you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more. The surface mount versions are great for harsh or high vibration environments.
 
 ## Ordering Part Number
-* 91 Pad Surface Mount: SC20260N
-* 105 Pad Surface Mount: SC20260E
-* 200 Pin SO-DIMM: SC20260D
+* 91 Pad Surface Mount: SCM20260N
+* 105 Pad Surface Mount: SCM20260E
+* 200 Pin SO-DIMM: SCM20260D
 
 ## Specifications
 
@@ -26,7 +26,7 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 
 ## Peripherals
 
-| Peripheral            | SC20260N               | SC20260E               | SC20260D               |
+| Peripheral            | SCM20260N              | SCM20260E              | SCM20260D              |
 |-----------------------|------------------------|------------------------|------------------------|
 | GPIO (all support IRQ)|                        |                        |                        |
 | SPI                   | 3                      | 3                      | 3                      |
@@ -45,6 +45,10 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 | Camera                | 1                      | 1                      | 1                      |
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
+
+> [!Note]
+> Interrupts (IRQs) are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
+example: PA1 and PB1 cannot both be used as interrupts at the same time, but PA1 and PB2 can.
 
 ## Features
 * Low power modes including three independently controllable power domains
@@ -123,16 +127,16 @@ Now that you have installed the bootloader and firmware on the SITCore, you can 
 
 We recommend no traces or vias under the module. Dimensions are in inches.
 
-### SC20260N Recommended Footprint
-![SC20260N Pinout](images/g120-footprint.jpg)
+### SCM20260N Recommended Footprint
+![SCM20260N Pinout](images/g120-footprint.jpg)
 
-### SC20260E Recommended Footprint
-![SC20260E Footprint](images/scm20260e-footprint.jpg)
+### SCM20260E Recommended Footprint
+![SCM20260E Footprint](images/scm20260e-footprint.jpg)
 
-### SC20260D SO-DIMM Socket
+### SCM20260D SO-DIMM Socket
 ![200 pin DDR2 SO-DIMM socket](images/200-pin-ddr2-so-dimm.jpg)
 
-The SC20260D and SC20260W use the same 200 pin SO-DIMM socket that was originally made for DDR2 memory modules. You can make a custom SO-DIMM SITCore circuit board by adding the appropriate SO-DIMM socket to your circuit board.
+The SCM20260D uses the same 200 pin SO-DIMM socket that was originally made for DDR2 memory modules. You can make a custom SO-DIMM SITCore circuit board by adding the appropriate SO-DIMM socket to your circuit board.
 
 > [!Tip]
 > Make sure to expose the required pins in your design. Specific pins are needed for device programming, updates, recovery, and WiFi firmware updates. See device specifications for details.
