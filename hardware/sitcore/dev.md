@@ -4,22 +4,22 @@
 
 We offer two development boards making it possible to start programming your application within minutes without designing or building new hardware. These boards are not only suitable for prototypes, but for short production runs of products as well.
 
-## SITCore SC20260D Dev Board
+## SITCore SCM20260D Dev Board
 
 Ordering Part Number:
 
 [Schematic]()
 
-The SC20260D Dev Board is the fastest and easiest way to start developing with the SC20260D. This board includes the SC20260D DIMM module and a 4.3 inch capacitive touch display. It provides standard connectors for input/output, and three 40 pin socket headers for connecting peripherals and a display. Peripheral connectors include external power, Ethernet, CAN, USB host and client, RTC backup battery, DCMI interface and an SD card slot.  It also has a buzzer, LEDs, a reset button, and user programmable boot buttons.
+The SCM20260D Dev Board is the fastest and easiest way to start developing with the SCM20260D. This board includes the SCM20260D DIMM module and a 4.3 inch capacitive touch display. It provides standard connectors for input/output, and three 40 pin socket headers for connecting peripherals and a display. Peripheral connectors include external power, Ethernet, CAN, USB host and client, RTC backup battery, DCMI interface and an SD card slot.  It also has a buzzer, LEDs, a reset button, and user programmable boot buttons.
 
-To start development using the SC20260D Dev Board, just install the module on the board, plug in the display (if needed), and connect the board's USB Client port to a host computer using a micro USB cable. Go to the [Getting Started](../../software/tinyclr/getting-started.md) page in the TinyCLR section of the documentation page for further instructions.
+To start development using the SCM20260D Dev Board, just install the module on the board, plug in the display (if needed), and connect the board's USB Client port to a host computer using a micro USB cable. Go to the [Getting Started](../../software/tinyclr/getting-started.md) page in the TinyCLR section of the documentation page for further instructions.
 
 The board can be powered through either the USB connectors or the barrel jack. Always use the barrel jack for power when using displays, especially the larger ones. USB does not provide sufficient power needed for displays.
 
 > [!Tip]
 > The barrel jack is pin positive, sleeve negative, 2.1mm. It is capable of anywhere 7V to 30V. 1A of power should be enough for most needs.
 
-### UCD-D43-A (Included with SC20260D Dev Board)
+### UCD-D43-A (Included with SCM20260D Dev Board)
 ![UD435](images/ud435.jpg)
 
 * Display Module: [ER-TFT043-3](https://www.buydisplay.com/)
@@ -27,7 +27,7 @@ The board can be powered through either the USB connectors or the barrel jack. A
 
 [Schematic](http://files.ghielectronics.com/downloads/Schematics/Systems/UD435%20Rev%20A%20Schematic.pdf)
 
-This display module has a 4.3" 480x272 TFT display with a capacitive touch screen. It plugs directly into the SC20260D Dev Board and uses I2C for capacitive touch. The backlight is controllable through ?. The capacitive touch controller is connected to I2C ? with the interrupt pin on ?.
+This display module has a 4.3" 480x272 TFT display with a capacitive touch screen. It plugs directly into the SCM20260D Dev Board and uses I2C for capacitive touch. The backlight is controllable through ?. The capacitive touch controller is connected to I2C ? with the interrupt pin on ?.
 
 The [TinyCLR Samples repo](https://github.com/ghi-electronics/TinyCLR-Samples) has usage examples. You can learn more in the [Graphics](../../software/tinyclr/tutorials/graphics.md) and [Display](../../software/tinyclr/tutorials/displays.md) sections of the TinyCLR tutorials.
 
@@ -51,16 +51,16 @@ Vertical Front Porch | 7
 Vertical Sync Polarity | low
 Vertical Sync Pulse Width | 1
 
-## SITCore SC20100 Dev Board
+## SITCore SC20100S Dev Board
 ![Development Options](images/sitcore-dev-board.jpg)
 
 Ordering Part Number:
 
 [Schematic]()
 
-The SC20100 Dev Board includes a SC20100 soldered to the board and a built in 1.8 inch color serial display. It has three 40 pin socket headers for connecting peripherals and a display. Peripheral connectors include external power, Ethernet, CAN, USB host and client, RTC backup battery, DCMI interface and an SD card slot.  It also has a buzzer, LEDs, a reset button, and user programmable boot buttons.
+The SC20100S Dev Board includes a SC20100S soldered to the board and a built in 1.8 inch color serial display. It has three 40 pin socket headers for connecting peripherals and a display. Peripheral connectors include external power, Ethernet, CAN, USB host and client, RTC backup battery, DCMI interface and an SD card slot.  It also has a buzzer, LEDs, a reset button, and user programmable boot buttons.
 
-To start development using the SC20100 Dev Board, just connect the board's USB Client port to a host computer using a micro USB cable. Go to the [Getting Started](../../software/tinyclr/getting-started.md) page in the TinyCLR section of the documentation page for further instructions.
+To start development using the SC20100S Dev Board, just connect the board's USB Client port to a host computer using a micro USB cable. Go to the [Getting Started](../../software/tinyclr/getting-started.md) page in the TinyCLR section of the documentation page for further instructions.
 
 The board can be powered through either the USB connectors or the barrel jack. Always use the barrel jack for power when using displays, especially the larger ones. USB does not provide sufficient power needed for displays.
 

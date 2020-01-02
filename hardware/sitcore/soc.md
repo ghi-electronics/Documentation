@@ -1,6 +1,6 @@
 # SITCore System on Chip
 ---
-![SITCore SC20260](images/sc20100-board.jpg)
+![SITCore SC20100S](images/sc20100-board.jpg)
 
 ## Overview
 The SITCore SoCs provide a low cost way to add .NET computing power to any embedded product. Available as either a 100 pin LQFP or a 265 ball BGA, the SITCore SoCs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more.
@@ -11,7 +11,7 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 
 ## Specifications
 
-| Spec               | SC20100x                  | SC20260B             |
+| Spec               | SC20100S                  | SC20260B             |
 |--------------------|---------------------------|----------------------|
 | Core               | ARM Cortex-M7 32 bit      | ARM Cortex-M7 32 bit |
 | Speed              | 480 MHz                   | 480 MHz              |
@@ -26,7 +26,7 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 
 ## Peripherals
 
-| Peripheral            | SC20100                   | SC20260               |
+| Peripheral            | SC20100S                  | SC20260B              |
 |-----------------------|---------------------------|-----------------------|
 | GPIO (all support IRQ)|                           |                       |
 | SPI                   | 4                         | 3                     |
@@ -77,8 +77,8 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 ### SC20100S Pinout
 [SC20100S Pinout](pdfs/sc20100s.pdf)
 
-### SC20260B Ballout
-[SC20260B Ballout](pdfs/sc20260b.pdf)
+### SC20260B Pinout
+[SC20260B Pinout](pdfs/sc20260b.pdf)
 
 ## Device Startup
 The SITCore is held in reset when the reset pin is low. Releasing it will begin the system startup process.
@@ -135,17 +135,12 @@ Now that you have installed the bootloader and firmware on the SITCore, you can 
 ## Design Considerations
 
 ### Footprints
-####This is the recommened footprint for the SC20100S:
+####This is the recommended footprint for the SC20100S:
 ![SC20100S Footprint](images/sc20100s-footprint.gif)
-
-####This is the recommended footprint and PCB design rules for the SC20100B:
-![SC20100B Footprint](images/sc20100b-footprint.gif)
-![SC20100B Design Rules](images/sc20100b-design-rules.gif)
 
 ####This is the recommended footprint and PCB design rules for the SC20260B:
 ![SC20260B Footprint](images/sc20260b-footprint.gif)
 ![SC20260B Design Rules](images/sc20260b-design-rules.gif)
-
 
 ### Required Pins
 Exposing the following pins is required in every design to enable device programming, updates, and recovery:

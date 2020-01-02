@@ -2585,17 +2585,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "hardware/netmf/images/reflow-graph.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "hardware/netmf/images/reflow-graph.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "hardware/netmf/images/reflow-profile.gif",
       "output": {
         "resource": {
@@ -2722,7 +2711,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/netmf/upgrade.html",
-          "hash": "7vmUwLd43zb7Q1BjKCbhYw=="
+          "hash": "syuRrISdgQZxLJeqCGP8ZQ=="
         }
       },
       "is_incremental": false,
@@ -2758,7 +2747,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/dev.html",
-          "hash": "HMqL9JgTRGSrXXBqCWazDw=="
+          "hash": "8sd0bWMPVqHoBLgZ/5MLHQ=="
         }
       },
       "is_incremental": false,
@@ -2803,28 +2792,6 @@
       "output": {
         "resource": {
           "relative_path": "hardware/sitcore/images/sc20100-board.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "hardware/sitcore/images/sc20100b-design-rules.gif",
-      "output": {
-        "resource": {
-          "relative_path": "hardware/sitcore/images/sc20100b-design-rules.gif"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "hardware/sitcore/images/sc20100b-footprint.gif",
-      "output": {
-        "resource": {
-          "relative_path": "hardware/sitcore/images/sc20100b-footprint.gif"
         }
       },
       "is_incremental": false,
@@ -2913,7 +2880,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/intro.html",
-          "hash": "c8J5Usq7C+fmMtZI2zZS7w=="
+          "hash": "QR8bzgJLP8b06Z38pjim4Q=="
         }
       },
       "is_incremental": false,
@@ -2980,7 +2947,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/soc.html",
-          "hash": "8HRrzStlhqUHqJw7vvtKCw=="
+          "hash": "FnWUyGa1zLrJsn4TYCmdPw=="
         }
       },
       "is_incremental": false,
@@ -2992,7 +2959,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/som.html",
-          "hash": "7MTfZ8s9I/x6PVTL+zNBVA=="
+          "hash": "phgHzEk1ewoJMn2bmNhs0A=="
         }
       },
       "is_incremental": false,
@@ -4074,7 +4041,7 @@
       "output": {
         ".html": {
           "relative_path": "software/netmf/tutorials/usb-client.html",
-          "hash": "HnadZLpRZZ0IoCMArc9L1A=="
+          "hash": "T8fD6gRKG4/X4iewNYb1lg=="
         }
       },
       "is_incremental": false,
@@ -4691,7 +4658,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/analog-in.html",
-          "hash": "I3KPVUF+522DjPIif+56Ag=="
+          "hash": "Dqz1VB2ni4V7iH0LM8RzWg=="
         }
       },
       "is_incremental": false,
@@ -4919,7 +4886,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/gpio.html",
-          "hash": "vajFrhcLXbgCxalO2jsvMw=="
+          "hash": "4U/eMjgXoWrkajXwFGUfDQ=="
         }
       },
       "is_incremental": false,
@@ -5302,7 +5269,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/pwm.html",
-          "hash": "upRJbmUs9TUFFs5l9EtM0Q=="
+          "hash": "thAP8W/e+40A4XJ3NHSu8w=="
         }
       },
       "is_incremental": false,
@@ -5470,7 +5437,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/uart.html",
-          "hash": "jHe+C/FXuqShEZ+0oye/Uw=="
+          "hash": "yazqL1fgKPpHTv1rir80CA=="
         }
       },
       "is_incremental": false,
@@ -5573,17 +5540,17 @@
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "RestApiDocumentProcessor": {

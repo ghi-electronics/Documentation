@@ -5,7 +5,7 @@ Serial data ports, called UARTs, transfer data between devices using two pins: T
 > [!Tip]
 > the TXD on one end (output) goes to the RXD on the other side (input) and vice versa.
 
-The easiest way to test a UART is by wiring a device's TXD to its RXD so any transmitted data is received by the same device. This is called a "loopback" test. The following code performs a simple loopback test on the SITCore SC20100 Dev Board. If you connect PE7, the COM7 RX pin, directly to the PE8, the COM7 TX pin, you will see "ABCDEF" in the output window when running this code.
+The easiest way to test a UART is by wiring a device's TXD to its RXD so any transmitted data is received by the same device. This is called a "loopback" test. The following code performs a simple loopback test on the SITCore SC20100S Dev Board. If you connect PE7, the COM7 RX pin, directly to the PE8, the COM7 TX pin, you will see "ABCDEF" in the output window when running this code.
 
 > [!Tip]
 > Don't forget to add the GHIElectronics.TinyCLR.Devices.Uart NuGet package!
@@ -50,7 +50,7 @@ TinyCLR's UART API included the following event listeners:
 * DataReceived
 * ErrorReceived
 
-The following example is written for the SC20100 Dev Board. It works the same as the previous example, except it uses the DateReceived event. If you connect PE7, the COM7 RX pin, directly to the PE8, the COM7 TX pin, you will see "ABCDEF" in the output window when running this code.
+The following example is written for the SC20100S Dev Board. It works the same as the previous example, except it uses the DateReceived event. If you connect PE7, the COM7 RX pin, directly to the PE8, the COM7 TX pin, you will see "ABCDEF" in the output window when running this code.
 
 ```csharp
 using System.Diagnostics;

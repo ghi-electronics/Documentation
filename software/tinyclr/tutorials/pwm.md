@@ -11,7 +11,7 @@ Pulse Width Modulation (PWM) is a very useful feature found on most microcontrol
 ## Energy Level
 PWM is perfect for dimming an LED or controlling the speed of a motor. When the duty cycle is 50%, half the energy is transferred to the attached load.
 
-This example is written for the SC20260D dev board, but will run unchanged on the SC20100 dev board. The left most LED on the board (PB0) will fade in and out.
+This example is written for the SCM20260D Dev board, but will run unchanged on the SC20100S Dev board. The left most LED on the board (PB0) will fade in and out.
 
 ```csharp
 using GHIElectronics.TinyCLR.Devices.Pwm;
@@ -48,7 +48,7 @@ class Program {
 ## Musical Tones
 Musical notes have specific frequencies; C for example is about 261Hz. Plugging these numbers into an array and knowing the length of each tone is all that is needed to play some simple music. When playing notes by changing the frequency, keep the duty cycle set to 0.5.
 
-The following example is written for the SC20100 dev board.
+The following example is written for the SC20100S Dev board.
 
 ```csharp
 using GHIElectronics.TinyCLR.Devices.Pwm;
@@ -113,7 +113,7 @@ The pulse that controls servos is sent every 20 ms. This pulse will usually have
 > [!Tip] 
 > As a rule, servos have three wires. Be sure the central wire is connected to 5V. The lighter color wire on one side of the connector is a signal and should be connected to a PWM pin. The third one, which is usually a darker color, is ground.
 
-This example is written for the SC20100 Dev Board. It will turn the positional servo (servo1) to the zero degree position, wait a second, and then turn it to 180 degrees. It will then rotate the continuous servo (servo2) at maximum speed for five seconds, and then reverse direction for five seconds. You must add the servo class (the code below this example) to your project for it to work.
+This example is written for the SC20100S Dev Board. It will turn the positional servo (servo1) to the zero degree position, wait a second, and then turn it to 180 degrees. It will then rotate the continuous servo (servo2) at maximum speed for five seconds, and then reverse direction for five seconds. You must add the servo class (the code below this example) to your project for it to work.
 
 > [!Tip]
 > Most servos will have a 1 ms minimum pulse width and a 2 ms maximum pulse width, but check the specs of the motor to be sure.

@@ -87,7 +87,7 @@ If the processor is powered from 3.3V, then the state high means that there is 3
 </div>
 <div class="WARNING"><h5>Warning</h5><p>Digital pins on microcontrollers are weak. They can only be used to control small LEDs or transistors. Those transistors can, in turn, control devices with high power needs like a motor.</p>
 </div>
-<p>While written for the SC20260D dev board, this example will work unchanged on the SC20100 dev board as well, blinking the left most LED (PB0).</p>
+<p>While written for the SCM20260D Dev board, this example will work unchanged on the SC20100S Dev board as well, blinking the left most LED (PB0).</p>
 <pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
 using System.Threading;
@@ -114,7 +114,7 @@ class Program {
 <p>In this example, a button is connected between ground and an input pin. We will enable the pull-up resistor making that pin high when the button is not pressed.  When the button is pressed it will overpower the pull-up and make the input low. We will read the status of the button and pass its state to an LED. </p>
 <div class="TIP"><h5>Tip</h5><p>Never use an infinite loop without giving the system time to think. Add a short sleep to the loop or use events instead.</p>
 </div>
-<p>While written for the SC20260D dev board, this example will work unchanged with the SC20100 dev board as well. The left most LED (PB0) will light when the right most button (PD7/MODE) is pressed.</p>
+<p>While written for the SCM20260D Dev board, this example will work unchanged with the SC20100S Dev board as well. The left most LED (PB0) will light when the right most button (PD7/MODE) is pressed.</p>
 <pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
 using System.Threading;
@@ -147,7 +147,7 @@ class Program {
 <p>When an event occurs, the program stops what it is doing and control is transferred to an event handler. An event handler is code you write that responds to the event. </p>
 <p>Let&#39;s use event driven programming to respond to a button and turn an LED on and off. We will raise an event when the value on the button&#39;s input pin changes because the button is pressed or released.</p>
 <p>You will see a reference to a &quot;falling edge&quot; in the following code. A falling edge occurs when the state of a pin goes from high to low. A rising edge is just the opposite -- it occurs when a pin goes from low to high.</p>
-<p>This example is written for the SC20260D dev board, but will also run unchanged on the SC20100 dev board. It works exactly the same as the above example, but uses events instead of polling.</p>
+<p>This example is written for the SCM20260D Dev board, but will also run unchanged on the SC20100S Dev board. It works exactly the same as the above example, but uses events instead of polling.</p>
 <pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
 using System.Threading;
