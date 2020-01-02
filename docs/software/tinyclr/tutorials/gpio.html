@@ -148,6 +148,9 @@ class Program {
 <p>Let&#39;s use event driven programming to respond to a button and turn an LED on and off. We will raise an event when the value on the button&#39;s input pin changes because the button is pressed or released.</p>
 <p>You will see a reference to a &quot;falling edge&quot; in the following code. A falling edge occurs when the state of a pin goes from high to low. A rising edge is just the opposite -- it occurs when a pin goes from low to high.</p>
 <p>This example is written for the SCM20260D Dev Board, but will also run unchanged on the SC20100S Dev Board. It works exactly the same as the above example, but uses events instead of polling.</p>
+<div class="NOTE"><h5>Note</h5><p>Input events use interrupts (IRQ). Interrupts are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
+example: PA1 and PB1 cannot both be used as interrupts at the same time, but PA1 and PB2 can.</p>
+</div>
 <pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
 using System.Threading;
