@@ -11,7 +11,7 @@ Pulse Width Modulation (PWM) is a very useful feature found on most microcontrol
 ## Energy Level
 PWM is perfect for dimming an LED or controlling the speed of a motor. When the duty cycle is 50%, half the energy is transferred to the attached load.
 
-This example is written for the SCM20260D Dev board, but will run unchanged on the SC20100S Dev board. The left most LED on the board (PB0) will fade in and out.
+This example is written for the SCM20260D Dev Board, but will run unchanged on the SC20100S Dev Board. The left most LED on the board (PB0) will fade in and out.
 
 ```csharp
 using GHIElectronics.TinyCLR.Devices.Pwm;
@@ -48,7 +48,7 @@ class Program {
 ## Musical Tones
 Musical notes have specific frequencies; C for example is about 261Hz. Plugging these numbers into an array and knowing the length of each tone is all that is needed to play some simple music. When playing notes by changing the frequency, keep the duty cycle set to 0.5.
 
-The following example is written for the SC20100S Dev board.
+The following example is written for the SC20100S Dev Board.
 
 ```csharp
 using GHIElectronics.TinyCLR.Devices.Pwm;

@@ -11,7 +11,7 @@ You may also use these products as quick drop-in options into your design as wel
 For some examples of using the development options in TinyCLR, take a look at the [TinyCLR Samples repo](https://github.com/ghi-electronics/TinyCLR-Samples). You may also find the [TinyCLR tutorials](../../software/tinyclr/tutorials/intro.md) useful.
 
 ## UCM Dev Board
-![UCM Dev board](images/ucm-dev.jpg)
+![UCM Dev Board](images/ucm-dev.jpg)
 
 Ordering Part Number: UCD-DEV-E	
 

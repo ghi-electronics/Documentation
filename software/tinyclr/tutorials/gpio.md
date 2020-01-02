@@ -15,7 +15,7 @@ If the processor is powered from 3.3V, then the state high means that there is 3
 > [!Warning]
 > Digital pins on microcontrollers are weak. They can only be used to control small LEDs or transistors. Those transistors can, in turn, control devices with high power needs like a motor.
 
-While written for the SCM20260D Dev board, this example will work unchanged on the SC20100S Dev board as well, blinking the left most LED (PB0).
+While written for the SCM20260D Dev Board, this example will work unchanged on the SC20100S Dev Board as well, blinking the left most LED (PB0).
 
 ```csharp
 using GHIElectronics.TinyCLR.Devices.Gpio;
@@ -52,7 +52,7 @@ In this example, a button is connected between ground and an input pin. We will 
 > [!Tip]
 > Never use an infinite loop without giving the system time to think. Add a short sleep to the loop or use events instead.
 
-While written for the SCM20260D Dev board, this example will work unchanged with the SC20100S Dev board as well. The left most LED (PB0) will light when the right most button (PD7/MODE) is pressed.
+While written for the SCM20260D Dev Board, this example will work unchanged with the SC20100S Dev Board as well. The left most LED (PB0) will light when the right most button (PD7/MODE) is pressed.
 
 ```csharp
 using GHIElectronics.TinyCLR.Devices.Gpio;
@@ -97,7 +97,7 @@ Let's use event driven programming to respond to a button and turn an LED on and
 
 You will see a reference to a "falling edge" in the following code. A falling edge occurs when the state of a pin goes from high to low. A rising edge is just the opposite -- it occurs when a pin goes from low to high.
 
-This example is written for the SCM20260D Dev board, but will also run unchanged on the SC20100S Dev board. It works exactly the same as the above example, but uses events instead of polling.
+This example is written for the SCM20260D Dev Board, but will also run unchanged on the SC20100S Dev Board. It works exactly the same as the above example, but uses events instead of polling.
 
 ```csharp
 using GHIElectronics.TinyCLR.Devices.Gpio;
