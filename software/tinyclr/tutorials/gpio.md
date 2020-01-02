@@ -100,7 +100,7 @@ You will see a reference to a "falling edge" in the following code. A falling ed
 This example is written for the SCM20260D Dev Board, but will also run unchanged on the SC20100S Dev Board. It works exactly the same as the above example, but uses events instead of polling.
 
 > [!Note]
-> Input events use interrupts (IRQ). Interrupts are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
+> Input events use interrupts (IRQs). Interrupts are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
 example: PA1 and PB1 cannot both be used as interrupts at the same time, but PA1 and PB2 can.
 
 

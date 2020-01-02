@@ -47,7 +47,7 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 *Note: As many pins share peripherals, not all peripherals will be available.*
 
 > [!Note]
-> Interrupts (IRQ) are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
+> Interrupts (IRQs) are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
 example: PA1 and PB1 cannot both be used as interrupts at the same time, but PA1 and PB2 can.
 
 ## Features
