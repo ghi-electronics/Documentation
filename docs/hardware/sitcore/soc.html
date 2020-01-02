@@ -338,7 +338,11 @@ kHz crystal and circuitry are required. Please see the processor&#39;s documenta
 <h3 id="reset">Reset</h3>
 <p>The reset pin is not pulled in any direction. Designs must be sure to use an appropriate pull-up resistor.</p>
 <h3 id="oven-reflow-profile">Oven Reflow Profile</h3>
-<h2 id="sitcore-development-board">SITCore Development Board</h2>
+<p>SITCore SoCs are not sealed for moisture. Baking SoCs before reflow is recommended and required in a humid environment. The process of reflow can damage the SoC if the temperature is too high or exposure is too long.</p>
+<p>The lead-free reflow profiles used by GHI Electronics are shown below. The profiles are based on AIM SAC 305 solder (3% silver, 0.5% copper). The thermal mass of the assembled board and the sensitivity of the components on it affect the total dwell time. Differences in the two profiles are where they reach their respective peak temperatures as well as the time above liquids (TAL). The shorter profile applies to smaller assemblies, whereas the longer profile applies to larger assemblies such as back-planes or high-density boards. The process window is described by the shaded area. These profiles are only starting-points and general guidance. The particulars of the oven and the assembly will determine the final process.</p>
+<p><a href="http://files.ghielectronics.com/downloads/Documents/Datasheets/WS483%20SAC305%20Solder%20Paste%20Datasheet.pdf"><img src="../netmf/images/reflow-profile.gif" alt="Reflow Chart"></a></p>
+<h2 id="sitcore-dev-boards">SITCore Dev Boards</h2>
+<p>We offer SITCore development boards to get you started as quickly and easily as possible. These boards allow you to start programming in minutes, and are suitable for both prototypes and production. Click <a href="dev.html">here</a> for details.</p>
 </article>
           </div>
           
