@@ -7,7 +7,7 @@ The resolution of the ADC determines its accuracy. An 8bit ADC has 256 steps to 
 > [!Tip]
 > Note that the analog channel number is not the pin number. We have these easily enumerated for FEZ, but you need to determine the channel number on a specific pin using your system's documentation.
 
-This example is written for the SC20100 Dev Board, but will work unchanged on the SC20260 Dev Board as well. It will read the ratio, that is 0 to 1, of an analog input (PA0). After running the program, connect a wire from the analog pin to ground and you should see a zero or something really close to zero. Connect to 3.3V and you will see 1 or something close, like 0.99.
+This example is written for the SC20100S Dev Board, but will work unchanged on the SCM20260D Dev Board as well. It will read the ratio, that is 0 to 1, of an analog input (PA0). After running the program, connect a wire from the analog pin to ground and you should see a zero or something really close to zero. Connect to 3.3V and you will see 1 or something close, like 0.99.
 
 ```csharp
 using System.Diagnostics;

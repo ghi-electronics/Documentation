@@ -8,7 +8,7 @@
     <title>SITCore System on Chip </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="SITCore System on Chip ">
-    <meta name="generator" content="docfx 2.29.1.0">
+    <meta name="generator" content="docfx 2.23.1.0">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
     <meta property="docfx:rel" content="../../">
     <meta property="docfx:newtab" content="true">
   </head>
@@ -78,7 +77,7 @@
 <h1 id="sitcore-system-on-chip">SITCore System on Chip</h1>
 
 <hr>
-<p><img src="images/sc20100-board.jpg" alt="SITCore SC20260"></p>
+<p><img src="images/sc20100-board.jpg" alt="SITCore SC20100S"></p>
 <h2 id="overview">Overview</h2>
 <p>The SITCore SoCs provide a low cost way to add .NET computing power to any embedded product. Available as either a 100 pin LQFP or a 265 ball BGA, the SITCore SoCs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more.</p>
 <h2 id="ordering-part-number">Ordering Part Number</h2>
@@ -91,7 +90,7 @@
 <thead>
 <tr>
 <th>Spec</th>
-<th>SC20100x</th>
+<th>SC20100S</th>
 <th>SC20260B</th>
 </tr>
 </thead>
@@ -144,8 +143,8 @@
 <thead>
 <tr>
 <th>Peripheral</th>
-<th>SC20100</th>
-<th>SC20260</th>
+<th>SC20100S</th>
+<th>SC20260B</th>
 </tr>
 </thead>
 <tbody>
@@ -227,6 +226,9 @@
 </tbody>
 </table>
 <p><em>Note: As many pins share peripherals, not all peripherals will be available.</em></p>
+<div class="NOTE"><h5>Note</h5><p>Interrupts (IRQs) are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
+example: PA1 and PB1 cannot both be used as interrupts at the same time, but PA1 and PB2 can.</p>
+</div>
 <h2 id="features">Features</h2>
 <ul>
 <li>Low power modes including three independently controllable power domains</li>
@@ -266,8 +268,8 @@
 <h2 id="pinouts">Pinouts</h2>
 <h3 id="sc20100s-pinout">SC20100S Pinout</h3>
 <p><a href="pdfs/sc20100s.pdf">SC20100S Pinout</a></p>
-<h3 id="sc20260b-ballout">SC20260B Ballout</h3>
-<p><a href="pdfs/sc20260b.pdf">SC20260B Ballout</a></p>
+<h3 id="sc20260b-pinout">SC20260B Pinout</h3>
+<p><a href="pdfs/sc20260b.pdf">SC20260B Pinout</a></p>
 <h2 id="device-startup">Device Startup</h2>
 <p>The SITCore is held in reset when the reset pin is low. Releasing it will begin the system startup process.</p>
 <p>There are three different components of the device firmware:</p>
@@ -276,19 +278,19 @@
 <li>TinyCLR: loads, debugs, and executes the managed application.</li>
 <li>Managed application: the program developed by the customer.</li>
 </ol>
-<p>Which components get executed on startup can be control by manipulating the LDR0 pin. It is pulled high on
-startup. When low, the device waits in the GHI Bootloader. Otherwise, the managed application is executed. LDR1
+<p>Which components get executed on startup can be control by manipulating the LDR pin. It is pulled high on
+startup. When low, the device waits in the GHI Bootloader. Otherwise, the managed application is executed. APP
 is reserved for future use.</p>
 <p>Additionally, the communications interface between the host PC and the SITCore is selected on startup through the
 MODE pin, which is pulled high on startup. The USB interface is selected when MODE is high and COM1 is selected
 when MODE is low.</p>
-<p>The above discussed functions of LDR0, LDR1, and MODE are only during startup. After startup, they return to the
-default GPIO state and are available to use as GPIO in the user application</p>
+<p>The above discussed functions of the LDR, APP, and MODE pins are only available during startup. After startup, the pins return to the
+default GPIO state and are available as GPIO in your application.</p>
 <h2 id="tinyclr-os">TinyCLR OS</h2>
 <p>TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page for instructions.</p>
 <h3 id="loading-the-firmware">Loading the Firmware</h3>
 <ol>
-<li>Activate the bootloader, hold the LDR0 signal low while resetting the board.</li>
+<li>Activate the bootloader, hold the LDR signal low while resetting the board.</li>
 <li>Open <a href="../../software/tinyclr/tinyclr-config.html">TinyCLR Config</a> tool.</li>
 <li>Click the loader tab.</li>
 <li>Select the correct COM port. If you are not seeing it then the device is not in the loader mode.</li>
@@ -302,9 +304,9 @@ default GPIO state and are available to use as GPIO in the user application</p>
 <li>Put the board in DFU mode: Hold the SYS A pin low and press/release the reset button. Wait for a second then release SYS A. Windows <em>Device Manager</em> will now show &quot;STM Device in DFU Mode&quot; under the &#39;Universal Serial Bus controller&#39; TAB.</li>
 <li>Go to the <a href="../loaders/stm32-bootloader.html">STM32 Bootloader</a> to learn how to upload DFU files.</li>
 </ol>
-<h3 id="loading-the-firmware-1">Loading the Firmware</h3>
+<h3 id="loading-the-firmware">Loading the Firmware</h3>
 <ol>
-<li>Activate the bootloader, hold the LDR0 signal (SYS B) low while resetting the board.</li>
+<li>Activate the bootloader, hold the LDR signal (SYS B) low while resetting the board.</li>
 <li>Open <a href="../../software/tinyclr/tinyclr-config.html">TinyCLR Config</a> tool.</li>
 <li>Click the loader tab.</li>
 <li>Select the correct COM port. If you are not seeing it then the device is not in the loader mode.</li>
@@ -316,11 +318,8 @@ default GPIO state and are available to use as GPIO in the user application</p>
 <h2 id="datasheet">Datasheet</h2>
 <h2 id="design-considerations">Design Considerations</h2>
 <h3 id="footprints">Footprints</h3>
-<h4 id="this-is-the-recommened-footprint-for-the-sc20100s">This is the recommened footprint for the SC20100S:</h4>
+<h4 id="this-is-the-recommended-footprint-for-the-sc20100s">This is the recommended footprint for the SC20100S:</h4>
 <p><img src="images/sc20100s-footprint.gif" alt="SC20100S Footprint"></p>
-<h4 id="this-is-the-recommended-footprint-and-pcb-design-rules-for-the-sc20100b">This is the recommended footprint and PCB design rules for the SC20100B:</h4>
-<p><img src="images/sc20100b-footprint.gif" alt="SC20100B Footprint">
-<img src="images/sc20100b-design-rules.gif" alt="SC20100B Design Rules"></p>
 <h4 id="this-is-the-recommended-footprint-and-pcb-design-rules-for-the-sc20260b">This is the recommended footprint and PCB design rules for the SC20260B:</h4>
 <p><img src="images/sc20260b-footprint.gif" alt="SC20260B Footprint">
 <img src="images/sc20260b-design-rules.gif" alt="SC20260B Design Rules"></p>
@@ -342,7 +341,11 @@ kHz crystal and circuitry are required. Please see the processor&#39;s documenta
 <h3 id="reset">Reset</h3>
 <p>The reset pin is not pulled in any direction. Designs must be sure to use an appropriate pull-up resistor.</p>
 <h3 id="oven-reflow-profile">Oven Reflow Profile</h3>
-<h2 id="sitcore-development-board">SITCore Development Board</h2>
+<p>SITCore SoCs are not sealed for moisture. Baking SoCs before reflow is recommended and required in a humid environment. The process of reflow can damage the SoC if the temperature is too high or exposure is too long.</p>
+<p>The lead-free reflow profiles used by GHI Electronics are shown below. The profiles are based on AIM SAC 305 solder (3% silver, 0.5% copper). The thermal mass of the assembled board and the sensitivity of the components on it affect the total dwell time. Differences in the two profiles are where they reach their respective peak temperatures as well as the time above liquids (TAL). The shorter profile applies to smaller assemblies, whereas the longer profile applies to larger assemblies such as back-planes or high-density boards. The process window is described by the shaded area. These profiles are only starting-points and general guidance. The particulars of the oven and the assembly will determine the final process.</p>
+<p><a href="http://files.ghielectronics.com/downloads/Documents/Datasheets/WS483%20SAC305%20Solder%20Paste%20Datasheet.pdf"><img src="../netmf/images/reflow-profile.gif" alt="Reflow Chart"></a></p>
+<h2 id="sitcore-dev-boards">SITCore Dev Boards</h2>
+<p>We offer SITCore development boards to get you started as quickly and easily as possible. These boards allow you to start programming in minutes, and are suitable for both prototypes and production. Click <a href="dev.html">here</a> for details.</p>
 </article>
           </div>
           
@@ -370,7 +373,7 @@ kHz crystal and circuitry are required. Please see the processor&#39;s documenta
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2019 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            <span>Copyright © 2020 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
             
           </div>
         </div>

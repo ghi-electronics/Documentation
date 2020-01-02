@@ -35,7 +35,7 @@ namespace UserInterfaceExample {
 
 ## Windows
 
-You can have multiple windows in your application but you will at least need one. Here is a complete example that shows a window with a gradient brush background. The code is for UCM Dev board with 4.3 display and UC5550 UCM.
+You can have multiple windows in your application but you will at least need one. Here is a complete example that shows a window with a gradient brush background. The code is for UCM Dev Board with 4.3 display and UC5550 UCM.
 
 ```cs
 using GHIElectronics.TinyCLR.UI;
