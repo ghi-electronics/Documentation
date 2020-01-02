@@ -25,7 +25,7 @@ Our SCM20260N is a drop in replacement for the G120 with the following differenc
 * SCM20260N pad 88 (PJ6/LCD R7) does not have COM RX as on G120 pad 88 (P2.9/LCD R4/COM5 RX). As this is an LCD pin, this will rarely be an issue.
 * SCM20260N pad 90 (PI13/LCD VSYNC) does not have PWM as on G120 pad 90 (P2.3/LCD VS/PWM9). Use software PWM if needed.
 
-* Pad 15 on the SCM20260N (PI2/SPI2 MISO/TIM8 CH4 + PD3/USART2 CTS through 0 ohm) provides USART CTS connected through a zero ohm resistor to maintain compatibility with Pad 15 on the G120 (P0.17/COM2 CTS/SPI1 MISO).
+* Pad 15 on the SCM20260N (PI2/SPI2 MISO/TIM8 CH4 + PD3/USART2 CTS through 1K resistor) provides USART CTS connected through a 1K resistor to maintain compatibility with Pad 15 on the G120 (P0.17/COM2 CTS/SPI1 MISO).
 
 ## G120E to SITCore
 
