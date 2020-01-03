@@ -2,7 +2,7 @@
 ---
 ![G400D](../../images/uc5550-noborder.jpg)
 
-These products have matured. They are in full production; however, NETMF software has been replaced by [TinyCLR OS 2.0](../../software/tinyclr/intro.md). Please concider switching to one of the new modules that suport TinyCLR 2.0.
+These products have matured. They are in full production; however, NETMF software has been replaced by [TinyCLR OS 2.0](../../software/tinyclr/intro.md). Please consider switching to one of the new modules that support TinyCLR 2.0.
 
 |  |  |
 |--|--|

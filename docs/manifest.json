@@ -1989,7 +1989,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/intro.html",
-          "hash": "hACfxq8vx7HmTrb3Xu/2Pw=="
+          "hash": "YAGAVFSF5KktTpzFKp0EQg=="
         }
       },
       "is_incremental": false,
@@ -2585,6 +2585,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "hardware/netmf/images/netmf-modules.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/netmf/images/netmf-modules.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "hardware/netmf/images/reflow-profile.gif",
       "output": {
         "resource": {
@@ -2699,7 +2710,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/netmf/intro.html",
-          "hash": "nWHbbHSuABtadrfK0GEVrg=="
+          "hash": "aZBi9Qu4pZXmFZA1KDhbcw=="
         }
       },
       "is_incremental": false,
@@ -2781,6 +2792,17 @@
       "output": {
         "resource": {
           "relative_path": "hardware/sitcore/images/g120e-footprint.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/legal.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/legal.jpg"
         }
       },
       "is_incremental": false,
@@ -5535,11 +5557,6 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "RestApiDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -5548,6 +5565,11 @@
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {
