@@ -2090,15 +2090,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/netmf/g120.md",
       "output": {
         ".html": {
           "relative_path": "hardware/netmf/g120.html",
-          "hash": "dZ0iHTmyzrs3OWL4VrD+KA=="
+          "hash": "rn+JrGFJIlHVcyWdU1NwfA=="
         }
       },
       "is_incremental": false,
@@ -2129,45 +2126,36 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/netmf/g400d.md",
       "output": {
         ".html": {
           "relative_path": "hardware/netmf/g400d.html",
-          "hash": "YKDprilCDSdXEOjatOALjg=="
+          "hash": "Y1IMXnwTVr3i/NDwgCgNiw=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/netmf/g400s.md",
       "output": {
         ".html": {
           "relative_path": "hardware/netmf/g400s.html",
-          "hash": "bkKKugePZdaGCYJVphjuOw=="
+          "hash": "VOm2lBlLAP+DG5nTahBZqg=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/netmf/g80.md",
       "output": {
         ".html": {
           "relative_path": "hardware/netmf/g80.html",
-          "hash": "eu2gofBaE6VnSPD0SE9VUg=="
+          "hash": "Oj20s5SNd4ZeXpCOLZfYzw=="
         }
       },
       "is_incremental": false,
@@ -5734,9 +5722,18 @@
         "incrementalPhase": "build"
       },
       "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build"
         },
         "RestApiDocumentProcessor": {
@@ -5744,17 +5741,8 @@
           "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build"
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
-          "incrementalPhase": "build"
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
