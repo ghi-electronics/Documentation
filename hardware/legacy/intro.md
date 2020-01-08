@@ -2,7 +2,7 @@
 ---
 ![Legacy Products](images/legacy-noborder.jpg)
 
-This section covers GHI Electronics legacy products. These products are not recommended for new designs and are no longer covered by our free support. Please [contact us](https://www.ghielectronics.com/contact) directly for details on our paid support services.
+This section covers GHI Electronics legacy products. While we take pride in helping our customers maximize the lifetime of their products, these products are not recommended for new designs and are no longer covered by our free support. Check out our [Longevity Promise](https://new.ghielectronics.com/longevity/) to find out more about GHI Electronics' product life cycle.
 
 |  |  |
 |--|--|
@@ -19,8 +19,6 @@ This section covers GHI Electronics legacy products. These products are not reco
 ## Producing Legacy Products
 
 GHI Electronic's products are all engineered and manufactured in-house.  While some of our older products are deemed legacy and not recommended for new designs, we can still produce them, however a minimum order may be required.
-
-We understand the need for continued product support and availability. Please [contact us](https://www.ghielectronics.com/company/contact) to discuss ways to fulfill your immediate needs and also to discuss upgrade options.
 
 ***
 
