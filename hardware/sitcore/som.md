@@ -1,6 +1,6 @@
 # SITCore System on Modules
 ---
-![G400S](images/uc5550.jpg)
+![G400S](images/system-on-modules.jpg)
 
 ## Overview
 The SITCore SoMs provide a low cost way to add .NET computing power to any embedded product. They are available as a 200 pin SO-DIMM with and without WiFi (G400 compatible), a 91 pad surface mount module (G120 compatible), or a 105 pad surface mount module (G120E compatible). The SITCore SoMs let's you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more. The surface mount versions are great for harsh or high vibration environments.

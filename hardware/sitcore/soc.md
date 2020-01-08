@@ -1,6 +1,6 @@
 # SITCore System on Chip
 ---
-![SITCore SC20100S](images/sc20100-board.jpg)
+![SITCore SC20100S](images/system-on-chip.jpg)
 
 ## Overview
 The SITCore SoCs provide a low cost way to add .NET computing power to any embedded product. Available as either a 100 pin LQFP or a 265 ball BGA, the SITCore SoCs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more.

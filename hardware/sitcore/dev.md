@@ -1,6 +1,6 @@
 # SITCore Dev Boards
 ---
-![Development Options](images/sitcore-dev-board.jpg)
+![Development Options](images/sitcore-dev-boards.jpg)
 
 We offer two development boards making it possible to start programming your application within minutes without designing or building new hardware. These boards are not only suitable for prototypes, but for short production runs of products as well.
 
@@ -52,7 +52,7 @@ Vertical Sync Polarity | low
 Vertical Sync Pulse Width | 1
 
 ## SITCore SC20100S Dev Board
-![Development Options](images/sitcore-dev-board.jpg)
+![Development Options](images/sc20100.jpg)
 
 Ordering Part Number:
 
