@@ -237,7 +237,7 @@
 <p>Bootloader v1 is needed for G400 to work with NETMF. It is available in the NETMF SDK.</p>
 <h3 id="loading-bootloader-version-2">Loading Bootloader Version 2</h3>
 <p>Download the <a href="../../software/netmf/bootloader.html">G400 bootloader v2 file</a> and load onto the dataflash using the Microchip <a href="https://www.microchip.com/developmenttools/ProductDetails/PartNO/SAM-BA%20In-system%20Programmer">SAM-BA tool</a> and the following instructions.</p>
-<p>To set the chip in SAM-BA mode, hold down the dedicated button on your board (SYS A on UCM Dev and Breakout boards) while the system powers up (or during reset). If there is no such button, follow the instructions from the specific product on how set the device in SAM-BA mode. For example, connect G400 pin SPI1_MISO to ground. Keep the button pressed (pin grounded) for three seconds after power up or reset, then release the pin. The device manager will show a COM port similar to &quot;Bossa Program Port&quot; or &quot;GPS Detect&quot;.</p>
+<p>To set the chip in SAM-BA mode, hold down the dedicated button on your board (SYS A on UCM Dev and Breakout boards) while the system powers up (or during reset). If there is no such button, connect G400D pin SPI1_MISO to ground. Keep the button pressed (pin grounded) for three seconds after power up or reset, then release the pin. The device manager will show a COM port similar to &quot;Bossa Program Port&quot; or &quot;GPS Detect&quot;.</p>
 <ol>
 <li>If it is not already installed, download and install the <a href="https://www.microchip.com/developmenttools/ProductDetails/PartNO/SAM-BA%20In-system%20Programmer">SAM-BA tool</a> from Microchip. The latest version we have tested is 2.18 for Windows. (The tool may not show correctly. Try to make the window larger to see all hidden buttons!)</li>
 <li>Open the SAM-BA program then select the COM port for your device in the connection box and your board type below it (at91sam9x35-ek for G400), then click connect.</li>
@@ -253,7 +253,7 @@
 <li>Activate the bootloader, hold the LDR0 signal (SYS B) low while resetting the board.</li>
 <li>Open the FEZ Config tool and follow the instructions.</li>
 </ol>
-<p>You can also update the firmware manually. Download the <a href="../../software/netmf/downloads.html">firmware</a> and learn how to use the <a href="../../software/netmf/bootloader.html">GHI Bootloader</a> manually.</p>
+<p>You can also update the firmware manually. Download the <a href="../../software/netmf/downloads.html">firmware</a> and learn how to use the <a href="../../software/netmf/bootloader.html">GHI Electronics Bootloader</a> manually.</p>
 <h3 id="start-coding">Start Coding</h3>
 <p>Now that you have installed the bootloader and firmware, you can setup your host computer and start programming.  Go to the NETMF <a href="../../software/netmf/getting-started.html">Getting Started</a> page for instructions.</p>
 <h2 id="datasheet">Datasheet</h2>

@@ -92,4 +92,3 @@
 # [Downloads](downloads.md)
 # [Release Notes](release-notes.md)
 # [Limitations](limitations.md)
-# [Legal](../../legal.md)

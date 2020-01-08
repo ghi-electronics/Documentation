@@ -1,4 +1,4 @@
-# Upgrading From Earlier GHI Hardware
+# Upgrading From Earlier Hardware
 
 To complement our ten year Longevity Promise, we provide SITCore products that are drop in replacements for most of our more mature SoMs and chipsets. We strive to keep your product viable as long as possible with no or minimal changes to your hardware.
 

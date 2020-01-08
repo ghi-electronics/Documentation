@@ -10,7 +10,7 @@ This page explains how to set up the TinyCLR programming environment.  It covers
 TinyCLR OS is made to run on our SITCore line of SoCs, SoMs, dev boards and single board computers. Check out the [**SITCore**](../../hardware/sitcore/intro.md) page in the hardware section of this documentation to find the device best suited for your project.
 
 ## TinyCLR Device Setup
-To use TinyCLR with a device you must first install the latest versions of the GHI bootloader and TinyCLR firmware on the device.  The bootloader is installed first and provides a way to install the firmware and to execute programs which are uploaded to the device.
+To use TinyCLR with a device you must first install the latest versions of the GHI Electronics bootloader and TinyCLR firmware on the device.  The bootloader is installed first and provides a way to install the firmware and to execute programs which are uploaded to the device.
 
 The TinyCLR firmware includes the Common Language Runtime (CLR) which converts compiled code into machine instructions and manages program execution.  The TinyCLR firmware is also responsible for interacting with Microsoft Visual Studio to load and debug your application programs.
 

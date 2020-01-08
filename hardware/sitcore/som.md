@@ -88,12 +88,12 @@ example: PA1 and PB1 cannot both be used as interrupts at the same time, but PA1
 The SITCore is held in reset when the reset pin is low. Releasing it will begin the system startup process.
 
 There are three different components of the device firmware:
-1. GHI Bootloader: initializes the system, updates TinyCLR when needed, and executes TinyCLR.
+1. GHI Electronics Bootloader: initializes the system, updates TinyCLR when needed, and executes TinyCLR.
 2. TinyCLR: loads, debugs, and executes the managed application.
 3. Managed application: the program developed by the customer.
 
 Which components get executed on startup can be control by manipulating the LDR pin. It is pulled high on
-startup. When low, the device waits in the GHI Bootloader. Otherwise, the managed application is executed. APP
+startup. When low, the device waits in the GHI Electronics Bootloader. Otherwise, the managed application is executed. APP
 is reserved for future use.
 
 Additionally, the communications interface between the host PC and the SITCore is selected on startup through the
@@ -114,7 +114,7 @@ TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the 
 4. Select the correct COM port. If you are not seeing it then the device is not in the loader mode.
 5. Click the `Update to Latest` button.
 
-You can also update the firmware manually. Download the [firmware](../../software/tinyclr/downloads.md) and learn how to use the [GHI Bootloader](../../software/tinyclr/bootloader.md) manually
+You can also update the firmware manually. Download the [firmware](../../software/tinyclr/downloads.md) and learn how to use the [GHI Electronics Bootloader](../../software/tinyclr/bootloader.md) manually
 
 ### Start Coding
 Now that you have installed the bootloader and firmware on the SITCore, you can setup your host computer and start programming.  Go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.

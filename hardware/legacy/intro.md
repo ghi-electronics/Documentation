@@ -2,7 +2,7 @@
 ---
 ![Legacy Products](images/legacy-noborder.jpg)
 
-This section covers GHI's legacy products. These products are not recommended for new designs and are no longer covered by our free support. Please [contact us](https://www.ghielectronics.com/contact) directly for details on our paid support services.
+This section covers GHI Electronics legacy products. These products are not recommended for new designs and are no longer covered by our free support. Please [contact us](https://www.ghielectronics.com/contact) directly for details on our paid support services.
 
 |  |  |
 |--|--|

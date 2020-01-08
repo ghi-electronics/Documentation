@@ -279,12 +279,12 @@ example: PA1 and PB1 cannot both be used as interrupts at the same time, but PA1
 <p>The SITCore is held in reset when the reset pin is low. Releasing it will begin the system startup process.</p>
 <p>There are three different components of the device firmware:</p>
 <ol>
-<li>GHI Bootloader: initializes the system, updates TinyCLR when needed, and executes TinyCLR.</li>
+<li>GHI Electronics Bootloader: initializes the system, updates TinyCLR when needed, and executes TinyCLR.</li>
 <li>TinyCLR: loads, debugs, and executes the managed application.</li>
 <li>Managed application: the program developed by the customer.</li>
 </ol>
 <p>Which components get executed on startup can be control by manipulating the LDR pin. It is pulled high on
-startup. When low, the device waits in the GHI Bootloader. Otherwise, the managed application is executed. APP
+startup. When low, the device waits in the GHI Electronics Bootloader. Otherwise, the managed application is executed. APP
 is reserved for future use.</p>
 <p>Additionally, the communications interface between the host PC and the SITCore is selected on startup through the
 MODE pin, which is pulled high on startup. The USB interface is selected when MODE is high and COM1 is selected
@@ -301,7 +301,7 @@ default GPIO state and are available to use as GPIO in the your application.</p>
 <li>Select the correct COM port. If you are not seeing it then the device is not in the loader mode.</li>
 <li>Click the <code>Update to Latest</code> button.</li>
 </ol>
-<p>You can also update the firmware manually. Download the <a href="../../software/tinyclr/downloads.html">firmware</a> and learn how to use the <a href="../../software/tinyclr/bootloader.html">GHI Bootloader</a> manually</p>
+<p>You can also update the firmware manually. Download the <a href="../../software/tinyclr/downloads.html">firmware</a> and learn how to use the <a href="../../software/tinyclr/bootloader.html">GHI Electronics Bootloader</a> manually</p>
 <h3 id="start-coding">Start Coding</h3>
 <p>Now that you have installed the bootloader and firmware on the SITCore, you can setup your host computer and start programming.  Go to the TinyCLR <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page for instructions.</p>
 <h2 id="datasheet">Datasheet</h2>

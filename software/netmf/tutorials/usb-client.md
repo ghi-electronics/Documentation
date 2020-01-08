@@ -1,7 +1,7 @@
 # USB Client
 ---
 
-By default, all of GHI's NETMF devices use USB for deploying and debugging. You may optionally use the USB client (not the host) for something other than debugging. This is actually supported by NETMF and GHI adds more functionality making it even easier to use.
+By default, all of GHI's NETMF devices use USB for deploying and debugging. You may optionally use the USB client (not the host) for something other than debugging. This is actually supported by NETMF and GHI Electronics adds more functionality making it even easier to use.
 
 Say you are making a device that that reads temperature and humidity and logs all of this data on an SD card. This device can be configured to set the time or give file names and you want this configuration to happen over USB, perhaps in the field. So when your device plugs into a USB port, you want it to show as a virtual serial port. This way, anyone can open a terminal software (like TeraTerm) to connect to your device and configure it.
 
@@ -197,7 +197,7 @@ public class Program
 
 GHI's USB client supports Mass Storage Class (MSC). This allows access to connected media right from USB. For example, a data logger application that needs to save data to an SD card or USB memory. When the user is done collecting data, they can plug the USB data logger into the PC and now the PC can detect the device as a mass storage device. The user can then transfer the files using standard operating system controls. It may be helpful to think of the device as a memory card reader. We can even enhance our logger where the USB client interface can be CDC to configure the device and later dynamically switch to MSC to transfer files.
 
-Once very common question on GHI support is "Why can't I access the media from my application while the media is also accessed externally (from windows)?"  Due to caching of file system data and/or the possibility of a write from one interface while the other is doing a read and/or a write, data on the media and/or data used by the interface will likely (and quickly) be corrupted.
+Once very common question on GHI Electronics support is "Why can't I access the media from my application while the media is also accessed externally (from windows)?"  Due to caching of file system data and/or the possibility of a write from one interface while the other is doing a read and/or a write, data on the media and/or data used by the interface will likely (and quickly) be corrupted.
 
 Note: you can easily switch back and forth between internal file system and USB MSC.
 
@@ -246,4 +246,4 @@ Windows and other operating systems have built in drivers for USB HID (Human Int
 
  http://www.ghielectronics.com/community/codeshare/entry/420
  
-The GHI USB Client allows you to control the USB client in anyway you like. This feature requires advanced knowledge of USB. If you do not know what an EndPoint or a Pipe is then do not attempt to create custom devices. It is very important to have the device configured correctly the first time it is plugged into Windows since Windows stores a lot of information in its registry. If you change the configuration of your device after you had it plugged into Windows previously, Windows may not see the changes since it will be using the old configuration from its registry. Do not use USB Client Custom Devices unless you really have good reason to use them and you are knowledgeable in USB and Windows drivers.
+The GHI Electronics USB Client allows you to control the USB client in anyway you like. This feature requires advanced knowledge of USB. If you do not know what an EndPoint or a Pipe is then do not attempt to create custom devices. It is very important to have the device configured correctly the first time it is plugged into Windows since Windows stores a lot of information in its registry. If you change the configuration of your device after you had it plugged into Windows previously, Windows may not see the changes since it will be using the old configuration from its registry. Do not use USB Client Custom Devices unless you really have good reason to use them and you are knowledgeable in USB and Windows drivers.
