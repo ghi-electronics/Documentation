@@ -1989,7 +1989,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/intro.html",
-          "hash": "YAGAVFSF5KktTpzFKp0EQg=="
+          "hash": "QPDlw6KAD68U58KG3St9HQ=="
         }
       },
       "is_incremental": false,
@@ -2711,7 +2711,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/dev.html",
-          "hash": "8sd0bWMPVqHoBLgZ/5MLHQ=="
+          "hash": "1Do2n3tzey0ICY/i//+niw=="
         }
       },
       "is_incremental": false,
@@ -2723,6 +2723,17 @@
       "output": {
         "resource": {
           "relative_path": "hardware/sitcore/images/200-pin-ddr2-so-dimm.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/SC20100.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/SC20100.jpg"
         }
       },
       "is_incremental": false,
@@ -2811,6 +2822,17 @@
       "output": {
         "resource": {
           "relative_path": "hardware/sitcore/images/scm20260e-footprint.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/secureIOT.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/secureIOT.jpg"
         }
       },
       "is_incremental": false,
@@ -2955,7 +2977,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/soc.html",
-          "hash": "olTnrb+BZr2obBKiEdbQAg=="
+          "hash": "d5VYCqeHDgJT8dWk14ofTg=="
         }
       },
       "is_incremental": false,
@@ -2967,7 +2989,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/som.html",
-          "hash": "Aq2NpH4/HsebwOv4o6vrkQ=="
+          "hash": "uNU7doLeje0eAo7oBJsdzw=="
         }
       },
       "is_incremental": false,
@@ -5712,11 +5734,6 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -5727,12 +5744,17 @@
           "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
