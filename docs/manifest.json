@@ -623,7 +623,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/filesystem/intro.html",
-          "hash": "URKPMjeiGDLCFWNwqe9BjA=="
+          "hash": "movOumRh/4rpQOai01TQuQ=="
         }
       },
       "is_incremental": false,
@@ -2043,65 +2043,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "hardware/loaders/ghi-bootloader.md",
-      "output": {
-        ".html": {
-          "relative_path": "hardware/loaders/ghi-bootloader.html",
-          "hash": "cP0yxfodlgktdjnmNY9Zfg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "hardware/loaders/images/bootloader-noborder.png",
-      "output": {
-        "resource": {
-          "relative_path": "hardware/loaders/images/bootloader-noborder.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "hardware/loaders/intro.md",
-      "output": {
-        ".html": {
-          "relative_path": "hardware/loaders/intro.html",
-          "hash": "pS5/+rrJy/wfL17xjUvNYg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "hardware/loaders/sam-ba-bootloader.md",
-      "output": {
-        ".html": {
-          "relative_path": "hardware/loaders/sam-ba-bootloader.html",
-          "hash": "/7XvhxVelNT6+i4TErzxgg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "hardware/loaders/stm32-bootloader.md",
-      "output": {
-        ".html": {
-          "relative_path": "hardware/loaders/stm32-bootloader.html",
-          "hash": "uPc5AU3tGu5BvUJMzmboXw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "hardware/mbuino.md",
       "output": {
         ".html": {
@@ -2149,12 +2090,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/netmf/g120.md",
       "output": {
         ".html": {
           "relative_path": "hardware/netmf/g120.html",
-          "hash": "NwqgijJsxO+BMNDsN+nkCg=="
+          "hash": "dZ0iHTmyzrs3OWL4VrD+KA=="
         }
       },
       "is_incremental": false,
@@ -2178,43 +2122,52 @@
       "output": {
         ".html": {
           "relative_path": "hardware/netmf/g30.html",
-          "hash": "RelpMlytKJrrQCE+zGmXaA=="
+          "hash": "GxcJ65BGYd1uETLduPocRg=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/netmf/g400d.md",
       "output": {
         ".html": {
           "relative_path": "hardware/netmf/g400d.html",
-          "hash": "v+/Qz3NrqvEqtCqMkkCQcA=="
+          "hash": "YKDprilCDSdXEOjatOALjg=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/netmf/g400s.md",
       "output": {
         ".html": {
           "relative_path": "hardware/netmf/g400s.html",
-          "hash": "cH2pmjvxfFTddMIFohViDA=="
+          "hash": "bkKKugePZdaGCYJVphjuOw=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/netmf/g80.md",
       "output": {
         ".html": {
           "relative_path": "hardware/netmf/g80.html",
-          "hash": "2/Dw7TEvYqJU9Ed87xMzpA=="
+          "hash": "eu2gofBaE6VnSPD0SE9VUg=="
         }
       },
       "is_incremental": false,
@@ -2734,7 +2687,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/netmf/usbizi.html",
-          "hash": "e6s4EG0jkTVlqxVtRzMEJg=="
+          "hash": "qG4iTnrx4KP3CNAnyZKgtg=="
         }
       },
       "is_incremental": false,
@@ -2876,6 +2829,39 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/sitcore-dev-boards.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/sitcore-dev-boards.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/system-on-chip.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/system-on-chip.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/system-on-modules.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/system-on-modules.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "hardware/sitcore/images/uc5550.jpg",
       "output": {
         "resource": {
@@ -2902,7 +2888,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/intro.html",
-          "hash": "QR8bzgJLP8b06Z38pjim4Q=="
+          "hash": "riAtw5DgmWKa5Ui//wITOQ=="
         }
       },
       "is_incremental": false,
@@ -2969,7 +2955,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/soc.html",
-          "hash": "8H7B1tPv47WtOJbCs+WEiw=="
+          "hash": "olTnrb+BZr2obBKiEdbQAg=="
         }
       },
       "is_incremental": false,
@@ -2981,7 +2967,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/som.html",
-          "hash": "z2Jsn4dbwUgT/yWEj5bNig=="
+          "hash": "Aq2NpH4/HsebwOv4o6vrkQ=="
         }
       },
       "is_incremental": false,
@@ -2993,7 +2979,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/toc.html",
-          "hash": "AlGkDYgAyv+uZBFCF6BLIg=="
+          "hash": "0wkgG5p2Z6vn+BjDHen4Rg=="
         }
       },
       "is_incremental": false,
@@ -3239,7 +3225,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/ucm/uc2550.html",
-          "hash": "03JmLu+UuwQivyUMu5mnRw=="
+          "hash": "cMKyNJPdrUNuO5j/Pc7wtw=="
         }
       },
       "is_incremental": false,
@@ -3251,7 +3237,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/ucm/uc5550.html",
-          "hash": "3IhxuiAk3wUlvMwxMkDm1Q=="
+          "hash": "lg3ijqxmvy77hArFcpI+WA=="
         }
       },
       "is_incremental": false,
@@ -3441,6 +3427,18 @@
         ".html": {
           "relative_path": "legal.html",
           "hash": "KLAtk8LqK1Gwgb1K/sfMZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/netmf/bootloader.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/netmf/bootloader.html",
+          "hash": "PcaZ+Jzfn4o37iHSCcgeSA=="
         }
       },
       "is_incremental": false,
@@ -3675,7 +3673,7 @@
       "output": {
         ".html": {
           "relative_path": "software/netmf/toc.html",
-          "hash": "KeirqJQjQLwizRO3SzRBrA=="
+          "hash": "16tb+EM4kZpgVdEiNzXYCQ=="
         }
       },
       "is_incremental": false,
@@ -4112,6 +4110,42 @@
         ".html": {
           "relative_path": "software/netmf/tutorials/xtea.html",
           "hash": "CMo9DWUw1MjVVLkAVIim+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/tinyclr/bootloader.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/tinyclr/bootloader.html",
+          "hash": "DjcsFT4KmQ2MsSOehkP8qw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/tinyclr/bootstrap-pins.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/tinyclr/bootstrap-pins.html",
+          "hash": "ekmT/TwREwI3N0rJEorVfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/tinyclr/config.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/tinyclr/config.html",
+          "hash": "9OZXPQ7KbxyyZHbDEv1tYg=="
         }
       },
       "is_incremental": false,
@@ -4632,7 +4666,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/limitations.html",
-          "hash": "z9q0JzGQef0Aadokc4Es1Q=="
+          "hash": "DcA7LgwRbAqUe3t0efvacw=="
         }
       },
       "is_incremental": false,
@@ -4656,7 +4690,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tinyclr-config.html",
-          "hash": "BvXv0XFLdhzieqpFDFN5ig=="
+          "hash": "wZl4VsnkuB819so1l3OP+g=="
         }
       },
       "is_incremental": false,
@@ -4668,7 +4702,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/toc.html",
-          "hash": "ahXZHmIWkddba9IbxnoDdg=="
+          "hash": "8ajozyBJzvBvySdLy6567g=="
         }
       },
       "is_incremental": false,
@@ -5683,14 +5717,14 @@
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "RestApiDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {

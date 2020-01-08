@@ -2,6 +2,11 @@
 
 # [Getting Started](getting-started.md)
 
+# [Configuration](intro.md)
+## [Bootstrap Pins](bootstrap-pins.md)
+## [Bootloader](bootloader.md)
+## [TinyCLR Config](tinyclr-config.md)
+
 # [Tutorials](tutorials/intro.md)
 ## Productivity Enhancements
 ### [USB Debugging](tutorials/debugging.md)
@@ -86,6 +91,5 @@
 
 # [Downloads](downloads.md)
 # [Release Notes](release-notes.md)
-# [TinyCLR Config](tinyclr-config.md)
 # [Limitations](limitations.md)
 # [Legal](../../legal.md)

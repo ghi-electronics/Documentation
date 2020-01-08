@@ -14,11 +14,6 @@
 ## [G400D](netmf/g400d.md)
 ## [Upgrading to SITCore](netmf/upgrade.md)
 
-# [Bootloaders](loaders/intro.md)
-## [GHI Bootloader](loaders/ghi-bootloader.md)
-## [STM32 Bootloader](loaders/stm32-bootloader.md)
-## [SAM-BA Bootloader](loaders/sam-ba-bootloader.md)
-
 # [Legacy](legacy/intro.md)
 
 ## [SoMs](legacy/som.md)

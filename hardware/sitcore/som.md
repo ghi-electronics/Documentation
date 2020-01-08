@@ -114,7 +114,7 @@ TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the 
 4. Select the correct COM port. If you are not seeing it then the device is not in the loader mode.
 5. Click the `Update to Latest` button.
 
-You can also update the firmware manually. Download the [firmware](../../software/tinyclr/downloads.md) and learn how to use the [GHI Bootloader](../../hardware/loaders/ghi-bootloader.md) manually
+You can also update the firmware manually. Download the [firmware](../../software/tinyclr/downloads.md) and learn how to use the [GHI Bootloader](../../software/tinyclr/bootloader.md) manually
 
 ### Start Coding
 Now that you have installed the bootloader and firmware on the SITCore, you can setup your host computer and start programming.  Go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.

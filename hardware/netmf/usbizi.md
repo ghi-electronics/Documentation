@@ -4,7 +4,7 @@
 
 USBizi was the first single chip .NET Micro Framework (NETMF) on the market. It was available in 100pin and 144pin LQFP packages.
 
-We are no longer selling this chipset but we are making all [bootloader binaries](../../hardware/loaders/ghi-bootloader.md) available for free, including for commercial use. 
+We are no longer selling this chipset but we are making all [bootloader binaries](../../software/netmf/bootloader.md) available for free, including for commercial use. 
 
 To use with NETMF, follow these [setup instructions](../../software/netmf/getting-started.md). Requires the NETMF 4.1 SDK.
 
