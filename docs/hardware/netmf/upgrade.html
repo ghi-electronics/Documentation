@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Upgrading From Earlier Hardware </title>
+    <title>Upgrading to SITCore </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Upgrading From Earlier Hardware ">
+    <meta name="title" content="Upgrading to SITCore ">
     <meta name="generator" content="docfx 2.23.1.0">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
@@ -74,8 +74,10 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="upgrading-from-earlier-hardware">Upgrading From Earlier Hardware</h1>
+<h1 id="upgrading-to-sitcore">Upgrading to SITCore</h1>
 
+<hr>
+<p><img src="images/upgrade-to-sitcore.jpg" alt="Upgrading to SITCore"></p>
 <p>To complement our ten year Longevity Promise, we provide SITCore products that are drop in replacements for most of our more mature SoMs and chipsets. We strive to keep your product viable as long as possible with no or minimal changes to your hardware.</p>
 <h2 id="g30-to-sitcore">G30 to SITCore</h2>
 <p>While we offer no SITCore in an LQFP64 package, the recommended replacement (the SC20100S) has considerably more horsepower and available resources. As nearly all new designs will require some form of IoT connectivity, the SC20100S provides much greater value for new designs or redesigns of existing products.</p>
@@ -83,20 +85,10 @@
 <p>Unfortunately the LQFP100 version of the SITCore processor is unavailable in a version that is pin compatible with the G80, so changes to your circuit board will be needed. However, many of the pins on the SC20100S have the same function as on the G80, and the other pins are close to their previous position. Our experience has shown that upgrading a circuit board design from the G80 to the SC20100S can easily be accomplished in a matter of hours.</p>
 <h2 id="g120-to-sitcore">G120 to SITCore</h2>
 <p>Our SCM20260N is a drop in replacement for the G120 with the following differences that will rarely be an issue.</p>
+<p>The following pads/pins on the SCM20260N do not support hardware PWM -- use software PWM if needed: Pad 3/pin PK7, pad 23/pin PC10, pad 24/pin PC9, pad 25/pin PC12, pad 26/pin PC8, pad 28/pin PD2, pad 85/pin PI12, and pad 90/pin PI13.</p>
 <ul>
-<li>SCM20260N pad 3 (PK7/LCD DE) does not have PWM as on G120 pad 3 (P2.4/PWM10/LCD OE). Use software PWM if needed.</li>
-<li>SCM20260N pad 23 (PC10/SDMMC1 D2/USART3 TX) does not have PWM as on G120 pad 23 (P1.11/PMW5/SD D2). Use software PWM if needed.</li>
-<li>SCM20260N pad 24 (PC9/SDMMC1 D1/UART5 CTS) does not have PWM as on G120 pad 24 (P1.7/PWM4/SD D1). Use software PWM if needed.</li>
-<li>SCM20260N pad 25 (PC12/SDMMC1 CK) does not have PWM as on G120 pad 25 (P1.2/PWM0/SD CLK). Use software PWM if needed.</li>
-<li>SCM20260N pad 26 (PC8/SDMMC1 D0/UART5 RTS) does not have PWM as on G120 pad 26 (P1.6/PWM3/SD D0). Use software PWM if needed.</li>
-<li>SCM20260N pad 28 (PD2/SDMMC1 CMD) does not have PWM as on G120 pad 28 (P1.3/PWM1/SD CMD). Use software PWM if needed.</li>
-<li>SCM20260N pad 80 (PK6/LCD B7) does not have COM TX as on G120 pad 80 (P1.29/LCD B4/COM5 TX). As this is an LCD pin, this will rarely be an issue.</li>
-<li>SCM20260N pad 85 (PI12/LCD HSYNC) does not have PWM as on G120 pad 85 (P2.5/LCD HS/PWM11). Use software PWM if needed.</li>
-<li>SCM20260N pad 88 (PJ6/LCD R7) does not have COM RX as on G120 pad 88 (P2.9/LCD R4/COM5 RX). As this is an LCD pin, this will rarely be an issue.</li>
-<li><p>SCM20260N pad 90 (PI13/LCD VSYNC) does not have PWM as on G120 pad 90 (P2.3/LCD VS/PWM9). Use software PWM if needed.</p>
-</li>
-<li><p>Pad 15 on the SCM20260N (PI2/SPI2 MISO/TIM8 CH4 + PD3/USART2 CTS through 1K resistor) provides USART CTS connected through a 1K resistor to maintain compatibility with Pad 15 on the G120 (P0.17/COM2 CTS/SPI1 MISO).</p>
-</li>
+<li>SCM20260N pad 80 (PK6/LCD B7) and pad 88 (PJ6/LCD R7) do not have COM TX and RX as found on G120 pads 80 and 88. As this is an LCD pin, this will rarely be an issue.</li>
+<li>Pad 15 on the SCM20260N (PI2/SPI2 MISO/TIM8 CH4 + PD3/USART2 CTS through 1K resistor) provides USART CTS connected through a 1K resistor to maintain compatibility with Pad 15 on the G120 (P0.17/COM2 CTS/SPI1 MISO).</li>
 </ul>
 <h2 id="g120e-to-sitcore">G120E to SITCore</h2>
 <p>Our SCM20260E is a drop in replacement for the G120E except for a few issues that will rarely present any problem.</p>

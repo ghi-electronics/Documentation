@@ -46,9 +46,9 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
 
-> [!Note]
-> Interrupts (IRQs) are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
-example: PA1 and PB1 cannot both be used as interrupts at the same time, but PA1 and PB2 can.
+### Using Interrupts (IRQs)
+
+The microcontrollers we use in our SITCore line of products do not support concurrent interrupts with the same pin number, even if the pins are on different ports (the port is denoted by the second letter of the GPIO pin name -- PA1 is pin 1 on port A). Therefore, interrupts are available on only 16 pins at any given time. For example, pins PA1 and PB1 cannot be used as interrupt pins at the same time, but PA1 and PB2 can. PA1 and PA2 can also be used with interrupts simultaneously.
 
 ## Features
 

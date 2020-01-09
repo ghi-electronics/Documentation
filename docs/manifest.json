@@ -2637,6 +2637,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "hardware/netmf/images/upgrade-to-sitcore.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/netmf/images/upgrade-to-sitcore.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "hardware/netmf/images/usbizi-100.jpg",
       "output": {
         "resource": {
@@ -2674,7 +2685,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/netmf/intro.html",
-          "hash": "aZBi9Qu4pZXmFZA1KDhbcw=="
+          "hash": "I/alIxwzK9PN6lGQcusrLw=="
         }
       },
       "is_incremental": false,
@@ -2686,7 +2697,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/netmf/upgrade.html",
-          "hash": "JwjBZeUhaiqVvjvjDcYQ+A=="
+          "hash": "Gwtdxpok/w1J8D4X7X6nJA=="
         }
       },
       "is_incremental": false,
@@ -2988,7 +2999,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/soc.html",
-          "hash": "kqy9/saIHzmm7ZtqZHwEYw=="
+          "hash": "UfyTJBhecK5/rFvM6r7P1A=="
         }
       },
       "is_incremental": false,
@@ -5721,9 +5732,9 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "RestApiDocumentProcessor": {
@@ -5739,9 +5750,9 @@
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
