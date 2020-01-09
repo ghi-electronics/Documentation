@@ -68,4 +68,4 @@
 ## [Raspberry PI Hats](raspberrypi-hats.md)
 ## [mBuino](mbuino.md)
 
-# [Legal](../legal.md)
+# [Legal](../hardware/legal.md)

@@ -9,11 +9,10 @@
 
 # [Tutorials](tutorials/intro.md)
 ## Productivity Enhancements
-### [USB Debugging](tutorials/debugging.md)
+### [Debugging](tutorials/debugging.md)
 ### [Memory Management](tutorials/memory.md)
 ### [Unmanaged Heap](tutorials/unmanaged-heap.md)
 ### [NuGet Based Libraries](tutorials/nuget.md)
-### [Mass Production Tools](tutorials/mass-production-tools.md)
 
 ## Modern OS Features
 ### [Multithreading](tutorials/multithreading.md)
@@ -30,7 +29,7 @@
 ### [Graphics](tutorials/graphics.md)
 ### [Image Decoders](tutorials/image-decoders.md)
 ### [Font Support](tutorials/font-support.md)
-### [Camera and Audio](tutorials/camera.md)
+### [Camera](tutorials/camera.md)
 ### [MJPEG Video](tutorials/mjpeg-video.md)
 ### [Audio Playback](tutorials/audio-playback.md)
 
@@ -54,7 +53,7 @@
 
 ## In Field Security
 ### [IP Protection](tutorials/ip-protection.md)
-### [Encrypted In-Field Update](tutorials/in-field-update.md)
+### [In-Field Update](tutorials/in-field-update.md)
 ### [Secure Storage Area](tutorials/secure-storage-area.md)
 ### [Secure Boot](tutorials/secure-boot.md)
 
