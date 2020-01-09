@@ -259,7 +259,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/breakout/intro.html",
-          "hash": "ibepVvkFTJdHMmq/zPt7Lw=="
+          "hash": "FchtiKsx8iCa3gdblNEe0A=="
         }
       },
       "is_incremental": false,
@@ -512,7 +512,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/duino/intro.html",
-          "hash": "GeDp1C9hP9A4V/wzXAyJoQ=="
+          "hash": "1y8V0ak6XmBfU7o16N8Nxw=="
         }
       },
       "is_incremental": false,
@@ -1989,7 +1989,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/intro.html",
-          "hash": "QPDlw6KAD68U58KG3St9HQ=="
+          "hash": "lQWGUbGZEuhDnV3TGS8KRA=="
         }
       },
       "is_incremental": false,
@@ -2023,7 +2023,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/legacy/intro.html",
-          "hash": "roNs2eGRw7Uv8fBllv7yyg=="
+          "hash": "oOH8ur3ESR7faxZtRI1aUA=="
         }
       },
       "is_incremental": false,
@@ -2036,6 +2036,18 @@
         ".html": {
           "relative_path": "hardware/legacy/som.html",
           "hash": "uHEErgHuDlsEtG6dGAycIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "hardware/legal.md",
+      "output": {
+        ".html": {
+          "relative_path": "hardware/legal.html",
+          "hash": "ELxh8BNvZYN97Aef43L7lQ=="
         }
       },
       "is_incremental": false,
@@ -3000,7 +3012,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/toc.html",
-          "hash": "0wkgG5p2Z6vn+BjDHen4Rg=="
+          "hash": "2n9ucsZ/cW2FVf3iBqQM/w=="
         }
       },
       "is_incremental": false,
@@ -3436,18 +3448,6 @@
         ".html": {
           "relative_path": "index.html",
           "hash": "bb0W7eiC+miY6z3NoG+a4A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "legal.md",
-      "output": {
-        ".html": {
-          "relative_path": "legal.html",
-          "hash": "KLAtk8LqK1Gwgb1K/sfMZQ=="
         }
       },
       "is_incremental": false,
@@ -4723,7 +4723,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/toc.html",
-          "hash": "M74LJ7BUAlDuCA33OOEScg=="
+          "hash": "7UC8PBvesTF3Z+8Y+wr7mg=="
         }
       },
       "is_incremental": false,
@@ -4759,7 +4759,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/audio-playback.html",
-          "hash": "Z5B32HBxdc5dBnxKM4umjA=="
+          "hash": "gTk6VVTUAKZbFm+3E6bQ8A=="
         }
       },
       "is_incremental": false,
@@ -5343,18 +5343,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/tinyclr/tutorials/mass-production-tools.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/tinyclr/tutorials/mass-production-tools.html",
-          "hash": "MuZiypDnRUmEelsaKg0PQQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/memory-management.md",
       "output": {
         ".html": {
@@ -5733,11 +5721,6 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "RestApiDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -5746,6 +5729,11 @@
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {
