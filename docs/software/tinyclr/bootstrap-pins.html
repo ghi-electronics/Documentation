@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> </title>
+    <title>Bootstrap Pins </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" ">
+    <meta name="title" content="Bootstrap Pins ">
     <meta name="generator" content="docfx 2.23.1.0">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
@@ -74,7 +74,47 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h1 id="bootstrap-pins">Bootstrap Pins</h1>
 
+<hr>
+<p>There are four pins that should be exposed on any SITCore circuit board. These pins are RESET, LDR, MOD, and APP. The LDR and MOD pins are only used during startup (or reset) and can be used as a GPIO or peripheral pin once your application is running.</p>
+<h2 id="reset">RESET</h2>
+<p>The SITCore chip is held in reset while the reset pin is low. Releasing the reset and allowing it to go high will begin the system startup process. When designing your own circuit board, the reset pin must be pulled high for the processor to start running. On our SITCore Modules and Dev Boards we pull reset high through a 10K resistor, allowing reset to be pulled low through the reset button.</p>
+<h2 id="ldr">LDR</h2>
+<p>The LDR pin is used to enter the GHI Electronics bootloader mode. The LDR pin is normally pulled high during startup or reset, allowing the managed application to execute. When the LDR pin is pulled low during startup or reset, the device enters GHI Electronics bootloader mode which is used to load the SITCore firmware. There is no need for a pull up resistor on the LDR pin as the LDR pin is pulled high through a pull up resistor internal to the processor.</p>
+<h2 id="mod">MOD</h2>
+<p>The MOD pin is used to select the debugging/deployment interface. The MOD pin is pulled high by an internal pull up resistor -- there is no need to add a pull up resistor to the MOD pin when designing a custom circuit board.</p>
+<p>By default the MOD pin is pulled high during reset which allows for deployment and debugging over USB. Pulling the MOD pin low during startup or reset allows for deployment and debugging over UART. Note that on our SITCore Dev Boards we include an FT232R USB to serial converter chip to provide a convenient way to connect a PC to the boards serial debug/deploy port.</p>
+<h2 id="app">APP</h2>
+<p>The APP pin is used to prevent the application from running. The APP pin is checked shortly after startup and reset. When the APP pin is high your application will run normally. If the APP pin is low when the bootloader is ready to run your application, the application will be prevented from running. There is no need for an external pull up on the APP pin as it is pulled high by an internal pull up.</p>
+<p>As the function of the APP pin may change in the future, it is not recommended that your application use this pin if it can be avoided.</p>
+<h3 id="loading-the-firmware">Loading the Firmware</h3>
+<ol>
+<li>Activate the bootloader by holding the LDR signal low while resetting the board.</li>
+<li>Open <a href="tinyclr-config.html">TinyCLR Config</a> tool.</li>
+<li>Click the loader tab.</li>
+<li>Select the correct COM port. If you are not seeing it then the device is not in the loader mode.</li>
+<li>Click the <code>Update to Latest</code> button.</li>
+</ol>
+<p>You can also update the firmware manually. Go to the <a href="bootloader.html">GHI Electronics Bootloader</a> page for instructions on using the bootloader and manually loading firmware. You can download the firmware <a href="downloads.html">here</a>.</p>
+<h2 id="device-startup">Device Startup</h2>
+<p>The SITCore is held in reset when the reset pin is low. Releasing it will begin the system startup process.</p>
+<p>There are three different components of the device firmware:</p>
+<ol>
+<li>GHI Electronics Bootloader: Initializes the system, updates TinyCLR when needed, and executes TinyCLR.</li>
+<li>TinyCLR: loads, debugs, and executes the managed application.</li>
+<li>Managed application: the program developed by the customer.</li>
+</ol>
+<p>Which components get executed on startup can be control by manipulating the LDR pin. It is pulled high on
+startup. When low, the device waits in the GHI Electronics Bootloader. Otherwise, the managed application is executed. APP
+is reserved for future use.</p>
+<p>Additionally, the communications interface between the host PC and the SITCore is selected on startup through the
+MODE pin, which is pulled high on startup. The USB interface is selected when MODE is high and COM1 is selected
+when MODE is low.</p>
+<p>The above discussed functions of the LDR, APP, and MODE pins are only available during startup. After startup, the pins return to the
+default GPIO state and are available as GPIO in your application.</p>
+<h3 id="start-coding">Start Coding</h3>
+<p>Now that you have installed the bootloader and firmware on the SITCore, you can setup your host computer and start programming.  Go to the TinyCLR <a href="getting-started.html">Getting Started</a> page for instructions.</p>
 </article>
           </div>
           

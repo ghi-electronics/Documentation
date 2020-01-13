@@ -84,6 +84,9 @@ The microcontrollers we use in our SITCore line of products do not support concu
 ### SC20260B Pinout
 [SC20260B Pinout](pdfs/sc20260b.pdf)
 
+## Device Configuration and Startup
+
+
 ## Device Startup
 The SITCore is held in reset when the reset pin is low. Releasing it will begin the system startup process.
 
@@ -116,21 +119,6 @@ TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the 
 
 You can also update the firmware manually. Download the [firmware](../../software/tinyclr/downloads.md) and learn how to use the [GHI Electronics Bootloader](../../software/tinyclr/bootloader.md) manually
 
-### Loading the Bootloader
-1. Download the SITCore bootloader [here](../../software/tinyclr/bootloader.md).
-2. Connect your device to the USB client port.
-3. Put the board in DFU mode: Hold the SYS A pin low and press/release the reset button. Wait for a second then release SYS A. Windows *Device Manager* will now show "STM Device in DFU Mode" under the 'Universal Serial Bus controller' TAB.
-4. Go to the [STM32 Bootloader](../../software/tinyclr/bootloader.md) to learn how to upload DFU files.
-
-### Loading the Firmware
-1. Activate the bootloader, hold the LDR signal (SYS B) low while resetting the board.
-2. Open [TinyCLR Config](../../software/tinyclr/tinyclr-config.md) tool.
-3. Click the loader tab.
-4. Select the correct COM port. If you are not seeing it then the device is not in the loader mode.
-5. Click the `Update to Latest` button.
-
-You can also update the firmware manually. Download the [firmware](../../software/tinyclr/downloads.md) and learn how to use the [GHI Electronics Bootloader](../../software/tinyclr/bootloader.md) manually.
-
 ### Start Coding
 Now that you have installed the bootloader and firmware on the SITCore, you can setup your host computer and start programming.  Go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.
 
@@ -152,6 +140,8 @@ Exposing the following pins is required in every design to enable device program
 * APP
 * RESET
 * MOD (if required to select a debug interface)
+
+Please see the [Boostrap Pins](../../software/tinyclr/bootstrap-pins.md) page for more details.
 
 ### Power Supply
 A typical clean power source, suited for digital circuitry, is needed to power the SITCore SoCs. Voltages should be within at

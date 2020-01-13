@@ -11,7 +11,7 @@ These products have matured. They are in full production; however, NETMF softwar
 | **G120 / G120E** </br> [**Learn more...**](g120.md) | **G400S/G400D** </br> [**Learn more...**](g400d.md) |
 | [![G120](images/g120.jpg)](g120.md) | [![G400S](images/g400d.jpg)](g400d.md) |
 | **Upgrading to SITCore** </br> [**Learn more...**](upgrade.md) |  |
-| [![Upgrade to SITCore](images/upgrade-to-sitcore.jpg)](upgrade.md) |  |
+| [![Upgrade to SITCore](images/upgrade-sign.jpg)](upgrade.md) |  |
  
 ***
 

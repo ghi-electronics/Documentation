@@ -2637,10 +2637,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "hardware/netmf/images/upgrade-to-sitcore.jpg",
+      "source_relative_path": "hardware/netmf/images/upgrade-sign.jpg",
       "output": {
         "resource": {
-          "relative_path": "hardware/netmf/images/upgrade-to-sitcore.jpg"
+          "relative_path": "hardware/netmf/images/upgrade-sign.jpg"
         }
       },
       "is_incremental": false,
@@ -2685,7 +2685,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/netmf/intro.html",
-          "hash": "I/alIxwzK9PN6lGQcusrLw=="
+          "hash": "WrQ/1gbwsI7Qk3Eq2GmVmA=="
         }
       },
       "is_incremental": false,
@@ -2697,7 +2697,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/netmf/upgrade.html",
-          "hash": "Gwtdxpok/w1J8D4X7X6nJA=="
+          "hash": "kFZcHxiI1VNv/Na+7f8f7g=="
         }
       },
       "is_incremental": false,
@@ -2999,7 +2999,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/soc.html",
-          "hash": "UfyTJBhecK5/rFvM6r7P1A=="
+          "hash": "cC3gLgkfOoK/al3mx7RnTA=="
         }
       },
       "is_incremental": false,
@@ -4165,7 +4165,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/bootstrap-pins.html",
-          "hash": "ekmT/TwREwI3N0rJEorVfA=="
+          "hash": "wV0KF64BbxjzEiyn46udxg=="
         }
       },
       "is_incremental": false,
@@ -5737,9 +5737,9 @@
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "TocDocumentProcessor": {
+        "RestApiDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {
@@ -5750,9 +5750,9 @@
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "RestApiDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
