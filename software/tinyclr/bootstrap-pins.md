@@ -4,17 +4,17 @@ There are four pins that should be exposed on any SITCore circuit board. These p
 
 ## RESET
 
-The SITCore chip is held in reset while the reset pin is low. Releasing the reset and allowing it to go high will begin the system startup process. When designing your own circuit board, the reset pin must be pulled high for the processor to start running. On our SITCore Modules and Dev Boards we pull reset high through a 10K resistor, allowing reset to be pulled low through the reset button.
+The SITCore chip is held in reset while the reset pin is low. Releasing reset and allowing it to go high will begin the system startup process. When designing your own circuit board, the reset pin must be pulled high for the processor to start running. On our SITCore Modules and Dev Boards we pull reset high through a 10K resistor, allowing reset to be pulled low through the reset button.
 
 ## LDR
 
-The LDR pin is used to enter the GHI Electronics bootloader mode. The LDR pin is normally pulled high during startup or reset, allowing the managed application to execute. When the LDR pin is pulled low during startup or reset, the device enters GHI Electronics bootloader mode which is used to load the SITCore firmware. There is no need for a pull up resistor on the LDR pin as the LDR pin is pulled high through a pull up resistor internal to the processor.
+The LDR pin is used to enter the GHI Electronics bootloader mode. The LDR pin is normally pulled high during startup or reset, allowing the managed application to execute. When the LDR pin is pulled low during startup or reset, the device enters GHI Electronics bootloader mode, which is used to load the SITCore firmware. There is no need for a pull up resistor on the LDR pin as the LDR pin is pulled high through a pull up resistor internal to the processor.
 
 ## MOD
 
 The MOD pin is used to select the debugging/deployment interface. The MOD pin is pulled high by an internal pull up resistor -- there is no need to add a pull up resistor to the MOD pin when designing a custom circuit board.
 
-By default the MOD pin is pulled high during reset which allows for deployment and debugging over USB. Pulling the MOD pin low during startup or reset allows for deployment and debugging over UART. Note that on our SITCore Dev Boards we include an FT232R USB to serial converter chip to provide a convenient way to connect a PC to the boards serial debug/deploy port.
+By default the MOD pin is pulled high during reset which allows for deployment and debugging over USB. Pulling the MOD pin low during startup or reset allows for deployment and debugging over UART. Note that our SITCore Dev Boards include an FT232R USB to serial converter chip to provide a convenient way to connect a PC to the boards serial debug/deploy port.
 
 ## APP
 

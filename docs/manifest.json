@@ -4176,7 +4176,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/bootstrap-pins.html",
-          "hash": "wV0KF64BbxjzEiyn46udxg=="
+          "hash": "F/Qc98y8HZuMiaRQvRrhhA=="
         }
       },
       "is_incremental": false,
@@ -5753,17 +5753,17 @@
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "RestApiDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build"
         }
       }
