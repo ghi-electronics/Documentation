@@ -2,7 +2,9 @@
 ---
 ![Download](images/download-noborder.jpg)
 
-This page includes downloads for the SITCore line of products. See individual product pages for details.
+This page includes downloads for the SITCore line of products as well as some of our earlier product lines. See individual product pages for details.
+
+## TinyCLR OS 2.0
 
 The release notes are [here](release-notes.md).
 
@@ -14,14 +16,61 @@ Production | Ready to be used commercially.
 Preview | Preview of the next release, not quite ready for production use.
 Alpha | Bleeding edge development that will frequently change. Major changes to come.
 
-## Visual Studio Project System and Libraries
-The project system is what gets loaded on Visual Studio to allow it to communicate with a TinyCLR OS device. It also includes project templates.
-
-Libraries provide prebuilt ways of performing many common tasks.
-
-The following .zip file includes both the project system and libraries. Note that the MD5 checksum is for the .zip file, not the extracted files.
+### Visual Studio Project System
+The extension is what gets loaded on Visual Studio to allow it to communicate with a TinyCLR OS device. It also includes project templates. You can find it on [Visual Studio Marketplace](getting-started.md) instead of downloading it here.
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.0.0-preview1](http://2m8oc.r.bh.d.sendibt3.com/mk/cl/f/yajlCgaoa_ViEDB9iTrvKcaISp3SBLoJF82JKqD4PmUfPXKkGYDQF500b_fE2RCBrMAdgOMZ7EBytUYZrBeivxLvOYiXELAOJrbb6BjyPHHmE14OkD2EvPSr8J-_HhUNexgRnD3ijcxETdlWQF8Mevlqdl2MMySSGUNnQjraHucB0SwpZXEB8jfYTsnEWTOax2BJLrst2qkHL3i5OKcwVoG52p1EXQXMwNRXW2zGp7DajEwVxh1mU_IH) | 2019-12-09 | Preview | E8744F0E1878D83214BAB9C2568ACE5A
+[v2.0.0-preview2](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR%20OS%20Project%20System%20v2.0.0-preview2.vsix) | 2019-12-09 | Preview | 
+
+### Libraries
+Libraries provide prebuilt ways of performing many common tasks. You can find them on [NuGet](getting-started.md) instead of downloading them here.
+
+File | Date | Status | MD5
+--- | --- | --- | ---
+[v2.0.0-preview2](http://files.ghielectronics.com/downloads/TinyCLR/Libraries/TinyCLR%20OS%20Libraries%20v2.0.0-preview2.zip) | 2019-12-09 | Preview |  
+
+
+### TinyCLR Config
+TinyCLR Config is a tool used to update and configure your TinyCLR device.
+
+File | Date | Status | MD5
+--- | --- | --- | ---
+[v2.0.0-preview2](http://files.ghielectronics.com/downloads/TinyCLR/Config/TinyCLR%20Config%20Setup%20v2.0.0-preview2.msi) | 2019-12-09 | Preview | 
+
+### TinyCLR Font Converter
+The font converter is a tool used to convert desktop TrueType fonts to the format used by TinyCLR OS.
+
+File | Date | Status | MD5
+--- | --- | --- | ---
+[v2.0.0-preview2](http://files.ghielectronics.com/downloads/TinyCLR/Tools/TinyCLR%20OS%20Font%20Converter%20v2.0.0-preview2.exe) | 2019-12-09 | Preview | 
+
+
+### Firmwares
+The Firmware is the TinyCLR OS that lives on your hardware. The firmware version loaded on the hardware must match the version number of the extension and the libraries. This will be easier managed once the libraries are hosted on http://www.nuget.org/
+
+#### SC20xxxx (works on all SITCore products)
+
+File | Date | Status | MD5
+--- | --- | --- | ---
+[v2.0.0-preview2](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore%20Firmware%20v2.0.0-preview2.ghi) |2019-12-09 | Preview | 
+
+## TinyCLR OS 1.0
+
+These downloads are provided with no support and are not recommended for commercial designs.
+
+File | Date | MD5
+-----|------|----
+[Project System](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR%20OS%20Project%20System%20v1.0.0.vsix) | 2018-12-27 | 2CDD88E2203716781CA0735FEAE2BBE3
+[Libraries](http://files.ghielectronics.com/downloads/TinyCLR/Libraries/TinyCLR%20OS%20Libraries%20v1.0.0.zip) | 2018-12-27 | 4EB8D0C9DBD8AABA8C48716256099924
+[TinyCLR Config](http://files.ghielectronics.com/downloads/TinyCLR/Config/TinyCLR%20Config%20Setup%20v1.0.0.msi) | 2018-12-27 | FFA158A503EBEA0D9F812007608A1974
+[TinyCLR Font Converter](http://files.ghielectronics.com/downloads/TinyCLR/Tools/TinyCLR%20OS%20Font%20Converter%20v1.0.0.exe) | 2018-12-27 | 9FBDD44955F51BDBE83BBAB4CAD25616
+[UC5550](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/UC5550/UC5550%20Firmware%20v1.0.0.glb) | 2018-12-27 | BE4D80D4F88AA0902F25E8353148D2F8
+[UC2550](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/UC2550/UC2550%20Firmware%20v1.0.0.glb) | 2018-12-27 | 97F2BA54A92107CBFB5DDA029E58DA42
+[G400](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/G400/G400%20Firmware%20v1.0.0.glb) | 2018-12-27 | DF863A79DE30F5C4C204B2F6EE0ED4FE
+[G120](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/G120/G120%20Firmware%20v1.0.0.glb) | 2018-12-27 | 482C2ADE1B27675A5457D8894D43BB6F
+[G80](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/G80/G80%20Firmware%20v1.0.0.ghi) | 2018-12-27 | CE90C3F05C6193A68C42E7D4C3A5AB80
+[G30](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/G30/G30%20Firmware%20v1.0.0.ghi) | 2018-12-27 | B3A3BC288A4776506D40198847AFAB85
+[FEZCLR (FEZ T18)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/FEZCLR/FEZCLR%20Firmware%20v1.0.0.glb) | 2018-12-27 | C089598B40CC7398DD7BBC3723D25D0E
+
 

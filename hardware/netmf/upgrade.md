@@ -1,4 +1,6 @@
-# Upgrading From Earlier GHI Hardware
+# Upgrading to SITCore
+---
+![Upgrading to SITCore](images/upgrade-sign.jpg)
 
 To complement our ten year Longevity Promise, we provide SITCore products that are drop in replacements for most of our more mature SoMs and chipsets. We strive to keep your product viable as long as possible with no or minimal changes to your hardware.
 
@@ -14,17 +16,9 @@ Unfortunately the LQFP100 version of the SITCore processor is unavailable in a v
 
 Our SCM20260N is a drop in replacement for the G120 with the following differences that will rarely be an issue.
 
-* SCM20260N pad 3 (PK7/LCD DE) does not have PWM as on G120 pad 3 (P2.4/PWM10/LCD OE). Use software PWM if needed.
-* SCM20260N pad 23 (PC10/SDMMC1 D2/USART3 TX) does not have PWM as on G120 pad 23 (P1.11/PMW5/SD D2). Use software PWM if needed.
-* SCM20260N pad 24 (PC9/SDMMC1 D1/UART5 CTS) does not have PWM as on G120 pad 24 (P1.7/PWM4/SD D1). Use software PWM if needed.
-* SCM20260N pad 25 (PC12/SDMMC1 CK) does not have PWM as on G120 pad 25 (P1.2/PWM0/SD CLK). Use software PWM if needed.
-* SCM20260N pad 26 (PC8/SDMMC1 D0/UART5 RTS) does not have PWM as on G120 pad 26 (P1.6/PWM3/SD D0). Use software PWM if needed.
-* SCM20260N pad 28 (PD2/SDMMC1 CMD) does not have PWM as on G120 pad 28 (P1.3/PWM1/SD CMD). Use software PWM if needed.
-* SCM20260N pad 80 (PK6/LCD B7) does not have COM TX as on G120 pad 80 (P1.29/LCD B4/COM5 TX). As this is an LCD pin, this will rarely be an issue.
-* SCM20260N pad 85 (PI12/LCD HSYNC) does not have PWM as on G120 pad 85 (P2.5/LCD HS/PWM11). Use software PWM if needed.
-* SCM20260N pad 88 (PJ6/LCD R7) does not have COM RX as on G120 pad 88 (P2.9/LCD R4/COM5 RX). As this is an LCD pin, this will rarely be an issue.
-* SCM20260N pad 90 (PI13/LCD VSYNC) does not have PWM as on G120 pad 90 (P2.3/LCD VS/PWM9). Use software PWM if needed.
+The following pads/pins on the SCM20260N do not support hardware PWM -- use software PWM if needed: Pad 3/pin PK7, pad 23/pin PC10, pad 24/pin PC9, pad 25/pin PC12, pad 26/pin PC8, pad 28/pin PD2, pad 85/pin PI12, and pad 90/pin PI13.
 
+* SCM20260N pad 80 (PK6/LCD B7) and pad 88 (PJ6/LCD R7) do not have COM TX and RX as found on G120 pads 80 and 88. As this is an LCD pin, this will rarely be an issue.
 * Pad 15 on the SCM20260N (PI2/SPI2 MISO/TIM8 CH4 + PD3/USART2 CTS through 1K resistor) provides USART CTS connected through a 1K resistor to maintain compatibility with Pad 15 on the G120 (P0.17/COM2 CTS/SPI1 MISO).
 
 ## G120E to SITCore

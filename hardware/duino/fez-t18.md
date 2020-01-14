@@ -2,6 +2,9 @@
 ---
 ![FEZ](images/fez-noborder.jpg)
 
+> [!Note]
+> FEZ T18 only works with TinyCLR OS 1.0 -- it will not run TinyCLR 2.0.
+
 An Arduino-pinout compatible single board computer
 
 | Spec           | Value                           |
@@ -18,7 +21,7 @@ An Arduino-pinout compatible single board computer
 * [Schematic](http://files.ghielectronics.com/downloads/Schematics/FEZ/FEZ%20T18%20Rev%20D%20Schematic.pdf)
 
 ## Software
-FEZ is only supported by TinyCLR OS 1.0. Consider using TinyCLR OS 2.0 and one its available hardware options.
+FEZ T18 is only supported by TinyCLR OS 1.0 and will not run TinyCLR OS 2.0.
 
 ***
 

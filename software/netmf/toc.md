@@ -1,5 +1,6 @@
 # [Introduction](intro.md)
 # [Getting Started](getting-started.md)
+# [Bootloaders](bootloader.md)
 # [Tutorials](tutorials/intro.md)
 ## [Analog Inputs](tutorials/analog-in.md)
 ## [Analog Outputs](tutorials/analog-out.md)

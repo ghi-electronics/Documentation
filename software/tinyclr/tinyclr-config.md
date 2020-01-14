@@ -1,6 +1,6 @@
 # TinyCLR Config
 ---
-TinyCLR Config is a stand-alone tool to help manage TinyCLR OS devices. The tool is cloud-connected. It automatically finds and downloads newer firmware versions from a list of provided sources. These sources can be on the Internet or local on your computer if you don't have (or don't want) Internet access. The firmware update functionality only works for devices that have [GHI Bootloader v2](../../hardware/loaders/ghi-bootloader.md).
+TinyCLR Config is a stand-alone tool to help manage TinyCLR OS devices. The tool is cloud-connected. It automatically finds and downloads newer firmware versions from a list of provided sources. These sources can be on the Internet or local on your computer if you don't have (or don't want) Internet access. The firmware update functionality only works for devices that have [GHI Electronics Bootloader v2](bootloader.md).
 
 You can download TinyCLR Config from the TinyCLR Config section of the [Downloads](downloads.md) page.
 
@@ -9,14 +9,14 @@ After installing TinyCLR Config, the program will be found in the GHI Electronic
 
 The `Debug` mode of the program is used to communicate through the device's USB debug port. TinyCLR firmware must be installed on the device to communicate through the debug interface. The debug mode of TinyCLR Config can be used to update firmware, manipulate your application, save and load binary images of your application, and enter bootloader mode.
 
-The `Loader` mode of the program is used to communicate with devices that are in bootloader mode. You do not need firmware installed to communicate, but GHI Bootloader v2 must be installed. The loader mode allows you to load or update the firmware, erase the device, and run your application.
+The `Loader` mode of the program is used to communicate with devices that are in bootloader mode. You do not need firmware installed to communicate, but GHI Electronics Bootloader v2 must be installed. The loader mode allows you to load or update the firmware, erase the device, and run your application.
 
 ### Using Debug Mode
 
 Start TinyCLR Config and plug your device into your computer's USB port. Select your device as show below. We are using the FEZ for this example.
 
 > [!Note]
-> You must have GHI Bootloader v2 and TinyCLR firmware installed on your device to communicate using the `Debug` mode of TinyCLR Config.
+> You must have GHI Electronics Bootloader v2 and TinyCLR firmware installed on your device to communicate using the `Debug` mode of TinyCLR Config.
 
 ![Select your device](images/select-device.png).
 
@@ -57,7 +57,7 @@ Used to load a previously saved binary image of an application (.tca file) onto 
 Plug the device into your computer's USB port and start TinyCLR Config. To use Loader mode, the device must first be placed into bootloader mode. Devices without firmware installed should boot into loader mode by default. You can also use the `Enter Loader` button in the `Debug` section of TinyCLR Config to put your device in loader mode. You may also assert one of the boot pins to force the device to stay in loader mode on power up -- see your device specifications for details.
 
 > [!Note]
-> You must have GHI Bootloader v2 installed on your device to communicate using the `Loader` mode of TinyCLR Config.
+> You must have GHI Electronics Bootloader v2 installed on your device to communicate using the `Loader` mode of TinyCLR Config.
 
 Click on the `Loader` tab of TinyCLR Config. Next to `Port:`, use the drop down text box to select the com port of your device. You may have to click the `Refresh` button if the connection to your device is not shown. When a connection is established, you should see the name and bootloader version of your device.
 
@@ -78,7 +78,7 @@ Erases the application program and firmware from the device. Does not erase the 
 Takes the device out of bootloader mode and starts the firmware on the device.
 
 ## Firmware Sources
-When TinyCLR Config starts up, it looks for a file called `FirmwareSources.txt` in the same directory as the TinyCLR Config executable itself. If the file isn't present, it's created automatically with one entry pointing to the official GHI firmware store.
+When TinyCLR Config starts up, it looks for a file called `FirmwareSources.txt` in the same directory as the TinyCLR Config executable itself. If the file isn't present, it's created automatically with one entry pointing to the official GHI Electronics firmware store.
 
 The file is a comma-separated list of sources, one per line. The first value is an integer priority with lower numbers being searched first. Each source is tried until a newer version than the currently flashed version is found. The next value is either `Local` or `Network` which determines where the next value points to: the local disk or the network. The last value is a URI that points to an xml file that defines the list of available firmwares.
 

@@ -260,7 +260,7 @@
 high internally on the G120E and left floating on the G120.
 There are four different components of the device firmware:</p>
 <ol>
-<li>GHI Bootloader: initializes the system, updates TinyBooter when needed, and executes TinyBooter.</li>
+<li>GHI Electronics Bootloader: initializes the system, updates TinyBooter when needed, and executes TinyBooter.</li>
 <li>TinyBooter: executes NETMF, updates NETMF when needed, and updates the system configuration.</li>
 <li>NETMF: loads, debugs, and executes the managed application.</li>
 <li>Managed application: the program developed by the customer.</li>
@@ -289,7 +289,7 @@ LDR1 are pulled high on startup.</p>
 <tr>
 <td>Low</td>
 <td>Low</td>
-<td>Wait in GHI Bootloader</td>
+<td>Wait in GHI Electronics Bootloader</td>
 </tr>
 </tbody>
 </table>
@@ -325,7 +325,7 @@ default GPIO state and are available to use as GPIO in the user application.</p>
 <li>Activate the bootloader, hold the LDR0 signal low while resetting the board.</li>
 <li>Open FEZ Config tool and follow the instructions.</li>
 </ol>
-<p>You can also update the firmware manually. See <a href="../loaders/ghi-bootloader.html">GHI Bootloader</a> page.</p>
+<p>You can also update the firmware manually. See <a href="../../software/netmf/bootloader.html">GHI Electronics Bootloader</a> page.</p>
 <h3 id="start-coding">Start Coding</h3>
 <p>Now that you have installed the bootloader and firmware on the G120, you can setup your host computer and start programming. Go to the NETMF <a href="../../software/netmf/getting-started.html">Getting Started</a> page for instructions.</p>
 <h2 id="datasheet">Datasheet</h2>

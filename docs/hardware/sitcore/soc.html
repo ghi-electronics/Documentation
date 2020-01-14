@@ -77,7 +77,7 @@
 <h1 id="sitcore-system-on-chip">SITCore System on Chip</h1>
 
 <hr>
-<p><img src="images/sc20100-board.jpg" alt="SITCore SC20100S"></p>
+<p><img src="images/system-on-chip.jpg" alt="SITCore SC20100S"></p>
 <h2 id="overview">Overview</h2>
 <p>The SITCore SoCs provide a low cost way to add .NET computing power to any embedded product. Available as either a 100 pin LQFP or a 265 ball BGA, the SITCore SoCs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more.</p>
 <h2 id="ordering-part-number">Ordering Part Number</h2>
@@ -226,9 +226,8 @@
 </tbody>
 </table>
 <p><em>Note: As many pins share peripherals, not all peripherals will be available.</em></p>
-<div class="NOTE"><h5>Note</h5><p>Interrupts (IRQs) are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
-example: PA1 and PB1 cannot both be used as interrupts at the same time, but PA1 and PB2 can.</p>
-</div>
+<h3 id="using-interrupts-irqs">Using Interrupts (IRQs)</h3>
+<p>The microcontrollers we use in our SITCore line of products do not support concurrent interrupts with the same pin number, even if the pins are on different ports (the port is denoted by the second letter of the GPIO pin name -- PA1 is pin 1 on port A). Therefore, interrupts are available on only 16 pins at any given time. For example, pins PA1 and PB1 cannot be used as interrupt pins at the same time, but PA1 and PB2 can. PA1 and PA2 can also be used with interrupts simultaneously.</p>
 <h2 id="features">Features</h2>
 <ul>
 <li>Low power modes including three independently controllable power domains</li>
@@ -274,18 +273,13 @@ example: PA1 and PB1 cannot both be used as interrupts at the same time, but PA1
 <p>The SITCore is held in reset when the reset pin is low. Releasing it will begin the system startup process.</p>
 <p>There are three different components of the device firmware:</p>
 <ol>
-<li>GHI Bootloader: Initializes the system, updates TinyCLR when needed, and executes TinyCLR.</li>
+<li>GHI Electronics Bootloader: Initializes the system, updates TinyCLR when needed, and executes TinyCLR.</li>
 <li>TinyCLR: loads, debugs, and executes the managed application.</li>
 <li>Managed application: the program developed by the customer.</li>
 </ol>
-<p>Which components get executed on startup can be control by manipulating the LDR pin. It is pulled high on
-startup. When low, the device waits in the GHI Bootloader. Otherwise, the managed application is executed. APP
-is reserved for future use.</p>
-<p>Additionally, the communications interface between the host PC and the SITCore is selected on startup through the
-MODE pin, which is pulled high on startup. The USB interface is selected when MODE is high and COM1 is selected
-when MODE is low.</p>
-<p>The above discussed functions of the LDR, APP, and MODE pins are only available during startup. After startup, the pins return to the
-default GPIO state and are available as GPIO in your application.</p>
+<p>Which components get executed on startup can be control by manipulating the LDR pin. It is pulled high on startup. When low, the device waits in the GHI Electronics Bootloader. Otherwise, the managed application is executed. The APP pin is used to stop the application from running.</p>
+<p>Additionally, the communications interface between the host PC and the SITCore is selected on startup through the MODE pin, which is pulled high on startup. The USB interface is selected when MODE is high and COM1 is selected when MODE is low.</p>
+<p>The above discussed functions of the LDR, APP, and MODE pins are only available during startup. After startup, the pins return to the default GPIO state and are available as GPIO in your application. Check out the <a href="../../software/tinyclr/special-pins.html">Bootstrap Pins</a> page for more information.</p>
 <h2 id="tinyclr-os">TinyCLR OS</h2>
 <p>TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page for instructions.</p>
 <h3 id="loading-the-firmware">Loading the Firmware</h3>
@@ -296,26 +290,9 @@ default GPIO state and are available as GPIO in your application.</p>
 <li>Select the correct COM port. If you are not seeing it then the device is not in the loader mode.</li>
 <li>Click the <code>Update to Latest</code> button.</li>
 </ol>
-<p>You can also update the firmware manually. Download the <a href="../../software/tinyclr/downloads.html">firmware</a> and learn how to use the <a href="../loaders/ghi-bootloader.html">GHI Bootloader</a> manually</p>
-<h3 id="loading-the-bootloader">Loading the Bootloader</h3>
-<ol>
-<li>Download the SITCore bootloader <a href="../loaders/ghi-bootloader.html">here</a>.</li>
-<li>Connect your device to the USB client port.</li>
-<li>Put the board in DFU mode: Hold the SYS A pin low and press/release the reset button. Wait for a second then release SYS A. Windows <em>Device Manager</em> will now show &quot;STM Device in DFU Mode&quot; under the &#39;Universal Serial Bus controller&#39; TAB.</li>
-<li>Go to the <a href="../loaders/stm32-bootloader.html">STM32 Bootloader</a> to learn how to upload DFU files.</li>
-</ol>
-<h3 id="loading-the-firmware">Loading the Firmware</h3>
-<ol>
-<li>Activate the bootloader, hold the LDR signal (SYS B) low while resetting the board.</li>
-<li>Open <a href="../../software/tinyclr/tinyclr-config.html">TinyCLR Config</a> tool.</li>
-<li>Click the loader tab.</li>
-<li>Select the correct COM port. If you are not seeing it then the device is not in the loader mode.</li>
-<li>Click the <code>Update to Latest</code> button.</li>
-</ol>
-<p>You can also update the firmware manually. Download the <a href="../../software/tinyclr/downloads.html">firmware</a> and learn how to use the <a href="../loaders/ghi-bootloader.html">GHI Bootloader</a> manually.</p>
+<p>You can also update the firmware manually. Download the <a href="../../software/tinyclr/downloads.html">firmware</a> and learn how to use the <a href="../../software/tinyclr/bootloader.html">GHI Electronics Bootloader</a> manually</p>
 <h3 id="start-coding">Start Coding</h3>
 <p>Now that you have installed the bootloader and firmware on the SITCore, you can setup your host computer and start programming.  Go to the TinyCLR <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page for instructions.</p>
-<h2 id="datasheet">Datasheet</h2>
 <h2 id="design-considerations">Design Considerations</h2>
 <h3 id="footprints">Footprints</h3>
 <h4 id="this-is-the-recommended-footprint-for-the-sc20100s">This is the recommended footprint for the SC20100S:</h4>
@@ -331,6 +308,7 @@ default GPIO state and are available as GPIO in your application.</p>
 <li>RESET</li>
 <li>MOD (if required to select a debug interface)</li>
 </ul>
+<p>Please see the <a href="../../software/tinyclr/special-pins.html">Boostrap Pins</a> page for more details.</p>
 <h3 id="power-supply">Power Supply</h3>
 <p>A typical clean power source, suited for digital circuitry, is needed to power the SITCore SoCs. Voltages should be within at
 least 10% of the specified voltage. Decoupling capacitors of 0.1 uF are needed near every power pin. Additionally, a

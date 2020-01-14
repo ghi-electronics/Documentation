@@ -2,7 +2,7 @@
 ---
 The file system features in NETMF are very similar to full .NET. There are no limits on file counts or sizes other than the limits of the FAT file system itself. NETMF supports FAT16 and FAT32.  
 
-With a few minor changes, NETMF file system access can be tested from within the Microsoft NETMF emulator. Changes include removing any of the GHI library dependencies.
+With a few minor changes, NETMF file system access can be tested from within the Microsoft NETMF emulator. Changes include removing any of the GHI Electronics library dependencies.
 
 Unlike full .NET, NETMF does require mounting of media. NETMF also handles media names differently than full .NET. Media name differences are easily handled by accessing the root directory name at runtime and then using that name. Consequently, most online examples of how to use .NET to access files on PCs can be used with NETMF. In NETMF, other than differences for specific physical characteristics, usage of SD/MMC cards and USB memory devices are identical to .NET.
 

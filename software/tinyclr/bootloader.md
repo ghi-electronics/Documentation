@@ -1,11 +1,11 @@
-# GHI Bootloader
+# GHI Electronics Bootloader
 ---
-The GHI Bootloader is used to update the firmware on our devices. It is the first program to run and unless the device specific LDR pins are set (see device documentation for details), it will execute the firmware on the device (if present). 
+The GHI Electronics Bootloader is used to update the firmware on our devices. It is the first program to run and unless the device specific LDR pins are set (see device documentation for details), it will execute the firmware on the device (if present). 
 
 The bootloader communicates over a USB virtual serial port and a regular serial port. The interface used is controlled by a MODE pin. See your device specifications for details on interface configuration and selection and which version of the bootloader it runs.
 
 > [!Tip]
-> If you are running Windows 7 or Windows 8, you must install drivers for the bootloader to appear in Windows. See "USB Drivers" in the [**downloads section**](ghi-bootloader.md#usb-drivers).
+> If you are running Windows 7 or Windows 8, you must install drivers for the bootloader to appear in Windows. See "USB Drivers" in the [**downloads section**](bootloader.md).
 
 ## Bootloader v2
 All commands and results are terminated with CR and LF (\r\n). "OK." will be sent after each successful command.
@@ -73,7 +73,7 @@ On startup, a banner is sent that is terminated by "BL". Once the banner is rece
 > [!Tip]
 > The USB interface on Version 1.0 doesn't always work on Windows 7 and newer operating systems. Use the serial interface instead.
 
-### Upgrading GHI Bootloader v1 to v2
+### Upgrading GHI Electronics Bootloader v1 to v2
 Some of our devices ship with v1 loader but require v2 loader to work with TinyCLR OS, such as G120.
 
 1. Download the bootloader file from the list below.

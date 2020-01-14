@@ -81,7 +81,7 @@
 <p>In the embedded system world, devices are usually always running and with no user interaction. So if something went wrong, it would be very beneficial if we have an automatic reset button. Watchdog is your reset button!</p>
 <p>Assume you are making a smart vending machine that reports its inventory over the network. If your code raises an exception that wasn&#39;t handled properly then your program will end. Program ended means the vending machine will no longer work. Someone will have to drive to the vending machine to reset it! The alternative is to use the watchdog.</p>
 <p>When watchdog is enabled, it is given a timeout where it will reset the system if the time reached without resetting the timeout. This is like saying &quot;reset the system in 5 seconds&quot; then the program goes on to do something. The program needs to come back and reset the time and say &quot;reset in 5 seconds&quot;. If the program keeps doing this, the system will never reset. But if the program got stuck somewhere, the 5 seconds will end causing the system to reset.</p>
-<div class="TIP"><h5>Tip</h5><p>GHI does not use the NETMF&#39;s built in services for watchdog, but uses its own.</p>
+<div class="TIP"><h5>Tip</h5><p>GHI Electronics does not use the NETMF&#39;s built in services for watchdog, but uses its own.</p>
 </div>
 <p>Use the GHI.Hardware assembly when using watchdog.</p>
 <div class="WARNING"><h5>Warning</h5><p>Do NOT set the Watchdog reset time too short during the debug phase. If it is shorter than the time taken to deploy your code then your device will reboot and the new code never gets loaded. The only way to get out of the problem is to erase the device and reflash the firmware.</p>

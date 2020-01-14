@@ -83,7 +83,7 @@ This boards combines F20 with a micro SD card connector on a very tiny circuit.
 * [F20-uSD Schematic](http://files.ghielectronics.com/downloads/Schematics/FileSystem/F20%20uSD%20Rev%201.1%20Schematic.pdf)
 
 ## Firmware Upgrade
-It is possible to upgrade and downgrade the firmware on the file system chipsets using the built in GHI Bootloader v1. The product datasheets explain how to enter the bootloader. The [GHI Bootloader](../loaders/ghi-bootloader.md) page details how to use it.
+It is possible to upgrade and downgrade the firmware on the file system chipsets using the built in GHI Electronics Bootloader v1. The product datasheets explain how to enter the bootloader. The [GHI Electronics Bootloader](../../software/netmf/bootloader.md) page details how to use it.
 
 ## Legacy Products
 
