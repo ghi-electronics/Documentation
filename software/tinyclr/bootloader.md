@@ -5,7 +5,7 @@ The GHI Electronics Bootloader is used to update the firmware on our devices. It
 The bootloader communicates over a USB virtual serial port and a regular serial port. The interface used is controlled by a MODE pin. See your device specifications for details on interface configuration and selection and which version of the bootloader it runs.
 
 > [!Tip]
-> If you are running Windows 7 or Windows 8, you must install drivers for the bootloader to appear in Windows. See "USB Drivers" in the [**downloads section**](bootloader.md#usb-drivers).
+> If you are running Windows 7 or Windows 8, you must install drivers for the bootloader to appear in Windows. See "USB Drivers" in the [**downloads section**](bootloader.md).
 
 ## Bootloader v2
 All commands and results are terminated with CR and LF (\r\n). "OK." will be sent after each successful command.

@@ -1,4 +1,4 @@
-# Bootstrap Pins
+# Special Pins
 ---
 There are four pins that should be exposed on any SITCore circuit board. These pins are RESET, LDR, MOD, and APP. The LDR and MOD pins are only used during startup (or reset) and can be used as a GPIO or peripheral pin once your application is running.
 
@@ -14,13 +14,13 @@ The LDR pin is used to enter the GHI Electronics bootloader mode. The LDR pin is
 
 The MOD pin is used to select the debugging/deployment interface. The MOD pin is pulled high by an internal pull up resistor -- there is no need to add a pull up resistor to the MOD pin when designing a custom circuit board.
 
-By default the MOD pin is pulled high during reset which allows for deployment and debugging over USB. Pulling the MOD pin low during startup or reset allows for deployment and debugging over UART. Note that our SITCore Dev Boards include an FT232R USB to serial converter chip to provide a convenient way to connect a PC to the boards serial debug/deploy port.
+By default the MOD pin is pulled high during reset which allows for deployment and debugging over USB. Pulling the MOD pin low during startup or reset allows for deployment and debugging over UART. Note that our SITCore Dev Boards include a FT232R USB to serial converter chip to provide a convenient way to connect a PC to the boards serial debug/deploy port.
 
 ## APP
 
-The APP pin is used to prevent the application from running. The APP pin is checked shortly after startup and reset. When the APP pin is high your application will run normally. If the APP pin is low when the bootloader is ready to run your application, the application will be prevented from running. There is no need for an external pull up on the APP pin as it is pulled high by an internal pull up.
+The APP pin is used to prevent the application from running. The APP pin is checked shortly after startup and reset. When the APP pin is high your application will run normally. If the APP pin is low when the bootloader is finished, the bootloader will not transfer execution to your application. There is no need for an external pull up on the APP pin as it is pulled high by an internal pull up.
 
-As the function of the APP pin may change in the future, it is not recommended that your application use this pin if it can be avoided.
+As the function of the APP pin may change in the future, it is recommended to avoid using this pin as a GPIO if possible.
 
 
 ### Loading the Firmware

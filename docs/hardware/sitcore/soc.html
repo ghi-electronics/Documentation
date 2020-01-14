@@ -269,7 +269,6 @@
 <p><a href="pdfs/sc20100s.pdf">SC20100S Pinout</a></p>
 <h3 id="sc20260b-pinout">SC20260B Pinout</h3>
 <p><a href="pdfs/sc20260b.pdf">SC20260B Pinout</a></p>
-<h2 id="device-configuration-and-startup">Device Configuration and Startup</h2>
 <h2 id="device-startup">Device Startup</h2>
 <p>The SITCore is held in reset when the reset pin is low. Releasing it will begin the system startup process.</p>
 <p>There are three different components of the device firmware:</p>
@@ -278,14 +277,9 @@
 <li>TinyCLR: loads, debugs, and executes the managed application.</li>
 <li>Managed application: the program developed by the customer.</li>
 </ol>
-<p>Which components get executed on startup can be control by manipulating the LDR pin. It is pulled high on
-startup. When low, the device waits in the GHI Electronics Bootloader. Otherwise, the managed application is executed. APP
-is reserved for future use.</p>
-<p>Additionally, the communications interface between the host PC and the SITCore is selected on startup through the
-MODE pin, which is pulled high on startup. The USB interface is selected when MODE is high and COM1 is selected
-when MODE is low.</p>
-<p>The above discussed functions of the LDR, APP, and MODE pins are only available during startup. After startup, the pins return to the
-default GPIO state and are available as GPIO in your application.</p>
+<p>Which components get executed on startup can be control by manipulating the LDR pin. It is pulled high on startup. When low, the device waits in the GHI Electronics Bootloader. Otherwise, the managed application is executed. The APP pin is used to stop the application from running.</p>
+<p>Additionally, the communications interface between the host PC and the SITCore is selected on startup through the MODE pin, which is pulled high on startup. The USB interface is selected when MODE is high and COM1 is selected when MODE is low.</p>
+<p>The above discussed functions of the LDR, APP, and MODE pins are only available during startup. After startup, the pins return to the default GPIO state and are available as GPIO in your application. Check out the <a href="../../software/tinyclr/special-pins.html">Bootstrap Pins</a> page for more information.</p>
 <h2 id="tinyclr-os">TinyCLR OS</h2>
 <p>TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page for instructions.</p>
 <h3 id="loading-the-firmware">Loading the Firmware</h3>
@@ -299,7 +293,6 @@ default GPIO state and are available as GPIO in your application.</p>
 <p>You can also update the firmware manually. Download the <a href="../../software/tinyclr/downloads.html">firmware</a> and learn how to use the <a href="../../software/tinyclr/bootloader.html">GHI Electronics Bootloader</a> manually</p>
 <h3 id="start-coding">Start Coding</h3>
 <p>Now that you have installed the bootloader and firmware on the SITCore, you can setup your host computer and start programming.  Go to the TinyCLR <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page for instructions.</p>
-<h2 id="datasheet">Datasheet</h2>
 <h2 id="design-considerations">Design Considerations</h2>
 <h3 id="footprints">Footprints</h3>
 <h4 id="this-is-the-recommended-footprint-for-the-sc20100s">This is the recommended footprint for the SC20100S:</h4>
@@ -315,7 +308,7 @@ default GPIO state and are available as GPIO in your application.</p>
 <li>RESET</li>
 <li>MOD (if required to select a debug interface)</li>
 </ul>
-<p>Please see the <a href="../../software/tinyclr/bootstrap-pins.html">Boostrap Pins</a> page for more details.</p>
+<p>Please see the <a href="../../software/tinyclr/special-pins.html">Boostrap Pins</a> page for more details.</p>
 <h3 id="power-supply">Power Supply</h3>
 <p>A typical clean power source, suited for digital circuitry, is needed to power the SITCore SoCs. Voltages should be within at
 least 10% of the specified voltage. Decoupling capacitors of 0.1 uF are needed near every power pin. Additionally, a

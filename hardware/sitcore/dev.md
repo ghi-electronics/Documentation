@@ -51,6 +51,11 @@ Vertical Front Porch | 7
 Vertical Sync Polarity | low
 Vertical Sync Pulse Width | 1
 
+### Demo Program
+
+The SITCore SC20260D Dev Board ships with a demonstration program that can be found on our [TinyCLR-Samples](https://github.com/ghi-electronics/TinyCLR-Samples) GitHub repository.
+
+
 ## SITCore SC20100S Dev Board
 ![Development Options](images/sc20100.jpg)
 

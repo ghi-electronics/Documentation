@@ -62,6 +62,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "hardware/breakout/fez-mini.md",
+      "output": {
+        ".html": {
+          "relative_path": "hardware/breakout/fez-mini.html",
+          "hash": "U4vywbmQcVOVCPyJKUKK/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "hardware/breakout/fez-rhino.md",
       "output": {
         ".html": {
@@ -160,6 +172,17 @@
       "output": {
         "resource": {
           "relative_path": "hardware/breakout/images/fez-cobra.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/breakout/images/fez-mini.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/breakout/images/fez-mini.jpg"
         }
       },
       "is_incremental": false,
@@ -327,18 +350,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "hardware/duino/fez-mini.md",
-      "output": {
-        ".html": {
-          "relative_path": "hardware/duino/fez-mini.html",
-          "hash": "Vu5gvB4gPH3NvEyYKSIwtA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "hardware/duino/fez-panda-ii.md",
       "output": {
         ".html": {
@@ -435,17 +446,6 @@
       "output": {
         "resource": {
           "relative_path": "hardware/duino/images/fez-lemur.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "hardware/duino/images/fez-mini.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "hardware/duino/images/fez-mini.jpg"
         }
       },
       "is_incremental": false,
@@ -2733,7 +2733,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/dev.html",
-          "hash": "1Do2n3tzey0ICY/i//+niw=="
+          "hash": "pUZsh5c3r51AKw0o0/JF+w=="
         }
       },
       "is_incremental": false,
@@ -2895,6 +2895,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/sitcore-feather.png",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/sitcore-feather.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "hardware/sitcore/images/system-on-chip.jpg",
       "output": {
         "resource": {
@@ -2943,7 +2954,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/intro.html",
-          "hash": "riAtw5DgmWKa5Ui//wITOQ=="
+          "hash": "p+KCj4xIyr4ooHKFpnAy2A=="
         }
       },
       "is_incremental": false,
@@ -3006,11 +3017,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "hardware/sitcore/sbc.md",
+      "output": {
+        ".html": {
+          "relative_path": "hardware/sitcore/sbc.html",
+          "hash": "GM2Xf2JoUQPM8mUnESbQ5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "hardware/sitcore/soc.md",
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/soc.html",
-          "hash": "cC3gLgkfOoK/al3mx7RnTA=="
+          "hash": "bE5gC5+19cXWdAN4z8y8QQ=="
         }
       },
       "is_incremental": false,
@@ -3022,7 +3045,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/som.html",
-          "hash": "JtzXeNt/affcyZZr7oizpA=="
+          "hash": "6t4zCgM4ZRaRpM+1O5yMrw=="
         }
       },
       "is_incremental": false,
@@ -3034,7 +3057,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/toc.html",
-          "hash": "2n9ucsZ/cW2FVf3iBqQM/w=="
+          "hash": "YF9Li0w9LDIZsR3Va+sD1w=="
         }
       },
       "is_incremental": false,
@@ -4164,19 +4187,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/bootloader.html",
-          "hash": "blHOs9rSJDcLZUf5YD2qPw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/tinyclr/bootstrap-pins.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/tinyclr/bootstrap-pins.html",
-          "hash": "F/Qc98y8HZuMiaRQvRrhhA=="
+          "hash": "/viME6jdQh2J40NMFEvdcg=="
         }
       },
       "is_incremental": false,
@@ -4729,6 +4740,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "software/tinyclr/special-pins.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/tinyclr/special-pins.html",
+          "hash": "IPjW5gb6QkLb+hXgwwEWAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tinyclr-config.md",
       "output": {
         ".html": {
@@ -4745,7 +4768,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/toc.html",
-          "hash": "7UC8PBvesTF3Z+8Y+wr7mg=="
+          "hash": "4XkLM25HRlmogoHh8lVtRA=="
         }
       },
       "is_incremental": false,
@@ -5441,7 +5464,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/nuget.html",
-          "hash": "Ue9FdZ606ftS1JObI8eGWA=="
+          "hash": "Iep22cEJwg2+WVjuTSvN3Q=="
         }
       },
       "is_incremental": false,
@@ -5743,11 +5766,6 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -5758,12 +5776,17 @@
           "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

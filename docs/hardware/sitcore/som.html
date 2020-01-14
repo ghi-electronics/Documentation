@@ -274,42 +274,14 @@
 <p><a href="pdfs/scm20260e.pdf">SCM20260E Pinout</a></p>
 <h2 id="scm20260d-pinout">SCM20260D Pinout</h2>
 <p><a href="pdfs/scm20260d.pdf">SCM20260D Pinout</a>                                                                                                   </p>
-<h2 id="device-startup">Device Startup</h2>
-<p>The SITCore is held in reset when the reset pin is low. Releasing it will begin the system startup process.</p>
-<p>There are three different components of the device firmware:</p>
-<ol>
-<li>GHI Electronics Bootloader: initializes the system, updates TinyCLR when needed, and executes TinyCLR.</li>
-<li>TinyCLR: loads, debugs, and executes the managed application.</li>
-<li>Managed application: the program developed by the customer.</li>
-</ol>
-<p>Which components get executed on startup can be control by manipulating the LDR pin. It is pulled high on
-startup. When low, the device waits in the GHI Electronics Bootloader. Otherwise, the managed application is executed. APP
-is reserved for future use.</p>
-<p>Additionally, the communications interface between the host PC and the SITCore is selected on startup through the
-MODE pin, which is pulled high on startup. The USB interface is selected when MODE is high and COM1 is selected
-when MODE is low.</p>
-<p>The above discussed functions of LDR, APP, and MODE are only during startup. After startup, they return to the
-default GPIO state and are available to use as GPIO in the your application.</p>
-<h2 id="tinyclr-os">TinyCLR OS</h2>
-<p>TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page for instructions.</p>
-<h3 id="loading-the-firmware">Loading the Firmware</h3>
-<ol>
-<li>Activate the bootloader, hold the LDR signal low while resetting the board.</li>
-<li>Open <a href="../../software/tinyclr/tinyclr-config.html">TinyCLR Config</a> tool.</li>
-<li>Click the loader tab.</li>
-<li>Select the correct COM port. If you are not seeing it then the device is not in the loader mode.</li>
-<li>Click the <code>Update to Latest</code> button.</li>
-</ol>
-<p>You can also update the firmware manually. Download the <a href="../../software/tinyclr/downloads.html">firmware</a> and learn how to use the <a href="../../software/tinyclr/bootloader.html">GHI Electronics Bootloader</a> manually</p>
-<h3 id="start-coding">Start Coding</h3>
-<p>Now that you have installed the bootloader and firmware on the SITCore, you can setup your host computer and start programming.  Go to the TinyCLR <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page for instructions.</p>
-<h2 id="datasheet">Datasheet</h2>
+<h2 id="getting-started">Getting Started</h2>
+<p>As the SITCore modules are based on the SITCore chipset, please refer to the <a href="soc.html">SITCore SoC page</a> for information on device startup, loading TinyCLR OS firmware, and writing and deploying your application.</p>
 <h2 id="design-considerations">Design Considerations</h2>
-<h2 id="footprints">Footprints</h2>
+<h3 id="footprints">Footprints</h3>
 <p>We recommend no traces or vias under the module. Dimensions are in inches.</p>
-<h3 id="scm20260n-recommended-footprint">SCM20260N Recommended Footprint</h3>
+<h4 id="scm20260n-recommended-footprint">SCM20260N Recommended Footprint</h4>
 <p><img src="images/g120-footprint.jpg" alt="SCM20260N Pinout"></p>
-<h3 id="scm20260e-recommended-footprint">SCM20260E Recommended Footprint</h3>
+<h4 id="scm20260e-recommended-footprint">SCM20260E Recommended Footprint</h4>
 <p><img src="images/scm20260e-footprint.jpg" alt="SCM20260E Footprint"></p>
 <h3 id="scm20260d-so-dimm-socket">SCM20260D SO-DIMM Socket</h3>
 <p><img src="images/200-pin-ddr2-so-dimm.jpg" alt="200 pin DDR2 SO-DIMM socket"></p>

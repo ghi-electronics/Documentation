@@ -3,7 +3,7 @@
 # [Getting Started](getting-started.md)
 
 # [Configuration](intro.md)
-## [Bootstrap Pins](bootstrap-pins.md)
+## [Special Pins](special-pins.md)
 ## [Bootloader](bootloader.md)
 ## [TinyCLR Config](tinyclr-config.md)
 
