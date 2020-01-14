@@ -1,7 +1,7 @@
 # SQLite Database
 
 ## Introduction
-According to the SQLite homepage, "SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine. SQLite is the most widely deployed SQL database engine in the world". GHI provides a driver for SQLite so that you can have access to a SQL database that resides entirely in a simple file on a persistant storage device.
+According to the SQLite homepage, "SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine. SQLite is the most widely deployed SQL database engine in the world". GHI Electronics provides a driver for SQLite so that you can have access to a SQL database that resides entirely in a simple file on a persistant storage device.
 
 The below code is a simple example where a database file is created in RAM (using SD cards and USB drives is possible as well). A table is created that is filled with some initial rows and then this data is read from the database. This data is then iterated over and printed out. ColumnOriginNames returns the names of each of the columns.
 

@@ -6,8 +6,11 @@ This page explains how to set up the TinyCLR programming environment.  It covers
 > [!Tip]
 > If you're an existing user of NETMF and still want to use it in addition to TinyCLR OS, don't worry. TinyCLR is completely independent of NETMF and works side-by-side with no issues.
 
+## Compatible Hardware
+TinyCLR OS is made to run on our SITCore line of SoCs, SoMs, dev boards and single board computers. Check out the [**SITCore**](../../hardware/sitcore/intro.md) page in the hardware section of this documentation to find the device best suited for your project.
+
 ## TinyCLR Device Setup
-To use TinyCLR with a device you must first install the latest versions of the GHI bootloader and TinyCLR firmware on the device.  The bootloader is installed first and provides a way to install the firmware and to execute programs which are uploaded to the device.
+To use TinyCLR with a device you must first install the latest versions of the GHI Electronics bootloader and TinyCLR firmware on the device.  The bootloader is installed first and provides a way to install the firmware and to execute programs which are uploaded to the device.
 
 The TinyCLR firmware includes the Common Language Runtime (CLR) which converts compiled code into machine instructions and manages program execution.  The TinyCLR firmware is also responsible for interacting with Microsoft Visual Studio to load and debug your application programs.
 
@@ -90,6 +93,7 @@ Congratulations!  You're on your way to becoming a TinyCLR embedded developer!
 
 
 ***
+To find the best hardware for your TinyCLR application, go to the [**SITCore**](../../hardware/sitcore/intro.md) page in the hardware section of this documentation.
 
 To learn more about TinyCLR embedded programming check out our [**tutorials**](tutorials/intro.md).
 

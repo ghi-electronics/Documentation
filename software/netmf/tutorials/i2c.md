@@ -15,7 +15,7 @@ One very important point about I2C is that I2C devices have a 7-bit address, but
 ## Software I2C
 When using I2C, it is highly recommended that you use the built-in hardware support for I2C. In some cases though it may be necessary to have another I2C bus or it is necessary to use specific pins that are not I2C pins. In this case, I2C can be handled completely in software, though performance will be lower.
 
-The GHI libraries include a software I2C implementation in the GHI.Hardware assembly (GHI.IO.SoftwareI2CBus).
+The GHI Electronics libraries include a software I2C implementation in the GHI.Hardware assembly (GHI.IO.SoftwareI2CBus).
 
 ## An I2C Example
 This example will read the value of the register on an I2C device with the 7-bit address of 0x38. As discussed above, you first have to write the register number you want to read, two in this case, and then read the value back.

@@ -4,6 +4,7 @@
 ## [System on Chip](sitcore/soc.md)
 ## [System on Modules](sitcore/som.md)
 ## [Development Boards](sitcore/dev.md)
+## [Single Board Computers](sitcore/sbc.md)
 
 # [NETMF Modules](netmf/intro.md)
 ## [G30](netmf/g30.md)
@@ -13,11 +14,6 @@
 ## [G400S](netmf/g400s.md)
 ## [G400D](netmf/g400d.md)
 ## [Upgrading to SITCore](netmf/upgrade.md)
-
-# [Bootloaders](loaders/intro.md)
-## [GHI Bootloader](loaders/ghi-bootloader.md)
-## [STM32 Bootloader](loaders/stm32-bootloader.md)
-## [SAM-BA Bootloader](loaders/sam-ba-bootloader.md)
 
 # [Legacy](legacy/intro.md)
 
@@ -31,6 +27,7 @@
 ### [The UCM Standard](ucm/standard.md)
 ### [UC2550](ucm/uc2550.md)
 ### [UC5550](ucm/uc5550.md)
+### [G400D](netmf/g400d.md)
 ### [Development Options](ucm/development-options.md)
 
 ## [Gadgeteer](gadgeteer/intro.md)
@@ -51,7 +48,6 @@
 ### [FEZ Cobra III](duino/fez-cobra-iii.md)
 ### [FEZ Domino](duino/fez-domino.md)
 ### [FEZ Lemur](duino/fez-lemur.md)
-### [FEZ Mini](duino/fez-mini.md)
 ### [FEZ Panda](duino/fez-panda.md)
 ### [FEZ Panda II](duino/fez-panda-ii.md)
 ### [FEZ Panda III](duino/fez-panda-iii.md)
@@ -59,6 +55,7 @@
 ## [Breakout](breakout/intro.md)
 ### [FEZ Cerb40 I and II](breakout/fez-cerb40.md)
 ### [FEZ Cobra](breakout/fez-cobra.md)
+### [FEZ Mini](breakout/fez-mini.md)
 ### [FEZ Rhino](breakout/fez-rhino.md)
 ### [G30 TH](breakout/g30-th.md)
 ### [G80 TH](breakout/g80-th.md)
@@ -73,4 +70,4 @@
 ## [Raspberry PI Hats](raspberrypi-hats.md)
 ## [mBuino](mbuino.md)
 
-# [Legal](../legal.md)
+# [Legal](../hardware/legal.md)

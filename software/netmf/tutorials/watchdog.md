@@ -10,7 +10,7 @@ When watchdog is enabled, it is given a timeout where it will reset the system i
 
  
 > [!Tip]
-> GHI does not use the NETMF's built in services for watchdog, but uses its own.
+> GHI Electronics does not use the NETMF's built in services for watchdog, but uses its own.
 
 Use the GHI.Hardware assembly when using watchdog.
 

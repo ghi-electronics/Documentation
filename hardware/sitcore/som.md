@@ -1,6 +1,6 @@
 # SITCore System on Modules
 ---
-![G400S](images/uc5550.jpg)
+![G400S](images/system-on-modules.jpg)
 
 ## Overview
 The SITCore SoMs provide a low cost way to add .NET computing power to any embedded product. They are available as a 200 pin SO-DIMM with and without WiFi (G400 compatible), a 91 pad surface mount module (G120 compatible), or a 105 pad surface mount module (G120E compatible). The SITCore SoMs let's you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more. The surface mount versions are great for harsh or high vibration environments.
@@ -46,9 +46,9 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
 
-> [!Note]
-> Interrupts (IRQs) are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
-example: PA1 and PB1 cannot both be used as interrupts at the same time, but PA1 and PB2 can.
+### Using Interrupts (IRQs)
+
+The microcontrollers we use in our SITCore line of products do not support concurrent interrupts with the same pin number, even if the pins are on different ports (the port is denoted by the second letter of the GPIO pin name -- PA1 is pin 1 on port A). Therefore, interrupts are available on only 16 pins at any given time. For example, pins PA1 and PB1 cannot be used as interrupt pins at the same time, but PA1 and PB2 can. PA1 and PA2 can also be used with interrupts simultaneously.
 
 ## Features
 * Low power modes including three independently controllable power domains
@@ -84,53 +84,19 @@ example: PA1 and PB1 cannot both be used as interrupts at the same time, but PA1
 ## SCM20260D Pinout
 [SCM20260D Pinout](pdfs/scm20260d.pdf)                                                                                                   
 
-## Device Startup
-The SITCore is held in reset when the reset pin is low. Releasing it will begin the system startup process.
-
-There are three different components of the device firmware:
-1. GHI Bootloader: initializes the system, updates TinyCLR when needed, and executes TinyCLR.
-2. TinyCLR: loads, debugs, and executes the managed application.
-3. Managed application: the program developed by the customer.
-
-Which components get executed on startup can be control by manipulating the LDR pin. It is pulled high on
-startup. When low, the device waits in the GHI Bootloader. Otherwise, the managed application is executed. APP
-is reserved for future use.
-
-Additionally, the communications interface between the host PC and the SITCore is selected on startup through the
-MODE pin, which is pulled high on startup. The USB interface is selected when MODE is high and COM1 is selected
-when MODE is low.
-
-The above discussed functions of LDR, APP, and MODE are only during startup. After startup, they return to the
-default GPIO state and are available to use as GPIO in the your application.
-
-## TinyCLR OS
-TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.
-
-### Loading the Firmware
-
-1. Activate the bootloader, hold the LDR signal low while resetting the board.
-2. Open [TinyCLR Config](../../software/tinyclr/tinyclr-config.md) tool.
-3. Click the loader tab.
-4. Select the correct COM port. If you are not seeing it then the device is not in the loader mode.
-5. Click the `Update to Latest` button.
-
-You can also update the firmware manually. Download the [firmware](../../software/tinyclr/downloads.md) and learn how to use the [GHI Bootloader](../../hardware/loaders/ghi-bootloader.md) manually
-
-### Start Coding
-Now that you have installed the bootloader and firmware on the SITCore, you can setup your host computer and start programming.  Go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.
-
-## Datasheet
+## Getting Started
+As the SITCore modules are based on the SITCore chipset, please refer to the [SITCore SoC page](soc.md) for information on device startup, loading TinyCLR OS firmware, and writing and deploying your application.
 
 ## Design Considerations
 
-## Footprints
+### Footprints
 
 We recommend no traces or vias under the module. Dimensions are in inches.
 
-### SCM20260N Recommended Footprint
+#### SCM20260N Recommended Footprint
 ![SCM20260N Pinout](images/g120-footprint.jpg)
 
-### SCM20260E Recommended Footprint
+#### SCM20260E Recommended Footprint
 ![SCM20260E Footprint](images/scm20260e-footprint.jpg)
 
 ### SCM20260D SO-DIMM Socket

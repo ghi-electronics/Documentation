@@ -14,73 +14,76 @@ If This Then That (IFTTT) is a free service allowing users to automate tasks by 
 * Notify you when the International Space Station passes overhead.
 * Track when your company is mentioned on Twitter or Reddit.
 
-The possibilities are almost endless. Here we will take you step by step through the process of making a simple FEZ based temperature alarm the will send a text message when the temperature drops below ten degrees celsius. First we will set up an IFTTT account, then create and test the needed applets, and finally program the FEZ to trigger the IFTTT applet.
+The possibilities are almost endless. Here we will take you step by step through the process using IFTTT to send an email notification of a button being pressed on a SITCore Dev Board. First we will set up an IFTTT account, then create and test the needed applets, and finally program the SITCore to trigger the IFTTT applet.
 
 ### Create an IFTTT Account
 
-Signing up for IFTTT is easy and free -- just go to [IFTTT.com](https://ifttt.com) and click on the `Sign up` button in the upper right hand corner of the screen. You can sign up using your Google or Facebook account, or use an e-mail address and password to sign in. You'll want to get past where IFTTT is asking you to pick sites you use regularly or is introducing applets and get to the main screen. You can either select some sites/applets your just hit the "X" in the upper right corner.
+Signing up for IFTTT is easy and free -- just go to [IFTTT.com](https://ifttt.com) and click on the `Sign up` button in the upper right hand corner of the screen. You can sign up using your Google or Facebook account, or use an e-mail address and password to sign in. IFTTT will usually offer to set up a sample connection right after you sign up -- just hit the "X" in the upper right corner to skip this step. Click on the `Get more` button under the message `Start connecting your world` to get started.
+
+![IFTTT Start Connecting](images/ifttt-start-connecting.png)
 
 ### Create the IFTTT Applets
 
-Three IFTTT applets will be needed for this project. An SMS Applet will be used to send the text message to your phone. A Webhooks Applet will be used to receive an HTTP GET request from the FEZ when the temperature goes below ten degrees. Finally, an If This Then That Applet will call the SMS Applet when triggered by the Webhooks Applet.
+Two IFTTT applets will be needed for this project. An Email Applet will be send and email when a button is pushed. A Webhooks Applet will be used to receive an HTTP GET request from the FEZ when the temperature goes below ten degrees. Finally, an If This Then That Applet will call the Email Applet when triggered by the Webhooks Applet.
 
-#### Create an SMS Applet
+#### Create the Webhooks Applet
 
-This is the Applet that will send a text message to your phone.
+After signing up and getting to the `Explore` page, scroll down the page until you find the `Create your own` button and click on it.
 
-In the search box, search for "sms" and click on `Services` in the results page, then click on the `SMS` box (or click on this [link](https://ifttt.com/services/sms)).
+![IFTTT Create Your Own](images/ifttt-create-your-own.png)
 
-![Click on SMS](images/click-sms.png)
+You will then be presented with a screen that may seem to provide no option forward. Click on `+This` to get to the next step.
 
-Now click on the `Connect` button. You will be taken to a screen asking for your phone number. This is the number the text message will be sent to. Enter your phone number and click on the `Send PIN` button. IFTTT will send a PIN to your phone that is used to verify that the phone number is correct. After entering the four digit PIN and hitting the `Connect` button, you will be sent back to the SMS screen. The `Connect SMS` applet is now configured and tied to your phone number.
+![IFTTT If This Then That](images/ifttt-if-this.png)
 
-#### Create a Webhooks Applet
+Search for `webhooks` and click on that option.
 
-This is the Applet that will receive an HTTP GET command from the FEZ when the temperature goes below ten degrees.
+![IFTTT Choose Webhooks SMS](images/ifttt-choose-webhooks.png)
 
-Search for "webhooks," click on `Services`, and then click on the `Webhooks` box (or use this [link](https://ifttt.com/services/maker_webhooks)). IFTTT Webhooks provides a way to trigger an Applet when an HTTP GET or PUT instruction is sent to a given web address. On the `Webhooks` page, click on the `Connect` button. `Documentation` and `Settings` buttons should appear at the upper right of your screen.
+On the next screen click on the `Connect` button, then click on the `Receive a web request` box on the following screen.
 
-![Documentation and Settings buttons](images/documentation-settings.png)
+![IFTTT Receive a web request](images/ifttt-receive-web-request.png)
 
-Click on the `Documentation` button. A page with your key and instructions for triggering an event will appear. The URL under `Make a POST or GET web request to:` is where the FEZ will send the GET request. You will need to cut and paste your key into the C# program that will be running on the FEZ.
+You will be prompted for an event name. Enter `button_press` and press the `Create trigger` button.
 
-There is a `Test It` button on the screen, but the Webhooks Applet is not yet connected to the SMS Applet, so clicking on this button will not send a text to your phone.
+![IFTTT Create trigger](images/ifttt-create-trigger.png)
 
-#### Create an If This Then That Applet
+Now click on `+That`. This will take us to the next step of choosing an action service -- in this case we will send an email.
 
-We now have to create an applet that will use the Webhooks Applet as a trigger (if this) to call the SMS Applet (then that). In other words, if the Webhooks Applet receives the correct HTTP GET request, then the SMS Applet will send a text.
+![IFTTT Then That](images/ifttt-then-that.png)
 
-Click on `Back to service`.
 
-![Back to service](images/back-to-service.png)
 
-Click on `My Applets` at the top left of the screen and then click on `New Applet` on the right side of the screen. Now click on `+this` which is highlighted in blue.
+#### Create the Email Applet
 
-![Click on +this](images/click-on-plus-this.png)
+You should now be on the `Choose action service` screen. Search for `email` and then click on the `email` icon.
 
-You will be asked to choose a service. Search for "webhooks" and then click on the `Webhooks` box.
+![IFTTT Choose action service](images/ifttt-choose-action-service.png)
 
-Now you will be asked to choose a trigger. Click on the `Receive a web request` box.
+Click on the `Connect` button on the next screen. You will be prompted for an email address to send notifications to. Type in the email address you would like to use and press the `Send PIN` button. Once you receive the email with your PIN, enter the PIN and hit the `Connect` button.
 
-You will be asked to complete the trigger fields. Type in the event name "FEZ_Temp_Alert" and hit the `Create trigger` button.
+Now click on the `Send me an email` box.
 
-Now click on `+that`. 
+![IFTTT Send me an email](images/ifttt-send-me-an-email.png)
 
-![Click on +that](images/click-on-plus-that.png)
+You should now be on the `Complete action fields` screen. Click on the `Create action` button without making any changes. This will tell IFTTT to use the default method of constructing the subject line and body of the notification email.
 
-You will be asked to choose an action service. Click on the green `SMS` box (search for "sms" if you don't see it), and then click on the green `Send me an SMS` box. You will be asked to complete action fields. We want to include the temperature reading as part of the text message, so click on the `Add Ingredient` button and select `Value1`. Now click the `Create action` button. You will now be asked to review and finish. If everything looks good hit the `Finish` button.
+This should take you to the `Review and finish` screen. Click on the `Finish` button.
 
-#### Testing Your IFTTT Applets
+#### Get Your Key
 
-Let's test the Applets. Click on `My Applets` at the top left of the screen. Click on `Services` and then `Webhooks`. Click on the `Documentation` button. In the `{event}` field in the POST/GET URL, type in "FEZ_Temp_Alert" as shown below.
+Now we just have to get the key that is sent from the SITCore to trigger the event. You should now be at a screen with the text "If Maker Event "button_press", then Send me an email at. . . Click on the Webhooks icon as shown below:
 
-![Enter FEZ_Temp_Alert](images/enter-fez-temp-alert.png)
+![IFTTT Click Webhooks icon](images/ifttt-click-webhooks-icon.png)
 
-If you cut and past the resulting URL into your web browser and hit the `Enter` key you should recieve a text message on your phone.
+Then click on the `Documentation` button near the upper right of the next screen. This will bring up a page with your unique key. Including this key in an HTTP GET or POST request to the IFTTT website will trigger your event.
 
-![Event Fired](images/event-fired.png)
+To test the IFTTT event, you can enter the following line into the address bar of your web brower (replace Your_Key_Here with your key) : https://maker.ifttt.com/trigger/button_press/with/key/Your_Key_Here
 
-### Setup the FEZ
+
+
+
+### Setup the SITCore
 
 To setup the FEZ we will have to connect a temperature sensor and then program the FEZ to send the proper HTTP GET request when the temperature drops below 10 degrees.
 

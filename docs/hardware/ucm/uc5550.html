@@ -80,8 +80,6 @@
 <p><img src="images/uc5550-noborder.jpg" alt="UC5550"></p>
 <h2 id="overview">Overview</h2>
 <p>The UC5550 System on Module has the processor and memory needed to run the most intense embedded applications, thanks to its 216 MHz Cortex-M7 and 32 MByte of RAM. Its built in native parallel TFT display makes it an ideal option for applications that require professional display support.</p>
-<div class="TIP"><h5>Tip</h5><p>Not recommended for new designs, consider SITCore <a href="../sitcore/soc.html">System on Chip</a>.</p>
-</div>
 <h2 id="ordering-part-number">Ordering Part Number</h2>
 <table>
 <thead>
@@ -269,17 +267,16 @@
 </div>
 <h3 id="loading-bootloader-v2">Loading Bootloader v2</h3>
 <ol>
-<li>Download the UC5550 bootloader <a href="../loaders/ghi-bootloader.html#uc5550">here</a>.</li>
+<li>Download the UC5550 bootloader <a href="../../software/netmf/bootloader.html">here</a>.</li>
 <li>Connect your device to the USB client port.</li>
 <li>Put the board in DFU mode: Hold the SYS A pin low and press/release the reset button. Wait for a second then release SYS A. Windows <em>Device Manager</em> will now show &quot;STM Device in DFU Mode&quot; under the &#39;Universal Serial Bus controller&#39; TAB.</li>
-<li>Go to the <a href="../loaders/stm32-bootloader.html">STM32 Bootloader</a> to learn how to upload DFU files.</li>
+<li>This is a DFU file, upload it like you would any other DFU file. See STMicroelectronics documentation for details.</li>
 </ol>
 <h3 id="loading-the-firmware">Loading the Firmware</h3>
 <ol>
 <li>Activate the bootloader, hold the LDR0 signal low while resetting the board.</li>
 <li>Open FEZ Config tool and follow the instructions.</li>
 </ol>
-<p>You can also update the firmware manually. See <a href="../loaders/ghi-bootloader.html">GHI Bootloader</a> page.</p>
 <h3 id="start-coding">Start Coding</h3>
 <p>Now that you have installed the bootloader and firmware on the UC5550, you can setup your host computer and start programming.  Go to the NETMF <a href="../../software/netmf/getting-started.html">Getting Started</a> page for instructions.</p>
 <h2 id="schematic">Schematic</h2>

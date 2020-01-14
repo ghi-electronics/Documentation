@@ -138,7 +138,7 @@ public class Program
 
 ## Serial
 
-Serial (UART) communication is a very common interface. There are many companies that create chips that convert USB to serial. GHI currently supports chipsets from FTDI. Their FT232 is known to work, though others may as well. USB chipsets are made to be somewhat customized. A company can use an FTDI chip to make their product run on USB and they will change the strings in USB descriptors so that when you plug in their device to a PC you will see the company name and not FTDI. They can also change the USB VID/PID, vendor ID and product ID. Many of the interface products on the market use the FTDI chipset.
+Serial (UART) communication is a very common interface. There are many companies that create chips that convert USB to serial. GHI Electronics currently supports chipsets from FTDI. Their FT232 is known to work, though others may as well. USB chipsets are made to be somewhat customized. A company can use an FTDI chip to make their product run on USB and they will change the strings in USB descriptors so that when you plug in their device to a PC you will see the company name and not FTDI. They can also change the USB VID/PID, vendor ID and product ID. Many of the interface products on the market use the FTDI chipset.
 
 A few other USB-Serial manufacturers, like Prolific, are included, but they are deprecated and not supported by us.
 
