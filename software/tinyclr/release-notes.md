@@ -12,6 +12,7 @@ A preview of the new API and available features.
 
 #### Known Issues
 - Still going through complete testing.
+- Cryptography and hashing are currently only supported through TLS. We are still planning how to securely expose this functionality.
 
 ### Firmware
 
