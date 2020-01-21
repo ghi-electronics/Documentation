@@ -10,11 +10,11 @@ This page explains how to set up the TinyCLR programming environment.  It covers
 TinyCLR OS is made to run on our SITCore line of SoCs, SoMs, dev boards and single board computers. Check out the [**SITCore**](../../hardware/sitcore/intro.md) page in the hardware section of this documentation to find the device best suited for your project.
 
 ## TinyCLR Device Setup
-To use TinyCLR with a device you must first install the latest versions of the GHI Electronics bootloader and TinyCLR firmware on the device.  The bootloader is installed first and provides a way to install the firmware and to execute programs which are uploaded to the device.
+To use TinyCLR with a device you must first install the latest version of the TinyCLR firmware on the device.
 
 The TinyCLR firmware includes the Common Language Runtime (CLR) which converts compiled code into machine instructions and manages program execution.  The TinyCLR firmware is also responsible for interacting with Microsoft Visual Studio to load and debug your application programs.
 
-Instructions for installing the bootloader and firmware are provided on the documentation page for each device.
+Instructions for installing the firmware are provided on the documentation page for each device.
 
 ## TinyCLR Computer Setup
 ### Download and Install Visual Studio and the TinyCLR Extension
@@ -26,6 +26,9 @@ Instructions for installing the bootloader and firmware are provided on the docu
     You can also find the [TinyCLR OS Project System](downloads.md) on our [Downloads](downloads.md) page if you want to download the file and install it from your hard drive.
 
 ### Install the TinyCLR Nuget Packages
+
+> [!Note]
+> If you are using special release libraries that are not hosted on NuGet.org, use the local feed feature to fetch the needed libraries from your local machine.
 
 1. Connect your device to your PC using a USB cable (make sure your device has the latest firmware installed).
 2. Start Visual Studio and create a new `TinyCLR Application` under `C# > TinyCLR`. New to Visual Studio or C#? Take a look at the [getting started guide from Microsoft](https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/with-visual-studio).
