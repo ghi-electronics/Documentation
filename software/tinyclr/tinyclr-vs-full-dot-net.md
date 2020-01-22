@@ -1,4 +1,4 @@
-# Limitations
+# TinyCLR vs. Full .NET
 ---
 TinyCLR OS is made to run on small, secure, IoT devices. TinyCLR was built from the ground up with security first and foremost. Performance is also excellent, but we did have to limit some of the less important features to achieve this performance while maximizing application memory. Here is a list of limitations and possible workarounds:
 
