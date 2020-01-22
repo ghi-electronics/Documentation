@@ -6,12 +6,12 @@ TinyCLR OS started with Microsoft's .NET Micro Framework and continues to enable
 
 |  |  |
 |--|--|
-|  **Getting Started** </br> Deploy your first TinyCLR program. [**Learn more...**](getting-started.md)  |  **Tutorials** </br> Learn TinyCLR embedded programming. [**Learn more...**](tutorials/intro.md)   |
-|  [![Getting Started](images/getting-started.jpg)](getting-started.md)   |  [![Tutorials](images/tutorials.jpg)](tutorials/intro.md)  |
-|  **Release Notes** </br> Find the latest changes to TinyCLR. [**Learn more...**](release-notes.md)  |  **Downloads** </br> Visual Studio and device downloads. [**Learn more...**](downloads.md)  |
-|  [![Release Notes](images/tinyclr-logo.jpg)](release-notes.md)  |  [![Download](images/download.jpg)](downloads.md) | 
-|  **TinyCLR Config** </br> Our device configuration program. [**Learn more...**](tinyclr-config.md)  |   |
-|  [![TinyCLR Config](images/tinyclr-config-sm.png)](tinyclr-config.md)  |   |
+|  **Getting Started** </br> Deploy your first TinyCLR program. [**Learn more...**](getting-started.md)  |  **Configuration** </br> Special pins, bootloader, TinyCLR Config [**Learn more...**](configuration.md) |
+|  [![Getting Started](images/getting-started.jpg)](getting-started.md)   |  [![TinyCLR Config](images/tinyclr-config-sm.png)](configuration.md)  |
+|  **Tutorials** </br> Learn TinyCLR embedded programming. [**Learn more...**](tutorials/intro.md)  |  **Downloads** </br> Visual Studio and device downloads. [**Learn more...**](downloads.md)  |
+|  [![Tutorials](images/tutorials.jpg)](tutorials/intro.md)  |  [![Download](images/download.jpg)](downloads.md) | 
+| **Release Notes** </br> Find the latest changes to TinyCLR. [**Learn more...**](release-notes.md)  |  **TinyCLR vs. Full .NET** </br> How TinyCLR OS is different from full .NET. [**Learn more...**](tinyclr-vs-full-dot-net.md) |
+|  [![Release Notes](images/tinyclr-logo.jpg)](release-notes.md)  |  [![TinyCLR vs. Full .NET](images/tinyclr-vs-full-dot-net.png)](tinyclr-vs-full-dot-net.md)  |
 
 
 ***

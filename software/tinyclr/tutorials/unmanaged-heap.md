@@ -1,13 +1,28 @@
 # Unmanaged Heap
 ---
-The built in [memory management](memory-management.md) system takes care of everything in an internal secure memory; however, TinyCLR OS also supports external unsecure memories through a special unmanaged heap. This memory is used in 2 different ways, in Large Buffer and for the Graphics system.
+TinyCLR's [memory management](memory-management.md) system takes care of everything in internal secure memory; however, TinyCLR OS also supports external unsecure memory through a special unmanaged heap. This memory is used in two different ways, for Large Buffers and for the Graphics system, and is only available on boards with that include external SDRAM memory. Our SCM20260D Dev Board has 32 MBytes of external SDRAM, but our SCM20100 Dev Board has none.
 
-## Unsecure Large Buffers (what is it called in code?)
+To ensure that unmanaged resources get disposed of properly, it is necessary to dispose of the buffer pointing to unmanaged heap manually, as shown in the sample code below.
 
-This is an easy way to create buffers that resides in external memories, which is typically much larger than internal memory.
+## Unmanaged Buffers
+
+This is an easy way to create buffers that reside in external memory, which typically provides much more storage than internal memory. The following example creates an array uTable[] in unmanaged heap space on the SCM20260D Dev Board and then disposes of it.
+
+> [!Tip]
+> Add the GHIElectronics.TinyCLR.Native NuGet package and GHIElectronics.TinyCLR.Native using statement to your application.
 
 ```
-// example code
+//Allocate space for 100,000 byte array in unmanaged heap.
+UnmanagedBuffer uBuffer = new UnmanagedBuffer(100000);
+
+var uTable = uBuffer.Bytes;
+//uTable is now available as a byte array with 100,000 elements.
+
+// Properly release the objects. This is unmanaged so it is mandatory!
+uTable = null;
+uBuffer.Dispose();
+
+
 ```
 
 ## Graphical Memory
