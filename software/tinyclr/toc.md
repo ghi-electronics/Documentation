@@ -91,4 +91,4 @@
 
 # [Downloads](downloads.md)
 # [Release Notes](release-notes.md)
-# [TinyCLR vs. Full .NET](tinyclr-vs-full-dot-net.md)
+# [Limitations](limitations.md)

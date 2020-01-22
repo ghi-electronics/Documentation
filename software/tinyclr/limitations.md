@@ -1,5 +1,7 @@
-# TinyCLR vs. Full .NET
+# Limitations
 ---
+![.NET vs TinyCLR OS](images/limitations.png)
+
 TinyCLR OS is made to run on small, secure, IoT devices. TinyCLR was built from the ground up with security first and foremost. Performance is also excellent, but we did have to limit some of the less important features to achieve this performance while maximizing application memory. Here is a list of limitations and possible workarounds:
 
 1.	There is no support for multidimensional arrays, use jagged arrays instead. Simply use [1][1] instead of [1,1].
