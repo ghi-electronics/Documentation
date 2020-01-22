@@ -10,8 +10,8 @@ TinyCLR OS started with Microsoft's .NET Micro Framework and continues to enable
 |  [![Getting Started](images/getting-started.jpg)](getting-started.md)   |  [![TinyCLR Config](images/tinyclr-config-sm.png)](configuration.md)  |
 |  **Tutorials** </br> Learn TinyCLR embedded programming. [**Learn more...**](tutorials/intro.md)  |  **Downloads** </br> Visual Studio and device downloads. [**Learn more...**](downloads.md)  |
 |  [![Tutorials](images/tutorials.jpg)](tutorials/intro.md)  |  [![Download](images/download.jpg)](downloads.md) | 
-| **Release Notes** </br> Find the latest changes to TinyCLR. [**Learn more...**](release-notes.md)  |  **TinyCLR vs. Full .NET** </br> How TinyCLR OS is different from full .NET. [**Learn more...**](tinyclr-vs-full-dot-net.md) |
-|  [![Release Notes](images/tinyclr-logo.jpg)](release-notes.md)  |  [![TinyCLR vs. Full .NET](images/tinyclr-vs-full-dot-net.png)](tinyclr-vs-full-dot-net.md)  |
+| **Release Notes** </br> Find the latest changes to TinyCLR. [**Learn more...**](release-notes.md)  |  **Limitations** </br> How TinyCLR OS is different from full .NET. [**Learn more...**](limitations.md) |
+|  [![Release Notes](images/tinyclr-logo.jpg)](release-notes.md)  |  [![Limitations](images/limitations.png)](limitations.md)  |
 
 
 ***

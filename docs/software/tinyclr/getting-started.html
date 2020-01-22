@@ -131,22 +131,43 @@
 </ol>
 <p>And, that&#39;s it! You&#39;re now ready to start programming using TinyCLR OS.</p>
 <h2 id="starting-a-new-project">Starting a New Project</h2>
-<p>Let&#39;s make a &quot;hello world&quot; program and deploy it on the FEZ Cobra III.</p>
-<p>Open Visual Studio and select <code>File &gt; New &gt; Project</code>. </p>
-<p>There should be a <code>TinyCLR</code> option under <code>Visual C#</code>.  Click on <code>TinyCLR</code> in the left panel, and <code>TinyCLR Application</code> in the center panel.  Name the project and hit the <code>OK</code> button to create a new project. </p>
-<p><img src="images/new-project.png" alt="New TinyCLR Project"></p>
-<p>The project will have a single C# file named <code>Program.cs</code> whose contents are shown below.</p>
-<p><img src="images/program-cs.png" alt="Program.cs"></p>
-<p>C# source files are listed in the <code>Solution Explorer</code> window.  If the <code>Solution Explorer</code> window is not visible, click on <code>View &gt; Solution Explorer</code> to open it.</p>
-<p><img src="images/solution-explorer.png" alt="Solution Explorer"></p>
-<p>If you right click on the project name in the Solution Explorer window, a drop down menu will appear.  Select <code>Manage NuGet Packages...</code> from the menu.</p>
-<p><img src="images/manage-nuget-packages-menu.png" alt="View Show Solution Explorer"> </p>
-<p>Now you should see the installed TinyCLR NuGet library (GHIElectronics.TinyCLR.Core).  This is the only library we will need for our &quot;hello world&quot; program.</p>
-<p><img src="images/installed-nuget.png" alt="Installed NuGet"></p>
-<p>Close the <code>NuGet...</code> tab or click on the <code>Program.cs</code> tab to edit the source code.  Change the contents as shown below.</p>
-<p><img src="images/hello-world-program.png" alt="Hello World Program"></p>
-<p>Make sure your device is plugged into the computer&#39;s USB port.  Now hit the start button as shown on the above image (or hit the <code>F5</code> key).  If you&#39;ve done everything correctly the program will compile and deploy to your device.  The message &quot;Hello World!&quot; should appear in the output window as shown below.</p>
-<p><img src="images/output-window.png" alt="Output Window"></p>
+<p>Let&#39;s make a &quot;hello world&quot; program and deploy it on a SITCore Dev Board.</p>
+<p>Open Visual Studio and select <code>Create a new project</code>.</p>
+<p><img src="images/create-new-project.png" alt="Create a new project"></p>
+<p>In the <code>Create a new project window</code>, select <code>TinyCLROS</code> from the <code>platforms</code> drop down list.</p>
+<p><img src="images/select-platform.png" alt="Select platform"></p>
+<p>Now select the C# TinyCLR Application template and click the <code>Next</code> button.</p>
+<p><img src="images/select-template.png" alt="Select C# TinyCLR Application template"></p>
+<p>We&#39;re going to stick with the default name and location. If you use a different name, make sure the program&#39;s namespace statement matches the namespace of your program. Now click on the &quot;Create&quot; button.</p>
+<p><img src="images/configure-project.png" alt="Configure project"></p>
+<p>Now cut and paste the following code into the <code>Program.cs</code> window. Make sure to install the <code>GHIElectronics.TinyCLR.Core</code>, <code>GHIElectronics.TinyCLR.Devices.Gpio</code>, <code>GHIElectronics.TinyCLR.Native</code>, and <code>GHIElectronics.TinyCLR.Pins</code> NuGet packages.</p>
+<p>Make sure the namespace statement matches the program&#39;s namespace.</p>
+<pre><code>using GHIElectronics.TinyCLR.Devices.Gpio;
+using GHIElectronics.TinyCLR.Pins;
+using System.Threading;
+
+namespace TinyCLRApplication1 {
+    class Program {
+        static void Main() {
+
+            //Use &quot;SC20100.GpioPin.PB0&quot; on SC20100 Dev Board.
+            //Use &quot;SC20260.GpioPin.PH6&quot; on SC20260D Dev Board.
+            var LED = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
+            LED.SetDriveMode(GpioPinDriveMode.Output);
+
+            while (true) {
+                LED.Write(GpioPinValue.High);
+                Thread.Sleep(100);
+
+                LED.Write(GpioPinValue.Low);
+                Thread.Sleep(100);
+            }
+        }
+    }
+}
+</code></pre><p>You may have to change line 11 depending on which dev board you are using (see the comment lines 9 and 10).</p>
+<p><img src="images/hit-start-button.png" alt="Hit Start button"></p>
+<p>Make sure your device is plugged into the computer&#39;s USB port. Now hit the start button as shown on the above image (or hit the F5 key). If you&#39;ve done everything correctly, the program will compile and deploy to your device. The left most LED on the dev board should blink if you&#39;ve done everything correctly.</p>
 <p>Congratulations!  You&#39;re on your way to becoming a TinyCLR embedded developer!</p>
 <hr>
 <p>To find the best hardware for your TinyCLR application, go to the <a href="../../hardware/sitcore/intro.html"><strong>SITCore</strong></a> page in the hardware section of this documentation.</p>
