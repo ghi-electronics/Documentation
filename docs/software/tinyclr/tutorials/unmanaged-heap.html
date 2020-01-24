@@ -94,7 +94,7 @@ uTable = null;
 uBuffer.Dispose();
 </code></pre><h2 id="graphical-memory">Graphical Memory</h2>
 <p>When the <a href="graphics.html">graphics</a> engine detects an available external memory, it automatically switches to it.</p>
-<h2 id="disposing-objects">Disposing Objects</h2>
+<h2 id="disposing-of-objects">Disposing of Objects</h2>
 <p>As the name implies, this memory is unmanaged! You are responsible for disposing these any allocated objects. The garbage collector does not handle this special memory.</p>
 <blockquote><p>!Note
 The graphics system will automatically use the unmanaged heap. Remember to manually dispose of any unneeded objects</p>
@@ -103,9 +103,11 @@ The graphics system will automatically use the unmanaged heap. Remember to manua
 // dispose
 Bitmap.Dispose();
 </code></pre><h2 id="helper-methods">Helper Methods</h2>
-<pre><code>// Get free memory size
-�.
-// Get total available memory
+<pre><code>//Print number of available bytes in unmanaged memory.
+System.Diagnostics.Debug.WriteLine(Memory.UnmanagedMemory.FreeBytes.ToString());
+
+//Print the number of bytes being used in unmanaged memory.
+System.Diagnostics.Debug.WriteLine(Memory.UnmanagedMemory.UsedBytes.ToString());
 </code></pre></article>
           </div>
           

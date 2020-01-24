@@ -28,7 +28,7 @@ uBuffer.Dispose();
 ## Graphical Memory
 When the [graphics](graphics.md) engine detects an available external memory, it automatically switches to it.
 
-## Disposing Objects
+## Disposing of Objects
 As the name implies, this memory is unmanaged! You are responsible for disposing these any allocated objects. The garbage collector does not handle this special memory.
 
 > !Note
@@ -43,8 +43,10 @@ Bitmap.Dispose();
 ## Helper Methods
 
 ```
-// Get free memory size
-….
-// Get total available memory
+//Print number of available bytes in unmanaged memory.
+System.Diagnostics.Debug.WriteLine(Memory.UnmanagedMemory.FreeBytes.ToString());
+
+//Print the number of bytes being used in unmanaged memory.
+System.Diagnostics.Debug.WriteLine(Memory.UnmanagedMemory.UsedBytes.ToString());
 ```
 
