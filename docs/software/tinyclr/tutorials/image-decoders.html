@@ -77,11 +77,24 @@
 <h1 id="image-decoders">Image Decoders</h1>
 
 <hr>
-<p>JPG, BMP and GIF are natively supported.</p>
-<pre><code>// Read file into array and use that array to create a Bitmap
-Bitmap = new Bitmap(data, type.BMP);
-</code></pre><p>You can also read bitmap from <a href="resources.html">Resources</a></p>
-<h1 id="video-playback">Video playback</h1>
+<p>TinyCLR OS provides methods for converting JPG, BMP, and GIF files into bitmaps that can be used in your application. The image can be added to your project as a <a href="resources.html">resource</a>, or the image can be stored in a byte array.</p>
+<pre><code class="lang-csharp">var screen = Graphics.FromImage(new Bitmap(displayController.ActiveConfiguration.Width,
+    displayController.ActiveConfiguration.Height));
+
+//Image is in a resource file named &quot;jpegImageFile&quot;:
+var imageBitmap = Resource1.GetBitmap(Resource1.BitmapResources.jpegImageFile);
+
+//Image is in a byte array named &quot;imageByteArray&quot;:
+imageBitmap = new Bitmap(imageByteArray, BitmapImageType.Jpeg);
+
+//Generate a bitmap from only part of a byte array.
+imageBitmap = new Bitmap(imageByteArray, offset, count, BitmapImageType.Jpeg);
+
+var imageX = 0;
+var imageY = 0;
+
+screen.DrawImage(imageBitmap, imageX, imageY);
+</code></pre><h2 id="video-playback">Video playback</h2>
 <p>Animated GIFs are not supported but <a href="mjpeg-video.html">Motion JPEG</a> is supported.</p>
 </article>
           </div>
@@ -91,7 +104,7 @@ Bitmap = new Bitmap(data, type.BMP);
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-special-pins/software/tinyclr/tutorials/image-decoders.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-tutorials/software/tinyclr/tutorials/image-decoders.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

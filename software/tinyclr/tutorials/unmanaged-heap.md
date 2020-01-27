@@ -9,7 +9,7 @@ To ensure that unmanaged resources get disposed of properly, it is necessary to 
 This is an easy way to create buffers that reside in external memory, which typically provides much more storage than internal memory. The following example creates an array uTable[] in unmanaged heap space on the SCM20260D Dev Board and then disposes of it.
 
 > [!Tip]
-> Add the GHIElectronics.TinyCLR.Native NuGet package and GHIElectronics.TinyCLR.Native using statement to your application.
+> Add the GHIElectronics.TinyCLR.Native NuGet package and using statement to your application.
 
 ```
 //Allocate space for 100,000 byte array in unmanaged heap.
@@ -26,12 +26,12 @@ uBuffer.Dispose();
 ```
 
 ## Graphical Memory
-When the [graphics](graphics.md) engine detects an available external memory, it automatically switches to it.
+When the [graphics](graphics.md) engine detects an available external memory, it automatically uses it.
 
 ## Disposing of Objects
 As the name implies, this memory is unmanaged! You are responsible for disposing these any allocated objects. The garbage collector does not handle this special memory.
 
-> !Note
+> [!Note]
 > The graphics system will automatically use the unmanaged heap. Remember to manually dispose of any unneeded objects
 
 ```

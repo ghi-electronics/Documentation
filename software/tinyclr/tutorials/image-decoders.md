@@ -1,12 +1,25 @@
 # Image Decoders
 ---
-JPG, BMP and GIF are natively supported.
+TinyCLR OS provides methods for converting JPG, BMP, and GIF files into bitmaps that can be used in your application. The image can be added to your project as a [resource](resources.md), or the image can be stored in a byte array.
 
-```
-// Read file into array and use that array to create a Bitmap
-Bitmap = new Bitmap(data, type.BMP);
-```
-You can also read bitmap from [Resources](resources.md)
+```csharp
+var screen = Graphics.FromImage(new Bitmap(displayController.ActiveConfiguration.Width,
+    displayController.ActiveConfiguration.Height));
 
-# Video playback
+//Image is in a resource file named "jpegImageFile":
+var imageBitmap = Resource1.GetBitmap(Resource1.BitmapResources.jpegImageFile);
+
+//Image is in a byte array named "imageByteArray":
+imageBitmap = new Bitmap(imageByteArray, BitmapImageType.Jpeg);
+
+//Generate a bitmap from only part of a byte array.
+imageBitmap = new Bitmap(imageByteArray, offset, count, BitmapImageType.Jpeg);
+
+var imageX = 0;
+var imageY = 0;
+
+screen.DrawImage(imageBitmap, imageX, imageY);
+```
+
+## Video playback
 Animated GIFs are not supported but [Motion JPEG](mjpeg-video.md) is supported.
