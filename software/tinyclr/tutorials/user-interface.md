@@ -14,18 +14,18 @@ namespace UserInterfaceExample {
         public Program(DisplayController d) : base(d) {
         }
         static void Main() {
-            var disp = DisplayController.GetDefault();
+            var display = DisplayController.GetDefault();
 
-            disp.SetConfiguration(new ParallelDisplayControllerSettings {
+            display.SetConfiguration(new ParallelDisplayControllerSettings {
                 //Your display configuration
             });
 
-            disp.Enable();
+            display.Enable();
 
-            var app = new Program(disp);
-            app.Run(Program.CreateWindow(disp));
+            var app = new Program(display);
+            app.Run(Program.CreateWindow(display));
         }
-        private static Window CreateWindow(DisplayController disp) {
+        private static Window CreateWindow(DisplayController display) {
             var window = ...
             return window;
         }
@@ -61,7 +61,7 @@ namespace UserInterfaceExample
             GpioPin backlight = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA15);
             backlight.SetDriveMode(GpioPinDriveMode.Output);
             backlight.Write(GpioPinValue.High);
-            var displayController = DisplayController.GetDefault();
+            var display = DisplayController.GetDefault();
 
             var controllerSetting = new GHIElectronics.TinyCLR.Devices.Display.ParallelDisplayControllerSettings
             {
@@ -82,24 +82,24 @@ namespace UserInterfaceExample
                 VerticalSyncPolarity = false,
             };
 
-            displayController.SetConfiguration(controllerSetting);
-            displayController.Enable();
+            display.SetConfiguration(controllerSetting);
+            display.Enable();
 
-            var screen = Graphics.FromHdc(displayController.Hdc);
+            var screen = Graphics.FromHdc(display.Hdc);
             var controller = I2cController.GetDefault();
             var ptr = Memory.UnmanagedMemory.Allocate(640 * 480 * 2);
             var data = Memory.UnmanagedMemory.ToBytes(ptr, 640 * 480 * 2);
 
 
-           app = new Program(displayController);
-            app.Run(Program.CreateWindow(displayController));
+           app = new Program(display);
+            app.Run(Program.CreateWindow(display));
         }
-        private static Window CreateWindow(DisplayController disp)
+        private static Window CreateWindow(DisplayController display)
         {
             var window = new Window
             {
-                Height = (int)disp.ActiveConfiguration.Height,
-                Width = (int)disp.ActiveConfiguration.Width
+                Height = (int)display.ActiveConfiguration.Height,
+                Width = (int)display.ActiveConfiguration.Width
             };
             window.Background = new LinearGradientBrush(Colors.Blue, Colors.Teal, 0, 0, window.Width, window.Height);
             window.Visibility = Visibility.Visible;
