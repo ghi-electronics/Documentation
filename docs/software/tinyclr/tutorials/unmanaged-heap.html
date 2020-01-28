@@ -81,7 +81,8 @@
 <p>To ensure that unmanaged resources get disposed of properly, it is necessary to dispose of the buffer pointing to unmanaged heap manually, as shown in the sample code below.</p>
 <h2 id="unmanaged-buffers">Unmanaged Buffers</h2>
 <p>This is an easy way to create buffers that reside in external memory, which typically provides much more storage than internal memory. The following example creates an array uTable[] in unmanaged heap space on the SCM20260D Dev Board and then disposes of it.</p>
-<div class="TIP"><h5>Tip</h5><p>Add the GHIElectronics.TinyCLR.Native NuGet package and using statement to your application.</p>
+<div class="TIP"><h5>Tip</h5><p>Nuget: GHIElectronics.TinyCLR.Native</p>
+<p>Using: GHIElectronics.TinyCLR.Native</p>
 </div>
 <pre><code>//Allocate space for 100,000 byte array in unmanaged heap.
 UnmanagedBuffer uBuffer = new UnmanagedBuffer(100000);
@@ -93,15 +94,8 @@ var uTable = uBuffer.Bytes;
 uTable = null;
 uBuffer.Dispose();
 </code></pre><h2 id="graphical-memory">Graphical Memory</h2>
-<p>When the <a href="graphics.html">graphics</a> engine detects an available external memory, it automatically uses it.</p>
-<h2 id="disposing-of-objects">Disposing of Objects</h2>
-<p>As the name implies, this memory is unmanaged! You are responsible for disposing these any allocated objects. The garbage collector does not handle this special memory.</p>
-<div class="NOTE"><h5>Note</h5><p>The graphics system will automatically use the unmanaged heap. Remember to manually dispose of any unneeded objects</p>
-</div>
-<pre><code>// make it
-// dispose
-Bitmap.Dispose();
-</code></pre><h2 id="helper-methods">Helper Methods</h2>
+<p>When the <a href="graphics.html">graphics</a> engine detects available external memory, it automatically uses it. Also, garbage collection will dispose of unmanaged graphics buffers automatically. You do not have to dispose of unmanaged graphics buffers like you do for unmanaged non-graphic buffers.</p>
+<h2 id="helper-methods">Helper Methods</h2>
 <pre><code>//Print number of available bytes in unmanaged memory.
 System.Diagnostics.Debug.WriteLine(Memory.UnmanagedMemory.FreeBytes.ToString());
 
