@@ -4,58 +4,79 @@ The `GHIElectronics.TinyCLR.Drawing` NuGet package includes the backbone for all
 
 Shape examples are `Graphics.FillEllipse`, `Graphics.DrawLine` and `Graphics.DrawRectangle`. These methods need `Pen` and `Brush` that are also part of `Graphics`.
 
-TinyCLR OS has built in graphics methods for these displays. The following sample code runs on our UCM Dev Board with the UD435 Display option. You will need to add the `GHIElectronics.TinyCLR.Drawing`, `GHIElectronics.TinyCLR.Devices.Gpio` and `GHIElectronics.TinyCLR.Pins` NuGet package to your program.
+TinyCLR OS has built in graphics methods for these displays. The following sample code runs on our SC20100 Dev Board with its built in display.
 
-The GPIO in this example is only used to control the display's backlight. Note that the backlight is on GPIO A on the UCM Dev Board. 
+> [!Tip]
+> Nugets: GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Pins
+> 
+> Usings: GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Pins, System.Drawing
 
-```cs
-using System.Drawing;
+
+The GPIO in this example is only used to control the display's backlight. Note that the backlight is on PE5 on the SITCore Sc20100 Dev Board. 
+
+```csharp
 using GHIElectronics.TinyCLR.Devices.Display;
 using GHIElectronics.TinyCLR.Devices.Gpio;
+using GHIElectronics.TinyCLR.Devices.Spi;
+using GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735;
 using GHIElectronics.TinyCLR.Pins;
+using System;
+using System.Drawing;
+using System.Threading;
 
-class Program {
-    private static void Main() {
-        UCMStandard.SetModel(UCMModel.UC5550); // Change to your specific board.
-        var backlight = GpioController.GetDefault().OpenPin(UCMStandard.GpioPin.A);
-        backlight.SetDriveMode(GpioPinDriveMode.Output);
+namespace SITCoreTestCodeForDocs {
 
-        var displayController = DisplayController.GetDefault();
+    class Program {
+        private static ST7735Controller st7735;
+        private const int SCREEN_WIDTH = 160;
+        private const int SCREEN_HEIGHT = 128;
 
-        // Enter the proper display configurations for the UD435
-        displayController.SetConfiguration(new ParallelDisplayControllerSettings {
-            Width = 480,
-            Height = 272,
-            DataFormat = DisplayDataFormat.Rgb565,
-            HorizontalBackPorch = 46,
-            HorizontalFrontPorch = 16,
-            HorizontalSyncPolarity = false,
-            HorizontalSyncPulseWidth = 1,
-            DataEnableIsFixed = false,
-            DataEnablePolarity = false,
-            PixelClockRate = 16_000_000,
-            PixelPolarity = false,
-            VerticalBackPorch = 23,
-            VerticalFrontPorch = 7,
-            VerticalSyncPolarity = false,
-            VerticalSyncPulseWidth = 1
-        });
+        private static void Main() {
+            var spi = SpiController.FromName(SC20100.SpiBus.Spi3);
+            var gpio = GpioController.GetDefault();
 
-        displayController.Enable();
-        backlight.Write(GpioPinValue.High);
+            st7735 = new ST7735Controller(
+                spi.GetDevice(ST7735Controller.GetConnectionSettings(SpiChipSelectType.Gpio, SC20100.GpioPin.PD10)), //CS pin.
+                gpio.OpenPin(SC20100.GpioPin.PC4), //RS pin.
+                gpio.OpenPin(SC20100.GpioPin.PE15) //RESET pin.
+            );
 
-        // Some needed objects
-        var screen = Graphics.FromHdc(displayController.Hdc);
-        var greenPen = new Pen(Color.Green, 5);
-        var redPen = new Pen(Color.Red, 3);
+            var backlight = gpio.OpenPin(SC20100.GpioPin.PE5);
+            backlight.SetDriveMode(GpioPinDriveMode.Output);
+            backlight.Write(GpioPinValue.High);
 
-        // Start Drawing (to memory)
-        screen.Clear(Color.Black);
-        screen.DrawEllipse(greenPen, 40, 30, 80, 60);
-        screen.DrawLine(redPen, 0, 0, 479, 271);
+            var displayController = DisplayController.FromProvider(st7735);
+            st7735.SetDataAccessControl(true, true, false, false); //Rotate the screen.
+            displayController.SetConfiguration(new SpiDisplayControllerSettings { Width = SCREEN_WIDTH, Height = SCREEN_HEIGHT, DataFormat = DisplayDataFormat.Rgb565 });
+            displayController.Enable();
 
-        // Flush the memory to the display. This is a very fast operation.
-        screen.Flush();
+            // Create flush event
+            Graphics.OnFlushEvent += Graphics_OnFlushEvent;
+
+            // Create bitmap buffer
+            var screen = Graphics.FromImage(new Bitmap(displayController.ActiveConfiguration.Width, displayController.ActiveConfiguration.Height));
+            var image = Resource1.GetBitmap(Resource1.BitmapResources.smallJpegBackground);
+            var font = Resource1.GetFont(Resource1.FontResources.small);
+
+            screen.Clear(Color.Black);
+            screen.FillEllipse(new SolidBrush(System.Drawing.Color.FromArgb(255, 255, 0, 0)), 0, 0, 80, 64);
+            screen.FillEllipse(new SolidBrush(System.Drawing.Color.FromArgb(255, 0, 0, 255)), 80, 0, 80, 64);
+            screen.FillEllipse(new SolidBrush(System.Drawing.Color.FromArgb(128, 0, 255, 0)), 40, 0, 80, 64);
+
+            screen.DrawImage(image, 56,50);
+
+            screen.DrawRectangle(new Pen(System.Drawing.Color.Yellow), 10, 80, 40, 25);
+            screen.DrawEllipse(new Pen(Color.Purple), 60, 80, 40, 25);
+            screen.FillRectangle(new SolidBrush(Color.Teal), 110, 80, 40,25);
+
+            screen.DrawString("Hello, world", font, new SolidBrush(Color.Blue), 50,110);
+
+            screen.Flush();
+            Thread.Sleep(-1);
+        }
+        private static void Graphics_OnFlushEvent(IntPtr hdc, byte[] data) {
+            st7735.DrawBuffer(data);
+        }
     }
 }
 ```

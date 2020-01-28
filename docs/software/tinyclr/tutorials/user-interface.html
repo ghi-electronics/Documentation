@@ -80,7 +80,7 @@
 <p>You can use the <code>GHIElectronics.TinyCLR.UI</code> library to create user interfaces for your application. It is inspired by WPF on the desktop.</p>
 <h2 id="application-management">Application Management</h2>
 <p>There is no special requirements when simply <a href="graphics.html">graphics</a>. However, the user interface has internal management requirements, that is handled by the application class. Your starting point will look like the following code. Do not forget to add the <code>GHIElectronics.TinyCLR.UI</code> NuGet package.</p>
-<pre><code class="lang-cs">using GHIElectronics.TinyCLR.UI;
+<pre><code class="lang-csharp">using GHIElectronics.TinyCLR.UI;
 using GHIElectronics.TinyCLR.Devices.Display;
 
 namespace UserInterfaceExample {
@@ -107,56 +107,70 @@ namespace UserInterfaceExample {
 }
 </code></pre><h2 id="windows">Windows</h2>
 <p>You can have multiple windows in your application but you will at least need one. Here is a complete example that shows a window with a gradient brush background. The code is for UCM Dev Board with 4.3 display and UC5550 UCM.</p>
-<pre><code class="lang-cs">using GHIElectronics.TinyCLR.UI;
+<pre><code class="lang-csharp">using GHIElectronics.TinyCLR.UI;
+using GHIElectronics.TinyCLR.UI.Media;
 using GHIElectronics.TinyCLR.Devices.Display;
+using GHIElectronics.TinyCLR.Devices.I2c;
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
-using GHIElectronics.TinyCLR.UI.Media;
+using System.Drawing;
+using GHIElectronics.TinyCLR.Native;
 
-namespace UserInterfaceExample {
-    class Program : Application {
-        public Program(DisplayController d) : base(d) {
+namespace UserInterfaceExample
+{
+    class Program : Application
+    {
+        public Program(DisplayController d) : base(d)
+        {
         }
-        static void Main() {
-            var disp = DisplayController.GetDefault();
+        static Program app;
+        static void Main()
+        {
 
-            disp.SetConfiguration(new ParallelDisplayControllerSettings {
-                //Your display configuration
-                Width = 480,
-                Height = 272,
-                DataFormat = DisplayDataFormat.Rgb565,
-                HorizontalBackPorch = 46,
-                HorizontalFrontPorch = 16,
-                HorizontalSyncPolarity = false,
-                HorizontalSyncPulseWidth = 1,
-                DataEnableIsFixed = false,
-                DataEnablePolarity = false,
-                PixelClockRate = 16_000_000,
-                PixelPolarity = false,
-                VerticalBackPorch = 23,
-                VerticalFrontPorch = 7,
-                VerticalSyncPolarity = false,
-                VerticalSyncPulseWidth = 1
-            });
-
-            disp.Enable();
-
-            UCMStandard.SetModel(UCMModel.UC5550);
-            var gpioController = GpioController.GetDefault();
-            var backlight = gpioController.OpenPin(UCMStandard.GpioPin.A);
+            GpioPin backlight = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA15);
             backlight.SetDriveMode(GpioPinDriveMode.Output);
             backlight.Write(GpioPinValue.High);
+            var displayController = DisplayController.GetDefault();
 
-            var app = new Program(disp);
-            app.Run(Program.CreateWindow(disp));
+            var controllerSetting = new GHIElectronics.TinyCLR.Devices.Display.ParallelDisplayControllerSettings
+            {
+                Width = 480,
+                Height = 272,
+                DataFormat = GHIElectronics.TinyCLR.Devices.Display.DisplayDataFormat.Rgb565,
+                PixelClockRate = 10000000,
+                PixelPolarity = false,
+                DataEnablePolarity = false,
+                DataEnableIsFixed = false,
+                HorizontalFrontPorch = 2,
+                HorizontalBackPorch = 2,
+                HorizontalSyncPulseWidth = 41,
+                HorizontalSyncPolarity = false,
+                VerticalFrontPorch = 2,
+                VerticalBackPorch = 2,
+                VerticalSyncPulseWidth = 10,
+                VerticalSyncPolarity = false,
+            };
+
+            displayController.SetConfiguration(controllerSetting);
+            displayController.Enable();
+
+            var screen = Graphics.FromHdc(displayController.Hdc);
+            var controller = I2cController.GetDefault();
+            var ptr = Memory.UnmanagedMemory.Allocate(640 * 480 * 2);
+            var data = Memory.UnmanagedMemory.ToBytes(ptr, 640 * 480 * 2);
+
+
+           app = new Program(displayController);
+            app.Run(Program.CreateWindow(displayController));
         }
-        private static Window CreateWindow(DisplayController disp) {
-            var window = new Window {
+        private static Window CreateWindow(DisplayController disp)
+        {
+            var window = new Window
+            {
                 Height = (int)disp.ActiveConfiguration.Height,
                 Width = (int)disp.ActiveConfiguration.Width
             };
-            window.Background = new LinearGradientBrush(Colors.Blue, Colors.Teal, 0, 0,
-               window.Width, window.Height);
+            window.Background = new LinearGradientBrush(Colors.Blue, Colors.Teal, 0, 0, window.Width, window.Height);
             window.Visibility = Visibility.Visible;
             return window;
         }
@@ -167,7 +181,7 @@ namespace UserInterfaceExample {
 <p>For the sake of simplifying the rest of this tutorial, we will add <code>private static UIElement Elements()</code> method that creates and returns the elements. This is then assigned to the <code>Child</code> of our <code>Window</code>. You will need to add <code>window.Child = Elements();</code> right before returning from <code>CreateWindow</code>.</p>
 <div class="TIP"><h5>Tip</h5><p>This example needs a <a href="font-support.html">font</a>.</p>
 </div>
-<pre><code class="lang-cs">private static UIElement Elements() {
+<pre><code class="lang-csharp">private static UIElement Elements() {
     var txt = new TextBox {
         Font = font,
         Text = &quot;Hello World!&quot;,
@@ -180,7 +194,7 @@ namespace UserInterfaceExample {
 <p>These 2 elements are very basic and very useful. They are used in many of the examples throught this tutorial.</p>
 <h2 id="panel">Panel</h2>
 <p>A <code>Window</code> can carry only a single <code>Child</code>, that is a single element. This is not a concern because the single element can be a container, like a <code>Panel</code>, which holds multiple elements. You can even have panels within panels and each has its own elements. This example will introduce shapes found in the <code>GHIElectronics.TinyCLR.UI.Shapes</code> namespace. It also shows an example of the <code>TextBox</code> element. We will also set margins for a better look.</p>
-<pre><code class="lang-cs">private static UIElement Elements() {
+<pre><code class="lang-csharp">private static UIElement Elements() {
     var panel = new Panel();
 
     var txt1 = new TextBox() {
@@ -212,7 +226,7 @@ namespace UserInterfaceExample {
 </code></pre><h2 id="stackpanel">StackPanel</h2>
 <p>There are also two types of elements that descend from panels, <code>Canvas</code> and <code>StackPanel</code>. The canvas allows elements to be added anywhere. Stack panels, on the other had, places elements in order.</p>
 <p>We will modify the previous example to use vertical stack. The elements will stack and be arrange to the right and the left. Note that setting vertical alignment will be ignored as the vertical stack does overrides how elements are stacked vertically.</p>
-<pre><code class="lang-cs">private static UIElement Elements() {
+<pre><code class="lang-csharp">private static UIElement Elements() {
     var panel = new StackPanel(Orientation.Vertical);
 
     var txt1 = new TextBox() {
@@ -242,7 +256,7 @@ namespace UserInterfaceExample {
 }
 </code></pre><h2 id="canvas">Canvas</h2>
 <p>The canvas provides pixel level control over where element go on the screen. However, like all other components, canvas is aware of the window size and things are aligned from it sides.</p>
-<pre><code class="lang-cs">private static UIElement Elements() {
+<pre><code class="lang-csharp">private static UIElement Elements() {
     var canvas = new Canvas();
 
     var txt = new Text(font, &quot;TinyCLR is Great!&quot;) {
@@ -265,7 +279,7 @@ namespace UserInterfaceExample {
 }
 </code></pre><h2 id="border">Border</h2>
 <p>This element allows a border to be added. The border starts from the parent element and then the child is constrained to the border&#39;s thickness. This example will demonstrate how. The border is this example i set to 10, meaning the window (the parent) will grow inwards the border&#39;s thickness and then the child element(s) will fill in. If the children do not fill in the entire space then the border will fill in more than the assigned thickness. Uncomment the 2 alignment lines to see undesired effect of how borders work.</p>
-<pre><code class="lang-cs">private static UIElement Elements() {
+<pre><code class="lang-csharp">private static UIElement Elements() {
 
     var border = new Border();
     border.SetBorderThickness(10);
@@ -281,7 +295,7 @@ namespace UserInterfaceExample {
     return border;
 }
 </code></pre><p>The fix around this is to add a container and then the container will have a border. In this example, the parent of the border is the canvas instead of the window.</p>
-<pre><code class="lang-cs">private static UIElement Elements() {
+<pre><code class="lang-csharp">private static UIElement Elements() {
 
     var canvas = new Canvas();
     var border = new Border();
@@ -301,7 +315,7 @@ namespace UserInterfaceExample {
 }
 </code></pre><h2 id="button">Button</h2>
 <p>Buttons are a good place for user input. The button needs a child, typically text. Buttons also have <code>Click</code> event to handle the user input.</p>
-<pre><code class="lang-cs">private static UIElement Elements() {
+<pre><code class="lang-csharp">private static UIElement Elements() {
     var txt = new Text(font, &quot;Push me!&quot;) {
         VerticalAlignment = VerticalAlignment.Center,
         HorizontalAlignment = HorizontalAlignment.Center,
@@ -320,7 +334,7 @@ private static void Button_Click(object sender, RoutedEventArgs e) {
 }
 </code></pre><h2 id="textflow">TextFlow</h2>
 <p>This element helps in adding text on multi-line and with different colors and sizes.</p>
-<pre><code class="lang-cs">private static UIElement Elements() {
+<pre><code class="lang-csharp">private static UIElement Elements() {
 
     var textFlow = new TextFlow();
     textFlow.TextRuns.Add(&quot;Hello &quot;, font, Colors.Red);
@@ -332,7 +346,7 @@ private static void Button_Click(object sender, RoutedEventArgs e) {
 }
 </code></pre><h2 id="listbox">ListBox</h2>
 <p>This element provides a list of options for users to select from.</p>
-<pre><code class="lang-cs">private static UIElement Elements() {
+<pre><code class="lang-csharp">private static UIElement Elements() {
     var listBox = new ListBox();
     listBox.Items.Add(new Text(font, &quot;Item 1&quot;));
     listBox.Items.Add(new Text(font, &quot;Item 2&quot;));
@@ -342,7 +356,7 @@ private static void Button_Click(object sender, RoutedEventArgs e) {
     return listBox;
 }
 </code></pre><p>It is also possible to add a separator between items, simply by using a rectangle. This item will be set to be not selectable.</p>
-<pre><code class="lang-cs">private static UIElement Elements() {
+<pre><code class="lang-csharp">private static UIElement Elements() {
     var rect = new Rectangle() {
         Height = 1,
         Width=30,
@@ -367,7 +381,7 @@ private static void Button_Click(object sender, RoutedEventArgs e) {
 <p>The scroll viewer allows for viewing content that are larger than the viewing area. The user input can then be used to shift the content within the viewing area.</p>
 <h2 id="the-dispatcher">The Dispatcher</h2>
 <p>The User Interface libraries rely on a dispatcher internally to handle system events and updates the invalidated elements. Any changes to any of the elements needs to happen from within the dispatcher. In this example, we will show time on the screen. The time will be in a text box that is updated every second using a <code>Timer</code>. Since timers run in their own thread, a dispatcher invoke is needed.</p>
-<pre><code class="lang-cs">static void Counter(object o) {
+<pre><code class="lang-csharp">static void Counter(object o) {
     Application.Current.Dispatcher.Invoke(TimeSpan.FromMilliseconds(1), _ =&gt; {
         Text txt = (Text)o;
         txt.TextContent = DateTime.Now.ToString();
@@ -387,7 +401,7 @@ private static UIElement Elements() {
     return txt;
 }
 </code></pre><p>You can also use the dispatcher timer directly</p>
-<pre><code class="lang-cs">private static UIElement Elements() {
+<pre><code class="lang-csharp">private static UIElement Elements() {
     var txt = new Text(font, &quot;Hello World!&quot;) {
         ForeColor = Colors.White,
         VerticalAlignment = VerticalAlignment.Center,
@@ -409,7 +423,7 @@ private static void Counter(object sender, EventArgs e) {
 }
 </code></pre><h2 id="user-input">User Input</h2>
 <p>A user can feed in input to the graphical interface through touch or button input.</p>
-<pre><code class="lang-cs">app.InputProvider.RaiseTouch(x, y, touchState, DateTime.UtcNow);
+<pre><code class="lang-csharp">app.InputProvider.RaiseTouch(x, y, touchState, DateTime.UtcNow);
 app.InputProvider.RaiseButton(btn, btnState, DateTime.UtcNow);
 </code></pre><p>The <a href="touch-screen.html">touch</a> tutorial has further details.</p>
 </article>
@@ -420,7 +434,7 @@ app.InputProvider.RaiseButton(btn, btnState, DateTime.UtcNow);
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-special-pins/software/tinyclr/tutorials/user-interface.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-tutorials/software/tinyclr/tutorials/user-interface.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

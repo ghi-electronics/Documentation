@@ -5,7 +5,7 @@ You can use the `GHIElectronics.TinyCLR.UI` library to create user interfaces fo
 ## Application Management
 There is no special requirements when simply [graphics](graphics.md). However, the user interface has internal management requirements, that is handled by the application class. Your starting point will look like the following code. Do not forget to add the `GHIElectronics.TinyCLR.UI` NuGet package.
 
-```cs
+```csharp
 using GHIElectronics.TinyCLR.UI;
 using GHIElectronics.TinyCLR.Devices.Display;
 
@@ -37,63 +37,78 @@ namespace UserInterfaceExample {
 
 You can have multiple windows in your application but you will at least need one. Here is a complete example that shows a window with a gradient brush background. The code is for UCM Dev Board with 4.3 display and UC5550 UCM.
 
-```cs
+```csharp
 using GHIElectronics.TinyCLR.UI;
+using GHIElectronics.TinyCLR.UI.Media;
 using GHIElectronics.TinyCLR.Devices.Display;
+using GHIElectronics.TinyCLR.Devices.I2c;
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
-using GHIElectronics.TinyCLR.UI.Media;
+using System.Drawing;
+using GHIElectronics.TinyCLR.Native;
 
-namespace UserInterfaceExample {
-    class Program : Application {
-        public Program(DisplayController d) : base(d) {
+namespace UserInterfaceExample
+{
+    class Program : Application
+    {
+        public Program(DisplayController d) : base(d)
+        {
         }
-        static void Main() {
-            var disp = DisplayController.GetDefault();
+        static Program app;
+        static void Main()
+        {
 
-            disp.SetConfiguration(new ParallelDisplayControllerSettings {
-                //Your display configuration
-                Width = 480,
-                Height = 272,
-                DataFormat = DisplayDataFormat.Rgb565,
-                HorizontalBackPorch = 46,
-                HorizontalFrontPorch = 16,
-                HorizontalSyncPolarity = false,
-                HorizontalSyncPulseWidth = 1,
-                DataEnableIsFixed = false,
-                DataEnablePolarity = false,
-                PixelClockRate = 16_000_000,
-                PixelPolarity = false,
-                VerticalBackPorch = 23,
-                VerticalFrontPorch = 7,
-                VerticalSyncPolarity = false,
-                VerticalSyncPulseWidth = 1
-            });
-
-            disp.Enable();
-
-            UCMStandard.SetModel(UCMModel.UC5550);
-            var gpioController = GpioController.GetDefault();
-            var backlight = gpioController.OpenPin(UCMStandard.GpioPin.A);
+            GpioPin backlight = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA15);
             backlight.SetDriveMode(GpioPinDriveMode.Output);
             backlight.Write(GpioPinValue.High);
+            var displayController = DisplayController.GetDefault();
 
-            var app = new Program(disp);
-            app.Run(Program.CreateWindow(disp));
+            var controllerSetting = new GHIElectronics.TinyCLR.Devices.Display.ParallelDisplayControllerSettings
+            {
+                Width = 480,
+                Height = 272,
+                DataFormat = GHIElectronics.TinyCLR.Devices.Display.DisplayDataFormat.Rgb565,
+                PixelClockRate = 10000000,
+                PixelPolarity = false,
+                DataEnablePolarity = false,
+                DataEnableIsFixed = false,
+                HorizontalFrontPorch = 2,
+                HorizontalBackPorch = 2,
+                HorizontalSyncPulseWidth = 41,
+                HorizontalSyncPolarity = false,
+                VerticalFrontPorch = 2,
+                VerticalBackPorch = 2,
+                VerticalSyncPulseWidth = 10,
+                VerticalSyncPolarity = false,
+            };
+
+            displayController.SetConfiguration(controllerSetting);
+            displayController.Enable();
+
+            var screen = Graphics.FromHdc(displayController.Hdc);
+            var controller = I2cController.GetDefault();
+            var ptr = Memory.UnmanagedMemory.Allocate(640 * 480 * 2);
+            var data = Memory.UnmanagedMemory.ToBytes(ptr, 640 * 480 * 2);
+
+
+           app = new Program(displayController);
+            app.Run(Program.CreateWindow(displayController));
         }
-        private static Window CreateWindow(DisplayController disp) {
-            var window = new Window {
+        private static Window CreateWindow(DisplayController disp)
+        {
+            var window = new Window
+            {
                 Height = (int)disp.ActiveConfiguration.Height,
                 Width = (int)disp.ActiveConfiguration.Width
             };
-            window.Background = new LinearGradientBrush(Colors.Blue, Colors.Teal, 0, 0,
-               window.Width, window.Height);
+            window.Background = new LinearGradientBrush(Colors.Blue, Colors.Teal, 0, 0, window.Width, window.Height);
             window.Visibility = Visibility.Visible;
             return window;
         }
     }
 }
 ```
+
 ## Elements
 A window is not very useful without some elements (controls). There are several built in elements and you can also custom make your own. All elements descend from the `UIElement` class. Explore the `GHIElectronics.TinyCLR.UI.Controls` namespace for available options.
 
@@ -103,7 +118,7 @@ For the sake of simplifying the rest of this tutorial, we will add `private stat
 > [!Tip]
 > This example needs a [font](font-support.md).
 
-```cs
+```csharp
 private static UIElement Elements() {
     var txt = new TextBox {
         Font = font,
@@ -114,6 +129,7 @@ private static UIElement Elements() {
     return txt;
 }
 ```
+
 ## Text and TextBox
 
 These 2 elements are very basic and very useful. They are used in many of the examples throught this tutorial.
@@ -121,7 +137,7 @@ These 2 elements are very basic and very useful. They are used in many of the ex
 ## Panel
 A `Window` can carry only a single `Child`, that is a single element. This is not a concern because the single element can be a container, like a `Panel`, which holds multiple elements. You can even have panels within panels and each has its own elements. This example will introduce shapes found in the `GHIElectronics.TinyCLR.UI.Shapes` namespace. It also shows an example of the `TextBox` element. We will also set margins for a better look.
 
-```cs
+```csharp
 private static UIElement Elements() {
     var panel = new Panel();
 
@@ -159,7 +175,7 @@ There are also two types of elements that descend from panels, `Canvas` and `Sta
 
 We will modify the previous example to use vertical stack. The elements will stack and be arrange to the right and the left. Note that setting vertical alignment will be ignored as the vertical stack does overrides how elements are stacked vertically.
 
-```cs
+```csharp
 private static UIElement Elements() {
     var panel = new StackPanel(Orientation.Vertical);
 
@@ -194,7 +210,7 @@ private static UIElement Elements() {
 
 The canvas provides pixel level control over where element go on the screen. However, like all other components, canvas is aware of the window size and things are aligned from it sides.
 
-```cs
+```csharp
 private static UIElement Elements() {
     var canvas = new Canvas();
 
@@ -217,11 +233,12 @@ private static UIElement Elements() {
     return canvas;
 }
 ```
+
 ## Border
 
 This element allows a border to be added. The border starts from the parent element and then the child is constrained to the border's thickness. This example will demonstrate how. The border is this example i set to 10, meaning the window (the parent) will grow inwards the border's thickness and then the child element(s) will fill in. If the children do not fill in the entire space then the border will fill in more than the assigned thickness. Uncomment the 2 alignment lines to see undesired effect of how borders work.
 
-```cs
+```csharp
 private static UIElement Elements() {
 
     var border = new Border();
@@ -241,7 +258,7 @@ private static UIElement Elements() {
 
 The fix around this is to add a container and then the container will have a border. In this example, the parent of the border is the canvas instead of the window.
 
-```cs
+```csharp
 private static UIElement Elements() {
 
     var canvas = new Canvas();
@@ -261,11 +278,12 @@ private static UIElement Elements() {
     return canvas;
 }
 ```
+
 ## Button
 
 Buttons are a good place for user input. The button needs a child, typically text. Buttons also have `Click` event to handle the user input.
 
-```cs
+```csharp
 private static UIElement Elements() {
     var txt = new Text(font, "Push me!") {
         VerticalAlignment = VerticalAlignment.Center,
@@ -289,7 +307,7 @@ private static void Button_Click(object sender, RoutedEventArgs e) {
 
 This element helps in adding text on multi-line and with different colors and sizes.
 
-```cs
+```csharp
 private static UIElement Elements() {
 
     var textFlow = new TextFlow();
@@ -301,11 +319,12 @@ private static UIElement Elements() {
     return textFlow;
 }
 ```
+
 ## ListBox
 
 This element provides a list of options for users to select from.
 
-```cs
+```csharp
 private static UIElement Elements() {
     var listBox = new ListBox();
     listBox.Items.Add(new Text(font, "Item 1"));
@@ -319,7 +338,7 @@ private static UIElement Elements() {
 
 It is also possible to add a separator between items, simply by using a rectangle. This item will be set to be not selectable.
 
-```cs
+```csharp
 private static UIElement Elements() {
     var rect = new Rectangle() {
         Height = 1,
@@ -352,7 +371,7 @@ The scroll viewer allows for viewing content that are larger than the viewing ar
 
 The User Interface libraries rely on a dispatcher internally to handle system events and updates the invalidated elements. Any changes to any of the elements needs to happen from within the dispatcher. In this example, we will show time on the screen. The time will be in a text box that is updated every second using a `Timer`. Since timers run in their own thread, a dispatcher invoke is needed.
 
-```cs
+```csharp
 static void Counter(object o) {
     Application.Current.Dispatcher.Invoke(TimeSpan.FromMilliseconds(1), _ => {
         Text txt = (Text)o;
@@ -376,7 +395,7 @@ private static UIElement Elements() {
 
 You can also use the dispatcher timer directly
 
-```cs
+```csharp
 private static UIElement Elements() {
     var txt = new Text(font, "Hello World!") {
         ForeColor = Colors.White,
@@ -402,7 +421,7 @@ private static void Counter(object sender, EventArgs e) {
 ## User Input
 A user can feed in input to the graphical interface through touch or button input.
 
-```cs
+```csharp
 app.InputProvider.RaiseTouch(x, y, touchState, DateTime.UtcNow);
 app.InputProvider.RaiseButton(btn, btnState, DateTime.UtcNow);
 ```
