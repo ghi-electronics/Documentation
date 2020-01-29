@@ -35,7 +35,7 @@ namespace UserInterfaceExample {
 
 ## Windows
 
-You can have multiple windows in your application but you will at least need one. Here is a complete example that shows a window with a gradient brush background. The code is for UCM Dev Board with 4.3 display and SC20260D Dev board.
+You can have multiple windows in your application but you will at least need one. Here is a complete example that shows a window with a gradient brush background. The code is for SC20260D Dev board with 4.3 display.
 
 ```csharp
 using GHIElectronics.TinyCLR.UI;
@@ -102,6 +102,70 @@ namespace UserInterfaceExample
                 Width = (int)display.ActiveConfiguration.Width
             };
             window.Background = new LinearGradientBrush(Colors.Blue, Colors.Teal, 0, 0, window.Width, window.Height);
+            window.Visibility = Visibility.Visible;
+            return window;
+        }
+    }
+}
+```
+The code is for N18 Display and SC20100 Dev board.
+```csharp
+using System;
+using System.Drawing;
+using GHIElectronics.TinyCLR.Devices.Display;
+using GHIElectronics.TinyCLR.Devices.Gpio;
+using GHIElectronics.TinyCLR.Devices.Spi;
+using GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735;
+using GHIElectronics.TinyCLR.Pins;
+using GHIElectronics.TinyCLR.UI;
+using GHIElectronics.TinyCLR.UI.Media;
+
+namespace SC20100_N18_WPF{
+    class Program : Application{
+        public Program(DisplayController d) : base(d){
+        }
+        private static ST7735Controller st7735;
+        private const int SCREEN_WIDTH = 160;
+        private const int SCREEN_HEIGHT = 128;
+        private static void Main(){
+            var spi = SpiController.FromName(SC20100.SpiBus.Spi3);
+            var gpio = GpioController.GetDefault();
+
+            st7735 = new ST7735Controller(
+                spi.GetDevice(ST7735Controller.GetConnectionSettings
+                (SpiChipSelectType.Gpio, SC20100.GpioPin.PD10)), //CS pin.
+                gpio.OpenPin(SC20100.GpioPin.PC4), //RS pin.
+                gpio.OpenPin(SC20100.GpioPin.PE15) //RESET pin.
+            );
+
+            var backlight = gpio.OpenPin(SC20100.GpioPin.PE5);
+            backlight.SetDriveMode(GpioPinDriveMode.Output);
+            backlight.Write(GpioPinValue.High);
+
+            var displayController = DisplayController.FromProvider(st7735);
+            st7735.SetDataAccessControl(true, true, false, false); //Rotate the screen.
+
+            displayController.SetConfiguration(new SpiDisplayControllerSettings{
+                Width = SCREEN_WIDTH,
+                Height = SCREEN_HEIGHT,
+                DataFormat = DisplayDataFormat.Rgb565
+            });
+
+            displayController.Enable();
+            Graphics.OnFlushEvent += Graphics_OnFlushEvent;
+
+            var app = new Program(displayController);
+            app.Run(Program.CreateWindow(displayController));      
+        }
+        private static void Graphics_OnFlushEvent(IntPtr hdc, byte[] data){
+            st7735.DrawBuffer(data);
+        }
+        private static Window CreateWindow(DisplayController display){
+            var window = new Window{
+                Height = (int)display.ActiveConfiguration.Height,
+                Width = (int)display.ActiveConfiguration.Width
+            };
+            window.Background = new LinearGradientBrush(Colors.Blue, Colors.Red, 0, 0, window.Width, -20);
             window.Visibility = Visibility.Visible;
             return window;
         }
