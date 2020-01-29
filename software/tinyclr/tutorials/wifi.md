@@ -26,8 +26,8 @@ static void DoTestWiFi7Click()
         ChipSelectSetupTime = TimeSpan.FromTicks(10)
     };
 
-    networkCommunicationInterfaceSettings.SpiApiName = "GHIElectronics.TinyCLR.NativeApis.STM32H7.SpiController\\2";
-    networkCommunicationInterfaceSettings.GpioApiName = "GHIElectronics.TinyCLR.NativeApis.STM32H7.GpioController\\0";
+    networkCommunicationInterfaceSettings.SpiApiName = GHIElectronics.TinyCLR.Pins.SC20260.SpiBus.Spi3;
+    networkCommunicationInterfaceSettings.GpioApiName = GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.Id;
     networkCommunicationInterfaceSettings.SpiSettings = settings;
     networkCommunicationInterfaceSettings.InterruptPin = SC20100.GpioPin.PC5;
     networkCommunicationInterfaceSettings.InterruptEdge = GpioPinEdge.FallingEdge;
@@ -82,7 +82,8 @@ private static void NetworkController_NetworkAddressChanged(NetworkController se
 }
 ```
 
-Note: There is enable pin which needs to be high on WiFI 7 click module. 
+> [!NOTE] 
+> There is enable pin which needs to be high on WiFI 7 click module. 
 
 ```csharp
 var enablePin = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PA15);

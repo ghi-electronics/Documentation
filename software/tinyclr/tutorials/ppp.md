@@ -20,7 +20,7 @@ static void DoTestPPP()
 
     UartNetworkCommunicationInterfaceSettings networkCommunicationInterfaceSettings = new UartNetworkCommunicationInterfaceSettings()
     {
-        ApiName = "GHIElectronics.TinyCLR.NativeApis.STM32H7.UartController\\0",
+        ApiName = GHIElectronics.TinyCLR.Pins.SC20260.UartPort.Usart1,
         BaudRate = 115200,
         DataBits = 8,
         Parity = UartParity.None,
@@ -67,12 +67,14 @@ private static void NetworkController_NetworkAddressChanged(NetworkController se
 }
 ```
 
-Note that depends on your simcard and Cellular modem, you may need to send some commands to initialize the sim card to be ready for PPP.
+> [!NOTE]  
+> Depends on your sim card and cellular modem, you may need to send some commands to initialize the sim card to be ready for PPP.
+
 Below is simple AT commands that we tested on SIM900 and SKYWIRE modules, using T-Mobile Simcard.
 
 ```csharp
 static void InitSimCard() {
-    var serial = GHIElectronics.TinyCLR.Devices.Uart.UartController.FromName("GHIElectronics.TinyCLR.NativeApis.STM32H7.UartController\\0");
+    var serial = GHIElectronics.TinyCLR.Devices.Uart.UartController.FromName(GHIElectronics.TinyCLR.Pins.SC20260.UartPort.Usart1);
 
     serial.SetActiveSettings(115200, 8, GHIElectronics.TinyCLR.Devices.Uart.UartParity.None, GHIElectronics.TinyCLR.Devices.Uart.UartStopBitCount.One, GHIElectronics.TinyCLR.Devices.Uart.UartHandshake.None);
 
