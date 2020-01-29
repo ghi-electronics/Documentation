@@ -91,6 +91,6 @@ To generate a JWK, you may want to visit https://jwt.io/
 There are also two fields "iat" (issue at), and "exp" (expire), they contains time in Unix Timestamp format. You can convert them online by https://www.epochconverter.com/
 
 >[!NOTE]
->The connection accepts max expire time 24 hours, meaning "exr" - "iat" within 24 hours.
+>The connection accepts max expire time 24 hours, meaning "exp" - "iat" within 24 hours.
 
 
