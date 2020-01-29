@@ -119,5 +119,5 @@ class Program {
 
 ```
 
-## Firmware and Application Matching
+## Firmware and Application Must Match
 It is important that the firmware on your chip is the same version expected by your application. To make sure your application and firmware match, it is best to update both simultaneously if possible.
