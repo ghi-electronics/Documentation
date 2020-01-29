@@ -122,16 +122,7 @@ Flash is not typically written to at runtime. The system will function even with
 TinyCLR OS allows resources, like fonts and images, to be merged into the project as a resource and then deployed to the device's flash. Those resources can then be fetched into RAM and used at runtime. The [Resource](resources.md) tutorial has more details.
 
 ## Direct Access
-In some cases, it is necessary to be able to write/read directly to a specific address in memory. For example, to configure an internal register.
-
-The `Marshal` class found in `System.Runtime.InteropServices` provides several methods to read and write memory directly.
-
-This code assumes we need to set the third bit in a 32 bit register located at 0x12345678.
-
-```cs
-var address = new System.IntPtr(0x12345678);
-Marshal.WriteInt32(address, Marshal.ReadInt32(address) | (1 << 3));
-```
+Unsupported at this time.
 
 > [!Tip]
 > You can only read from Flash, not write.

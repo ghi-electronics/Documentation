@@ -1,6 +1,6 @@
 # Reflection
 ---
-Reflection returns objects of type `Type` that describe assemblies, modules, and types.
+Reflection class is used for obtaining type information at runtime. This class is in the System.Reflection namespace.
 
 ```csharp
 var i=20;
