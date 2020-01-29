@@ -78,8 +78,50 @@
 
 <hr>
 <p>Hyper Text Transport Protocol (HTTP) builds on top of the <a href="core-protocols.html">Core Protocols</a> to provide a standard way to work with web servers.</p>
-<pre><code>// fetch www.google.com home page
-�
+<pre><code class="lang-csharp">static void DoTestHttp()
+{
+    var url = &quot;http://www.bing.com/robots.txt&quot;;
+
+    int read = 0, total = 0;
+    byte[] result = new byte[512];
+
+    try
+    {
+        using (var req = HttpWebRequest.Create(url) as HttpWebRequest)
+        {
+            req.KeepAlive = false;                    
+            req.ReadWriteTimeout = 2000;
+
+            using (var res = req.GetResponse() as HttpWebResponse)
+            {
+                using (var stream = res.GetResponseStream())
+                {
+                    do
+                    {
+                        read = stream.Read(result, 0, result.Length);
+                        total += read;
+
+                        System.Diagnostics.Debug.WriteLine(&quot;read : &quot; + read);
+                        System.Diagnostics.Debug.WriteLine(&quot;total : &quot; + total);
+
+                        String page = &quot;&quot;;
+
+                        page = new String(System.Text.Encoding.UTF8.GetChars(result, 0, read));
+
+                        System.Diagnostics.Debug.WriteLine(&quot;Response : &quot; + page);
+                    }
+                    while (read != 0);
+
+
+                }
+            }
+        }  
+    }
+    catch
+    {
+
+    }
+}
 </code></pre><p>Secure connections similarly work, through the built in <a href="tls.html">TLS</a> support.</p>
 <p>HTTPS can also be used to send data to a cloud, such as <a href="azure.html">Azure</a>.</p>
 </article>
@@ -90,7 +132,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-special-pins/software/tinyclr/tutorials/http-https.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-tutorials/software/tinyclr/tutorials/http-https.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

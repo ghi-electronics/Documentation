@@ -84,11 +84,9 @@
 //Image is in a resource file named &quot;jpegImageFile&quot;:
 var imageBitmap = Resource1.GetBitmap(Resource1.BitmapResources.jpegImageFile);
 
-//Image is in a byte array named &quot;imageByteArray&quot;:
-imageBitmap = new Bitmap(imageByteArray, BitmapImageType.Jpeg);
-
-//Generate a bitmap from only part of a byte array.
-imageBitmap = new Bitmap(imageByteArray, offset, count, BitmapImageType.Jpeg);
+var b1 = new Bitmap(dataArray, BitmapImageType.Jpeg);
+var b2 = new Bitmap(dataArray, BitmapImageType.Gif);
+var b3 = new Bitmap(dataArray, BitmapImageType.Bmp);  
 
 var imageX = 0;
 var imageY = 0;

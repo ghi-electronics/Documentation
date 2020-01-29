@@ -4827,7 +4827,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/aws.html",
-          "hash": "f6bZMfaNtb9kswCQUonCBA=="
+          "hash": "5x5C87gOwpNgBs578PbO5w=="
         }
       },
       "is_incremental": false,
@@ -4839,7 +4839,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/azure.html",
-          "hash": "nxNoEuo3TB4lMhB2YXYiVw=="
+          "hash": "B5roedNBSaX4UbJP9VWGcw=="
         }
       },
       "is_incremental": false,
@@ -4971,7 +4971,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/ethernet.html",
-          "hash": "APU7WXyS6Tb6qaAy25nKNQ=="
+          "hash": "P0n5C5gIjE+UzKRPfcZj8w=="
         }
       },
       "is_incremental": false,
@@ -5067,7 +5067,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/http-https.html",
-          "hash": "KO47hw1MAdtujwlXiX9L7Q=="
+          "hash": "8WADwLEt5OK67uPYjgYobw=="
         }
       },
       "is_incremental": false,
@@ -5103,7 +5103,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/image-decoders.html",
-          "hash": "kK6FAcdNzREXNHzok+fDrQ=="
+          "hash": "RBGLIXndo7NM8hIYvBfYhw=="
         }
       },
       "is_incremental": false,
@@ -5192,6 +5192,17 @@
       "output": {
         "resource": {
           "relative_path": "software/tinyclr/tutorials/images/documentation-settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/tinyclr/tutorials/images/download_google_certificate.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "software/tinyclr/tutorials/images/download_google_certificate.jpg"
         }
       },
       "is_incremental": false,
@@ -5379,7 +5390,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/in-field-update.html",
-          "hash": "a8sZ2Qt3jkgwBVXdASLY6A=="
+          "hash": "iZtDs/XUxjuw8D8Kll+udA=="
         }
       },
       "is_incremental": false,
@@ -5463,7 +5474,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/mqtt.html",
-          "hash": "3o5G5XZ2iMR7u9DnoD/k0g=="
+          "hash": "TLkGvg6y/PexZC+BifOA3A=="
         }
       },
       "is_incremental": false,
@@ -5511,7 +5522,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/ppp.html",
-          "hash": "Glc5pjynZWoo4djpHO91UQ=="
+          "hash": "QiuhLS/nMJUO+iTYwgBBxw=="
         }
       },
       "is_incremental": false,
@@ -5595,7 +5606,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/secure-storage-area.html",
-          "hash": "hg3D1hVnYL3Z92jArQM+IA=="
+          "hash": "h9TMsoAWyz3/SG2osHqHSw=="
         }
       },
       "is_incremental": false,
@@ -5667,7 +5678,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/tls.html",
-          "hash": "b4yIMc+V5cqWQ6YevAumpQ=="
+          "hash": "ZKjPq3GYQNdpmt3T+EDzIw=="
         }
       },
       "is_incremental": false,
@@ -5739,7 +5750,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/user-interface.html",
-          "hash": "Zcg8sKlWrvBL7PgxWf5IVQ=="
+          "hash": "a0+qDh0Digwa1rRx+alHDA=="
         }
       },
       "is_incremental": false,
@@ -5763,7 +5774,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/wifi.html",
-          "hash": "ptGJAQXwbOCKd4KzNtWDEQ=="
+          "hash": "gZ4K4dDOIjV2sYs2jui3Yw=="
         }
       },
       "is_incremental": false,
@@ -5794,12 +5805,9 @@
           "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build"
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "TocDocumentProcessor": {
@@ -5807,9 +5815,12 @@
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build"
         }
       }

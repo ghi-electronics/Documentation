@@ -47,8 +47,7 @@ class Program {
 
         updater = new InFieldUpdate(fwBuf, appBuf);
 
-        updater.ApplicationKey = new byte[] { 0x11, 0x11, 0x11, 0x11,
-            0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11 };
+        updater.ApplicationKey = new byte[] { }; //Add key as byte array here.
 
         try {
             updater.AuthenticateFirmware(out var versionFw);
@@ -102,8 +101,7 @@ class Program {
 
         updater = new InFieldUpdate(fsApp);
 
-        updater.ApplicationKey = new byte[] { 0x11, 0x11, 0x11, 0x11,
-            0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11 };
+        updater.ApplicationKey = new byte[] { }; //Add key as byte array here.
 
         try {
             updater.AuthenticateApplication(out var versionApp);
@@ -119,4 +117,4 @@ class Program {
 ```
 
 ## Firmware and Application Matching
-It is important that the firmware on your chip is the same version expected by your application. To make sure your application and firmware match, it is best to always update both simultaneously if possible.
+It is important that the firmware on your chip is the same version expected by your application. To make sure your application and firmware match, it is best to update both simultaneously if possible.

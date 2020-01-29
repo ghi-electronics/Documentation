@@ -78,7 +78,54 @@
 
 <hr>
 <p>TLS is how the Internet securely works, for banks, airports and security systems. We support TLS 1.3, a global security standard. All encryption, decryption and certification are done a secure internal memory.</p>
-<p>More details will be added to this tutorials but see the cloud support for actual use examples on <a href="azure.html">Azure</a>, <a href="aws.html">AWS</a> and <a href="google-cloud.html">Google Cloud</a>.</p>
+<p>Below is simple example show to connect <a href="https://www.google.com">https://www.google.com</a> </p>
+<pre><code class="lang-csharp">static void DoTestHttps()
+{
+    var url = &quot;https://www.google.com&quot;;
+
+    var certificates = Resources.GetBytes(Properties.Resources.BinaryResources.GlobalSign);
+
+    X509Certificate[] certx509 = new X509Certificate[] { new X509Certificate(certificates) };
+
+    int read = 0, total = 0;
+    byte[] result = new byte[512];
+
+    try
+    {
+        using (var req = HttpWebRequest.Create(url) as HttpWebRequest)
+        {
+            req.KeepAlive = false;
+            req.HttpsAuthentCerts = certx509;
+            req.ReadWriteTimeout = 2000;
+
+            using (var res = req.GetResponse() as HttpWebResponse)
+            {
+                using (var stream = res.GetResponseStream())
+                {
+                    do
+                    {
+                        read = stream.Read(result, 0, result.Length);
+                        total += read;
+
+                        System.Diagnostics.Debug.WriteLine(&quot;read : &quot; + read);
+                        System.Diagnostics.Debug.WriteLine(&quot;total : &quot; + total);
+
+                        var page = new String(System.Text.Encoding.UTF8.GetChars(result, 0, read));
+
+                        System.Diagnostics.Debug.WriteLine(&quot;Response : &quot; + page);
+                    }
+                    while (read != 0);
+                }
+            }
+        }
+
+    }
+    catch { }
+
+}
+</code></pre><div class="NOTE"><h5>Note</h5><p>TinyCLR 2.0 requires a root certificate to access secure websites. TinyCLR accepts certificates in both text and binary formats. The following instructions show how to download certificates:</p>
+</div>
+<p><img src="images/download_google_certificate.jpg" alt="How to dowload certificate"></p>
 </article>
           </div>
           
@@ -87,7 +134,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-special-pins/software/tinyclr/tutorials/tls.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-tutorials/software/tinyclr/tutorials/tls.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
