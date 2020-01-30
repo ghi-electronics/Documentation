@@ -82,25 +82,25 @@
 <p>RAM is used a lot at runtime. It is important to understand needed memory and plan accordingly. When creating a data receiving buffer from UART for example, use a reasonable size that you really need.</p>
 <h2 id="ram-memory-size">RAM Memory Size</h2>
 <p>Free and used memory sizes can be measured at runtime. This helps in optimizing systems.</p>
-<pre><code class="lang-cs">var freeRam = GHIElectronics.TinyCLR.Native.Memory.FreeBytes;
-var usedRam = GHIElectronics.TinyCLR.Native.Memory.UsedBytes;
+<pre><code class="lang-csharp">var freeRam = GHIElectronics.TinyCLR.Native.Memory.ManagedMemory.FreeBytes;
+var usedRam = GHIElectronics.TinyCLR.Native.Memory.ManagedMemory.UsedBytes;
 </code></pre><h2 id="allocating-memory">Allocating Memory</h2>
-<p>TinyCLR OS Garbage Collector allocates and frees objects automatically on the heap. When the memory gets fragmented, the system will compact the heap. This is the desired behavior but this also creates a problem when sharing resource between TinyCLR OS and native drivers. In advance setup, a user may have a buffer that gets written to from an interrupt routine. Assuming this is implemented in native code, we would need a buffer that always sits at a fixed address. Using <code>var buffer = new byte[12];</code> will not work as the garbage collector may move the buffer to compact the heap.</p>
-<p>A fixed location buffer can be allocated using <code>GHIElectronics.TinyCLR.Native.Memory.Allocate()</code>. Keep in mind that this is not managed memory anymore and you are responsible to free this memory using <code>GHIElectronics.TinyCLR.Native.Memory.Free()</code>.</p>
+<p>TinyCLR OS Garbage Collector allocates and frees objects automatically on the heap. When the memory gets fragmented, the system will compact the heap. This is the desired behavior, but this also creates a problem when sharing resource between TinyCLR OS and native drivers. In advance setup, a user may have a buffer that gets written to from an interrupt routine. Assuming this is implemented in native code, we would need a buffer that always sits at a fixed address. Using <code>var buffer = new byte[12];</code> will not work as the garbage collector may move the buffer to compact the heap.</p>
+<p>A fixed location buffer can be allocated using <code>GHIElectronics.TinyCLR.Native.Memory.ManagedMemory.Allocate()</code>. Keep in mind that this is not managed memory anymore and you are responsible to free this memory using <code>GHIElectronics.TinyCLR.Native.Memory.ManagedMemory.Free()</code>.</p>
 <h2 id="memory-allocation-cost">Memory Allocation Cost</h2>
 <p>Creating/disposing objects is costly, especially when used in inner loops. Assuming there is a method that sends a byte array over a buses/network. Also assuming we there is a byte that needs to be sent. We will need to create a byte array of size one.</p>
 <pre><code class="lang-cs">void WritByte(byte b) {
     var ba = new byte[1];
     // use that byte
     ba[0] = b;
-    Network.SendByteArray(b);
+    Network.SendByteArray(ba);
 }
 </code></pre><p>The code will work just fine but if it is being used in inner loops and it is being called 1000/second, then it will need to create and lose 1000 individual arrays. The system will run better if the array is created only once.</p>
 <pre><code class="lang-cs">byte[] ba = new byte[1];
 void WritByte(byte b) {
     // use that byte
     ba[0] = b;
-    Network.SendByteArray(b);
+    Network.SendByteArray(ba);
 }
 </code></pre><h2 id="disposing-objects">Disposing Objects</h2>
 <p>With TinyCLR OS being managed system that monitors and frees resources, memory/object leaks become less of a concern. However, there is still chance that issues can arise, especially in embedded systems, where objects can be a combination of memory and a physical thing. Take a GPIO pin for example. What happens when we no longer have a reference to a pin? Will the GC free the object? Will the pin change in state when the GC frees the pin? And finally, why would a pin (or any physical object) be left for the GC to decide how it should be freed? The right answer is that we need to understand and track these resources manually.</p>
@@ -191,7 +191,7 @@ Marshal.WriteInt32(address, Marshal.ReadInt32(address) | (1 &lt;&lt; 3));
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-special-pins/software/tinyclr/tutorials/memory.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-tutorials/software/tinyclr/tutorials/memory.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

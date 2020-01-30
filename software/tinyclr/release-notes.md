@@ -2,7 +2,18 @@
 ---
 ![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
 
-## 2.0.0-preview2 on 2019-01-22
+## 2.0.0-p2 (2020-01-31)
+
+### Notes
+A refresh release of the firmware only with improved performance.
+
+#### Changes
+- Considerably faster execution speed.
+
+#### Known Issues
+- Same as previous release
+
+## 2.0.0-p2 (2020-01-22)
 
 ### Notes
 Initial insider release for SITCore hardware.
@@ -55,7 +66,7 @@ Initial insider release for SITCore hardware.
 - PulseFeedback DrainDuration does not work when going from low to high.
 - Not digitally signed.
 
-## 2.0.0-preview1 on 2019-12-09
+## 2.0.0-p1 (2019-12-09)
 
 ### Notes
 A preview of the new API and available features.

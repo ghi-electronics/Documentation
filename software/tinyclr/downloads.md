@@ -47,13 +47,14 @@ File | Date | Status | MD5
 
 
 ### Firmwares
-The Firmware is the TinyCLR OS that lives on your hardware. The firmware version loaded on the hardware must match the version number of the extension and the libraries. This will be easier managed once the libraries are hosted on http://www.nuget.org/
+The Firmware is the TinyCLR OS that lives on your hardware. The firmware version loaded on the hardware must match the version number of the extension and the libraries. This will be more easily managed once the libraries are hosted on http://www.nuget.org/
 
 #### SC20xxxx (works on all SITCore products)
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.0.0-preview2](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore%20Firmware%20v2.0.0-preview2.ghi) |2020-01-22 | Preview | 61148AD3CC4A5E7D79D5F73B7F313C7F
+[v2.0.0.21000 (preview2)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore%20Firmware%20v2.0.0.21000-preview2.ghi) |2020-01-31 | Preview | 
+[v2.0.0.20000 (preview2)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore%20Firmware%20v2.0.0.20000-preview2.ghi) |2020-01-22 | Preview | 61148AD3CC4A5E7D79D5F73B7F313C7F
 
 ## TinyCLR OS 1.0
 
@@ -72,5 +73,4 @@ File | Date | MD5
 [G80](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/G80/G80%20Firmware%20v1.0.0.ghi) | 2018-12-27 | CE90C3F05C6193A68C42E7D4C3A5AB80
 [G30](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/G30/G30%20Firmware%20v1.0.0.ghi) | 2018-12-27 | B3A3BC288A4776506D40198847AFAB85
 [FEZCLR (FEZ T18)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/FEZCLR/FEZCLR%20Firmware%20v1.0.0.glb) | 2018-12-27 | C089598B40CC7398DD7BBC3723D25D0E
-
 

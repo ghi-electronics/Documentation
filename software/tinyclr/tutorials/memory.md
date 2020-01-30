@@ -9,15 +9,15 @@ RAM is used a lot at runtime. It is important to understand needed memory and pl
 ## RAM Memory Size
 Free and used memory sizes can be measured at runtime. This helps in optimizing systems.
 
-```cs
-var freeRam = GHIElectronics.TinyCLR.Native.Memory.FreeBytes;
-var usedRam = GHIElectronics.TinyCLR.Native.Memory.UsedBytes;
+```csharp
+var freeRam = GHIElectronics.TinyCLR.Native.Memory.ManagedMemory.FreeBytes;
+var usedRam = GHIElectronics.TinyCLR.Native.Memory.ManagedMemory.UsedBytes;
 ```
 
 ## Allocating Memory
-TinyCLR OS Garbage Collector allocates and frees objects automatically on the heap. When the memory gets fragmented, the system will compact the heap. This is the desired behavior but this also creates a problem when sharing resource between TinyCLR OS and native drivers. In advance setup, a user may have a buffer that gets written to from an interrupt routine. Assuming this is implemented in native code, we would need a buffer that always sits at a fixed address. Using `var buffer = new byte[12];` will not work as the garbage collector may move the buffer to compact the heap.
+TinyCLR OS Garbage Collector allocates and frees objects automatically on the heap. When the memory gets fragmented, the system will compact the heap. This is the desired behavior, but this also creates a problem when sharing resource between TinyCLR OS and native drivers. In advance setup, a user may have a buffer that gets written to from an interrupt routine. Assuming this is implemented in native code, we would need a buffer that always sits at a fixed address. Using `var buffer = new byte[12];` will not work as the garbage collector may move the buffer to compact the heap.
 
-A fixed location buffer can be allocated using `GHIElectronics.TinyCLR.Native.Memory.Allocate()`. Keep in mind that this is not managed memory anymore and you are responsible to free this memory using `GHIElectronics.TinyCLR.Native.Memory.Free()`.
+A fixed location buffer can be allocated using `GHIElectronics.TinyCLR.Native.Memory.ManagedMemory.Allocate()`. Keep in mind that this is not managed memory anymore and you are responsible to free this memory using `GHIElectronics.TinyCLR.Native.Memory.ManagedMemory.Free()`.
 
 ## Memory Allocation Cost
 Creating/disposing objects is costly, especially when used in inner loops. Assuming there is a method that sends a byte array over a buses/network. Also assuming we there is a byte that needs to be sent. We will need to create a byte array of size one.
@@ -27,7 +27,7 @@ void WritByte(byte b) {
     var ba = new byte[1];
     // use that byte
     ba[0] = b;
-    Network.SendByteArray(b);
+    Network.SendByteArray(ba);
 }
 ```
 The code will work just fine but if it is being used in inner loops and it is being called 1000/second, then it will need to create and lose 1000 individual arrays. The system will run better if the array is created only once.
@@ -37,7 +37,7 @@ byte[] ba = new byte[1];
 void WritByte(byte b) {
     // use that byte
     ba[0] = b;
-    Network.SendByteArray(b);
+    Network.SendByteArray(ba);
 }
 ```
 
