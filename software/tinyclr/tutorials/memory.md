@@ -49,7 +49,7 @@ This example code will turn an LED on but we it not be able to control that pin 
 ```cs
 class Program {
     static void BadExample() {
-        var led = GpioController.GetDefault().OpenPin(FEZ.GpioPin.Led1);
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.High);
     }
@@ -57,7 +57,7 @@ class Program {
     static void Main() {
         BadExample();
         // This code will raise an exception
-        var led = GpioController.GetDefault().OpenPin(FEZ.GpioPin.Led1);
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.Low);
         //...
@@ -68,8 +68,8 @@ This example will `Dispose` the pin and the code will work; however, disposing t
 
 ```cs
 class Program {
-    static void BadExample() {
-        var led = GpioController.GetDefault().OpenPin(FEZ.GpioPin.Led1);
+    static void GoodExample() {
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.High);
         // Free the pin, but this may change the pin status to default
@@ -77,9 +77,9 @@ class Program {
     }
 
     static void Main() {
-        BadExample();
+        GoodExample();
         // This code will now work
-        var led = GpioController.GetDefault().OpenPin(FEZ.GpioPin.Led1);
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.Low);
         //...
@@ -99,7 +99,7 @@ class Program {
 
     static void Main() {
         // Init the hardware
-        led = GpioController.GetDefault().OpenPin(FEZ.GpioPin.Led1);
+        led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
         led.SetDriveMode(GpioPinDriveMode.Output);
         // You can use the pin everywhere now
         // ... in the method

@@ -78,9 +78,11 @@
 
 <hr>
 <p>The example below show how to use MQTT to send and receive messages from IoT Hub Azure</p>
+<div class="TIP"><h5>Tip</h5><p>Need Nugets: GHIElectronics.TinyCLR.Networking.Mqtt</p>
+</div>
 <pre><code class="lang-csharp">static void DoTestAzureMqtt()
 {
-    var caCert = new X509Certificate(UTF8Encoding.UTF8.GetBytes(&quot;Add azure certificate here&quot;));
+    var caCert = new X509Certificate(UTF8Encoding.UTF8.GetBytes(&quot;Need Azure certificate&quot;));
 
     var iotHubName = &quot;your IoT Hub name&quot;;
     var iotHubPort = 8883;
@@ -89,7 +91,7 @@
     const string deviceId = &quot;your device Id&quot;;
 
     var username = string.Format(&quot;{0}/{1}&quot;, iotHubName, deviceId);
-    var password = &quot;your password&quot;;
+    var password = &quot;your string connection&quot;;
 
     // define topics
     var topicDeviceToServer = string.Format(&quot;devices/{0}/messages/events/&quot;, deviceId);
@@ -131,10 +133,10 @@
     {
         throw;
     }
-}
-</code></pre><div class="NOTE"><h5>Note</h5><p>This example requires iotHubName, deviceId, and Password, which are available only when you register an Azure account.
-More detail about Microsoft Azure, please visit: <a href="https://azure.microsoft.com/en-us/">https://azure.microsoft.com/en-us/</a></p>
-</div>
+</code></pre><p>This example requires iotHubName, deviceId, which are available only when you register an Azure account.</p>
+<p>For &quot;password&quot;, this is a string connection, it starts with &quot;SharedAccessSignature sr=...&quot;.</p>
+<p>To generate a &quot;password&quot; string, visit <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string">https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string</a></p>
+<p>More detail about Microsoft Azure, please visit: <a href="https://azure.microsoft.com/en-us/">https://azure.microsoft.com/en-us/</a></p>
 </article>
           </div>
           

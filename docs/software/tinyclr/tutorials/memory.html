@@ -107,7 +107,7 @@ void WritByte(byte b) {
 <p>This example code will turn an LED on but we it not be able to control that pin anymore. The <code>BadExample</code> method uses a pin but it doesn&#39;t free it.</p>
 <pre><code class="lang-cs">class Program {
     static void BadExample() {
-        var led = GpioController.GetDefault().OpenPin(FEZ.GpioPin.Led1);
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.High);
     }
@@ -115,7 +115,7 @@ void WritByte(byte b) {
     static void Main() {
         BadExample();
         // This code will raise an exception
-        var led = GpioController.GetDefault().OpenPin(FEZ.GpioPin.Led1);
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.Low);
         //...
@@ -123,8 +123,8 @@ void WritByte(byte b) {
 }
 </code></pre><p>This example will <code>Dispose</code> the pin and the code will work; however, disposing the pin may take the pin back to the default state. There is no exact definition on what a piece of hardware (pin in this example) does when disposed.</p>
 <pre><code class="lang-cs">class Program {
-    static void BadExample() {
-        var led = GpioController.GetDefault().OpenPin(FEZ.GpioPin.Led1);
+    static void GoodExample() {
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.High);
         // Free the pin, but this may change the pin status to default
@@ -132,9 +132,9 @@ void WritByte(byte b) {
     }
 
     static void Main() {
-        BadExample();
+        GoodExample();
         // This code will now work
-        var led = GpioController.GetDefault().OpenPin(FEZ.GpioPin.Led1);
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.Low);
         //...
@@ -150,7 +150,7 @@ void WritByte(byte b) {
 
     static void Main() {
         // Init the hardware
-        led = GpioController.GetDefault().OpenPin(FEZ.GpioPin.Led1);
+        led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
         led.SetDriveMode(GpioPinDriveMode.Output);
         // You can use the pin everywhere now
         // ... in the method
@@ -168,12 +168,8 @@ void WritByte(byte b) {
 <h2 id="resources">Resources</h2>
 <p>TinyCLR OS allows resources, like fonts and images, to be merged into the project as a resource and then deployed to the device&#39;s flash. Those resources can then be fetched into RAM and used at runtime. The <a href="resources.html">Resource</a> tutorial has more details.</p>
 <h2 id="direct-access">Direct Access</h2>
-<p>In some cases, it is necessary to be able to write/read directly to a specific address in memory. For example, to configure an internal register.</p>
-<p>The <code>Marshal</code> class found in <code>System.Runtime.InteropServices</code> provides several methods to read and write memory directly.</p>
-<p>This code assumes we need to set the third bit in a 32 bit register located at 0x12345678.</p>
-<pre><code class="lang-cs">var address = new System.IntPtr(0x12345678);
-Marshal.WriteInt32(address, Marshal.ReadInt32(address) | (1 &lt;&lt; 3));
-</code></pre><div class="TIP"><h5>Tip</h5><p>You can only read from Flash, not write.</p>
+<p>Unsupported at this time.</p>
+<div class="TIP"><h5>Tip</h5><p>You can only read from Flash, not write.</p>
 </div>
 <h2 id="garbage-collection">Garbage Collection</h2>
 <p>TinyCLR OS automatically disposes of objects that are no longer needed. Garbage collection eliminates the need to manage memory manually, and reduces or eliminates some types of bugs.</p>
