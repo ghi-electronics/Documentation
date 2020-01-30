@@ -1,9 +1,9 @@
 # User Interface
 ---
-You can use the `GHIElectronics.TinyCLR.UI` library to create user interfaces for your application. It is inspired by WPF on the desktop.
+You can use the `GHIElectronics.TinyCLR.UI` library to create user interfaces for your application. The UI library is inspired by Windows Presentation Foundation on the desktop.
 
 ## Application Management
-There is no special requirements when simply [graphics](graphics.md). However, the user interface has internal management requirements, that is handled by the application class. Your starting point will look like the following code. Do not forget to add the `GHIElectronics.TinyCLR.UI` NuGet package.
+The UI library requires internal management that is handled by the application class. The following code provides a good starting point. Do not forget to add the `GHIElectronics.TinyCLR.UI` NuGet package.
 
 ```csharp
 using GHIElectronics.TinyCLR.UI;
@@ -13,6 +13,7 @@ namespace UserInterfaceExample {
     class Program : Application {
         public Program(DisplayController d) : base(d) {
         }
+
         static void Main() {
             var display = DisplayController.GetDefault();
 
@@ -25,6 +26,7 @@ namespace UserInterfaceExample {
             var app = new Program(display);
             app.Run(Program.CreateWindow(display));
         }
+
         private static Window CreateWindow(DisplayController display) {
             var window = ...
             return window;
@@ -35,7 +37,7 @@ namespace UserInterfaceExample {
 
 ## Windows
 
-You can have multiple windows in your application but you will at least need one. Here is a complete example that shows a window with a gradient brush background. The code is for SC20260D Dev board with 4.3 display.
+While you can have multiple windows in your UI application, it is mandatory to have at least one window. Here is a complete example that shows a window with a gradient brush background. The code is for SC20260D Dev board with the 4.3 inch display.
 
 ```csharp
 using GHIElectronics.TinyCLR.UI;
@@ -54,16 +56,18 @@ namespace UserInterfaceExample
         public Program(DisplayController d) : base(d)
         {
         }
+
         static Program app;
+
         static void Main()
         {
-
             GpioPin backlight = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA15);
             backlight.SetDriveMode(GpioPinDriveMode.Output);
             backlight.Write(GpioPinValue.High);
             var display = DisplayController.GetDefault();
 
-            var controllerSetting = new GHIElectronics.TinyCLR.Devices.Display.ParallelDisplayControllerSettings
+            var controllerSetting = new 
+                GHIElectronics.TinyCLR.Devices.Display.ParallelDisplayControllerSettings
             {
                 Width = 480,
                 Height = 272,
@@ -90,10 +94,10 @@ namespace UserInterfaceExample
             var ptr = Memory.UnmanagedMemory.Allocate(640 * 480 * 2);
             var data = Memory.UnmanagedMemory.ToBytes(ptr, 640 * 480 * 2);
 
-
-           app = new Program(display);
+            app = new Program(display);
             app.Run(Program.CreateWindow(display));
         }
+
         private static Window CreateWindow(DisplayController display)
         {
             var window = new Window
@@ -101,14 +105,20 @@ namespace UserInterfaceExample
                 Height = (int)display.ActiveConfiguration.Height,
                 Width = (int)display.ActiveConfiguration.Width
             };
-            window.Background = new LinearGradientBrush(Colors.Blue, Colors.Teal, 0, 0, window.Width, window.Height);
+
+            window.Background = new LinearGradientBrush
+                (Colors.Blue, Colors.Teal, 0, 0, window.Width, window.Height);
+
             window.Visibility = Visibility.Visible;
+
             return window;
         }
     }
 }
 ```
-The code is for N18 Display and SC20100 Dev board.
+
+This code is for the SC20100 Dev Board with the N18 1.8 inch display.
+
 ```csharp
 using System;
 using System.Drawing;
@@ -124,9 +134,11 @@ namespace SC20100_N18_WPF{
     class Program : Application{
         public Program(DisplayController d) : base(d){
         }
+
         private static ST7735Controller st7735;
         private const int SCREEN_WIDTH = 160;
         private const int SCREEN_HEIGHT = 128;
+
         private static void Main(){
             var spi = SpiController.FromName(SC20100.SpiBus.Spi3);
             var gpio = GpioController.GetDefault();
@@ -157,16 +169,22 @@ namespace SC20100_N18_WPF{
             var app = new Program(displayController);
             app.Run(Program.CreateWindow(displayController));      
         }
+
         private static void Graphics_OnFlushEvent(IntPtr hdc, byte[] data){
             st7735.DrawBuffer(data);
         }
+
         private static Window CreateWindow(DisplayController display){
             var window = new Window{
                 Height = (int)display.ActiveConfiguration.Height,
                 Width = (int)display.ActiveConfiguration.Width
             };
-            window.Background = new LinearGradientBrush(Colors.Blue, Colors.Red, 0, 0, window.Width, -20);
+
+            window.Background = new LinearGradientBrush
+                Colors.Blue, Colors.Red, 0, 0, window.Width, -20);
+
             window.Visibility = Visibility.Visible;
+
             return window;
         }
     }
@@ -174,9 +192,9 @@ namespace SC20100_N18_WPF{
 ```
 
 ## Elements
-A window is not very useful without some elements (controls). There are several built in elements and you can also custom make your own. All elements descend from the `UIElement` class. Explore the `GHIElectronics.TinyCLR.UI.Controls` namespace for available options.
+A window is not very useful without some elements (controls). There are many available standard elements, and you can make your own custom elements as well. All elements descend from the `UIElement` class. Explore the `GHIElectronics.TinyCLR.UI.Controls` namespace to see what's available.
 
-For the sake of simplifying the rest of this tutorial, we will add `private static UIElement Elements()` method that creates and returns the elements. This is then assigned to the `Child` of our `Window`. You will need to add `window.Child = Elements();` right before returning from `CreateWindow`.
+For the sake of simplifying the rest of this tutorial, we've added the `private static UIElement Elements()` method that creates and returns the elements. This is then assigned to the child of our window. You will need to add `window.Child = Elements();` right before returning from `CreateWindow`.
 
 
 > [!Tip]
@@ -190,16 +208,16 @@ private static UIElement Elements() {
         HorizontalAlignment = HorizontalAlignment.Center,
         VerticalAlignment = VerticalAlignment.Center
     };
+
     return txt;
 }
 ```
 
-## Text and TextBox
+### Label, TextBlock, and TextBox     Text and TextBox
+A TextBlock just displays text that cannot be changed at runtime. A TextBlock could be used for a window title, for example. A Label is like a TextBlock, but Label text can be changed at runtime. The Label control can also host controls other than text strings. The TextBox allows for both single line and multiple line text input.
 
-These 2 elements are very basic and very useful. They are used in many of the examples throught this tutorial.
-
-## Panel
-A `Window` can carry only a single `Child`, that is a single element. This is not a concern because the single element can be a container, like a `Panel`, which holds multiple elements. You can even have panels within panels and each has its own elements. This example will introduce shapes found in the `GHIElectronics.TinyCLR.UI.Shapes` namespace. It also shows an example of the `TextBox` element. We will also set margins for a better look.
+### Panel
+A `Window` can carry only a single `Child`, that is a single element. This is not a concern because the single element can be a container, like a `Panel`, which holds multiple elements. You can even have panels within panels with each having its own elements. This example will introduce shapes found in the `GHIElectronics.TinyCLR.UI.Shapes` namespace. It also shows an example of the `TextBox` element. We will also set margins for a better look.
 
 ```csharp
 private static UIElement Elements() {
@@ -208,8 +226,8 @@ private static UIElement Elements() {
     var txt1 = new TextBox() {
         HorizontalAlignment = HorizontalAlignment.Left,
         VerticalAlignment = VerticalAlignment.Top,
-
     };
+
     txt1.Font = font;
     txt1.SetMargin(20);
     txt1.Text = "Hello World!";
@@ -218,13 +236,14 @@ private static UIElement Elements() {
         ForeColor = Colors.White,
         HorizontalAlignment = HorizontalAlignment.Right,
     };
-    txt2.SetMargin(20);
 
+    txt2.SetMargin(20);
 
     var rect = new Rectangle(200, 10) {
         Fill = new SolidColorBrush(Colors.Green),
         HorizontalAlignment = HorizontalAlignment.Center,
     };
+
     panel.Children.Add(txt1);
     panel.Children.Add(txt2);
     panel.Children.Add(rect);
@@ -233,11 +252,11 @@ private static UIElement Elements() {
 }
 ```
 
-## StackPanel
+### StackPanel
 
-There are also two types of elements that descend from panels, `Canvas` and `StackPanel`. The canvas allows elements to be added anywhere. Stack panels, on the other had, places elements in order.
+There are also two types of elements that descend from panels, `Canvas` and `StackPanel`. The Canvas control allows elements to be added anywhere. StackPanels, on the other hand, place elements in order.
 
-We will modify the previous example to use vertical stack. The elements will stack and be arrange to the right and the left. Note that setting vertical alignment will be ignored as the vertical stack does overrides how elements are stacked vertically.
+We will modify the previous example to use a vertical StackPanel. The elements will stack and be arranged to the right and the left. Note that setting vertical alignment will be ignored as the vertical StackPanel overrides how elements are stacked.
 
 ```csharp
 private static UIElement Elements() {
@@ -246,22 +265,24 @@ private static UIElement Elements() {
     var txt1 = new TextBox() {
         HorizontalAlignment = HorizontalAlignment.Left,
         VerticalAlignment = VerticalAlignment.Top,
-
     };
+
     txt1.Font = font;
     txt1.SetMargin(20);
     txt1.Text = "Hello World!";
+
     var txt2 = new Text(font, "TinyCLR is Great!") {
         ForeColor = Colors.White,
         HorizontalAlignment = HorizontalAlignment.Right,
     };
-    txt2.SetMargin(20);
 
+    txt2.SetMargin(20);
 
     var rect = new Rectangle(200, 10) {
         Fill = new SolidColorBrush(Colors.Green),
         HorizontalAlignment = HorizontalAlignment.Center,
     };
+
     panel.Children.Add(txt1);
     panel.Children.Add(txt2);
     panel.Children.Add(rect);
@@ -270,9 +291,9 @@ private static UIElement Elements() {
 }
 ```
 
-## Canvas
+### Canvas
 
-The canvas provides pixel level control over where element go on the screen. However, like all other components, canvas is aware of the window size and things are aligned from it sides.
+The Canvas element provides pixel level control over the placement of its child controls. The `Width` and `Height` properties of Canvas are requested dimensions, but the actual size depends on the size of the parent element. The `ActualWidth` and `ActualHeight` properties can be used to determine the actual size of the Canvas. Controls within a Canvas are positioned relative to the four edges of the Canvas.
 
 ```csharp
 private static UIElement Elements() {
@@ -289,29 +310,33 @@ private static UIElement Elements() {
 
     Canvas.SetLeft(rect, 20);
     Canvas.SetBottom(rect, 20);
+
     canvas.Children.Add(rect);
+
     Canvas.SetLeft(txt, 30);
     Canvas.SetBottom(txt, 25);
+
     canvas.Children.Add(txt);
 
     return canvas;
 }
 ```
 
-## Border
+### Border
 
-This element allows a border to be added. The border starts from the parent element and then the child is constrained to the border's thickness. This example will demonstrate how. The border is this example i set to 10, meaning the window (the parent) will grow inwards the border's thickness and then the child element(s) will fill in. If the children do not fill in the entire space then the border will fill in more than the assigned thickness. Uncomment the 2 alignment lines to see undesired effect of how borders work.
+This element defines a border inside another element. The position of child elements is constrained to the area inside the border. In this example the border thickness is set to 10, but if the children do not fill the area within the border, the border's thickness will automatically increase. Uncomment the two alignment lines to see an undesired effect of how borders work.
 
 ```csharp
 private static UIElement Elements() {
-
     var border = new Border();
     border.SetBorderThickness(10);
     border.BorderBrush = new SolidColorBrush(Colors.Red)
+
     var txt = new TextBox() {
         //HorizontalAlignment = HorizontalAlignment.Center,
         //VerticalAlignment= VerticalAlignment.Center,
     };
+
     txt.Font = font;
     txt.Text = "TinyCLR is Great!";
     border.Child = txt;
@@ -320,11 +345,10 @@ private static UIElement Elements() {
 }
 ```
 
-The fix around this is to add a container and then the container will have a border. In this example, the parent of the border is the canvas instead of the window.
+The fix is to add a container and then the container will have a border. In this example, the parent of the border is the canvas instead of the window.
 
 ```csharp
 private static UIElement Elements() {
-
     var canvas = new Canvas();
     var border = new Border();
     border.SetBorderThickness(10);
@@ -343,9 +367,9 @@ private static UIElement Elements() {
 }
 ```
 
-## Button
+### Button
 
-Buttons are a good place for user input. The button needs a child, typically text. Buttons also have `Click` event to handle the user input.
+Buttons are simple controls that accept user input in the form of a click, which in embedded devices is usually a finger tap on a touch screen. The button needs a child, typically text, which describes the button's function. Buttons have a `Click` event to respond to user input.
 
 ```csharp
 private static UIElement Elements() {
@@ -353,27 +377,28 @@ private static UIElement Elements() {
         VerticalAlignment = VerticalAlignment.Center,
         HorizontalAlignment = HorizontalAlignment.Center,
     };
+
     var button = new Button() {
         Child = txt,
         Width = 100,
         Height = 40,
     };
+
     button.Click += Button_Click;
     return button;
 }
 
 private static void Button_Click(object sender, RoutedEventArgs e) {
-    // Add your code here...
+    // Add button click event code here...
 }
 ```
 
-## TextFlow
+### TextFlow
 
-This element helps in adding text on multi-line and with different colors and sizes.
+TextFlow is a more powerful version of TextBlock that supports more advanced text formatting, and works well with large blocks of text.
 
 ```csharp
 private static UIElement Elements() {
-
     var textFlow = new TextFlow();
     textFlow.TextRuns.Add("Hello ", font, Colors.Red);
     textFlow.TextRuns.Add("World!", font, Colors.Purple);
@@ -384,7 +409,7 @@ private static UIElement Elements() {
 }
 ```
 
-## ListBox
+### ListBox
 
 This element provides a list of options for users to select from.
 
@@ -409,13 +434,16 @@ private static UIElement Elements() {
         Width=30,
         Stroke = new Pen(Colors.Black),
     };
+
     var separator = new ListBoxItem() {
         Child = rect,
         IsSelectable = false,
     };
+
     separator.SetMargin(2);
 
     var listBox = new ListBox();
+
     listBox.Items.Add(new Text(font, "Item 1"));
     listBox.Items.Add(new Text(font, "Item 2"));
     listBox.Items.Add(separator);
@@ -426,14 +454,14 @@ private static UIElement Elements() {
 }
 ```
 
-## ScrollViewer
+### ScrollViewer
 
-The scroll viewer allows for viewing content that are larger than the viewing area. The user input can then be used to shift the content within the viewing area.
+The scroll viewer allows for viewing content that is larger than the viewing area. The user input can then be used to shift the content within the viewing area.
 
 
-## The Dispatcher
+### The Dispatcher
 
-The User Interface libraries rely on a dispatcher internally to handle system events and updates the invalidated elements. Any changes to any of the elements needs to happen from within the dispatcher. In this example, we will show time on the screen. The time will be in a text box that is updated every second using a `Timer`. Since timers run in their own thread, a dispatcher invoke is needed.
+The User Interface libraries rely on a dispatcher internally to handle system events and updates the invalidated elements. Any changes to any of the elements needs to happen from within the dispatcher. In this example, we will show the time on the screen. The time will be in a text box that is updated every second using a `Timer`. Since timers run in their own thread, a dispatcher invoke is needed.
 
 ```csharp
 static void Counter(object o) {
@@ -482,7 +510,7 @@ private static void Counter(object sender, EventArgs e) {
 }
 ```
 
-## User Input
+### User Input
 A user can feed in input to the graphical interface through touch or button input.
 
 ```csharp
