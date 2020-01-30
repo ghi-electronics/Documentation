@@ -20,4 +20,4 @@ screen.DrawImage(imageBitmap, imageX, imageY);
 ```
 
 ## Video playback
-Animated GIFs are not supported but [Motion JPEG](mjpeg-video.md) is supported.
+Animated GIFs are not supported but [Motion JPEG](mjpeg-video.md) will soon be supported.

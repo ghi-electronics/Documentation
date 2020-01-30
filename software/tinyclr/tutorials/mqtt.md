@@ -1,12 +1,12 @@
 # MQTT
 ---
 
-MQTT is a light weight messaging protocol for sensors and it is the protocol supported by all major cloud services. The specific cloud pages has further details [Azure](azure.md), [AWS](aws.md) and [Google Cloud](google-cloud.md).
+MQTT is a light weight messaging protocol for sensors that is supported by all major cloud services. See the following cloud provider pages for further details: [Azure](azure.md), [AWS](aws.md) and [Google Cloud](google-cloud.md).
 
-This example shows a simple use of MQTT but the previous cloud pages has further details.
+The following is a simple example of MQTT:
 
 >[!TIP]
->Need Nugets: GHIElectronics.TinyCLR.Networking.Mqtt
+>Needed Nugets: GHIElectronics.TinyCLR.Networking.Mqtt
 
 ```csharp
 static void DoTestMqtt()
@@ -46,12 +46,13 @@ static void DoTestMqtt()
 
         var packetId = 1;
                 
-        // subcribe a topic
-        client.Subscribe(new string[] { topic }, new QoSLevel[] { QoSLevel.ExactlyOnce }, (ushort)packetId++);
+        // Subscribe to a topic
+        client.Subscribe(new string[] { topic }, new QoSLevel[] { QoSLevel.ExactlyOnce },
+            (ushort)packetId++);
 
-        // public a topic
-        client.Publish(topic, Encoding.UTF8.GetBytes("your message"), QoSLevel.MostOnce, false, (ushort)packetId);
-
+        // Publish a topic
+        client.Publish(topic, Encoding.UTF8.GetBytes("your message"), QoSLevel.MostOnce,
+            false, (ushort)packetId);
     }
     catch (Exception e) 
     { 
@@ -59,8 +60,9 @@ static void DoTestMqtt()
     }
 }
 ```
+
 >[!NOTE]
-> MQTT driver in TinyCLR OS support client mode only.
+> The MQTT driver in TinyCLR OS supports client mode only.
 
 # Event Handler
 

@@ -77,12 +77,13 @@
 <h1 id="camera-interface">Camera Interface</h1>
 
 <hr>
-<p>For devices with digital camera interface, sometimes called DCMI or DCI, TinyCLR OS includes the necessary drivers. Typically, cameras need to be configured using <a href="i2c.html">I2C bus</a>. Please refer to the camera�s manuals to determine the needed configuration.</p>
-<p>The function to capture from the camera will be from this line in the driver.  </p>
-<pre><code>public void Capture(byte[] data, int timeoutMillisecond) =&gt; this.cameraController.Capture(data, timeoutMillisecond);
-</code></pre><p>Don&#39;t forget you still have to configure your camera before you capture, check the Omnivision/Ov9655 driver under
-<a href="https://github.com/ghi-electronics/TinyCLR-Drivers">https://github.com/ghi-electronics/TinyCLR-Drivers</a> for an example of how to configure your camera </p>
-<p>This example configures and shows the camera on the display on the SCM20260D Dev Board.</p>
+<p>TinyCLR OS supports digital camera interface, sometimes referred to as DCMI or DCI, on devices using the SITCore SC20260 SoC. Typically, cameras need to be configured using <a href="i2c.html">I2C bus</a>. Please refer to the camera&#39;s manual to determine the needed configuration.</p>
+<p>The following function captures camera images:  </p>
+<pre><code>public void Capture(byte[] data, int timeoutMillisecond) =&gt;
+    this.cameraController.Capture(data, timeoutMillisecond);
+</code></pre><p>Don&#39;t forget to configure your camera before you use it -- check the Omnivision/Ov9655 driver under
+<a href="https://github.com/ghi-electronics/TinyCLR-Drivers">https://github.com/ghi-electronics/TinyCLR-Drivers</a> for an example of how to configure your camera.</p>
+<p>This example configures the camera and sends the images to the 4.3 inch display attached to the SCM20260D Dev Board.</p>
 <pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Devices.Gpio;
 using System.Drawing;
 using System.Diagnostics;
@@ -100,9 +101,11 @@ class Program
         backlight.SetDriveMode(GpioPinDriveMode.Output);
         backlight.Write(GpioPinValue.High);
 
-        var displayController = GHIElectronics.TinyCLR.Devices.Display.DisplayController.GetDefault();
+        var displayController =
+            GHIElectronics.TinyCLR.Devices.Display.DisplayController.GetDefault();
 
-        var controllerSetting = new GHIElectronics.TinyCLR.Devices.Display.ParallelDisplayControllerSettings
+        var controllerSetting = 
+            new GHIElectronics.TinyCLR.Devices.Display.ParallelDisplayControllerSettings
         {
             Width = 480,
             Height = 272,
@@ -153,6 +156,7 @@ class Program
             { }
         }
     }
+
     static void Main()
     {
         Test_Dcmi();
@@ -166,7 +170,7 @@ class Program
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-special-pins/software/tinyclr/tutorials/camera.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-tutorials/software/tinyclr/tutorials/camera.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

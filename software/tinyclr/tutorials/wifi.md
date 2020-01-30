@@ -7,7 +7,7 @@ The easiest way to get started quickly is by plugging a mikro WiFi 7 click modul
 This example uses the WiFi 7 click on our SC20100 dev board.
 
 >[!TIP]
->Need Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins
+>Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins
 
 ```csharp
 static void DoTestWiFi7Click()
@@ -17,7 +17,9 @@ static void DoTestWiFi7Click()
     enablePin.SetDriveMode(GpioPinDriveMode.Output);
     enablePin.Write(GpioPinValue.High);
 
-    SpiNetworkCommunicationInterfaceSettings networkCommunicationInterfaceSettings = new SpiNetworkCommunicationInterfaceSettings();
+    SpiNetworkCommunicationInterfaceSettings networkCommunicationInterfaceSettings =
+        new SpiNetworkCommunicationInterfaceSettings();
+
     var settings = new GHIElectronics.TinyCLR.Devices.Spi.SpiConnectionSettings()
     {
         ChipSelectLine = SC20100.GpioPin.PD3,
@@ -29,8 +31,12 @@ static void DoTestWiFi7Click()
         ChipSelectSetupTime = TimeSpan.FromTicks(10)
     };
 
-    networkCommunicationInterfaceSettings.SpiApiName = GHIElectronics.TinyCLR.Pins.SC20260.SpiBus.Spi3;
-    networkCommunicationInterfaceSettings.GpioApiName = GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.Id;
+    networkCommunicationInterfaceSettings.SpiApiName =
+        GHIElectronics.TinyCLR.Pins.SC20260.SpiBus.Spi3;
+
+    networkCommunicationInterfaceSettings.GpioApiName =
+        GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.Id;
+
     networkCommunicationInterfaceSettings.SpiSettings = settings;
     networkCommunicationInterfaceSettings.InterruptPin = SC20100.GpioPin.PC5;
     networkCommunicationInterfaceSettings.InterruptEdge = GpioPinEdge.FallingEdge;
@@ -38,18 +44,20 @@ static void DoTestWiFi7Click()
     networkCommunicationInterfaceSettings.ResetPin = SC20100.GpioPin.PD4;
     networkCommunicationInterfaceSettings.ResetActiveState = GpioPinValue.Low;
 
-    var networkController = NetworkController.FromName("GHIElectronics.TinyCLR.NativeApis.ATWINC15xx.NetworkController");
+    var networkController = NetworkController.FromName
+        ("GHIElectronics.TinyCLR.NativeApis.ATWINC15xx.NetworkController");
 
     WiFiNetworkInterfaceSettings networkInterfaceSetting = new WiFiNetworkInterfaceSettings()
     {
         Ssid = "yourSSID",
-        Password = "yourPass",
+        Password = "yourPassword",
     };
 
     networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
     networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
     networkInterfaceSetting.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
-    networkInterfaceSetting.DnsAddresses = new IPAddress[] { new IPAddress(new byte[] { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
+    networkInterfaceSetting.DnsAddresses = new IPAddress[] { new IPAddress(new byte[]
+        { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
 
     networkInterfaceSetting.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
     networkInterfaceSetting.IsDhcpEnabled = true;
@@ -58,11 +66,14 @@ static void DoTestWiFi7Click()
     networkInterfaceSetting.TlsEntropy = new byte[] { 0, 1, 2, 3 };
 
     networkController.SetInterfaceSettings(networkInterfaceSetting);
-    networkController.SetCommunicationInterfaceSettings(networkCommunicationInterfaceSettings);
+    networkController.SetCommunicationInterfaceSettings
+        (networkCommunicationInterfaceSettings);
+
     networkController.SetAsDefaultController();
 
     networkController.NetworkAddressChanged += NetworkController_NetworkAddressChanged;
-    networkController.NetworkLinkConnectedChanged += NetworkController_NetworkLinkConnectedChanged;
+    networkController.NetworkLinkConnectedChanged +=
+        NetworkController_NetworkLinkConnectedChanged;
 
     networkController.Enable();
 
@@ -71,12 +82,14 @@ static void DoTestWiFi7Click()
     // Network is ready to used
 }
 
-private static void NetworkController_NetworkLinkConnectedChanged(NetworkController sender, NetworkLinkConnectedChangedEventArgs e)
+private static void NetworkController_NetworkLinkConnectedChanged
+    (NetworkController sender, NetworkLinkConnectedChangedEventArgs e)
 {
     // Raise event connect/disconnect
 }
 
-private static void NetworkController_NetworkAddressChanged(NetworkController sender, NetworkAddressChangedEventArgs e)
+private static void NetworkController_NetworkAddressChanged
+    (NetworkController sender, NetworkAddressChangedEventArgs e)
 {
     var ipProperties = sender.GetIPProperties();
     var address = ipProperties.Address.GetAddressBytes();
@@ -86,7 +99,7 @@ private static void NetworkController_NetworkAddressChanged(NetworkController se
 ```
 
 > [!IMPORTANT] 
-> There is enable pin which needs to be high on WiFI 7 click module. 
+> There is an enable pin which needs to be pulled high on the WiFI 7 click module. 
 
 ```csharp
 var enablePin = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PA15);

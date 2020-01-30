@@ -78,7 +78,7 @@
 
 <hr>
 <p>Hyper Text Transport Protocol (HTTP) builds on top of the <a href="core-protocols.html">Core Protocols</a> to provide a standard way to work with web servers.</p>
-<div class="TIP"><h5>Tip</h5><p>Need Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Networking.Http</p>
+<div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Networking.Http</p>
 </div>
 <pre><code class="lang-csharp">static void DoTestHttp()
 {
@@ -108,13 +108,13 @@
 
                         String page = &quot;&quot;;
 
-                        page = new String(System.Text.Encoding.UTF8.GetChars(result, 0, read));
+                        page = new String(System.Text.Encoding.UTF8.GetChars
+                            (result, 0, read));
 
                         System.Diagnostics.Debug.WriteLine(&quot;Response : &quot; + page);
                     }
+
                     while (read != 0);
-
-
                 }
             }
         }  
@@ -124,8 +124,8 @@
 
     }
 }
-</code></pre><p>Secure connections similarly work, through the built in <a href="tls.html">TLS</a> support.</p>
-<p>HTTPS can also be used to send data to a cloud, such as <a href="azure.html">Azure</a>.</p>
+</code></pre><p>Secure connections work in a similar way through built in <a href="tls.html">TLS</a> support.</p>
+<p>HTTPS can also be used to send data to the cloud computing services such as <a href="azure.html">Azure</a>.</p>
 </article>
           </div>
           

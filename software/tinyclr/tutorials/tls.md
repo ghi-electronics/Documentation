@@ -6,7 +6,7 @@ TLS is how the Internet securely works, for banks, airports and security systems
 Below is simple example show to connect https://www.google.com 
 
 >[!TIP]
->Need Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Networking.Http
+>Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Networking.Http
 
 ```csharp
 static void DoTestHttps()
@@ -40,19 +40,21 @@ static void DoTestHttps()
                         System.Diagnostics.Debug.WriteLine("read : " + read);
                         System.Diagnostics.Debug.WriteLine("total : " + total);
 
-                        var page = new String(System.Text.Encoding.UTF8.GetChars(result, 0, read));
+                        var page = new String(System.Text.Encoding.UTF8.
+                            GetChars(result, 0, read));
 
                         System.Diagnostics.Debug.WriteLine("Response : " + page);
                     }
+
                     while (read != 0);
                 }
             }
         }
-
     }
+
     catch { }
-            
 }
+
 ```
 
 You need a root certificate to access secure websites. TinyCLR OS accepts certificates in both text and binary formats. The following instructions show how to download certificates:
