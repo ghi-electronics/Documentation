@@ -6,6 +6,9 @@ Ethernet connection is supported through the internal MAC, by adding an external
 
 This is a simple example:
 
+>[!TIP]
+>Need Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Pins
+
 ```csharp
         static bool linkReady = false;
 
@@ -70,6 +73,9 @@ This is a simple example:
 ## ENC28J60
 
 This example uses the ENC28J60 click on our SC20100 dev board.
+
+>[!TIP]
+>Need Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins
 
 ```csharp
 static void DoTestEnc28()
@@ -139,7 +145,9 @@ private static void NetworkController_NetworkAddressChanged(NetworkController se
 }
 ```
 ## Event Handlers
+
 NetworkController provides two events:
+
 ```csharp
 private static void NetworkController_NetworkLinkConnectedChanged(NetworkController sender, NetworkLinkConnectedChangedEventArgs e)
 {

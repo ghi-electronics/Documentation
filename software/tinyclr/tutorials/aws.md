@@ -2,6 +2,9 @@
 ---
 This example show how to send and receive message to AWS.
 
+>[!TIP]
+>Need Nugets: GHIElectronics.TinyCLR.Networking.Mqtt
+
 ```csharp
 static void DoTestAwsMqtt()
 {
@@ -21,8 +24,7 @@ static void DoTestAwsMqtt()
     X509Certificate CaCert = new X509Certificate(caCertSource);
     X509Certificate ClientCert = new X509Certificate(clientCertSource);
 
-    ClientCert.PrivateKey = privateKeyData;
-    ClientCert.Password = "";
+    ClientCert.PrivateKey = privateKeyData;    
 
     var clientSetting = new MqttClientSetting
     {
@@ -54,6 +56,6 @@ static void DoTestAwsMqtt()
     iotClient.Publish(topicShadowUpdate, Encoding.UTF8.GetBytes(message), QoSLevel.MostOnce, false, packetId++);
 }
 ```
->[!NOTE]
->This example requires iotArnString, deviceId, CA certificate, client certificates and private key, which are available when you register an AWS account.
->For AWS tutorial, please visit: https://aws.amazon.com/
+This example requires iotArnString, deviceId, CA certificate, client certificates and private key, which are available when you register an AWS account.
+
+For AWS tutorial, please visit: https://aws.amazon.com/

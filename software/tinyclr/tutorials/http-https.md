@@ -2,6 +2,9 @@
 ---
 Hyper Text Transport Protocol (HTTP) builds on top of the [Core Protocols](core-protocols.md) to provide a standard way to work with web servers.
 
+>[!TIP]
+>Need Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Networking.Http
+
 ```csharp
 static void DoTestHttp()
 {

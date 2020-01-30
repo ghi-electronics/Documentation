@@ -3,10 +3,13 @@
 
 The example below show how to use MQTT to send and receive messages from IoT Hub Azure
 
+>[!TIP]
+>Need Nugets: GHIElectronics.TinyCLR.Networking.Mqtt
+
 ```csharp
 static void DoTestAzureMqtt()
 {
-    var caCert = new X509Certificate(UTF8Encoding.UTF8.GetBytes("Add azure certificate here"));
+    var caCert = new X509Certificate(UTF8Encoding.UTF8.GetBytes("Need Azure certificate"));
             
     var iotHubName = "your IoT Hub name";
     var iotHubPort = 8883;
@@ -15,7 +18,7 @@ static void DoTestAzureMqtt()
     const string deviceId = "your device Id";
 
     var username = string.Format("{0}/{1}", iotHubName, deviceId);
-    var password = "your password";
+    var password = "your string connection";
 
     // define topics
     var topicDeviceToServer = string.Format("devices/{0}/messages/events/", deviceId);
@@ -57,8 +60,14 @@ static void DoTestAzureMqtt()
     {
         throw;
     }
-}
 ```
->[!NOTE]
-> This example requires iotHubName, deviceId, and Password, which are available only when you register an Azure account.
-> More detail about Microsoft Azure, please visit: https://azure.microsoft.com/en-us/
+
+This example requires iotHubName, deviceId, which are available only when you register an Azure account.
+
+For "password", this is a string connection, it starts with "SharedAccessSignature sr=...".
+
+To generate a "password" string, visit https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string
+
+More detail about Microsoft Azure, please visit: https://azure.microsoft.com/en-us/
+
+

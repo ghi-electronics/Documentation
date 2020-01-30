@@ -6,6 +6,9 @@ The easiest way to get started quickly is by plugging a mikro WiFi 7 click modul
 
 This example uses the WiFi 7 click on our SC20100 dev board.
 
+>[!TIP]
+>Need Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins
+
 ```csharp
 static void DoTestWiFi7Click()
 {
@@ -82,7 +85,7 @@ private static void NetworkController_NetworkAddressChanged(NetworkController se
 }
 ```
 
-> [!NOTE] 
+> [!IMPORTANT] 
 > There is enable pin which needs to be high on WiFI 7 click module. 
 
 ```csharp
