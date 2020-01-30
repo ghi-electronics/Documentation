@@ -77,8 +77,8 @@
 <h1 id="google-cloud">Google Cloud</h1>
 
 <hr>
-<p>This example below show how to communicate to Google Cloud:</p>
-<div class="TIP"><h5>Tip</h5><p>Need Nugets: GHIElectronics.TinyCLR.Networking.Mqtt</p>
+<p>This example below demonstrates how to communicate with the Google Cloud Platform:</p>
+<div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Networking.Mqtt</p>
 </div>
 <pre><code class="lang-csharp">static void DoTestGoogleCloudMqtt()
 {
@@ -116,7 +116,9 @@
 
     var jwt = &quot;your jwt&quot;;
 
-    iotClient.PublishReceivedChanged += (a, b) =&gt; { Debug.WriteLine(&quot;Publish Received Changed.&quot;); };
+    iotClient.PublishReceivedChanged += (a, b) =&gt;
+        { Debug.WriteLine(&quot;Publish Received Changed.&quot;); };
+
     iotClient.PublishedChanged += (a, b, c) =&gt; { Debug.WriteLine(&quot;Published Changed.&quot;); }; ;
     iotClient.SubscribedChanged += (a, b) =&gt; { Debug.WriteLine(&quot;Subscribed Changed.&quot;); };
     iotClient.ConnectedChanged += (a) =&gt; { Debug.WriteLine(&quot;Connected Changed.&quot;); };
@@ -141,17 +143,17 @@
                 , false, 1);
     }            
 }
-</code></pre><p>This example requires projectId, cloudRegion, registryId, deviceId, which will be available when you register an Google Cloud account.</p>
-<p>Client certificate, private key are also available when you register your account.</p>
+</code></pre><p>This example requires projectId, cloudRegion, registryId, and deviceId, which will be available when you register a Google Cloud account.</p>
+<p>a client certificate and private key are also provided when you register your account.</p>
 <p>You may want to visit <a href="https://cloud.google.com/iot/docs/quickstart">https://cloud.google.com/iot/docs/quickstart</a> for more detail.</p>
 <h1 id="jwt">JWT</h1>
-<p>When connect to google cloud, you also need JWT (JSON Web Token) and be used as password if using MQTT.</p>
-<p>To generate a JWK, you may want to visit <a href="https://jwt.io/">https://jwt.io/</a></p>
+<p>When connect to google cloud, you also need a JWT (JSON Web Token) to be used as password if using MQTT.</p>
+<p>For an easy way to generate a JWT visit <a href="https://jwt.io/">https://jwt.io/</a>. However, if you are concerned about sharing your private key with a third party site, there are a multitude of other options. </p>
 <div class="WARNING"><h5>Warning</h5><p>By using <a href="https://jwt.io/">https://jwt.io/</a>, your private key is shared with a third party. This should be used only for testing purpose.&quot;</p>
 </div>
-<p><img src="images/generate_jwt.png" alt="How to dowload generate JWT"></p>
-<p>There are also two fields &quot;iat&quot; (issue at), and &quot;exp&quot; (expire), they contains time in Unix Timestamp format. You can convert them online by <a href="https://www.epochconverter.com/">https://www.epochconverter.com/</a></p>
-<div class="NOTE"><h5>Note</h5><p>The connection accepts max expire time 24 hours, meaning &quot;exp&quot; - &quot;iat&quot; within 24 hours.</p>
+<p><img src="images/generate_jwt.png" alt="How to download generate JWT"></p>
+<p>There are also two fields <code>iat</code> (issue at), and <code>exp</code> (expire), they contains time in Unix Timestamp format. You can convert them online at <a href="https://www.epochconverter.com/">https://www.epochconverter.com/</a></p>
+<div class="NOTE"><h5>Note</h5><p>The google cloud connection accepts a maximum expire time of 24 hours, meaning the timespan between <code>iat</code> and <code>exp</code> must be less that 24 hours.</p>
 </div>
 </article>
           </div>

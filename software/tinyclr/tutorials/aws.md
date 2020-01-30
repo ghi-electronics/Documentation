@@ -1,9 +1,9 @@
 # Amazon Web Services
 ---
-This example show how to send and receive message to AWS.
+This example shows how to communicate with AWS.
 
 >[!TIP]
->Need Nugets: GHIElectronics.TinyCLR.Networking.Mqtt
+>Needed Nugets: GHIElectronics.TinyCLR.Networking.Mqtt
 
 ```csharp
 static void DoTestAwsMqtt()
@@ -37,7 +37,9 @@ static void DoTestAwsMqtt()
 
     var iotClient = new Mqtt(clientSetting);
 
-    iotClient.PublishReceivedChanged += (a, b) => { Debug.WriteLine("Received message: " + Encoding.UTF8.GetString(b.Data)); };
+    iotClient.PublishReceivedChanged += (a, b) => { Debug.WriteLine
+        ("Received message: " + Encoding.UTF8.GetString(b.Data)); };
+
     iotClient.SubscribedChanged += (a, b) => { Debug.WriteLine("Subscribed"); };
 
     var connectSetting = new MqttConnectionSetting
@@ -51,11 +53,13 @@ static void DoTestAwsMqtt()
 
     ushort packetId = 1;
 
-    iotClient.Subscribe(new string[] { topicShadowGet }, new QoSLevel[] { QoSLevel.LeastOnce }, packetId++);
+    iotClient.Subscribe(new string[] { topicShadowGet }, new QoSLevel[]
+        { QoSLevel.LeastOnce }, packetId++);
             
-    iotClient.Publish(topicShadowUpdate, Encoding.UTF8.GetBytes(message), QoSLevel.MostOnce, false, packetId++);
+    iotClient.Publish(topicShadowUpdate, Encoding.UTF8.GetBytes(message),
+        QoSLevel.MostOnce, false, packetId++);
 }
 ```
-This example requires iotArnString, deviceId, CA certificate, client certificates and private key, which are available when you register an AWS account.
+This example requires iotArnString, deviceId, CA certificate, client certificates, and a private key, which are available when you register an AWS account.
 
-For AWS tutorial, please visit: https://aws.amazon.com/
+Check out the AWS tutorial at: https://aws.amazon.com/

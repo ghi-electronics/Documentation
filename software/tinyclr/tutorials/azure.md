@@ -1,10 +1,10 @@
 # Microsoft Azure
 ---
 
-The example below show how to use MQTT to send and receive messages from IoT Hub Azure
+The example below shows how to use MQTT to communicate with the Azure IoT Hub.
 
 >[!TIP]
->Need Nugets: GHIElectronics.TinyCLR.Networking.Mqtt
+>Needed Nugets: GHIElectronics.TinyCLR.Networking.Mqtt
 
 ```csharp
 static void DoTestAzureMqtt()
@@ -37,7 +37,8 @@ static void DoTestAzureMqtt()
 
         var client = new Mqtt(clientSetting);
 
-        client.PublishReceivedChanged += (a, b) => { Debug.WriteLine("Received message: " + Encoding.UTF8.GetString(b.Data)); };
+        client.PublishReceivedChanged += (a, b) => { Debug.WriteLine
+            ("Received message: " + Encoding.UTF8.GetString(b.Data)); };
                 
         var connectSetting = new MqttConnectionSetting
         {
@@ -50,10 +51,14 @@ static void DoTestAzureMqtt()
 
         ushort packetId = 1;
 
-        client.Subscribe(new string[] { topicService2Device }, new QoSLevel[] { QoSLevel.ExactlyOnce }, packetId++);
-        client.Subscribe(new string[] { topicDeviceToServer }, new QoSLevel[] { QoSLevel.ExactlyOnce }, packetId++);
+        client.Subscribe(new string[] { topicService2Device }, new QoSLevel[]
+            { QoSLevel.ExactlyOnce }, packetId++);
 
-        client.Publish(topicDeviceToServer, Encoding.UTF8.GetBytes("Your message"), QoSLevel.MostOnce, false, packetId++);
+        client.Subscribe(new string[] { topicDeviceToServer }, new QoSLevel[]
+            { QoSLevel.ExactlyOnce }, packetId++);
+
+        client.Publish(topicDeviceToServer, Encoding.UTF8.GetBytes
+            ("Your message"), QoSLevel.MostOnce, false, packetId++);
     }
 
     catch (Exception e)
@@ -62,11 +67,11 @@ static void DoTestAzureMqtt()
     }
 ```
 
-This example requires iotHubName, deviceId, which are available only when you register an Azure account.
+This example requires iotHubName and deviceId, which are available only when you open an Azure account.
 
-For "password", this is a string connection, it starts with "SharedAccessSignature sr=...".
+Replace "password" with a string that starts with "SharedAccessSignature sr=...".
 
-To generate a "password" string, visit https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string
+To generate a password string, visit https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string
 
 More detail about Microsoft Azure, please visit: https://azure.microsoft.com/en-us/
 

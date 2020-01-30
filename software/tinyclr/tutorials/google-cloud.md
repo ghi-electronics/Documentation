@@ -1,10 +1,10 @@
 # Google Cloud
 ---
 
-This example below show how to communicate to Google Cloud:
+This example below demonstrates how to communicate with the Google Cloud Platform:
 
 >[!TIP]
->Need Nugets: GHIElectronics.TinyCLR.Networking.Mqtt
+>Needed Nugets: GHIElectronics.TinyCLR.Networking.Mqtt
 
 ```csharp
 static void DoTestGoogleCloudMqtt()
@@ -43,7 +43,9 @@ static void DoTestGoogleCloudMqtt()
 
     var jwt = "your jwt";
 
-    iotClient.PublishReceivedChanged += (a, b) => { Debug.WriteLine("Publish Received Changed."); };
+    iotClient.PublishReceivedChanged += (a, b) =>
+        { Debug.WriteLine("Publish Received Changed."); };
+
     iotClient.PublishedChanged += (a, b, c) => { Debug.WriteLine("Published Changed."); }; ;
     iotClient.SubscribedChanged += (a, b) => { Debug.WriteLine("Subscribed Changed."); };
     iotClient.ConnectedChanged += (a) => { Debug.WriteLine("Connected Changed."); };
@@ -70,27 +72,26 @@ static void DoTestGoogleCloudMqtt()
 }
 ```
 
-This example requires projectId, cloudRegion, registryId, deviceId, which will be available when you register an Google Cloud account.
+This example requires projectId, cloudRegion, registryId, and deviceId, which will be available when you register a Google Cloud account.
 
-Client certificate, private key are also available when you register your account.
+a client certificate and private key are also provided when you register your account.
 
 You may want to visit https://cloud.google.com/iot/docs/quickstart for more detail.
 
 # JWT
 
-When connect to google cloud, you also need JWT (JSON Web Token) and be used as password if using MQTT.
+When connect to google cloud, you also need a JWT (JSON Web Token) to be used as password if using MQTT.
 
-To generate a JWK, you may want to visit https://jwt.io/
+For an easy way to generate a JWT visit https://jwt.io/. However, if you are concerned about sharing your private key with a third party site, there are a multitude of other options. 
 
 >[!WARNING]
 > By using https://jwt.io/, your private key is shared with a third party. This should be used only for testing purpose."
 
+![How to download generate JWT](images/generate_jwt.png)
 
-![How to dowload generate JWT](images/generate_jwt.png)
-
-There are also two fields "iat" (issue at), and "exp" (expire), they contains time in Unix Timestamp format. You can convert them online by https://www.epochconverter.com/
+There are also two fields `iat` (issue at), and `exp` (expire), they contains time in Unix Timestamp format. You can convert them online at https://www.epochconverter.com/
 
 >[!NOTE]
->The connection accepts max expire time 24 hours, meaning "exp" - "iat" within 24 hours.
+>The google cloud connection accepts a maximum expire time of 24 hours, meaning the timespan between `iat` and `exp` must be less that 24 hours.
 
 

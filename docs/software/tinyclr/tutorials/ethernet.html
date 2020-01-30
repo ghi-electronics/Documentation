@@ -80,76 +80,89 @@
 <p>Ethernet connection is supported through the internal MAC, by adding an external PHY (100BASE), and also supported through ENC28J60 through <a href="spi.html">SPI</a> bus (10BASE). Some of the available modules include the necessary PHY so the user will only need to add an Ethernet connector with magnets.</p>
 <h2 id="built-in-ethernet">Built-in Ethernet</h2>
 <p>This is a simple example:</p>
-<div class="TIP"><h5>Tip</h5><p>Need Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Pins</p>
+<div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Pins</p>
 </div>
-<pre><code class="lang-csharp">        static bool linkReady = false;
+<pre><code class="lang-csharp">static bool linkReady = false;
 
-        static void DoTestEthernet()
-        {
-            // Do external Phy reset
-            var gpioController = GpioController.GetDefault();
-            var resetPin = gpioController.OpenPin(SC20260.GpioPin.PG3);
-            resetPin.SetDriveMode(GpioPinDriveMode.Output);
+static void DoTestEthernet()
+{
+    // Do external Phy reset
+    var gpioController = GpioController.GetDefault();
+    var resetPin = gpioController.OpenPin(SC20260.GpioPin.PG3);
+    resetPin.SetDriveMode(GpioPinDriveMode.Output);
 
-            resetPin.Write(GpioPinValue.Low);
-            Thread.Sleep(100);
+    resetPin.Write(GpioPinValue.Low);
+    Thread.Sleep(100);
 
-            resetPin.Write(GpioPinValue.High);
-            Thread.Sleep(100);
+    resetPin.Write(GpioPinValue.High);
+    Thread.Sleep(100);
 
-            var networkController = NetworkController.FromName(&quot;GHIElectronics.TinyCLR.NativeApis.STM32H7.EthernetEmacController\\0&quot;);
-            var networkInterfaceSetting = new EthernetNetworkInterfaceSettings();
-            var networkCommunicationInterfaceSettings = new BuiltInNetworkCommunicationInterfaceSettings();
+    var networkController = NetworkController.FromName
+        (&quot;GHIElectronics.TinyCLR.NativeApis.STM32H7.EthernetEmacController\\0&quot;);
 
-            networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
-            networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
-            networkInterfaceSetting.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
-            networkInterfaceSetting.DnsAddresses = new IPAddress[] { new IPAddress(new byte[] { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
+    var networkInterfaceSetting = new EthernetNetworkInterfaceSettings();
+    var networkCommunicationInterfaceSettings =
+        new BuiltInNetworkCommunicationInterfaceSettings();
 
-            networkInterfaceSetting.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
-            networkInterfaceSetting.IsDhcpEnabled = true;
-            networkInterfaceSetting.IsDynamicDnsEnabled = true;
+    networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
+    networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
+    networkInterfaceSetting.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
+    networkInterfaceSetting.DnsAddresses = new IPAddress[] { new IPAddress(new byte[]
+        { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
 
-            networkInterfaceSetting.TlsEntropy = new byte[] { 0, 1, 2, 3 };
+    networkInterfaceSetting.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
+    networkInterfaceSetting.IsDhcpEnabled = true;
+    networkInterfaceSetting.IsDynamicDnsEnabled = true;
 
-            networkController.SetInterfaceSettings(networkInterfaceSetting);
-            networkController.SetCommunicationInterfaceSettings(networkCommunicationInterfaceSettings);
-            networkController.SetAsDefaultController();
+    networkInterfaceSetting.TlsEntropy = new byte[] { 0, 1, 2, 3 };
 
-            networkController.NetworkAddressChanged += NetworkController_NetworkAddressChanged;
-            networkController.NetworkLinkConnectedChanged += NetworkController_NetworkLinkConnectedChanged;
+    networkController.SetInterfaceSettings(networkInterfaceSetting);
+    networkController.SetCommunicationInterfaceSettings
+        (networkCommunicationInterfaceSettings);
 
-            networkController.Enable();
+    networkController.SetAsDefaultController();
 
-            while (linkReady == false) ;
+    networkController.NetworkAddressChanged += NetworkController_NetworkAddressChanged;
+    networkController.NetworkLinkConnectedChanged +=
+        NetworkController_NetworkLinkConnectedChanged;
 
-            System.Diagnostics.Debug.WriteLine(&quot;Network is ready to use&quot;);
+    networkController.Enable();
 
-            Thread.Sleep(-1);
-        }
+    while (linkReady == false) ;
 
-        private static void NetworkController_NetworkLinkConnectedChanged(NetworkController sender, NetworkLinkConnectedChangedEventArgs e)
-        {
-            // Raise event connect/disconnect
-        }
+    System.Diagnostics.Debug.WriteLine(&quot;Network is ready to use&quot;);
 
-        private static void NetworkController_NetworkAddressChanged(NetworkController sender, NetworkAddressChangedEventArgs e)
-        {
-            var ipProperties = sender.GetIPProperties();
-            var address = ipProperties.Address.GetAddressBytes();
+    Thread.Sleep(-1);
+}
 
-            linkReady = address[0] != 0;
-        }
+private static void NetworkController_NetworkLinkConnectedChanged
+    (NetworkController sender, NetworkLinkConnectedChangedEventArgs e)
+{
+    // Raise event connect/disconnect
+}
+
+private static void NetworkController_NetworkAddressChanged
+    (NetworkController sender, NetworkAddressChangedEventArgs e)
+{
+    var ipProperties = sender.GetIPProperties();
+    var address = ipProperties.Address.GetAddressBytes();
+
+    linkReady = address[0] != 0;
+}
 </code></pre><h2 id="enc28j60">ENC28J60</h2>
 <p>This example uses the ENC28J60 click on our SC20100 dev board.</p>
-<div class="TIP"><h5>Tip</h5><p>Need Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins</p>
+<div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins</p>
 </div>
 <pre><code class="lang-csharp">static void DoTestEnc28()
 {
-    var networkController = NetworkController.FromName(&quot;GHIElectronics.TinyCLR.NativeApis.ENC28J60.NetworkController&quot;);
+    var networkController = NetworkController.FromName
+        (&quot;GHIElectronics.TinyCLR.NativeApis.ENC28J60.NetworkController&quot;);
+
     var networkInterfaceSetting = new EthernetNetworkInterfaceSettings();
 
-    var networkCommunicationInterfaceSettings = new SpiNetworkCommunicationInterfaceSettings();
+    var networkCommunicationInterfaceSettings = new
+        SpiNetworkCommunicationInterfaceSettings();
+
     var settings = new GHIElectronics.TinyCLR.Devices.Spi.SpiConnectionSettings()
     {
         ChipSelectLine = SC20100.GpioPin.PD3,
@@ -161,8 +174,12 @@
         ChipSelectSetupTime = TimeSpan.FromTicks(10)
     };
 
-    networkCommunicationInterfaceSettings.SpiApiName = GHIElectronics.TinyCLR.Pins.SC20260.SpiBus.Spi3;
-    networkCommunicationInterfaceSettings.GpioApiName = GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.Id;
+    networkCommunicationInterfaceSettings.SpiApiName =
+        GHIElectronics.TinyCLR.Pins.SC20260.SpiBus.Spi3;
+
+    networkCommunicationInterfaceSettings.GpioApiName =
+        GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.Id;
+
     networkCommunicationInterfaceSettings.SpiSettings = settings;
     networkCommunicationInterfaceSettings.InterruptPin = SC20100.GpioPin.PC5;
     networkCommunicationInterfaceSettings.InterruptEdge = GpioPinEdge.FallingEdge;
@@ -173,7 +190,8 @@
     networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
     networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
     networkInterfaceSetting.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
-    networkInterfaceSetting.DnsAddresses = new IPAddress[] { new IPAddress(new byte[] { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
+    networkInterfaceSetting.DnsAddresses = new IPAddress[] { new IPAddress(new byte[]
+        { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
 
     networkInterfaceSetting.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
     networkInterfaceSetting.IsDhcpEnabled = true;
@@ -182,11 +200,14 @@
     networkInterfaceSetting.TlsEntropy = new byte[] { 0, 1, 2, 3 };
 
     networkController.SetInterfaceSettings(networkInterfaceSetting);
-    networkController.SetCommunicationInterfaceSettings(networkCommunicationInterfaceSettings);
+    networkController.SetCommunicationInterfaceSettings
+        (networkCommunicationInterfaceSettings);
+
     networkController.SetAsDefaultController();
 
     networkController.NetworkAddressChanged += NetworkController_NetworkAddressChanged;
-    networkController.NetworkLinkConnectedChanged += NetworkController_NetworkLinkConnectedChanged;
+    networkController.NetworkLinkConnectedChanged +=
+        NetworkController_NetworkLinkConnectedChanged;
 
     networkController.Enable();
 
@@ -197,12 +218,14 @@
     Thread.Sleep(-1);
 }
 
-    private static void NetworkController_NetworkLinkConnectedChanged(NetworkController sender, NetworkLinkConnectedChangedEventArgs e)
+    private static void NetworkController_NetworkLinkConnectedChanged
+        (NetworkController sender, NetworkLinkConnectedChangedEventArgs e)
 {
     // Raise event connect/disconnect
 }
 
-private static void NetworkController_NetworkAddressChanged(NetworkController sender, NetworkAddressChangedEventArgs e)
+private static void NetworkController_NetworkAddressChanged
+    (NetworkController sender, NetworkAddressChangedEventArgs e)
 {
     var ipProperties = sender.GetIPProperties();
     var address = ipProperties.Address.GetAddressBytes();
@@ -210,13 +233,15 @@ private static void NetworkController_NetworkAddressChanged(NetworkController se
     linkReady = address[0] != 0;
 }
 </code></pre><h2 id="event-handlers">Event Handlers</h2>
-<p>NetworkController provides two events:</p>
-<pre><code class="lang-csharp">private static void NetworkController_NetworkLinkConnectedChanged(NetworkController sender, NetworkLinkConnectedChangedEventArgs e)
+<p>The NetworkController provides two events:</p>
+<pre><code class="lang-csharp">private static void NetworkController_NetworkLinkConnectedChanged
+    (NetworkController sender, NetworkLinkConnectedChangedEventArgs e)
 {
     // Raise event connect/disconnect
 }
 
-private static void NetworkController_NetworkAddressChanged(NetworkController sender, NetworkAddressChangedEventArgs e)
+private static void NetworkController_NetworkAddressChanged
+    (NetworkController sender, NetworkAddressChangedEventArgs e)
 {
     var ipProperties = sender.GetIPProperties();
     var address = ipProperties.Address.GetAddressBytes();
@@ -228,7 +253,6 @@ private static void NetworkController_NetworkAddressChanged(NetworkController se
     for (int i = 0; i &lt; dnsCount; i++)
     {
         var dns = ipProperties.DnsAddresses[i].GetAddressBytes();
-
     }
 }
 </code></pre></article>
