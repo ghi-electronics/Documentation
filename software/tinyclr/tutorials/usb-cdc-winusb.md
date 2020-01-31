@@ -16,8 +16,8 @@ static void DoTestCDC
     usbclient.SetActiveSetting(GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientMode.Cdc, 0x1234, 0x5678);
     usbclient.Enable();
 
-    usbclient.DeviceStateChanged += (a,count) => Debug.WriteLine("Data received:" + count);
-    usbclient.DataReceived += (a,b) => Debug.WriteLine("Connection changed."); 
+    usbclient.DeviceStateChanged += (a,b) => Debug.WriteLine("Connection changed."); 
+    usbclient.DataReceived += (a,count) => Debug.WriteLine("Data received:" + count);
 
     while (usbclient.DeviceState != GHIElectronics.TinyCLR.Devices.UsbClient.DeviceState.Configured) ;
 
@@ -61,8 +61,8 @@ static void DoTestWinUsb
     usbclient.SetActiveSetting(GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientMode.WinUsb, "Manufacture_Name", "Product_Name", "SerailNumber", 0x1234, 0x5678, "{your guid}");
     usbclient.Enable();
 
-    usbclient.DeviceStateChanged += (a,count) => Debug.WriteLine("Data received:" + count);
-    usbclient.DataReceived += (a,b) => Debug.WriteLine("Connection changed."); 
+    usbclient.DeviceStateChanged += (a,b) => Debug.WriteLine("Connection changed."); 
+    usbclient.DataReceived += (a,count) => Debug.WriteLine("Data received:" + count);
 
     while (usbclient.DeviceState != GHIElectronics.TinyCLR.Devices.UsbClient.DeviceState.Configured) ;
 
