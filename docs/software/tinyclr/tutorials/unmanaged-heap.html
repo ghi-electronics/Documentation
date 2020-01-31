@@ -77,30 +77,24 @@
 <h1 id="unmanaged-heap">Unmanaged Heap</h1>
 
 <hr>
-<p>TinyCLR&#39;s <a href="memory-management.html">memory management</a> system takes care of everything in internal secure memory; however, TinyCLR OS also supports external unsecure memory through a special unmanaged heap. This memory is used in two different ways, for Large Buffers and for the Graphics system, and is only available on boards with that include external SDRAM memory. Our SCM20260D Dev Board has 32 MBytes of external SDRAM, but our SCM20100 Dev Board has none.</p>
-<p>To ensure that unmanaged resources get disposed of properly, it is necessary to dispose of the buffer pointing to unmanaged heap manually, as shown in the sample code below.</p>
-<h2 id="unmanaged-buffers">Unmanaged Buffers</h2>
-<p>This is an easy way to create buffers that reside in external memory, which typically provides much more storage than internal memory. The following example creates an array uTable[] in unmanaged heap space on the SCM20260D Dev Board and then disposes of it.</p>
-<div class="TIP"><h5>Tip</h5><p>Nuget: GHIElectronics.TinyCLR.Native</p>
-<p>Using: GHIElectronics.TinyCLR.Native</p>
-</div>
-<pre><code class="lang-cs">//Allocate space for 100,000 byte array in unmanaged heap.
-UnmanagedBuffer uBuffer = new UnmanagedBuffer(100000);
-
-var uTable = uBuffer.Bytes;
-//uTable is now available as a byte array with 100,000 elements.
-
-// Properly release the objects. This is unmanaged so it is mandatory!
-uTable = null;
-uBuffer.Dispose();
+<p>The built in <a href="memory-management.html">memory management</a> system takes care of everything in an internal secure memory; however, TinyCLR OS also supports external unsecure memories through a special unmanaged heap. This memory is used in 2 different ways, in Large Buffer and for the Graphics system.</p>
+<h2 id="unsecure-large-buffers-what-is-it-called-in-code">Unsecure Large Buffers (what is it called in code?)</h2>
+<p>This is an easy way to create buffers that resides in external memories, which is typically much larger than internal memory.</p>
+<pre><code>// example code
 </code></pre><h2 id="graphical-memory">Graphical Memory</h2>
-<p>When the <a href="graphics.html">graphics</a> engine detects available external memory, it automatically uses it. Also, garbage collection will dispose of unmanaged graphics buffers automatically. You do not have to dispose of unmanaged graphics buffers like you do for unmanaged non-graphic buffers.</p>
-<h2 id="helper-methods">Helper Methods</h2>
-<pre><code class="lang-cs">//Print number of available bytes in unmanaged memory.
-System.Diagnostics.Debug.WriteLine(Memory.UnmanagedMemory.FreeBytes.ToString());
-
-//Print the number of bytes being used in unmanaged memory.
-System.Diagnostics.Debug.WriteLine(Memory.UnmanagedMemory.UsedBytes.ToString());
+<p>When the <a href="graphics.html">graphics</a> engine detects an available external memory, it automatically switches to it.</p>
+<h2 id="disposing-objects">Disposing Objects</h2>
+<p>As the name implies, this memory is unmanaged! You are responsible for disposing these any allocated objects. The garbage collector does not handle this special memory.</p>
+<blockquote><p>!Note
+The graphics system will automatically use the unmanaged heap. Remember to manually dispose of any unneeded objects</p>
+</blockquote>
+<pre><code>// make it
+// dispose
+Bitmap.Dispose();
+</code></pre><h2 id="helper-methods">Helper Methods</h2>
+<pre><code>// Get free memory size
+�.
+// Get total available memory
 </code></pre></article>
           </div>
           
@@ -109,7 +103,7 @@ System.Diagnostics.Debug.WriteLine(Memory.UnmanagedMemory.UsedBytes.ToString());
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-tutorials/software/tinyclr/tutorials/unmanaged-heap.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/tinyclr/tutorials/unmanaged-heap.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

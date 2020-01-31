@@ -77,84 +77,8 @@
 <h1 id="google-cloud">Google Cloud</h1>
 
 <hr>
-<p>This example below demonstrates how to communicate with the Google Cloud Platform:</p>
-<div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Networking.Mqtt</p>
-</div>
-<pre><code class="lang-cs">static void DoTestGoogleCloudMqtt()
-{
-    string iotHubName = &quot;mqtt.googleapis.com&quot;;
-    int iotPort = 8883;
-
-    var projectId = &quot;your project id&quot;;
-    var cloudRegion = &quot;your region&quot;;
-    var registryId = &quot;your register id&quot;;
-    var deviceId = &quot;your device id&quot;;
-
-    var clientId = $&quot;projects/{projectId}&quot; +
-            $&quot;/locations/{cloudRegion}&quot; +
-            $&quot;/registries/{registryId}&quot; +
-            $&quot;/devices/{deviceId}&quot;;
-
-    var message = &quot;My message&quot;;
-
-    var caCertSource = UTF8Encoding.UTF8.GetBytes(&quot;Your CA certificate&quot;);
-    var clientCertSource = UTF8Encoding.UTF8.GetBytes(&quot;Your Client certificate&quot;);
-
-    X509Certificate CaCert = new X509Certificate(caCertSource);
-    X509Certificate ClientCert = new X509Certificate(clientCertSource);
-
-    var clientSetting = new MqttClientSetting
-    {
-        BrokerName = iotHubName,
-        BrokerPort = iotPort,
-        CaCertificate = CaCert,
-        ClientCertificate = null,
-        SslProtocol = System.Security.Authentication.SslProtocols.Tls12
-    };
-
-    var iotClient = new Mqtt(clientSetting);
-
-    var jwt = &quot;your jwt&quot;;
-
-    iotClient.PublishReceivedChanged += (a, b) =&gt;
-        { Debug.WriteLine(&quot;Publish Received Changed.&quot;); };
-
-    iotClient.PublishedChanged += (a, b, c) =&gt; { Debug.WriteLine(&quot;Published Changed.&quot;); }; ;
-    iotClient.SubscribedChanged += (a, b) =&gt; { Debug.WriteLine(&quot;Subscribed Changed.&quot;); };
-    iotClient.ConnectedChanged += (a) =&gt; { Debug.WriteLine(&quot;Connected Changed.&quot;); };
-    iotClient.UnsubscribedChanged += (a, b) =&gt; { Debug.WriteLine(&quot;Unsubscribed Changed.&quot;); };
-
-    var connectSetting = new MqttConnectionSetting
-    {
-        ClientId = clientId,
-        UserName = &quot;unused&quot;,
-        Password = jwt
-    };
-
-    string topic = $&quot;/devices/{deviceId}/events&quot;;
-
-    var returnCode = iotClient.Connect(connectSetting);
-
-    if (returnCode == ConnectReturnCode.ConnectionAccepted)
-    {
-        iotClient.Publish(topic
-                , UTF8Encoding.UTF8.GetBytes(message)
-                , QoSLevel.LeastOnce
-                , false, 1);
-    }            
-}
-</code></pre><p>This example requires projectId, cloudRegion, registryId, and deviceId, which will be available when you register a Google Cloud account.</p>
-<p>a client certificate and private key are also provided when you register your account.</p>
-<p>You may want to visit <a href="https://cloud.google.com/iot/docs/quickstart">https://cloud.google.com/iot/docs/quickstart</a> for more detail.</p>
-<h1 id="jwt">JWT</h1>
-<p>When connect to google cloud, you also need a JWT (JSON Web Token) to be used as password if using MQTT.</p>
-<p>For an easy way to generate a JWT visit <a href="https://jwt.io/">https://jwt.io/</a>. However, if you are concerned about sharing your private key with a third party site, there are a multitude of other options. </p>
-<div class="WARNING"><h5>Warning</h5><p>By using <a href="https://jwt.io/">https://jwt.io/</a>, your private key is shared with a third party. This should be used only for testing purpose.&quot;</p>
-</div>
-<p><img src="images/generate_jwt.png" alt="How to download generate JWT"></p>
-<p>There are also two fields <code>iat</code> (issue at), and <code>exp</code> (expire), they contains time in Unix Timestamp format. You can convert them online at <a href="https://www.epochconverter.com/">https://www.epochconverter.com/</a></p>
-<div class="NOTE"><h5>Note</h5><p>The google cloud connection accepts a maximum expire time of 24 hours, meaning the timespan between <code>iat</code> and <code>exp</code> must be less that 24 hours.</p>
-</div>
+<h2 id="google-cloud">Google Cloud</h2>
+<p><a href="https://cloud.google.com/">https://cloud.google.com/</a></p>
 </article>
           </div>
           
@@ -163,7 +87,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-tutorials/software/tinyclr/tutorials/google-cloud.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/tinyclr/tutorials/google-cloud.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

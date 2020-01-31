@@ -77,31 +77,8 @@
 <h1 id="serialization">Serialization</h1>
 
 <hr>
-<p>Serialization is the process of converting the state of an object into a form that can be persisted or transported. The complement of serialization is deserialization, which converts a stream into an object. Together, these processes allow data to be stored and transferred.</p>
 <p>TinyCLR OS includes a built in JSON library to help in serializing data.</p>
-<div class="TIP"><h5>Tip</h5><p>Need Nugets: GHIElectronics.TinyCLR.Data.Json</p>
-</div>
-<pre><code class="lang-cs">static void DoTestSerialize()
-{
-    var intArray = new int[] { 1, 3, 5, 7, 9 };
-
-    var result = JsonConverter.Serialize(intArray);
-
-    var bson = result.ToBson();
-
-    var compare = (Array)JsonConverter.FromBson(bson, typeof(int[]));
-
-    for (var i = 0; i &lt; intArray.Length; i++)
-    {
-        if (intArray[i] != (int)compare.GetValue(i))
-        {
-            Debug.WriteLine(&quot;Array test failed&quot;);
-
-            break;
-        }
-    }
-    Debug.WriteLine(&quot;Array test succeeded&quot;);
-}
+<pre><code>// example code
 </code></pre></article>
           </div>
           
@@ -110,7 +87,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-tutorials/software/tinyclr/tutorials/serialization.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/tinyclr/tutorials/serialization.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -77,91 +77,15 @@
 <h1 id="usb-cdc--winusb">USB CDC &amp; WinUSB</h1>
 
 <p>This feature is for devices that needs to transfer data to a PC. Note that the debug interface need to be switched to serial to free up the USB Client port for this feature. This is accomplished though the MODE pin, details in the device&#39;s documentations.</p>
-<div class="TIP"><h5>Tip</h5><p>Need Nugets: GHIElectronics.TinyCLR.Devices.UsbClient</p>
-</div>
 <h2 id="usb-cdc">USB CDC</h2>
 <p>The CDC class is natively supported by Windows and Linux. It is a way for the PC to see a virtual serial port. Once loaded, the PC will can use this port like any other serial port (COM port). Windows 10 works without the need for any drivers. Earlier operating systems needs a driver. While it works with most operating systems, CDC is typically limited to 64KB/sec.</p>
-<pre><code class="lang-cs">static void DoTestCDC 
-{
-    var usbclient = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
-
-    usbclient.SetActiveSetting(GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientMode.Cdc, 0x1234, 0x5678);
-    usbclient.Enable();
-
-    usbclient.DeviceStateChanged += (a,count) =&gt; Debug.WriteLine(&quot;Data received:&quot; + count);
-    usbclient.DataReceived += (a,b) =&gt; Debug.WriteLine(&quot;Connection changed.&quot;); 
-
-    while (usbclient.DeviceState != GHIElectronics.TinyCLR.Devices.UsbClient.DeviceState.Configured) ;
-
-    Debug.WriteLine(&quot;UsbClient Connected&quot;);
-
-    // The example will read data from port to dataR array
-    // Copy dataR to dataW array, plus 1 for each element
-    // Write dataW array back to port
-
-    while (true)
-    {
-        var len = usbclient.ByteToRead;
-
-        if (len &gt; 0)
-        {
-            var dataR = new byte[len];
-            var dataW = new byte[len];
-
-            int read = usbclient.Read(dataR);
-
-            for (var i = 0; i &lt; read; i++)
-            {
-                dataW[i] = (byte)(dataR[i] + 1);
-            }
-
-            usbclient.Write(dataW);
-        }
-        Thread.Sleep(100);
-    }
-}
+<pre><code>// code
 </code></pre><h2 id="winusb">WinUSB</h2>
 <p>The WinUSB drivers are unique to Windows and they do take advantage of the power and speed of USB, meaning they are faster then CDC at data transfers. The speed is limited by the data processing on the IoT devices. Windows 10 loads the drivers automatically, Windows 7 requires drivers.</p>
-<pre><code class="lang-cs">static void DoTestWinUsb
-{
-    var usbclient = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
-    usbclient.SetActiveSetting(GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientMode.WinUsb, &quot;Manufacture_Name&quot;, &quot;Product_Name&quot;, &quot;SerailNumber&quot;, 0x1234, 0x5678, &quot;{your guid}&quot;);
-    usbclient.Enable();
-
-    usbclient.DeviceStateChanged += (a,count) =&gt; Debug.WriteLine(&quot;Data received:&quot; + count);
-    usbclient.DataReceived += (a,b) =&gt; Debug.WriteLine(&quot;Connection changed.&quot;); 
-
-    while (usbclient.DeviceState != GHIElectronics.TinyCLR.Devices.UsbClient.DeviceState.Configured) ;
-
-    Debug.WriteLine(&quot;UsbClient Connected&quot;);
-
-    // The example will read data from port to dataR array
-    // Copy dataR to dataW array, plus 1 for each element
-    // Write dataW array back to port
-    while (true)
-    {
-        var len = usbclient.ByteToRead;
-
-        if (len &gt; 0)
-        {
-            var dataR = new byte[len];
-            var dataW = new byte[len];
-
-            int read = usbclient.Read(dataR);
-
-            for (var i = 0; i &lt; read; i++)
-            {
-                dataW[i] = (byte)(dataR[i] + 1);
-            }
-
-            usbclient.Write(dataW);
-        }
-        Thread.Sleep(100);
-    }
-}
-</code></pre><div class="NOTE"><h5>Note</h5><p>Unlike CDC mode, a disadvantage to WinUSB is that fact that it requires a special code on the PC side to read and write to the device.</p>
-</div>
-</article>
+<pre><code>//code
+</code></pre><p>A disadvantage to WinUSB is that fact that it requires a special code on the PC side to read and write to the device. Fear not, we are providing an example as well.</p>
+<pre><code>// or we should give them github link? Probably github!
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -169,7 +93,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-tutorials/software/tinyclr/tutorials/usb-cdc-winusb.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/tinyclr/tutorials/usb-cdc-winusb.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
