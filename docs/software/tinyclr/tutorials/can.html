@@ -8,7 +8,7 @@
     <title>CAN </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="CAN ">
-    <meta name="generator" content="docfx 2.23.1.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
+    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -59,7 +60,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -218,7 +221,7 @@
 <p><code>SetExplicitFilter()</code> takes an array argument which specifies individual arbitration IDs that will be accepted regardless of the group filter settings.  In the sample code below, CAN messages with arbitration IDs of <code>0x11</code> and <code>0x5678</code> will be accepted, in addition to the arbitration IDs specified by the group filters.</p>
 <h2 id="sample-code">Sample Code</h2>
 <p>The following sample code is written for our SITCore SC20100 Dev Board.  It requires installation of the <code>GHIElectronics.TinyCLR.Core</code>, <code>GHIElectronics.TinyCLR.Devices</code> and <code>GHIElectronics.TinyCLR.Pins</code> NuGet packages.</p>
-<pre><code class="lang-csharp">using System;
+<pre><code class="lang-cs">using System;
 using System.Diagnostics;
 using System.Threading;
 using GHIElectronics.TinyCLR.Devices.Can;
@@ -298,7 +301,7 @@ class Program {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/tinyclr/tutorials/can.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/can.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -8,7 +8,7 @@
     <title>Real Time Clock </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Real Time Clock ">
-    <meta name="generator" content="docfx 2.23.1.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
+    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -59,7 +60,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -78,7 +81,7 @@
 
 <p>The Real Time Clock (RTC) is a circuit that runs off a small battery or a super capacitor. It has its own crystal and keeps runnning even when the system is powered off. Not every hardware has a built in RTC, so check your hardware&#39;s manual for more details.</p>
 <p>In the even the RTC battery was drained or the RTC was never initialized, the RTC will not have a correct value. Use the <code>rtc.IsValid</code> to dermine of time is was set correctly.</p>
-<pre><code>using GHIElectronics.TinyCLR.Devices.Rtc;
+<pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Rtc;
 using GHIElectronics.TinyCLR.Native;
 using System;
 using System.Diagnostics;
@@ -122,7 +125,7 @@ Current RTC Time: 01/01/2019 11:15:36
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/tinyclr/tutorials/real-time-clock.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/real-time-clock.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

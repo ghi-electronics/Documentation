@@ -8,7 +8,7 @@
     <title>Release Notes </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Release Notes ">
-    <meta name="generator" content="docfx 2.23.1.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     <meta property="docfx:rel" content="../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -59,7 +60,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -77,33 +80,102 @@
 <h1 id="release-notes">Release Notes</h1>
 
 <hr>
-<h2 id="200-preview1-on-2019-12-09">2.0.0-preview1 on 2019-12-09</h2>
-<h3 id="notes">Notes</h3>
-<p>A preview of the new API and available features.</p>
+<p><img src="images/tinyclr-logo-noborder.jpg" alt="TinyCLR Logo"></p>
+<h2 id="200-preview2-update">2.0.0-preview2 update</h2>
+<h3 id="released-2020-01-31">Released 2020-01-31</h3>
+<p>A refresh release of the firmware only with improved performance.</p>
+<h4 id="changes">Changes</h4>
+<ul>
+<li>Considerably faster execution speed.</li>
+</ul>
+<h4 id="known-issues">Known Issues</h4>
+<ul>
+<li>See the 2.0.0-preview2 release notes.</li>
+<li>This 2.0.0.21000 release activates all accelerators which might cause some bugs. If you have any strange behavior, please load the previous 2.0.0.20000 release and see if that fixes your issue. Both firmware versions are identical otherwise, and both run with same 2.0.0-preview2 NuGet packages.</li>
+</ul>
+<h2 id="200-preview2">2.0.0-preview2</h2>
+<h3 id="released-2020-01-22">Released 2020-01-22</h3>
+<p>Initial insider release for SITCore hardware.</p>
+<h3 id="visual-studio-project-system">Visual Studio Project System</h3>
+<h4 id="changes-1">Changes</h4>
+<ul>
+<li>First release to private insiders with major changes.</li>
+</ul>
+<h4 id="known-issues-1">Known Issues</h4>
+<ul>
+<li>Cannot change boards or connect an additional board to your PC while Visual Studio is open, or Visual Studio will get confused and deployment will stop working. Do not switch devices while Visual Studio is open.</li>
+<li>Not digitally signed.</li>
+</ul>
 <h3 id="libraries">Libraries</h3>
-<h4 id="changes">Changes</h4>
+<h4 id="changes-2">Changes</h4>
 <ul>
-<li>Major changes.</li>
+<li>First release to private insiders with major changes.</li>
 </ul>
-<h4 id="known-issues">Known Issues</h4>
+<h4 id="known-issues-2">Known Issues</h4>
 <ul>
-<li>Still going through complete testing.</li>
-</ul>
-<h3 id="firmware">Firmware</h3>
-<h4 id="changes">Changes</h4>
-<ul>
-<li>Major changes.</li>
-</ul>
-<h4 id="known-issues">Known Issues</h4>
-<ul>
-<li>Internal use only.</li>
+<li>None, still going through final testing.</li>
+<li>Cryptography and hashing are currently only supported through TLS. We are still planning how to securely expose this functionality.</li>
+<li>Not digitally signed.</li>
 </ul>
 <h3 id="tinyclr-config">TinyCLR Config</h3>
-<h4 id="changes">Changes</h4>
+<h4 id="changes-3">Changes</h4>
+<ul>
+<li>First release to private insiders with major changes.</li>
+</ul>
+<h4 id="known-issues-3">Known Issues</h4>
+<ul>
+<li>TinyCLR may not work when connecting over UART. Use Tera Term to update firmware when in UART mode.</li>
+<li>Not digitally signed.</li>
+</ul>
+<h3 id="tinyclr-font-converter">TinyCLR Font Converter</h3>
+<h4 id="changes-4">Changes</h4>
 <ul>
 <li>None.</li>
 </ul>
-<h4 id="known-issues">Known Issues</h4>
+<h4 id="known-issues-4">Known Issues</h4>
+<ul>
+<li>None.</li>
+<li>Not digitally signed.</li>
+</ul>
+<h3 id="firmware">Firmware</h3>
+<h4 id="changes-5">Changes</h4>
+<ul>
+<li>First release to private insiders with major changes.</li>
+</ul>
+<h4 id="known-issues-5">Known Issues</h4>
+<ul>
+<li>TinyCLR OS is not yet optimized for full performance as this release is focused on stability.</li>
+<li>Conversion from enum to string (enumObject.ToString()) may fail.</li>
+<li>PulseFeedback DrainDuration does not work when going from low to high.</li>
+<li>Not digitally signed.</li>
+</ul>
+<h2 id="200-preview1">2.0.0-preview1</h2>
+<h3 id="released-2019-12-09">Released 2019-12-09</h3>
+<p>A preview of the new API and available features.</p>
+<h3 id="libraries-1">Libraries</h3>
+<h4 id="changes-6">Changes</h4>
+<ul>
+<li>Major changes.</li>
+</ul>
+<h4 id="known-issues-6">Known Issues</h4>
+<ul>
+<li>Still going through complete testing.</li>
+</ul>
+<h3 id="firmware-1">Firmware</h3>
+<h4 id="changes-7">Changes</h4>
+<ul>
+<li>Major changes.</li>
+</ul>
+<h4 id="known-issues-7">Known Issues</h4>
+<ul>
+<li>Internal use only.</li>
+</ul>
+<h3 id="tinyclr-config-1">TinyCLR Config</h3>
+<h4 id="changes-8">Changes</h4>
+<ul>
+<li>None.</li>
+</ul>
+<h4 id="known-issues-8">Known Issues</h4>
 <ul>
 <li>Random crash.</li>
 </ul>
@@ -115,7 +187,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/tinyclr/release-notes.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/release-notes.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

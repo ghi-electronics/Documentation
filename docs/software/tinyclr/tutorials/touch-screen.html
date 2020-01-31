@@ -8,7 +8,7 @@
     <title>Touch Screen </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Touch Screen ">
-    <meta name="generator" content="docfx 2.23.1.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
+    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -59,7 +60,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -81,13 +84,14 @@
 <p>Displays may optionally include a touch sensitive screen to detect user touch input. Touch Screens can be resistive or capacitive.</p>
 <p><img src="../images/ucm-touch-display.jpg" alt="UD435"></p>
 <h2 id="resistive-touch">Resistive Touch</h2>
-<p>A resistive touch screen measures the resistance across X and Y to determine the touch position. While it is possible to use GPIO and ADC, it is better to use dedicated chips. The only advantage of resistive touch over capacitive is that they work through pressure, meaning you can use it while wearing gloves. But, resistive touch is not very accurate and requires calibration.</p>
-<p>Unless you have specific reason to use resistive touch, capacitive touch should be used.</p>
+<p>A resistive touch screen measures the resistance across the X and Y axes to determine the touch position. While it is possible to use GPIO and ADC, it is better to use dedicated chips. The only advantage of resistive touch over capacitive is that resistive touch works through a change in resistance induced by finger pressure, meaning you can use it while wearing gloves. However, resistive touch is not very accurate and requires calibration.</p>
+<p>Unless you have specific reason to use resistive touch, capacitive touch is preferred.</p>
 <p>This is a simple example showing how to read a resistive display. A better approach would be to use a resistive touch controller chip that works over SPI/I2C.</p>
 <pre><code class="lang-cs">private void TouchReader() {
     var adc = AdcController.GetDefault();
     var gpio = GpioController.GetDefault();
     int x, y;
+
     while (this.active) {
         // Read X
         {
@@ -108,6 +112,7 @@
             YU.Dispose();
             YD.Dispose();
         }
+
         // Read Y
         {
             var YD = gpio.OpenPin(this.PinYD);
@@ -127,20 +132,22 @@
             YU.Dispose();
             YD.Dispose();
         }
+
         if (x &gt; 50 &amp;&amp; y &gt; 50) {
             var sx = this.Scale(x, 50, 830, 0, 320);
             var sy = this.Scale(y, 150, 830, 0, 240);
             this.TouchMove?.Invoke(this, new TouchEventArgs(sx, sy));
         }
+
         Thread.Sleep(20);
     }
 }
 </code></pre><h2 id="capacitive-touch">Capacitive Touch</h2>
 <p>Capacitive touch screens are used on most modern devices, including phones. They are very accurate and capable of detecting multiple simultaneous touches.</p>
-<p>A special capacitive controller chip must be used to control the touch panel. This chip is usually mounted right on the flat cable going to the touch panel. These chips are usually I2C or SPI, with I2C being more common.</p>
+<p>A special capacitive controller chip must be used to read the touch panel. This chip is usually mounted right on the flat cable going to the touch panel. These chips are usually I2C or SPI, with I2C being more common.</p>
 <p>The capacitive displays used in our development options use a controller from FocalTech.</p>
-<p>We provide the <code>GHIElectronics.TinyCLR.Drivers.FocalTech.FT5xx6</code> NuGet package to interact with the touch screens. The constructor simply needs to know which I2C bus and reset pin are being used. The event fires with exact position matching the display resolution, no need for any scaling or calibration. The driver source code is found on the <a href="https://github.com/ghi-electronics/TinyCLR-Drivers">TinyCLR Drivers repo</a>.</p>
-<p>This basics example will draw a dot on touch move</p>
+<p>We provide the <code>GHIElectronics.TinyCLR.Drivers.FocalTech.FT5xx6</code> NuGet package to interact with capacitive touch screens. The constructor simply needs to know which I2C bus and reset pin are being used. The event fires giving the exact position matching the display resolution, no need for any scaling or calibration. The driver source code is found on the <a href="https://github.com/ghi-electronics/TinyCLR-Drivers">TinyCLR Drivers repo</a>.</p>
+<p>This simple example will draw a dot on touch move:</p>
 <pre><code class="lang-cs">using GHIElectronics.TinyCLR.Drivers.FocalTech.FT5xx6;
 
 var touch = new FT5xx6Controller(i2cController.GetDevice(FT5xx6Controller.GetConnectionSettings()), gpioController.OpenPin(UCMStandard.GpioPin.B));
@@ -157,7 +164,7 @@ touch.TouchMove += (_, e) =&gt; {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/tinyclr/tutorials/touch-screen.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/touch-screen.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -8,7 +8,7 @@
     <title>Power Management </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Power Management ">
-    <meta name="generator" content="docfx 2.23.1.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
+    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -59,7 +60,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -77,13 +80,35 @@
 <h1 id="power-management">Power Management</h1>
 
 <hr>
-<p>TinyCLR OS currently supports Hibernate and Shutdown.</p>
+<p>TinyCLR OS currently supports the Hibernate and Shutdown power saving modes. Any GPIO interrupt can be used to wake a board from Hibernate mode, but the WKUP pin must be used to wake up from Shutdown mode.</p>
 <h2 id="hibernate">Hibernate</h2>
-<p>In this mode, the system, goes into sleep low power mode and only wakes up and resumes from a specified pin.</p>
-<pre><code>// sleep and wakeup using APP pin
+<p>In this mode the system goes to sleep to save power and wakes up and resumes processing when the assigned interrupt is received. Any GPIO interrupt can be used to wake from hibernation. The following example runs on both the SC20100 and SC20260D Dev boards and uses the LDR button to wake up. </p>
+<div class="NOTE"><h5>Note</h5><p>Don&#39;t forget to configure the interrupt and interrupt handler for the pin that will be used to wake up from hibernation.</p>
+</div>
+<div class="TIP"><h5>Tip</h5><p>This code needs the GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Devices.Gpio, and GHIElectronics.TinyCLR.Pins NuGet packages and using statements in addition to the GHIElectronics.TinyCLR.Core NuGet package.</p>
+</div>
+<pre><code class="lang-cs">var ldrButton = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE3);
+ldrButton.SetDriveMode(GpioPinDriveMode.InputPullUp);
+ldrButton.ValueChanged += ldrButton_ValueChanged;
+
+//The next line starts hibernation
+Power.SetLevel(PowerLevel.Sleep3, PowerWakeSource.Gpio, (ulong)(ldrButton.PinNumber));
+
+//The system is hibernating.
+//Pressing the ldrButton button (PE3) wakes up the system.
+
+private static void ldrButton_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e) {
+
+}
 </code></pre><h2 id="shutdown">Shutdown</h2>
-<p>In this mode, the system completely shuts down. It can only be woken up by reset, power cycle or by toggling the WAKEUP pin. Note that the system will always reset when it wakes up from this mode.</p>
-<pre><code>// Showdown
+<p>In this mode the system completely shuts down. It can only be awakened by reset, power cycle, or by toggling the WKUP pin.</p>
+<p>The following code shuts down the system. The <code>false</code> argument configures the system to wake up when the WKUP pin goes from high to low. Make the argument <code>true</code> to wake up when WKUP goes high.</p>
+<div class="NOTE"><h5>Note</h5><p>Waking from Shutdown mode always resets the system. Your application will start over, it will not resume where it left off.</p>
+</div>
+<div class="TIP"><h5>Tip</h5><p>This code needs the GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Devices.Gpio, and GHIElectronics.TinyCLR.Pins NuGet packages and using statements in addition to the GHIElectronics.TinyCLR.Core NuGet package.</p>
+</div>
+<pre><code class="lang-cs">//The next line shuts down the system.
+Power.Shutdown(false); 
 </code></pre></article>
           </div>
           
@@ -92,7 +117,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/tinyclr/tutorials/power-management.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/power-management.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

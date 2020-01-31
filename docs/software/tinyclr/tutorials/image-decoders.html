@@ -8,7 +8,7 @@
     <title>Image Decoders </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Image Decoders ">
-    <meta name="generator" content="docfx 2.23.1.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
+    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -59,7 +60,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -77,12 +80,23 @@
 <h1 id="image-decoders">Image Decoders</h1>
 
 <hr>
-<p>JPG, BMP and GIF are natively supported.</p>
-<pre><code>// Read file into array and use that array to create a Bitmap
-Bitmap = new Bitmap(data, type.BMP);
-</code></pre><p>You can also read bitmap from <a href="resources.html">Resources</a></p>
-<h1 id="video-playback">Video playback</h1>
-<p>Animated GIFs are not supported but <a href="mjpeg-video.html">Motion JPEG</a> is supported.</p>
+<p>TinyCLR OS provides methods for converting JPG, BMP, and GIF files into bitmaps that can be used in your application. The image can be added to your project as a <a href="resources.html">resource</a>, or the image can be stored in a byte array.</p>
+<pre><code class="lang-cs">var screen = Graphics.FromImage(new Bitmap(displayController.ActiveConfiguration.Width,
+    displayController.ActiveConfiguration.Height));
+
+//Image is in a resource file named &quot;jpegImageFile&quot;:
+var imageBitmap = Resource1.GetBitmap(Resource1.BitmapResources.jpegImageFile);
+
+var b1 = new Bitmap(dataArray, BitmapImageType.Jpeg);
+var b2 = new Bitmap(dataArray, BitmapImageType.Gif);
+var b3 = new Bitmap(dataArray, BitmapImageType.Bmp);  
+
+var imageX = 0;
+var imageY = 0;
+
+screen.DrawImage(imageBitmap, imageX, imageY);
+</code></pre><h2 id="video-playback">Video playback</h2>
+<p>Animated GIFs are not supported but <a href="mjpeg-video.html">Motion JPEG</a> will soon be supported.</p>
 </article>
           </div>
           
@@ -91,7 +105,7 @@ Bitmap = new Bitmap(data, type.BMP);
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/software/tinyclr/tutorials/image-decoders.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/image-decoders.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
