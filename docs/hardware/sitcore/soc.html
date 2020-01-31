@@ -270,16 +270,16 @@
 <h3 id="sc20260b-pinout">SC20260B Pinout</h3>
 <p><a href="pdfs/sc20260b.pdf">SC20260B Pinout</a></p>
 <h2 id="device-startup">Device Startup</h2>
-<p>The SITCore is held in reset while the RESET pin is low. Releasing RESET will begin the system startup process.</p>
+<p>The SITCore is held in reset when the reset pin is low. Releasing it will begin the system startup process.</p>
 <p>There are three different components of the device firmware:</p>
 <ol>
-<li>GHI Electronics Bootloader: initializes the system, updates TinyCLR when needed, and executes TinyCLR.</li>
-<li>TinyCLR: used to load, debug, and execute the managed application.</li>
-<li>Managed application: the program developed by you or your software developer.</li>
+<li>GHI Electronics Bootloader: Initializes the system, updates TinyCLR when needed, and executes TinyCLR.</li>
+<li>TinyCLR: loads, debugs, and executes the managed application.</li>
+<li>Managed application: the program developed by the customer.</li>
 </ol>
-<p>Which components get executed on startup is controlled by manipulating the LDR pin. It is pulled high on startup during normal program execution. When low, the device waits in the GHI Electronics Bootloader. Otherwise, the managed application is executed. The APP pin is used to stop the application from running.</p>
+<p>Which components get executed on startup can be control by manipulating the LDR pin. It is pulled high on startup. When low, the device waits in the GHI Electronics Bootloader. Otherwise, the managed application is executed. The APP pin is used to stop the application from running.</p>
 <p>Additionally, the communications interface between the host PC and the SITCore is selected on startup through the MODE pin, which is pulled high on startup. The USB interface is selected when MODE is high and COM1 is selected when MODE is low.</p>
-<p>The above discussed functions of the LDR, APP, and MODE pins are only available during startup. After startup, the pins return to the default GPIO state and are available as a GPIO (or peripheral pin) in your application. Check out the <a href="../../software/tinyclr/special-pins.html">Special Pins</a> page for more information.</p>
+<p>The above discussed functions of the LDR, APP, and MODE pins are only available during startup. After startup, the pins return to the default GPIO state and are available as GPIO in your application. Check out the <a href="../../software/tinyclr/special-pins.html">Bootstrap Pins</a> page for more information.</p>
 <h2 id="tinyclr-os">TinyCLR OS</h2>
 <p>TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page for instructions.</p>
 <h3 id="loading-the-firmware">Loading the Firmware</h3>
@@ -303,9 +303,9 @@
 <h3 id="required-pins">Required Pins</h3>
 <p>Exposing the following pins is required in every design to enable device programming, updates, and recovery:</p>
 <ul>
-<li>RESET</li>
 <li>LDR</li>
 <li>APP</li>
+<li>RESET</li>
 <li>MOD (if required to select a debug interface)</li>
 </ul>
 <p>Please see the <a href="../../software/tinyclr/special-pins.html">Boostrap Pins</a> page for more details.</p>
@@ -332,7 +332,7 @@ kHz crystal and circuitry are required. Please see the processor&#39;s documenta
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-special-pins/hardware/sitcore/soc.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/joel-add-content/hardware/sitcore/soc.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

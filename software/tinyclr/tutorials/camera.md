@@ -1,17 +1,20 @@
 # Camera Interface
 ---
-For devices with digital camera interface, sometimes called DCMI or DCI, TinyCLR OS includes the necessary drivers. Typically, cameras need to be configured using [I2C bus](i2c.md). Please refer to the camera’s manuals to determine the needed configuration.
 
-The function to capture from the camera will be from this line in the driver.  
+TinyCLR OS supports digital camera interface, sometimes referred to as DCMI or DCI, on devices using the SITCore SC20260 SoC. Typically, cameras need to be configured using [I2C bus](i2c.md). Please refer to the camera's manual to determine the needed configuration.
+
+The following function captures camera images:  
+```cs
+public void Capture(byte[] data, int timeoutMillisecond) =>
+    this.cameraController.Capture(data, timeoutMillisecond);
 ```
-public void Capture(byte[] data, int timeoutMillisecond) => this.cameraController.Capture(data, timeoutMillisecond);
-```
-Don't forget you still have to configure your camera before you capture, check the Omnivision/Ov9655 driver under
-https://github.com/ghi-electronics/TinyCLR-Drivers for an example of how to configure your camera 
 
-This example configures and shows the camera on the display on the SCM20260D Dev Board.
+Don't forget to configure your camera before you use it -- check the Omnivision/Ov9655 driver under
+https://github.com/ghi-electronics/TinyCLR-Drivers for an example of how to configure your camera.
 
-```csharp
+This example configures the camera and sends the images to the 4.3 inch display attached to the SCM20260D Dev Board.
+
+```cs
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using System.Drawing;
 using System.Diagnostics;
@@ -29,9 +32,11 @@ class Program
         backlight.SetDriveMode(GpioPinDriveMode.Output);
         backlight.Write(GpioPinValue.High);
 
-        var displayController = GHIElectronics.TinyCLR.Devices.Display.DisplayController.GetDefault();
+        var displayController =
+            GHIElectronics.TinyCLR.Devices.Display.DisplayController.GetDefault();
 
-        var controllerSetting = new GHIElectronics.TinyCLR.Devices.Display.ParallelDisplayControllerSettings
+        var controllerSetting = 
+            new GHIElectronics.TinyCLR.Devices.Display.ParallelDisplayControllerSettings
         {
             Width = 480,
             Height = 272,
@@ -82,6 +87,7 @@ class Program
             { }
         }
     }
+
     static void Main()
     {
         Test_Dcmi();

@@ -17,7 +17,7 @@ If the processor is powered from 3.3V, then the state high means that there is 3
 
 While written for the SCM20260D Dev Board, this example will work unchanged on the SC20100S Dev Board as well, blinking the left most LED (PB0).
 
-```csharp
+```cs
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
 using System.Threading;
@@ -54,7 +54,7 @@ In this example, a button is connected between ground and an input pin. We will 
 
 While written for the SCM20260D Dev Board, this example will work unchanged with the SC20100S Dev Board as well. The left most LED (PB0) will light when the right most button (PD7/MODE) is pressed.
 
-```csharp
+```cs
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
 using System.Threading;
@@ -104,7 +104,7 @@ This example is written for the SCM20260D Dev Board, but will also run unchanged
 example: PA1 and PB1 cannot both be used as interrupts at the same time, but PA1 and PB2 can.
 
 
-```csharp
+```cs
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
 using System.Threading;

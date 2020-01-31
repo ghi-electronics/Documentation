@@ -104,7 +104,7 @@ The `WriteMessages()` method is used to send an array of CAN messages.  The argu
 ## Sample Code
 The following sample code is written for our SITCore SC20100 Dev Board.  It requires installation of the `GHIElectronics.TinyCLR.Core`, `GHIElectronics.TinyCLR.Devices` and `GHIElectronics.TinyCLR.Pins` NuGet packages.
  
-```csharp
+```cs
 using System;
 using System.Diagnostics;
 using System.Threading;

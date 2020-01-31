@@ -7,10 +7,11 @@ The USB client support is mainly used for deploying and debugging applications. 
 ## USB Host
 USB MSC (Mass Storage Class) allows file access on USB memory devices.
 
-```
-// Initialize a USB MSC device
+```cs
+// Initialize a USB memory device.
+var usbHostController = StorageController.FromName(@"GHIElectronics.TinyCLR.NativeApis.STM32H7.UsbHostMassStorageStorageController\0");
+var usbHost = FileSystem.Mount(sd.Hdc);
 
-// List files found on a USB memory device.
 ```
 
 > Note 

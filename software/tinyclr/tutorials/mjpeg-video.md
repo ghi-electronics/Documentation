@@ -1,8 +1,4 @@
 # MJPEG Video
 ---
-While TinyCLR OS is focused on small IoT devices, the speed of its core and JPEG decoding allows for MJPEG video playback. MJPEG format is simply a chain of JPG images. A library is provided to parse MJPEG video files and pass the data to the built in native JPG file decoder.
+MJPEG video is still under development, but will be available soon. MJPEG format is simply a chain of JPG images. SITCore's speed and capacity to store large amounts of data allow for high performance MJPEG video playback. Please stay tuned. . .
 
-```
-// open Sd card
-// play file
-```
