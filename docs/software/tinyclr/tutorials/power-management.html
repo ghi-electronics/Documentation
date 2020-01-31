@@ -84,7 +84,7 @@
 </div>
 <div class="TIP"><h5>Tip</h5><p>This code needs the GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Devices.Gpio, and GHIElectronics.TinyCLR.Pins NuGet packages and using statements in addition to the GHIElectronics.TinyCLR.Core NuGet package.</p>
 </div>
-<pre><code class="lang-csharp">var ldrButton = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE3);
+<pre><code class="lang-cs">var ldrButton = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE3);
 ldrButton.SetDriveMode(GpioPinDriveMode.InputPullUp);
 ldrButton.ValueChanged += ldrButton_ValueChanged;
 
@@ -104,7 +104,7 @@ private static void ldrButton_ValueChanged(GpioPin sender, GpioPinValueChangedEv
 </div>
 <div class="TIP"><h5>Tip</h5><p>This code needs the GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Devices.Gpio, and GHIElectronics.TinyCLR.Pins NuGet packages and using statements in addition to the GHIElectronics.TinyCLR.Core NuGet package.</p>
 </div>
-<pre><code>//The next line shuts down the system.
+<pre><code class="lang-cs">//The next line shuts down the system.
 Power.Shutdown(false); 
 </code></pre></article>
           </div>

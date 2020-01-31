@@ -9,7 +9,7 @@ RAM is used a lot at runtime. It is important to understand needed memory and pl
 ## RAM Memory Size
 Free and used memory sizes can be measured at runtime. This helps in optimizing systems.
 
-```csharp
+```cs
 var freeRam = GHIElectronics.TinyCLR.Native.Memory.ManagedMemory.FreeBytes;
 var usedRam = GHIElectronics.TinyCLR.Native.Memory.ManagedMemory.UsedBytes;
 ```

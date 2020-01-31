@@ -82,7 +82,7 @@
 <p>RAM is used a lot at runtime. It is important to understand needed memory and plan accordingly. When creating a data receiving buffer from UART for example, use a reasonable size that you really need.</p>
 <h2 id="ram-memory-size">RAM Memory Size</h2>
 <p>Free and used memory sizes can be measured at runtime. This helps in optimizing systems.</p>
-<pre><code class="lang-csharp">var freeRam = GHIElectronics.TinyCLR.Native.Memory.ManagedMemory.FreeBytes;
+<pre><code class="lang-cs">var freeRam = GHIElectronics.TinyCLR.Native.Memory.ManagedMemory.FreeBytes;
 var usedRam = GHIElectronics.TinyCLR.Native.Memory.ManagedMemory.UsedBytes;
 </code></pre><h2 id="allocating-memory">Allocating Memory</h2>
 <p>TinyCLR OS Garbage Collector allocates and frees objects automatically on the heap. When the memory gets fragmented, the system will compact the heap. This is the desired behavior, but this also creates a problem when sharing resource between TinyCLR OS and native drivers. In advance setup, a user may have a buffer that gets written to from an interrupt routine. Assuming this is implemented in native code, we would need a buffer that always sits at a fixed address. Using <code>var buffer = new byte[12];</code> will not work as the garbage collector may move the buffer to compact the heap.</p>

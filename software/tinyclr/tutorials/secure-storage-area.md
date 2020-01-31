@@ -5,7 +5,7 @@ An internal 128 Kbyte region of flash that can be used for non-volatile storage 
 > [!Tip]
 > Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Storage, GHIElectronics.TinyCLR.Native
 
-```
+```cs
 using GHIElectronics.TinyCLR.Devices.Storage;
 using System;
 using System.Diagnostics;

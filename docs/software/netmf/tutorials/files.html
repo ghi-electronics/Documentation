@@ -159,7 +159,7 @@ class Program {
 }
 </code></pre><h2 id="sd-card-writing-files">SD Card: Writing Files</h2>
 <p>There is more than one way to open files. I will only cover FileStream objects. This example will open a file and write a string to it. Since FileStream will only take byte arrays, we need to convert our string to a byte array.</p>
-<pre><code>using System.Threading;
+<pre><code class="lang-cs">using System.Threading;
 using System.Text;
 using Microsoft.SPOT;
 using System.IO;
@@ -198,7 +198,7 @@ public class Program {
 </code></pre><h2 id="sd-card-reading-a-file">SD Card: Reading a File</h2>
 <p>Take the SD Card used in the last example, put it in a PC and you will see the file.
 For this example, we use the same SD Card written to by the last example. The file is opened and read to verify its contents.</p>
-<pre><code>using System.Threading;
+<pre><code class="lang-cs">using System.Threading;
 using System.Text;
 using Microsoft.SPOT;
 using System.IO;
@@ -243,7 +243,7 @@ public class Program {
 </code></pre><h2 id="sd-card-media-detection">SD Card: Media Detection</h2>
 <p>The previous examples assumed that the card was already inserted and mostly ignored whether that media was formatted (contained a file system). The following example shows an application without such assumptions; additionally, it demonstrates the Format method.</p>
 <p>Together, <code>InsertEventHandler</code>, <code>EjectEventHandler</code>, and <code>IsSDCardPresent</code> are used to respond to physical card activities, which in turn are used to control mounting (<code>Mount</code>, <code>Unmount</code>) of the card. Once the card is mounted, the file-system can be used.</p>
-<pre><code>using System;
+<pre><code class="lang-cs">using System;
 using System.IO;
 using System.Threading;
 using Microsoft.SPOT;
@@ -349,7 +349,7 @@ public class Program
 </code></pre><h2 id="usb-mass-storage-devices">USB Mass Storage Devices</h2>
 <p>USB mass storage devices, such as memory sticks and card readers are supported by GHI&#39;s NETMF devices.
 If you compare the following example with those above for SD Cards, you will see how easy it is to program for one, the other, or both with virtually identical code.</p>
-<pre><code>using System;
+<pre><code class="lang-cs">using System;
 using System.Threading;
 using System.IO;
 using Microsoft.SPOT;
@@ -445,7 +445,7 @@ public class Program {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-special-pins/software/netmf/tutorials/files.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-tutorials/software/netmf/tutorials/files.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

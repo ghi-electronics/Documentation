@@ -5,7 +5,7 @@ There are two built in libraries to help in encoding data, bit converter and str
 ## BitConverter
 The BitConverter class is used to convert from one data type to another. For example, to convert an integer into a byte array:
 
-```csharp
+```cs
 var byteArray = BitConverter.GetBytes(23);
 //byteArray[0] = 23, byteArray[1] = 0, byteArray[2] = 0, byteArray[3] = 0
 
@@ -17,7 +17,7 @@ byteArray = BitConverter.GetBytes(65536);
 
 #### Convert to a Byte Array
 
-```csharp
+```cs
 BitConverter.GetBytes(char value)
 BitConverter.GetBytes(double value)
 BitConverter.GetBytes(float value)
@@ -32,7 +32,7 @@ BitConverter.GetBytes(bool value)
 
 #### Convert from a Byte Array
 
-```csharp
+```cs
 BitConverter.ToBoolean(byte[] value, int startIndex)
 BitConverter.ToChar(byte[] value, int startIndex)
 BitConverter.ToDouble(byte[] value, int startIndex)
@@ -50,13 +50,13 @@ BitConverter.ToUInt64(byte[] value, int startIndex)
 
 #### Convert Between Double and Long
 
-```csharp
+```cs
 BitConverter.DoubleToInt64Bits(double value)
 BitConverter.Int64BitsToDouble(long value)
 ```
 
 #### Swap Endianness
 
-```csharp
+```cs
 BitConverter.SwapEndianness(byte[] data, int groupSize)
 ```

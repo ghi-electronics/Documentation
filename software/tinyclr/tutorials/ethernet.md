@@ -9,7 +9,7 @@ This is a simple example:
 >[!TIP]
 >Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Pins
 
-```csharp
+```cs
 static bool linkReady = false;
 
 static void DoTestEthernet()
@@ -86,7 +86,7 @@ This example uses the ENC28J60 click on our SC20100 dev board.
 >[!TIP]
 >Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins
 
-```csharp
+```cs
 static void DoTestEnc28()
 {
     var networkController = NetworkController.FromName
@@ -173,7 +173,7 @@ private static void NetworkController_NetworkAddressChanged
 
 The NetworkController provides two events:
 
-```csharp
+```cs
 private static void NetworkController_NetworkLinkConnectedChanged
     (NetworkController sender, NetworkLinkConnectedChangedEventArgs e)
 {

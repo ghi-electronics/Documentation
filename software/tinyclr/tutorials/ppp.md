@@ -8,7 +8,7 @@ This example uses the xxxx click module on our dev boards to establish a connect
 >[!TIP]
 >Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Networking.Uart, GHIElectronics.TinyCLR.Pins
 
-```csharp
+```cs
 static bool linkReady = false;
 
 static void DoTestPPP()
@@ -85,7 +85,7 @@ private static void NetworkController_NetworkAddressChanged(NetworkController se
 
 Below are simple AT commands that we tested on SIM900 and SKYWIRE modules, using a T-Mobile SIM card.
 
-```csharp
+```cs
 static void InitSimCard() {
     var serial = GHIElectronics.TinyCLR.Devices.Uart.UartController.FromName
         (GHIElectronics.TinyCLR.Pins.SC20260.UartPort.Usart1);
@@ -131,7 +131,7 @@ static void SendAT(UartController port, string command)
 
 Here's a Main function that uses the above code:
 
-```csharp
+```cs
 static void Main()
 {
     InitSimCard();

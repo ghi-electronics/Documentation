@@ -9,7 +9,7 @@ This example uses the WiFi 7 click on our SC20100 dev board.
 >[!TIP]
 >Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins
 
-```csharp
+```cs
 static void DoTestWiFi7Click()
 {
     var enablePin = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PA15);
@@ -101,7 +101,7 @@ private static void NetworkController_NetworkAddressChanged
 > [!IMPORTANT] 
 > There is an enable pin which needs to be pulled high on the WiFI 7 click module. 
 
-```csharp
+```cs
 var enablePin = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PA15);
             
 enablePin.SetDriveMode(GpioPinDriveMode.Output);

@@ -86,22 +86,58 @@
 <h2 id="tinyclr-device-setup">TinyCLR Device Setup</h2>
 <p>To use TinyCLR with a device you must first install the latest version of the TinyCLR firmware on the device.</p>
 <p>The TinyCLR firmware includes the Common Language Runtime (CLR) which converts compiled code into machine instructions and manages program execution.  The TinyCLR firmware is also responsible for interacting with Microsoft Visual Studio to load and debug your application programs.</p>
-<p>Instructions for installing the firmware are provided on the documentation page for each device.</p>
-<h2 id="tinyclr-computer-setup">TinyCLR Computer Setup</h2>
-<h3 id="download-and-install-visual-studio-and-the-tinyclr-extension">Download and Install Visual Studio and the TinyCLR Extension</h3>
+<p>Use the <a href="tinyclr-config.html">TinyCLR Config</a> tool to update the firmware on your device.</p>
+<h2 id="development-machine-setup">Development Machine Setup</h2>
 <ol>
-<li>If you don&#39;t already have Visual Studio 2019, download and install the free version from here:  <a href="https://www.visualstudio.com/downloads/">Visual Studio Community 2019</a>.</li>
+<li>If you don&#39;t already have Visual Studio 2019, download and install one of the editions, including the free community edition: <a href="https://www.visualstudio.com/downloads/">Visual Studio Community 2019</a>. You can also use other editions as well.</li>
 <li>Make sure to select the <code>.NET desktop development</code> workload when installing Visual Studio.</li>
-<li><p>Download and install the newest TinyCLR Visual Studio Project System by going to <code>Tools</code> &gt; <code>Extensions and Updates...</code>. In the <code>Extensions and Updates</code> dialog box select <code>Online</code> in the left panel. Type <code>tinyclr</code> into the <code>Search</code> text box in the upper right of the window to search for and install the <code>TinyCLR OS Project System</code>. You&#39;ll need to restart Visual Studio to let the extension installer complete the installation.
- <img src="images/Install-tinyclr-extension.gif" alt="Install TinyCLR Extension"></p>
-<p> You can also find the <a href="downloads.html">TinyCLR OS Project System</a> on our <a href="downloads.html">Downloads</a> page if you want to download the file and install it from your hard drive.</p>
-</li>
+<li>Download and install the newest TinyCLR Visual Studio Project System by going to <code>Tools</code> &gt; <code>Extensions and Updates...</code>. In the <code>Extensions and Updates</code> dialog box select <code>Online</code> in the left panel. Type <code>tinyclr</code> into the <code>Search</code> text box in the upper right of the window to search for and install the <code>TinyCLR OS Project System</code>. You&#39;ll need to restart Visual Studio to let the extension installer complete the installation.
+ <img src="images/Install-tinyclr-extension.gif" alt="Install TinyCLR Extension"></li>
 </ol>
-<h3 id="install-the-tinyclr-nuget-packages">Install the TinyCLR Nuget Packages</h3>
-<div class="NOTE"><h5>Note</h5><p>If you are using special release libraries that are not hosted on NuGet.org, use the local feed feature to fetch the needed libraries from your local machine.</p>
+<div class="NOTE"><h5>Note</h5><p>Pre-releases of the Project System are not hosted online but found on the <a href="downloads.html"><strong>Downloads</strong></a> page.</p>
 </div>
+<h2 id="starting-a-new-project">Starting a New Project</h2>
+<p>Let&#39;s blink an LED on a SITCore board.</p>
+<p>Open Visual Studio and select <code>Create a new project</code>.</p>
+<p><img src="images/create-new-project.png" alt="Create a new project"></p>
+<p>In the <code>Create a new project window</code>, select <code>TinyCLROS</code> from the <code>platforms</code> drop down list.</p>
+<p><img src="images/select-platform.png" alt="Select platform"></p>
+<p>Now select the C# TinyCLR Application template and click the <code>Next</code> button.</p>
+<p><img src="images/select-template.png" alt="Select C# TinyCLR Application template"></p>
+<p>We&#39;re going to stick with the default name and location. If you use a different name, make sure the program&#39;s namespace statement matches the namespace of your program. Now click on the &quot;Create&quot; button.</p>
+<p><img src="images/configure-project.png" alt="Configure project"></p>
+<p>Now cut and paste the following code into the <code>Program.cs</code> window. Make sure to install the <code>GHIElectronics.TinyCLR.Core</code>, <code>GHIElectronics.TinyCLR.Devices.Gpio</code>, <code>GHIElectronics.TinyCLR.Native</code>, and <code>GHIElectronics.TinyCLR.Pins</code> NuGet packages. If not sure how, the following section explains how this can be done.</p>
+<pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Gpio;
+using GHIElectronics.TinyCLR.Pins;
+using System.Threading;
+
+namespace TinyCLRApplication1 {
+    class Program {
+        static void Main() {
+
+            //Use &quot;SC20100.GpioPin.PB0&quot; on SC20100 Dev Board.
+            //Use &quot;SC20260.GpioPin.PH6&quot; on SC20260D Dev Board.
+            var LED = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
+            LED.SetDriveMode(GpioPinDriveMode.Output);
+
+            while (true) {
+                LED.Write(GpioPinValue.High);
+                Thread.Sleep(100);
+
+                LED.Write(GpioPinValue.Low);
+                Thread.Sleep(100);
+            }
+        }
+    }
+}
+</code></pre><p>You may have to change line 11 depending on which board you are using.</p>
+<p><img src="images/hit-start-button.png" alt="Hit Start button"></p>
+<p>Make sure your device is plugged into the computer&#39;s USB port. Now hit the start button as shown on the above image (or hit the F5 key). If you&#39;ve done everything correctly, the program will compile and deploy to your device. The left most LED on the dev board should blink if you&#39;ve done everything correctly.</p>
+<p>Congratulations!  You&#39;re on your way to becoming a TinyCLR embedded developer!</p>
+<h3 id="the-nuget-packages">The NuGet Packages</h3>
+<p>NuGet packages are typically hosted online on www.NuGet.org. </p>
+<p>The steps below explain how to add onlione-hosted NuGet libraries to your project. If you are using a pre-release, the libraries must be <a href="downloads.html">downloaded</a> and installed as a local feed.</p>
 <ol>
-<li>Connect your device to your PC using a USB cable (make sure your device has the latest firmware installed).</li>
 <li>Start Visual Studio and create a new <code>TinyCLR Application</code> under <code>C# &gt; TinyCLR</code>. New to Visual Studio or C#? Take a look at the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/with-visual-studio">getting started guide from Microsoft</a>.</li>
 <li><p>Right click on your Project in the Solution Explorer panel and select <code>Manage NuGet Packages</code>.  If the Solution Explorer window is not visible, open it by selecting <code>Solution Explorer</code> in the <code>View</code> menu. You can also select <code>Manage NuGet Packages...</code> in the <code>Project</code> menu of Visual Studio.
 <img src="images/select-manage-nuget-packages.gif" alt="View Show Solution Explorer"></p>
@@ -129,46 +165,8 @@
 <img src="images/accept-agreement-for-nuget.gif" alt="Accept Agreement for NuGet"></p>
 </li>
 </ol>
-<p>And, that&#39;s it! You&#39;re now ready to start programming using TinyCLR OS.</p>
-<h2 id="starting-a-new-project">Starting a New Project</h2>
-<p>Let&#39;s make a &quot;hello world&quot; program and deploy it on a SITCore Dev Board.</p>
-<p>Open Visual Studio and select <code>Create a new project</code>.</p>
-<p><img src="images/create-new-project.png" alt="Create a new project"></p>
-<p>In the <code>Create a new project window</code>, select <code>TinyCLROS</code> from the <code>platforms</code> drop down list.</p>
-<p><img src="images/select-platform.png" alt="Select platform"></p>
-<p>Now select the C# TinyCLR Application template and click the <code>Next</code> button.</p>
-<p><img src="images/select-template.png" alt="Select C# TinyCLR Application template"></p>
-<p>We&#39;re going to stick with the default name and location. If you use a different name, make sure the program&#39;s namespace statement matches the namespace of your program. Now click on the &quot;Create&quot; button.</p>
-<p><img src="images/configure-project.png" alt="Configure project"></p>
-<p>Now cut and paste the following code into the <code>Program.cs</code> window. Make sure to install the <code>GHIElectronics.TinyCLR.Core</code>, <code>GHIElectronics.TinyCLR.Devices.Gpio</code>, <code>GHIElectronics.TinyCLR.Native</code>, and <code>GHIElectronics.TinyCLR.Pins</code> NuGet packages.</p>
-<p>Make sure the namespace statement matches the program&#39;s namespace.</p>
-<pre><code>using GHIElectronics.TinyCLR.Devices.Gpio;
-using GHIElectronics.TinyCLR.Pins;
-using System.Threading;
-
-namespace TinyCLRApplication1 {
-    class Program {
-        static void Main() {
-
-            //Use &quot;SC20100.GpioPin.PB0&quot; on SC20100 Dev Board.
-            //Use &quot;SC20260.GpioPin.PH6&quot; on SC20260D Dev Board.
-            var LED = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
-            LED.SetDriveMode(GpioPinDriveMode.Output);
-
-            while (true) {
-                LED.Write(GpioPinValue.High);
-                Thread.Sleep(100);
-
-                LED.Write(GpioPinValue.Low);
-                Thread.Sleep(100);
-            }
-        }
-    }
-}
-</code></pre><p>You may have to change line 11 depending on which dev board you are using (see the comment lines 9 and 10).</p>
-<p><img src="images/hit-start-button.png" alt="Hit Start button"></p>
-<p>Make sure your device is plugged into the computer&#39;s USB port. Now hit the start button as shown on the above image (or hit the F5 key). If you&#39;ve done everything correctly, the program will compile and deploy to your device. The left most LED on the dev board should blink if you&#39;ve done everything correctly.</p>
-<p>Congratulations!  You&#39;re on your way to becoming a TinyCLR embedded developer!</p>
+<div class="NOTE"><h5>Note</h5><p>Pre-release libraries are not hosted on NuGet.org, use the local feed feature to fetch the needed libraries from your local machine, found on the <a href="downloads.html"><strong>Downloads</strong></a> page.</p>
+</div>
 <hr>
 <p>To find the best hardware for your TinyCLR application, go to the <a href="../../hardware/sitcore/intro.html"><strong>SITCore</strong></a> page in the hardware section of this documentation.</p>
 <p>To learn more about TinyCLR embedded programming check out our <a href="tutorials/intro.html"><strong>tutorials</strong></a>.</p>

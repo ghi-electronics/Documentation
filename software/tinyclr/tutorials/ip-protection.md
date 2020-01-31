@@ -10,7 +10,7 @@ Companies need a way to protect their applications from piracy: TinyCLR OS runni
 
 As USB and serial ports are used for application deployment and debugging, these interfaces can also be used by unauthorized parties to read or pirate your application. TinyCLR OS can prevent unauthorized access with a single command that disables the debug interface:
 
-```csharp
+```cs
 GHIElectronics.TinyCLR.Update.Application.Lock()
 ```
 
@@ -18,7 +18,7 @@ As this instruction is stored internally in non-volatile flash, it is persistent
 
 You can also check what interface is active, or if it is disabled:
 
-```csharp
+```cs
 GHIElectronics.TinyCLR.Native.DeviceInformation.DebugInterface
 ```
 

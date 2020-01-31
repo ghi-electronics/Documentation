@@ -11,7 +11,7 @@ Type type = i.GetType();
 
 Another example below shows how to access a private function from a different class. Let's say we have a class named ReflectionExample with private functions named FunctionA() and FunctionB().
 
-```csharp
+```cs
 public class ReflectionExample
 {
     private uint FunctionA() => 0x1234;
@@ -22,7 +22,7 @@ public class ReflectionExample
 
 Reflection provides a way to access these two functions even though they are declared as private.
 
-```csharp
+```cs
 var r = new ReflectionExample();
 
 var type = r.GetType();

@@ -85,7 +85,7 @@
 </div>
 <div class="TIP"><h5>Tip</h5><p>Make sure you change the namespace to match your project! </p>
 </div>
-<pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Devices.Display;
+<pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Display;
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Devices.Spi;
 using GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735;
@@ -174,7 +174,7 @@ namespace GraphicsSample {
 </div>
 <div class="TIP"><h5>Tip</h5><p>Make sure you change the namespace to match your project!</p>
 </div>
-<pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Devices.Display;
+<pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Display;
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
 using System.Drawing;
@@ -245,7 +245,7 @@ namespace GraphicsSample {
 }
 </code></pre><h3 id="with-7-display">With 7&quot; Display</h3>
 <p>If you are using the UD700 7 inch display, replace the display configuration code with the following code:</p>
-<pre><code class="lang-csharp">displayController.SetConfiguration(new ParallelDisplayControllerSettings {
+<pre><code class="lang-cs">displayController.SetConfiguration(new ParallelDisplayControllerSettings {
     Width = 800,
     Height = 480,
     DataFormat = DisplayDataFormat.Rgb565,
@@ -264,7 +264,7 @@ namespace GraphicsSample {
 });
 </code></pre><h2 id="helper-methods">Helper Methods</h2>
 <p>The <code>DisplayController.ActiveConfiguration</code> can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display&#39;s resolution. The following line of code automatically draw a line from corner to corner, no matter the display resolution.</p>
-<pre><code class="lang-csharp">screen.DrawLine(new Pen(Color.Red), 0, 0, displayController.ActiveConfiguration.Width - 1,
+<pre><code class="lang-cs">screen.DrawLine(new Pen(Color.Red), 0, 0, displayController.ActiveConfiguration.Width - 1,
     displayController.ActiveConfiguration.Height - 1);
 </code></pre><p>It is important to note that drawing functions process graphics in RAM independently from the display. The display driver then transfers the pixels from the internal memory to the display, through <code>Graphics.Flush</code>. Learn more about <a href="displays.html">display</a> support.</p>
 <h2 id="images">Images</h2>

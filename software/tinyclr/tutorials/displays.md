@@ -24,7 +24,7 @@ TinyCLR also provides low level display access as part of the `GHIElectronics.Ti
 
 The following example is written for the SC20100 Dev Board and will paint the screen as shown in the picture beneath the code. Note that low level display access requires that you to use the data format required by your display as configured. The SC20100 Dev Board used in this example expects each pixel to have 16 bits (two bytes per pixel) of color information in RGB565 format.
 
-```csharp
+```cs
 using GHIElectronics.TinyCLR.Devices.Display;
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;

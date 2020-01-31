@@ -5,7 +5,7 @@ This example shows how to communicate with AWS.
 >[!TIP]
 >Needed Nugets: GHIElectronics.TinyCLR.Networking.Mqtt
 
-```csharp
+```cs
 static void DoTestAwsMqtt()
 {
     var iotArnString = "Need your ARN string";

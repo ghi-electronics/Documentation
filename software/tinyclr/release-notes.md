@@ -2,20 +2,21 @@
 ---
 ![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
 
-## 2.0.0-p2 (2020-01-31)
+## 2.0.0-preview2 update
 
-### Notes
+### Released 2020-01-31
 A refresh release of the firmware only with improved performance.
 
 #### Changes
 - Considerably faster execution speed.
 
 #### Known Issues
-- Same as previous release
+- See the 2.0.0-preview2 release notes.
+- This 2.0.0.21000 release activates all accelerators which might cause some bugs. If you have any strange behavior, please load the previous 2.0.0.20000 release and see if that fixes your issue. Both firmware versions are identical otherwise, and both run with same 2.0.0-preview2 NuGet packages.
 
-## 2.0.0-p2 (2020-01-22)
+## 2.0.0-preview2
 
-### Notes
+### Released 2020-01-22
 Initial insider release for SITCore hardware.
 
 ### Visual Studio Project System
@@ -66,9 +67,9 @@ Initial insider release for SITCore hardware.
 - PulseFeedback DrainDuration does not work when going from low to high.
 - Not digitally signed.
 
-## 2.0.0-p1 (2019-12-09)
+## 2.0.0-preview1
 
-### Notes
+### Released 2019-12-09
 A preview of the new API and available features.
 
 ### Libraries

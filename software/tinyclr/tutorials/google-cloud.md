@@ -6,7 +6,7 @@ This example below demonstrates how to communicate with the Google Cloud Platfor
 >[!TIP]
 >Needed Nugets: GHIElectronics.TinyCLR.Networking.Mqtt
 
-```csharp
+```cs
 static void DoTestGoogleCloudMqtt()
 {
     string iotHubName = "mqtt.googleapis.com";

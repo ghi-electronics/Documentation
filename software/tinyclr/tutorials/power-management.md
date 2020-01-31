@@ -11,7 +11,7 @@ In this mode the system goes to sleep to save power and wakes up and resumes pro
 > [!Tip]
 > This code needs the GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Devices.Gpio, and GHIElectronics.TinyCLR.Pins NuGet packages and using statements in addition to the GHIElectronics.TinyCLR.Core NuGet package.
 
-```csharp
+```cs
 var ldrButton = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE3);
 ldrButton.SetDriveMode(GpioPinDriveMode.InputPullUp);
 ldrButton.ValueChanged += ldrButton_ValueChanged;
@@ -39,7 +39,7 @@ The following code shuts down the system. The `false` argument configures the sy
 > [!Tip]
 > This code needs the GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Devices.Gpio, and GHIElectronics.TinyCLR.Pins NuGet packages and using statements in addition to the GHIElectronics.TinyCLR.Core NuGet package.
 
-```
+```cs
 //The next line shuts down the system.
 Power.Shutdown(false); 
 

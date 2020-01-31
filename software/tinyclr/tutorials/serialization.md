@@ -7,7 +7,7 @@ TinyCLR OS includes a built in JSON library to help in serializing data.
 > [!TIP]
 > Need Nugets: GHIElectronics.TinyCLR.Data.Json
 
-```csharp
+```cs
 static void DoTestSerialize()
 {
     var intArray = new int[] { 1, 3, 5, 7, 9 };

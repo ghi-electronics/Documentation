@@ -5,7 +5,7 @@ Hyper Text Transport Protocol (HTTP) builds on top of the [Core Protocols](core-
 >[!TIP]
 >Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Networking.Http
 
-```csharp
+```cs
 static void DoTestHttp()
 {
     var url = "http://www.bing.com/robots.txt";

@@ -5,7 +5,7 @@ You can use the `GHIElectronics.TinyCLR.UI` library to create user interfaces fo
 ## Application Management
 The UI library requires internal management that is handled by the application class. The following code provides a good starting point. Do not forget to add the `GHIElectronics.TinyCLR.UI` NuGet package.
 
-```csharp
+```cs
 using GHIElectronics.TinyCLR.UI;
 using GHIElectronics.TinyCLR.Devices.Display;
 
@@ -39,7 +39,7 @@ namespace UserInterfaceExample {
 
 While you can have multiple windows in your UI application, it is mandatory to have at least one window. Here is a complete example that shows a window with a gradient brush background. The code is for SC20260D Dev board with the 4.3 inch display.
 
-```csharp
+```cs
 using GHIElectronics.TinyCLR.UI;
 using GHIElectronics.TinyCLR.UI.Media;
 using GHIElectronics.TinyCLR.Devices.Display;
@@ -119,7 +119,7 @@ namespace UserInterfaceExample
 
 This code is for the SC20100 Dev Board with the N18 1.8 inch display.
 
-```csharp
+```cs
 using System;
 using System.Drawing;
 using GHIElectronics.TinyCLR.Devices.Display;
@@ -200,7 +200,7 @@ For the sake of simplifying the rest of this tutorial, we've added the `private 
 > [!Tip]
 > This example needs a [font](font-support.md).
 
-```csharp
+```cs
 private static UIElement Elements() {
     var txt = new TextBox {
         Font = font,
@@ -219,7 +219,7 @@ A TextBlock just displays text that cannot be changed at runtime. A TextBlock co
 ### Panel
 A `Window` can carry only a single `Child`, that is a single element. This is not a concern because the single element can be a container, like a `Panel`, which holds multiple elements. You can even have panels within panels with each having its own elements. This example will introduce shapes found in the `GHIElectronics.TinyCLR.UI.Shapes` namespace. It also shows an example of the `TextBox` element. We will also set margins for a better look.
 
-```csharp
+```cs
 private static UIElement Elements() {
     var panel = new Panel();
 
@@ -258,7 +258,7 @@ There are also two types of elements that descend from panels, `Canvas` and `Sta
 
 We will modify the previous example to use a vertical StackPanel. The elements will stack and be arranged to the right and the left. Note that setting vertical alignment will be ignored as the vertical StackPanel overrides how elements are stacked.
 
-```csharp
+```cs
 private static UIElement Elements() {
     var panel = new StackPanel(Orientation.Vertical);
 
@@ -295,7 +295,7 @@ private static UIElement Elements() {
 
 The Canvas element provides pixel level control over the placement of its child controls. The `Width` and `Height` properties of Canvas are requested dimensions, but the actual size depends on the size of the parent element. The `ActualWidth` and `ActualHeight` properties can be used to determine the actual size of the Canvas. Controls within a Canvas are positioned relative to the four edges of the Canvas.
 
-```csharp
+```cs
 private static UIElement Elements() {
     var canvas = new Canvas();
 
@@ -326,7 +326,7 @@ private static UIElement Elements() {
 
 This element defines a border inside another element. The position of child elements is constrained to the area inside the border. In this example the border thickness is set to 10, but if the children do not fill the area within the border, the border's thickness will automatically increase. Uncomment the two alignment lines to see an undesired effect of how borders work.
 
-```csharp
+```cs
 private static UIElement Elements() {
     var border = new Border();
     border.SetBorderThickness(10);
@@ -347,7 +347,7 @@ private static UIElement Elements() {
 
 The fix is to add a container and then the container will have a border. In this example, the parent of the border is the canvas instead of the window.
 
-```csharp
+```cs
 private static UIElement Elements() {
     var canvas = new Canvas();
     var border = new Border();
@@ -371,7 +371,7 @@ private static UIElement Elements() {
 
 Buttons are simple controls that accept user input in the form of a click, which in embedded devices is usually a finger tap on a touch screen. The button needs a child, typically text, which describes the button's function. Buttons have a `Click` event to respond to user input.
 
-```csharp
+```cs
 private static UIElement Elements() {
     var txt = new Text(font, "Push me!") {
         VerticalAlignment = VerticalAlignment.Center,
@@ -397,7 +397,7 @@ private static void Button_Click(object sender, RoutedEventArgs e) {
 
 TextFlow is a more powerful version of TextBlock that supports more advanced text formatting, and works well with large blocks of text.
 
-```csharp
+```cs
 private static UIElement Elements() {
     var textFlow = new TextFlow();
     textFlow.TextRuns.Add("Hello ", font, Colors.Red);
@@ -413,7 +413,7 @@ private static UIElement Elements() {
 
 This element provides a list of options for users to select from.
 
-```csharp
+```cs
 private static UIElement Elements() {
     var listBox = new ListBox();
     listBox.Items.Add(new Text(font, "Item 1"));
@@ -427,7 +427,7 @@ private static UIElement Elements() {
 
 It is also possible to add a separator between items, simply by using a rectangle. This item will be set to be not selectable.
 
-```csharp
+```cs
 private static UIElement Elements() {
     var rect = new Rectangle() {
         Height = 1,
@@ -463,7 +463,7 @@ The scroll viewer allows for viewing content that is larger than the viewing are
 
 The User Interface libraries rely on a dispatcher internally to handle system events and updates the invalidated elements. Any changes to any of the elements needs to happen from within the dispatcher. In this example, we will show the time on the screen. The time will be in a text box that is updated every second using a `Timer`. Since timers run in their own thread, a dispatcher invoke is needed.
 
-```csharp
+```cs
 static void Counter(object o) {
     Application.Current.Dispatcher.Invoke(TimeSpan.FromMilliseconds(1), _ => {
         Text txt = (Text)o;
@@ -487,7 +487,7 @@ private static UIElement Elements() {
 
 You can also use the dispatcher timer directly
 
-```csharp
+```cs
 private static UIElement Elements() {
     var txt = new Text(font, "Hello World!") {
         ForeColor = Colors.White,
@@ -513,7 +513,7 @@ private static void Counter(object sender, EventArgs e) {
 ### User Input
 A user can feed in input to the graphical interface through touch or button input.
 
-```csharp
+```cs
 app.InputProvider.RaiseTouch(x, y, touchState, DateTime.UtcNow);
 app.InputProvider.RaiseButton(btn, btnState, DateTime.UtcNow);
 ```

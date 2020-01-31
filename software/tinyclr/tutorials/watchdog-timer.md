@@ -5,7 +5,7 @@ The watchdog is a feature to keep checking that the system is functional by regu
 > Note
 > Once Watchdog is enabled it can’t be disabled without resetting the system or a power cycle.
 
-```
+```cs
 // Set watchdog to 5 seconds and reset it every 4 seconds
 Watchdog.Enable(5000);
 While(true)

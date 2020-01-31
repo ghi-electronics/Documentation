@@ -13,7 +13,7 @@ This is an easy way to create buffers that reside in external memory, which typi
 > 
 >Using: GHIElectronics.TinyCLR.Native
 
-```
+```cs
 //Allocate space for 100,000 byte array in unmanaged heap.
 UnmanagedBuffer uBuffer = new UnmanagedBuffer(100000);
 
@@ -31,7 +31,7 @@ When the [graphics](graphics.md) engine detects available external memory, it au
 
 ## Helper Methods
 
-```
+```cs
 //Print number of available bytes in unmanaged memory.
 System.Diagnostics.Debug.WriteLine(Memory.UnmanagedMemory.FreeBytes.ToString());
 

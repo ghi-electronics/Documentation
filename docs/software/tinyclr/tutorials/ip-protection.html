@@ -82,10 +82,10 @@
 <p>Companies need a way to protect their applications from piracy: TinyCLR OS running on SITCore devices gives you exactly what you need!</p>
 <h3 id="disabling-the-debug-interface">Disabling the Debug Interface</h3>
 <p>As USB and serial ports are used for application deployment and debugging, these interfaces can also be used by unauthorized parties to read or pirate your application. TinyCLR OS can prevent unauthorized access with a single command that disables the debug interface:</p>
-<pre><code class="lang-csharp">GHIElectronics.TinyCLR.Update.Application.Lock()
+<pre><code class="lang-cs">GHIElectronics.TinyCLR.Update.Application.Lock()
 </code></pre><p>As this instruction is stored internally in non-volatile flash, it is persistent and the chip can only be unlocked by completely erasing the device through the bootloader. This also erases your application, so locking the chip provides a great deal of security for your application.</p>
 <p>You can also check what interface is active, or if it is disabled:</p>
-<pre><code class="lang-csharp">GHIElectronics.TinyCLR.Native.DeviceInformation.DebugInterface
+<pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.DeviceInformation.DebugInterface
 </code></pre><p>Once you lock your device, everyone, including you and GHI Electronics, is locked out of accessing and debugging your application. So how do you update your device?</p>
 <p>The first step is to create an encrypted copy of the application. This is easily done using TinyCLR Config tool. You need to enter a key, or the tool will generate a key for you. The tool will then read the application, encrypt it, and store the encrypted application and the key as files on your machine. Of course, this needs to be done before you disable the debug interface on your device!</p>
 <p>You can now use the application deployment to deploy to other devices. This is good for mass production as well. Do not forget that you need the key if you are sending the deployment to a contract manufacturer.</p>

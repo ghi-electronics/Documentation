@@ -84,7 +84,7 @@
 <div class="TIP"><h5>Tip</h5><p>Nuget: GHIElectronics.TinyCLR.Native</p>
 <p>Using: GHIElectronics.TinyCLR.Native</p>
 </div>
-<pre><code>//Allocate space for 100,000 byte array in unmanaged heap.
+<pre><code class="lang-cs">//Allocate space for 100,000 byte array in unmanaged heap.
 UnmanagedBuffer uBuffer = new UnmanagedBuffer(100000);
 
 var uTable = uBuffer.Bytes;
@@ -96,7 +96,7 @@ uBuffer.Dispose();
 </code></pre><h2 id="graphical-memory">Graphical Memory</h2>
 <p>When the <a href="graphics.html">graphics</a> engine detects available external memory, it automatically uses it. Also, garbage collection will dispose of unmanaged graphics buffers automatically. You do not have to dispose of unmanaged graphics buffers like you do for unmanaged non-graphic buffers.</p>
 <h2 id="helper-methods">Helper Methods</h2>
-<pre><code>//Print number of available bytes in unmanaged memory.
+<pre><code class="lang-cs">//Print number of available bytes in unmanaged memory.
 System.Diagnostics.Debug.WriteLine(Memory.UnmanagedMemory.FreeBytes.ToString());
 
 //Print the number of bytes being used in unmanaged memory.

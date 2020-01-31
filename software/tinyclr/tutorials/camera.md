@@ -4,7 +4,7 @@
 TinyCLR OS supports digital camera interface, sometimes referred to as DCMI or DCI, on devices using the SITCore SC20260 SoC. Typically, cameras need to be configured using [I2C bus](i2c.md). Please refer to the camera's manual to determine the needed configuration.
 
 The following function captures camera images:  
-```
+```cs
 public void Capture(byte[] data, int timeoutMillisecond) =>
     this.cameraController.Capture(data, timeoutMillisecond);
 ```
@@ -14,7 +14,7 @@ https://github.com/ghi-electronics/TinyCLR-Drivers for an example of how to conf
 
 This example configures the camera and sends the images to the 4.3 inch display attached to the SCM20260D Dev Board.
 
-```csharp
+```cs
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using System.Drawing;
 using System.Diagnostics;

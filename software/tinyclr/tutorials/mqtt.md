@@ -8,7 +8,7 @@ The following is a simple example of MQTT:
 >[!TIP]
 >Needed Nugets: GHIElectronics.TinyCLR.Networking.Mqtt
 
-```csharp
+```cs
 static void DoTestMqtt()
 {
     var caCertificate = new X509Certificate(UTF8Encoding.UTF8.GetBytes("Your certificate"));
@@ -68,7 +68,7 @@ static void DoTestMqtt()
 
 Mqtt driver provides five events:
 
-```csharp
+```cs
 client.PublishReceivedChanged += (a,b) => { Debug.WriteLine("Publish Received Changed.");  };
 client.PublishedChanged += (a, b, c) => { Debug.WriteLine("Published Changed."); }; ;
 client.SubscribedChanged += (a, b) => { Debug.WriteLine("Subscribed Changed."); };

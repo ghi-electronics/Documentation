@@ -83,7 +83,7 @@
 <p>The easiest way to test a UART is by wiring a device&#39;s TXD to its RXD so any transmitted data is received by the same device. This is called a &quot;loopback&quot; test. The following code performs a simple loopback test on the SITCore SC20100S Dev Board. If you connect PE7, the COM7 RX pin, directly to the PE8, the COM7 TX pin, you will see &quot;ABCDEF&quot; in the output window when running this code.</p>
 <div class="TIP"><h5>Tip</h5><p>Don&#39;t forget to add the GHIElectronics.TinyCLR.Devices.Uart NuGet package!</p>
 </div>
-<pre><code class="lang-csharp">using System.Diagnostics;
+<pre><code class="lang-cs">using System.Diagnostics;
 using System.Text;
 using System.Threading;
 using GHIElectronics.TinyCLR.Devices.Uart;
@@ -120,7 +120,7 @@ class Program {
 <li>ErrorReceived</li>
 </ul>
 <p>The following example is written for the SC20100S Dev Board. It works the same as the previous example, except it uses the DateReceived event. If you connect PE7, the COM7 RX pin, directly to the PE8, the COM7 TX pin, you will see &quot;ABCDEF&quot; in the output window when running this code.</p>
-<pre><code class="lang-csharp">using System.Diagnostics;
+<pre><code class="lang-cs">using System.Diagnostics;
 using System.Text;
 using System.Threading;
 using GHIElectronics.TinyCLR.Devices.Uart;
@@ -170,7 +170,7 @@ class Program {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-special-pins/software/tinyclr/tutorials/uart.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-tutorials/software/tinyclr/tutorials/uart.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

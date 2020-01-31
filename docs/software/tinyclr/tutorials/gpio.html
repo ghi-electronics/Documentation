@@ -88,7 +88,7 @@ If the processor is powered from 3.3V, then the state high means that there is 3
 <div class="WARNING"><h5>Warning</h5><p>Digital pins on microcontrollers are weak. They can only be used to control small LEDs or transistors. Those transistors can, in turn, control devices with high power needs like a motor.</p>
 </div>
 <p>While written for the SCM20260D Dev Board, this example will work unchanged on the SC20100S Dev Board as well, blinking the left most LED (PB0).</p>
-<pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Devices.Gpio;
+<pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
 using System.Threading;
 
@@ -115,7 +115,7 @@ class Program {
 <div class="TIP"><h5>Tip</h5><p>Never use an infinite loop without giving the system time to think. Add a short sleep to the loop or use events instead.</p>
 </div>
 <p>While written for the SCM20260D Dev Board, this example will work unchanged with the SC20100S Dev Board as well. The left most LED (PB0) will light when the right most button (PD7/MODE) is pressed.</p>
-<pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Devices.Gpio;
+<pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
 using System.Threading;
 
@@ -151,7 +151,7 @@ class Program {
 <div class="NOTE"><h5>Note</h5><p>Input events use interrupts (IRQs). Interrupts are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
 example: PA1 and PB1 cannot both be used as interrupts at the same time, but PA1 and PB2 can.</p>
 </div>
-<pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Devices.Gpio;
+<pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
 using System.Threading;
 
@@ -189,7 +189,7 @@ class Program {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-special-pins/software/tinyclr/tutorials/gpio.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-tutorials/software/tinyclr/tutorials/gpio.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

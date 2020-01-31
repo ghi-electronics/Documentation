@@ -24,7 +24,7 @@ screen.Flush();
 
 To convert a font you must first make a .fntdef file which is a text file describing the font to convert as well as a number of other parameters. This file contains one option on each line. A minimal .fntdef file may look like this to have the standard ASCII characters.
 
-```
+```cs
 SelectFont "FN:Arial,WE:400,HE:12,IT:0"
 ImportRange 32 126
 ```

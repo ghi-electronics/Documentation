@@ -81,7 +81,7 @@
 <p>This example uses the xxxx click module on our dev boards to establish a connection and read a web page.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Networking.Uart, GHIElectronics.TinyCLR.Pins</p>
 </div>
-<pre><code class="lang-csharp">static bool linkReady = false;
+<pre><code class="lang-cs">static bool linkReady = false;
 
 static void DoTestPPP()
 {
@@ -153,7 +153,7 @@ private static void NetworkController_NetworkAddressChanged(NetworkController se
 </code></pre><div class="NOTE"><h5>Note</h5><p>Depending on your SIM card and cellular modem, you may need to initialize the SIM card before using PPP.</p>
 </div>
 <p>Below are simple AT commands that we tested on SIM900 and SKYWIRE modules, using a T-Mobile SIM card.</p>
-<pre><code class="lang-csharp">static void InitSimCard() {
+<pre><code class="lang-cs">static void InitSimCard() {
     var serial = GHIElectronics.TinyCLR.Devices.Uart.UartController.FromName
         (GHIElectronics.TinyCLR.Pins.SC20260.UartPort.Usart1);
 
@@ -195,7 +195,7 @@ static void SendAT(UartController port, string command)
     }
 }
 </code></pre><p>Here&#39;s a Main function that uses the above code:</p>
-<pre><code class="lang-csharp">static void Main()
+<pre><code class="lang-cs">static void Main()
 {
     InitSimCard();
     DoTestPPP();

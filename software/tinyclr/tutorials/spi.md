@@ -15,7 +15,7 @@ In its simplest terms, the master will swap data between itself and the slave. Y
 > [!Tip]
 > Note that a board running TinyCLR OS is always a SPI master, not slave.
 
-```csharp
+```cs
 using GHIElectronics.TinyCLR.Devices.Spi;
 using GHIElectronics.TinyCLR.Pins;
 

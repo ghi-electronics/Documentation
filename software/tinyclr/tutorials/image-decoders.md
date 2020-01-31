@@ -2,7 +2,7 @@
 ---
 TinyCLR OS provides methods for converting JPG, BMP, and GIF files into bitmaps that can be used in your application. The image can be added to your project as a [resource](resources.md), or the image can be stored in a byte array.
 
-```csharp
+```cs
 var screen = Graphics.FromImage(new Bitmap(displayController.ActiveConfiguration.Width,
     displayController.ActiveConfiguration.Height));
 

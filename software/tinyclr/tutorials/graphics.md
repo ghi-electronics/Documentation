@@ -13,7 +13,7 @@ The following sample code runs on our SC20100 Dev Board with its built in displa
 > [!Tip]
 > Make sure you change the namespace to match your project! 
 
-```csharp
+```cs
 using GHIElectronics.TinyCLR.Devices.Display;
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Devices.Spi;
@@ -109,7 +109,7 @@ Here's the same basic sample code as above, but adapted for the larger displays 
 > [!Tip]
 > Make sure you change the namespace to match your project!
 
-```csharp
+```cs
 using GHIElectronics.TinyCLR.Devices.Display;
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
@@ -184,7 +184,7 @@ namespace GraphicsSample {
 ### With 7" Display
 
 If you are using the UD700 7 inch display, replace the display configuration code with the following code:
-```csharp
+```cs
 displayController.SetConfiguration(new ParallelDisplayControllerSettings {
     Width = 800,
     Height = 480,
@@ -207,7 +207,7 @@ displayController.SetConfiguration(new ParallelDisplayControllerSettings {
 ## Helper Methods
 The `DisplayController.ActiveConfiguration` can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display's resolution. The following line of code automatically draw a line from corner to corner, no matter the display resolution.
 
-```csharp
+```cs
 screen.DrawLine(new Pen(Color.Red), 0, 0, displayController.ActiveConfiguration.Width - 1,
     displayController.ActiveConfiguration.Height - 1);
 ```

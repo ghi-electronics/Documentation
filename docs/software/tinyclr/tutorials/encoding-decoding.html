@@ -80,14 +80,14 @@
 <p>There are two built in libraries to help in encoding data, bit converter and string handling.</p>
 <h2 id="bitconverter">BitConverter</h2>
 <p>The BitConverter class is used to convert from one data type to another. For example, to convert an integer into a byte array:</p>
-<pre><code class="lang-csharp">var byteArray = BitConverter.GetBytes(23);
+<pre><code class="lang-cs">var byteArray = BitConverter.GetBytes(23);
 //byteArray[0] = 23, byteArray[1] = 0, byteArray[2] = 0, byteArray[3] = 0
 
 byteArray = BitConverter.GetBytes(65536);
 //byteArray[0] = 0, byteArray[1] = 0, byteArray[2] = 1, byteArray[3] = 0
 </code></pre><h3 id="bitconverter-overloads">BitConverter Overloads</h3>
 <h4 id="convert-to-a-byte-array">Convert to a Byte Array</h4>
-<pre><code class="lang-csharp">BitConverter.GetBytes(char value)
+<pre><code class="lang-cs">BitConverter.GetBytes(char value)
 BitConverter.GetBytes(double value)
 BitConverter.GetBytes(float value)
 BitConverter.GetBytes(int value)
@@ -98,7 +98,7 @@ BitConverter.GetBytes(ulong value)
 BitConverter.GetBytes(ushort value)
 BitConverter.GetBytes(bool value)
 </code></pre><h4 id="convert-from-a-byte-array">Convert from a Byte Array</h4>
-<pre><code class="lang-csharp">BitConverter.ToBoolean(byte[] value, int startIndex)
+<pre><code class="lang-cs">BitConverter.ToBoolean(byte[] value, int startIndex)
 BitConverter.ToChar(byte[] value, int startIndex)
 BitConverter.ToDouble(byte[] value, int startIndex)
 BitConverter.ToInt16(byte[] value, int startIndex)
@@ -112,10 +112,10 @@ BitConverter.ToUInt16(byte[] value, int startIndex)
 BitConverter.ToUInt32(byte[] value, int startIndex)
 BitConverter.ToUInt64(byte[] value, int startIndex)
 </code></pre><h4 id="convert-between-double-and-long">Convert Between Double and Long</h4>
-<pre><code class="lang-csharp">BitConverter.DoubleToInt64Bits(double value)
+<pre><code class="lang-cs">BitConverter.DoubleToInt64Bits(double value)
 BitConverter.Int64BitsToDouble(long value)
 </code></pre><h4 id="swap-endianness">Swap Endianness</h4>
-<pre><code class="lang-csharp">BitConverter.SwapEndianness(byte[] data, int groupSize)
+<pre><code class="lang-cs">BitConverter.SwapEndianness(byte[] data, int groupSize)
 </code></pre></article>
           </div>
           

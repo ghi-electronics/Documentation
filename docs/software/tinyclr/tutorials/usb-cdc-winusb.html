@@ -81,7 +81,7 @@
 </div>
 <h2 id="usb-cdc">USB CDC</h2>
 <p>The CDC class is natively supported by Windows and Linux. It is a way for the PC to see a virtual serial port. Once loaded, the PC will can use this port like any other serial port (COM port). Windows 10 works without the need for any drivers. Earlier operating systems needs a driver. While it works with most operating systems, CDC is typically limited to 64KB/sec.</p>
-<pre><code class="lang-csharp">static void DoTestCDC 
+<pre><code class="lang-cs">static void DoTestCDC 
 {
     var usbclient = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
 
@@ -122,7 +122,7 @@
 }
 </code></pre><h2 id="winusb">WinUSB</h2>
 <p>The WinUSB drivers are unique to Windows and they do take advantage of the power and speed of USB, meaning they are faster then CDC at data transfers. The speed is limited by the data processing on the IoT devices. Windows 10 loads the drivers automatically, Windows 7 requires drivers.</p>
-<pre><code class="lang-csharp">static void DoTestWinUsb
+<pre><code class="lang-cs">static void DoTestWinUsb
 {
     var usbclient = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
     usbclient.SetActiveSetting(GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientMode.WinUsb, &quot;Manufacture_Name&quot;, &quot;Product_Name&quot;, &quot;SerailNumber&quot;, 0x1234, 0x5678, &quot;{your guid}&quot;);
