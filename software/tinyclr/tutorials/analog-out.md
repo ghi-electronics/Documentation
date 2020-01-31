@@ -6,7 +6,7 @@ The analog out on a microcontroller has a given resolution which in large part d
 
 This example will generate a triangular waveform on the G120.
 
-```csharp
+```cs
 using System.Threading;
 using GHIElectronics.TinyCLR.Devices.Dac;
 using GHIElectronics.TinyCLR.Pins;

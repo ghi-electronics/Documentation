@@ -10,7 +10,7 @@ The easiest way to test a UART is by wiring a device's TXD to its RXD so any tra
 > [!Tip]
 > Don't forget to add the GHIElectronics.TinyCLR.Devices.Uart NuGet package!
 
-```csharp
+```cs
 using System.Diagnostics;
 using System.Text;
 using System.Threading;
@@ -52,7 +52,7 @@ TinyCLR's UART API included the following event listeners:
 
 The following example is written for the SC20100S Dev Board. It works the same as the previous example, except it uses the DateReceived event. If you connect PE7, the COM7 RX pin, directly to the PE8, the COM7 TX pin, you will see "ABCDEF" in the output window when running this code.
 
-```csharp
+```cs
 using System.Diagnostics;
 using System.Text;
 using System.Threading;

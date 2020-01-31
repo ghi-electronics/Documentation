@@ -8,7 +8,7 @@
     <title>File System </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="File System ">
-    <meta name="generator" content="docfx 2.23.1.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
+    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -59,7 +60,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -82,7 +85,7 @@
 <p>This allows file access on USB devices with MSC class, such as USB memory sticks. The support for USB drives is still not publicly available.</p>
 <h2 id="sd-card">SD Card</h2>
 <p>The below example requires the <code>GHIElectronics.TinyCLR.IO</code> and <code>GHIElectronics.TinyCLR.Storage</code> libraries and a device with an SD card.</p>
-<pre><code class="lang-csharp">using GHIElectronics.TinyCLR.Devices.Storage;
+<pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Storage;
 using GHIElectronics.TinyCLR.IO;
 using System;
 using System.IO;
@@ -91,7 +94,7 @@ using System.Text;
 namespace FileSystem {
     public class Program {
         private static void Main() {
-            var sd = StorageController.FromName(@&quot;GHIElectronics.TinyCLR.NativeApis.STM32F4.SdCardStorageController\0&quot;);
+            var sd = StorageController.FromName(@&quot;GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0&quot;);
             var drive = FileSystem.Mount(sd.Hdc);
 
             var file = new FileStream($@&quot;{drive.Name}Test.txt&quot;, FileMode.OpenOrCreate);
@@ -107,7 +110,7 @@ namespace FileSystem {
 }
 </code></pre><h2 id="low-level-access">Low-level Access</h2>
 <p>You can access the raw underlying data of the storage provider using the <code>Provider</code> property of the controller. Be careful when using this interface, however, as it bypasses any file system present and writes directly to the device. This is useful for implementing your own or otherwise unsupported file systems.</p>
-<pre><code class="lang-csharp">var controller = StorageController.FromName(@&quot;GHIElectronics.TinyCLR.NativeApis.STM32F4.SdCardStorageController\0&quot;);
+<pre><code class="lang-cs">var controller = StorageController.FromName(@&quot;GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0&quot;);
 controller.Provider.Read(address, buffer, 0, buffer.Length, -1);
 </code></pre></article>
           </div>
@@ -117,7 +120,7 @@ controller.Provider.Read(address, buffer, 0, buffer.Length, -1);
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-special-pins/software/tinyclr/tutorials/file-system.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/file-system.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

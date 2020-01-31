@@ -8,7 +8,7 @@
     <title>Secure Storage Area </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Secure Storage Area ">
-    <meta name="generator" content="docfx 2.23.1.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
+    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -59,7 +60,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -77,10 +80,68 @@
 <h1 id="secure-storage-area">Secure Storage Area</h1>
 
 <hr>
-<p>An internal secure flash region is provided for storing any sensitive information, like security certificates and serial numbers.</p>
-<pre><code>// read size
-// read data
-// write data
+<p>An internal 128 Kbyte region of flash that can be used for non-volatile storage of data. If you lock your device, this region is also great for storing sensitive information like security certificates and serial numbers.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Storage, GHIElectronics.TinyCLR.Native</p>
+</div>
+<pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Storage;
+using System;
+using System.Diagnostics;
+using System.Threading;
+
+class Program {
+    private static void Main() {
+        const uint STORAGE_SIZE = 128 * 1024;
+
+        var data = new byte[STORAGE_SIZE];
+
+        var realStorageSize = Configuration.Size;
+
+        bool isErased = Configuration.IsErased(0, realStorageSize);
+
+        if (isErased == false) {
+            Debug.WriteLine(&quot;Configuration is not empty&quot;);
+
+            Debug.WriteLine(&quot;Erasing...&quot;);
+
+            bool erased = Configuration.Erase(0, realStorageSize);
+
+            Debug.WriteLine(&quot;Erased ? &quot; + erased);
+        }
+
+
+        Debug.WriteLine(&quot;Fill buffer....&quot;);
+
+        for (var i = 0; i &lt; data.Length; i++) {
+            data[i] = (byte)(i % 255);
+        }
+
+        Debug.WriteLine(&quot;Writing buffer....&quot;);
+
+        Configuration.Write(data, 0, 0, (uint)data.Length);
+
+        Debug.WriteLine(&quot;Clear buffer....&quot;);
+
+        Array.Clear(data, 0, data.Length);
+
+        Debug.WriteLine(&quot;Read configuration....&quot;);
+
+        Configuration.Read(data, 0, 0, realStorageSize);
+
+        Debug.WriteLine(&quot;Compare buffer....&quot;);
+
+        for (var i = 0; i &lt; data.Length; i++) {
+            if (data[i] != (byte)(i % 255)) {
+                Debug.WriteLine(&quot;Configuration corrupted&quot;);
+
+                Thread.Sleep(-1);
+            }
+        }
+
+        Debug.WriteLine(&quot;The Configuration driver is good to go!!!!&quot;);
+
+        Thread.Sleep(-1);
+    }
+}
 </code></pre></article>
           </div>
           
@@ -89,7 +150,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-special-pins/software/tinyclr/tutorials/secure-storage-area.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/secure-storage-area.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

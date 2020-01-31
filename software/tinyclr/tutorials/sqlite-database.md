@@ -5,7 +5,7 @@ According to the SQLite homepage, "SQLite is a software library that implements 
 
 The below code is a simple example where a database file is created in RAM (using SD cards and USB drives is possible as well). A table is created that is filled with some initial rows and then this data is read from the database. This data is then iterated over and printed out. ColumnOriginNames returns the names of each of the columns.
 
-```charp
+```cs
 using System.Collections;
 using System.Diagnostics;
 using GHIElectronics.TinyCLR.Data.SQLite;

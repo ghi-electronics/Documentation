@@ -8,9 +8,9 @@ Displays may optionally include a touch sensitive screen to detect user touch in
 
 ## Resistive Touch
 
-A resistive touch screen measures the resistance across X and Y to determine the touch position. While it is possible to use GPIO and ADC, it is better to use dedicated chips. The only advantage of resistive touch over capacitive is that they work through pressure, meaning you can use it while wearing gloves. But, resistive touch is not very accurate and requires calibration.
+A resistive touch screen measures the resistance across the X and Y axes to determine the touch position. While it is possible to use GPIO and ADC, it is better to use dedicated chips. The only advantage of resistive touch over capacitive is that resistive touch works through a change in resistance induced by finger pressure, meaning you can use it while wearing gloves. However, resistive touch is not very accurate and requires calibration.
 
-Unless you have specific reason to use resistive touch, capacitive touch should be used.
+Unless you have specific reason to use resistive touch, capacitive touch is preferred.
 
 This is a simple example showing how to read a resistive display. A better approach would be to use a resistive touch controller chip that works over SPI/I2C.
 
@@ -19,6 +19,7 @@ private void TouchReader() {
     var adc = AdcController.GetDefault();
     var gpio = GpioController.GetDefault();
     int x, y;
+
     while (this.active) {
         // Read X
         {
@@ -39,6 +40,7 @@ private void TouchReader() {
             YU.Dispose();
             YD.Dispose();
         }
+
         // Read Y
         {
             var YD = gpio.OpenPin(this.PinYD);
@@ -58,11 +60,13 @@ private void TouchReader() {
             YU.Dispose();
             YD.Dispose();
         }
+
         if (x > 50 && y > 50) {
             var sx = this.Scale(x, 50, 830, 0, 320);
             var sy = this.Scale(y, 150, 830, 0, 240);
             this.TouchMove?.Invoke(this, new TouchEventArgs(sx, sy));
         }
+
         Thread.Sleep(20);
     }
 }
@@ -72,13 +76,13 @@ private void TouchReader() {
 
 Capacitive touch screens are used on most modern devices, including phones. They are very accurate and capable of detecting multiple simultaneous touches.
 
-A special capacitive controller chip must be used to control the touch panel. This chip is usually mounted right on the flat cable going to the touch panel. These chips are usually I2C or SPI, with I2C being more common.
+A special capacitive controller chip must be used to read the touch panel. This chip is usually mounted right on the flat cable going to the touch panel. These chips are usually I2C or SPI, with I2C being more common.
 
 The capacitive displays used in our development options use a controller from FocalTech.
 
-We provide the `GHIElectronics.TinyCLR.Drivers.FocalTech.FT5xx6` NuGet package to interact with the touch screens. The constructor simply needs to know which I2C bus and reset pin are being used. The event fires with exact position matching the display resolution, no need for any scaling or calibration. The driver source code is found on the [TinyCLR Drivers repo](https://github.com/ghi-electronics/TinyCLR-Drivers).
+We provide the `GHIElectronics.TinyCLR.Drivers.FocalTech.FT5xx6` NuGet package to interact with capacitive touch screens. The constructor simply needs to know which I2C bus and reset pin are being used. The event fires giving the exact position matching the display resolution, no need for any scaling or calibration. The driver source code is found on the [TinyCLR Drivers repo](https://github.com/ghi-electronics/TinyCLR-Drivers).
 
-This basics example will draw a dot on touch move
+This simple example will draw a dot on touch move:
 
 ```cs
 using GHIElectronics.TinyCLR.Drivers.FocalTech.FT5xx6;

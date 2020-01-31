@@ -2,7 +2,7 @@
 ---
 The below example requires the `GHIElectronics.TinyCLR.IO` and `GHIElectronics.TinyCLR.Storage` libraries and a device with an SD card.
 
-```csharp
+```cs
 using GHIElectronics.TinyCLR.Devices.Storage;
 using GHIElectronics.TinyCLR.IO;
 using System;
@@ -12,7 +12,7 @@ using System.Text;
 namespace FileSystem {
     public class Program {
         private static void Main() {
-            var sd = StorageController.FromName(@"GHIElectronics.TinyCLR.NativeApis.STM32F4.SdCardStorageController\0");
+            var sd = StorageController.FromName(@"GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0");
             var drive = FileSystem.Mount(sd.Hdc);
 
             var file = new FileStream($@"{drive.Name}Test.txt", FileMode.OpenOrCreate);

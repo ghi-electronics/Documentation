@@ -81,7 +81,7 @@ You may be thinking, if the software locked up then how would the code that hand
 ## Detecting Watchdog
 In some cases, you need to know if the system did reset because of a watchdog to log this info or run some recovery procedures. This is how it works
 
-```
+```cs
 using System;
 using System.Threading;
 using Microsoft.SPOT;

@@ -1,6 +1,8 @@
 # Audio Playback
 ---
 
+Audio Playback is still under development, please stay tuned.
+
 ## WAV Files
 ---
 Simple audio playback is accomplished by reading a PCM WAV file and passing the data onto the built-in analog out pin. Even easier, parse the WAV file on a PC and include the PCM samples.

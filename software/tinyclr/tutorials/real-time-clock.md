@@ -4,7 +4,7 @@ The Real Time Clock (RTC) is a circuit that runs off a small battery or a super 
 
 In the even the RTC battery was drained or the RTC was never initialized, the RTC will not have a correct value. Use the `rtc.IsValid` to dermine of time is was set correctly.
 
-```
+```cs
 using GHIElectronics.TinyCLR.Devices.Rtc;
 using GHIElectronics.TinyCLR.Native;
 using System;

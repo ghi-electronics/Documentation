@@ -8,7 +8,7 @@
     <title>WiFi </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="WiFi ">
-    <meta name="generator" content="docfx 2.23.1.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
+    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -59,7 +60,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -76,10 +79,104 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="wifi">WiFi</h1>
 
-<hr>
 <p>First introduced over twenty years ago, WiFi has become the most popular wireless networking technology. Our SITCore line of products includes native support for the Microchip <a href="https://www.microchip.com/wwwproducts/en/ATwinc1500">ATWINC1500</a> series of WiFi modules. These modules are available pre-certified from FCC, CE, and other regulatory agencies. For added security, WiFi module communication is handled through SPI, not through AT commands.</p>
 <p>The easiest way to get started quickly is by plugging a mikro WiFi 7 click module into the mikroBUS 1 socket on one of our dev boards. If you want to use a bare ATWINC1500 module instead of a mikro click module, you&#39;ll need to connect interrupt, reset, and chip select lines in addition to the SPI lines (MOSI, MISO, SCK).</p>
-</article>
+<p>This example uses the WiFi 7 click on our SC20100 dev board.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins</p>
+</div>
+<pre><code class="lang-cs">static void DoTestWiFi7Click()
+{
+    var enablePin = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PA15);
+
+    enablePin.SetDriveMode(GpioPinDriveMode.Output);
+    enablePin.Write(GpioPinValue.High);
+
+    SpiNetworkCommunicationInterfaceSettings networkCommunicationInterfaceSettings =
+        new SpiNetworkCommunicationInterfaceSettings();
+
+    var settings = new GHIElectronics.TinyCLR.Devices.Spi.SpiConnectionSettings()
+    {
+        ChipSelectLine = SC20100.GpioPin.PD3,
+        ClockFrequency = 4000000,
+        Mode = GHIElectronics.TinyCLR.Devices.Spi.SpiMode.Mode0,
+        DataBitLength = 8,
+        ChipSelectType = GHIElectronics.TinyCLR.Devices.Spi.SpiChipSelectType.Gpio,
+        ChipSelectHoldTime = TimeSpan.FromTicks(10),
+        ChipSelectSetupTime = TimeSpan.FromTicks(10)
+    };
+
+    networkCommunicationInterfaceSettings.SpiApiName =
+        GHIElectronics.TinyCLR.Pins.SC20260.SpiBus.Spi3;
+
+    networkCommunicationInterfaceSettings.GpioApiName =
+        GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.Id;
+
+    networkCommunicationInterfaceSettings.SpiSettings = settings;
+    networkCommunicationInterfaceSettings.InterruptPin = SC20100.GpioPin.PC5;
+    networkCommunicationInterfaceSettings.InterruptEdge = GpioPinEdge.FallingEdge;
+    networkCommunicationInterfaceSettings.InterruptDriveMode = GpioPinDriveMode.InputPullUp;
+    networkCommunicationInterfaceSettings.ResetPin = SC20100.GpioPin.PD4;
+    networkCommunicationInterfaceSettings.ResetActiveState = GpioPinValue.Low;
+
+    var networkController = NetworkController.FromName
+        (&quot;GHIElectronics.TinyCLR.NativeApis.ATWINC15xx.NetworkController&quot;);
+
+    WiFiNetworkInterfaceSettings networkInterfaceSetting = new WiFiNetworkInterfaceSettings()
+    {
+        Ssid = &quot;yourSSID&quot;,
+        Password = &quot;yourPassword&quot;,
+    };
+
+    networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
+    networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
+    networkInterfaceSetting.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
+    networkInterfaceSetting.DnsAddresses = new IPAddress[] { new IPAddress(new byte[]
+        { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
+
+    networkInterfaceSetting.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
+    networkInterfaceSetting.IsDhcpEnabled = true;
+    networkInterfaceSetting.IsDynamicDnsEnabled = true;
+
+    networkInterfaceSetting.TlsEntropy = new byte[] { 0, 1, 2, 3 };
+
+    networkController.SetInterfaceSettings(networkInterfaceSetting);
+    networkController.SetCommunicationInterfaceSettings
+        (networkCommunicationInterfaceSettings);
+
+    networkController.SetAsDefaultController();
+
+    networkController.NetworkAddressChanged += NetworkController_NetworkAddressChanged;
+    networkController.NetworkLinkConnectedChanged +=
+        NetworkController_NetworkLinkConnectedChanged;
+
+    networkController.Enable();
+
+    while (linkReady == false) ;
+
+    // Network is ready to used
+}
+
+private static void NetworkController_NetworkLinkConnectedChanged
+    (NetworkController sender, NetworkLinkConnectedChangedEventArgs e)
+{
+    // Raise event connect/disconnect
+}
+
+private static void NetworkController_NetworkAddressChanged
+    (NetworkController sender, NetworkAddressChangedEventArgs e)
+{
+    var ipProperties = sender.GetIPProperties();
+    var address = ipProperties.Address.GetAddressBytes();
+
+    linkReady = address[0] != 0;
+}
+</code></pre><div class="IMPORTANT"><h5>Important</h5><p>There is an enable pin which needs to be pulled high on the WiFI 7 click module. </p>
+</div>
+<pre><code class="lang-cs">var enablePin = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PA15);
+
+enablePin.SetDriveMode(GpioPinDriveMode.Output);
+enablePin.Write(GpioPinValue.High);
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -87,7 +184,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-special-pins/software/tinyclr/tutorials/wifi.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/wifi.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -98,7 +98,7 @@ class Program {
 ## SD Card: Writing Files
 
 There is more than one way to open files. I will only cover FileStream objects. This example will open a file and write a string to it. Since FileStream will only take byte arrays, we need to convert our string to a byte array.
-```
+```cs
 using System.Threading;
 using System.Text;
 using Microsoft.SPOT;
@@ -141,7 +141,7 @@ public class Program {
 
 Take the SD Card used in the last example, put it in a PC and you will see the file.
 For this example, we use the same SD Card written to by the last example. The file is opened and read to verify its contents.
-```
+```cs
 using System.Threading;
 using System.Text;
 using Microsoft.SPOT;
@@ -192,7 +192,7 @@ The previous examples assumed that the card was already inserted and mostly igno
 
 Together, `InsertEventHandler`, `EjectEventHandler`, and `IsSDCardPresent` are used to respond to physical card activities, which in turn are used to control mounting (`Mount`, `Unmount`) of the card. Once the card is mounted, the file-system can be used.
 
-```
+```cs
 using System;
 using System.IO;
 using System.Threading;
@@ -302,7 +302,7 @@ public class Program
 USB mass storage devices, such as memory sticks and card readers are supported by GHI's NETMF devices.
 If you compare the following example with those above for SD Cards, you will see how easy it is to program for one, the other, or both with virtually identical code.
 
-```
+```cs
 using System;
 using System.Threading;
 using System.IO;

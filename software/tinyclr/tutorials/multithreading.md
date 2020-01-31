@@ -1,8 +1,8 @@
 # Multithreading
 ---
-TinyCLR OS is a single process system, only running your application. This is in face a good security feature! However, TinyCLR OS supports threading similar to full .NET system.
+TinyCLR OS is a single process system, only running your application. This is in fact a good security feature! However, TinyCLR OS supports threading similar to full .NET.
 
-```
+```cs
 void Blinker()
 {
     // LED on

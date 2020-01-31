@@ -64,7 +64,7 @@ Since Gadgeteer already creates an application instance, you cannot use the abov
 > [!Tip]
 > In the below example we still use a Bitmap object to draw to the display. Usually in Gadgeteer programs you will want to use the SimpleGraphics interface on a display module.
 
-```
+```cs
 using Microsoft.SPOT;
 using Microsoft.SPOT.Input;
 using Microsoft.SPOT.Presentation;
@@ -111,7 +111,7 @@ If your screen does not report touches close to where they actually were, your s
 
 The below example takes care of all of this calibration for you. It requires the Microsoft.SPOT.Native, Microsoft.SPOT.Graphics, Microsoft.SPOT.TinyCore, and Microsoft.SPOT.Touch assemblies. You begin calibration by touching the screen once. After that, touch where each of the five circles is displayed in turn. After you do that, it will show you the calibration data and show a circle wherever you touch.
 
-```
+```cs
 using Microsoft.SPOT;
 using Microsoft.SPOT.Input;
 using Microsoft.SPOT.Presentation;
@@ -236,6 +236,6 @@ public class Program : Application
 
 After you calibrate your display, you can save the values in the four short arrays in the above program along with the number of calibration points. You can then pass these values at a later point, without running calibration again, to the below function.
 
-```
+```cs
 Touch.ActiveTouchPanel.SetCalibration(calibrationPoints, screenX, screenY, uncalibratedX, uncalibratedY);
 ```

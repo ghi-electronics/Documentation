@@ -8,7 +8,7 @@
     <title>Displays </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Displays ">
-    <meta name="generator" content="docfx 2.23.1.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
+    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -59,7 +60,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -90,51 +93,58 @@
 <p>These displays are capable of only showing characters. The most commonly use the HD44780 controller. They are available in different sizes but 2x16 character is most common. These displays only require GPIO pins and can be used with TinyCLR.</p>
 <h2 id="low-level-display-access">Low Level Display Access</h2>
 <p>TinyCLR also provides low level display access as part of the <code>GHIElectronics.TinyCLR.Devices.Display</code> library. These methods provide a simple way to write to a display without need for the <code>System.Drawing</code> library or an added font resource file.</p>
-<p>The following example is written for the G120E Dev Board and will paint the screen as shown in the picture beneath the code. Note that low level display access requires that you to use the data format required by your display as configured. The G120E Dev Board used in this example expects each pixel to have 16 bits (two bytes per pixel) of color information in RGB565 format.</p>
+<p>The following example is written for the SC20100 Dev Board and will paint the screen as shown in the picture beneath the code. Note that low level display access requires that you to use the data format required by your display as configured. The SC20100 Dev Board used in this example expects each pixel to have 16 bits (two bytes per pixel) of color information in RGB565 format.</p>
 <pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Display;
+using GHIElectronics.TinyCLR.Devices.Gpio;
+using GHIElectronics.TinyCLR.Pins;
 
-class Program {
-    private static void Main() {
-        var displayController = DisplayController.GetDefault();
+namespace LowLevelDisplayAccess{
+    class Program{
+        private static void Main(){
+            GpioPin backlight = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA15);
+            backlight.SetDriveMode(GpioPinDriveMode.Output);
+            backlight.Write(GpioPinValue.High);
+            var displayController = DisplayController.GetDefault();
 
-        // Enter the proper display configurations
-        displayController.SetConfiguration(new ParallelDisplayControllerSettings {
-            Width = 320,
-            Height = 240,
-            DataFormat = DisplayDataFormat.Rgb565,
-            HorizontalBackPorch = 29,
-            HorizontalFrontPorch = 51,
-            HorizontalSyncPolarity = false,
-            HorizontalSyncPulseWidth = 41,
-            DataEnableIsFixed = true,
-            DataEnablePolarity = true,
-            PixelClockRate = 15000000,
-            PixelPolarity = true,
-            VerticalBackPorch = 3,
-            VerticalFrontPorch = 16,
-            VerticalSyncPolarity = false,
-            VerticalSyncPulseWidth = 10
-        });
+            // Enter the proper display configurations
+            displayController.SetConfiguration(new ParallelDisplayControllerSettings{
+                Width = 480,
+                Height = 272,
+                DataFormat = GHIElectronics.TinyCLR.Devices.Display.DisplayDataFormat.Rgb565,
+                PixelClockRate = 10000000,
+                PixelPolarity = false,
+                DataEnablePolarity = false,
+                DataEnableIsFixed = false,
+                HorizontalFrontPorch = 2,
+                HorizontalBackPorch = 2,
+                HorizontalSyncPulseWidth = 41,
+                HorizontalSyncPolarity = false,
+                VerticalFrontPorch = 2,
+                VerticalBackPorch = 2,
+                VerticalSyncPulseWidth = 10,
+                VerticalSyncPolarity = false,
+            });
 
-        displayController.Enable();
+            displayController.Enable();
+            byte[] myPic = new byte[480 * 272 * 2];
 
-        byte[] myPic = new byte[320 * 240 * 2];
-        for (var i = 0; i &lt; myPic.Length; i++) {
-            myPic[i] = (byte)(((i % 2) == 0) ? ((i / 2400) &amp; 0b00000111) &lt;&lt; 5 : i / 19200);
-        }
+            for (var i = 0; i &lt; myPic.Length; i++){
+                myPic[i] = (byte)(((i % 2) == 0) ? ((i / 4080) &amp; 0b00000111) &lt;&lt; 5 : i / 32640);
+            }
 
-        displayController.DrawString(&quot;\f&quot;);
-        displayController.DrawBuffer(0, 0, 320, 240, myPic, 0);
-        displayController.DrawString(&quot;GHI Electronics\n&quot;);
-        displayController.DrawString(&quot;Low Level Display Demo.&quot;);
+            displayController.DrawString(&quot;\f&quot;);     
+            displayController.DrawBuffer(0, 0, 0, 0, 480, 272, 480, myPic, 0);
+            displayController.DrawString(&quot;GHI Electronics\n&quot;);
+            displayController.DrawString(&quot;Low Level Display Demo.&quot;);
 
-        for (var x = 20; x &lt; 300; x++) {
-            displayController.DrawPixel(x, 50, 0xF800);     //Color is 31,0,0 (RGB565).
-            displayController.DrawPixel(x, 51, 0xF800);
+            for (var x = 20; x &lt; 459; x++){
+                displayController.DrawPixel(x, 50, 0xF800);     //Color is 31,0,0 (RGB565).
+                displayController.DrawPixel(x, 51, 0xF800);
+            }
         }
     }
 }
-</code></pre><p>G120E Dev Board display after running the sample code:</p>
+</code></pre><p>SC20260D Dev Board display after running the sample code:</p>
 <p><img src="../images/low-level-display-sample.jpg" alt="Low Level Display Sample"></p>
 </article>
           </div>
@@ -144,7 +154,7 @@ class Program {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-special-pins/software/tinyclr/tutorials/displays.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/displays.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

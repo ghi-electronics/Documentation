@@ -8,7 +8,7 @@
     <title>Amazon Web Services </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Amazon Web Services ">
-    <meta name="generator" content="docfx 2.23.1.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
+    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -59,7 +60,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -77,8 +80,64 @@
 <h1 id="amazon-web-services">Amazon Web Services</h1>
 
 <hr>
-<h2 id="amazon-web-services">Amazon Web Services</h2>
-<p><a href="https://aws.amazon.com/">https://aws.amazon.com/</a></p>
+<p>This example shows how to communicate with AWS.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Networking.Mqtt</p>
+</div>
+<pre><code class="lang-cs">static void DoTestAwsMqtt()
+{
+    var iotArnString = &quot;Need your ARN string&quot;;
+    var iotPort = 8883;
+    var deviceId = &quot;Need your Device ID&quot;;
+
+    var topicShadowUpdate = string.Format(&quot;$aws/things/{0}/shadow/update&quot;, deviceId);
+    var topicShadowGet = string.Format(&quot;$aws/things/{0}/shadow/get&quot;, deviceId);
+
+    var message = &quot;{\&quot;state\&quot;:{\&quot;desired\&quot;:{\&quot;My message\&quot;:\&quot;From my test \&quot;}}}&quot;;
+
+    var caCertSource = UTF8Encoding.UTF8.GetBytes(&quot;Need AWS root CA certificate&quot;);
+    var clientCertSource = UTF8Encoding.UTF8.GetBytes(&quot;Need your AWS client CA certificate&quot;);
+    var privateKeyData = UTF8Encoding.UTF8.GetBytes(&quot;Need your AWS private key&quot;);
+
+    X509Certificate CaCert = new X509Certificate(caCertSource);
+    X509Certificate ClientCert = new X509Certificate(clientCertSource);
+
+    ClientCert.PrivateKey = privateKeyData;    
+
+    var clientSetting = new MqttClientSetting
+    {
+        BrokerName = iotArnString,
+        BrokerPort = iotPort,
+        CaCertificate = CaCert,
+        ClientCertificate = ClientCert,
+        SslProtocol = System.Security.Authentication.SslProtocols.Tls12
+    };
+
+    var iotClient = new Mqtt(clientSetting);
+
+    iotClient.PublishReceivedChanged += (a, b) =&gt; { Debug.WriteLine
+        (&quot;Received message: &quot; + Encoding.UTF8.GetString(b.Data)); };
+
+    iotClient.SubscribedChanged += (a, b) =&gt; { Debug.WriteLine(&quot;Subscribed&quot;); };
+
+    var connectSetting = new MqttConnectionSetting
+    {
+        ClientId = deviceId,
+        UserName = null,
+        Password = null
+    };
+
+    var connectCode = iotClient.Connect(connectSetting);
+
+    ushort packetId = 1;
+
+    iotClient.Subscribe(new string[] { topicShadowGet }, new QoSLevel[]
+        { QoSLevel.LeastOnce }, packetId++);
+
+    iotClient.Publish(topicShadowUpdate, Encoding.UTF8.GetBytes(message),
+        QoSLevel.MostOnce, false, packetId++);
+}
+</code></pre><p>This example requires iotArnString, deviceId, CA certificate, client certificates, and a private key, which are available when you register an AWS account.</p>
+<p>Check out the AWS tutorial at: <a href="https://aws.amazon.com/">https://aws.amazon.com/</a></p>
 </article>
           </div>
           
@@ -87,7 +146,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-special-pins/software/tinyclr/tutorials/aws.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/aws.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

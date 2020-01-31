@@ -8,7 +8,7 @@
     <title>Cellular </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Cellular ">
-    <meta name="generator" content="docfx 2.23.1.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
+    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -59,7 +60,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -81,8 +84,8 @@
 <p><a href="http://new-docs.ghielectronics.com/software/tinyclr/tutorials/wifi.html">http://new-docs.ghielectronics.com/software/tinyclr/tutorials/wifi.html</a>
 (keep what you have and add)</p>
 <h2 id="security-clarification">Security Clarification</h2>
-<p>Most embedded systems that connect to WiFi networks assume they are secure but they are surely not. Typically, a serial connection with AT commands are used to communicate with the Internet. While the data offer the air is secure, all the data going over the serial wire is raw unencrypted data that can be easily scoped. This is not the case on TinyCLR OS.</p>
-<p>Operating systems like TinyCLR that utilizes PPP for communication are secure due to the fact that the serial data between the device and the modem is encrypted. All data handling is done internally inside the core processor, which is extremely difficult to hack into.</p>
+<p>Most users of embedded systems that connect to mobile networks assume they are secure, but often they are not. Typically, a serial connection with AT commands is used to communicate with the Internet. While the data over the air is secure, all data transmitted over the serial connection is raw unencrypted data that can be easily scoped. This is not the case with TinyCLR OS.</p>
+<p>With TinyCLR OS, serial data between the device and the modem is encrypted. All data handling is done internally inside the core processor, which is extremely difficult to hack into.</p>
 </article>
           </div>
           
@@ -91,7 +94,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-special-pins/software/tinyclr/tutorials/cellular.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/cellular.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

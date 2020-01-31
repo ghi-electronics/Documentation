@@ -107,7 +107,7 @@ This is a current sensor that uses ACS712, which simply outputs an analog voltag
 ![Display CP7](images/modules/display-cp7.jpg)
 
 The configurations for the display:
-```
+```cs
 // these are the wrong values!
 Width = 800,
 Height = 480,

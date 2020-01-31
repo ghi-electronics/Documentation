@@ -8,7 +8,7 @@
     <title>Encoding &amp; Decoding </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Encoding &amp; Decoding ">
-    <meta name="generator" content="docfx 2.23.1.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
+    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -59,7 +60,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -78,13 +81,44 @@
 
 <hr>
 <p>There are two built in libraries to help in encoding data, bit converter and string handling.</p>
-<h1 id="bitconverter">BitConverter</h1>
-<hr>
-<p>This library has many useful bit-level conversion methods.</p>
-<pre><code>// Convert xxx to xxx
-/// �.
-// Byte swap (MSB to LSB)
-�.
+<h2 id="bitconverter">BitConverter</h2>
+<p>The BitConverter class is used to convert from one data type to another. For example, to convert an integer into a byte array:</p>
+<pre><code class="lang-cs">var byteArray = BitConverter.GetBytes(23);
+//byteArray[0] = 23, byteArray[1] = 0, byteArray[2] = 0, byteArray[3] = 0
+
+byteArray = BitConverter.GetBytes(65536);
+//byteArray[0] = 0, byteArray[1] = 0, byteArray[2] = 1, byteArray[3] = 0
+</code></pre><h3 id="bitconverter-overloads">BitConverter Overloads</h3>
+<h4 id="convert-to-a-byte-array">Convert to a Byte Array</h4>
+<pre><code class="lang-cs">BitConverter.GetBytes(char value)
+BitConverter.GetBytes(double value)
+BitConverter.GetBytes(float value)
+BitConverter.GetBytes(int value)
+BitConverter.GetBytes(long value)
+BitConverter.GetBytes(short value)
+BitConverter.GetBytes(uint value)
+BitConverter.GetBytes(ulong value)
+BitConverter.GetBytes(ushort value)
+BitConverter.GetBytes(bool value)
+</code></pre><h4 id="convert-from-a-byte-array">Convert from a Byte Array</h4>
+<pre><code class="lang-cs">BitConverter.ToBoolean(byte[] value, int startIndex)
+BitConverter.ToChar(byte[] value, int startIndex)
+BitConverter.ToDouble(byte[] value, int startIndex)
+BitConverter.ToInt16(byte[] value, int startIndex)
+BitConverter.ToInt32(byte[] value, int startIndex)
+BitConverter.ToInt64(byte[] value, int startIndex)
+BitConverter.ToSingle(byte[] value, int startIndex)
+BitConverter.ToString(byte[] value)
+BitConverter.ToString(byte[] value, int startIndex)
+BitConverter.ToString(byte[] value, int startIndex, int length)
+BitConverter.ToUInt16(byte[] value, int startIndex)
+BitConverter.ToUInt32(byte[] value, int startIndex)
+BitConverter.ToUInt64(byte[] value, int startIndex)
+</code></pre><h4 id="convert-between-double-and-long">Convert Between Double and Long</h4>
+<pre><code class="lang-cs">BitConverter.DoubleToInt64Bits(double value)
+BitConverter.Int64BitsToDouble(long value)
+</code></pre><h4 id="swap-endianness">Swap Endianness</h4>
+<pre><code class="lang-cs">BitConverter.SwapEndianness(byte[] data, int groupSize)
 </code></pre></article>
           </div>
           
@@ -93,7 +127,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/add-special-pins/software/tinyclr/tutorials/encoding-decoding.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/encoding-decoding.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

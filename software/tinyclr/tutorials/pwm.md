@@ -13,7 +13,7 @@ PWM is perfect for dimming an LED or controlling the speed of a motor. When the 
 
 This example is written for the SCM20260D Dev Board, but will run unchanged on the SC20100S Dev Board. The left most LED on the board (PB0) will fade in and out.
 
-```csharp
+```cs
 using GHIElectronics.TinyCLR.Devices.Pwm;
 using GHIElectronics.TinyCLR.Pins;
 using System.Threading;
@@ -50,7 +50,7 @@ Musical notes have specific frequencies; C for example is about 261Hz. Plugging 
 
 The following example is written for the SC20100S Dev Board.
 
-```csharp
+```cs
 using GHIElectronics.TinyCLR.Devices.Pwm;
 using GHIElectronics.TinyCLR.Pins;
 using System.Threading;
@@ -118,7 +118,7 @@ This example is written for the SC20100S Dev Board. It will turn the positional 
 > [!Tip]
 > Most servos will have a 1 ms minimum pulse width and a 2 ms maximum pulse width, but check the specs of the motor to be sure.
 
-```csharp
+```cs
 using GHIElectronics.TinyCLR.Pins;
 using GHIElectronics.TinyCLR.Devices.Pwm;
 using GHIElectronics.TinyCLR.Devices.Servo;
@@ -155,7 +155,7 @@ class Program {
 ```
 
 This is the servo.cs class that provides the methods used in the above code to control the servos:
-```csharp
+```cs
 using GHIElectronics.TinyCLR.Devices.Pwm;
 using System;
 
