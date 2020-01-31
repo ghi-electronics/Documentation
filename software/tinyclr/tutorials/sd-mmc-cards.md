@@ -12,7 +12,7 @@ using System.Text;
 namespace FileSystem {
     public class Program {
         private static void Main() {
-            var sd = StorageController.FromName(@"GHIElectronics.TinyCLR.NativeApis.STM32F4.SdCardStorageController\0");
+            var sd = StorageController.FromName(@"GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0");
             var drive = FileSystem.Mount(sd.Hdc);
 
             var file = new FileStream($@"{drive.Name}Test.txt", FileMode.OpenOrCreate);
