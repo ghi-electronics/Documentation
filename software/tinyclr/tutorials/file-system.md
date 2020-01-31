@@ -18,7 +18,7 @@ using System.Text;
 namespace FileSystem {
     public class Program {
         private static void Main() {
-            var sd = StorageController.FromName(@"GHIElectronics.TinyCLR.NativeApis.STM32F4.SdCardStorageController\0");
+            var sd = StorageController.FromName(@"GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0");
             var drive = FileSystem.Mount(sd.Hdc);
 
             var file = new FileStream($@"{drive.Name}Test.txt", FileMode.OpenOrCreate);
@@ -39,6 +39,6 @@ namespace FileSystem {
 You can access the raw underlying data of the storage provider using the `Provider` property of the controller. Be careful when using this interface, however, as it bypasses any file system present and writes directly to the device. This is useful for implementing your own or otherwise unsupported file systems.
 
 ```cs
-var controller = StorageController.FromName(@"GHIElectronics.TinyCLR.NativeApis.STM32F4.SdCardStorageController\0");
+var controller = StorageController.FromName(@"GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0");
 controller.Provider.Read(address, buffer, 0, buffer.Length, -1);
 ```
