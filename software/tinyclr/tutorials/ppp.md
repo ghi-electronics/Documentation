@@ -98,8 +98,14 @@ static void InitSimCard() {
 
     SendAT(serial, "AT");
 
-    SendAT(serial, "AT+CGDCONT=2,\"IP\",\"telargo.t-mobile.com\"");
-    SendAT(serial, "ATDT*99***2#");
+    // Some params for 'AT+CGDCONT' that we tested:
+    // T-Mobile: \"IP\",\"telargo.t-mobile.com\""
+    // T-Mobile: \"IP\",\"fast.t-mobile.com\""
+    // Google Fi: \"IPv4\",\"h2g2\""
+    // NIMBLINK : \"IPV4V6\",\"NIMBLINK.GW12.VZWENTP\""
+
+    SendAT(serial, "AT+CGDCONT=1,\"IP\",\"telargo.t-mobile.com\""); // or \"IP\",\"fast.t-mobile.com\""
+    SendAT(serial, "ATDT*99***1#");
     
     System.Diagnostics.Debug.WriteLine("OK to start PPP....");
 }
