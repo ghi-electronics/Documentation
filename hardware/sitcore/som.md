@@ -30,17 +30,17 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 |-----------------------|------------------------|------------------------|------------------------|
 | GPIO (all support IRQ)|                        |                        |                        |
 | SPI                   | 3                      | 3                      | 3                      |
-| I2C                   | 2                      | 3                      | 3                      |
+| I2C                   | 1                      | 3                      | 3                      |
 | UART/USART            | 7 (4 with handshaking) | 8 (4 with handshaking) | 8 (4 with handshaking) |
 | CAN                   | 2                      | 2                      | 2                      |
-| PWM                   | 21                     | 23                     | 27                     |
-| ADC                   | 21                     | 21                     | 21                     |
-| DAC                   | 2                      | 2                      | 2                      |
+| PWM                   | 22                     | 23                     | 29                     |
+| ADC                   | 16                     | 15                     | 20                     |
+| DAC                   | 2                      | 1                      | 2                      |
 | SD/SDIP/MMC           | 1                      | 1                      | 1                      |
 | Quad SPI              | 1                      | 1                      | 1                      |
 | USB Host              | 1                      | 1                      | 1                      |
 | USB Client            | 1                      | 1                      | 1                      |
-| Ethernet              | 1                      | 1                      | 1                      |
+| Ethernet              | 0                      | 1                      | 1                      |
 | LCD TFT               | 1                      | 1                      | 1                      |
 | Camera                | 1                      | 1                      | 1                      |
 

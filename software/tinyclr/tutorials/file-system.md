@@ -1,12 +1,12 @@
 # File System
 ---
-The file system library can be used to read and write files. FAT16 and FAT32 are supported.
+The file system library is used to read and write files to storage devices supporting the FAT16 or FAT32 file systems.
 
 ## USB Mass Storage
-This allows file access on USB devices with MSC class, such as USB memory sticks. The support for USB drives is still not publicly available.
+This allows file access on USB devices with MSC class, such as USB memory sticks. Support for USB drives is still not publicly available.
 
 ## SD Card
-The below example requires the `GHIElectronics.TinyCLR.IO` and `GHIElectronics.TinyCLR.Storage` libraries and a device with an SD card.
+The example below requires the `GHIElectronics.TinyCLR.IO` and `GHIElectronics.TinyCLR.Storage` libraries and a device with an SD card.
 
 ```cs
 using GHIElectronics.TinyCLR.Devices.Storage;
@@ -18,11 +18,14 @@ using System.Text;
 namespace FileSystem {
     public class Program {
         private static void Main() {
-            var sd = StorageController.FromName(@"GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0");
+            var sd = StorageController.FromName
+                (@"GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0");
+
             var drive = FileSystem.Mount(sd.Hdc);
 
             var file = new FileStream($@"{drive.Name}Test.txt", FileMode.OpenOrCreate);
-            var bytes = Encoding.UTF8.GetBytes(DateTime.UtcNow.ToString() + Environment.NewLine);
+            var bytes = Encoding.UTF8.GetBytes(DateTime.UtcNow.ToString() +
+                Environment.NewLine);
 
             file.Write(bytes, 0, bytes.Length);
 
@@ -36,9 +39,11 @@ namespace FileSystem {
 ```
 
 ## Low-level Access
-You can access the raw underlying data of the storage provider using the `Provider` property of the controller. Be careful when using this interface, however, as it bypasses any file system present and writes directly to the device. This is useful for implementing your own or otherwise unsupported file systems.
+You can access the raw underlying data of the storage provider by using the `Provider` property of the controller. Be careful when using this interface, however, as it bypasses any file system present and writes directly to the device. This is useful for implementing your own or otherwise unsupported file systems.
 
 ```cs
-var controller = StorageController.FromName(@"GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0");
+var controller = StorageController.FromName
+        (@"GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0");
+
 controller.Provider.Read(address, buffer, 0, buffer.Length, -1);
 ```
