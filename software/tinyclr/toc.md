@@ -18,7 +18,6 @@
 ### [Multithreading](tutorials/multithreading.md)
 ### [Reflection](tutorials/reflection.md)
 ### [Collections](tutorials/collections.md)
-### [Globalization](tutorials/globalization.md)
 ### [Serialization](tutorials/serialization.md)
 ### [Encoding & Decoding](tutorials/encoding-decoding.md)
 
