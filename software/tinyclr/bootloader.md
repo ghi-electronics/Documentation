@@ -4,7 +4,7 @@
 
 The GHI Electronics Bootloader is used to update the firmware on our devices. It is the first program to run and unless the device specific LDR pins are set (see device documentation for details), it will execute the firmware on the device (if present). 
 
-The bootloader communicates over a USB (virtual serial port) and a regular serial port. The interface used is controlled by a MODE pin as detailed in [Special Pins](special-pins.md).
+The bootloader communicates over a USB (virtual serial port) and a regular serial port. The interface used is controlled by a MOD pin as detailed in [Special Pins](special-pins.md).
 
 ## Loading the Firmware
 

@@ -120,7 +120,7 @@ Exposing the following pins is required in every design to enable device program
 * APP
 * Reset
 * Desired debug interface(s)
-* MODE if required to select a debug interface
+* MOD if required to select a debug interface
 
 ### Power Supply
 A typical clean power source, suited for digital circuitry, is needed to power the SITCore SoMs. The voltage should be within 10% of 3.3 volts.

@@ -52,7 +52,7 @@ In this example, a button is connected between ground and an input pin. We will 
 > [!Tip]
 > Never use an infinite loop without giving the system time to think. Add a short sleep to the loop or use events instead.
 
-While written for the SCM20260D Dev Board, this example will work unchanged with the SC20100S Dev Board as well. The left most LED (PB0) will light when the right most button (PD7/MODE) is pressed.
+While written for the SCM20260D Dev Board, this example will work unchanged with the SC20100S Dev Board as well. The left most LED (PB0) will light when the right most button (PD7/MOD) is pressed.
 
 ```cs
 using GHIElectronics.TinyCLR.Devices.Gpio;

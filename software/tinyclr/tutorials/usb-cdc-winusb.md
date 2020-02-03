@@ -1,5 +1,5 @@
 # USB CDC & WinUSB
-This feature is for devices that needs to transfer data to a PC. Note that the debug interface need to be switched to serial to free up the USB Client port for this feature. This is accomplished though the MODE pin, details in the device's documentations.
+This feature is for devices that need to transfer data to a PC. Note that the debug interface needs to be switched to serial (UART) to free up the USB Client port for this feature. This is accomplished though the MOD pin, details in the device's documentations.
 
 > [!TIP]
 > Need Nugets: GHIElectronics.TinyCLR.Devices.UsbClient
