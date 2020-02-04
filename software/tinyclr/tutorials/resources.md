@@ -12,5 +12,5 @@ In the background, a file is generated to reflect the added resources. Using the
 
 
 > [!Tip]
-> If you are copying an example code that uses resource, some minor changes are needed to match the resources' names in your project.
+> If you are copying example code that uses resource files, some changes may be needed to match the resources' names in your project.
 

@@ -45,14 +45,14 @@ Digital inputs sense the state of an input pin based on its voltage. The pin can
 > [!Warning] 
 > 5V tolerant doesn't mean the processor can be powered by 5V, only that the input pins can tolerate 5V.
 
-Unconnected input pins are called "floating." They are in a high impedance state and are susceptible to surrounding noise which can make the pin read high or low. A resistor can be added to pull the pin high or low. Modern processors include internal pull-down or pull-up resistors that are controlled by software. Note that a pull-up resistor doesn't necessarily make a pin high -- something connected to the pin can still pull it low.
+Unconnected input pins are called "floating." They are in a high impedance state and are susceptible to surrounding noise which can make the pin read high or low. A resistor can be added to pull the pin high or low. Modern processors include internal pull-up and pull-down resistors that are controlled by software. Note that a pull-up resistor doesn't necessarily make a pin high -- something connected to the pin can still pull it low.
 
-In this example, a button is connected between ground and an input pin. We will enable the pull-up resistor making that pin high when the button is not pressed.  When the button is pressed it will overpower the pull-up and make the input low. We will read the status of the button and pass its state to an LED. 
+In this example, a button is connected between ground and an input pin. We will enable the pull-up resistor making that pin high when the button is not pressed.  When the button is pressed, it will overpower the pull-up and make the input low. We will read the status of the button and pass its state to an LED. 
 
 > [!Tip]
 > Never use an infinite loop without giving the system time to think. Add a short sleep to the loop or use events instead.
 
-While written for the SCM20260D Dev Board, this example will work unchanged with the SC20100S Dev Board as well. The left most LED (PB0) will light when the right most button (PD7/MODE) is pressed.
+While written for the SCM20260D Dev Board, this example will work unchanged with the SC20100S Dev Board as well. The left most LED (PB0) will light when the right most button (PD7/MOD) is pressed.
 
 ```cs
 using GHIElectronics.TinyCLR.Devices.Gpio;
@@ -101,7 +101,7 @@ This example is written for the SCM20260D Dev Board, but will also run unchanged
 
 > [!Note]
 > Input events use interrupts (IRQs). Interrupts are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
-example: PA1 and PB1 cannot both be used as interrupts at the same time, but PA1 and PB2 can.
+example: PA1 and PB1 cannot both be used as interrupts at the same time. However, PA1 and PB2, or even PA1 and PA2, can be used simultaneously with interrupts.
 
 
 ```cs

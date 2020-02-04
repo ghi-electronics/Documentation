@@ -88,7 +88,7 @@ The first step needed to use TinyCLR OS is to load the GHI Electronics Bootloade
 
 This example will blink the debug LED. You only need to add a power module to your mainboard.
 
-```csharp
+```cs
 using System.Threading;
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;

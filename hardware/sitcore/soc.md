@@ -28,12 +28,12 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 
 | Peripheral            | SC20100S                  | SC20260B              |
 |-----------------------|---------------------------|-----------------------|
-| GPIO (all support IRQ)|                           |                       |
-| SPI                   | 4                         | 3                     |
-| I2C                   | 3                         | 3                     |
+| GPIO (all support IRQ)| 76                        | 164                   |
+| SPI                   | 3                         | 3                     |
+| I2C                   | 2                         | 3                     |
 | UART/USART            | 8 (4 with handshaking)    | 8 (4 with handshaking)|
 | CAN                   | 2                         | 2                     |
-| PWM                   | 19                        | 27                    |
+| PWM                   | 16                        | 29                    |
 | ADC                   | 11                        | 21                    |
 | DAC                   | 2                         | 2                     |
 | SD/SDIP/MMC           | 1                         | 1                     |
@@ -94,9 +94,9 @@ There are three different components of the device firmware:
 
 Which components get executed on startup is controlled by manipulating the LDR pin. It is pulled high on startup during normal program execution. When low, the device waits in the GHI Electronics Bootloader. Otherwise, the managed application is executed. The APP pin is used to stop the application from running.
 
-Additionally, the communications interface between the host PC and the SITCore is selected on startup through the MODE pin, which is pulled high on startup. The USB interface is selected when MODE is high and COM1 is selected when MODE is low.
+Additionally, the communications interface between the host PC and the SITCore is selected on startup through the MOD pin, which is pulled high on startup. The USB interface is selected when MOD is high and COM1 is selected when MOD is low.
 
-The above discussed functions of the LDR, APP, and MODE pins are only available during startup. After startup, the pins return to the default GPIO state and are available as a GPIO (or peripheral pin) in your application. Check out the [Special Pins](../../software/tinyclr/special-pins.md) page for more information.
+The above discussed functions of the LDR, APP, and MOD pins are only available during startup. After startup, the pins return to the default GPIO state and are available as a GPIO (or peripheral pin) in your application. Check out the [Special Pins](../../software/tinyclr/special-pins.md) page for more information.
 
 ## TinyCLR OS
 TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.

@@ -6,7 +6,7 @@ The PulseFeedback class can be used in three different modes. The below image sh
 
 ![Pulse feedback timing](images/pulse-feedback.jpg)
 
-The first mode is EchoDuration. This mode sends a pulse of a given length and state over the provided pin. It then waits for an echo on the other specified pin and measures how long that echo pulse was. The echo and pulse pin can be the same if desired. 
+The first mode is EchoDuration. This mode sends a pulse of a given length and state over the provided pin. It then waits for an echo on the other specified pin and measures how long that echo pulse was. The echo and pulse pin can be the same pin if desired. 
 
 The next mode is DurationUntilEcho. It is very similar to EchoDuration, although instead of sending a pulse and measuring the length of the resulting echo, it measures how long it takes until that echo is received.
 
@@ -26,7 +26,9 @@ using System.Threading;
 
 public static class Program {
     public static void Main() {
-        var pulse = new PulseFeedback(FEZ.GpioPin.D0, FEZ.GpioPin.D1, PulseFeedbackMode.EchoDuration) {
+        var pulse = new PulseFeedback
+            (FEZ.GpioPin.D0, FEZ.GpioPin.D1, PulseFeedbackMode.EchoDuration) {
+
             DisableInterrupts = false,
             Timeout = TimeSpan.FromSeconds(1),
             PulseLength = TimeSpan.FromTicks(100),
@@ -86,7 +88,7 @@ SignalGenerator is a digital waveform generator. SignalGenerator works by compar
 
 SignalGenerator can also be used to generate PWM. Unlike the PWM class, SignalGenerator can be used to generate PWM on any available output pin. It does use processor time -- the higher the frequency the more processor time it uses.
 
-At this time, SignalGenerator only operates in blocking mode. While SingnalGenerator is running it will not yield any processor time to other code.
+At this time, SignalGenerator only operates in blocking mode. While SignalGenerator is running, it will not yield any processor time to other code.
 
 The following sample code will blink LED1 on the FEZ four times (for one second each time) every five seconds.
 
@@ -100,6 +102,7 @@ using System.Threading;
 public static class Program {
     public static void Main() {
         var gen = new SignalGenerator(FEZ.GpioPin.Led1);
+
         var buffer = new[] {
             TimeSpan.FromSeconds(1),
             TimeSpan.FromSeconds(1),

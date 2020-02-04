@@ -9,7 +9,7 @@ Simple audio playback is accomplished by reading a PCM WAV file and passing the 
 
 This code plays an audio file
 
-```
+```cs
 // code
 ```
 

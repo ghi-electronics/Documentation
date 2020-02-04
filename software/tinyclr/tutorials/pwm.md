@@ -6,7 +6,7 @@ Pulse Width Modulation (PWM) is a very useful feature found on most microcontrol
 > We usually use GetDefault() for most peripherals. For example, there is only one GPIO controller on most systems. This is not the case with PWM. Never use the Default controller and always select the proper channel on the corresponding controller.
 
 > [!Tip]
-> PWM2.3 is channel 3 on controller 2
+> PWM2.3 is channel 3 on controller 2.
 
 ## Energy Level
 PWM is perfect for dimming an LED or controlling the speed of a motor. When the duty cycle is 50%, half the energy is transferred to the attached load.
@@ -155,6 +155,7 @@ class Program {
 ```
 
 This is the servo.cs class that provides the methods used in the above code to control the servos:
+
 ```cs
 using GHIElectronics.TinyCLR.Devices.Pwm;
 using System;

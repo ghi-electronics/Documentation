@@ -1,9 +1,9 @@
 # Watchdog
 ---
-The watchdog is a feature to keep checking that the system is functional by regularly “checking in”, or by “kicking the dog”! First, there is a countdown timer that is set to a specific time. When the timer reaches zero, the system will completely reset. A normally operating software will always regularly reset the timer so it will never reach zero, and so the system never resets under normal conditions. However, when the system fails or locks up, the timer will end up reaching zero and the system will reset.
+A watchdog timer is used to reset the system if the system fails or locks up. A watchdog timer is a countdown timer that will reset the system when the timer reaches zero. During normal operation, the application will regularly reset the watchdog timer so it never reaches zero and doesn't reset the system. However, when the system fails or locks up, the timer will time out and reset the system.
 
-> Note
-> Once Watchdog is enabled it can’t be disabled without resetting the system or a power cycle.
+> [!Note]
+> Once Watchdog is enabled it can't be disabled without resetting the system or a power cycle.
 
 ```cs
 // Set watchdog to 5 seconds and reset it every 4 seconds
@@ -17,5 +17,5 @@ Watchdog.Reset()
 
 ```
 
-> Note
-> Enabling Watchdog when debugging is a bad idea since the system will probably reset when stepping through code.
+> [!Note]
+> Enabling the watchdog timer when debugging is a bad idea since the system will probably reset while stepping through code.

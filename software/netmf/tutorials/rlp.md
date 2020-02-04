@@ -57,6 +57,7 @@ int YourFunc(void** args) {
 	unsigned char arg4 = *(unsigned char*)(args[3]); //the boolean
 }
 ```
+
 When you pass a primitive value, you simple cast the void pointer to a pointer of the corresponding native type and dereference it. When the argument is an array, you again cast the void pointer to a pointer of the corresponding native type but you do not reference it. You can dereference that pointer as if it were an array. Again, make sure to not read beyond its length.
 
 > [!Warning]
@@ -96,6 +97,7 @@ public class Program
     }
 }
 ```
+
 Now imagine we defined the native function like this:
 
 ```c
@@ -111,6 +113,7 @@ int YourFunc(void** args) {
 	return arg1;
 }
 ```
+
 The first parameter, the integer, is returned from the function. You can access that value as the return value of the Invoke function in the managed side. The above C# example prints out that value.
 
 If the fourth parameter, the boolean, is not false (0 is false, otherwise it is true) we will add the first and second elements of the byte array and store the result in the third element. You will see the change to the array in the managed side.
@@ -151,6 +154,7 @@ int StartTask(void** args)
 	return 1;
 }
 ```
+
 As before, we create and invoke the RLP function object but we also subscribe to the NativeEvent event and then print out the value received. Every time PostManagedEvent is called from the native side, this event will be fired with the data passed to it. In this example, it should be fired six times, printing out 5, 4, 3, 2, 1, and then 0.
 
 ```cs
