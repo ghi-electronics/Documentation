@@ -145,62 +145,65 @@ static void Main()
 }
 ```
 
-## Switch from Data Mode to Command Mode:
+## Switching to Command Mode:
 
-When PPP connection is set up successful, to switch UART port from data mode to command mode, we use sequence +++ . To prevent the +++ escape sequence from being misinterpreted as data, the following sequence should be followed: 
+When a PPP connection is set up successfully, you can switch the modem from data mode to command mode with the `+++` escape sequence. To prevent the `+++` escape sequence from being misinterpreted as data, the following guidelines should be followed: 
  
-1) Do not input any character within 1s or longer before inputting +++.  
-2) Input +++ within 1s, and no other characters can be inputted during the time. 
-3) Do not input any character within 1s after +++ has been inputted.  
+1) Do not send any other characters within one second (before or after) of sending `+++`.  
+2) Send `+++` quickly, sending all three characters within one second. 
  
-When such particular sequence +++ is received, the UART port will switch from data mode to command mode, and the module will return OK for the operation. 
+When the `+++` sequence is received, the modem will switch from data mode to command mode and reply with an "OK" response. 
 
-## Switch from Command Mode to Data Mode: 
-From command mode, send command "ATO" and wait for "CONNECT 150000000", which indicates that TA has entered into data mode, and all data inputted from USB/UART port will be treated as PPP frames.
+## Switching to Data Mode: 
+When the modem is in command mode, sending the `ATO` command will switch the modem to Data Mode. Wait for the "CONNECT 150000000" response after sending the `ATO` command to make sure the modem is in data mode. All data sent will now be treated as PPP frames.
 
-Example is how to switch from Data mode to Command Mode, send few AT commands then switch back to Data mode. TinyCLR OS provides two functions, Suspend() and Resume() that need for this case.
-
-Assuming SC20260.UartPort.Uart8 is used for PPP configuration.
+The following example switches from Data mode to Command Mode, sends a few AT commands, then switches back to Data mode. TinyCLR OS provides two functions, Suspend() and Resume() that are needed for this example. This code uses SC20260.UartPort.Uart8 for PPP configuration.
 
 ```cs
 //PPP is connected
 //....
 
-networkController.Suspend(); // suspend PPP, release UART Port from TinyCLR OS
+networkController.Suspend(); //Suspend PPP, release UART Port from TinyCLR OS.
 
 {
-    // Open uart
-    var serial = GHIElectronics.TinyCLR.Devices.Uart.UartController.FromName(SC20260.UartPort.Uart8);
+    //Open UART.
+    var serial = GHIElectronics.TinyCLR.Devices.Uart.UartController.FromName
+        (SC20260.UartPort.Uart8);
 
-    serial.SetActiveSettings(115200, 8, GHIElectronics.TinyCLR.Devices.Uart.UartParity.None, GHIElectronics.TinyCLR.Devices.Uart.UartStopBitCount.One, GHIElectronics.TinyCLR.Devices.Uart.UartHandshake.None);
+    serial.SetActiveSettings(
+        115200,
+        8,
+        GHIElectronics.TinyCLR.Devices.Uart.UartParity.None,
+        GHIElectronics.TinyCLR.Devices.Uart.UartStopBitCount.One,
+        GHIElectronics.TinyCLR.Devices.Uart.UartHandshake.None);
 
     serial.Enable();
 
     Thread.Sleep(1000);
 
-    SendAT(serial, "+++"); // send "+++" to stop "PPP" from modem.
+    SendAT(serial, "+++"); //Send "+++" to enter command mode.
 
     Thread.Sleep(1000);
 
-    // Send any AT command here, 
-    // Example AT+CSQ to check  signal strength
+    //Send any AT command here. 
+    //For example, AT+CSQ to check signal strength.
     SendAT(serial, "AT+CSQ");
 
-    SendAT(serial, "ATO"); // Enable "PPP" from modem, wait for "CONNECT 150000000" from AT command.
+    SendAT(serial, "ATO"); //Enable "PPP" modem, wait for "CONNECT 150000000" response.
 
     serial.Dispose();
 
-    serial = null; // Release UART, resume PPP interface from TinyCLR OS
+    serial = null; //Release UART, resume PPP interface.
 }
 
 networkController.Resume();
 
 // Continue network
-....
+...
 ```
 
 > [!NOTE]
-> When send "+++", no "\r" or "\n" at the end, while most other AT commands do need.
+> When sending "+++", do not send "\r" or "\n" at the end. While most AT commands need end of line characters, +++ does not.
 
 ## Security Clarification
 
