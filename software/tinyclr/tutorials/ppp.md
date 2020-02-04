@@ -145,6 +145,63 @@ static void Main()
 }
 ```
 
+## Switch from Data Mode to Command Mode:
+
+When PPP connection is set up successful, to switch UART port from data mode to command mode, we use sequence +++ . To prevent the +++ escape sequence from being misinterpreted as data, the following sequence should be followed: 
+ 
+1) Do not input any character within 1s or longer before inputting +++.  
+2) Input +++ within 1s, and no other characters can be inputted during the time. 
+3) Do not input any character within 1s after +++ has been inputted.  
+ 
+When such particular sequence +++ is received, the UART port will switch from data mode to command mode, and the module will return OK for the operation. 
+
+## Switch from Command Mode to Data Mode: 
+From command mode, send command "ATO" and wait for "CONNECT 150000000", which indicates that TA has entered into data mode, and all data inputted from USB/UART port will be treated as PPP frames.
+
+Example is how to switch from Data mode to Command Mode, send few AT commands then switch back to Data mode. TinyCLR OS provides two functions, Suspend() and Resume() that need for this case.
+
+Assuming SC20260.UartPort.Uart8 is used for PPP configuration.
+
+```cs
+//PPP is connected
+//....
+
+networkController.Suspend(); // suspend PPP, release UART Port from TinyCLR OS
+
+{
+    // Open uart
+    var serial = GHIElectronics.TinyCLR.Devices.Uart.UartController.FromName(SC20260.UartPort.Uart8);
+
+    serial.SetActiveSettings(115200, 8, GHIElectronics.TinyCLR.Devices.Uart.UartParity.None, GHIElectronics.TinyCLR.Devices.Uart.UartStopBitCount.One, GHIElectronics.TinyCLR.Devices.Uart.UartHandshake.None);
+
+    serial.Enable();
+
+    Thread.Sleep(1000);
+
+    SendAT(serial, "+++"); // send "+++" to stop "PPP" from modem.
+
+    Thread.Sleep(1000);
+
+    // Send any AT command here, 
+    // Example AT+CSQ to check  signal strength
+    SendAT(serial, "AT+CSQ");
+
+    SendAT(serial, "ATO"); // Enable "PPP" from modem, wait for "CONNECT 150000000" from AT command.
+
+    serial.Dispose();
+
+    serial = null; // Release UART, resume PPP interface from TinyCLR OS
+}
+
+networkController.Resume();
+
+// Continue network
+....
+```
+
+> [!NOTE]
+> When send "+++", no "\r" or "\n" at the end, while most other AT commands do need.
+
 ## Security Clarification
 
 Most users of embedded systems that connect to mobile networks assume they are secure, but often they are not. Typically, a serial connection with AT commands is used to communicate with the Internet. While the data over the air is secure, all data transmitted over the serial connection is raw unencrypted data that can be easily scoped. This is not the case with TinyCLR OS.
