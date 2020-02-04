@@ -28,12 +28,12 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 
 | Peripheral            | SCM20260N              | SCM20260E              | SCM20260D              |
 |-----------------------|------------------------|------------------------|------------------------|
-| GPIO (all support IRQ)|                        |                        |                        |
+| GPIO (all support IRQ)| 79                     | 85                     | 108                    |
 | SPI                   | 3                      | 3                      | 3                      |
 | I2C                   | 1                      | 3                      | 3                      |
 | UART/USART            | 7 (4 with handshaking) | 8 (4 with handshaking) | 8 (4 with handshaking) |
 | CAN                   | 2                      | 2                      | 2                      |
-| PWM                   | 22                     | 23                     | 29                     |
+| PWM                   | 22                     | 23                     | 28                     |
 | ADC                   | 16                     | 15                     | 20                     |
 | DAC                   | 2                      | 1                      | 2                      |
 | SD/SDIP/MMC           | 1                      | 1                      | 1                      |
