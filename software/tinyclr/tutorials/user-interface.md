@@ -116,7 +116,9 @@ namespace UserInterfaceExample
     }
 }
 ```
+
 When using the the 7" display with the above code sample, change the display configuration to the following. 
+
 ```cs
 var controllerSetting = new GHIElectronics.TinyCLR.Devices.Display.ParallelDisplayControllerSettings
             {
@@ -137,9 +139,6 @@ var controllerSetting = new GHIElectronics.TinyCLR.Devices.Display.ParallelDispl
                 VerticalSyncPolarity = false,
             };
 ```
-
-
-
 
 This code is for the SC20100 Dev Board with the N18 1.8 inch display.
 

@@ -53,7 +53,7 @@ The `synchronizationJumpWidth` defines the maximum amount of time quanta a bit p
 
 When true, `useMultiBitSampling` will cause the bus to be sampled three times for each bit.  Its use is recommended for low to medium speed buses to filter noise on the bus line.  For high speed buses it is recommended to set this to `false`.
 
-In the sample code below, the CAN bus is communicating at one Megabit per second over a short bus.
+In the sample code at the bottom of this page, the CAN bus is communicating at one Megabit per second over a short bus.
 
 ### CAN Bit Timing Settings
 
@@ -114,14 +114,14 @@ using GHIElectronics.TinyCLR.Pins;
 
 class Program {
     private static void Main() {
-        var Ldr0Button = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE3);
-        Ldr0Button.SetDriveMode(GpioPinDriveMode.InputPullUp);
+        var LdrButton = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE3);
+        LdrButton.SetDriveMode(GpioPinDriveMode.InputPullUp);
 
         var can = CanController.FromName(SC20100.CanBus.Can1);
 
         var propagationPhase1 = 13;
         var phase2 = 2;
-        var baudratePrescaler = 12;
+        var baudratePrescaler = 3;
         var synchronizationJumpWidth = 1;
         var useMultiBitSampling = false;
 
@@ -149,7 +149,7 @@ class Program {
         can.ErrorReceived += Can_ErrorReceived;
 
         while (true) {
-            if (Ldr0Button.Read() == GpioPinValue.Low)
+            if (LdrButton.Read() == GpioPinValue.Low)
                 can.WriteMessage(message);
 
             Thread.Sleep(100);

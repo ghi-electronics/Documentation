@@ -29,7 +29,7 @@ class Program {
 
 ## Software I2C
 
-The I2C bus is relatively simple and can be "bit banged" using software. The advantage is that any two GPIO pins can be used. However, software I2C requires more system resources and runs slower.
+The I2C bus is relatively simple and can be "bit banged" using software. The advantage of bit banging is that any two GPIO pins can be used, not just the pins that support hardware I2C. However, software I2C requires more system resources and runs slower.
 
 This example initializes a software I2C driver. Once initialized, it's used the same as hardware I2C.
 
@@ -40,9 +40,13 @@ using GHIElectronics.TinyCLR.Pins;
 
 class Program {
     private static void Main() {
-        var provider = new I2cControllerSoftwareProvider(FEZ.GpioPin.A0, FEZ.GpioPin.A1, false);
+        var provider = new I2cControllerSoftwareProvider
+            (FEZ.GpioPin.A0, FEZ.GpioPin.A1, false);
+
         var controller = I2cController.FromProvider(provider);
-        var device = controller.GetDevice(new I2cConnectionSettings(0x1C) { AddressFormat = I2cAddressFormat.SevenBit, BusSpeed = I2cBusSpeed.StandardMode }); //Device address
+
+        var device = controller.GetDevice(new I2cConnectionSettings(0x1C) { AddressFormat
+            = I2cAddressFormat.SevenBit, BusSpeed = I2cBusSpeed.StandardMode });
     }
 }
 

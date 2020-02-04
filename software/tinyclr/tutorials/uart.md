@@ -90,11 +90,12 @@ class Program {
 }
 
 ```
+
 > [!Tip] 
 > Once you type += after the event, hit the tab key and Visual Studio will automatically create the event for you.
 
 ## RS232
-UART uses the processor's voltage levels (logic levels) for transferring data. On the SITCore this is 0 to 3.3 volts. In the early days of computers UARTs used -12 to 12 volts to communicate reliably over longer distances. This is known as the RS232 standard.
+UART uses the processor's voltage levels (logic levels) for transferring data. On the SITCore this is 0 to 3.3 volts. In the early days of computers, UARTs used -12 to +12 volts to communicate reliably over longer distances. This is known as the RS232 standard.
 
 Some PCs still include serial ports, but those are RS232 serial ports. A voltage level shifter is needed to properly connect a logic level UART to an RS232 device.
 

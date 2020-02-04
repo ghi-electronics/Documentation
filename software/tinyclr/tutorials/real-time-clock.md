@@ -14,6 +14,7 @@ using System.Threading;
 class Program {
     static void Main() {
         var rtc = RtcController.GetDefault();
+
         if (rtc.IsValid) {
             Debug.WriteLine("RTC is Valid");
             // RTC is good so let's use it
@@ -36,6 +37,7 @@ class Program {
     }
 }
 ```
+
 The output will show both times and they should match. If the time is invalid when you first run them program, the program will detect the invalid time and will set the RTC.
 
 ```

@@ -46,7 +46,7 @@ File | Date | Status | MD5
 [v2.0.0-preview2](http://files.ghielectronics.com/downloads/TinyCLR/Tools/TinyCLR%20OS%20Font%20Converter%20v2.0.0-preview2.exe) | 2020-01-22 | Preview | 40F6EA89AA8B826956A83220285E471F
 
 
-### Firmwares
+### Firmware
 The Firmware is the TinyCLR OS that lives on your hardware. The firmware version loaded on the hardware must match the version number of the extension and the libraries. This will be more easily managed once the libraries are hosted on http://www.nuget.org/
 
 #### SC20xxxx (works on all SITCore products)

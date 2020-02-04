@@ -1,4 +1,5 @@
 # USB CDC & WinUSB
+---
 These protocols facilitate communication between your SITCore device and a PC. Note that the debug interface needs to be switched to serial (UART) to free up the USB Client port for PC communication. This is accomplished by pulling the MOD pin low during reset as detailed on the [SITCore System on Chip](../../../hardware/sitcore/soc.md) page.
 
 > [!TIP]

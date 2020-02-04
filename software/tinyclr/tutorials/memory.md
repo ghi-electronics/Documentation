@@ -30,6 +30,7 @@ void WritByte(byte b) {
     Network.SendByteArray(ba);
 }
 ```
+
 The code will work just fine but if it is being used in inner loops and it is being called 1000/second, then it will need to create and lose 1000 individual arrays. The system will run better if the array is created only once.
 
 ```cs
@@ -64,6 +65,7 @@ class Program {
     }
 }
 ```
+
 This example will `Dispose` the pin and the code will work; however, disposing the pin may take the pin back to the default state. There is no exact definition on what a piece of hardware (pin in this example) does when disposed.
 
 ```cs

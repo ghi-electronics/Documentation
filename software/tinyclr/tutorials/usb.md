@@ -1,4 +1,5 @@
 # USB
+---
 TinyCLR OS supports both USB Client and USB Host
 
 ## USB Client
@@ -9,10 +10,12 @@ USB MSC (Mass Storage Class) allows file access on USB memory devices.
 
 ```cs
 // Initialize a USB memory device.
-var usbHostController = StorageController.FromName(@"GHIElectronics.TinyCLR.NativeApis.STM32H7.UsbHostMassStorageStorageController\0");
+var usbHostController = StorageController.FromName
+    (@"GHIElectronics.TinyCLR.NativeApis.STM32H7.UsbHostMassStorageStorageController\0");
+
 var usbHost = FileSystem.Mount(sd.Hdc);
 
 ```
 
-> Note 
-> USB Hubs are not currently supported. Special USB memory devices that have multiple interface or built in hubs will not work.
+> [!Note]
+> USB Hubs are not currently supported. Special USB memory devices that have multiple interfaces or built in hubs will not work.
