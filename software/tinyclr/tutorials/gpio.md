@@ -15,7 +15,7 @@ If the processor is powered from 3.3V, then the state high means that there is 3
 > [!Warning]
 > Digital pins on microcontrollers are weak. They can only be used to control small LEDs or transistors. Those transistors can, in turn, control devices with high power needs like a motor.
 
-While written for the SCM20260D Dev Board, this example will work unchanged on the SC20100S Dev Board as well, blinking the left most LED (PB0).
+While written for the SCM20260D Dev Board, this example also works on the SC20100S Dev Board. Just uncomment the code for the appropriate board.
 
 ```cs
 using GHIElectronics.TinyCLR.Devices.Gpio;
@@ -24,7 +24,9 @@ using System.Threading;
 
 class Program {
     static void Main() {
-        var led = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PH11);
+          var led = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PH6);//For SC20260 Dev
+          //var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);//For SC20100 Dev
+
         led.SetDriveMode(GpioPinDriveMode.Output);
 
         while (true) {
@@ -52,7 +54,7 @@ In this example, a button is connected between ground and an input pin. We will 
 > [!Tip]
 > Never use an infinite loop without giving the system time to think. Add a short sleep to the loop or use events instead.
 
-While written for the SCM20260D Dev Board, this example will work unchanged with the SC20100S Dev Board as well. The left most LED (PB0) will light when the right most button (PD7/MOD) is pressed.
+While written for the SCM20260D Dev Board, this example also works on the SC20100S Dev Board. Just uncomment the code for the appropriate board. The left most LED will light when the MOD button is pressed.
 
 ```cs
 using GHIElectronics.TinyCLR.Devices.Gpio;
@@ -62,10 +64,12 @@ using System.Threading;
 class Program {
     private static void Main() {
         var gpio = GpioController.GetDefault();
-        var led = gpio.OpenPin(SC20260.GpioPin.PB0);
+        var led = gpio.OpenPin(SC20260.GpioPin.PH6);//For SC20260 Dev
+        //var led = gpio.OpenPin(SC20100.GpioPin.PB0);//For SC20100 Dev
         led.SetDriveMode(GpioPinDriveMode.Output);
 
-        var button = gpio.OpenPin(SC20260.GpioPin.PD7);
+        var button = gpio.OpenPin(SC20260.GpioPin.PD7);//For SC20260 Dev
+        //var button = gpio.OpenPin(SC20100.GpioPin.PD7);//For SC20100 Dev
         button.SetDriveMode(GpioPinDriveMode.InputPullUp);
 
         while (true) {
@@ -97,7 +101,7 @@ Let's use event driven programming to respond to a button and turn an LED on and
 
 You will see a reference to a "falling edge" in the following code. A falling edge occurs when the state of a pin goes from high to low. A rising edge is just the opposite -- it occurs when a pin goes from low to high.
 
-This example is written for the SCM20260D Dev Board, but will also run unchanged on the SC20100S Dev Board. It works exactly the same as the above example, but uses events instead of polling.
+While written for the SCM20260D Dev Board, this example also works on the SC20100S Dev Board. Just uncomment the code for the appropriate board. This example works exactly the same as the above, but uses events instead of polling.
 
 > [!Note]
 > Input events use interrupts (IRQs). Interrupts are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
@@ -114,10 +118,12 @@ class Program {
     private static void Main() {
         var gpio = GpioController.GetDefault();
 
-        led = gpio.OpenPin(SC20260.GpioPin.PB0);
+        led = gpio.OpenPin(SC20260.GpioPin.PH6);//For SC20260 Dev
+        //led = gpio.OpenPin(SC20100.GpioPin.PB0);//For SC20100 Dev
         led.SetDriveMode(GpioPinDriveMode.Output);
 
-        var button = gpio.OpenPin(SC20260.GpioPin.PD7);
+        var button = gpio.OpenPin(SC20260.GpioPin.PD7);//For SC20260 Dev
+        //var button = gpio.OpenPin(SC20100.GpioPin.PD7);//For SC20100 Dev
         button.SetDriveMode(GpioPinDriveMode.InputPullUp);
 
         button.ValueChanged += Button_ValueChanged;
