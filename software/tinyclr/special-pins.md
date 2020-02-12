@@ -33,6 +33,10 @@ By default, the MOD pin is pulled high during reset allowing for deployment and 
 
 The WKUP pin can be used to wake up the processor from special power saving modes. The WKUP pin can be configured to use an internal pull-up or pull-down, so no external pull resistor is needed. When WKUP functionality is not needed, this pin can be used as a GPIO or peripheral pin. See the [Power Management](../../software/tinyclr/tutorials/power-management.md) page for more information.
 
+## Debug Interface
+
+Don't forget to expose either the USB client or UART interface (or both) that you plan on using to deploy and debug you application code.
+
 ## Other Recommended Pin Usage
 
 When designing your own board, we recommend that you add the following peripherals using the stated pins to maintain consistency with our dev boards and sample software.
