@@ -78,6 +78,6 @@ namespace LowLevelDisplayAccess{
 
 ```
 
-SC20260D Dev Board display after running the sample code:
+SCM20260D Dev Board display after running the sample code:
 
 ![Low Level Display Sample](../images/low-level-display-sample.jpg)

@@ -130,8 +130,9 @@ Exposing the following pins is required in every design to enable device program
 * LDR
 * APP
 * MOD (if required to select a debug interface)
+* Desired debug interface(s)
 
-Please see the [Boostrap Pins](../../software/tinyclr/special-pins.md) page for more details.
+Please see the [Special Pins](../../software/tinyclr/special-pins.md) page for more details.
 
 ### Power Supply
 A typical clean power source, suited for digital circuitry, is needed to power the SITCore SoCs. Voltages should be within at

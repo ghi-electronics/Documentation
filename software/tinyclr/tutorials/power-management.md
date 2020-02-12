@@ -3,7 +3,7 @@
 TinyCLR OS currently supports the Hibernate and Shutdown power saving modes. Any GPIO interrupt can be used to wake a board from Hibernate mode, but the WKUP pin must be used to wake up from Shutdown mode.
 
 ## Hibernate 
-In this mode the system goes to sleep to save power and wakes up and resumes processing when the assigned interrupt is received. Any GPIO interrupt can be used to wake from hibernation. The following example runs on both the SC20100 and SC20260D Dev boards and uses the LDR button to wake up. 
+In this mode the system goes to sleep to save power and wakes up and resumes processing when the assigned interrupt is received. Any GPIO interrupt can be used to wake from hibernation. The following example runs on both the SC20100 and SCM20260D Dev boards and uses the LDR button to wake up. 
 
 > [!Note]
 > Don't forget to configure the interrupt and interrupt handler for the pin that will be used to wake up from hibernation.

@@ -98,8 +98,8 @@ namespace GraphicsSample {
 }
 ```
 
-## SC20260D Dev Board Code Sample
-Here's the same basic sample code as above, but adapted for the larger displays used with the SC20260D Dev Board. You will need to add a font and a small JPG image as [resources](resources.md) to run the code as is.
+## SCM20260D Dev Board Code Sample
+Here's the same basic sample code as above, but adapted for the larger displays used with the SCM20260D Dev Board. You will need to add a font and a small JPG image as [resources](resources.md) to run the code as is.
 
 ### With 4.3" Display
 
