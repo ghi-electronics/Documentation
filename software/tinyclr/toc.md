@@ -50,7 +50,7 @@
 ### [Google Cloud](tutorials/google-cloud.md)
 ### [IFTTT](tutorials/ifttt.md)
 
-## In Field Security
+## In-Field Security
 ### [IP Protection](tutorials/ip-protection.md)
 ### [In-Field Update](tutorials/in-field-update.md)
 ### [Secure Storage Area](tutorials/secure-storage-area.md)
