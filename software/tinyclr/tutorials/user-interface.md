@@ -37,7 +37,7 @@ namespace UserInterfaceExample {
 
 ## Windows
 
-While you can have multiple windows in your UI application, it is mandatory to have at least one window. Here is a complete example that shows a window with a gradient brush background. The code is for SC20260D Dev board with the 4.3 inch display.
+While you can have multiple windows in your UI application, it is mandatory to have at least one window. Here is a complete example that shows a window with a gradient brush background. The code is for SCM20260D Dev board with the 4.3 inch display.
 
 ```cs
 using GHIElectronics.TinyCLR.UI;

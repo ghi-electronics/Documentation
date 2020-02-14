@@ -116,11 +116,13 @@ Here is a link to the manufacturer's web page for the connector we use on our bo
 
 ### Required Pins
 Exposing the following pins is required in every design to enable device programming, updates, and recovery:
+* RESET
 * LDR
 * APP
-* Reset
+* MOD (if required to select a debug interface)
 * Desired debug interface(s)
-* MOD if required to select a debug interface
+
+Please see the [Special Pins](../../software/tinyclr/special-pins.md) page for more details.
 
 ### Power Supply
 A typical clean power source, suited for digital circuitry, is needed to power the SITCore SoMs. The voltage should be within 10% of 3.3 volts.
