@@ -12,7 +12,7 @@ This is a partial demo showing the use of I2C.
 using GHIElectronics.TinyCLR.Devices.I2c;
 using GHIElectronics.TinyCLR.Pins;
 
-class program {
+class Program {
     private static void Main() {
         var settings = new I2cConnectionSettings(0x1C, 100000); //The slave's address and
                                                                 //    the bus speed.
