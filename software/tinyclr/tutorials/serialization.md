@@ -5,7 +5,7 @@ Serialization is the process of converting the state of an object into a form th
 TinyCLR OS includes a built in JSON library to help in serializing data.
 
 > [!TIP]
-> Need Nugets: GHIElectronics.TinyCLR.Data.Json
+> Needed NuGet: GHIElectronics.TinyCLR.Data.Json
 
 ```cs
 static void DoTestSerialize()
@@ -27,6 +27,7 @@ static void DoTestSerialize()
             break;
         }
     }
+
     Debug.WriteLine("Array test succeeded");
 }
 ```

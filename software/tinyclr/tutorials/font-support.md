@@ -30,7 +30,7 @@ ImportRange 32 126
 ```
 
 > [!TIP]
-> This [third-party tool](http://informatix.miloush.net/microframework/Utilities/TinyFontTool.aspx) can be handy for generating compatible fonts.
+> This [**third-party tool**](http://informatix.miloush.net/microframework/Utilities/TinyFontTool.aspx) can be handy for generating compatible fonts.
 
 ## Font Definition
 The .fntdef file options are as follows:

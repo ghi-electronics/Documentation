@@ -1,9 +1,9 @@
 # TLS
 ---
 
-TLS is how the Internet securely works, for banks, airports and security systems. We support TLS 1.3, a global security standard. All encryption, decryption and certification are done a secure internal memory.
+TLS is how the Internet securely works, for banks, airports and security systems. We support TLS 1.3, a global security standard. All encryption, decryption and certification are done in secure internal memory to keep sensitive data safe.
 
-Below is simple example show to connect https://www.google.com 
+Below is simple example showing how to connect to https://www.google.com 
 
 >[!TIP]
 >Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Networking.Http

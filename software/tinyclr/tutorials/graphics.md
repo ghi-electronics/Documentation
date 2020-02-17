@@ -205,18 +205,18 @@ displayController.SetConfiguration(new ParallelDisplayControllerSettings {
 ```
 
 ## Helper Methods
-The `DisplayController.ActiveConfiguration` can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display's resolution. The following line of code automatically draw a line from corner to corner, no matter the display resolution.
+The `DisplayController.ActiveConfiguration` can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display's resolution. The following line of code draws a line from corner to corner, no matter the display resolution.
 
 ```cs
 screen.DrawLine(new Pen(Color.Red), 0, 0, displayController.ActiveConfiguration.Width - 1,
     displayController.ActiveConfiguration.Height - 1);
 ```
 
-It is important to note that drawing functions process graphics in RAM independently from the display. The display driver then transfers the pixels from the internal memory to the display, through `Graphics.Flush`. Learn more about [display](displays.md) support.
+It is important to note that drawing functions process graphics in RAM independently from the display. The display driver then transfers the pixels from internal memory to the display when `Graphics.Flush` is called. Learn more about [display](displays.md) support.
 
 ## Images
 
-TinyCLR OS supports BMP, GIF, and JPG. Depending on your hardware's limitation, one or more of these image formats maybe supported. Images can be loaded from a `stream` or simply load from [resources](resources.md). 
+TinyCLR OS supports the BMP, GIF, and JPG image formats. Depending on your hardware's limitations, one or more of these image formats may be supported. Images can be loaded from a `stream` or loaded from [resources](resources.md). 
 
 > [!Tip]
 > BMP supports 256 colors and 24bit.

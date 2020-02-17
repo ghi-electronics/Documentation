@@ -50,7 +50,7 @@ TinyCLR's UART API included the following event listeners:
 * DataReceived
 * ErrorReceived
 
-The following example is written for the SC20100S Dev Board. It works the same as the previous example, except it uses the DateReceived event. If you connect PE7, the COM7 RX pin, directly to the PE8, the COM7 TX pin, you will see "ABCDEF" in the output window when running this code.
+The following example is written for the SC20100S Dev Board. It works the same as the previous example, except it uses the DataReceived event. If you connect PE7, the COM7 RX pin, directly to the PE8, the COM7 TX pin, you will see "ABCDEF" in the output window when running this code.
 
 ```cs
 using System.Diagnostics;

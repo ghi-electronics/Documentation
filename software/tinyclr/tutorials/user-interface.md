@@ -3,11 +3,14 @@
 You can use the `GHIElectronics.TinyCLR.UI` library to create user interfaces for your application. The UI library is inspired by Windows Presentation Foundation on the desktop.
 
 ## Application Management
-The UI library requires internal management that is handled by the application class. The following code provides a good starting point. Do not forget to add the `GHIElectronics.TinyCLR.UI` NuGet package.
+The UI library requires internal management that is handled by the application class. The following code provides a good starting point.
+
+> [!Note]
+> Needed NuGets: GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.UI
 
 ```cs
-using GHIElectronics.TinyCLR.UI;
 using GHIElectronics.TinyCLR.Devices.Display;
+using GHIElectronics.TinyCLR.UI;
 
 namespace UserInterfaceExample {
     class Program : Application {
@@ -39,15 +42,18 @@ namespace UserInterfaceExample {
 
 While you can have multiple windows in your UI application, it is mandatory to have at least one window. Here is a complete example that shows a window with a gradient brush background. The code is for SCM20260D Dev board with the 4.3 inch display.
 
+> [!Note]
+> Needed NuGets: GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins, GHIElectronics.TinyCLR.UI, GHIElectronics.TinyCLR.UI.Media
+
 ```cs
+using GHIElectronics.TinyCLR.Devices.Display;
+using GHIElectronics.TinyCLR.Devices.Gpio;
+using GHIElectronics.TinyCLR.Devices.I2c;
+using GHIElectronics.TinyCLR.Native;
+using GHIElectronics.TinyCLR.Pins;
 using GHIElectronics.TinyCLR.UI;
 using GHIElectronics.TinyCLR.UI.Media;
-using GHIElectronics.TinyCLR.Devices.Display;
-using GHIElectronics.TinyCLR.Devices.I2c;
-using GHIElectronics.TinyCLR.Devices.Gpio;
-using GHIElectronics.TinyCLR.Pins;
 using System.Drawing;
-using GHIElectronics.TinyCLR.Native;
 
 namespace UserInterfaceExample
 {
@@ -117,11 +123,11 @@ namespace UserInterfaceExample
 }
 ```
 
-When using the the 7" display with the above code sample, change the display configuration to the following. 
+When using the the 7" display with the above code sample, change the display configuration to the following:
 
 ```cs
-var controllerSetting = new GHIElectronics.TinyCLR.Devices.Display.ParallelDisplayControllerSettings
-            {
+var controllerSetting = new 
+    GHIElectronics.TinyCLR.Devices.Display.ParallelDisplayControllerSettings {
                 Width = 800,
                 Height = 480,
                 DataFormat = DisplayDataFormat.Rgb565,
@@ -142,9 +148,10 @@ var controllerSetting = new GHIElectronics.TinyCLR.Devices.Display.ParallelDispl
 
 This code is for the SC20100 Dev Board with the N18 1.8 inch display.
 
+> [!Note]
+> Needed NuGets: GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735, GHIElectronics.TinyCLR.Pins, GHIElectronics.TinyCLR.UI, GHIElectronics.TinyCLR.UI.Media
+
 ```cs
-using System;
-using System.Drawing;
 using GHIElectronics.TinyCLR.Devices.Display;
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Devices.Spi;
@@ -152,6 +159,8 @@ using GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735;
 using GHIElectronics.TinyCLR.Pins;
 using GHIElectronics.TinyCLR.UI;
 using GHIElectronics.TinyCLR.UI.Media;
+using System;
+using System.Drawing;
 
 namespace SC20100_N18_WPF{
     class Program : Application{
@@ -217,7 +226,7 @@ namespace SC20100_N18_WPF{
 ## Elements
 A window is not very useful without some elements (controls). There are many available standard elements, and you can make your own custom elements as well. All elements descend from the `UIElement` class. Explore the `GHIElectronics.TinyCLR.UI.Controls` namespace to see what's available.
 
-For the sake of simplifying the rest of this tutorial, we've added the `private static UIElement Elements()` method that creates and returns the elements. This is then assigned to the child of our window. You will need to add `window.Child = Elements();` right before returning from `CreateWindow`.
+For the sake of simplifying the rest of this tutorial, we've added the `private static UIElement Elements()` method that creates and returns the elements. This is then assigned to the child of our window. You will need to add `window.Child = Elements()` right before returning from `CreateWindow`.
 
 
 > [!Tip]
@@ -236,7 +245,7 @@ private static UIElement Elements() {
 }
 ```
 
-### Label, TextBlock, and TextBox     Text and TextBox
+### Label, TextBlock, and TextBox
 A TextBlock just displays text that cannot be changed at runtime. A TextBlock could be used for a window title, for example. A Label is like a TextBlock, but Label text can be changed at runtime. The Label control can also host controls other than text strings. The TextBox allows for both single line and multiple line text input.
 
 ### Panel
@@ -479,12 +488,12 @@ private static UIElement Elements() {
 
 ### ScrollViewer
 
-The scroll viewer allows for viewing content that is larger than the viewing area. The user input can then be used to shift the content within the viewing area.
+The scroll viewer allows for viewing content that is larger than the viewing area. User input is used to shift the content within the viewing area.
 
 
 ### The Dispatcher
 
-The User Interface libraries rely on a dispatcher internally to handle system events and updates the invalidated elements. Any changes to any of the elements needs to happen from within the dispatcher. In this example, we will show the time on the screen. The time will be in a text box that is updated every second using a `Timer`. Since timers run in their own thread, a dispatcher invoke is needed.
+The User Interface libraries rely on a dispatcher to handle system events and update invalidated elements. All elements are changed and updated from within the dispatcher. In this example, we will show the time on the screen. The time will be in a text box that is updated every second using a `Timer`. Since timers run in their own thread, a dispatcher invoke is needed.
 
 ```cs
 static void Counter(object o) {
@@ -508,7 +517,7 @@ private static UIElement Elements() {
 }
 ```
 
-You can also use the dispatcher timer directly
+You can also use the dispatcher timer directly:
 
 ```cs
 private static UIElement Elements() {
@@ -534,7 +543,7 @@ private static void Counter(object sender, EventArgs e) {
 ```
 
 ### User Input
-A user can feed in input to the graphical interface through touch or button input.
+A user can feed input to the graphical interface through touch or button input.
 
 ```cs
 app.InputProvider.RaiseTouch(x, y, touchState, DateTime.UtcNow);

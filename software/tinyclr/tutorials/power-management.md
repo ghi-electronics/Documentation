@@ -9,14 +9,14 @@ In this mode the system goes to sleep to save power and wakes up and resumes pro
 > Don't forget to configure the interrupt and interrupt handler for the pin that will be used to wake up from hibernation.
 
 > [!Tip]
-> This code needs the GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Devices.Gpio, and GHIElectronics.TinyCLR.Pins NuGet packages and using statements in addition to the GHIElectronics.TinyCLR.Core NuGet package.
+> Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins
 
 ```cs
 var ldrButton = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE3);
 ldrButton.SetDriveMode(GpioPinDriveMode.InputPullUp);
 ldrButton.ValueChanged += ldrButton_ValueChanged;
 
-//The next line starts hibernation
+//The next line starts hibernation.
 Power.SetLevel(PowerLevel.Sleep3, PowerWakeSource.Gpio, (ulong)(ldrButton.PinNumber));
 
 //The system is hibernating.
@@ -37,7 +37,7 @@ The following code shuts down the system. The `false` argument configures the sy
 > Waking from Shutdown mode always resets the system. Your application will start over, it will not resume where it left off.
 
 > [!Tip]
-> This code needs the GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Devices.Gpio, and GHIElectronics.TinyCLR.Pins NuGet packages and using statements in addition to the GHIElectronics.TinyCLR.Core NuGet package.
+> Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Native, and GHIElectronics.TinyCLR.Pins
 
 ```cs
 //The next line shuts down the system.
