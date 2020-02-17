@@ -13,7 +13,6 @@ static bool linkReady = false;
 
 static void DoTestPPP()
 {
-            
     var networkController = NetworkController.FromName
             ("GHIElectronics.TinyCLR.NativeApis.Ppp.NetworkController");
 
@@ -207,7 +206,7 @@ networkController.Resume();
 
 ## Security Clarification
 
-Most users of embedded systems that connect to mobile networks assume they are secure, but often they are not. Typically, a serial connection with AT commands is used to communicate with the Internet. While the data over the air is secure, all data transmitted over the serial connection is raw unencrypted data that can be easily scoped. This is not the case with TinyCLR OS.
+Most users of embedded systems that connect to mobile networks assume they are secure, but often they are not. Typically, a serial connection with AT commands is used to communicate with the modem. While the data over the air is secure, all data transmitted over the serial connection is raw unencrypted data that can be easily scoped. This is not the case with TinyCLR OS.
 
 With TinyCLR OS, serial data between the device and the modem is encrypted. All data handling is done internally inside the core processor, which is extremely difficult to hack into.
 

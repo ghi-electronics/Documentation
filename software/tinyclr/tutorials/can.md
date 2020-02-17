@@ -23,7 +23,7 @@ High speed CAN is set up as a linear bus of 120 ohm nominal twisted pair wiring 
 ![CAN linear bus](../images/can-bus.png)
 
 > [!TIP]
-> Some CAN devices including our own development boards have built in termination resistors. If you are using more than two nodes on a high speed CAN bus you must disable the termination resistors on all nodes except for the two end nodes. 
+> Some CAN devices, including our own development boards, have built in termination resistors. If you are using more than two nodes on a high speed CAN bus, you must disable the termination resistors on all nodes except for the two end nodes. 
 
 Low speed or fault tolerant CAN uses a linear bus, star bus, or multiple star buses.  Fault tolerant CAN buses are terminated differently than linear CAN buses and require a termination resistor at each node.  The value of these resistors depends on the network but should equal about 100 ohms per CAN line in total.
 
@@ -102,7 +102,10 @@ The `WriteMessages()` method is used to send an array of CAN messages.  The argu
 `SetExplicitFilter()` takes an array argument which specifies individual arbitration IDs that will be accepted regardless of the group filter settings.  In the sample code below, CAN messages with arbitration IDs of `0x11` and `0x5678` will be accepted, in addition to the arbitration IDs specified by the group filters.
 
 ## Sample Code
-The following sample code is written for our SITCore SC20100 Dev Board.  It requires installation of the `GHIElectronics.TinyCLR.Core`, `GHIElectronics.TinyCLR.Devices` and `GHIElectronics.TinyCLR.Pins` NuGet packages.
+The following sample code is written for our SITCore SC20100 Dev Board.
+
+> [!Note]
+> Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices and GHIElectronics.TinyCLR.Pins
  
 ```cs
 using System;

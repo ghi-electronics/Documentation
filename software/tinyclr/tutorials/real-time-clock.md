@@ -48,7 +48,7 @@ class Program {
 }
 ```
 
-The output will show both times and they should match. If the time is invalid when you first run them program, the program will detect the invalid time and will set the RTC.
+The output will show both times and they should match. If the RTC time is invalid when you first run the program, the program will detect the invalid time and will set the RTC.
 
 ```
 RTC is Valid

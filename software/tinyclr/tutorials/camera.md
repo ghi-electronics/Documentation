@@ -14,15 +14,19 @@ https://github.com/ghi-electronics/TinyCLR-Drivers for an example of how to conf
 
 This example configures the camera and sends the images to the 4.3 inch display attached to the SCM20260D Dev Board.
 
+> [!Note]
+> Needed NuGets: GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Drivers.Omnivision.Ov9655, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins
+>
+> Needed Namespaces: GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Drivers.Omnivision.Ov9655, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins, System.Diagnostics, System.Drawing
+
 ```cs
 using GHIElectronics.TinyCLR.Devices.Gpio;
-using System.Drawing;
-using System.Diagnostics;
 using GHIElectronics.TinyCLR.Devices.I2c;
-using GHIElectronics.TinyCLR.Native;
 using GHIElectronics.TinyCLR.Drivers.Omnivision.Ov9655;
+using GHIElectronics.TinyCLR.Native;
 using GHIElectronics.TinyCLR.Pins;
-
+using System.Diagnostics;
+using System.Drawing;
 
 class Program
 {

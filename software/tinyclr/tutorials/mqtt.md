@@ -66,7 +66,7 @@ static void DoTestMqtt()
 
 # Event Handler
 
-Mqtt driver provides five events:
+The Mqtt driver provides five events:
 
 ```cs
 client.PublishReceivedChanged += (a,b) => { Debug.WriteLine("Publish Received Changed.");  };

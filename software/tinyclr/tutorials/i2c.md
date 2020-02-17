@@ -14,14 +14,13 @@ using GHIElectronics.TinyCLR.Pins;
 
 class Program {
     private static void Main() {
-        var settings = new I2cConnectionSettings(0x1C);     //The slave's address.
-        settings.BusSpeed = I2cBusSpeed.FastMode;
-
-        var controller = I2cController.FromName(FEZ.I2cBus.I2c1);
+        var settings = new I2cConnectionSettings(0x1C, 100000); //The slave's address and
+                                                                //    the bus speed.
+        var controller = I2cController.FromName(SC20100.I2cBus.I2c1);
         var device = controller.GetDevice(settings);
 
         device.Write(new byte[] { 1, 2 });  //Write something
-        device.WriteRead(...);              //This is good for reading registers.
+        device.WriteRead(...);              //This is good for reading register
     }
 }
 
@@ -41,12 +40,13 @@ using GHIElectronics.TinyCLR.Pins;
 class Program {
     private static void Main() {
         var provider = new I2cControllerSoftwareProvider
-            (FEZ.GpioPin.A0, FEZ.GpioPin.A1, false);
+            (SC20260.GpioPin.PA0, SC20260.GpioPin.PA1, false);
 
         var controller = I2cController.FromProvider(provider);
 
-        var device = controller.GetDevice(new I2cConnectionSettings(0x1C) { AddressFormat
-            = I2cAddressFormat.SevenBit, BusSpeed = I2cBusSpeed.StandardMode });
+        var device = controller.GetDevice(new I2cConnectionSettings(0x1C) {
+            AddressFormat = I2cAddressFormat.SevenBit, BusSpeed = 400000
+        });
     }
 }
 

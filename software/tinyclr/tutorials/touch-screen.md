@@ -12,7 +12,7 @@ A resistive touch screen measures the resistance across the X and Y axes to dete
 
 Unless you have specific reason to use resistive touch, capacitive touch is preferred.
 
-This is a simple example showing how to read a resistive display. A better approach would be to use a resistive touch controller chip that works over SPI/I2C.
+This is a simple example showing how to read a resistive display. A better approach would be to use a resistive touch controller chip that works over SPI or I2C.
 
 ```cs
 private void TouchReader() {
@@ -78,16 +78,18 @@ Capacitive touch screens are used on most modern devices, including phones. They
 
 A special capacitive controller chip must be used to read the touch panel. This chip is usually mounted right on the flat cable going to the touch panel. These chips are usually I2C or SPI, with I2C being more common.
 
-The capacitive displays used in our development options use a controller from FocalTech.
+The capacitive displays used in our development options use a touch controller from FocalTech.
 
-We provide the `GHIElectronics.TinyCLR.Drivers.FocalTech.FT5xx6` NuGet package to interact with capacitive touch screens. The constructor simply needs to know which I2C bus and reset pin are being used. The event fires giving the exact position matching the display resolution, no need for any scaling or calibration. The driver source code is found on the [TinyCLR Drivers repo](https://github.com/ghi-electronics/TinyCLR-Drivers).
+We provide the `GHIElectronics.TinyCLR.Drivers.FocalTech.FT5xx6` NuGet package to interact with capacitive touch screens. The constructor simply needs to know which I2C bus and reset pin are being used. The event fires giving the exact position using display pixels as units -- there is no need for scaling or calibration. The driver source code is found on the [TinyCLR Drivers repo](https://github.com/ghi-electronics/TinyCLR-Drivers).
 
 This simple example will draw a dot on touch move:
 
 ```cs
 using GHIElectronics.TinyCLR.Drivers.FocalTech.FT5xx6;
 
-var touch = new FT5xx6Controller(i2cController.GetDevice(FT5xx6Controller.GetConnectionSettings()), gpioController.OpenPin(UCMStandard.GpioPin.B));
+var touch = new FT5xx6Controller(
+    i2cController.GetDevice(FT5xx6Controller.GetConnectionSettings()),
+    gpioController.OpenPin(UCMStandard.GpioPin.B));
 
 touch.TouchMove += (_, e) => {
     screen.FillEllipse(brush, e.X, e.Y, 5, 5);
