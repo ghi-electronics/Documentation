@@ -146,7 +146,7 @@ var controllerSetting = new
             };
 ```
 
-This code is for the SC20100 Dev Board with the N18 1.8 inch display.
+This code is for the SC20100S Dev Board with the N18 1.8 inch display.
 
 > [!Note]
 > Needed NuGets: GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735, GHIElectronics.TinyCLR.Pins, GHIElectronics.TinyCLR.UI, GHIElectronics.TinyCLR.UI.Media

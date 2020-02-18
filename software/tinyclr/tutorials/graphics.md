@@ -4,8 +4,8 @@ The `GHIElectronics.TinyCLR.Drawing` NuGet package includes the backbone for all
 
 Shape examples are `Graphics.FillEllipse`, `Graphics.DrawLine` and `Graphics.DrawRectangle`. These methods need `Pen` and `Brush` that are also part of `Graphics`.
 
-## SC20100 Dev Board Code Sample
-The following sample code runs on our SC20100 Dev Board with its built in display. You will need to add a font and a small JPG image as [resources](resources.md) to run the code as is. 
+## SC20100S Dev Board Code Sample
+The following sample code runs on our SC20100S Dev Board with its built in display. You will need to add a font and a small JPG image as [resources](resources.md) to run the code as is. 
 
 > [!Tip]
 > Needed Nugets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.

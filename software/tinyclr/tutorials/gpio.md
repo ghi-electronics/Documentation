@@ -25,7 +25,7 @@ using System.Threading;
 class Program {
     static void Main() {
           var led = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PH6);//For SC20260 Dev
-          //var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);//For SC20100 Dev
+          //var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);//For SC20100S Dev
 
         led.SetDriveMode(GpioPinDriveMode.Output);
 
@@ -65,11 +65,11 @@ class Program {
     private static void Main() {
         var gpio = GpioController.GetDefault();
         var led = gpio.OpenPin(SC20260.GpioPin.PH6);//For SC20260 Dev
-        //var led = gpio.OpenPin(SC20100.GpioPin.PB0);//For SC20100 Dev
+        //var led = gpio.OpenPin(SC20100.GpioPin.PB0);//For SC20100S Dev
         led.SetDriveMode(GpioPinDriveMode.Output);
 
         var button = gpio.OpenPin(SC20260.GpioPin.PD7);//For SC20260 Dev
-        //var button = gpio.OpenPin(SC20100.GpioPin.PD7);//For SC20100 Dev
+        //var button = gpio.OpenPin(SC20100.GpioPin.PD7);//For SC20100S Dev
         button.SetDriveMode(GpioPinDriveMode.InputPullUp);
 
         while (true) {
@@ -119,11 +119,11 @@ class Program {
         var gpio = GpioController.GetDefault();
 
         led = gpio.OpenPin(SC20260.GpioPin.PH6);//For SC20260 Dev
-        //led = gpio.OpenPin(SC20100.GpioPin.PB0);//For SC20100 Dev
+        //led = gpio.OpenPin(SC20100.GpioPin.PB0);//For SC20100S Dev
         led.SetDriveMode(GpioPinDriveMode.Output);
 
         var button = gpio.OpenPin(SC20260.GpioPin.PD7);//For SC20260 Dev
-        //var button = gpio.OpenPin(SC20100.GpioPin.PD7);//For SC20100 Dev
+        //var button = gpio.OpenPin(SC20100.GpioPin.PD7);//For SC20100S Dev
         button.SetDriveMode(GpioPinDriveMode.InputPullUp);
 
         button.ValueChanged += Button_ValueChanged;
