@@ -2,7 +2,7 @@
 ---
 1-Wire is a communication protocol designed by Dallas Semiconductor. 1-Wire is similar to I2C, but with lower data rates, longer range, and the ability to power remote sensors over the two bus lines (data and ground).
 
-The following sample code is written for the SC20100 Dev Board with one or more DS18B20 temperature sensors. The temperature sensors are powered directly from the dev board with the data line connected to pin PA1.
+The following sample code is written for the SC20100S Dev Board with one or more DS18B20 temperature sensors. The temperature sensors are powered directly from the dev board with the data line connected to pin PA1.
 
 > [!Note]
 > Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Onewire, GHIElectronics.TinyCLR.Native, and GHIElectronics.TinyCLR.Pins.

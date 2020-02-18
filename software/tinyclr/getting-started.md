@@ -58,7 +58,7 @@ namespace TinyCLRApplication1 {
     class Program {
         static void Main() {
 
-            //Use "SC20100.GpioPin.PB0" on SC20100 Dev Board.
+            //Use "SC20100.GpioPin.PB0" on SC20100S Dev Board.
             //Use "SC20260.GpioPin.PH6" on SCM20260D Dev Board.
             var LED = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
             LED.SetDriveMode(GpioPinDriveMode.Output);

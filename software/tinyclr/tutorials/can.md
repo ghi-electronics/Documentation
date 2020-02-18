@@ -102,7 +102,7 @@ The `WriteMessages()` method is used to send an array of CAN messages.  The argu
 `SetExplicitFilter()` takes an array argument which specifies individual arbitration IDs that will be accepted regardless of the group filter settings.  In the sample code below, CAN messages with arbitration IDs of `0x11` and `0x5678` will be accepted, in addition to the arbitration IDs specified by the group filters.
 
 ## Sample Code
-The following sample code is written for our SITCore SC20100 Dev Board.
+The following sample code is written for our SITCore SC20100S Dev Board.
 
 > [!Note]
 > Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices and GHIElectronics.TinyCLR.Pins

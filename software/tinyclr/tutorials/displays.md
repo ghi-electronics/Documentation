@@ -22,7 +22,7 @@ These displays are capable of only showing characters. Most of these displays us
 ## Low Level Display Access
 TinyCLR also provides low level display access as part of the `GHIElectronics.TinyCLR.Devices.Display` library. These methods provide a simple way to write to a display without need for the `System.Drawing` library or an added font resource file.
 
-The following example is written for the SC20100 Dev Board and will paint the screen as shown in the picture beneath the code. Note that low level display access requires that you use the data format required by your display as configured. The SC20100 Dev Board used in this example expects each pixel to have 16 bits (two bytes per pixel) of color information in RGB565 format.
+The following example is written for the SC20100S Dev Board and will paint the screen as shown in the picture beneath the code. Note that low level display access requires that you use the data format required by your display as configured. The SC20100S Dev Board used in this example expects each pixel to have 16 bits (two bytes per pixel) of color information in RGB565 format.
 
 ```cs
 using GHIElectronics.TinyCLR.Devices.Display;
