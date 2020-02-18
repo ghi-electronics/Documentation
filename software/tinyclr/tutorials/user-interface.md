@@ -97,8 +97,6 @@ namespace UserInterfaceExample
 
             var screen = Graphics.FromHdc(display.Hdc);
             var controller = I2cController.GetDefault();
-            var ptr = Memory.UnmanagedMemory.Allocate(640 * 480 * 2);
-            var data = Memory.UnmanagedMemory.ToBytes(ptr, 640 * 480 * 2);
 
             app = new Program(display);
             app.Run(Program.CreateWindow(display));
@@ -123,7 +121,7 @@ namespace UserInterfaceExample
 }
 ```
 
-When using the the 7" display with the above code sample, change the display configuration to the following:
+When using the 7" display with the above code sample, change the display configuration to the following:
 
 ```cs
 var controllerSetting = new 
