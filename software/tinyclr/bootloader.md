@@ -24,9 +24,10 @@ TinyCLR Config tool should be used to update the firmware. As a backup, use thes
 4. Press `V` and then enter. You will see back the boot loader version number (v2.x.x)
 5. Press `U` or `X` and then enter. Use `X` for firmware file type GHI and `U` for firmware file type GLB. 
 6. Press `Y` to confirm then enter. You will now see `CCCC`...
-7. Go to `File` -> `Transfer` -> `XMODEM` -> `Send` and then check the `1K` option.
-8. Select the firmware file.
-9. When the transfer is complete, reset your board.
+7. Go to `File` -> `Transfer` -> `XMODEM` -> `Send`.
+8. IMPORTANT: Make sure you check the `1K` option.
+9. Select the firmware file.
+10. When the transfer is complete, reset your board.
 
 ## Commands
 All commands and results are terminated with CR and LF (\r\n). "OK." will be sent after each successful command.

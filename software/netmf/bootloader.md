@@ -46,9 +46,10 @@ TinyCLR Config tool should be used to update the firmware. As a backup, use thes
 4. Press `V` and then enter. You will see back the boot loader version number (v2.x.x)
 5. Press `U` or `X` and then enter. Use `X` for firmware file type GHI and `U` for firmware file type GLB. 
 6. Press `Y` to confirm then enter. You will now see `CCCC`...
-7. Go to `File` -> `Transfer` -> `XMODEM` -> `Send` and then check the `1K` option.
-8. Select the firmware file.
-9. When the transfer is complete, reset your board.
+7. Go to `File` -> `Transfer` -> `XMODEM` -> `Send`.
+8. IMPORTANT: Make sure you check the `1K` option.
+9. Select the firmware file.
+10. When the transfer is complete, reset your board.
 
 #### GLB File Format
 The glb files that are loaded onto devices have some additional metadata that help the bootloader function in addition to the raw data itself. The first 1,024 bytes of a glb file is the upload header. Starting from offset 0 are the below fields. The rest of the header is currently reserved.
@@ -80,11 +81,12 @@ Some of our devices ship with v1 loader but require v2 loader to work with TinyC
 5. Select serial and pick the COM port associated with your board.
 6. Enter `E` and you will see back "Erase all memory! Are you sure?" now enter `Y`. (The bootloader is case sensitive)
 7. Enter `X` and you will see `CCCC`... showing on the terminal.
-8. Now go to `File` -> `Transfer` -> `XMODEM` -> `Send` and then check the `1K` option.
-9. Select the bootloader file you have downloaded above.
-10. You will see `File Transfer Finished Successfully`.
-11. Change the configuration switches back to the off position and reset the board.
-12. You are now running GHI Electronics bootloader v2!
+8. Now go to `File` -> `Transfer` -> `XMODEM` -> `Send`.
+9. IMPORTANT: Make sure you check the `1K` option.
+10. Select the bootloader file you have downloaded above.
+11. You will see `File Transfer Finished Successfully`.
+12. Change the configuration switches back to the off position and reset the board.
+13. You are now running GHI Electronics bootloader v2!
 
 
 ## Bootloader Downloads
