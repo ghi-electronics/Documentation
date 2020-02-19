@@ -26,6 +26,16 @@ namespace FileSystem {
 
             var drive = FileSystem.Mount(sd.Hdc);
 
+            //Show a list of files in the root directory
+            var directory = new DirectoryInfo(drive.Name);
+            var files = directory.GetFiles();
+
+            foreach (var f in files)
+            {
+                System.Diagnostics.Debug.WriteLine(f.Name);
+            }
+
+            //Create a text file and save it to the SD card.
             var file = new FileStream($@"{drive.Name}Test.txt", FileMode.OpenOrCreate);
             var bytes = Encoding.UTF8.GetBytes(DateTime.UtcNow.ToString() +
                 Environment.NewLine);
