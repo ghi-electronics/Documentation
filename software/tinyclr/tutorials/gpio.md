@@ -9,6 +9,16 @@ Microcontrollers include pins that can be controlled through software. They can 
 A digital output pin can be set to either high or low. There are different ways of describing these two states. High can also be called "true" or "one;" low can be called "false" or "zero".
 If the processor is powered from 3.3V, then the state high means that there is 3.3V on the output pin. It is not going to be exactly 3.3V but very close. When the pin is set to low, it's voltage will be very close to zero.
 
+### Maximum Output Current
+
+Each SITCore GPIO pin can sink and source up to 8 mA of current, and up to 20 mA with relaxed output voltage ratings.
+
+For example, the maximum output low voltage is 0.4 volts when the I/O current is +8 mA, but could be as high as 1.3 volts when the I/O current is +20 mA.
+
+The minimum output high voltage is Vdd - 0.4 volts (2.9 volts with 3.3 volt supply) when the I/O current is -8 mA, but could be as low as Vdd - 1.3 (2.0 volts with 3.3 volt supply) volts when the I/O current is -20 mA.
+
+The total output current sunk or sourced by the sum of all I/Os and control pins must not exceed 140 mA.
+
 > [!Warning]
 > Never connect two output pins together. If they are connected and one is high and the other is low, the entire processor can be damaged.
 
