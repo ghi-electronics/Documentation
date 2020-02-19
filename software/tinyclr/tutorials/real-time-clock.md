@@ -74,6 +74,54 @@ To set the system clock to the RTC time, use the following command:
 GHIElectronics.TinyCLR.Native.SystemTime.SetTime(rtc.Now);
 ```
 
+## SNTP
+
+You can use SNTP (Simple Network Time Protocol) to accurately set the time in your application. The following method will return the current date and time after retrieving it from an NTP server. Your device will need an active network connection for this code to work.
+
+```cs
+public static DateTime GetNetworkTime(int CorrectLocalTime = 0)
+    {
+        const string ntpServer = "pool.ntp.org";
+        var ntpData = new byte[48];
+        ntpData[0] = 0x1B; //LeapIndicator = 0 (no warning), VersionNum = 3 (IPv4 only),
+                           //    Mode = 3 (Client Mode)
+
+        var addresses = System.Net.Dns.GetHostEntry(ntpServer).AddressList;
+        var ipEndPoint = new System.Net.IPEndPoint(addresses[0], 123);
+        var socket = new System.Net.Sockets.Socket(
+            System.Net.Sockets.AddressFamily.InterNetwork,
+            System.Net.Sockets.SocketType.Dgram,
+            System.Net.Sockets.ProtocolType.Udp);
+
+        socket.Connect(ipEndPoint);
+
+        System.Threading.Thread.Sleep(1); //Added to support TinyCLR OS.
+
+        socket.Send(ntpData);
+        socket.Receive(ntpData);
+        socket.Close();
+
+        ulong intPart = (ulong)ntpData[40] << 24 | (ulong)ntpData[41] << 16 |
+            (ulong)ntpData[42] << 8 | (ulong)ntpData[43];
+
+        ulong fractPart = (ulong)ntpData[44] << 24 | (ulong)ntpData[45] << 16 |
+            (ulong)ntpData[46] << 8 | (ulong)ntpData[47];
+
+        var milliseconds = (intPart * 1000) + ((fractPart * 1000) / 0x100000000L);
+
+        var networkDateTime = (new System.DateTime(1900, 1, 1)).
+            AddMilliseconds((long)milliseconds);
+
+        return networkDateTime.AddHours(CorrectLocalTime);
+    }
+```
+
+The above method is used as follows, with the argument indicating how many hours to add to convert UTC time to your local time zone:
+
+```cs
+DateTime dateTime = GetNetworkTime(-5);
+```
+
 ## Battery Backed Memory
 
 SITCore devices include 4 Kbytes of battery backed memory. Like our [secure storage area](secure-storage-area.md), this memory accepts and returns byte arrays of data. The commands and their overloads for accessing this memory are as follows:
