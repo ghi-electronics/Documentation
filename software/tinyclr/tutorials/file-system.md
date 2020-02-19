@@ -6,7 +6,10 @@ The file system library is used to read and write files to storage devices suppo
 This allows file access on USB devices with MSC class, such as USB memory sticks. Support for USB drives is still not publicly available.
 
 ## SD Card
-The example below requires the `GHIElectronics.TinyCLR.IO` and `GHIElectronics.TinyCLR.Storage` libraries and a device with an SD card.
+The example below requires the `GHIElectronics.TinyCLR.IO` and `GHIElectronics.TinyCLR.Devices.Storage` libraries and a device with an SD card.
+
+> [!Note]
+> Make sure the namespace statement in the following code is changed to match the namespace of your project.
 
 ```cs
 using GHIElectronics.TinyCLR.Devices.Storage;
