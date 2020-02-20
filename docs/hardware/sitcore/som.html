@@ -142,9 +142,9 @@
 <tbody>
 <tr>
 <td>GPIO (all support IRQ)</td>
-<td></td>
-<td></td>
-<td></td>
+<td>79</td>
+<td>85</td>
+<td>108</td>
 </tr>
 <tr>
 <td>SPI</td>
@@ -154,7 +154,7 @@
 </tr>
 <tr>
 <td>I2C</td>
-<td>2</td>
+<td>1</td>
 <td>3</td>
 <td>3</td>
 </tr>
@@ -172,20 +172,20 @@
 </tr>
 <tr>
 <td>PWM</td>
-<td>21</td>
+<td>22</td>
 <td>23</td>
-<td>27</td>
+<td>28</td>
 </tr>
 <tr>
 <td>ADC</td>
-<td>21</td>
-<td>21</td>
-<td>21</td>
+<td>16</td>
+<td>15</td>
+<td>20</td>
 </tr>
 <tr>
 <td>DAC</td>
 <td>2</td>
-<td>2</td>
+<td>1</td>
 <td>2</td>
 </tr>
 <tr>
@@ -214,7 +214,7 @@
 </tr>
 <tr>
 <td>Ethernet</td>
-<td>1</td>
+<td>0</td>
 <td>1</td>
 <td>1</td>
 </tr>
@@ -298,12 +298,13 @@
 <h3 id="required-pins">Required Pins</h3>
 <p>Exposing the following pins is required in every design to enable device programming, updates, and recovery:</p>
 <ul>
+<li>RESET</li>
 <li>LDR</li>
 <li>APP</li>
-<li>Reset</li>
+<li>MOD (if required to select a debug interface)</li>
 <li>Desired debug interface(s)</li>
-<li>MODE if required to select a debug interface</li>
 </ul>
+<p>Please see the <a href="../../software/tinyclr/special-pins.html">Special Pins</a> page for more details.</p>
 <h3 id="power-supply">Power Supply</h3>
 <p>A typical clean power source, suited for digital circuitry, is needed to power the SITCore SoMs. The voltage should be within 10% of 3.3 volts.</p>
 <h3 id="reset">Reset</h3>

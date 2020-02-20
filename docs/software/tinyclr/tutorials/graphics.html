@@ -82,8 +82,8 @@
 <hr>
 <p>The <code>GHIElectronics.TinyCLR.Drawing</code> NuGet package includes the backbone for all graphics needs. It includes support for shapes, fonts and bitmaps.</p>
 <p>Shape examples are <code>Graphics.FillEllipse</code>, <code>Graphics.DrawLine</code> and <code>Graphics.DrawRectangle</code>. These methods need <code>Pen</code> and <code>Brush</code> that are also part of <code>Graphics</code>.</p>
-<h2 id="sc20100-dev-board-code-sample">SC20100 Dev Board Code Sample</h2>
-<p>The following sample code runs on our SC20100 Dev Board with its built in display. You will need to add a font and a small JPG image as <a href="resources.html">resources</a> to run the code as is. </p>
+<h2 id="sc20100s-dev-board-code-sample">SC20100S Dev Board Code Sample</h2>
+<p>The following sample code runs on our SC20100S Dev Board with its built in display. You will need to add a font and a small JPG image as <a href="resources.html">resources</a> to run the code as is. </p>
 <div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.</p>
 </div>
 <div class="TIP"><h5>Tip</h5><p>Make sure you change the namespace to match your project! </p>
@@ -170,8 +170,8 @@ namespace GraphicsSample {
         }
     }
 }
-</code></pre><h2 id="sc20260d-dev-board-code-sample">SC20260D Dev Board Code Sample</h2>
-<p>Here&#39;s the same basic sample code as above, but adapted for the larger displays used with the SC20260D Dev Board. You will need to add a font and a small JPG image as <a href="resources.html">resources</a> to run the code as is.</p>
+</code></pre><h2 id="scm20260d-dev-board-code-sample">SCM20260D Dev Board Code Sample</h2>
+<p>Here&#39;s the same basic sample code as above, but adapted for the larger displays used with the SCM20260D Dev Board. You will need to add a font and a small JPG image as <a href="resources.html">resources</a> to run the code as is.</p>
 <h3 id="with-43-display">With 4.3&quot; Display</h3>
 <div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.</p>
 </div>
@@ -266,12 +266,12 @@ namespace GraphicsSample {
     VerticalSyncPolarity = false,
 });
 </code></pre><h2 id="helper-methods">Helper Methods</h2>
-<p>The <code>DisplayController.ActiveConfiguration</code> can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display&#39;s resolution. The following line of code automatically draw a line from corner to corner, no matter the display resolution.</p>
+<p>The <code>DisplayController.ActiveConfiguration</code> can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display&#39;s resolution. The following line of code draws a line from corner to corner, no matter the display resolution.</p>
 <pre><code class="lang-cs">screen.DrawLine(new Pen(Color.Red), 0, 0, displayController.ActiveConfiguration.Width - 1,
     displayController.ActiveConfiguration.Height - 1);
-</code></pre><p>It is important to note that drawing functions process graphics in RAM independently from the display. The display driver then transfers the pixels from the internal memory to the display, through <code>Graphics.Flush</code>. Learn more about <a href="displays.html">display</a> support.</p>
+</code></pre><p>It is important to note that drawing functions process graphics in RAM independently from the display. The display driver then transfers the pixels from internal memory to the display when <code>Graphics.Flush</code> is called. Learn more about <a href="displays.html">display</a> support.</p>
 <h2 id="images">Images</h2>
-<p>TinyCLR OS supports BMP, GIF, and JPG. Depending on your hardware&#39;s limitation, one or more of these image formats maybe supported. Images can be loaded from a <code>stream</code> or simply load from <a href="resources.html">resources</a>. </p>
+<p>TinyCLR OS supports the BMP, GIF, and JPG image formats. Depending on your hardware&#39;s limitations, one or more of these image formats may be supported. Images can be loaded from a <code>stream</code> or loaded from <a href="resources.html">resources</a>. </p>
 <div class="TIP"><h5>Tip</h5><p>BMP supports 256 colors and 24bit.
 GIF does not support animated images.</p>
 </div>

@@ -90,11 +90,14 @@ using System.Text;
 namespace FileSystem {
     public class Program {
         private static void Main() {
-            var sd = StorageController.FromName(@&quot;GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0&quot;);
+            var sd = StorageController.FromName
+                (@&quot;GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0&quot;);
+
             var drive = FileSystem.Mount(sd.Hdc);
 
             var file = new FileStream($@&quot;{drive.Name}Test.txt&quot;, FileMode.OpenOrCreate);
-            var bytes = Encoding.UTF8.GetBytes(DateTime.UtcNow.ToString() + Environment.NewLine);
+            var bytes = Encoding.UTF8.GetBytes
+                (DateTime.UtcNow.ToString() + Environment.NewLine);
 
             file.Write(bytes, 0, bytes.Length);
 

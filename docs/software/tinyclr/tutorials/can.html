@@ -98,7 +98,7 @@
 <p>CAN bus is generally a two wire bus, but sometimes additional power and ground lines are included requiring four wires.</p>
 <p>High speed CAN is set up as a linear bus of 120 ohm nominal twisted pair wiring with two or more nodes.  Termination resistors are used at each end of the bus as shown below.</p>
 <p><img src="../images/can-bus.png" alt="CAN linear bus"></p>
-<div class="TIP"><h5>Tip</h5><p>Some CAN devices including our own development boards have built in termination resistors. If you are using more than two nodes on a high speed CAN bus you must disable the termination resistors on all nodes except for the two end nodes. </p>
+<div class="TIP"><h5>Tip</h5><p>Some CAN devices, including our own development boards, have built in termination resistors. If you are using more than two nodes on a high speed CAN bus, you must disable the termination resistors on all nodes except for the two end nodes. </p>
 </div>
 <p>Low speed or fault tolerant CAN uses a linear bus, star bus, or multiple star buses.  Fault tolerant CAN buses are terminated differently than linear CAN buses and require a termination resistor at each node.  The value of these resistors depends on the network but should equal about 100 ohms per CAN line in total.</p>
 <h2 id="the-tinyclr-can-interface">The TinyCLR CAN Interface</h2>
@@ -114,7 +114,7 @@
 <p>The <code>baudratePrescaler</code> argument determines the speed of the CAN system clock.</p>
 <p>The <code>synchronizationJumpWidth</code> defines the maximum amount of time quanta a bit period may be lengthened or shortened during each re-synchronization.</p>
 <p>When true, <code>useMultiBitSampling</code> will cause the bus to be sampled three times for each bit.  Its use is recommended for low to medium speed buses to filter noise on the bus line.  For high speed buses it is recommended to set this to <code>false</code>.</p>
-<p>In the sample code below, the CAN bus is communicating at one Megabit per second over a short bus.</p>
+<p>In the sample code at the bottom of this page, the CAN bus is communicating at one Megabit per second over a short bus.</p>
 <h3 id="can-bit-timing-settings">CAN Bit Timing Settings</h3>
 <p>The following CAN bit timing parameters were calculated for our SITCore Dev Boards and provide a good starting point for setting CAN timing. These values will work with any SITCore driving a SN65HVD230 CAN driver chip. When using a different CAN driver chip, the maximum cable length may be affected.</p>
 <p>If you are already familiar with CAN, you might notice that the Propagation and Phase 1 segments have been combined. This is very common for online CAN calculators and also the way CAN is handled by the microcontrollers used in the SITCore line of products.</p>
@@ -220,7 +220,9 @@
 <h4 id="setexplicitfilters">SetExplicitFilters()</h4>
 <p><code>SetExplicitFilter()</code> takes an array argument which specifies individual arbitration IDs that will be accepted regardless of the group filter settings.  In the sample code below, CAN messages with arbitration IDs of <code>0x11</code> and <code>0x5678</code> will be accepted, in addition to the arbitration IDs specified by the group filters.</p>
 <h2 id="sample-code">Sample Code</h2>
-<p>The following sample code is written for our SITCore SC20100 Dev Board.  It requires installation of the <code>GHIElectronics.TinyCLR.Core</code>, <code>GHIElectronics.TinyCLR.Devices</code> and <code>GHIElectronics.TinyCLR.Pins</code> NuGet packages.</p>
+<p>The following sample code is written for our SITCore SC20100S Dev Board.</p>
+<div class="NOTE"><h5>Note</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices and GHIElectronics.TinyCLR.Pins</p>
+</div>
 <pre><code class="lang-cs">using System;
 using System.Diagnostics;
 using System.Threading;
@@ -230,14 +232,14 @@ using GHIElectronics.TinyCLR.Pins;
 
 class Program {
     private static void Main() {
-        var Ldr0Button = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE3);
-        Ldr0Button.SetDriveMode(GpioPinDriveMode.InputPullUp);
+        var LdrButton = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE3);
+        LdrButton.SetDriveMode(GpioPinDriveMode.InputPullUp);
 
         var can = CanController.FromName(SC20100.CanBus.Can1);
 
         var propagationPhase1 = 13;
         var phase2 = 2;
-        var baudratePrescaler = 12;
+        var baudratePrescaler = 3;
         var synchronizationJumpWidth = 1;
         var useMultiBitSampling = false;
 
@@ -265,7 +267,7 @@ class Program {
         can.ErrorReceived += Can_ErrorReceived;
 
         while (true) {
-            if (Ldr0Button.Read() == GpioPinValue.Low)
+            if (LdrButton.Read() == GpioPinValue.Low)
                 can.WriteMessage(message);
 
             Thread.Sleep(100);

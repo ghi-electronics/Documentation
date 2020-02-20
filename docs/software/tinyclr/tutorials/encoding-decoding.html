@@ -119,6 +119,24 @@ BitConverter.ToUInt64(byte[] value, int startIndex)
 BitConverter.Int64BitsToDouble(long value)
 </code></pre><h4 id="swap-endianness">Swap Endianness</h4>
 <pre><code class="lang-cs">BitConverter.SwapEndianness(byte[] data, int groupSize)
+</code></pre><h2 id="string-handling">String Handling</h2>
+<h3 id="stringbuilder">StringBuilder</h3>
+<p>As strings are immutable, manipulating strings, especially in a tight loop, can impact system performance and increase memory usage and fragmentation. Because strings cannot be changed, every time you manipulate a string a new string is created and the original string becomes garbage. The StringBuilder class uses a string buffer to improve the performance of string manipulation, allowing you to manipulate strings instead of creating new strings.</p>
+<p>The following example changes the content of a string without creating a new string.</p>
+<pre><code class="lang-cs">var sb = new System.Text.StringBuilder(&quot;PA0 is the pin to use.&quot;);
+
+sb[1] = &#39;B&#39;;
+
+System.Diagnostics.Debug.WriteLine(sb.ToString()); //Will output &quot;PB0 is the pin to use.&quot;
+</code></pre><p>StringBuilder is also great when you want to build strings by concatenating characters or other strings. Without StringBuilder, each time you add a character to a string, a new string is created and the old string becomes garbage. The following code creates a string one character at a time without creating all the garbage strings.</p>
+<pre><code class="lang-cs">var sb = new System.Text.StringBuilder();
+
+for (int i=48; i&lt;58; i++) {
+    sb.Append((char)i);
+}
+
+
+System.Diagnostics.Debug.WriteLine(sb.ToString()); //Will output &quot;0123456789&quot;
 </code></pre></article>
           </div>
           

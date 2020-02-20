@@ -82,7 +82,7 @@
 <hr>
 <p><img src="images/bootloader.png" alt="Bootloader"></p>
 <p>The GHI Electronics Bootloader is used to update the firmware on our devices. It is the first program to run and unless the device specific LDR pins are set (see device documentation for details), it will execute the firmware on the device (if present). </p>
-<p>The bootloader communicates over a USB (virtual serial port) and a regular serial port. The interface used is controlled by a MODE pin as detailed in <a href="special-pins.html">Special Pins</a>.</p>
+<p>The bootloader communicates over a USB (virtual serial port) and a regular serial port. The interface used is controlled by a MOD pin as detailed in <a href="special-pins.html">Special Pins</a>.</p>
 <h2 id="loading-the-firmware">Loading the Firmware</h2>
 <p>The individual product pages include further instructions on the firmware needed and how to set the board in the loader mode. Once you have downloaded the firmware and set the board in loader mode, use the instructions below to load the firmware.</p>
 <h3 id="using-tinyclr-config">Using TinyCLR Config</h3>
@@ -97,7 +97,8 @@
 <li>Press <code>V</code> and then enter. You will see back the boot loader version number (v2.x.x)</li>
 <li>Press <code>U</code> or <code>X</code> and then enter. Use <code>X</code> for firmware file type GHI and <code>U</code> for firmware file type GLB. </li>
 <li>Press <code>Y</code> to confirm then enter. You will now see <code>CCCC</code>...</li>
-<li>Go to <code>File</code> -&gt; <code>Transfer</code> -&gt; <code>XMODEM</code> -&gt; <code>Send</code> and then check the <code>1K</code> option.</li>
+<li>Go to <code>File</code> -&gt; <code>Transfer</code> -&gt; <code>XMODEM</code> -&gt; <code>Send</code>.</li>
+<li>IMPORTANT: Make sure you check the <code>1K</code> option.</li>
 <li>Select the firmware file.</li>
 <li>When the transfer is complete, reset your board.</li>
 </ol>
