@@ -4,8 +4,8 @@ The `GHIElectronics.TinyCLR.Drawing` NuGet package includes the backbone for all
 
 Shape examples are `Graphics.FillEllipse`, `Graphics.DrawLine` and `Graphics.DrawRectangle`. These methods need `Pen` and `Brush` that are also part of `Graphics`.
 
-## SC20100 Dev Board Code Sample
-The following sample code runs on our SC20100 Dev Board with its built in display. You will need to add a font and a small JPG image as [resources](resources.md) to run the code as is. 
+## SC20100S Dev Board Code Sample
+The following sample code runs on our SC20100S Dev Board with its built in display. You will need to add a font and a small JPG image as [resources](resources.md) to run the code as is. 
 
 > [!Tip]
 > Needed Nugets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.
@@ -98,8 +98,8 @@ namespace GraphicsSample {
 }
 ```
 
-## SC20260D Dev Board Code Sample
-Here's the same basic sample code as above, but adapted for the larger displays used with the SC20260D Dev Board. You will need to add a font and a small JPG image as [resources](resources.md) to run the code as is.
+## SCM20260D Dev Board Code Sample
+Here's the same basic sample code as above, but adapted for the larger displays used with the SCM20260D Dev Board. You will need to add a font and a small JPG image as [resources](resources.md) to run the code as is.
 
 ### With 4.3" Display
 
@@ -205,18 +205,18 @@ displayController.SetConfiguration(new ParallelDisplayControllerSettings {
 ```
 
 ## Helper Methods
-The `DisplayController.ActiveConfiguration` can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display's resolution. The following line of code automatically draw a line from corner to corner, no matter the display resolution.
+The `DisplayController.ActiveConfiguration` can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display's resolution. The following line of code draws a line from corner to corner, no matter the display resolution.
 
 ```cs
 screen.DrawLine(new Pen(Color.Red), 0, 0, displayController.ActiveConfiguration.Width - 1,
     displayController.ActiveConfiguration.Height - 1);
 ```
 
-It is important to note that drawing functions process graphics in RAM independently from the display. The display driver then transfers the pixels from the internal memory to the display, through `Graphics.Flush`. Learn more about [display](displays.md) support.
+It is important to note that drawing functions process graphics in RAM independently from the display. The display driver then transfers the pixels from internal memory to the display when `Graphics.Flush` is called. Learn more about [display](displays.md) support.
 
 ## Images
 
-TinyCLR OS supports BMP, GIF, and JPG. Depending on your hardware's limitation, one or more of these image formats maybe supported. Images can be loaded from a `stream` or simply load from [resources](resources.md). 
+TinyCLR OS supports the BMP, GIF, and JPG image formats. Depending on your hardware's limitations, one or more of these image formats may be supported. Images can be loaded from a `stream` or loaded from [resources](resources.md). 
 
 > [!Tip]
 > BMP supports 256 colors and 24bit.

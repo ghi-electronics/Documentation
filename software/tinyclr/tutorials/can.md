@@ -23,7 +23,7 @@ High speed CAN is set up as a linear bus of 120 ohm nominal twisted pair wiring 
 ![CAN linear bus](../images/can-bus.png)
 
 > [!TIP]
-> Some CAN devices including our own development boards have built in termination resistors. If you are using more than two nodes on a high speed CAN bus you must disable the termination resistors on all nodes except for the two end nodes. 
+> Some CAN devices, including our own development boards, have built in termination resistors. If you are using more than two nodes on a high speed CAN bus, you must disable the termination resistors on all nodes except for the two end nodes. 
 
 Low speed or fault tolerant CAN uses a linear bus, star bus, or multiple star buses.  Fault tolerant CAN buses are terminated differently than linear CAN buses and require a termination resistor at each node.  The value of these resistors depends on the network but should equal about 100 ohms per CAN line in total.
 
@@ -53,7 +53,7 @@ The `synchronizationJumpWidth` defines the maximum amount of time quanta a bit p
 
 When true, `useMultiBitSampling` will cause the bus to be sampled three times for each bit.  Its use is recommended for low to medium speed buses to filter noise on the bus line.  For high speed buses it is recommended to set this to `false`.
 
-In the sample code below, the CAN bus is communicating at one Megabit per second over a short bus.
+In the sample code at the bottom of this page, the CAN bus is communicating at one Megabit per second over a short bus.
 
 ### CAN Bit Timing Settings
 
@@ -102,7 +102,10 @@ The `WriteMessages()` method is used to send an array of CAN messages.  The argu
 `SetExplicitFilter()` takes an array argument which specifies individual arbitration IDs that will be accepted regardless of the group filter settings.  In the sample code below, CAN messages with arbitration IDs of `0x11` and `0x5678` will be accepted, in addition to the arbitration IDs specified by the group filters.
 
 ## Sample Code
-The following sample code is written for our SITCore SC20100 Dev Board.  It requires installation of the `GHIElectronics.TinyCLR.Core`, `GHIElectronics.TinyCLR.Devices` and `GHIElectronics.TinyCLR.Pins` NuGet packages.
+The following sample code is written for our SITCore SC20100S Dev Board.
+
+> [!Note]
+> Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices and GHIElectronics.TinyCLR.Pins
  
 ```cs
 using System;
@@ -114,14 +117,14 @@ using GHIElectronics.TinyCLR.Pins;
 
 class Program {
     private static void Main() {
-        var Ldr0Button = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE3);
-        Ldr0Button.SetDriveMode(GpioPinDriveMode.InputPullUp);
+        var LdrButton = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE3);
+        LdrButton.SetDriveMode(GpioPinDriveMode.InputPullUp);
 
         var can = CanController.FromName(SC20100.CanBus.Can1);
 
         var propagationPhase1 = 13;
         var phase2 = 2;
-        var baudratePrescaler = 12;
+        var baudratePrescaler = 3;
         var synchronizationJumpWidth = 1;
         var useMultiBitSampling = false;
 
@@ -149,7 +152,7 @@ class Program {
         can.ErrorReceived += Can_ErrorReceived;
 
         while (true) {
-            if (Ldr0Button.Read() == GpioPinValue.Low)
+            if (LdrButton.Read() == GpioPinValue.Low)
                 can.WriteMessage(message);
 
             Thread.Sleep(100);

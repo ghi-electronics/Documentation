@@ -137,7 +137,7 @@ This is an SPI display that can work on any system with SPI bus, even small ones
 ![Display N7](images/modules/display-n7.jpg)
 
 The configurations for the display:
-```
+```cs
 Width = 800,
 Height = 480,
 PixelClockRate = 24 * 1000 * 1000,
@@ -171,7 +171,7 @@ Supported displays:
 
 
 The configurations for all 4.3" display:
-```
+```cs
 Width = 480,
 Height = 272,
 PixelClockRate = 20 * 1000 * 1000,
@@ -189,7 +189,7 @@ VerticalSyncPolarity = false,
 ```
 
 The configurations for all 7" display:
-```
+```cs
 Width = 800,
 Height = 480,
 PixelClockRate = 20 * 1000 * 1000,
@@ -206,7 +206,7 @@ VerticalSyncPulseWidth = 3,
 VerticalSyncPolarity = false,
 ```
 As for the capacitive touch controller, use this old NETMF driver code as a reference:
-```
+```cs
 public class FT5306Controller {
     private InterruptPort touchInterrupt;
     private I2CDevice i2cBus;
@@ -271,7 +271,7 @@ public class FT5306Controller {
 ![Display T35](images/modules/display-t35.jpg)
 
 The configurations for the display:
-```
+```cs
 Width = 320,
 Height = 240,
 PixelClockRate = 15 * 1000 * 1000,
@@ -293,7 +293,7 @@ VerticalSyncPolarity = false,
 ![Display T43](images/modules/display-t43.jpg)
 
 The configurations for the display:
-```
+```cs
 Width = 480,
 Height = 272,
 PixelClockRate = 20 * 1000 * 1000,
@@ -315,7 +315,7 @@ VerticalSyncPolarity = false,
 ![Display TE35](images/modules/display-te35.jpg)
 
 The configurations for the display:
-```
+```cs
 Width = 320,
 Height = 240,
 PixelClockRate = 15 * 1000 * 1000,

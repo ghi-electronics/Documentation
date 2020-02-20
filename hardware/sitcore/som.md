@@ -28,19 +28,19 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 
 | Peripheral            | SCM20260N              | SCM20260E              | SCM20260D              |
 |-----------------------|------------------------|------------------------|------------------------|
-| GPIO (all support IRQ)|                        |                        |                        |
+| GPIO (all support IRQ)| 79                     | 85                     | 108                    |
 | SPI                   | 3                      | 3                      | 3                      |
-| I2C                   | 2                      | 3                      | 3                      |
+| I2C                   | 1                      | 3                      | 3                      |
 | UART/USART            | 7 (4 with handshaking) | 8 (4 with handshaking) | 8 (4 with handshaking) |
 | CAN                   | 2                      | 2                      | 2                      |
-| PWM                   | 21                     | 23                     | 27                     |
-| ADC                   | 21                     | 21                     | 21                     |
-| DAC                   | 2                      | 2                      | 2                      |
+| PWM                   | 22                     | 23                     | 28                     |
+| ADC                   | 16                     | 15                     | 20                     |
+| DAC                   | 2                      | 1                      | 2                      |
 | SD/SDIP/MMC           | 1                      | 1                      | 1                      |
 | Quad SPI              | 1                      | 1                      | 1                      |
 | USB Host              | 1                      | 1                      | 1                      |
 | USB Client            | 1                      | 1                      | 1                      |
-| Ethernet              | 1                      | 1                      | 1                      |
+| Ethernet              | 0                      | 1                      | 1                      |
 | LCD TFT               | 1                      | 1                      | 1                      |
 | Camera                | 1                      | 1                      | 1                      |
 
@@ -116,11 +116,13 @@ Here is a link to the manufacturer's web page for the connector we use on our bo
 
 ### Required Pins
 Exposing the following pins is required in every design to enable device programming, updates, and recovery:
+* RESET
 * LDR
 * APP
-* Reset
+* MOD (if required to select a debug interface)
 * Desired debug interface(s)
-* MODE if required to select a debug interface
+
+Please see the [Special Pins](../../software/tinyclr/special-pins.md) page for more details.
 
 ### Power Supply
 A typical clean power source, suited for digital circuitry, is needed to power the SITCore SoMs. The voltage should be within 10% of 3.3 volts.

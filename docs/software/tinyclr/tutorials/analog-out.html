@@ -82,7 +82,7 @@
 <hr>
 <h2 id="dac">DAC</h2>
 <p>A Digital to Analog Converter (DAC) will convert a digital input (number) to an analog output (voltage). The voltage of a DAC usually swings from very close to zero volts up to nearly the voltage of the microcontroller (usually 3.3 volts). This output voltage is only a weak signal and is not meant to drive a load. An op-amp or similar circuit can be added to drive a load, such as a speaker.
-The analog out on a microcontroller has a given resolution which in large part determines its precision or accuracy. Check the device documentation for details. For example, an 8-bit DAC has 256 possible output voltage levels and a resolution of 3.3V/256 or 0.013 volts.</p>
+The analog out on a microcontroller has a given resolution, which in large part determines its precision or accuracy. Check the device documentation for details. For example, an 8-bit DAC has 256 possible output voltage levels and a resolution of 3.3V/256 or 0.013 volts.</p>
 <p>This example will generate a triangular waveform on the G120.</p>
 <pre><code class="lang-cs">using System.Threading;
 using GHIElectronics.TinyCLR.Devices.Dac;
@@ -92,8 +92,10 @@ class Program {
     private static void Main() {
         var dac = DacController.GetDefault();
         var analog = dac.OpenChannel(G120.DacChannel.P0_26);
+
         double d = 0.5;
         double dd = 0.01;
+
         while (true) {
             analog.WriteValue(d);
             d += dd;
@@ -108,7 +110,7 @@ class Program {
 <h2 id="pwm">PWM</h2>
 <p>PWM can also be used to output an analog voltage. <a href="pwm.html">Click here</a> for details.</p>
 <h2 id="audio-playback">Audio Playback</h2>
-<p>WAV audio playback can be done an analog output pin. See <a href="audio-playback.html">Audio Playback</a>.</p>
+<p>WAV audio playback can be done using an analog output pin. See <a href="audio-playback.html">Audio Playback</a>.</p>
 </article>
           </div>
           

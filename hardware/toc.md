@@ -3,7 +3,6 @@
 # [SITCore](sitcore/intro.md)
 ## [System on Chip](sitcore/soc.md)
 ## [System on Modules](sitcore/som.md)
-## [Single Board Computers](sitcore/sbc.md)
 ## [Development Boards](sitcore/dev.md)
 
 # [NETMF Modules](netmf/intro.md)

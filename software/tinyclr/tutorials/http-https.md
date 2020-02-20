@@ -55,4 +55,4 @@ static void DoTestHttp()
 
 Secure connections work in a similar way through built in [TLS](tls.md) support.
 
-HTTPS can also be used to send data to the cloud computing services such as [Azure](azure.md).
+HTTPS can also be used to send data to cloud computing services such as [Azure](azure.md).

@@ -12,11 +12,14 @@ using System.Text;
 namespace FileSystem {
     public class Program {
         private static void Main() {
-            var sd = StorageController.FromName(@"GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0");
+            var sd = StorageController.FromName
+                (@"GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0");
+
             var drive = FileSystem.Mount(sd.Hdc);
 
             var file = new FileStream($@"{drive.Name}Test.txt", FileMode.OpenOrCreate);
-            var bytes = Encoding.UTF8.GetBytes(DateTime.UtcNow.ToString() + Environment.NewLine);
+            var bytes = Encoding.UTF8.GetBytes
+                (DateTime.UtcNow.ToString() + Environment.NewLine);
 
             file.Write(bytes, 0, bytes.Length);
 

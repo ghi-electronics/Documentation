@@ -4,7 +4,7 @@
 
 The GHI Electronics Bootloader is used to update the firmware on our devices. It is the first program to run and unless the device specific LDR pins are set (see device documentation for details), it will execute the firmware on the device (if present). 
 
-The bootloader communicates over a USB (virtual serial port) and a regular serial port. The interface used is controlled by a MODE pin as detailed in [Special Pins](special-pins.md).
+The bootloader communicates over a USB (virtual serial port) and a regular serial port. The interface used is controlled by a MOD pin as detailed in [Special Pins](special-pins.md).
 
 ## Loading the Firmware
 
@@ -24,9 +24,10 @@ TinyCLR Config tool should be used to update the firmware. As a backup, use thes
 4. Press `V` and then enter. You will see back the boot loader version number (v2.x.x)
 5. Press `U` or `X` and then enter. Use `X` for firmware file type GHI and `U` for firmware file type GLB. 
 6. Press `Y` to confirm then enter. You will now see `CCCC`...
-7. Go to `File` -> `Transfer` -> `XMODEM` -> `Send` and then check the `1K` option.
-8. Select the firmware file.
-9. When the transfer is complete, reset your board.
+7. Go to `File` -> `Transfer` -> `XMODEM` -> `Send`.
+8. IMPORTANT: Make sure you check the `1K` option.
+9. Select the firmware file.
+10. When the transfer is complete, reset your board.
 
 ## Commands
 All commands and results are terminated with CR and LF (\r\n). "OK." will be sent after each successful command.

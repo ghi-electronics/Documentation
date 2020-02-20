@@ -1,12 +1,15 @@
 # File System
 ---
-The file system library can be used to read and write files. FAT16 and FAT32 are supported.
+The file system library is used to read and write files to storage devices supporting the FAT16 or FAT32 file systems.
 
 ## USB Mass Storage
-This allows file access on USB devices with MSC class, such as USB memory sticks. The support for USB drives is still not publicly available.
+This allows file access on USB devices with MSC class, such as USB memory sticks. Support for USB drives is still not publicly available.
 
 ## SD Card
-The below example requires the `GHIElectronics.TinyCLR.IO` and `GHIElectronics.TinyCLR.Storage` libraries and a device with an SD card.
+The example below requires the `GHIElectronics.TinyCLR.IO` and `GHIElectronics.TinyCLR.Devices.Storage` libraries and a device with an SD card.
+
+> [!Note]
+> Make sure the namespace statement in the following code is changed to match the namespace of your project.
 
 ```cs
 using GHIElectronics.TinyCLR.Devices.Storage;
@@ -18,11 +21,24 @@ using System.Text;
 namespace FileSystem {
     public class Program {
         private static void Main() {
-            var sd = StorageController.FromName(@"GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0");
+            var sd = StorageController.FromName
+                (@"GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0");
+
             var drive = FileSystem.Mount(sd.Hdc);
 
+            //Show a list of files in the root directory
+            var directory = new DirectoryInfo(drive.Name);
+            var files = directory.GetFiles();
+
+            foreach (var f in files)
+            {
+                System.Diagnostics.Debug.WriteLine(f.Name);
+            }
+
+            //Create a text file and save it to the SD card.
             var file = new FileStream($@"{drive.Name}Test.txt", FileMode.OpenOrCreate);
-            var bytes = Encoding.UTF8.GetBytes(DateTime.UtcNow.ToString() + Environment.NewLine);
+            var bytes = Encoding.UTF8.GetBytes(DateTime.UtcNow.ToString() +
+                Environment.NewLine);
 
             file.Write(bytes, 0, bytes.Length);
 
@@ -36,9 +52,11 @@ namespace FileSystem {
 ```
 
 ## Low-level Access
-You can access the raw underlying data of the storage provider using the `Provider` property of the controller. Be careful when using this interface, however, as it bypasses any file system present and writes directly to the device. This is useful for implementing your own or otherwise unsupported file systems.
+You can access the raw underlying data of the storage provider by using the `Provider` property of the controller. Be careful when using this interface, however, as it bypasses any file system present and writes directly to the device. This is useful for implementing your own or otherwise unsupported file systems.
 
 ```cs
-var controller = StorageController.FromName(@"GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0");
+var controller = StorageController.FromName
+        (@"GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0");
+
 controller.Provider.Read(address, buffer, 0, buffer.Length, -1);
 ```

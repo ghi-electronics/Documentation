@@ -91,6 +91,7 @@ while (netif.IPAddress == "0.0.0.0")
 
 //The network is now ready to use.
 ```
+
 ## HTTP communication
 Once you configure a network interface, you probably want to start communicating over the network. One of the easiest ways to do this is through HTTP. After you have received an IP Address (as shown above), you can create an HTTP request to a URL and then receive its response. What you do with that data is up to you. Make sure the result buffer is larger enough to hold the response or process the data as you read it.
 

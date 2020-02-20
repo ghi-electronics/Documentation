@@ -79,8 +79,15 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="real-time-clock">Real Time Clock</h1>
 
-<p>The Real Time Clock (RTC) is a circuit that runs off a small battery or a super capacitor. It has its own crystal and keeps runnning even when the system is powered off. Not every hardware has a built in RTC, so check your hardware&#39;s manual for more details.</p>
-<p>In the even the RTC battery was drained or the RTC was never initialized, the RTC will not have a correct value. Use the <code>rtc.IsValid</code> to dermine of time is was set correctly.</p>
+<hr>
+<p>The Real Time Clock (RTC) is a circuit that runs off a small battery or a super capacitor. It has its own crystal and keeps running even when the system is powered off. Not all hardware has a built in RTC, so check your hardware&#39;s documentation for more details.</p>
+<p>In the event the RTC battery was drained or the RTC was never initialized, the RTC will not have a correct value. Use the <code>rtc.IsValid</code> method to determine if the time was set correctly.</p>
+<div class="IMPORTANT"><h5>Important</h5><p>There is a command to control charging of the RTC supercap (if used). If your RTC does not keep time when the board is powered down, and you are using a supercap instead of a battery for the RTC (as on our dev boards), add the following code to your program:</p>
+<pre><code class="lang-cs">var rtc = GHIElectronics.TinyCLR.Devices.Rtc.RtcController.GetDefault();
+rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Fast);
+</code></pre></div>
+<div class="NOTE"><h5>Note</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Devices.Rtc, GHIElectronics.TinyCLR.Native</p>
+</div>
 <pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Rtc;
 using GHIElectronics.TinyCLR.Native;
 using System;
@@ -90,6 +97,7 @@ using System.Threading;
 class Program {
     static void Main() {
         var rtc = RtcController.GetDefault();
+
         if (rtc.IsValid) {
             Debug.WriteLine(&quot;RTC is Valid&quot;);
             // RTC is good so let&#39;s use it
@@ -111,12 +119,89 @@ class Program {
         }
     }
 }
-</code></pre><p>The output will show both times and they should match. The first time maybe invalid and the time is set but the second power up will show the correct time.</p>
+</code></pre><p>The output will show both times and they should match. If the RTC time is invalid when you first run the program, the program will detect the invalid time and will set the RTC.</p>
 <pre><code>RTC is Valid
 Current Time    : 01/01/2019 11:15:35
 Current RTC Time: 01/01/2019 11:15:35
 Current Time    : 01/01/2019 11:15:36
 Current RTC Time: 01/01/2019 11:15:36
+</code></pre><h2 id="system-clock">System Clock</h2>
+<p>You can get the current system time using <code>DateTime.Now</code>. The system clock starts running at power up, but until you set the clock, the time and date will be incorrect. </p>
+<p>The following command is used to set the time:</p>
+<pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.SystemTime.SetTime(DateTime utcTime);
+</code></pre><p>To set the system clock to the RTC time, use the following command:</p>
+<pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.SystemTime.SetTime(rtc.Now);
+</code></pre><h2 id="sntp">SNTP</h2>
+<p>You can use SNTP (Simple Network Time Protocol) to accurately set the time in your application. The following method will return the current date and time after retrieving it from an NTP server. Your device will need an active network connection for this code to work.</p>
+<pre><code class="lang-cs">public static DateTime GetNetworkTime(int CorrectLocalTime = 0)
+    {
+        const string ntpServer = &quot;pool.ntp.org&quot;;
+        var ntpData = new byte[48];
+        ntpData[0] = 0x1B; //LeapIndicator = 0 (no warning), VersionNum = 3 (IPv4 only),
+                           //    Mode = 3 (Client Mode)
+
+        var addresses = System.Net.Dns.GetHostEntry(ntpServer).AddressList;
+        var ipEndPoint = new System.Net.IPEndPoint(addresses[0], 123);
+        var socket = new System.Net.Sockets.Socket(
+            System.Net.Sockets.AddressFamily.InterNetwork,
+            System.Net.Sockets.SocketType.Dgram,
+            System.Net.Sockets.ProtocolType.Udp);
+
+        socket.Connect(ipEndPoint);
+
+        System.Threading.Thread.Sleep(1); //Added to support TinyCLR OS.
+
+        socket.Send(ntpData);
+        socket.Receive(ntpData);
+        socket.Close();
+
+        ulong intPart = (ulong)ntpData[40] &lt;&lt; 24 | (ulong)ntpData[41] &lt;&lt; 16 |
+            (ulong)ntpData[42] &lt;&lt; 8 | (ulong)ntpData[43];
+
+        ulong fractPart = (ulong)ntpData[44] &lt;&lt; 24 | (ulong)ntpData[45] &lt;&lt; 16 |
+            (ulong)ntpData[46] &lt;&lt; 8 | (ulong)ntpData[47];
+
+        var milliseconds = (intPart * 1000) + ((fractPart * 1000) / 0x100000000L);
+
+        var networkDateTime = (new System.DateTime(1900, 1, 1)).
+            AddMilliseconds((long)milliseconds);
+
+        return networkDateTime.AddHours(CorrectLocalTime);
+    }
+</code></pre><p>The above method is used as follows, with the argument indicating how many hours to add to convert UTC time to your local time zone:</p>
+<pre><code class="lang-cs">DateTime dateTime = GetNetworkTime(-5);
+</code></pre><h2 id="battery-backed-memory">Battery Backed Memory</h2>
+<p>SITCore devices include 4 Kbytes of battery backed memory. Like our <a href="secure-storage-area.html">secure storage area</a>, this memory accepts and returns byte arrays of data. The commands and their overloads for accessing this memory are as follows:</p>
+<pre><code class="lang-cs">BackupMemorySize; //Returns 4096, total size in bytes of battery backed memory.
+
+ReadBackupMemory(byte[] destinationData);
+ReadBackupMemory(byte[] destinationData, uint sourceOffset);
+ReadBackupMemory(byte[] destinationData, uint destinationOffset,
+    uint sourceOffset, int count);
+
+public void WriteBackupMemory(byte[] sourceData, uint destinationOffset);
+public void WriteBackupMemory(byte[] sourceData);
+public void WriteBackupMemory(byte[] sourceData, uint sourceOffset,
+    uint destinationOffset, int count);
+</code></pre><p>Note that the battery backed memory is not managed at all. There is no allocate, dispose, or garbage collection. The commands used to access battery backed memory only copy the bytes from your array into memory, or from memory into your array. Until you overwrite it or lose RTC battery power, the data will always be in battery backed memory.</p>
+<p>Here is a simple example that displays the size of the battery backed memory, and then writes and reads five bytes of data.</p>
+<div class="NOTE"><h5>Note</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Devices.Rtc</p>
+</div>
+<pre><code class="lang-cs">var rtc = GHIElectronics.TinyCLR.Devices.Rtc.RtcController.GetDefault();
+
+System.Diagnostics.Debug.WriteLine(rtc.BackupMemorySize.ToString()); //Displays &quot;4096&quot;
+
+var writeData = new byte[] { 1, 2, 3, 4, 5 };
+
+rtc.WriteBackupMemory(writeData);
+
+var readData = new byte[5];
+
+rtc.ReadBackupMemory(readData);
+
+for (int i=0; i &lt; 5; i++) {
+    System.Diagnostics.Debug.WriteLine(readData[i].ToString()); //Displays 1, 2, 3, 4, 5
+}
 </code></pre></article>
           </div>
           

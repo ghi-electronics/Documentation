@@ -3,11 +3,11 @@
 ![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
 
 There are five pins that have special functionality on the SITCore line of products: 
-* RESET
-* LDR
-* APP
-* MOD
-* WKUP
+* RESET (NRST)
+* LDR (PE3)
+* APP (PB7)
+* MOD (PD7)
+* WKUP (PA0)
 
 All special pins except RESET can be used as GPIO or peripheral pins, however it is up to you to make sure your use of these pins does not interfere with their use as special pins if needed. We strongly recommend exposing all special pins in your SITCore designs.
 
@@ -32,3 +32,27 @@ By default, the MOD pin is pulled high during reset allowing for deployment and 
 ## WKUP
 
 The WKUP pin can be used to wake up the processor from special power saving modes. The WKUP pin can be configured to use an internal pull-up or pull-down, so no external pull resistor is needed. When WKUP functionality is not needed, this pin can be used as a GPIO or peripheral pin. See the [Power Management](../../software/tinyclr/tutorials/power-management.md) page for more information.
+
+## Debug Interface
+
+Don't forget to expose either the USB client or UART interface (or both) that you plan on using to deploy and debug you application code.
+
+## Other Recommended Pin Usage
+
+When designing your own board, we recommend that you add the following peripherals using the stated pins to maintain consistency with our dev boards and sample software.
+
+| Peripheral | Recommended SITCore I/O Assignment |
+|--|--|
+| User LED | PB0 |
+|  |  |
+| Buzzer | PB1 |
+|  |  |
+| SPI Display | SPI = SPI4 |
+|  | BL = PA15 |
+|  | CS = PD10 |
+|  | RS = PC4 |
+|  | RST = PE15 |
+|  |  |
+| Parallel Display | BL = PA15 |
+|  | Touch I2C = I2C1 |
+|  | Touch IRQ = PJ14 |

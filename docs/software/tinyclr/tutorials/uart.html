@@ -122,7 +122,7 @@ class Program {
 <li>DataReceived</li>
 <li>ErrorReceived</li>
 </ul>
-<p>The following example is written for the SC20100S Dev Board. It works the same as the previous example, except it uses the DateReceived event. If you connect PE7, the COM7 RX pin, directly to the PE8, the COM7 TX pin, you will see &quot;ABCDEF&quot; in the output window when running this code.</p>
+<p>The following example is written for the SC20100S Dev Board. It works the same as the previous example, except it uses the DataReceived event. If you connect PE7, the COM7 RX pin, directly to the PE8, the COM7 TX pin, you will see &quot;ABCDEF&quot; in the output window when running this code.</p>
 <pre><code class="lang-cs">using System.Diagnostics;
 using System.Text;
 using System.Threading;
@@ -161,7 +161,7 @@ class Program {
 </code></pre><div class="TIP"><h5>Tip</h5><p>Once you type += after the event, hit the tab key and Visual Studio will automatically create the event for you.</p>
 </div>
 <h2 id="rs232">RS232</h2>
-<p>UART uses the processor&#39;s voltage levels (logic levels) for transferring data. On the SITCore this is 0 to 3.3 volts. In the early days of computers UARTs used -12 to 12 volts to communicate reliably over longer distances. This is known as the RS232 standard.</p>
+<p>UART uses the processor&#39;s voltage levels (logic levels) for transferring data. On the SITCore this is 0 to 3.3 volts. In the early days of computers, UARTs used -12 to +12 volts to communicate reliably over longer distances. This is known as the RS232 standard.</p>
 <p>Some PCs still include serial ports, but those are RS232 serial ports. A voltage level shifter is needed to properly connect a logic level UART to an RS232 device.</p>
 <div class="WARNING"><h5>Warning</h5><p>Connecting your device to an RS232 port without a proper voltage level shifter can damage your device.</p>
 </div>

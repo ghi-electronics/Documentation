@@ -81,101 +81,181 @@
 
 <hr>
 <p><img src="images/tinyclr-logo-noborder.jpg" alt="TinyCLR Logo"></p>
+<h2 id="200-preview3">2.0.0-preview3</h2>
+<h3 id="released-2020-02-20">Released 2020-02-20</h3>
+<h3 id="visual-studio-project-system">Visual Studio Project System</h3>
+<h4 id="changes">Changes</h4>
+<ul>
+<li>None</li>
+</ul>
+<h4 id="known-issues">Known Issues</h4>
+<ul>
+<li>None</li>
+</ul>
+<h3 id="libraries">Libraries</h3>
+<h4 id="changes-1">Changes</h4>
+<ul>
+<li>Added missing USB host controller definition.</li>
+<li>Added missing UART controller definition.</li>
+<li>Removed Network Stream timeout.</li>
+<li>Removed Streams.</li>
+<li>Removed GHIElectronics.TinyCLR.Devices NuGet package.</li>
+<li>Fixed HTTP exception that sometimes occurs when parsing data.</li>
+<li>Added Button, ListBoxHighLightItem, ProgressBar, CheckBox, Radio Button, and Drop-Down List elements to UI.</li>
+<li>Added ability to get current WiFi MAC Address.</li>
+<li>Added simple MJPEG driver that supports decoding of MJPEG files.</li>
+<li>Added simple WAV driver that supports decoding of WAV files.</li>
+</ul>
+<h4 id="known-issues-1">Known Issues</h4>
+<ul>
+<li>JSON doesn&#39;t work in some cases.</li>
+<li>Ov9655 camera can randomly have a noisy picture. Reset the board as a workaround.      </li>
+</ul>
+<h3 id="tinyclr-config">TinyCLR Config</h3>
+<h4 id="changes-2">Changes</h4>
+<ul>
+<li>Fixed display of incorrect version number.</li>
+<li>Fixed crashing when trying to connect to bootloader.</li>
+<li>Fixed Connect button not returning to Enable after firmware update is done.</li>
+</ul>
+<h4 id="known-issues-2">Known Issues</h4>
+<ul>
+<li>None.</li>
+</ul>
+<h3 id="tinyclr-font-converter">TinyCLR Font Converter</h3>
+<h4 id="changes-3">Changes</h4>
+<ul>
+<li>None.</li>
+</ul>
+<h4 id="known-issues-3">Known Issues</h4>
+<ul>
+<li>None.</li>
+</ul>
+<h3 id="firmware">Firmware</h3>
+<h4 id="changes-4">Changes</h4>
+<ul>
+<li>Increased Performance by 15%.</li>
+<li>Added RSA cryptography.</li>
+<li>Added MD5 hash.</li>
+<li>Fixed One-Wire exceptions and inconsistent operation.</li>
+<li>Added Network Suspend/Resume to support changing back and forth between a modem&#39;s PPP data frame mode and AT command mode.</li>
+<li>Added Enable External Memory for heap (heap can be 32 MBytes).</li>
+<li>Fixed SPI from using PA0 for chip select if no chip select pin is specified.</li>
+<li>Fixed SPI4 and SPI5 clock errors.</li>
+<li>Increased default free heap size from 300 kBytes to 364 kBytes (maximum size is still 512 kBytes).</li>
+<li>Fixed USB client reading only a single byte of each packet.</li>
+<li>Fixed system crashing when there are missing network configuration settings.</li>
+<li>Added support for hardware random number generator.</li>
+<li>Fixed SPI throwing exceptions when drawing on N18 display.</li>
+</ul>
+<h4 id="known-issues-4">Known Issues</h4>
+<ul>
+<li>In Visual Studio the application doesn&#39;t start automatically when trying to <code>Start Without Debugging</code> (Ctrl+F5). Pressing the reset button will start the application.</li>
+<li>The PJ0 interrupt configuration changes when the device is reset with the reset button, but there is no problem when resetting by power cycling the board. </li>
+<li>ToString() doesn&#39;t work if the argument is an Enum.</li>
+<li>PulseFeedback DrainDuration does not work correctly.</li>
+</ul>
+<hr>
+<hr>
 <h2 id="200-preview2-update">2.0.0-preview2 update</h2>
 <h3 id="released-2020-01-31">Released 2020-01-31</h3>
 <p>A refresh release of the firmware only with improved performance.</p>
-<h4 id="changes">Changes</h4>
+<h4 id="changes-5">Changes</h4>
 <ul>
 <li>Considerably faster execution speed.</li>
 </ul>
-<h4 id="known-issues">Known Issues</h4>
+<h4 id="known-issues-5">Known Issues</h4>
 <ul>
 <li>See the 2.0.0-preview2 release notes.</li>
 <li>This 2.0.0.21000 release activates all accelerators which might cause some bugs. If you have any strange behavior, please load the previous 2.0.0.20000 release and see if that fixes your issue. Both firmware versions are identical otherwise, and both run with same 2.0.0-preview2 NuGet packages.</li>
 </ul>
+<hr>
+<hr>
 <h2 id="200-preview2">2.0.0-preview2</h2>
 <h3 id="released-2020-01-22">Released 2020-01-22</h3>
 <p>Initial insider release for SITCore hardware.</p>
-<h3 id="visual-studio-project-system">Visual Studio Project System</h3>
-<h4 id="changes-1">Changes</h4>
+<h3 id="visual-studio-project-system-1">Visual Studio Project System</h3>
+<h4 id="changes-6">Changes</h4>
 <ul>
 <li>First release to private insiders with major changes.</li>
 </ul>
-<h4 id="known-issues-1">Known Issues</h4>
+<h4 id="known-issues-6">Known Issues</h4>
 <ul>
 <li>Cannot change boards or connect an additional board to your PC while Visual Studio is open, or Visual Studio will get confused and deployment will stop working. Do not switch devices while Visual Studio is open.</li>
 <li>Not digitally signed.</li>
 </ul>
-<h3 id="libraries">Libraries</h3>
-<h4 id="changes-2">Changes</h4>
+<h3 id="libraries-1">Libraries</h3>
+<h4 id="changes-7">Changes</h4>
 <ul>
 <li>First release to private insiders with major changes.</li>
 </ul>
-<h4 id="known-issues-2">Known Issues</h4>
+<h4 id="known-issues-7">Known Issues</h4>
 <ul>
 <li>None, still going through final testing.</li>
 <li>Cryptography and hashing are currently only supported through TLS. We are still planning how to securely expose this functionality.</li>
 <li>Not digitally signed.</li>
 </ul>
-<h3 id="tinyclr-config">TinyCLR Config</h3>
-<h4 id="changes-3">Changes</h4>
+<h3 id="tinyclr-config-1">TinyCLR Config</h3>
+<h4 id="changes-8">Changes</h4>
 <ul>
 <li>First release to private insiders with major changes.</li>
 </ul>
-<h4 id="known-issues-3">Known Issues</h4>
+<h4 id="known-issues-8">Known Issues</h4>
 <ul>
 <li>TinyCLR may not work when connecting over UART. Use Tera Term to update firmware when in UART mode.</li>
 <li>Not digitally signed.</li>
 </ul>
-<h3 id="tinyclr-font-converter">TinyCLR Font Converter</h3>
-<h4 id="changes-4">Changes</h4>
+<h3 id="tinyclr-font-converter-1">TinyCLR Font Converter</h3>
+<h4 id="changes-9">Changes</h4>
 <ul>
 <li>None.</li>
 </ul>
-<h4 id="known-issues-4">Known Issues</h4>
+<h4 id="known-issues-9">Known Issues</h4>
 <ul>
 <li>None.</li>
 <li>Not digitally signed.</li>
 </ul>
-<h3 id="firmware">Firmware</h3>
-<h4 id="changes-5">Changes</h4>
+<h3 id="firmware-1">Firmware</h3>
+<h4 id="changes-10">Changes</h4>
 <ul>
 <li>First release to private insiders with major changes.</li>
 </ul>
-<h4 id="known-issues-5">Known Issues</h4>
+<h4 id="known-issues-10">Known Issues</h4>
 <ul>
 <li>TinyCLR OS is not yet optimized for full performance as this release is focused on stability.</li>
 <li>Conversion from enum to string (enumObject.ToString()) may fail.</li>
 <li>PulseFeedback DrainDuration does not work when going from low to high.</li>
 <li>Not digitally signed.</li>
 </ul>
+<hr>
+<hr>
 <h2 id="200-preview1">2.0.0-preview1</h2>
 <h3 id="released-2019-12-09">Released 2019-12-09</h3>
 <p>A preview of the new API and available features.</p>
-<h3 id="libraries-1">Libraries</h3>
-<h4 id="changes-6">Changes</h4>
+<h3 id="libraries-2">Libraries</h3>
+<h4 id="changes-11">Changes</h4>
 <ul>
 <li>Major changes.</li>
 </ul>
-<h4 id="known-issues-6">Known Issues</h4>
+<h4 id="known-issues-11">Known Issues</h4>
 <ul>
 <li>Still going through complete testing.</li>
 </ul>
-<h3 id="firmware-1">Firmware</h3>
-<h4 id="changes-7">Changes</h4>
+<h3 id="firmware-2">Firmware</h3>
+<h4 id="changes-12">Changes</h4>
 <ul>
 <li>Major changes.</li>
 </ul>
-<h4 id="known-issues-7">Known Issues</h4>
+<h4 id="known-issues-12">Known Issues</h4>
 <ul>
 <li>Internal use only.</li>
 </ul>
-<h3 id="tinyclr-config-1">TinyCLR Config</h3>
-<h4 id="changes-8">Changes</h4>
+<h3 id="tinyclr-config-2">TinyCLR Config</h3>
+<h4 id="changes-13">Changes</h4>
 <ul>
 <li>None.</li>
 </ul>
-<h4 id="known-issues-8">Known Issues</h4>
+<h4 id="known-issues-13">Known Issues</h4>
 <ul>
 <li>Random crash.</li>
 </ul>

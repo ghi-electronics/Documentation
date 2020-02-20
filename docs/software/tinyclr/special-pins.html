@@ -83,11 +83,11 @@
 <p><img src="images/tinyclr-logo-noborder.jpg" alt="TinyCLR Logo"></p>
 <p>There are five pins that have special functionality on the SITCore line of products: </p>
 <ul>
-<li>RESET</li>
-<li>LDR</li>
-<li>APP</li>
-<li>MOD</li>
-<li>WKUP</li>
+<li>RESET (NRST)</li>
+<li>LDR (PE3)</li>
+<li>APP (PB7)</li>
+<li>MOD (PD7)</li>
+<li>WKUP (PA0)</li>
 </ul>
 <p>All special pins except RESET can be used as GPIO or peripheral pins, however it is up to you to make sure your use of these pins does not interfere with their use as special pins if needed. We strongly recommend exposing all special pins in your SITCore designs.</p>
 <h2 id="reset">RESET</h2>
@@ -101,6 +101,72 @@
 <p>By default, the MOD pin is pulled high during reset allowing for deployment and debugging over USB. Pulling the MOD pin low during startup or reset allows for deployment and debugging over UART. Note that our SITCore Dev Boards include a FT232R USB to serial converter chip to provide a convenient way to connect a PC to the board&#39;s serial debug/deploy port.</p>
 <h2 id="wkup">WKUP</h2>
 <p>The WKUP pin can be used to wake up the processor from special power saving modes. The WKUP pin can be configured to use an internal pull-up or pull-down, so no external pull resistor is needed. When WKUP functionality is not needed, this pin can be used as a GPIO or peripheral pin. See the <a href="tutorials/power-management.html">Power Management</a> page for more information.</p>
+<h2 id="debug-interface">Debug Interface</h2>
+<p>Don&#39;t forget to expose either the USB client or UART interface (or both) that you plan on using to deploy and debug you application code.</p>
+<h2 id="other-recommended-pin-usage">Other Recommended Pin Usage</h2>
+<p>When designing your own board, we recommend that you add the following peripherals using the stated pins to maintain consistency with our dev boards and sample software.</p>
+<table>
+<thead>
+<tr>
+<th>Peripheral</th>
+<th>Recommended SITCore I/O Assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User LED</td>
+<td>PB0</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Buzzer</td>
+<td>PB1</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SPI Display</td>
+<td>SPI = SPI4</td>
+</tr>
+<tr>
+<td></td>
+<td>BL = PA15</td>
+</tr>
+<tr>
+<td></td>
+<td>CS = PD10</td>
+</tr>
+<tr>
+<td></td>
+<td>RS = PC4</td>
+</tr>
+<tr>
+<td></td>
+<td>RST = PE15</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Parallel Display</td>
+<td>BL = PA15</td>
+</tr>
+<tr>
+<td></td>
+<td>Touch I2C = I2C1</td>
+</tr>
+<tr>
+<td></td>
+<td>Touch IRQ = PJ14</td>
+</tr>
+</tbody>
+</table>
 </article>
           </div>
           

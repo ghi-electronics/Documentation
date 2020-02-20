@@ -89,18 +89,17 @@ using GHIElectronics.TinyCLR.Pins;
 
 class Program {
     private static void Main() {
-        var settings = new I2cConnectionSettings(0x1C);     //The slave&#39;s address.
-        settings.BusSpeed = I2cBusSpeed.FastMode;
-
-        var controller = I2cController.FromName(FEZ.I2cBus.I2c1);
+        var settings = new I2cConnectionSettings(0x1C, 100000); //The slave&#39;s address and
+                                                                //    the bus speed.
+        var controller = I2cController.FromName(SC20100.I2cBus.I2c1);
         var device = controller.GetDevice(settings);
 
         device.Write(new byte[] { 1, 2 });  //Write something
-        device.WriteRead(...);              //This is good for reading registers.
+        device.WriteRead(...);              //This is good for reading register
     }
 }
 </code></pre><h2 id="software-i2c">Software I2C</h2>
-<p>The I2C bus is relatively simple and can be &quot;bit banged&quot; using software. The advantage is that any two GPIO pins can be used. However, software I2C requires more system resources and runs slower.</p>
+<p>The I2C bus is relatively simple and can be &quot;bit banged&quot; using software. The advantage of bit banging is that any two GPIO pins can be used, not just the pins that support hardware I2C. However, software I2C requires more system resources and runs slower.</p>
 <p>This example initializes a software I2C driver. Once initialized, it&#39;s used the same as hardware I2C.</p>
 <pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.I2c;
 using GHIElectronics.TinyCLR.Devices.I2c.Provider;
@@ -108,9 +107,14 @@ using GHIElectronics.TinyCLR.Pins;
 
 class Program {
     private static void Main() {
-        var provider = new I2cControllerSoftwareProvider(FEZ.GpioPin.A0, FEZ.GpioPin.A1, false);
+        var provider = new I2cControllerSoftwareProvider
+            (SC20260.GpioPin.PA0, SC20260.GpioPin.PA1, false);
+
         var controller = I2cController.FromProvider(provider);
-        var device = controller.GetDevice(new I2cConnectionSettings(0x1C) { AddressFormat = I2cAddressFormat.SevenBit, BusSpeed = I2cBusSpeed.StandardMode }); //Device address
+
+        var device = controller.GetDevice(new I2cConnectionSettings(0x1C) {
+            AddressFormat = I2cAddressFormat.SevenBit, BusSpeed = 400000
+        });
     }
 }
 </code></pre></article>

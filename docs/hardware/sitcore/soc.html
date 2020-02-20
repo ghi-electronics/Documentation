@@ -153,17 +153,17 @@
 <tbody>
 <tr>
 <td>GPIO (all support IRQ)</td>
-<td></td>
-<td></td>
+<td>76</td>
+<td>164</td>
 </tr>
 <tr>
 <td>SPI</td>
-<td>4</td>
+<td>3</td>
 <td>3</td>
 </tr>
 <tr>
 <td>I2C</td>
-<td>3</td>
+<td>2</td>
 <td>3</td>
 </tr>
 <tr>
@@ -178,8 +178,8 @@
 </tr>
 <tr>
 <td>PWM</td>
-<td>19</td>
-<td>27</td>
+<td>16</td>
+<td>29</td>
 </tr>
 <tr>
 <td>ADC</td>
@@ -281,8 +281,8 @@
 <li>Managed application: the program developed by you or your software developer.</li>
 </ol>
 <p>Which components get executed on startup is controlled by manipulating the LDR pin. It is pulled high on startup during normal program execution. When low, the device waits in the GHI Electronics Bootloader. Otherwise, the managed application is executed. The APP pin is used to stop the application from running.</p>
-<p>Additionally, the communications interface between the host PC and the SITCore is selected on startup through the MODE pin, which is pulled high on startup. The USB interface is selected when MODE is high and COM1 is selected when MODE is low.</p>
-<p>The above discussed functions of the LDR, APP, and MODE pins are only available during startup. After startup, the pins return to the default GPIO state and are available as a GPIO (or peripheral pin) in your application. Check out the <a href="../../software/tinyclr/special-pins.html">Special Pins</a> page for more information.</p>
+<p>Additionally, the communications interface between the host PC and the SITCore is selected on startup through the MOD pin, which is pulled high on startup. The USB interface is selected when MOD is high and COM1 is selected when MOD is low.</p>
+<p>The above discussed functions of the LDR, APP, and MOD pins are only available during startup. After startup, the pins return to the default GPIO state and are available as a GPIO (or peripheral pin) in your application. Check out the <a href="../../software/tinyclr/special-pins.html">Special Pins</a> page for more information.</p>
 <h2 id="tinyclr-os">TinyCLR OS</h2>
 <p>TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page for instructions.</p>
 <h3 id="loading-the-firmware">Loading the Firmware</h3>
@@ -310,8 +310,9 @@
 <li>LDR</li>
 <li>APP</li>
 <li>MOD (if required to select a debug interface)</li>
+<li>Desired debug interface(s)</li>
 </ul>
-<p>Please see the <a href="../../software/tinyclr/special-pins.html">Boostrap Pins</a> page for more details.</p>
+<p>Please see the <a href="../../software/tinyclr/special-pins.html">Special Pins</a> page for more details.</p>
 <h3 id="power-supply">Power Supply</h3>
 <p>A typical clean power source, suited for digital circuitry, is needed to power the SITCore SoCs. Voltages should be within at
 least 10% of the specified voltage. Decoupling capacitors of 0.1 uF are needed near every power pin. Additionally, a

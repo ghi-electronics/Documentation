@@ -1,25 +1,28 @@
 # USB CDC & WinUSB
-This feature is for devices that needs to transfer data to a PC. Note that the debug interface need to be switched to serial to free up the USB Client port for this feature. This is accomplished though the MODE pin, details in the device's documentations.
-
-> [!TIP]
-> Need Nugets: GHIElectronics.TinyCLR.Devices.UsbClient
-
+---
+These protocols facilitate communication between your SITCore device and a PC. Note that the debug interface needs to be switched to serial (UART) to free up the USB Client port for PC communication. This is accomplished by pulling the MOD pin low during reset as detailed on the [SITCore System on Chip](../../../hardware/sitcore/soc.md) page.
 
 ## USB CDC
-The CDC class is natively supported by Windows and Linux. It is a way for the PC to see a virtual serial port. Once loaded, the PC will can use this port like any other serial port (COM port). Windows 10 works without the need for any drivers. Earlier operating systems needs a driver. While it works with most operating systems, CDC is typically limited to 64KB/sec.
+The USB Communications Device Class (CDC) is natively supported by Windows and Linux. It is a way for a PC to use a USB port as a virtual serial port. Once loaded, the PC will use this port like any other serial port (COM port). Windows 10 works without the need for any drivers, but earlier operating systems may need a driver. While it works with most operating systems, CDC is typically limited to 64 Kbytes/second.
+
+> [!TIP]
+> Needed Nugets: GHIElectronics.TinyCLR.Devices.UsbClient
 
 ```cs
 static void DoTestCDC 
 {
     var usbclient = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
             
-    usbclient.SetActiveSetting(GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientMode.Cdc, 0x1234, 0x5678);
+    usbclient.SetActiveSetting
+        (GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientMode.Cdc,0x1234, 0x5678);
+
     usbclient.Enable();
 
     usbclient.DeviceStateChanged += (a,b) => Debug.WriteLine("Connection changed."); 
     usbclient.DataReceived += (a,count) => Debug.WriteLine("Data received:" + count);
 
-    while (usbclient.DeviceState != GHIElectronics.TinyCLR.Devices.UsbClient.DeviceState.Configured) ;
+    while (usbclient.DeviceState !=
+        GHIElectronics.TinyCLR.Devices.UsbClient.DeviceState.Configured) ;
 
     Debug.WriteLine("UsbClient Connected");
 
@@ -51,20 +54,23 @@ static void DoTestCDC
 ```
 
 ## WinUSB
-The WinUSB drivers are unique to Windows and they do take advantage of the power and speed of USB, meaning they are faster then CDC at data transfers. The speed is limited by the data processing on the IoT devices. Windows 10 loads the drivers automatically, Windows 7 requires drivers.
+The WinUSB drivers are unique to Windows and take advantage of the power and speed of USB to provide faster communication than CDC. The speed is limited by the data processing on the IoT device. Windows 10 loads the drivers automatically, Windows 7 requires drivers.
 
 
 ```cs
 static void DoTestWinUsb
 {
     var usbclient = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
-    usbclient.SetActiveSetting(GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientMode.WinUsb, "Manufacture_Name", "Product_Name", "SerailNumber", 0x1234, 0x5678, "{your guid}");
+    usbclient.SetActiveSetting(GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientMode.WinUsb,
+        "Manufacture_Name", "Product_Name", "SerailNumber", 0x1234, 0x5678, "{your guid}");
+    
     usbclient.Enable();
 
     usbclient.DeviceStateChanged += (a,b) => Debug.WriteLine("Connection changed."); 
     usbclient.DataReceived += (a,count) => Debug.WriteLine("Data received:" + count);
 
-    while (usbclient.DeviceState != GHIElectronics.TinyCLR.Devices.UsbClient.DeviceState.Configured) ;
+    while (usbclient.DeviceState !=
+        GHIElectronics.TinyCLR.Devices.UsbClient.DeviceState.Configured) ;
 
     Debug.WriteLine("UsbClient Connected");
 
@@ -96,7 +102,7 @@ static void DoTestWinUsb
 ```
 
 > [!NOTE]
-> Unlike CDC mode, a disadvantage to WinUSB is that fact that it requires a special code on the PC side to read and write to the device.
+> Unlike CDC mode, a disadvantage of WinUSB is that it requires a special code on the PC side to read and write to the device.
 
 
 
