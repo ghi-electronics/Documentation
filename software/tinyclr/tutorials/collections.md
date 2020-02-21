@@ -8,7 +8,7 @@ TinyCLR OS collections support ArrayLists, Hashtables, Queues, and Stacks.
 
 ## ArrayLists
 
-The following code sample creates an ArrayList, adds a couple of records, and then iterates through the ArrayList items and displays each record.
+ArrayLists have a significant advantage over arrays in that ArrayLists are automatically resized as needed, whereas arrays are limited to a fixed number of elements. The following code sample creates an ArrayList, adds a couple of records, and then iterates through the ArrayList items and displays each record.
 
 ```cs
 class Program {
@@ -17,6 +17,7 @@ class Program {
         public string modelNumber;
         public string fault;
     }
+
     private static void Main() {
         var rmaList = new System.Collections.ArrayList();
         var record = new rmaRecord();
@@ -43,7 +44,9 @@ class Program {
         System.Diagnostics.Debug.WriteLine("Values:");
 
         foreach (rmaRecord record in list) {
-            System.Diagnostics.Debug.WriteLine("    Date: " + record.date.Year + "/" + record.date.Month + "/" + record.date.Day);
+            System.Diagnostics.Debug.WriteLine("    Date: " + record.date.Year +
+                "/" + record.date.Month + "/" + record.date.Day);
+
             System.Diagnostics.Debug.WriteLine("    Model#: " + record.modelNumber);
             System.Diagnostics.Debug.WriteLine("    Fault: " + record.fault);
             System.Diagnostics.Debug.WriteLine("----------");
@@ -67,6 +70,9 @@ Values:
     Fault: Blown fuse
 ----------
 ```
+
+In the above sample, `rmaList.Clear()` will remove all elements from `rmaList`, `rmaList.RemoveAt(1)` will remove only the second element in the list, and `rmaList.Remove(record)` will remove the first element that is equal to `record`.
+
 
 ## Hashtables
 
@@ -106,3 +112,11 @@ Key = BTN3    Value = PD7
 Key = WKUP    Value = PA0
 Key = APP    Value = PB7
 ```
+
+## Queues
+
+Queues are first in, first out collections of objects. To add items to a queue, the `enqueue` method is used. To remove items, the `dequeue` method is used.
+
+## Stacks
+
+Stacks are first in, last out collection of objects.
