@@ -123,7 +123,7 @@ Queues are first in, first out collections of objects. To add items to a queue, 
 
 ```cs
 private static void Main() {
-    System.Collections.Queue sitCoreDevices = new System.Collections.Queue();
+    var sitCoreDevices = new System.Collections.Queue();
     sitCoreDevices.Enqueue("SC20100S");
     sitCoreDevices.Enqueue("SC20260B");
     sitCoreDevices.Enqueue("SCM20260D");
