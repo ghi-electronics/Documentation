@@ -4,7 +4,7 @@ Similar data can often be handled more efficiently when stored and manipulated a
 
 For more info go to https://docs.microsoft.com/en-us/dotnet/standard/collections/index.
 
-TinyCLR OS collections support ArrayLists, Hashtables, Queues, and Stacks.
+TinyCLR OS collections support ArrayLists, Hashtables, Stacks, and Queues.
 
 ## ArrayLists
 
@@ -113,10 +113,60 @@ Key = WKUP    Value = PA0
 Key = APP    Value = PB7
 ```
 
+## Stacks
+
+Stacks are first in, last out collection of objects.
+
 ## Queues
 
 Queues are first in, first out collections of objects. To add items to a queue, the `enqueue` method is used. To remove items, the `dequeue` method is used.
 
-## Stacks
+```cs
+private static void Main() {
+    System.Collections.Queue sitCoreDevices = new System.Collections.Queue();
+    sitCoreDevices.Enqueue("SC20100S");
+    sitCoreDevices.Enqueue("SC20260B");
+    sitCoreDevices.Enqueue("SCM20260D");
+    sitCoreDevices.Enqueue("SCM20260E");
+    sitCoreDevices.Enqueue("SCM20260N");
+        
+    PrintValues(sitCoreDevices);
 
-Stacks are first in, last out collection of objects.
+    System.Diagnostics.Debug.WriteLine("Dequeued: " +
+        sitCoreDevices.Dequeue().ToString());
+
+    System.Diagnostics.Debug.WriteLine(" ");
+
+    PrintValues(sitCoreDevices);
+}
+
+public static void PrintValues(System.Collections.Queue myQueue) {
+    System.Diagnostics.Debug.WriteLine("Count: " + myQueue.Count);
+    System.Diagnostics.Debug.WriteLine("Items in queue:");
+
+    foreach (System.Object obj in myQueue)
+        System.Diagnostics.Debug.WriteLine("    " + obj);
+
+    System.Diagnostics.Debug.WriteLine(" ");
+}
+```
+
+The above code outputs the following:
+```
+Count: 5
+Items in queue:
+    SC20100S
+    SC20260B
+    SCM20260D
+    SCM20260N
+    SCM20260E
+ 
+Dequeued: SC20100S
+ 
+Count: 4
+Items in queue:
+    SC20260B
+    SCM20260D
+    SCM20260N
+    SCM20260E
+```
