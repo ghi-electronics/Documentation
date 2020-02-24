@@ -115,7 +115,56 @@ Key = APP    Value = PB7
 
 ## Stacks
 
-Stacks are first in, last out collection of objects.
+Stacks are first in, last out (or last in, first out) collection of objects. The `Push` method is used to add items to a stack, and the `Pop` method is used to remove items from a stack. There is also a `Peek` method that returns the item at the top of the stack without removing it from the stack.
+
+```cs
+private static void Main() {
+    var sitCoreDevices = new System.Collections.Stack();
+    sitCoreDevices.Push("SC20100S");
+    sitCoreDevices.Push("SC20260B");
+    sitCoreDevices.Push("SCM20260D");
+    sitCoreDevices.Push("SCM20260E");
+    sitCoreDevices.Push("SCM20260N");
+        
+    PrintValues(sitCoreDevices);
+
+    System.Diagnostics.Debug.WriteLine("Popped: " + sitCoreDevices.Pop().ToString());
+    System.Diagnostics.Debug.WriteLine(" ");
+
+    PrintValues(sitCoreDevices);
+}
+
+public static void PrintValues(System.Collections.Stack myQueue) {
+    System.Diagnostics.Debug.WriteLine("Count: " + myQueue.Count);
+    System.Diagnostics.Debug.WriteLine("Items in queue:");
+
+    foreach (System.Object obj in myQueue)
+        System.Diagnostics.Debug.WriteLine("    " + obj);
+
+    System.Diagnostics.Debug.WriteLine(" ");
+}
+```
+
+The above code outputs the following:
+```
+The thread '<No Name>' (0x2) has exited with code 0 (0x0).
+Count: 5
+Items in queue:
+    SCM20260N
+    SCM20260E
+    SCM20260D
+    SC20260B
+    SC20100S
+ 
+Popped: SCM20260N
+ 
+Count: 4
+Items in queue:
+    SCM20260E
+    SCM20260D
+    SC20260B
+    SC20100S
+```
 
 ## Queues
 
