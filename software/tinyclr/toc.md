@@ -37,7 +37,6 @@
 ### [HTTP/HTTPS](tutorials/http-https.md)
 ### [MQTT](tutorials/mqtt.md)
 ### [PPP](tutorials/ppp.md)
-### [TLS](tutorials/tls.md)
 
 ## Networking Interfaces
 ### [WiFi](tutorials/wifi.md)
