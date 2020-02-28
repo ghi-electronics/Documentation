@@ -75,6 +75,9 @@ In the above sample, `rmaList.Clear()` will remove all elements from `rmaList`, 
 
 
 ## Hashtables
+Hash tables are used to store information in a way that associates each data element, or value, with a key that can be used to look up that value. Hash tables make it easy to quickly retrieve information that would otherwise be difficult to organize in an efficient manner.
+
+For example, imagine trying to look up a phone number from a given name. You could make a two dimension array of names and phone numbers and then iterate through the array looking for the correct name, but this would be slow with a large array. Hash tables solve this problem by using a hash function to convert a key, in this case a name, into an array index that points directly to the data element you are looking for. This allows you to quickly retrieve the data directly instead of searching for it. 
 
 The following code sample creates a hash table, adds elements to the hash table, and then reads back the value for each key.
 
@@ -115,7 +118,7 @@ Key = APP    Value = PB7
 
 ## Stacks
 
-Stacks are first in, last out (or last in, first out) collection of objects. The `Push` method is used to add items to a stack, and the `Pop` method is used to remove items from a stack. There is also a `Peek` method that returns the item at the top of the stack without removing it from the stack.
+Stacks are first in, last out (or last in, first out) collections of objects. The `Push` method is used to add items to a stack, and the `Pop` method is used to remove items from a stack. There is also a `Peek` method that returns the item at the top of the stack without removing it from the stack.
 
 ```cs
 private static void Main() {
