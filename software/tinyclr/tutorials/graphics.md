@@ -53,7 +53,10 @@ namespace GraphicsSample {
                 VerticalSyncPolarity = false,
             });
 
-            displayController.Enable();
+            displayController.Enable(); //This line turns on the display I/O and starts
+                                        //  refreshing the display. Native displays are
+                                        //  continually refreshed automatically after this
+                                        //  command is executed.
 
             var screen = Graphics.FromHdc(displayController.Hdc);
 
