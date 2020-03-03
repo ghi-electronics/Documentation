@@ -1,150 +1,150 @@
 # PPP
 ---
 
-Point to Point protocol started in the days of dial up Internet and is still used today in cellular modems. While using PPP can be optional for small IoT systems, having a secure connection requires PPP.
+Point to Point Protocol (PPP) started in the days of dial up Internet and is still used today in cellular modems. While using PPP can be optional for small IoT systems, having a secure connection requires PPP.
 
-This example uses the xxxx click module on our dev boards to establish a connection and read a web page.
+This example uses the LTE IoT 2 click module on the SCM20260D Dev Boards to establish a connection and read a web page. We've also successfully tested the SIMCOM SIM900 and NimbeLink's Skywire cellular embedded modems.
 
 >[!TIP]
->Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Networking.Uart, GHIElectronics.TinyCLR.Pins
+>Needed Nugets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Devices.Uart, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Networking, and GHIElectronics.TinyCLR.Pins.
 
 ```cs
-static bool linkReady = false;
+class Program {
+    static bool linkReady = false;
 
-static void DoTestPPP()
-{
-    var networkController = NetworkController.FromName
-            ("GHIElectronics.TinyCLR.NativeApis.Ppp.NetworkController");
+    static void Main() {
+        var reset = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
+            OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PI8);
 
-    PppNetworkInterfaceSettings networkInterfaceSetting = new PppNetworkInterfaceSettings()
-    {
-        AuthenticationType = PppAuthenticationType.Pap,
-        Username = "",
-        Password = "",
-    };
+        reset.SetDriveMode(GHIElectronics.TinyCLR.Devices.Gpio.GpioPinDriveMode.Output);
 
-    UartNetworkCommunicationInterfaceSettings networkCommunicationInterfaceSettings =
-        new UartNetworkCommunicationInterfaceSettings()
-    {
-        ApiName = GHIElectronics.TinyCLR.Pins.SC20260.UartPort.Usart1,
-        BaudRate = 115200,
-        DataBits = 8,
-        Parity = UartParity.None,
-        StopBits = UartStopBitCount.One,
-        Handshaking = UartHandshake.None,
-    };
+        reset.Write(GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.High);
+        System.Threading.Thread.Sleep(200);
 
-    networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
-    networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
-    networkInterfaceSetting.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
-    networkInterfaceSetting.DnsAddresses = new IPAddress[] { new IPAddress(new byte[]
-        { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
+        reset.Write(GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.Low);
+        System.Threading.Thread.Sleep(7000); //Wait for modem to initialize.
 
-    networkInterfaceSetting.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
-    networkInterfaceSetting.IsDhcpEnabled = true;
-    networkInterfaceSetting.IsDynamicDnsEnabled = true;
+        InitSimCard();
+        TestPPP();
+    }
 
-    networkInterfaceSetting.TlsEntropy = new byte[] { 0, 1, 2, 3 };
+    static void InitSimCard() {
+        var serial = GHIElectronics.TinyCLR.Devices.Uart.UartController.FromName
+            (GHIElectronics.TinyCLR.Pins.SC20260.UartPort.Uart8);
 
-    networkController.SetInterfaceSettings(networkInterfaceSetting);
-    networkController.SetCommunicationInterfaceSettings
-        (networkCommunicationInterfaceSettings);
+        serial.SetActiveSettings(115200, 8,
+            GHIElectronics.TinyCLR.Devices.Uart.UartParity.None,
+            GHIElectronics.TinyCLR.Devices.Uart.UartStopBitCount.One,
+            GHIElectronics.TinyCLR.Devices.Uart.UartHandshake.None);
 
-    networkController.SetAsDefaultController();
+        serial.Enable();
 
-    networkController.NetworkAddressChanged += NetworkController_NetworkAddressChanged;
-    networkController.NetworkLinkConnectedChanged +=
-        NetworkController_NetworkLinkConnectedChanged;
+        while (!SendAT(serial, "AT")) { }
 
-    networkController.Enable();
+        SendAT(serial, "AT+CGDCONT=1,\"IP\",\"h2g2\"");                      //Google Fi.
+        SendAT(serial, "AT+CGDCONT=2,\"IP\",\"telargo.t-mobile.com\"");      //T-Mobile.
+        SendAT(serial, "AT+CGDCONT=3,\"IP\",\"fast.t-mobile.com\"");         //T-Mobile.
+        SendAT(serial, "AT+CGDCONT=4,\"IPV4V6\",\"NIMBLINK.GW12.VZWENTP\""); //NimbeLink.
 
-    while (linkReady == false) ;
+        SendAT(serial, "ATDT*99***1#"); //Modem dial string. The '1' in this string points
+                                        //  to the Google Fi PDP context previously defined
+                                        //  by the SendAT() method.
 
-    // Network is ready to used
-}
+        System.Diagnostics.Debug.WriteLine("OK to start PPP....");
+    }
 
-private static void NetworkController_NetworkLinkConnectedChanged(NetworkController sender,
-    NetworkLinkConnectedChangedEventArgs e)
-{
-    // Raise event connect/disconnect
-}
+    static void TestPPP() {
+        var networkController = GHIElectronics.TinyCLR.Devices.Network.NetworkController.
+            FromName("GHIElectronics.TinyCLR.NativeApis.Ppp.NetworkController");
 
-private static void NetworkController_NetworkAddressChanged(NetworkController sender,
-    NetworkAddressChangedEventArgs e)
-{
-    var ipProperties = sender.GetIPProperties();
-    var address = ipProperties.Address.GetAddressBytes();
+        GHIElectronics.TinyCLR.Devices.Network.PppNetworkInterfaceSettings
+            networkInterfaceSetting = new GHIElectronics.TinyCLR.Devices.
+            Network.PppNetworkInterfaceSettings() {
+                AuthenticationType = GHIElectronics.TinyCLR.Devices.Network.
+                PppAuthenticationType.Pap,
 
-    linkReady = address[0] != 0;
-}
-```
+                Username = "",
+                Password = "",
+            };
 
-> [!NOTE]  
-> Depending on your SIM card and cellular modem, you may need to initialize the SIM card before using PPP.
+        GHIElectronics.TinyCLR.Devices.Network.UartNetworkCommunicationInterfaceSettings
+            networkCommunicationInterfaceSettings = new GHIElectronics.TinyCLR.Devices.
+            Network.UartNetworkCommunicationInterfaceSettings() {
+                ApiName = GHIElectronics.TinyCLR.Pins.SC20260.UartPort.Uart8,
+                BaudRate = 115200,
+                DataBits = 8,
+                Parity = GHIElectronics.TinyCLR.Devices.Uart.UartParity.None,
+                StopBits = GHIElectronics.TinyCLR.Devices.Uart.UartStopBitCount.One,
+                Handshaking = GHIElectronics.TinyCLR.Devices.Uart.UartHandshake.None,
+            };
 
-Below are simple AT commands that we tested on SIM900 and SKYWIRE modules, using a T-Mobile SIM card.
+        networkController.SetInterfaceSettings(networkInterfaceSetting);
+        networkController.SetCommunicationInterfaceSettings
+            (networkCommunicationInterfaceSettings);
 
-```cs
-static void InitSimCard() {
-    var serial = GHIElectronics.TinyCLR.Devices.Uart.UartController.FromName
-        (GHIElectronics.TinyCLR.Pins.SC20260.UartPort.Usart1);
+        networkController.SetAsDefaultController();
 
-    serial.SetActiveSettings(115200, 8, GHIElectronics.TinyCLR.Devices.Uart.UartParity.None,
-        GHIElectronics.TinyCLR.Devices.Uart.UartStopBitCount.One,
-        GHIElectronics.TinyCLR.Devices.Uart.UartHandshake.None);
+        networkController.NetworkAddressChanged += NetworkController_NetworkAddressChanged;
+        networkController.NetworkLinkConnectedChanged +=
+            NetworkController_NetworkLinkConnectedChanged;
 
-    serial.Enable();
+        networkController.Enable();
 
-    SendAT(serial, "AT");
+        while (linkReady == false) { }
+        //Network is now ready to use.
+    }
 
-    // Some params for 'AT+CGDCONT' that we tested:
-    // T-Mobile: \"IP\",\"telargo.t-mobile.com\""
-    // T-Mobile: \"IP\",\"fast.t-mobile.com\""
-    // Google Fi: \"IPv4\",\"h2g2\""
-    // NIMBLINK : \"IPV4V6\",\"NIMBLINK.GW12.VZWENTP\""
+    private static void NetworkController_NetworkLinkConnectedChanged
+        (GHIElectronics.TinyCLR.Devices.Network.NetworkController sender,
+        GHIElectronics.TinyCLR.Devices.Network.NetworkLinkConnectedChangedEventArgs e) {
+        //Raise event connect/disconnect
+    }
 
-    SendAT(serial, "AT+CGDCONT=1,\"IP\",\"telargo.t-mobile.com\""); // or \"IP\",\"fast.t-mobile.com\""
-    SendAT(serial, "ATDT*99***1#");
-    
-    System.Diagnostics.Debug.WriteLine("OK to start PPP....");
-}
+    private static void NetworkController_NetworkAddressChanged
+        (GHIElectronics.TinyCLR.Devices.Network.NetworkController sender,
+        GHIElectronics.TinyCLR.Devices.Network.NetworkAddressChangedEventArgs e) {
 
-static void SendAT(UartController port, string command)
-{
-    command += "\r";
+        var ipProperties = sender.GetIPProperties();
+        var address = ipProperties.Address.GetAddressBytes();
 
-    var sendBuffer = Encoding.UTF8.GetBytes(command);
-    var readBuffer = new byte[256];
-    var read = 0;
+        System.Diagnostics.Debug.WriteLine("IP Address: " + address[0] + "." + address[1]
+            + "." + address[2] + "." + address[3]);
 
-    port.Write(sendBuffer, 0, sendBuffer.Length);
+        linkReady = address[0] != 0;
+    }
 
-    while (true)
-    {
-        read += port.Read(readBuffer, read, readBuffer.Length - read);
+    static bool SendAT(GHIElectronics.TinyCLR.Devices.Uart.UartController port,
+        string command) {
 
-        var response = new string(Encoding.UTF8.GetChars(readBuffer, 0, read));
+        command += "\r";
 
-        if (response.IndexOf("OK") != -1 || response.IndexOf("CONNECT") != -1)
-        {
-            System.Diagnostics.Debug.WriteLine(" " + response);
-            break;
+        var sendBuffer = System.Text.Encoding.UTF8.GetBytes(command);
+        var readBuffer = new byte[256];
+        var read = 0;
+        var count = 10;
+
+        port.Write(sendBuffer, 0, sendBuffer.Length);
+
+        while (count-- > 0) {
+            System.Threading.Thread.Sleep(100);
+
+            read += port.Read(readBuffer, read, readBuffer.Length - read);
+
+            var response = new string
+                (System.Text.Encoding.UTF8.GetChars(readBuffer, 0, read));
+
+            if (response.IndexOf("OK") != -1 || response.IndexOf("CONNECT") != -1) {
+                System.Diagnostics.Debug.WriteLine(" " + response);
+                return true;
+            }
         }
+
+        return false;
     }
 }
 ```
 
-Here's a Main function that uses the above code:
-
-```cs
-static void Main()
-{
-    InitSimCard();
-    DoTestPPP();
-}
-```
-
-## Switching to Command Mode:
+## Switching to Command Mode
 
 When a PPP connection is set up successfully, you can switch the modem from data mode to command mode with the `+++` escape sequence. To prevent the `+++` escape sequence from being misinterpreted as data, the following guidelines should be followed: 
  
@@ -153,7 +153,7 @@ When a PPP connection is set up successfully, you can switch the modem from data
  
 When the `+++` sequence is received, the modem will switch from data mode to command mode and reply with an "OK" response. 
 
-## Switching to Data Mode: 
+## Switching to Data Mode
 When the modem is in command mode, sending the `ATO` command will switch the modem to Data Mode. Wait for the "CONNECT 150000000" response after sending the `ATO` command to make sure the modem is in data mode. All data sent will now be treated as PPP frames.
 
 The following example switches from Data mode to Command Mode, sends a few AT commands, then switches back to Data mode. TinyCLR OS provides two functions, Suspend() and Resume() that are needed for this example. This code uses SC20260.UartPort.Uart8 for PPP configuration.

@@ -6,6 +6,9 @@ Before data is transferred, the master transmits the 7-bit address of the slave 
 
 The two wires for I2C communication are called the SDA and SCL lines. SDA stands for Serial Data, and SCL is Serial Clock.
 
+> [!Note]
+> I2C bus speed can be either 100,000 bits/second (standard mode) or 400,000 bits/second (fast mode).
+
 This is a partial demo showing the use of I2C.
 
 ```cs
@@ -14,7 +17,7 @@ using GHIElectronics.TinyCLR.Pins;
 
 class Program {
     private static void Main() {
-        var settings = new I2cConnectionSettings(0x1C, 100000); //The slave's address and
+        var settings = new I2cConnectionSettings(0x1C, 100_000); //The slave's address and
                                                                 //    the bus speed.
         var controller = I2cController.FromName(SC20100.I2cBus.I2c1);
         var device = controller.GetDevice(settings);
@@ -45,7 +48,7 @@ class Program {
         var controller = I2cController.FromProvider(provider);
 
         var device = controller.GetDevice(new I2cConnectionSettings(0x1C) {
-            AddressFormat = I2cAddressFormat.SevenBit, BusSpeed = 400000
+            AddressFormat = I2cAddressFormat.SevenBit, BusSpeed = 400_000
         });
     }
 }
