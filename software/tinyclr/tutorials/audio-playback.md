@@ -7,7 +7,7 @@ Simple audio playback is accomplished by reading a PCM WAV file and passing the 
 
 This code plays an 8 bit mono WAV file with a sample rate of 8 kHz. The WAV file must be saved as a BIN file before adding it as a resource. The audio is output to pin PA4 on the SC20100S Dev Board.
 
-> [!Note]
+> [!Tip]
 > Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Dac, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Drivers.Media, GHIElectronics.TinyCLR.IO, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.
 
 
