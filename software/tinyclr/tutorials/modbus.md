@@ -4,7 +4,7 @@ Modbus is an asynchronous serial communications protocol that uses RS485 as its 
 
 The following sample is written for the SC20100S Dev Board and uses Uart5 for communication:
 
->[!Note]
+>[!Tip]
 >Needed NuGets: GHIElectronics.TinyCLR.Devices.Uart, GHIElectronics.TinyCLR.Pins, GHIElectronics.TinyCLR.Devices.Modbus
 
 ```cs

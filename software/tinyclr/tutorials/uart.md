@@ -7,6 +7,9 @@ Serial data ports, called UARTs, transfer data between devices using two pins: T
 
 The easiest way to test a UART is by wiring a device's TXD to its RXD so any transmitted data is received by the same device. This is called a "loopback" test. The following code performs a simple loopback test on the SITCore SC20100S Dev Board. If you connect PE7, the COM7 RX pin, directly to the PE8, the COM7 TX pin, you will see "ABCDEF" in the output window when running this code.
 
+> [!Note]
+> UART ports are also referred to as COM ports, especially on PCs.
+
 > [!Tip]
 > Don't forget to add the GHIElectronics.TinyCLR.Devices.Uart NuGet package!
 

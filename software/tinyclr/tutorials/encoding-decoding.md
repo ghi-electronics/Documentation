@@ -6,10 +6,10 @@ There are two built in libraries to help in encoding data, bit converter and str
 The BitConverter class is used to convert from one data type to another. For example, to convert an integer into a byte array:
 
 ```cs
-var byteArray = BitConverter.GetBytes(23);
+var byteArray = System.BitConverter.GetBytes(23);
 //byteArray[0] = 23, byteArray[1] = 0, byteArray[2] = 0, byteArray[3] = 0
 
-byteArray = BitConverter.GetBytes(65536);
+byteArray = System.BitConverter.GetBytes(65536);
 //byteArray[0] = 0, byteArray[1] = 0, byteArray[2] = 1, byteArray[3] = 0
 ```
 
@@ -18,47 +18,47 @@ byteArray = BitConverter.GetBytes(65536);
 #### Convert to a Byte Array
 
 ```cs
-BitConverter.GetBytes(char value)
-BitConverter.GetBytes(double value)
-BitConverter.GetBytes(float value)
-BitConverter.GetBytes(int value)
-BitConverter.GetBytes(long value)
-BitConverter.GetBytes(short value)
-BitConverter.GetBytes(uint value)
-BitConverter.GetBytes(ulong value)
-BitConverter.GetBytes(ushort value)
-BitConverter.GetBytes(bool value)
+System.BitConverter.GetBytes(char value)
+System.BitConverter.GetBytes(double value)
+System.BitConverter.GetBytes(float value)
+System.BitConverter.GetBytes(int value)
+System.BitConverter.GetBytes(long value)
+System.BitConverter.GetBytes(short value)
+System.BitConverter.GetBytes(uint value)
+System.BitConverter.GetBytes(ulong value)
+System.BitConverter.GetBytes(ushort value)
+System.BitConverter.GetBytes(bool value)
 ```
 
 #### Convert from a Byte Array
 
 ```cs
-BitConverter.ToBoolean(byte[] value, int startIndex)
-BitConverter.ToChar(byte[] value, int startIndex)
-BitConverter.ToDouble(byte[] value, int startIndex)
-BitConverter.ToInt16(byte[] value, int startIndex)
-BitConverter.ToInt32(byte[] value, int startIndex)
-BitConverter.ToInt64(byte[] value, int startIndex)
-BitConverter.ToSingle(byte[] value, int startIndex)
-BitConverter.ToString(byte[] value)
-BitConverter.ToString(byte[] value, int startIndex)
-BitConverter.ToString(byte[] value, int startIndex, int length)
-BitConverter.ToUInt16(byte[] value, int startIndex)
-BitConverter.ToUInt32(byte[] value, int startIndex)
-BitConverter.ToUInt64(byte[] value, int startIndex)
+System.BitConverter.ToBoolean(byte[] value, int startIndex)
+System.BitConverter.ToChar(byte[] value, int startIndex)
+System.BitConverter.ToDouble(byte[] value, int startIndex)
+System.BitConverter.ToInt16(byte[] value, int startIndex)
+System.BitConverter.ToInt32(byte[] value, int startIndex)
+System.BitConverter.ToInt64(byte[] value, int startIndex)
+System.BitConverter.ToSingle(byte[] value, int startIndex)
+System.BitConverter.ToString(byte[] value)
+System.BitConverter.ToString(byte[] value, int startIndex)
+System.BitConverter.ToString(byte[] value, int startIndex, int length)
+System.BitConverter.ToUInt16(byte[] value, int startIndex)
+System.BitConverter.ToUInt32(byte[] value, int startIndex)
+System.BitConverter.ToUInt64(byte[] value, int startIndex)
 ```
 
 #### Convert Between Double and Long
 
 ```cs
-BitConverter.DoubleToInt64Bits(double value)
-BitConverter.Int64BitsToDouble(long value)
+System.BitConverter.DoubleToInt64Bits(double value)
+System.BitConverter.Int64BitsToDouble(long value)
 ```
 
 #### Swap Endianness
 
 ```cs
-BitConverter.SwapEndianness(byte[] data, int groupSize)
+System.BitConverter.SwapEndianness(byte[] data, int groupSize)
 ```
 
 ## String Handling
@@ -85,7 +85,6 @@ var sb = new System.Text.StringBuilder();
 for (int i=48; i<58; i++) {
     sb.Append((char)i);
 }
-
 
 System.Diagnostics.Debug.WriteLine(sb.ToString()); //Will output "0123456789"
 ```

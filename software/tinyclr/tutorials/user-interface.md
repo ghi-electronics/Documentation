@@ -5,7 +5,7 @@ You can use the `GHIElectronics.TinyCLR.UI` library to create user interfaces fo
 ## Application Management
 The UI library requires internal management that is handled by the application class. The following code provides a good starting point.
 
-> [!Note]
+> [!Tip]
 > Needed NuGets: GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.UI
 
 ```cs
@@ -42,7 +42,7 @@ namespace UserInterfaceExample {
 
 While you can have multiple windows in your UI application, it is mandatory to have at least one window. Here is a complete example that shows a window with a gradient brush background. The code is for SCM20260D Dev board with the 4.3 inch display.
 
-> [!Note]
+> [!Tip]
 > Needed NuGets: GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins, GHIElectronics.TinyCLR.UI, GHIElectronics.TinyCLR.UI.Media
 
 ```cs
@@ -146,7 +146,7 @@ var controllerSetting = new
 
 This code is for the SC20100S Dev Board with the N18 1.8 inch display.
 
-> [!Note]
+> [!Tip]
 > Needed NuGets: GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735, GHIElectronics.TinyCLR.Pins, GHIElectronics.TinyCLR.UI, GHIElectronics.TinyCLR.UI.Media
 
 ```cs
