@@ -1,33 +1,11 @@
 # SD/MMC Cards
 ---
-The below example requires the `GHIElectronics.TinyCLR.IO` and `GHIElectronics.TinyCLR.Storage` libraries and a device with an SD card.
+SD and MMC cards are fully supported through the [File System](file-system.md) libraries.
+
+This is a sample on how setup the SD driver.
 
 ```cs
-using GHIElectronics.TinyCLR.Devices.Storage;
-using GHIElectronics.TinyCLR.IO;
-using System;
-using System.IO;
-using System.Text;
+var sd = StorageController.FromName(SC20100.StorageController.SdCard);
 
-namespace FileSystem {
-    public class Program {
-        private static void Main() {
-            var sd = StorageController.FromName
-                (@"GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0");
-
-            var drive = FileSystem.Mount(sd.Hdc);
-
-            var file = new FileStream($@"{drive.Name}Test.txt", FileMode.OpenOrCreate);
-            var bytes = Encoding.UTF8.GetBytes
-                (DateTime.UtcNow.ToString() + Environment.NewLine);
-
-            file.Write(bytes, 0, bytes.Length);
-
-            file.Flush();
-
-            FileSystem.Flush(sd.Hdc);
-        }
-    }
-}
-
+var drive = FileSystem.Mount(sd.Hdc);
 ```

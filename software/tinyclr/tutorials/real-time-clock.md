@@ -33,8 +33,8 @@ class Program {
         else {
             Debug.WriteLine("RTC is Invalid");
             // RTC is not valid. Get user input to set it
-            // This example will simply set it to January 1st 2019 at 11:11:11
-            var MyTime = new DateTime(2019, 1, 1, 11, 11, 11);
+            // This example will simply set it to January 1st 2020 at 11:11:11
+            var MyTime = new DateTime(2020, 1, 1, 11, 11, 11);
             rtc.Now = MyTime;
             SystemTime.SetTime(MyTime);
         }
@@ -124,7 +124,7 @@ DateTime dateTime = GetNetworkTime(-5);
 
 ## Battery Backed Memory
 
-SITCore devices include 4 Kbytes of battery backed memory. Like our [secure storage area](secure-storage-area.md), this memory accepts and returns byte arrays of data. The commands and their overloads for accessing this memory are as follows:
+SITCore devices include 4 Kbytes of battery backed memory. This memory accepts and returns byte arrays of data. The commands and their overloads for accessing this memory are as follows:
 
 ```cs
 BackupMemorySize; //Returns 4096, total size in bytes of battery backed memory.

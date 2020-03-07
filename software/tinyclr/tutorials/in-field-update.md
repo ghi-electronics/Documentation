@@ -25,11 +25,9 @@ using System.IO;
 
 class Program {
     private static void Main() {
-        const string FSSD_API_CONTROLLER = 
-            @"GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0";
+        const string FSSD_API_CONTROLLER = SC20100.StorageController.SdCard;
 
-        const string FSUSB_API_CONTROLLER = 
-            @"GHIElectronics.TinyCLR.NativeApis.STM32H7.UsbHostMassStorageStorageController\0";
+        const string FSUSB_API_CONTROLLER =  SC20100.StorageController.UsbHostMassStorage;
 
         var media = StorageController.FromName(FSSD_API_CONTROLLER); //Update from SD card.
         var drive = FileSystem.Mount(media.Hdc);
@@ -89,11 +87,9 @@ using System.IO;
 
 class Program {
     private static void Main() {
-        const string FSSD_API_CONTROLLER =
-            @"GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0";
+        const string FSSD_API_CONTROLLER = SC20100.StorageController.SdCard;
 
-        const string FSUSB_API_CONTROLLER =
-            @"GHIElectronics.TinyCLR.NativeApis.STM32H7.UsbHostMassStorageStorageController\0";
+        const string FSUSB_API_CONTROLLER = SC20100.StorageController.UsbHostMassStorage;
 
         var media = StorageController.FromName(FSSD_API_CONTROLLER); //Using SD card.
         var drive = FileSystem.Mount(media.Hdc);
