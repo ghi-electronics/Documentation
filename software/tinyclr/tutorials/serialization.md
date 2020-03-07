@@ -2,7 +2,16 @@
 ---
 Serialization is the process of converting the state of an object into a form that can be persisted or transported. The complement of serialization is deserialization, which converts a stream into an object. Together, these processes allow data to be stored and transferred.
 
-TinyCLR OS includes a built in JSON library to help in serializing data.
+## Binary Serialization
+Binary Serialization is a native, fast and lean way to serialize objects. To keep the serialized objects small and efficient, it is not compatible with the desktop's binary serialization. However, an implementation on the PC can be used to process the binary data if necessary.
+
+```
+
+```
+
+## JSON
+
+TinyCLR OS includes a built in JSON library.
 
 > [!TIP]
 > Needed NuGet: GHIElectronics.TinyCLR.Data.Json
