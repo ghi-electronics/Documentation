@@ -1,4 +1,4 @@
-# Extended Memory
+# External Memory
 ---
 External memories are typically not secures as they can be probed by hackers. However, external memories are large and required in some cases.
 
