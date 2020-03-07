@@ -2,29 +2,23 @@
 ---
 Unlike digital input pins, which can only read high or low, analog pins can read a range of voltage levels.  Microcontrollers based on 3.3V can typically read voltages anywhere between zero and 3.3V. Analog inputs connect internally to an Analog to Digital Converter (ADC) that converts the analog voltage level on the pin to a digital value.
 
-The resolution of the ADC determines its accuracy. An 8bit ADC has 256 steps to work with, 3.3V/256=0.013V. This means an increase of 0.013V will increase the ADC value by one. In other words, a voltage change of less than 0.013V has no effect. The ADC on FEZ is 12bit and should work well for most needs.
-
 > [!Tip]
 > Note that the analog channel number is not the pin number. You need to determine the channel number of a specific pin using your system's documentation.
 
-This example is written for the SC20100S Dev Board, but will work unchanged on the SCM20260D Dev Board as well. It will read the ratio, that is 0 to 1, of an analog input (PA0). After running the program, connect a wire from the analog pin to ground and you should see a zero or something really close to zero. Connect to 3.3V and you will see 1 or something close, like 0.99.
+The resolution of the ADC determines its accuracy. An 8bit ADC has 256 steps to work with, 3.3V/256=0.013V. This means an increase of 0.013V will increase the ADC value by one. In other words, a voltage change of less than 0.013V has no effect.
+
+
+
+> [!Tip]
+> When multiple ADC are available on a system, you must select the right controller instead of using the default controller through GetDefault()
 
 ```cs
-using System.Diagnostics;
-using System.Threading;
-using GHIElectronics.TinyCLR.Devices.Adc;
-using GHIElectronics.TinyCLR.Pins;
+var adc = AdcController.FromName(SC20100.AdcChannel.Controller1.Id);
+var analog = adc.OpenChannel(SC20100.AdcChannel.Controller1.PA0);
 
-class Program {
-    private static void Main() {
-        var adc = AdcController.GetDefault();
-        var analog = adc.OpenChannel(SC20100.AdcChannel.Controller1.PA0);
-
-        while (true) {
-            double d = analog.ReadRatio();
-            Debug.WriteLine("An-> " + d.ToString("N2"));
-            Thread.Sleep(100);
-        }
-    }
+while (true) {
+    double d = analog.ReadRatio();
+    Debug.WriteLine("An-> " + d.ToString("N2"));
+    Thread.Sleep(100);
 }
 ```

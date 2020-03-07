@@ -16,6 +16,7 @@ var usbHostController = StorageController.FromName
 var usbHost = FileSystem.Mount(sd.Hdc);
 
 ```
+At this point, the [file system](file-system.md) library can be used as usual.
 
 > [!Note]
 > USB Hubs are not currently supported. Special USB memory devices that have multiple interfaces or built in hubs will not work.
