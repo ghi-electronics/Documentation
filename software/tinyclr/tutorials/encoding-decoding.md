@@ -1,6 +1,42 @@
 # Encoding & Decoding
 ---
-There are two built in libraries to help in encoding data, bit converter and string handling.
+TinyCLR OS provides the following methods for converting data and handling strings.
+
+## Encoding
+
+The Encoding class is used to convert between strings, character arrays, and byte arrays. For example, to convert from a byte array to a string:
+
+```cs
+var string = System.Text.Encoding.UTF8.GetString(new byte[] { 65, 66, 67, 68, 69 });
+//string = "ABCDE"
+```
+
+### Encoding Overloads
+
+#### Convert From String to Byte Array
+
+```cs
+System.Text.Encoding.UTF8.GetBytes(string s)
+
+//The following method returns an integer for the number of bytes converted.
+//The resulting bytes are returned within the byte[] array.
+System.Text.Encoding.UTF8.GetBytes(string s, int charIndex, int charCount, byte[] bytes,
+    int byteIndex)
+```
+
+#### Convert From Byte Array to Character Array
+
+```cs
+System.Text.Encoding.UTF8.GetChars(byte[] bytes)
+System.Text.Encoding.UTF8.GetChars(byte[] bytes, int byteIndex, int byteCount)
+```
+
+#### Convert From Byte Array to String
+
+```cs
+System.Text.Encoding.UTF8.GetString(byte[] bytes)
+System.Text.Encoding.UTF8.GetString(byte[] bytes, int index, int count)
+```
 
 ## BitConverter
 The BitConverter class is used to convert from one data type to another. For example, to convert an integer into a byte array:
@@ -11,6 +47,16 @@ var byteArray = System.BitConverter.GetBytes(23);
 
 byteArray = System.BitConverter.GetBytes(65536);
 //byteArray[0] = 0, byteArray[1] = 0, byteArray[2] = 1, byteArray[3] = 0
+```
+
+You can also convert from a byte array to a string, but the results are different than the results from the Encoding class:
+
+```cs
+var string = System.BitConverter.ToString(new byte[] { 65, 66, 67, 68, 69 });
+//string = "41-42-43-44-45" (hexadecimal values delimited by hyphens).
+
+var string = System.Text.Encoding.UTF8.GetString(new byte[] { 65, 66, 67, 68, 69 });
+//string = "ABCDE"
 ```
 
 ### BitConverter Overloads
@@ -33,19 +79,19 @@ System.BitConverter.GetBytes(bool value)
 #### Convert from a Byte Array
 
 ```cs
-System.BitConverter.ToBoolean(byte[] value, int startIndex)
-System.BitConverter.ToChar(byte[] value, int startIndex)
-System.BitConverter.ToDouble(byte[] value, int startIndex)
-System.BitConverter.ToInt16(byte[] value, int startIndex)
-System.BitConverter.ToInt32(byte[] value, int startIndex)
-System.BitConverter.ToInt64(byte[] value, int startIndex)
-System.BitConverter.ToSingle(byte[] value, int startIndex)
-System.BitConverter.ToString(byte[] value)
-System.BitConverter.ToString(byte[] value, int startIndex)
-System.BitConverter.ToString(byte[] value, int startIndex, int length)
-System.BitConverter.ToUInt16(byte[] value, int startIndex)
-System.BitConverter.ToUInt32(byte[] value, int startIndex)
-System.BitConverter.ToUInt64(byte[] value, int startIndex)
+System.BitConverter.ToBoolean(byte[] bytes, int startIndex)
+System.BitConverter.ToChar(byte[] bytes, int startIndex)
+System.BitConverter.ToDouble(byte[] bytes, int startIndex)
+System.BitConverter.ToInt16(byte[] bytes, int startIndex)
+System.BitConverter.ToInt32(byte[] bytes, int startIndex)
+System.BitConverter.ToInt64(byte[] bytes, int startIndex)
+System.BitConverter.ToSingle(byte[] bytes, int startIndex)
+System.BitConverter.ToString(byte[] bytes)
+System.BitConverter.ToString(byte[] bytes, int startIndex)
+System.BitConverter.ToString(byte[] bytes, int startIndex, int length)
+System.BitConverter.ToUInt16(byte[] bytes, int startIndex)
+System.BitConverter.ToUInt32(byte[] bytes, int startIndex)
+System.BitConverter.ToUInt64(byte[] bytes, int startIndex)
 ```
 
 #### Convert Between Double and Long
