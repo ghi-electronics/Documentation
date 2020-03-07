@@ -6,6 +6,9 @@ Before data is transferred, the master transmits the 7-bit address of the slave 
 
 The two wires for I2C communication are called the SDA and SCL lines. SDA stands for Serial Data, and SCL is Serial Clock.
 
+> [!Note]
+> I2C bus speed can be either 100,000 bits/second (standard mode) or 400,000 bits/second (fast mode).
+
 This is a partial demo showing the use of I2C.
 
 ```cs

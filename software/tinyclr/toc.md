@@ -22,10 +22,10 @@
 ### [Encoding & Decoding](tutorials/encoding-decoding.md)
 
 ## Multimedia
-### [Displays](tutorials/displays.md)
+### [Graphics](tutorials/graphics.md)
 ### [Touch Screen](tutorials/touch-screen.md)
 ### [User Interface](tutorials/user-interface.md)
-### [Graphics](tutorials/graphics.md)
+### [Displays](tutorials/displays.md)
 ### [Image Decoders](tutorials/image-decoders.md)
 ### [Font Support](tutorials/font-support.md)
 ### [Camera](tutorials/camera.md)
@@ -37,7 +37,6 @@
 ### [HTTP/HTTPS](tutorials/http-https.md)
 ### [MQTT](tutorials/mqtt.md)
 ### [PPP](tutorials/ppp.md)
-### [TLS](tutorials/tls.md)
 
 ## Networking Interfaces
 ### [WiFi](tutorials/wifi.md)

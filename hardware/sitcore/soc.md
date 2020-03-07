@@ -34,7 +34,7 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 | UART/USART            | 8 (4 with handshaking)    | 8 (4 with handshaking)|
 | CAN                   | 2                         | 2                     |
 | PWM                   | 16                        | 29                    |
-| ADC                   | 11                        | 21                    |
+| ADC                   | 12                        | 21                    |
 | DAC                   | 2                         | 2                     |
 | SD/SDIP/MMC           | 1                         | 1                     |
 | Quad SPI              | 1                         | 1                     |

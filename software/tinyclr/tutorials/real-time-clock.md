@@ -11,7 +11,7 @@ In the event the RTC battery was drained or the RTC was never initialized, the R
 >rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Fast);
 ```
 
->[!Note]
+>[!Tip]
 >Needed NuGets: GHIElectronics.TinyCLR.Devices.Rtc, GHIElectronics.TinyCLR.Native
 
 ```cs
@@ -144,7 +144,7 @@ Note that the battery backed memory is not managed at all. There is no allocate,
 
 Here is a simple example that displays the size of the battery backed memory, and then writes and reads five bytes of data.
 
->[!Note]
+>[!Tip]
 >Needed NuGet: GHIElectronics.TinyCLR.Devices.Rtc
 
 ```cs

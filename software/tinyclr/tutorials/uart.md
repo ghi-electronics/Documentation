@@ -6,7 +6,7 @@ Serial data ports, called UARTs, transfer data between devices using two pins: T
 > the TXD on one end (output) goes to the RXD on the other side (input) and vice versa.
 
 > [!Tip]
-> UART sometimes refered to as COM port.
+> UART ports are also referred to as COM ports, especially on PCs..
 
 The easiest way to test a UART is by wiring a device's TXD to its RXD so any transmitted data is received by the same device. This is called a "loopback" test. The following code performs a simple loopback test.
 
