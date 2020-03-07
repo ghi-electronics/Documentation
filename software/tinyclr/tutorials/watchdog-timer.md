@@ -11,7 +11,7 @@ Watchdog.Enable(5000);
 While(true)
 {
               // reset the timer
-Watchdog.Reset()
+              Watchdog.Reset()
               Thread.Sleep(4000);
 }
 

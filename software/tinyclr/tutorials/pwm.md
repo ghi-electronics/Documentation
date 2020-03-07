@@ -11,38 +11,26 @@ Pulse Width Modulation (PWM) is a very useful feature found on most microcontrol
 ## Energy Level
 PWM is perfect for dimming an LED or controlling the speed of a motor. When the duty cycle is 50%, half the energy is transferred to the attached load.
 
-This example is written for the SCM20260D Dev Board, but will run unchanged on the SC20100S Dev Board. The left most LED on the board (PB0) will fade in and out.
-
 ```cs
-using GHIElectronics.TinyCLR.Devices.Pwm;
-using GHIElectronics.TinyCLR.Pins;
-using System.Threading;
+var controller = PwmController.FromName(SC20260.PwmChannel.Controller3.Id);
+var led = controller.OpenChannel(SC20260.PwmChannel.Controller3.PB0);
+controller.SetDesiredFrequency(10000);
 
-class Program {
-    private static void Main() {
-        var controller = PwmController.FromName(SC20260.PwmChannel.Controller3.Id);
-        var led = controller.OpenChannel(SC20260.PwmChannel.Controller3.PB0);
-        controller.SetDesiredFrequency(10000);
+double duty = 0.5, speed = 0.01;
 
-        double duty = 0.5, speed = 0.01;
-        
-        led.Start();
-        
-        while (true) {
-            if (duty <= 0 || duty >= 1.0) {
-                speed *= -1;    //Reverse direction.
-                duty += speed;
-            }
+led.Start();
 
-            led.SetActiveDutyCyclePercentage(duty);
-            duty += speed;
-
-            Thread.Sleep(10);   //Always give the system time to think!
-        }
+while (true) {
+    if (duty <= 0 || duty >= 1.0) {
+        speed *= -1;    //Reverse direction.
+        duty += speed;
     }
-}
 
-   
+    led.SetActiveDutyCyclePercentage(duty);
+    duty += speed;
+
+    Thread.Sleep(10);   //Always give the system time to think!
+}  
 ```
 
 ## Musical Tones

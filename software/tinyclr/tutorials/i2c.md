@@ -12,21 +12,12 @@ The two wires for I2C communication are called the SDA and SCL lines. SDA stands
 This is a partial demo showing the use of I2C.
 
 ```cs
-using GHIElectronics.TinyCLR.Devices.I2c;
-using GHIElectronics.TinyCLR.Pins;
+var settings = new I2cConnectionSettings(0x1C, 100_000); //The slave's address and the bus speed.
+var controller = I2cController.FromName(SC20100.I2cBus.I2c1);
+var device = controller.GetDevice(settings);
 
-class Program {
-    private static void Main() {
-        var settings = new I2cConnectionSettings(0x1C, 100_000); //The slave's address and
-                                                                //    the bus speed.
-        var controller = I2cController.FromName(SC20100.I2cBus.I2c1);
-        var device = controller.GetDevice(settings);
-
-        device.Write(new byte[] { 1, 2 });  //Write something
-        device.WriteRead(...);              //This is good for reading register
-    }
-}
-
+device.Write(new byte[] { 1, 2 });  //Write something
+device.WriteRead(...);              //This is good for reading register
 ```
 
 ## Software I2C
@@ -36,21 +27,12 @@ The I2C bus is relatively simple and can be "bit banged" using software. The adv
 This example initializes a software I2C driver. Once initialized, it's used the same as hardware I2C.
 
 ```cs
-using GHIElectronics.TinyCLR.Devices.I2c;
-using GHIElectronics.TinyCLR.Devices.I2c.Provider;
-using GHIElectronics.TinyCLR.Pins;
+var provider = new I2cControllerSoftwareProvider
+    (SC20260.GpioPin.PA0, SC20260.GpioPin.PA1, false);
 
-class Program {
-    private static void Main() {
-        var provider = new I2cControllerSoftwareProvider
-            (SC20260.GpioPin.PA0, SC20260.GpioPin.PA1, false);
+var controller = I2cController.FromProvider(provider);
 
-        var controller = I2cController.FromProvider(provider);
-
-        var device = controller.GetDevice(new I2cConnectionSettings(0x1C) {
-            AddressFormat = I2cAddressFormat.SevenBit, BusSpeed = 400_000
-        });
-    }
-}
-
+var device = controller.GetDevice(new I2cConnectionSettings(0x1C, 100_000) {
+    AddressFormat = I2cAddressFormat.SevenBit
+});
 ```

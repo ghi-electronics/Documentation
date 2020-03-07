@@ -1,6 +1,10 @@
 # Secure Storage Area
 ---
-An internal 128 Kbyte region of flash that can be used for non-volatile storage of data. If you lock your device, this region is also great for storing sensitive information like security certificates and serial numbers.
+An internal 128 KByte region of flash that can be used for non-volatile storage of data. If you lock your device, this region is also great for storing sensitive information like security certificates and serial numbers.
+
+> [!Tip]
+> This storage is deleted when a device erase is performed in the boot loader mode.
+
 
 > [!Tip]
 > Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Storage, GHIElectronics.TinyCLR.Native

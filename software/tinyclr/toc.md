@@ -64,7 +64,7 @@
 ### [USB CDC and WinUSB](tutorials/usb-cdc-winusb.md)
 ### [SQLite Database](tutorials/sqlite-database.md)
 ### [File System](tutorials/file-system.md)
-### [SD/MMC Cards](tutorials/sd-mmc-cards.md)
+### [SD/MMC Cards](tutorials/sd-cards.md)
 ### [Power Management](tutorials/power-management.md)
 ### [Watchdog Timer](tutorials/watchdog-timer.md)
 ### [Real Time Clock](tutorials/real-time-clock.md)
