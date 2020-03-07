@@ -229,18 +229,7 @@ It is important to note that drawing functions process graphics in RAM independe
 
 ## Images
 
-TinyCLR OS supports the BMP, GIF, and JPG image formats. Depending on your hardware's limitations, one or more of these image formats may be supported. Images can be loaded from a `stream` or loaded from [resources](resources.md). 
-
-> [!Tip]
-> BMP supports 256 colors and 24bit.
-> GIF does not support animated images.
-
-```cs
-var screen = Graphics.FromHdc(displayController.Hdc);
-var logo = Resource.GetBitmap(Resource.BitmapResources.GHI_Electronics_Logo);
-screen.DrawImage(logo, 50, 150);
-screen.Flush();
-```
+TinyCLR OS supports the BMP, GIF, and JPG. See the [Image Decoders](image-decoders.md) page.
 
 ## Fonts
 

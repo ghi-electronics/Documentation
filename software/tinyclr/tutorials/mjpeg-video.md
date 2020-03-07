@@ -1,6 +1,6 @@
 # MJPEG Video
 ---
-The MJPEG video format is simply a chain of JPG images that are stored in a single file. SITCore's speed and its capacity to store large amounts of data allow for high performance MJPEG video playback.
+The MJPEG video format is simply a chain of JPG images that are stored in a single file.
 
 The following code sample runs on the SC20100S Dev Board and plays an MJPEG video file that is stored on a USB flash drive.
 
