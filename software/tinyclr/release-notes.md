@@ -53,6 +53,7 @@ This preview release includes many bug fixes, a few new and updated features, an
 ### Firmware
 
 #### Changes
+- Signal generator has been improved and can now generate signals of up to 1.25 MHz in frequency.
 - Fixed SPI locking up networking.
 - Fixed bug when sharing SPI bus with multiple devices.
 - Fixed incorrect timestamping of events.
