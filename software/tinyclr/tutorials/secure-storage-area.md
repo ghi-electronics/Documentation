@@ -3,7 +3,7 @@
 An internal 128 KByte region of flash that can be used for non-volatile storage of data. If you lock your device, this region is also great for storing sensitive information like security certificates and serial numbers.
 
 > [!Tip]
-> This storage is deleted when a device erase is performed in the boot loader mode.
+> The Secure Storage Area is only erased when a device erase is performed by executing the `E` command in [**boot loader**](../bootloader.md) mode.
 
 
 > [!Tip]
