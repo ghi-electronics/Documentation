@@ -9,7 +9,7 @@ This preview release includes many bug fixes, a few new and updated features, an
 ### Visual Studio Project System
 
 #### Changes
-- None
+- Updated with the latest core libraries.
 
 #### Known Issues
 - None
@@ -73,6 +73,7 @@ This preview release includes many bug fixes, a few new and updated features, an
 - ToString() does not work if the argument is and Enum.
 - PulseFeedback DrainDuration does not work correctly.
 - Cannot send more than 64 kBytes in one SPI transaction. The workaround is to split the data so the transactions are smaller.
+- When using static IP addressing, after disconnecting the device from an Ethernet network the old IP address will still be assigned instead of 0.0.0.0.
 
 ---
 
