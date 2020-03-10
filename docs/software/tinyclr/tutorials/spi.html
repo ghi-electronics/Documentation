@@ -89,28 +89,20 @@
 </div>
 <div class="TIP"><h5>Tip</h5><p>Note that a board running TinyCLR OS is always an SPI master, not slave.</p>
 </div>
-<pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Spi;
-using GHIElectronics.TinyCLR.Pins;
+<pre><code class="lang-cs">var settings = new SpiConnectionSettings() {
+    ChipSelectType = SpiChipSelectType.Gpio,
+    ChipSelectLine = SC20100.GpioPin.PE4,
+    Mode = SpiMode.Mode1,
+    ClockFrequency = 4_000_000,
+    DataBitLength = 8,
+};
 
-class Program {
-    private static void Main() {
-        var settings = new SpiConnectionSettings() {
-            ChipSelectType = SpiChipSelectType.Gpio,
-            ChipSelectLine = SC20100.GpioPin.PE4,
-            Mode = SpiMode.Mode1,
-            ClockFrequency = 4 * 1000 * 1000,       //4Mhz
-            DataBitLength = 8,
-        };
+var controller = SpiController.FromName(SC20100.SpiBus.Spi4);
+var device = controller.GetDevice(settings);
 
-        var controller = SpiController.FromName(SC20100.SpiBus.Spi4);
-        var device = controller.GetDevice(settings);
-
-        device.Write(new byte[] { 1, 2 });  //Write something.
-        device.TransferSequential(...);     //This is good for reading registers.
-        device.TransferFullDuplex(...);     //This is the only one that truly represents
-                                            //  how SPI works.
-    }
-}
+device.Write(new byte[] { 1, 2 });  //Write something.
+device.TransferSequential(...);     //This is good for reading registers.
+device.TransferFullDuplex(...);     //This is the only one that truly represents how SPI works.
 </code></pre></article>
           </div>
           
@@ -119,7 +111,7 @@ class Program {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/spi.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/display-clean-up/software/tinyclr/tutorials/spi.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -80,7 +80,13 @@
 <h1 id="hashing">Hashing</h1>
 
 <hr>
-<p>Libraries are only supported through <a href="tls.html">TLS</a> currently. We are still planning how to securely expose this functionality.</p>
+<p>TinyCLR OS currently supports the very popular MD5 hash function. While MD5 is no longer used as a cryptographic hash function, it is still used as a checksum to guard against unintentional corruption of data. For example, our <a href="../downloads.html">Downloads</a> page lists the MD5 hash value of each TinyCLR OS file. When you download one of these files, you can calculate the MD5 hash value of the downloaded file to make sure it matches the MD5 hash value we provide. This ensures the file was downloaded correctly and matches the original.</p>
+<p> The following commands will calculate the MD5 hash value of a byte array:</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core and GHIElectronics.TinyCLR.Cryptography</p>
+</div>
+<pre><code class="lang-cs">var md5 = GHIElectronics.TinyCLR.Cryptography.MD5.Create();
+var hashValue = md5.ComputeHash(data); //data is a byte array.
+</code></pre><p>There is also an overload of the <code>ComputeHash</code> method that takes an <code>offset</code> into the byte array and a <code>count</code> of how many bytes to process. </p>
 </article>
           </div>
           
@@ -89,7 +95,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/hashing.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/display-clean-up/software/tinyclr/tutorials/hashing.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
