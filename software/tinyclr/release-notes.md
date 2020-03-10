@@ -67,7 +67,7 @@ This preview release includes many bug fixes, a few new and updated features, an
 - Added pin PC1 as analog input on SC20100S.
 - Fixed crashing when deploying application over UART.
 - Improved Ethernet
-- Fixed Network Static IP Address doesn't work.
+- Fixed networking bug when using static IP Addressing.
 
 #### Known Issues
 - In Visual Studio, the application doesn't start automatically when trying to `Start Without Debugging` (CTRL+F5). Resetting the board will start the application.
@@ -76,7 +76,7 @@ This preview release includes many bug fixes, a few new and updated features, an
 - PulseFeedback DrainDuration does not work correctly.
 - Cannot send more than 64 kBytes in one SPI transaction. The workaround is to split the data so the transactions are smaller.
 - When using static IP addressing, after disconnecting the device from an Ethernet network the old IP address will still be assigned instead of 0.0.0.0.
-- Graphics.DrawString() may stop wifi on NativeDisplay on SC20260.
+- Graphics.DrawString() with native displays on the SC20260B may stop WiFi.
 
 ---
 
