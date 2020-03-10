@@ -33,28 +33,19 @@ class Program {
         backlight.SetDriveMode(GHIElectronics.TinyCLR.Devices.Gpio.GpioPinDriveMode.Output);
         backlight.Write(GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.High);
 
-        var displayController = GHIElectronics.TinyCLR.Devices.Display.DisplayController.
-            FromProvider(st7735);
+        st7735.SetDataAccessControl(false, false, false, false);
+        st7735.SetDrawWindow(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+        st7735.Enable();
 
-        st7735.SetDataAccessControl(false, false, false, false); //Rotate the screen.
-
-        displayController.SetConfiguration(new GHIElectronics.TinyCLR.Devices.Display.
-            SpiDisplayControllerSettings {
-
-            Width = SCREEN_WIDTH,
-            Height = SCREEN_HEIGHT,
-            DataFormat = GHIElectronics.TinyCLR.Devices.Display.DisplayDataFormat.Rgb565
-        });
-
-        displayController.Enable();
+        st7735.SetDataAccessControl(true, true, false, false); //Rotate the screen.
+            st7735.SetDrawWindow(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT); // Update draw window as wide screen
+            st7735.Enable();
 
         //Create flush event
         System.Drawing.Graphics.OnFlushEvent += Graphics_OnFlushEvent;
 
         //Create bitmap buffer
-        graphic = System.Drawing.Graphics.FromImage(new System.Drawing.Bitmap
-            (displayController.ActiveConfiguration.Width,
-            displayController.ActiveConfiguration.Height));
+        graphic = System.Drawing.Graphics.FromImage(new System.Drawing.Bitmap(SCREEN_WIDTH, SCREEN_HEIGHT));
 
         var media = GHIElectronics.TinyCLR.Devices.Storage.StorageController.FromName
             (GHIElectronics.TinyCLR.Pins.SC20100.StorageController.UsbHostMassStorage);
@@ -71,7 +62,7 @@ class Program {
 
         mjpegDecoder.FrameDecodedEvent += MjpegDecoder_FrameDecodedEvent;
 
-        mjpegDecoder.StartDecode(stream);
+        mjpegDecoder.StartDecode(stream); // Non-block function
 
         System.Threading.Thread.Sleep(-1);
     }

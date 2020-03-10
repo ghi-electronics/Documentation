@@ -162,7 +162,8 @@ using System.Drawing;
 
 namespace SC20100_N18_WPF{
     class Program : Application{
-        public Program(DisplayController d) : base(d){
+        public Program(int width, int height) : base(width, height)
+        {
         }
 
         private static ST7735Controller st7735;
@@ -183,31 +184,26 @@ namespace SC20100_N18_WPF{
             var backlight = gpio.OpenPin(SC20100.GpioPin.PE5);
             backlight.SetDriveMode(GpioPinDriveMode.Output);
             backlight.Write(GpioPinValue.High);
-
-            var displayController = DisplayController.FromProvider(st7735);
+            
             st7735.SetDataAccessControl(true, true, false, false); //Rotate the screen.
-
-            displayController.SetConfiguration(new SpiDisplayControllerSettings{
-                Width = SCREEN_WIDTH,
-                Height = SCREEN_HEIGHT,
-                DataFormat = DisplayDataFormat.Rgb565
-            });
-
-            displayController.Enable();
+            st7735.SetDrawWindow(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT); // Update draw window as wide screen
+            st7735.Enable();
+            
             Graphics.OnFlushEvent += Graphics_OnFlushEvent;
 
-            var app = new Program(displayController);
-            app.Run(Program.CreateWindow(displayController));      
+            app = new Program(SCREEN_WIDTH, SCREEN_HEIGHT);
+
+            app.Run(Program.CreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT));     
         }
 
         private static void Graphics_OnFlushEvent(IntPtr hdc, byte[] data){
             st7735.DrawBuffer(data);
         }
 
-        private static Window CreateWindow(DisplayController display){
+        private static Window CreateWindow(int width, int height){
             var window = new Window{
-                Height = (int)display.ActiveConfiguration.Height,
-                Width = (int)display.ActiveConfiguration.Width
+                Height = height,
+                Width = width
             };
 
             window.Background = new LinearGradientBrush
