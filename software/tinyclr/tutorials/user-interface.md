@@ -186,7 +186,7 @@ namespace SC20100_N18_WPF{
             backlight.Write(GpioPinValue.High);
             
             st7735.SetDataAccessControl(true, true, false, false); //Rotate the screen.
-            st7735.SetDrawWindow(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT); // Update draw window as wide screen
+            st7735.SetDrawWindow(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
             st7735.Enable();
             
             Graphics.OnFlushEvent += Graphics_OnFlushEvent;
