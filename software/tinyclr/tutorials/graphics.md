@@ -163,26 +163,20 @@ namespace GraphicsSample {
             backlight.SetDriveMode(GpioPinDriveMode.Output);
             backlight.Write(GpioPinValue.High);
 
-            var displayController = DisplayController.FromProvider(st7735);
+            
             st7735.SetDataAccessControl(true, true, false, false); //Rotate the screen.
+            st7735.SetDrawWindow(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT); // Update draw window as wide screen
+            st7735.Enable();
             
-            displayController.SetConfiguration(new SpiDisplayControllerSettings
-                { Width = SCREEN_WIDTH,
-                Height = SCREEN_HEIGHT,
-                DataFormat = DisplayDataFormat.Rgb565 });
-            
-            displayController.Enable();
 
             // Create flush event
             Graphics.OnFlushEvent += Graphics_OnFlushEvent;
 
             // Create bitmap buffer
-            var screen = Graphics.FromImage(new Bitmap
-                (displayController.ActiveConfiguration.Width, 
-                displayController.ActiveConfiguration.Height));
+            var screen = Graphics.FromImage(new Bitmap(SCREEN_WIDTH, SCREEN_HEIGHT));
 
-            var image = Resource1.GetBitmap(Resource1.BitmapResources.smallJpegBackground);
-            var font = Resource1.GetFont(Resource1.FontResources.small);
+            var image = Resource.GetBitmap(Resource.BitmapResources.smallJpegBackground);
+            var font = Resource.GetFont(Resource.FontResources.small);
 
             screen.Clear(Color.Black);
 
@@ -218,7 +212,7 @@ namespace GraphicsSample {
 ```
 
 ## Helper Methods
-The `DisplayController.ActiveConfiguration` can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display's resolution. The following line of code draws a line from corner to corner, no matter the display resolution.
+With Parallel Display, (also called as native display in this document), the `DisplayController.ActiveConfiguration` can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display's resolution. The following line of code draws a line from corner to corner, no matter the display resolution.
 
 ```cs
 screen.DrawLine(new Pen(Color.Red), 0, 0, displayController.ActiveConfiguration.Width - 1,
