@@ -57,12 +57,13 @@ Power.Sleep(DateTime.Now.AddSeconds(90)); // wake the board up after 90 seconds,
 
 In Shutdown mode:
 ```
-Power.Shutdown(false, DateTime.Now.AddSeconds(90); // wake the board up after 90 seconds, from now.
+Power.Shutdown(false, DateTime.Now.AddSeconds(90); // wake the board up after 90 seconds, from now. WKUP pin has no effects.
 ```
 
 Use WKUP pin and time each other:
 ```
-Power.Shutdown(false, DateTime.Now.AddSeconds(90); // wake the board up after 90 seconds, or press WKUP any time to wakeup system.
+Power.Shutdown(true, DateTime.Now.AddSeconds(90); // wake the board up after 90 seconds, or press WKUP any time to wakeup system.
+
 ```
 
 
