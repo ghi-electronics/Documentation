@@ -38,14 +38,15 @@ class Program {
         st7735.Enable();
 
         st7735.SetDataAccessControl(true, true, false, false); //Rotate the screen.
-            st7735.SetDrawWindow(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT); // Update draw window as wide screen
-            st7735.Enable();
+        st7735.SetDrawWindow(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+        st7735.Enable();
 
         //Create flush event
         System.Drawing.Graphics.OnFlushEvent += Graphics_OnFlushEvent;
 
         //Create bitmap buffer
-        graphic = System.Drawing.Graphics.FromImage(new System.Drawing.Bitmap(SCREEN_WIDTH, SCREEN_HEIGHT));
+        graphic = System.Drawing.Graphics.FromImage(new System.Drawing.Bitmap
+            (SCREEN_WIDTH, SCREEN_HEIGHT));
 
         var media = GHIElectronics.TinyCLR.Devices.Storage.StorageController.FromName
             (GHIElectronics.TinyCLR.Pins.SC20100.StorageController.UsbHostMassStorage);
