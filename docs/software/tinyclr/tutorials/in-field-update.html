@@ -98,11 +98,9 @@ using System.IO;
 
 class Program {
     private static void Main() {
-        const string FSSD_API_CONTROLLER = 
-            @&quot;GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0&quot;;
+        const string FSSD_API_CONTROLLER = SC20100.StorageController.SdCard;
 
-        const string FSUSB_API_CONTROLLER = 
-            @&quot;GHIElectronics.TinyCLR.NativeApis.STM32H7.UsbHostMassStorageStorageController\0&quot;;
+        const string FSUSB_API_CONTROLLER =  SC20100.StorageController.UsbHostMassStorage;
 
         var media = StorageController.FromName(FSSD_API_CONTROLLER); //Update from SD card.
         var drive = FileSystem.Mount(media.Hdc);
@@ -155,11 +153,9 @@ using System.IO;
 
 class Program {
     private static void Main() {
-        const string FSSD_API_CONTROLLER =
-            @&quot;GHIElectronics.TinyCLR.NativeApis.STM32H7.SdCardStorageController\0&quot;;
+        const string FSSD_API_CONTROLLER = SC20100.StorageController.SdCard;
 
-        const string FSUSB_API_CONTROLLER =
-            @&quot;GHIElectronics.TinyCLR.NativeApis.STM32H7.UsbHostMassStorageStorageController\0&quot;;
+        const string FSUSB_API_CONTROLLER = SC20100.StorageController.UsbHostMassStorage;
 
         var media = StorageController.FromName(FSSD_API_CONTROLLER); //Using SD card.
         var drive = FileSystem.Mount(media.Hdc);
@@ -192,7 +188,7 @@ class Program {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/in-field-update.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/display-clean-up/software/tinyclr/tutorials/in-field-update.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

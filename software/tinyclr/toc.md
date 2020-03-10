@@ -11,6 +11,7 @@
 ## Productivity Enhancements
 ### [Debugging](tutorials/debugging.md)
 ### [Memory Management](tutorials/memory.md)
+### [External Memory](tutorials/external-memory.md)
 ### [Unmanaged Heap](tutorials/unmanaged-heap.md)
 ### [NuGet Based Libraries](tutorials/nuget.md)
 
@@ -22,10 +23,10 @@
 ### [Encoding & Decoding](tutorials/encoding-decoding.md)
 
 ## Multimedia
-### [Displays](tutorials/displays.md)
+### [Graphics](tutorials/graphics.md)
 ### [Touch Screen](tutorials/touch-screen.md)
 ### [User Interface](tutorials/user-interface.md)
-### [Graphics](tutorials/graphics.md)
+### [Displays](tutorials/displays.md)
 ### [Image Decoders](tutorials/image-decoders.md)
 ### [Font Support](tutorials/font-support.md)
 ### [Camera](tutorials/camera.md)
@@ -37,7 +38,6 @@
 ### [HTTP/HTTPS](tutorials/http-https.md)
 ### [MQTT](tutorials/mqtt.md)
 ### [PPP](tutorials/ppp.md)
-### [TLS](tutorials/tls.md)
 
 ## Networking Interfaces
 ### [WiFi](tutorials/wifi.md)
@@ -50,7 +50,7 @@
 ### [Google Cloud](tutorials/google-cloud.md)
 ### [IFTTT](tutorials/ifttt.md)
 
-## In-Field Security
+## Application Security
 ### [IP Protection](tutorials/ip-protection.md)
 ### [In-Field Update](tutorials/in-field-update.md)
 ### [Secure Storage Area](tutorials/secure-storage-area.md)
@@ -65,7 +65,7 @@
 ### [USB CDC and WinUSB](tutorials/usb-cdc-winusb.md)
 ### [SQLite Database](tutorials/sqlite-database.md)
 ### [File System](tutorials/file-system.md)
-### [SD/MMC Cards](tutorials/sd-mmc-cards.md)
+### [SD/MMC Cards](tutorials/sd-cards.md)
 ### [Power Management](tutorials/power-management.md)
 ### [Watchdog Timer](tutorials/watchdog-timer.md)
 ### [Real Time Clock](tutorials/real-time-clock.md)

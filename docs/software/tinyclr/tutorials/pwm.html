@@ -87,35 +87,25 @@
 </div>
 <h2 id="energy-level">Energy Level</h2>
 <p>PWM is perfect for dimming an LED or controlling the speed of a motor. When the duty cycle is 50%, half the energy is transferred to the attached load.</p>
-<p>This example is written for the SCM20260D Dev Board, but will run unchanged on the SC20100S Dev Board. The left most LED on the board (PB0) will fade in and out.</p>
-<pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Pwm;
-using GHIElectronics.TinyCLR.Pins;
-using System.Threading;
+<pre><code class="lang-cs">var controller = PwmController.FromName(SC20260.PwmChannel.Controller3.Id);
+var led = controller.OpenChannel(SC20260.PwmChannel.Controller3.PB0);
+controller.SetDesiredFrequency(10000);
 
-class Program {
-    private static void Main() {
-        var controller = PwmController.FromName(SC20260.PwmChannel.Controller3.Id);
-        var led = controller.OpenChannel(SC20260.PwmChannel.Controller3.PB0);
-        controller.SetDesiredFrequency(10000);
+double duty = 0.5, speed = 0.01;
 
-        double duty = 0.5, speed = 0.01;
+led.Start();
 
-        led.Start();
-
-        while (true) {
-            if (duty &lt;= 0 || duty &gt;= 1.0) {
-                speed *= -1;    //Reverse direction.
-                duty += speed;
-            }
-
-            led.SetActiveDutyCyclePercentage(duty);
-            duty += speed;
-
-            Thread.Sleep(10);   //Always give the system time to think!
-        }
+while (true) {
+    if (duty &lt;= 0 || duty &gt;= 1.0) {
+        speed *= -1;    //Reverse direction.
+        duty += speed;
     }
-}
 
+    led.SetActiveDutyCyclePercentage(duty);
+    duty += speed;
+
+    Thread.Sleep(10);   //Always give the system time to think!
+}  
 </code></pre><h2 id="musical-tones">Musical Tones</h2>
 <p>Musical notes have specific frequencies; C for example is about 261Hz. Plugging these numbers into an array and knowing the length of each tone is all that is needed to play some simple music. When playing notes by changing the frequency, keep the duty cycle set to 0.5.</p>
 <p>The following example is written for the SC20100S Dev Board.</p>
@@ -291,7 +281,7 @@ namespace GHIElectronics.TinyCLR.Devices.Servo {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/pwm.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/display-clean-up/software/tinyclr/tutorials/pwm.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

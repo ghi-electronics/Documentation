@@ -80,7 +80,42 @@
 <h1 id="cryptography">Cryptography</h1>
 
 <hr>
-<p>Libraries are only supported through <a href="tls.html">TLS</a> currently. We are still planning how to securely expose this functionality.</p>
+<p>TinyCLR OS supports RSA public key cryptography. Key sizes can be 1024 or 2048 bits and are generated automatically when <code>RSACryptoServiceProvider()</code> is instantiated. </p>
+<div class="NOTE"><h5>Note</h5><p><code>RSACryptoServiceProvider()</code> implements the IDisposable interface</p>
+</div>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core and GHIElectronics.TinyCLR.Cryptography</p>
+</div>
+<p>The following sample code encrypts and decrypts a string of text.</p>
+<pre><code class="lang-cs">byte[] dataToEncrypt = System.Text.Encoding.UTF8.GetBytes(&quot;Data to Encrypt&quot;);
+byte[] encryptedData;
+byte[] decryptedData;
+
+using (GHIElectronics.TinyCLR.Cryptography.RSACryptoServiceProvider RSA = new
+    GHIElectronics.TinyCLR.Cryptography.RSACryptoServiceProvider(2048)) {
+
+    //Encrypt data.
+    using (GHIElectronics.TinyCLR.Cryptography.RSACryptoServiceProvider encryptRSA = new
+        GHIElectronics.TinyCLR.Cryptography.RSACryptoServiceProvider()) {
+
+        encryptRSA.ImportParameters(RSA.ExportParameters(false));
+        encryptedData = encryptRSA.Encrypt(dataToEncrypt);
+    }
+
+    //Decrypt data.
+    using (GHIElectronics.TinyCLR.Cryptography.RSACryptoServiceProvider decryptRSA = new
+        GHIElectronics.TinyCLR.Cryptography.RSACryptoServiceProvider()) {
+
+        decryptRSA.ImportParameters(RSA.ExportParameters(true));
+        decryptedData = decryptRSA.Decrypt(encryptedData);
+    }
+}
+
+System.Diagnostics.Debug.WriteLine(&quot;Decrypted: &quot; +
+    System.Text.Encoding.UTF8.GetString(decryptedData));
+</code></pre><p>The above code outputs the following:</p>
+<pre><code class="lang-cs">Decrypted: Data to Encrypt
+</code></pre><p>If no key size is provided as an argument to <code>RSACryptoServiceProvider()</code>, a default key size of 1024 bits will be used.</p>
+<p>The boolean argument for <code>RSA.ExportParameters()</code> determines whether this method returns the private key (true) or public key (false). The public key is used to encrypt messages, while the private key is needed to decrypt messages.</p>
 </article>
           </div>
           
@@ -89,7 +124,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/cryptography.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/display-clean-up/software/tinyclr/tutorials/cryptography.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

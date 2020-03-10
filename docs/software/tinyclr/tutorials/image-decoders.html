@@ -80,7 +80,10 @@
 <h1 id="image-decoders">Image Decoders</h1>
 
 <hr>
-<p>TinyCLR OS provides methods for converting JPG, BMP, and GIF files into bitmaps that can be used in your application. The image can be added to your project as a <a href="resources.html">resource</a>, or the image can be stored in a byte array.</p>
+<p>TinyCLR OS provides methods for converting JPG, BMP, and GIF files into bitmaps that can be used in your application. The image can be added to your project as a <a href="resources.html">resource</a>, or the image can be loaded from a byte array, like from and SD card.</p>
+<div class="TIP"><h5>Tip</h5><p>BMP supports 256 colors and 24bit.
+GIF does not support animated images.</p>
+</div>
 <pre><code class="lang-cs">var screen = Graphics.FromImage(new Bitmap(displayController.ActiveConfiguration.Width,
     displayController.ActiveConfiguration.Height));
 
@@ -96,7 +99,7 @@ var imageY = 0;
 
 screen.DrawImage(imageBitmap, imageX, imageY);
 </code></pre><h2 id="video-playback">Video playback</h2>
-<p>Animated GIFs are not supported, but <a href="mjpeg-video.html">Motion JPEG</a> will soon be supported.</p>
+<p>Video playback can be achieved through <a href="mjpeg-video.html">Motion JPEG</a>.</p>
 </article>
           </div>
           

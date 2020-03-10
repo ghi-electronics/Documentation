@@ -4,7 +4,7 @@
 
 The following sample code is written for the SC20100S Dev Board with one or more DS18B20 temperature sensors. The temperature sensors are powered directly from the dev board with the data line connected to pin PA1.
 
-> [!Note]
+> [!Tip]
 > Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Onewire, GHIElectronics.TinyCLR.Native, and GHIElectronics.TinyCLR.Pins.
 
 ```cs

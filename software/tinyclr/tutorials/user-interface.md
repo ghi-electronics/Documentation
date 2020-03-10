@@ -5,7 +5,7 @@ You can use the `GHIElectronics.TinyCLR.UI` library to create user interfaces fo
 ## Application Management
 The UI library requires internal management that is handled by the application class. The following code provides a good starting point.
 
-> [!Note]
+> [!Tip]
 > Needed NuGets: GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.UI
 
 ```cs
@@ -42,7 +42,7 @@ namespace UserInterfaceExample {
 
 While you can have multiple windows in your UI application, it is mandatory to have at least one window. Here is a complete example that shows a window with a gradient brush background. The code is for SCM20260D Dev board with the 4.3 inch display.
 
-> [!Note]
+> [!Tip]
 > Needed NuGets: GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins, GHIElectronics.TinyCLR.UI, GHIElectronics.TinyCLR.UI.Media
 
 ```cs
@@ -146,7 +146,7 @@ var controllerSetting = new
 
 This code is for the SC20100S Dev Board with the N18 1.8 inch display.
 
-> [!Note]
+> [!Tip]
 > Needed NuGets: GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735, GHIElectronics.TinyCLR.Pins, GHIElectronics.TinyCLR.UI, GHIElectronics.TinyCLR.UI.Media
 
 ```cs
@@ -162,7 +162,8 @@ using System.Drawing;
 
 namespace SC20100_N18_WPF{
     class Program : Application{
-        public Program(DisplayController d) : base(d){
+        public Program(int width, int height) : base(width, height)
+        {
         }
 
         private static ST7735Controller st7735;
@@ -183,31 +184,26 @@ namespace SC20100_N18_WPF{
             var backlight = gpio.OpenPin(SC20100.GpioPin.PE5);
             backlight.SetDriveMode(GpioPinDriveMode.Output);
             backlight.Write(GpioPinValue.High);
-
-            var displayController = DisplayController.FromProvider(st7735);
+            
             st7735.SetDataAccessControl(true, true, false, false); //Rotate the screen.
-
-            displayController.SetConfiguration(new SpiDisplayControllerSettings{
-                Width = SCREEN_WIDTH,
-                Height = SCREEN_HEIGHT,
-                DataFormat = DisplayDataFormat.Rgb565
-            });
-
-            displayController.Enable();
+            st7735.SetDrawWindow(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+            st7735.Enable();
+            
             Graphics.OnFlushEvent += Graphics_OnFlushEvent;
 
-            var app = new Program(displayController);
-            app.Run(Program.CreateWindow(displayController));      
+            app = new Program(SCREEN_WIDTH, SCREEN_HEIGHT);
+
+            app.Run(Program.CreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT));     
         }
 
         private static void Graphics_OnFlushEvent(IntPtr hdc, byte[] data){
             st7735.DrawBuffer(data);
         }
 
-        private static Window CreateWindow(DisplayController display){
+        private static Window CreateWindow(int width, int height){
             var window = new Window{
-                Height = (int)display.ActiveConfiguration.Height,
-                Width = (int)display.ActiveConfiguration.Width
+                Height = height,
+                Width = width
             };
 
             window.Background = new LinearGradientBrush

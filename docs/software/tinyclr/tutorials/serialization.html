@@ -80,31 +80,82 @@
 <h1 id="serialization">Serialization</h1>
 
 <hr>
-<p>Serialization is the process of converting the state of an object into a form that can be persisted or transported. The complement of serialization is deserialization, which converts a stream into an object. Together, these processes allow data to be stored and transferred.</p>
-<p>TinyCLR OS includes a built in JSON library to help in serializing data.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Data.Json</p>
+<p>Serialization is the process of converting the state of an object into a form that can be persisted or transported. The complement of serialization is deserialization, which converts a stream into an object. Together, these processes allow objects to be stored and transferred.</p>
+<h2 id="binary-serialization">Binary Serialization</h2>
+<p>Binary Serialization is a native, fast and lean way to serialize objects. To keep serialization fast and efficient on embedded devices, TinyCLR&#39;s serialization is not compatible with binary serialization on desktop PCs. However, an implementation on the PC can be used to process the serialized binary data if necessary.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core and System.Reflection.</p>
 </div>
-<pre><code class="lang-cs">static void DoTestSerialize()
-{
-    var intArray = new int[] { 1, 3, 5, 7, 9 };
+<pre><code>class Program {
+    public enum MyEnum : short { A, B, C };
 
-    var result = JsonConverter.Serialize(intArray);
+    private static void Main() {
+        MySerializableClass original = new MySerializableClass(1, &quot;ABCD&quot;, 3, MyEnum.B, 0.1f);
 
-    var bson = result.ToBson();
+        System.Diagnostics.Debug.WriteLine(&quot;original: &quot; + original.ToString());
 
-    var compare = (Array)JsonConverter.FromBson(bson, typeof(int[]));
+        byte[] buffer = System.Reflection.Reflection.Serialize(original,
+            typeof(MySerializableClass));
 
-    for (var i = 0; i &lt; intArray.Length; i++)
-    {
-        if (intArray[i] != (int)compare.GetValue(i))
-        {
-            Debug.WriteLine(&quot;Array test failed&quot;);
+        MySerializableClass restored = (MySerializableClass)System.Reflection.Reflection.
+            Deserialize(buffer, typeof(MySerializableClass));
 
-            break;
-        }
+        System.Diagnostics.Debug.WriteLine(&quot;restored: &quot; + restored.ToString());
+        System.Diagnostics.Debug.WriteLine(&quot;Number of bytes: &quot; + buffer.Length.ToString());
     }
 
-    Debug.WriteLine(&quot;Array test succeeded&quot;);
+    [System.Serializable]
+    public class MySerializableClass {
+        public int a;
+        public string b;
+        private byte c;
+        private MyEnum d;
+        private float e;
+        private System.DateTime dt;
+
+        public MySerializableClass(int a, string b, byte c, MyEnum d, float e) {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+            this.d = d;
+            this.e = e;
+            this.dt = this.dt = new System.DateTime(2007, 1, 22);
+        }
+
+        public override string ToString() {
+            return &quot;a=&quot; + a.ToString() + &quot;, b=&quot; + b + &quot;, c=&quot; + c.ToString() + &quot;, d=&quot; +
+                ((object)d).ToString() + &quot;, e=&quot; + e.ToString(&quot;F2&quot;);
+        }
+    }
+}
+</code></pre><div class="NOTE"><h5>Note</h5><p>Serialization in TinyCLR OS is not compatible with full .NET. That means you cannot deserialize an object with .NET on a PC from a byte stream that was created with TinyCLR OS and vice versa. There is a solution which allows Serialization in TinyCLR OS and the .NET Framework to be compatible. For details, look at the BinarySerializationDesktopSample here: <strong><a href="https://github.com/Apress/exp-.net-micro-framework/tree/master/source/Chapter09/BinarySerializationDesktopSample">https://github.com/Apress/exp-.net-micro-framework/tree/master/source/Chapter09/BinarySerializationDesktopSample</a></strong></p>
+</div>
+<div class="WARNING"><h5>Warning</h5><p>GHI Electronics does not own or have rights to the code in this repository: <a href="https://github.com/Apress/exp-.net-micro-framework">https://github.com/Apress/exp-.net-micro-framework</a>. It is your responsibility to adhere to the license provided by the owner of this code.</p>
+</div>
+<h2 id="json">JSON</h2>
+<p>TinyCLR OS includes a built in JSON library.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Data.Json.</p>
+</div>
+<pre><code class="lang-cs">class Program {
+    private static void Main() {
+        var intArray = new int[] { 1, 3, 5, 7, 9 };
+
+        var result = GHIElectronics.TinyCLR.Data.Json.JsonConverter.Serialize(intArray);
+
+        var bson = result.ToBson();
+
+        var compare = (System.Array)GHIElectronics.TinyCLR.Data.Json.JsonConverter.
+            FromBson(bson, typeof(int[]));
+
+        for (var i = 0; i &lt; intArray.Length; i++) {
+            if (intArray[i] != (int)compare.GetValue(i)) {
+                System.Diagnostics.Debug.WriteLine(&quot;Array test failed&quot;);
+
+                break;
+            }
+        }
+
+        System.Diagnostics.Debug.WriteLine(&quot;Array test succeeded&quot;);
+    }
 }
 </code></pre></article>
           </div>

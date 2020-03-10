@@ -1,10 +1,91 @@
 # Release Notes
 ---
 ![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
+## 2.0.0-preview4
+
+### Released 2020-03-10
+This preview release includes many bug fixes, a few new and updated features, and some API improvements.
+
+### Visual Studio Project System
+
+#### Changes
+- Updated with the latest core libraries.
+
+#### Known Issues
+- None
+
+### Libraries
+
+#### Changes
+- Fixed missing UART dependency when adding Network NuGet.
+- Fixed ADC that was incorrectly mapped to wrong controller.
+- Added serialization.
+- Reworked power management API.
+- DisplayController is now only used with parallel interface displays.
+- Graphics.Clear() no longer takes an argument.
+- Added NeoPixel WS2812 driver.
+- Added SSD1351 display driver.
+- Changed MJPEG driver to return raw jpeg data instead of internally flushing data to display.
+- Fixed dependency for OV9655 driver and sped up screen refresh rate.
+- Reworked the SSD1306 and ST7735 display drivers so they no longer inherit from DisplayController.
+
+#### Known Issues
+- JSON does not work in some cases.
+- When drawing to SSD1351 displays, you may have to add ten to the x coordinate for the screen position to be correct.
+- The OV9655 camera can intermittently have a noisy picture. Resetting the board should fix the problem.
+
+### TinyCLR Config
+
+#### Changes
+- Fixed occasional crashes during firmware updates.
+
+#### Known Issues
+- None
+
+### TinyCLR Font Converter
+
+#### Changes
+- None.
+
+#### Known Issues
+- None.
+
+### Firmware
+
+#### Changes
+- Signal generator has been improved and can now generate signals of up to 1.25 MHz in frequency.
+- Fixed SPI locking up networking.
+- Fixed bug when sharing SPI bus with multiple devices.
+- Fixed incorrect timestamping of events.
+- Added support for microcontroller temperature sensor.
+- Added support for Vbat voltage monitoring.
+- Added support for ADC internal reference voltage.
+- Fixed I2C bug with messages larger than 255 bytes.
+- Corrected I2C clock bug.
+- Added support for wake up from RTC alarm.
+- Reworked power management with support for stopping processor during Thread.Sleep().
+- Added pin PC1 as analog input on SC20100S.
+- Fixed crashing when deploying application over UART.
+- Improved Ethernet
+- Fixed networking bug when using static IP Addressing.
+
+#### Known Issues
+- In Visual Studio, the application doesn't start automatically when trying to `Start Without Debugging` (CTRL+F5). Resetting the board will start the application.
+- The PJ0 interrupt configuration changes when the device is reset with the reset button, but there is no problem when power cycling the board.
+- ToString() does not work if the argument is an Enum.
+- PulseFeedback DrainDuration does not work correctly.
+- Cannot send more than 64 kBytes in one SPI transaction. The workaround is to split the data so the transactions are smaller.
+- When using static IP addressing, after disconnecting the device from an Ethernet network the old IP address will still be assigned instead of 0.0.0.0.
+- Graphics.DrawString() with native displays on the SC20260B may stop WiFi.
+
+---
+
+---
 
 ## 2.0.0-preview3
 
 ### Released 2020-02-20
+Our third preview includes bug fixes, added features, and increases performance.
 
 ### Visual Studio Project System
 

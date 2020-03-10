@@ -25,30 +25,18 @@ The total output current sunk or sourced by the sum of all I/Os and control pins
 > [!Warning]
 > Digital pins on microcontrollers are weak. They can only be used to control small LEDs or transistors. Those transistors can, in turn, control devices with high power needs like a motor.
 
-While written for the SCM20260D Dev Board, this example also works on the SC20100S Dev Board. Just uncomment the code for the appropriate board.
 
 ```cs
-using GHIElectronics.TinyCLR.Devices.Gpio;
-using GHIElectronics.TinyCLR.Pins;
-using System.Threading;
+var led = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PH6);
+led.SetDriveMode(GpioPinDriveMode.Output);
 
-class Program {
-    static void Main() {
-          var led = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PH6);//For SC20260 Dev
-          //var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);//For SC20100S Dev
+while (true) {
+    led.Write(GpioPinValue.High);
+    Thread.Sleep(100);
 
-        led.SetDriveMode(GpioPinDriveMode.Output);
-
-        while (true) {
-            led.Write(GpioPinValue.High);
-            Thread.Sleep(100);
-
-            led.Write(GpioPinValue.Low);
-            Thread.Sleep(100);
-        }
-    }
+    led.Write(GpioPinValue.Low);
+    Thread.Sleep(100);
 }
-
 ```
 
 ## Digital Inputs
@@ -62,41 +50,20 @@ Unconnected input pins are called "floating." They are in a high impedance state
 In this example, a button is connected between ground and an input pin. We will enable the pull-up resistor making that pin high when the button is not pressed.  When the button is pressed, it will overpower the pull-up and make the input low. We will read the status of the button and pass its state to an LED. 
 
 > [!Tip]
-> Never use an infinite loop without giving the system time to think. Add a short sleep to the loop or use events instead.
-
-While written for the SCM20260D Dev Board, this example also works on the SC20100S Dev Board. Just uncomment the code for the appropriate board. The left most LED will light when the MOD button is pressed.
+> Never use an infinite loop without giving the system time to think. Add a short sleep to the loop, or use events instead.
 
 ```cs
-using GHIElectronics.TinyCLR.Devices.Gpio;
-using GHIElectronics.TinyCLR.Pins;
-using System.Threading;
+var gpio = GpioController.GetDefault();
+var button = gpio.OpenPin(SC20260.GpioPin.PD7);
+button.SetDriveMode(GpioPinDriveMode.InputPullUp);
 
-class Program {
-    private static void Main() {
-        var gpio = GpioController.GetDefault();
-        var led = gpio.OpenPin(SC20260.GpioPin.PH6);//For SC20260 Dev
-        //var led = gpio.OpenPin(SC20100.GpioPin.PB0);//For SC20100S Dev
-        led.SetDriveMode(GpioPinDriveMode.Output);
+while (true) {
+    if (button.Read() == GpioPinValue.Low) {
+        //Button is pressed.
+    } 
 
-        var button = gpio.OpenPin(SC20260.GpioPin.PD7);//For SC20260 Dev
-        //var button = gpio.OpenPin(SC20100.GpioPin.PD7);//For SC20100S Dev
-        button.SetDriveMode(GpioPinDriveMode.InputPullUp);
-
-        while (true) {
-            if (button.Read() == GpioPinValue.Low) {
-                //Button is pressed.
-                led.Write(GpioPinValue.High);
-            }
-            else {
-                led.Write(GpioPinValue.Low);
-            }
-
-            Thread.Sleep(10);   //Always give the system time to think!
-        }
-    }
+    Thread.Sleep(10);   //Always give the system time to think!
 }
-
-
 ```
 
 ## Digital Input Events
@@ -119,37 +86,24 @@ example: PA1 and PB1 cannot both be used as interrupts at the same time. However
 
 
 ```cs
-using GHIElectronics.TinyCLR.Devices.Gpio;
-using GHIElectronics.TinyCLR.Pins;
-using System.Threading;
+private static void Main() {
+    var gpio = GpioController.GetDefault();
 
-class Program {
-    private static GpioPin led;
-    private static void Main() {
-        var gpio = GpioController.GetDefault();
+    var button = gpio.OpenPin(SC20260.GpioPin.PD7);
+    button.SetDriveMode(GpioPinDriveMode.InputPullUp);
+    button.ValueChanged += Button_ValueChanged;
 
-        led = gpio.OpenPin(SC20260.GpioPin.PH6);//For SC20260 Dev
-        //led = gpio.OpenPin(SC20100.GpioPin.PB0);//For SC20100S Dev
-        led.SetDriveMode(GpioPinDriveMode.Output);
-
-        var button = gpio.OpenPin(SC20260.GpioPin.PD7);//For SC20260 Dev
-        //var button = gpio.OpenPin(SC20100.GpioPin.PD7);//For SC20100S Dev
-        button.SetDriveMode(GpioPinDriveMode.InputPullUp);
-
-        button.ValueChanged += Button_ValueChanged;
-
-        //Sleep "forever" to reduce power use and allow the system to do other tasks.
-        Thread.Sleep(-1);
-    }
-
-    private static void Button_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e) {
-        if (e.Edge == GpioPinEdge.FallingEdge)
-            led.Write(GpioPinValue.High);
-        else
-            led.Write(GpioPinValue.Low);
-    }
+    //Do other tasks here ...
+    Thread.Sleep(-1);
 }
 
+private static void Button_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e) {
+    if (e.Edge == GpioPinEdge.FallingEdge) {
+        // Pin went low
+    } else {
+        // Pin went high
+    }
+}
 ```
 
 > [!Tip] 

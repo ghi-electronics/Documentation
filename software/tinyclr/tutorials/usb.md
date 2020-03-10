@@ -10,12 +10,12 @@ USB MSC (Mass Storage Class) allows file access on USB memory devices.
 
 ```cs
 // Initialize a USB memory device.
-var usbHostController = StorageController.FromName
-    (@"GHIElectronics.TinyCLR.NativeApis.STM32H7.UsbHostMassStorageStorageController\0");
+var usbHostController = StorageController.FromName(SC20100.StorageController.UsbHostMassStorage);
 
-var usbHost = FileSystem.Mount(sd.Hdc);
+var usbHost = FileSystem.Mount(usbHostController.Hdc);
 
 ```
+At this point, the [file system](file-system.md) library can be used as usual.
 
 > [!Note]
 > USB Hubs are not currently supported. Special USB memory devices that have multiple interfaces or built in hubs will not work.

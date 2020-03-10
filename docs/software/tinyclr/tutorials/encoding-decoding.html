@@ -80,45 +80,69 @@
 <h1 id="encoding--decoding">Encoding &amp; Decoding</h1>
 
 <hr>
-<p>There are two built in libraries to help in encoding data, bit converter and string handling.</p>
-<h2 id="bitconverter">BitConverter</h2>
+<p>TinyCLR OS provides the following methods for converting data and handling strings.</p>
+<h2 id="encoding">Encoding</h2>
+<p>The Encoding class is used to convert between strings, character arrays, and byte arrays. For example, to convert from a byte array to a string:</p>
+<pre><code class="lang-cs">var string = System.Text.Encoding.UTF8.GetString(new byte[] { 65, 66, 67, 68, 69 });
+//string = &quot;ABCDE&quot;
+</code></pre><h3 id="encoding-overloads">Encoding Overloads</h3>
+<h4 id="convert-from-string-to-byte-array">Convert From String to Byte Array</h4>
+<pre><code class="lang-cs">System.Text.Encoding.UTF8.GetBytes(string s)
+
+//The following method returns an integer for the number of bytes converted.
+//The resulting bytes are returned within the byte[] array.
+System.Text.Encoding.UTF8.GetBytes(string s, int charIndex, int charCount, byte[] bytes,
+    int byteIndex)
+</code></pre><h4 id="convert-from-byte-array-to-character-array">Convert From Byte Array to Character Array</h4>
+<pre><code class="lang-cs">System.Text.Encoding.UTF8.GetChars(byte[] bytes)
+System.Text.Encoding.UTF8.GetChars(byte[] bytes, int byteIndex, int byteCount)
+</code></pre><h4 id="convert-from-byte-array-to-string">Convert From Byte Array to String</h4>
+<pre><code class="lang-cs">System.Text.Encoding.UTF8.GetString(byte[] bytes)
+System.Text.Encoding.UTF8.GetString(byte[] bytes, int index, int count)
+</code></pre><h2 id="bitconverter">BitConverter</h2>
 <p>The BitConverter class is used to convert from one data type to another. For example, to convert an integer into a byte array:</p>
-<pre><code class="lang-cs">var byteArray = BitConverter.GetBytes(23);
+<pre><code class="lang-cs">var byteArray = System.BitConverter.GetBytes(23);
 //byteArray[0] = 23, byteArray[1] = 0, byteArray[2] = 0, byteArray[3] = 0
 
-byteArray = BitConverter.GetBytes(65536);
+byteArray = System.BitConverter.GetBytes(65536);
 //byteArray[0] = 0, byteArray[1] = 0, byteArray[2] = 1, byteArray[3] = 0
+</code></pre><p>You can also convert from a byte array to a string, but the results are different than the results from the Encoding class:</p>
+<pre><code class="lang-cs">var string = System.BitConverter.ToString(new byte[] { 65, 66, 67, 68, 69 });
+//string = &quot;41-42-43-44-45&quot; (hexadecimal values delimited by hyphens).
+
+var string = System.Text.Encoding.UTF8.GetString(new byte[] { 65, 66, 67, 68, 69 });
+//string = &quot;ABCDE&quot;
 </code></pre><h3 id="bitconverter-overloads">BitConverter Overloads</h3>
 <h4 id="convert-to-a-byte-array">Convert to a Byte Array</h4>
-<pre><code class="lang-cs">BitConverter.GetBytes(char value)
-BitConverter.GetBytes(double value)
-BitConverter.GetBytes(float value)
-BitConverter.GetBytes(int value)
-BitConverter.GetBytes(long value)
-BitConverter.GetBytes(short value)
-BitConverter.GetBytes(uint value)
-BitConverter.GetBytes(ulong value)
-BitConverter.GetBytes(ushort value)
-BitConverter.GetBytes(bool value)
+<pre><code class="lang-cs">System.BitConverter.GetBytes(char value)
+System.BitConverter.GetBytes(double value)
+System.BitConverter.GetBytes(float value)
+System.BitConverter.GetBytes(int value)
+System.BitConverter.GetBytes(long value)
+System.BitConverter.GetBytes(short value)
+System.BitConverter.GetBytes(uint value)
+System.BitConverter.GetBytes(ulong value)
+System.BitConverter.GetBytes(ushort value)
+System.BitConverter.GetBytes(bool value)
 </code></pre><h4 id="convert-from-a-byte-array">Convert from a Byte Array</h4>
-<pre><code class="lang-cs">BitConverter.ToBoolean(byte[] value, int startIndex)
-BitConverter.ToChar(byte[] value, int startIndex)
-BitConverter.ToDouble(byte[] value, int startIndex)
-BitConverter.ToInt16(byte[] value, int startIndex)
-BitConverter.ToInt32(byte[] value, int startIndex)
-BitConverter.ToInt64(byte[] value, int startIndex)
-BitConverter.ToSingle(byte[] value, int startIndex)
-BitConverter.ToString(byte[] value)
-BitConverter.ToString(byte[] value, int startIndex)
-BitConverter.ToString(byte[] value, int startIndex, int length)
-BitConverter.ToUInt16(byte[] value, int startIndex)
-BitConverter.ToUInt32(byte[] value, int startIndex)
-BitConverter.ToUInt64(byte[] value, int startIndex)
+<pre><code class="lang-cs">System.BitConverter.ToBoolean(byte[] bytes, int startIndex)
+System.BitConverter.ToChar(byte[] bytes, int startIndex)
+System.BitConverter.ToDouble(byte[] bytes, int startIndex)
+System.BitConverter.ToInt16(byte[] bytes, int startIndex)
+System.BitConverter.ToInt32(byte[] bytes, int startIndex)
+System.BitConverter.ToInt64(byte[] bytes, int startIndex)
+System.BitConverter.ToSingle(byte[] bytes, int startIndex)
+System.BitConverter.ToString(byte[] bytes)
+System.BitConverter.ToString(byte[] bytes, int startIndex)
+System.BitConverter.ToString(byte[] bytes, int startIndex, int length)
+System.BitConverter.ToUInt16(byte[] bytes, int startIndex)
+System.BitConverter.ToUInt32(byte[] bytes, int startIndex)
+System.BitConverter.ToUInt64(byte[] bytes, int startIndex)
 </code></pre><h4 id="convert-between-double-and-long">Convert Between Double and Long</h4>
-<pre><code class="lang-cs">BitConverter.DoubleToInt64Bits(double value)
-BitConverter.Int64BitsToDouble(long value)
+<pre><code class="lang-cs">System.BitConverter.DoubleToInt64Bits(double value)
+System.BitConverter.Int64BitsToDouble(long value)
 </code></pre><h4 id="swap-endianness">Swap Endianness</h4>
-<pre><code class="lang-cs">BitConverter.SwapEndianness(byte[] data, int groupSize)
+<pre><code class="lang-cs">System.BitConverter.SwapEndianness(byte[] data, int groupSize)
 </code></pre><h2 id="string-handling">String Handling</h2>
 <h3 id="stringbuilder">StringBuilder</h3>
 <p>As strings are immutable, manipulating strings, especially in a tight loop, can impact system performance and increase memory usage and fragmentation. Because strings cannot be changed, every time you manipulate a string a new string is created and the original string becomes garbage. The StringBuilder class uses a string buffer to improve the performance of string manipulation, allowing you to manipulate strings instead of creating new strings.</p>
@@ -135,7 +159,6 @@ for (int i=48; i&lt;58; i++) {
     sb.Append((char)i);
 }
 
-
 System.Diagnostics.Debug.WriteLine(sb.ToString()); //Will output &quot;0123456789&quot;
 </code></pre></article>
           </div>
@@ -145,7 +168,7 @@ System.Diagnostics.Debug.WriteLine(sb.ToString()); //Will output &quot;012345678
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/encoding-decoding.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/display-clean-up/software/tinyclr/tutorials/encoding-decoding.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
