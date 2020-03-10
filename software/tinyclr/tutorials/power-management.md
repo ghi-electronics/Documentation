@@ -1,9 +1,7 @@
 # Power Management
 ---
 TinyCLR OS currently supports the Sleep and Shutdown power saving modes. 
-In sleep mode, any GPIO interrupt can be used to wake a board, but in Shutdown mode, only the WKUP pin can wake up the board.
-
-Another way to wakeup the board is, we can set up special time, instead of using GPIO interrupt or WKUP pin.
+In sleep mode, any GPIO interrupt can be used to wake the board, but in Shutdown mode, only the WKUP pin can wake up the board. You can also program the device to wake up after a specified time.
 
 ## Sleep 
 In this mode the system goes to sleep to save power and wakes up and resumes processing when the assigned interrupt is received. Any GPIO interrupt can be used to wake from Sleep. The following example runs on both the SC20100 and SCM20260D Dev boards and uses the LDR button to wake up. 
@@ -23,11 +21,8 @@ ldrButton.ValueChanged += ldrButton_ValueChanged;
 Power.Sleep();
 
 //The system is Sleeping.
-//Pressing the ldrButton button (PE3) wakes up the system.
-
-private static void ldrButton_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e) {
-
-}
+//Pressing the LDR Button (PE3) wakes up the system.
+private static void ldrButton_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e) { }
 
 ```
 
@@ -48,21 +43,24 @@ Power.Shutdown(true, DateTime.MaxValue);
 
 ```
 
-## Wakeup by setting special time
+## Sleep or Shutdown for a Specific Time
 
-In Sleep mode
-```
-Power.Sleep(DateTime.Now.AddSeconds(90)); // wake the board up after 90 seconds, from now. During sleep mode, any Gpio also wakeup the system.
-```
-
-In Shutdown mode:
-```
-Power.Shutdown(false, DateTime.Now.AddSeconds(90); // wake the board up after 90 seconds, from now. WKUP pin has no effects.
+To sleep for a specific time:
+```cs
+Power.Sleep(DateTime.Now.AddSeconds(90)); //Will wake up after 90 seconds.
+                                          //A GPIO can also wake up the system.
 ```
 
-Use WKUP pin and time each other:
+To shutdown for a specific time:
+```cs
+Power.Shutdown(false, DateTime.Now.AddSeconds(90); //Will wake up after 90 seconds.
+                                                   //WKUP pin has no effect.
 ```
-Power.Shutdown(true, DateTime.Now.AddSeconds(90); // wake the board up after 90 seconds, or press WKUP any time to wakeup system.
+
+To shutdown for a specific time or when the WKUP pin changes state (whichever comes first):
+```cs
+Power.Shutdown(true, DateTime.Now.AddSeconds(90); //Will wake up after 90 seconds or
+                                                  //when WKUP is pressed.
 
 ```
 
