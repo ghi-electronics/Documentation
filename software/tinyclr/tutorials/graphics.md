@@ -133,7 +133,6 @@ The following sample code runs on our SC20100S Dev Board with its built in displ
 > Make sure you change the namespace to match your project! 
 
 ```cs
-using GHIElectronics.TinyCLR.Devices.Display;
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Devices.Spi;
 using GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735;
@@ -163,11 +162,9 @@ namespace GraphicsSample {
             backlight.SetDriveMode(GpioPinDriveMode.Output);
             backlight.Write(GpioPinValue.High);
 
-            
             st7735.SetDataAccessControl(true, true, false, false); //Rotate the screen.
-            st7735.SetDrawWindow(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT); // Update draw window as wide screen
+            st7735.SetDrawWindow(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
             st7735.Enable();
-            
 
             // Create flush event
             Graphics.OnFlushEvent += Graphics_OnFlushEvent;
@@ -175,8 +172,10 @@ namespace GraphicsSample {
             // Create bitmap buffer
             var screen = Graphics.FromImage(new Bitmap(SCREEN_WIDTH, SCREEN_HEIGHT));
 
-            var image = Resource.GetBitmap(Resource.BitmapResources.smallJpegBackground);
-            var font = Resource.GetFont(Resource.FontResources.small);
+            var image = Properties.Resources.GetBitmap(Properties.Resources.BitmapResources.
+                smallJpegBackground);
+
+            var font = Properties.Resources.GetFont(Properties.Resources.FontResources.small);
 
             screen.Clear(Color.Black);
 
@@ -212,7 +211,7 @@ namespace GraphicsSample {
 ```
 
 ## Helper Methods
-With Parallel Display, (also called as native display in this document), the `DisplayController.ActiveConfiguration` can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display's resolution. The following line of code draws a line from corner to corner, no matter the display resolution.
+With parallel displays, (also called native displays), the `DisplayController.ActiveConfiguration` can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display's resolution. The following line of code draws a line from corner to corner, no matter the display resolution.
 
 ```cs
 screen.DrawLine(new Pen(Color.Red), 0, 0, displayController.ActiveConfiguration.Width - 1,
