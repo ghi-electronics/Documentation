@@ -63,7 +63,7 @@ namespace GraphicsSample {
             var image = Resource1.GetBitmap(Resource1.BitmapResources.smallJpegBackground);
             var font = Resource1.GetFont(Resource1.FontResources.small);
 
-            screen.Clear(Color.Black);
+            screen.Clear();
 
             screen.FillEllipse(new SolidBrush(System.Drawing.Color.FromArgb
                 (255, 255, 0, 0)), 0, 0, 240, 136);
@@ -177,7 +177,7 @@ namespace GraphicsSample {
 
             var font = Properties.Resources.GetFont(Properties.Resources.FontResources.small);
 
-            screen.Clear(Color.Black);
+            screen.Clear();
 
             screen.FillEllipse(new SolidBrush(System.Drawing.Color.FromArgb
                 (255, 255, 0, 0)), 0, 0, 80, 64);
