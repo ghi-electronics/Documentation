@@ -2,6 +2,8 @@
 ---
 Hyper Text Transport Protocol (HTTP) builds on top of the [Core Protocols](core-protocols.md) to provide a standard way to work with web servers.
 
+### HTTP Client
+
 >[!TIP]
 >Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Networking.Http
 
@@ -52,6 +54,55 @@ static void DoTestHttp()
 }
 
 ```
+
+### HTTP Server
+
+TinyCLR OS also provides HttpListener class which needs for Http Server as well. 
+
+```cs
+static void DoTestHttpServer()
+{            
+    // Create a listener.
+    HttpListener listener = new HttpListener("http", 80);
+    
+    listener.Start();
+    Debug.WriteLine("Listening...");
+
+    var clientRequestCount = 0;
+    
+    // Note: The GetContext method blocks while waiting for a request. 
+    while (true)
+    {
+        HttpListenerContext context = listener.GetContext();
+
+        // Obtain a response object.
+        HttpListenerResponse response = context.Response;
+        
+        // Construct a response.                
+        var responseString = string.Format("<HTML><BODY> I am TinyCLR OS Server. Client request count: {0}</BODY></HTML>", ++clientRequestCount);                
+        
+        byte[] buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
+        
+        // Get a response stream and write the response to it.
+        response.ContentLength64 = buffer.Length;
+        var output = response.OutputStream;
+
+        output.Write(buffer, 0, buffer.Length);
+        
+        // You must close the output stream.
+        output.Close();
+    }
+
+    listener.Stop();
+}
+```
+
+From your client devices (smartphone, PC...), enter server ip address into the web browse. Our case 192.168.1.6. The response will be shown as below:
+
+![ ](images/http-server.png)
+
+> [!Tip]
+> To run this example, client and server devices must connect to same local network.
 
 Secure connections work in a similar way through built in [TLS](tls.md) support.
 
