@@ -2,7 +2,7 @@
 ---
 Reflection objects are used for obtaining type information at runtime. This class is in the System.Reflection namespace.
 
-```csharp
+```cs
 var i=20;
 Type type = i.GetType();
 

@@ -21,6 +21,7 @@
 ### [Collections](tutorials/collections.md)
 ### [Serialization](tutorials/serialization.md)
 ### [Encoding & Decoding](tutorials/encoding-decoding.md)
+### [Application Domain](tutorials/application-domain.md)
 
 ## Multimedia
 ### [Graphics](tutorials/graphics.md)
