@@ -1,6 +1,6 @@
 # Application Domain
 ---
-The `AppDomain` class lets you load assemblies from any file stream at runtime. This feature can be used to reduce the need for program flash memory by loading code only as needed from USB flash drives or SD cards, or when you won't know until runtime which assemblies will be used.
+The `AppDomain` class lets you load assemblies from any file stream at runtime. This feature can be used to reduce the need for program flash memory by loading code only as needed from a USB flash drive or SD card, or when you won't know until runtime which assemblies will be used.
 
 The sample code below loads and executes a small assembly from a USB flash drive. To run this sample, start a new project in Visual Studio and copy the first code sample into the `Program.cs` window. Then add a new TinyCLR class named `TestAppDomainAssembly.cs`, and copy the second code sample into this window.
 
@@ -58,7 +58,7 @@ In the `TestAppDomain` properties window (right click on `TestAppDomain` in Solu
 
 ![Native stubs check boxes](images/native-stubs-check-boxes.png)
 
-Now build the project. Inside of the project's directory navigate to the `TestAppDomain/bin/Debug/pe` directory and copy the file `TestAppDomain.pe` to a USB flash drive. Now insert the flash drive into you SITCore Dev Board and deploy the program. The main program will load and run `TestAppDomain.pe` from the USB flash drive. If everthing worked, you should see the following in your output window:
+Now build the project. Inside of the project's directory navigate to the `TestAppDomain/bin/Debug/pe` directory and copy the file `TestAppDomain.pe` to a USB flash drive. Now insert the flash drive into your SITCore board and deploy the program. The main program will load and run `TestAppDomain.pe` from the USB flash drive. If everthing worked, you should see the following in your output window:
 
 ```text
 'GHIElectronics.TinyCLR.VisualStudio.ProjectSystem.dll' (Managed): Loaded 'TestAppDomain'
