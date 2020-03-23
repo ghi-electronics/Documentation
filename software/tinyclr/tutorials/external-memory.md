@@ -1,67 +1,63 @@
 # External Memory
 ---
-External memories are typically not secures as they can be probed by hackers. However, external memories are large and required in some cases.
+External memory is typically not secure as it can be probed by hackers. However, external memory provides a large amount of storage that is required for some applications.
 
 ## External RAM
-Systems with external ram have the option to utilize the memory as [Unmanaged Heap](unmanaged-heap.md) that uses in special cases only to keeps the system secure.
-
-Developers have also the option to simply enable the external memory as a full heap. This feature is a trade off between security and convenience.
+Systems with external RAM have the option of utilizing this memory as [Unmanaged Heap](unmanaged-heap.md). Unmanaged heap is great for storing large amounts of data, but it is not considered secure. Developers also have the option of enabling the external memory as managed heap. This feature is a trade off between security and convenience as it provides a large amount of heap space, but is not secure.
 
 ```
 GHIElectronics.TinyCLR.Native.Memory.EnableExternalHeap()
 ```
 
 ## External Flash
-High speed QSPI flash is available through the system's internal drivers. This memory is being evaluated for security and so not yet available to the user.
+High speed QSPI flash is available through the system's internal drivers. This memory is being evaluated for security and is not yet available to the user.
 
-However, here is an example to directly write, read then compare data.
+Here is an example that directly writes, reads, and then compares data in external flash.
 
 > [!Tip]
 > Needed NuGets: GHIElectronics.TinyCLR.Devices.Storage
 
 ```
-static void DoTestQSPI()
-{
+static void TestQSPI() {
 
-    const int TOTAL_SIZE = 16 * 1024 * 1024; // Total size 16MB
-    const int SECTOR_SIZE = 4 * 1024;        // Sector size 4KB
+    const int TOTAL_SIZE = 16 * 1024 * 1024; //Total size 16MB
+    const int SECTOR_SIZE = 4 * 1024;        //Sector size 4KB
 
     var dataWrite = new byte[SECTOR_SIZE];
     var dataRead = new byte[SECTOR_SIZE];
 
-    var dataToWrite = System.Text.UTF8Encoding.UTF8.GetBytes("This is for test");
+    var dataToWrite = System.Text.UTF8Encoding.UTF8.GetBytes("This is a test");
 
-    var storeController = StorageController.FromName("GHIElectronics.TinyCLR.NativeApis.STM32H7.QspiStorageController\\0");
+    var storeController = GHIElectronics.TinyCLR.Devices.Storage.StorageController.FromName
+        (GHIElectronics.TinyCLR.Pins.SC20260.StorageController.QuadSpi);
 
     var drive = storeController.Provider;
 
     drive.Open();
 
     for (var i = 0; i < SECTOR_SIZE; i += dataToWrite.Length) {
-        Array.Copy(dataToWrite, 0, dataWrite, i, dataToWrite.Length);
+        System.Array.Copy(dataToWrite, 0, dataWrite, i, dataToWrite.Length);
     }
 
     var block = TOTAL_SIZE / SECTOR_SIZE;
     var index = 0 * SECTOR_SIZE;
     var countBlock = 0;
 
-    while (block > 0)
-    {
+    while (block > 0) {
         // Erase
-        drive.Erase(index, SECTOR_SIZE, TimeSpan.FromSeconds(100));
+        drive.Erase(index, SECTOR_SIZE, System.TimeSpan.FromSeconds(100));
 
         // Write
-        drive.Write(index, SECTOR_SIZE, dataWrite, 0, TimeSpan.FromSeconds(100));
+        drive.Write(index, SECTOR_SIZE, dataWrite, 0, System.TimeSpan.FromSeconds(100));
 
         // Read
-        drive.Read(index, SECTOR_SIZE, dataRead, 0, TimeSpan.FromSeconds(100));
+        drive.Read(index, SECTOR_SIZE, dataRead, 0, System.TimeSpan.FromSeconds(100));
 
         // Compare data after read
-        for (var i = 0; i < SECTOR_SIZE; i++)
-        {
-            if (dataRead[i] != dataWrite[i])
-            {                
-                System.Diagnostics.Debug.WriteLine("Detect corupted data at sector: " + block);                
+        for (var i = 0; i < SECTOR_SIZE; i++) {
+            if (dataRead[i] != dataWrite[i]) {
+                System.Diagnostics.Debug.WriteLine
+                    ("Corrupted data detected at sector: " + block);
             }
         }
 
