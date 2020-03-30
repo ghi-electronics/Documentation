@@ -130,6 +130,16 @@ You can use `Debug.GC(true)` to force garbage collection. You might use this to 
 `Debug.EnableGCMessages(true)` can be used to make sure that garbage collection messages are sent out over the debug port.
 
 TinyCLR also supports unmanaged heap space. Unmanaged heap space can be used for large graphic buffers, for example. In unmanaged heap space, it is up to the programmer to make sure memory is correctly allocated and deallocated. Read more about unmanaged heap space [here](unmanaged-heap.md).
+#### Finalizers
+
+The Garbage Collector does a lot of work in the background. To keep the system running smoothly, some of this work is done when the system is idle, like running finalizers and compacting the heap. When the system running a tight loop with continuous allocations, there will be no idle time for the Garbage Collector to finish its tasks. In this case, it is possible to force the Garbage Collector to finish the tasks.
+
+```cs
+GC.Collect();
+
+GC.WaitForPendingFinalizers();
+
+```
 
 ### Battery Backed RAM
 
