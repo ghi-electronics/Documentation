@@ -1,6 +1,6 @@
 # Adafruit IO
 ---
-The Adafruit cloud, Adafruit IO, is a cloud service primarily aimed at the maker market. While Adafruit IO is more limited than the major players in cloud services, it is very easy to use and there's a free option making this a great way to test IoT proof of concepts and prototypes.
+The Adafruit cloud, Adafruit IO, is a cloud service primarily aimed at the maker market. While Adafruit IO is more limited than the major players in cloud services, it is very easy to use and there's a free option making this a great way to test IoT proofs of concept and prototypes.
 
 To run the sample code on this page, you will need to create an Adafruit account and setup a dashboard with a gauge named "Temperature" and a toggle named "Digital." For the toggle, you will need to change the `Button On Text` to "1" and the `Button Off Text` to "0."
 
