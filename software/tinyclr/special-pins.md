@@ -35,7 +35,7 @@ The WKUP pin can be used to wake up the processor from special power saving mode
 
 ## Debug Interface
 
-Don't forget to expose either the USB client or UART interface (or both) that you plan on using to deploy and debug you application code. All products in the SITCore line use UART5 for the serial debug interface.
+Don't forget to expose either the USB client or UART interface (or both) that you plan on using to deploy and debug your application code. All SITCore products built around a 100 pin chip (SC20100x) use UART1 for the serial debug interface. All SITCore products built around the 260 pin SC20260B chip use UART5 for the serial debug interface.
 
 ## Other Recommended Pin Usage
 
