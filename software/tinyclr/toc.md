@@ -50,6 +50,7 @@
 ### [AWS](tutorials/aws.md)
 ### [Google Cloud](tutorials/google-cloud.md)
 ### [IFTTT](tutorials/ifttt.md)
+### [Adafruit IO](tutorials/adafruit-io.md)
 
 ## Application Security
 ### [IP Protection](tutorials/ip-protection.md)
