@@ -17,7 +17,7 @@ var postData = "{\"value\":\"20\"}"; //Sending a temperature of 20 degrees.
 
 var byteArray = System.Text.Encoding.UTF8.GetBytes(postData);
 
-var cert = Resources.GetBytes(Resources.BinaryResources.DigiCertGlobalRootG2);
+var cert = Resource.GetBytes(Resource.BinaryResources.DigiCertGlobalRootG2);
 
 certx509 = new X509Certificate[] { new X509Certificate(cert) };
 
@@ -71,7 +71,7 @@ You can use an HTTP GET request to read the status of an Adafruit IO feed. The f
 url = "https://io.adafruit.com/api/v2/adafruit_io_username/
     feeds/digital/data?include=value&limit=1";
 
-var cert = Resources.GetBytes(Resources.BinaryResources.DigiCertGlobalRootG2);
+var cert = Resource.GetBytes(Resource.BinaryResources.DigiCertGlobalRootG2);
 
 certx509 = new X509Certificate[] { new X509Certificate(cert) };
 
@@ -112,7 +112,7 @@ This sample code connects to Adafruit IO using their MQTT API. It publishes a va
 
 ```cs
 var certx509 = new
-    X509Certificate(Resources.GetBytes(Resources.BinaryResources.DigiCertGlobalRootG2));
+    X509Certificate(Resource.GetBytes(Resource.BinaryResources.DigiCertGlobalRootG2));
 
 var mqttHost = "io.adafruit.com";
 var mqttPort = 8883; //Default SSL port is 8883, default insecure port is 1883.
