@@ -25,21 +25,21 @@ We are offering five single board computers to provide the lowest possible barri
 
 |  |  |  |
 |---|---|---|
-|                        | **Fez Portal**         | **FEZ Stick** |
-| **Core**               | SC20260N               | SC20100S      |
-| **Display**            | 4.3" 480x272 Cap Touch |               |
-| **Click Connectors**   | 1                      | 2             |
-| **WiFi**               | Yes                    | X             |
-| **Micro SD**           | Yes                    | Yes           |
-| **User LED**           | Yes                    | Yes           |
-| **Buzzer**             | Yes                    | Yes           |
-| **Accelerometer**      | X                      | X             |
-| **User Buttons**       | Yes                    | Yes           |
-| **USB Client**         | Yes                    | Yes           |
-| **USB Host Connector** | Yes                    | Yes           |
-| **QSPI**               | Yes                    | ?             |
-| **LiPo Connector**     | X                      | X             |
-| **Power Barrel**       | X                      | X             |
+|                        | **Fez Portal**                | **FEZ Stick** |
+| **Core**               | SC20260N                      | SC20100S      |
+| **Display**            | 4.3" 480x272 Capacitive Touch |               |
+| **Click Connectors**   | 1                             | 2             |
+| **WiFi**               | Yes                           | X             |
+| **Micro SD**           | Yes                           | Yes           |
+| **User LED**           | Yes                           | Yes           |
+| **Buzzer**             | Yes                           | Yes           |
+| **Accelerometer**      | X                             | X             |
+| **User Buttons**       | Yes                           | Yes           |
+| **USB Client**         | Yes                           | Yes           |
+| **USB Host Connector** | Yes                           | Yes           |
+| **QSPI**               | Yes                           | ?             |
+| **LiPo Connector**     | X                             | X             |
+| **Power Barrel**       | X                             | X             |
 
 
 
