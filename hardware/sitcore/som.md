@@ -75,14 +75,10 @@ The microcontrollers we use in our SITCore line of products do not support concu
   * Capture
   * Pulse measurement
     
-## SCM20260N Pinout
-[SCM20260N Pinout](pdfs/scm20260n.pdf)
-
-## SCM20260E Pinout
-[SCM20260E Pinout](pdfs/scm20260e.pdf)
-
-## SCM20260D Pinout
-[SCM20260D Pinout](pdfs/scm20260d.pdf)                                                                                                   
+## Module Pinout
+* [SCM20260N Pinout](pdfs/scm20260n.pdf)
+* [SCM20260E Pinout](pdfs/scm20260e.pdf)
+* [SCM20260D Pinout](pdfs/scm20260d.pdf)                                                                                                   
 
 ## Getting Started
 As the SITCore modules are based on the SITCore chipset, please refer to the [SITCore SoC page](soc.md) for information on device startup, loading TinyCLR OS firmware, and writing and deploying your application.
