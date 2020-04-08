@@ -2,7 +2,7 @@
 ---
 ![Single Board Computer](images/sitcore-feather.png)
 
-We are offering five single board computers to provide the lowest possible barrier to entering the world of TinyCLR OS. All of these boards have WiFi and support the complete TinyCLR feature set. These board are great for trying out TinyCLR OS, building prototypes, or incorporating into products.
+We are offering five single board computers to provide the lowest possible barrier to entering the world of TinyCLR OS. All of these boards have WiFi and support the complete TinyCLR feature set. These boards are great for trying out TinyCLR OS, building prototypes, or incorporating into products.
 
 
 |  |  |  |  |
