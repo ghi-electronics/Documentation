@@ -2,7 +2,7 @@
 ---
 ![Single Board Computer](images/sitcore-feather.png)
 
-We offer multiple single board computers to provide the lowest possible barrier to entering the world of TinyCLR OS. All of these boards have WiFi and support the complete TinyCLR feature set. These boards are great for trying out TinyCLR OS, building prototypes, or incorporating into products.
+We offer multiple single board computers to provide the lowest possible barrier to entering the world of TinyCLR OS. Most of these boards have WiFi and they all support the complete TinyCLR feature set. These boards are great for trying out TinyCLR OS, building prototypes, or incorporating into products.
 
 
 |                        |              |               |                 |                         |               |
@@ -37,7 +37,7 @@ The FEZ Duino provides female headers that make use of the popular Arduino pinou
 
 ## FEZ Feather
 
-The Adafruit Feather form factor boards are made to be stackable and have built in support for LiPo batteries including a charging circuit. We've watched this form factor quickly gaining popularity, so we decided to make a Feather board of our own. If your project needs to run off of a battery, this board makes it quick and easy to get started. The FEZ Feather provides both through hole pads and castellated edges making it both breadboard friendly and easy to build into products.
+The Adafruit Feather form factor boards are made to be stackable and have built in support for LiPo batteries, including a charging circuit. We've watched this form factor quickly gaining popularity, so we decided to make a Feather board of our own. If your project needs to run off of a battery, this board makes it quick and easy to get started. The FEZ Feather provides both through hole pads and castellated edges making it both breadboard friendly and easy to build into products.
 
 ## FEZ Portal
 
