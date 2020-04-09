@@ -3,7 +3,7 @@
 ![G400S](images/system-on-modules.jpg)
 
 ## Overview
-The SITCore SoMs provide a low cost way to add .NET computing power to any embedded product. They are available as a 200 pin SO-DIMM with and without WiFi (G400 compatible), a 91 pad surface mount module (G120 compatible), or a 105 pad surface mount module (G120E compatible). The SITCore SoMs let's you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more. The surface mount versions are great for harsh or high vibration environments.
+The SITCore SoMs provide a low cost way to add .NET computing power to any embedded product. They are available as a 200 pin SO-DIMM format or as a surface mount module options. The SITCore SoMs let's you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more. The surface mount versions are great for harsh or high vibration environments.
 
 ## Ordering Part Number
 * 91 Pad Surface Mount: SCM20260N
@@ -75,14 +75,10 @@ The microcontrollers we use in our SITCore line of products do not support concu
   * Capture
   * Pulse measurement
     
-## SCM20260N Pinout
-[SCM20260N Pinout](pdfs/scm20260n.pdf)
-
-## SCM20260E Pinout
-[SCM20260E Pinout](pdfs/scm20260e.pdf)
-
-## SCM20260D Pinout
-[SCM20260D Pinout](pdfs/scm20260d.pdf)                                                                                                   
+## Module Pinout
+* [SCM20260N Pinout](pdfs/scm20260n.pdf)
+* [SCM20260E Pinout](pdfs/scm20260e.pdf)
+* [SCM20260D Pinout](pdfs/scm20260d.pdf)                                                                                                   
 
 ## Getting Started
 As the SITCore modules are based on the SITCore chipset, please refer to the [SITCore SoC page](soc.md) for information on device startup, loading TinyCLR OS firmware, and writing and deploying your application.
