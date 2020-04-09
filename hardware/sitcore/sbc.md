@@ -43,11 +43,15 @@ The Adafruit Feather form factor boards are made to be stackable and have built 
 
 ## FEZ Portal
 
+![FEZ Portal](images/fez-portal.png)
+
 Already one of our most popular SITCore single board computers, The FEZ Portal is a 4.3" 480x272 display with capacitive touch that is programmable in C#. As the display and controller are one unit, it's even easier to make a product with touch as you only have to mount a single board that's only slightly larger than the display.
 
 ## FEZ Stick
 
-The FEZ Stick is simply the least expensive way to easily get started with TinyCLR OS. While providing an inexpensive way for the uninitiated to try TinyCLR OS, we've provided castellated edges as well as through hole pads to make it breadboard friendly and easy to embed into products.
+![FEZ Stick](images/fez-stick.png)
+
+The FEZ Stick is simply the least expensive way to easily get started with TinyCLR OS. While providing an inexpensive way for the uninitiated to try TinyCLR OS, we've provided castellated edges as well as through hole pads to make it breadboard friendly and easy to embed into products. Also, there's actually space for two click modules, making this one very versatile board for the price!
 
 
 
