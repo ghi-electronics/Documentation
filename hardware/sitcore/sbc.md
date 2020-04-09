@@ -51,7 +51,7 @@ Already one of our most popular SITCore single board computers, The FEZ Portal i
 
 ![FEZ Stick](images/fez-stick.png)
 
-The FEZ Stick is simply the least expensive way to easily get started with TinyCLR OS. While providing an inexpensive way for the uninitiated to try TinyCLR OS, we've provided castellated edges as well as through hole pads to make it breadboard friendly and easy to embed into products. Also, there's actually space for two click modules, making this one very versatile board for the price!
+The FEZ Stick is simply the least expensive way to easily get started with TinyCLR OS. While providing an inexpensive way for the uninitiated to try TinyCLR OS, we've provided castellated edges as well as through hole pads to make it breadboard friendly and easy to embed into products. Also, there's actually space for two click modules, making this one very versatile board at a very affordable price!
 
 
 
