@@ -88,8 +88,11 @@ As the SITCore modules are based on the SITCore chipset, please refer to the [SI
 
 We recommend no traces or vias under the module. Dimensions are in inches.
 
+#### SCM20100E Recommended Footpring
+![SCM20100E Footprint](images/scm20100e-footprint.jpg)
+
 #### SCM20260N Recommended Footprint
-![SCM20260N Pinout](images/g120-footprint.jpg)
+![SCM20260N Footprint](images/g120-footprint.jpg)
 
 #### SCM20260E Recommended Footprint
 ![SCM20260E Footprint](images/scm20260e-footprint.jpg)
