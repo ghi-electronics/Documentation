@@ -3,7 +3,7 @@
 ![G400S](images/system-on-modules.jpg)
 
 ## Overview
-The SITCore SoMs provide a low cost way to add .NET computing power to any embedded product. They are available as a 200 pin SO-DIMM format or as a surface mount module options. The SITCore SoMs let's you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more. The surface mount versions are great for harsh or high vibration environments.
+The SITCore SoMs provide a low cost way to add .NET computing power to any embedded product. They are available in a 200 pin SO-DIMM format or as surface mount modules. The SITCore SoMs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more. The surface mount versions are great for harsh or high vibration environments.
 
 ## Ordering Part Numbers
 * 61 Pad Surface Mount: SCM20100E
@@ -15,7 +15,7 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 
 | Spec               | All SITCore SoMs          |
 |--------------------|---------------------------|
-| Processor Type     | ARM Coretex-M7 32 Bit     |
+| Processor Type     | ARM Cortex-M7 32 Bit      |
 | Speed              | 480 MHz                   |
 | Internal RAM       | 1 MByte                   |
 | Internal Flash     | 2 MByte                   |
@@ -103,7 +103,7 @@ We recommend no traces or vias under the module. Dimensions are in inches.
 The SCM20260D uses the same 200 pin SO-DIMM socket that was originally made for DDR2 memory modules. You can make a custom SO-DIMM SITCore circuit board by adding the appropriate SO-DIMM socket to your circuit board.
 
 > [!Tip]
-> Make sure to expose the required pins in your design. Specific pins are needed for device programming, updates, recovery, and WiFi firmware updates. See device specifications for details.
+> Make sure to expose the required pins in your design. Specific pins are needed for device programming, updates, recovery, and WiFi firmware updates. See the [**Special Pins**](../../software/tinyclr/special-pins.md) page and the device specifications for details.
 
 SO-DIMM stands for Small Outline Dual Inline Memory Module. There are two different 200 pin SO-DIMM sockets, those made for DDR memory and those made for DDR2 memory. They are identical except for the orientation notch which is in a slightly different position. These sockets are not interchangeable. There is also a 204 pin SO-DIMM socket for DDR3 memory with the notch positioned closer to the center of the module.
 
@@ -124,9 +124,6 @@ Please see the [Special Pins](../../software/tinyclr/special-pins.md) page for m
 
 ### Power Supply
 A typical clean power source, suited for digital circuitry, is needed to power the SITCore SoMs. The voltage should be within 10% of 3.3 volts.
-
-### Reset
-The reset pin is not pulled in any direction. Designs must be sure to use an appropriate pull-up resistor.
 
 ### Oven Reflow Profile
 
