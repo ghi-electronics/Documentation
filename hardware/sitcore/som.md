@@ -73,7 +73,7 @@ The microcontrollers we use in our SITCore line of products do not support concu
   * Capture
   * Pulse measurement
     
-## Module Pinout
+## Module Pinouts
 * [SCM20100E Pinout](pdfs/scm20100e.pdf)
 * [SCM20260N Pinout](pdfs/scm20260n.pdf)
 * [SCM20260E Pinout](pdfs/scm20260e.pdf)
