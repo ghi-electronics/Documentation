@@ -1,8 +1,7 @@
 # Special Pins
 ---
-![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
 
-There are five pins that have special functionality on the SITCore line of products: 
+There are five pins that have special functionality. They are also predefined on the SITCore line of products: 
 * RESET (NRST)
 * LDR (PE3)
 * APP (PB7)
@@ -53,7 +52,7 @@ When designing your own board, we recommend that you add the following periphera
 |  | RS = PC4 |
 |  | RST = PE15 |
 |  |  |
-| Parallel Display | BL = PA15 |
+| Parallel Display | Backlight = PA15 |
 |  | Touch I2C = I2C1 |
 |  | Touch IRQ = PJ14 |
 |  |  |
