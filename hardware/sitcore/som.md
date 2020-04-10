@@ -3,9 +3,10 @@
 ![G400S](images/system-on-modules.jpg)
 
 ## Overview
-The SITCore SoMs provide a low cost way to add .NET computing power to any embedded product. They are available as a 200 pin SO-DIMM format or as a surface mount module options. The SITCore SoMs let's you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more. The surface mount versions are great for harsh or high vibration environments.
+The SITCore SoMs provide a low cost way to add .NET computing power to any embedded product. They are available in a 200 pin SO-DIMM format or as surface mount modules. The SITCore SoMs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more. The surface mount versions are great for harsh or high vibration environments.
 
-## Ordering Part Number
+## Ordering Part Numbers
+* 61 Pad Surface Mount: SCM20100E
 * 91 Pad Surface Mount: SCM20260N
 * 105 Pad Surface Mount: SCM20260E
 * 200 Pin SO-DIMM: SCM20260D
@@ -14,7 +15,7 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 
 | Spec               | All SITCore SoMs          |
 |--------------------|---------------------------|
-| Processor Type     | ARM Coretex-M7 32 Bit     |
+| Processor Type     | ARM Cortex-M7 32 Bit      |
 | Speed              | 480 MHz                   |
 | Internal RAM       | 1 MByte                   |
 | Internal Flash     | 2 MByte                   |
@@ -26,23 +27,23 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 
 ## Peripherals
 
-| Peripheral            | SCM20260N              | SCM20260E              | SCM20260D              |
-|-----------------------|------------------------|------------------------|------------------------|
-| GPIO (all support IRQ)| 79                     | 85                     | 108                    |
-| SPI                   | 3                      | 3                      | 3                      |
-| I2C                   | 1                      | 3                      | 3                      |
-| UART/USART            | 7 (4 with handshaking) | 8 (4 with handshaking) | 8 (4 with handshaking) |
-| CAN                   | 2                      | 2                      | 2                      |
-| PWM                   | 22                     | 23                     | 28                     |
-| ADC                   | 16                     | 15                     | 20                     |
-| DAC                   | 2                      | 1                      | 2                      |
-| SD/SDIP/MMC           | 1                      | 1                      | 1                      |
-| Quad SPI              | 1                      | 1                      | 1                      |
-| USB Host              | 1                      | 1                      | 1                      |
-| USB Client            | 1                      | 1                      | 1                      |
-| Ethernet              | 0                      | 1                      | 1                      |
-| LCD TFT               | 1                      | 1                      | 1                      |
-| Camera                | 1                      | 1                      | 1                      |
+| Peripheral            | SCM20100E     | SCM20260N     | SCM20260E     | SCM20260D     |
+|-----------------------|---------------|---------------|---------------|---------------|
+| GPIO (all support IRQ)| 43            | 79            | 85            | 108           |
+| SPI                   | 3             | 3             | 3             | 3             |
+| I2C                   | 1             | 1             | 3             | 3             |
+| UART/USART            | 5 (2 w/ H.S.) | 7 (4 w/ H.S.) | 8 (4 w/ H.S.) | 8 (4 w/ H.S.) |
+| CAN                   | 1             | 2             | 2             | 2             |
+| PWM                   | 12            | 22            | 23            | 28            |
+| ADC                   | 6             | 16            | 15            | 20            |
+| DAC                   | 2             | 2             | 1             | 2             |
+| SD/SDIP/MMC           | 1             | 1             | 1             | 1             |
+| External Flash        | None          | 128 MByte     | 128 MByte     | 128 MByte     |
+| USB Host              | 1             | 1             | 1             | 1             |
+| USB Client            | 1             | 1             | 1             | 1             |
+| Ethernet              | 1             | 0             | 1             | 1             |
+| LCD TFT               | 0             | 1             | 1             | 1             |
+| Camera                | 0             | 1             | 1             | 1             |
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
 
@@ -67,15 +68,13 @@ The microcontrollers we use in our SITCore line of products do not support concu
   * Full .NET file interface
   * SD cards
   * USB drives
-* Native extensions
-  * Runtime Loadable Procedures
-  * Device register access
 * Signal controls
   * Generation
   * Capture
   * Pulse measurement
     
-## Module Pinout
+## Module Pinouts
+* [SCM20100E Pinout](pdfs/scm20100e.pdf)
 * [SCM20260N Pinout](pdfs/scm20260n.pdf)
 * [SCM20260E Pinout](pdfs/scm20260e.pdf)
 * [SCM20260D Pinout](pdfs/scm20260d.pdf)                                                                                                   
@@ -89,8 +88,11 @@ As the SITCore modules are based on the SITCore chipset, please refer to the [SI
 
 We recommend no traces or vias under the module. Dimensions are in inches.
 
+#### SCM20100E Recommended Footpring
+![SCM20100E Footprint](images/scm20100e-footprint.jpg)
+
 #### SCM20260N Recommended Footprint
-![SCM20260N Pinout](images/g120-footprint.jpg)
+![SCM20260N Footprint](images/g120-footprint.jpg)
 
 #### SCM20260E Recommended Footprint
 ![SCM20260E Footprint](images/scm20260e-footprint.jpg)
@@ -101,7 +103,7 @@ We recommend no traces or vias under the module. Dimensions are in inches.
 The SCM20260D uses the same 200 pin SO-DIMM socket that was originally made for DDR2 memory modules. You can make a custom SO-DIMM SITCore circuit board by adding the appropriate SO-DIMM socket to your circuit board.
 
 > [!Tip]
-> Make sure to expose the required pins in your design. Specific pins are needed for device programming, updates, recovery, and WiFi firmware updates. See device specifications for details.
+> Make sure to expose the required pins in your design. Specific pins are needed for device programming, updates, recovery, and WiFi firmware updates. See the [**Special Pins**](../../software/tinyclr/special-pins.md) page and the device specifications for details.
 
 SO-DIMM stands for Small Outline Dual Inline Memory Module. There are two different 200 pin SO-DIMM sockets, those made for DDR memory and those made for DDR2 memory. They are identical except for the orientation notch which is in a slightly different position. These sockets are not interchangeable. There is also a 204 pin SO-DIMM socket for DDR3 memory with the notch positioned closer to the center of the module.
 
@@ -122,9 +124,6 @@ Please see the [Special Pins](../../software/tinyclr/special-pins.md) page for m
 
 ### Power Supply
 A typical clean power source, suited for digital circuitry, is needed to power the SITCore SoMs. The voltage should be within 10% of 3.3 volts.
-
-### Reset
-The reset pin is not pulled in any direction. Designs must be sure to use an appropriate pull-up resistor.
 
 ### Oven Reflow Profile
 
