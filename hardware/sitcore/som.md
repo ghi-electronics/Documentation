@@ -68,9 +68,6 @@ The microcontrollers we use in our SITCore line of products do not support concu
   * Full .NET file interface
   * SD cards
   * USB drives
-* Native extensions
-  * Runtime Loadable Procedures
-  * Device register access
 * Signal controls
   * Generation
   * Capture
