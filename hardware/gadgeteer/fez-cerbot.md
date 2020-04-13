@@ -6,7 +6,7 @@ A robot with reflective sensors and tons of LEDs. Gadgeteer sockets are used as 
 
 ## Resources
 
-* [Schematic](http://files.ghielectronics.com/downloads/Schematics/FEZ/FEZ%20Cerbot%20Schematic.pdf)
+* [Schematic](http://files.ghielectronics.com/downloads/Schematics/FEZ/FEZ%20Cerbot%20Rev%201.3%20Schematic.pdf)
 
 ## Software
 

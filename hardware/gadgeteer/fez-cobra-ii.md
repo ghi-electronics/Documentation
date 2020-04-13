@@ -7,9 +7,9 @@ FEZ Cobra II is a .NET Gadgeteer product that utilizes .NET Micro Frameworks (NE
 Follow the instructions on the [G120 page](../netmf/g120.md) to learn how to use FEZ Cobra with NETMF and TinyCLR OS.
 
 ## Resources
-* Eco and WiFi [Schematic](http://files.ghielectronics.com/downloads/Schematics/FEZ/FEZ%20Cobra%20II%20Schematic.pdf)
-* Net [Schematic](http://files.ghielectronics.com/downloads/Schematics/FEZ/FEZ%20Cobra%20II%20Net%20Schematic.pdf)
-* Cobra II Extender [schematic](http://files.ghielectronics.com/downloads/Schematics/FEZ/FEZ%20Cobra%20II%20Extender%20Schematic.pdf)
+* Eco and WiFi [Schematic](http://files.ghielectronics.com/downloads/Schematics/FEZ/FEZ%20Cobra%20II%20Rev%20C%20Schematic.pdf)
+* Net [Schematic](http://files.ghielectronics.com/downloads/Schematics/FEZ/FEZ%20Cobra%20II%20Net%20Rev%20B%20Schematic.pdf)
+* Cobra II Extender [schematic](http://files.ghielectronics.com/downloads/Schematics/FEZ/FEZ%20Cobra%20II%20Ext%20Rev%20B%20Schematic.pdf)
 
 > [!Tip]
 > To activate bootloader v2, press and hold the LDR0 button while resetting the board.

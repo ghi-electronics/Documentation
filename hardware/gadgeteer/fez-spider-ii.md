@@ -7,7 +7,7 @@ FEZ Spider II is a .NET Gadgeteer product that utilizes .NET Micro Frameworks (N
 To use with NETMF/Gadgeteer, follow these [setup instructions](../../software/netmf/getting-started.md).
 
 ## Resources
-* [Schematic](http://files.ghielectronics.com/downloads/Schematics/FEZ/FEZ%20Spider%20II%20Schematic.pdf)
+* [Schematic](http://files.ghielectronics.com/downloads/Schematics/FEZ/FEZ%20Spider%20II%20Rev%201.0%20Schematic.pdf)
 
 ## Using TinyCLR OS
 Follow the instructions on the [G120 page](../netmf/g120.md) to learn how to use FEZ Spider II TinyCLR OS.
