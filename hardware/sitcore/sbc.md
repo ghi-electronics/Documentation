@@ -51,6 +51,9 @@ The **FEZ Bit**, while seemingly more of a "maker" board, provides a convenient 
 |                   | EN = PA8    |
 |                   | RST = PA9   |
 
+> [!Note]
+> All boards with a barrel power jack accept a 5.5 x 2.1 mm power plug. The pin is positive, the sleeve is negative. While these boards accept a wide voltage range, they use linear voltage regulators that run hotter with higher input voltages. Generally we recommend an input voltage of 6 to 12 volts, but if your project draws a lot of current, use a lower voltage to keep the regulator cooler. A one amp power supply should provide enough current for most needs.
+
 ## FEZ Duino
 
 ![FEZ Duino](images/fez-duino.png)
