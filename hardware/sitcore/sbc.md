@@ -33,7 +33,7 @@ The **FEZ Bit**, while seemingly more of a "maker" board, provides a convenient 
 
 |                   |             |
 |-------------------|-------------|
-| **User LED**      | PB0         |
+| **User LED**      | PE11        |
 |                   |             |
 | **Buzzer**        | PB1         |
 |                   |             |
@@ -64,7 +64,7 @@ The **FEZ Duino** provides female headers that make use of the popular Arduino p
 
 |                   |             |
 |-------------------|-------------|
-| **User LED**      | PB0         |
+| **User LED**      | PE11        |
 |                   |             |
 | **WiFi**          | SPI = SPI3  |
 |                   | IRQ = PA10  |
@@ -82,7 +82,7 @@ The Adafruit Feather form factor boards are made to be stackable and have built 
 
 |                   |             |
 |-------------------|-------------|
-| **User LED**      | PB0         |
+| **User LED**      | PE11        |
 |                   |             |
 | **WiFi**          | SPI = SPI3  |
 |                   | IRQ = PA10  |
@@ -124,7 +124,7 @@ The **FEZ Stick** is simply the least expensive way to easily get started with T
 
 |                   |             |
 |-------------------|-------------|
-| **User LED**      | PB0         |
+| **User LED**      | PE11        |
 
 
 

@@ -55,13 +55,13 @@ class Program {
         BadExample();
 
         //The following line will raise an exception:
-        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE11);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.Low);
     }
 
     static void BadExample() {
-        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE11);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.High);
     }
@@ -76,14 +76,14 @@ class Program {
         GoodExample();
 
         //This code will now work
-        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE11);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.Low);
         //...
     }    
 
     static void GoodExample() {
-        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE11);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.High);
 
@@ -101,7 +101,7 @@ class Program {
 
     static void Main() {
         // Init the hardware
-        led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
+        led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE11);
         led.SetDriveMode(GpioPinDriveMode.Output);
 
         Example();
