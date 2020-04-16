@@ -99,7 +99,7 @@ At this time, SignalGenerator only operates in blocking mode. While SignalGenera
 The following sample code will blink the user LED on the SC20100S Dev board four times (for one second each time) every five seconds.
 
 ```cs
-var gen = new SignalGenerator(SC20100.GpioPin.PB0);
+var gen = new SignalGenerator(SC20100.GpioPin.PE11);
 
 var buffer = new[] {
     TimeSpan.FromSeconds(1),

@@ -42,8 +42,8 @@ When designing your own board, we recommend that you add the following periphera
 
 | Peripheral | Recommended SITCore I/O Assignment |
 |--|--|
-| User LED | PB0 |
-|  |  |
+| User LED | 100 pin devices: PE11 |
+|  | 260 pin devices: PB0 |
 | Buzzer | PB1 |
 |  |  |
 | SPI Display | SPI = SPI4 |
