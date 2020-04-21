@@ -14,13 +14,12 @@ Echo Duration sends a trigger pulse of a given state over the provided pin. It t
 
 The following code will read the distance in centimeters from an HC-SR04 ultrasonic distance sensor. This sensor has a trigger pin that is pulsed high to start distance measurement. It has a separate echo pin that the sensor holds high until it receives an echo. Therefore, the time the echo pin is high represents the time it takes for the sound to hit the target and reflect back to the sensor.
 
-To test this code, I plugged the sensor directly into the SCM20260D Dev board and ran a couple short wires for power.
+To test this code, I plugged the sensor directly into the SCM20260D Dev board and ran a couple short wires for power. It was convenient having 5V on the header. I was surprised how well this inexpensive sensor worked.
 
 ![HC-SR04 on dev board](images/ultrasonic-on-header.jpg)
 
 > [!Note]
-> The HC-SR04 ultrasonic distance sensor requires a 5 volt power supply. While the module accepts 3.3 volt logic on the Trig and Echo pins, it will not work with a 3.3 volt supply voltage.
-
+> The HC-SR04 ultrasonic distance sensor requires a 5 volt power supply. While the module accepts 3.3 volt logic on the Trig and Echo pins, it will not work with a 3.3 volt supply for power.
 
 ```cs
 class Program {
