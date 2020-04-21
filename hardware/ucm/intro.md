@@ -1,7 +1,7 @@
 # Universal Compute Modules
 ---
 > [!IMPORTANT]
-> Continuing with our longevity policy, these modules are available for purchase; however, due to discontinued components by STMicroelectronics, they are no longer recommended.
+> Continuing with our longevity policy, these modules are available for purchase; however, due to discontinued components by STMicroelectronics, they are no longer recommended. Condider [upgrading](../netmf/upgrade.md)
 
 ![UC5550](../../images/uc5550-noborder.jpg)
 
