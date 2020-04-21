@@ -111,6 +111,7 @@ namespace GraphicsSample {
                 Width = 480,
                 Height = 272,
                 DataFormat = DisplayDataFormat.Rgb565,
+                Orientation = DisplayOrientation.Degrees0, //Rotate display.
                 PixelClockRate = 10000000,
                 PixelPolarity = false,
                 DataEnablePolarity = false,
@@ -135,7 +136,7 @@ namespace GraphicsSample {
             var image = Resource1.GetBitmap(Resource1.BitmapResources.smallJpegBackground);
             var font = Resource1.GetFont(Resource1.FontResources.small);
 
-            screen.Clear(Color.Black);
+            screen.Clear();
 
             screen.FillEllipse(new SolidBrush(System.Drawing.Color.FromArgb
                 (255, 255, 0, 0)), 0, 0, 240, 136);
@@ -169,6 +170,7 @@ namespace GraphicsSample {
     Width = 800,
     Height = 480,
     DataFormat = DisplayDataFormat.Rgb565,
+    Orientation = DisplayOrientation.Degrees0, //Rotate display.
     PixelClockRate = 24000000,
     PixelPolarity = false,
     DataEnablePolarity = false,
@@ -235,7 +237,7 @@ namespace GraphicsSample {
 
             var font = Properties.Resources.GetFont(Properties.Resources.FontResources.small);
 
-            screen.Clear(Color.Black);
+            screen.Clear();
 
             screen.FillEllipse(new SolidBrush(System.Drawing.Color.FromArgb
                 (255, 255, 0, 0)), 0, 0, 80, 64);

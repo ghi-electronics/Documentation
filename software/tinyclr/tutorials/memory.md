@@ -55,13 +55,13 @@ class Program {
         BadExample();
 
         //The following line will raise an exception:
-        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE11);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.Low);
     }
 
     static void BadExample() {
-        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE11);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.High);
     }
@@ -76,14 +76,14 @@ class Program {
         GoodExample();
 
         //This code will now work
-        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE11);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.Low);
         //...
     }    
 
     static void GoodExample() {
-        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE11);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.High);
 
@@ -101,7 +101,7 @@ class Program {
 
     static void Main() {
         // Init the hardware
-        led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
+        led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE11);
         led.SetDriveMode(GpioPinDriveMode.Output);
 
         Example();
@@ -130,6 +130,16 @@ You can use `Debug.GC(true)` to force garbage collection. You might use this to 
 `Debug.EnableGCMessages(true)` can be used to make sure that garbage collection messages are sent out over the debug port.
 
 TinyCLR also supports unmanaged heap space. Unmanaged heap space can be used for large graphic buffers, for example. In unmanaged heap space, it is up to the programmer to make sure memory is correctly allocated and deallocated. Read more about unmanaged heap space [here](unmanaged-heap.md).
+#### Finalizers
+
+The Garbage Collector does a lot of work in the background. To keep the system running smoothly, some of this work is done when the system is idle, like running finalizers and compacting the heap. When the system running a tight loop with continuous allocations, there will be no idle time for the Garbage Collector to finish its tasks. In this case, it is possible to force the Garbage Collector to finish the tasks.
+
+```cs
+GC.Collect();
+
+GC.WaitForPendingFinalizers();
+
+```
 
 ### Battery Backed RAM
 

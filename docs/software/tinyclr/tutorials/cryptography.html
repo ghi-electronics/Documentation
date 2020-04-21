@@ -113,7 +113,7 @@ using (GHIElectronics.TinyCLR.Cryptography.RSACryptoServiceProvider RSA = new
 System.Diagnostics.Debug.WriteLine(&quot;Decrypted: &quot; +
     System.Text.Encoding.UTF8.GetString(decryptedData));
 </code></pre><p>The above code outputs the following:</p>
-<pre><code class="lang-cs">Decrypted: Data to Encrypt
+<pre><code class="lang-text">Decrypted: Data to Encrypt
 </code></pre><p>If no key size is provided as an argument to <code>RSACryptoServiceProvider()</code>, a default key size of 1024 bits will be used.</p>
 <p>The boolean argument for <code>RSA.ExportParameters()</code> determines whether this method returns the private key (true) or public key (false). The public key is used to encrypt messages, while the private key is needed to decrypt messages.</p>
 </article>

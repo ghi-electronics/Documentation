@@ -115,13 +115,13 @@ for (int i=0; i&lt;10000; i++) {
         BadExample();
 
         //The following line will raise an exception:
-        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE11);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.Low);
     }
 
     static void BadExample() {
-        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE11);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.High);
     }
@@ -132,14 +132,14 @@ for (int i=0; i&lt;10000; i++) {
         GoodExample();
 
         //This code will now work
-        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE11);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.Low);
         //...
     }    
 
     static void GoodExample() {
-        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
+        var led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE11);
         led.SetDriveMode(GpioPinDriveMode.Output);
         led.Write(GpioPinValue.High);
 
@@ -153,7 +153,7 @@ for (int i=0; i&lt;10000; i++) {
 
     static void Main() {
         // Init the hardware
-        led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
+        led = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE11);
         led.SetDriveMode(GpioPinDriveMode.Output);
 
         Example();
@@ -173,7 +173,12 @@ for (int i=0; i&lt;10000; i++) {
 <p>You can use <code>Debug.GC(true)</code> to force garbage collection. You might use this to ensure that garbage collection occurs during a period when responsiveness is less important.</p>
 <p><code>Debug.EnableGCMessages(true)</code> can be used to make sure that garbage collection messages are sent out over the debug port.</p>
 <p>TinyCLR also supports unmanaged heap space. Unmanaged heap space can be used for large graphic buffers, for example. In unmanaged heap space, it is up to the programmer to make sure memory is correctly allocated and deallocated. Read more about unmanaged heap space <a href="unmanaged-heap.html">here</a>.</p>
-<h3 id="battery-backed-ram">Battery Backed RAM</h3>
+<h4 id="finalizers">Finalizers</h4>
+<p>The Garbage Collector does a lot of work in the background. To keep the system running smoothly, some of this work is done when the system is idle, like running finalizers and compacting the heap. When the system running a tight loop with continuous allocations, there will be no idle time for the Garbage Collector to finish its tasks. In this case, it is possible to force the Garbage Collector to finish the tasks.</p>
+<pre><code class="lang-cs">GC.Collect();
+
+GC.WaitForPendingFinalizers();
+</code></pre><h3 id="battery-backed-ram">Battery Backed RAM</h3>
 <p>SITCore devices support 4 Kbytes of battery backed RAM. Details can be found in the <a href="real-time-clock.html">Real Time Clock Tutorial</a>.</p>
 <h2 id="flash-memory">Flash Memory</h2>
 <p>Flash memory does not lose its contents on power loss. There are special requirements to write to flash but you can read Flash just like RAM. When deploying a program, the <code>TinyCLR Device Deployment</code> window will show what is being loaded and how large it is. It will then show how much free Flash is still available. </p>

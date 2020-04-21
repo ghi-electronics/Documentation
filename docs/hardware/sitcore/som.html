@@ -82,9 +82,10 @@
 <hr>
 <p><img src="images/system-on-modules.jpg" alt="G400S"></p>
 <h2 id="overview">Overview</h2>
-<p>The SITCore SoMs provide a low cost way to add .NET computing power to any embedded product. They are available as a 200 pin SO-DIMM with and without WiFi (G400 compatible), a 91 pad surface mount module (G120 compatible), or a 105 pad surface mount module (G120E compatible). The SITCore SoMs let&#39;s you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more. The surface mount versions are great for harsh or high vibration environments.</p>
-<h2 id="ordering-part-number">Ordering Part Number</h2>
+<p>The SITCore SoMs provide a low cost way to add .NET computing power to any embedded product. They are available in a 200 pin SO-DIMM format or as surface mount modules. The SITCore SoMs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more. The surface mount versions are great for harsh or high vibration environments.</p>
+<h2 id="ordering-part-numbers">Ordering Part Numbers</h2>
 <ul>
+<li>61 Pad Surface Mount: SCM20100E</li>
 <li>91 Pad Surface Mount: SCM20260N</li>
 <li>105 Pad Surface Mount: SCM20260E</li>
 <li>200 Pin SO-DIMM: SCM20260D</li>
@@ -100,7 +101,7 @@
 <tbody>
 <tr>
 <td>Processor Type</td>
-<td>ARM Coretex-M7 32 Bit</td>
+<td>ARM Cortex-M7 32 Bit</td>
 </tr>
 <tr>
 <td>Speed</td>
@@ -134,6 +135,7 @@
 <thead>
 <tr>
 <th>Peripheral</th>
+<th>SCM20100E</th>
 <th>SCM20260N</th>
 <th>SCM20260E</th>
 <th>SCM20260D</th>
@@ -142,6 +144,7 @@
 <tbody>
 <tr>
 <td>GPIO (all support IRQ)</td>
+<td>43</td>
 <td>79</td>
 <td>85</td>
 <td>108</td>
@@ -151,39 +154,46 @@
 <td>3</td>
 <td>3</td>
 <td>3</td>
+<td>3</td>
 </tr>
 <tr>
 <td>I2C</td>
+<td>1</td>
 <td>1</td>
 <td>3</td>
 <td>3</td>
 </tr>
 <tr>
 <td>UART/USART</td>
-<td>7 (4 with handshaking)</td>
-<td>8 (4 with handshaking)</td>
-<td>8 (4 with handshaking)</td>
+<td>5 (2 w/ H.S.)</td>
+<td>7 (4 w/ H.S.)</td>
+<td>8 (4 w/ H.S.)</td>
+<td>8 (4 w/ H.S.)</td>
 </tr>
 <tr>
 <td>CAN</td>
+<td>1</td>
 <td>2</td>
 <td>2</td>
 <td>2</td>
 </tr>
 <tr>
 <td>PWM</td>
+<td>12</td>
 <td>22</td>
 <td>23</td>
 <td>28</td>
 </tr>
 <tr>
 <td>ADC</td>
+<td>6</td>
 <td>16</td>
 <td>15</td>
 <td>20</td>
 </tr>
 <tr>
 <td>DAC</td>
+<td>2</td>
 <td>2</td>
 <td>1</td>
 <td>2</td>
@@ -193,15 +203,18 @@
 <td>1</td>
 <td>1</td>
 <td>1</td>
+<td>1</td>
 </tr>
 <tr>
-<td>Quad SPI</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
+<td>External Flash</td>
+<td>None</td>
+<td>128 MByte</td>
+<td>128 MByte</td>
+<td>128 MByte</td>
 </tr>
 <tr>
 <td>USB Host</td>
+<td>1</td>
 <td>1</td>
 <td>1</td>
 <td>1</td>
@@ -211,21 +224,25 @@
 <td>1</td>
 <td>1</td>
 <td>1</td>
+<td>1</td>
 </tr>
 <tr>
 <td>Ethernet</td>
+<td>1</td>
 <td>0</td>
 <td>1</td>
 <td>1</td>
 </tr>
 <tr>
 <td>LCD TFT</td>
+<td>0</td>
 <td>1</td>
 <td>1</td>
 <td>1</td>
 </tr>
 <tr>
 <td>Camera</td>
+<td>0</td>
 <td>1</td>
 <td>1</td>
 <td>1</td>
@@ -259,11 +276,6 @@
 <li>USB drives</li>
 </ul>
 </li>
-<li>Native extensions<ul>
-<li>Runtime Loadable Procedures</li>
-<li>Device register access</li>
-</ul>
-</li>
 <li>Signal controls<ul>
 <li>Generation</li>
 <li>Capture</li>
@@ -271,25 +283,30 @@
 </ul>
 </li>
 </ul>
-<h2 id="scm20260n-pinout">SCM20260N Pinout</h2>
-<p><a href="pdfs/scm20260n.pdf">SCM20260N Pinout</a></p>
-<h2 id="scm20260e-pinout">SCM20260E Pinout</h2>
-<p><a href="pdfs/scm20260e.pdf">SCM20260E Pinout</a></p>
-<h2 id="scm20260d-pinout">SCM20260D Pinout</h2>
-<p><a href="pdfs/scm20260d.pdf">SCM20260D Pinout</a>                                                                                                   </p>
+<h2 id="module-pinouts">Module Pinouts</h2>
+<h3 id="scm20100e-pinout">SCM20100E Pinout</h3>
+<p><a href="pdfs/scm20100e.pdf"><img src="images/scm20100e-pinout.gif" alt="SCm20100E Pinout"></a></p>
+<h3 id="scm20260n-pinout">SCM20260N Pinout</h3>
+<p><a href="pdfs/scm20260n.pdf"><img src="images/scm20260n-pinout.gif" alt="SCm20260N Pinout"></a></p>
+<h3 id="scm20260e-pinout">SCM20260E Pinout</h3>
+<p><a href="pdfs/scm20260e.pdf"><img src="images/scm20260e-pinout.gif" alt="SCm20260E Pinout"></a></p>
+<h3 id="scm20260d-pinout">SCM20260D Pinout</h3>
+<p><a href="pdfs/scm20260d.pdf"><img src="images/scm20260d-pinout.gif" alt="SCm20260D Pinout"></a></p>
 <h2 id="getting-started">Getting Started</h2>
 <p>As the SITCore modules are based on the SITCore chipset, please refer to the <a href="soc.html">SITCore SoC page</a> for information on device startup, loading TinyCLR OS firmware, and writing and deploying your application.</p>
 <h2 id="design-considerations">Design Considerations</h2>
 <h3 id="footprints">Footprints</h3>
 <p>We recommend no traces or vias under the module. Dimensions are in inches.</p>
+<h4 id="scm20100e-recommended-footpring">SCM20100E Recommended Footpring</h4>
+<p><img src="images/scm20100e-footprint.jpg" alt="SCM20100E Footprint"></p>
 <h4 id="scm20260n-recommended-footprint">SCM20260N Recommended Footprint</h4>
-<p><img src="images/g120-footprint.jpg" alt="SCM20260N Pinout"></p>
+<p><img src="images/g120-footprint.jpg" alt="SCM20260N Footprint"></p>
 <h4 id="scm20260e-recommended-footprint">SCM20260E Recommended Footprint</h4>
 <p><img src="images/scm20260e-footprint.jpg" alt="SCM20260E Footprint"></p>
 <h3 id="scm20260d-so-dimm-socket">SCM20260D SO-DIMM Socket</h3>
 <p><img src="images/200-pin-ddr2-so-dimm.jpg" alt="200 pin DDR2 SO-DIMM socket"></p>
 <p>The SCM20260D uses the same 200 pin SO-DIMM socket that was originally made for DDR2 memory modules. You can make a custom SO-DIMM SITCore circuit board by adding the appropriate SO-DIMM socket to your circuit board.</p>
-<div class="TIP"><h5>Tip</h5><p>Make sure to expose the required pins in your design. Specific pins are needed for device programming, updates, recovery, and WiFi firmware updates. See device specifications for details.</p>
+<div class="TIP"><h5>Tip</h5><p>Make sure to expose the required pins in your design. Specific pins are needed for device programming, updates, recovery, and WiFi firmware updates. See the <a href="../../software/tinyclr/special-pins.html"><strong>Special Pins</strong></a> page and the device specifications for details.</p>
 </div>
 <p>SO-DIMM stands for Small Outline Dual Inline Memory Module. There are two different 200 pin SO-DIMM sockets, those made for DDR memory and those made for DDR2 memory. They are identical except for the orientation notch which is in a slightly different position. These sockets are not interchangeable. There is also a 204 pin SO-DIMM socket for DDR3 memory with the notch positioned closer to the center of the module.</p>
 <div class="NOTE"><h5>Note</h5><p>Our UCMs are only compatible with DDR2 type 200 pin SO-DIMM sockets.</p>
@@ -307,8 +324,6 @@
 <p>Please see the <a href="../../software/tinyclr/special-pins.html">Special Pins</a> page for more details.</p>
 <h3 id="power-supply">Power Supply</h3>
 <p>A typical clean power source, suited for digital circuitry, is needed to power the SITCore SoMs. The voltage should be within 10% of 3.3 volts.</p>
-<h3 id="reset">Reset</h3>
-<p>The reset pin is not pulled in any direction. Designs must be sure to use an appropriate pull-up resistor.</p>
 <h3 id="oven-reflow-profile">Oven Reflow Profile</h3>
 <p>SITCore SoMs are not sealed for moisture. Baking modules before reflow is recommended and required in a humid environment. The process of reflow can damage the SoM if the temperature is too high or exposure is too long.</p>
 <p>The lead-free reflow profiles used by GHI Electronics are shown below. The profiles are based on AIM SAC 305 solder (3% silver, 0.5% copper). The thermal mass of the assembled board and the sensitivity of the components on it affect the total dwell time. Differences in the two profiles are where they reach their respective peak temperatures as well as the time above liquids (TAL). The shorter profile applies to smaller assemblies, whereas the longer profile applies to larger assemblies such as back-planes or high-density boards. The process window is described by the shaded area. These profiles are only starting-points and general guidance. The particulars of the oven and the assembly will determine the final process.</p>

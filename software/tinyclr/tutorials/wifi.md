@@ -20,12 +20,14 @@ static void DoTestWiFi7Click()
     SpiNetworkCommunicationInterfaceSettings networkCommunicationInterfaceSettings =
         new SpiNetworkCommunicationInterfaceSettings();
 
+    var cs = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
+        OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PD3);
+
     var settings = new GHIElectronics.TinyCLR.Devices.Spi.SpiConnectionSettings()
     {
-        ChipSelectLine = SC20100.GpioPin.PD3,
+        ChipSelectLine = cs,
         ClockFrequency = 4000000,
         Mode = GHIElectronics.TinyCLR.Devices.Spi.SpiMode.Mode0,
-        DataBitLength = 8,
         ChipSelectType = GHIElectronics.TinyCLR.Devices.Spi.SpiChipSelectType.Gpio,
         ChipSelectHoldTime = TimeSpan.FromTicks(10),
         ChipSelectSetupTime = TimeSpan.FromTicks(10)

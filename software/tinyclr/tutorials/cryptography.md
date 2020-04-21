@@ -41,7 +41,7 @@ System.Diagnostics.Debug.WriteLine("Decrypted: " +
 ```
 
 The above code outputs the following:
-```cs
+```text
 Decrypted: Data to Encrypt
 ```
 

@@ -91,6 +91,8 @@ var touch = new FT5xx6Controller(
     i2cController.GetDevice(FT5xx6Controller.GetConnectionSettings()),
     gpioController.OpenPin(UCMStandard.GpioPin.B));
 
+touch.Orientation = FT5xx6Controller.TouchOrientation.Degrees0; //Rotate touch coordinates.
+
 touch.TouchMove += (_, e) => {
     screen.FillEllipse(brush, e.X, e.Y, 5, 5);
     screen.Flush();

@@ -1,8 +1,7 @@
 # Special Pins
 ---
-![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
 
-There are five pins that have special functionality on the SITCore line of products: 
+There are five pins that have special functionality. They are also predefined on the SITCore line of products: 
 * RESET (NRST)
 * LDR (PE3)
 * APP (PB7)
@@ -35,7 +34,7 @@ The WKUP pin can be used to wake up the processor from special power saving mode
 
 ## Debug Interface
 
-Don't forget to expose either the USB client or UART interface (or both) that you plan on using to deploy and debug you application code.
+Don't forget to expose either the USB client or UART interface (or both) that you plan on using to deploy and debug your application code. All SITCore products built around a 100 pin chip (SC20100x) use UART1 for the serial debug interface. All SITCore products built around the 260 pin SC20260B chip use UART5 for the serial debug interface.
 
 ## Other Recommended Pin Usage
 
@@ -43,8 +42,8 @@ When designing your own board, we recommend that you add the following periphera
 
 | Peripheral | Recommended SITCore I/O Assignment |
 |--|--|
-| User LED | PB0 |
-|  |  |
+| User LED | 100 pin devices: PE11 |
+|  | 260 pin devices: PB0 |
 | Buzzer | PB1 |
 |  |  |
 | SPI Display | SPI = SPI4 |
@@ -53,7 +52,7 @@ When designing your own board, we recommend that you add the following periphera
 |  | RS = PC4 |
 |  | RST = PE15 |
 |  |  |
-| Parallel Display | BL = PA15 |
+| Parallel Display | Backlight = PA15 |
 |  | Touch I2C = I2C1 |
 |  | Touch IRQ = PJ14 |
 |  |  |

@@ -7,4 +7,4 @@ FEZ Spider is a .NET Gadgeteer product that utilizes .NET Micro Frameworks (NETM
 To use with NETMF/Gadgeteer, follow these [setup instructions](../../software/netmf/getting-started.md).
 
 ## Resources
-* [Schematic](http://files.ghielectronics.com/downloads/Schematics/FEZ/FEZ%20Spider%20Schematic.pdf)
+* [Schematic](http://files.ghielectronics.com/downloads/Schematics/FEZ/FEZ%20Spider%20Rev%201.1%20Schematic.pdf)

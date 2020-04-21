@@ -21,6 +21,7 @@
 ### [Collections](tutorials/collections.md)
 ### [Serialization](tutorials/serialization.md)
 ### [Encoding & Decoding](tutorials/encoding-decoding.md)
+### [Application Domain](tutorials/application-domain.md)
 
 ## Multimedia
 ### [Graphics](tutorials/graphics.md)
@@ -49,6 +50,7 @@
 ### [AWS](tutorials/aws.md)
 ### [Google Cloud](tutorials/google-cloud.md)
 ### [IFTTT](tutorials/ifttt.md)
+### [Adafruit IO](tutorials/adafruit-io.md)
 
 ## Application Security
 ### [IP Protection](tutorials/ip-protection.md)
