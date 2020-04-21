@@ -1,6 +1,96 @@
 # Release Notes
 ---
 ![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
+
+## 2.0.0-preview5
+
+### Released 2020-04-21
+This preview release moves us closer to a commercially viable product with new and updated features and some API improvements.
+
+### Visual Studio Project System
+
+#### Changes
+- Updated to preview5
+
+#### Known Issues
+- None
+
+### Libraries
+
+#### Changes
+- Added rotation to display and touch.
+- Added endianness argument to SPI API.
+- Removed data bit length from SPI API.
+- Changed SPI chip select argument type from integer to GpioPin.
+- AssemblySigner has been removed.
+- Updated user interface keyboard resource image.
+- Added support for USB keyboards, mice, and raw device library to USB host class.
+- SignalGenerator now always uses a carrier frequency of 38 kHz.
+- Added missing QSPI pins to GHIElectronics.TinyCLR.Pins.
+- Improved JSON support.
+- Changed GeneratePulse() to Trigger() in SignalGenerator, SignalCapture, and PulseFeedback APIs.
+- Simplified formatting of RFC dates.
+- Fixed TextBox misalignment in UI library.
+- Made CheckBoxes consistent with XAML API in UI library.
+- Fixed problem with building libraries.
+- Added PWM15 pin definition.
+
+#### Known Issues
+- The ToString() method fails on structs, including Guid and enum.
+- Equals() throws an CLR_E_UNSUPPORTED_INSTRUCTION exception.
+- Dropdowns in user interface do not respond to direct touches.
+- In networking, Socket.Connect blocks all threads until it finishes.
+
+### TinyCLR Config
+
+#### Changes
+- Added a progress bar and result highlighting.
+
+#### Known Issues
+- TinyCLR Config forces device reboot several times when reconnecting to the device. Does not happen during firmware update.
+
+### TinyCLR Font Converter
+
+#### Changes
+- None.
+
+#### Known Issues
+- None.
+
+### Firmware
+
+#### Changes
+- Removed GetDefault() from the API of peripherals that have more than one controller or channel.
+- Reworked the SPI API.
+- Added screen rotation.
+- Added USB host keyboard, mouse, and raw device.
+- Fixed PulseFeedback DrainDuration mode.
+- Fixed file information calls returning a Not Implemented exception.
+- Fixed incorrect reporting of static IP addresses when there is no connection.
+- Fixed inability to set socket timeout.
+- Changed serial deploy/debug port from UART5 to UART1 on 100 pin devices. SC20260B still uses UART5.
+- The RTC will run approximately one second slower every 4-6 hours.
+- Drawing on display becomes slower if there is network activity.
+
+#### Known Issues
+- In Visual Studio, the application doesn't start automatically when trying to `Start Without Debugging` (CTRL+F5). Resetting the board will start the application.
+- The PJ0 interrupt configuration changes when the device is reset with the reset button, but there is no problem when power cycling the board.
+
+### Drivers
+
+#### Changes
+- Added support for display rotation to the FT5x06 Touch driver
+- Reworked the MSGEQ7 graphic equalizer API.
+- Fixed incorrect color rendition in the WS2812 LED driver.
+
+#### Known Issues
+- When drawing to SSD1351 displays, you may have to add ten to the x coordinate for the screen position to be correct.
+- The OV9655 camera can intermittently have a noisy picture. Resetting the board should fix the problem.
+
+---
+
+---
+
 ## 2.0.0-preview4
 
 ### Released 2020-03-10
