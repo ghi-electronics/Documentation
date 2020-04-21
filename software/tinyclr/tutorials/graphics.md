@@ -39,6 +39,7 @@ namespace GraphicsSample {
                 Width = 480,
                 Height = 272,
                 DataFormat = DisplayDataFormat.Rgb565,
+                Orientation = DisplayOrientation.Degrees0, //Rotate display.
                 PixelClockRate = 10000000,
                 PixelPolarity = false,
                 DataEnablePolarity = false,
@@ -101,6 +102,7 @@ displayController.SetConfiguration(new ParallelDisplayControllerSettings {
     Width = 800,
     Height = 480,
     DataFormat = DisplayDataFormat.Rgb565,
+    Orientation = DisplayOrientation.Degrees0, //Rotate display.
     PixelClockRate = 24000000,
     PixelPolarity = false,
     DataEnablePolarity = false,

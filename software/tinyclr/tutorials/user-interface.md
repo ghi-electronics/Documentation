@@ -78,6 +78,7 @@ namespace UserInterfaceExample
                 Width = 480,
                 Height = 272,
                 DataFormat = GHIElectronics.TinyCLR.Devices.Display.DisplayDataFormat.Rgb565,
+                Orientation = DisplayOrientation.Degrees0, //Rotate display.
                 PixelClockRate = 10000000,
                 PixelPolarity = false,
                 DataEnablePolarity = false,
@@ -129,6 +130,7 @@ var controllerSetting = new
                 Width = 800,
                 Height = 480,
                 DataFormat = DisplayDataFormat.Rgb565,
+                Orientation = DisplayOrientation.Degrees0, //Rotate Display.
                 PixelClockRate = 24000000,
                 PixelPolarity = false,
                 DataEnablePolarity = false,
