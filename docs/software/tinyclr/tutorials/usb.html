@@ -80,19 +80,133 @@
 <h1 id="usb">USB</h1>
 
 <hr>
-<p>TinyCLR OS supports both USB Client and USB Host</p>
+<p>TinyCLR OS supports both USB Client and USB Host and includes support for using USB keyboards, mice, and mass storage devices with your SITCore devices.</p>
 <h2 id="usb-client">USB Client</h2>
-<p>The USB client support is mainly used for deploying and debugging applications. It can also be used to transfer data between the IoT device and a PC. See <a href="usb-cdc-winusb.html">USB CDC &amp; WinUSB</a> for details.</p>
+<p>USB client support is mainly used for deploying and debugging applications. It can also be used to transfer data between a SITCore device and a PC. See <a href="usb-cdc-winusb.html">USB CDC &amp; WinUSB</a> for details.</p>
 <h2 id="usb-host">USB Host</h2>
-<p>USB MSC (Mass Storage Class) allows file access on USB memory devices.</p>
-<pre><code class="lang-cs">// Initialize a USB memory device.
-var usbHostController = StorageController.FromName(SC20100.StorageController.UsbHostMassStorage);
-
-var usbHost = FileSystem.Mount(usbHostController.Hdc);
-</code></pre><p>At this point, the <a href="file-system.html">file system</a> library can be used as usual.</p>
-<div class="NOTE"><h5>Note</h5><p>USB Hubs are not currently supported. Special USB memory devices that have multiple interfaces or built in hubs will not work.</p>
+<p>The USB Host API supports USB keyboards, mice, raw devices, and USB MSC (Mass Storage Class), which allows file access on USB memory devices. The following code sample shows how to detect devices as they are connected to your SITCore device&#39;s USB host port.</p>
+<div class="NOTE"><h5>Note</h5><p>USB hubs are not currently supported. Special USB memory devices that have multiple interfaces or built in hubs will not work.</p>
 </div>
-</article>
+<pre><code class="lang-cs">class Program {
+    static void Main() {
+        var usbHostController = UsbHostController.GetDefault();
+
+        usbHostController.OnConnectionChangedEvent +=
+            UsbHostController_OnConnectionChangedEvent;
+
+        usbHostController.Enable();            
+
+        Thread.Sleep(-1);
+    }
+
+    private static void UsbHostController_OnConnectionChangedEvent
+        (UsbHostController sender, DeviceConnectionEventArgs e){
+
+        Debug.WriteLine(&quot;e.Id = &quot; + e.Id + &quot; \n&quot;);
+        Debug.WriteLine(&quot;e.InterfaceIndex = &quot; + e.InterfaceIndex + &quot; \n&quot;);
+        Debug.WriteLine(&quot;e.PortNumber = &quot; + e.PortNumber);
+        Debug.WriteLine(&quot;e.Type = &quot; + ((object)(e.Type)).ToString() + &quot; \n&quot;);
+        Debug.WriteLine(&quot;e.VendorId = &quot; + e.VendorId + &quot; \n&quot;);
+        Debug.WriteLine(&quot;e.ProductId = &quot; + e.ProductId + &quot; \n&quot;);
+
+        switch (e.DeviceStatus) {
+            case DeviceConnectionStatus.Connected:
+                switch (e.Type) {
+                    case BaseDevice.DeviceType.Keyboard:
+                        var keyboard = new Keyboard(e.Id);
+
+                        keyboard.KeyUp += Keyboard_KeyUp;
+                        keyboard.KeyDown += Keyboard_KeyDown;
+                        break;
+
+                    case BaseDevice.DeviceType.Mouse:
+                        var mouse = new Mouse(e.Id);
+
+                        mouse.ButtonChanged += Mouse_ButtonChanged;
+                        mouse.CursorMoved += Mouse_CursorMoved;
+                        break;
+
+                    case BaseDevice.DeviceType.MassStorage:
+                        var strogareController = StorageController.FromName
+                            (SC20260.StorageController.UsbHostMassStorage);
+
+                        var driver = FileSystem.Mount(strogareController.Hdc);
+                        var driveInfo = new DriveInfo(driver.Name);
+
+                        Debug.WriteLine(&quot;Free: &quot; + driveInfo.TotalFreeSpace);
+                        Debug.WriteLine(&quot;TotalSize: &quot; + driveInfo.TotalSize);
+                        Debug.WriteLine(&quot;VolumeLabel:&quot; + driveInfo.VolumeLabel);
+                        Debug.WriteLine(&quot;RootDirectory: &quot; + driveInfo.RootDirectory);
+                        Debug.WriteLine(&quot;DriveFormat: &quot; + driveInfo.DriveFormat);
+                        break;
+
+                    default:
+                        var rawDevice = new RawDevice(e.Id);
+                        var devDesc = rawDevice.GetDeviceDescriptor();
+                        var cfgDesc = rawDevice.GetConfigurationDescriptor(0);
+                        var endpointData = new byte[7];
+
+                        endpointData[0] = 7;          //Length in bytes of this descriptor.
+                        endpointData[1] = (byte)5;    //Descriptor type (endpoint).
+                        endpointData[2] = 0x81;       //Input endpoint address.
+                        endpointData[3] = 3;          //Transfer type is interrupt endpoint.
+                        endpointData[4] = 8;          //Max packet size LSB.
+                        endpointData[5] = 0;          //Max packet size MSB.
+                        endpointData[6] = 10;         //Polling interval.
+
+                        var endpoint = new GHIElectronics.TinyCLR.Devices.UsbHost.
+                            Descriptors.Endpoint(endpointData, 0);
+
+                        var pipe = rawDevice.OpenPipe(endpoint);
+                        pipe.TransferTimeout = 10;
+
+                        var data = new byte[8];
+                        var read = pipe.Transfer(data);
+
+                        if (read &gt; 0) {
+                            Debug.WriteLine(&quot;Raw Device has new data &quot; + data[0] + &quot;, &quot;
+                                + data[1] + &quot;, &quot; + data[2] + &quot;, &quot; + data[3]);
+                        }
+
+                        else if (read == 0) {
+                            Debug.WriteLine(&quot;No new data&quot;);
+                        }
+
+                        Thread.Sleep(500);
+                        break;
+                }
+                break;
+
+            case DeviceConnectionStatus.Disconnected:
+                Debug.WriteLine(&quot;Device Disconnected&quot;);
+                //Unmount filesystem if it was mounted.
+                break;
+
+            case DeviceConnectionStatus.Bad:
+                Debug.WriteLine(&quot;Bad Device&quot;);
+                break;
+        }
+    }
+
+    private static void Keyboard_KeyDown(Keyboard sender, Keyboard.KeyboardEventArgs args) {
+        Debug.WriteLine(&quot;Key pressed: &quot; + ((object)args.Which).ToString());
+        Debug.WriteLine(&quot;Key pressed ASCII: &quot; + ((object)args.ASCII).ToString());
+    }
+
+    private static void Keyboard_KeyUp(Keyboard sender, Keyboard.KeyboardEventArgs args) {
+        Debug.WriteLine(&quot;Key released: &quot; + ((object)args.Which).ToString());
+        Debug.WriteLine(&quot;Key released ASCII: &quot; + ((object)args.ASCII).ToString());
+    }
+
+    private static void Mouse_CursorMoved(Mouse sender, Mouse.CursorMovedEventArgs e) {
+        Debug.WriteLine(&quot;Mouse moved to: &quot; + e.NewPosition.X + &quot;, &quot; + e.NewPosition.Y);
+    }
+
+    private static void Mouse_ButtonChanged(Mouse sender, Mouse.ButtonChangedEventArgs args) {
+        Debug.WriteLine(&quot;Mouse button changed: &quot; + ((object)args.Which).ToString());
+    }
+}
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

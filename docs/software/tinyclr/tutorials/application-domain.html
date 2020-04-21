@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>External Memory </title>
+    <title>Application Domain </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="External Memory ">
+    <meta name="title" content="Application Domain ">
     <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -77,68 +77,56 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="external-memory">External Memory</h1>
+<h1 id="application-domain">Application Domain</h1>
 
 <hr>
-<p>External memory is typically not secure as it can be probed by hackers. However, external memory provides a large amount of storage that is required for some applications.</p>
-<h2 id="external-ram">External RAM</h2>
-<p>Systems with external RAM have the option of utilizing this memory as <a href="unmanaged-heap.html">Unmanaged Heap</a>. Unmanaged heap is great for storing large amounts of data, but it is not considered secure. Developers also have the option of enabling the external memory as managed heap. This feature is a trade off between security and convenience as it provides a large amount of heap space, but is not secure.</p>
-<pre><code>GHIElectronics.TinyCLR.Native.Memory.EnableExternalHeap()
-</code></pre><h2 id="external-flash">External Flash</h2>
-<p>High speed QSPI flash is available through the system&#39;s internal drivers. This memory is being evaluated for security and is not yet available to the user.</p>
-<p>Here is an example that directly writes, reads, and then compares data in external flash.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Devices.Storage</p>
+<p>The <code>AppDomain</code> class lets you load assemblies from any file stream at runtime. This feature can be used to reduce the need for program flash memory by loading code only as needed from a USB flash drive or SD card, or when you won&#39;t know until runtime which assemblies will be used.</p>
+<p>The sample code below loads and executes a small assembly from a USB flash drive. To run this sample, start a new project in Visual Studio and copy the first code sample into the <code>Program.cs</code> window. Then add a new TinyCLR class named <code>TestAppDomainAssembly.cs</code>, and copy the second code sample into this window.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Storage, GHIElectronics.TinyCLR.IO, GHIElectronics.TinyCLR.Native, and GHIElectronics.TinyCLR.Pins.</p>
 </div>
-<pre><code>static void TestQSPI() {
+<p><code>Program.cs</code> class:</p>
+<pre><code class="lang-cs">class Program {
+    static void Main() {
+        var storageController = GHIElectronics.TinyCLR.Devices.Storage.StorageController.
+            FromName(GHIElectronics.TinyCLR.Pins.SC20260.StorageController.
+            UsbHostMassStorage);
 
-    const int TOTAL_SIZE = 16 * 1024 * 1024; //Total size 16MB
-    const int SECTOR_SIZE = 4 * 1024;        //Sector size 4KB
+        var drive = GHIElectronics.TinyCLR.IO.FileSystem.Mount(storageController.Hdc);
 
-    var dataWrite = new byte[SECTOR_SIZE];
-    var dataRead = new byte[SECTOR_SIZE];
+        var filename = drive.Name + &quot;\\TestAppDomain.pe&quot;;
 
-    var dataToWrite = System.Text.UTF8Encoding.UTF8.GetBytes(&quot;This is a test&quot;);
+        System.IO.FileStream fsRead = new System.IO.FileStream(filename,
+            System.IO.FileMode.Open);
 
-    var storeController = GHIElectronics.TinyCLR.Devices.Storage.StorageController.FromName
-        (GHIElectronics.TinyCLR.Pins.SC20260.StorageController.QuadSpi);
+        var assemblyInBytes = new byte[fsRead.Length];
 
-    var drive = storeController.Provider;
+        fsRead.Read(assemblyInBytes, 0, assemblyInBytes.Length);
 
-    drive.Open();
+        var assembly = System.Reflection.Assembly.Load(assemblyInBytes);
+        var obj = System.AppDomain.CurrentDomain.CreateInstanceAndUnwrap(&quot;TestAppDomain&quot;,
+            &quot;TestAppDomain.TestAssembly&quot;);
 
-    for (var i = 0; i &lt; SECTOR_SIZE; i += dataToWrite.Length) {
-        System.Array.Copy(dataToWrite, 0, dataWrite, i, dataToWrite.Length);
+        var type = assembly.GetType(&quot;TestAppDomain.TestAssembly&quot;);
+
+        System.Reflection.MethodInfo mi = type.GetMethod(&quot;PrintMessage&quot;);
+        mi.Invoke(obj, null);
     }
-
-    var block = TOTAL_SIZE / SECTOR_SIZE;
-    var index = 0 * SECTOR_SIZE;
-    var countBlock = 0;
-
-    while (block &gt; 0) {
-        // Erase
-        drive.Erase(index, SECTOR_SIZE, System.TimeSpan.FromSeconds(100));
-
-        // Write
-        drive.Write(index, SECTOR_SIZE, dataWrite, 0, System.TimeSpan.FromSeconds(100));
-
-        // Read
-        drive.Read(index, SECTOR_SIZE, dataRead, 0, System.TimeSpan.FromSeconds(100));
-
-        // Compare data after read
-        for (var i = 0; i &lt; SECTOR_SIZE; i++) {
-            if (dataRead[i] != dataWrite[i]) {
-                System.Diagnostics.Debug.WriteLine
-                    (&quot;Corrupted data detected at sector: &quot; + block);
-            }
-        }
-
-        countBlock++;
-        block--;
-        index += SECTOR_SIZE;
-    }
-
-    System.Diagnostics.Debug.WriteLine(&quot;Test all sectors passed&quot;);
 }
+</code></pre><p><code>TestAppDomainAssembly.cs</code> class:</p>
+<pre><code class="lang-cs">namespace TestAppDomain {
+    public class TestAssembly
+    {
+        public void PrintMessage()
+        {
+            System.Diagnostics.Debug.WriteLine(&quot;Hello from TestAssembly&quot;);
+        }
+    }
+}
+</code></pre><p>In the <code>TestAppDomain</code> properties window (right click on <code>TestAppDomain</code> in Solution Explorer and select <code>Properties</code>), click on <code>TinyCLR OS</code> in the left panel and check the <code>Generate native stubs for internal methods</code> and <code>Generate bare native stubs</code> boxes. This tells Visual Studio to create the Portable Executable (PE) file that will be copied to the USB flash drive and then executed by the main program.</p>
+<p><img src="images/native-stubs-check-boxes.png" alt="Native stubs check boxes"></p>
+<p>Now build the project. Inside of the project&#39;s directory navigate to the <code>TestAppDomain/bin/Debug/pe</code> directory and copy the file <code>TestAppDomain.pe</code> to a USB flash drive. Now insert the flash drive into your SITCore board and deploy the program. The main program will load and run <code>TestAppDomain.pe</code> from the USB flash drive. If everthing worked, you should see the following in your output window:</p>
+<pre><code class="lang-text">&#39;GHIElectronics.TinyCLR.VisualStudio.ProjectSystem.dll&#39; (Managed): Loaded &#39;TestAppDomain&#39;
+   Assembly: TestAppDomain (1.0.0.0)  Hello from TestAssembly
 </code></pre></article>
           </div>
           
@@ -147,7 +135,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/external-memory.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/application-domain.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

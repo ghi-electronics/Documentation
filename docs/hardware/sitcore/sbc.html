@@ -81,10 +81,11 @@
 
 <hr>
 <p><img src="images/sitcore-feather.png" alt="Single Board Computer"></p>
-<p>We are offering four single board computers to provide the lowest possible barrier to entering the world of TinyCLR OS. All of these boards have WiFi and support the complete TinyCLR feature set.</p>
+<p>We offer multiple single board computers to provide the lowest possible barrier to entering the world of TinyCLR OS. Most of these boards have WiFi and they all support the complete TinyCLR feature set. These boards are great for trying out TinyCLR OS, building prototypes, or incorporating into products.</p>
 <table>
 <thead>
 <tr>
+<th></th>
 <th></th>
 <th></th>
 <th></th>
@@ -95,31 +96,35 @@
 <tbody>
 <tr>
 <td></td>
-<td><strong>FEZ Feather</strong></td>
-<td><strong>Fez Click</strong></td>
 <td><strong>FEZ Bit</strong></td>
 <td><strong>Fez Duino</strong></td>
+<td><strong>FEZ Feather</strong></td>
+<td><strong>Fez Portal</strong></td>
+<td><strong>FEZ Stick</strong></td>
 </tr>
 <tr>
-<td><strong>Chipset</strong></td>
+<td><strong>Core</strong></td>
 <td>SC20100S</td>
 <td>SC20100S</td>
 <td>SC20100S</td>
+<td>SC20260N</td>
 <td>SC20100S</td>
 </tr>
 <tr>
 <td><strong>Display</strong></td>
+<td>1.8&quot; 160x128</td>
 <td>X</td>
-<td>1.8&quot; 160x128</td>
-<td>1.8&quot; 160x128</td>
+<td>X</td>
+<td>4.3&quot; 480x272 Cap. Touch</td>
 <td>X</td>
 </tr>
 <tr>
 <td><strong>Click Connectors</strong></td>
 <td>X</td>
+<td>X</td>
+<td>X</td>
+<td>1</td>
 <td>2</td>
-<td>X</td>
-<td>X</td>
 </tr>
 <tr>
 <td><strong>WiFi</strong></td>
@@ -127,13 +132,15 @@
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
+<td>X</td>
 </tr>
 <tr>
 <td><strong>Micro SD</strong></td>
+<td>Yes</td>
+<td>Yes</td>
 <td>X</td>
 <td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
+<td>X</td>
 </tr>
 <tr>
 <td><strong>User LED</strong></td>
@@ -141,23 +148,27 @@
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><strong>Buzzer</strong></td>
-<td>X</td>
 <td>Yes</td>
+<td>X</td>
+<td>X</td>
 <td>Yes</td>
 <td>X</td>
 </tr>
 <tr>
 <td><strong>Accelerometer</strong></td>
-<td>X</td>
-<td>X</td>
 <td>Yes</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
 <td>X</td>
 </tr>
 <tr>
 <td><strong>User Buttons</strong></td>
+<td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -169,6 +180,7 @@
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td><strong>USB Host Connector</strong></td>
@@ -176,27 +188,283 @@
 <td>Yes</td>
 <td>X</td>
 <td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td><strong>QSPI</strong></td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td><strong>External Flash</strong></td>
+<td>X</td>
+<td>Yes</td>
+<td>X</td>
+<td>Yes</td>
 <td>X</td>
 </tr>
 <tr>
-<td><strong>LiPo Connector</strong></td>
+<td><strong>LiPo Charger</strong></td>
+<td>X</td>
+<td>X</td>
 <td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
+<td>X</td>
 <td>X</td>
 </tr>
 <tr>
 <td><strong>Power Barrel</strong></td>
 <td>X</td>
-<td>X</td>
-<td>X</td>
 <td>Yes</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fez-bit">FEZ Bit</h2>
+<p><img src="images/fez-bit.png" alt="FEZ Bit"></p>
+<p>The <strong>FEZ Bit</strong>, while seemingly more of a &quot;maker&quot; board, provides a convenient way to easily use the multitude of inexpensive Micro:bit accessories that have flooded the market. As the number of Micro:bit accessories continues to grow, this board will be valued as a way to use these accessories to quickly assemble prototypes and test new product concepts.</p>
+<h3 id="fez-bit-peripheral-pins">FEZ Bit Peripheral Pins</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>User LED</strong></td>
+<td>PE11</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Buzzer</strong></td>
+<td>PB1</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Accelerometer</strong></td>
+<td>I2C = I2C1</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SPI Display</strong></td>
+<td>SPI = SPI4</td>
+</tr>
+<tr>
+<td></td>
+<td>BL = PA15</td>
+</tr>
+<tr>
+<td></td>
+<td>CS = PD10</td>
+</tr>
+<tr>
+<td></td>
+<td>RS = PC4</td>
+</tr>
+<tr>
+<td></td>
+<td>RST = PE15</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WiFi</strong></td>
+<td>SPI = SPI3</td>
+</tr>
+<tr>
+<td></td>
+<td>IRQ = PA10</td>
+</tr>
+<tr>
+<td></td>
+<td>CS = PD15</td>
+</tr>
+<tr>
+<td></td>
+<td>EN = PA8</td>
+</tr>
+<tr>
+<td></td>
+<td>RST = PA9</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Note</h5><p>All boards with a barrel power jack accept a 5.5 x 2.1 mm power plug. The pin is positive, the sleeve is negative. While these boards accept a wide voltage range, they use linear voltage regulators that run hotter with higher input voltages. Generally we recommend an input voltage of 6 to 12 volts, but if your project draws a lot of current, use a lower voltage to keep the regulator cooler. A one amp power supply should provide enough current for most needs.</p>
+</div>
+<h2 id="fez-duino">FEZ Duino</h2>
+<p><img src="images/fez-duino.png" alt="FEZ Duino"></p>
+<p>The <strong>FEZ Duino</strong> provides female headers that make use of the popular Arduino pinout. Once again, we are trying to make it as easy and inexpensive as possible to build prototypes and try out new concepts by taking advantage of an existing accessory ecosystem.</p>
+<h3 id="fez-duino-peripheral-pins">FEZ Duino Peripheral Pins</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>User LED</strong></td>
+<td>PE11</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WiFi</strong></td>
+<td>SPI = SPI3</td>
+</tr>
+<tr>
+<td></td>
+<td>IRQ = PA10</td>
+</tr>
+<tr>
+<td></td>
+<td>CS = PD15</td>
+</tr>
+<tr>
+<td></td>
+<td>EN = PA8</td>
+</tr>
+<tr>
+<td></td>
+<td>RST = PA9</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fez-feather">FEZ Feather</h2>
+<p><img src="images/fez-feather.png" alt="FEZ Feather"></p>
+<p>The Adafruit Feather form factor boards are made to be stackable and have built in support for LiPo batteries, including a charging circuit. We&#39;ve watched this form factor quickly gaining popularity, so we decided to make a Feather board of our own. If your project needs to run off of a battery, this board makes it quick and easy to get started. The <strong>FEZ Feather</strong> provides both through hole pads and castellated edges making it both breadboard friendly and easy to build into products.</p>
+<h3 id="fez-feather-peripheral-pins">FEZ Feather Peripheral Pins</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>User LED</strong></td>
+<td>PE11</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WiFi</strong></td>
+<td>SPI = SPI3</td>
+</tr>
+<tr>
+<td></td>
+<td>IRQ = PA10</td>
+</tr>
+<tr>
+<td></td>
+<td>CS = PD15</td>
+</tr>
+<tr>
+<td></td>
+<td>EN = PA8</td>
+</tr>
+<tr>
+<td></td>
+<td>RST = PA9</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fez-portal">FEZ Portal</h2>
+<p><img src="images/fez-portal.png" alt="FEZ Portal"></p>
+<p>Already one of our most popular SITCore single board computers, The <strong>FEZ Portal</strong> is a 4.3&quot; 480x272 display with capacitive touch that is programmable in C#. As the display and controller are one unit, it&#39;s even easier to make a product with touch as you only have to mount a single board that&#39;s only slightly larger than the display.</p>
+<h3 id="fez-portal-peripheral-pins">FEZ Portal Peripheral Pins</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>User LED</strong></td>
+<td>PB0</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Buzzer</strong></td>
+<td>PB1</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Display</strong></td>
+<td>BL = PA15</td>
+</tr>
+<tr>
+<td></td>
+<td>Touch I2C = I2C1</td>
+</tr>
+<tr>
+<td></td>
+<td>Touch IRQ = PG9</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WiFi</strong></td>
+<td>SPI = SPI3</td>
+</tr>
+<tr>
+<td></td>
+<td>IRQ = PF10</td>
+</tr>
+<tr>
+<td></td>
+<td>CS = PA6</td>
+</tr>
+<tr>
+<td></td>
+<td>EN = PA8</td>
+</tr>
+<tr>
+<td></td>
+<td>RST = PF8</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fez-stick">FEZ Stick</h2>
+<p><img src="images/fez-stick.png" alt="FEZ Stick"></p>
+<p>The <strong>FEZ Stick</strong> is simply the least expensive way to easily get started with TinyCLR OS. While providing an inexpensive way for the uninitiated to try TinyCLR OS, we&#39;ve provided castellated edges as well as through hole pads to make it breadboard friendly and easy to embed into products. Also, there&#39;s actually space for two click modules, making this a very versatile board at a very affordable price!</p>
+<h3 id="fez-stick-peripheral-pins">FEZ Stick Peripheral Pins</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>User LED</strong></td>
+<td>PE11</td>
 </tr>
 </tbody>
 </table>
