@@ -8,7 +8,7 @@
     <title>USB </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="USB ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.23.1.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,11 +16,10 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix">
     <div id="wrapper">
       <header>
         
@@ -60,9 +59,7 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
-          </div>
+          <div class="sr-items"></div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -87,72 +84,99 @@
 <p>The USB Host API supports USB keyboards, mice, raw devices, and USB MSC (Mass Storage Class), which allows file access on USB memory devices. The following code sample shows how to detect devices as they are connected to your SITCore device&#39;s USB host port.</p>
 <div class="NOTE"><h5>Note</h5><p>USB hubs are not currently supported. Special USB memory devices that have multiple interfaces or built in hubs will not work.</p>
 </div>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Storage, GHIElectronics.TinyCLR.Devices.UsbHost, GHIElectronics.TinyCLR.IO, GHIElectronics.TinyCLR.Native, and GHIElectronics.TinyCLR.Pins.</p>
+</div>
 <pre><code class="lang-cs">class Program {
     static void Main() {
-        var usbHostController = UsbHostController.GetDefault();
+        var usbHostController = GHIElectronics.TinyCLR.Devices.UsbHost.
+            UsbHostController.GetDefault();
 
         usbHostController.OnConnectionChangedEvent +=
             UsbHostController_OnConnectionChangedEvent;
 
-        usbHostController.Enable();            
+        usbHostController.Enable();
 
-        Thread.Sleep(-1);
+        System.Threading.Thread.Sleep(-1);
     }
 
     private static void UsbHostController_OnConnectionChangedEvent
-        (UsbHostController sender, DeviceConnectionEventArgs e){
+        (GHIElectronics.TinyCLR.Devices.UsbHost.UsbHostController sender,
+        GHIElectronics.TinyCLR.Devices.UsbHost.DeviceConnectionEventArgs e) {
 
-        Debug.WriteLine(&quot;e.Id = &quot; + e.Id + &quot; \n&quot;);
-        Debug.WriteLine(&quot;e.InterfaceIndex = &quot; + e.InterfaceIndex + &quot; \n&quot;);
-        Debug.WriteLine(&quot;e.PortNumber = &quot; + e.PortNumber);
-        Debug.WriteLine(&quot;e.Type = &quot; + ((object)(e.Type)).ToString() + &quot; \n&quot;);
-        Debug.WriteLine(&quot;e.VendorId = &quot; + e.VendorId + &quot; \n&quot;);
-        Debug.WriteLine(&quot;e.ProductId = &quot; + e.ProductId + &quot; \n&quot;);
+        System.Diagnostics.Debug.WriteLine(&quot;e.Id = &quot; + e.Id + &quot; \n&quot;);
+        System.Diagnostics.Debug.WriteLine(&quot;e.InterfaceIndex = &quot; + e.InterfaceIndex + &quot; \n&quot;);
+        System.Diagnostics.Debug.WriteLine(&quot;e.PortNumber = &quot; + e.PortNumber);
+        System.Diagnostics.Debug.WriteLine(&quot;e.Type = &quot; + ((object)(e.Type)).
+            ToString() + &quot; \n&quot;);
+
+        System.Diagnostics.Debug.WriteLine(&quot;e.VendorId = &quot; + e.VendorId + &quot; \n&quot;);
+        System.Diagnostics.Debug.WriteLine(&quot;e.ProductId = &quot; + e.ProductId + &quot; \n&quot;);
 
         switch (e.DeviceStatus) {
-            case DeviceConnectionStatus.Connected:
+            case GHIElectronics.TinyCLR.Devices.UsbHost.DeviceConnectionStatus.Connected:
                 switch (e.Type) {
-                    case BaseDevice.DeviceType.Keyboard:
-                        var keyboard = new Keyboard(e.Id);
+                    case GHIElectronics.TinyCLR.Devices.UsbHost.BaseDevice.
+                        DeviceType.Keyboard:
+
+                        var keyboard = new GHIElectronics.TinyCLR.Devices.UsbHost.
+                            Keyboard(e.Id, e.InterfaceIndex);
 
                         keyboard.KeyUp += Keyboard_KeyUp;
                         keyboard.KeyDown += Keyboard_KeyDown;
                         break;
 
-                    case BaseDevice.DeviceType.Mouse:
-                        var mouse = new Mouse(e.Id);
+                    case GHIElectronics.TinyCLR.Devices.UsbHost.BaseDevice.DeviceType.Mouse:
+                        var mouse = new GHIElectronics.TinyCLR.Devices.UsbHost.
+                            Mouse(e.Id, e.InterfaceIndex);
 
                         mouse.ButtonChanged += Mouse_ButtonChanged;
                         mouse.CursorMoved += Mouse_CursorMoved;
                         break;
 
-                    case BaseDevice.DeviceType.MassStorage:
-                        var strogareController = StorageController.FromName
-                            (SC20260.StorageController.UsbHostMassStorage);
+                    case GHIElectronics.TinyCLR.Devices.UsbHost.BaseDevice.
+                        DeviceType.MassStorage:
 
-                        var driver = FileSystem.Mount(strogareController.Hdc);
-                        var driveInfo = new DriveInfo(driver.Name);
+                        var strogareController = GHIElectronics.TinyCLR.Devices.Storage.
+                            StorageController.FromName(GHIElectronics.TinyCLR.Pins.
+                            SC20260.StorageController.UsbHostMassStorage);
 
-                        Debug.WriteLine(&quot;Free: &quot; + driveInfo.TotalFreeSpace);
-                        Debug.WriteLine(&quot;TotalSize: &quot; + driveInfo.TotalSize);
-                        Debug.WriteLine(&quot;VolumeLabel:&quot; + driveInfo.VolumeLabel);
-                        Debug.WriteLine(&quot;RootDirectory: &quot; + driveInfo.RootDirectory);
-                        Debug.WriteLine(&quot;DriveFormat: &quot; + driveInfo.DriveFormat);
+                        var driver = GHIElectronics.TinyCLR.IO.FileSystem.
+                            Mount(strogareController.Hdc);
+
+                        var driveInfo = new System.IO.DriveInfo(driver.Name);
+
+                        System.Diagnostics.Debug.WriteLine
+                            (&quot;Free: &quot; + driveInfo.TotalFreeSpace);
+
+                        System.Diagnostics.Debug.WriteLine
+                            (&quot;TotalSize: &quot; + driveInfo.TotalSize);
+
+                        System.Diagnostics.Debug.WriteLine
+                            (&quot;VolumeLabel:&quot; + driveInfo.VolumeLabel);
+
+                        System.Diagnostics.Debug.WriteLine
+                            (&quot;RootDirectory: &quot; + driveInfo.RootDirectory);
+
+                        System.Diagnostics.Debug.WriteLine
+                            (&quot;DriveFormat: &quot; + driveInfo.DriveFormat);
+
                         break;
 
                     default:
-                        var rawDevice = new RawDevice(e.Id);
+                        var rawDevice = new GHIElectronics.TinyCLR.Devices.UsbHost.
+                            RawDevice(e.Id, e.InterfaceIndex, e.Type);
+
                         var devDesc = rawDevice.GetDeviceDescriptor();
                         var cfgDesc = rawDevice.GetConfigurationDescriptor(0);
                         var endpointData = new byte[7];
 
-                        endpointData[0] = 7;          //Length in bytes of this descriptor.
-                        endpointData[1] = (byte)5;    //Descriptor type (endpoint).
-                        endpointData[2] = 0x81;       //Input endpoint address.
-                        endpointData[3] = 3;          //Transfer type is interrupt endpoint.
-                        endpointData[4] = 8;          //Max packet size LSB.
-                        endpointData[5] = 0;          //Max packet size MSB.
-                        endpointData[6] = 10;         //Polling interval.
+                        endpointData[0] = 7;        //Length in bytes of this descriptor.
+                        endpointData[1] = 5;        //Descriptor type (endpoint).
+                        endpointData[2] = 0x81;     //Input endpoint address.
+                        endpointData[3] = 3;        //Transfer type is interrupt endpoint.
+                        endpointData[4] = 8;        //Max packet size LSB.
+                        endpointData[5] = 0;        //Max packet size MSB.
+                        endpointData[6] = 10;       //Polling interval.
 
                         var endpoint = new GHIElectronics.TinyCLR.Devices.UsbHost.
                             Descriptors.Endpoint(endpointData, 0);
@@ -164,46 +188,60 @@
                         var read = pipe.Transfer(data);
 
                         if (read &gt; 0) {
-                            Debug.WriteLine(&quot;Raw Device has new data &quot; + data[0] + &quot;, &quot;
-                                + data[1] + &quot;, &quot; + data[2] + &quot;, &quot; + data[3]);
+                            System.Diagnostics.Debug.WriteLine(&quot;Raw Device has new data &quot;
+                                + data[0] + &quot;, &quot; + data[1] + &quot;, &quot; + data[2] + &quot;, &quot; + data[3]);
                         }
 
                         else if (read == 0) {
-                            Debug.WriteLine(&quot;No new data&quot;);
+                            System.Diagnostics.Debug.WriteLine(&quot;No new data&quot;);
                         }
 
-                        Thread.Sleep(500);
+                        System.Threading.Thread.Sleep(500);
                         break;
                 }
                 break;
 
-            case DeviceConnectionStatus.Disconnected:
-                Debug.WriteLine(&quot;Device Disconnected&quot;);
+            case GHIElectronics.TinyCLR.Devices.UsbHost.DeviceConnectionStatus.Disconnected:
+                System.Diagnostics.Debug.WriteLine(&quot;Device Disconnected&quot;);
                 //Unmount filesystem if it was mounted.
                 break;
 
-            case DeviceConnectionStatus.Bad:
-                Debug.WriteLine(&quot;Bad Device&quot;);
+            case GHIElectronics.TinyCLR.Devices.UsbHost.DeviceConnectionStatus.Bad:
+                System.Diagnostics.Debug.WriteLine(&quot;Bad Device&quot;);
                 break;
         }
     }
 
-    private static void Keyboard_KeyDown(Keyboard sender, Keyboard.KeyboardEventArgs args) {
-        Debug.WriteLine(&quot;Key pressed: &quot; + ((object)args.Which).ToString());
-        Debug.WriteLine(&quot;Key pressed ASCII: &quot; + ((object)args.ASCII).ToString());
+    private static void Keyboard_KeyDown(GHIElectronics.TinyCLR.Devices.UsbHost.Keyboard
+        sender, GHIElectronics.TinyCLR.Devices.UsbHost.Keyboard.KeyboardEventArgs args) {
+
+        System.Diagnostics.Debug.WriteLine(&quot;Key pressed: &quot; + ((object)args.Which).ToString());
+        System.Diagnostics.Debug.WriteLine(&quot;Key pressed ASCII: &quot; +
+            ((object)args.ASCII).ToString());
     }
 
-    private static void Keyboard_KeyUp(Keyboard sender, Keyboard.KeyboardEventArgs args) {
-        Debug.WriteLine(&quot;Key released: &quot; + ((object)args.Which).ToString());
-        Debug.WriteLine(&quot;Key released ASCII: &quot; + ((object)args.ASCII).ToString());
+    private static void Keyboard_KeyUp(GHIElectronics.TinyCLR.Devices.UsbHost.Keyboard
+        sender, GHIElectronics.TinyCLR.Devices.UsbHost.Keyboard.KeyboardEventArgs args) {
+
+        System.Diagnostics.Debug.WriteLine
+            (&quot;Key released: &quot; + ((object)args.Which).ToString());
+
+        System.Diagnostics.Debug.WriteLine
+            (&quot;Key released ASCII: &quot; + ((object)args.ASCII).ToString());
     }
 
-    private static void Mouse_CursorMoved(Mouse sender, Mouse.CursorMovedEventArgs e) {
-        Debug.WriteLine(&quot;Mouse moved to: &quot; + e.NewPosition.X + &quot;, &quot; + e.NewPosition.Y);
+    private static void Mouse_CursorMoved(GHIElectronics.TinyCLR.Devices.UsbHost.Mouse
+        sender, GHIElectronics.TinyCLR.Devices.UsbHost.Mouse.CursorMovedEventArgs e) {
+
+        System.Diagnostics.Debug.WriteLine(&quot;Mouse moved to: &quot; + e.NewPosition.X +
+             &quot;, &quot; + e.NewPosition.Y);
     }
 
-    private static void Mouse_ButtonChanged(Mouse sender, Mouse.ButtonChangedEventArgs args) {
-        Debug.WriteLine(&quot;Mouse button changed: &quot; + ((object)args.Which).ToString());
+    private static void Mouse_ButtonChanged(GHIElectronics.TinyCLR.Devices.UsbHost.Mouse
+        sender, GHIElectronics.TinyCLR.Devices.UsbHost.Mouse.ButtonChangedEventArgs args) {
+
+        System.Diagnostics.Debug.WriteLine
+            (&quot;Mouse button changed: &quot; + ((object)args.Which).ToString());
     }
 }
 </code></pre></article>
@@ -214,7 +252,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/usb.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/compiled/software/tinyclr/tutorials/usb.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
