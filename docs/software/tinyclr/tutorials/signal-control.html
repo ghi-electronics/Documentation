@@ -8,7 +8,7 @@
     <title>Signal Control </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Signal Control ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.23.1.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,11 +16,10 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  <body data-spy="scroll" data-target="#affix">
     <div id="wrapper">
       <header>
         
@@ -60,9 +59,7 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
-          </div>
+          <div class="sr-items"></div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -87,9 +84,9 @@
 <p><img src="images/echo-duration.gif" alt="Echo duration timing"></p>
 <p>Echo Duration sends a trigger pulse of a given state over the provided pin. It then waits for an echo on the other specified pin and measures the length of that echo pulse. The trigger and echo pins cannot be the same pin.</p>
 <p>The following code will read the distance in centimeters from an HC-SR04 ultrasonic distance sensor. This sensor has a trigger pin that is pulsed high to start distance measurement. It has a separate echo pin that the sensor holds high until it receives an echo. Therefore, the time the echo pin is high represents the time it takes for the sound to hit the target and reflect back to the sensor.</p>
-<p>To test this code, I plugged the sensor directly into the SCM20260D Dev board and ran a couple short wires for power.</p>
+<p>To test this code, I plugged the sensor directly into the SCM20260D Dev board and ran a couple short wires for power. It was convenient having 5V on the header. I was surprised how well this inexpensive sensor worked.</p>
 <p><img src="images/ultrasonic-on-header.jpg" alt="HC-SR04 on dev board"></p>
-<div class="NOTE"><h5>Note</h5><p>The HC-SR04 ultrasonic distance sensor requires a 5 volt power supply. While the module accepts 3.3 volt logic on the Trig and Echo pins, it will not work with a 3.3 volt supply voltage.</p>
+<div class="NOTE"><h5>Note</h5><p>The HC-SR04 ultrasonic distance sensor requires a 5 volt power supply. While the module accepts 3.3 volt logic on the Trig and Echo pins, it will not work with a 3.3 volt supply for power.</p>
 </div>
 <pre><code class="lang-cs">class Program {
     private static GHIElectronics.TinyCLR.Devices.Signals.PulseFeedback pulseFeedback;
@@ -244,7 +241,7 @@ while (true) {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/signal-control.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/compiled/software/tinyclr/tutorials/signal-control.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
