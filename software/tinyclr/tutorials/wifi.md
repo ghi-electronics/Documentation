@@ -7,7 +7,7 @@ The easiest way to get started quickly is by plugging a mikro WiFi 7 click modul
 This example uses the WiFi 7 click on our SC20100S Dev Board.
 
 >[!TIP]
->Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins
+>Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins, System.Net
 
 ```cs
 static void DoTestWiFi7Click()
