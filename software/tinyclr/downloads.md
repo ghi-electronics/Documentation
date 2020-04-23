@@ -56,7 +56,7 @@ File | Date | Status | MD5
 
 
 ### Firmware
-The Firmware is the TinyCLR OS that lives on your hardware. The firmware version loaded on the hardware must match the version number of the extension and the libraries. This will be more easily managed once the libraries are hosted on http://www.nuget.org/
+The Firmware is the TinyCLR OS that lives on your hardware. The firmware version loaded on the hardware must match the version number of the extension and the libraries.
 
 #### SC20xxxx (works on all SITCore products)
 
