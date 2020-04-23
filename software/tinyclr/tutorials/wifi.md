@@ -91,7 +91,7 @@ static void Wifi_Example() {
             (NetworkController sender, NetworkAddressChangedEventArgs e) {
             var ipProperties = sender.GetIPProperties();
             var address = ipProperties.Address.GetAddressBytes();
-            Debug.WriteLine(address.ToString());
+            Debug.WriteLine("IP: "+address[0]+"."+address[1]+"."+address[2]+"."+address[3]);
         }
 ```
 
