@@ -7,7 +7,7 @@ TinyCLR OS started with Microsoft's .NET Micro Framework and continues to enable
 |  |  |
 |--|--|
 |  **Getting Started** </br> Deploy your first TinyCLR program. [**Learn more...**](getting-started.md)  |  **Configuration** </br> Special pins, bootloader, TinyCLR Config [**Learn more...**](configuration.md) |
-|  [![Getting Started](images/getting-started.jpg)](getting-started.md)   |  [![TinyCLR Config](images/tinyclr-config-sm.png)](configuration.md)  |
+|  [![Getting Started](images/getting-started.jpg)](getting-started.md)   |  [![TinyCLR Config](images/tinyclr-config.gif)](configuration.md)  |
 |  **Tutorials** </br> Learn TinyCLR embedded programming. [**Learn more...**](tutorials/intro.md)  |  **Downloads** </br> Visual Studio and device downloads. [**Learn more...**](downloads.md)  |
 |  [![Tutorials](images/tutorials.jpg)](tutorials/intro.md)  |  [![Download](images/download.jpg)](downloads.md) | 
 | **Release Notes** </br> Find the latest changes to TinyCLR. [**Learn more...**](release-notes.md)  |  **Limitations** </br> How TinyCLR OS is different from full .NET. [**Learn more...**](limitations.md) |
