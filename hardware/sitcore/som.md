@@ -38,7 +38,7 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 | ADC                   | 6             | 16            | 15            | 20            |
 | DAC                   | 2             | 2             | 1             | 2             |
 | SD/SDIP/MMC           | 1             | 1             | 1             | 1             |
-| External Flash        | None          | 8 MByte       | 8 MByte       | 8 MByte       |
+| External Flash        | None          | 16 MByte      | 16 MByte      | 16 MByte      |
 | USB Host              | 1             | 1             | 1             | 1             |
 | USB Client            | 1             | 1             | 1             | 1             |
 | Ethernet              | 1             | 0             | 1             | 1             |
