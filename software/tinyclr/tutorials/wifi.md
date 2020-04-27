@@ -11,7 +11,7 @@ This example uses the FEZ Portal with its built in ATWINC1500 WiFi module.
 
 ```cs
 static void Wifi_Example() {
-            var enablePin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA8);
+            var enablePin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PI0);
 
             enablePin.SetDriveMode(GpioPinDriveMode.Output);
             enablePin.Write(GpioPinValue.High);
@@ -20,7 +20,7 @@ static void Wifi_Example() {
                 new SpiNetworkCommunicationInterfaceSettings();
 
             var cs = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
-                OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PA6);
+                OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PG12);
 
             var settings = new GHIElectronics.TinyCLR.Devices.Spi.SpiConnectionSettings() {
                 ChipSelectLine = cs,
@@ -39,11 +39,11 @@ static void Wifi_Example() {
 
             networkCommunicationInterfaceSettings.SpiSettings = settings;
             networkCommunicationInterfaceSettings.InterruptPin = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
-                OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PF10);
+                OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PG6);
             networkCommunicationInterfaceSettings.InterruptEdge = GpioPinEdge.FallingEdge;
             networkCommunicationInterfaceSettings.InterruptDriveMode = GpioPinDriveMode.InputPullUp;
             networkCommunicationInterfaceSettings.ResetPin = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
-                OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PF8);
+                OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PI8);
             networkCommunicationInterfaceSettings.ResetActiveState = GpioPinValue.Low;
 
             var networkController = NetworkController.FromName
@@ -99,7 +99,7 @@ static void Wifi_Example() {
 > There is an enable pin which needs to be pulled high on the WiFI 7 click module. 
 
 ```cs
-var enablePin = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PA15);
+var enablePin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PI0);
             
 enablePin.SetDriveMode(GpioPinDriveMode.Output);
 enablePin.Write(GpioPinValue.High);
