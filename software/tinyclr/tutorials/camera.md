@@ -1,7 +1,7 @@
 # Camera Interface
 ---
 
-TinyCLR OS supports digital camera interface, sometimes referred to as DCMI or DCI, on devices using the SITCore SC20260 SoC. Typically, cameras need to be configured using [I2C bus](i2c.md). Please refer to the camera's manual to determine the needed configuration.
+TinyCLR OS supports digital camera interface, sometimes referred to as DCMI or DCI, on devices using the SITCore SC20260 SoC. Typically, cameras need to be configured using [I2C bus](i2c.md). Check the Omnivision/Ov9655 driver under https://github.com/ghi-electronics/TinyCLR-Drivers for an example of how to configure your camera, or refer to the camera's manual to determine the needed configuration.
 
 The following function captures camera images:  
 ```cs
@@ -9,8 +9,17 @@ public void Capture(byte[] data, int timeoutMillisecond) =>
     this.cameraController.Capture(data, timeoutMillisecond);
 ```
 
-Don't forget to configure your camera before you use it -- check the Omnivision/Ov9655 driver under
-https://github.com/ghi-electronics/TinyCLR-Drivers for an example of how to configure your camera.
+We have had problems with some of the OV9655 breakout boards we tried. These boards provide a connector for the camera ribbon cable and an 18 pin 0.1" pin header that plugs into the SCM20260D Dev board. Some of these breakout boards ship with voltage regulators that don't seem to work properly, while others work well.
+
+Here are pictures that show the difference. The good camera has regulators labeled "3DB8N" and "3Cb2b:"
+
+![Good camera](images/good-camera.jpg).
+
+The bad cameras have voltage regulators labeled "2EB2S" and "3AB2I:"
+
+![Bad camera](images/bad-camera.jpg)
+
+## Sample Code
 
 This example configures the camera and sends the images to the 4.3 inch display attached to the SCM20260D Dev Board.
 
