@@ -19,7 +19,7 @@ We offer multiple single board computers to provide the lowest possible barrier 
 | **User Buttons**       | Yes          | Yes           | Yes             | Yes                     | Yes           |
 | **USB Client**         | Yes          | Yes           | Yes             | Yes                     | Yes           |
 | **USB Host Connector** | X            | Yes           | X               | Yes                     | Yes           |
-| **External Flash**     | X            | Yes           | X               | Yes                     | X             |
+| **External Flash**     | X            | 16 MByte      | X               | 16 MByte                | X             |
 | **LiPo Charger**       | X            | X             | Yes             | X                       | X             |
 | **Power Barrel**       | X            | Yes           | X               | X                       | X             |
 
