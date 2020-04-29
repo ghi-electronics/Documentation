@@ -55,10 +55,3 @@ When designing your own board, we recommend that you add the following periphera
 | Parallel Display | Backlight = PA15 |
 |  | Touch I2C = I2C1 |
 |  | Touch IRQ = PJ14 |
-|  |  |
-| WiFi | SPI = SPI3 |
-|  | IRQ = PA10 |
-|  | CS = PD15 |
-|  | EN = PA8 |
-|  | RST = PA9 |
-
