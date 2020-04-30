@@ -8,7 +8,7 @@
     <title>Camera Interface </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Camera Interface ">
-    <meta name="generator" content="docfx 2.23.1.0">
+    <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
+    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -59,7 +60,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -77,13 +80,11 @@
 <h1 id="camera-interface">Camera Interface</h1>
 
 <hr>
-<p>TinyCLR OS supports digital camera interface, sometimes referred to as DCMI or DCI, on devices using the SITCore SC20260 SoC. Typically, cameras need to be configured using <a href="i2c.html">I2C bus</a>. Please refer to the camera&#39;s manual to determine the needed configuration.</p>
+<p>TinyCLR OS supports digital camera interface, sometimes referred to as DCMI or DCI, on devices using the SITCore SC20260 SoC. Typically, cameras need to be configured using <a href="i2c.html">I2C bus</a>. Check the Omnivision/Ov9655 driver under <a href="https://github.com/ghi-electronics/TinyCLR-Drivers">https://github.com/ghi-electronics/TinyCLR-Drivers</a> for an example of how to configure your camera, or refer to the camera&#39;s manual to determine the needed configuration.</p>
 <p>The following function captures camera images:  </p>
 <pre><code class="lang-cs">public void Capture(byte[] data, int timeoutMillisecond) =&gt;
     this.cameraController.Capture(data, timeoutMillisecond);
-</code></pre><p>Don&#39;t forget to configure your camera before you use it -- check the Omnivision/Ov9655 driver under
-<a href="https://github.com/ghi-electronics/TinyCLR-Drivers">https://github.com/ghi-electronics/TinyCLR-Drivers</a> for an example of how to configure your camera.</p>
-<p>This example configures the camera and sends the images to the 4.3 inch display attached to the SCM20260D Dev Board.</p>
+</code></pre><p>This example configures the camera and sends the images to the 4.3 inch display attached to the SCM20260D Dev Board.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Drivers.Omnivision.Ov9655, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Drawing</p>
 <p>Needed Namespaces: GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Drivers.Omnivision.Ov9655, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins, System.Diagnostics, System.Drawing</p>
 </div>
@@ -173,7 +174,7 @@ class Program
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/compiled/software/tinyclr/tutorials/camera.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/camera.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

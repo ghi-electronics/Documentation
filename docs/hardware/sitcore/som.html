@@ -8,7 +8,7 @@
     <title>SITCore System on Modules </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="SITCore System on Modules ">
-    <meta name="generator" content="docfx 2.23.1.0">
+    <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
+    
     <meta property="docfx:rel" content="../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -59,7 +60,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -80,13 +83,6 @@
 <p><img src="images/system-on-modules.jpg" alt="G400S"></p>
 <h2 id="overview">Overview</h2>
 <p>The SITCore SoMs provide a low cost way to add .NET computing power to any embedded product. They are available in a 200 pin SO-DIMM format or as surface mount modules. The SITCore SoMs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more. The surface mount versions are great for harsh or high vibration environments.</p>
-<h2 id="ordering-part-numbers">Ordering Part Numbers</h2>
-<ul>
-<li>61 Pad Surface Mount: SCM20100E</li>
-<li>91 Pad Surface Mount: SCM20260N</li>
-<li>105 Pad Surface Mount: SCM20260E</li>
-<li>200 Pin SO-DIMM: SCM20260D</li>
-</ul>
 <h2 id="specifications">Specifications</h2>
 <table>
 <thead>
@@ -205,9 +201,9 @@
 <tr>
 <td>External Flash</td>
 <td>None</td>
-<td>128 MByte</td>
-<td>128 MByte</td>
-<td>128 MByte</td>
+<td>16 MByte</td>
+<td>16 MByte</td>
+<td>16 MByte</td>
 </tr>
 <tr>
 <td>USB Host</td>
@@ -282,19 +278,26 @@
 </ul>
 <h2 id="module-pinouts">Module Pinouts</h2>
 <h3 id="scm20100e-pinout">SCM20100E Pinout</h3>
-<p><a href="pdfs/scm20100e.pdf"><img src="images/scm20100e-pinout.gif" alt="SCm20100E Pinout"></a></p>
+<p><a href="pdfs/scm20100e-pinout.pdf"><img src="images/scm20100e-pinout.gif" alt="SCm20100E Pinout"></a></p>
 <h3 id="scm20260n-pinout">SCM20260N Pinout</h3>
-<p><a href="pdfs/scm20260n.pdf"><img src="images/scm20260n-pinout.gif" alt="SCm20260N Pinout"></a></p>
+<p><a href="pdfs/scm20260n-pinout.pdf"><img src="images/scm20260n-pinout.gif" alt="SCm20260N Pinout"></a></p>
 <h3 id="scm20260e-pinout">SCM20260E Pinout</h3>
-<p><a href="pdfs/scm20260e.pdf"><img src="images/scm20260e-pinout.gif" alt="SCm20260E Pinout"></a></p>
+<p><a href="pdfs/scm20260e-pinout.pdf"><img src="images/scm20260e-pinout.gif" alt="SCm20260E Pinout"></a></p>
 <h3 id="scm20260d-pinout">SCM20260D Pinout</h3>
-<p><a href="pdfs/scm20260d.pdf"><img src="images/scm20260d-pinout.gif" alt="SCm20260D Pinout"></a></p>
+<p><a href="pdfs/scm20260d-pinout.pdf"><img src="images/scm20260d-pinout.gif" alt="SCm20260D Pinout"></a></p>
+<h2 id="schematics">Schematics</h2>
+<ul>
+<li><a href="pdfs/scm20100e-schematic.pdf">SCM20100E Schematic</a></li>
+<li><a href="pdfs/scm20260n-schematic.pdf">SCM20260N Schematic</a></li>
+<li><a href="pdfs/scm20260e-schematic.pdf">SCM20260E Schematic</a></li>
+<li><a href="pdfs/scm20260d-schematic.pdf">SCM20260D Schematic</a></li>
+</ul>
 <h2 id="getting-started">Getting Started</h2>
 <p>As the SITCore modules are based on the SITCore chipset, please refer to the <a href="soc.html">SITCore SoC page</a> for information on device startup, loading TinyCLR OS firmware, and writing and deploying your application.</p>
 <h2 id="design-considerations">Design Considerations</h2>
 <h3 id="footprints">Footprints</h3>
 <p>We recommend no traces or vias under the module. Dimensions are in inches.</p>
-<h4 id="scm20100e-recommended-footpring">SCM20100E Recommended Footpring</h4>
+<h4 id="scm20100e-recommended-footprint">SCM20100E Recommended Footprint</h4>
 <p><img src="images/scm20100e-footprint.jpg" alt="SCM20100E Footprint"></p>
 <h4 id="scm20260n-recommended-footprint">SCM20260N Recommended Footprint</h4>
 <p><img src="images/g120-footprint.jpg" alt="SCM20260N Footprint"></p>
@@ -320,7 +323,9 @@
 </ul>
 <p>Please see the <a href="../../software/tinyclr/special-pins.html">Special Pins</a> page for more details.</p>
 <h3 id="power-supply">Power Supply</h3>
-<p>A typical clean power source, suited for digital circuitry, is needed to power the SITCore SoMs. The voltage should be within 10% of 3.3 volts.</p>
+<p>A clean power source, suitable for digital circuitry, is needed to power SITCore SoMs. Voltages should be regulated to within 10% or better of the specified voltage. Additionally, a large capacitor, typically 47 uF, should be placed near the SoM if the power supply is more than few inches away.</p>
+<h3 id="analog-considerations">Analog Considerations</h3>
+<p>Where these pins are provided, using a separate filtered supply for <code>Analog 3.3V</code> and <code>Analog VREF+</code> may help to improve ADC accuracy by reducing analog supply noise. For the same reason, you may want to provide a separate and clean analog ground for the <code>Analog GND</code> and <code>Analog VREF-</code>, if these pads are provided on the SoM you are using.</p>
 <h3 id="oven-reflow-profile">Oven Reflow Profile</h3>
 <p>SITCore SoMs are not sealed for moisture. Baking modules before reflow is recommended and required in a humid environment. The process of reflow can damage the SoM if the temperature is too high or exposure is too long.</p>
 <p>The lead-free reflow profiles used by GHI Electronics are shown below. The profiles are based on AIM SAC 305 solder (3% silver, 0.5% copper). The thermal mass of the assembled board and the sensitivity of the components on it affect the total dwell time. Differences in the two profiles are where they reach their respective peak temperatures as well as the time above liquids (TAL). The shorter profile applies to smaller assemblies, whereas the longer profile applies to larger assemblies such as back-planes or high-density boards. The process window is described by the shaded area. These profiles are only starting-points and general guidance. The particulars of the oven and the assembly will determine the final process.</p>
@@ -335,7 +340,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/compiled/hardware/sitcore/som.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/hardware/sitcore/som.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

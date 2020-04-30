@@ -8,7 +8,7 @@
     <title>Ethernet </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Ethernet ">
-    <meta name="generator" content="docfx 2.23.1.0">
+    <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
+    
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -59,7 +60,9 @@
         
         <div id="search-results">
           <div class="search-list"></div>
-          <div class="sr-items"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
           <ul id="pagination"></ul>
         </div>
       </div>
@@ -159,7 +162,7 @@ private static void NetworkController_NetworkAddressChanged
     linkReady = address[0] != 0;
 }
 </code></pre><h2 id="enc28j60">ENC28J60</h2>
-<p>This example uses the ENC28J60 click on our SC20100S Dev Board.</p>
+<p>This example uses the ENC28J60 click on our SC20260D Dev Board.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins</p>
 </div>
 <pre><code class="lang-cs">static void Enc28Test()
@@ -173,7 +176,7 @@ private static void NetworkController_NetworkAddressChanged
         SpiNetworkCommunicationInterfaceSettings();
 
     var cs = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
-        OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PD3);
+        OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PG12);
 
     var settings = new GHIElectronics.TinyCLR.Devices.Spi.SpiConnectionSettings()
     {
@@ -191,12 +194,16 @@ private static void NetworkController_NetworkAddressChanged
     networkCommunicationInterfaceSettings.GpioApiName =
         GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.Id;
 
+
     networkCommunicationInterfaceSettings.SpiSettings = settings;
-    networkCommunicationInterfaceSettings.InterruptPin = SC20100.GpioPin.PC5;
+    networkCommunicationInterfaceSettings.InterruptPin = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
+        OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PG6);
     networkCommunicationInterfaceSettings.InterruptEdge = GpioPinEdge.FallingEdge;
     networkCommunicationInterfaceSettings.InterruptDriveMode = GpioPinDriveMode.InputPullUp;
-    networkCommunicationInterfaceSettings.ResetPin = SC20100.GpioPin.PD4;
+    networkCommunicationInterfaceSettings.ResetPin = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
+        OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PI8);
     networkCommunicationInterfaceSettings.ResetActiveState = GpioPinValue.Low;
+
 
     networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
     networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
@@ -274,7 +281,7 @@ private static void NetworkController_NetworkAddressChanged
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/compiled/software/tinyclr/tutorials/ethernet.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/ethernet.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
