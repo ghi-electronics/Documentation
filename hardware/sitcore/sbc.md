@@ -19,7 +19,7 @@ We offer multiple single board computers to provide the lowest possible barrier 
 | **User Buttons**       | Yes          | Yes           | Yes             | Yes                     | Yes           |
 | **USB Client**         | Yes          | Yes           | Yes             | Yes                     | Yes           |
 | **USB Host Connector** | X            | Yes           | X               | Yes                     | Yes           |
-| **External Flash**     | X            | Yes           | X               | Yes                     | X             |
+| **External Flash**     | X            | 16 MByte      | X               | 16 MByte                | X             |
 | **LiPo Charger**       | X            | X             | Yes             | X                       | X             |
 | **Power Barrel**       | X            | Yes           | X               | X                       | X             |
 
@@ -28,6 +28,8 @@ We offer multiple single board computers to provide the lowest possible barrier 
 ![FEZ Bit](images/fez-bit.png)
 
 The **FEZ Bit**, while seemingly more of a "maker" board, provides a convenient way to easily use the multitude of inexpensive Micro:bit accessories that have flooded the market. As the number of Micro:bit accessories continues to grow, this board will be valued as a way to use these accessories to quickly assemble prototypes and test new product concepts.
+
+[FEZ Bit Schematic](pdfs/fez-bit-schematic.pdf)
 
 ### FEZ Bit Peripheral Pins
 
@@ -96,6 +98,8 @@ The Adafruit Feather form factor boards are made to be stackable and have built 
 
 Already one of our most popular SITCore single board computers, The **FEZ Portal** is a 4.3" 480x272 display with capacitive touch that is programmable in C#. As the display and controller are one unit, it's even easier to make a product with touch as you only have to mount a single board that's only slightly larger than the display.
 
+[FEZ Portal Schematic](pdfs/fez-portal-schematic.pdf)
+
 ### FEZ Portal Peripheral Pins
 
 |                   |                 |
@@ -119,6 +123,8 @@ Already one of our most popular SITCore single board computers, The **FEZ Portal
 ![FEZ Stick](images/fez-stick.png)
 
 The **FEZ Stick** is simply the least expensive way to easily get started with TinyCLR OS. While providing an inexpensive way for the uninitiated to try TinyCLR OS, we've provided castellated edges as well as through hole pads to make it breadboard friendly and easy to embed into products. Also, there's actually space for two click modules, making this a very versatile board at a very affordable price!
+
+[FEZ Stick Schematic](pdfs/fez-stick-schematic.pdf)
 
 ### FEZ Stick Peripheral Pins
 

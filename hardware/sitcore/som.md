@@ -5,12 +5,6 @@
 ## Overview
 The SITCore SoMs provide a low cost way to add .NET computing power to any embedded product. They are available in a 200 pin SO-DIMM format or as surface mount modules. The SITCore SoMs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more. The surface mount versions are great for harsh or high vibration environments.
 
-## Ordering Part Numbers
-* 61 Pad Surface Mount: SCM20100E
-* 91 Pad Surface Mount: SCM20260N
-* 105 Pad Surface Mount: SCM20260E
-* 200 Pin SO-DIMM: SCM20260D
-
 ## Specifications
 
 | Spec               | All SITCore SoMs          |
@@ -38,7 +32,7 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 | ADC                   | 6             | 16            | 15            | 20            |
 | DAC                   | 2             | 2             | 1             | 2             |
 | SD/SDIP/MMC           | 1             | 1             | 1             | 1             |
-| External Flash        | None          | 128 MByte     | 128 MByte     | 128 MByte     |
+| External Flash        | None          | 16 MByte      | 16 MByte      | 16 MByte      |
 | USB Host              | 1             | 1             | 1             | 1             |
 | USB Client            | 1             | 1             | 1             | 1             |
 | Ethernet              | 1             | 0             | 1             | 1             |
@@ -76,16 +70,22 @@ The microcontrollers we use in our SITCore line of products do not support concu
 ## Module Pinouts
 
 ### SCM20100E Pinout
-[![SCm20100E Pinout](images/scm20100e-pinout.gif)](pdfs/scm20100e.pdf)
+[![SCm20100E Pinout](images/scm20100e-pinout.gif)](pdfs/scm20100e-pinout.pdf)
 
 ### SCM20260N Pinout
-[![SCm20260N Pinout](images/scm20260n-pinout.gif)](pdfs/scm20260n.pdf)
+[![SCm20260N Pinout](images/scm20260n-pinout.gif)](pdfs/scm20260n-pinout.pdf)
 
 ### SCM20260E Pinout
-[![SCm20260E Pinout](images/scm20260e-pinout.gif)](pdfs/scm20260e.pdf)
+[![SCm20260E Pinout](images/scm20260e-pinout.gif)](pdfs/scm20260e-pinout.pdf)
 
 ### SCM20260D Pinout
-[![SCm20260D Pinout](images/scm20260d-pinout.gif)](pdfs/scm20260d.pdf)
+[![SCm20260D Pinout](images/scm20260d-pinout.gif)](pdfs/scm20260d-pinout.pdf)
+
+## Schematics
+- [SCM20100E Schematic](pdfs/scm20100e-schematic.pdf)
+- [SCM20260N Schematic](pdfs/scm20260n-schematic.pdf)
+- [SCM20260E Schematic](pdfs/scm20260e-schematic.pdf)
+- [SCM20260D Schematic](pdfs/scm20260d-schematic.pdf)
 
 ## Getting Started
 As the SITCore modules are based on the SITCore chipset, please refer to the [SITCore SoC page](soc.md) for information on device startup, loading TinyCLR OS firmware, and writing and deploying your application.
@@ -96,7 +96,7 @@ As the SITCore modules are based on the SITCore chipset, please refer to the [SI
 
 We recommend no traces or vias under the module. Dimensions are in inches.
 
-#### SCM20100E Recommended Footpring
+#### SCM20100E Recommended Footprint
 ![SCM20100E Footprint](images/scm20100e-footprint.jpg)
 
 #### SCM20260N Recommended Footprint
@@ -131,7 +131,10 @@ Exposing the following pins is required in every design to enable device program
 Please see the [Special Pins](../../software/tinyclr/special-pins.md) page for more details.
 
 ### Power Supply
-A typical clean power source, suited for digital circuitry, is needed to power the SITCore SoMs. The voltage should be within 10% of 3.3 volts.
+A clean power source, suitable for digital circuitry, is needed to power SITCore SoMs. Voltages should be regulated to within 10% or better of the specified voltage. Additionally, a large capacitor, typically 47 uF, should be placed near the SoM if the power supply is more than few inches away.
+
+### Analog Considerations
+Where these pins are provided, using a separate filtered supply for `Analog 3.3V` and `Analog VREF+` may help to improve ADC accuracy by reducing analog supply noise. For the same reason, you may want to provide a separate and clean analog ground for the `Analog GND` and `Analog VREF-`, if these pads are provided on the SoM you are using.
 
 ### Oven Reflow Profile
 

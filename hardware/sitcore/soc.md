@@ -5,10 +5,6 @@
 ## Overview
 The SITCore SoCs provide a low cost way to add .NET computing power to any embedded product. Available as either a 100 pin LQFP or a 265 ball BGA, the SITCore SoCs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more.
 
-## Ordering Part Number
-* 100 Pin LQFP: SC20100S
-* 265 Ball BGA: SC20260B
-
 ## Specifications
 
 | Spec               | SC20100S                  | SC20260B             |
@@ -79,10 +75,10 @@ The microcontrollers we use in our SITCore line of products do not support concu
 ## Pinouts
 
 ### SC20100S Pinout
-[![SC20100S Pinout](images/sc20100s-pinout.gif)](pdfs/sc20100s.pdf)
+[![SC20100S Pinout](images/sc20100s-pinout.gif)](pdfs/sc20100s-pinout.pdf)
 
 ### SC20260B Pinout
-[![SC20260B Pinout](images/sc20260b-pinout.gif)](pdfs/sc20260b.pdf)
+[![SC20260B Pinout](images/sc20260b-pinout.gif)](pdfs/sc20260b-pinout.pdf)
 
 ## Device Startup
 The SITCore is held in reset while the RESET pin is low. Releasing RESET will begin the system startup process.
@@ -135,9 +131,10 @@ Exposing the following pins is required in every design to enable device program
 Please see the [Special Pins](../../software/tinyclr/special-pins.md) page for more details.
 
 ### Power Supply
-A typical clean power source, suited for digital circuitry, is needed to power the SITCore SoCs. Voltages should be within at
-least 10% of the specified voltage. Decoupling capacitors of 0.1 uF are needed near every power pin. Additionally, a
-large capacitor, typically 47 uF, should be near the G80 if the power supply is more than few inches away.
+A clean power source, suitable for digital circuitry, is needed to power SITCore SoCs. Voltages should be regulated to within 10% or better of the specified voltage. Decoupling capacitors of 0.1 uF are needed near every power pin. Additionally, a large capacitor, typically 47 uF, should be placed near the SoC if the power supply is more than few inches away.
+
+### Analog Considerations
+It is a good idea to provide a separate filtered supply line for the `Vdda`, and `Vref+` pins. Additionally, on the 260 pin devices, you may want to provide a separate filtered ground connection for the `Vssa` and `Vref-` pins. While this is not needed for ADC operation, it does help to ensure more accurate ADC readings by reducing analog supply noise.
 
 ### Crystals
 The SITCore requires an external 8 MHz crystal and associated circuitry to function. For the RTC to function, a 32.768

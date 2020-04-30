@@ -90,7 +90,7 @@ private static void NetworkController_NetworkAddressChanged
 
 ## ENC28J60
 
-This example uses the ENC28J60 click on our SC20100S Dev Board.
+This example uses the ENC28J60 click on our SC20260D Dev Board.
 
 >[!TIP]
 >Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins
@@ -107,7 +107,7 @@ static void Enc28Test()
         SpiNetworkCommunicationInterfaceSettings();
 
     var cs = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
-        OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PD3);
+        OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PG12);
 
     var settings = new GHIElectronics.TinyCLR.Devices.Spi.SpiConnectionSettings()
     {
@@ -125,12 +125,16 @@ static void Enc28Test()
     networkCommunicationInterfaceSettings.GpioApiName =
         GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.Id;
 
+    
     networkCommunicationInterfaceSettings.SpiSettings = settings;
-    networkCommunicationInterfaceSettings.InterruptPin = SC20100.GpioPin.PC5;
+    networkCommunicationInterfaceSettings.InterruptPin = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
+        OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PG6);
     networkCommunicationInterfaceSettings.InterruptEdge = GpioPinEdge.FallingEdge;
     networkCommunicationInterfaceSettings.InterruptDriveMode = GpioPinDriveMode.InputPullUp;
-    networkCommunicationInterfaceSettings.ResetPin = SC20100.GpioPin.PD4;
+    networkCommunicationInterfaceSettings.ResetPin = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
+        OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PI8);
     networkCommunicationInterfaceSettings.ResetActiveState = GpioPinValue.Low;
+
 
     networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
     networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });

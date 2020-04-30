@@ -1,16 +1,13 @@
 # Camera Interface
 ---
 
-TinyCLR OS supports digital camera interface, sometimes referred to as DCMI or DCI, on devices using the SITCore SC20260 SoC. Typically, cameras need to be configured using [I2C bus](i2c.md). Please refer to the camera's manual to determine the needed configuration.
+TinyCLR OS supports digital camera interface, sometimes referred to as DCMI or DCI, on devices using the SITCore SC20260 SoC. Typically, cameras need to be configured using [I2C bus](i2c.md). Check the Omnivision/Ov9655 driver under https://github.com/ghi-electronics/TinyCLR-Drivers for an example of how to configure your camera, or refer to the camera's manual to determine the needed configuration.
 
 The following function captures camera images:  
 ```cs
 public void Capture(byte[] data, int timeoutMillisecond) =>
     this.cameraController.Capture(data, timeoutMillisecond);
 ```
-
-Don't forget to configure your camera before you use it -- check the Omnivision/Ov9655 driver under
-https://github.com/ghi-electronics/TinyCLR-Drivers for an example of how to configure your camera.
 
 This example configures the camera and sends the images to the 4.3 inch display attached to the SCM20260D Dev Board.
 
