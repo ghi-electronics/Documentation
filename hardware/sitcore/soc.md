@@ -5,10 +5,6 @@
 ## Overview
 The SITCore SoCs provide a low cost way to add .NET computing power to any embedded product. Available as either a 100 pin LQFP or a 265 ball BGA, the SITCore SoCs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more.
 
-## Ordering Part Number
-* 100 Pin LQFP: SC20100S
-* 265 Ball BGA: SC20260B
-
 ## Specifications
 
 | Spec               | SC20100S                  | SC20260B             |
