@@ -70,16 +70,22 @@ The microcontrollers we use in our SITCore line of products do not support concu
 ## Module Pinouts
 
 ### SCM20100E Pinout
-[![SCm20100E Pinout](images/scm20100e-pinout.gif)](pdfs/scm20100e.pdf)
+[![SCm20100E Pinout](images/scm20100e-pinout.gif)](pdfs/scm20100e-pinout.pdf)
 
 ### SCM20260N Pinout
-[![SCm20260N Pinout](images/scm20260n-pinout.gif)](pdfs/scm20260n.pdf)
+[![SCm20260N Pinout](images/scm20260n-pinout.gif)](pdfs/scm20260n-pinout.pdf)
 
 ### SCM20260E Pinout
-[![SCm20260E Pinout](images/scm20260e-pinout.gif)](pdfs/scm20260e.pdf)
+[![SCm20260E Pinout](images/scm20260e-pinout.gif)](pdfs/scm20260e-pinout.pdf)
 
 ### SCM20260D Pinout
-[![SCm20260D Pinout](images/scm20260d-pinout.gif)](pdfs/scm20260d.pdf)
+[![SCm20260D Pinout](images/scm20260d-pinout.gif)](pdfs/scm20260d-pinout.pdf)
+
+## Schematics
+- [SCM20100E Schematic](pdfs/scm20100e-schematic.pdf)
+- [SCM20260N Schematic](pdfs/scm20260n-schematic.pdf)
+- [SCM20260E Schematic](pdfs/scm20260e-schematic.pdf)
+- [SCM20260D Schematic](pdfs/scm20260d-schematic.pdf)
 
 ## Getting Started
 As the SITCore modules are based on the SITCore chipset, please refer to the [SITCore SoC page](soc.md) for information on device startup, loading TinyCLR OS firmware, and writing and deploying your application.
