@@ -79,10 +79,10 @@ The microcontrollers we use in our SITCore line of products do not support concu
 ## Pinouts
 
 ### SC20100S Pinout
-[![SC20100S Pinout](images/sc20100s-pinout.gif)](pdfs/sc20100s.pdf)
+[![SC20100S Pinout](images/sc20100s-pinout.gif)](pdfs/sc20100s-pinout.pdf)
 
 ### SC20260B Pinout
-[![SC20260B Pinout](images/sc20260b-pinout.gif)](pdfs/sc20260b.pdf)
+[![SC20260B Pinout](images/sc20260b-pinout.gif)](pdfs/sc20260b-pinout.pdf)
 
 ## Device Startup
 The SITCore is held in reset while the RESET pin is low. Releasing RESET will begin the system startup process.

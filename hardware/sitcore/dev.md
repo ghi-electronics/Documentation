@@ -9,7 +9,7 @@ We offer two development boards making it possible to start programming your app
 
 Ordering Part Number: SCDEV-20100S
 
-[Schematic]()
+[SC20100S Dev Board Schematic](pdfs/sc20100s-dev-schematic.pdf)
 
 The SC20100S Dev Board includes an SC20100S soldered to the board and a built in 1.8 inch color serial display. It has three 40 pin socket headers for connecting peripherals and a display. Peripheral connectors include external power, Ethernet, CAN, USB host and client, RTC backup battery, DCMI interface and an SD card slot.  It also has a buzzer, LEDs, a reset button, and user programmable boot buttons.
 
@@ -24,7 +24,7 @@ The board can be powered through either the USB client connectors or the barrel 
 
 Ordering Part Number: SCDEV-20260D
 
-[Schematic]()
+[SCM20260D Dev Board Schematic](pdfs/scm20260-dev-schematic.pdf)
 
 The SCM20260D Dev Board is the fastest and easiest way to start developing with the SCM20260D. This board includes an SCM20260D DIMM module and a 4.3 inch capacitive touch display. It provides standard connectors for input/output, and three 40 pin socket headers for connecting peripherals and a display. Peripheral connectors include external power, Ethernet, CAN, USB host and client, RTC backup battery, DCMI interface and an SD card slot.  It also has a buzzer, LEDs, a reset button, and user programmable boot buttons.
 
