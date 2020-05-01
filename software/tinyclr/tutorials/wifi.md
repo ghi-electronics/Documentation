@@ -38,42 +38,51 @@ static void Wifi_Example() {
                 GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.Id;
 
             networkCommunicationInterfaceSettings.SpiSettings = settings;
-            networkCommunicationInterfaceSettings.InterruptPin = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
-                OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PG6);
+            networkCommunicationInterfaceSettings.InterruptPin = GHIElectronics.TinyCLR.
+                Devices.Gpio.GpioController.GetDefault().OpenPin(
+                GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PG6);
+
             networkCommunicationInterfaceSettings.InterruptEdge = GpioPinEdge.FallingEdge;
-            networkCommunicationInterfaceSettings.InterruptDriveMode = GpioPinDriveMode.InputPullUp;
-            networkCommunicationInterfaceSettings.ResetPin = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
-                OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PI8);
+            networkCommunicationInterfaceSettings.InterruptDriveMode =
+                GpioPinDriveMode.InputPullUp;
+
+            networkCommunicationInterfaceSettings.ResetPin = GHIElectronics.TinyCLR.
+                Devices.Gpio.GpioController.GetDefault().OpenPin(
+                GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PI8);
+
             networkCommunicationInterfaceSettings.ResetActiveState = GpioPinValue.Low;
 
             var networkController = NetworkController.FromName
                 ("GHIElectronics.TinyCLR.NativeApis.ATWINC15xx.NetworkController");
 
-            WiFiNetworkInterfaceSettings networkInterfaceSetting = new WiFiNetworkInterfaceSettings() {
+            WiFiNetworkInterfaceSettings wifiSettings = new WiFiNetworkInterfaceSettings() {
                 Ssid = "Your SSID",
                 Password = "Your Password",
             };
 
-            networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
-            networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
-            networkInterfaceSetting.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
-            networkInterfaceSetting.DnsAddresses = new IPAddress[] { new IPAddress(new byte[]
-        { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
+            wifiSettings.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
+            wifiSettings.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
+            wifiSettings.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
+            wifiSettings.DnsAddresses = new IPAddress[] { new IPAddress(new byte[]
+                { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
 
-            networkInterfaceSetting.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
-            networkInterfaceSetting.IsDhcpEnabled = true;
-            networkInterfaceSetting.IsDynamicDnsEnabled = true;
+            wifiSettings.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
+            wifiSettings.IsDhcpEnabled = true;
+            wifiSettings.IsDynamicDnsEnabled = true;
 
-            networkInterfaceSetting.TlsEntropy = new byte[] { 0, 1, 2, 3 };
+            wifiSettings.TlsEntropy = new byte[] { 0, 1, 2, 3 };
 
-            networkController.SetInterfaceSettings(networkInterfaceSetting);
+            networkController.SetInterfaceSettings(wifiSettings);
             networkController.SetCommunicationInterfaceSettings
                 (networkCommunicationInterfaceSettings);
 
             networkController.SetAsDefaultController();
 
-            networkController.NetworkAddressChanged += NetworkController_NetworkAddressChanged;
-            networkController.NetworkLinkConnectedChanged += NetworkController_NetworkLinkConnectedChanged;
+            networkController.NetworkAddressChanged +=
+                NetworkController_NetworkAddressChanged;
+
+            networkController.NetworkLinkConnectedChanged +=
+                NetworkController_NetworkLinkConnectedChanged;
 
             networkController.Enable();
 
