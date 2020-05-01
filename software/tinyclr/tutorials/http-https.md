@@ -85,7 +85,7 @@ static void TestHttpServer() {
 
         //Construct a response.                
         var responseString = string.Format("<HTML><BODY> I am TinyCLR OS Server." +
-            "Client request count: { 0}</ BODY ></ HTML > ", ++clientRequestCount);                
+            "Client request count: {0}</BODY></HTML> ", ++clientRequestCount);                
         
         byte[] buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
 
