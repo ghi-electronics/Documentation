@@ -62,6 +62,8 @@ The **FEZ Bit**, while seemingly more of a "maker" board, provides a convenient 
 
 The **FEZ Duino** provides female headers that make use of the popular Arduino pinout. Once again, we are trying to make it as easy and inexpensive as possible to build prototypes and try out new concepts by taking advantage of an existing accessory ecosystem.
 
+[FEZ Duino Schematic](pdfs/fez-duino-schematic.pdf)
+
 ### FEZ Duino Peripheral Pins
 
 |                   |             |
@@ -79,6 +81,8 @@ The **FEZ Duino** provides female headers that make use of the popular Arduino p
 ![FEZ Feather](images/fez-feather.png)
 
 The Adafruit Feather form factor boards are made to be stackable and have built in support for LiPo batteries, including a charging circuit. We've watched this form factor quickly gaining popularity, so we decided to make a Feather board of our own. If your project needs to run off of a battery, this board makes it quick and easy to get started. The **FEZ Feather** provides both through hole pads and castellated edges making it both breadboard friendly and easy to build into products.
+
+[FEZ Feather Schematic](pdfs/fez-feather-schematic.pdf)
 
 ### FEZ Feather Peripheral Pins
 
