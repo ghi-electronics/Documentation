@@ -67,36 +67,34 @@ TinyCLR OS provides an HttpListener class which can be used to make an HTTP Serv
 > To run this example the client and server devices must both connect to the same local network.
 
 ```cs
-static void TestHttpServer()
-{            
+static void TestHttpServer() {
     //Create a listener.
     HttpListener listener = new HttpListener("http", 80);
-    
+
     listener.Start();
     System.Diagnostics.Debug.WriteLine("Listening...");
 
     var clientRequestCount = 0;
-    
-    while (true)
-    {
+
+    while (true) {
         //Note: The GetContext method blocks while waiting for a request.
         HttpListenerContext context = listener.GetContext();
 
         //Obtain a response object.
         HttpListenerResponse response = context.Response;
-        
+
         //Construct a response.                
-        var responseString = string.Format("<HTML><BODY> I am TinyCLR OS Server. 
-            Client request count: {0}</BODY></HTML>", ++clientRequestCount);                
+        var responseString = string.Format("<HTML><BODY> I am TinyCLR OS Server. " +
+            "Client request count: {0}</BODY></HTML>", ++clientRequestCount);                
         
         byte[] buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
-        
+
         //Get a response stream and write the response to it.
         response.ContentLength64 = buffer.Length;
         var output = response.OutputStream;
 
         output.Write(buffer, 0, buffer.Length);
-        
+
         //You must close the output stream.
         output.Close();
     }
