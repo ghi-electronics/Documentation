@@ -82,18 +82,11 @@ This boards combines F20 with a micro SD card connector on a very tiny circuit.
 * Part Number F20FS-546
 * [F20-uSD Schematic](http://files.ghielectronics.com/downloads/Schematics/FileSystem/F20%20uSD%20Rev%201.1%20Schematic.pdf)
 
-## Firmware Upgrade
-It is possible to upgrade and downgrade the firmware on the file system chipsets using the built in GHI Electronics Bootloader v1. The product datasheets explain how to enter the bootloader. The [GHI Electronics Bootloader](../../software/netmf/bootloader.md) page details how to use it.
-
-## Legacy Products
-
-### uALFAT Chipset
-This is a legacy product, replaced by F40.
+## uALFAT Chipset
 * [User Manual](http://files.ghielectronics.com/downloads/Documents/Manuals/uALFAT%20User%20Manual.pdf)
 * [Firmware v3.13](http://files.ghielectronics.com/downloads/ALFAT/Firmwares/uALFAT%20Firmware%20v3.13.ghi)
 
-### USBwiz Chipset
-This is a legacy product, replaced by F40.
+## USBwiz Chipset
 * [User Manual](http://files.ghielectronics.com/downloads/Documents/Manuals/USBwiz%20User%20Manual.pdf)
 * [Firmware v2.29](http://files.ghielectronics.com/downloads/ALFAT/Firmwares/USBwiz%20Firmware%20v2.29.ghi)
 
