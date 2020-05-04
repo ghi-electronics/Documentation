@@ -26,7 +26,7 @@ To start development using the SCM20260D Dev Board, just install the module on t
 
 The board can be powered through either the USB client connectors or the barrel jack. Always use the barrel jack for power when using displays, especially the larger ones. USB does not provide sufficient power needed for displays.
 
-[SCM20260D Dev Board Schematic](pdfs/scm20260-dev-schematic.pdf)
+[SCM20260D Dev Board Schematic](pdfs/scm20260d-dev-schematic.pdf)
 
 > [!Note]
 > All boards with a barrel power jack accept a 5.5 x 2.1 mm power plug. The pin is positive, the sleeve is negative. While these boards accept a wide voltage range, they use linear voltage regulators that run hotter with higher input voltages. Generally we recommend an input voltage of 6 to 12 volts, but if your project draws a lot of current, use a lower voltage to keep the regulator cooler. A one amp power supply should provide enough current for most needs.
