@@ -14,7 +14,7 @@ All special pins except RESET can be used as GPIO or peripheral pins, however it
 
 The SITCore chip is held in reset while the RESET(NRST) pin is held low. Releasing RESET and allowing it to go high will begin the system startup process.
 
-All SITCore processors have a permanent internal pull up resistor on the RESET pin. An external pull us resistor is not required on the RESET(NRST) pin when designing your own circuit boards.
+All SITCore processors have a permanent internal pull up resistor on the RESET pin. An external pull up resistor is not required on the RESET(NRST) pin when designing your own circuit boards.
 
 ## LDR
 
