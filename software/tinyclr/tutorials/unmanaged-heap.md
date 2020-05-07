@@ -39,7 +39,4 @@ System.Diagnostics.Debug.WriteLine(Memory.UnmanagedMemory.FreeBytes.ToString());
 System.Diagnostics.Debug.WriteLine(Memory.UnmanagedMemory.UsedBytes.ToString());
 ```
 
-## Battery Backed RAM
-
-SITCore devices support 4 Kbytes of battery backed RAM. Details can be found in the [Real Time Clock Tutorial](real-time-clock.md).
 
