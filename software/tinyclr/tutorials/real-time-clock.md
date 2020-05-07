@@ -2,6 +2,8 @@
 ---
 The Real Time Clock (RTC) is a circuit that runs off a small battery or a super capacitor. It has its own crystal and keeps running even when the system is powered off. Not all hardware has a built in RTC, so check your hardware's documentation for more details.
 
+Generally, the RTC is accurate to plus or minus two seconds per day. However, this error may be larger for boards operating in high or low temperature environments.
+
 In the event the RTC battery was drained or the RTC was never initialized, the RTC will not have a correct value. Use the `rtc.IsValid` method to determine if the time was set correctly.
 
 >[!Important]
