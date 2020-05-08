@@ -68,7 +68,6 @@ static void Wifi_Example() {
     wifiSettings.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
     wifiSettings.IsDhcpEnabled = true;
     wifiSettings.IsDynamicDnsEnabled = true;
-
     wifiSettings.TlsEntropy = new byte[] { 0, 1, 2, 3 };
 
     networkController.SetInterfaceSettings(wifiSettings);
