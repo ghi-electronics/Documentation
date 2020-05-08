@@ -128,7 +128,7 @@ Exposing the following pins is required in every design to enable device program
 * MOD (if required to select a debug interface)
 * Desired debug interface(s)
 
-Please see the [Special Pins](../../software/tinyclr/special-pins.md) page for more details.
+For information on these and other important pins, please refer to the [Special Pins](../../software/tinyclr/special-pins.md) page.
 
 ### Power Supply
 A clean power source, suitable for digital circuitry, is needed to power SITCore SoCs. Voltages should be regulated to within 10% or better of the specified voltage. Decoupling capacitors of 0.1 uF are needed near every power pin. Additionally, a large capacitor, typically 47 uF, should be placed near the SoC if the power supply is more than few inches away.

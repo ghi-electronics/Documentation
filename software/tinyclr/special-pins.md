@@ -1,14 +1,15 @@
 # Special Pins
 ---
 
-There are five pins that have special functionality. They are also predefined on the SITCore line of products: 
+There are a number of predefined pins that have special functionality on SITCore SoMs and SoCs: 
 * RESET (NRST)
 * LDR (PE3)
 * APP (PB7)
 * MOD (PD7)
 * WKUP (PA0)
+* Vbat
 
-All special pins except RESET can be used as GPIO or peripheral pins, however it is up to you to make sure your use of these pins does not interfere with their use as special pins if needed. We strongly recommend exposing all special pins in your SITCore designs.
+All special pins except RESET and Vbat can be used as GPIO or peripheral pins, however it is up to you to make sure your use of these pins does not interfere with their use as special pins if needed. We strongly recommend exposing all special pins in your SITCore designs. You will also need to expose the debug interface(s) you plan to use to deploy and debug your application.
 
 In addition to exposing these pins, it is important to follow the design considerations on the [System on Chip](../../hardware/sitcore/soc.md) or [System on Module](../../hardware/sitcore/som.md) page that corresponds to the SITCore product your are using.
 
@@ -35,6 +36,18 @@ By default, the MOD pin is pulled high during reset allowing for deployment and 
 ## WKUP
 
 The WKUP pin can be used to wake up the processor from special power saving modes. The WKUP pin can be configured to use an internal pull-up or pull-down, so no external pull resistor is needed. When WKUP functionality is not needed, this pin can be used as a GPIO or peripheral pin. See the [Power Management](../../software/tinyclr/tutorials/power-management.md) page for more information.
+
+## Vbat
+
+The Vbat pin on SITCore SoCs and SoMs is used to provide battery power to the [Real Time Clock](tutorials/real-time-clock.md) (RTC). This pin also provides power for battery backed memory (see the [Real Time Clock](tutorials/real-time-clock.md) page for details).
+
+If you require either RTC or battery backed memory, the Vbat pin must be connected to the positive terminal of a supercap or battery. The negative terminal of the battery or supercap needs a connection to GND.
+
+Vbat requires 1.2 to 3.6 volts for correct operation. This is usually provided by either a CR2032 lithium coin cell or a supercap, but other options are available. SITCore Dev boards use a 33 mF 3.3 volt supercap.
+
+The best Vbat option depends on your application. If your board needs to keep correct time while being unpowered for more than a few days, a battery may be a better choice than a supercap. The disadvantage to batteries is they eventually discharge and must be replaced. Supercaps are rechargeable and should last for the life of the product.
+
+It is important that your application correctly sets the charging status of the Vbat pin. Trying to charge a lithium coin cell may damage it and could possibly cause it to leak. Supercaps need to be charged every few days or so (depending on supercap size) before they lose their charge. Information on setting Vbat charge status is found on the [Real Time Clock](tutorials/real-time-clock.md) page.
 
 ## Debug Interface
 
