@@ -10,6 +10,8 @@ There are five pins that have special functionality. They are also predefined on
 
 All special pins except RESET can be used as GPIO or peripheral pins, however it is up to you to make sure your use of these pins does not interfere with their use as special pins if needed. We strongly recommend exposing all special pins in your SITCore designs.
 
+In addition to exposing these pins, it is important to follow the design considerations on the [System on Chip](../../hardware/sitcore/soc.md) or [System on Module](../../hardware/sitcore/som.md) page that corresponds to the SITCore product your are using.
+
 ## RESET
 
 The SITCore chip is held in reset while the RESET(NRST) pin is held low. Releasing RESET and allowing it to go high will begin the system startup process.
