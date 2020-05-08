@@ -9,7 +9,7 @@ In the event the RTC battery was drained or the RTC was never initialized, the R
 ## Setting Vbat Charge Mode
 
 >[!Important]
->Make sure the RTC battery charge mode is correctly set. Charging a lithium coin cell may cause damage to the cell and could cause it to leak. Not chrarging a supercap will result in a discharged supercap and loss of correct time and battery backed ram data when your board is powered down.
+>Make sure the RTC battery charge mode is correctly set. Charging a lithium coin cell may cause damage to the cell and could cause it to leak. Not charging a supercap will result in a discharged supercap and loss of correct time and battery backed ram data when your board is powered down.
 
 The RTC is powered by a battery or supercap when your board is powered down. It is important to correctly set the charge mode based on the RTC power source. Lithium coin cells, such as the common CR2032, may be damaged and could possibly leak if recharging is attempted. Supercaps need to be charged every few days or so (depending on supercap size) or they will lose power. More information is found in the Vbat section of the [Special Pins](../special-pins.md) page.
 
