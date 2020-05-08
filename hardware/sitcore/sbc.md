@@ -29,7 +29,7 @@ We offer multiple single board computers to provide the lowest possible barrier 
 
 The **FEZ Bit**, while seemingly more of a "maker" board, provides a convenient way to easily use the multitude of inexpensive Micro:bit accessories that have flooded the market. As the number of Micro:bit accessories continues to grow, this board will be valued as a way to use these accessories to quickly assemble prototypes and test new product concepts.
 
-[FEZ Bit Schematic](pdfs/fez-bit-schematic.pdf)
+[FEZ Bit Schematic](pdfs/fez-bit-rev-b-schematic.pdf)
 
 ### FEZ Bit Peripheral Pins
 
@@ -62,7 +62,7 @@ The **FEZ Bit**, while seemingly more of a "maker" board, provides a convenient 
 
 The **FEZ Duino** provides female headers that make use of the popular Arduino pinout. Once again, we are trying to make it as easy and inexpensive as possible to build prototypes and try out new concepts by taking advantage of an existing accessory ecosystem.
 
-[FEZ Duino Schematic](pdfs/fez-duino-schematic.pdf)
+[FEZ Duino Schematic](pdfs/fez-duino-rev-b-schematic.pdf)
 
 ### FEZ Duino Peripheral Pins
 
@@ -82,7 +82,7 @@ The **FEZ Duino** provides female headers that make use of the popular Arduino p
 
 The Adafruit Feather form factor boards are made to be stackable and have built in support for LiPo batteries, including a charging circuit. We've watched this form factor quickly gaining popularity, so we decided to make a Feather board of our own. If your project needs to run off of a battery, this board makes it quick and easy to get started. The **FEZ Feather** provides both through hole pads and castellated edges making it both breadboard friendly and easy to build into products.
 
-[FEZ Feather Schematic](pdfs/fez-feather-schematic.pdf)
+[FEZ Feather Schematic](pdfs/fez-feather-rev-b-schematic.pdf)
 
 ### FEZ Feather Peripheral Pins
 
@@ -102,7 +102,7 @@ The Adafruit Feather form factor boards are made to be stackable and have built 
 
 Already one of our most popular SITCore single board computers, The **FEZ Portal** is a 4.3" 480x272 display with capacitive touch that is programmable in C#. As the display and controller are one unit, it's even easier to make a product with touch as you only have to mount a single board that's only slightly larger than the display.
 
-[FEZ Portal Schematic](pdfs/fez-portal-schematic.pdf)
+[FEZ Portal Schematic](pdfs/fez-portal-rev-b-schematic.pdf)
 
 ### FEZ Portal Peripheral Pins
 
@@ -128,7 +128,7 @@ Already one of our most popular SITCore single board computers, The **FEZ Portal
 
 The **FEZ Stick** is simply the least expensive way to easily get started with TinyCLR OS. While providing an inexpensive way for the uninitiated to try TinyCLR OS, we've provided castellated edges as well as through hole pads to make it breadboard friendly and easy to embed into products. Also, there's actually space for two click modules, making this a very versatile board at a very affordable price!
 
-[FEZ Stick Schematic](pdfs/fez-stick-schematic.pdf)
+[FEZ Stick Schematic](pdfs/fez-stick-rev-b-schematic.pdf)
 
 ### FEZ Stick Peripheral Pins
 
