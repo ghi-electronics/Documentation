@@ -7,38 +7,38 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 
 ## Specifications
 
-| Spec               | SC20100S                  | SC20260B             |
-|--------------------|---------------------------|----------------------|
-| Core               | ARM Cortex-M7 32 bit      | ARM Cortex-M7 32 bit |
-| Speed              | 480 MHz                   | 480 MHz              |
-| Internal RAM       | 1 MByte                   | 1 MByte              |
-| Internal Flash     | 2 MByte                   | 2 MByte              |
-| Instruction Cache  | 16 KByte                  | 16 KByte             |
-| Data Cache         | 16 KByte                  | 16 KByte             |
-| Package            | LQFP100 14 x 14 mm        | 265-TFBGA 14 x 14 mm |
-| Temperature Range  | -40C to +85C              | -40C to +85C         |
+| Spec                   | SC20100S                  | SC20260B             |
+|------------------------|---------------------------|----------------------|
+| **Core**               | ARM Cortex-M7 32 bit      | ARM Cortex-M7 32 bit |
+| **Speed**              | 480 MHz                   | 480 MHz              |
+| **Internal RAM**       | 1 MByte                   | 1 MByte              |
+| **Internal Flash**     | 2 MByte                   | 2 MByte              |
+| **Instruction Cache**  | 16 KByte                  | 16 KByte             |
+| **Data Cache**         | 16 KByte                  | 16 KByte             |
+| **Package**            | LQFP100 14 x 14 mm        | 265-TFBGA 14 x 14 mm |
+| **Temperature Range**  | -40C to +85C              | -40C to +85C         |
 
 *Note: Resources are shared between your application and the operating system.*
 
 ## Peripherals
 
-| Peripheral            | SC20100S                  | SC20260B              |
-|-----------------------|---------------------------|-----------------------|
-| GPIO (all support IRQ)| 76                        | 164                   |
-| SPI                   | 3                         | 3                     |
-| I2C                   | 2                         | 3                     |
-| UART/USART            | 8 (4 with handshaking)    | 8 (4 with handshaking)|
-| CAN                   | 2                         | 2                     |
-| PWM                   | 16                        | 29                    |
-| ADC                   | 12                        | 21                    |
-| DAC                   | 2                         | 2                     |
-| SD/SDIP/MMC           | 1                         | 1                     |
-| Quad SPI              | 1                         | 1                     |
-| USB Host              | 1                         | 1                     |
-| USB Client            | 1                         | 1                     |
-| Ethernet              | 1                         | 1                     |
-| LCD TFT               | 0                         | 1                     |
-| Camera                | 0                         | 1                     |
+| Peripheral                 | SC20100S                  | SC20260B              |
+|----------------------------|---------------------------|-----------------------|
+| **GPIO (all support IRQ)** | 76                        | 164                   |
+| **SPI**                    | 3                         | 3                     |
+| **I2C**                    | 2                         | 3                     |
+| **UART**                   | 8 (4 with handshaking)    | 8 (4 with handshaking)|
+| **CAN**                    | 2                         | 2                     |
+| **PWM**                    | 16                        | 29                    |
+| **ADC**                    | 12                        | 21                    |
+| **DAC**                    | 2                         | 2                     |
+| **SD/SDIP/MMC**            | 1                         | 1                     |
+| **Quad SPI**               | 1                         | 1                     |
+| **USB Host**               | 1                         | 1                     |
+| **USB Client**             | 1                         | 1                     |
+| **Ethernet**               | 1                         | 1                     |
+| **LCD TFT**                | 0                         | 1                     |
+| **Camera**                 | 0                         | 1                     |
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
 
