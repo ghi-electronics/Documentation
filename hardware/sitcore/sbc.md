@@ -85,6 +85,10 @@ The Adafruit Feather form factor boards are made to be stackable and have built 
 >[!Important]
 >Be very careful to ensure the correct polarity of LiPo batteries before connecting them to the FEZ Feather. Reverse polarity will damage the charging circuit, and not all batteries are wired correctly. GHI Electronics is not responsible for, and will not warranty, damage caused by incorrectly connected batteries.
 
+Make sure the battery polarity is correct as shown below:
+
+![FEZ Feather Battery Connection](images/battery-connect.jpg)
+
 [FEZ Feather Schematic](pdfs/fez-feather-rev-b-schematic.pdf)
 
 ### FEZ Feather Peripheral Pins
