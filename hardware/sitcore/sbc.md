@@ -5,36 +5,36 @@
 We offer multiple single board computers to provide the lowest possible barrier to entering the world of TinyCLR OS. Most of these boards have WiFi and they all support the complete TinyCLR feature set. These boards are great for trying out TinyCLR OS, building prototypes, or incorporating into products.
 
 
-|                            |                 |                 |                 |                         |               |
-|----------------------------|-----------------|-----------------|-----------------|-------------------------|---------------|
-|                            | **FEZ Bit**     | **Fez Duino**   | **FEZ Feather** | **Fez Portal**          | **FEZ Stick** |
-| **External SDRAM**         | X               | X               | X               | 32 MByte                | X             |
-| **External Flash**         | X               | 16 MByte        | X               | 16 MByte                | X             |
-| **Core**                   | SC20100S        | SC20100S        | SC20100S        | SC20260N                | SC20100S      |
-| **Display**                | 1.8" 160x128    | X               | X               | 4.3" 480x272 Cap. Touch | X             |
-| **Click Connectors**       | X               | X               | X               | 1                       | 2             |
-| **WiFi**                   | Yes             | Yes             | Yes             | Yes                     | X             |
-| **Micro SD**               | Yes             | Yes             | X               | Yes                     | X             |
-| **User LED**               | Yes             | Yes             | Yes             | Yes                     | Yes           |
-| **Buzzer**                 | Yes             | X               | X               | Yes                     | X             |
-| **Accelerometer**          | Yes             | X               | X               | X                       | X             |
-| **User Buttons**           | Yes             | Yes             | Yes             | Yes                     | Yes           |
-| **USB Client**             | Yes             | Yes             | Yes             | Yes                     | Yes           |
-| **USB Host Connector**     | X               | Yes             | X               | Yes                     | Yes           |
-| **LiPo Charger**           | X               | X               | Yes             | X                       | X             |
-| **Power Barrel**           | X               | Yes             | X               | X                       | X             |
-| **GPIO (all support IRQ)** | 19              | 38              | 31              | 45                      |               |
-| **SPI**                    | 1               | 2               | 2               | 3                       |               |
-| **I2C**                    | 1               | 2               | 1               | 1                       |               |
-| **UART**                   | 3 (0 with H.S.) | 5 (2 with H.S.) | 5 (1 with H.S.) | 6 (1 with H.S.)         |               |
-| **CAN**                    | 1               | 1               | 1               | 2                       |               |
-| **PWM**                    | 8               | 12              | 8               | 17                      |               |
-| **ADC**                    | 8               | 11              | 6               | 10                      |               |
-| **DAC**                    | 1               | 2               | 1               | 2                       |               |
-| **SD/SDIP/MMC**            | 1               | 1               | 1               | 1                       |               |
-| **Quad SPI**               | X               | X               | X               | X                       |               |
-| **Ethernet**               | X               | X               | X               | X                       |               |
-| **Camera**                 | X               | X               | X               | X                       |               |
+|                            |                 |                 |                 |                         |                 |
+|----------------------------|-----------------|-----------------|-----------------|-------------------------|-----------------|
+|                            | **FEZ Bit**     | **Fez Duino**   | **FEZ Feather** | **Fez Portal**          | **FEZ Stick**   |
+| **External SDRAM**         | X               | X               | X               | 32 MByte                | X               |
+| **External Flash**         | X               | 16 MByte        | X               | 16 MByte                | X               |
+| **Core**                   | SC20100S        | SC20100S        | SC20100S        | SC20260N                | SC20100S        |
+| **Display**                | 1.8" 160x128    | X               | X               | 4.3" 480x272 Cap. Touch | X               |
+| **Click Connectors**       | X               | X               | X               | 1                       | 2               |
+| **WiFi**                   | Yes             | Yes             | Yes             | Yes                     | X               |
+| **Micro SD**               | Yes             | Yes             | X               | Yes                     | X               |
+| **User LED**               | Yes             | Yes             | Yes             | Yes                     | Yes             |
+| **Buzzer**                 | Yes             | X               | X               | Yes                     | X               |
+| **Accelerometer**          | Yes             | X               | X               | X                       | X               |
+| **User Buttons**           | Yes             | Yes             | Yes             | Yes                     | Yes             |
+| **USB Client**             | Yes             | Yes             | Yes             | Yes                     | Yes             |
+| **USB Host Connector**     | X               | Yes             | X               | Yes                     | Yes             |
+| **LiPo Charger**           | X               | X               | Yes             | X                       | X               |
+| **Power Barrel**           | X               | Yes             | X               | X                       | X               |
+| **GPIO (all support IRQ)** | 19              | 38              | 31              | 45                      | 33              |
+| **SPI**                    | 1               | 2               | 2               | 3                       | 2               |
+| **I2C**                    | 1               | 2               | 1               | 1                       | 2               |
+| **UART**                   | 3 (0 with H.S.) | 5 (2 with H.S.) | 5 (1 with H.S.) | 6 (1 with H.S.)         | 3 (1 with H.S.) |
+| **CAN**                    | 1               | 1               | 1               | 2                       | 1               |
+| **PWM**                    | 8               | 12              | 8               | 17                      | 6               |
+| **ADC**                    | 8               | 11              | 6               | 10                      | 3               |
+| **DAC**                    | 1               | 2               | 1               | 2                       | X               |
+| **SD/SDIP/MMC**            | 1               | 1               | 1               | 1                       | 1               |
+| **Quad SPI**               | X               | X               | X               | X                       | X               |
+| **Ethernet**               | X               | X               | X               | X                       | X               |
+| **Camera**                 | X               | X               | X               | X                       | X               |
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
 
