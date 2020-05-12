@@ -35,7 +35,7 @@
 ### [Audio Playback](tutorials/audio-playback.md)
 
 ## Networking Protocols
-### [Core Protocols](tutorials/core-protocols.md)
+### [Networking Core](tutorials/networking-core.md)
 ### [HTTP/HTTPS](tutorials/http-https.md)
 ### [MQTT](tutorials/mqtt.md)
 ### [PPP](tutorials/ppp.md)
@@ -44,7 +44,6 @@
 ### [WiFi](tutorials/wifi.md)
 ### [Ethernet](tutorials/ethernet.md)
 ### [Cellular](tutorials/cellular.md)
-### [Additional Info](tutorials/networking-info.md)
 
 ## Cloud Support
 ### [Azure](tutorials/azure.md)

@@ -2,7 +2,7 @@
 ---
 Ethernet is supported through the internal MAC, by adding an external PHY (100BASE), and also by using an ENC28J60 over [SPI](spi.md) bus (10BASE). Some available modules include the necessary PHY, so the user will only need to add an Ethernet connector with magnets.
 
-If you are designing a product that incorporates Ethernet, you will need to ship each device with a valid and unique MAC address. More information about MAC addresses can be found [here](networking-info.md).
+If you are designing a product that incorporates Ethernet, you will need to ship each device with a valid and unique MAC address. More information about MAC addresses can be found [here](networking-core.md).
 
 ## Built-in Ethernet
 

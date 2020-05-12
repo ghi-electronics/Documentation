@@ -113,7 +113,7 @@ enablePin.Write(GpioPinValue.High);
 
 We provide the static Winc15x0Interface class to access some of the native functions of the WINC1500 WiFi module. Commands for getting the WiFi module's MAC address, getting RSSI (Relative Signal Strength Indicator), scanning for access points, checking the firmware version, and over-the-air (OTA) firmware update are supported.
 
-If you are designing a product that incorporates WiFi, you will need to ship each device with a valid and unique MAC address. More information about MAC addresses can be found [here](networking-info.md).
+If you are designing a product that incorporates WiFi, you will need to ship each device with a valid and unique MAC address. More information about MAC addresses can be found [here](networking-core.md).
 
 ```cs
 //Scan for WiFi access points:
