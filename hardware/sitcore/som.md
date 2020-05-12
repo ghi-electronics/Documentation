@@ -25,7 +25,7 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 |----------------------------|---------------|---------------|---------------|---------------|
 | **External SDRAM**         | None          | 32 MByte      | 32 MByte      | 32 MByte      |
 | **External Flash**         | None          | 16 MByte      | 16 MByte      | 16 MByte      |
-| **GPIO (all support IRQ)** | 43            | 79            | 85            | 108           |
+| **GPIO**                   | 43            | 79            | 85            | 108           |
 | **SPI**                    | 3             | 3             | 3             | 3             |
 | **I2C**                    | 1             | 1             | 3             | 3             |
 | **UART**                   | 5 (2 w/ H.S.) | 7 (4 w/ H.S.) | 8 (4 w/ H.S.) | 8 (4 w/ H.S.) |
