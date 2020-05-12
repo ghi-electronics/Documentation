@@ -34,7 +34,6 @@ We offer multiple single board computers to provide the lowest possible barrier 
 | **SD/SDIP/MMC**            | 1               | 1               | 1               | 1                       |               |
 | **Quad SPI**               | X               | X               | X               | X                       |               |
 | **Ethernet**               | X               | X               | X               | X                       |               |
-| **LCD TFT**                | X               | X               | X               | 1                       |               |
 | **Camera**                 | X               | X               | X               | X                       |               |
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
