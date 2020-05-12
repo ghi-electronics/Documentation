@@ -33,8 +33,6 @@ We offer multiple single board computers to provide the lowest possible barrier 
 | **DAC**                    | 1               | 2               | 1               | 2                       |               |
 | **SD/SDIP/MMC**            | 1               | 1               | 1               | 1                       |               |
 | **Quad SPI**               | X               | X               | X               | X                       |               |
-| **USB Host**               | 1               | 1               | 1               | 1                       |               |
-| **USB Client**             | 1               | 1               | 1               | 1                       |               |
 | **Ethernet**               | X               | X               | X               | X                       |               |
 | **LCD TFT**                | X               | X               | X               | 1                       |               |
 | **Camera**                 | X               | X               | X               | X                       |               |
