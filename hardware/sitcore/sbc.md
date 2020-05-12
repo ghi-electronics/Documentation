@@ -24,7 +24,7 @@ We offer multiple single board computers to provide the lowest possible barrier 
 | **USB Host Connector**     | X               | Yes             | X               | Yes                     | Yes             |
 | **LiPo Charger**           | X               | X               | Yes             | X                       | X               |
 | **Power Barrel**           | X               | Yes             | X               | X                       | X               |
-| **GPIO (all support IRQ)** | 19              | 38              | 31              | 45                      | 33              |
+| **GPIO**                   | 19              | 38              | 31              | 45                      | 33              |
 | **SPI**                    | 1               | 2               | 2               | 3                       | 2               |
 | **I2C**                    | 1               | 2               | 1               | 1                       | 2               |
 | **UART**                   | 3 (0 w/ HS)     | 5 (2 w/ HS)     | 5 (1 w/ HS)     | 6 (1 w/ HS)             | 3 (1 w/ HS)     |
