@@ -28,7 +28,7 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 | **GPIO (all support IRQ)** | 43            | 79            | 85            | 108           |
 | **SPI**                    | 3             | 3             | 3             | 3             |
 | **I2C**                    | 1             | 1             | 3             | 3             |
-| **UART/USART**             | 5 (2 w/ H.S.) | 7 (4 w/ H.S.) | 8 (4 w/ H.S.) | 8 (4 w/ H.S.) |
+| **UART**                   | 5 (2 w/ H.S.) | 7 (4 w/ H.S.) | 8 (4 w/ H.S.) | 8 (4 w/ H.S.) |
 | **CAN**                    | 1             | 2             | 2             | 2             |
 | **PWM**                    | 12            | 22            | 23            | 28            |
 | **ADC**                    | 6             | 16            | 15            | 20            |
