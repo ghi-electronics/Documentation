@@ -4,24 +4,38 @@
 
 We offer multiple single board computers to provide the lowest possible barrier to entering the world of TinyCLR OS. Most of these boards have WiFi and they all support the complete TinyCLR feature set. These boards are great for trying out TinyCLR OS, building prototypes, or incorporating into products.
 
+## Specifications and Peripherals
 
-|                        |              |               |                 |                         |               |
-|------------------------|--------------|---------------|-----------------|-------------------------|---------------|
-|                        | **FEZ Bit**  | **Fez Duino** | **FEZ Feather** | **Fez Portal**          | **FEZ Stick** |
-| **Core**               | SC20100S     | SC20100S      | SC20100S        | SC20260N                | SC20100S      |
-| **Display**            | 1.8" 160x128 | X             | X               | 4.3" 480x272 Cap. Touch | X             |
-| **Click Connectors**   | X            | X             | X               | 1                       | 2             |
-| **WiFi**               | Yes          | Yes           | Yes             | Yes                     | X             |
-| **Micro SD**           | Yes          | Yes           | X               | Yes                     | X             |
-| **User LED**           | Yes          | Yes           | Yes             | Yes                     | Yes           |
-| **Buzzer**             | Yes          | X             | X               | Yes                     | X             |
-| **Accelerometer**      | Yes          | X             | X               | X                       | X             |
-| **User Buttons**       | Yes          | Yes           | Yes             | Yes                     | Yes           |
-| **USB Client**         | Yes          | Yes           | Yes             | Yes                     | Yes           |
-| **USB Host Connector** | X            | Yes           | X               | Yes                     | Yes           |
-| **External Flash**     | X            | 16 MByte      | X               | 16 MByte                | X             |
-| **LiPo Charger**       | X            | X             | Yes             | X                       | X             |
-| **Power Barrel**       | X            | Yes           | X               | X                       | X             |
+|                            |                 |                 |                 |                         |                 |
+|----------------------------|-----------------|-----------------|-----------------|-------------------------|-----------------|
+|                            | **FEZ Bit**     | **Fez Duino**   | **FEZ Feather** | **Fez Portal**          | **FEZ Stick**   |
+| **Core**                   | SC20100S        | SC20100S        | SC20100S        | SC20260N                | SC20100S        |
+| **External SDRAM**         | X               | X               | X               | 32 MByte                | X               |
+| **External Flash**         | X               | 16 MByte        | X               | 16 MByte                | X               |
+| **Display**                | 1.8" 160x128    | X               | X               | 4.3" 480x272 Cap. Touch | X               |
+| **Click Connectors**       | X               | X               | X               | 1                       | 2               |
+| **WiFi**                   | Yes             | Yes             | Yes             | Yes                     | X               |
+| **Micro SD**               | Yes             | Yes             | X               | Yes                     | X               |
+| **User LED**               | Yes             | Yes             | Yes             | Yes                     | Yes             |
+| **Buzzer**                 | Yes             | X               | X               | Yes                     | X               |
+| **Accelerometer**          | Yes             | X               | X               | X                       | X               |
+| **User Buttons**           | Yes             | Yes             | Yes             | Yes                     | Yes             |
+| **USB Client**             | Yes             | Yes             | Yes             | Yes                     | Yes             |
+| **USB Host Connector**     | X               | Yes             | X               | Yes                     | Yes             |
+| **LiPo Charger**           | X               | X               | Yes             | X                       | X               |
+| **Power Barrel**           | X               | Yes             | X               | X                       | X               |
+| **GPIO**                   | 19              | 38              | 31              | 45                      | 33              |
+| **SPI**                    | 1               | 2               | 2               | 3                       | 2               |
+| **I2C**                    | 1               | 2               | 1               | 1                       | 2               |
+| **UART**                   | 3 (0 w/ HS)     | 5 (2 w/ HS)     | 5 (1 w/ HS)     | 6 (1 w/ HS)             | 3 (1 w/ HS)     |
+| **CAN**                    | 1               | 1               | 1               | 2                       | 1               |
+| **PWM**                    | 8               | 12              | 8               | 17                      | 6               |
+| **ADC**                    | 8               | 11              | 6               | 10                      | 3               |
+| **DAC**                    | 1               | 2               | 1               | 2                       | X               |
+| **SD/SDIP/MMC**            | 1               | 1               | 1               | 1                       | 1               |
+
+*Note: As many pins share peripherals, not all peripherals will be available.*
+
 
 ## FEZ Bit
 
@@ -85,7 +99,7 @@ The Adafruit Feather form factor boards are made to be stackable and have built 
 >[!Important]
 >Be very careful to ensure the correct polarity of LiPo batteries before connecting them to the FEZ Feather. Reverse polarity will damage the charging circuit, and not all batteries are wired correctly. GHI Electronics is not responsible for, and will not warranty, damage caused by incorrectly connected batteries.
 
-Make sure the battery polarity is correct as shown below:
+Make sure the battery polarity is correct as shown below (red wire to plus, black to minus):
 
 ![FEZ Feather Battery Connection](images/battery-connect.jpg)
 
