@@ -33,7 +33,6 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 | **ADC**                    | 12                        | 21                    |
 | **DAC**                    | 2                         | 2                     |
 | **SD/SDIP/MMC**            | 1                         | 1                     |
-| **Quad SPI**               | 1                         | 1                     |
 | **USB Host**               | 1                         | 1                     |
 | **USB Client**             | 1                         | 1                     |
 | **Ethernet**               | 1                         | 1                     |

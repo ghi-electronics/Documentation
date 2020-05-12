@@ -33,9 +33,6 @@ We offer multiple single board computers to provide the lowest possible barrier 
 | **ADC**                    | 8               | 11              | 6               | 10                      | 3               |
 | **DAC**                    | 1               | 2               | 1               | 2                       | X               |
 | **SD/SDIP/MMC**            | 1               | 1               | 1               | 1                       | 1               |
-| **Quad SPI**               | X               | X               | X               | X                       | X               |
-| **Ethernet**               | X               | X               | X               | X                       | X               |
-| **Camera**                 | X               | X               | X               | X                       | X               |
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
 
