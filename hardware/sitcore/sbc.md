@@ -26,7 +26,7 @@ We offer multiple single board computers to provide the lowest possible barrier 
 | **GPIO (all support IRQ)** | 19              | 38              | 31              | 45                      | 33              |
 | **SPI**                    | 1               | 2               | 2               | 3                       | 2               |
 | **I2C**                    | 1               | 2               | 1               | 1                       | 2               |
-| **UART**                   | 3 (0 with H.S.) | 5 (2 with H.S.) | 5 (1 with H.S.) | 6 (1 with H.S.)         | 3 (1 with H.S.) |
+| **UART**                   | 3 (0 w/ HS)     | 5 (2 w/ HS)     | 5 (1 w/ HS)     | 6 (1 w/ HS)             | 3 (1 w/ HS)     |
 | **CAN**                    | 1               | 1               | 1               | 2                       | 1               |
 | **PWM**                    | 8               | 12              | 8               | 17                      | 6               |
 | **ADC**                    | 8               | 11              | 6               | 10                      | 3               |
@@ -101,7 +101,7 @@ The Adafruit Feather form factor boards are made to be stackable and have built 
 >[!Important]
 >Be very careful to ensure the correct polarity of LiPo batteries before connecting them to the FEZ Feather. Reverse polarity will damage the charging circuit, and not all batteries are wired correctly. GHI Electronics is not responsible for, and will not warranty, damage caused by incorrectly connected batteries.
 
-Make sure the battery polarity is correct as shown below:
+Make sure the battery polarity is correct as shown below (red wire to plus, black to minus):
 
 ![FEZ Feather Battery Connection](images/battery-connect.jpg)
 
