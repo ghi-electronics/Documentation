@@ -34,7 +34,7 @@
 ### [MJPEG Video](tutorials/mjpeg-video.md)
 ### [Audio Playback](tutorials/audio-playback.md)
 
-## Networking
+## Networking Protocols
 ### [Core Protocols](tutorials/core-protocols.md)
 ### [HTTP/HTTPS](tutorials/http-https.md)
 ### [MQTT](tutorials/mqtt.md)
@@ -44,6 +44,7 @@
 ### [WiFi](tutorials/wifi.md)
 ### [Ethernet](tutorials/ethernet.md)
 ### [Cellular](tutorials/cellular.md)
+### [Additional Info](tutorials/networking-info.md)
 
 ## Cloud Support
 ### [Azure](tutorials/azure.md)
