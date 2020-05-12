@@ -8,6 +8,8 @@ We offer multiple single board computers to provide the lowest possible barrier 
 |                            |                 |                 |                 |                         |               |
 |----------------------------|-----------------|-----------------|-----------------|-------------------------|---------------|
 |                            | **FEZ Bit**     | **Fez Duino**   | **FEZ Feather** | **Fez Portal**          | **FEZ Stick** |
+| **External SDRAM**         | X               | X               | X               | 32 MByte                | X             |
+| **External Flash**         | X               | 16 MByte        | X               | 16 MByte                | X             |
 | **Core**                   | SC20100S        | SC20100S        | SC20100S        | SC20260N                | SC20100S      |
 | **Display**                | 1.8" 160x128    | X               | X               | 4.3" 480x272 Cap. Touch | X             |
 | **Click Connectors**       | X               | X               | X               | 1                       | 2             |
@@ -19,25 +21,23 @@ We offer multiple single board computers to provide the lowest possible barrier 
 | **User Buttons**           | Yes             | Yes             | Yes             | Yes                     | Yes           |
 | **USB Client**             | Yes             | Yes             | Yes             | Yes                     | Yes           |
 | **USB Host Connector**     | X               | Yes             | X               | Yes                     | Yes           |
-| **External Flash**         | X               | 16 MByte        | X               | 16 MByte                | X             |
 | **LiPo Charger**           | X               | X               | Yes             | X                       | X             |
 | **Power Barrel**           | X               | Yes             | X               | X                       | X             |
-|                            |                 |                 |                 |                         |               |
-| **GPIO (all support IRQ)** | 19              | 38              | 31              |                         |               |
-| **SPI**                    | 1               | 2               | 2               |                         |               |
-| **I2C**                    | 1               | 2               | 1               |                         |               |
-| **UART**                   | 3 (0 with H.S.) | 5 (2 with H.S.) | 5 (1 with H.S.) |                         |               |
-| **CAN**                    | 1               | 1               | 1               |                         |               |
-| **PWM**                    | 8               | 12              | 8               |                         |               |
-| **ADC**                    | 8               | 11              | 6               |                         |               |
-| **DAC**                    | 1               | 2               | 1               |                         |               |
-| **SD/SDIP/MMC**            | 1               | 1               | 1               |                         |               |
-| **Quad SPI**               | X               | X               | X               |                         |               |
-| **USB Host**               | 1               | 1               | 1               |                         |               |
-| **USB Client**             | 1               | 1               | 1               |                         |               |
-| **Ethernet**               | X               | X               | X               |                         |               |
-| **LCD TFT**                | X               | X               | X               |                         |               |
-| **Camera**                 | X               | X               | X               |                         |               |
+| **GPIO (all support IRQ)** | 19              | 38              | 31              | 45                      |               |
+| **SPI**                    | 1               | 2               | 2               | 3                       |               |
+| **I2C**                    | 1               | 2               | 1               | 1                       |               |
+| **UART**                   | 3 (0 with H.S.) | 5 (2 with H.S.) | 5 (1 with H.S.) | 6 (1 with H.S.)         |               |
+| **CAN**                    | 1               | 1               | 1               | 2                       |               |
+| **PWM**                    | 8               | 12              | 8               | 17                      |               |
+| **ADC**                    | 8               | 11              | 6               | 10                      |               |
+| **DAC**                    | 1               | 2               | 1               | 2                       |               |
+| **SD/SDIP/MMC**            | 1               | 1               | 1               | 1                       |               |
+| **Quad SPI**               | X               | X               | X               | X                       |               |
+| **USB Host**               | 1               | 1               | 1               | 1                       |               |
+| **USB Client**             | 1               | 1               | 1               | 1                       |               |
+| **Ethernet**               | X               | X               | X               | X                       |               |
+| **LCD TFT**                | X               | X               | X               | 1                       |               |
+| **Camera**                 | X               | X               | X               | X                       |               |
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
 

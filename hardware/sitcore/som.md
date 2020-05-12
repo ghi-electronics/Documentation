@@ -21,24 +21,24 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 
 ## Peripherals
 
-| Peripheral            | SCM20100E     | SCM20260N     | SCM20260E     | SCM20260D     |
-|-----------------------|---------------|---------------|---------------|---------------|
-| External SDRAM        | None          | 32 MByte      | 32 MByte      | 32 MByte      |
-| External Flash        | None          | 16 MByte      | 16 MByte      | 16 MByte      |
-| GPIO (all support IRQ)| 43            | 79            | 85            | 108           |
-| SPI                   | 3             | 3             | 3             | 3             |
-| I2C                   | 1             | 1             | 3             | 3             |
-| UART/USART            | 5 (2 w/ H.S.) | 7 (4 w/ H.S.) | 8 (4 w/ H.S.) | 8 (4 w/ H.S.) |
-| CAN                   | 1             | 2             | 2             | 2             |
-| PWM                   | 12            | 22            | 23            | 28            |
-| ADC                   | 6             | 16            | 15            | 20            |
-| DAC                   | 2             | 2             | 1             | 2             |
-| SD/SDIP/MMC           | 1             | 1             | 1             | 1             |
-| USB Host              | 1             | 1             | 1             | 1             |
-| USB Client            | 1             | 1             | 1             | 1             |
-| Ethernet              | 1             | 0             | 1             | 1             |
-| LCD TFT               | 0             | 1             | 1             | 1             |
-| Camera                | 0             | 1             | 1             | 1             |
+| Peripheral                 | SCM20100E     | SCM20260N     | SCM20260E     | SCM20260D     |
+|----------------------------|---------------|---------------|---------------|---------------|
+| **External SDRAM**         | None          | 32 MByte      | 32 MByte      | 32 MByte      |
+| **External Flash**         | None          | 16 MByte      | 16 MByte      | 16 MByte      |
+| **GPIO (all support IRQ)** | 43            | 79            | 85            | 108           |
+| **SPI**                    | 3             | 3             | 3             | 3             |
+| **I2C**                    | 1             | 1             | 3             | 3             |
+| **UART/USART**             | 5 (2 w/ H.S.) | 7 (4 w/ H.S.) | 8 (4 w/ H.S.) | 8 (4 w/ H.S.) |
+| **CAN**                    | 1             | 2             | 2             | 2             |
+| **PWM**                    | 12            | 22            | 23            | 28            |
+| **ADC**                    | 6             | 16            | 15            | 20            |
+| **DAC**                    | 2             | 2             | 1             | 2             |
+| **SD/SDIP/MMC**            | 1             | 1             | 1             | 1             |
+| **USB Host**               | 1             | 1             | 1             | 1             |
+| **USB Client**             | 1             | 1             | 1             | 1             |
+| **Ethernet**               | 1             | 0             | 1             | 1             |
+| **LCD TFT**                | 0             | 1             | 1             | 1             |
+| **Camera**                 | 0             | 1             | 1             | 1             |
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
 
