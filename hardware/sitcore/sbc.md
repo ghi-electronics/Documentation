@@ -4,13 +4,14 @@
 
 We offer multiple single board computers to provide the lowest possible barrier to entering the world of TinyCLR OS. Most of these boards have WiFi and they all support the complete TinyCLR feature set. These boards are great for trying out TinyCLR OS, building prototypes, or incorporating into products.
 
+## Specifications and Peripherals
 
 |                            |                 |                 |                 |                         |                 |
 |----------------------------|-----------------|-----------------|-----------------|-------------------------|-----------------|
 |                            | **FEZ Bit**     | **Fez Duino**   | **FEZ Feather** | **Fez Portal**          | **FEZ Stick**   |
+| **Core**                   | SC20100S        | SC20100S        | SC20100S        | SC20260N                | SC20100S        |
 | **External SDRAM**         | X               | X               | X               | 32 MByte                | X               |
 | **External Flash**         | X               | 16 MByte        | X               | 16 MByte                | X               |
-| **Core**                   | SC20100S        | SC20100S        | SC20100S        | SC20260N                | SC20100S        |
 | **Display**                | 1.8" 160x128    | X               | X               | 4.3" 480x272 Cap. Touch | X               |
 | **Click Connectors**       | X               | X               | X               | 1                       | 2               |
 | **WiFi**                   | Yes             | Yes             | Yes             | Yes                     | X               |
