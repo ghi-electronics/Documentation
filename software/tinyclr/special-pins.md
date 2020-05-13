@@ -62,13 +62,4 @@ When designing your own board, we recommend that you add the following periphera
 | User LED | 100 pin devices: PE11 |
 |  | 260 pin devices: PB0 |
 | Buzzer | PB1 |
-|  |  |
-| SPI Display | SPI = SPI4 |
-|  | BL = PA15 |
-|  | CS = PD10 |
-|  | RS = PC4 |
-|  | RST = PE15 |
-|  |  |
-| Parallel Display | Backlight = PA15 |
-|  | Touch I2C = I2C1 |
-|  | Touch IRQ = PJ14 |
+
