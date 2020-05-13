@@ -2,6 +2,8 @@
 ---
 Ethernet is supported through the internal MAC, by adding an external PHY (100BASE), and also by using an ENC28J60 over [SPI](spi.md) bus (10BASE). Some available modules include the necessary PHY, so the user will only need to add an Ethernet connector with magnets.
 
+If you are designing a product that incorporates Ethernet, you will need to ship each device with a valid and unique MAC address. More information about MAC addresses can be found [here](networking-core.md).
+
 ## Built-in Ethernet
 
 Here is a simple example:
@@ -127,14 +129,16 @@ static void Enc28Test()
 
     
     networkCommunicationInterfaceSettings.SpiSettings = settings;
-    networkCommunicationInterfaceSettings.InterruptPin = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
-        OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PG6);
+    networkCommunicationInterfaceSettings.InterruptPin = GHIElectronics.TinyCLR.Devices.
+        Gpio.GpioController.GetDefault().OpenPin
+        (GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PG6);
+
     networkCommunicationInterfaceSettings.InterruptEdge = GpioPinEdge.FallingEdge;
     networkCommunicationInterfaceSettings.InterruptDriveMode = GpioPinDriveMode.InputPullUp;
-    networkCommunicationInterfaceSettings.ResetPin = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
-        OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PI8);
-    networkCommunicationInterfaceSettings.ResetActiveState = GpioPinValue.Low;
+    networkCommunicationInterfaceSettings.ResetPin = GHIElectronics.TinyCLR.Devices.Gpio.
+        GpioController.GetDefault().OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PI8);
 
+    networkCommunicationInterfaceSettings.ResetActiveState = GpioPinValue.Low;
 
     networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
     networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
@@ -168,14 +172,14 @@ static void Enc28Test()
 }
 
 private static void NetworkController_NetworkLinkConnectedChanged
-    (NetworkController sender, NetworkLinkConnectedChangedEventArgs e)
-{
+    (NetworkController sender, NetworkLinkConnectedChangedEventArgs e) {
+
     // Raise event connect/disconnect
 }
 
 private static void NetworkController_NetworkAddressChanged
-    (NetworkController sender, NetworkAddressChangedEventArgs e)
-{
+    (NetworkController sender, NetworkAddressChangedEventArgs e) {
+
     var ipProperties = sender.GetIPProperties();
     var address = ipProperties.Address.GetAddressBytes();
            

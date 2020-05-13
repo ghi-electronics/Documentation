@@ -34,8 +34,8 @@
 ### [MJPEG Video](tutorials/mjpeg-video.md)
 ### [Audio Playback](tutorials/audio-playback.md)
 
-## Networking
-### [Core Protocols](tutorials/core-protocols.md)
+## Networking Protocols
+### [Networking Core](tutorials/networking-core.md)
 ### [HTTP/HTTPS](tutorials/http-https.md)
 ### [MQTT](tutorials/mqtt.md)
 ### [PPP](tutorials/ppp.md)

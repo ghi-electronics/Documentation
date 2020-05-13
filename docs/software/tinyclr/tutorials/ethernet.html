@@ -81,6 +81,7 @@
 
 <hr>
 <p>Ethernet is supported through the internal MAC, by adding an external PHY (100BASE), and also by using an ENC28J60 over <a href="spi.html">SPI</a> bus (10BASE). Some available modules include the necessary PHY, so the user will only need to add an Ethernet connector with magnets.</p>
+<p>If you are designing a product that incorporates Ethernet, you will need to ship each device with a valid and unique MAC address. More information about MAC addresses can be found <a href="networking-core.html">here</a>.</p>
 <h2 id="built-in-ethernet">Built-in Ethernet</h2>
 <p>Here is a simple example:</p>
 <div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Pins</p>
@@ -196,14 +197,16 @@ private static void NetworkController_NetworkAddressChanged
 
 
     networkCommunicationInterfaceSettings.SpiSettings = settings;
-    networkCommunicationInterfaceSettings.InterruptPin = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
-        OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PG6);
+    networkCommunicationInterfaceSettings.InterruptPin = GHIElectronics.TinyCLR.Devices.
+        Gpio.GpioController.GetDefault().OpenPin
+        (GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PG6);
+
     networkCommunicationInterfaceSettings.InterruptEdge = GpioPinEdge.FallingEdge;
     networkCommunicationInterfaceSettings.InterruptDriveMode = GpioPinDriveMode.InputPullUp;
-    networkCommunicationInterfaceSettings.ResetPin = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
-        OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PI8);
-    networkCommunicationInterfaceSettings.ResetActiveState = GpioPinValue.Low;
+    networkCommunicationInterfaceSettings.ResetPin = GHIElectronics.TinyCLR.Devices.Gpio.
+        GpioController.GetDefault().OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PI8);
 
+    networkCommunicationInterfaceSettings.ResetActiveState = GpioPinValue.Low;
 
     networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
     networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
@@ -237,14 +240,14 @@ private static void NetworkController_NetworkAddressChanged
 }
 
 private static void NetworkController_NetworkLinkConnectedChanged
-    (NetworkController sender, NetworkLinkConnectedChangedEventArgs e)
-{
+    (NetworkController sender, NetworkLinkConnectedChangedEventArgs e) {
+
     // Raise event connect/disconnect
 }
 
 private static void NetworkController_NetworkAddressChanged
-    (NetworkController sender, NetworkAddressChangedEventArgs e)
-{
+    (NetworkController sender, NetworkAddressChangedEventArgs e) {
+
     var ipProperties = sender.GetIPProperties();
     var address = ipProperties.Address.GetAddressBytes();
 

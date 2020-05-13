@@ -1,6 +1,6 @@
 # HTTP/HTTPS
 ---
-Hyper Text Transport Protocol (HTTP) builds on top of the [Core Networking Protocols](core-protocols.md) to provide a standard way to work with web servers.
+Hyper Text Transport Protocol (HTTP) builds on top of the [Core Networking Protocols](networking-core.md) to provide a standard way to work with web servers.
 
 ## HTTP Client
 The following code connects to bing.com and reads the robots.txt file. This code needs an active network connection to work properly.
@@ -67,36 +67,34 @@ TinyCLR OS provides an HttpListener class which can be used to make an HTTP Serv
 > To run this example the client and server devices must both connect to the same local network.
 
 ```cs
-static void TestHttpServer()
-{            
+static void TestHttpServer() {
     //Create a listener.
     HttpListener listener = new HttpListener("http", 80);
-    
+
     listener.Start();
     System.Diagnostics.Debug.WriteLine("Listening...");
 
     var clientRequestCount = 0;
-    
-    while (true)
-    {
+
+    while (true) {
         //Note: The GetContext method blocks while waiting for a request.
         HttpListenerContext context = listener.GetContext();
 
         //Obtain a response object.
         HttpListenerResponse response = context.Response;
-        
+
         //Construct a response.                
-        var responseString = string.Format("<HTML><BODY> I am TinyCLR OS Server. 
-            Client request count: {0}</BODY></HTML>", ++clientRequestCount);                
+        var responseString = string.Format("<HTML><BODY> I am TinyCLR OS Server. " +
+            "Client request count: {0}</BODY></HTML>", ++clientRequestCount);                
         
         byte[] buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
-        
+
         //Get a response stream and write the response to it.
         response.ContentLength64 = buffer.Length;
         var output = response.OutputStream;
 
         output.Write(buffer, 0, buffer.Length);
-        
+
         //You must close the output stream.
         output.Close();
     }

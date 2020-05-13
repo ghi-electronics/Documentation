@@ -117,6 +117,9 @@ Power.Shutdown(true, DateTime.MaxValue);
 </code></pre><p>To shutdown for a specific time or when the WKUP pin changes state (whichever comes first):</p>
 <pre><code class="lang-cs">Power.Shutdown(true, DateTime.Now.AddSeconds(90); //Will wake up after 90 seconds or
                                                   //when WKUP is pressed.
+</code></pre><h2 id="software-reset">Software Reset</h2>
+<p>You can also reset your device from within your application with the following command:</p>
+<pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.Power.Reset();
 </code></pre></article>
           </div>
           

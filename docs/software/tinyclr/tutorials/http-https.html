@@ -80,7 +80,7 @@
 <h1 id="httphttps">HTTP/HTTPS</h1>
 
 <hr>
-<p>Hyper Text Transport Protocol (HTTP) builds on top of the <a href="core-protocols.html">Core Networking Protocols</a> to provide a standard way to work with web servers.</p>
+<p>Hyper Text Transport Protocol (HTTP) builds on top of the <a href="networking-core.html">Core Networking Protocols</a> to provide a standard way to work with web servers.</p>
 <h2 id="http-client">HTTP Client</h2>
 <p>The following code connects to bing.com and reads the robots.txt file. This code needs an active network connection to work properly.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Network and GHIElectronics.TinyCLR.Networking.Http.</p>
@@ -135,8 +135,7 @@
 </div>
 <div class="NOTE"><h5>Note</h5><p>To run this example the client and server devices must both connect to the same local network.</p>
 </div>
-<pre><code class="lang-cs">static void TestHttpServer()
-{            
+<pre><code class="lang-cs">static void TestHttpServer() {
     //Create a listener.
     HttpListener listener = new HttpListener(&quot;http&quot;, 80);
 
@@ -145,8 +144,7 @@
 
     var clientRequestCount = 0;
 
-    while (true)
-    {
+    while (true) {
         //Note: The GetContext method blocks while waiting for a request.
         HttpListenerContext context = listener.GetContext();
 
@@ -154,8 +152,8 @@
         HttpListenerResponse response = context.Response;
 
         //Construct a response.                
-        var responseString = string.Format(&quot;&lt;HTML&gt;&lt;BODY&gt; I am TinyCLR OS Server. 
-            Client request count: {0}&lt;/BODY&gt;&lt;/HTML&gt;&quot;, ++clientRequestCount);                
+        var responseString = string.Format(&quot;&lt;HTML&gt;&lt;BODY&gt; I am TinyCLR OS Server. &quot; +
+            &quot;Client request count: {0}&lt;/BODY&gt;&lt;/HTML&gt;&quot;, ++clientRequestCount);                
 
         byte[] buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
 

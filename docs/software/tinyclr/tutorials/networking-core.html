@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Core Networking Protocols </title>
+    <title>Networking Core </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Core Networking Protocols ">
+    <meta name="title" content="Networking Core ">
     <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -77,13 +77,47 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="core-networking-protocols">Core Networking Protocols</h1>
+<h1 id="networking-core">Networking Core</h1>
 
 <hr>
-<p>Networking support in TinyCLR OS is a subset of Microsoft&#39;s .NET Framework networking stack. More details will be added to this tutorial in the future. Please see the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.net.sockets.socket?view=netframework-4.8">Microsoft Sockets Class</a> documentation to get started. </p>
+<p>Networking support in TinyCLR OS is a subset of Microsoft&#39;s .NET Framework networking stack. More details will be added to this tutorial in the future. You might want to look at the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.net.sockets.socket?view=netframework-4.8">Microsoft Sockets Class</a> documentation to get started -- it should very closely resemble the TinyCLR sockets class.</p>
+<h2 id="mac-addresses">MAC Addresses</h2>
+<p>SITCore&#39;s built in PHY and ENC28 Ethernet networking ship with a default MAC address that is preset by GHI Electronics. This is fine for internal testing, but this is not a unique MAC address suitable for use inside a commercial product.</p>
+<p>You will need to set a valid and unique MAC address before shipping your product. If you do not have access to an appropriate MAC address, you can either use an online MAC address generator, which is not ideal, or you can use a MAC address from an old computer or network card that is no longer used.</p>
+<p>Not having a unique MAC address can be a problem. If two devices with the same MAC address are present on the same local network subnet, neither device will be able to communicate properly.</p>
+<p>The WINC1500 WiFi module supported by SITCore devices ships with a manufacturer assigned unique MAC address. While you can set whatever MAC address you want, it is better to read the manufacturer assigned MAC address and then pass it on to the stack.</p>
 <h2 id="secure-sockets">Secure Sockets</h2>
 <p>TLS is natively support. See the <a href="tls.html">TLS page</a> for details.</p>
-</article>
+<h2 id="net-sockets">.NET Sockets</h2>
+<p>TinyCLR OS&#39;s support of sockets is very similar to .NET socket support. Most .NET socket code should run with little modification. Socket support is provided as part of the TinyCLR OS core. Tiny CLR sockets work similar to .NET sockets -- most .NET examples are applicable to TinyCLR.</p>
+<h2 id="tcpudp">TCP/UDP</h2>
+<p>TCP and UDP are the core of the Internet protocols and are supported through standard .NET Sockets. The web is full of examples on using TCP and UDP Sockets that should work as is or with minor changes.</p>
+<h2 id="dhcp">DHCP</h2>
+<p>TinyCLR OS supports both static and dynamic IP addressing. Note that static IP addressing does not work with <a href="ppp.html">PPP</a>.</p>
+<p>The following line of code enables dynamic DHCP. For static IP, set <code>IsDhcpEnabled</code> to <code>false</code>.</p>
+<pre><code class="lang-cs">networkInterfaceSetting2.IsDhcpEnabled = true;
+</code></pre><p>With static IP addressing, you must provide the following settings. These settings will be ignored if dynamic DHCP is enabled.</p>
+<pre><code class="lang-cs">networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
+networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
+networkInterfaceSetting.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
+networkInterfaceSetting.DnsAddresses = new IPAddress[] { new IPAddress(new byte[]
+    { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
+</code></pre><h2 id="dns">DNS</h2>
+<p>The TinyCLR Dns class can be used to resolve a URL into its IP address by using the following code:</p>
+<pre><code class="lang-cs">var hostEntry = Dns.GetHostEntry(hostName);
+
+if ((hostEntry != null) &amp;&amp; (hostEntry.AddressList.Length &gt; 0)) {
+    var i = 0;
+
+    while (hostEntry.AddressList[i] == null) i++;
+
+    remoteIpAddress = hostEntry.AddressList[i];
+}
+
+else {
+    throw new Exception(&quot;Server not found.&quot;); ;
+}
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -91,7 +125,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/core-protocols.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/networking-core.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

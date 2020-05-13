@@ -7,38 +7,37 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 
 ## Specifications
 
-| Spec               | SC20100S                  | SC20260B             |
-|--------------------|---------------------------|----------------------|
-| Core               | ARM Cortex-M7 32 bit      | ARM Cortex-M7 32 bit |
-| Speed              | 480 MHz                   | 480 MHz              |
-| Internal RAM       | 1 MByte                   | 1 MByte              |
-| Internal Flash     | 2 MByte                   | 2 MByte              |
-| Instruction Cache  | 16 KByte                  | 16 KByte             |
-| Data Cache         | 16 KByte                  | 16 KByte             |
-| Package            | LQFP100 14 x 14 mm        | 265-TFBGA 14 x 14 mm |
-| Temperature Range  | -40C to +85C              | -40C to +85C         |
+| Spec                   | SC20100S                  | SC20260B             |
+|------------------------|---------------------------|----------------------|
+| **Core**               | ARM Cortex-M7 32 bit      | ARM Cortex-M7 32 bit |
+| **Speed**              | 480 MHz                   | 480 MHz              |
+| **Internal RAM**       | 1 MByte                   | 1 MByte              |
+| **Internal Flash**     | 2 MByte                   | 2 MByte              |
+| **Instruction Cache**  | 16 KByte                  | 16 KByte             |
+| **Data Cache**         | 16 KByte                  | 16 KByte             |
+| **Package**            | LQFP100 14 x 14 mm        | 265-TFBGA 14 x 14 mm |
+| **Temperature Range**  | -40C to +85C              | -40C to +85C         |
 
 *Note: Resources are shared between your application and the operating system.*
 
 ## Peripherals
 
-| Peripheral            | SC20100S                  | SC20260B              |
-|-----------------------|---------------------------|-----------------------|
-| GPIO (all support IRQ)| 76                        | 164                   |
-| SPI                   | 3                         | 3                     |
-| I2C                   | 2                         | 3                     |
-| UART/USART            | 8 (4 with handshaking)    | 8 (4 with handshaking)|
-| CAN                   | 2                         | 2                     |
-| PWM                   | 16                        | 29                    |
-| ADC                   | 12                        | 21                    |
-| DAC                   | 2                         | 2                     |
-| SD/SDIP/MMC           | 1                         | 1                     |
-| Quad SPI              | 1                         | 1                     |
-| USB Host              | 1                         | 1                     |
-| USB Client            | 1                         | 1                     |
-| Ethernet              | 1                         | 1                     |
-| LCD TFT               | 0                         | 1                     |
-| Camera                | 0                         | 1                     |
+| Peripheral                 | SC20100S                  | SC20260B              |
+|----------------------------|---------------------------|-----------------------|
+| **GPIO**                   | 76                        | 164                   |
+| **SPI**                    | 3                         | 3                     |
+| **I2C**                    | 2                         | 3                     |
+| **UART**                   | 8 (4 with handshaking)    | 8 (4 with handshaking)|
+| **CAN**                    | 2                         | 2                     |
+| **PWM**                    | 16                        | 29                    |
+| **ADC**                    | 12                        | 21                    |
+| **DAC**                    | 2                         | 2                     |
+| **SD/SDIP/MMC**            | 1                         | 1                     |
+| **USB Host**               | 1                         | 1                     |
+| **USB Client**             | 1                         | 1                     |
+| **Ethernet**               | 1                         | 1                     |
+| **LCD TFT**                | 0                         | 1                     |
+| **Camera**                 | 0                         | 1                     |
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
 
@@ -128,7 +127,7 @@ Exposing the following pins is required in every design to enable device program
 * MOD (if required to select a debug interface)
 * Desired debug interface(s)
 
-Please see the [Special Pins](../../software/tinyclr/special-pins.md) page for more details.
+For information on these and other important pins, please refer to the [Special Pins](../../software/tinyclr/special-pins.md) page.
 
 ### Power Supply
 A clean power source, suitable for digital circuitry, is needed to power SITCore SoCs. Voltages should be regulated to within 10% or better of the specified voltage. Decoupling capacitors of 0.1 uF are needed near every power pin. Additionally, a large capacitor, typically 47 uF, should be placed near the SoC if the power supply is more than few inches away.
@@ -137,8 +136,45 @@ A clean power source, suitable for digital circuitry, is needed to power SITCore
 It is a good idea to provide a separate filtered supply line for the `Vdda`, and `Vref+` pins. Additionally, on the 260 pin devices, you may want to provide a separate filtered ground connection for the `Vssa` and `Vref-` pins. While this is not needed for ADC operation, it does help to ensure more accurate ADC readings by reducing analog supply noise.
 
 ### Crystals
-The SITCore requires an external 8 MHz crystal and associated circuitry to function. For the RTC to function, a 32.768
-kHz crystal and circuitry are required. Please see the processor's documentation for advanced information.
+SITCore SoCs require an external 8 MHz crystal and two load capacitors to function. For the RTC to function, a 32.768 kHz crystal two load capacitors are required.
+
+There is a lot to consider when selecting a crystal -- especially the RTC crystal. This is one reason our SoMs are so popular, as the difficult design choices have already been made for you. For more information on crystal selection for SITCore SoCs, please consult [AN2867](https://www.st.com/resource/en/application_note/cd00221665-oscillator-design-guide-for-stm8afals-stm32-mcus-and-mpus-stmicroelectronics.pdf) from STMicroelectronics.
+
+### Main Crystal
+Most 8 MHz quartz crystals and ceramic resonators from various manufacturer will work with SITCore SoCs. The table below will tell you what to look for based on the crystal's maximum equivalent series resistance (ESR), shunt capacitance (C0), and load capacitance (CL). Keeping the total capacitance of C0 + CL well below the recommended maximum will provide more of a safety margin for stable and reliable oscillator operation.
+
+|                       |                                         |
+|-----------------------|-----------------------------------------|
+|Max crystal ESR (ohms) | Recommended max total of C0 and CL (pF) |
+| 40                    | 49                                      |
+| 50                    | 44                                      |
+| 60                    | 40                                      |
+| 70                    | 37                                      |
+| 80                    | 35                                      |
+| 100                   | 31                                      |
+| 200                   | 22                                      |
+| 300                   | 18                                      |
+
+### RTC Crystal
+It's more difficult finding crystals that will work reliably with the RTC. This is because the RTC oscillator is an extremely low power oscillator to increase RTC battery life. Start by looking for crystals with low load capacitance. The table below will help. For reliable operation, the total capacitance of C0 (crystal shunt capacitance) and CL (crystal load capacitance) must be less than the recommended max total of C0 and CL.
+
+|                          |                                         |
+|--------------------------|-----------------------------------------|
+|Max crystal ESR (kilohms) | Recommended max total of C0 and CL (pF) |
+| 30                       | 9.9                                     |
+| 40                       | 8.5                                     |
+| 50                       | 7.6                                     |
+| 60                       | 7.0                                     |
+| 70                       | 6.5                                     |
+| 80                       | 6.0                                     |
+| 90                       | 5.7                                     |
+| 100                      | 5.4                                     |
+
+When laying out your board, it is best to keep the crystal as close as possible to the SoC so the oscillator traces are as short as possible. The oscillator circuit should also be surrounded by a grounded guard ring or ground plane on the same layer to reduce noise. There should also be a ground plane on a layer underneath the oscillator circuit. The oscillator ground plane should be connected to the closest SoC ground pin.
+
+Conformal coating or other protection is recommended in severe environments to reduce leakage current caused by PCB contamination. Do not expose the crystal to higher temperatures than it is rated for as damage may occur. PCB cleaning is recommended to obtain maximum performance by removing flux residuals from the board after assembly (even when using "no-clean" products in ultra-low-power applications).
+
+Follow the crystal manufacturer's guidelines for load capacitance, otherwise the oscillation frequency may be changed slightly. If the two load capacitors have the same value, one half the value of one load capacitor added to the capacitance of the oscillator traces should be equal to the manufacturer's recommended load capacitance.
 
 ### Reset
 The reset pin is not pulled in any direction. Designs must be sure to use an appropriate pull-up resistor.

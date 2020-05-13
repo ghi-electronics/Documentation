@@ -2,14 +2,31 @@
 ---
 The Real Time Clock (RTC) is a circuit that runs off a small battery or a super capacitor. It has its own crystal and keeps running even when the system is powered off. Not all hardware has a built in RTC, so check your hardware's documentation for more details.
 
+Generally, the RTC is accurate to plus or minus two seconds per day. However, this error may be larger for boards operating in high or low temperature environments.
+
 In the event the RTC battery was drained or the RTC was never initialized, the RTC will not have a correct value. Use the `rtc.IsValid` method to determine if the time was set correctly.
 
+## Setting Vbat Charge Mode
+
 >[!Important]
->There is a command to control charging of the RTC supercap (if used). If your RTC does not keep time when the board is powered down, and you are using a supercap instead of a battery for the RTC (as on our dev boards), add the following code to your program:
->```cs
->var rtc = GHIElectronics.TinyCLR.Devices.Rtc.RtcController.GetDefault();
->rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Fast);
+>Make sure the RTC battery charge mode is correctly set. Charging a lithium coin cell may cause damage to the cell and could cause it to leak. Not charging a supercap will result in a discharged supercap and loss of correct time and battery backed ram data when your board is powered down.
+
+The RTC is powered by a battery or supercap when your board is powered down. It is important to correctly set the charge mode based on the RTC power source. Lithium coin cells, such as the common CR2032, may be damaged and could possibly leak if recharging is attempted. Supercaps need to be charged every few days or so (depending on supercap size) or they will lose power. More information is found in the Vbat section of the [Special Pins](../special-pins.md) page.
+
+```cs
+var rtc = GHIElectronics.TinyCLR.Devices.Rtc.RtcController.GetDefault();
+
+//The following line turns off charging. Used for lithium coin cells.
+rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.None);
+
+//The following line charges slowly through a 5 K resistor. Used for supercaps.
+rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Slow)
+
+//The following line charges quickly through a 1.5 K resistor.
+//   This is the mode we use for the supercaps on SITCore Dev boards.
+rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Fast)
 ```
+
 
 >[!Tip]
 >Needed NuGets: GHIElectronics.TinyCLR.Devices.Rtc, GHIElectronics.TinyCLR.Native

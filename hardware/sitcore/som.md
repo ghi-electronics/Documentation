@@ -1,43 +1,44 @@
 # SITCore System on Modules
 ---
-![G400S](images/system-on-modules.jpg)
+![SITCore SoMs](images/module-options-size.jpg)
 
 ## Overview
 The SITCore SoMs provide a low cost way to add .NET computing power to any embedded product. They are available in a 200 pin SO-DIMM format or as surface mount modules. The SITCore SoMs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more. The surface mount versions are great for harsh or high vibration environments.
 
 ## Specifications
 
-| Spec               | All SITCore SoMs          |
-|--------------------|---------------------------|
-| Processor Type     | ARM Cortex-M7 32 Bit      |
-| Speed              | 480 MHz                   |
-| Internal RAM       | 1 MByte                   |
-| Internal Flash     | 2 MByte                   |
-| Instruction Cache  | 16 KByte                  |
-| Data Cache         | 16 KByte                  |
-| Temperature Range  | -40C to +85C              |
+| Spec                   | All SITCore SoMs          |
+|------------------------|---------------------------|
+| **Processor Type**     | ARM Cortex-M7 32 Bit      |
+| **Speed**              | 480 MHz                   |
+| **Internal RAM**       | 1 MByte                   |
+| **Internal Flash**     | 2 MByte                   |
+| **Instruction Cache**  | 16 KByte                  |
+| **Data Cache**         | 16 KByte                  |
+| **Temperature Range**  | -40C to +85C              |
 
 *Note: Resources are shared between your application and the operating system.*
 
 ## Peripherals
 
-| Peripheral            | SCM20100E     | SCM20260N     | SCM20260E     | SCM20260D     |
-|-----------------------|---------------|---------------|---------------|---------------|
-| GPIO (all support IRQ)| 43            | 79            | 85            | 108           |
-| SPI                   | 3             | 3             | 3             | 3             |
-| I2C                   | 1             | 1             | 3             | 3             |
-| UART/USART            | 5 (2 w/ H.S.) | 7 (4 w/ H.S.) | 8 (4 w/ H.S.) | 8 (4 w/ H.S.) |
-| CAN                   | 1             | 2             | 2             | 2             |
-| PWM                   | 12            | 22            | 23            | 28            |
-| ADC                   | 6             | 16            | 15            | 20            |
-| DAC                   | 2             | 2             | 1             | 2             |
-| SD/SDIP/MMC           | 1             | 1             | 1             | 1             |
-| External Flash        | None          | 16 MByte      | 16 MByte      | 16 MByte      |
-| USB Host              | 1             | 1             | 1             | 1             |
-| USB Client            | 1             | 1             | 1             | 1             |
-| Ethernet              | 1             | 0             | 1             | 1             |
-| LCD TFT               | 0             | 1             | 1             | 1             |
-| Camera                | 0             | 1             | 1             | 1             |
+| Peripheral                 | SCM20100E     | SCM20260N     | SCM20260E     | SCM20260D     |
+|----------------------------|---------------|---------------|---------------|---------------|
+| **External SDRAM**         | None          | 32 MByte      | 32 MByte      | 32 MByte      |
+| **External Flash**         | None          | 16 MByte      | 16 MByte      | 16 MByte      |
+| **GPIO**                   | 43            | 79            | 85            | 108           |
+| **SPI**                    | 3             | 3             | 3             | 3             |
+| **I2C**                    | 1             | 1             | 3             | 3             |
+| **UART**                   | 5 (2 w/ H.S.) | 7 (4 w/ H.S.) | 8 (4 w/ H.S.) | 8 (4 w/ H.S.) |
+| **CAN**                    | 1             | 2             | 2             | 2             |
+| **PWM**                    | 12            | 22            | 23            | 28            |
+| **ADC**                    | 6             | 16            | 15            | 20            |
+| **DAC**                    | 2             | 2             | 1             | 2             |
+| **SD/SDIP/MMC**            | 1             | 1             | 1             | 1             |
+| **USB Host**               | 1             | 1             | 1             | 1             |
+| **USB Client**             | 1             | 1             | 1             | 1             |
+| **Ethernet**               | 1             | 0             | 1             | 1             |
+| **LCD TFT**                | 0             | 1             | 1             | 1             |
+| **Camera**                 | 0             | 1             | 1             | 1             |
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
 
@@ -82,10 +83,10 @@ The microcontrollers we use in our SITCore line of products do not support concu
 [![SCm20260D Pinout](images/scm20260d-pinout.gif)](pdfs/scm20260d-pinout.pdf)
 
 ## Schematics
-- [SCM20100E Schematic](pdfs/scm20100e-schematic.pdf)
-- [SCM20260N Schematic](pdfs/scm20260n-schematic.pdf)
-- [SCM20260E Schematic](pdfs/scm20260e-schematic.pdf)
-- [SCM20260D Schematic](pdfs/scm20260d-schematic.pdf)
+- [SCM20100E Schematic](pdfs/scm20100e-rev-b-schematic.pdf)
+- [SCM20260N Schematic](pdfs/scm20260n-rev-c-schematic.pdf)
+- [SCM20260E Schematic](pdfs/scm20260e-rev-b-schematic.pdf)
+- [SCM20260D Schematic](pdfs/scm20260d-rev-c-schematic.pdf)
 
 ## Getting Started
 As the SITCore modules are based on the SITCore chipset, please refer to the [SITCore SoC page](soc.md) for information on device startup, loading TinyCLR OS firmware, and writing and deploying your application.
@@ -128,7 +129,7 @@ Exposing the following pins is required in every design to enable device program
 * MOD (if required to select a debug interface)
 * Desired debug interface(s)
 
-Please see the [Special Pins](../../software/tinyclr/special-pins.md) page for more details.
+For information on these and other important pins, please refer to the [Special Pins](../../software/tinyclr/special-pins.md) page.
 
 ### Power Supply
 A clean power source, suitable for digital circuitry, is needed to power SITCore SoMs. Voltages should be regulated to within 10% or better of the specified voltage. Additionally, a large capacitor, typically 47 uF, should be placed near the SoM if the power supply is more than few inches away.

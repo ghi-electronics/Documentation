@@ -1,18 +1,23 @@
 # Special Pins
 ---
 
-There are five pins that have special functionality. They are also predefined on the SITCore line of products: 
+There are a number of predefined pins that have special functionality on SITCore SoMs and SoCs: 
 * RESET (NRST)
 * LDR (PE3)
 * APP (PB7)
 * MOD (PD7)
 * WKUP (PA0)
+* Vbat
 
-All special pins except RESET can be used as GPIO or peripheral pins, however it is up to you to make sure your use of these pins does not interfere with their use as special pins if needed. We strongly recommend exposing all special pins in your SITCore designs.
+All special pins except RESET and Vbat can be used as GPIO or peripheral pins, however it is up to you to make sure your use of these pins does not interfere with their use as special pins if needed. We strongly recommend exposing all special pins in your SITCore designs. You will also need to expose the debug interface(s) you plan to use to deploy and debug your application.
+
+In addition to exposing these pins, it is important to follow the design considerations on the [System on Chip](../../hardware/sitcore/soc.md) or [System on Module](../../hardware/sitcore/som.md) page that corresponds to the SITCore product your are using.
 
 ## RESET
 
-The SITCore chip is held in reset while the reset pin is low. Releasing RESET and allowing it to go high will begin the system startup process. When designing your own circuit board, the RESET pin must be pulled high for the processor to start running. On our SITCore Modules and Dev Boards we pull RESET high through a 10K resistor, allowing RESET to be pulled low by the RESET button. When using the SITCore chipsets, you will have to pull RESET high yourself.
+The SITCore chip is held in reset while the RESET(NRST) pin is held low. Releasing RESET and allowing it to go high will begin the system startup process.
+
+All SITCore processors have a permanent internal pull up resistor on the RESET pin. An external pull up resistor is not required on the RESET(NRST) pin when designing your own circuit boards.
 
 ## LDR
 
@@ -32,6 +37,18 @@ By default, the MOD pin is pulled high during reset allowing for deployment and 
 
 The WKUP pin can be used to wake up the processor from special power saving modes. The WKUP pin can be configured to use an internal pull-up or pull-down, so no external pull resistor is needed. When WKUP functionality is not needed, this pin can be used as a GPIO or peripheral pin. See the [Power Management](../../software/tinyclr/tutorials/power-management.md) page for more information.
 
+## Vbat
+
+The Vbat pin on SITCore SoCs and SoMs is used to provide battery power to the [Real Time Clock](tutorials/real-time-clock.md) (RTC). This pin also provides power for battery backed memory (see the [Real Time Clock](tutorials/real-time-clock.md) page for details).
+
+If you require either RTC or battery backed memory, the Vbat pin must be connected to the positive terminal of a supercap or battery. The negative terminal of the battery or supercap needs a connection to GND.
+
+Vbat requires 1.2 to 3.6 volts for correct operation. This is usually provided by either a CR2032 lithium coin cell or a supercap, but other options are available. SITCore Dev boards use a 33 mF 3.3 volt supercap.
+
+The best Vbat option depends on your application. If your board needs to keep correct time while being unpowered for more than a few days, a battery may be a better choice than a supercap. The disadvantage to batteries is they eventually discharge and must be replaced. Supercaps are rechargeable and should last for the life of the product.
+
+It is important that your application correctly sets the charging status of the Vbat pin. Trying to charge a lithium coin cell may damage it and could possibly cause it to leak. Supercaps need to be charged every few days or so (depending on supercap size) before they lose their charge. Information on setting Vbat charge status is found on the [Real Time Clock](tutorials/real-time-clock.md) page.
+
 ## Debug Interface
 
 Don't forget to expose either the USB client or UART interface (or both) that you plan on using to deploy and debug your application code. All SITCore products built around a 100 pin chip (SC20100x) use UART1 for the serial debug interface. All SITCore products built around the 260 pin SC20260B chip use UART5 for the serial debug interface.
@@ -45,13 +62,4 @@ When designing your own board, we recommend that you add the following periphera
 | User LED | 100 pin devices: PE11 |
 |  | 260 pin devices: PB0 |
 | Buzzer | PB1 |
-|  |  |
-| SPI Display | SPI = SPI4 |
-|  | BL = PA15 |
-|  | CS = PD10 |
-|  | RS = PC4 |
-|  | RST = PE15 |
-|  |  |
-| Parallel Display | Backlight = PA15 |
-|  | Touch I2C = I2C1 |
-|  | Touch IRQ = PJ14 |
+

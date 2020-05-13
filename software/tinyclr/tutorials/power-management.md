@@ -64,4 +64,12 @@ Power.Shutdown(true, DateTime.Now.AddSeconds(90); //Will wake up after 90 second
 
 ```
 
+## Software Reset
+
+You can also reset your device from within your application with the following command:
+
+```cs
+GHIElectronics.TinyCLR.Native.Power.Reset();
+```
+
 
