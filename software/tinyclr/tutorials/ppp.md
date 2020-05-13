@@ -1,7 +1,7 @@
 # PPP
 ---
 
-Point to Point Protocol (PPP) started in the days of dial up Internet and is still used today in cellular modems. While using PPP can be optional for small IoT systems, having a secure connection requires PPP.
+Point to Point Protocol (PPP) started in the days of dial up Internet and is still used today in cellular modems. While using PPP can be optional for small IoT systems, having a secure connection requires PPP. A [MAC address](networking-core.md) is not needed for PPP.
 
 This example uses the LTE IoT 2 click module on the SCM20260D Dev Boards to establish a connection and read a web page. We've also successfully tested the SIMCOM SIM900 and NimbeLink's Skywire cellular embedded modems.
 
