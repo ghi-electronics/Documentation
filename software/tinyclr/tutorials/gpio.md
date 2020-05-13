@@ -78,12 +78,7 @@ Let's use event driven programming to respond to a button and turn an LED on and
 
 You will see a reference to a "falling edge" in the following code. A falling edge occurs when the state of a pin goes from high to low. A rising edge is just the opposite -- it occurs when a pin goes from low to high.
 
-While written for the SCM20260D Dev Board, this example also works on the SC20100S Dev Board. Just uncomment the code for the appropriate board. This example works exactly the same as the above, but uses events instead of polling.
-
-> [!Note]
-> Input events use interrupts (IRQs). Interrupts are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
-example: PA1 and PB1 cannot both be used as interrupts at the same time. However, PA1 and PB2, or even PA1 and PA2, can be used simultaneously with interrupts.
-
+The following code demonstrates a GPIO pin event (interrupt) on the SCM20260D Dev board. This example works exactly the same as the example above, but uses events instead of polling.
 
 ```cs
 private static void Main() {
@@ -109,3 +104,8 @@ private static void Button_ValueChanged(GpioPin sender, GpioPinValueChangedEvent
 > [!Tip] 
 > Once you type += after the event, hit the tab key and Visual Studio will automatically create the event for you.
 
+### Pin Interrupts
+Input events use interrupts (IRQs). Interrupts are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
+example: PA1 and PB1 cannot both be used as interrupts at the same time. However, PA1 and PB2, or even PA1 and PA2, can be used simultaneously with interrupts. 
+
+If your product design relies on interrupts, it is important to be very careful when allocating GPIO pins to make sure interrupts are available on all needed pins.
