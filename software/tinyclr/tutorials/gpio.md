@@ -106,6 +106,8 @@ private static void Button_ValueChanged(GpioPin sender, GpioPinValueChangedEvent
 
 ### Pin Interrupts
 Input events use interrupts (IRQs). Interrupts are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
-example: PA1 and PB1 cannot both be used as interrupts at the same time. However, PA1 and PB2, or even PA1 and PA2, can be used simultaneously with interrupts. 
+example: PA1 and PB1 cannot both be used as interrupts at the same time. However, PA1 and PB2, or even PA1 and PA2, can be used simultaneously with interrupts.
 
-If your product design relies on interrupts, it is important to be very careful when allocating GPIO pins to make sure interrupts are available on all needed pins.
+It is also important to consider what interrupt pins are used by the system's internal functions, such as WiFi and touch screen interrupt pins. These interrupts invalidate interrupts with the same pin number on any GPIO port. 
+
+If your product design relies on interrupts, be very careful when allocating GPIO pins to make sure interrupts are available on all needed pins.
