@@ -130,10 +130,7 @@ while (true) {
 <p>When an event occurs, the program stops what it is doing and control is transferred to an event handler. An event handler is code you write that responds to the event. </p>
 <p>Let&#39;s use event driven programming to respond to a button and turn an LED on and off. We will raise an event when the value on the button&#39;s input pin changes because the button is pressed or released.</p>
 <p>You will see a reference to a &quot;falling edge&quot; in the following code. A falling edge occurs when the state of a pin goes from high to low. A rising edge is just the opposite -- it occurs when a pin goes from low to high.</p>
-<p>While written for the SCM20260D Dev Board, this example also works on the SC20100S Dev Board. Just uncomment the code for the appropriate board. This example works exactly the same as the above, but uses events instead of polling.</p>
-<div class="NOTE"><h5>Note</h5><p>Input events use interrupts (IRQs). Interrupts are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
-example: PA1 and PB1 cannot both be used as interrupts at the same time. However, PA1 and PB2, or even PA1 and PA2, can be used simultaneously with interrupts.</p>
-</div>
+<p>The following code demonstrates a GPIO pin event (interrupt) on the SCM20260D Dev board. This example works exactly the same as the example above, but uses events instead of polling.</p>
 <pre><code class="lang-cs">private static void Main() {
     var gpio = GpioController.GetDefault();
 
@@ -154,6 +151,11 @@ private static void Button_ValueChanged(GpioPin sender, GpioPinValueChangedEvent
 }
 </code></pre><div class="TIP"><h5>Tip</h5><p>Once you type += after the event, hit the tab key and Visual Studio will automatically create the event for you.</p>
 </div>
+<h3 id="pin-interrupts">Pin Interrupts</h3>
+<p>Input events use interrupts (IRQs). Interrupts are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
+example: PA1 and PB1 cannot both be used as interrupts at the same time. However, PA1 and PB2, or even PA1 and PA2, can be used simultaneously with interrupts.</p>
+<p>It is also important to consider what interrupt pins are used by the system&#39;s internal functions, such as WiFi and touch screen interrupt pins. These interrupts invalidate interrupts with the same pin number on any GPIO port. </p>
+<p>If your product design relies on interrupts, be very careful when allocating GPIO pins to make sure interrupts are available on all needed pins.</p>
 </article>
           </div>
           
