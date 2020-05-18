@@ -44,7 +44,7 @@ TinyCLR Config is a tool used to update and configure your TinyCLR device.
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.0.0-preview6](http://files.ghielectronics.com/downloads/TinyCLR/Config/TinyCLR%20Config%20Setup%20v2.0.0-preview6.msi) | 2020-05-20 | Preview | 6726BFDBD74B9E8E863809B92B12ADB3
+[v2.0.0-preview6](http://files.ghielectronics.com/downloads/TinyCLR/Config/TinyCLR%20Config%20Setup%20v2.0.0-preview6.msi) | 2020-05-20 | Preview | 5E8A01715DD20D9FA1B2115C2DFCB8E0
 [v2.0.0-preview5](http://files.ghielectronics.com/downloads/TinyCLR/Config/TinyCLR%20Config%20Setup%20v2.0.0-preview5.msi) | 2020-04-21 | Preview | 3D60888ECD7884964DE74D5551FFAFE5
 [v2.0.0-preview4](http://files.ghielectronics.com/downloads/TinyCLR/Config/TinyCLR%20Config%20Setup%20v2.0.0-preview4.msi) | 2020-03-10 | Preview | 4E56B1E2810DAC30799290CA3276B202
 [v2.0.0-preview3](http://files.ghielectronics.com/downloads/TinyCLR/Config/TinyCLR%20Config%20Setup%20v2.0.0-preview3.msi) | 2020-02-20 | Preview | D58DA9D455EA1EC51BEEAA579E714568
