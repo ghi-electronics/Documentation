@@ -74,7 +74,7 @@ class Program {
 ```
 
 ## 64 Kbyte OTP Secure Storage Area
-The OTP secure flash region is organized into 2048 blocks of 32 bytes each. Once you write to a block, that block can be read but never changed. 
+The one time programmable (OTP) secure flash region is organized into 2048 blocks of 32 bytes each. Once you write to a block, that block can be read but never changed. 
 
 The static GHIElectronics.TinyCLR.Native.Flash class has methods to read and write OTP flash blocks and also to see if blocks are blank.
 
