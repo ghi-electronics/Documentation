@@ -4,6 +4,9 @@
 
 We offer two development boards making it possible to start programming your application within minutes without designing or building new hardware. These boards are not only suitable for prototypes, but for short production runs as well.
 
+> [!Note]
+> All SITCore Dev boards use a USB-C connector for application deployment and debugging. While USB-C has many advantages, we've also noticed some flaws. Every USB-A to USB-C cable tested worked as expected. Testing USB-C to USB-C cables gave interesting and unexpected results. Most USB-C hubs also do not work when using USB-C to USB-C cables. If you are having problems deploying or debugging, try connecting the board directly to your computer with a USB-A to USB-C cable.
+
 ## SITCore SC20100S Dev Board
 ![Development Options](images/sc20100.jpg)
 
