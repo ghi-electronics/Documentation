@@ -11,8 +11,8 @@ An Arduino-pinout compatible single board computer
 |----------------|---------------------------------|
 | Processor      | STMicroelectronics ST32F401RET6 |
 | Speed          | 84 MHz                          |
-| Internal RAM   | 96 KByte                        |
-| Internal Flash | 512 KByte                       |
+| Internal RAM   | 96 Kbyte                        |
+| Internal Flash | 512 Kbyte                       |
 | Dimensions     | 70.6 x 56.0 x 14.5 mm           |
 
 ![FEZ Pinout](images/fez-pinout.gif)

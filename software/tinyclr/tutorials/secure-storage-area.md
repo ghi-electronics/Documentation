@@ -1,10 +1,12 @@
 # Secure Storage Area
 ---
-An internal 128 KByte region of flash that can be used for non-volatile storage of data. If you lock your device, this region is also great for storing sensitive information like security certificates and serial numbers.
+There are two secure storage areas you may find helpful. There is an internal 128 Kbyte region of flash that can be used for non-volatile storage of data. If you lock your device, this region is also great for storing sensitive information like security certificates and serial numbers.
 
+There is also an internal 64 Kbyte one time programmable (OTP) region of memory that is organized into 32 byte blocks. Once you write to one of these blocks, it can never be changed or erased.
+
+## 128 Kbyte Secure Storage Area
 > [!Tip]
-> The Secure Storage Area is only erased when a device erase is performed by executing the `E` command in [**bootloader**](../bootloader.md) mode.
-
+> The 128 Kbyte secure storage area is only erased when a device erase is performed by executing the `E` command in [**bootloader**](../bootloader.md) mode.
 
 > [!Tip]
 > Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Storage, GHIElectronics.TinyCLR.Native
@@ -70,3 +72,34 @@ class Program {
     }
 }
 ```
+
+## 64 Kbyte OTP Secure Storage Area
+The OTP secure flash region is organized into 2048 blocks of 32 bytes each. Once you write to a block, that block can be read but never changed. 
+
+The static GHIElectronics.TinyCLR.Native.Flash class has methods to read and write OTP flash blocks and also to see if blocks are blank.
+
+### Writing an OTP Block
+To write a block of 32 bytes to the OTP region of flash memory, use the following command:
+```
+GHIElectronics.TinyCLR.Native.Flash.OtpWrite(uint blockIndex, byte[] data);
+```
+
+The byte array of data must be exactly 32 bytes in length or an `ArgumentOutOfRangeException` will be thrown.
+
+### Reading an OTP Block
+
+To read a block from the OTP region of flash memory, use the following command:
+```
+GHIElectronics.TinyCLR.Native.Flash.OtpRead(uint blockIndex, byte[] data);
+```
+A byte array 32 bytes long will be returned.
+
+### Checking if an OTP Block is Blank
+> [!Note]
+> If all 32 bytes of any OTP flash block are equal to 0xFF, the block is considered unused. If you write only 0xFF to the contents of a block, the block will be regarded as unused. Depending on the data you are saving, you may want to reserve one byte in the block as a write indicator, by writing anything other than 0xFF to that byte when the block is written.
+
+To see if a block is blank:
+```
+GHIElectronics.TinyCLR.Native.Flash.OtpIsBlank(uint blockIndex);
+```
+Returns a boolean value that is true if the block is blank.

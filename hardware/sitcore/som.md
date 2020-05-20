@@ -11,10 +11,10 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 |------------------------|---------------------------|
 | **Processor Type**     | ARM Cortex-M7 32 Bit      |
 | **Speed**              | 480 MHz                   |
-| **Internal RAM**       | 1 MByte                   |
-| **Internal Flash**     | 2 MByte                   |
-| **Instruction Cache**  | 16 KByte                  |
-| **Data Cache**         | 16 KByte                  |
+| **Internal RAM**       | 1 Mbyte                   |
+| **Internal Flash**     | 2 Mbyte                   |
+| **Instruction Cache**  | 16 Kbyte                  |
+| **Data Cache**         | 16 Kbyte                  |
 | **Temperature Range**  | -40C to +85C              |
 
 *Note: Resources are shared between your application and the operating system.*
@@ -23,8 +23,8 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 
 | Peripheral                 | SCM20100E     | SCM20260N     | SCM20260E     | SCM20260D     |
 |----------------------------|---------------|---------------|---------------|---------------|
-| **External SDRAM**         | None          | 32 MByte      | 32 MByte      | 32 MByte      |
-| **External Flash**         | None          | 16 MByte      | 16 MByte      | 16 MByte      |
+| **External SDRAM**         | None          | 32 Mbyte      | 32 Mbyte      | 32 Mbyte      |
+| **External Flash**         | None          | 16 Mbyte      | 16 Mbyte      | 16 Mbyte      |
 | **GPIO**                   | 43            | 79            | 85            | 108           |
 | **SPI**                    | 3             | 3             | 3             | 3             |
 | **I2C**                    | 1             | 1             | 3             | 3             |

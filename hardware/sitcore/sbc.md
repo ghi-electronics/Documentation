@@ -13,8 +13,8 @@ We offer multiple single board computers to provide the lowest possible barrier 
 |----------------------------|-----------------|-----------------|-----------------|-------------------------|-----------------|
 |                            | **FEZ Bit**     | **Fez Duino**   | **FEZ Feather** | **Fez Portal**          | **FEZ Stick**   |
 | **Core**                   | SC20100S        | SC20100S        | SC20100S        | SC20260N                | SC20100S        |
-| **External SDRAM**         | X               | X               | X               | 32 MByte                | X               |
-| **External Flash**         | X               | 16 MByte        | X               | 16 MByte                | X               |
+| **External SDRAM**         | X               | X               | X               | 32 Mbyte                | X               |
+| **External Flash**         | X               | 16 Mbyte        | X               | 16 Mbyte                | X               |
 | **Display**                | 1.8" 160x128    | X               | X               | 4.3" 480x272 Cap. Touch | X               |
 | **Click Connectors**       | X               | X               | X               | 1                       | 2               |
 | **WiFi**                   | Yes             | Yes             | Yes             | Yes                     | X               |
