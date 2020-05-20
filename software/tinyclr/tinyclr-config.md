@@ -24,9 +24,9 @@ The device configuration options have very important implications for system sec
 #### Firmware Configuration
 The `Extend heap` and `Enable external flash` firmware configuration options both expand internal memory by allowing the use of external memory chips. Once external heap or flash are enabled, you will need to reflash the firmware or completely erase the device to disable external memory.
 
-`Extend heap` extends internal RAM and only works on devices that include external SDRAM.
+`Extend heap` extends internal RAM and only works on devices that include external SDRAM. There is also a method, `GHIElectronics.TinyCLR.Native.Memory.ExtendHeap()`, that can be used to extend the heap from within your code. See the [External Memory](tutorials/external-memory.md) page for more information.
 
-`Enable external flash` extends internal flash memory and only works devices that include external flash memory.
+`Enable external flash` extends internal flash memory and only works devices that include external flash memory. To extend flash from within an application, use the `GHIElectronics.TinyCLR.Native.Flash.EnableExternalFlash()` method. See the [External Memory](tutorials/external-memory.md) page for more information.
 
 Data stored in external SDRAM or flash memory is less secure than data stored internally. See the [IP Protection](tutorials/ip-protection.md) page for more information.
 
