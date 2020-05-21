@@ -82,10 +82,9 @@
 <hr>
 <p>Networking support in TinyCLR OS is a subset of Microsoft&#39;s .NET Framework networking stack. More details will be added to this tutorial in the future. You might want to look at the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.net.sockets.socket?view=netframework-4.8">Microsoft Sockets Class</a> documentation to get started -- it should very closely resemble the TinyCLR sockets class.</p>
 <h2 id="mac-addresses">MAC Addresses</h2>
-<p>SITCore&#39;s built in PHY and ENC28 Ethernet networking ship with a default MAC address that is preset by GHI Electronics. This is fine for internal testing, but this is not a unique MAC address suitable for use inside a commercial product.</p>
-<p>You will need to set a valid and unique MAC address before shipping your product. If you do not have access to an appropriate MAC address, you can either use an online MAC address generator, which is not ideal, or you can use a MAC address from an old computer or network card that is no longer used.</p>
+<p>Before using SITCore&#39;s built in PHY and ENC28 Ethernet networking, you have to set a MAC address or an exception will be raised. While you may not need a unique MAC address for internal testing, you will need to set a valid and unique MAC address before shipping your product. If you do not have access to an appropriate MAC address, you can either use an online MAC address generator, which is not ideal, or you can use a MAC address from an old computer or network card that is no longer used.</p>
 <p>Not having a unique MAC address can be a problem. If two devices with the same MAC address are present on the same local network subnet, neither device will be able to communicate properly.</p>
-<p>The WINC1500 WiFi module supported by SITCore devices ships with a manufacturer assigned unique MAC address. While you can set whatever MAC address you want, it is better to read the manufacturer assigned MAC address and then pass it on to the stack.</p>
+<p>The WINC1500 WiFi module supported by SITCore devices ships with a manufacturer assigned unique MAC address. This address is used by default, although you can provide your own MAC address if desired.</p>
 <h2 id="secure-sockets">Secure Sockets</h2>
 <p>TLS is natively support. See the <a href="tls.html">TLS page</a> for details.</p>
 <h2 id="net-sockets">.NET Sockets</h2>
