@@ -60,8 +60,8 @@ This preview release implements all remaining functionality, fixes bugs, and imp
 
 #### Changes
 - Support for deployments in external QSPI flash in addition to internal flash.
-- Deployment size has changed. Secure deployments can now be up to 640 kBytes in size, external deployments can be up to 8 MBytes.
-- Added 64 kByte one time programmable (OTP) region.
+- Deployment size has changed. Secure deployments can now be up to 640 KBytes in size, external deployments can be up to 8 MBytes.
+- Added 64 KByte one time programmable (OTP) region.
 - Improved Ethernet performance.
 - Green Ethernet LED is now activity indicator instead of link indictor.
 - MAC addressing has changed. Ethernet and ENC always require a MAC address, WiFi MAC address is optional, PPP needs no MAC address.
@@ -254,7 +254,7 @@ This preview release includes many bug fixes, a few new and updated features, an
 - The PJ0 interrupt configuration changes when the device is reset with the reset button, but there is no problem when power cycling the board.
 - ToString() does not work if the argument is an Enum.
 - PulseFeedback DrainDuration does not work correctly.
-- Cannot send more than 64 kBytes in one SPI transaction. The workaround is to split the data so the transactions are smaller.
+- Cannot send more than 64 KBytes in one SPI transaction. The workaround is to split the data so the transactions are smaller.
 - When using static IP addressing, after disconnecting the device from an Ethernet network the old IP address will still be assigned instead of 0.0.0.0.
 - Graphics.DrawString() with native displays on the SC20260B may stop WiFi.
 
@@ -324,7 +324,7 @@ Our third preview includes bug fixes, added features, and increases performance.
 - Added Enable External Memory for heap (heap can be 32 MBytes).
 - Fixed SPI from using PA0 for chip select if no chip select pin is specified.
 - Fixed SPI4 and SPI5 clock errors.
-- Increased default free heap size from 300 kBytes to 364 kBytes (maximum size is still 512 kBytes).
+- Increased default free heap size from 300 KBytes to 364 KBytes (maximum size is still 512 KBytes).
 - Fixed USB client reading only a single byte of each packet.
 - Fixed system crashing when there are missing network configuration settings.
 - Added support for hardware random number generator.
