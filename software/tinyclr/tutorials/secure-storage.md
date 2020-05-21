@@ -1,12 +1,9 @@
-# Secure Storage Area
+# Secure Storage
 ---
-There are two secure storage areas you may find useful. There is an internal 128 KByte region of flash that can be used for non-volatile storage of data. If you lock your device, this region is also great for storing sensitive information like security certificates and serial numbers.
+There are two secure storage areas you may find useful.
 
-There is also an internal 64 KByte one time programmable (OTP) region of memory that is organized into 32 byte blocks. Once you write to one of these blocks, it can never be changed or erased.
-
-## 128 KByte Secure Storage Area
-> [!Tip]
-> The 128 KByte secure storage area is only erased when a device erase is performed by executing the `E` command in [**bootloader**](../bootloader.md) mode.
+## Programmable Storage
+This 128 KByte secure storage area can be modified. Performing an ```erase all`` in TinyCLR Config will wipe out this area.
 
 > [!Tip]
 > Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Storage, GHIElectronics.TinyCLR.Native
@@ -73,8 +70,10 @@ class Program {
 }
 ```
 
-## 64 KByte OTP Secure Storage Area
-The one time programmable (OTP) secure flash region is organized into 2048 blocks of 32 bytes each. Once you write to a block, that block can be read but never changed. 
+## One Time Programmable Area
+The one time programmable (OTP) secure flash region is organized into 2048 blocks of 32 bytes each. Once you write to a block, that block can be read but never changed.
+
+There is no way to modify written data. Erasing the entire device ```Erase All``` in TinyCLR Config will not mot modify this area.
 
 The static GHIElectronics.TinyCLR.Native.Flash class has methods to read and write OTP flash blocks and also to see if blocks are blank.
 

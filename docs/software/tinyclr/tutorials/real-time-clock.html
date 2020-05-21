@@ -183,7 +183,7 @@ Current RTC Time: 01/01/2019 11:15:36
 </code></pre><p>The above method is used as follows, with the argument indicating how many hours to add to convert UTC time to your local time zone:</p>
 <pre><code class="lang-cs">DateTime dateTime = GetNetworkTime(-5);
 </code></pre><h2 id="battery-backed-memory">Battery Backed Memory</h2>
-<p>SITCore devices include 4 Kbytes of battery backed memory. This memory accepts and returns byte arrays of data. The commands and their overloads for accessing this memory are as follows:</p>
+<p>SITCore devices include 4 KBytes of battery backed memory. This memory accepts and returns byte arrays of data. The commands and their overloads for accessing this memory are as follows:</p>
 <pre><code class="lang-cs">BackupMemorySize; //Returns 4096, total size in bytes of battery backed memory.
 
 ReadBackupMemory(byte[] destinationData);
