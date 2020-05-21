@@ -11,10 +11,10 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 |------------------------|---------------------------|----------------------|
 | **Core**               | ARM Cortex-M7 32 bit      | ARM Cortex-M7 32 bit |
 | **Speed**              | 480 MHz                   | 480 MHz              |
-| **Internal RAM**       | 1 Mbyte                   | 1 Mbyte              |
-| **Internal Flash**     | 2 Mbyte                   | 2 Mbyte              |
-| **Instruction Cache**  | 16 Kbyte                  | 16 Kbyte             |
-| **Data Cache**         | 16 Kbyte                  | 16 Kbyte             |
+| **Internal RAM**       | 1 MByte                   | 1 MByte              |
+| **Internal Flash**     | 2 MByte                   | 2 MByte              |
+| **Instruction Cache**  | 16 KByte                  | 16 KByte             |
+| **Data Cache**         | 16 KByte                  | 16 KByte             |
 | **Package**            | LQFP100 14 x 14 mm        | 265-TFBGA 14 x 14 mm |
 | **Temperature Range**  | -40C to +85C              | -40C to +85C         |
 

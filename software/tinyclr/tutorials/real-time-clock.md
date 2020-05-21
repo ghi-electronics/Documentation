@@ -141,7 +141,7 @@ DateTime dateTime = GetNetworkTime(-5);
 
 ## Battery Backed Memory
 
-SITCore devices include 4 Kbytes of battery backed memory. This memory accepts and returns byte arrays of data. The commands and their overloads for accessing this memory are as follows:
+SITCore devices include 4 KBytes of battery backed memory. This memory accepts and returns byte arrays of data. The commands and their overloads for accessing this memory are as follows:
 
 ```cs
 BackupMemorySize; //Returns 4096, total size in bytes of battery backed memory.

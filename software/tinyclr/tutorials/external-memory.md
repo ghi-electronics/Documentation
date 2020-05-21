@@ -13,11 +13,11 @@ GHIElectronics.TinyCLR.Native.Memory.ExtendHeap()
 ```
 
 ## External Flash
-Devices with external flash have the option of using up to 8 Mbytes of this memory for deployment. This is done by using [TinyCLR Config](../tinyclr-config.md) to enable external flash, or by using the following method:
+Devices with external flash have the option of using up to 8 MBytes of this memory for deployment. This is done by using [TinyCLR Config](../tinyclr-config.md) to enable external flash, or by using the following method:
 ```
 GHIElectronics.TinyCLR.Native.Flash.EnableExternalFlash()
 ```
-On SITCore devices that include external flash, there is another 8 Mbytes we are reserving for future use.
+On SITCore devices that include external flash, there is another 8 MBytes we are reserving for future use.
 
 As external memory chips can possibly be probed, enabling external flash has important security implications. See the [IP Protection](ip-protection.md) page for more information.
 
