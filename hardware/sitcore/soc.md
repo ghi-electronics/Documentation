@@ -143,32 +143,32 @@ There is a lot to consider when selecting a crystal -- especially the RTC crysta
 ### Main Crystal
 Most 8 MHz quartz crystals and ceramic resonators from various manufacturer will work with SITCore SoCs. The table below will tell you what to look for based on the crystal's maximum equivalent series resistance (ESR), shunt capacitance (C0), and load capacitance (CL). Keeping the total capacitance of C0 + CL well below the recommended maximum will provide more of a safety margin for stable and reliable oscillator operation.
 
-|                       |                                         |
-|-----------------------|-----------------------------------------|
-|Max crystal ESR (ohms) | Recommended max total of C0 and CL (pF) |
-| 40                    | 49                                      |
-| 50                    | 44                                      |
-| 60                    | 40                                      |
-| 70                    | 37                                      |
-| 80                    | 35                                      |
-| 100                   | 31                                      |
-| 200                   | 22                                      |
-| 300                   | 18                                      |
+|                        |                                         |
+|------------------------|-----------------------------------------|
+| Max crystal ESR (ohms) | Recommended max total of C0 and CL (pF) |
+| 40                     | 49                                      |
+| 50                     | 44                                      |
+| 60                     | 40                                      |
+| 70                     | 37                                      |
+| 80                     | 35                                      |
+| 100                    | 31                                      |
+| 200                    | 22                                      |
+| 300                    | 18                                      |
 
 ### RTC Crystal
 It's more difficult finding crystals that will work reliably with the RTC. This is because the RTC oscillator is an extremely low power oscillator to increase RTC battery life. Start by looking for crystals with low load capacitance. The table below will help. For reliable operation, the total capacitance of C0 (crystal shunt capacitance) and CL (crystal load capacitance) must be less than the recommended max total of C0 and CL.
 
-|                          |                                         |
-|--------------------------|-----------------------------------------|
-|Max crystal ESR (kilohms) | Recommended max total of C0 and CL (pF) |
-| 30                       | 9.9                                     |
-| 40                       | 8.5                                     |
-| 50                       | 7.6                                     |
-| 60                       | 7.0                                     |
-| 70                       | 6.5                                     |
-| 80                       | 6.0                                     |
-| 90                       | 5.7                                     |
-| 100                      | 5.4                                     |
+|                           |                                         |
+|---------------------------|-----------------------------------------|
+| Max crystal ESR (kilohms) | Recommended max total of C0 and CL (pF) |
+| 30                        | 9.9                                     |
+| 40                        | 8.5                                     |
+| 50                        | 7.6                                     |
+| 60                        | 7.0                                     |
+| 70                        | 6.5                                     |
+| 80                        | 6.0                                     |
+| 90                        | 5.7                                     |
+| 100                       | 5.4                                     |
 
 When laying out your board, it is best to keep the crystal as close as possible to the SoC so the oscillator traces are as short as possible. The oscillator circuit should also be surrounded by a grounded guard ring or ground plane on the same layer to reduce noise. There should also be a ground plane on a layer underneath the oscillator circuit. The oscillator ground plane should be connected to the closest SoC ground pin.
 
@@ -176,8 +176,11 @@ Conformal coating or other protection is recommended in severe environments to r
 
 Follow the crystal manufacturer's guidelines for load capacitance, otherwise the oscillation frequency may be changed slightly. If the two load capacitors have the same value, one half the value of one load capacitor added to the capacitance of the oscillator traces should be equal to the manufacturer's recommended load capacitance.
 
+### QuadSPI External Flash
+We have tested two 16 MByte QuadSPI flash chips with SITCore SoCs. These are the Winbond Electronics W25Q128JVSIM TR and W25Q128JVSIQ TR. If you want to add external flash to your design, sticking with one of these two chips should ensure compatibility with both the SoC and TinyCLR OS.
+
 ### Reset
-The reset pin is not pulled in any direction. Designs must be sure to use an appropriate pull-up resistor.
+SITCore processors have a permanent internal pull up resistor that is connected to the RESET (NRST) pin. No external pull up resistor is needed.
 
 ### Oven Reflow Profile
 
