@@ -12,6 +12,8 @@ However, if external flash is enabled, assemblies will be deployed to external f
 
 To tag an assembly as secure, you will have to edit the `AssemblyInfo.cs` file in the `Properties` folder within your project's folder. Change the line `[assembly: AssemblyConfiguration("")]` to `[assembly: AssemblyConfiguration("secure")]` (the word "secure" is case insensitive). If this is not done, by default the assembly will not be secure. Note that this only matters when external flash is enabled and the size of the assemblies is larger than the internal flash capacity.
 
+During deployment Visual Studio will display an allocation table showing both the secure and unsecure assemblies and their address, so it is easy to check the security status of your assemblies. This is found in the `TinyCLR Device Deployment` Visual Studio output window.
+
 ### Disabling the Debug Interface
 As USB and serial ports are used for application deployment and debugging, these interfaces can also be used by unauthorized parties to read or pirate your application. TinyCLR OS supports disabling of the debug interface to prevent unauthorized access. You can disable the debug interface with the [TinyCLR Config](../tinyclr-config.md) utility program or with the following method:
 
