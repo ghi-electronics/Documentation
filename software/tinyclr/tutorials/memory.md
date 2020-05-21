@@ -143,7 +143,7 @@ GC.WaitForPendingFinalizers();
 
 ### Battery Backed RAM
 
-SITCore devices support 4 Kbytes of battery backed RAM. Details can be found in the [Real Time Clock Tutorial](real-time-clock.md).
+SITCore devices support 4 KBytes of battery backed RAM. Details can be found in the [Real Time Clock Tutorial](real-time-clock.md).
 
 ## Flash Memory
 Flash memory does not lose its contents on power loss. There are special requirements to write to flash but you can read Flash just like RAM. When deploying a program, the `TinyCLR Device Deployment` window will show what is being loaded and how large it is. It will then show how much free Flash is still available.

@@ -81,20 +81,109 @@
 
 <hr>
 <p><img src="images/tinyclr-logo-noborder.jpg" alt="TinyCLR Logo"></p>
-<h2 id="200-preview5">2.0.0-preview5</h2>
-<h3 id="released-2020-04-21">Released 2020-04-21</h3>
-<p>This preview release moves us closer to a commercially viable product with new and updated features and some API improvements.</p>
+<h2 id="200-preview6">2.0.0-preview6</h2>
+<h3 id="released-2020-05-20">Released 2020-05-20</h3>
+<p>This preview release implements all remaining functionality, fixes bugs, and improves the API.</p>
 <h3 id="visual-studio-project-system">Visual Studio Project System</h3>
 <h4 id="changes">Changes</h4>
 <ul>
-<li>Updated to preview5</li>
+<li>Added support for secure assemblies.</li>
+<li>Removed Visual Basic template.</li>
 </ul>
 <h4 id="known-issues">Known Issues</h4>
 <ul>
-<li>None</li>
+<li>Debug breakpoint will sometimes hang for 5-6 seconds before resuming normally.</li>
+<li>There is sometimes a longer than usual delay during deployment at the &quot;Found debugger&quot; and &quot;Waiting for device to initialize&quot; steps.</li>
 </ul>
 <h3 id="libraries">Libraries</h3>
 <h4 id="changes-1">Changes</h4>
+<ul>
+<li>MQTT keep alive timeout default has been changed to 60 seconds.</li>
+<li>&quot;EnableExternalHeap&quot; has been renamed to &quot;ExtendHeap.&quot;</li>
+<li>Added OTP support to API.</li>
+<li>Added external flash support to API.</li>
+<li>Fixed Double.Compare incorrectly returning zero.</li>
+<li>Fixed intermittent crashing when using SPI with no chip select.</li>
+</ul>
+<h4 id="known-issues-1">Known Issues</h4>
+<ul>
+<li>String does not implement IEnumerable (GitHub issue #323).</li>
+<li>JSON cannot deserialize long integers (GitHub issue #540).</li>
+<li>Network operations on any thread block all other threads (GitHub issue #525).</li>
+<li>Network stack requires delays in order to work properly (GitHub issue #503).</li>
+<li>Equals() throws unsupported instruction exceptions (GitHub issue #502).</li>
+<li>On touch screens, moving off of a button does not release the button (GitHub issue #479).</li>
+<li>I2C raises timeout exception when using address 0x00 (GitHub issue #554).</li>
+<li>Several other bugs have been reported which have not yet been verified by GHI Electronics.</li>
+</ul>
+<h3 id="tinyclr-config">TinyCLR Config</h3>
+<h4 id="changes-2">Changes</h4>
+<ul>
+<li>Improved user experience during installation.</li>
+<li>Added Device Configuration window to enable extension of RAM (Extend heap) and extension of flash (Enable external flash) into external memories. Also added ability to disable the debug interface.</li>
+<li>Added Deployment Map.</li>
+<li>Added progress bar while erasing device.</li>
+</ul>
+<h4 id="known-issues-2">Known Issues</h4>
+<ul>
+<li>Sometimes fails to connect until board is reset.</li>
+</ul>
+<h3 id="tinyclr-font-converter">TinyCLR Font Converter</h3>
+<h4 id="changes-3">Changes</h4>
+<ul>
+<li>None.</li>
+</ul>
+<h4 id="known-issues-3">Known Issues</h4>
+<ul>
+<li>None.</li>
+</ul>
+<h3 id="firmware">Firmware</h3>
+<h4 id="changes-4">Changes</h4>
+<ul>
+<li>Support for deployments in external QSPI flash in addition to internal flash.</li>
+<li>Deployment size has changed. Secure deployments can now be up to 640 KBytes in size, external deployments can be up to 8 MBytes.</li>
+<li>Added 64 KByte one time programmable (OTP) region.</li>
+<li>Improved Ethernet performance.</li>
+<li>Green Ethernet LED is now activity indicator instead of link indictor.</li>
+<li>MAC addressing has changed. Ethernet and ENC always require a MAC address, WiFi MAC address is optional, PPP needs no MAC address.</li>
+<li>Fixed Thread.Sleep() adding 2 ms when not debugging.</li>
+<li>Fixed USB and SD card not working at the same time.</li>
+</ul>
+<h4 id="known-issues-4">Known Issues</h4>
+<ul>
+<li>User can access QSPI pins even when QSPI is active for deployment.</li>
+<li>Networking won&#39;t work correctly if WiFi scan is called after <code>Network.Enable()</code>.</li>
+<li>WiFi scan always adds a blank SSID at the end of the list.</li>
+<li>Drawing on screen may be slower when network that uses SPI is running (WiFi, ENC28).</li>
+<li>In Visual Studio, the application doesn&#39;t start automatically when trying to <code>Start Without Debugging</code> (CTRL+F5). Resetting the board will start the application.</li>
+<li>The PJ0 interrupt configuration changes when the device is reset with the reset button, but there is no problem when power cycling the board.</li>
+</ul>
+<h3 id="drivers">Drivers</h3>
+<h4 id="changes-5">Changes</h4>
+<ul>
+<li>Fixed issue of intermittent noise coming from OV9655 camera modules.</li>
+</ul>
+<h4 id="known-issues-5">Known Issues</h4>
+<ul>
+<li>None.</li>
+</ul>
+<hr>
+<hr>
+<p><img src="images/tinyclr-logo-noborder.jpg" alt="TinyCLR Logo"></p>
+<h2 id="200-preview5">2.0.0-preview5</h2>
+<h3 id="released-2020-04-21">Released 2020-04-21</h3>
+<p>This preview release moves us closer to a commercially viable product with new and updated features and some API improvements.</p>
+<h3 id="visual-studio-project-system-1">Visual Studio Project System</h3>
+<h4 id="changes-6">Changes</h4>
+<ul>
+<li>Updated to preview5</li>
+</ul>
+<h4 id="known-issues-6">Known Issues</h4>
+<ul>
+<li>None</li>
+</ul>
+<h3 id="libraries-1">Libraries</h3>
+<h4 id="changes-7">Changes</h4>
 <ul>
 <li>Added rotation to display and touch.</li>
 <li>Added endianness argument to SPI API.</li>
@@ -113,33 +202,33 @@
 <li>Fixed problem with building libraries.</li>
 <li>Added PWM15 pin definition.</li>
 </ul>
-<h4 id="known-issues-1">Known Issues</h4>
+<h4 id="known-issues-7">Known Issues</h4>
 <ul>
 <li>The ToString() method fails on structs, including Guid and enum.</li>
 <li>Equals() throws an CLR_E_UNSUPPORTED_INSTRUCTION exception.</li>
 <li>Dropdowns in user interface do not respond to direct touches.</li>
 <li>In networking, Socket.Connect blocks all threads until it finishes.</li>
 </ul>
-<h3 id="tinyclr-config">TinyCLR Config</h3>
-<h4 id="changes-2">Changes</h4>
+<h3 id="tinyclr-config-1">TinyCLR Config</h3>
+<h4 id="changes-8">Changes</h4>
 <ul>
 <li>Added a progress bar and result highlighting.</li>
 </ul>
-<h4 id="known-issues-2">Known Issues</h4>
+<h4 id="known-issues-8">Known Issues</h4>
 <ul>
 <li>TinyCLR Config forces device reboot several times when reconnecting to the device. Does not happen during firmware update.</li>
 </ul>
-<h3 id="tinyclr-font-converter">TinyCLR Font Converter</h3>
-<h4 id="changes-3">Changes</h4>
+<h3 id="tinyclr-font-converter-1">TinyCLR Font Converter</h3>
+<h4 id="changes-9">Changes</h4>
 <ul>
 <li>None.</li>
 </ul>
-<h4 id="known-issues-3">Known Issues</h4>
+<h4 id="known-issues-9">Known Issues</h4>
 <ul>
 <li>None.</li>
 </ul>
-<h3 id="firmware">Firmware</h3>
-<h4 id="changes-4">Changes</h4>
+<h3 id="firmware-1">Firmware</h3>
+<h4 id="changes-10">Changes</h4>
 <ul>
 <li>Removed GetDefault() from the API of peripherals that have more than one controller or channel.</li>
 <li>Reworked the SPI API.</li>
@@ -153,39 +242,40 @@
 <li>The RTC will run approximately one second slower every 4-6 hours.</li>
 <li>Drawing on display becomes slower if there is network activity.</li>
 </ul>
-<h4 id="known-issues-4">Known Issues</h4>
+<h4 id="known-issues-10">Known Issues</h4>
 <ul>
 <li>In Visual Studio, the application doesn&#39;t start automatically when trying to <code>Start Without Debugging</code> (CTRL+F5). Resetting the board will start the application.</li>
 <li>The PJ0 interrupt configuration changes when the device is reset with the reset button, but there is no problem when power cycling the board.</li>
 </ul>
-<h3 id="drivers">Drivers</h3>
-<h4 id="changes-5">Changes</h4>
+<h3 id="drivers-1">Drivers</h3>
+<h4 id="changes-11">Changes</h4>
 <ul>
 <li>Added support for display rotation to the FT5x06 Touch driver</li>
 <li>Reworked the MSGEQ7 graphic equalizer API.</li>
 <li>Fixed incorrect color rendition in the WS2812 LED driver.</li>
 </ul>
-<h4 id="known-issues-5">Known Issues</h4>
+<h4 id="known-issues-11">Known Issues</h4>
 <ul>
 <li>When drawing to SSD1351 displays, you may have to add ten to the x coordinate for the screen position to be correct.</li>
 <li>The OV9655 camera can intermittently have a noisy picture. Resetting the board should fix the problem.</li>
 </ul>
 <hr>
 <hr>
+<p><img src="images/tinyclr-logo-noborder.jpg" alt="TinyCLR Logo"></p>
 <h2 id="200-preview4">2.0.0-preview4</h2>
 <h3 id="released-2020-03-10">Released 2020-03-10</h3>
 <p>This preview release includes many bug fixes, a few new and updated features, and some API improvements.</p>
-<h3 id="visual-studio-project-system-1">Visual Studio Project System</h3>
-<h4 id="changes-6">Changes</h4>
+<h3 id="visual-studio-project-system-2">Visual Studio Project System</h3>
+<h4 id="changes-12">Changes</h4>
 <ul>
 <li>Updated with the latest core libraries.</li>
 </ul>
-<h4 id="known-issues-6">Known Issues</h4>
+<h4 id="known-issues-12">Known Issues</h4>
 <ul>
 <li>None</li>
 </ul>
-<h3 id="libraries-1">Libraries</h3>
-<h4 id="changes-7">Changes</h4>
+<h3 id="libraries-2">Libraries</h3>
+<h4 id="changes-13">Changes</h4>
 <ul>
 <li>Fixed missing UART dependency when adding Network NuGet.</li>
 <li>Fixed ADC that was incorrectly mapped to wrong controller.</li>
@@ -199,32 +289,32 @@
 <li>Fixed dependency for OV9655 driver and sped up screen refresh rate.</li>
 <li>Reworked the SSD1306 and ST7735 display drivers so they no longer inherit from DisplayController.</li>
 </ul>
-<h4 id="known-issues-7">Known Issues</h4>
+<h4 id="known-issues-13">Known Issues</h4>
 <ul>
 <li>JSON does not work in some cases.</li>
 <li>When drawing to SSD1351 displays, you may have to add ten to the x coordinate for the screen position to be correct.</li>
 <li>The OV9655 camera can intermittently have a noisy picture. Resetting the board should fix the problem.</li>
 </ul>
-<h3 id="tinyclr-config-1">TinyCLR Config</h3>
-<h4 id="changes-8">Changes</h4>
+<h3 id="tinyclr-config-2">TinyCLR Config</h3>
+<h4 id="changes-14">Changes</h4>
 <ul>
 <li>Fixed occasional crashes during firmware updates.</li>
 </ul>
-<h4 id="known-issues-8">Known Issues</h4>
+<h4 id="known-issues-14">Known Issues</h4>
 <ul>
 <li>None</li>
 </ul>
-<h3 id="tinyclr-font-converter-1">TinyCLR Font Converter</h3>
-<h4 id="changes-9">Changes</h4>
+<h3 id="tinyclr-font-converter-2">TinyCLR Font Converter</h3>
+<h4 id="changes-15">Changes</h4>
 <ul>
 <li>None.</li>
 </ul>
-<h4 id="known-issues-9">Known Issues</h4>
+<h4 id="known-issues-15">Known Issues</h4>
 <ul>
 <li>None.</li>
 </ul>
-<h3 id="firmware-1">Firmware</h3>
-<h4 id="changes-10">Changes</h4>
+<h3 id="firmware-2">Firmware</h3>
+<h4 id="changes-16">Changes</h4>
 <ul>
 <li>Signal generator has been improved and can now generate signals of up to 1.25 MHz in frequency.</li>
 <li>Fixed SPI locking up networking.</li>
@@ -242,32 +332,33 @@
 <li>Improved Ethernet</li>
 <li>Fixed networking bug when using static IP Addressing.</li>
 </ul>
-<h4 id="known-issues-10">Known Issues</h4>
+<h4 id="known-issues-16">Known Issues</h4>
 <ul>
 <li>In Visual Studio, the application doesn&#39;t start automatically when trying to <code>Start Without Debugging</code> (CTRL+F5). Resetting the board will start the application.</li>
 <li>The PJ0 interrupt configuration changes when the device is reset with the reset button, but there is no problem when power cycling the board.</li>
 <li>ToString() does not work if the argument is an Enum.</li>
 <li>PulseFeedback DrainDuration does not work correctly.</li>
-<li>Cannot send more than 64 kBytes in one SPI transaction. The workaround is to split the data so the transactions are smaller.</li>
+<li>Cannot send more than 64 KBytes in one SPI transaction. The workaround is to split the data so the transactions are smaller.</li>
 <li>When using static IP addressing, after disconnecting the device from an Ethernet network the old IP address will still be assigned instead of 0.0.0.0.</li>
 <li>Graphics.DrawString() with native displays on the SC20260B may stop WiFi.</li>
 </ul>
 <hr>
 <hr>
+<p><img src="images/tinyclr-logo-noborder.jpg" alt="TinyCLR Logo"></p>
 <h2 id="200-preview3">2.0.0-preview3</h2>
 <h3 id="released-2020-02-20">Released 2020-02-20</h3>
 <p>Our third preview includes bug fixes, added features, and increases performance.</p>
-<h3 id="visual-studio-project-system-2">Visual Studio Project System</h3>
-<h4 id="changes-11">Changes</h4>
+<h3 id="visual-studio-project-system-3">Visual Studio Project System</h3>
+<h4 id="changes-17">Changes</h4>
 <ul>
 <li>None</li>
 </ul>
-<h4 id="known-issues-11">Known Issues</h4>
+<h4 id="known-issues-17">Known Issues</h4>
 <ul>
 <li>None</li>
 </ul>
-<h3 id="libraries-2">Libraries</h3>
-<h4 id="changes-12">Changes</h4>
+<h3 id="libraries-3">Libraries</h3>
+<h4 id="changes-18">Changes</h4>
 <ul>
 <li>Added missing USB host controller definition.</li>
 <li>Added missing UART controller definition.</li>
@@ -280,104 +371,21 @@
 <li>Added simple MJPEG driver that supports decoding of MJPEG files.</li>
 <li>Added simple WAV driver that supports decoding of WAV files.</li>
 </ul>
-<h4 id="known-issues-12">Known Issues</h4>
+<h4 id="known-issues-18">Known Issues</h4>
 <ul>
 <li>JSON doesn&#39;t work in some cases.</li>
 <li>Ov9655 camera can randomly have a noisy picture. Reset the board as a workaround.      </li>
 </ul>
-<h3 id="tinyclr-config-2">TinyCLR Config</h3>
-<h4 id="changes-13">Changes</h4>
+<h3 id="tinyclr-config-3">TinyCLR Config</h3>
+<h4 id="changes-19">Changes</h4>
 <ul>
 <li>Fixed display of incorrect version number.</li>
 <li>Fixed crashing when trying to connect to bootloader.</li>
 <li>Fixed Connect button not returning to Enable after firmware update is done.</li>
 </ul>
-<h4 id="known-issues-13">Known Issues</h4>
-<ul>
-<li>None.</li>
-</ul>
-<h3 id="tinyclr-font-converter-2">TinyCLR Font Converter</h3>
-<h4 id="changes-14">Changes</h4>
-<ul>
-<li>None.</li>
-</ul>
-<h4 id="known-issues-14">Known Issues</h4>
-<ul>
-<li>None.</li>
-</ul>
-<h3 id="firmware-2">Firmware</h3>
-<h4 id="changes-15">Changes</h4>
-<ul>
-<li>Increased Performance by 15%.</li>
-<li>Added RSA cryptography.</li>
-<li>Added MD5 hash.</li>
-<li>Fixed One-Wire exceptions and inconsistent operation.</li>
-<li>Added Network Suspend/Resume to support changing back and forth between a modem&#39;s PPP data frame mode and AT command mode.</li>
-<li>Added Enable External Memory for heap (heap can be 32 MBytes).</li>
-<li>Fixed SPI from using PA0 for chip select if no chip select pin is specified.</li>
-<li>Fixed SPI4 and SPI5 clock errors.</li>
-<li>Increased default free heap size from 300 kBytes to 364 kBytes (maximum size is still 512 kBytes).</li>
-<li>Fixed USB client reading only a single byte of each packet.</li>
-<li>Fixed system crashing when there are missing network configuration settings.</li>
-<li>Added support for hardware random number generator.</li>
-<li>Fixed SPI throwing exceptions when drawing on N18 display.</li>
-</ul>
-<h4 id="known-issues-15">Known Issues</h4>
-<ul>
-<li>In Visual Studio the application doesn&#39;t start automatically when trying to <code>Start Without Debugging</code> (Ctrl+F5). Pressing the reset button will start the application.</li>
-<li>The PJ0 interrupt configuration changes when the device is reset with the reset button, but there is no problem when resetting by power cycling the board. </li>
-<li>ToString() doesn&#39;t work if the argument is an Enum.</li>
-<li>PulseFeedback DrainDuration does not work correctly.</li>
-</ul>
-<hr>
-<hr>
-<h2 id="200-preview2-update">2.0.0-preview2 update</h2>
-<h3 id="released-2020-01-31">Released 2020-01-31</h3>
-<p>A refresh release of the firmware only with improved performance.</p>
-<h4 id="changes-16">Changes</h4>
-<ul>
-<li>Considerably faster execution speed.</li>
-</ul>
-<h4 id="known-issues-16">Known Issues</h4>
-<ul>
-<li>See the 2.0.0-preview2 release notes.</li>
-<li>This 2.0.0.21000 release activates all accelerators which might cause some bugs. If you have any strange behavior, please load the previous 2.0.0.20000 release and see if that fixes your issue. Both firmware versions are identical otherwise, and both run with same 2.0.0-preview2 NuGet packages.</li>
-</ul>
-<hr>
-<hr>
-<h2 id="200-preview2">2.0.0-preview2</h2>
-<h3 id="released-2020-01-22">Released 2020-01-22</h3>
-<p>Initial insider release for SITCore hardware.</p>
-<h3 id="visual-studio-project-system-3">Visual Studio Project System</h3>
-<h4 id="changes-17">Changes</h4>
-<ul>
-<li>First release to private insiders with major changes.</li>
-</ul>
-<h4 id="known-issues-17">Known Issues</h4>
-<ul>
-<li>Cannot change boards or connect an additional board to your PC while Visual Studio is open, or Visual Studio will get confused and deployment will stop working. Do not switch devices while Visual Studio is open.</li>
-<li>Not digitally signed.</li>
-</ul>
-<h3 id="libraries-3">Libraries</h3>
-<h4 id="changes-18">Changes</h4>
-<ul>
-<li>First release to private insiders with major changes.</li>
-</ul>
-<h4 id="known-issues-18">Known Issues</h4>
-<ul>
-<li>None, still going through final testing.</li>
-<li>Cryptography and hashing are currently only supported through TLS. We are still planning how to securely expose this functionality.</li>
-<li>Not digitally signed.</li>
-</ul>
-<h3 id="tinyclr-config-3">TinyCLR Config</h3>
-<h4 id="changes-19">Changes</h4>
-<ul>
-<li>First release to private insiders with major changes.</li>
-</ul>
 <h4 id="known-issues-19">Known Issues</h4>
 <ul>
-<li>TinyCLR may not work when connecting over UART. Use Tera Term to update firmware when in UART mode.</li>
-<li>Not digitally signed.</li>
+<li>None.</li>
 </ul>
 <h3 id="tinyclr-font-converter-3">TinyCLR Font Converter</h3>
 <h4 id="changes-20">Changes</h4>
@@ -387,14 +395,99 @@
 <h4 id="known-issues-20">Known Issues</h4>
 <ul>
 <li>None.</li>
-<li>Not digitally signed.</li>
 </ul>
 <h3 id="firmware-3">Firmware</h3>
 <h4 id="changes-21">Changes</h4>
 <ul>
-<li>First release to private insiders with major changes.</li>
+<li>Increased Performance by 15%.</li>
+<li>Added RSA cryptography.</li>
+<li>Added MD5 hash.</li>
+<li>Fixed One-Wire exceptions and inconsistent operation.</li>
+<li>Added Network Suspend/Resume to support changing back and forth between a modem&#39;s PPP data frame mode and AT command mode.</li>
+<li>Added Enable External Memory for heap (heap can be 32 MBytes).</li>
+<li>Fixed SPI from using PA0 for chip select if no chip select pin is specified.</li>
+<li>Fixed SPI4 and SPI5 clock errors.</li>
+<li>Increased default free heap size from 300 KBytes to 364 KBytes (maximum size is still 512 KBytes).</li>
+<li>Fixed USB client reading only a single byte of each packet.</li>
+<li>Fixed system crashing when there are missing network configuration settings.</li>
+<li>Added support for hardware random number generator.</li>
+<li>Fixed SPI throwing exceptions when drawing on N18 display.</li>
 </ul>
 <h4 id="known-issues-21">Known Issues</h4>
+<ul>
+<li>In Visual Studio the application doesn&#39;t start automatically when trying to <code>Start Without Debugging</code> (Ctrl+F5). Pressing the reset button will start the application.</li>
+<li>The PJ0 interrupt configuration changes when the device is reset with the reset button, but there is no problem when resetting by power cycling the board. </li>
+<li>ToString() doesn&#39;t work if the argument is an Enum.</li>
+<li>PulseFeedback DrainDuration does not work correctly.</li>
+</ul>
+<hr>
+<hr>
+<p><img src="images/tinyclr-logo-noborder.jpg" alt="TinyCLR Logo"></p>
+<h2 id="200-preview2-update">2.0.0-preview2 update</h2>
+<h3 id="released-2020-01-31">Released 2020-01-31</h3>
+<p>A refresh release of the firmware only with improved performance.</p>
+<h4 id="changes-22">Changes</h4>
+<ul>
+<li>Considerably faster execution speed.</li>
+</ul>
+<h4 id="known-issues-22">Known Issues</h4>
+<ul>
+<li>See the 2.0.0-preview2 release notes.</li>
+<li>This 2.0.0.21000 release activates all accelerators which might cause some bugs. If you have any strange behavior, please load the previous 2.0.0.20000 release and see if that fixes your issue. Both firmware versions are identical otherwise, and both run with same 2.0.0-preview2 NuGet packages.</li>
+</ul>
+<hr>
+<hr>
+<p><img src="images/tinyclr-logo-noborder.jpg" alt="TinyCLR Logo"></p>
+<h2 id="200-preview2">2.0.0-preview2</h2>
+<h3 id="released-2020-01-22">Released 2020-01-22</h3>
+<p>Initial insider release for SITCore hardware.</p>
+<h3 id="visual-studio-project-system-4">Visual Studio Project System</h3>
+<h4 id="changes-23">Changes</h4>
+<ul>
+<li>First release to private insiders with major changes.</li>
+</ul>
+<h4 id="known-issues-23">Known Issues</h4>
+<ul>
+<li>Cannot change boards or connect an additional board to your PC while Visual Studio is open, or Visual Studio will get confused and deployment will stop working. Do not switch devices while Visual Studio is open.</li>
+<li>Not digitally signed.</li>
+</ul>
+<h3 id="libraries-4">Libraries</h3>
+<h4 id="changes-24">Changes</h4>
+<ul>
+<li>First release to private insiders with major changes.</li>
+</ul>
+<h4 id="known-issues-24">Known Issues</h4>
+<ul>
+<li>None, still going through final testing.</li>
+<li>Cryptography and hashing are currently only supported through TLS. We are still planning how to securely expose this functionality.</li>
+<li>Not digitally signed.</li>
+</ul>
+<h3 id="tinyclr-config-4">TinyCLR Config</h3>
+<h4 id="changes-25">Changes</h4>
+<ul>
+<li>First release to private insiders with major changes.</li>
+</ul>
+<h4 id="known-issues-25">Known Issues</h4>
+<ul>
+<li>TinyCLR may not work when connecting over UART. Use Tera Term to update firmware when in UART mode.</li>
+<li>Not digitally signed.</li>
+</ul>
+<h3 id="tinyclr-font-converter-4">TinyCLR Font Converter</h3>
+<h4 id="changes-26">Changes</h4>
+<ul>
+<li>None.</li>
+</ul>
+<h4 id="known-issues-26">Known Issues</h4>
+<ul>
+<li>None.</li>
+<li>Not digitally signed.</li>
+</ul>
+<h3 id="firmware-4">Firmware</h3>
+<h4 id="changes-27">Changes</h4>
+<ul>
+<li>First release to private insiders with major changes.</li>
+</ul>
+<h4 id="known-issues-27">Known Issues</h4>
 <ul>
 <li>TinyCLR OS is not yet optimized for full performance as this release is focused on stability.</li>
 <li>Conversion from enum to string (enumObject.ToString()) may fail.</li>
@@ -403,33 +496,34 @@
 </ul>
 <hr>
 <hr>
+<p><img src="images/tinyclr-logo-noborder.jpg" alt="TinyCLR Logo"></p>
 <h2 id="200-preview1">2.0.0-preview1</h2>
 <h3 id="released-2019-12-09">Released 2019-12-09</h3>
 <p>A preview of the new API and available features.</p>
-<h3 id="libraries-4">Libraries</h3>
-<h4 id="changes-22">Changes</h4>
+<h3 id="libraries-5">Libraries</h3>
+<h4 id="changes-28">Changes</h4>
 <ul>
 <li>Major changes.</li>
 </ul>
-<h4 id="known-issues-22">Known Issues</h4>
+<h4 id="known-issues-28">Known Issues</h4>
 <ul>
 <li>Still going through complete testing.</li>
 </ul>
-<h3 id="firmware-4">Firmware</h3>
-<h4 id="changes-23">Changes</h4>
+<h3 id="firmware-5">Firmware</h3>
+<h4 id="changes-29">Changes</h4>
 <ul>
 <li>Major changes.</li>
 </ul>
-<h4 id="known-issues-23">Known Issues</h4>
+<h4 id="known-issues-29">Known Issues</h4>
 <ul>
 <li>Internal use only.</li>
 </ul>
-<h3 id="tinyclr-config-4">TinyCLR Config</h3>
-<h4 id="changes-24">Changes</h4>
+<h3 id="tinyclr-config-5">TinyCLR Config</h3>
+<h4 id="changes-30">Changes</h4>
 <ul>
 <li>None.</li>
 </ul>
-<h4 id="known-issues-24">Known Issues</h4>
+<h4 id="known-issues-30">Known Issues</h4>
 <ul>
 <li>Random crash.</li>
 </ul>

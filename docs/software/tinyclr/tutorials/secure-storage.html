@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Secure Storage Area </title>
+    <title>Secure Storage </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Secure Storage Area ">
+    <meta name="title" content="Secure Storage ">
     <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -77,12 +77,12 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="secure-storage-area">Secure Storage Area</h1>
+<h1 id="secure-storage">Secure Storage</h1>
 
 <hr>
-<p>An internal 128 KByte region of flash that can be used for non-volatile storage of data. If you lock your device, this region is also great for storing sensitive information like security certificates and serial numbers.</p>
-<div class="TIP"><h5>Tip</h5><p>The Secure Storage Area is only erased when a device erase is performed by executing the <code>E</code> command in <a href="../bootloader.html"><strong>bootloader</strong></a> mode.</p>
-</div>
+<p>There are two secure storage areas you may find useful.</p>
+<h2 id="programmable-storage">Programmable Storage</h2>
+<p>This 128 KByte secure storage area can be modified. Performing an <code>`erase all</code> in TinyCLR Config will wipe out this area.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Storage, GHIElectronics.TinyCLR.Native</p>
 </div>
 <pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Storage;
@@ -144,7 +144,25 @@ class Program {
         Thread.Sleep(-1);
     }
 }
-</code></pre></article>
+</code></pre><h2 id="one-time-programmable-area">One Time Programmable Area</h2>
+<p>The one time programmable (OTP) secure flash region is organized into 2048 blocks of 32 bytes each. Once you write to a block, that block can be read but never changed.</p>
+<p>There is no way to modify written data. Erasing the entire device <code>Erase All</code> in TinyCLR Config will not mot modify this area.</p>
+<p>The static GHIElectronics.TinyCLR.Native.Flash class has methods to read and write OTP flash blocks and also to see if blocks are blank.</p>
+<h3 id="writing-an-otp-block">Writing an OTP Block</h3>
+<p>To write a block of 32 bytes to the OTP region of flash memory, use the following command:</p>
+<pre><code>GHIElectronics.TinyCLR.Native.Flash.OtpWrite(uint blockIndex, byte[] data);
+</code></pre><p>The byte array of data must be exactly 32 bytes in length or an <code>ArgumentOutOfRangeException</code> will be thrown.</p>
+<h3 id="reading-an-otp-block">Reading an OTP Block</h3>
+<p>To read a block from the OTP region of flash memory, use the following command:</p>
+<pre><code>GHIElectronics.TinyCLR.Native.Flash.OtpRead(uint blockIndex, byte[] data);
+</code></pre><p>A byte array 32 bytes long will be returned.</p>
+<h3 id="checking-if-an-otp-block-is-blank">Checking if an OTP Block is Blank</h3>
+<div class="NOTE"><h5>Note</h5><p>If all 32 bytes of any OTP flash block contain 0xFF, the block is considered unused. If you write only 0xFF to the contents of a block, the block will be regarded as unused and you will be able to rewrite the block. </p>
+</div>
+<p>To see if a block is blank (all 32 bytes in block are 0xFF):</p>
+<pre><code>GHIElectronics.TinyCLR.Native.Flash.OtpIsBlank(uint blockIndex);
+</code></pre><p>Returns a boolean value that is true if the block is blank.</p>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -152,7 +170,7 @@ class Program {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/secure-storage-area.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/secure-storage.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

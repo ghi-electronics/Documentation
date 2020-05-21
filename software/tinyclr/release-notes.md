@@ -2,6 +2,94 @@
 ---
 ![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
 
+## 2.0.0-preview6
+
+### Released 2020-05-20
+This preview release implements all remaining functionality, fixes bugs, and improves the API.
+
+### Visual Studio Project System
+
+#### Changes
+- Added support for secure assemblies.
+- Removed Visual Basic template.
+
+#### Known Issues
+- Debug breakpoint will sometimes hang for 5-6 seconds before resuming normally.
+- There is sometimes a longer than usual delay during deployment at the "Found debugger" and "Waiting for device to initialize" steps.
+
+### Libraries
+
+#### Changes
+- MQTT keep alive timeout default has been changed to 60 seconds.
+- "EnableExternalHeap" has been renamed to "ExtendHeap."
+- Added OTP support to API.
+- Added external flash support to API.
+- Fixed Double.Compare incorrectly returning zero.
+- Fixed intermittent crashing when using SPI with no chip select.
+
+#### Known Issues
+- String does not implement IEnumerable (GitHub issue #323).
+- JSON cannot deserialize long integers (GitHub issue #540).
+- Network operations on any thread block all other threads (GitHub issue #525).
+- Network stack requires delays in order to work properly (GitHub issue #503).
+- Equals() throws unsupported instruction exceptions (GitHub issue #502).
+- On touch screens, moving off of a button does not release the button (GitHub issue #479).
+- I2C raises timeout exception when using address 0x00 (GitHub issue #554).
+- Several other bugs have been reported which have not yet been verified by GHI Electronics.
+
+### TinyCLR Config
+
+#### Changes
+- Improved user experience during installation.
+- Added Device Configuration window to enable extension of RAM (Extend heap) and extension of flash (Enable external flash) into external memories. Also added ability to disable the debug interface.
+- Added Deployment Map.
+- Added progress bar while erasing device.
+
+#### Known Issues
+- Sometimes fails to connect until board is reset.
+
+### TinyCLR Font Converter
+
+#### Changes
+- None.
+
+#### Known Issues
+- None.
+
+### Firmware
+
+#### Changes
+- Support for deployments in external QSPI flash in addition to internal flash.
+- Deployment size has changed. Secure deployments can now be up to 640 KBytes in size, external deployments can be up to 8 MBytes.
+- Added 64 KByte one time programmable (OTP) region.
+- Improved Ethernet performance.
+- Green Ethernet LED is now activity indicator instead of link indictor.
+- MAC addressing has changed. Ethernet and ENC always require a MAC address, WiFi MAC address is optional, PPP needs no MAC address.
+- Fixed Thread.Sleep() adding 2 ms when not debugging.
+- Fixed USB and SD card not working at the same time.
+
+#### Known Issues
+- User can access QSPI pins even when QSPI is active for deployment.
+- Networking won't work correctly if WiFi scan is called after `Network.Enable()`.
+- WiFi scan always adds a blank SSID at the end of the list.
+- Drawing on screen may be slower when network that uses SPI is running (WiFi, ENC28).
+- In Visual Studio, the application doesn't start automatically when trying to `Start Without Debugging` (CTRL+F5). Resetting the board will start the application.
+- The PJ0 interrupt configuration changes when the device is reset with the reset button, but there is no problem when power cycling the board.
+
+### Drivers
+
+#### Changes
+- Fixed issue of intermittent noise coming from OV9655 camera modules.
+
+#### Known Issues
+- None.
+
+---
+
+---
+
+![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
+
 ## 2.0.0-preview5
 
 ### Released 2020-04-21
@@ -91,6 +179,8 @@ This preview release moves us closer to a commercially viable product with new a
 
 ---
 
+![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
+
 ## 2.0.0-preview4
 
 ### Released 2020-03-10
@@ -164,13 +254,15 @@ This preview release includes many bug fixes, a few new and updated features, an
 - The PJ0 interrupt configuration changes when the device is reset with the reset button, but there is no problem when power cycling the board.
 - ToString() does not work if the argument is an Enum.
 - PulseFeedback DrainDuration does not work correctly.
-- Cannot send more than 64 kBytes in one SPI transaction. The workaround is to split the data so the transactions are smaller.
+- Cannot send more than 64 KBytes in one SPI transaction. The workaround is to split the data so the transactions are smaller.
 - When using static IP addressing, after disconnecting the device from an Ethernet network the old IP address will still be assigned instead of 0.0.0.0.
 - Graphics.DrawString() with native displays on the SC20260B may stop WiFi.
 
 ---
 
 ---
+
+![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
 
 ## 2.0.0-preview3
 
@@ -232,7 +324,7 @@ Our third preview includes bug fixes, added features, and increases performance.
 - Added Enable External Memory for heap (heap can be 32 MBytes).
 - Fixed SPI from using PA0 for chip select if no chip select pin is specified.
 - Fixed SPI4 and SPI5 clock errors.
-- Increased default free heap size from 300 kBytes to 364 kBytes (maximum size is still 512 kBytes).
+- Increased default free heap size from 300 KBytes to 364 KBytes (maximum size is still 512 KBytes).
 - Fixed USB client reading only a single byte of each packet.
 - Fixed system crashing when there are missing network configuration settings.
 - Added support for hardware random number generator.
@@ -247,6 +339,8 @@ Our third preview includes bug fixes, added features, and increases performance.
 ---
 
 ---
+
+![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
 
 ## 2.0.0-preview2 update
 
@@ -263,6 +357,8 @@ A refresh release of the firmware only with improved performance.
 ---
 
 ---
+
+![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
 
 ## 2.0.0-preview2
 
@@ -320,6 +416,8 @@ Initial insider release for SITCore hardware.
 ---
 
 ---
+
+![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
 
 ## 2.0.0-preview1
 
