@@ -109,6 +109,26 @@ System.BitConverter.SwapEndianness(byte[] data, int groupSize)
 
 ## String Handling
 
+### ToString() Supported Conversions
+
+As TinyCLR OS is a subset of the full desktop .NET development system, not all desktop .NET features are supported. The following `ToString()` arguments are supported:
+```cs
+Debug.WriteLine(123.ToString("N4")); //Outputs 123.0000
+Debug.WriteLine(123.ToString("F4")); //Outputs 123.0000
+Debug.WriteLine(123.ToString("D4")); //Outputs 0123
+Debug.WriteLine(123.ToString("G4")); //Outputs 123
+Debug.WriteLine(123.ToString("X4")); //Outputs 007B
+```
+
+The following `ToString()` arguments are not supported and will raise an exception:
+```cs
+Debug.WriteLine(123.ToString("E4")); //'E' option not supported
+Debug.WriteLine(123.ToString("R4")); //'R' option not supported
+Debug.WriteLine(123.ToString("P4")); //'P' option not supported
+Debug.WriteLine(123.ToString("C2")); //'C' option not supported
+```
+
+
 ### StringBuilder
 
 As strings are immutable, manipulating strings, especially in a tight loop, can impact system performance and increase memory usage and fragmentation. Because strings cannot be changed, every time you manipulate a string a new string is created and the original string becomes garbage. The StringBuilder class uses a string buffer to improve the performance of string manipulation, allowing you to manipulate strings instead of creating new strings.
