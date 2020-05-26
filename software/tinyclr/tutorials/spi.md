@@ -17,12 +17,13 @@ In TinyCLR OS, SPI transfers are dynamically sent in batches that are internally
 > [!Tip]
 > Note that a board running TinyCLR OS is always the SPI master, not the slave.
 
-## Maximum Clock Speed
+## SPI Clock Speed
 
-SITCore SPI devices do not use the same clock, and will therefore support different maximum clock speeds. The `MaxClockFrequency` field can be used to determine the maximum clock speed of a given SPI port:
+SITCore SPI ports do not use the same clock, so different SPI ports may have different minimum and maximum clock speeds. The `MinClockFrequency` and `MaxClockFrequency` fields can be used to determine the range of valid clock speeds for a given SPI port:
 ```cs
 var controller = SpiController.FromName(SC20100.SpiBus.Spi3);
-Debug.WriteLine(controller.MaxClockFrequency.ToString()); //Prints max SPI clock in Hertz.
+Debug.WriteLine(controller.MinClockFrequency.ToString()); //Prints minimum SPI clock in Hertz.
+Debug.WriteLine(controller.MaxClockFrequency.ToString()); //Prints maximum SPI clock in Hertz.
 ```
 
 ## Sample Code
