@@ -155,7 +155,7 @@ namespace GraphicsSample {
 
             st7735 = new ST7735Controller(
                 spi.GetDevice(ST7735Controller.GetConnectionSettings
-                (SpiChipSelectType.Gpio, SC20100.GpioPin.PD10)), //CS pin.
+                (SpiChipSelectType.Gpio, gpio.OpenPin(SC20100.GpioPin.PD10))), //CS pin.
                 gpio.OpenPin(SC20100.GpioPin.PC4), //RS pin.
                 gpio.OpenPin(SC20100.GpioPin.PE15) //RESET pin.
             );
