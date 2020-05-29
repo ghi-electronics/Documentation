@@ -26,7 +26,7 @@ The `Extend heap` and `Enable external flash` firmware configuration options bot
 
 `Extend heap` extends internal RAM and only works on devices that include external SDRAM. There is also a method, `GHIElectronics.TinyCLR.Native.Memory.ExtendHeap()`, that can be used to extend the heap from within your code. See the [External Memory](tutorials/external-memory.md) page for more information.
 
-`Enable external flash` extends internal flash memory and only works devices that include external flash memory. To extend flash from within an application, use the `GHIElectronics.TinyCLR.Native.Flash.EnableExternalFlash()` method. See the [External Memory](tutorials/external-memory.md) page for more information.
+`Enable external flash` extends internal flash memory and only works on devices that include external flash memory. To extend flash from within an application, use the `GHIElectronics.TinyCLR.Native.Flash.EnableExternalFlash()` method. See the [External Memory](tutorials/external-memory.md) page for more information.
 
 Data stored in external SDRAM or flash memory is less secure than data stored internally. See the [IP Protection](tutorials/ip-protection.md) page for more information.
 
@@ -51,8 +51,15 @@ If you want to add a version number to your deployment, enter it in the `Version
 
 Click on the `...` button next to the `Create App` button and select a directory and enter a filename for your deployment file. Now press the `Create App` button. The encrypted deployment file and a text file with the key will be saved in the directory you selected.
 
+> [!Note]
+> The application key format used by TinyCLR Config is different than the format used in your application. TinyCLR Config uses hexadecimal pairs delimited by hyphens (5C-2A-64-6A-60-. . .), while in code you need a byte array (updater.ApplicationKey = new byte[] { 0x5C, 0x2A, 0x64, 0x6A, 0x60, . . . }).
+
 ### Installing a Deployment File
 To install an encrypted deployment file on your device, first use TinyCLR Config to connect to your device. Click on the `...` button next to the `Update App` button and select the deployment file (should have a .tca extension). Enter the correct key in the text box next to the `Generate Key` button. The key is a series of hexadecimal pairs that are separated by hyphens. Now click on the `Update App` button. If the key matches the deployment file, the application will be deployed to your device.
+
+### In Field Update
+
+The deployment file created by TinyCLR can also be used for in-field updates. The [In-Field Update](tutorials/in-field-update.md) page has more information.
 
 
 
