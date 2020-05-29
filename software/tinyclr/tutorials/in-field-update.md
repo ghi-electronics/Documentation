@@ -8,7 +8,7 @@ TinyCLR OS allows for secure, encrypted, In-Field Update (IFU) of your applicati
 ## Update via Buffer
 Systems with external memory can use the buffer updater, which first copies the new update from a file, network, or bus, and stores it in a buffer. When the entire firmware file is in memory, the IFU will then check the buffer for authenticity. Only then will it decrypt the data and flash it into the chip's internal memory.
 
-It doesn't matter if the buffer is in managed heap or unmanaged heap. In most cases, unmanaged memory is the only memory large enough to hold the firmware buffer. However, if the managed heap has been extended to external memory (see the [External Memory](external-memory.md) page), then managed heap can be used to store the firmware buffer.
+It doesn't matter to IFU if the buffer is in managed heap or unmanaged heap. In most cases, unmanaged memory is the only memory large enough to hold the firmware buffer. However, if the managed heap has been extended to external memory (see the [External Memory](external-memory.md) page), then managed heap must be used as there is no longer any unmanaged heap space.
 
 Update via buffer is the recommended update mode, but it only works on systems with external memory.
 
