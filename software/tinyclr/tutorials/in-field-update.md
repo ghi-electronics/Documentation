@@ -40,24 +40,18 @@ class Program {
         InFieldUpdate updater;
         byte[] fwBuf, appBuf;
 
-        try {
-            //Try managed heap first.
-            fwBuf = new byte[(int)fsFw.Length];
-        }
-        catch {
-            //Not enough room in managed heap. Use unmanaged heap.
-            UnmanagedBuffer fwBuffer = new UnmanagedBuffer((int)fsFw.Length);
+        if (Memory.UnmanagedMemory.FreeBytes > 0)
+        {
+            var fwBuffer = new UnmanagedBuffer((int)fsFw.Length);              
+            var appBuffer = new UnmanagedBuffer((int)fsApp.Length);
+               
+            appBuf = appBuffer.Bytes;
             fwBuf = fwBuffer.Bytes;
         }
-
-        try {
-            //Try managed heap first.
+        else
+        {
+            fwBuf = new byte[(int)fsFw.Length];
             appBuf = new byte[((int)fsApp.Length)];
-        }
-        catch {
-            //Not enough room in managed heap. Use unmanaged heap.
-            UnmanagedBuffer appBuffer = new UnmanagedBuffer((int)fsApp.Length);
-            appBuf = appBuffer.Bytes;
         }
 
         fsFw.Read(fwBuf, 0, fwBuf.Length);
