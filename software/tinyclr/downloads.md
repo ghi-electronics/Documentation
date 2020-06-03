@@ -28,7 +28,7 @@ File | Date | Status | MD5
 [v2.0.0-preview2](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR%20OS%20Project%20System%20v2.0.0-preview2.vsix) | 2020-01-22 | Preview | E0B241CCE0B7C1CBA25D0B41D8B0F75A 
 
 ### Libraries
-Libraries provide prebuilt ways of performing many common tasks. You can find them on [NuGet](getting-started.md) instead of downloading them here.
+Libraries provide prebuilt ways of performing many common tasks. Previews are temporarily listed here but releases are permanently listed here and also on Nuget.org.
 
 File | Date | Status | MD5
 --- | --- | --- | ---
