@@ -48,6 +48,8 @@ The **FEZ Bit**, while seemingly more of a "maker" board, provides a convenient 
 
 [FEZ Bit Schematic](pdfs/fez-bit-rev-b-schematic.pdf)
 
+[FEZ Bit 3D STEP File](http://files.ghielectronics.com/downloads/hardware/3d/sbc/FEZ%20Bit%20Rev%20B.step)
+
 ### FEZ Bit Peripheral Pins
 
 |                   |             |
@@ -81,6 +83,9 @@ The **FEZ Duino** provides female headers that make use of the popular Arduino p
 
 [FEZ Duino Schematic](pdfs/fez-duino-rev-b-schematic.pdf)
 
+[FEZ Duino 3D STEP File](http://files.ghielectronics.com/downloads/hardware/3d/sbc/FEZ%20Duino%20Rev%20B.step)
+
+
 ### FEZ Duino Peripheral Pins
 
 |                   |             |
@@ -108,6 +113,9 @@ Make sure the battery polarity is correct as shown below (red wire to plus, blac
 
 [FEZ Feather Schematic](pdfs/fez-feather-rev-b-schematic.pdf)
 
+[FEZ Feather 3D STEP File](http://files.ghielectronics.com/downloads/hardware/3d/sbc/FEZ%20Feather%20Rev%20B.step)
+
+
 ### FEZ Feather Peripheral Pins
 
 |                   |             |
@@ -127,6 +135,9 @@ Make sure the battery polarity is correct as shown below (red wire to plus, blac
 Already one of our most popular SITCore single board computers, The **FEZ Portal** is a 4.3" 480x272 display with capacitive touch that is programmable in C#. As the display and controller are one unit, it's even easier to make a product with touch as you only have to mount a single board that's only slightly larger than the display.
 
 [FEZ Portal Schematic](pdfs/fez-portal-rev-b-schematic.pdf)
+
+[FEZ Portal 3D STEP File](http://files.ghielectronics.com/downloads/hardware/3d/sbc/FEZ%20Portal%20Rev%20B.step)
+
 
 ### FEZ Portal Peripheral Pins
 
@@ -153,6 +164,9 @@ Already one of our most popular SITCore single board computers, The **FEZ Portal
 The **FEZ Stick** is simply the least expensive way to easily get started with TinyCLR OS. While providing an inexpensive way for the uninitiated to try TinyCLR OS, we've provided castellated edges as well as through hole pads to make it breadboard friendly and easy to embed into products. Also, there's actually space for two click modules, making this a very versatile board at a very affordable price!
 
 [FEZ Stick Schematic](pdfs/fez-stick-rev-b-schematic.pdf)
+
+[FEZ Stick 3D STEP File](http://files.ghielectronics.com/downloads/hardware/3d/sbc/FEZ%20Stick%20Rev%20B.step)
+
 
 ### FEZ Stick Peripheral Pins
 
