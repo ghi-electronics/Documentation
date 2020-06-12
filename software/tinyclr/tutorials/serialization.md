@@ -90,3 +90,67 @@ class Program {
     }
 }
 ```
+
+## XML
+TinyCLR OS supports both the writing and reading of XML (eXtensible Markup Language) files through its XmlReader and XmlWriter classes. Full documentation of XML is beyond the scope of this document, but for more information Microsoft's [.NET XML documentation](https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmldocument?view=netcore-3.1) is a good place to start. Please note that the TinyCLR implementation of XML is not fully .NET compatible, for example the asynchronous API is not supported.
+
+
+> [!Note]
+> XmlReader and XmlWriter both implement the IDisposable interface.
+
+`XmlWriter()` provides a fast, non-cached, forward-only means of generating streams or files containing XML data. Here's a simple example:
+
+```cs
+var sd = StorageController.FromName(SC20100.StorageController.SdCard);
+var drive = FileSystem.Mount(sd.Hdc);
+var stream = new FileStream($@"A:\Test.txt", FileMode.OpenOrCreate);
+
+using (XmlWriter writer = XmlWriter.Create(stream)) {
+    writer.WriteStartElement("pf", "root", "http://ns");
+    writer.WriteStartElement(null, "sub", null);
+    writer.WriteAttributeString(null, "att", null, "val");
+    writer.WriteString("text");
+    writer.WriteEndElement();
+    writer.WriteProcessingInstruction("pName", "pValue");
+    writer.WriteComment("cValue");
+    writer.WriteEndElement();
+    writer.Flush();
+}
+
+stream.Flush();
+
+```
+
+A short sample showing the use of `XmlReader()`:
+```cs
+var sd = StorageController.FromName(SC20100.StorageController.SdCard);
+var drive = FileSystem.Mount(sd.Hdc);
+var stream = new FileStream($@"A:\Test.txt", FileMode.Open);
+
+using (XmlReader reader = XmlReader.Create(stream)) {
+    while (reader.Read()) {
+        switch(reader.NodeType){
+            case XmlNodeType.Element:
+                Debug.WriteLine("Start Element: " + reader.Name);
+                break;
+
+            case XmlNodeType.Text:
+                Debug.WriteLine("Text Node: " + reader.Value);
+                break;
+
+            case XmlNodeType.EndElement:
+                Debug.WriteLine("End Element: " + reader.Name);
+                break;
+
+            default:
+                Debug.WriteLine("Other Node " + reader.NodeType +
+                    " with value " + reader.Value);
+
+                break;
+        }
+    }
+}
+
+```
+
+
