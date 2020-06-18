@@ -68,10 +68,17 @@ The **FEZ Bit**, while seemingly more of a "maker" board, provides a convenient 
 |                   | RST = PE15  |
 |                   |             |
 | **WiFi**          | SPI = SPI3  |
-|                   | IRQ = PA10  |
+|                   | IRQ = PB12  |
 |                   | CS = PD15   |
 |                   | EN = PA8    |
-|                   | RST = PA9   |
+|                   | RST = PB13  |
+|                   |             |
+| **Buttons**       | LDR = PE3   |
+|                   | APP = PB7   |
+|                   | UP = PE4    |  
+|                   | DOWN = PA1  |
+|                   | A = PE5     |
+|                   | B = PE6     |
 
 > [!Note]
 > All boards with a barrel power jack accept a 5.5 x 2.1 mm power plug. The pin is positive, the sleeve is negative. While these boards accept a wide voltage range, they use linear voltage regulators that run hotter with higher input voltages. Generally we recommend an input voltage of 6 to 12 volts, but if your project draws a lot of current, use a lower voltage to keep the regulator cooler. A one amp power supply should provide enough current for most needs.
@@ -94,10 +101,13 @@ The **FEZ Duino** provides female headers that make use of the popular Arduino p
 | **User LED**      | PE11        |
 |                   |             |
 | **WiFi**          | SPI = SPI3  |
-|                   | IRQ = PA10  |
+|                   | IRQ = PB12  |
 |                   | CS = PD15   |
 |                   | EN = PA8    |
-|                   | RST = PA9   |
+|                   | RST = PB13  |
+|                   |             |
+| **Buttons**       | LDR = PE3   |
+|                   | APP = PB7   |
 
 ## FEZ Feather
 
@@ -124,10 +134,13 @@ Make sure the battery polarity is correct as shown below (red wire to plus, blac
 | **User LED**      | PE11        |
 |                   |             |
 | **WiFi**          | SPI = SPI3  |
-|                   | IRQ = PA10  |
+|                   | IRQ = PB12  |
 |                   | CS = PD15   |
 |                   | EN = PA8    |
-|                   | RST = PA9   |
+|                   | RST = PB13  |
+|                   |             |
+| **Buttons**       | LDR = PE3   |
+|                   | APP = PB7   |
 
 ## FEZ Portal
 
@@ -157,6 +170,9 @@ Already one of our most popular SITCore single board computers, The **FEZ Portal
 |                   | CS = PA6        |
 |                   | EN = PA8        |
 |                   | RST = PF8       |
+|                   |                 |
+| **Buttons**       | LDR = PE3       |
+|                   | APP = PB7       |
 
 ## FEZ Stick
 
@@ -174,7 +190,9 @@ The **FEZ Stick** is simply the least expensive way to easily get started with T
 |                   |             |
 |-------------------|-------------|
 | **User LED**      | PE11        |
-
+|                   |             |
+| **Buttons**       | LDR = PE3   |
+|                   | APP = PB7   |
 
 
 
