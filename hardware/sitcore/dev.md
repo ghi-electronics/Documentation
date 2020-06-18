@@ -18,7 +18,7 @@ The board can be powered through either the USB client connectors or the barrel 
 
 [SC20100S Dev Board Schematic](pdfs/sc20100s-dev-rev-c-schematic.pdf)
 
-[SC20100S Dev Board 3D STEP File](http://files.ghielectronics.com/downloads/hardware/3d/dev/SC20100S%20Dev%20Rev%20C.step)
+[SC20100S Dev Board 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/Dev/SC20100S%20Dev%20Rev%20C.step)
 
 > [!Note]
 > All boards with a barrel power jack accept a 5.5 x 2.1 mm power plug. The pin is positive, the sleeve is negative. While these boards accept a wide voltage range, they use linear voltage regulators that run hotter with higher input voltages. Generally we recommend an input voltage of 6 to 12 volts, but if your project draws a lot of current, use a lower voltage to keep the regulator cooler. A one amp power supply should provide enough current for most needs.
@@ -33,7 +33,7 @@ The board can be powered through either the USB client connectors or the barrel 
 
 [SCM20260D Dev Board Schematic](pdfs/scm20260d-dev-rev-c-schematic.pdf)
 
-[SCM20260D Dev Board 3D STEP File](http://files.ghielectronics.com/downloads/hardware/3d/dev/SCM20260D%20Dev%20Rev%20C.step)
+[SCM20260D Dev Board 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/Dev/SCM20260D%20Dev%20Rev%20C.step)
 
 
 > [!Note]

@@ -48,7 +48,8 @@ The **FEZ Bit**, while seemingly more of a "maker" board, provides a convenient 
 
 [FEZ Bit Schematic](pdfs/fez-bit-rev-b-schematic.pdf)
 
-[FEZ Bit 3D STEP File](http://files.ghielectronics.com/downloads/hardware/3d/sbc/FEZ%20Bit%20Rev%20B.step)
+[FEZ Bit 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Bit%20Rev%20B.step)
+
 
 ### FEZ Bit Peripheral Pins
 
@@ -83,7 +84,7 @@ The **FEZ Duino** provides female headers that make use of the popular Arduino p
 
 [FEZ Duino Schematic](pdfs/fez-duino-rev-b-schematic.pdf)
 
-[FEZ Duino 3D STEP File](http://files.ghielectronics.com/downloads/hardware/3d/sbc/FEZ%20Duino%20Rev%20B.step)
+[FEZ Duino 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Duino%20Rev%20B.step)
 
 
 ### FEZ Duino Peripheral Pins
@@ -113,7 +114,7 @@ Make sure the battery polarity is correct as shown below (red wire to plus, blac
 
 [FEZ Feather Schematic](pdfs/fez-feather-rev-b-schematic.pdf)
 
-[FEZ Feather 3D STEP File](http://files.ghielectronics.com/downloads/hardware/3d/sbc/FEZ%20Feather%20Rev%20B.step)
+[FEZ Feather 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Feather%20Rev%20B.step)
 
 
 ### FEZ Feather Peripheral Pins
@@ -136,7 +137,7 @@ Already one of our most popular SITCore single board computers, The **FEZ Portal
 
 [FEZ Portal Schematic](pdfs/fez-portal-rev-b-schematic.pdf)
 
-[FEZ Portal 3D STEP File](http://files.ghielectronics.com/downloads/hardware/3d/sbc/FEZ%20Portal%20Rev%20B.step)
+[FEZ Portal 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Portal%20Rev%20B.step)
 
 
 ### FEZ Portal Peripheral Pins
@@ -165,7 +166,7 @@ The **FEZ Stick** is simply the least expensive way to easily get started with T
 
 [FEZ Stick Schematic](pdfs/fez-stick-rev-b-schematic.pdf)
 
-[FEZ Stick 3D STEP File](http://files.ghielectronics.com/downloads/hardware/3d/sbc/FEZ%20Stick%20Rev%20B.step)
+[FEZ Stick 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Stick%20Rev%20B.step)
 
 
 ### FEZ Stick Peripheral Pins

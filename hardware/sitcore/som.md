@@ -89,10 +89,10 @@ The microcontrollers we use in our SITCore line of products do not support concu
 - [SCM20260D Schematic](pdfs/scm20260d-rev-c-schematic.pdf)
 
 ## 3D STEP files
-- [SCM20100E STEP File](http://files.ghielectronics.com/downloads/hardware/3d/som/SCM20100E%20Rev%20B.step)
-- [SCM20260N STEP File](http://files.ghielectronics.com/downloads/hardware/3d/som/SCM20260N%20Rev%20C.step)
-- [SCM20260E STEP File](http://files.ghielectronics.com/downloads/hardware/3d/som/SCM20260E%20Rev%20B.step)
-- [SCM20260D STEP File](http://files.ghielectronics.com/downloads/hardware/3d/som/SCM20260D%20Rev%20C.step)
+- [SCM20100E STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SoM/SCM20100E%20Rev%20B.step)
+- [SCM20260N STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SoM/SCM20260N%20Rev%20C.step)
+- [SCM20260E STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SoM/SCM20260E%20Rev%20B.step)
+- [SCM20260D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SoM/SCM20260D%20Rev%20C.step)
 
 ## Getting Started
 As the SITCore modules are based on the SITCore chipset, please refer to the [SITCore SoC page](soc.md) for information on device startup, loading TinyCLR OS firmware, and writing and deploying your application.
