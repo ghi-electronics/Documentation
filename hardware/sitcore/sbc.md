@@ -79,6 +79,26 @@ The **FEZ Bit**, while seemingly more of a "maker" board, provides a convenient 
 |                   | DOWN = PA1  |
 |                   | A = PE5     |
 |                   | B = PE6     |
+| **Edge Connctor** | P0 = PC6 (PC2 Analog)|
+|                   | P1 = PC7 (PA3 Analog)|
+|                   | P2 = PA0    |
+|                   | P3 = PB0    |
+|                   | P4 = PA4    |
+|                   | P5 = PD13   |
+|                   | P6 = PD12   |
+|                   | P7 = PD11   |
+|                   | P8 = PE8    |
+|                   | P9 = PC3    |
+|                   | P10 = PC0   |
+|                   | P11 = PD1   |
+|                   | P12 = PD0   |
+|                   | P13 = PA5   |
+|                   | P14 = PA6   |
+|                   | P15 = PA7   |
+|                   | P16 = PE7   |
+|                   | P19 = PB8   |
+|                   | P20 = PB9   |
+
 
 > [!Note]
 > All boards with a barrel power jack accept a 5.5 x 2.1 mm power plug. The pin is positive, the sleeve is negative. While these boards accept a wide voltage range, they use linear voltage regulators that run hotter with higher input voltages. Generally we recommend an input voltage of 6 to 12 volts, but if your project draws a lot of current, use a lower voltage to keep the regulator cooler. A one amp power supply should provide enough current for most needs.
