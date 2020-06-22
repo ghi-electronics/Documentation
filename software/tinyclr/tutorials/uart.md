@@ -19,8 +19,16 @@ var rxBuffer = new byte[txBuffer.Length];
 
 var myUart = UartController.FromName(SC20100.UartPort.Uart7);
 
-myUart.SetActiveSettings(9600, 8, UartParity.None, UartStopBitCount.One,
-    UartHandshake.None);
+var uartSetting = new UartSetting()
+            {
+                BaudRate = 115200,
+                DataBits = 8,
+                Parity = UartParity.None,
+                StopBits = UartStopBitCount.One,
+                Handshaking = UartHandshake.None,
+            };
+
+myUart.SetActiveSettings(uartSetting);
 
 myUart.Enable();
 myUart.Write(txBuffer, 0, txBuffer.Length);
@@ -49,8 +57,16 @@ private static void Main() {
 
     myUart = UartController.FromName(SC20100.UartPort.Uart7);
 
-    myUart.SetActiveSettings(9600, 8, UartParity.None, UartStopBitCount.One,
-        UartHandshake.None);
+    var uartSetting = new UartSetting()
+            {
+                BaudRate = 115200,
+                DataBits = 8,
+                Parity = UartParity.None,
+                StopBits = UartStopBitCount.One,
+                Handshaking = UartHandshake.None,
+            };
+
+      myUart.SetActiveSettings(uartSetting);
 
     myUart.Enable();
 
