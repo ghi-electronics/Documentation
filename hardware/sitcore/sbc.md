@@ -79,7 +79,8 @@ The **FEZ Bit**, while seemingly more of a "maker" board, provides a convenient 
 |                   | DOWN = PA1  |
 |                   | A = PE5     |
 |                   | B = PE6     |
-| **Edge Connctor** | P0 = PC6 (PC2 Analog)|
+|                   |             |
+| **Edge Connector**| P0 = PC6 (PC2 Analog)|
 |                   | P1 = PC7 (PA3 Analog)|
 |                   | P2 = PA0    |
 |                   | P3 = PB0    |
