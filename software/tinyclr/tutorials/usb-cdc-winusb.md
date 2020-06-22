@@ -12,9 +12,19 @@ The USB Communications Device Class (CDC) is natively supported by Windows and L
 static void DoTestCDC 
 {
     var usbclient = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
+    
+    var usbClientSetting = new UsbClientSetting()
+            {
+                 Mode = UsbClientMode.WinUsb,
+                ManufactureName = "Manufacture_Name",
+                ProductName = "Product_Name",
+                 SerialNumber = "12345678",
+                Guid = "{your guid}",
+                 ProductId = 0x1234,
+                 VendorId = 0x5678,
+            };
             
-    usbclient.SetActiveSetting
-        (GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientMode.Cdc,0x1234, 0x5678);
+    usbclient.SetActiveSetting(usbClientSetting);
 
     usbclient.Enable();
 
@@ -61,8 +71,19 @@ The WinUSB drivers are unique to Windows and take advantage of the power and spe
 static void DoTestWinUsb
 {
     var usbclient = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
-    usbclient.SetActiveSetting(GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientMode.WinUsb,
-        "Manufacture_Name", "Product_Name", "SerailNumber", 0x1234, 0x5678, "{your guid}");
+    
+    var usbClientSetting = new UsbClientSetting()
+            {
+                 Mode = UsbClientMode.WinUsb,
+                ManufactureName = "Manufacture_Name",
+                ProductName = "Product_Name",
+                 SerialNumber = "12345678",
+                Guid = "{your guid}",
+                 ProductId = 0x1234,
+                 VendorId = 0x5678,
+            };
+            
+    usbclient.SetActiveSetting(usbClientSetting);   
     
     usbclient.Enable();
 
