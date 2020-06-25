@@ -9,7 +9,7 @@ Asymmetric encryption methods such as RSA use public and private key pairs and a
 Check out the Wikipedia [XTEA](https://en.wikipedia.org/wiki/XTEA) and [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) pages for more information.
 
 ## XTEA
-XTEA encryption is a symmetrical encryption method that always uses a 128 bit key. Keys of any other size will throw an exception.
+XTEA encryption is a symmetrical encryption method that always uses a 128 bit key. Keys of any other size will throw an exception. XTEA encryption also requires the data to you are encrypting to be a multiple of eight bytes in length.
 
 XTEA encryption is not only dependent upon the supplied key, but also the "number of rounds" or iterations the encryption algorithm uses to encode and decode information. TinyCLR OS always uses 32 rounds. So, for example, if you are using a PC to decode data that was encoded using TinyCLR OS, make sure that both the correct key and number of rounds (32) are used on the PC side.
 
@@ -20,17 +20,17 @@ The following sample code encrypts and decrypts a string of text.
 
 ```cs
 //Argument below is the 128 bit key. XTEA always uses a 128 bit key.
-XTEA crypto = new XTEA(new uint[] { 0x01234567, 0x89ABCDEF, 0xFEDCBA98, 0x76543210 });
+var crypto = new Xtea(new uint[] { 0x01234567, 0x89ABCDEF, 0xFEDCBA98, 0x76543210 });
 
-byte[] dataToEncrypt = System.Text.Encoding.UTF8.GetBytes("Data to Encrypt");
+byte[] dataToEncrypt = System.Text.Encoding.UTF8.GetBytes("Data to encrypt.");
 byte[] encryptedData;
 byte[] decryptedData;
 
-//Encrypt data.
-encryptedData = crypto.Encrypt(dataToEncrypt, 0, 15);
+//Encrypt data. Data must be a multiple of 8 bytes.
+encryptedData = crypto.Encrypt(dataToEncrypt, 0, (uint)dataToEncrypt.Length);
 
 //Decrypt data.
-decryptedData = crypto.Decrypt(encryptedData, 0, 15);
+decryptedData = crypto.Decrypt(encryptedData, 0, (uint)encryptedData.Length);
 
 System.Diagnostics.Debug.WriteLine("Decrypted: " +
     System.Text.Encoding.UTF8.GetString(decryptedData));
@@ -38,7 +38,7 @@ System.Diagnostics.Debug.WriteLine("Decrypted: " +
 
 The above code outputs the following:
 ```text
-Decrypted: Data to Encrypt
+Decrypted: Data to encrypt.
 ```
 
 ## RSA
