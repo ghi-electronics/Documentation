@@ -5,7 +5,7 @@
 ## 2.0.0-rc1
 
 ### Released 2020-07-04
-This is our first release candidate, so it's probably not our first production release, but we're close!
+Complete software package prepping for production.
 
 ### Visual Studio Project System
 
