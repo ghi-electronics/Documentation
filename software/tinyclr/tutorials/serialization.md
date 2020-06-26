@@ -98,59 +98,89 @@ TinyCLR OS supports both the writing and reading of XML (eXtensible Markup Langu
 > [!Note]
 > XmlReader and XmlWriter both implement the IDisposable interface.
 
-`XmlWriter()` provides a fast, non-cached, forward-only means of generating streams or files containing XML data. Here's a simple example:
+The following example shows the creation and reading of an XML file to and from a memory stream:
+> [!TIP]
+> Needed NuGets: GHIElectronics.TinyCLR.Core and GHIElectronics.TinyCLR.Data.Xml.
 
 ```cs
-var sd = StorageController.FromName(SC20100.StorageController.SdCard);
-var drive = FileSystem.Mount(sd.Hdc);
-var stream = new FileStream($@"A:\Test.txt", FileMode.OpenOrCreate);
+MemoryStream stream = new MemoryStream();
 
-using (XmlWriter writer = XmlWriter.Create(stream)) {
-    writer.WriteStartElement("pf", "root", "http://ns");
-    writer.WriteStartElement(null, "sub", null);
-    writer.WriteAttributeString(null, "att", null, "val");
-    writer.WriteString("text");
-    writer.WriteEndElement();
-    writer.WriteProcessingInstruction("pName", "pValue");
-    writer.WriteComment("cValue");
-    writer.WriteEndElement();
-    writer.Flush();
-}
+XmlWriter writer = XmlWriter.Create(stream);
 
-stream.Flush();
+writer.WriteProcessingInstruction("xml", "version=\"1.0\" encoding=\"utf-8\"");
+writer.WriteComment("This is just a comment");
+writer.WriteRaw("\r\n");
+writer.WriteStartElement("NETMF_DataLogger"); //Root element
+writer.WriteString("\r\n\t");
+writer.WriteStartElement("FileName");         //Child element
+writer.WriteString("Data");
+writer.WriteEndElement();
+writer.WriteRaw("\r\n\t");
+writer.WriteStartElement("FileExt");
+writer.WriteString("txt");
+writer.WriteEndElement();
+writer.WriteRaw("\r\n\t");
+writer.WriteStartElement("SampleFeq");
+writer.WriteString("10");
+writer.WriteEndElement();
+writer.WriteRaw("\r\n");
+writer.WriteEndElement();                     //End of root element
 
-```
+writer.Flush();
+writer.Close();
 
-A short sample showing the use of `XmlReader()`:
-```cs
-var sd = StorageController.FromName(SC20100.StorageController.SdCard);
-var drive = FileSystem.Mount(sd.Hdc);
-var stream = new FileStream($@"A:\Test.txt", FileMode.Open);
+//Display the XML data.
+byte[] byteArray = stream.ToArray();
+char[] characterArray = System.Text.UTF8Encoding.UTF8.GetChars(byteArray);
+Debug.WriteLine(new string(characterArray) + "\r\n\r\n");
+stream.Dispose();
 
-using (XmlReader reader = XmlReader.Create(stream)) {
-    while (reader.Read()) {
-        switch(reader.NodeType){
-            case XmlNodeType.Element:
-                Debug.WriteLine("Start Element: " + reader.Name);
-                break;
+//Read the XML data.
+stream = new MemoryStream(byteArray);
 
-            case XmlNodeType.Text:
-                Debug.WriteLine("Text Node: " + reader.Value);
-                break;
+XmlReaderSettings settings = new XmlReaderSettings();
+settings.IgnoreWhitespace = true;
+settings.IgnoreComments = false;
 
-            case XmlNodeType.EndElement:
-                Debug.WriteLine("End Element: " + reader.Name);
-                break;
+XmlReader reader = XmlReader.Create(stream, settings);
 
-            default:
-                Debug.WriteLine("Other Node " + reader.NodeType +
-                    " with value " + reader.Value);
+while (!reader.EOF) {
+    reader.Read();
 
-                break;
-        }
+    switch (reader.NodeType) {
+        case XmlNodeType.Element:
+            Debug.WriteLine("Element: " + reader.Name);
+            break;
+
+        case XmlNodeType.Text:
+            Debug.WriteLine("Text: " + reader.Value);
+            break;
+
+        case XmlNodeType.XmlDeclaration:
+            Debug.WriteLine("Declaration: " + reader.Name + ", " + reader.Value);
+            break;
+
+        case XmlNodeType.Comment:
+            Debug.WriteLine("Comment: " + reader.Value);
+            break;
+
+        case XmlNodeType.EndElement:
+            Debug.WriteLine("End element");
+            break;
+
+        case XmlNodeType.Whitespace:
+            Debug.WriteLine("White space");
+            break;
+
+        case XmlNodeType.None:
+            Debug.WriteLine("None");
+            break;
+
+        default:
+            Debug.WriteLine(reader.NodeType.ToString());
+            break;
     }
 }
-
 ```
 
 
