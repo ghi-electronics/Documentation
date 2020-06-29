@@ -125,9 +125,14 @@ Exposing the following pins is required in every design to enable device program
 * LDR
 * APP
 * MOD (if required to select a debug interface)
-* Desired debug interface(s)
+* Desired debug interface(s) (see below)
 
 For information on these and other important pins, please refer to the [Special Pins](../../software/tinyclr/special-pins.md) page.
+
+### Debug Interface
+All SITCore products provide two debug and deployment interfaces: USB and serial. Whether USB or serial debugging is selected is determined by the state of the MOD pin during startup and reset. If the MOD pin is held high during startup, the USB debug interface will be selected. If the MOD pin is held low during startup, the serial debug interface will be selected.
+
+All SITCore products using our 100 pin chips (the SC20100S and SC20100B) use UART1 for the serial debug interface. SITCore products built around the 260 pin SC20260B chip use UART5 for the serial debug interface.
 
 ### Power Supply
 A clean power source, suitable for digital circuitry, is needed to power SITCore SoCs. Voltages should be regulated to within 10% or better of the specified voltage. Decoupling capacitors of 0.1 uF are needed near every power pin. Additionally, a large capacitor, typically 47 uF, should be placed near the SoC if the power supply is more than few inches away.

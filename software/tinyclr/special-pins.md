@@ -51,7 +51,7 @@ It is important that your application correctly sets the charging status of the 
 
 ## Debug Interface
 
-Don't forget to expose either the USB client or UART interface (or both) that you plan on using to deploy and debug your application code. All SITCore products built around a 100 pin chip (SC20100x) use UART1 for the serial debug interface. All SITCore products built around the 260 pin SC20260B chip use UART5 for the serial debug interface.
+Don't forget to expose either the USB client or UART interface (or both) that you plan on using to deploy and debug your application code. See the [System on Chip (SoC)](../../hardware/sitcore/soc.md) page for details.
 
 ## Other Recommended Pin Usage
 
