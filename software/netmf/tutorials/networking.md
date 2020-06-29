@@ -143,7 +143,7 @@ public class Program
 
         NetworkChange.NetworkAvailabilityChanged += NetworkChange_NetworkAvailabilityChanged;
 
-        using (var port = new SerialPort("YOUR COM PORT", 115200, Parity.None, 8, StopBits.One))
+        using (var port = new SerialPort("YOUR UART PORT", 115200, Parity.None, 8, StopBits.One))
         {
             port.Open();
 
