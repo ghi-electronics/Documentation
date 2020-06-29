@@ -18,7 +18,8 @@ Our SCM20260N is a drop in replacement for the G120 with the following differenc
 
 * The following pads/pins on the SCM20260N do not support hardware PWM -- use software PWM if needed: Pad 3/pin PK7, pad 23/pin PC10, pad 24/pin PC9, pad 25/pin PC12, pad 26/pin PC8, pad 28/pin PD2, pad 85/pin PI12, and pad 90/pin PI13.
 * SCM20260N pad 80 (PK6/LCD B7) and pad 88 (PJ6/LCD R7) do not have COM TX and RX as found on G120 pads 80 and 88. As this is an LCD pin, this will rarely be an issue.
-* Pad 15 on the SCM20260N (PI2/SPI2 MISO/TIM8 CH4 + PD3/USART2 CTS through 1K resistor) provides USART CTS connected through a 1K resistor to maintain compatibility with Pad 15 on the G120 (P0.17/COM2 CTS/SPI1 MISO).
+* Pad 15 on the SCM20260N (PI2/SPI2 MISO/TIM8 CH4 + PD3/USART2 CTS through a 330 ohm resistor) provides USART CTS connected through a 330 ohm resistor to maintain compatibility with Pad 15 on the G120 (P0.17/COM2 CTS/SPI1 MISO).
+* The SCM20260N serial debug port (UART5) is exposed on pads 29 and 30 of the SoM, while on the G120 the serial debug (UART1) is on pads 5 and 6. This will only be a problem when using serial debugging/deployment -- USB debugging/deployment is not affected.
 
 ## G120E to SITCore
 
