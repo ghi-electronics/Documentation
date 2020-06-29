@@ -2,7 +2,7 @@
 ---
 
 ## RAM Memory
-This memory type loses its contents when the system is turned off. The system uses this memory at runtime to quickly store and retrieve data. TinyCLR OS is a managed operating system -- objects in RAM are automatically tracked and freed as needed. The Garbage Collector (GC) runs when the system is low on available RAM, where it will look for unused objects and free the memory they occupy. You may also invoke the GC at any time using `GC.Collect()`.
+This memory type loses its contents when the system is turned off. The system uses this memory at runtime to quickly store and retrieve data. TinyCLR OS is a managed operating system -- objects in RAM are automatically tracked and freed as needed. The Garbage Collector (GC) runs when the system is low on available RAM, where it will look for unused objects and free the memory they occupy. You may also invoke the GC at any time using `System.GC.Collect()`.
 
 RAM is the main workspace for your application -- running out of memory will cause your application to fail. It is important to understand the memory needs of your application and to plan accordingly. When creating a buffer for a UART for example, use a reasonable size buffer that's large enough to handle your communication needs without being so large as to waste memory.
 
@@ -123,11 +123,11 @@ The act of garbage collection can temporarily reduce the responsiveness of your 
 
 To reduce garbage collection, minimize the use of dynamically allocated buffers and minimize allocations in routines that get called often by preallocating or using static objects. Minimize string manipulation. As strings are immutable, manipulating a string creates a new string and the old string becomes garbage. Using [StringBuilder](encoding-decoding.md) to manipulate strings may help reduce garbage generation.
 
-You can use `GC.GetTotalMemory(true)` to find out how much memory is being used. Checking free memory often during program execution will let you know if the amount of free memory is decreasing and how quickly. 
+You can use `System.GC.GetTotalMemory(true)` to find out how much memory is being used. the "true" argument forces full garbage collection. Checking free memory often during program execution will let you know if the amount of free memory is decreasing and how quickly. 
 
-You can use `Debug.GC(true)` to force garbage collection. You might use this to ensure that garbage collection occurs during a period when responsiveness is less important.
+`System.Diagnostics.Debug.GC(true)` will force garbage collection. You might use this to ensure that garbage collection occurs during a period when responsiveness is less important.
 
-`Debug.EnableGCMessages(true)` can be used to make sure that garbage collection messages are sent out over the debug port.
+`System.Diagnostics.Debug.EnableGCMessages(true)` can be used to make sure that garbage collection messages are sent out over the debug port.
 
 TinyCLR also supports unmanaged heap space. Unmanaged heap space can be used for large graphic buffers, for example. In unmanaged heap space, it is up to the programmer to make sure memory is correctly allocated and deallocated. Read more about unmanaged heap space [here](unmanaged-heap.md).
 #### Finalizers
@@ -135,9 +135,8 @@ TinyCLR also supports unmanaged heap space. Unmanaged heap space can be used for
 The Garbage Collector does a lot of work in the background. To keep the system running smoothly, some of this work is done when the system is idle, like running finalizers and compacting the heap. When the system running a tight loop with continuous allocations, there will be no idle time for the Garbage Collector to finish its tasks. In this case, it is possible to force the Garbage Collector to finish the tasks.
 
 ```cs
-GC.Collect();
-
-GC.WaitForPendingFinalizers();
+System.GC.Collect();
+System.GC.WaitForPendingFinalizers();
 
 ```
 
