@@ -144,7 +144,19 @@ System.BitConverter.Int64BitsToDouble(long value)
 </code></pre><h4 id="swap-endianness">Swap Endianness</h4>
 <pre><code class="lang-cs">System.BitConverter.SwapEndianness(byte[] data, int groupSize)
 </code></pre><h2 id="string-handling">String Handling</h2>
-<h3 id="stringbuilder">StringBuilder</h3>
+<h3 id="tostring-supported-conversions">ToString() Supported Conversions</h3>
+<p>As TinyCLR OS is a subset of the full desktop .NET development system, not all desktop .NET features are supported. The following <code>ToString()</code> arguments are supported:</p>
+<pre><code class="lang-cs">Debug.WriteLine(123.ToString(&quot;N4&quot;)); //Outputs 123.0000
+Debug.WriteLine(123.ToString(&quot;F4&quot;)); //Outputs 123.0000
+Debug.WriteLine(123.ToString(&quot;D4&quot;)); //Outputs 0123
+Debug.WriteLine(123.ToString(&quot;G4&quot;)); //Outputs 123
+Debug.WriteLine(123.ToString(&quot;X4&quot;)); //Outputs 007B
+</code></pre><p>The following <code>ToString()</code> arguments are not supported and will raise an exception:</p>
+<pre><code class="lang-cs">Debug.WriteLine(123.ToString(&quot;E4&quot;)); //&#39;E&#39; option not supported
+Debug.WriteLine(123.ToString(&quot;R4&quot;)); //&#39;R&#39; option not supported
+Debug.WriteLine(123.ToString(&quot;P4&quot;)); //&#39;P&#39; option not supported
+Debug.WriteLine(123.ToString(&quot;C2&quot;)); //&#39;C&#39; option not supported
+</code></pre><h3 id="stringbuilder">StringBuilder</h3>
 <p>As strings are immutable, manipulating strings, especially in a tight loop, can impact system performance and increase memory usage and fragmentation. Because strings cannot be changed, every time you manipulate a string a new string is created and the original string becomes garbage. The StringBuilder class uses a string buffer to improve the performance of string manipulation, allowing you to manipulate strings instead of creating new strings.</p>
 <p>The following example changes the content of a string without creating a new string.</p>
 <pre><code class="lang-cs">var sb = new System.Text.StringBuilder(&quot;PA0 is the pin to use.&quot;);

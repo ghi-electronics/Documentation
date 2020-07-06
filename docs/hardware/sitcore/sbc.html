@@ -304,6 +304,7 @@
 <p><img src="images/fez-bit.png" alt="FEZ Bit"></p>
 <p>The <strong>FEZ Bit</strong>, while seemingly more of a &quot;maker&quot; board, provides a convenient way to easily use the multitude of inexpensive Micro:bit accessories that have flooded the market. As the number of Micro:bit accessories continues to grow, this board will be valued as a way to use these accessories to quickly assemble prototypes and test new product concepts.</p>
 <p><a href="pdfs/fez-bit-rev-b-schematic.pdf">FEZ Bit Schematic</a></p>
+<p><a href="http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Bit%20Rev%20B.step">FEZ Bit 3D STEP File</a></p>
 <h3 id="fez-bit-peripheral-pins">FEZ Bit Peripheral Pins</h3>
 <table>
 <thead>
@@ -367,7 +368,7 @@
 </tr>
 <tr>
 <td></td>
-<td>IRQ = PA10</td>
+<td>IRQ = PB12</td>
 </tr>
 <tr>
 <td></td>
@@ -379,7 +380,115 @@
 </tr>
 <tr>
 <td></td>
-<td>RST = PA9</td>
+<td>RST = PB13</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Buttons</strong></td>
+<td>LDR = PE3</td>
+</tr>
+<tr>
+<td></td>
+<td>APP = PB7</td>
+</tr>
+<tr>
+<td></td>
+<td>UP = PE4</td>
+</tr>
+<tr>
+<td></td>
+<td>DOWN = PA1</td>
+</tr>
+<tr>
+<td></td>
+<td>A = PE5</td>
+</tr>
+<tr>
+<td></td>
+<td>B = PE6</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Edge Connector</strong></td>
+<td>P0 = PC6 (PC2 Analog)</td>
+</tr>
+<tr>
+<td></td>
+<td>P1 = PC7 (PA3 Analog)</td>
+</tr>
+<tr>
+<td></td>
+<td>P2 = PA0</td>
+</tr>
+<tr>
+<td></td>
+<td>P3 = PB0</td>
+</tr>
+<tr>
+<td></td>
+<td>P4 = PA4</td>
+</tr>
+<tr>
+<td></td>
+<td>P5 = PD13</td>
+</tr>
+<tr>
+<td></td>
+<td>P6 = PD12</td>
+</tr>
+<tr>
+<td></td>
+<td>P7 = PD11</td>
+</tr>
+<tr>
+<td></td>
+<td>P8 = PE8</td>
+</tr>
+<tr>
+<td></td>
+<td>P9 = PC3</td>
+</tr>
+<tr>
+<td></td>
+<td>P10 = PC0</td>
+</tr>
+<tr>
+<td></td>
+<td>P11 = PD1</td>
+</tr>
+<tr>
+<td></td>
+<td>P12 = PD0</td>
+</tr>
+<tr>
+<td></td>
+<td>P13 = PA5</td>
+</tr>
+<tr>
+<td></td>
+<td>P14 = PA6</td>
+</tr>
+<tr>
+<td></td>
+<td>P15 = PA7</td>
+</tr>
+<tr>
+<td></td>
+<td>P16 = PE7</td>
+</tr>
+<tr>
+<td></td>
+<td>P19 = PB8</td>
+</tr>
+<tr>
+<td></td>
+<td>P20 = PB9</td>
 </tr>
 </tbody>
 </table>
@@ -389,6 +498,7 @@
 <p><img src="images/fez-duino.png" alt="FEZ Duino"></p>
 <p>The <strong>FEZ Duino</strong> provides female headers that make use of the popular Arduino pinout. Once again, we are trying to make it as easy and inexpensive as possible to build prototypes and try out new concepts by taking advantage of an existing accessory ecosystem.</p>
 <p><a href="pdfs/fez-duino-rev-b-schematic.pdf">FEZ Duino Schematic</a></p>
+<p><a href="http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Duino%20Rev%20B.step">FEZ Duino 3D STEP File</a></p>
 <h3 id="fez-duino-peripheral-pins">FEZ Duino Peripheral Pins</h3>
 <table>
 <thead>
@@ -412,7 +522,7 @@
 </tr>
 <tr>
 <td></td>
-<td>IRQ = PA10</td>
+<td>IRQ = PB12</td>
 </tr>
 <tr>
 <td></td>
@@ -424,18 +534,33 @@
 </tr>
 <tr>
 <td></td>
-<td>RST = PA9</td>
+<td>RST = PB13</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Buttons</strong></td>
+<td>LDR = PE3</td>
+</tr>
+<tr>
+<td></td>
+<td>APP = PB7</td>
 </tr>
 </tbody>
 </table>
 <h2 id="fez-feather">FEZ Feather</h2>
 <p><img src="images/fez-feather.png" alt="FEZ Feather"></p>
 <p>The Adafruit Feather form factor boards are made to be stackable and have built in support for LiPo batteries, including a charging circuit. We&#39;ve watched this form factor quickly gaining popularity, so we decided to make a Feather board of our own. If your project needs to run off of a battery, this board makes it quick and easy to get started. The <strong>FEZ Feather</strong> provides both through hole pads and castellated edges making it both breadboard friendly and easy to build into products.</p>
+<div class="IMPORTANT"><h5>Important</h5><p>Lithium Polymoer(Li-Po) batteries are significantly more volatile than other rechargable batteries. Make sure you have an understand of how to properly charge and use them before connecting to the FEZ Feather. Never attempt to charge a damaged or swollen battery. Never leave battery charging unattended. Improper use could result in fire.</p>
+</div>
 <div class="IMPORTANT"><h5>Important</h5><p>Be very careful to ensure the correct polarity of LiPo batteries before connecting them to the FEZ Feather. Reverse polarity will damage the charging circuit, and not all batteries are wired correctly. GHI Electronics is not responsible for, and will not warranty, damage caused by incorrectly connected batteries.</p>
 </div>
 <p>Make sure the battery polarity is correct as shown below (red wire to plus, black to minus):</p>
 <p><img src="images/battery-connect.jpg" alt="FEZ Feather Battery Connection"></p>
 <p><a href="pdfs/fez-feather-rev-b-schematic.pdf">FEZ Feather Schematic</a></p>
+<p><a href="http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Feather%20Rev%20B.step">FEZ Feather 3D STEP File</a></p>
 <h3 id="fez-feather-peripheral-pins">FEZ Feather Peripheral Pins</h3>
 <table>
 <thead>
@@ -459,7 +584,7 @@
 </tr>
 <tr>
 <td></td>
-<td>IRQ = PA10</td>
+<td>IRQ = PB12</td>
 </tr>
 <tr>
 <td></td>
@@ -471,14 +596,27 @@
 </tr>
 <tr>
 <td></td>
-<td>RST = PA9</td>
+<td>RST = PB13</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Buttons</strong></td>
+<td>LDR = PE3</td>
+</tr>
+<tr>
+<td></td>
+<td>APP = PB7</td>
 </tr>
 </tbody>
 </table>
 <h2 id="fez-portal">FEZ Portal</h2>
 <p><img src="images/fez-portal.png" alt="FEZ Portal"></p>
 <p>Already one of our most popular SITCore single board computers, The <strong>FEZ Portal</strong> is a 4.3&quot; 480x272 display with capacitive touch that is programmable in C#. As the display and controller are one unit, it&#39;s even easier to make a product with touch as you only have to mount a single board that&#39;s only slightly larger than the display.</p>
-<p><a href="pdfs/fez-portal-rev-b-schematic.pdf">FEZ Portal Schematic</a></p>
+<p><a href="pdfs/fez-portal-rev-c-schematic.pdf">FEZ Portal Schematic</a></p>
+<p><a href="http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Portal%20Rev%20C.step">FEZ Portal 3D STEP File</a></p>
 <h3 id="fez-portal-peripheral-pins">FEZ Portal Peripheral Pins</h3>
 <table>
 <thead>
@@ -540,12 +678,25 @@
 <td></td>
 <td>RST = PF8</td>
 </tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Buttons</strong></td>
+<td>LDR = PE3</td>
+</tr>
+<tr>
+<td></td>
+<td>APP = PB7</td>
+</tr>
 </tbody>
 </table>
 <h2 id="fez-stick">FEZ Stick</h2>
 <p><img src="images/fez-stick.png" alt="FEZ Stick"></p>
 <p>The <strong>FEZ Stick</strong> is simply the least expensive way to easily get started with TinyCLR OS. While providing an inexpensive way for the uninitiated to try TinyCLR OS, we&#39;ve provided castellated edges as well as through hole pads to make it breadboard friendly and easy to embed into products. Also, there&#39;s actually space for two click modules, making this a very versatile board at a very affordable price!</p>
 <p><a href="pdfs/fez-stick-rev-b-schematic.pdf">FEZ Stick Schematic</a></p>
+<p><a href="http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Stick%20Rev%20B.step">FEZ Stick 3D STEP File</a></p>
 <h3 id="fez-stick-peripheral-pins">FEZ Stick Peripheral Pins</h3>
 <table>
 <thead>
@@ -558,6 +709,18 @@
 <tr>
 <td><strong>User LED</strong></td>
 <td>PE11</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Buttons</strong></td>
+<td>LDR = PE3</td>
+</tr>
+<tr>
+<td></td>
+<td>APP = PB7</td>
 </tr>
 </tbody>
 </table>

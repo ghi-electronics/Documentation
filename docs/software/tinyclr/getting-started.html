@@ -81,7 +81,7 @@
 
 <hr>
 <p><img src="images/getting-started-noborder.jpg" alt="Getting Started"></p>
-<p>This page explains how to set up the TinyCLR programming environment.  It covers device and computer setup and deployment of a &quot;hello world&quot; program.</p>
+<p>This page explains how to set up the TinyCLR programming environment.  It covers device and computer setup and deployment of a &quot;hello world&quot; program to a SITCore device.</p>
 <div class="TIP"><h5>Tip</h5><p>If you&#39;re an existing user of NETMF and still want to use it in addition to TinyCLR OS, don&#39;t worry. TinyCLR is completely independent of NETMF and works side-by-side with no issues.</p>
 </div>
 <h2 id="compatible-hardware">Compatible Hardware</h2>
@@ -89,16 +89,18 @@
 <h2 id="tinyclr-device-setup">TinyCLR Device Setup</h2>
 <p>To use TinyCLR with a device you must first install the latest version of the TinyCLR firmware on the device.</p>
 <p>The TinyCLR firmware includes the Common Language Runtime (CLR) which converts compiled code into machine instructions and manages program execution.  The TinyCLR firmware is also responsible for interacting with Microsoft Visual Studio to load and debug your application programs.</p>
-<p>Use the <a href="tinyclr-config.html">TinyCLR Config</a> tool to update the firmware on your device.</p>
+<p>Use the <a href="tinyclr-config.html">TinyCLR Config</a> tool to update the firmware on your device to the latest version.</p>
 <h2 id="development-machine-setup">Development Machine Setup</h2>
 <ol>
-<li>If you don&#39;t already have Visual Studio 2019, download and install one of the editions, including the free community edition: <a href="https://www.visualstudio.com/downloads/">Visual Studio Community 2019</a>. You can also use other editions as well.</li>
+<li>If you don&#39;t already have Visual Studio 2019, download and install one of the latest editions. Any edition will work, including the free community edition: <a href="https://www.visualstudio.com/downloads/">Visual Studio Community 2019</a>.</li>
 <li>Make sure to select the <code>.NET desktop development</code> workload when installing Visual Studio.</li>
-<li>Download and install the newest TinyCLR Visual Studio Project System by going to <code>Tools</code> &gt; <code>Extensions and Updates...</code>. In the <code>Extensions and Updates</code> dialog box select <code>Online</code> in the left panel. Type <code>tinyclr</code> into the <code>Search</code> text box in the upper right of the window to search for and install the <code>TinyCLR OS Project System</code>. You&#39;ll need to restart Visual Studio to let the extension installer complete the installation.
- <img src="images/Install-tinyclr-extension.gif" alt="Install TinyCLR Extension"></li>
+<li><p>Download and install the newest TinyCLR Visual Studio Project System by going to <code>Extensions</code> &gt; <code>Manage Extensions</code>. In the <code>Manage Extensions</code> dialog box select <code>Online</code> in the left panel. Type <code>tinyclr</code> into the <code>Search</code> text box in the upper right of the window to search for and install the <code>TinyCLR OS Project System</code>. You&#39;ll need to restart Visual Studio to let the extension installer complete the installation.</p>
+<p> Alternately you can download the Visual Studio Project System from our <a href="downloads.html">Downloads</a> page and open or double click on the file to install the extension.</p>
+</li>
 </ol>
-<div class="NOTE"><h5>Note</h5><p>Pre-releases of the Project System are not hosted online but found on the <a href="downloads.html"><strong>Downloads</strong></a> page.</p>
+<div class="NOTE"><h5>Note</h5><p>Pre-releases of the Project System are not hosted online but are found on the <a href="downloads.html"><strong>Downloads</strong></a> page.</p>
 </div>
+<p><img src="images/Install-tinyclr-extension.gif" alt="Install TinyCLR Extension"></p>
 <h2 id="starting-a-new-project">Starting a New Project</h2>
 <p>Let&#39;s blink an LED on a SITCore board.</p>
 <p>Open Visual Studio and select <code>Create a new project</code>.</p>
@@ -139,7 +141,7 @@ namespace TinyCLRApplication1 {
 <p>Congratulations!  You&#39;re on your way to becoming a TinyCLR embedded developer!</p>
 <h3 id="the-nuget-packages">The NuGet Packages</h3>
 <p>NuGet packages are typically hosted online on www.NuGet.org. </p>
-<p>The steps below explain how to add onlione-hosted NuGet libraries to your project. If you are using a pre-release, the libraries must be <a href="downloads.html">downloaded</a> and installed as a local feed.</p>
+<p>The steps below explain how to add online-hosted NuGet libraries to your project. If you are using a pre-release, the libraries must be <a href="downloads.html">downloaded</a> and installed as a local feed.</p>
 <ol>
 <li>Start Visual Studio and create a new <code>TinyCLR Application</code> under <code>C# &gt; TinyCLR</code>. New to Visual Studio or C#? Take a look at the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/with-visual-studio">getting started guide from Microsoft</a>.</li>
 <li><p>Right click on your Project in the Solution Explorer panel and select <code>Manage NuGet Packages</code>.  If the Solution Explorer window is not visible, open it by selecting <code>Solution Explorer</code> in the <code>View</code> menu. You can also select <code>Manage NuGet Packages...</code> in the <code>Project</code> menu of Visual Studio.
@@ -148,24 +150,24 @@ namespace TinyCLRApplication1 {
 <li><p>Make sure the package source is set to &quot;Package source&quot; or &quot;All.&quot;
 <img src="images/package-source.png" alt="Set package source"></p>
 </li>
-<li><p>In the search box type &quot;tinyclr&quot;
+<li><p>In the search box type &quot;tinyclr.&quot; <strong>You may have to check the &quot;Include prerelease&quot; box to find the libraries.</strong>
 <img src="images/search-for-tinyclr.png" alt="Search for TinyCLR"></p>
 </li>
-<li><p>Selecting the <code>Browse</code> tab will show all the TinyCLR NuGet packages. Those installed are noted with a green down arrow in front of the name. 
-<img src="images/browse-nuget-feed.gif" alt="Browse NuGet Feed"></p>
+<li><p>Selecting the <code>Browse</code> tab will show all the TinyCLR NuGet packages.
+<img src="images/browse-nuget-feed.png" alt="Browse NuGet Feed"></p>
 </li>
 <li><p>To install one of the packages click on the down arrow to the right of the package version.
-<img src="images/add-nuget-package.gif" alt="Add Nuget Package"></p>
+<img src="images/add-nuget-package.png" alt="Add Nuget Package"></p>
 </li>
 </ol>
 <p>You can also select the package and click on the <code>Install</code> button in the center panel.
-<img src="images/nuget-install-button.gif" alt="Nuget-package-install-button"></p>
+<img src="images/nuget-install-button.png" alt="Nuget-package-install-button"></p>
 <ol>
 <li><p>Click <code>OK</code> to accept the proposed changes.
-<img src="images/accept-changes.gif" alt="Accept changes"></p>
+<img src="images/accept-changes.png" alt="Accept changes"></p>
 </li>
 <li><p>Accept the licensing agreement to install the package.
-<img src="images/accept-agreement-for-nuget.gif" alt="Accept Agreement for NuGet"></p>
+<img src="images/accept-agreement-for-nuget.png" alt="Accept Agreement for NuGet"></p>
 </li>
 </ol>
 <div class="NOTE"><h5>Note</h5><p>Pre-release libraries are not hosted on NuGet.org, use the local feed feature to fetch the needed libraries from your local machine, found on the <a href="downloads.html"><strong>Downloads</strong></a> page.</p>

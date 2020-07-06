@@ -86,15 +86,22 @@
 <div class="TIP"><h5>Tip</h5><p>UART ports are also referred to as COM ports, especially on PCs..</p>
 </div>
 <p>The easiest way to test a UART is by wiring a device&#39;s TXD to its RXD so any transmitted data is received by the same device. This is called a &quot;loopback&quot; test. The following code performs a simple loopback test.</p>
-<div class="TIP"><h5>Tip</h5><p>UART requires the GHIElectronics.TinyCLR.Devices.Uart NuGet package!</p>
+<div class="TIP"><h5>Tip</h5><p>UART requires the GHIElectronics.TinyCLR.Devices.Uart NuGet package.</p>
 </div>
 <pre><code class="lang-cs">var txBuffer = new byte[] { 0x41, 0x42, 0x43, 0x44, 0x45, 0x46 }; //A, B, C, D, E, F
 var rxBuffer = new byte[txBuffer.Length];
 
 var myUart = UartController.FromName(SC20100.UartPort.Uart7);
 
-myUart.SetActiveSettings(9600, 8, UartParity.None, UartStopBitCount.One,
-    UartHandshake.None);
+var uartSetting = new UartSetting() {
+        BaudRate = 115200,
+        DataBits = 8,
+        Parity = UartParity.None,
+        StopBits = UartStopBitCount.One,
+        Handshaking = UartHandshake.None,
+    };
+
+myUart.SetActiveSettings(uartSetting);
 
 myUart.Enable();
 myUart.Write(txBuffer, 0, txBuffer.Length);
@@ -107,6 +114,45 @@ while (true) {
 
     Thread.Sleep(20);
 }
+</code></pre><h2 id="uart-settings">UART Settings</h2>
+<p>We&#39;ve expanded the available UART settings to better support serial protocols such as RS-485 and DMX. Here&#39;s a complete list of the available settings:</p>
+<ul>
+<li>BaudRate: Communication speed in bits per second.</li>
+<li>DataBits: Number of data bits in each byte. Usually set to eight.</li>
+<li>Parity: Parity bit setting. Disabled when set to <code>UartParity.None</code>.</li>
+<li>StopBits: Number of stop bits sent to mark the end of each byte.</li>
+<li>Handshaking: Can be set to none or <code>UartHandshake.RequestToSend</code> for hardware handshaking.</li>
+<li>EnableDePin: Used to enable and disable the <code>Driver Enable</code> pin, which is used for RS-485 communication.</li>
+<li>InvertTxPolarity: Used to invert high and low states of the transmit pin. Useful for hardware that inverts this signal.</li>
+<li>InvertRxPolarity: Used to invert high and low states of the receive pin. Useful for hardware that inverts this signal.</li>
+<li>InvertBinaryData: Used to invert the data polarity without inverting the start and stop bit polarity.</li>
+<li>SwapTxRxPin: Swaps the transmit and receive pins. Very useful for correcting board layout mistakes!</li>
+<li>InvertDePolarity: Inverts the polarity of the <code>Driver Enable</code> pin used for RS-485.</li>
+</ul>
+<h2 id="break-generation">Break Generation</h2>
+<p>It is sometimes necessary to generate a <code>break</code> signal before transmission to let the receiver(s) know that a new data frame is starting. Such is the case when using the DMX protocol, which is often used for stage lighting.</p>
+<div class="NOTE"><h5>Note</h5><p>You must wait for the previous transmission of finish before starting a new transmission that incorporates a break signal.</p>
+</div>
+<p>The following code sample shows how to transmit an array of bytes using the DMX protocol:</p>
+<pre><code class="lang-cs">GpioPin dmxEnablePin = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PA1);
+dmxEnablePin.SetDriveMode(GpioPinDriveMode.Output);
+dmxEnablePin.Write(GpioPinValue.High);
+
+var uart = UartController.FromName(SC20100.UartPort.Uart5);
+
+uart.SetActiveSettings(new UartSetting {
+    DataBits = 8,
+    StopBits = UartStopBitCount.Two,
+    BaudRate = 250000 });
+
+uart.Enable();
+
+var txBuffer = new byte[] { 0, 127, 255, 255, 255 };
+
+while (uart.BytesToWrite &gt; 0) Thread.Sleep(0); //Make sure UART is done transmitting.
+
+//The following line sends a break of 100 uS before sending the data.
+uart.Write(txBuffer, 0, txBuffer.Length, TimeSpan.FromTicks(1000));
 </code></pre><h2 id="event-handlers">Event Handlers</h2>
 <p>TinyCLR&#39;s UART API included the following event listeners:</p>
 <ul>
@@ -120,8 +166,16 @@ while (true) {
 
     myUart = UartController.FromName(SC20100.UartPort.Uart7);
 
-    myUart.SetActiveSettings(9600, 8, UartParity.None, UartStopBitCount.One,
-        UartHandshake.None);
+    var uartSetting = new UartSetting()
+            {
+                BaudRate = 115200,
+                DataBits = 8,
+                Parity = UartParity.None,
+                StopBits = UartStopBitCount.One,
+                Handshaking = UartHandshake.None,
+            };
+
+      myUart.SetActiveSettings(uartSetting);
 
     myUart.Enable();
 
