@@ -48,6 +48,8 @@ Complete software package prepping for production.
 - Project->Add->Class does not select the correct template: https://github.com/ghi-electronics/TinyCLR-Libraries/issues/500.
 - Equals() throws an unsupported instruction exception: https://github.com/ghi-electronics/TinyCLR-Libraries/issues/502.
 - Double.ToString() sometimes shows incorrect number. https://github.com/ghi-electronics/TinyCLR-Libraries/issues/629.
+- CAN: CanWriteMessage always return true: https://github.com/ghi-electronics/TinyCLR-Libraries/issues/635
+- Uart: Break Signal need to wait to last byte transfer complete https://github.com/ghi-electronics/TinyCLR-Libraries/issues/634
 
 ### TinyCLR Config
 
