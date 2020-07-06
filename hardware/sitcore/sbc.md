@@ -48,6 +48,9 @@ The **FEZ Bit**, while seemingly more of a "maker" board, provides a convenient 
 
 [FEZ Bit Schematic](pdfs/fez-bit-rev-b-schematic.pdf)
 
+[FEZ Bit 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Bit%20Rev%20B.step)
+
+
 ### FEZ Bit Peripheral Pins
 
 |                   |             |
@@ -65,10 +68,38 @@ The **FEZ Bit**, while seemingly more of a "maker" board, provides a convenient 
 |                   | RST = PE15  |
 |                   |             |
 | **WiFi**          | SPI = SPI3  |
-|                   | IRQ = PA10  |
+|                   | IRQ = PB12  |
 |                   | CS = PD15   |
 |                   | EN = PA8    |
-|                   | RST = PA9   |
+|                   | RST = PB13  |
+|                   |             |
+| **Buttons**       | LDR = PE3   |
+|                   | APP = PB7   |
+|                   | UP = PE4    |  
+|                   | DOWN = PA1  |
+|                   | A = PE5     |
+|                   | B = PE6     |
+|                   |             |
+| **Edge Connector**| P0 = PC6 (PC2 Analog)|
+|                   | P1 = PC7 (PA3 Analog)|
+|                   | P2 = PA0    |
+|                   | P3 = PB0    |
+|                   | P4 = PA4    |
+|                   | P5 = PD13   |
+|                   | P6 = PD12   |
+|                   | P7 = PD11   |
+|                   | P8 = PE8    |
+|                   | P9 = PC3    |
+|                   | P10 = PC0   |
+|                   | P11 = PD1   |
+|                   | P12 = PD0   |
+|                   | P13 = PA5   |
+|                   | P14 = PA6   |
+|                   | P15 = PA7   |
+|                   | P16 = PE7   |
+|                   | P19 = PB8   |
+|                   | P20 = PB9   |
+
 
 > [!Note]
 > All boards with a barrel power jack accept a 5.5 x 2.1 mm power plug. The pin is positive, the sleeve is negative. While these boards accept a wide voltage range, they use linear voltage regulators that run hotter with higher input voltages. Generally we recommend an input voltage of 6 to 12 volts, but if your project draws a lot of current, use a lower voltage to keep the regulator cooler. A one amp power supply should provide enough current for most needs.
@@ -81,6 +112,9 @@ The **FEZ Duino** provides female headers that make use of the popular Arduino p
 
 [FEZ Duino Schematic](pdfs/fez-duino-rev-b-schematic.pdf)
 
+[FEZ Duino 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Duino%20Rev%20B.step)
+
+
 ### FEZ Duino Peripheral Pins
 
 |                   |             |
@@ -88,16 +122,22 @@ The **FEZ Duino** provides female headers that make use of the popular Arduino p
 | **User LED**      | PE11        |
 |                   |             |
 | **WiFi**          | SPI = SPI3  |
-|                   | IRQ = PA10  |
+|                   | IRQ = PB12  |
 |                   | CS = PD15   |
 |                   | EN = PA8    |
-|                   | RST = PA9   |
+|                   | RST = PB13  |
+|                   |             |
+| **Buttons**       | LDR = PE3   |
+|                   | APP = PB7   |
 
 ## FEZ Feather
 
 ![FEZ Feather](images/fez-feather.png)
 
 The Adafruit Feather form factor boards are made to be stackable and have built in support for LiPo batteries, including a charging circuit. We've watched this form factor quickly gaining popularity, so we decided to make a Feather board of our own. If your project needs to run off of a battery, this board makes it quick and easy to get started. The **FEZ Feather** provides both through hole pads and castellated edges making it both breadboard friendly and easy to build into products.
+
+>[!Important]
+>Lithium Polymoer(Li-Po) batteries are significantly more volatile than other rechargable batteries. Make sure you have an understand of how to properly charge and use them before connecting to the FEZ Feather. Never attempt to charge a damaged or swollen battery. Never leave battery charging unattended. Improper use could result in fire.
 
 >[!Important]
 >Be very careful to ensure the correct polarity of LiPo batteries before connecting them to the FEZ Feather. Reverse polarity will damage the charging circuit, and not all batteries are wired correctly. GHI Electronics is not responsible for, and will not warranty, damage caused by incorrectly connected batteries.
@@ -108,6 +148,9 @@ Make sure the battery polarity is correct as shown below (red wire to plus, blac
 
 [FEZ Feather Schematic](pdfs/fez-feather-rev-b-schematic.pdf)
 
+[FEZ Feather 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Feather%20Rev%20B.step)
+
+
 ### FEZ Feather Peripheral Pins
 
 |                   |             |
@@ -115,10 +158,13 @@ Make sure the battery polarity is correct as shown below (red wire to plus, blac
 | **User LED**      | PE11        |
 |                   |             |
 | **WiFi**          | SPI = SPI3  |
-|                   | IRQ = PA10  |
+|                   | IRQ = PB12  |
 |                   | CS = PD15   |
 |                   | EN = PA8    |
-|                   | RST = PA9   |
+|                   | RST = PB13  |
+|                   |             |
+| **Buttons**       | LDR = PE3   |
+|                   | APP = PB7   |
 
 ## FEZ Portal
 
@@ -126,7 +172,10 @@ Make sure the battery polarity is correct as shown below (red wire to plus, blac
 
 Already one of our most popular SITCore single board computers, The **FEZ Portal** is a 4.3" 480x272 display with capacitive touch that is programmable in C#. As the display and controller are one unit, it's even easier to make a product with touch as you only have to mount a single board that's only slightly larger than the display.
 
-[FEZ Portal Schematic](pdfs/fez-portal-rev-b-schematic.pdf)
+[FEZ Portal Schematic](pdfs/fez-portal-rev-c-schematic.pdf)
+
+[FEZ Portal 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Portal%20Rev%20C.step)
+
 
 ### FEZ Portal Peripheral Pins
 
@@ -145,6 +194,9 @@ Already one of our most popular SITCore single board computers, The **FEZ Portal
 |                   | CS = PA6        |
 |                   | EN = PA8        |
 |                   | RST = PF8       |
+|                   |                 |
+| **Buttons**       | LDR = PE3       |
+|                   | APP = PB7       |
 
 ## FEZ Stick
 
@@ -154,12 +206,17 @@ The **FEZ Stick** is simply the least expensive way to easily get started with T
 
 [FEZ Stick Schematic](pdfs/fez-stick-rev-b-schematic.pdf)
 
+[FEZ Stick 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Stick%20Rev%20B.step)
+
+
 ### FEZ Stick Peripheral Pins
 
 |                   |             |
 |-------------------|-------------|
 | **User LED**      | PE11        |
-
+|                   |             |
+| **Buttons**       | LDR = PE3   |
+|                   | APP = PB7   |
 
 
 

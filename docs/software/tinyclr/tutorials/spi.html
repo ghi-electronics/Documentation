@@ -80,16 +80,44 @@
 <h1 id="spi">SPI</h1>
 
 <hr>
-<p>SPI uses three or sometimes four wires for transferring data. A SPI bus consists of a single master and one or more slaves. The master will send the clock signal to the slaves over the SCK (Serial Clock) pin. It will also send data over MOSI (Master Out Slave In) pin, while reading incoming data on the MISO (Master In Slave Out) pin. The SCK line is used to determine how fast the data is moved. If you know electronics, this is simply a shift register.</p>
+<p>SPI uses three or four wires for transferring data. A SPI bus consists of a single master and one or more slaves. The master will send the clock signal to the slaves over the SCK (Serial Clock) pin. It will also send data over MOSI (Master Out Slave In) pin, while reading incoming data on the MISO (Master In Slave Out) pin. The SCK line is used to determine how fast the data is moved. If you know electronics, this is simply a shift register.</p>
 <p>The master selects which slave it will swap the data with using the SSEL (Slave SELect) pin, sometimes called CS (Chip Select).</p>
 <p>In its simplest terms, the master will swap data between itself and the slave. You cannot write data without reading data at the same time. However, often you want to write data and don&#39;t care about the incoming data. To do this you can use the Write method. Keep in mind that the Write method is discarding whatever data the slave is sending back.</p>
 <p>In TinyCLR OS, SPI transfers are dynamically sent in batches that are internally optimized to allow for maximum speed back-to-back transfers. This is helpful when sending large buffers, such as when refreshing displays.</p>
 <div class="TIP"><h5>Tip</h5><p>Some SPI devices (slaves) can have more than one select pin, like the VS1053 MP3 decoder chip that uses one select pin for data and the other for commands. Both share the three data transfer pins (SCK, MOSI, MISO).</p>
 </div>
-<div class="TIP"><h5>Tip</h5><p>SPI needs more wires than other similar buses, but it can transfer data very quickly. A 50Mhz clock is possible on SPI, that is 50 million bits transferred in one second. </p>
+<div class="TIP"><h5>Tip</h5><p>SPI needs more wires than other similar buses, but it can transfer data very quickly. A SPI port with a clock speed of 30Mhz transfers 30 million bits in one second. </p>
 </div>
-<div class="TIP"><h5>Tip</h5><p>Note that a board running TinyCLR OS is always an SPI master, not slave.</p>
+<div class="TIP"><h5>Tip</h5><p>Note that a board running TinyCLR OS is always the SPI master, not the slave.</p>
 </div>
+<h2 id="spi-clock-speed">SPI Clock Speed</h2>
+<p>SITCore SPI ports do not use the same clock, so different SPI ports have different minimum and maximum clock speeds:</p>
+<table>
+<thead>
+<tr>
+<th>SPI Controllers</th>
+<th>1, 2 &amp; 3</th>
+<th>4 &amp; 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Minimum Speed</td>
+<td>188 kHz</td>
+<td>469 kHz</td>
+</tr>
+<tr>
+<td>Maximum Speed</td>
+<td>24 MHz</td>
+<td>60 MHz</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>MinClockFrequency</code> and <code>MaxClockFrequency</code> fields can be used to verify the range of valid clock speeds for a given SPI port:</p>
+<pre><code class="lang-cs">var controller = SpiController.FromName(SC20100.SpiBus.Spi3);
+Debug.WriteLine(controller.MinClockFrequency.ToString()); //Prints minimum SPI clock in Hertz.
+Debug.WriteLine(controller.MaxClockFrequency.ToString()); //Prints maximum SPI clock in Hertz.
+</code></pre><h2 id="sample-code">Sample Code</h2>
 <pre><code class="lang-cs">var cs = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
     OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PE4);
 
@@ -103,9 +131,9 @@ var settings = new SpiConnectionSettings() {
 var controller = SpiController.FromName(SC20100.SpiBus.Spi4);
 var device = controller.GetDevice(settings);
 
-device.Write(new byte[] { 1, 2 });  //Write something.
-device.TransferSequential(...);     //This is good for reading registers.
-device.TransferFullDuplex(...);     //This is the only one that truly represents how SPI works.
+device.Write(new byte[] { 1, 2 }); //Write something.
+device.TransferSequential(...);    //This is good for reading registers.
+device.TransferFullDuplex(...);    //This is the only one that truly represents how SPI works.
 </code></pre></article>
           </div>
           

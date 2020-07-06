@@ -89,8 +89,18 @@
 {
     var usbclient = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
 
-    usbclient.SetActiveSetting
-        (GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientMode.Cdc,0x1234, 0x5678);
+    var usbClientSetting = new UsbClientSetting()
+            {
+                 Mode = UsbClientMode.WinUsb,
+                ManufactureName = &quot;Manufacture_Name&quot;,
+                ProductName = &quot;Product_Name&quot;,
+                 SerialNumber = &quot;12345678&quot;,
+                Guid = &quot;{your guid}&quot;,
+                 ProductId = 0x1234,
+                 VendorId = 0x5678,
+            };
+
+    usbclient.SetActiveSetting(usbClientSetting);
 
     usbclient.Enable();
 
@@ -132,8 +142,19 @@
 <pre><code class="lang-cs">static void DoTestWinUsb
 {
     var usbclient = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
-    usbclient.SetActiveSetting(GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientMode.WinUsb,
-        &quot;Manufacture_Name&quot;, &quot;Product_Name&quot;, &quot;SerailNumber&quot;, 0x1234, 0x5678, &quot;{your guid}&quot;);
+
+    var usbClientSetting = new UsbClientSetting()
+            {
+                 Mode = UsbClientMode.WinUsb,
+                ManufactureName = &quot;Manufacture_Name&quot;,
+                ProductName = &quot;Product_Name&quot;,
+                 SerialNumber = &quot;12345678&quot;,
+                Guid = &quot;{your guid}&quot;,
+                 ProductId = 0x1234,
+                 VendorId = 0x5678,
+            };
+
+    usbclient.SetActiveSetting(usbClientSetting);   
 
     usbclient.Enable();
 

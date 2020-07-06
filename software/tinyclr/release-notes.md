@@ -2,6 +2,104 @@
 ---
 ![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
 
+## 2.0.0-rc1
+
+### Released 2020-07-04
+Complete software package prepping for production.
+
+### Visual Studio Project System
+
+#### Changes
+- Fixed the issue where an application wouldn't start automatically when trying to `Start Without Debugging` (CTRL+F5).
+
+#### Known Issues
+- Debug breakpoints will sometimes hang for 5-6 seconds before resuming normally.
+- There is sometimes a longer than usual delay during deployment at the "Found debugger" and "Waiting for device to initialize" steps.
+
+### Libraries
+
+#### Changes
+- Fixed sockets blocking code execution while connecting.
+- Added XTEA cryptography.
+- Added CAN FD support.
+- Added CAN hardware filters.
+- UART: 
+        - Added DE pin support.
+        - Added ability to invert RX and TX polarity.
+        - Added support for swapping TX and RX pins.
+        - Added support generating a Break signal of user defined length.
+        - Changed SetActiveSettings API.
+- Changed SetActiveSettings API for USB client.
+- Added XML support.       
+- Added the SecureStorage class to support both the OTP and configuration storage areas.
+- Added support for changing some processor peripheral registers through use of the Marshal class.
+- Enabled garbage collection (GC) messages.
+- Added ability to enable and disable global interrupts.
+- Improved UI and fixed some UI bugs.
+- Fixed issue where the WiFi Scan() method would return an array of SSIDs with the last element always empty.
+
+#### Known Issues
+- Running out of stack kills Visual Studio: https://github.com/ghi-electronics/TinyCLR-Libraries/issues/586.
+- PNG file deployment issue: https://github.com/ghi-electronics/TinyCLR-Libraries/issues/557.
+- JSON cannot deserialize long integers: https://github.com/ghi-electronics/TinyCLR-Libraries/issues/540.
+- Network operations (except socket connection) on any thread blocks all other threads: https://github.com/ghi-electronics/TinyCLR-Libraries/issues/525.
+- String does not implement IEnumerable: https://github.com/ghi-electronics/TinyCLR-Libraries/issues/323.
+- Exceptions in event handlers leave the UI corrupted: https://github.com/ghi-electronics/TinyCLR-Libraries/issues/498.
+- Project->Add->Class does not select the correct template: https://github.com/ghi-electronics/TinyCLR-Libraries/issues/500.
+- Equals() throws an unsupported instruction exception: https://github.com/ghi-electronics/TinyCLR-Libraries/issues/502.
+- Double.ToString() sometimes shows incorrect number. https://github.com/ghi-electronics/TinyCLR-Libraries/issues/629.
+- CAN: CanWriteMessage always return true: https://github.com/ghi-electronics/TinyCLR-Libraries/issues/635
+- Uart: Break Signal need to wait to last byte transfer complete https://github.com/ghi-electronics/TinyCLR-Libraries/issues/634
+
+### TinyCLR Config
+
+#### Changes
+- Changed export key template. 
+- Fixed progress bar no longer appearing once a firmware update fails.
+
+#### Known Issues
+- Sometimes fails to connect until board is reset.
+
+### TinyCLR Font Converter
+
+#### Changes
+- None.
+
+#### Known Issues
+- None.
+
+### Firmware
+
+#### Changes
+- Fixed issue of SPI locking up the system.
+- Added protection for QSPI pins to prevent their use if external flash is enabled.
+- Added WiFi activity and status LED support.
+- Fixed issue with UART when using two stop bits.
+- Fixed incorrect Ethernet RX/TX buffer allocation.
+- Fixed USB disconnection causing crash on SC20100 series devices.
+- Fixed use of ADC on PC3 pin throwing an invalid operator exception.
+- Improved In-Field Update (IFU) by raising an exception if the application is too large to deploy to device.
+- Fixed issue of an exception not being raised when attempting to write to a configuration storage block which is not blank.
+- Fixed System Timer updating incorrectly.
+- Fixed USBClient.Read() sometimes losing data.
+
+#### Known Issue
+- Networking won't work correctly if WiFi Scan() is called after Network.Enable().
+
+### Drivers
+
+#### Changes
+- None.
+
+#### Known Issues
+- None.
+
+---
+
+---
+
+![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
+
 ## 2.0.0-preview6
 
 ### Released 2020-05-20

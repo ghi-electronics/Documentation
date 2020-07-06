@@ -80,7 +80,7 @@
 <h1 id="unmanaged-heap">Unmanaged Heap</h1>
 
 <hr>
-<p>TinyCLR&#39;s <a href="memory-management.html">memory management</a> system takes care of everything in internal secure memory; however, TinyCLR OS also supports external unsecure memory through a special unmanaged heap. This memory is used in two different ways, for Large Buffers and for the Graphics system, and is only available on boards with that include external SDRAM memory. Most SITCore SoMs have 32 MBytes of external SDRAM.</p>
+<p>TinyCLR&#39;s <a href="memory.html">memory management</a> system takes care of everything in internal secure memory; however, TinyCLR OS also supports external unsecure memory through a special unmanaged heap. This memory is used in two different ways, for Large Buffers and for the Graphics system, and is only available on boards with that include external SDRAM memory. Most SITCore SoMs have 32 MBytes of external SDRAM.</p>
 <p>To ensure that unmanaged resources get disposed of properly, it is necessary to dispose of the buffer pointing to unmanaged heap manually, as shown in the sample code below.</p>
 <h2 id="unmanaged-buffers">Unmanaged Buffers</h2>
 <p>This is an easy way to create buffers that reside in external memory, which typically provides much more storage than internal memory. The following example creates an array uTable[] in unmanaged heap space on the SCM20260D Dev Board and then disposes of it.</p>

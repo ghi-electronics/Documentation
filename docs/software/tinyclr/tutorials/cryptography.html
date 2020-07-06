@@ -80,7 +80,35 @@
 <h1 id="cryptography">Cryptography</h1>
 
 <hr>
-<p>TinyCLR OS supports RSA public key cryptography. Key sizes can be 1024 or 2048 bits and are generated automatically when <code>RSACryptoServiceProvider()</code> is instantiated. </p>
+<p>TinyCLR OS supports XTEA symmetric cryptography and RSA public key (asymmetric) cryptography. XTEA has a fixed key size of 128 bits, while RSA key sizes can be 1024 or 2048 bits. RSA keys are generated automatically when <code>RSACryptoServiceProvider()</code> is instantiated, but for XTEA a key must be provided.</p>
+<p>For those unfamiliar with encryption, symmetric cryptography schemes such as XTEA use a single key which must be shared among all individuals who need to send or receive messages. This single key is used to both encrypt and decrypt messages. This creates a possible security problem as the key must be shared, but only among authorized individuals. </p>
+<p>Asymmetric encryption methods such as RSA use public and private key pairs and are designed to eliminate the problem of securely sharing a key. The public key can be shared openly as it is only used to encrypt messages. Only the private key can decrypt messages, and this key is not shared. Asymmetric encryption is much more computationally intensive.</p>
+<p>Check out the Wikipedia <a href="https://en.wikipedia.org/wiki/XTEA">XTEA</a> and <a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">RSA</a> pages for more information.</p>
+<h2 id="xtea">XTEA</h2>
+<p>XTEA encryption is a symmetrical encryption method that always uses a 128 bit key. Keys of any other size will throw an exception. XTEA encryption also requires the data to you are encrypting to be a multiple of eight bytes in length.</p>
+<p>XTEA encryption is not only dependent upon the supplied key, but also the &quot;number of rounds&quot; or iterations the encryption algorithm uses to encode and decode information. TinyCLR OS always uses 32 rounds. So, for example, if you are using a PC to decode data that was encoded using TinyCLR OS, make sure that both the correct key and number of rounds (32) are used on the PC side.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core and GHIElectronics.TinyCLR.Cryptography</p>
+</div>
+<p>The following sample code encrypts and decrypts a string of text.</p>
+<pre><code class="lang-cs">//Argument below is the 128 bit key. XTEA always uses a 128 bit key.
+var crypto = new Xtea(new uint[] { 0x01234567, 0x89ABCDEF, 0xFEDCBA98, 0x76543210 });
+
+byte[] dataToEncrypt = System.Text.Encoding.UTF8.GetBytes(&quot;Data to encrypt.&quot;);
+byte[] encryptedData;
+byte[] decryptedData;
+
+//Encrypt data. Data must be a multiple of 8 bytes.
+encryptedData = crypto.Encrypt(dataToEncrypt, 0, (uint)dataToEncrypt.Length);
+
+//Decrypt data.
+decryptedData = crypto.Decrypt(encryptedData, 0, (uint)encryptedData.Length);
+
+System.Diagnostics.Debug.WriteLine(&quot;Decrypted: &quot; +
+    System.Text.Encoding.UTF8.GetString(decryptedData));
+</code></pre><p>The above code outputs the following:</p>
+<pre><code class="lang-text">Decrypted: Data to encrypt.
+</code></pre><h2 id="rsa">RSA</h2>
+<p>RSA public key cryptography has become the most popular asymmetric cryptography scheme on the Internet. While public key cryptography systems solve the problem of secure key sharing that exists in symmetric cryptography, they are much more computationally intensive. As a result, cryptography systems such as RSA are often used only to securely transfer the key for a symmetric cryptography method such as XTEA. Once the key has been sent, the computationally less intensive symmetric cryptography system is then used to encode and decode the bulk of the data.</p>
 <div class="NOTE"><h5>Note</h5><p><code>RSACryptoServiceProvider()</code> implements the IDisposable interface</p>
 </div>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core and GHIElectronics.TinyCLR.Cryptography</p>

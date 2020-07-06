@@ -11,12 +11,16 @@ The following sample is written for the SC20100S Dev Board and uses Uart5 for co
 var serial = GHIElectronics.TinyCLR.Devices.Uart.UartController.FromName
     (GHIElectronics.TinyCLR.Pins.SC20100.UartPort.Uart5);
 
-serial.SetActiveSettings(
-    19200,
-    8,
-    GHIElectronics.TinyCLR.Devices.Uart.UartParity.None,
-    GHIElectronics.TinyCLR.Devices.Uart.UartStopBitCount.One,
-    GHIElectronics.TinyCLR.Devices.Uart.UartHandshake.None);
+var uartSetting = new UartSetting()
+    {
+        BaudRate = 19200,
+        DataBits = 8,
+        Parity = UartParity.None,
+        StopBits = UartStopBitCount.One,
+        Handshaking = UartHandshake.None,
+    };
+
+serial.SetActiveSettings(uartSetting);
 
 serial.Enable();
 

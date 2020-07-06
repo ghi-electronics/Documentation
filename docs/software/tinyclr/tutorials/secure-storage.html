@@ -80,89 +80,75 @@
 <h1 id="secure-storage">Secure Storage</h1>
 
 <hr>
-<p>There are two secure storage areas you may find useful.</p>
-<h2 id="programmable-storage">Programmable Storage</h2>
-<p>This 128 KByte secure storage area can be modified. Performing an <code>`erase all</code> in TinyCLR Config will wipe out this area.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Storage, GHIElectronics.TinyCLR.Native</p>
+<p>There are two secure storage areas you may find useful: the configuration storage area and the one time programmable storage area.</p>
+<h2 id="configuration-storage">Configuration Storage</h2>
+<p>This 128 KByte secure storage area is organized as 4096 blocks of 32 bytes each. Configuration storage can be erased and modified. Performing an <code>erase all</code> in TinyCLR Config will wipe out this area. As this area is comprised of a single sector of flash memory, only the whole storage area can be erased. Partial erases are not possible.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.SecureStorage</p>
 </div>
-<pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Storage;
-using System;
-using System.Diagnostics;
-using System.Threading;
+<pre><code class="lang-cs">const uint STORAGE_SIZE = 32 * 1024;
+var configStorage = new SecureStorageController(SecureStorage.Configuration);
+var data = new byte[STORAGE_SIZE];
 
-class Program {
-    private static void Main() {
-        const uint STORAGE_SIZE = 128 * 1024;
+Debug.WriteLine(&quot;Configuration storage total size: &quot; +
+    configStorage.TotalSize.ToString() + &quot; bytes.&quot;);
 
-        var data = new byte[STORAGE_SIZE];
+Debug.WriteLine(&quot;Configuration storage block size: &quot; +
+    configStorage.BlockSize.ToString() + &quot; bytes.&quot;);
 
-        var realStorageSize = Configuration.Size;
+Debug.WriteLine(&quot;Checking if blank. . .&quot;);
+var isBlank = true;
 
-        bool isErased = Configuration.IsErased(0, realStorageSize);
+for (uint block = 0; block &lt; configStorage.TotalSize / configStorage.BlockSize; block++) {
+    if (!configStorage.IsBlank(block)) isBlank = false;
+}
 
-        if (isErased == false) {
-            Debug.WriteLine(&quot;Configuration is not empty&quot;);
+if (isBlank) {
+    Debug.WriteLine(&quot;Configuration storage area is blank.&quot;);
+}
+else {
+    Debug.WriteLine(&quot;Erasing entire configuration storage area...&quot;);
+    configStorage.Erase();
+}
 
-            Debug.WriteLine(&quot;Erasing...&quot;);
+Debug.WriteLine(&quot;Filling buffer...&quot;);
 
-            bool erased = Configuration.Erase(0, realStorageSize);
+for (var i = 0; i &lt; data.Length; i++) {
+    data[i] = (byte)(i % 255);
+}
 
-            Debug.WriteLine(&quot;Erased ? &quot; + erased);
+Debug.WriteLine(&quot;Writing buffer...&quot;);
+var dataBlock = new byte[configStorage.BlockSize];
+
+for (uint block = 0; block &lt; data.Length / configStorage.BlockSize; block++) {
+    Array.Copy(data, (int)(block * configStorage.BlockSize), dataBlock, 0,
+        (int)(configStorage.BlockSize));
+
+    configStorage.Write(block, dataBlock);
+}
+
+Debug.WriteLine(&quot;Comparing buffer...&quot;);
+
+for (uint block = 0; block &lt; data.Length / configStorage.BlockSize; block++) {
+    for (var byteIndex = 0; byteIndex &lt; configStorage.BlockSize; byteIndex++) {
+        configStorage.Read(block, dataBlock);
+
+        if (data[block * configStorage.BlockSize + byteIndex] != dataBlock[byteIndex]) {
+            Debug.WriteLine(&quot;Configuration storage data is corrupted!&quot;);
+            Thread.Sleep(-1);
         }
-
-
-        Debug.WriteLine(&quot;Fill buffer....&quot;);
-
-        for (var i = 0; i &lt; data.Length; i++) {
-            data[i] = (byte)(i % 255);
-        }
-
-        Debug.WriteLine(&quot;Writing buffer....&quot;);
-
-        Configuration.Write(data, 0, 0, (uint)data.Length);
-
-        Debug.WriteLine(&quot;Clear buffer....&quot;);
-
-        Array.Clear(data, 0, data.Length);
-
-        Debug.WriteLine(&quot;Read configuration....&quot;);
-
-        Configuration.Read(data, 0, 0, realStorageSize);
-
-        Debug.WriteLine(&quot;Compare buffer....&quot;);
-
-        for (var i = 0; i &lt; data.Length; i++) {
-            if (data[i] != (byte)(i % 255)) {
-                Debug.WriteLine(&quot;Configuration corrupted&quot;);
-
-                Thread.Sleep(-1);
-            }
-        }
-
-        Debug.WriteLine(&quot;The Configuration driver is good to go!!!!&quot;);
-
-        Thread.Sleep(-1);
     }
 }
+
+Debug.WriteLine(&quot;Configuration storage is good to go!!!&quot;);
 </code></pre><h2 id="one-time-programmable-area">One Time Programmable Area</h2>
-<p>The one time programmable (OTP) secure flash region is organized into 2048 blocks of 32 bytes each. Once you write to a block, that block can be read but never changed.</p>
-<p>There is no way to modify written data. Erasing the entire device <code>Erase All</code> in TinyCLR Config will not mot modify this area.</p>
-<p>The static GHIElectronics.TinyCLR.Native.Flash class has methods to read and write OTP flash blocks and also to see if blocks are blank.</p>
-<h3 id="writing-an-otp-block">Writing an OTP Block</h3>
-<p>To write a block of 32 bytes to the OTP region of flash memory, use the following command:</p>
-<pre><code>GHIElectronics.TinyCLR.Native.Flash.OtpWrite(uint blockIndex, byte[] data);
-</code></pre><p>The byte array of data must be exactly 32 bytes in length or an <code>ArgumentOutOfRangeException</code> will be thrown.</p>
-<h3 id="reading-an-otp-block">Reading an OTP Block</h3>
-<p>To read a block from the OTP region of flash memory, use the following command:</p>
-<pre><code>GHIElectronics.TinyCLR.Native.Flash.OtpRead(uint blockIndex, byte[] data);
-</code></pre><p>A byte array 32 bytes long will be returned.</p>
-<h3 id="checking-if-an-otp-block-is-blank">Checking if an OTP Block is Blank</h3>
 <div class="NOTE"><h5>Note</h5><p>If all 32 bytes of any OTP flash block contain 0xFF, the block is considered unused. If you write only 0xFF to the contents of a block, the block will be regarded as unused and you will be able to rewrite the block. </p>
 </div>
-<p>To see if a block is blank (all 32 bytes in block are 0xFF):</p>
-<pre><code>GHIElectronics.TinyCLR.Native.Flash.OtpIsBlank(uint blockIndex);
-</code></pre><p>Returns a boolean value that is true if the block is blank.</p>
-</article>
+<p>The one time programmable (OTP) secure flash region is organized into 2048 blocks of 32 bytes each. Once you write to a block, that block can be read but never changed.</p>
+<p>There is no way to modify written data. Erasing the entire device <code>Erase All</code> in TinyCLR Config will not erase or modify this area.</p>
+<p>The API for OTP storage is the same as for the configuration storage area, except that instantiation takes a different argument and the <code>Erase</code> method is disabled.</p>
+<p>OTP secure storage is instantiated as follows:</p>
+<pre><code>var otpStorage = new SecureStorageController(SecureStorage.Otp);
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

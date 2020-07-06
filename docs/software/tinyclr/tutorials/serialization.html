@@ -157,6 +157,91 @@
         System.Diagnostics.Debug.WriteLine(&quot;Array test succeeded&quot;);
     }
 }
+</code></pre><h2 id="xml">XML</h2>
+<p>TinyCLR OS supports both the writing and reading of XML (eXtensible Markup Language) files through its XmlReader and XmlWriter classes. Full documentation of XML is beyond the scope of this document, but for more information Microsoft&#39;s <a href="https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmldocument?view=netcore-3.1">.NET XML documentation</a> is a good place to start. Please note that the TinyCLR implementation of XML is not fully .NET compatible, for example the asynchronous API is not supported.</p>
+<div class="NOTE"><h5>Note</h5><p>XmlReader and XmlWriter both implement the IDisposable interface.</p>
+</div>
+<p>The following example shows the creation and reading of an XML file to and from a memory stream:</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core and GHIElectronics.TinyCLR.Data.Xml.</p>
+</div>
+<pre><code class="lang-cs">MemoryStream stream = new MemoryStream();
+
+XmlWriter writer = XmlWriter.Create(stream);
+
+writer.WriteProcessingInstruction(&quot;xml&quot;, &quot;version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;&quot;);
+writer.WriteComment(&quot;This is just a comment&quot;);
+writer.WriteRaw(&quot;\r\n&quot;);
+writer.WriteStartElement(&quot;NETMF_DataLogger&quot;); //Root element
+writer.WriteString(&quot;\r\n\t&quot;);
+writer.WriteStartElement(&quot;FileName&quot;);         //Child element
+writer.WriteString(&quot;Data&quot;);
+writer.WriteEndElement();
+writer.WriteRaw(&quot;\r\n\t&quot;);
+writer.WriteStartElement(&quot;FileExt&quot;);
+writer.WriteString(&quot;txt&quot;);
+writer.WriteEndElement();
+writer.WriteRaw(&quot;\r\n\t&quot;);
+writer.WriteStartElement(&quot;SampleFeq&quot;);
+writer.WriteString(&quot;10&quot;);
+writer.WriteEndElement();
+writer.WriteRaw(&quot;\r\n&quot;);
+writer.WriteEndElement();                     //End of root element
+
+writer.Flush();
+writer.Close();
+
+//Display the XML data.
+byte[] byteArray = stream.ToArray();
+char[] characterArray = System.Text.UTF8Encoding.UTF8.GetChars(byteArray);
+Debug.WriteLine(new string(characterArray) + &quot;\r\n\r\n&quot;);
+stream.Dispose();
+
+//Read the XML data.
+stream = new MemoryStream(byteArray);
+
+XmlReaderSettings settings = new XmlReaderSettings();
+settings.IgnoreWhitespace = true;
+settings.IgnoreComments = false;
+
+XmlReader reader = XmlReader.Create(stream, settings);
+
+while (!reader.EOF) {
+    reader.Read();
+
+    switch (reader.NodeType) {
+        case XmlNodeType.Element:
+            Debug.WriteLine(&quot;Element: &quot; + reader.Name);
+            break;
+
+        case XmlNodeType.Text:
+            Debug.WriteLine(&quot;Text: &quot; + reader.Value);
+            break;
+
+        case XmlNodeType.XmlDeclaration:
+            Debug.WriteLine(&quot;Declaration: &quot; + reader.Name + &quot;, &quot; + reader.Value);
+            break;
+
+        case XmlNodeType.Comment:
+            Debug.WriteLine(&quot;Comment: &quot; + reader.Value);
+            break;
+
+        case XmlNodeType.EndElement:
+            Debug.WriteLine(&quot;End element&quot;);
+            break;
+
+        case XmlNodeType.Whitespace:
+            Debug.WriteLine(&quot;White space&quot;);
+            break;
+
+        case XmlNodeType.None:
+            Debug.WriteLine(&quot;None&quot;);
+            break;
+
+        default:
+            Debug.WriteLine(reader.NodeType.ToString());
+            break;
+    }
+}
 </code></pre></article>
           </div>
           

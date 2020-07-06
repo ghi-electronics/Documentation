@@ -11,7 +11,7 @@ Serial data ports, called UARTs, transfer data between devices using two pins: T
 The easiest way to test a UART is by wiring a device's TXD to its RXD so any transmitted data is received by the same device. This is called a "loopback" test. The following code performs a simple loopback test.
 
 > [!Tip]
-> UART requires the GHIElectronics.TinyCLR.Devices.Uart NuGet package!
+> UART requires the GHIElectronics.TinyCLR.Devices.Uart NuGet package.
 
 ```cs
 var txBuffer = new byte[] { 0x41, 0x42, 0x43, 0x44, 0x45, 0x46 }; //A, B, C, D, E, F
@@ -19,8 +19,15 @@ var rxBuffer = new byte[txBuffer.Length];
 
 var myUart = UartController.FromName(SC20100.UartPort.Uart7);
 
-myUart.SetActiveSettings(9600, 8, UartParity.None, UartStopBitCount.One,
-    UartHandshake.None);
+var uartSetting = new UartSetting() {
+        BaudRate = 115200,
+        DataBits = 8,
+        Parity = UartParity.None,
+        StopBits = UartStopBitCount.One,
+        Handshaking = UartHandshake.None,
+    };
+
+myUart.SetActiveSettings(uartSetting);
 
 myUart.Enable();
 myUart.Write(txBuffer, 0, txBuffer.Length);
@@ -33,6 +40,49 @@ while (true) {
 
     Thread.Sleep(20);
 }
+```
+
+## UART Settings
+We've expanded the available UART settings to better support serial protocols such as RS-485 and DMX. Here's a complete list of the available settings:
+- BaudRate: Communication speed in bits per second.
+- DataBits: Number of data bits in each byte. Usually set to eight.
+- Parity: Parity bit setting. Disabled when set to `UartParity.None`.
+- StopBits: Number of stop bits sent to mark the end of each byte.
+- Handshaking: Can be set to none or `UartHandshake.RequestToSend` for hardware handshaking.
+- EnableDePin: Used to enable and disable the `Driver Enable` pin, which is used for RS-485 communication.
+- InvertTxPolarity: Used to invert high and low states of the transmit pin. Useful for hardware that inverts this signal.
+- InvertRxPolarity: Used to invert high and low states of the receive pin. Useful for hardware that inverts this signal.
+- InvertBinaryData: Used to invert the data polarity without inverting the start and stop bit polarity.
+- SwapTxRxPin: Swaps the transmit and receive pins. Very useful for correcting board layout mistakes!
+- InvertDePolarity: Inverts the polarity of the `Driver Enable` pin used for RS-485.
+
+## Break Generation
+It is sometimes necessary to generate a `break` signal before transmission to let the receiver(s) know that a new data frame is starting. Such is the case when using the DMX protocol, which is often used for stage lighting.
+
+> [!NOTE]
+> You must wait for the previous transmission of finish before starting a new transmission that incorporates a break signal.
+
+The following code sample shows how to transmit an array of bytes using the DMX protocol:
+```cs
+GpioPin dmxEnablePin = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PA1);
+dmxEnablePin.SetDriveMode(GpioPinDriveMode.Output);
+dmxEnablePin.Write(GpioPinValue.High);
+
+var uart = UartController.FromName(SC20100.UartPort.Uart5);
+
+uart.SetActiveSettings(new UartSetting {
+    DataBits = 8,
+    StopBits = UartStopBitCount.Two,
+    BaudRate = 250000 });
+
+uart.Enable();
+
+var txBuffer = new byte[] { 0, 127, 255, 255, 255 };
+
+while (uart.BytesToWrite > 0) Thread.Sleep(0); //Make sure UART is done transmitting.
+
+//The following line sends a break of 100 uS before sending the data.
+uart.Write(txBuffer, 0, txBuffer.Length, TimeSpan.FromTicks(1000));
 ```
 
 ## Event Handlers
@@ -49,8 +99,16 @@ private static void Main() {
 
     myUart = UartController.FromName(SC20100.UartPort.Uart7);
 
-    myUart.SetActiveSettings(9600, 8, UartParity.None, UartStopBitCount.One,
-        UartHandshake.None);
+    var uartSetting = new UartSetting()
+            {
+                BaudRate = 115200,
+                DataBits = 8,
+                Parity = UartParity.None,
+                StopBits = UartStopBitCount.One,
+                Handshaking = UartHandshake.None,
+            };
+
+      myUart.SetActiveSettings(uartSetting);
 
     myUart.Enable();
 

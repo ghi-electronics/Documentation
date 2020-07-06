@@ -110,7 +110,7 @@
 <p>The best Vbat option depends on your application. If your board needs to keep correct time while being unpowered for more than a few days, a battery may be a better choice than a supercap. The disadvantage to batteries is they eventually discharge and must be replaced. Supercaps are rechargeable and should last for the life of the product.</p>
 <p>It is important that your application correctly sets the charging status of the Vbat pin. Trying to charge a lithium coin cell may damage it and could possibly cause it to leak. Supercaps need to be charged every few days or so (depending on supercap size) before they lose their charge. Information on setting Vbat charge status is found on the <a href="tutorials/real-time-clock.html">Real Time Clock</a> page.</p>
 <h2 id="debug-interface">Debug Interface</h2>
-<p>Don&#39;t forget to expose either the USB client or UART interface (or both) that you plan on using to deploy and debug your application code. All SITCore products built around a 100 pin chip (SC20100x) use UART1 for the serial debug interface. All SITCore products built around the 260 pin SC20260B chip use UART5 for the serial debug interface.</p>
+<p>Don&#39;t forget to expose either the USB client or UART interface (or both) that you plan on using to deploy and debug your application code. See the <a href="../../hardware/sitcore/soc.html">System on Chip (SoC)</a> page for details.</p>
 <h2 id="other-recommended-pin-usage">Other Recommended Pin Usage</h2>
 <p>When designing your own board, we recommend that you add the following peripherals using the stated pins to maintain consistency with our dev boards and sample software.</p>
 <table>
