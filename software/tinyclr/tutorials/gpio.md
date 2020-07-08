@@ -45,6 +45,9 @@ Digital inputs sense the state of an input pin based on its voltage. The pin can
 > [!Warning] 
 > 5V tolerant doesn't mean the processor can be powered by 5V, only that the input pins can tolerate 5V.
 
+The logic low threshold is 0.4\*Vdd-0.-1.  With a 3.3v power supply this means 1.22v.   
+The logic high threshold is 0.47\*Vdd+0.25.  With a 3.3v power supply this means 1.801v.  
+
 Unconnected input pins are called "floating." They are in a high impedance state and are susceptible to surrounding noise which can make the pin read high or low. A resistor can be added to pull the pin high or low. Modern processors include internal pull-up and pull-down resistors that are controlled by software. Note that a pull-up resistor doesn't necessarily make a pin high -- something connected to the pin can still pull it low.
 
 In this example, a button is connected between ground and an input pin. We will enable the pull-up resistor making that pin high when the button is not pressed.  When the button is pressed, it will overpower the pull-up and make the input low. We will read the status of the button and pass its state to an LED. 
