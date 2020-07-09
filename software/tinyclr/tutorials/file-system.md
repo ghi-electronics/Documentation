@@ -8,7 +8,7 @@ This allows file access on USB devices with MSC class, such as USB memory sticks
 ## SD Card
 SD and MMC cards are fully supported as detailed on the [SD tutorial](sd-cards.md) page.
 
-The example below requires the `GHIElectronics.TinyCLR.IO` and `GHIElectronics.TinyCLR.Devices.Storage` libraries and a device with an SD card.
+The example below requires the `GHIElectronics.TinyCLR.IO` and `GHIElectronics.TinyCLR.Devices.SecureStorage` libraries and a device with an SD card.
 
 > [!Note]
 > Make sure the namespace statement in the following code is changed to match the namespace of your project.
