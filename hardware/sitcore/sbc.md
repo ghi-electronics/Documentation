@@ -204,6 +204,9 @@ Already one of our most popular SITCore single board computers, The **FEZ Portal
 
 The **FEZ Stick** is simply the least expensive way to easily get started with TinyCLR OS. While providing an inexpensive way for the uninitiated to try TinyCLR OS, we've provided castellated edges as well as through hole pads to make it breadboard friendly and easy to embed into products. Also, there's actually space for two click modules, making this a very versatile board at a very affordable price!
 
+> [!Note]
+> FEZ Stick REV. B pin PB13 MISO is mislabeled on the silk screen and should read PE13 MISO
+
 [FEZ Stick Schematic](pdfs/fez-stick-rev-b-schematic.pdf)
 
 [FEZ Stick 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Stick%20Rev%20B.step)
