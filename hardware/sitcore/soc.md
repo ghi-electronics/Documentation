@@ -24,7 +24,7 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 
 | Peripheral                 | SC20100S                  | SC20260B              |
 |----------------------------|---------------------------|-----------------------|
-| **GPIO**                   | 76                        | 164                   |
+| **GPIO**                   | 74                        | 163                   |
 | **SPI**                    | 3                         | 3                     |
 | **I2C**                    | 2                         | 3                     |
 | **UART**                   | 8 (4 with handshaking)    | 8 (4 with handshaking)|
