@@ -23,24 +23,25 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 
 ## Peripherals
 
-| Peripheral                 | SC20100S/B                | SC20260B              |
-|----------------------------|---------------------------|-----------------------|
-| **GPIO**                   | 74                        | 163                   |
-| **SPI**                    | 3                         | 3                     |
-| **I2C**                    | 2                         | 3                     |
-| **UART**                   | 8 (4 with handshaking)    | 8 (4 with handshaking)|
-| **CAN**                    | 2                         | 2                     |
-| **PWM**                    | 16                        | 29                    |
-| **ADC**                    | 12                        | 21                    |
-| **DAC**                    | 2                         | 2                     |
-| **SD/SDIP/MMC**            | 1                         | 1                     |
-| **Quad SPI**               | 1                         | 1                     |
-| **USB Host**               | 1                         | 1                     |
-| **USB Client**             | 1                         | 1                     |
-| **Ethernet**               | 1                         | 1                     |
-| **LCD TFT**                | 0                         | 1                     |
-| **Graphics**               | via SPI                   | 16BPP TFT             |
-| **Camera**                 | 0                         | 1                     |
+| Peripheral                 | SC20100S/B                | SC20260B                |
+|----------------------------|---------------------------|-------------------------|
+| **GPIO**                   | 74                        | 163                     |
+| **SPI**                    | 3                         | 3                       |
+| **I2C**                    | 2                         | 3                       |
+| **UART**                   | 8 (4 with handshaking)    | 8 (4 with handshaking)  |
+| **CAN**                    | 2                         | 2                       |
+| **PWM**                    | 16                        | 29                      |
+| **ADC**                    | 12                        | 21                      |
+| **DAC**                    | 2                         | 2                       |
+| **SD/SDIP/MMC**            | 1                         | 1                       |
+| **Quad SPI**               | 1                         | 1                       |
+| **USB Host**               | 1                         | 1                       |
+| **USB Client**             | 1                         | 1                       |
+| **Ethernet**               | 1                         | 1                       |
+| **Networking**             | Cell,WiFi, and Ethernet   | Cell,WiFi, and Ethernet |                   
+| **LCD TFT**                | 0                         | 1                       |
+| **Graphics**               | via SPI                   | 16BPP TFT               |
+| **Camera**                 | 0                         | 1                       |
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
 
