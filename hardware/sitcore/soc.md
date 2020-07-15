@@ -74,11 +74,12 @@ The microcontrollers we use in our SITCore line of products do not support concu
 ## Pinouts
 
 ### SC20100S Pinout
-[![SC20100S Pinout](images/sc20100s-pinout.gif)](pdfs/sc20100s-pinout.pdf)
+[![SC20100S Pinout](images/sc20100s-b-pinout.gif)](pdfs/sc20100s-b-pinout.pdf)
+*Connect to VDD on both S or B packages
 
 ### SC20260B Pinout
 [![SC20260B Pinout](images/sc20260b-pinout.gif)](pdfs/sc20260b-pinout.pdf)
-
+*Analog Only
 ## Device Startup
 The SITCore is held in reset while the RESET pin is low. Releasing RESET will begin the system startup process.
 
@@ -114,6 +115,10 @@ Now that you have installed the bootloader and firmware on the SITCore, you can 
 ### Footprints
 ####This is the recommended footprint for the SC20100S:
 ![SC20100S Footprint](images/sc20100s-footprint.gif)
+
+####This is the recommended footprint for the SC20100B:
+![SC20100B Footprint](images/sc20100b-footprint.gif)
+![SC20100B Design Rules](images/sc20100b-design-rules.gif)
 
 ####This is the recommended footprint and PCB design rules for the SC20260B:
 ![SC20260B Footprint](images/sc20260b-footprint.gif)
