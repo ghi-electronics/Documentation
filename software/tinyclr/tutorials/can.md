@@ -131,9 +131,7 @@ class Program {
         var useMultiBitSampling = false;
 
         can.SetNominalBitTiming(new CanBitTiming(propagationPhase1, phase2, baudratePrescaler,
-            synchronizationJumpWidth, useMultiBitSampling));
-
-        can.Enable();
+            synchronizationJumpWidth, useMultiBitSampling));        
 
         var message = new CanMessage() {
             Data = new byte[] { 0x48, 0x65, 0x6C, 0x6C, 0x6F, 0x2E, 0x20, 0x20 },
@@ -159,6 +157,8 @@ class Program {
 
         can.MessageReceived += Can_MessageReceived;
         can.ErrorReceived += Can_ErrorReceived;
+        
+        can.Enable();
 
         while (true) {
             if (LdrButton.Read() == GpioPinValue.Low)
