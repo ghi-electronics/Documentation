@@ -2,6 +2,94 @@
 ---
 ![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
 
+## 2.0.0-rc2
+
+### Released 2020-08-05
+Fixed final bug, making it ready for production.
+
+### Visual Studio Project System
+
+#### Changes
+- Fixed assemblies that contain resources with a lot of 0xFF, where the system mistook them for blank spaces.
+- Prevent deploy if the size didn't fit in a region in some cases.
+
+#### Known Issues
+- None
+
+### Libraries
+
+#### Changes
+- Support old NETMF Graphics API.
+- Add Tiny File System.
+- Add RTC calibration.
+- Fixed XML EOF (End Of File) doesn't work.
+- UI MessageBox support one button, instead of always two buttons.
+- Graphic Color class now supports array convert between RGB565, ARGB8888, RGB888 and RGB323 and scale pattern color table.
+- BitConverter now supports convert array with pattern index table.
+- Fixed WiFi and ENC can't enable/disable multi-time.
+- Fixed PWM Controller 1 doesn't work on SC20100.
+- Fixed QSPI check blank failed after erase in some cases.
+#### Known Issues
+- Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
+- Debug breakpoints sometimes hang for 5-6 seconds before resuming normally (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/659)
+- Exception filter causes lockup when exception thrown from instance method (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/652)
+- GetChars throwing on certain byte values (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/651)
+- Double ToString() show number incorrectly sometime  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/629)
+- Running out of stack kills Visual studio (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/586)
+- JSON cannot deserialize long integers (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/540)
+- Network operations on any thread block all threads  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/525)
+- String does not implement IEnumerable  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/323)
+- Equals() throws unsupported instruction exception  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/502)
+### TinyCLR Config
+
+#### Changes
+- Update Application also update Firmware at the same time if both file are selected.
+- Fixed Invalid Key message if without clicking the "Generate Key" button sometime.
+- Fixed some minor GUI.
+- Export tca file has smaller size.
+
+#### Known Issues
+- Erase all doesn't erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+- None.
+
+#### Known Issues
+- None.
+
+### Firmware
+
+#### Changes
+- Uart: Fixed can not release CTS, RTS pins when close UART
+- Uart: Enable FIFO mode.
+- Uart: Flush() will wait until last byte transfer completed.
+- CAN: Fix CanWrite property is alway return true.
+- QSPI: Fixed total size was wrong.
+- Disable some peripherals interrupt during deploy application.
+- Fix freeze in some cases when update application by TinyCLR Config.
+
+#### Known Issue
+- None.
+
+### Drivers
+
+#### Changes
+- LPD8806, WS2812, APA102C: Add SetBuffer(), Flush() to speed up transfer.
+- Rename: LPD8806, WS2812, APA102C, OV9655, VS1053B, Msgeq7 to LPD8806Controller, WS2812Controller, APA102CController, OV9655Controller, VS1053BController, Msgeq7Controller.
+
+
+#### Known Issues
+ - SSD1351-Draw at position X may need offset = 10 to correct position. (https://github.com/ghi-electronics/TinyCLR-Drivers/issues/109)
+
+---
+
+---
+
+
+
 ## 2.0.0-rc1
 
 ### Released 2020-07-04
