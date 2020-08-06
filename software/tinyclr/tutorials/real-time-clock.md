@@ -184,14 +184,11 @@ for (int i=0; i < 5; i++) {
 
 ## RTC Calibration
 
-RTC also provides a calibration feature. To set calibration, use. 
+RTC also provides a calibration feature. 
 
 ```
 rtc.Calibrate(int pulse);
 ```
+```pulse``` is how many ticks to add (positive) or remove (negative) every 32 seconds. Use 0 to disable.
 
-If pulse is a positive number, this will add ‘n’ pulses of RTC every 32 seconds.
-If pulse is a negative number, this will minus ‘n’ pulses of RTC every 32 seconds.
-To disable calibration once enabled, set this pulse is 0.
-
-Maximum pulse is +/-512 pulses, meaning RTC frequency can be adjust between -487.1ppm to 488.5ppm.
+Maximum ```pulse``` is +/-512, meaning RTC frequency can be adjust between -487.1ppm to 488.5ppm.
