@@ -68,7 +68,7 @@ Fixed final bug, making it ready for production.
 - Uart: Fixed can not release CTS, RTS pins when close UART
 - Uart: Enable FIFO mode.
 - Uart: Flush() will wait until last byte transfer completed.
-- CAN: Fix CanWrite property is alway return true.
+- CAN: Fixed CanWrite property is alway return true.
 - QSPI: Fixed total size was wrong.
 - Disable some peripherals interrupt during deploy application.
 - Fix freeze in some cases when update application by TinyCLR Config.
