@@ -41,6 +41,7 @@ Fixed final bug, making it ready for production.
 - Network operations on any thread block all threads  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/525)
 - String does not implement IEnumerable  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/323)
 - Equals() throws unsupported instruction exception  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/502)
+- CAN CanWriteMessage always return true (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/635)
 
 ### TinyCLR Config
 
@@ -68,7 +69,6 @@ Fixed final bug, making it ready for production.
 - Uart: Fixed can not release CTS, RTS pins when close UART
 - Uart: Enable FIFO mode.
 - Uart: Flush() will wait until last byte transfer completed.
-- CAN: Fixed CanWrite property is alway return true.
 - QSPI: Fixed total size was wrong.
 - Disable some peripherals interrupt during deploy application.
 - Fix freeze in some cases when update application by TinyCLR Config.
