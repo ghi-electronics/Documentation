@@ -29,6 +29,7 @@ Fixed final bug, making it ready for production.
 - Fixed WiFi and ENC can't enable/disable multi-time.
 - Fixed PWM Controller 1 doesn't work on SC20100.
 - Fixed QSPI check blank failed after erase in some cases.
+
 #### Known Issues
 - Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
 - Debug breakpoints sometimes hang for 5-6 seconds before resuming normally (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/659)
@@ -40,6 +41,7 @@ Fixed final bug, making it ready for production.
 - Network operations on any thread block all threads  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/525)
 - String does not implement IEnumerable  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/323)
 - Equals() throws unsupported instruction exception  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/502)
+
 ### TinyCLR Config
 
 #### Changes
