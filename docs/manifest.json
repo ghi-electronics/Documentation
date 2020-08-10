@@ -390,7 +390,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/duino/fez-t18.html",
-          "hash": "H76WbjT+kXAz8eywGdGSvQ=="
+          "hash": "UuGj1QD6q0pbbyiLwMTMkQ=="
         }
       },
       "is_incremental": false,
@@ -2131,7 +2131,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/netmf/g400d.html",
-          "hash": "US/gKBp6iX8pPOK4MMELuQ=="
+          "hash": "qi8q1Ppd6D6KHodziBc4Gw=="
         }
       },
       "is_incremental": false,
@@ -2143,7 +2143,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/netmf/g400s.html",
-          "hash": "98MK9v/NqHhn5Nlz5nv/ew=="
+          "hash": "JdivUr3orDlZgYj6pgjxyA=="
         }
       },
       "is_incremental": false,
@@ -2721,7 +2721,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/dev.html",
-          "hash": "2IlK1t7BloRW4GiVfOgYCg=="
+          "hash": "scAtBDjUjymRvrJcpZPkbA=="
         }
       },
       "is_incremental": false,
@@ -2909,6 +2909,39 @@
       "output": {
         "resource": {
           "relative_path": "hardware/sitcore/images/sc20100-board.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/sc20100b-design-rules.gif",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/sc20100b-design-rules.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/sc20100b-footprint.gif",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/sc20100b-footprint.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/sc20100s-b-pinout.gif",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/sc20100s-b-pinout.gif"
         }
       },
       "is_incremental": false,
@@ -3181,6 +3214,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "hardware/sitcore/pdfs/sc20100s-b-pinout.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/pdfs/sc20100s-b-pinout.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "hardware/sitcore/pdfs/sc20100s-dev-rev-c-schematic.pdf",
       "output": {
         "resource": {
@@ -3328,7 +3372,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/sbc.html",
-          "hash": "yIk6xkYNo1LVZQWqnrLLnA=="
+          "hash": "uDIHiifMbyYQqCQvl4V83A=="
         }
       },
       "is_incremental": false,
@@ -3340,7 +3384,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/soc.html",
-          "hash": "Kx9siaj/wpXTtkhP4wlRig=="
+          "hash": "P9vMLoZAYK0f0B2U5yh02Q=="
         }
       },
       "is_incremental": false,
@@ -3352,7 +3396,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/som.html",
-          "hash": "sGqTiYPFqD0QB6RTSCotKQ=="
+          "hash": "fH8zgRaCkvrzqAfT5mKQMA=="
         }
       },
       "is_incremental": false,
@@ -3811,7 +3855,7 @@
       "output": {
         ".html": {
           "relative_path": "software/netmf/bootloader.html",
-          "hash": "JK9JhK025Ilm4rfAhExRCg=="
+          "hash": "qs6ZkMHev8kH9u3+fR6DAQ=="
         }
       },
       "is_incremental": false,
@@ -4518,7 +4562,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/downloads.html",
-          "hash": "XA/NgcHBDFDMGFOMHP/k+A=="
+          "hash": "2PB7SkeMFOhJmYKdGZIHKA=="
         }
       },
       "is_incremental": false,
@@ -4802,10 +4846,32 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "software/tinyclr/images/resources-noborder.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/tinyclr/images/resources-noborder.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "software/tinyclr/images/resources.jpg",
       "output": {
         "resource": {
           "relative_path": "software/tinyclr/images/resources.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/tinyclr/images/resources.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/tinyclr/images/resources.png"
         }
       },
       "is_incremental": false,
@@ -5026,7 +5092,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/intro.html",
-          "hash": "DeJARCNix5RdcO01An2JBA=="
+          "hash": "cEoX4latVwpL46xRo9tjnA=="
         }
       },
       "is_incremental": false,
@@ -5053,7 +5119,19 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/release-notes.html",
-          "hash": "H/Kc1ynWiLXOhMtYZaDk+w=="
+          "hash": "T7uvRTM7/gQn4yv+mJadxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/tinyclr/resources.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/tinyclr/resources.html",
+          "hash": "yOt+othJ526vKP2O2a8GMg=="
         }
       },
       "is_incremental": false,
@@ -5089,7 +5167,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/toc.html",
-          "hash": "24JoW4Joo9BqL2mOqDZ1Vw=="
+          "hash": "zCWUej3fQAv+mbFeCJTLuA=="
         }
       },
       "is_incremental": false,
@@ -5209,7 +5287,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/can.html",
-          "hash": "aA3TYstBtXYvrfO2vxgopA=="
+          "hash": "w7N8IUo6lbz9xeZwc87OxA=="
         }
       },
       "is_incremental": false,
@@ -5990,7 +6068,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/real-time-clock.html",
-          "hash": "0zzjgAl6k4AQTggcx4K35A=="
+          "hash": "cQai2NHIR931LTJ3teVRcA=="
         }
       },
       "is_incremental": false,
@@ -6249,8 +6327,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 167,
-          "skipped_file_count": 140
+          "total_file_count": 168,
+          "skipped_file_count": 166
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
