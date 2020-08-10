@@ -92,4 +92,5 @@
 
 # [Downloads](downloads.md)
 # [Release Notes](release-notes.md)
+# [Resources](resources.md)
 # [Limitations](limitations.md)

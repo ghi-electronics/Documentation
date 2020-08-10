@@ -238,8 +238,8 @@
 <h2 id="net-micro-framework-netmf">.NET Micro Framework (NETMF)</h2>
 <p>The NETMF software on G400 is mature and complete. For more information on NETMF you can go to the <a href="../../software/netmf/intro.html">NETMF Introduction</a> page.  The <a href="../../software/netmf/getting-started.html">NETMF Getting Started</a> page covers NETMF from setup of the host computer to program deployment on both an emulator and target device.</p>
 <p>Bootloader v1 is needed for G400 to work with NETMF. It is available in the NETMF SDK.</p>
-<h3 id="loading-bootloader-version-2">Loading Bootloader Version 2</h3>
-<p>Download the <a href="../../software/netmf/bootloader.html">G400 bootloader v2 file</a> and load onto the dataflash using the Microchip <a href="https://www.microchip.com/developmenttools/ProductDetails/PartNO/SAM-BA%20In-system%20Programmer">SAM-BA tool</a> and the following instructions.</p>
+<h3 id="loading-bootloader">Loading Bootloader</h3>
+<p>Download the <a href="../../software/netmf/bootloader.html">G400 bootloader file</a> and load onto the dataflash using the Microchip (Atmel) <a href="https://www.microchip.com/developmenttools/ProductDetails/PartNO/SAM-BA%20In-system%20Programmer">SAM-BA tool</a> and the following instructions.</p>
 <p>To set the chip in SAM-BA mode, hold down the dedicated button on your board (SYS A on UCM Dev and Breakout boards) while the system powers up (or during reset). If there is no such button, connect G400D pin SPI1_MISO to ground. Keep the button pressed (pin grounded) for three seconds after power up or reset, then release the pin. The device manager will show a COM port similar to &quot;Bossa Program Port&quot; or &quot;GPS Detect&quot;.</p>
 <ol>
 <li>If it is not already installed, download and install the <a href="https://www.microchip.com/developmenttools/ProductDetails/PartNO/SAM-BA%20In-system%20Programmer">SAM-BA tool</a> from Microchip. The latest version we have tested is 2.18 for Windows. (The tool may not show correctly. Try to make the window larger to see all hidden buttons!)</li>
@@ -1374,7 +1374,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/hardware/netmf/g400d.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/rc2-prep/hardware/netmf/g400d.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

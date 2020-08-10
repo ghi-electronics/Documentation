@@ -7,7 +7,7 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 
 ## Specifications
 
-| Spec                   | SC20100S                  | SC20260B             |
+| Spec                   | SC20100S/B                | SC20260B             |
 |------------------------|---------------------------|----------------------|
 | **Core**               | ARM Cortex-M7 32 bit      | ARM Cortex-M7 32 bit |
 | **Speed**              | 480 MHz                   | 480 MHz              |
@@ -15,16 +15,17 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 | **Internal Flash**     | 2 MByte                   | 2 MByte              |
 | **Instruction Cache**  | 16 KByte                  | 16 KByte             |
 | **Data Cache**         | 16 KByte                  | 16 KByte             |
-| **Package**            | LQFP100 14 x 14 mm        | 265-TFBGA 14 x 14 mm |
+| **Package**            | S/ LQFP100 14 x 14 mm     | 265-TFBGA 14 x 14 mm |
+|                        | B/ 100-TFBGA 8 x 8 mm 
 | **Temperature Range**  | -40C to +85C              | -40C to +85C         |
 
 *Note: Resources are shared between your application and the operating system.*
 
 ## Peripherals
 
-| Peripheral                 | SC20100S                  | SC20260B              |
+| Peripheral                 | SC20100S/B                | SC20260B              |
 |----------------------------|---------------------------|-----------------------|
-| **GPIO**                   | 76                        | 164                   |
+| **GPIO**                   | 74                        | 163                   |
 | **SPI**                    | 3                         | 3                     |
 | **I2C**                    | 2                         | 3                     |
 | **UART**                   | 8 (4 with handshaking)    | 8 (4 with handshaking)|
@@ -33,10 +34,12 @@ The SITCore SoCs provide a low cost way to add .NET computing power to any embed
 | **ADC**                    | 12                        | 21                    |
 | **DAC**                    | 2                         | 2                     |
 | **SD/SDIP/MMC**            | 1                         | 1                     |
+| **Quad SPI**               | 1                         | 1                     |
 | **USB Host**               | 1                         | 1                     |
 | **USB Client**             | 1                         | 1                     |
 | **Ethernet**               | 1                         | 1                     |
 | **LCD TFT**                | 0                         | 1                     |
+| **Graphics**               | via SPI                   | 16BPP TFT             |
 | **Camera**                 | 0                         | 1                     |
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
@@ -73,12 +76,15 @@ The microcontrollers we use in our SITCore line of products do not support concu
     
 ## Pinouts
 
-### SC20100S Pinout
-[![SC20100S Pinout](images/sc20100s-pinout.gif)](pdfs/sc20100s-pinout.pdf)
+### SC20100S/B Pinout
+[![SC20100S Pinout](images/sc20100s-b-pinout.gif)](pdfs/sc20100s-b-pinout.pdf)
+
+*Connect to VDD on both S or B packages
 
 ### SC20260B Pinout
 [![SC20260B Pinout](images/sc20260b-pinout.gif)](pdfs/sc20260b-pinout.pdf)
 
+*Analog Only
 ## Device Startup
 The SITCore is held in reset while the RESET pin is low. Releasing RESET will begin the system startup process.
 
@@ -114,6 +120,10 @@ Now that you have installed the bootloader and firmware on the SITCore, you can 
 ### Footprints
 ####This is the recommended footprint for the SC20100S:
 ![SC20100S Footprint](images/sc20100s-footprint.gif)
+
+####This is the recommended footprint for the SC20100B:
+![SC20100B Footprint](images/sc20100b-footprint.gif)
+![SC20100B Design Rules](images/sc20100b-design-rules.gif)
 
 ####This is the recommended footprint and PCB design rules for the SC20260B:
 ![SC20260B Footprint](images/sc20260b-footprint.gif)
