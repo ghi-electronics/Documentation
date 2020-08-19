@@ -50,8 +50,8 @@ controller.Provider.Read(address, buffer, 0, buffer.Length, -1);
 
 # Tiny File System (TFS)
 
-While TinyCLR OS fully support SD, USB thumb drive through native File System (FS) which is fast and standard, it also provides a Tiny File System (TFS) to access any memory storage as file system. TFS is managed code, slower than FS, but work with any storage. All we need is, provide basic driver to Read, Write, Erase these storages.
-Below is example to use 16MB of builtin Qspi as file system.
+While TinyCLR OS fully supports SD cards and USB thumb drives through native File System(FS) which is fast and standard, it also provides a Tiny File System(TFS) to access any memory storage as a file system. TFS is managed code, slower than FS, but works with any storage. All we need is, to provide a basic driver to Read, Write, and Erase these storages.
+Below is an example to that uses 16MB of builtin QSPI as file system.
 
 > [!Note]
 > This example requires the `GHIElectronics.TinyCLR.IO.TinyFileSystem`
@@ -75,8 +75,7 @@ static void DoTestTFS()
             {
                 Debug.WriteLine(line);
             }
-        }
-        
+        }     
 
         TinyFileSystem.DeviceStats aa = _tfs.GetStats();
         Debug.WriteLine("Stats : " + aa.BytesFree);
@@ -108,7 +107,7 @@ static void DoTestTFS()
 }
 ```
 
-As explain above, we need to provide a basic driver to Read, Write and Erase Qspi. In this case, it is QspiMemory.cs as below:
+As explained above, we need to provide a basic driver to Read, Write, and Erase QSPI. In this case we use QspiMemory.cs, as shown below:
 
 ```
 using System;
@@ -132,7 +131,6 @@ public sealed class QspiMemory : StorageDriver
         qspiController = StorageController.FromName(SC20260.StorageController.QuadSpi);
         qspiDrive = qspiController.Provider;
         qspiDrive.Open();
-
     }
 
     public override void EraseBlock(int block, int count)
