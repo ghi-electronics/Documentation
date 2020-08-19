@@ -59,50 +59,42 @@ Below is an example to that uses 16MB of builtin QSPI as file system.
 ```
 static void DoTestTFS()
 {
-    var _tfs = new TinyFileSystem(new QspiMemory());           
-
-    if (_tfs.CheckIfFormatted())
+    var tfs = new TinyFileSystem(new QspiMemory());
+            
+    if (!tfs.CheckIfFormatted())
     {
-        Debug.WriteLine("Filesystem OK. Mounting...n.");
-        _tfs.Mount();
-        Debug.WriteLine("Mounted. Now reading settings.dat file...");
-        if (!_tfs.Exists("settings.dat")) return;
-        using (Stream fs = _tfs.Open("settings.dat", FileMode.Open))
-        using (var rdr = new StreamReader(fs))
+        //Do Format if necessary 
+        tfs.Format();
+    }
+    else
+    {
+        // Mount tiny file system
+        tfs.Mount();
+    }
+
+    //Open to write
+    using (var fsWrite = tfs.Create("settings.dat"))
+    {
+        using (var wr = new StreamWriter(fsWrite))
+        {
+            wr.WriteLine("This is TFS test");
+            
+            wr.Flush();
+            fsWrite.Flush();
+        }
+    }
+
+    //Open to read
+    using (var fsRead = tfs.Open("settings.dat", FileMode.Open))
+    {
+        using (var rdr = new StreamReader(fsRead))
         {
             System.String line;
             while ((line = rdr.ReadLine()) != null)
             {
                 Debug.WriteLine(line);
             }
-        }     
-
-        TinyFileSystem.DeviceStats aa = _tfs.GetStats();
-        Debug.WriteLine("Stats : " + aa.BytesFree);
-    }
-    else
-    {
-        Debug.WriteLine("Formatting");
-        var start = DateTime.Now;
-        _tfs.Format();
-        var end = DateTime.Now;
-        Debug.WriteLine($"Formatting done, seconds elapsed : {(end - start).TotalSeconds}");
-
-        Debug.WriteLine("Creating file");
-        using (Stream fs1 = _tfs.Create("settings.dat"))
-        {
-            using (var wr = new StreamWriter(fs1))
-            {
-                wr.WriteLine("<settings>");
-                wr.WriteLine("InitialPosX=200");
-                wr.WriteLine("InitialPosY=150");
-                wr.WriteLine("</settings>");
-                wr.Flush();
-                fs1.Flush();
-            }
         }
-        
-        Debug.WriteLine("FileCreated");
     }
 }
 ```
@@ -119,9 +111,9 @@ using GHIElectronics.TinyCLR.Pins;
 public sealed class QspiMemory : StorageDriver
 {
     public override int Capacity => 0x1000000;
-    public override int PageSize => 0x1000;
+    public override int PageSize => 0x400;
     public override int SectorSize => 0x1000;
-    public override int BlockSize => 0x1000;
+    public override int BlockSize => 0x10000;
 
     private StorageController qspiController;
     private IStorageControllerProvider qspiDrive;
@@ -151,8 +143,6 @@ public sealed class QspiMemory : StorageDriver
         var block = this.Capacity / this.SectorSize;
         var address = 0;
                 
-        // qspiDrive.Erase(address, this.Capacity, TimeSpan.FromSeconds(100));
-        
         while (block > 0)
         {
             qspiDrive.Erase(address, SectorSize, TimeSpan.FromSeconds(100));
@@ -184,10 +174,6 @@ public sealed class QspiMemory : StorageDriver
         qspiDrive.Write(address, count, data, index, TimeSpan.FromSeconds(1));
     }
 
-    public void DetectParameters()
-    {
-
-    }
 }
 ```
 
