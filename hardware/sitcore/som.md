@@ -45,10 +45,10 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 ## Power Consumption
 |                            | SCM20100E       |   SCM20260N     |   SCM20260E     |   SCM20260D     |              
 |----------------------------|-----------------|-----------------|-----------------|-----------------|
-| **Running**                | 211mA           | 217mA           | 229mA           | 213mA           | 
-| **Sleep**                  | 182mA           | 188mA           | 204mA           | 185mA           | 
-| **Hibernate**              | 26mA            | 22mA            | 57mA            | 27mA            | 
-| **Shutdown**               | 19mA            | 15mA            | 39mA            | 17mA            |
+| **Running**                | 265mA           | 217mA           | 305mA           | 305mA           | 
+| **Sleep**                  | 182mA           | 188mA           | 185mA           | 185mA           | 
+| **Hibernate**              | 26mA            | 22mA            | 24mA            | 27mA            | 
+| **Shutdown**               | 19mA            | 15mA            | 17mA            | 17mA            |
 
 See the [Power Management](http://docs.ghielectronics.com/software/tinyclr/tutorials/power-management.html) tutorial 
 
