@@ -59,7 +59,7 @@ Below is an example that uses 16MB of built in QSPI as a file system.
 > [!Note]
 > This example requires the `GHIElectronics.TinyCLR.IO.TinyFileSystem`
 
-```
+```cs
 var tfs = new TinyFileSystem(new QspiMemory());
             
 if (!tfs.CheckIfFormatted()) {
@@ -93,7 +93,7 @@ using (var fsRead = tfs.Open("settings.dat", FileMode.Open)) {
 ```
 Below is a basic driver implementation utiliing QSPI:
 
-```
+```cs
 using System;
 using GHIElectronics.TinyCLR.Devices.Storage;
 using GHIElectronics.TinyCLR.Devices.Storage.Provider;
