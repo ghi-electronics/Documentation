@@ -54,51 +54,44 @@ controller.Provider.Read(address, buffer, 0, buffer.Length, -1);
 
 Tiny File System(TFS) can be used to access any memory storage as a file system. All that is needed is a basic driver to Read, Write, and Erase these storages. 
 
-Below is an example that uses 16MB of builtin QSPI as file system.
+Below is an example that uses 16MB of built in QSPI as a file system.
 
 > [!Note]
 > This example requires the `GHIElectronics.TinyCLR.IO.TinyFileSystem`
 
 ```
-    var tfs = new TinyFileSystem(new QspiMemory());
+var tfs = new TinyFileSystem(new QspiMemory());
             
-    if (!tfs.CheckIfFormatted())
-    {
-        //Do Format if necessary 
-        tfs.Format();
-    }
-    else
-    {
-        // Mount tiny file system
-        tfs.Mount();
-    }
+if (!tfs.CheckIfFormatted()) {
+    //Do Format if necessary 
+    tfs.Format();
+}
+else {
+    // Mount tiny file system
+    tfs.Mount();
+}
 
-    //Open to write
-    using (var fsWrite = tfs.Create("settings.dat"))
-    {
-        using (var wr = new StreamWriter(fsWrite))
-        {
-            wr.WriteLine("This is TFS test");
-            
-            wr.Flush();
-            fsWrite.Flush();
-        }
+//Open to write
+using (var fsWrite = tfs.Create("settings.dat")) {
+    using (var wr = new StreamWriter(fsWrite)) {
+        wr.WriteLine("This is TFS test");
+        wr.Flush();
+        fsWrite.Flush();
     }
+}
 
-    //Open to read
-    using (var fsRead = tfs.Open("settings.dat", FileMode.Open))
-    {
-        using (var rdr = new StreamReader(fsRead))
-        {
-            System.String line;
-            while ((line = rdr.ReadLine()) != null)
-            {
+//Open to read
+using (var fsRead = tfs.Open("settings.dat", FileMode.Open)) {
+    using (var rdr = new StreamReader(fsRead)) {
+        System.String line;
+            while ((line = rdr.ReadLine()) != null) {
                 Debug.WriteLine(line);
             }
         }
     }
+}
 ```
-Below is the basic driver implementation:
+Below is a basic driver implementation utiliing QSPI:
 
 ```
 using System;
@@ -107,72 +100,60 @@ using GHIElectronics.TinyCLR.Devices.Storage.Provider;
 using GHIElectronics.TinyCLR.IO.TinyFileSystem;
 using GHIElectronics.TinyCLR.Pins;
 
-public sealed class QspiMemory : StorageDriver
-{
+public sealed class QspiMemory : StorageDriver {
     public override int Capacity => 0x1000000;
     public override int PageSize => 0x400;
     public override int SectorSize => 0x1000;
     public override int BlockSize => 0x10000;
-
     private StorageController qspiController;
     private IStorageControllerProvider qspiDrive;
 
-    public QspiMemory()
-    {
+    public QspiMemory() {
         qspiController = StorageController.FromName(SC20260.StorageController.QuadSpi);
         qspiDrive = qspiController.Provider;
         qspiDrive.Open();
     }
 
-    public override void EraseBlock(int block, int count)
-    {
+    public override void EraseBlock(int block, int count) {
         if ((block + count) * BlockSize > Capacity) throw new ArgumentException("Invalid block + count");
 
         var address = block * BlockSize;
 
-        for (var i = 0; i < count; i++)
-        {
+        for (var i = 0; i < count; i++) {
             qspiDrive.Erase(address, BlockSize, TimeSpan.FromSeconds(100));
             address += BlockSize;
         }
     }
     
-    public override void EraseChip()
-    {
+    public override void EraseChip() {
         var block = this.Capacity / this.SectorSize;
         var address = 0;
                 
-        while (block > 0)
-        {
+        while (block > 0) {
             qspiDrive.Erase(address, SectorSize, TimeSpan.FromSeconds(100));
             address += SectorSize;
             block--;
         }
     }
     
-    public override void EraseSector(int sector, int count)
-    {
+    public override void EraseSector(int sector, int count) {
         if ((sector + count) * SectorSize > Capacity) throw new ArgumentException("Invalid sector + count");
 
         var address = sector * SectorSize;
 
-        for (var i = 0; i < count; i++)
-        {
+        for (var i = 0; i < count; i++) {
             qspiDrive.Erase(address, BlockSize, TimeSpan.FromSeconds(100));
             address += SectorSize;
         }
     }
    
-    public override void ReadData(int address, byte[] data, int index, int count)
-    {
+    public override void ReadData(int address, byte[] data, int index, int count) {
         qspiDrive.Read(address, count, data, index, TimeSpan.FromSeconds(1));
     }
     
-    public override void WriteData(int address, byte[] data, int index, int count)
-    {
+    public override void WriteData(int address, byte[] data, int index, int count) {
         qspiDrive.Write(address, count, data, index, TimeSpan.FromSeconds(1));
     }
-
 }
 ```
 
