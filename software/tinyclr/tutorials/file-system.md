@@ -84,9 +84,9 @@ using (var fsWrite = tfs.Create("settings.dat")) {
 using (var fsRead = tfs.Open("settings.dat", FileMode.Open)) {
     using (var rdr = new StreamReader(fsRead)) {
         System.String line;
-            while ((line = rdr.ReadLine()) != null) {
+        
+        while ((line = rdr.ReadLine()) != null) {
                 Debug.WriteLine(line);
-            }
         }
     }
 }
