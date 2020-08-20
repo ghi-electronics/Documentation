@@ -2,10 +2,12 @@
 ---
 The file system library is subset of the full .NET file system support. Most example should work with without minor changes. The internal drivers fully support FAT16 or FAT32 file systems, with no limitations beyond the FAT file system itself!
 
-## USB Mass Storage
+## Fat File Sytem
+
+### USB Mass Storage
 This allows file access on USB devices with MSC class, such as USB memory sticks. See the [USB](usb.md) page.
 
-## SD Card
+### SD Card
 SD and MMC cards are fully supported as detailed on the [SD tutorial](sd-cards.md) page.
 
 The example below requires the `GHIElectronics.TinyCLR.IO` and `GHIElectronics.TinyCLR.Devices.Storage` libraries and a device with an SD card.
@@ -38,7 +40,7 @@ FileSystem.Flush(sd.Hdc);
 
 ```
 
-## Low-level Access
+### Low-level Access
 You can access the raw underlying data of the storage provider by using the `Provider` property of the controller. Be careful when using this interface, however, as it bypasses any file system present and writes directly to the device. This is useful for implementing your own or otherwise unsupported file systems.
 
 ```cs
@@ -48,17 +50,16 @@ var controller = StorageController.FromName
 controller.Provider.Read(address, buffer, 0, buffer.Length, -1);
 ```
 
-# Tiny File System (TFS)
+## Tiny File System (TFS)
 
-While TinyCLR OS fully supports SD cards and USB thumb drives through native File System(FS) which is fast and standard, it also provides a Tiny File System(TFS) to access any memory storage as a file system. TFS is managed code, slower than FS, but works with any storage. All we need is, to provide a basic driver to Read, Write, and Erase these storages.
-Below is an example to that uses 16MB of builtin QSPI as file system.
+Tiny File System(TFS) can be used to access any memory storage as a file system. All that is needed is a basic driver to Read, Write, and Erase these storages. 
+
+Below is an example that uses 16MB of builtin QSPI as file system.
 
 > [!Note]
 > This example requires the `GHIElectronics.TinyCLR.IO.TinyFileSystem`
 
 ```
-static void DoTestTFS()
-{
     var tfs = new TinyFileSystem(new QspiMemory());
             
     if (!tfs.CheckIfFormatted())
@@ -96,10 +97,8 @@ static void DoTestTFS()
             }
         }
     }
-}
 ```
-
-As explained above, we need to provide a basic driver to Read, Write, and Erase QSPI. In this case we use QspiMemory.cs, as shown below:
+Below is the basic driver implementation:
 
 ```
 using System;
