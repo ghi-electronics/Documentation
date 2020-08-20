@@ -46,6 +46,9 @@ We offer multiple single board computers to provide the lowest possible barrier 
 
 The **FEZ Bit**, while seemingly more of a "maker" board, provides a convenient way to easily use the multitude of inexpensive Micro:bit accessories that have flooded the market. As the number of Micro:bit accessories continues to grow, this board will be valued as a way to use these accessories to quickly assemble prototypes and test new product concepts.
 
+>[!Caution]
+>The 3.3v regulator may run hot, especially when WiFi is in use.
+
 [FEZ Bit Schematic](pdfs/fez-bit-rev-b-schematic.pdf)
 
 [FEZ Bit 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Bit%20Rev%20B.step)
@@ -134,17 +137,20 @@ The **FEZ Duino** provides female headers that make use of the popular Arduino p
 
 ![FEZ Feather](images/fez-feather.png)
 
-The Adafruit Feather form factor boards are made to be stackable and have built in support for LiPo batteries, including a charging circuit. We've watched this form factor quickly gaining popularity, so we decided to make a Feather board of our own. If your project needs to run off of a battery, this board makes it quick and easy to get started. The **FEZ Feather** provides both through hole pads and castellated edges making it both breadboard friendly and easy to build into products.
+The Adafruit Feather form factor boards are made to be stackable and have built-in support for 3.7V LiPo batteries with a charging circuit. The **FEZ Feather** provides both through hole pads and castellated edges making it both breadboard friendly and easy to build into products.
 
->[!Important]
+>[!Caution]
 >Lithium Polymoer(Li-Po) batteries are significantly more volatile than other rechargable batteries. Make sure you have an understand of how to properly charge and use them before connecting to the FEZ Feather. Never attempt to charge a damaged or swollen battery. Never leave battery charging unattended. Improper use could result in fire.
 
->[!Important]
+>[!Warning]
 >Be very careful to ensure the correct polarity of LiPo batteries before connecting them to the FEZ Feather. Reverse polarity will damage the charging circuit, and not all batteries are wired correctly. GHI Electronics is not responsible for, and will not warranty, damage caused by incorrectly connected batteries.
 
 Make sure the battery polarity is correct as shown below (red wire to plus, black to minus):
 
 ![FEZ Feather Battery Connection](images/battery-connect.jpg)
+
+>[!Caution]
+>The 3.3v regulator may run hot, especially when WiFi is in use.
 
 [FEZ Feather Schematic](pdfs/fez-feather-rev-b-schematic.pdf)
 
