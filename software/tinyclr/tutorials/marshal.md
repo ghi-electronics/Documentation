@@ -1,11 +1,11 @@
 # Marshal
 ---
-Marshal is a static class provides two functions to read `ReadInt32`, write and modify some special peripheral's registers `WriteInt32`.
+Marshal is a static class that provides two functions `ReadInt32` to read, and `WriteInt32` to write and modify some special peripheral's registers .
 
-Example below show how to use Marshal to read gpio input data register, modify on gpio output data register to set pin PB0 to high:
+Example below shows how to use Marshal to read gpio input data register, and modify on gpio output data register to set pin PB0 to high:
 
 >[!TIP]
-> The example below requires the `System.Runtime.InteropServices`.
+> The example below requires `System.Runtime.InteropServices`.
 
 ```
 var pinPB0OutDataReg = (IntPtr)0x58020414;
@@ -16,9 +16,9 @@ Marshal.WriteInt32(pinPB0OutDataReg, portValue);
 
 ```
 >[!WARNING]
-> Some peripherals, reading status registers also clear their status, which may effect to their behavior in run time.
+> Some peripherals, reading status registers also clear their status, which may effect their behavior at run time.
 
-Below is list of peripheral registers that TinyCLR OS allowes to access. An exception will be thrown if invalid register.
+Below is list of peripheral registers that TinyCLR OS allows access to. An exception will be thrown if an invalid register is used.
 
     - Analog-to-digital converters (ADC)
     - Controller area network (CANFD)
