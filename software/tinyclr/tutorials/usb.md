@@ -65,12 +65,12 @@ class Program {
                     case GHIElectronics.TinyCLR.Devices.UsbHost.BaseDevice.
                         DeviceType.MassStorage:
 
-                        var strogareController = GHIElectronics.TinyCLR.Devices.Storage.
+                        var storageController = GHIElectronics.TinyCLR.Devices.Storage.
                             StorageController.FromName(GHIElectronics.TinyCLR.Pins.
                             SC20260.StorageController.UsbHostMassStorage);
 
                         var driver = GHIElectronics.TinyCLR.IO.FileSystem.
-                            Mount(strogareController.Hdc);
+                            Mount(storageController.Hdc);
 
                         var driveInfo = new System.IO.DriveInfo(driver.Name);
 
