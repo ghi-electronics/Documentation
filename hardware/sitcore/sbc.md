@@ -1,6 +1,6 @@
 # Single Board Computers
 ---
-![Single Board Computer](images/sitcore-feather.png)
+![Single Board Computer](images/sbc.png)
 
 We offer multiple single board computers to provide the lowest possible barrier to entering the world of TinyCLR OS. Most of these boards have WiFi and they all support the complete TinyCLR feature set. These boards are great for trying out TinyCLR OS, building prototypes, or incorporating into products.
 
@@ -39,6 +39,17 @@ We offer multiple single board computers to provide the lowest possible barrier 
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
 
+## Power Consumption
+The 'Running' power consumption totals include all other on board components, such as WiFi & Display.
+
+|                            | FEZ Bit         | Fez Duino       | FEZ Feather     | Fez Portal              | FEZ Stick       |
+|----------------------------|-----------------|-----------------|-----------------|-------------------------|-----------------|
+| **Running**                | 305mA           | 295mA           | 285mA           | 535mA                   | 194mA           |
+| **Sleep**                  | 187mA           | 187mA           | 179mA           | 200mA                   | 163mA           |
+| **Hibernate**              | 11mA            | 11mA            | 9mA             | 37mA                    | 6mA             |
+| **Shutdown**               | 2mA             | 5mA             | 90uA            | 20mA                    | 810uA           |
+
+See the [Power Management](http://docs.ghielectronics.com/software/tinyclr/tutorials/power-management.html) tutorial 
 
 ## FEZ Bit
 
