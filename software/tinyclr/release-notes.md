@@ -2,6 +2,78 @@
 ---
 ![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
 
+## 2.0.0 - Release
+
+### Released 2020-08-21
+Fixed final bug, making it ready for production.
+
+### Visual Studio Project System
+
+#### Changes
+- Updated version number 2.0.0
+
+#### Known Issues
+- None
+
+### Libraries
+
+#### Changes
+- Updated version number 2.0.0
+
+#### Known Issues
+- Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
+- Debug breakpoints sometimes hang for 5-6 seconds before resuming normally (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/659)
+- Exception filter causes lockup when exception thrown from instance method (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/652)
+- GetChars throwing on certain byte values (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/651)
+- Double ToString() show number incorrectly sometime  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/629)
+- Running out of stack kills Visual studio (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/586)
+- JSON cannot deserialize long integers (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/540)
+- Network operations on any thread block all threads  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/525)
+- String does not implement IEnumerable  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/323)
+- Equals() throws unsupported instruction exception  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/502)
+- CAN CanWriteMessage always return true (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/635)
+- Power consumption is high in Shutdown mode (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/667)
+- USB Host: Unmount FS may cause system hang in Disconnected event. See workaround: https://github.com/ghi-electronics/TinyCLR-Libraries/issues/665
+- System time need to be more accurate (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/664)
+
+### TinyCLR Config
+
+#### Changes
+- Updated version number 2.0.0
+- Fixed text. 
+
+#### Known Issues
+- Erase all doesn't erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+- None.
+
+#### Known Issues
+- None.
+
+### Firmware
+
+#### Changes
+- None.
+
+#### Known Issue
+- None.
+
+### Drivers
+
+#### Changes
+- Updated version number 2.0.0
+
+#### Known Issues
+ - SSD1351-Draw at position X may need offset = 10 to correct position. (https://github.com/ghi-electronics/TinyCLR-Drivers/issues/109)
+
+---
+
+---
+
 ## 2.0.0-rc2
 
 ### Released 2020-08-05
