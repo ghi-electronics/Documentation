@@ -486,6 +486,32 @@ private static UIElement Elements() {
 
 The scroll viewer allows for viewing content that is larger than the viewing area. User input is used to shift the content within the viewing area.
 
+```
+    // Create a scrollviewer
+    var scrollViewer = new ScrollViewer {
+        Background = new SolidColorBrush(Colors.Gray),
+
+        // scroll line by line with 10 pixels per line
+        ScrollingStyle = ScrollingStyle.LineByLine,
+        LineWidth = 10,
+        LineHeight = 10    
+    };
+    
+```
+
+Register Touch event, items in scrollViewer will go up or down every time touched. 
+
+```
+    scrollViewer.TouchUp += ScrollViewer_TouchUp;
+```
+
+```
+    private void ScrollViewer_TouchUp(object sender, GHIElectronics.TinyCLR.UI.Input.TouchEventArgs e) {
+        var s = (ScrollViewer)sender;
+
+        s.LineDown();
+    }
+```
 
 ### The Dispatcher
 
