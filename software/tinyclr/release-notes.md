@@ -35,6 +35,7 @@ Fixed final bug, making it ready for production.
 - Power consumption is high in Shutdown mode (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/667)
 - USB Host: Unmount FS may cause system hang in Disconnected event. See workaround: https://github.com/ghi-electronics/TinyCLR-Libraries/issues/665
 - System time need to be more accurate (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/664)
+- Uart Rx buffer full doesn't make RTS pin go high (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/669)
 
 ### TinyCLR Config
 
