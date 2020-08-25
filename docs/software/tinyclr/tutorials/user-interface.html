@@ -492,7 +492,23 @@ private static void Button_Click(object sender, RoutedEventArgs e) {
 }
 </code></pre><h3 id="scrollviewer">ScrollViewer</h3>
 <p>The scroll viewer allows for viewing content that is larger than the viewing area. User input is used to shift the content within the viewing area.</p>
-<h3 id="the-dispatcher">The Dispatcher</h3>
+<pre><code>    // Create a scrollviewer
+    var scrollViewer = new ScrollViewer {
+        Background = new SolidColorBrush(Colors.Gray),
+
+        // scroll line by line with 10 pixels per line
+        ScrollingStyle = ScrollingStyle.LineByLine,
+        LineWidth = 10,
+        LineHeight = 10    
+    };
+</code></pre><p>Register Touch event, items in scrollViewer will go up or down every time touched. </p>
+<pre><code>    scrollViewer.TouchUp += ScrollViewer_TouchUp;
+</code></pre><pre><code>    private void ScrollViewer_TouchUp(object sender, GHIElectronics.TinyCLR.UI.Input.TouchEventArgs e) {
+        var s = (ScrollViewer)sender;
+
+        s.LineDown();
+    }
+</code></pre><h3 id="the-dispatcher">The Dispatcher</h3>
 <p>The User Interface libraries rely on a dispatcher to handle system events and update invalidated elements. All elements are changed and updated from within the dispatcher. In this example, we will show the time on the screen. The time will be in a text box that is updated every second using a <code>Timer</code>. Since timers run in their own thread, a dispatcher invoke is needed.</p>
 <pre><code class="lang-cs">static void Counter(object o) {
     Application.Current.Dispatcher.Invoke(TimeSpan.FromMilliseconds(1), _ =&gt; {

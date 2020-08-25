@@ -80,7 +80,7 @@
 <h1 id="single-board-computers">Single Board Computers</h1>
 
 <hr>
-<p><img src="images/sitcore-feather.png" alt="Single Board Computer"></p>
+<p><img src="images/sbc.png" alt="Single Board Computer"></p>
 <p>We offer multiple single board computers to provide the lowest possible barrier to entering the world of TinyCLR OS. Most of these boards have WiFi and they all support the complete TinyCLR feature set. These boards are great for trying out TinyCLR OS, building prototypes, or incorporating into products.</p>
 <div class="NOTE"><h5>Note</h5><p>All SITCore single board computers use a USB-C connector for application deployment and debugging. While USB-C has many advantages, we&#39;ve also noticed some flaws. Every USB-A to USB-C cable tested worked as expected. Testing USB-C to USB-C cables gave interesting and unexpected results. Most USB-C hubs also do not work when using USB-C to USB-C cables. If you are having problems deploying or debugging, try connecting the board directly to your computer with a USB-A to USB-C cable.</p>
 </div>
@@ -300,9 +300,60 @@
 </tbody>
 </table>
 <p><em>Note: As many pins share peripherals, not all peripherals will be available.</em></p>
+<h2 id="power-consumption">Power Consumption</h2>
+<p>The &#39;Running&#39; power consumption totals include all other on board components, such as WiFi &amp; Display.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>FEZ Bit</th>
+<th>Fez Duino</th>
+<th>FEZ Feather</th>
+<th>Fez Portal</th>
+<th>FEZ Stick</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Running</strong></td>
+<td>305mA</td>
+<td>295mA</td>
+<td>285mA</td>
+<td>535mA</td>
+<td>194mA</td>
+</tr>
+<tr>
+<td><strong>Sleep</strong></td>
+<td>187mA</td>
+<td>187mA</td>
+<td>179mA</td>
+<td>200mA</td>
+<td>163mA</td>
+</tr>
+<tr>
+<td><strong>Hibernate</strong></td>
+<td>11mA</td>
+<td>11mA</td>
+<td>9mA</td>
+<td>37mA</td>
+<td>6mA</td>
+</tr>
+<tr>
+<td><strong>Shutdown</strong></td>
+<td>2mA</td>
+<td>5mA</td>
+<td>90uA</td>
+<td>20mA</td>
+<td>810uA</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="http://docs.ghielectronics.com/software/tinyclr/tutorials/power-management.html">Power Management</a> tutorial </p>
 <h2 id="fez-bit">FEZ Bit</h2>
 <p><img src="images/fez-bit.png" alt="FEZ Bit"></p>
 <p>The <strong>FEZ Bit</strong>, while seemingly more of a &quot;maker&quot; board, provides a convenient way to easily use the multitude of inexpensive Micro:bit accessories that have flooded the market. As the number of Micro:bit accessories continues to grow, this board will be valued as a way to use these accessories to quickly assemble prototypes and test new product concepts.</p>
+<div class="CAUTION"><h5>Caution</h5><p>The 3.3v regulator may run hot, especially when WiFi is in use.</p>
+</div>
 <p><a href="pdfs/fez-bit-rev-b-schematic.pdf">FEZ Bit Schematic</a></p>
 <p><a href="http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Bit%20Rev%20B.step">FEZ Bit 3D STEP File</a></p>
 <h3 id="fez-bit-peripheral-pins">FEZ Bit Peripheral Pins</h3>
@@ -552,13 +603,15 @@
 </table>
 <h2 id="fez-feather">FEZ Feather</h2>
 <p><img src="images/fez-feather.png" alt="FEZ Feather"></p>
-<p>The Adafruit Feather form factor boards are made to be stackable and have built in support for LiPo batteries, including a charging circuit. We&#39;ve watched this form factor quickly gaining popularity, so we decided to make a Feather board of our own. If your project needs to run off of a battery, this board makes it quick and easy to get started. The <strong>FEZ Feather</strong> provides both through hole pads and castellated edges making it both breadboard friendly and easy to build into products.</p>
-<div class="IMPORTANT"><h5>Important</h5><p>Lithium Polymoer(Li-Po) batteries are significantly more volatile than other rechargable batteries. Make sure you have an understand of how to properly charge and use them before connecting to the FEZ Feather. Never attempt to charge a damaged or swollen battery. Never leave battery charging unattended. Improper use could result in fire.</p>
+<p>The Adafruit Feather form factor boards are made to be stackable and have built-in support for 3.7V LiPo batteries with a charging circuit. The <strong>FEZ Feather</strong> provides both through hole pads and castellated edges making it both breadboard friendly and easy to build into products.</p>
+<div class="CAUTION"><h5>Caution</h5><p>Lithium Polymoer(Li-Po) batteries are significantly more volatile than other rechargable batteries. Make sure you have an understand of how to properly charge and use them before connecting to the FEZ Feather. Never attempt to charge a damaged or swollen battery. Never leave battery charging unattended. Improper use could result in fire.</p>
 </div>
-<div class="IMPORTANT"><h5>Important</h5><p>Be very careful to ensure the correct polarity of LiPo batteries before connecting them to the FEZ Feather. Reverse polarity will damage the charging circuit, and not all batteries are wired correctly. GHI Electronics is not responsible for, and will not warranty, damage caused by incorrectly connected batteries.</p>
+<div class="WARNING"><h5>Warning</h5><p>Be very careful to ensure the correct polarity of LiPo batteries before connecting them to the FEZ Feather. Reverse polarity will damage the charging circuit, and not all batteries are wired correctly. GHI Electronics is not responsible for, and will not warranty, damage caused by incorrectly connected batteries.</p>
 </div>
 <p>Make sure the battery polarity is correct as shown below (red wire to plus, black to minus):</p>
 <p><img src="images/battery-connect.jpg" alt="FEZ Feather Battery Connection"></p>
+<div class="CAUTION"><h5>Caution</h5><p>The 3.3v regulator may run hot, especially when WiFi is in use.</p>
+</div>
 <p><a href="pdfs/fez-feather-rev-b-schematic.pdf">FEZ Feather Schematic</a></p>
 <p><a href="http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Feather%20Rev%20B.step">FEZ Feather 3D STEP File</a></p>
 <h3 id="fez-feather-peripheral-pins">FEZ Feather Peripheral Pins</h3>
@@ -734,7 +787,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/rc2-prep/hardware/sitcore/sbc.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/hardware/sitcore/sbc.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
