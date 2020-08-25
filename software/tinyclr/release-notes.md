@@ -5,7 +5,7 @@
 ## 2.0.0 - Release
 
 ### Released 2020-08-21
-Fixed final bug, making it ready for production.
+Production ready release!
 
 ### Visual Studio Project System
 
