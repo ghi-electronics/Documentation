@@ -63,7 +63,7 @@ The font converter is a tool used to convert desktop TrueType fonts to the forma
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.0.0](http://files.ghielectronics.com/downloads/TinyCLR/Tools/TinyCLR%20OS%20Font%20Converter%20v2.0.0.exe) | 2020-01-22 | Preview | 40F6EA89AA8B826956A83220285E471F
+[v2.0.0](http://files.ghielectronics.com/downloads/TinyCLR/Tools/TinyCLR%20OS%20Font%20Converter%20v2.0.0.exe) | 2020-01-22 | Production | 40F6EA89AA8B826956A83220285E471F
 
 ## TinyCLR OS 1.0
 

@@ -234,6 +234,39 @@
 </tbody>
 </table>
 <p><em>Note: As many pins share peripherals, not all peripherals will be available.</em></p>
+<h2 id="power-consumption">Power Consumption</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>SC20100S/B</th>
+<th>SC20260B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Running</strong></td>
+<td>194mA</td>
+<td>194mA</td>
+</tr>
+<tr>
+<td><strong>Sleep</strong></td>
+<td>163mA</td>
+<td>163mA</td>
+</tr>
+<tr>
+<td><strong>Hibernate</strong></td>
+<td>6mA</td>
+<td>6mA</td>
+</tr>
+<tr>
+<td><strong>Shutdown</strong></td>
+<td>810uA</td>
+<td>810uA</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="http://docs.ghielectronics.com/software/tinyclr/tutorials/power-management.html">Power Management</a> tutorial </p>
 <h3 id="using-interrupts-irqs">Using Interrupts (IRQs)</h3>
 <p>The microcontrollers we use in our SITCore line of products do not support concurrent interrupts with the same pin number, even if the pins are on different ports (the port is denoted by the second letter of the GPIO pin name -- PA1 is pin 1 on port A). Therefore, interrupts are available on only 16 pins at any given time. For example, pins PA1 and PB1 cannot be used as interrupt pins at the same time, but PA1 and PB2 can. PA1 and PA2 can also be used with interrupts simultaneously.</p>
 <h2 id="features">Features</h2>
@@ -450,7 +483,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/rc2-prep/hardware/sitcore/soc.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/hardware/sitcore/soc.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
