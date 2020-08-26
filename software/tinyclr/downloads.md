@@ -54,8 +54,8 @@ The Firmware is the TinyCLR OS that lives on your hardware. The firmware version
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.0.0.8000 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore%20Firmware%20v2.0.0.ghi) | 2020-07-04 | Production | AE9DC4E117D04CE058AB305896F273DE
-[v2.0.0.8000 (RC2)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore%20Firmware%20v2.0.0.8000-rc2.ghi) | 2020-07-04 | Release Candidate | AE9DC4E117D04CE058AB305896F273DE
+[v2.0.0.8000 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore%20Firmware%20v2.0.0.ghi) | 2020-08-05 | Production | AE9DC4E117D04CE058AB305896F273DE
+[v2.0.0.8000 (RC2)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore%20Firmware%20v2.0.0.8000-rc2.ghi) | 2020-08-05| Release Candidate | AE9DC4E117D04CE058AB305896F273DE
 [v2.0.0.70000 (RC1)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore%20Firmware%20v2.0.0.70000-rc1.ghi) | 2020-07-04 | Release Candidate | FE2C4E67C5635513B998540C32F96C8D
 
 ### TinyCLR Font Converter
