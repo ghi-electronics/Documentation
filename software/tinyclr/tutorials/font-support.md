@@ -10,16 +10,6 @@ screen.DrawString("Hello World!", font, greenPen.Brush, 10, 100);
 screen.Flush();
 ```
 
-## Built-in fonts
-When using systems with managed SPI display drivers, the font support is handled though an internal built-in font. This is done to reduce memory requirements.
-
-```cs
-var teal = new SolidBrush(Color.Teal);
-var font = new Font("GHIMono8x5", 8);
-screen.DrawString("Hello World!", font, teal, 40, 10);
-screen.Flush();
-```
-
 ## Font Conversion
 
 To convert a font you must first make a .fntdef file which is a text file describing the font to convert as well as a number of other parameters. This file contains one option on each line. A minimal .fntdef file may look like this to have the standard ASCII characters.
