@@ -79,6 +79,6 @@ The API for OTP storage is the same as for the configuration storage area, excep
 
 OTP secure storage is instantiated as follows:
 
-```
+```cs
 var otpStorage = new SecureStorageController(SecureStorage.Otp);
 ```
