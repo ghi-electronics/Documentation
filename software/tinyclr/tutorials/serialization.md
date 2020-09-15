@@ -8,7 +8,7 @@ Binary Serialization is a native, fast and lean way to serialize objects. To kee
 > [!TIP]
 > Needed NuGets: GHIElectronics.TinyCLR.Core and System.Reflection.
 
-```
+```cs
 class Program {
     public enum MyEnum : short { A, B, C };
 

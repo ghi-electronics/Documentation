@@ -7,7 +7,7 @@ Example below shows how to use Marshal to read gpio input data register, and mod
 >[!TIP]
 > The example below requires `System.Runtime.InteropServices`.
 
-```
+```cs
 var pinPB0OutDataReg = (IntPtr)0x58020414;
 
 var portValue = Marshal.ReadInt32(pinPB0OutDataReg) | (1 << 0); // Pin 0

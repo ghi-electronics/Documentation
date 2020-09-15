@@ -8,9 +8,8 @@ Below is simple example showing how to connect to https://www.google.com
 >[!TIP]
 >Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Networking.Http
 
-```csharp
-static void DoTestHttps()
-{
+```cs
+static void DoTestHttps() {
     var url = "https://www.google.com";
 
     var certificates = Resources.GetBytes(Properties.Resources.BinaryResources.GlobalSign);
@@ -20,20 +19,15 @@ static void DoTestHttps()
     int read = 0, total = 0;
     byte[] result = new byte[512];
 
-    try
-    {
-        using (var req = HttpWebRequest.Create(url) as HttpWebRequest)
-        {
+    try {
+        using (var req = HttpWebRequest.Create(url) as HttpWebRequest){
             req.KeepAlive = false;
             req.HttpsAuthentCerts = certx509;
             req.ReadWriteTimeout = 2000;
 
-            using (var res = req.GetResponse() as HttpWebResponse)
-            {
-                using (var stream = res.GetResponseStream())
-                {
-                    do
-                    {
+            using (var res = req.GetResponse() as HttpWebResponse){
+                using (var stream = res.GetResponseStream()){
+                    do {
                         read = stream.Read(result, 0, result.Length);
                         total += read;
 
@@ -45,16 +39,14 @@ static void DoTestHttps()
 
                         System.Diagnostics.Debug.WriteLine("Response : " + page);
                     }
-
                     while (read != 0);
                 }
             }
         }
     }
-
-    catch { }
+    catch { 
+    }
 }
-
 ```
 
 You need a root certificate to access secure websites. TinyCLR OS accepts certificates in both text and binary formats. The following instructions show how to download certificates:

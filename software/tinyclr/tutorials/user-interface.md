@@ -55,26 +55,20 @@ using GHIElectronics.TinyCLR.UI;
 using GHIElectronics.TinyCLR.UI.Media;
 using System.Drawing;
 
-namespace UserInterfaceExample
-{
-    class Program : Application
-    {
-        public Program(DisplayController d) : base(d)
-        {
+namespace UserInterfaceExample {
+    class Program : Application {
+        public Program(DisplayController d) : base(d){
         }
-
         static Program app;
 
-        static void Main()
-        {
+        static void Main() {
             GpioPin backlight = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA15);
             backlight.SetDriveMode(GpioPinDriveMode.Output);
             backlight.Write(GpioPinValue.High);
             var display = DisplayController.GetDefault();
 
             var controllerSetting = new 
-                GHIElectronics.TinyCLR.Devices.Display.ParallelDisplayControllerSettings
-            {
+                GHIElectronics.TinyCLR.Devices.Display.ParallelDisplayControllerSettings {
                 Width = 480,
                 Height = 272,
                 DataFormat = GHIElectronics.TinyCLR.Devices.Display.DisplayDataFormat.Rgb565,
@@ -103,10 +97,8 @@ namespace UserInterfaceExample
             app.Run(Program.CreateWindow(display));
         }
 
-        private static Window CreateWindow(DisplayController display)
-        {
-            var window = new Window
-            {
+        private static Window CreateWindow(DisplayController display){
+            var window = new Window {
                 Height = (int)display.ActiveConfiguration.Height,
                 Width = (int)display.ActiveConfiguration.Width
             };
@@ -164,8 +156,7 @@ using System.Drawing;
 
 namespace SC20100_N18_WPF{
     class Program : Application{
-        public Program(int width, int height) : base(width, height)
-        {
+        public Program(int width, int height) : base(width, height){
         }
 
         private static ST7735Controller st7735;
@@ -236,7 +227,6 @@ private static UIElement Elements() {
         HorizontalAlignment = HorizontalAlignment.Center,
         VerticalAlignment = VerticalAlignment.Center
     };
-
     return txt;
 }
 ```
@@ -379,8 +369,10 @@ The fix is to add a container and then the container will have a border. In this
 private static UIElement Elements() {
     var canvas = new Canvas();
     var border = new Border();
+
     border.SetBorderThickness(10);
     border.BorderBrush = new SolidColorBrush(Colors.Red);
+
     Canvas.SetLeft(border, 20);
     Canvas.SetTop(border, 20);
 
@@ -486,7 +478,7 @@ private static UIElement Elements() {
 
 The scroll viewer allows for viewing content that is larger than the viewing area. User input is used to shift the content within the viewing area.
 
-```
+```cs
     // Create a scrollviewer
     var scrollViewer = new ScrollViewer {
         Background = new SolidColorBrush(Colors.Gray),
@@ -501,11 +493,11 @@ The scroll viewer allows for viewing content that is larger than the viewing are
 
 Register Touch event, items in scrollViewer will go up or down every time touched. 
 
-```
+```cs
     scrollViewer.TouchUp += ScrollViewer_TouchUp;
 ```
 
-```
+```cs
     private void ScrollViewer_TouchUp(object sender, GHIElectronics.TinyCLR.UI.Input.TouchEventArgs e) {
         var s = (ScrollViewer)sender;
 
