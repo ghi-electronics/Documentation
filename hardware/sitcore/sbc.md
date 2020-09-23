@@ -58,7 +58,7 @@ See the [Power Management](http://docs.ghielectronics.com/software/tinyclr/tutor
 The **FEZ Bit**, while seemingly more of a "maker" board, provides a convenient way to easily use the multitude of inexpensive Micro:bit accessories that have flooded the market. As the number of Micro:bit accessories continues to grow, this board will be valued as a way to use these accessories to quickly assemble prototypes and test new product concepts.
 
 >[!Caution]
->The 3.3v regulator may run hot, especially when WiFi is in use.
+>The 3.3v regulator may run hot, especially when WiFi is in use. You can add 3.3V regulator externally to eliminate this heat issue, and this is needed if adding any external components that draw more than 10mA.
 
 [FEZ Bit Schematic](pdfs/fez-bit-rev-b-schematic.pdf)
 
@@ -161,7 +161,7 @@ Make sure the battery polarity is correct as shown below (red wire to plus, blac
 ![FEZ Feather Battery Connection](images/battery-connect.jpg)
 
 >[!Caution]
->The 3.3v regulator may run hot, especially when WiFi is in use.
+>The 3.3v regulator may run hot, especially when WiFi is in use. You can add 3.3V regulator externally to eliminate this heat issue, and this is needed if adding any external components that draw more than 10mA.
 
 [FEZ Feather Schematic](pdfs/fez-feather-rev-b-schematic.pdf)
 
@@ -223,6 +223,9 @@ The **FEZ Stick** is simply the least expensive way to easily get started with T
 
 > [!Note]
 > FEZ Stick REV. B pin PB13 MISO is mislabeled on the silk screen and should read PE13 MISO
+
+>[!Caution]
+>The onboard 3.3v regulator is only capable of running external components of an additional 50mA. If more current is necessary, then add an additional external 3.3V regulator.
 
 [FEZ Stick Schematic](pdfs/fez-stick-rev-b-schematic.pdf)
 
