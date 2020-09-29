@@ -128,7 +128,7 @@ The **FEZ Duino** provides female headers that make use of the popular Arduino p
 
 [FEZ Duino 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Duino%20Rev%20B.step)
 
-![FEZ Feather](images/fez_duino_pinout.gif)
+![FEZ Feather](images/fez_duino_diagram.gif)
 
 ### FEZ Duino Peripheral Pins
 
