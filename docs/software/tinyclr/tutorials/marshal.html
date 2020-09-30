@@ -84,7 +84,7 @@
 <p>Example below shows how to use Marshal to read gpio input data register, and modify on gpio output data register to set pin PB0 to high:</p>
 <div class="TIP"><h5>Tip</h5><p>The example below requires <code>System.Runtime.InteropServices</code>.</p>
 </div>
-<pre><code>var pinPB0OutDataReg = (IntPtr)0x58020414;
+<pre><code class="lang-cs">var pinPB0OutDataReg = (IntPtr)0x58020414;
 
 var portValue = Marshal.ReadInt32(pinPB0OutDataReg) | (1 &lt;&lt; 0); // Pin 0
 

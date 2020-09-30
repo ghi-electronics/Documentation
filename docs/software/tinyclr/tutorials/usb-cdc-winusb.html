@@ -80,58 +80,50 @@
 <h1 id="usb-cdc--winusb">USB CDC &amp; WinUSB</h1>
 
 <hr>
-<p>These protocols facilitate communication between your SITCore device and a PC. Note that the debug interface needs to be switched to serial (UART) to free up the USB Client port for PC communication. This is accomplished by pulling the MOD pin low during reset as detailed on the <a href="../../../hardware/sitcore/soc.html">SITCore System on Chip</a> page.</p>
+<p>These protocols facilitate communication between your SITCore device and a PC.</p>
+<div class="NOTE"><h5>Note</h5><p>The debug interface needs to be switched to serial (UART) to free up the USB Client port for PC communication. This is accomplished by pulling the MOD pin low during reset as detailed on the <a href="../../../hardware/sitcore/soc.html">SITCore System on Chip</a> page. It is beneficial to add a 1K pull down on MOD to keep the device in serial debug mode indefinitely.</p>
+</div>
 <h2 id="usb-cdc">USB CDC</h2>
 <p>The USB Communications Device Class (CDC) is natively supported by Windows and Linux. It is a way for a PC to use a USB port as a virtual serial port. Once loaded, the PC will use this port like any other serial port (COM port). Windows 10 works without the need for any drivers, but earlier operating systems may need a driver. While it works with most operating systems, CDC is typically limited to 64 KBytes/second.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Devices.UsbClient</p>
 </div>
-<pre><code class="lang-cs">static void DoTestCDC 
-{
-    var usbclient = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
+<pre><code class="lang-cs">static void DoTestCDC {
+        var usbclient = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
 
-    var usbClientSetting = new UsbClientSetting()
-            {
-                 Mode = UsbClientMode.WinUsb,
+        var usbClientSetting = new UsbClientSetting(){
+                Mode = UsbClientMode.WinUsb,
                 ManufactureName = &quot;Manufacture_Name&quot;,
                 ProductName = &quot;Product_Name&quot;,
-                 SerialNumber = &quot;12345678&quot;,
+                SerialNumber = &quot;12345678&quot;,
                 Guid = &quot;{your guid}&quot;,
-                 ProductId = 0x1234,
-                 VendorId = 0x5678,
-            };
+                ProductId = 0x1234,
+                VendorId = 0x5678,
+        };
 
-    usbclient.SetActiveSetting(usbClientSetting);
+        usbclient.SetActiveSetting(usbClientSetting);
+        usbclient.Enable();
+        usbclient.DeviceStateChanged += (a,b) =&gt; Debug.WriteLine(&quot;Connection changed.&quot;); 
+        usbclient.DataReceived += (a,count) =&gt; Debug.WriteLine(&quot;Data received:&quot; + count);
 
-    usbclient.Enable();
+        while (usbclient.DeviceState !=
+            GHIElectronics.TinyCLR.Devices.UsbClient.DeviceState.Configured);
+                Debug.WriteLine(&quot;UsbClient Connected&quot;);
 
-    usbclient.DeviceStateChanged += (a,b) =&gt; Debug.WriteLine(&quot;Connection changed.&quot;); 
-    usbclient.DataReceived += (a,count) =&gt; Debug.WriteLine(&quot;Data received:&quot; + count);
+// The example will read data from port to dataR array
+// Copy dataR to dataW array, plus 1 for each element
+// Write dataW array back to port
 
-    while (usbclient.DeviceState !=
-        GHIElectronics.TinyCLR.Devices.UsbClient.DeviceState.Configured) ;
+        while (true){
+            var len = usbclient.ByteToRead;
 
-    Debug.WriteLine(&quot;UsbClient Connected&quot;);
+                if (len &gt; 0){
+                    var dataR = new byte[len];
+                    var dataW = new byte[len];
+                    int read = usbclient.Read(dataR);
 
-    // The example will read data from port to dataR array
-    // Copy dataR to dataW array, plus 1 for each element
-    // Write dataW array back to port
-
-    while (true)
-    {
-        var len = usbclient.ByteToRead;
-
-        if (len &gt; 0)
-        {
-            var dataR = new byte[len];
-            var dataW = new byte[len];
-
-            int read = usbclient.Read(dataR);
-
-            for (var i = 0; i &lt; read; i++)
-            {
-                dataW[i] = (byte)(dataR[i] + 1);
-            }
-
+                for (var i = 0; i &lt; read; i++){
+                    dataW[i] = (byte)(dataR[i] + 1);
+                }
             usbclient.Write(dataW);
         }
         Thread.Sleep(100);
@@ -139,52 +131,43 @@
 }
 </code></pre><h2 id="winusb">WinUSB</h2>
 <p>The WinUSB drivers are unique to Windows and take advantage of the power and speed of USB to provide faster communication than CDC. The speed is limited by the data processing on the IoT device. Windows 10 loads the drivers automatically, Windows 7 requires drivers.</p>
-<pre><code class="lang-cs">static void DoTestWinUsb
-{
-    var usbclient = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
+<pre><code class="lang-cs">static void DoTestWinUsb {
+        var usbclient = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
 
-    var usbClientSetting = new UsbClientSetting()
-            {
-                 Mode = UsbClientMode.WinUsb,
+        var usbClientSetting = new UsbClientSetting(){
+                Mode = UsbClientMode.WinUsb,
                 ManufactureName = &quot;Manufacture_Name&quot;,
                 ProductName = &quot;Product_Name&quot;,
-                 SerialNumber = &quot;12345678&quot;,
+                SerialNumber = &quot;12345678&quot;,
                 Guid = &quot;{your guid}&quot;,
-                 ProductId = 0x1234,
-                 VendorId = 0x5678,
-            };
+                ProductId = 0x1234,
+                VendorId = 0x5678,
+        };
 
-    usbclient.SetActiveSetting(usbClientSetting);   
+        usbclient.SetActiveSetting(usbClientSetting);       
+        usbclient.Enable();
+        usbclient.DeviceStateChanged += (a,b) =&gt; Debug.WriteLine(&quot;Connection changed.&quot;); 
+        usbclient.DataReceived += (a,count) =&gt; Debug.WriteLine(&quot;Data received:&quot; + count);
 
-    usbclient.Enable();
+        while (usbclient.DeviceState !=
+            GHIElectronics.TinyCLR.Devices.UsbClient.DeviceState.Configured) ;
+                Debug.WriteLine(&quot;UsbClient Connected&quot;);
 
-    usbclient.DeviceStateChanged += (a,b) =&gt; Debug.WriteLine(&quot;Connection changed.&quot;); 
-    usbclient.DataReceived += (a,count) =&gt; Debug.WriteLine(&quot;Data received:&quot; + count);
+// The example will read data from port to dataR array
+// Copy dataR to dataW array, plus 1 for each element
+// Write dataW array back to port
 
-    while (usbclient.DeviceState !=
-        GHIElectronics.TinyCLR.Devices.UsbClient.DeviceState.Configured) ;
-
-    Debug.WriteLine(&quot;UsbClient Connected&quot;);
-
-    // The example will read data from port to dataR array
-    // Copy dataR to dataW array, plus 1 for each element
-    // Write dataW array back to port
-    while (true)
-    {
+        while (true){
         var len = usbclient.ByteToRead;
 
-        if (len &gt; 0)
-        {
+        if (len &gt; 0){
             var dataR = new byte[len];
             var dataW = new byte[len];
-
             int read = usbclient.Read(dataR);
 
-            for (var i = 0; i &lt; read; i++)
-            {
+            for (var i = 0; i &lt; read; i++){
                 dataW[i] = (byte)(dataR[i] + 1);
             }
-
             usbclient.Write(dataW);
         }
         Thread.Sleep(100);

@@ -20,10 +20,10 @@ In TinyCLR OS, SPI transfers are dynamically sent in batches that are internally
 ## SPI Clock Speed
 SITCore SPI ports do not use the same clock, so different SPI ports have different minimum and maximum clock speeds:
 
-SPI Controllers | 1, 2 & 3 | 4 & 5   
-----------------|----------|---------
-Minimum Speed   | 188 kHz  | 469 kHz
-Maximum Speed   | 24 MHz   | 60 MHz
+SPI Controllers | 1, 2 & 3 | 4 & 5   | 6
+----------------|----------|---------|----------
+Minimum Speed   | 188 kHz  | 469 kHz | 250K
+Maximum Speed   | 24 MHz   | 60 MHz  | 32MHz
 
 
 The `MinClockFrequency` and `MaxClockFrequency` fields can be used to verify the range of valid clock speeds for a given SPI port:
@@ -31,6 +31,21 @@ The `MinClockFrequency` and `MaxClockFrequency` fields can be used to verify the
 var controller = SpiController.FromName(SC20100.SpiBus.Spi3);
 Debug.WriteLine(controller.MinClockFrequency.ToString()); //Prints minimum SPI clock in Hertz.
 Debug.WriteLine(controller.MaxClockFrequency.ToString()); //Prints maximum SPI clock in Hertz.
+```
+## Most Significant Bit (MSB) and Least Significant Bit (LSB)
+SITCore supports switching between MSB and LSB.
+
+```
+var spiSettings = new SpiConnectionSettings()
+{               
+    DataFrameFormat = SpiDataFrame.MsbFirst // MSB
+};
+
+var spiSettings = new SpiConnectionSettings()
+{
+    DataFrameFormat = SpiDataFrame.LsbFirst // LSB
+};
+
 ```
 
 ## Sample Code

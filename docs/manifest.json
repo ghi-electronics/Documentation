@@ -2721,7 +2721,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/dev.html",
-          "hash": "scAtBDjUjymRvrJcpZPkbA=="
+          "hash": "j9mzqRBKeRTQIErmw1TjUA=="
         }
       },
       "is_incremental": false,
@@ -2751,6 +2751,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/SCM20260D.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/SCM20260D.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "hardware/sitcore/images/bad-camera.jpg",
       "output": {
         "resource": {
@@ -2773,10 +2784,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "hardware/sitcore/images/fez-bit.png",
+      "source_relative_path": "hardware/sitcore/images/fez_bit.jpg",
       "output": {
         "resource": {
-          "relative_path": "hardware/sitcore/images/fez-bit.png"
+          "relative_path": "hardware/sitcore/images/fez_bit.jpg"
         }
       },
       "is_incremental": false,
@@ -2784,10 +2795,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "hardware/sitcore/images/fez-duino.png",
+      "source_relative_path": "hardware/sitcore/images/fez_duino.jpg",
       "output": {
         "resource": {
-          "relative_path": "hardware/sitcore/images/fez-duino.png"
+          "relative_path": "hardware/sitcore/images/fez_duino.jpg"
         }
       },
       "is_incremental": false,
@@ -2795,10 +2806,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "hardware/sitcore/images/fez-feather.png",
+      "source_relative_path": "hardware/sitcore/images/fez_duino_diagram.gif",
       "output": {
         "resource": {
-          "relative_path": "hardware/sitcore/images/fez-feather.png"
+          "relative_path": "hardware/sitcore/images/fez_duino_diagram.gif"
         }
       },
       "is_incremental": false,
@@ -2806,10 +2817,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "hardware/sitcore/images/fez-portal.png",
+      "source_relative_path": "hardware/sitcore/images/fez_duino_pinout.gif",
       "output": {
         "resource": {
-          "relative_path": "hardware/sitcore/images/fez-portal.png"
+          "relative_path": "hardware/sitcore/images/fez_duino_pinout.gif"
         }
       },
       "is_incremental": false,
@@ -2817,10 +2828,32 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "hardware/sitcore/images/fez-stick.png",
+      "source_relative_path": "hardware/sitcore/images/fez_feather.jpg",
       "output": {
         "resource": {
-          "relative_path": "hardware/sitcore/images/fez-stick.png"
+          "relative_path": "hardware/sitcore/images/fez_feather.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/fez_portal.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/fez_portal.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/fez_stick.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/fez_stick.jpg"
         }
       },
       "is_incremental": false,
@@ -3383,7 +3416,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/sbc.html",
-          "hash": "VF8bubP6S3abHi2Xy/I8rg=="
+          "hash": "vFvwtqa+FWvZmNOllbr9uQ=="
         }
       },
       "is_incremental": false,
@@ -3878,7 +3911,7 @@
       "output": {
         ".html": {
           "relative_path": "software/netmf/downloads.html",
-          "hash": "5gSM/lTG6Z6MNl/BBSJnDw=="
+          "hash": "vNjF0xVjvIOvtFheu9MtXQ=="
         }
       },
       "is_incremental": false,
@@ -5370,7 +5403,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/displays.html",
-          "hash": "WUZ6r4Yai1SSioxUQ65Hzg=="
+          "hash": "cynpuwBFYIwS8Z9lM5ob0Q=="
         }
       },
       "is_incremental": false,
@@ -5406,7 +5439,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/external-memory.html",
-          "hash": "9Wkw2LUabX7GtrUt/O9Qjg=="
+          "hash": "n0BUnM4x4cYmRRgpNc71dg=="
         }
       },
       "is_incremental": false,
@@ -5418,19 +5451,22 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/file-system.html",
-          "hash": "IKkDrSY+MOF6RIVgD5ixnQ=="
+          "hash": "Cto63SkmdJvlMWCT5Atf9A=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/font-support.md",
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/font-support.html",
-          "hash": "zazOAedjTa8kWlJfFS7eTA=="
+          "hash": "FGrcslTZbisI/X3152uWtQ=="
         }
       },
       "is_incremental": false,
@@ -5959,7 +5995,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/marshal.html",
-          "hash": "m1XzkrfOLJgFFzfesr4xFA=="
+          "hash": "wW7Na0u17rYcDCVfwwC+OA=="
         }
       },
       "is_incremental": false,
@@ -6151,7 +6187,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/secure-storage.html",
-          "hash": "N8hDw71B8/iwb7cIRW8h/w=="
+          "hash": "XbmHgBI78HYlDHXscMvnMw=="
         }
       },
       "is_incremental": false,
@@ -6163,7 +6199,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/serialization.html",
-          "hash": "O9bBy9H7EweOXUBIVzbDOw=="
+          "hash": "LsVBIq+6MB1FsINqaFiBjQ=="
         }
       },
       "is_incremental": false,
@@ -6187,7 +6223,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/spi.html",
-          "hash": "arCKllWpppjJ0eXsCIk1rw=="
+          "hash": "JTOxyANqEI7+En2inguYGg=="
         }
       },
       "is_incremental": false,
@@ -6199,7 +6235,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/sqlite-database.html",
-          "hash": "u4xRHyFkVHbYyEVrLhWegA=="
+          "hash": "5zvO/bxXBG6m7aOOUlEu+Q=="
         }
       },
       "is_incremental": false,
@@ -6223,7 +6259,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/tls.html",
-          "hash": "iRCnzPgSvwMpfGWliyd3rA=="
+          "hash": "m68B4LHr6urEZKwCjUNLTA=="
         }
       },
       "is_incremental": false,
@@ -6235,7 +6271,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/touch-screen.html",
-          "hash": "iQ/9fJc1bsPagyq1kHLRaA=="
+          "hash": "OeGhxaZ6tRPQsaTTrkeLRQ=="
         }
       },
       "is_incremental": false,
@@ -6271,7 +6307,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/usb-cdc-winusb.html",
-          "hash": "CVozqTHhV4359coWRr3zjw=="
+          "hash": "1e447TCiMQsY7hShfv1Q+Q=="
         }
       },
       "is_incremental": false,
@@ -6295,7 +6331,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/user-interface.html",
-          "hash": "eMhWVgOhwk/DJzkUbU9IUQ=="
+          "hash": "sTr7tZRq99Bic4WYJTCcew=="
         }
       },
       "is_incremental": false,
@@ -6307,7 +6343,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/watchdog-timer.html",
-          "hash": "JvN3pAY3iY2GXSSJYx6+sA=="
+          "hash": "n7lqjGcCaDV36BdXrxsqJA=="
         }
       },
       "is_incremental": false,
@@ -6351,7 +6387,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 169,
-          "skipped_file_count": 168
+          "skipped_file_count": 152
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

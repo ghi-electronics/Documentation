@@ -84,9 +84,10 @@
 <div class="NOTE"><h5>Note</h5><p>Once Watchdog is enabled it can&#39;t be disabled without resetting the system or a power cycle.</p>
 </div>
 <pre><code class="lang-cs">// Set watchdog to 5 seconds and reset it every 4 seconds
+
 Watchdog.Enable(5000);
-While(true)
-{
+
+While(true){
               // reset the timer
               Watchdog.Reset()
               Thread.Sleep(4000);

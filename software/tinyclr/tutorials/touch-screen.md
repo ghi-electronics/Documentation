@@ -89,7 +89,7 @@ using GHIElectronics.TinyCLR.Drivers.FocalTech.FT5xx6;
 
 var touch = new FT5xx6Controller(
     i2cController.GetDevice(FT5xx6Controller.GetConnectionSettings()),
-    gpioController.OpenPin(UCMStandard.GpioPin.B));
+    gpioController.OpenPin(SC20260.GpioPin.PJ14));
 
 touch.Orientation = FT5xx6Controller.TouchOrientation.Degrees0; //Rotate touch coordinates.
 

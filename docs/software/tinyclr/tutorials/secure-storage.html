@@ -147,7 +147,7 @@ Debug.WriteLine(&quot;Configuration storage is good to go!!!&quot;);
 <p>There is no way to modify written data. Erasing the entire device <code>Erase All</code> in TinyCLR Config will not erase or modify this area.</p>
 <p>The API for OTP storage is the same as for the configuration storage area, except that instantiation takes a different argument and the <code>Erase</code> method is disabled.</p>
 <p>OTP secure storage is instantiated as follows:</p>
-<pre><code>var otpStorage = new SecureStorageController(SecureStorage.Otp);
+<pre><code class="lang-cs">var otpStorage = new SecureStorageController(SecureStorage.Otp);
 </code></pre></article>
           </div>
           

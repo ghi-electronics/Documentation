@@ -15,6 +15,8 @@ The lastest version of Visual Studio that works with NETMF is VS2013.  The Commu
 
 [Microsoft .NET Gadgeteer Core](http://gadgeteer.codeplex.com/downloads/get/1519812)
 
+Download the archived zip file. It contains everything you will need. If you need to find a specific library, you can look at realeaseList.json file found in the release folder. You’ll be able to see accurately the filenames you need for each file and its path under the releases directory.
+
 ## GHI Electronics Product NETMF SDKs
 > [!Tip] 
 >Release notes are found within the SDKs.

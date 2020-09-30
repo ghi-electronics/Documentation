@@ -98,6 +98,7 @@
 <th>SPI Controllers</th>
 <th>1, 2 &amp; 3</th>
 <th>4 &amp; 5</th>
+<th>6</th>
 </tr>
 </thead>
 <tbody>
@@ -105,11 +106,13 @@
 <td>Minimum Speed</td>
 <td>188 kHz</td>
 <td>469 kHz</td>
+<td>250K</td>
 </tr>
 <tr>
 <td>Maximum Speed</td>
 <td>24 MHz</td>
 <td>60 MHz</td>
+<td>32MHz</td>
 </tr>
 </tbody>
 </table>
@@ -117,6 +120,17 @@
 <pre><code class="lang-cs">var controller = SpiController.FromName(SC20100.SpiBus.Spi3);
 Debug.WriteLine(controller.MinClockFrequency.ToString()); //Prints minimum SPI clock in Hertz.
 Debug.WriteLine(controller.MaxClockFrequency.ToString()); //Prints maximum SPI clock in Hertz.
+</code></pre><h2 id="most-significant-bit-msb-and-least-significant-bit-lsb">Most Significant Bit (MSB) and Least Significant Bit (LSB)</h2>
+<p>SITCore supports switching between MSB and LSB.</p>
+<pre><code>var spiSettings = new SpiConnectionSettings()
+{               
+    DataFrameFormat = SpiDataFrame.MsbFirst // MSB
+};
+
+var spiSettings = new SpiConnectionSettings()
+{
+    DataFrameFormat = SpiDataFrame.LsbFirst // LSB
+};
 </code></pre><h2 id="sample-code">Sample Code</h2>
 <pre><code class="lang-cs">var cs = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
     OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PE4);

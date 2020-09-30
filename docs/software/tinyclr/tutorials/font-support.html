@@ -86,12 +86,6 @@ var font = Resource.GetFont(Resource.FontResources.NinaB);
 var greenPen = new Pen(Color.Green);
 screen.DrawString(&quot;Hello World!&quot;, font, greenPen.Brush, 10, 100);
 screen.Flush();
-</code></pre><h2 id="built-in-fonts">Built-in fonts</h2>
-<p>When using systems with managed SPI display drivers, the font support is handled though an internal built-in font. This is done to reduce memory requirements.</p>
-<pre><code class="lang-cs">var teal = new SolidBrush(Color.Teal);
-var font = new Font(&quot;GHIMono8x5&quot;, 8);
-screen.DrawString(&quot;Hello World!&quot;, font, teal, 40, 10);
-screen.Flush();
 </code></pre><h2 id="font-conversion">Font Conversion</h2>
 <p>To convert a font you must first make a .fntdef file which is a text file describing the font to convert as well as a number of other parameters. This file contains one option on each line. A minimal .fntdef file may look like this to have the standard ASCII characters.</p>
 <pre><code class="lang-cs">SelectFont &quot;FN:Arial,WE:400,HE:12,IT:0&quot;

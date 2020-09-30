@@ -106,7 +106,7 @@ using GHIElectronics.TinyCLR.Pins;
 
 public sealed class QspiMemory : StorageDriver {
     public override int Capacity => 0x1000000;
-    public override int PageSize => 0x400;
+    public override int PageSize => 0x100;
     public override int SectorSize => 0x1000;
     public override int BlockSize => 0x10000;
     private StorageController qspiController;

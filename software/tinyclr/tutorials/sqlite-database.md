@@ -57,8 +57,6 @@ namespace TinyCLRDocTesting
         }
     }
 }
-
-
 ``` 
 
 ## More Info
