@@ -85,7 +85,7 @@
 <p>Binary Serialization is a native, fast and lean way to serialize objects. To keep serialization fast and efficient on embedded devices, TinyCLR&#39;s serialization is not compatible with binary serialization on desktop PCs. However, an implementation on the PC can be used to process the serialized binary data if necessary.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core and System.Reflection.</p>
 </div>
-<pre><code>class Program {
+<pre><code class="lang-cs">class Program {
     public enum MyEnum : short { A, B, C };
 
     private static void Main() {

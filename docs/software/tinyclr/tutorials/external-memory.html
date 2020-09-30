@@ -85,10 +85,10 @@
 <p>Devices with external RAM have the option of utilizing this memory as <a href="unmanaged-heap.html">Unmanaged Heap</a>. Unmanaged heap is great for storing large amounts of data, but it is not considered secure. Bitmaps and large buffers are automatically stored in unmanaged heap.</p>
 <p>Developers also have the option of extending core managed heap into unsecure external memory, in which case there is no longer any unmanaged heap space. This feature is a trade off between security and convenience -- it provides a large amount of managed heap space, but data is stored outside of the microcontroller chip where it&#39;s less secure. Please see the <a href="ip-protection.html">IP Protection</a> page for more information.</p>
 <p><a href="../tinyclr-config.html">TinyCLR Config</a> can be used to extend the heap into external SDRAM, as well as the following method:</p>
-<pre><code>GHIElectronics.TinyCLR.Native.Memory.ExtendHeap()
+<pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.Memory.ExtendHeap()
 </code></pre><h2 id="external-flash">External Flash</h2>
 <p>Devices with external flash have the option of using up to 8 MBytes of this memory for deployment. This is done by using <a href="../tinyclr-config.html">TinyCLR Config</a> to enable external flash, or by using the following method:</p>
-<pre><code>GHIElectronics.TinyCLR.Native.Flash.EnableExternalFlash()
+<pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.Flash.EnableExternalFlash()
 </code></pre><p>On SITCore devices that include external flash, there is another 8 MBytes we are reserving for future use.</p>
 <p>As external memory chips can possibly be probed, enabling external flash has important security implications. See the <a href="ip-protection.html">IP Protection</a> page for more information.</p>
 </article>
