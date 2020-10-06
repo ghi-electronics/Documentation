@@ -96,7 +96,7 @@ var password = "SharedAccessSignature sr=GHI-test &sig=AQiUrZZyIBym2WQMpio0I2qkd
 >Values used above are for reference only and will not work in your code, you must create and generate your own connection string and SAS
 >
 
-Now we can send and recieve data to our IoT device from the Azure IoT Explorer and see the results in the output window of Visual Studio and Azure IoT Explorer. To recieve data from your IoT device, add a message to send in this line of the code.
+Now we can send and receive data to our IoT device from the Azure IoT Explorer and see the results in the output window of Visual Studio and Azure IoT Explorer. To receive data from your IoT device, add a message to send in this line of the code.
 
 ```cs
 client.Publish(topicDeviceToServer, Encoding.UTF8.GetBytes
