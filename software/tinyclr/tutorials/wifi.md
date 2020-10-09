@@ -81,7 +81,7 @@ static void Wifi_Example() {
 
     networkController.Enable();
 
-    // Network is ready to used
+    // Network is ready to use
     Thread.Sleep(Timeout.Infinite);
 }
 

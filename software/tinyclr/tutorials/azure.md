@@ -1,7 +1,7 @@
 # Microsoft Azure
 ---
+This example shows how to communicate with Azure IoT Hub using MQTT. You'll also need to set up a Nework Interface connection on the device such as [WiFi](wifi.md) to Connect to Azure in your program.
 
-The example below shows how to use MQTT to communicate with the Azure IoT Hub.
 
 >[!TIP]
 >Needed Nugets: GHIElectronics.TinyCLR.Networking.Mqtt
