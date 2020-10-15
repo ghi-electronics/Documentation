@@ -230,7 +230,7 @@ var jwt = "Paste your JWT here";
 >[!NOTE]
 >The google cloud connection accepts a maximum expire time of 24 hours, meaning the timespan between `iat` and `exp` must be less than 24 hours.
 
-To recieve a message from Google Cloud click on the 'SEND COMMAND' under the Gateway dashboard.
+To receive a message from Google Cloud click on the 'SEND COMMAND' under the Gateway dashboard.
 
 ![GCloud Message in VS](images/gcloud-send-command.jpg)
 
@@ -238,7 +238,7 @@ Enter your message and click 'SEND'
 
 ![GCloud Create Message](images/gcloud-create-message.jpg)
 
-The device will recieve your message and display it in the Ouput window of Visual Studio. 
+The device will receive your message and display it in the Output window of Visual Studio. 
 
 ![GCloud Message in VS](images/gcloud-message-vs.jpg)
 
@@ -254,7 +254,7 @@ Next, click on 'CREATE SUBSCRIPTION'
 
 ![GCloud Create Subscription](images/gcloud-create-subscription.jpg)
 
-Create a name for in the 'Subscription ID' box, and select topic we created earlier. There may be additional setting on this dashboard you can use, but for this tutorial we only need to set these two items. Click the 'CREATE' button at the bottom. 
+Create a name for in the 'Subscription ID' box and select topic we created earlier. There may be additional setting on this dashboard you can use, but for this tutorial we only need to set these two items. Click the 'CREATE' button at the bottom. 
 
 ![GCloud Name Subscription](images/gcloud-name-subscription.jpg)
 
