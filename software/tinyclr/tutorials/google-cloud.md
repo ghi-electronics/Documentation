@@ -59,8 +59,18 @@ string topic = $"/devices/{deviceId}/events";
 var returnCode = iotClient.Connect(connectSetting);
 
 if (returnCode == ConnectReturnCode.ConnectionAccepted) {
+
     Gcp_SetupMqttTopics(iotClient, gatewayId);
     Gcp_AttachDevice(iotClient, deviceId, "{}");
+
+    while (true) {
+        iotClient.Publish(topic
+                , UTF8Encoding.UTF8.GetBytes("" + message + cnt)
+                , QoSLevel.LeastOnce
+                , false, 1);
+        cnt++;
+        Thread.Sleep(5000);
+    }
 }
 
 Thread.Sleep(-1);
@@ -232,6 +242,22 @@ The device will recieve your message and display it in the Ouput window of Visua
 
 ![GCloud Message in VS](images/gcloud-message-vs.jpg)
 
+To view the messages being sent from the device to the cloud we need to add a subscription to 'MyTopic'. To do this we need to go to the Registry dashboard and click on the topic we created called 'MyTopic' 
 
+![GCloud Send Message to Cloud](images/gcloud-select-topic.jpg)
 
+Once on the 'Pub/Sub' dashboard, select 'Subscriptions' from the side menu.
 
+![GCloud Select Subscriptions](images/gcloud-select-subscription.jpg)
+
+Next, click on 'CREATE SUBSCRIPTION'
+
+![GCloud Create Subscription](images/gcloud-create-subscription.jpg)
+
+Create a name for in the 'Subscription ID' box, and select topic we created earlier. There may be additional setting on this dashboard you can use, but for this tutorial we only need to set these two items. Click the 'CREATE' button at the bottom. 
+
+![GCloud Name Subscription](images/gcloud-name-subscription.jpg)
+
+Deploy the program to your device. Once connected, inside the 'Subscription details' dashboard, click on 'VIEW MESSAGES', inside the 'Messages' Pop-up click on the 'PULL' button. This will display the latest messages being sent from the device. The tutorial program sends a new message every 5 seconds and then increments the count by one. We can also continue to send messages to the device from the 'Gateway' dashboard as we did earlier. 
+
+ ![GCloud View Messages](images/gcloud-view-messages.jpg)
