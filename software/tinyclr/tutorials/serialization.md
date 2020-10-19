@@ -67,28 +67,20 @@ TinyCLR OS includes a built in JSON library.
 > Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Data.Json.
 
 ```cs
-class Program {
-    private static void Main() {
-        var intArray = new int[] { 1, 3, 5, 7, 9 };
+var intArray = new int[] { 1, 3, 5, 7, 9 };
+var result = GHIElectronics.TinyCLR.Data.Json.JsonConverter.Serialize(intArray);
+var bson = result.ToBson();
 
-        var result = GHIElectronics.TinyCLR.Data.Json.JsonConverter.Serialize(intArray);
+var compare = (System.Array).Json.JsonConverter.
+    FromBson(bson, typeof(int[]));
 
-        var bson = result.ToBson();
-
-        var compare = (System.Array)GHIElectronics.TinyCLR.Data.Json.JsonConverter.
-            FromBson(bson, typeof(int[]));
-
-        for (var i = 0; i < intArray.Length; i++) {
-            if (intArray[i] != (int)compare.GetValue(i)) {
-                System.Diagnostics.Debug.WriteLine("Array test failed");
-
-                break;
-            }
-        }
-
-        System.Diagnostics.Debug.WriteLine("Array test succeeded");
+for (var i = 0; i < intArray.Length; i++) {
+    if (intArray[i] != (int)compare.GetValue(i)) {
+        Debug.WriteLine("Array test failed");
+        break;
     }
 }
+Debug.WriteLine("Array test succeeded");
 ```
 
 ## XML
