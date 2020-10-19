@@ -1,6 +1,6 @@
 # Secure Storage
 ---
-There are two secure storage areas you may find useful: the configuration storage area and the one time programmable storage area.
+There are two secure storage areas you may find useful: the configuration storage area and the one-time programmable storage area.
 
 ## Configuration Storage
 This 128 KByte secure storage area is organized as 4096 blocks of 32 bytes each. Configuration storage can be erased and modified. Performing an `erase all` in TinyCLR Config will wipe out this area. As this area is comprised of a single sector of flash memory, only the whole storage area can be erased. Partial erases are not possible.
