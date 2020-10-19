@@ -89,7 +89,7 @@ private static void Main() {
     button.ValueChanged += Button_ValueChanged;
 
     //Do other tasks here ...
-    Thread.Sleep(-1);
+    Thread.Sleep(Timeout.Infinite);
 }
 
 private static void Button_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e) {
