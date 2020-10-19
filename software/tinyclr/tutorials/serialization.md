@@ -9,46 +9,44 @@ Binary Serialization is a native, fast and lean way to serialize objects. To kee
 > Needed NuGets: GHIElectronics.TinyCLR.Core and System.Reflection.
 
 ```cs
-class Program {
-    public enum MyEnum : short { A, B, C };
+public enum MyEnum : short { A, B, C };
 
-    private static void Main() {
-        MySerializableClass original = new MySerializableClass(1, "ABCD", 3, MyEnum.B, 0.1f);
+private static void Main() {
+    MySerializableClass original = new MySerializableClass(1, "ABCD", 3, MyEnum.B, 0.1f);
 
-        System.Diagnostics.Debug.WriteLine("original: " + original.ToString());
+    Debug.WriteLine("original: " + original.ToString());
 
-        byte[] buffer = System.Reflection.Reflection.Serialize(original,
-            typeof(MySerializableClass));
+    byte[] buffer = Reflection.Serialize(original,
+        typeof(MySerializableClass));
 
-        MySerializableClass restored = (MySerializableClass)System.Reflection.Reflection.
-            Deserialize(buffer, typeof(MySerializableClass));
+    MySerializableClass restored = (MySerializableClass)Reflection.
+        Deserialize(buffer, typeof(MySerializableClass));
 
-        System.Diagnostics.Debug.WriteLine("restored: " + restored.ToString());
-        System.Diagnostics.Debug.WriteLine("Number of bytes: " + buffer.Length.ToString());
+    Debug.WriteLine("restored: " + restored.ToString());
+    Debug.WriteLine("Number of bytes: " + buffer.Length.ToString());
+}
+
+[System.Serializable]
+public class MySerializableClass {
+    public int a;
+    public string b;
+    private byte c;
+    private MyEnum d;
+    private float e;
+    private System.DateTime dt;
+
+    public MySerializableClass(int a, string b, byte c, MyEnum d, float e) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
+        this.e = e;
+        this.dt = this.dt = new System.DateTime(2007, 1, 22);
     }
 
-    [System.Serializable]
-    public class MySerializableClass {
-        public int a;
-        public string b;
-        private byte c;
-        private MyEnum d;
-        private float e;
-        private System.DateTime dt;
-
-        public MySerializableClass(int a, string b, byte c, MyEnum d, float e) {
-            this.a = a;
-            this.b = b;
-            this.c = c;
-            this.d = d;
-            this.e = e;
-            this.dt = this.dt = new System.DateTime(2007, 1, 22);
-        }
-
-        public override string ToString() {
-            return "a=" + a.ToString() + ", b=" + b + ", c=" + c.ToString() + ", d=" +
-                ((object)d).ToString() + ", e=" + e.ToString("F2");
-        }
+    public override string ToString() {
+        return "a=" + a.ToString() + ", b=" + b + ", c=" + c.ToString() + ", d=" +
+            ((object)d).ToString() + ", e=" + e.ToString("F2");
     }
 }
 ```
@@ -68,7 +66,7 @@ TinyCLR OS includes a built in JSON library.
 
 ```cs
 var intArray = new int[] { 1, 3, 5, 7, 9 };
-var result = GHIElectronics.TinyCLR.Data.Json.JsonConverter.Serialize(intArray);
+var result = JsonConverter.Serialize(intArray);
 var bson = result.ToBson();
 
 var compare = (System.Array).Json.JsonConverter.
@@ -123,7 +121,7 @@ writer.Close();
 
 //Display the XML data.
 byte[] byteArray = stream.ToArray();
-char[] characterArray = System.Text.UTF8Encoding.UTF8.GetChars(byteArray);
+char[] characterArray = UTF8Encoding.UTF8.GetChars(byteArray);
 Debug.WriteLine(new string(characterArray) + "\r\n\r\n");
 stream.Dispose();
 
