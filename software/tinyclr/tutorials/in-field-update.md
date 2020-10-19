@@ -40,16 +40,14 @@ class Program {
         InFieldUpdate updater;
         byte[] fwBuf, appBuf;
 
-        if (Memory.UnmanagedMemory.FreeBytes > 0)
-        {
+        if (Memory.UnmanagedMemory.FreeBytes > 0) {
             var fwBuffer = new UnmanagedBuffer((int)fsFw.Length);              
             var appBuffer = new UnmanagedBuffer((int)fsApp.Length);
                
             appBuf = appBuffer.Bytes;
             fwBuf = fwBuffer.Bytes;
         }
-        else
-        {
+        else {
             fwBuf = new byte[(int)fsFw.Length];
             appBuf = new byte[((int)fsApp.Length)];
         }
@@ -123,7 +121,6 @@ class Program {
         updater.FlashAndReset();
     }
 }
-
 ```
 
 ## Firmware and Application Must Match
