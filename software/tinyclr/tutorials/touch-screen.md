@@ -15,60 +15,58 @@ Unless you have specific reason to use resistive touch, capacitive touch is pref
 This is a simple example showing how to read a resistive display. A better approach would be to use a resistive touch controller chip that works over SPI or I2C.
 
 ```cs
-private void TouchReader() {
-    var adc = AdcController.GetDefault();
-    var gpio = GpioController.GetDefault();
-    int x, y;
+var adc = AdcController.GetDefault();
+var gpio = GpioController.GetDefault();
+int x, y;
 
-    while (this.active) {
-        // Read X
-        {
-            var XR = gpio.OpenPin(this.PinXR);
-            XR.SetDriveMode(GpioPinDriveMode.Output);
-            XR.Write(GpioPinValue.High);
-            var XL = gpio.OpenPin(this.PinXL);
-            XL.SetDriveMode(GpioPinDriveMode.Output);
-            XL.Write(GpioPinValue.Low);
+while (this.active) {
+    // Read X
+    {
+        var XR = gpio.OpenPin(this.PinXR);
+        XR.SetDriveMode(GpioPinDriveMode.Output);
+        XR.Write(GpioPinValue.High);
+        var XL = gpio.OpenPin(this.PinXL);
+        XL.SetDriveMode(GpioPinDriveMode.Output);
+        XL.Write(GpioPinValue.Low);
 
-            var YD = gpio.OpenPin(this.PinYD);
-            YD.SetDriveMode(GpioPinDriveMode.Input);
-            var YU = adc.OpenChannel(this.ChannelYUA);
+        var YD = gpio.OpenPin(this.PinYD);
+        YD.SetDriveMode(GpioPinDriveMode.Input);
+        var YU = adc.OpenChannel(this.ChannelYUA);
 
-            x = (int)(YU.ReadRatio()*1000);
-            XR.Dispose();
-            XL.Dispose();
-            YU.Dispose();
-            YD.Dispose();
-        }
-
-        // Read Y
-        {
-            var YD = gpio.OpenPin(this.PinYD);
-            YD.SetDriveMode(GpioPinDriveMode.Output);
-            YD.Write(GpioPinValue.High);
-            var YU = gpio.OpenPin(this.PinYU);
-            YU.SetDriveMode(GpioPinDriveMode.Output);
-            YU.Write(GpioPinValue.Low);
-
-            var XR = gpio.OpenPin(this.PinXR);
-            XR.SetDriveMode(GpioPinDriveMode.Input);
-            var XL = adc.OpenChannel(this.ChannelXLA);
-
-            y = (int)(XL.ReadRatio()*1000);
-            XR.Dispose();
-            XL.Dispose();
-            YU.Dispose();
-            YD.Dispose();
-        }
-
-        if (x > 50 && y > 50) {
-            var sx = this.Scale(x, 50, 830, 0, 320);
-            var sy = this.Scale(y, 150, 830, 0, 240);
-            this.TouchMove?.Invoke(this, new TouchEventArgs(sx, sy));
-        }
-
-        Thread.Sleep(20);
+        x = (int)(YU.ReadRatio()*1000);
+        XR.Dispose();
+        XL.Dispose();
+        YU.Dispose();
+        YD.Dispose();
     }
+
+    // Read Y
+    {
+        var YD = gpio.OpenPin(this.PinYD);
+        YD.SetDriveMode(GpioPinDriveMode.Output);
+        YD.Write(GpioPinValue.High);
+        var YU = gpio.OpenPin(this.PinYU);
+        YU.SetDriveMode(GpioPinDriveMode.Output);
+        YU.Write(GpioPinValue.Low);
+
+        var XR = gpio.OpenPin(this.PinXR);
+        XR.SetDriveMode(GpioPinDriveMode.Input);
+        var XL = adc.OpenChannel(this.ChannelXLA);
+
+        y = (int)(XL.ReadRatio()*1000);
+        XR.Dispose();
+        XL.Dispose();
+        YU.Dispose();
+        YD.Dispose();
+    }
+
+    if (x > 50 && y > 50) {
+        var sx = this.Scale(x, 50, 830, 0, 320);
+        var sy = this.Scale(y, 150, 830, 0, 240);
+        this.TouchMove?.Invoke(this, new TouchEventArgs(sx, sy));
+    }
+
+    Thread.Sleep(20);
 }
 ```
 
