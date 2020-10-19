@@ -9,29 +9,26 @@ The following code sample runs on the SC20100S Dev Board and plays an MJPEG vide
 
 ```cs
 class Program {
-    private static GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735.ST7735Controller st7735;
+    private static ST7735.ST7735Controller st7735;
     private const int SCREEN_WIDTH = 128;
     private const int SCREEN_HEIGHT = 160;
     private static System.Drawing.Graphics graphic;
 
     private static void Main() {
-        var spi = GHIElectronics.TinyCLR.Devices.Spi.SpiController.FromName
-            (GHIElectronics.TinyCLR.Pins.SC20100.SpiBus.Spi3);
+        var spi = SpiController.FromName(SC20100.SpiBus.Spi3);
 
-        var gpio = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault();
+        var gpio = GpioController.GetDefault();
 
-        st7735 = new GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735.ST7735Controller(
-            spi.GetDevice(GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735.ST7735Controller.
-            GetConnectionSettings(GHIElectronics.TinyCLR.Devices.Spi.SpiChipSelectType.Gpio,
-            GHIElectronics.TinyCLR.Pins.SC20100.GpioPin.PD10)), //CS pin.
+        st7735 = new ST7735.ST7735Controller(spi.GetDevice(ST7735.ST7735Controller.
+            GetConnectionSettings(SpiChipSelectType.Gpio,SC20100.GpioPin.PD10)), //CS pin.
 
-            gpio.OpenPin(GHIElectronics.TinyCLR.Pins.SC20100.GpioPin.PC4), //RS pin.
-            gpio.OpenPin(GHIElectronics.TinyCLR.Pins.SC20100.GpioPin.PE15) //RESET pin.
+            gpio.OpenPin(SC20100.GpioPin.PC4), //RS pin.
+            gpio.OpenPin(SC20100.GpioPin.PE15) //RESET pin.
         );
 
-        var backlight = gpio.OpenPin(GHIElectronics.TinyCLR.Pins.SC20100.GpioPin.PE5);
-        backlight.SetDriveMode(GHIElectronics.TinyCLR.Devices.Gpio.GpioPinDriveMode.Output);
-        backlight.Write(GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.High);
+        var backlight = gpio.OpenPin(SC20100.GpioPin.PE5);
+        backlight.SetDriveMode(GpioPinDriveMode.Output);
+        backlight.Write(GpioPinValue.High);
 
         st7735.SetDataAccessControl(false, false, false, false);
         st7735.SetDrawWindow(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -42,35 +39,34 @@ class Program {
         st7735.Enable();
 
         //Create flush event
-        System.Drawing.Graphics.OnFlushEvent += Graphics_OnFlushEvent;
+        Graphics.OnFlushEvent += Graphics_OnFlushEvent;
 
         //Create bitmap buffer
-        graphic = System.Drawing.Graphics.FromImage(new System.Drawing.Bitmap
+        graphic = Graphics.FromImage(new Bitmap
             (SCREEN_WIDTH, SCREEN_HEIGHT));
 
-        var media = GHIElectronics.TinyCLR.Devices.Storage.StorageController.FromName
-            (GHIElectronics.TinyCLR.Pins.SC20100.StorageController.UsbHostMassStorage);
+        var media = StorageController.FromName
+            (SC20100.StorageController.UsbHostMassStorage);
 
-        var drive = GHIElectronics.TinyCLR.IO.FileSystem.Mount(media.Hdc);
+        var drive = FileSystem.Mount(media.Hdc);
 
-        var stream = new System.IO.FileStream($@"A:\128x160.mjpeg", System.IO.FileMode.Open);
+        var stream = new FileStream($@"A:\128x160.mjpeg", FileMode.Open);
 
-        var settings = new GHIElectronics.TinyCLR.Drivers.Media.Mjpeg.Setting();
+        var settings = new Mjpeg.Setting();
         settings.BufferSize = 16 * 1024;
         settings.BufferCount = 3;
 
-        var mjpegDecoder = new GHIElectronics.TinyCLR.Drivers.Media.Mjpeg(settings);
+        var mjpegDecoder = new Mjpeg(settings);
 
         mjpegDecoder.FrameDecodedEvent += MjpegDecoder_FrameDecodedEvent;
 
         mjpegDecoder.StartDecode(stream); // Non-block function
 
-        System.Threading.Thread.Sleep(-1);
+        Thread.Sleep(Timeout.Infinite);
     }
 
     private static void MjpegDecoder_FrameDecodedEvent(byte[] data) {
-        using (var image = new System.Drawing.Bitmap(data, 0, data.Length,
-            System.Drawing.BitmapImageType.Jpeg)) {
+        using (var image = new Bitmap(data, 0, data.Length,BitmapImageType.Jpeg)) {
 
             if (graphic != null) {
                 graphic.DrawImage(image, 0, 0, image.Width, image.Height);
@@ -78,7 +74,7 @@ class Program {
             }
         }
 
-        System.GC.WaitForPendingFinalizers();
+        GC.WaitForPendingFinalizers();
     }
 
     private static void Graphics_OnFlushEvent(System.IntPtr hdc, byte[] data) {
