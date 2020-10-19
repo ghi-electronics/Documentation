@@ -8,36 +8,32 @@ The sample code below loads and executes a small assembly from a USB flash drive
 > Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Storage, GHIElectronics.TinyCLR.IO, GHIElectronics.TinyCLR.Native, and GHIElectronics.TinyCLR.Pins.
 
 
-`Program.cs` class:
+
 
 ```cs
-class Program {
-    static void Main() {
-        var storageController = GHIElectronics.TinyCLR.Devices.Storage.StorageController.
-            FromName(GHIElectronics.TinyCLR.Pins.SC20260.StorageController.
-            UsbHostMassStorage);
+var storageController = StorageController.
+    FromName(SC20260.StorageController.
+    UsbHostMassStorage);
 
-        var drive = GHIElectronics.TinyCLR.IO.FileSystem.Mount(storageController.Hdc);
+var drive = FileSystem.Mount(storageController.Hdc);
 
-        var filename = drive.Name + "\\TestAppDomain.pe";
+var filename = drive.Name + "\\TestAppDomain.pe";
 
-        System.IO.FileStream fsRead = new System.IO.FileStream(filename,
-            System.IO.FileMode.Open);
+FileStream fsRead = new FileStream(filename,
+    System.IO.FileMode.Open);
 
-        var assemblyInBytes = new byte[fsRead.Length];
+var assemblyInBytes = new byte[fsRead.Length];
 
-        fsRead.Read(assemblyInBytes, 0, assemblyInBytes.Length);
+fsRead.Read(assemblyInBytes, 0, assemblyInBytes.Length);
 
-        var assembly = System.Reflection.Assembly.Load(assemblyInBytes);
-        var obj = System.AppDomain.CurrentDomain.CreateInstanceAndUnwrap("TestAppDomain",
-            "TestAppDomain.TestAssembly");
+var assembly = Assembly.Load(assemblyInBytes);
+var obj = AppDomain.CurrentDomain.CreateInstanceAndUnwrap("TestAppDomain",
+    "TestAppDomain.TestAssembly");
 
-        var type = assembly.GetType("TestAppDomain.TestAssembly");
+var type = assembly.GetType("TestAppDomain.TestAssembly");
 
-        System.Reflection.MethodInfo mi = type.GetMethod("PrintMessage");
-        mi.Invoke(obj, null);
-    }
-}
+MethodInfo mi = type.GetMethod("PrintMessage");
+mi.Invoke(obj, null);
 ```
 
 `TestAppDomainAssembly.cs` class:
@@ -58,7 +54,7 @@ In the `TestAppDomain` properties window (right click on `TestAppDomain` in Solu
 
 ![Native stubs check boxes](images/native-stubs-check-boxes.png)
 
-Now build the project. Inside of the project's directory navigate to the `TestAppDomain/bin/Debug/pe` directory and copy the file `TestAppDomain.pe` to a USB flash drive. Now insert the flash drive into your SITCore board and deploy the program. The main program will load and run `TestAppDomain.pe` from the USB flash drive. If everthing worked, you should see the following in your output window:
+Now build the project. Inside of the project's directory navigate to the `TestAppDomain/bin/Debug/pe` directory and copy the file `TestAppDomain.pe` to a USB flash drive. Now insert the flash drive into your SITCore board and deploy the program. The main program will load and run `TestAppDomain.pe` from the USB flash drive. If everything worked, you should see the following in your output window:
 
 ```text
 'GHIElectronics.TinyCLR.VisualStudio.ProjectSystem.dll' (Managed): Loaded 'TestAppDomain'
