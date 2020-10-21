@@ -8,11 +8,9 @@ The following sample is written for the SC20100S Dev Board and uses Uart5 for co
 >Needed NuGets: GHIElectronics.TinyCLR.Devices.Uart, GHIElectronics.TinyCLR.Pins, GHIElectronics.TinyCLR.Devices.Modbus
 
 ```cs
-var serial = GHIElectronics.TinyCLR.Devices.Uart.UartController.FromName
-    (GHIElectronics.TinyCLR.Pins.SC20100.UartPort.Uart5);
+var serial = UartController.FromName(SC20100.UartPort.Uart5);
 
-var uartSetting = new UartSetting()
-    {
+var uartSetting = new UartSetting(){
         BaudRate = 19200,
         DataBits = 8,
         Parity = UartParity.None,
@@ -24,16 +22,16 @@ serial.SetActiveSettings(uartSetting);
 
 serial.Enable();
 
-GHIElectronics.TinyCLR.Devices.Modbus.Interface.IModbusInterface mbInterface;
-mbInterface = new GHIElectronics.TinyCLR.Devices.Modbus.Interface.ModbusRtuInterface(
+IModbusInterface mbInterface;
+mbInterface = ModbusRtuInterface(
     serial,
     19200,
     8,
-    GHIElectronics.TinyCLR.Devices.Uart.UartStopBitCount.One,
-    GHIElectronics.TinyCLR.Devices.Uart.UartParity.None);
+    UartStopBitCount.One,
+    UartParity.None);
 
-GHIElectronics.TinyCLR.Devices.Modbus.ModbusMaster mbMaster;
-mbMaster = new GHIElectronics.TinyCLR.Devices.Modbus.ModbusMaster(mbInterface);
+ModbusMaster mbMaster;
+mbMaster = new ModbusMaster(mbInterface);
 
 var mbTimeout = false;
 
@@ -51,14 +49,14 @@ while (true) {
             break;
     }
     catch (System.Exception error) {
-        System.Diagnostics.Debug.WriteLine("Modbus Timeout");
+        Debug.WriteLine("Modbus Timeout");
         mbTimeout = true;
     }
 
     if (!mbTimeout) {
-        System.Diagnostics.Debug.WriteLine("Modbus : " + (object)reply[0].ToString());
+        Debug.WriteLine("Modbus : " + (object)reply[0].ToString());
     }
 
-    System.Threading.Thread.Sleep(1000);
+    Thread.Sleep(1000);
 }
 ```

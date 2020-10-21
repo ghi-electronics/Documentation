@@ -88,7 +88,7 @@ namespace GraphicsSample {
 
             screen.Flush();
 
-            Thread.Sleep(-1);
+            Thread.Sleep(Timeout.Infinite);
         }
     }
 }
@@ -202,7 +202,7 @@ namespace GraphicsSample {
             screen.DrawString("Hello world!", font, new SolidBrush(Color.Blue), 50, 110);
 
             screen.Flush();
-            Thread.Sleep(-1);
+            Thread.Sleep(Timeout.Infinite);
         }
 
         private static void Graphics_OnFlushEvent(IntPtr hdc, byte[] data) {

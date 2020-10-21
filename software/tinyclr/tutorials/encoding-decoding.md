@@ -152,7 +152,7 @@ for (int i=48; i<58; i++) {
     sb.Append((char)i);
 }
 
-System.Diagnostics.Debug.WriteLine(sb.ToString()); //Will output "0123456789"
+Debug.WriteLine(sb.ToString()); //Will output "0123456789"
 ```
 
 

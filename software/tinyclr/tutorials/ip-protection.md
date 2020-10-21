@@ -10,7 +10,7 @@ Secure assemblies are assemblies that are deployed only to flash memory internal
 
 However, if external flash is enabled, assemblies will be deployed to external flash when the amount of internal flash is running low. In such cases, we have provided a way to protect your most sensitive code. By tagging an assembly as secure, you can ensure that it will never be deployed to external flash. If there is not enough internal flash to hold all of the secure assemblies, an out of memory exception will be raised.
 
-To tag an assembly as secure, you will have to edit the `AssemblyInfo.cs` file in the `Properties` folder within your project's folder. Change the line `[assembly: AssemblyConfiguration("")]` to `[assembly: AssemblyConfiguration("secure")]` (the word "secure" is case insensitive). If this is not done, by default the assembly will not be secure. Note that this only matters when external flash is enabled and the size of the assemblies is larger than the internal flash capacity.
+To tag an assembly as secure, you will have to edit the `AssemblyInfo.cs` file in the `Properties` folder within your project's folder. Change the line `[assembly: AssemblyConfiguration("")]` to `[assembly: AssemblyConfiguration("secure")]` (the word "secure" is case insensitive). If this is not done, by default the assembly will not be secure. Note that this only matters when external flash is enabled, and the size of the assemblies is larger than the internal flash capacity.
 
 During deployment Visual Studio will display an allocation table showing both the secure and unsecure assemblies and their address, so it is easy to check the security status of your assemblies. This is found in the `TinyCLR Device Deployment` Visual Studio output window.
 
@@ -21,7 +21,7 @@ As USB and serial ports are used for application deployment and debugging, these
 GHIElectronics.TinyCLR.Update.Application.Lock()
 ```
 
-As this instruction is stored internally in non-volatile flash, it is persistent and the chip can only be unlocked by completely erasing the device through the bootloader. This also erases your application, so locking the chip provides a great deal of security for your application.
+As this instruction is stored internally in non-volatile flash, it is persistent, and the chip can only be unlocked by completely erasing the device through the bootloader. This also erases your application, so locking the chip provides a great deal of security for your application.
 
 You can also check what interface is active, or if it is disabled:
 
@@ -44,4 +44,4 @@ SITCore devices provide security for your sensitive data by using RAM that is in
 ### Extending Heap
 While extending the heap into external SDRAM provides more RAM for your application, it also reduces security as it is possible for bad actors to probe the memory interface and reconstruct your data.
 
-If you are storing sensitive data in RAM, extending heap memory will reduce security. To keep data secure it is best not to extend the heap. If you need more RAM and must extend the heap, encrypt or obfuscate sensitive data before storing it in RAM if possible. The other option is to include a physical barrier to the circuit, such as potting the circuit board, to make it more difficult to probe the data.
+If you are storing sensitive data in RAM, extending heap memory will reduce security. To keep data secure it is best not to extend the heap. If you need more RAM and must extend the heap, encrypt, or obfuscate sensitive data before storing it in RAM if possible. The other option is to include a physical barrier to the circuit, such as potting the circuit board, to make it more difficult to probe the data.

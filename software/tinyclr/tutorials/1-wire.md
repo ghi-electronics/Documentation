@@ -8,56 +8,49 @@ The following sample code is written for the SC20100S Dev Board with one or more
 > Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Onewire, GHIElectronics.TinyCLR.Native, and GHIElectronics.TinyCLR.Pins.
 
 ```cs
-class program {
-    private static void Main() {
-        var oneWireBus = new GHIElectronics.TinyCLR.Devices.Onewire.OneWireController
-            (GHIElectronics.TinyCLR.Pins.SC20100.GpioPin.PA1);
-        
-        oneWireBus.TouchReset();
+var oneWireBus = new OneWireController(SC20100.GpioPin.PA1);
+var oneWireDevices = oneWireBus.FindAllDevices();
 
-        var oneWireDevices = oneWireBus.FindAllDevices();
+oneWireBus.TouchReset();
+            
+Debug.WriteLine("Number of sensors found = " +
+oneWireDevices.Count.ToString());
 
-        System.Diagnostics.Debug.WriteLine("Number of sensors found = " +
-            oneWireDevices.Count.ToString());
+foreach (byte[] serialNumber in oneWireDevices) {
+    oneWireBus.TouchReset();
+    oneWireBus.WriteByte(0x55); //Match ROM command.
 
-        foreach (byte[] serialNumber in oneWireDevices) {
-            oneWireBus.TouchReset();
-            oneWireBus.WriteByte(0x55); //Match ROM command.
-
-            for (int i = 0; i < serialNumber.Length; i++) {
-                oneWireBus.WriteByte(serialNumber[i]); //Send serial number of device.
-            }
-
-            oneWireBus.WriteByte(0x44); //Convert temperature.
-
-            while (oneWireBus.ReadByte() == 0) { // Wait for conversion to finish.
-            }
-
-            oneWireBus.TouchReset();
-            oneWireBus.WriteByte(0x55); //Match ROM command.
-
-            for (int i = 0; i < serialNumber.Length; i++) {
-                oneWireBus.WriteByte(serialNumber[i]); //Send serial number of device.
-            }
-
-            oneWireBus.WriteByte(0xBE); //Read scratchpad command.
-
-            System.Diagnostics.Debug.WriteLine("Temperature: " +
-                ((float)(oneWireBus.ReadByte() +
-                (oneWireBus.ReadByte() << 8)) / 16.0).ToString());
-
-            System.Diagnostics.Debug.WriteLine("Remaining 7 bytes of scratch pad:");
-
-            for (int i = 0; i < 7; i++) {
-                System.Diagnostics.Debug.WriteLine(oneWireBus.ReadByte().ToString());
-            }
-
-            System.Diagnostics.Debug.WriteLine("--------");
-        }
-
-        System.Threading.Thread.Sleep(-1);
+    for (int i = 0; i < serialNumber.Length; i++) {
+        oneWireBus.WriteByte(serialNumber[i]); //Send serial number of device.
     }
+
+    oneWireBus.WriteByte(0x44); //Convert temperature.
+
+    while (oneWireBus.ReadByte() == 0) { // Wait for conversion to finish.
+    }
+
+    oneWireBus.TouchReset();
+    oneWireBus.WriteByte(0x55); //Match ROM command.
+
+    for (int i = 0; i < serialNumber.Length; i++) {
+        oneWireBus.WriteByte(serialNumber[i]); //Send serial number of device.
+    }
+
+    oneWireBus.WriteByte(0xBE); //Read scratchpad command.
+
+    Debug.WriteLine("Temperature: " +
+        ((float)(oneWireBus.ReadByte() +
+        (oneWireBus.ReadByte() << 8)) / 16.0).ToString());
+
+    Debug.WriteLine("Remaining 7 bytes of scratch pad:");
+
+    for (int i = 0; i < 7; i++) {
+        Debug.WriteLine(oneWireBus.ReadByte().ToString());
+    }
+
+    Debug.WriteLine("--------");
 }
+Thread.Sleep(Timeout.Infinite);
 ```
 
 Sample output:

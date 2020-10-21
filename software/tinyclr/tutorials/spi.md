@@ -36,13 +36,11 @@ Debug.WriteLine(controller.MaxClockFrequency.ToString()); //Prints maximum SPI c
 SITCore supports switching between MSB and LSB.
 
 ```
-var spiSettings = new SpiConnectionSettings()
-{               
+var spiSettings = new SpiConnectionSettings() {               
     DataFrameFormat = SpiDataFrame.MsbFirst // MSB
 };
 
-var spiSettings = new SpiConnectionSettings()
-{
+var spiSettings = new SpiConnectionSettings() {
     DataFrameFormat = SpiDataFrame.LsbFirst // LSB
 };
 
@@ -51,8 +49,7 @@ var spiSettings = new SpiConnectionSettings()
 ## Sample Code
 
 ```cs
-var cs = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
-    OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PE4);
+var cs = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PE4);
 
 var settings = new SpiConnectionSettings() {
     ChipSelectType = SpiChipSelectType.Gpio,
