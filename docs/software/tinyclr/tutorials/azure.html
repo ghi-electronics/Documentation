@@ -80,71 +80,91 @@
 <h1 id="microsoft-azure">Microsoft Azure</h1>
 
 <hr>
-<p>The example below shows how to use MQTT to communicate with the Azure IoT Hub.</p>
+<p>This example shows how to communicate with Azure IoT Hub using MQTT. You&#39;ll also need to set up a Nework Interface connection on the device such as <a href="wifi.html">WiFi</a> to Connect to Azure in your program.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Networking.Mqtt</p>
+<p>Add using statement:
+using System.Security.Cryptography.X509Certificates;</p>
 </div>
-<pre><code class="lang-cs">static void DoTestAzureMqtt()
-{
-    var caCert = new X509Certificate(UTF8Encoding.UTF8.GetBytes(&quot;Need Azure certificate&quot;));
+<pre><code class="lang-cs">var caCert = 
+new X509Certificate(UTF8Encoding.UTF8.GetBytes(&quot;Need Azure certificate&quot;));
 
-    var iotHubName = &quot;your IoT Hub name&quot;;
-    var iotHubPort = 8883;
+var iotHubName = &quot;your IoT Hub name&quot;;
+var iotHubPort = 8883;
 
-    // device/client information
-    const string deviceId = &quot;your device Id&quot;;
+// device/client information
+const string deviceId = &quot;your device Id&quot;;
 
-    var username = string.Format(&quot;{0}/{1}&quot;, iotHubName, deviceId);
-    var password = &quot;your string connection&quot;;
+var username = string.Format(&quot;{0}/{1}&quot;, iotHubName, deviceId);
+var password = &quot;your string connection&quot;;
 
-    // define topics
-    var topicDeviceToServer = string.Format(&quot;devices/{0}/messages/events/&quot;, deviceId);
-    var topicService2Device = string.Format(&quot;devices/{0}/messages/devicebound/#&quot;, deviceId);
+// define topics
+var topicDeviceToServer = 
+string.Format(&quot;devices/{0}/messages/events/&quot;, deviceId);
 
-    try
-    {
-        var clientSetting = new MqttClientSetting
-        {
-            BrokerName = iotHubName,
-            BrokerPort = iotHubPort,
-            ClientCertificate = null,
-            CaCertificate = caCert,
-            SslProtocol = System.Security.Authentication.SslProtocols.Tls12
-        };
+var topicService2Device = 
+string.Format(&quot;devices/{0}/messages/devicebound/#&quot;, deviceId);
 
-        var client = new Mqtt(clientSetting);
+try {
+    var clientSetting = new MqttClientSetting {
+        BrokerName = iotHubName,
+        BrokerPort = iotHubPort,
+        ClientCertificate = null,
+        CaCertificate = caCert,
+        SslProtocol = System.Security.Authentication.SslProtocols.Tls12
+    };
 
-        client.PublishReceivedChanged += (a, b) =&gt; { Debug.WriteLine
-            (&quot;Received message: &quot; + Encoding.UTF8.GetString(b.Data)); };
+    var client = new Mqtt(clientSetting);
 
-        var connectSetting = new MqttConnectionSetting
-        {
-            ClientId = deviceId,
-            UserName = username,
-            Password = password
-        };
+    client.PublishReceivedChanged += (a, b) =&gt; { Debug.WriteLine
+        (&quot;Received message: &quot; + Encoding.UTF8.GetString(b.Data)); };
 
-        var returnCode = client.Connect(connectSetting);
+    var connectSetting = new MqttConnectionSetting {
+        ClientId = deviceId,
+        UserName = username,
+        Password = password
+    };
 
-        ushort packetId = 1;
+    var returnCode = client.Connect(connectSetting);
 
-        client.Subscribe(new string[] { topicService2Device }, new QoSLevel[]
-            { QoSLevel.ExactlyOnce }, packetId++);
+    ushort packetId = 1;
 
-        client.Subscribe(new string[] { topicDeviceToServer }, new QoSLevel[]
-            { QoSLevel.ExactlyOnce }, packetId++);
+    client.Subscribe(new string[] { topicService2Device }, new QoSLevel[]
+        { QoSLevel.ExactlyOnce }, packetId++);
 
-        client.Publish(topicDeviceToServer, Encoding.UTF8.GetBytes
-            (&quot;Your message&quot;), QoSLevel.MostOnce, false, packetId++);
-    }
+    client.Subscribe(new string[] { topicDeviceToServer }, new QoSLevel[]
+        { QoSLevel.ExactlyOnce }, packetId++);
 
-    catch (Exception e)
-    {
-        throw;
-    }
-</code></pre><p>This example requires iotHubName and deviceId, which are available only when you open an Azure account.</p>
-<p>Replace &quot;password&quot; with a string that starts with &quot;SharedAccessSignature sr=...&quot;.</p>
-<p>To generate a password string, visit <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string">https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string</a></p>
-<p>More detail about Microsoft Azure, please visit: <a href="https://azure.microsoft.com/en-us/">https://azure.microsoft.com/en-us/</a></p>
+    client.Publish(topicDeviceToServer, Encoding.UTF8.GetBytes
+        (&quot;Your message&quot;), QoSLevel.MostOnce, false, packetId++);
+}
+
+catch (Exception e) {
+    throw;
+}
+</code></pre><p>In the first line of code above, you need to add an Azure Certificate and place the certificate inside project resources and change the code to reflect the name of that certificate, in the example below the name is zura.</p>
+<pre><code class="lang-cs"> var caCert = 
+new X509Certificate(Properties.Resources.GetByte(Properties.Resources.BinaryResources.zura));
+</code></pre><p>The example code also requires iotHubName and deviceId, which are available only when you open an Azure account. To create the iotHubName and deviceId you can follow these instructions found on their website.</p>
+<p><a href="https://docs.microsoft.com/en-us/azure/iot-hub/tutorial-connectivity">Create an IoT Hub &amp; Device ID</a></p>
+<p>We can also retrieve the Connection String for the newly created Device here too. We will use this key to generate a Shared Acccess Signature(SAS) which we will add to our code.</p>
+<p><img src="images/string.png" alt="Device Details"></p>
+<p>Once we have the Connection String, there are several ways to generate an SAS, the easiest is to use <a href="https://docs.microsoft.com/en-us/azure/iot-pnp/howto-use-iot-explorer">Azure IoT Explorer</a></p>
+<p>Paste the Connection String you obtained inside the Connection Information box, then click &#39;Update&#39;. This will automatically generate the Key Name, Key Value and Target. You can select how many days the SAS you are generating will be good for. Finally click the &#39;Generate SAS&#39; button. </p>
+<p><img src="images/azure_explorer.jpg" alt="Azure IoT Explorer">
+Copy the SAS text generated and set to variable &#39;password&#39; in our code. As shown here:</p>
+<pre><code class="lang-cs">var password = &quot;SharedAccessSignature sr=GHI-test &amp;sig=AQiUrZZyIBym2WQMpio0I2qkdOvbCPaaR9BQq3C13Q%3d&amp;se=1633448319&amp;skn=iothubowner&quot;;
+</code></pre><div class="TIP"><h5>Tip</h5><p>Values used above are for reference only and will not work in your code, you must create and generate your own connection string and SAS</p>
+</div>
+<p>Now we can send and receive data to our IoT device from the Azure IoT Explorer and see the results in the output window of Visual Studio and Azure IoT Explorer. To receive data from your IoT device, add a message to send in this line of the code.</p>
+<pre><code class="lang-cs">client.Publish(topicDeviceToServer, Encoding.UTF8.GetBytes
+(&quot;Your message&quot;), QoSLevel.MostOnce, false, packetId++);
+</code></pre><p>Select the &#39;Data&#39; Tab in the Azure IoT Explorer program and push the &#39;Monitor&#39; button.
+Deploy the program or reset the device it will automatically send &quot;Your message&quot; to the Azure IoT Explorer. </p>
+<p><img src="images/azure_message_recieved.jpg" alt="Message Sent"></p>
+<p>To send a message from Azure to your IoT device, select the &#39;Messages To Device&#39; tab in Azure IoT Explorer. Type your message in the Message Box and hit &#39;Send&#39;. </p>
+<p><img src="images/azure_message_sent.jpg" alt="Message Recieved"></p>
+<p>Your message will appear in the &#39;Output&#39; window of Visual Studio.</p>
+<p><img src="images/vs_output.jpg" alt="VS Output Window"> </p>
 </article>
           </div>
           

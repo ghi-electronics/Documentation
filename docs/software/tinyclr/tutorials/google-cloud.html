@@ -80,84 +80,186 @@
 <h1 id="google-cloud">Google Cloud</h1>
 
 <hr>
-<p>This example below demonstrates how to communicate with the Google Cloud Platform:</p>
+<p>This example shows how to communicate with Google Cloud Platform using MQTT. You&#39;ll also need to set up a Network Interface connection on the device such as <a href="wifi.html">WiFi</a> to Connect to Google Cloud in your program.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Networking.Mqtt</p>
+<p>Add using statement:
+using System.Security.Cryptography.X509Certificates;</p>
 </div>
-<pre><code class="lang-cs">static void DoTestGoogleCloudMqtt()
-{
-    string iotHubName = &quot;mqtt.googleapis.com&quot;;
-    int iotPort = 8883;
+<pre><code class="lang-cs">string iotHubName = &quot;mqtt.googleapis.com&quot;;
+int iotPort = 8883;
 
-    var projectId = &quot;your project id&quot;;
-    var cloudRegion = &quot;your region&quot;;
-    var registryId = &quot;your register id&quot;;
-    var deviceId = &quot;your device id&quot;;
+var projectId = &quot;Your ProjectID&quot;;
+var cloudRegion = &quot;Your Cloud Region&quot;;
+var registryId = &quot;Your Registry&quot;;
+var deviceId = &quot;Your DeviceID&quot;;
+var gatewayId = &quot;Your GatewayID&quot;;
 
-    var clientId = $&quot;projects/{projectId}&quot; +
-            $&quot;/locations/{cloudRegion}&quot; +
-            $&quot;/registries/{registryId}&quot; +
-            $&quot;/devices/{deviceId}&quot;;
+var clientId = $&quot;projects/{projectId}&quot; +
+    $&quot;/locations/{cloudRegion}&quot; +
+    $&quot;/registries/{registryId}&quot; +
+    $&quot;/devices/{gatewayId}&quot;;
 
-    var message = &quot;My message&quot;;
+var message = &quot;My message&quot;;
 
-    var caCertSource = UTF8Encoding.UTF8.GetBytes(&quot;Your CA certificate&quot;);
-    var clientCertSource = UTF8Encoding.UTF8.GetBytes(&quot;Your Client certificate&quot;);
+var caCertSource = Properties.Resources.GetBytes(Properties.Resources.BinaryResources.&quot;GOOGLE Root CERT&quot;);
 
-    X509Certificate CaCert = new X509Certificate(caCertSource);
-    X509Certificate ClientCert = new X509Certificate(clientCertSource);
+X509Certificate CaCert = new X509Certificate(caCertSource);
 
-    var clientSetting = new MqttClientSetting
-    {
-        BrokerName = iotHubName,
-        BrokerPort = iotPort,
-        CaCertificate = CaCert,
-        ClientCertificate = null,
-        SslProtocol = System.Security.Authentication.SslProtocols.Tls12
-    };
+var clientSetting = new MqttClientSetting {
+    BrokerName = iotHubName,
+    BrokerPort = iotPort,
+    CaCertificate = CaCert,
+    ClientCertificate = null,
+    SslProtocol = System.Security.Authentication.SslProtocols.Tls12
+};
 
-    var iotClient = new Mqtt(clientSetting);
+var iotClient = new Mqtt(clientSetting);
 
-    var jwt = &quot;your jwt&quot;;
+var jwt = &quot;Your JSON Web Token&quot;;
 
-    iotClient.PublishReceivedChanged += (a, b) =&gt;
-        { Debug.WriteLine(&quot;Publish Received Changed.&quot;); };
+iotClient.PublishReceivedChanged += (a, b) =&gt; { Debug.WriteLine(&quot;Publish Received Changed:&quot; + new string(System.Text.UTF8Encoding.UTF8.GetChars(b.Data))); };
+iotClient.PublishedChanged += (a, b, c) =&gt; { Debug.WriteLine(&quot;Published Changed.&quot;); }; 
+iotClient.SubscribedChanged += (a, b) =&gt; { Debug.WriteLine(&quot;Subscribed Changed.&quot;); };
+iotClient.ConnectedChanged += (a) =&gt; { Debug.WriteLine(&quot;Connected Changed.&quot;); };
+iotClient.UnsubscribedChanged += (a, b) =&gt; { Debug.WriteLine(&quot;Unsubscribed Changed.&quot;); };
 
-    iotClient.PublishedChanged += (a, b, c) =&gt; { Debug.WriteLine(&quot;Published Changed.&quot;); }; ;
-    iotClient.SubscribedChanged += (a, b) =&gt; { Debug.WriteLine(&quot;Subscribed Changed.&quot;); };
-    iotClient.ConnectedChanged += (a) =&gt; { Debug.WriteLine(&quot;Connected Changed.&quot;); };
-    iotClient.UnsubscribedChanged += (a, b) =&gt; { Debug.WriteLine(&quot;Unsubscribed Changed.&quot;); };
+var connectSetting = new MqttConnectionSetting {
+    ClientId = clientId,
+    UserName = &quot;unused&quot;,
+    Password = jwt
+};
 
-    var connectSetting = new MqttConnectionSetting
-    {
-        ClientId = clientId,
-        UserName = &quot;unused&quot;,
-        Password = jwt
-    };
+string topic = $&quot;/devices/{deviceId}/events&quot;;
 
-    string topic = $&quot;/devices/{deviceId}/events&quot;;
+var returnCode = iotClient.Connect(connectSetting);
 
-    var returnCode = iotClient.Connect(connectSetting);
+if (returnCode == ConnectReturnCode.ConnectionAccepted) {
 
-    if (returnCode == ConnectReturnCode.ConnectionAccepted)
-    {
+    Gcp_SetupMqttTopics(iotClient, gatewayId);
+    Gcp_AttachDevice(iotClient, deviceId, &quot;{}&quot;);
+
+    while (true) {
         iotClient.Publish(topic
-                , UTF8Encoding.UTF8.GetBytes(message)
+                , UTF8Encoding.UTF8.GetBytes(&quot;&quot; + message + cnt)
                 , QoSLevel.LeastOnce
                 , false, 1);
-    }            
+        cnt++;
+        Thread.Sleep(5000);
+    }
 }
-</code></pre><p>This example requires projectId, cloudRegion, registryId, and deviceId, which will be available when you register a Google Cloud account.</p>
+
+Thread.Sleep(-1);
+
+static void Gcp_SetupMqttTopics(Mqtt client, string deviceId) {
+    // The configuration topic is used for acknowledged changes.
+    string mqttConfigTopic = $&quot;/devices/{deviceId}/config&quot;;
+    // The commands topic is used for frequent, transitory, updates.
+    string mqttCommandTopic = $&quot;/devices/{deviceId}/commands/#&quot;;
+    string mqttErrorTopic = $&quot;/devices/{deviceId}/errors&quot;;
+
+    string[] topics = new string[] {
+        mqttConfigTopic,
+        mqttCommandTopic,
+        mqttErrorTopic
+    };
+
+    QoSLevel[] qosLevels = new QoSLevel[] {
+        QoSLevel.LeastOnce, // config topic, Qos *1*
+        QoSLevel.MostOnce, // command topic, Qos 0
+        QoSLevel.MostOnce // error topic, Qos 0
+    };
+
+    client.Subscribe(topics, qosLevels, 1);
+}
+
+static void Gcp_AttachDevice(Mqtt client, string deviceId, string auth) {
+    var attachTopic = $&quot;/devices/{deviceId}/attach&quot;;
+
+    var BinaryData = Encoding.UTF8.GetBytes(auth);
+    client.Publish(attachTopic, BinaryData, QoSLevel.LeastOnce, true, 1);
+
+    Debug.WriteLine(&quot;Waiting for device to attach about 5 seconds&quot;);
+
+    Thread.Sleep(5);
+}
+</code></pre><p>This example requires projectId, cloudRegion, registryId, gatewayId, and deviceId, which will be available when you register a Google Cloud account.</p>
 <p>a client certificate and private key are also provided when you register your account.</p>
-<p>You may want to visit <a href="https://cloud.google.com/iot/docs/quickstart">https://cloud.google.com/iot/docs/quickstart</a> for more detail.</p>
-<h1 id="jwt">JWT</h1>
-<p>When connect to google cloud, you also need a JWT (JSON Web Token) to be used as password if using MQTT.</p>
+<p>Let&#39;s create a new project. Click on &#39;Create Project&#39; on the Manage resources dashboard.</p>
+<p><img src="images/gcloud-create-project.jpg" alt="GCloud Create Project"></p>
+<p>Next we&#39;ll need to create a meaningful name, for this project will call it SITCoreIoT. </p>
+<p><img src="images/gcloud-name-project.jpg" alt="GCloud Name Project"></p>
+<p>In the search box type &#39;IoT Core&#39; and then select it. </p>
+<p><img src="images/gcloud-search-iotcore.jpg" alt="GCloud Search IoT Core"></p>
+<p>Next, we need to &#39;ENABLE&#39; the Google Cloud IoT API. </p>
+<p><img src="images/gcloud-enable-cloud.jpg" alt="GCloud Enable API"></p>
+<p>Next we&#39;ll need to create a Registry for our project. Click on &#39;CREATE REGISTRY&#39;</p>
+<p><img src="images/gcloud-create-registry.jpg" alt="GCloud Create Registry"></p>
+<p>We need to create a &#39;Registry ID&#39;, select a cloud &#39;Region&#39;, and a create a &#39;Topic&#39;. Finally, we need to click on the &#39;SHOW ADVANCED OPTIONS&#39; Tab to finish the creation</p>
+<p><img src="images/gcloud-registry-id.jpg" alt="GCloud Name Registry"></p>
+<p>For this exercise we only need MQTT, and we&#39;ve selected &#39;Debug&#39; under Cloud Logging. This isn&#39;t necessary but will allow us to see device activity in the log and may be useful for more complex programs. Finally click the &#39;CREATE&#39; button. </p>
+<p><img src="images/gcloud-set-protocol.jpg" alt="GCloud Set Protocols"></p>
+<p>Once created we&#39;re taken to the Registry details dashboard. We need to create our device by clicking on &#39;Devices&#39; from the left menu. </p>
+<p><img src="images/gcloud-create-device.jpg" alt="GCloud Create Device"></p>
+<p>From the Device dashboard, click on &#39;CREATE A DEVICE&#39; </p>
+<p><img src="images/gcloud-device-create.jpg" alt="GCloud Create Device"></p>
+<p>Before we continue, we&#39;ll need to generate both a Private and Public key that we can attach to our Device. This can be done with a program like OpenSSL (secure), or we can use a third-party site to generate one for us for testing (unsecure). For this exercise, we&#39;ll use a third-party site like:</p>
+<p><a href="https://cryptotools.net/rsagen">CryptoTool.net</a></p>
+<p>We need to select a Key Length of 2048, and then click &#39;Generate key pair&#39;. Next, we need to copy the Public Key to the clipboard and use it in a moment. Keep the window open, we&#39;ll need to use the Private key later. </p>
+<p><img src="images/gcloud-generate-keys.jpg" alt="GCloud RSA Key"></p>
+<p>Now let&#39;s go back to the &#39;Create a device&#39; dashboard in Google. We need to create a name for our Device, this will be the &#39;Device ID&#39;. Before we click &#39;CREATE&#39; we need to click on the &#39;COMMUNICATION, CLOUD LOGGING, AUTENTICATION drop down. </p>
+<p><img src="images/gcloud-set-deviceID.jpg" alt="GCloud Create Device ID"></p>
+<p>Here we&#39;ll paste the Public key we generated earlier. Make sure the Public key format is set to RS256. Then click on &#39;CREATE&#39; button. </p>
+<p><img src="images/gcloud-paste-key.jpg" alt="GCloud Paste Public Key"></p>
+<p>Next we&#39;ll create a Gateway. From inside the Device details dashboard select &#39;Gateways&#39; from the menu on the left.</p>
+<p><img src="images/gcloud-select-gateway.jpg" alt="GCloud Select Gateway"></p>
+<p>Click on the &#39;CREATE A GATEWAY&#39;</p>
+<p><img src="images/gcloud-create-gateway.jpg" alt="GCloud Create Gateway"></p>
+<p>Next will name our Gateway, this will be the &#39;Gateway ID&#39; that we will add to our code. Before we click &#39;CREATE&#39;, click on the &#39;COMMUNICATION, CLOUD LOGGING, AUTHENTICATION tab. </p>
+<p><img src="images/gcloud-name-gateway.jpg" alt="GCloud Name Gateway"></p>
+<p>We have to add the same Public key we pasted earlier here too. Make sure that the key format is also set to RS256. Then click on &#39;CREATE&#39; button.</p>
+<p><img src="images/gcloud-gateway-RSA.jpg" alt="GCloud Gateway RSA"></p>
+<p>Finally, lets bind our Device to the Gateway. Click on &#39;BOUND DEVICES&#39; tab and then click on the &#39;BIND DEVICES&#39; button. Select our Device from the list and click &#39;BIND&#39; </p>
+<p><img src="images/gcloud-bind-device.jpg" alt="GCloud Bind Device"></p>
+<p>We have the data we need now let&#39;s plug in all the IDs we created into our code</p>
+<pre><code class="lang-cs">var projectId = &quot;sitcoreiot&quot;;
+var cloudRegion = &quot;us-central1&quot;;
+var registryId = &quot;SITCore-IoT-Registry&quot;;
+var deviceId = &quot;MySITCore&quot;;
+var gatewayId = &quot;SITCoreGatewayIoT&quot;;
+</code></pre><p>We need to add a Google Root CA Certificate to our resources and add it to this line of our code. </p>
+<pre><code class="lang-cs">var caCertSource = Properties.Resources.GetBytes(Properties.Resources.BinaryResources.&quot;GOOGLE Root CERT&quot;);
+</code></pre><p>Lastly when connect to google cloud, you also need a JWT (JSON Web Token) to be used as password if using MQTT.</p>
 <p>For an easy way to generate a JWT visit <a href="https://jwt.io/">https://jwt.io/</a>. However, if you are concerned about sharing your private key with a third party site, there are a multitude of other options. </p>
-<div class="WARNING"><h5>Warning</h5><p>By using <a href="https://jwt.io/">https://jwt.io/</a>, your private key is shared with a third party. This should be used only for testing purpose.&quot;</p>
+<div class="WARNING"><h5>Warning</h5><p>By using <a href="https://jwt.io/">https://jwt.io/</a>, your private key is shared with a third-party. This should be used only for testing purpose.&quot;</p>
 </div>
 <p><img src="images/generate_jwt.png" alt="How to download generate JWT"></p>
-<p>There are also two fields <code>iat</code> (issue at), and <code>exp</code> (expire), they contains time in Unix Timestamp format. You can convert them online at <a href="https://www.epochconverter.com/">https://www.epochconverter.com/</a></p>
-<div class="NOTE"><h5>Note</h5><p>The google cloud connection accepts a maximum expire time of 24 hours, meaning the timespan between <code>iat</code> and <code>exp</code> must be less that 24 hours.</p>
+<p>We must change the &#39;PAYLOAD DATA&#39; to match the image above. There are two fields <code>iat</code> (issue at), and <code>exp</code> (expire), they contain time in Unix Timestamp format. </p>
+<p>You can convert them online at <a href="https://www.epochconverter.com/">https://www.epochconverter.com/</a></p>
+<pre><code class="lang-cs">{
+  &quot;iat&quot;: 1602616824,
+  &quot;aud&quot;: &quot;sitcoreiot&quot;,  
+  &quot;exp&quot;: 1602616858
+}
+</code></pre><p>Finally copy your Endoded Token into this line of code in your program:</p>
+<pre><code class="lang-cs">var jwt = &quot;Paste your JWT here&quot;;
+</code></pre><div class="NOTE"><h5>Note</h5><p>The google cloud connection accepts a maximum expire time of 24 hours, meaning the timespan between <code>iat</code> and <code>exp</code> must be less than 24 hours.</p>
 </div>
+<p>To receive a message from Google Cloud click on the &#39;SEND COMMAND&#39; under the Gateway dashboard.</p>
+<p><img src="images/gcloud-send-command.jpg" alt="GCloud Message in VS"></p>
+<p>Enter your message and click &#39;SEND&#39;</p>
+<p><img src="images/gcloud-create-message.jpg" alt="GCloud Create Message"></p>
+<p>The device will receive your message and display it in the Output window of Visual Studio. </p>
+<p><img src="images/gcloud-message-vs.jpg" alt="GCloud Message in VS"></p>
+<p>To view the messages being sent from the device to the cloud we need to add a subscription to &#39;MyTopic&#39;. To do this we need to go to the Registry dashboard and click on the topic we created called &#39;MyTopic&#39; </p>
+<p><img src="images/gcloud-select-topic.jpg" alt="GCloud Send Message to Cloud"></p>
+<p>Once on the &#39;Pub/Sub&#39; dashboard, select &#39;Subscriptions&#39; from the side menu.</p>
+<p><img src="images/gcloud-select-subscription.jpg" alt="GCloud Select Subscriptions"></p>
+<p>Next, click on &#39;CREATE SUBSCRIPTION&#39;</p>
+<p><img src="images/gcloud-create-subscription.jpg" alt="GCloud Create Subscription"></p>
+<p>Create a name for in the &#39;Subscription ID&#39; box and select topic we created earlier. There may be additional setting on this dashboard you can use, but for this tutorial we only need to set these two items. Click the &#39;CREATE&#39; button at the bottom. </p>
+<p><img src="images/gcloud-name-subscription.jpg" alt="GCloud Name Subscription"></p>
+<p>Deploy the program to your device. Once connected, inside the &#39;Subscription details&#39; dashboard, click on &#39;VIEW MESSAGES&#39;, inside the &#39;Messages&#39; Pop-up click on the &#39;PULL&#39; button. This will display the latest messages being sent from the device. The tutorial program sends a new message every 5 seconds and then increments the count by one. We can also continue to send messages to the device from the &#39;Gateway&#39; dashboard as we did earlier. </p>
+<p> <img src="images/gcloud-view-messages.jpg" alt="GCloud View Messages"></p>
 </article>
           </div>
           

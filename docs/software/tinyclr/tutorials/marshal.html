@@ -80,7 +80,7 @@
 <h1 id="marshal">Marshal</h1>
 
 <hr>
-<p>Marshal is a static class that provides two functions <code>ReadInt32</code> to read, and <code>WriteInt32</code> to write and modify some special peripheral&#39;s registers .</p>
+<p>Marshal is a static class that provides two functions <code>ReadInt32</code> to read, and <code>WriteInt32</code> to write and modify some special peripheral&#39;s registers.</p>
 <p>Example below shows how to use Marshal to read gpio input data register, and modify on gpio output data register to set pin PB0 to high:</p>
 <div class="TIP"><h5>Tip</h5><p>The example below requires <code>System.Runtime.InteropServices</code>.</p>
 </div>
@@ -89,7 +89,7 @@
 var portValue = Marshal.ReadInt32(pinPB0OutDataReg) | (1 &lt;&lt; 0); // Pin 0
 
 Marshal.WriteInt32(pinPB0OutDataReg, portValue);
-</code></pre><div class="WARNING"><h5>Warning</h5><p>Some peripherals, reading status registers also clear their status, which may effect their behavior at run time.</p>
+</code></pre><div class="WARNING"><h5>Warning</h5><p>Some peripherals, reading status registers also clear their status, which may affect their behavior at run time.</p>
 </div>
 <p>Below is list of peripheral registers that TinyCLR OS allows access to. An exception will be thrown if an invalid register is used.</p>
 <pre><code>- Analog-to-digital converters (ADC)

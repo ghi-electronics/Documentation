@@ -145,41 +145,40 @@ Current RTC Time: 01/01/2019 11:15:36
 <pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.SystemTime.SetTime(rtc.Now);
 </code></pre><h2 id="sntp">SNTP</h2>
 <p>You can use SNTP (Simple Network Time Protocol) to accurately set the time in your application. The following method will return the current date and time after retrieving it from an NTP server. Your device will need an active network connection for this code to work.</p>
-<pre><code class="lang-cs">public static DateTime GetNetworkTime(int CorrectLocalTime = 0)
-    {
-        const string ntpServer = &quot;pool.ntp.org&quot;;
-        var ntpData = new byte[48];
-        ntpData[0] = 0x1B; //LeapIndicator = 0 (no warning), VersionNum = 3 (IPv4 only),
-                           //    Mode = 3 (Client Mode)
+<pre><code class="lang-cs">public static DateTime GetNetworkTime(int CorrectLocalTime = 0) {
+    const string ntpServer = &quot;pool.ntp.org&quot;;
+    var ntpData = new byte[48];
+    ntpData[0] = 0x1B; //LeapIndicator = 0 (no warning), VersionNum = 3 (IPv4 only),
+                        //    Mode = 3 (Client Mode)
 
-        var addresses = System.Net.Dns.GetHostEntry(ntpServer).AddressList;
-        var ipEndPoint = new System.Net.IPEndPoint(addresses[0], 123);
-        var socket = new System.Net.Sockets.Socket(
-            System.Net.Sockets.AddressFamily.InterNetwork,
-            System.Net.Sockets.SocketType.Dgram,
-            System.Net.Sockets.ProtocolType.Udp);
+    var addresses = System.Net.Dns.GetHostEntry(ntpServer).AddressList;
+    var ipEndPoint = new System.Net.IPEndPoint(addresses[0], 123);
+    var socket = new System.Net.Sockets.Socket(
+        System.Net.Sockets.AddressFamily.InterNetwork,
+        System.Net.Sockets.SocketType.Dgram,
+        System.Net.Sockets.ProtocolType.Udp);
 
-        socket.Connect(ipEndPoint);
+    socket.Connect(ipEndPoint);
 
-        System.Threading.Thread.Sleep(1); //Added to support TinyCLR OS.
+    System.Threading.Thread.Sleep(1); //Added to support TinyCLR OS.
 
-        socket.Send(ntpData);
-        socket.Receive(ntpData);
-        socket.Close();
+    socket.Send(ntpData);
+    socket.Receive(ntpData);
+    socket.Close();
 
-        ulong intPart = (ulong)ntpData[40] &lt;&lt; 24 | (ulong)ntpData[41] &lt;&lt; 16 |
-            (ulong)ntpData[42] &lt;&lt; 8 | (ulong)ntpData[43];
+    ulong intPart = (ulong)ntpData[40] &lt;&lt; 24 | (ulong)ntpData[41] &lt;&lt; 16 |
+        (ulong)ntpData[42] &lt;&lt; 8 | (ulong)ntpData[43];
 
-        ulong fractPart = (ulong)ntpData[44] &lt;&lt; 24 | (ulong)ntpData[45] &lt;&lt; 16 |
-            (ulong)ntpData[46] &lt;&lt; 8 | (ulong)ntpData[47];
+    ulong fractPart = (ulong)ntpData[44] &lt;&lt; 24 | (ulong)ntpData[45] &lt;&lt; 16 |
+        (ulong)ntpData[46] &lt;&lt; 8 | (ulong)ntpData[47];
 
-        var milliseconds = (intPart * 1000) + ((fractPart * 1000) / 0x100000000L);
+    var milliseconds = (intPart * 1000) + ((fractPart * 1000) / 0x100000000L);
 
-        var networkDateTime = (new System.DateTime(1900, 1, 1)).
-            AddMilliseconds((long)milliseconds);
+    var networkDateTime = (new System.DateTime(1900, 1, 1)).
+        AddMilliseconds((long)milliseconds);
 
-        return networkDateTime.AddHours(CorrectLocalTime);
-    }
+    return networkDateTime.AddHours(CorrectLocalTime);
+}
 </code></pre><p>The above method is used as follows, with the argument indicating how many hours to add to convert UTC time to your local time zone:</p>
 <pre><code class="lang-cs">DateTime dateTime = GetNetworkTime(-5);
 </code></pre><h2 id="battery-backed-memory">Battery Backed Memory</h2>
@@ -199,9 +198,9 @@ public void WriteBackupMemory(byte[] sourceData, uint sourceOffset,
 <p>Here is a simple example that displays the size of the battery backed memory, and then writes and reads five bytes of data.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Devices.Rtc</p>
 </div>
-<pre><code class="lang-cs">var rtc = GHIElectronics.TinyCLR.Devices.Rtc.RtcController.GetDefault();
+<pre><code class="lang-cs">var rtc = RtcController.GetDefault();
 
-System.Diagnostics.Debug.WriteLine(rtc.BackupMemorySize.ToString()); //Displays &quot;4096&quot;
+Debug.WriteLine(rtc.BackupMemorySize.ToString()); //Displays &quot;4096&quot;
 
 var writeData = new byte[] { 1, 2, 3, 4, 5 };
 
@@ -212,7 +211,7 @@ var readData = new byte[5];
 rtc.ReadBackupMemory(readData);
 
 for (int i=0; i &lt; 5; i++) {
-    System.Diagnostics.Debug.WriteLine(readData[i].ToString()); //Displays 1, 2, 3, 4, 5
+    Debug.WriteLine(readData[i].ToString()); //Displays 1, 2, 3, 4, 5
 }
 </code></pre><h2 id="rtc-calibration">RTC Calibration</h2>
 <p>RTC also provides a calibration feature. </p>
@@ -227,7 +226,7 @@ for (int i=0; i &lt; 5; i++) {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/rc2-prep/software/tinyclr/tutorials/real-time-clock.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/real-time-clock.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

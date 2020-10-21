@@ -88,29 +88,28 @@
     static bool linkReady = false;
 
     static void Main() {
-        var reset = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
-            OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PI8);
+        var reset = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PI8);
 
-        reset.SetDriveMode(GHIElectronics.TinyCLR.Devices.Gpio.GpioPinDriveMode.Output);
+        reset.SetDriveMode(GpioPinDriveMode.Output);
 
-        reset.Write(GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.High);
-        System.Threading.Thread.Sleep(200);
+        reset.Write(GpioPinValue.High);
+        Thread.Sleep(200);
 
-        reset.Write(GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.Low);
-        System.Threading.Thread.Sleep(7000); //Wait for modem to initialize.
+        reset.Write(GpioPinValue.Low);
+        Thread.Sleep(7000); //Wait for modem to initialize.
 
         InitSimCard();
         TestPPP();
     }
 
     static void InitSimCard() {
-        var serial = GHIElectronics.TinyCLR.Devices.Uart.UartController.FromName
-            (GHIElectronics.TinyCLR.Pins.SC20260.UartPort.Uart8);
+        var serial = UartController.FromName
+            (SC20260.UartPort.Uart8);
 
         serial.SetActiveSettings(115200, 8,
-            GHIElectronics.TinyCLR.Devices.Uart.UartParity.None,
-            GHIElectronics.TinyCLR.Devices.Uart.UartStopBitCount.One,
-            GHIElectronics.TinyCLR.Devices.Uart.UartHandshake.None);
+            UartParity.None,
+            UartStopBitCount.One,
+            UartHandshake.None);
 
         serial.Enable();
 
@@ -125,32 +124,27 @@
                                         //  to the Google Fi PDP context previously defined
                                         //  by the SendAT() method.
 
-        System.Diagnostics.Debug.WriteLine(&quot;OK to start PPP....&quot;);
+        Debug.WriteLine(&quot;OK to start PPP....&quot;);
     }
 
     static void TestPPP() {
-        var networkController = GHIElectronics.TinyCLR.Devices.Network.NetworkController.
-            FromName(&quot;GHIElectronics.TinyCLR.NativeApis.Ppp.NetworkController&quot;);
+        var networkController = NetworkController.
+            FromName(&quot;NativeApis.Ppp.NetworkController&quot;);
 
-        GHIElectronics.TinyCLR.Devices.Network.PppNetworkInterfaceSettings
-            networkInterfaceSetting = new GHIElectronics.TinyCLR.Devices.
-            Network.PppNetworkInterfaceSettings() {
-                AuthenticationType = GHIElectronics.TinyCLR.Devices.Network.
-                PppAuthenticationType.Pap,
+        PppNetworkInterfaceSettings networkInterfaceSetting = new PppNetworkInterfaceSettings() {
+                AuthenticationType = PppAuthenticationType.Pap,
 
                 Username = &quot;&quot;,
                 Password = &quot;&quot;,
             };
 
-        GHIElectronics.TinyCLR.Devices.Network.UartNetworkCommunicationInterfaceSettings
-            networkCommunicationInterfaceSettings = new GHIElectronics.TinyCLR.Devices.
-            Network.UartNetworkCommunicationInterfaceSettings() {
-                ApiName = GHIElectronics.TinyCLR.Pins.SC20260.UartPort.Uart8,
+        UartNetworkCommunicationInterfaceSettings networkCommunicationInterfaceSettings = new UartNetworkCommunicationInterfaceSettings() {
+                ApiName = SC20260.UartPort.Uart8,
                 BaudRate = 115200,
                 DataBits = 8,
-                Parity = GHIElectronics.TinyCLR.Devices.Uart.UartParity.None,
-                StopBits = GHIElectronics.TinyCLR.Devices.Uart.UartStopBitCount.One,
-                Handshaking = GHIElectronics.TinyCLR.Devices.Uart.UartHandshake.None,
+                Parity = UartParity.None,
+                StopBits = UartStopBitCount.One,
+                Handshaking = UartHandshake.None,
             };
 
         networkController.SetInterfaceSettings(networkInterfaceSetting);
@@ -170,30 +164,28 @@
     }
 
     private static void NetworkController_NetworkLinkConnectedChanged
-        (GHIElectronics.TinyCLR.Devices.Network.NetworkController sender,
-        GHIElectronics.TinyCLR.Devices.Network.NetworkLinkConnectedChangedEventArgs e) {
+        (NetworkController sender, NetworkLinkConnectedChangedEventArgs e) {
         //Raise event connect/disconnect
     }
 
     private static void NetworkController_NetworkAddressChanged
-        (GHIElectronics.TinyCLR.Devices.Network.NetworkController sender,
-        GHIElectronics.TinyCLR.Devices.Network.NetworkAddressChangedEventArgs e) {
+        (NetworkController sender,NetworkAddressChangedEventArgs e) {
 
         var ipProperties = sender.GetIPProperties();
         var address = ipProperties.Address.GetAddressBytes();
 
-        System.Diagnostics.Debug.WriteLine(&quot;IP Address: &quot; + address[0] + &quot;.&quot; + address[1]
+        Debug.WriteLine(&quot;IP Address: &quot; + address[0] + &quot;.&quot; + address[1]
             + &quot;.&quot; + address[2] + &quot;.&quot; + address[3]);
 
         linkReady = address[0] != 0;
     }
 
-    static bool SendAT(GHIElectronics.TinyCLR.Devices.Uart.UartController port,
+    static bool SendAT(UartController port,
         string command) {
 
         command += &quot;\r&quot;;
 
-        var sendBuffer = System.Text.Encoding.UTF8.GetBytes(command);
+        var sendBuffer = Encoding.UTF8.GetBytes(command);
         var readBuffer = new byte[256];
         var read = 0;
         var count = 10;
@@ -201,19 +193,18 @@
         port.Write(sendBuffer, 0, sendBuffer.Length);
 
         while (count-- &gt; 0) {
-            System.Threading.Thread.Sleep(100);
+            Thread.Sleep(100);
 
             read += port.Read(readBuffer, read, readBuffer.Length - read);
 
             var response = new string
-                (System.Text.Encoding.UTF8.GetChars(readBuffer, 0, read));
+                (Encoding.UTF8.GetChars(readBuffer, 0, read));
 
             if (response.IndexOf(&quot;OK&quot;) != -1 || response.IndexOf(&quot;CONNECT&quot;) != -1) {
-                System.Diagnostics.Debug.WriteLine(&quot; &quot; + response);
+                Debug.WriteLine(&quot; &quot; + response);
                 return true;
             }
         }
-
         return false;
     }
 }
@@ -228,7 +219,6 @@
 //....
 
 networkController.Suspend(); //Suspend PPP, release UART Port from TinyCLR OS.
-
 {
     //Open UART.
     var serial = GHIElectronics.TinyCLR.Devices.Uart.UartController.FromName

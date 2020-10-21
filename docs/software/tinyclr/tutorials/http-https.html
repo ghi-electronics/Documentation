@@ -85,49 +85,39 @@
 <p>The following code connects to bing.com and reads the robots.txt file. This code needs an active network connection to work properly.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Network and GHIElectronics.TinyCLR.Networking.Http.</p>
 </div>
-<pre><code class="lang-cs">static void TestHttp()
-{
-    var url = &quot;http://www.bing.com/robots.txt&quot;;
+<pre><code class="lang-cs">var url = &quot;http://www.bing.com/robots.txt&quot;;
 
-    int read = 0, total = 0;
-    byte[] result = new byte[512];
+int read = 0, total = 0;
+byte[] result = new byte[512];
 
-    try
-    {
-        using (var req = HttpWebRequest.Create(url) as HttpWebRequest)
-        {
-            req.KeepAlive = false;                    
-            req.ReadWriteTimeout = 2000;
+try {
+    using (var req = HttpWebRequest.Create(url) as HttpWebRequest) {
+        req.KeepAlive = false;                    
+        req.ReadWriteTimeout = 2000;
 
-            using (var res = req.GetResponse() as HttpWebResponse)
-            {
-                using (var stream = res.GetResponseStream())
-                {
-                    do
-                    {
-                        read = stream.Read(result, 0, result.Length);
-                        total += read;
+        using (var res = req.GetResponse() as HttpWebResponse) {
+            using (var stream = res.GetResponseStream()) {
+                do {
+                    read = stream.Read(result, 0, result.Length);
+                    total += read;
 
-                        System.Diagnostics.Debug.WriteLine(&quot;read : &quot; + read);
-                        System.Diagnostics.Debug.WriteLine(&quot;total : &quot; + total);
+                    Debug.WriteLine(&quot;read : &quot; + read);
+                    Debug.WriteLine(&quot;total : &quot; + total);
 
-                        String page = &quot;&quot;;
+                    String page = &quot;&quot;;
 
-                        page = new String(System.Text.Encoding.UTF8.GetChars
-                            (result, 0, read));
+                    page = new String(System.Text.Encoding.UTF8.GetChars
+                        (result, 0, read));
 
-                        System.Diagnostics.Debug.WriteLine(&quot;Response : &quot; + page);
-                    }
-
-                    while (read != 0);
+                    Debug.WriteLine(&quot;Response : &quot; + page);
                 }
-            }
-        }  
-    }
-    catch
-    {
 
-    }
+                while (read != 0);
+            }
+        }
+    }  
+}
+catch {               
 }
 </code></pre><h2 id="http-server">HTTP Server</h2>
 <p>TinyCLR OS provides an HttpListener class which can be used to make an HTTP Server. This code needs an active network connection on the same local network as your client application to work properly.</p>
@@ -135,40 +125,38 @@
 </div>
 <div class="NOTE"><h5>Note</h5><p>To run this example the client and server devices must both connect to the same local network.</p>
 </div>
-<pre><code class="lang-cs">static void TestHttpServer() {
-    //Create a listener.
-    HttpListener listener = new HttpListener(&quot;http&quot;, 80);
+<pre><code class="lang-cs">//Create a listener.
+HttpListener listener = new HttpListener(&quot;http&quot;, 80);
 
-    listener.Start();
-    System.Diagnostics.Debug.WriteLine(&quot;Listening...&quot;);
+listener.Start();
+System.Diagnostics.Debug.WriteLine(&quot;Listening...&quot;);
 
-    var clientRequestCount = 0;
+var clientRequestCount = 0;
 
-    while (true) {
-        //Note: The GetContext method blocks while waiting for a request.
-        HttpListenerContext context = listener.GetContext();
+while (true) {
+    //Note: The GetContext method blocks while waiting for a request.
+    HttpListenerContext context = listener.GetContext();
 
-        //Obtain a response object.
-        HttpListenerResponse response = context.Response;
+    //Obtain a response object.
+    HttpListenerResponse response = context.Response;
 
-        //Construct a response.                
-        var responseString = string.Format(&quot;&lt;HTML&gt;&lt;BODY&gt; I am TinyCLR OS Server. &quot; +
-            &quot;Client request count: {0}&lt;/BODY&gt;&lt;/HTML&gt;&quot;, ++clientRequestCount);                
+    //Construct a response.                
+    var responseString = string.Format(&quot;&lt;HTML&gt;&lt;BODY&gt; I am TinyCLR OS Server. &quot; +
+        &quot;Client request count: {0}&lt;/BODY&gt;&lt;/HTML&gt;&quot;, ++clientRequestCount);                
 
-        byte[] buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
+    byte[] buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
 
-        //Get a response stream and write the response to it.
-        response.ContentLength64 = buffer.Length;
-        var output = response.OutputStream;
+    //Get a response stream and write the response to it.
+    response.ContentLength64 = buffer.Length;
+    var output = response.OutputStream;
 
-        output.Write(buffer, 0, buffer.Length);
+    output.Write(buffer, 0, buffer.Length);
 
-        //You must close the output stream.
-        output.Close();
-    }
-
-    listener.Stop();
+    //You must close the output stream.
+    output.Close();
 }
+
+listener.Stop();
 </code></pre><p>From your client device (smartphone, PC...), enter the server ip address into your web browser. In our case it&#39;s 192.168.1.6. The response is shown as below:</p>
 <p><img src="images/http-server.png" alt="Server response"></p>
 <h2 id="https">HTTPS</h2>
