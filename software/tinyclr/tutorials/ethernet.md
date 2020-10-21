@@ -185,7 +185,6 @@ private static void NetworkController_NetworkAddressChanged
            
     linkReady = address[0] != 0;
 }
-
 ```
 
 ## Event Handlers
@@ -214,7 +213,6 @@ private static void NetworkController_NetworkAddressChanged
 		var dns = ipProperties.DnsAddresses[i].GetAddressBytes();
 	}
 }
-
 ```
 
 

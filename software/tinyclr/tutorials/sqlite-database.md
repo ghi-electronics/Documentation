@@ -9,14 +9,11 @@ using System.Collections;
 using System.Diagnostics;
 using GHIElectronics.TinyCLR.Data.SQLite;
 
-namespace TinyCLRDocTesting
-{
-    class Program
-    {
-        static void Main()
-        {
-            using (var db = new SQLiteDatabase())
-            {
+namespace SQLiteSample {
+    class Program {
+        static void Main() {
+            using (var db = new SQLiteDatabase()) {
+
                 Debug.WriteLine("Executing 1...");
                 db.ExecuteNonQuery("CREATE Table Test
                     (Var1 TEXT, Var2 INTEGER, Var3 DOUBLE);");

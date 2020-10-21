@@ -22,7 +22,7 @@ The following sample code encrypts and decrypts a string of text.
 //Argument below is the 128 bit key. XTEA always uses a 128 bit key.
 var crypto = new Xtea(new uint[] { 0x01234567, 0x89ABCDEF, 0xFEDCBA98, 0x76543210 });
 
-byte[] dataToEncrypt = System.Text.Encoding.UTF8.GetBytes("Data to encrypt.");
+byte[] dataToEncrypt = Encoding.UTF8.GetBytes("Data to encrypt.");
 byte[] encryptedData;
 byte[] decryptedData;
 
@@ -32,8 +32,7 @@ encryptedData = crypto.Encrypt(dataToEncrypt, 0, (uint)dataToEncrypt.Length);
 //Decrypt data.
 decryptedData = crypto.Decrypt(encryptedData, 0, (uint)encryptedData.Length);
 
-System.Diagnostics.Debug.WriteLine("Decrypted: " +
-    System.Text.Encoding.UTF8.GetString(decryptedData));
+Debug.WriteLine("Decrypted: " + Encoding.UTF8.GetString(decryptedData));
 ```
 
 The above code outputs the following:
@@ -53,32 +52,28 @@ RSA public key cryptography has become the most popular asymmetric cryptography 
 The following sample code encrypts and decrypts a string of text.
 
 ```cs
-byte[] dataToEncrypt = System.Text.Encoding.UTF8.GetBytes("Data to Encrypt");
+byte[] dataToEncrypt = Encoding.UTF8.GetBytes("Data to Encrypt");
 byte[] encryptedData;
 byte[] decryptedData;
 
-using (GHIElectronics.TinyCLR.Cryptography.RSACryptoServiceProvider RSA = new
-    GHIElectronics.TinyCLR.Cryptography.RSACryptoServiceProvider(2048)) {
+using (RSACryptoServiceProvider RSA = new RSACryptoServiceProvider(2048)) {
 
     //Encrypt data.
-    using (GHIElectronics.TinyCLR.Cryptography.RSACryptoServiceProvider encryptRSA = new
-        GHIElectronics.TinyCLR.Cryptography.RSACryptoServiceProvider()) {
+    using (RSACryptoServiceProvider encryptRSA = new RSACryptoServiceProvider()) {
 
         encryptRSA.ImportParameters(RSA.ExportParameters(false));
         encryptedData = encryptRSA.Encrypt(dataToEncrypt);
     }
 
     //Decrypt data.
-    using (GHIElectronics.TinyCLR.Cryptography.RSACryptoServiceProvider decryptRSA = new
-        GHIElectronics.TinyCLR.Cryptography.RSACryptoServiceProvider()) {
+    using (RSACryptoServiceProvider decryptRSA = new RSACryptoServiceProvider()) {
 
         decryptRSA.ImportParameters(RSA.ExportParameters(true));
         decryptedData = decryptRSA.Decrypt(encryptedData);
     }
 }
 
-System.Diagnostics.Debug.WriteLine("Decrypted: " +
-    System.Text.Encoding.UTF8.GetString(decryptedData));
+Debug.WriteLine("Decrypted: " + Encoding.UTF8.GetString(decryptedData));
 
 ```
 

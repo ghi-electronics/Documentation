@@ -9,43 +9,41 @@ Below is simple example showing how to connect to https://www.google.com
 >Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Networking.Http
 
 ```cs
-static void DoTestHttps() {
-    var url = "https://www.google.com";
+var url = "https://www.google.com";
 
-    var certificates = Resources.GetBytes(Properties.Resources.BinaryResources.GlobalSign);
+var certificates = Resources.GetBytes(Properties.Resources.BinaryResources.GlobalSign);
 
-    X509Certificate[] certx509 = new X509Certificate[] { new X509Certificate(certificates) };
+X509Certificate[] certx509 = new X509Certificate[] { new X509Certificate(certificates) };
 
-    int read = 0, total = 0;
-    byte[] result = new byte[512];
+int read = 0, total = 0;
+byte[] result = new byte[512];
 
-    try {
-        using (var req = HttpWebRequest.Create(url) as HttpWebRequest){
-            req.KeepAlive = false;
-            req.HttpsAuthentCerts = certx509;
-            req.ReadWriteTimeout = 2000;
+try {
+    using (var req = HttpWebRequest.Create(url) as HttpWebRequest){
+        req.KeepAlive = false;
+        req.HttpsAuthentCerts = certx509;
+        req.ReadWriteTimeout = 2000;
 
-            using (var res = req.GetResponse() as HttpWebResponse){
-                using (var stream = res.GetResponseStream()){
-                    do {
-                        read = stream.Read(result, 0, result.Length);
-                        total += read;
+        using (var res = req.GetResponse() as HttpWebResponse){
+            using (var stream = res.GetResponseStream()){
+                do {
+                    read = stream.Read(result, 0, result.Length);
+                    total += read;
 
-                        System.Diagnostics.Debug.WriteLine("read : " + read);
-                        System.Diagnostics.Debug.WriteLine("total : " + total);
+                    System.Diagnostics.Debug.WriteLine("read : " + read);
+                    System.Diagnostics.Debug.WriteLine("total : " + total);
 
-                        var page = new String(System.Text.Encoding.UTF8.
-                            GetChars(result, 0, read));
+                    var page = new String(System.Text.Encoding.UTF8.
+                        GetChars(result, 0, read));
 
-                        System.Diagnostics.Debug.WriteLine("Response : " + page);
-                    }
-                    while (read != 0);
+                    System.Diagnostics.Debug.WriteLine("Response : " + page);
                 }
+                while (read != 0);
             }
         }
     }
-    catch { 
-    }
+}
+catch { 
 }
 ```
 

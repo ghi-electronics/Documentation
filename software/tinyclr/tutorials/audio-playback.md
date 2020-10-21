@@ -12,15 +12,13 @@ This code plays an 8 bit mono WAV file with a sample rate of 8 kHz. The WAV file
 
 
 ```cs
-var dac = GHIElectronics.TinyCLR.Devices.Dac.DacController.GetDefault();
-
-var analogOut = dac.OpenChannel(GHIElectronics.TinyCLR.Pins.SC20100.DacChannel.PA4);
+var dac = DacController.GetDefault();
+var analogOut = dac.OpenChannel(SC20100.DacChannel.PA4);
 
 var byteFile = Properties.Resources.GetBytes
     (Properties.Resources.BinaryResources.yourWavFileResource);
 
-var wavFile = new GHIElectronics.TinyCLR.Drivers.Media.Wav(byteFile);
-
+var wavFile = new Wav(byteFile);
 var dataIndex = wavFile.GetDataIndex();
 var size = wavFile.GetDataSize();
 var sampleRate = wavFile.GetSampleRate();
@@ -29,11 +27,11 @@ if (sampleRate == 8000) {
     for (int i = dataIndex; i < size; i++) {
         analogOut.WriteValue(byteFile[i]);
 
-        for (int timer = 0; timer < 58; timer++) { }
+        for (int timer = 0; timer < 58; timer++) {}
     }
 }
 else {
-    System.Diagnostics.Debug.WriteLine("Sorry, file does not have an 8 kHz sample rate.");
+    Debug.WriteLine("Sorry, file does not have an 8 kHz sample rate.");
 }
 ```
 

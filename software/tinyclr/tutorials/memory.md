@@ -93,7 +93,7 @@ class Program {
 }
 ```
 
-The following example shows the best way to handle the situation by moving the LED object declaration so it is available and accessible to the entire class.
+The following example shows the best way to handle the situation by moving the LED object declaration, so it is available and accessible to the entire class.
 
 ```cs
 class Program {
@@ -117,7 +117,7 @@ class Program {
 
 ### Garbage Collection
 
-TinyCLR OS automatically disposes of objects that are no longer needed. Garbage collection eliminates the need to manage memory manually, and reduces or eliminates some types of bugs.
+TinyCLR OS automatically disposes of objects that are no longer needed. Garbage collection eliminates the need to manage memory manually and reduces or eliminates some types of bugs.
 
 The act of garbage collection can temporarily reduce the responsiveness of your system, so it may be beneficial to actively manage garbage collection to improve real time response. Garbage collection will usually only run when there is a failed memory allocation, so by properly structuring your program you should be able to eliminate garbage collection or greatly reduce it. String operations are particularly troublesome in the creation of garbage as strings are immutable.
 
@@ -145,20 +145,20 @@ System.GC.WaitForPendingFinalizers();
 SITCore devices support 4 KBytes of battery backed RAM. Details can be found in the [Real Time Clock Tutorial](real-time-clock.md).
 
 ## Flash Memory
-Flash memory does not lose its contents on power loss. There are special requirements to write to flash but you can read Flash just like RAM. When deploying a program, the `TinyCLR Device Deployment` window will show what is being loaded and how large it is. It will then show how much free Flash is still available.
+Flash memory does not lose its contents on power loss. There are special requirements to write to Flash, but you can read Flash just like RAM. When deploying a program, the `TinyCLR Device Deployment` window will show what is being loaded and how large it is. It will then show how much free Flash is still available.
 
 > Assemblies deployed. There are 2,408,408 bytes left in the deployment area.
 
 Flash is not typically written to at runtime. The system will function even with no free available FLASH.
 
 ### Resources
-TinyCLR OS allows resources, like fonts and images, to be merged into the project as a resource and then deployed to the device's flash. Those resources can then be fetched into RAM and used at runtime. The [Resource](resources.md) tutorial has more details.
+TinyCLR OS allows resources, like fonts and images, to be merged into the project as a resource and then deployed to the device's Flash. Those resources can then be fetched into RAM and used at runtime. The [Resource](resources.md) tutorial has more details.
 
 ### Direct Access
 Unsupported at this time.
 
 > [!Tip]
-> You can only read from Flash, not write.
+> You can only read from flash, not write.
 
 
 

@@ -21,41 +21,32 @@ To test this code, I plugged the sensor directly into the SCM20260D Dev board an
 > [!Note]
 > The HC-SR04 ultrasonic distance sensor requires a 5 volt power supply. While the module accepts 3.3 volt logic on the Trig and Echo pins, it will not work with a 3.3 volt supply for power.
 
+>[!TIP]
+>Needed Nuget: GHIElectronics.TinyCLR.Devices.Signals
+>
 ```cs
-class Program {
-    private static GHIElectronics.TinyCLR.Devices.Signals.PulseFeedback pulseFeedback;
-    
-    static void Main() {
-        var distanceTriggerPin = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.
-            GetDefault().OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PA15);
+var gpio = GpioController.GetDefault();
+var distanceTriggerPin = gpio.OpenPin(SC20260.GpioPin.PA15);
 
-        var distanceEchoPin = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.
-            GetDefault().OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PJ14);
+var distanceEchoPin = gpio.OpenPin(SC20260.GpioPin.PJ14);
 
-        pulseFeedback = new GHIElectronics.TinyCLR.Devices.Signals.PulseFeedback
-            (distanceTriggerPin, distanceEchoPin, GHIElectronics.TinyCLR.Devices.
-            Signals.PulseFeedbackMode.EchoDuration) {
+pulseFeedback = new PulseFeedback(distanceTriggerPin,
+    distanceEchoPin,
+    PulseFeedbackMode.EchoDuration) {
+    DisableInterrupts = false,
+    Timeout = System.TimeSpan.FromSeconds(1),
+    PulseLength = System.TimeSpan.FromTicks(100),
+    EchoValue = GpioPinValue.High,
+    PulseValue = GpioPinValue.High,
+};
 
-            DisableInterrupts = false,
-            Timeout = System.TimeSpan.FromSeconds(1),
-            PulseLength = System.TimeSpan.FromTicks(100),
-            EchoValue = GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.High,
-            PulseValue = GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.High,
-        };
+while (true) {
+    var time = pulseFeedback.Trigger();
+    var microseconds = time.TotalMilliseconds * 1000.0;
+    var distance = microseconds * 0.036 / 2.0;
 
-        while (true) {
-            System.Diagnostics.Debug.WriteLine(ReadDistance().ToString());
-            System.Threading.Thread.Sleep(1000);
-        }
-    }
-
-    public static double ReadDistance() {
-        var time = pulseFeedback.Trigger();
-        var microseconds = time.TotalMilliseconds * 1000.0;
-        var distance = microseconds * 0.036 / 2.0;
-
-        return distance;
-    }
+    Debug.WriteLine(distance.ToString());
+    Thread.Sleep(Timeout.Infinite);
 }
 ```
 
@@ -67,41 +58,34 @@ Duration Until Echo is very similar to Echo Duration, although instead of sendin
 
 The following code reads the distance in centimeters from a Polaroid 6500 Ranging Module. This module is similar to the HC-SR04 distance sensor, however the time it takes for the sensor to pulse the ECHO pin after your device pulses the INIT must be measured.
 
+
+>[!TIP]
+>Needed Nuget: GHIElectronics.TinyCLR.Devices.Signals
+1`
 ```cs
-class Program {
-    private static GHIElectronics.TinyCLR.Devices.Signals.PulseFeedback pulseFeedback;
-    
-    static void Main() {
-        var distanceTriggerPin = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.
-            GetDefault().OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PA15);
+var gpio = GpioController.GetDefault();
+var distanceTriggerPin = gpio.OpenPin(SC20260.GpioPin.PA15);
 
-        var distanceEchoPin = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.
-            GetDefault().OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PJ14);
+var distanceEchoPin = gpio.OpenPin(SC20260.GpioPin.PJ14);
 
-        pulseFeedback = new GHIElectronics.TinyCLR.Devices.Signals.PulseFeedback
-            (distanceTriggerPin, distanceEchoPin, GHIElectronics.TinyCLR.Devices.
-            Signals.PulseFeedbackMode.DurationUntilEcho) {
+var pulseFeedback = new PulseFeedback(distanceTriggerPin, 
+    distanceEchoPin, 
+    PulseFeedbackMode.DurationUntilEcho) {
 
-            DisableInterrupts = false,
-            Timeout = System.TimeSpan.FromSeconds(1),
-            PulseLength = System.TimeSpan.FromTicks(100),
-            EchoValue = GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.High,
-            PulseValue = GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.High,
-        };
+    DisableInterrupts = false,
+    Timeout = System.TimeSpan.FromSeconds(1),
+    PulseLength = System.TimeSpan.FromTicks(100),
+    EchoValue = GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.High,
+    PulseValue = GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.High,
+};
 
-        while (true) {
-            System.Diagnostics.Debug.WriteLine(ReadDistance().ToString());
-            System.Threading.Thread.Sleep(1000);
-        }
-    }
+while (true) {
+    var time = pulseFeedback.Trigger();
+    var microseconds = time.TotalMilliseconds * 1000.0;
+    var distance = microseconds * 0.036 / 2.0;
 
-    public static double ReadDistance() {
-        var time = pulseFeedback.Trigger();
-        var microseconds = time.TotalMilliseconds * 1000.0;
-        var distance = microseconds * 0.036 / 2.0;
-
-        return distance;
-    }
+    Debug.WriteLine(distance.ToString());
+    Thread.Sleep(1000);
 }
 ```
 
@@ -117,29 +101,22 @@ The final mode is DrainDuration. This mode is often used to implement capacitive
 The following example illustrates the reading of a capacitive touch sensor. It sends a pulse of 10us to charge a capacitor and then measures the length of time it takes the capacitor to discharge on the same pin. It prints out the total discharge duration in milliseconds. It repeats every second.
 
 ```cs
-class Program {
-    static void Main() {
-        var capacitiveSensePin = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.
-            GetDefault().OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PJ14);
+var gpio = GpioController.GetDefault();
+var capacitiveSensePin = gpio.OpenPin(SC20260.GpioPin.PJ14);
 
-        var pulseFeedback = new GHIElectronics.TinyCLR.Devices.Signals.PulseFeedback
-            (capacitiveSensePin, GHIElectronics.TinyCLR.Devices.Signals.
-                PulseFeedbackMode.DrainDuration) {
+var pulseFeedback = new PulseFeedback(capacitiveSensePin, 
+    PulseFeedbackMode.DrainDuration) {
 
-            DisableInterrupts = false,
-            Timeout = System.TimeSpan.FromSeconds(1),
-            PulseLength = System.TimeSpan.FromTicks(100),
-            EchoValue = GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.High,
-            PulseValue = GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.High,
-        };
+    DisableInterrupts = false,
+    Timeout = System.TimeSpan.FromSeconds(1),
+    PulseLength = System.TimeSpan.FromTicks(100),
+    EchoValue = GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.High,
+    PulseValue = GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.High,
+};
 
-        while (true) {
-            System.Diagnostics.Debug.WriteLine(pulseFeedback.Trigger().
-                TotalMilliseconds.ToString());
-
-            System.Threading.Thread.Sleep(1000);
-        }
-    }
+while (true) {
+    Debug.WriteLine(pulseFeedback.Trigger().TotalMilliseconds.ToString());
+    Thread.Sleep(1000);
 }
 ```
 
@@ -152,8 +129,8 @@ When calling Read, it blocks other code from executing until it either fills the
 The following sample code captures the signal generated by pressing LDR button on the SC20100S Dev board. It will attempt to capture 100 transitions, waiting no more than 10 seconds. It will also enable the pull-up resistor on the pin. It will return the initial state of the pin when it started capturing and how many transitions it captured. Note that the signal capture may record button bounces, resulting in a number of transitions in rapid succession.
 
 ```cs
-var capturePin = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
-    OpenPin(GHIElectronics.TinyCLR.Pins.SC20100.GpioPin.PE3);
+var gpio = GpioController.GetDefault();
+var capturePin = gpio.OpenPin(SC20100.GpioPin.PE3);
 
 var capture = new SignalCapture(capturePin);
 var buffer = new TimeSpan[100];
@@ -164,7 +141,6 @@ capture.DriveMode = GpioPinDriveMode.InputPullUp;
 
 while (true) {
     var count = capture.Read(out var init, buffer);
-
     Thread.Sleep(100);
 }
 ```
@@ -180,9 +156,8 @@ At this time, SignalGenerator only operates in blocking mode. While SignalGenera
 The following sample code will blink the user LED on the SC20100S Dev board four times (for one second each time) every five seconds.
 
 ```cs
-var signalPin = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.
-    GetDefault().OpenPin(GHIElectronics.TinyCLR.Pins.SC20100.GpioPin.PE11);
-
+var gpio = GpioController.GetDefault();
+var signalPin = gpio.OpenPin(SC20260.GpioPin.PE11);
 var signalGen = new SignalGenerator(signalPin);
 
 var buffer = new[] {
@@ -201,7 +176,6 @@ signalGen.IdleValue = GpioPinValue.Low;
 
 while (true) {
     signalGen.Write(buffer);
-
     Thread.Sleep(5000);
 }
 ```

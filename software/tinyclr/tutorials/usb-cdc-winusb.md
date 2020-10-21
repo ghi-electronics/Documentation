@@ -13,7 +13,7 @@ The USB Communications Device Class (CDC) is natively supported by Windows and L
 
 ```cs
 static void DoTestCDC {
-        var usbclient = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
+        var usbclient = UsbClientController.GetDefault();
     
         var usbClientSetting = new UsbClientSetting(){
                 Mode = UsbClientMode.WinUsb,
@@ -30,8 +30,7 @@ static void DoTestCDC {
         usbclient.DeviceStateChanged += (a,b) => Debug.WriteLine("Connection changed."); 
         usbclient.DataReceived += (a,count) => Debug.WriteLine("Data received:" + count);
 
-        while (usbclient.DeviceState !=
-            GHIElectronics.TinyCLR.Devices.UsbClient.DeviceState.Configured);
+        while (usbclient.DeviceState != DeviceState.Configured);
                 Debug.WriteLine("UsbClient Connected");
 
 // The example will read data from port to dataR array
@@ -62,7 +61,7 @@ The WinUSB drivers are unique to Windows and take advantage of the power and spe
 
 ```cs
 static void DoTestWinUsb {
-        var usbclient = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
+        var usbclient = UsbClientController.GetDefault();
     
         var usbClientSetting = new UsbClientSetting(){
                 Mode = UsbClientMode.WinUsb,
@@ -79,8 +78,7 @@ static void DoTestWinUsb {
         usbclient.DeviceStateChanged += (a,b) => Debug.WriteLine("Connection changed."); 
         usbclient.DataReceived += (a,count) => Debug.WriteLine("Data received:" + count);
 
-        while (usbclient.DeviceState !=
-            GHIElectronics.TinyCLR.Devices.UsbClient.DeviceState.Configured) ;
+        while (usbclient.DeviceState != DeviceState.Configured) ;
                 Debug.WriteLine("UsbClient Connected");
 
 // The example will read data from port to dataR array

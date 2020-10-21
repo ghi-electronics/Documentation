@@ -80,65 +80,120 @@
 <h1 id="amazon-web-services">Amazon Web Services</h1>
 
 <hr>
-<p>This example shows how to communicate with AWS.</p>
+<p>This example shows how to communicate with AWS using MQTT. You&#39;ll also need to set up a Network Interface connection on the device such as <a href="wifi.html">WiFi</a> to Connect to AWS in your program.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Networking.Mqtt</p>
+<p>Add using statement:
+using System.Security.Cryptography.X509Certificates;</p>
 </div>
-<pre><code class="lang-cs">static void DoTestAwsMqtt()
+<pre><code class="lang-cs">var iotEndPoint = &quot;Need your Rest API Endpoint&quot;;
+var iotPort = 8883;
+var deviceId = &quot;Need your Device ID&quot;;
+
+var topicShadowUpdate = string.Format(&quot;$aws/things/{0}/shadow/update&quot;, deviceId);
+var topicShadowGet = string.Format(&quot;$aws/things/{0}/shadow/get&quot;, deviceId);
+
+var message = &quot;{\&quot;state\&quot;:{\&quot;desired\&quot;:{\&quot;My message\&quot;:\&quot;Hello World&quot;}}}&quot;;
+
+var caCertSource = UTF8Encoding.UTF8.GetBytes(&quot;Need AWS root CA certificate&quot;);
+var clientCertSource = UTF8Encoding.UTF8.GetBytes(&quot;Need your AWS client CA certificate&quot;);
+var privateKeyData = UTF8Encoding.UTF8.GetBytes(&quot;Need your AWS private key&quot;);
+
+X509Certificate CaCert = new X509Certificate(caCertSource);
+X509Certificate ClientCert = new X509Certificate(clientCertSource);
+
+ClientCert.PrivateKey = privateKeyData;    
+
+var clientSetting = new MqttClientSetting
 {
-    var iotArnString = &quot;Need your ARN string&quot;;
-    var iotPort = 8883;
-    var deviceId = &quot;Need your Device ID&quot;;
+    BrokerName = iotEndPoint,
+    BrokerPort = iotPort,
+    CaCertificate = CaCert,
+    ClientCertificate = ClientCert,
+    SslProtocol = System.Security.Authentication.SslProtocols.Tls12
+};
 
-    var topicShadowUpdate = string.Format(&quot;$aws/things/{0}/shadow/update&quot;, deviceId);
-    var topicShadowGet = string.Format(&quot;$aws/things/{0}/shadow/get&quot;, deviceId);
+var iotClient = new Mqtt(clientSetting);
 
-    var message = &quot;{\&quot;state\&quot;:{\&quot;desired\&quot;:{\&quot;My message\&quot;:\&quot;From my test \&quot;}}}&quot;;
+iotClient.PublishReceivedChanged += (a, b) =&gt; { Debug.WriteLine
+    (&quot;Received message: &quot; + Encoding.UTF8.GetString(b.Data)); };
 
-    var caCertSource = UTF8Encoding.UTF8.GetBytes(&quot;Need AWS root CA certificate&quot;);
-    var clientCertSource = UTF8Encoding.UTF8.GetBytes(&quot;Need your AWS client CA certificate&quot;);
-    var privateKeyData = UTF8Encoding.UTF8.GetBytes(&quot;Need your AWS private key&quot;);
+iotClient.SubscribedChanged += (a, b) =&gt; { Debug.WriteLine(&quot;Subscribed&quot;); };
 
-    X509Certificate CaCert = new X509Certificate(caCertSource);
-    X509Certificate ClientCert = new X509Certificate(clientCertSource);
+Debug.WriteLine(&quot;Connecting....&quot;)
 
-    ClientCert.PrivateKey = privateKeyData;    
+var connectSetting = new MqttConnectionSetting
+{
+    ClientId = deviceId,
+    UserName = null,
+    Password = null
+};
 
-    var clientSetting = new MqttClientSetting
+var connectCode = iotClient.Connect(connectSetting);
+
+ushort packetId = 1;
+
+iotClient.Subscribe(new string[] { topicShadowGet }, new QoSLevel[]
+    { QoSLevel.LeastOnce }, packetId++);
+
+iotClient.Publish(topicShadowUpdate, Encoding.UTF8.GetBytes(message),
+    QoSLevel.MostOnce, false, packetId++);
+</code></pre><p>We need a few things to complete the code sample that we&#39;ll get from AWS. We need an iotEndPoint, a deviceId, an AWS root certificate, a client certificate and a private key. First, you&#39;ll need to create an AWS account. </p>
+<p>Once you&#39;ve created your account, we need to find the service to set up our device. On the AWS Management  Console, search for the service &#39;IoT Core&#39; and select it. </p>
+<p><img src="images/aws-select-iot.jpg" alt="AWS Management Console"></p>
+<p>Before we add our device, we need to create a Policy that the device will use. From the side menu under the &#39;Secure&#39; tab click &#39;Polices&#39; click on the button to create a new policy. Name your policy and then click on advanced mode. Paste the code found below in the code window. Then click the &#39;Create&#39; button. We&#39;ll attach the policy to the device later. </p>
+<p><img src="images/aws-create-policy.jpg" alt="AWS Create Policy"></p>
+<p>Paste this code in the above window.</p>
+<pre><code class="lang-cs">{
+  &quot;Version&quot;: &quot;2012-10-17&quot;,
+  &quot;Statement&quot;: [
     {
-        BrokerName = iotArnString,
-        BrokerPort = iotPort,
-        CaCertificate = CaCert,
-        ClientCertificate = ClientCert,
-        SslProtocol = System.Security.Authentication.SslProtocols.Tls12
-    };
-
-    var iotClient = new Mqtt(clientSetting);
-
-    iotClient.PublishReceivedChanged += (a, b) =&gt; { Debug.WriteLine
-        (&quot;Received message: &quot; + Encoding.UTF8.GetString(b.Data)); };
-
-    iotClient.SubscribedChanged += (a, b) =&gt; { Debug.WriteLine(&quot;Subscribed&quot;); };
-
-    var connectSetting = new MqttConnectionSetting
-    {
-        ClientId = deviceId,
-        UserName = null,
-        Password = null
-    };
-
-    var connectCode = iotClient.Connect(connectSetting);
-
-    ushort packetId = 1;
-
-    iotClient.Subscribe(new string[] { topicShadowGet }, new QoSLevel[]
-        { QoSLevel.LeastOnce }, packetId++);
-
-    iotClient.Publish(topicShadowUpdate, Encoding.UTF8.GetBytes(message),
-        QoSLevel.MostOnce, false, packetId++);
+      &quot;Effect&quot;: &quot;Allow&quot;,
+      &quot;Action&quot;: [
+        &quot;iot:Publish&quot;,
+        &quot;iot:Subscribe&quot;,
+        &quot;iot:Connect&quot;,
+        &quot;iot:Receive&quot;
+      ],
+      &quot;Resource&quot;: [
+        &quot;*&quot;
+      ]
+    }
+  ]
 }
-</code></pre><p>This example requires iotArnString, deviceId, CA certificate, client certificates, and a private key, which are available when you register an AWS account.</p>
-<p>Check out the AWS tutorial at: <a href="https://aws.amazon.com/">https://aws.amazon.com/</a></p>
-</article>
+</code></pre><p>Now we need to create our IoT device within AWS.
+Click on the &#39;Manage&#39; Dropdown and select &#39;Things&#39;, then click on &#39;Register a thing&#39;</p>
+<p><img src="images/aws-manage-things.jpg" alt="AWS Manage Things"></p>
+<p>Next, we click on &#39;Create a single thing&#39;</p>
+<p><img src="images/aws-create-single.jpg" alt="AWS Create Single Thing"></p>
+<p>Now we&#39;ll create a Name for our IoT device and add it to the &#39;Things&#39; registry. This will be the deviceId we will use in the code sample. There are other options available that can be added, but in this tutorial, we only need to create a &#39;Name&#39; and click &#39;NEXT&#39;</p>
+<p><img src="images/aws-name-device.jpg" alt="AWS Create DeviceID"></p>
+<p>The next page is where we&#39;ll create the CA Certificates, we need to add to our projects resources. In this case we can use the &#39;One-Click certificate creation&#39;. Click on &#39;Create certificate&#39;</p>
+<p><img src="images/aws-create-certificates.jpg" alt="AWS Create Certificates"></p>
+<p>Next we need to download the CA Certificates we need. We need &#39;A certificates for this thing&#39; and &#39;the private key&#39;, we don&#39;t need to download the public key for this project. You&#39;ll also need an AWS root certificate, you can follow the link to download RSA 2048 bit key: Amazon Root CA 1. Next we need to click on the &#39;Activate&#39; button to activate the certificates we created, then click &#39;Attach a policy&#39;</p>
+<p><img src="images/aws-download-cert.jpg" alt="AWS Download Certs"></p>
+<p>Check the box for the &#39;Policy&#39; we created earlier, and then click the &#39;Register Thing&#39; button.</p>
+<p><img src="images/aws-add-policy.jpg" alt="AWS Add Policy"></p>
+<p>Add the 3 Certificates we downloaded to Resources in our project and SAVE your project.</p>
+<p><img src="images/aws-cert.jpg" alt="AWS Certs Resources"></p>
+<p>Inside the &#39;Things&#39; registry list click on the device you just created.</p>
+<p><img src="images/aws-select-device.jpg" alt="AWS Select Device"></p>
+<p>Once you&#39;re on your devices dashboard, click on the &#39;Interact&#39; tab. This will give you the iotEndPoint we&#39;ll need for our code. Copy the code...</p>
+<p><img src="images/aws-copy-endpoint.jpg" alt="AWS Copy Endpoint"></p>
+<p>...and paste it into the code as shown below. Also add the name of your device to the variable deviceId.</p>
+<pre><code class="lang-cs">var iotEndPoint = &quot;a13gxtasnslh-ats.iot.us-west-2.amazonaws.com&quot;;
+var iotPort = 8883;
+var deviceId = &quot;MyDevice&quot;;
+</code></pre><p>Finally, we need to link the CA Certificates we placed in our project resources to our code as shown in the example below.</p>
+<pre><code class="lang-cs">var caCertSorce = Properties.Resources.GetBytes(Properties.Resources.BinaryResources.AmazonRootCA1);
+var clientCertSource = Properties.Resources.GetBytes(Properties.Resources.BinaryResources._3a59c69926_certificate_pem);
+var privateKeyData = Properties.Resources.GetBytes(Properties.Resources.BinaryResources._3a59c69926_private_pem);
+</code></pre><p>You can now deploy your program in Visual Studio, to connect your device to AWS. Clicking on the &#39;Activity&#39; Tab on our device dashboard will show the active connection. </p>
+<p><img src="images/aws-device-activity.jpg" alt="AWS Device Activity"></p>
+<p>We view the messages being sent from our IoT device to AWS by clicking on the &#39;Shadows&#39; Tab, then click &#39;Classic Shadows&#39;. The message in the window is sent from our device...</p>
+<p><img src="images/aws-message-recieved.jpg" alt="AWS Device Activity"></p>
+<p>We can edit the message being sent from the device in Visual Studio by changing the message in this line of our code.</p>
+<pre><code class="lang-cs">var Message = &quot;{\&quot;state\&quot;:{\&quot;desired\&quot;:{\&quot;My message\&quot;:\&quot;Hello World\&quot;}}}&quot;;
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

@@ -84,34 +84,29 @@
 <p>The sample code below loads and executes a small assembly from a USB flash drive. To run this sample, start a new project in Visual Studio and copy the first code sample into the <code>Program.cs</code> window. Then add a new TinyCLR class named <code>TestAppDomainAssembly.cs</code>, and copy the second code sample into this window.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Storage, GHIElectronics.TinyCLR.IO, GHIElectronics.TinyCLR.Native, and GHIElectronics.TinyCLR.Pins.</p>
 </div>
-<p><code>Program.cs</code> class:</p>
-<pre><code class="lang-cs">class Program {
-    static void Main() {
-        var storageController = GHIElectronics.TinyCLR.Devices.Storage.StorageController.
-            FromName(GHIElectronics.TinyCLR.Pins.SC20260.StorageController.
-            UsbHostMassStorage);
+<pre><code class="lang-cs">var storageController = StorageController.
+    FromName(SC20260.StorageController.
+    UsbHostMassStorage);
 
-        var drive = GHIElectronics.TinyCLR.IO.FileSystem.Mount(storageController.Hdc);
+var drive = FileSystem.Mount(storageController.Hdc);
 
-        var filename = drive.Name + &quot;\\TestAppDomain.pe&quot;;
+var filename = drive.Name + &quot;\\TestAppDomain.pe&quot;;
 
-        System.IO.FileStream fsRead = new System.IO.FileStream(filename,
-            System.IO.FileMode.Open);
+FileStream fsRead = new FileStream(filename,
+    System.IO.FileMode.Open);
 
-        var assemblyInBytes = new byte[fsRead.Length];
+var assemblyInBytes = new byte[fsRead.Length];
 
-        fsRead.Read(assemblyInBytes, 0, assemblyInBytes.Length);
+fsRead.Read(assemblyInBytes, 0, assemblyInBytes.Length);
 
-        var assembly = System.Reflection.Assembly.Load(assemblyInBytes);
-        var obj = System.AppDomain.CurrentDomain.CreateInstanceAndUnwrap(&quot;TestAppDomain&quot;,
-            &quot;TestAppDomain.TestAssembly&quot;);
+var assembly = Assembly.Load(assemblyInBytes);
+var obj = AppDomain.CurrentDomain.CreateInstanceAndUnwrap(&quot;TestAppDomain&quot;,
+    &quot;TestAppDomain.TestAssembly&quot;);
 
-        var type = assembly.GetType(&quot;TestAppDomain.TestAssembly&quot;);
+var type = assembly.GetType(&quot;TestAppDomain.TestAssembly&quot;);
 
-        System.Reflection.MethodInfo mi = type.GetMethod(&quot;PrintMessage&quot;);
-        mi.Invoke(obj, null);
-    }
-}
+MethodInfo mi = type.GetMethod(&quot;PrintMessage&quot;);
+mi.Invoke(obj, null);
 </code></pre><p><code>TestAppDomainAssembly.cs</code> class:</p>
 <pre><code class="lang-cs">namespace TestAppDomain {
     public class TestAssembly
@@ -124,7 +119,7 @@
 }
 </code></pre><p>In the <code>TestAppDomain</code> properties window (right click on <code>TestAppDomain</code> in Solution Explorer and select <code>Properties</code>), click on <code>TinyCLR OS</code> in the left panel and check the <code>Generate native stubs for internal methods</code> and <code>Generate bare native stubs</code> boxes. This tells Visual Studio to create the Portable Executable (PE) file that will be copied to the USB flash drive and then executed by the main program.</p>
 <p><img src="images/native-stubs-check-boxes.png" alt="Native stubs check boxes"></p>
-<p>Now build the project. Inside of the project&#39;s directory navigate to the <code>TestAppDomain/bin/Debug/pe</code> directory and copy the file <code>TestAppDomain.pe</code> to a USB flash drive. Now insert the flash drive into your SITCore board and deploy the program. The main program will load and run <code>TestAppDomain.pe</code> from the USB flash drive. If everthing worked, you should see the following in your output window:</p>
+<p>Now build the project. Inside of the project&#39;s directory navigate to the <code>TestAppDomain/bin/Debug/pe</code> directory and copy the file <code>TestAppDomain.pe</code> to a USB flash drive. Now insert the flash drive into your SITCore board and deploy the program. The main program will load and run <code>TestAppDomain.pe</code> from the USB flash drive. If everything worked, you should see the following in your output window:</p>
 <pre><code class="lang-text">&#39;GHIElectronics.TinyCLR.VisualStudio.ProjectSystem.dll&#39; (Managed): Loaded &#39;TestAppDomain&#39;
    Assembly: TestAppDomain (1.0.0.0)  Hello from TestAssembly
 </code></pre></article>

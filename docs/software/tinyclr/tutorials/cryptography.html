@@ -93,7 +93,7 @@
 <pre><code class="lang-cs">//Argument below is the 128 bit key. XTEA always uses a 128 bit key.
 var crypto = new Xtea(new uint[] { 0x01234567, 0x89ABCDEF, 0xFEDCBA98, 0x76543210 });
 
-byte[] dataToEncrypt = System.Text.Encoding.UTF8.GetBytes(&quot;Data to encrypt.&quot;);
+byte[] dataToEncrypt = Encoding.UTF8.GetBytes(&quot;Data to encrypt.&quot;);
 byte[] encryptedData;
 byte[] decryptedData;
 
@@ -103,8 +103,7 @@ encryptedData = crypto.Encrypt(dataToEncrypt, 0, (uint)dataToEncrypt.Length);
 //Decrypt data.
 decryptedData = crypto.Decrypt(encryptedData, 0, (uint)encryptedData.Length);
 
-System.Diagnostics.Debug.WriteLine(&quot;Decrypted: &quot; +
-    System.Text.Encoding.UTF8.GetString(decryptedData));
+Debug.WriteLine(&quot;Decrypted: &quot; + Encoding.UTF8.GetString(decryptedData));
 </code></pre><p>The above code outputs the following:</p>
 <pre><code class="lang-text">Decrypted: Data to encrypt.
 </code></pre><h2 id="rsa">RSA</h2>
@@ -114,32 +113,28 @@ System.Diagnostics.Debug.WriteLine(&quot;Decrypted: &quot; +
 <div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core and GHIElectronics.TinyCLR.Cryptography</p>
 </div>
 <p>The following sample code encrypts and decrypts a string of text.</p>
-<pre><code class="lang-cs">byte[] dataToEncrypt = System.Text.Encoding.UTF8.GetBytes(&quot;Data to Encrypt&quot;);
+<pre><code class="lang-cs">byte[] dataToEncrypt = Encoding.UTF8.GetBytes(&quot;Data to Encrypt&quot;);
 byte[] encryptedData;
 byte[] decryptedData;
 
-using (GHIElectronics.TinyCLR.Cryptography.RSACryptoServiceProvider RSA = new
-    GHIElectronics.TinyCLR.Cryptography.RSACryptoServiceProvider(2048)) {
+using (RSACryptoServiceProvider RSA = new RSACryptoServiceProvider(2048)) {
 
     //Encrypt data.
-    using (GHIElectronics.TinyCLR.Cryptography.RSACryptoServiceProvider encryptRSA = new
-        GHIElectronics.TinyCLR.Cryptography.RSACryptoServiceProvider()) {
+    using (RSACryptoServiceProvider encryptRSA = new RSACryptoServiceProvider()) {
 
         encryptRSA.ImportParameters(RSA.ExportParameters(false));
         encryptedData = encryptRSA.Encrypt(dataToEncrypt);
     }
 
     //Decrypt data.
-    using (GHIElectronics.TinyCLR.Cryptography.RSACryptoServiceProvider decryptRSA = new
-        GHIElectronics.TinyCLR.Cryptography.RSACryptoServiceProvider()) {
+    using (RSACryptoServiceProvider decryptRSA = new RSACryptoServiceProvider()) {
 
         decryptRSA.ImportParameters(RSA.ExportParameters(true));
         decryptedData = decryptRSA.Decrypt(encryptedData);
     }
 }
 
-System.Diagnostics.Debug.WriteLine(&quot;Decrypted: &quot; +
-    System.Text.Encoding.UTF8.GetString(decryptedData));
+Debug.WriteLine(&quot;Decrypted: &quot; + Encoding.UTF8.GetString(decryptedData));
 </code></pre><p>The above code outputs the following:</p>
 <pre><code class="lang-text">Decrypted: Data to Encrypt
 </code></pre><p>If no key size is provided as an argument to <code>RSACryptoServiceProvider()</code>, a default key size of 1024 bits will be used.</p>

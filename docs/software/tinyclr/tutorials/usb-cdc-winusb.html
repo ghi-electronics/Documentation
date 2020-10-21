@@ -88,7 +88,7 @@
 <div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Devices.UsbClient</p>
 </div>
 <pre><code class="lang-cs">static void DoTestCDC {
-        var usbclient = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
+        var usbclient = UsbClientController.GetDefault();
 
         var usbClientSetting = new UsbClientSetting(){
                 Mode = UsbClientMode.WinUsb,
@@ -105,8 +105,7 @@
         usbclient.DeviceStateChanged += (a,b) =&gt; Debug.WriteLine(&quot;Connection changed.&quot;); 
         usbclient.DataReceived += (a,count) =&gt; Debug.WriteLine(&quot;Data received:&quot; + count);
 
-        while (usbclient.DeviceState !=
-            GHIElectronics.TinyCLR.Devices.UsbClient.DeviceState.Configured);
+        while (usbclient.DeviceState != DeviceState.Configured);
                 Debug.WriteLine(&quot;UsbClient Connected&quot;);
 
 // The example will read data from port to dataR array
@@ -132,7 +131,7 @@
 </code></pre><h2 id="winusb">WinUSB</h2>
 <p>The WinUSB drivers are unique to Windows and take advantage of the power and speed of USB to provide faster communication than CDC. The speed is limited by the data processing on the IoT device. Windows 10 loads the drivers automatically, Windows 7 requires drivers.</p>
 <pre><code class="lang-cs">static void DoTestWinUsb {
-        var usbclient = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
+        var usbclient = UsbClientController.GetDefault();
 
         var usbClientSetting = new UsbClientSetting(){
                 Mode = UsbClientMode.WinUsb,
@@ -149,8 +148,7 @@
         usbclient.DeviceStateChanged += (a,b) =&gt; Debug.WriteLine(&quot;Connection changed.&quot;); 
         usbclient.DataReceived += (a,count) =&gt; Debug.WriteLine(&quot;Data received:&quot; + count);
 
-        while (usbclient.DeviceState !=
-            GHIElectronics.TinyCLR.Devices.UsbClient.DeviceState.Configured) ;
+        while (usbclient.DeviceState != DeviceState.Configured) ;
                 Debug.WriteLine(&quot;UsbClient Connected&quot;);
 
 // The example will read data from port to dataR array

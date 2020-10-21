@@ -85,46 +85,44 @@
 <p>Binary Serialization is a native, fast and lean way to serialize objects. To keep serialization fast and efficient on embedded devices, TinyCLR&#39;s serialization is not compatible with binary serialization on desktop PCs. However, an implementation on the PC can be used to process the serialized binary data if necessary.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core and System.Reflection.</p>
 </div>
-<pre><code class="lang-cs">class Program {
-    public enum MyEnum : short { A, B, C };
+<pre><code class="lang-cs">public enum MyEnum : short { A, B, C };
 
-    private static void Main() {
-        MySerializableClass original = new MySerializableClass(1, &quot;ABCD&quot;, 3, MyEnum.B, 0.1f);
+private static void Main() {
+    MySerializableClass original = new MySerializableClass(1, &quot;ABCD&quot;, 3, MyEnum.B, 0.1f);
 
-        System.Diagnostics.Debug.WriteLine(&quot;original: &quot; + original.ToString());
+    Debug.WriteLine(&quot;original: &quot; + original.ToString());
 
-        byte[] buffer = System.Reflection.Reflection.Serialize(original,
-            typeof(MySerializableClass));
+    byte[] buffer = Reflection.Serialize(original,
+        typeof(MySerializableClass));
 
-        MySerializableClass restored = (MySerializableClass)System.Reflection.Reflection.
-            Deserialize(buffer, typeof(MySerializableClass));
+    MySerializableClass restored = (MySerializableClass)Reflection.
+        Deserialize(buffer, typeof(MySerializableClass));
 
-        System.Diagnostics.Debug.WriteLine(&quot;restored: &quot; + restored.ToString());
-        System.Diagnostics.Debug.WriteLine(&quot;Number of bytes: &quot; + buffer.Length.ToString());
+    Debug.WriteLine(&quot;restored: &quot; + restored.ToString());
+    Debug.WriteLine(&quot;Number of bytes: &quot; + buffer.Length.ToString());
+}
+
+[System.Serializable]
+public class MySerializableClass {
+    public int a;
+    public string b;
+    private byte c;
+    private MyEnum d;
+    private float e;
+    private System.DateTime dt;
+
+    public MySerializableClass(int a, string b, byte c, MyEnum d, float e) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
+        this.e = e;
+        this.dt = this.dt = new System.DateTime(2007, 1, 22);
     }
 
-    [System.Serializable]
-    public class MySerializableClass {
-        public int a;
-        public string b;
-        private byte c;
-        private MyEnum d;
-        private float e;
-        private System.DateTime dt;
-
-        public MySerializableClass(int a, string b, byte c, MyEnum d, float e) {
-            this.a = a;
-            this.b = b;
-            this.c = c;
-            this.d = d;
-            this.e = e;
-            this.dt = this.dt = new System.DateTime(2007, 1, 22);
-        }
-
-        public override string ToString() {
-            return &quot;a=&quot; + a.ToString() + &quot;, b=&quot; + b + &quot;, c=&quot; + c.ToString() + &quot;, d=&quot; +
-                ((object)d).ToString() + &quot;, e=&quot; + e.ToString(&quot;F2&quot;);
-        }
+    public override string ToString() {
+        return &quot;a=&quot; + a.ToString() + &quot;, b=&quot; + b + &quot;, c=&quot; + c.ToString() + &quot;, d=&quot; +
+            ((object)d).ToString() + &quot;, e=&quot; + e.ToString(&quot;F2&quot;);
     }
 }
 </code></pre><div class="NOTE"><h5>Note</h5><p>Serialization in TinyCLR OS is not compatible with full .NET. That means you cannot deserialize an object with .NET on a PC from a byte stream that was created with TinyCLR OS and vice versa. There is a solution which allows Serialization in TinyCLR OS and the .NET Framework to be compatible. For details, look at the BinarySerializationDesktopSample here: <strong><a href="https://github.com/Apress/exp-.net-micro-framework/tree/master/source/Chapter09/BinarySerializationDesktopSample">https://github.com/Apress/exp-.net-micro-framework/tree/master/source/Chapter09/BinarySerializationDesktopSample</a></strong></p>
@@ -135,28 +133,20 @@
 <p>TinyCLR OS includes a built in JSON library.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Data.Json.</p>
 </div>
-<pre><code class="lang-cs">class Program {
-    private static void Main() {
-        var intArray = new int[] { 1, 3, 5, 7, 9 };
+<pre><code class="lang-cs">var intArray = new int[] { 1, 3, 5, 7, 9 };
+var result = JsonConverter.Serialize(intArray);
+var bson = result.ToBson();
 
-        var result = GHIElectronics.TinyCLR.Data.Json.JsonConverter.Serialize(intArray);
+var compare = (System.Array).Json.JsonConverter.
+    FromBson(bson, typeof(int[]));
 
-        var bson = result.ToBson();
-
-        var compare = (System.Array)GHIElectronics.TinyCLR.Data.Json.JsonConverter.
-            FromBson(bson, typeof(int[]));
-
-        for (var i = 0; i &lt; intArray.Length; i++) {
-            if (intArray[i] != (int)compare.GetValue(i)) {
-                System.Diagnostics.Debug.WriteLine(&quot;Array test failed&quot;);
-
-                break;
-            }
-        }
-
-        System.Diagnostics.Debug.WriteLine(&quot;Array test succeeded&quot;);
+for (var i = 0; i &lt; intArray.Length; i++) {
+    if (intArray[i] != (int)compare.GetValue(i)) {
+        Debug.WriteLine(&quot;Array test failed&quot;);
+        break;
     }
 }
+Debug.WriteLine(&quot;Array test succeeded&quot;);
 </code></pre><h2 id="xml">XML</h2>
 <p>TinyCLR OS supports both the writing and reading of XML (eXtensible Markup Language) files through its XmlReader and XmlWriter classes. Full documentation of XML is beyond the scope of this document, but for more information Microsoft&#39;s <a href="https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmldocument?view=netcore-3.1">.NET XML documentation</a> is a good place to start. Please note that the TinyCLR implementation of XML is not fully .NET compatible, for example the asynchronous API is not supported.</p>
 <div class="NOTE"><h5>Note</h5><p>XmlReader and XmlWriter both implement the IDisposable interface.</p>
@@ -192,7 +182,7 @@ writer.Close();
 
 //Display the XML data.
 byte[] byteArray = stream.ToArray();
-char[] characterArray = System.Text.UTF8Encoding.UTF8.GetChars(byteArray);
+char[] characterArray = UTF8Encoding.UTF8.GetChars(byteArray);
 Debug.WriteLine(new string(characterArray) + &quot;\r\n\r\n&quot;);
 stream.Dispose();
 

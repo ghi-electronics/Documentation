@@ -122,18 +122,15 @@ Debug.WriteLine(controller.MinClockFrequency.ToString()); //Prints minimum SPI c
 Debug.WriteLine(controller.MaxClockFrequency.ToString()); //Prints maximum SPI clock in Hertz.
 </code></pre><h2 id="most-significant-bit-msb-and-least-significant-bit-lsb">Most Significant Bit (MSB) and Least Significant Bit (LSB)</h2>
 <p>SITCore supports switching between MSB and LSB.</p>
-<pre><code>var spiSettings = new SpiConnectionSettings()
-{               
+<pre><code>var spiSettings = new SpiConnectionSettings() {               
     DataFrameFormat = SpiDataFrame.MsbFirst // MSB
 };
 
-var spiSettings = new SpiConnectionSettings()
-{
+var spiSettings = new SpiConnectionSettings() {
     DataFrameFormat = SpiDataFrame.LsbFirst // LSB
 };
 </code></pre><h2 id="sample-code">Sample Code</h2>
-<pre><code class="lang-cs">var cs = GHIElectronics.TinyCLR.Devices.Gpio.GpioController.GetDefault().
-    OpenPin(GHIElectronics.TinyCLR.Pins.SC20260.GpioPin.PE4);
+<pre><code class="lang-cs">var cs = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PE4);
 
 var settings = new SpiConnectionSettings() {
     ChipSelectType = SpiChipSelectType.Gpio,
