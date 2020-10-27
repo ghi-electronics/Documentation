@@ -155,11 +155,7 @@ Flash is not typically written to at runtime. The system will function even with
 TinyCLR OS allows resources, like fonts and images, to be merged into the project as a resource and then deployed to the device's Flash. Those resources can then be fetched into RAM and used at runtime. The [Resource](resources.md) tutorial has more details.
 
 ### Direct Access
-Unsupported at this time.
-
-> [!Tip]
-> You can only read from flash, not write.
-
+Writing to Flash (persistent storage) is supported securely through [secure storage.](resources.md)
 
 
 
