@@ -1,7 +1,7 @@
 # IFTTT
 ---
 ## If This Then That IOT Example.
-If This Then That (IFTTT) is a free service allowing users to automate tasks by using simple conditional statements to create scripts or Applets (previously called "recipes"). Some similar platforms you might want to check out include [Twilio](https://www.twilio.com/), [ThingSpeak](https://thingspeak.com/), [Yonomi](https://www.yonomi.co/), and [Home Assistant](https://www.home-assistant.io/). IFTTT can be used to respond to both events on websites and events from devices. Some uses include:
+If This Then That (IFTTT) is a service allowing users to automate tasks by using simple conditional statements to create scripts or Applets (previously called "recipes"). Some similar platforms you might want to check out include [Twilio](https://www.twilio.com/), [ThingSpeak](https://thingspeak.com/), [Yonomi](https://www.yonomi.co/), and [Home Assistant](https://www.home-assistant.io/). IFTTT can be used to respond to both events on websites and events from devices. Some uses include:
 
 * Turn on the lights when you come home.
 * Send a text message if rain is forecast.
@@ -18,21 +18,21 @@ The possibilities are almost endless. Here we will take you step by step through
 
 ### Create an IFTTT Account
 
-Signing up for IFTTT is easy and free -- just go to [IFTTT.com](https://ifttt.com) and click on the `Sign up` button in the upper right hand corner of the screen. You can sign up using your Google or Facebook account, or use an e-mail address and password to sign in. IFTTT will usually offer to set up a sample connection right after you sign up -- just hit the "X" in the upper right corner to skip this step. Click on the `Get more` button under the message `Start connecting your world` to get started.
+Signing up for IFTTT is easy and they offer a free limited account, but it only allows up to 3 applets. Their paid service offers unlimited applet creation, queries, conditional logic and multiple actions -- just go to [IFTTT.com](https://ifttt.com) and click on the `Sign up` button in the upper right hand corner of the screen. You can sign up using your Google or Facebook account, or use an e-mail address and password to sign in. IFTTT will usually offer to set up a sample connection right after you sign up -- just hit the "X" in the upper right corner to skip this step. Click on the `Get more` button under the message `Start connecting your world` to get started.
 
 ![IFTTT Start Connecting](images/ifttt-start-connecting.png)
 
 ### Create the IFTTT Applets
 
-Two IFTTT applets will be needed for this project. An Email Applet will be send and email when a button is pushed. A Webhooks Applet will be used to receive an HTTP GET request from the FEZ when the temperature goes below ten degrees. Finally, an If This Then That Applet will call the Email Applet when triggered by the Webhooks Applet.
+Two IFTTT applets will be needed for this project. An Email Applet will be send an email when a button is pushed. A Webhooks Applet will be used to receive an HTTP GET request from the FEZ when the temperature goes below ten degrees. Finally, an If This Then That Applet will call the Email Applet when triggered by the Webhooks Applet.
 
 #### Create the Webhooks Applet
 
-After signing up and getting to the `Explore` page, scroll down the page until you find the `Create your own` button and click on it.
+After signing up click on `Create` button in the top menu. 
 
 ![IFTTT Create Your Own](images/ifttt-create-your-own.png)
 
-You will then be presented with a screen that may seem to provide no option forward. Click on `+This` to get to the next step.
+You will then be presented with a screen that may seem to provide no option forward. Click on `If This Add` to get to the next step.
 
 ![IFTTT If This Then That](images/ifttt-if-this.png)
 
@@ -68,7 +68,13 @@ Now click on the `Send me an email` box.
 
 You should now be on the `Complete action fields` screen. Click on the `Create action` button without making any changes. This will tell IFTTT to use the default method of constructing the subject line and body of the notification email.
 
-This should take you to the `Review and finish` screen. Click on the `Finish` button.
+![IFTTT Complete action fields](images/ifttt-complete-action.png)
+
+This will then take you back to the main If Then page. Click on continue
+
+![IFTTT Continue](images/ifttt-continue.png)
+
+Finally we're at the `Review and finish` screen. Click on the `Finish` button.
 
 #### Get Your Key
 
@@ -77,6 +83,8 @@ Now we just have to get the key that is sent from the SITCore to trigger the eve
 ![IFTTT Click Webhooks icon](images/ifttt-click-webhooks-icon.png)
 
 Then click on the `Documentation` button near the upper right of the next screen. This will bring up a page with your unique key. Including this key in an HTTP GET or POST request to the IFTTT website will trigger your event.
+
+![IFTTT Webhooks Key](images/ifttt-webhooks-key.png)
 
 To test the IFTTT event, you can enter the following line into the address bar of your web brower (replace Your_Key_Here with your key) : https://maker.ifttt.com/trigger/button_press/with/key/Your_Key_Here
 
