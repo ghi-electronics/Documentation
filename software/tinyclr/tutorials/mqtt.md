@@ -61,9 +61,9 @@ catch (Exception e) {
 The Mqtt driver provides five events:
 
 ```cs
-client.PublishReceivedChanged += (a,b) => { Debug.WriteLine("Publish Received Changed.");  };
+client.PublishReceivedChanged += (p1, p2, p3, p4, p5, p6) => { Debug.WriteLine("Received message");};
 client.PublishedChanged += (a, b, c) => { Debug.WriteLine("Published Changed."); }; ;
-client.SubscribedChanged += (a, b) => { Debug.WriteLine("Subscribed Changed."); };
+client.SubscribedChanged += (a, b, c) => { Debug.WriteLine("Subscribed Changed."); };
 client.ConnectedChanged += (a) => { Debug.WriteLine("Connected Changed."); };
 client.UnsubscribedChanged += (a, b) => { Debug.WriteLine("Unsubscribed Changed."); };
 ```
