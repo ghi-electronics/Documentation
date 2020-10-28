@@ -38,8 +38,9 @@ var clientSetting = new MqttClientSetting
 
 var iotClient = new Mqtt(clientSetting);
 
-iotClient.PublishReceivedChanged += (a, b) => { Debug.WriteLine
-    ("Received message: " + Encoding.UTF8.GetString(b.Data)); };
+iotClient.PublishReceivedChanged += (p1, p2, p3, p4, p5, p6) => {
+Debug.WriteLine("Received message: " + Encoding.UTF8.GetString(p3));
+};
 
 iotClient.SubscribedChanged += (a, b) => { Debug.WriteLine("Subscribed"); };
 
