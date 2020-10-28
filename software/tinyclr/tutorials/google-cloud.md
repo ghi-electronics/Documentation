@@ -42,7 +42,10 @@ var iotClient = new Mqtt(clientSetting);
 
 var jwt = "Your JSON Web Token";
 
-iotClient.PublishReceivedChanged += (a, b) => { Debug.WriteLine("Publish Received Changed:" + new string(System.Text.UTF8Encoding.UTF8.GetChars(b.Data))); };
+iotClient.PublishReceivedChanged += (p1, p2, p3, p4, p5, p6) => {
+Debug.WriteLine("Received message: " + Encoding.UTF8.GetString(p3));
+};
+
 iotClient.PublishedChanged += (a, b, c) => { Debug.WriteLine("Published Changed."); }; 
 iotClient.SubscribedChanged += (a, b) => { Debug.WriteLine("Subscribed Changed."); };
 iotClient.ConnectedChanged += (a) => { Debug.WriteLine("Connected Changed."); };
