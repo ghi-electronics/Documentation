@@ -48,6 +48,12 @@ try {
     // Publish a topic
     client.Publish(topic, Encoding.UTF8.GetBytes("your message"), QoSLevel.MostOnce,
         false, (ushort)packetId);
+
+    // Publish recieved change from a specific topic
+    client.PublishReceivedChanged += (object sender, string topic, byte[] data, bool duplicate, QoSLevel qosLevel, bool retain) => {
+    Debug.WriteLine("Received message: " + Encoding.UTF8.GetString(data));
+    };
+
 }
 catch (Exception e) { 
 }
@@ -55,6 +61,8 @@ catch (Exception e) {
 
 >[!NOTE]
 > The MQTT driver in TinyCLR OS supports client mode only.
+
+The `PublishedReceivedChanged` Event allows you to select the topic that the device recieves the change from.
 
 # Event Handler
 
