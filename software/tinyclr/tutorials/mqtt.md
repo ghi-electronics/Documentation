@@ -62,7 +62,7 @@ catch (Exception e) {
 >[!NOTE]
 > The MQTT driver in TinyCLR OS supports client mode only.
 
-The `PublishedReceivedChanged` Event allows you to select the topic that the device recieves the change from.
+The `PublishedReceivedChanged` Event allows you to select the topic that the device receives the change from.
 
 # Event Handler
 
