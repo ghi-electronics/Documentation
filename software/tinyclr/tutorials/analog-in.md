@@ -13,8 +13,8 @@ The resolution of the ADC determines its accuracy. An 8bit ADC has 256 steps to 
 > When multiple ADC are available on a system, you must select the right controller instead of using the default controller through GetDefault()
 
 ```cs
-var adc = AdcController.FromName(SC20100.AdcChannel.Controller1.Id);
-var analog = adc.OpenChannel(SC20100.AdcChannel.Controller1.PA0);
+var adc = AdcController.FromName(SC20100.Adc.Controller1.Id);
+var analog = adc.OpenChannel(SC20100.Adc.Controller1.PA0);
 
 while (true) {
     double d = analog.ReadRatio();
