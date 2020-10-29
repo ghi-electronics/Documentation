@@ -12,8 +12,8 @@ Pulse Width Modulation (PWM) is a very useful feature found on most microcontrol
 PWM is perfect for dimming an LED or controlling the speed of a motor. When the duty cycle is 50%, half the energy is transferred to the attached load.
 
 ```cs
-var controller = PwmController.FromName(SC20260.PwmChannel.Controller3.Id);
-var led = controller.OpenChannel(SC20260.PwmChannel.Controller3.PB0);
+var controller = PwmController.FromName(SC20260.Timer.Pwm.Controller3.Id);
+var led = controller.OpenChannel(SC20260.Timer.Pwm.Controller3.PB0);
 controller.SetDesiredFrequency(10000);
 
 double duty = 0.5, speed = 0.01;
@@ -72,8 +72,8 @@ class Program {
                               QUARTER, QUARTER, QUARTERDOT, EIGHTH, WHOLE};
 
     private static void Main() {
-        var controller = PwmController.FromName(SC20100.PwmChannel.Controller14.Id);
-        var toneOut = controller.OpenChannel(SC20100.PwmChannel.Controller14.PA7);
+        var controller = PwmController.FromName(SC20100.Timer.Pwm.Controller14.Id);
+        var toneOut = controller.OpenChannel(SC20100.Timer.Pwm.Controller14.PA7);
         toneOut.SetActiveDutyCyclePercentage(0.5);
 
         while (true) {
@@ -115,14 +115,14 @@ using System.Threading;
 class Program {
     private static void Main() {
         ServoMotor servo1 = new ServoMotor(ServoMotor.ServoType.Positional,
-            PwmController.FromName(SC20100.PwmChannel.Controller15.Id),
-            SC20100.PwmChannel.Controller15.PE6);
+            PwmController.FromName(SC20100.Timer.Pwm.Controller15.Id),
+            SC20100.Timer.Pwm.Controller15.PE6);
         
         servo1.ConfigurePulseParameters(0.5, 2.4);  //Settings for TowerPro SG90 micro servo.
 
         ServoMotor servo2 = new ServoMotor(ServoMotor.ServoType.Continuous,
-            PwmController.FromName(SC20100.PwmChannel.Controller2.Id),
-            SC20100.PwmChannel.Controller2.PA3);
+            PwmController.FromName(SC20100.Timer.Pwm.Controller2.Id),
+            SC20100.Timer.Pwm.Controller2.PA3);
 
         servo1.Set(0);
         Thread.Sleep(1000);

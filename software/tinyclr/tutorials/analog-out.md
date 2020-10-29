@@ -9,7 +9,7 @@ This example will generate a triangular waveform.
 
 ```cs
 var dac = DacController.GetDefault();
-var analog = dac.OpenChannel(SC20100.DacChannel.PA4);
+var analog = dac.OpenChannel(SC20100.Dac.PA4);
 
 double d = 0.5;
 double dd = 0.01;
