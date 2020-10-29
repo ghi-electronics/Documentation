@@ -23,7 +23,7 @@ To test this code, I plugged the sensor directly into the SCM20260D Dev board an
 
 >[!TIP]
 >Needed Nuget: GHIElectronics.TinyCLR.Devices.Signals
->
+
 ```cs
 var gpio = GpioController.GetDefault();
 var distanceTriggerPin = gpio.OpenPin(SC20260.GpioPin.PA15);
