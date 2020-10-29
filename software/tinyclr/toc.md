@@ -9,7 +9,7 @@
 
 # [Tutorials](tutorials/intro.md)
 ## Productivity Enhancements
-### [Device Information](tutorials/debugging.md)
+### [Debugging](tutorials/debugging.md)
 ### [Memory Management](tutorials/memory.md)
 ### [External Memory](tutorials/external-memory.md)
 ### [Unmanaged Heap](tutorials/unmanaged-heap.md)
