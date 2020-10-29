@@ -24,6 +24,7 @@
 ### [Encoding & Decoding](tutorials/encoding-decoding.md)
 ### [Application Domain](tutorials/application-domain.md)
 ### [Marshal](tutorials/marshal.md)
+### [RegEx](tutorials/reg-ex.md)
 
 ## Multimedia
 ### [Graphics](tutorials/graphics.md)
