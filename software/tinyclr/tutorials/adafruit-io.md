@@ -146,19 +146,19 @@ try {
 catch (Exception e) {
 
 }
-Thread.Sleep(-1);
+Thread.Sleep(Timeout.Infinite);
 }
-private static void Client_PublishReceivedChanged(object sender, MqttPacket packet) {
-    if (packet.Data[0] == '1') { //Toggle is set to '1'
+
+private static void Client_PublishReceivedChanged(object sender, string topic, byte[] data, bool duplicate, QoSLevel qosLevel, bool retain) {
+    if (data[0] == '1') { //Toggle is set to '1'
         Debug.WriteLine("ToggleSwitch set to 1");
     }
-    if (packet.Data[0] == '0') {  //Toggle is set to '0'
+    if (data[0] == '0') {  //Toggle is set to '0'
         Debug.WriteLine("ToggleSwitch set to 0");
     }
 }
 
 ```
-
 
 ## Using HTML
 
