@@ -14,6 +14,7 @@
 ### [External Memory](tutorials/external-memory.md)
 ### [Unmanaged Heap](tutorials/unmanaged-heap.md)
 ### [NuGet Based Libraries](tutorials/nuget.md)
+### [Device Ino](tutorials/device-info.md)
 
 ## Modern OS Features
 ### [Multithreading](tutorials/multithreading.md)
