@@ -77,7 +77,7 @@
 ### Firmware
 
 #### Changes
-- Updated version number 2.1.0-preview1
+- Updated version number 2.1.0.10000
 - Speed up system speed 15%
 - Use Timer Counter (TIM) for System Timer instead of CortexM SystemTick
 - Fixed SDCard writing sometime failed.
