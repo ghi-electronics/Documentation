@@ -8,7 +8,7 @@
     <title>HTTP/HTTPS </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="HTTP/HTTPS ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -119,7 +119,8 @@ try {
 }
 catch {               
 }
-</code></pre><h2 id="http-server">HTTP Server</h2>
+</code></pre><hr>
+<h2 id="http-server">HTTP Server</h2>
 <p>TinyCLR OS provides an HttpListener class which can be used to make an HTTP Server. This code needs an active network connection on the same local network as your client application to work properly.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Network and GHIElectronics.TinyCLR.Networking.Http.</p>
 </div>
@@ -159,6 +160,7 @@ while (true) {
 listener.Stop();
 </code></pre><p>From your client device (smartphone, PC...), enter the server ip address into your web browser. In our case it&#39;s 192.168.1.6. The response is shown as below:</p>
 <p><img src="images/http-server.png" alt="Server response"></p>
+<hr>
 <h2 id="https">HTTPS</h2>
 <p>Secure connections work in a similar way through built in <a href="tls.html">TLS</a> support.</p>
 <p>HTTPS can also be used to send data to cloud computing services such as <a href="azure.html">Azure</a>.</p>
@@ -170,12 +172,13 @@ listener.Stop();
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/http-https.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/SubjectDividers/software/tinyclr/tutorials/http-https.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

@@ -8,7 +8,7 @@
     <title>Analog Out </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Analog Out ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -85,7 +85,7 @@
 <p>The analog out on a microcontroller has a given resolution, which in large part determines its precision or accuracy. Check the device documentation for details. For example, an 8-bit DAC has 256 possible output voltage levels and a resolution of 3.3V/256 or 0.013 volts.</p>
 <p>This example will generate a triangular waveform.</p>
 <pre><code class="lang-cs">var dac = DacController.GetDefault();
-var analog = dac.OpenChannel(SC20100.DacChannel.PA4);
+var analog = dac.OpenChannel(SC20100.Dac.PA4);
 
 double d = 0.5;
 double dd = 0.01;
@@ -99,8 +99,10 @@ while (true) {
 }
 </code></pre><div class="TIP"><h5>Tip</h5><p>Do not use analog outputs to control the power of an LED or a motor. Use <a href="pwm.html">PWM</a> for that.</p>
 </div>
+<hr>
 <h2 id="pwm">PWM</h2>
 <p>PWM can also be used to output an analog voltage. <a href="pwm.html">Click here</a> for details.</p>
+<hr>
 <h2 id="audio-playback">Audio Playback</h2>
 <p>WAV audio playback can be done using an analog output pin. See <a href="audio-playback.html">Audio Playback</a>.</p>
 </article>
@@ -111,12 +113,13 @@ while (true) {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/analog-out.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/SubjectDividers/software/tinyclr/tutorials/analog-out.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

@@ -8,7 +8,7 @@
     <title>Ethernet </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Ethernet ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -162,7 +162,8 @@ private static void NetworkController_NetworkAddressChanged
 
     linkReady = address[0] != 0;
 }
-</code></pre><h2 id="enc28j60">ENC28J60</h2>
+</code></pre><hr>
+<h2 id="enc28j60">ENC28J60</h2>
 <p>This example uses the ENC28J60 click on our SC20260D Dev Board.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins</p>
 </div>
@@ -253,7 +254,8 @@ private static void NetworkController_NetworkAddressChanged
 
     linkReady = address[0] != 0;
 }
-</code></pre><h2 id="event-handlers">Event Handlers</h2>
+</code></pre><hr>
+<h2 id="event-handlers">Event Handlers</h2>
 <p>NetworkController provides two events:</p>
 <pre><code class="lang-cs">private static void NetworkController_NetworkLinkConnectedChanged
     (NetworkController sender, NetworkLinkConnectedChangedEventArgs e)
@@ -284,12 +286,13 @@ private static void NetworkController_NetworkAddressChanged
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/ethernet.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/SubjectDividers/software/tinyclr/tutorials/ethernet.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

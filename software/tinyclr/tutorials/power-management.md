@@ -80,9 +80,9 @@ GHIElectronics.TinyCLR.Native.Power.Reset();
 
 ---
 
-## Low Speed
+## Clock Speed
 
-You can set your device system clock to operate at half speed, saving 40% power consumption with the following commands:
+You can set your device's system clock to operate at half speed, saving 40% power consumption with the following commands:
 
 ```cs
 if (Power.GetSystemClock() == SystemClock.High){
@@ -100,7 +100,7 @@ if (Power.GetSystemClock() == SystemClock.Low){
 ```
 > [!Note]
 > Changing the clock speed requires a software reset in the code. Calling this reset 
-> detaches the debugger, you'll need to redeploy to continue debugging.
+> detaches the debugger, you'll need to redeploy to the device to continue debugging.
 
 
 

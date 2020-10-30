@@ -8,7 +8,7 @@
     <title>Power Management </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Power Management ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -98,7 +98,8 @@ Power.Sleep();
 //The system is Sleeping.
 //Pressing the LDR Button (PE3) wakes up the system.
 private static void ldrButton_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e) { }
-</code></pre><h2 id="shutdown">Shutdown</h2>
+</code></pre><hr>
+<h2 id="shutdown">Shutdown</h2>
 <p>In this mode the system completely shuts down. It can only be awakened by reset, power cycle, or by toggling the WKUP pin.</p>
 <p>The following code shuts down the system. The <code>false</code> argument configures the system to wake up when the WKUP pin goes from high to low. Make the argument <code>true</code> to wake up when WKUP goes high.</p>
 <div class="NOTE"><h5>Note</h5><p>Waking from Shutdown mode always resets the system. Your application will start over, it will not resume where it left off.</p>
@@ -107,7 +108,8 @@ private static void ldrButton_ValueChanged(GpioPin sender, GpioPinValueChangedEv
 </div>
 <pre><code class="lang-cs">//The next line shuts down the system.
 Power.Shutdown(true, DateTime.MaxValue); 
-</code></pre><h2 id="sleep-or-shutdown-for-a-specific-time">Sleep or Shutdown for a Specific Time</h2>
+</code></pre><hr>
+<h2 id="sleep-or-shutdown-for-a-specific-time">Sleep or Shutdown for a Specific Time</h2>
 <p>To sleep for a specific time:</p>
 <pre><code class="lang-cs">Power.Sleep(DateTime.Now.AddSeconds(90)); //Will wake up after 90 seconds.
                                           //A GPIO can also wake up the system.
@@ -117,7 +119,8 @@ Power.Shutdown(true, DateTime.MaxValue);
 </code></pre><p>To shutdown for a specific time or when the WKUP pin changes state (whichever comes first):</p>
 <pre><code class="lang-cs">Power.Shutdown(true, DateTime.Now.AddSeconds(90); //Will wake up after 90 seconds or
                                                   //when WKUP is pressed.
-</code></pre><h2 id="software-reset">Software Reset</h2>
+</code></pre><hr>
+<h2 id="software-reset">Software Reset</h2>
 <p>You can also reset your device from within your application with the following command:</p>
 <pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.Power.Reset();
 </code></pre></article>
@@ -128,12 +131,13 @@ Power.Shutdown(true, DateTime.MaxValue);
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/power-management.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/SubjectDividers/software/tinyclr/tutorials/power-management.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

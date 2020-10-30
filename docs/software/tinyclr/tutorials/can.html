@@ -8,7 +8,7 @@
     <title>CAN </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="CAN ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -102,6 +102,7 @@
 <div class="TIP"><h5>Tip</h5><p>Some CAN devices, including our own development boards, have built in termination resistors. If you are using more than two nodes on a high speed CAN bus, you must disable the termination resistors on all nodes except for the two end nodes. </p>
 </div>
 <p>Low speed or fault tolerant CAN uses a linear bus, star bus, or multiple star buses.  Fault tolerant CAN buses are terminated differently than linear CAN buses and require a termination resistor at each node.  The value of these resistors depends on the network but should equal about 100 ohms per CAN line in total.</p>
+<hr>
 <h2 id="standard-can">Standard CAN</h2>
 <p>The TinyCLR CAN API provides several methods for configuring the CAN bus and sending and receiving standard CAN messages. This also forms the basis upon which CAN-FD is provided.</p>
 <h3 id="configuring-the-bus">Configuring the Bus</h3>
@@ -222,6 +223,7 @@
 <h4 id="addmaskfilter">AddMaskFilter()</h4>
 <p><code>AddMaskFilter()</code> can be used to specify an individual arbitration ID or a range of arbitration IDs that will be accepted regardless of the group filter settings. If the arbitration ID of the message is bitwise anded with the given mask argument, and the result is equal to the compare argument you provide, the message will be accepted.</p>
 <p>In the sample code below, CAN messages with arbitration IDs of <code>0x11</code>, <code>0x13</code>, and <code>0x5678</code> will be accepted in addition to the arbitration IDs specified by the group filters.</p>
+<hr>
 <h2 id="sample-code">Sample Code</h2>
 <p>The following sample code is written for our SITCore SC20100S Dev Board.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices and GHIElectronics.TinyCLR.Pins</p>
@@ -305,7 +307,8 @@ class Program {
     private static void Can_ErrorReceived(CanController sender, ErrorReceivedEventArgs e)
         =&gt; Debug.WriteLine(&quot;Error &quot; + e.ToString());
 }
-</code></pre><h2 id="can-fd">CAN-FD</h2>
+</code></pre><hr>
+<h2 id="can-fd">CAN-FD</h2>
 <p>CAN-FD allows for faster data transmission and larger data packet size to increase throughput. At the same time, CAN-FD is compatible with traditional CAN -- CAN-FD and standard CAN nodes can even coexist on the same CAN bus!</p>
 <p>CAN-FD can be used by setting the <code>FdCan</code> property of your CAN message to <code>true</code>. This setting will allow you to send up to 64 bytes of data per CAN message.</p>
 <p>To send the data at higher speed you will also need to set two bit timings, one for the normal, slower speed (<code>SetNominalBitTiming()</code>), and one for the faster speed (<code>SetDataBitTiming()</code>). You will also have to set the <code>BitRateSwitch</code> property of the CAN message to <code>true.</code></p>
@@ -345,12 +348,13 @@ var message = new CanMessage() {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/rc2-prep/software/tinyclr/tutorials/can.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/SubjectDividers/software/tinyclr/tutorials/can.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

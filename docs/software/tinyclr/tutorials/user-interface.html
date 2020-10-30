@@ -8,7 +8,7 @@
     <title>User Interface </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="User Interface ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -112,7 +112,8 @@ namespace UserInterfaceExample {
         }
     }
 }
-</code></pre><h2 id="windows">Windows</h2>
+</code></pre><hr>
+<h2 id="windows">Windows</h2>
 <p>While you can have multiple windows in your UI application, it is mandatory to have at least one window. Here is a complete example that shows a window with a gradient brush background. The code is for SCM20260D Dev board with the 4.3 inch display.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins, GHIElectronics.TinyCLR.UI, GHIElectronics.TinyCLR.UI.Media</p>
 </div>
@@ -269,7 +270,8 @@ namespace SC20100_N18_WPF{
         }
     }
 }
-</code></pre><h2 id="elements">Elements</h2>
+</code></pre><hr>
+<h2 id="elements">Elements</h2>
 <p>A window is not very useful without some elements (controls). There are many available standard elements, and you can make your own custom elements as well. All elements descend from the <code>UIElement</code> class. Explore the <code>GHIElectronics.TinyCLR.UI.Controls</code> namespace to see what&#39;s available.</p>
 <p>For the sake of simplifying the rest of this tutorial, we&#39;ve added the <code>private static UIElement Elements()</code> method that creates and returns the elements. This is then assigned to the child of our window. You will need to add <code>window.Child = Elements()</code> right before returning from <code>CreateWindow</code>.</p>
 <div class="TIP"><h5>Tip</h5><p>This example needs a <a href="font-support.html">font</a>.</p>
@@ -555,12 +557,13 @@ app.InputProvider.RaiseButton(btn, btnState, DateTime.UtcNow);
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/user-interface.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/SubjectDividers/software/tinyclr/tutorials/user-interface.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

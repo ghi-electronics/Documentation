@@ -8,7 +8,7 @@
     <title>Signal Control </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Signal Control ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -81,6 +81,75 @@
 
 <hr>
 <p><img src="images/signal-control.jpg" alt="HC-SR04 ultrasonic sensor"></p>
+<h2 id="digitalsignal">DigitalSignal</h2>
+<p>The DigitalSignal is used to handle digital signals! Unlike the other features on this page, DigitalSignal is accurate because it is hardware-backed and runs in a non-blocking manner.</p>
+<p>Being hardware backed, this feature only runs on specific pins. Those pins can be found under the pins library, such as <code>SC20260.Timer.Capture.Controller?.xxx</code>. </p>
+<div class="TIP"><h5>Tip</h5><p>Timers are also used with other features, such as PWM. Once a timer is reserved for DigitalSignal, it is no longer available for other features. However, the system includes many timer controllers.</p>
+</div>
+<p>There are two uses for DigitalSignal, to capture a stream of durations (signal analyzer) or a pulse counter. Both features can be used to capture on <code>RisingEdge</code> or <code>FallingEdge</code>. If both edges are desired, use <code>RisingEdge | FallingEdge</code>. Capturing starts immediately unless <code>waitForEdge</code> is set to <code>true</code>.</p>
+<div class="WARNING"><h5>Warning</h5><p>The <code>waitForEdge</code> uses interrupt pin internally to start the capturing cycle. Same rules apply as GPIO interrupt pins, for example when using PB3 to capture with <code>waitForEdge</code> equals <code>true</code>, PA3, PC3, PD3...etc can&#39;t be used for interrupts. See <a href="gpio.html">GPIO</a> for details on interrupt pins.</p>
+</div>
+<h3 id="capture">Capture</h3>
+<p>The Capture feature return an array of timestamps of individual durations. The returned values are in nanoseconds?</p>
+<div class="TIP"><h5>Tip</h5><p>Digital Signal is limited to the timer max value, which comes to be about 17.89 seconds. The <code>waitForEdge</code> helps by only starting the timer when there is an active pulse.</p>
+</div>
+<pre><code class="lang-cs">var digitalSignalPin = GpioController.GetDefault().OpenPin(SC20260.Timer.Capture.Controller5.PB3);
+
+var digitalSignal = new DigitalSignal(digitalSignalPin);
+bool waitForEdge = false;// Start capturing as soon as Capture is called
+
+// Subscribe event when done capturing
+digitalSignal.OnCaptureReady += Digital_OnCaptureReady;
+
+// start capture 100 samples, timeout is 15seconds
+digitalSignal.Capture(100, GpioPinEdge.RisingEdge | GpioPinEdge.FallingEdge, waitForEdge, TimeSpan.FromSeconds(15));
+
+// Wait for finish capture
+// do other work
+Thread.Sleep(Timeout.Infinite); 
+
+// The event
+private static void Digital_OnCaptureReady(DigitalSignal sender, uint[] buffer, uint count, GpioPinValue pinValue) {
+    if (count == 0) {
+        Debug.WriteLine(&quot;no data was captured!&quot;);
+        return;
+    }
+    for (int i = 0; i &lt; count; i++) {
+        Debug.WriteLine(&quot;Sample [&quot; + i +&quot;]: &quot;+ buffer[i]+&quot; ns&quot;);
+    }
+}
+</code></pre><div class="NOTE"><h5>Note</h5><p>The first captured pulse will likely have an inaccurate (shorter) value due to system prep time.</p>
+</div>
+<h3 id="readpulse">ReadPulse</h3>
+<p>ReadPulse can be used to measure frequency and other analyses that require measuring time duration for specific pulse count.</p>
+<pre><code class="lang-cs">var digitalSignalPin = GpioController.GetDefault().OpenPin(SC20260.Timer.Capture.Controller5.PB3);
+var digitalSignal = new DigitalSignal(digitalSignalPin);
+bool waitForEdge = true;// wait for first pulse before starting the measurement
+
+// Subscribe event when done reading
+digitalSignal.OnReadPulseReady += Digital_OnReadPulseReady;           
+
+// Start reading 1000 pulses
+digitalSignal.ReadPulse(1000, GpioPinEdge.RisingEdge, waitForEdge);
+
+// do other work...
+Thread.Sleep(Timeout.Infinite);
+
+// the event
+private static void Digital_OnReadPulseReady(DigitalSignal sender, TimeSpan duration, uint count, GpioPinValue pinValue) {
+    var ticks = duration.Ticks;
+    var microsecond = ((double)duration.Ticks) / 10;
+    var millisecond = ((double)duration.Ticks) / 10000;
+    var freq = (count / microsecond) * 1000000;
+
+    Debug.WriteLine(&quot;GpioPinValue = &quot; + ((pinValue == GpioPinValue.High) ? &quot;High&quot; : &quot;Low&quot;));
+    Debug.WriteLine(&quot;PulseCount = &quot; + count);
+    Debug.WriteLine(&quot;Duration ticks = &quot; + ticks);
+    Debug.WriteLine(&quot;Duration microsecond = &quot; + microsecond);
+    Debug.WriteLine(&quot;Duration millisecond = &quot; + millisecond);
+    Debug.WriteLine(&quot;freq = &quot; + freq / 1000.0 + &quot; KHz&quot;);
+}
+</code></pre><hr>
 <h2 id="pulse-feedback">Pulse Feedback</h2>
 <p>The PulseFeedback class can be used in three different modes. These modes are used to measure Echo Duration, Duration Until Echo, and Drain Duration.</p>
 <h3 id="echo-duration">Echo Duration</h3>
@@ -91,12 +160,12 @@
 <p><img src="images/ultrasonic-on-header.jpg" alt="HC-SR04 on dev board"></p>
 <div class="NOTE"><h5>Note</h5><p>The HC-SR04 ultrasonic distance sensor requires a 5 volt power supply. While the module accepts 3.3 volt logic on the Trig and Echo pins, it will not work with a 3.3 volt supply for power.</p>
 </div>
-<div class="TIP"><h5>Tip</h5><p>Needed Nuget: GHIElectronics.TinyCLR.Devices.Signals</p>
 <pre><code class="lang-cs">var gpio = GpioController.GetDefault();
 var distanceTriggerPin = gpio.OpenPin(SC20260.GpioPin.PA15);
-</code></pre></div>
-<p>var distanceEchoPin = gpio.OpenPin(SC20260.GpioPin.PJ14);</p>
-<p>pulseFeedback = new PulseFeedback(distanceTriggerPin,
+
+var distanceEchoPin = gpio.OpenPin(SC20260.GpioPin.PJ14);
+
+pulseFeedback = new PulseFeedback(distanceTriggerPin,
     distanceEchoPin,
     PulseFeedbackMode.EchoDuration) {
     DisableInterrupts = false,
@@ -104,29 +173,23 @@ var distanceTriggerPin = gpio.OpenPin(SC20260.GpioPin.PA15);
     PulseLength = System.TimeSpan.FromTicks(100),
     EchoValue = GpioPinValue.High,
     PulseValue = GpioPinValue.High,
-};</p>
-<p>while (true) {
+};
+
+while (true) {
     var time = pulseFeedback.Trigger();
     var microseconds = time.TotalMilliseconds * 1000.0;
-    var distance = microseconds * 0.036 / 2.0;</p>
-<pre><code>Debug.WriteLine(distance.ToString());
-Thread.Sleep(Timeout.Infinite);
-</code></pre><p>}</p>
-<pre><code>
-### Duration Until Echo
+    var distance = microseconds * 0.036 / 2.0;
 
-![Duration until echo timing](images/duration-until-echo.gif)
-
-Duration Until Echo is very similar to Echo Duration, although instead of sending a pulse and measuring the length of the resulting echo, it measures how long it takes until that echo is received. Pulse and echo cannot use the same pins.
-
-The following code reads the distance in centimeters from a Polaroid 6500 Ranging Module. This module is similar to the HC-SR04 distance sensor, however the time it takes for the sensor to pulse the ECHO pin after your device pulses the INIT must be measured.
-
-
-&gt;[!TIP]
-&gt;Needed Nuget: GHIElectronics.TinyCLR.Devices.Signals
-1`
-```cs
-var gpio = GpioController.GetDefault();
+    Debug.WriteLine(distance.ToString());
+    Thread.Sleep(Timeout.Infinite);
+}
+</code></pre><h3 id="duration-until-echo">Duration Until Echo</h3>
+<p><img src="images/duration-until-echo.gif" alt="Duration until echo timing"></p>
+<p>Duration Until Echo is very similar to Echo Duration, although instead of sending a pulse and measuring the length of the resulting echo, it measures how long it takes until that echo is received. Pulse and echo cannot use the same pins.</p>
+<p>The following code reads the distance in centimeters from a Polaroid 6500 Ranging Module. This module is similar to the HC-SR04 distance sensor, however the time it takes for the sensor to pulse the ECHO pin after your device pulses the INIT must be measured.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed Nuget: GHIElectronics.TinyCLR.Devices.Signals`</p>
+</div>
+<pre><code class="lang-cs">var gpio = GpioController.GetDefault();
 var distanceTriggerPin = gpio.OpenPin(SC20260.GpioPin.PA15);
 
 var distanceEchoPin = gpio.OpenPin(SC20260.GpioPin.PJ14);
@@ -172,7 +235,8 @@ while (true) {
     Debug.WriteLine(pulseFeedback.Trigger().TotalMilliseconds.ToString());
     Thread.Sleep(1000);
 }
-</code></pre><h2 id="signal-capture">Signal Capture</h2>
+</code></pre><hr>
+<h2 id="signal-capture">Signal Capture</h2>
 <p>The SignalCapture class monitors a pin and records any changes (high-low or low-high transitions) of the pin to an array. It is a digital waveform recorder. Each array element is the number of microseconds between each signal change.</p>
 <p>When calling Read, it blocks other code from executing until it either fills the input buffer or it has captured the number of transitions specified by the count argument. If your signal is shorter than that, the call will never return. Make sure to request only what you plan to capture.</p>
 <p>The following sample code captures the signal generated by pressing LDR button on the SC20100S Dev board. It will attempt to capture 100 transitions, waiting no more than 10 seconds. It will also enable the pull-up resistor on the pin. It will return the initial state of the pin when it started capturing and how many transitions it captured. Note that the signal capture may record button bounces, resulting in a number of transitions in rapid succession.</p>
@@ -190,7 +254,8 @@ while (true) {
     var count = capture.Read(out var init, buffer);
     Thread.Sleep(100);
 }
-</code></pre><h2 id="signal-generator">Signal Generator</h2>
+</code></pre><hr>
+<h2 id="signal-generator">Signal Generator</h2>
 <p>SignalGenerator is a digital waveform generator. SignalGenerator works by comparing an internal counter to an array of time values, one by one. When the value of the argument matches the counter, the output pin is changed. The time values are in microseconds.</p>
 <p>SignalGenerator can also be used to generate PWM. Unlike the PWM class, SignalGenerator can be used to generate PWM on any available output pin. It does use processor time -- the higher the frequency the more processor time it uses.</p>
 <p>At this time, SignalGenerator only operates in blocking mode. While SignalGenerator is running, it will not yield any processor time to other code.</p>
@@ -225,12 +290,13 @@ while (true) {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/signal-control.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/SubjectDividers/software/tinyclr/tutorials/signal-control.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

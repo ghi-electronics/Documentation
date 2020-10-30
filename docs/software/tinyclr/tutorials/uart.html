@@ -8,7 +8,7 @@
     <title>UART </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UART ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -114,22 +114,7 @@ while (true) {
 
     Thread.Sleep(20);
 }
-</code></pre><h2 id="uart-settings">UART Settings</h2>
-<p>We&#39;ve expanded the available UART settings to better support serial protocols such as RS-485 and DMX. Here&#39;s a complete list of the available settings:</p>
-<ul>
-<li>BaudRate: Communication speed in bits per second.</li>
-<li>DataBits: Number of data bits in each byte. Usually set to eight.</li>
-<li>Parity: Parity bit setting. Disabled when set to <code>UartParity.None</code>.</li>
-<li>StopBits: Number of stop bits sent to mark the end of each byte.</li>
-<li>Handshaking: Can be set to none or <code>UartHandshake.RequestToSend</code> for hardware handshaking.</li>
-<li>EnableDePin: Used to enable and disable the <code>Driver Enable</code> pin, which is used for RS-485 communication.</li>
-<li>InvertTxPolarity: Used to invert high and low states of the transmit pin. Useful for hardware that inverts this signal.</li>
-<li>InvertRxPolarity: Used to invert high and low states of the receive pin. Useful for hardware that inverts this signal.</li>
-<li>InvertBinaryData: Used to invert the data polarity without inverting the start and stop bit polarity.</li>
-<li>SwapTxRxPin: Swaps the transmit and receive pins. Very useful for correcting board layout mistakes!</li>
-<li>InvertDePolarity: Inverts the polarity of the <code>Driver Enable</code> pin used for RS-485.</li>
-</ul>
-<h2 id="break-generation">Break Generation</h2>
+</code></pre><h2 id="break-generation">Break Generation</h2>
 <p>It is sometimes necessary to generate a <code>break</code> signal before transmission to let the receiver(s) know that a new data frame is starting. Such is the case when using the DMX protocol, which is often used for stage lighting.</p>
 <div class="NOTE"><h5>Note</h5><p>You must wait for the previous transmission of finish before starting a new transmission that incorporates a break signal.</p>
 </div>
@@ -153,7 +138,8 @@ while (uart.BytesToWrite &gt; 0) Thread.Sleep(0); //Make sure UART is done trans
 
 //The following line sends a break of 100 uS before sending the data.
 uart.Write(txBuffer, 0, txBuffer.Length, TimeSpan.FromTicks(1000));
-</code></pre><h2 id="event-handlers">Event Handlers</h2>
+</code></pre><hr>
+<h2 id="event-handlers">Event Handlers</h2>
 <p>TinyCLR&#39;s UART API included the following event listeners:</p>
 <ul>
 <li>ClearToSendChanged</li>
@@ -193,6 +179,7 @@ private static void MyUart_DataReceived(UartController sender, DataReceivedEvent
 }
 </code></pre><div class="TIP"><h5>Tip</h5><p>Once you type += after the event, hit the tab key and Visual Studio will automatically create the event for you.</p>
 </div>
+<hr>
 <h2 id="rs232">RS232</h2>
 <p>UART uses the processor&#39;s voltage levels (logic levels) for transferring data. On the SITCore this is 0 to 3.3 volts. In the early days of computers, UARTs used -12 to +12 volts to communicate reliably over longer distances. This is known as the RS232 standard.</p>
 <p>Some PCs still include serial ports, but those are RS232 serial ports. A voltage level shifter is needed to properly connect a logic level UART to an RS232 device.</p>
@@ -206,12 +193,13 @@ private static void MyUart_DataReceived(UartController sender, DataReceivedEvent
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/uart.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/SubjectDividers/software/tinyclr/tutorials/uart.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>
