@@ -8,7 +8,7 @@
     <title>MQTT </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="MQTT ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -123,16 +123,24 @@ try {
     // Publish a topic
     client.Publish(topic, Encoding.UTF8.GetBytes(&quot;your message&quot;), QoSLevel.MostOnce,
         false, (ushort)packetId);
+
+    // Publish recieved change from a specific topic
+    client.PublishReceivedChanged += (object sender, string topic, byte[] data, bool duplicate, QoSLevel qosLevel, bool retain) =&gt; {
+    Debug.WriteLine(&quot;Received message: &quot; + Encoding.UTF8.GetString(data));
+    };
+
 }
 catch (Exception e) { 
 }
 </code></pre><div class="NOTE"><h5>Note</h5><p>The MQTT driver in TinyCLR OS supports client mode only.</p>
 </div>
+<p>The <code>PublishedReceivedChanged</code> Event allows you to select the topic that the device receives the change from.</p>
+<hr>
 <h1 id="event-handler">Event Handler</h1>
 <p>The Mqtt driver provides five events:</p>
-<pre><code class="lang-cs">client.PublishReceivedChanged += (a,b) =&gt; { Debug.WriteLine(&quot;Publish Received Changed.&quot;);  };
+<pre><code class="lang-cs">client.PublishReceivedChanged += (p1, p2, p3, p4, p5, p6) =&gt; { Debug.WriteLine(&quot;Received message&quot;);};
 client.PublishedChanged += (a, b, c) =&gt; { Debug.WriteLine(&quot;Published Changed.&quot;); }; ;
-client.SubscribedChanged += (a, b) =&gt; { Debug.WriteLine(&quot;Subscribed Changed.&quot;); };
+client.SubscribedChanged += (a, b, c) =&gt; { Debug.WriteLine(&quot;Subscribed Changed.&quot;); };
 client.ConnectedChanged += (a) =&gt; { Debug.WriteLine(&quot;Connected Changed.&quot;); };
 client.UnsubscribedChanged += (a, b) =&gt; { Debug.WriteLine(&quot;Unsubscribed Changed.&quot;); };
 </code></pre></article>
@@ -143,12 +151,13 @@ client.UnsubscribedChanged += (a, b) =&gt; { Debug.WriteLine(&quot;Unsubscribed 
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/mqtt.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/SubjectDividers/software/tinyclr/tutorials/mqtt.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

@@ -22,6 +22,8 @@ ImportRange 32 126
 > [!TIP]
 > This [**third-party tool**](http://informatix.miloush.net/microframework/Utilities/TinyFontTool.aspx) can be handy for generating compatible fonts.
 
+---
+
 ## Font Definition
 The .fntdef file options are as follows:
 
@@ -119,9 +121,8 @@ The .fntdef file options are as follows:
 
 Syntax for running FontConverter is GHIElectronics.TinyCLR.FontConverter.exe *input-font* *output-font*. For example `GHIElectronics.TinyCLR.FontConverter.exe Arial.fntdef Arial.tcfnt`.
 
-
-## Resources
 ---
 
+## Resources
 Fonts can be added to your application as a resource. [Click here](resources.md) for more information.
 

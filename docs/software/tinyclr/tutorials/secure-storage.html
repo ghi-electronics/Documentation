@@ -8,7 +8,7 @@
     <title>Secure Storage </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Secure Storage ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -140,7 +140,8 @@ for (uint block = 0; block &lt; data.Length / configStorage.BlockSize; block++) 
 }
 
 Debug.WriteLine(&quot;Configuration storage is good to go!!!&quot;);
-</code></pre><h2 id="one-time-programmable-area">One Time Programmable Area</h2>
+</code></pre><hr>
+<h2 id="one-time-programmable-area">One Time Programmable Area</h2>
 <div class="NOTE"><h5>Note</h5><p>If all 32 bytes of any OTP flash block contain 0xFF, the block is considered unused. If you write only 0xFF to the contents of a block, the block will be regarded as unused and you will be able to rewrite the block. </p>
 </div>
 <p>The one time programmable (OTP) secure flash region is organized into 2048 blocks of 32 bytes each. Once you write to a block, that block can be read but never changed.</p>
@@ -156,12 +157,13 @@ Debug.WriteLine(&quot;Configuration storage is good to go!!!&quot;);
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/secure-storage.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/SubjectDividers/software/tinyclr/tutorials/secure-storage.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

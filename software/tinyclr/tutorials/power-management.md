@@ -26,6 +26,8 @@ private static void ldrButton_ValueChanged(GpioPin sender, GpioPinValueChangedEv
 
 ```
 
+---
+
 ## Shutdown
 In this mode the system completely shuts down. It can only be awakened by reset, power cycle, or by toggling the WKUP pin.
 
@@ -42,6 +44,8 @@ The following code shuts down the system. The `false` argument configures the sy
 Power.Shutdown(true, DateTime.MaxValue); 
 
 ```
+
+---
 
 ## Sleep or Shutdown for a Specific Time
 
@@ -64,6 +68,8 @@ Power.Shutdown(true, DateTime.Now.AddSeconds(90); //Will wake up after 90 second
 
 ```
 
+---
+
 ## Software Reset
 
 You can also reset your device from within your application with the following command:
@@ -71,5 +77,31 @@ You can also reset your device from within your application with the following c
 ```cs
 GHIElectronics.TinyCLR.Native.Power.Reset();
 ```
+
+---
+
+## Clock Speed
+
+You can set your device's system clock to operate at half speed, saving 40% power consumption with the following commands:
+
+```cs
+if (Power.GetSystemClock() == SystemClock.High){
+    Power.SetSystemClock(SystemClock.Low);
+    Power.Reset();
+}
+```
+You can set the clock speed back to 100% with the following commands:
+
+```cs
+if (Power.GetSystemClock() == SystemClock.Low){
+    Power.SetSystemClock(SystemClock.High);
+    Power.Reset();
+}
+```
+> [!Note]
+> Changing the clock speed requires a software reset in the code. Calling this reset 
+> detaches the debugger, you'll need to redeploy to the device to continue debugging.
+
+
 
 

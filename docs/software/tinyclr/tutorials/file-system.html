@@ -8,7 +8,7 @@
     <title>File System </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="File System ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -84,7 +84,7 @@
 <div class="NOTE"><h5>Note</h5><p>The USB drive must have an MBR record, not a GPT table.
 FAT16 and FAT32 file systems are supported.</p>
 </div>
-<h2 id="fat-file-sytem">Fat File Sytem</h2>
+<h2 id="fat-file-system">Fat File System</h2>
 <h3 id="usb-mass-storage">USB Mass Storage</h3>
 <p>This allows file access on USB devices with MSC class, such as USB memory sticks. See the <a href="usb.html">USB</a> page.</p>
 <h3 id="sd-card">SD Card</h3>
@@ -119,7 +119,8 @@ FileSystem.Flush(sd.Hdc);
         (SC20100.StorageController.SdCard);
 
 controller.Provider.Read(address, buffer, 0, buffer.Length, -1);
-</code></pre><h2 id="tiny-file-system-tfs">Tiny File System (TFS)</h2>
+</code></pre><hr>
+<h2 id="tiny-file-system-tfs">Tiny File System (TFS)</h2>
 <p>Tiny File System(TFS) can be used to access any memory storage as a file system. All that is needed is a basic driver to Read, Write, and Erase these storages. </p>
 <p>Below is an example that uses 16MB of built in QSPI as a file system.</p>
 <div class="NOTE"><h5>Note</h5><p>This example requires the <code>GHIElectronics.TinyCLR.IO.TinyFileSystem</code></p>
@@ -224,12 +225,13 @@ public sealed class QspiMemory : StorageDriver {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/file-system.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/SubjectDividers/software/tinyclr/tutorials/file-system.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

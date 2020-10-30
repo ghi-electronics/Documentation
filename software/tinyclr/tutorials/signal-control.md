@@ -16,8 +16,6 @@ There are two uses for DigitalSignal, to capture a stream of durations (signal a
 > [!WARNING]
 > The `waitForEdge` uses interrupt pin internally to start the capturing cycle. Same rules apply as GPIO interrupt pins, for example when using PB3 to capture with `waitForEdge` equals `true`, PA3, PC3, PD3...etc can't be used for interrupts. See [GPIO](gpio.md) for details on interrupt pins.
 
-
-
 ### Capture
 The Capture feature return an array of timestamps of individual durations. The returned values are in nanoseconds?
 
@@ -173,7 +171,6 @@ while (true) {
     Thread.Sleep(1000);
 }
 ```
-
 
 ### Drain Duration
 

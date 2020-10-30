@@ -64,6 +64,8 @@ catch (Exception e) {
 
 The `PublishedReceivedChanged` Event allows you to select the topic that the device receives the change from.
 
+---
+
 # Event Handler
 
 The Mqtt driver provides five events:

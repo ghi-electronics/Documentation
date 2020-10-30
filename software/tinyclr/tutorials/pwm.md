@@ -33,6 +33,8 @@ while (true) {
 }  
 ```
 
+---
+
 ## Musical Tones
 Musical notes have specific frequencies; C for example is about 261Hz. Plugging these numbers into an array and knowing the length of each tone is all that is needed to play some simple music. When playing notes by changing the frequency, keep the duty cycle set to 0.5.
 
@@ -92,6 +94,8 @@ class Program {
 }
 
 ```
+
+---
 
 ## Servo Motors
 A servo motor is a motor that has a small internal circuit allowing you to control it using electrical pulses. Servo motors are available as either continuous or positional servos. While they look identical, a positional servo only turns to a given position and then holds that position until you tell it to move to another position. A continuous servo motor will rotate continuously in one direction until it is told to either stop or reverse direction.

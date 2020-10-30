@@ -6,6 +6,8 @@ Displays may optionally include a touch sensitive screen to detect user touch in
 
 ![UD435](../images/ucm-touch-display.jpg)
 
+---
+
 ## Resistive Touch
 
 A resistive touch screen measures the resistance across the X and Y axes to determine the touch position. While it is possible to use GPIO and ADC, it is better to use dedicated chips. The only advantage of resistive touch over capacitive is that resistive touch works through a change in resistance induced by finger pressure, meaning you can use it while wearing gloves. However, resistive touch is not very accurate and requires calibration.
@@ -69,6 +71,8 @@ while (this.active) {
     Thread.Sleep(20);
 }
 ```
+
+---
 
 ## Capacitive Touch
 

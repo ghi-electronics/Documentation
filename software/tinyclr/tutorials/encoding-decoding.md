@@ -38,6 +38,8 @@ System.Text.Encoding.UTF8.GetString(byte[] bytes)
 System.Text.Encoding.UTF8.GetString(byte[] bytes, int index, int count)
 ```
 
+---
+
 ## BitConverter
 The BitConverter class is used to convert from one data type to another. For example, to convert an integer into a byte array:
 
@@ -106,6 +108,8 @@ System.BitConverter.Int64BitsToDouble(long value)
 ```cs
 System.BitConverter.SwapEndianness(byte[] data, int groupSize)
 ```
+
+---
 
 ## String Handling
 

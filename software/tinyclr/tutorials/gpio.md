@@ -39,6 +39,8 @@ while (true) {
 }
 ```
 
+---
+
 ## Digital Inputs
 Digital inputs sense the state of an input pin based on its voltage. The pin can be high or low. Every pin has a maximum and minimum supported voltage. For example, the typical minimum voltage on most pins is 0 volts; a negative voltage may damage the pin or the processor. Also, the maximum that can be applied to most pins must be less than or equal to the processor's power supply voltage. Since most processors run on 3.3V, the highest voltage a pin should see is 3.3V. However, some processors that are powered by 3.3V are 5V tolerant -- they can withstand up to 5V on their inputs. The SITCore is 5V tolerant.
 
@@ -65,6 +67,8 @@ while (true) {
     Thread.Sleep(10);   //Always give the system time to think!
 }
 ```
+
+---
 
 ## Digital Input Events
 

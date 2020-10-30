@@ -35,8 +35,11 @@ The first step is to create an encrypted copy of the application. This is easily
 
 You can now use application deployment to deploy to other devices. This is good for mass production as well. If you are sending the deployment to a contract manufacturer, remember to send the key too!
 
+
 ### In-Field Update
 You can use [TinyCLR Config](../tinyclr-config.md) to create an encrypted application deployment that can be securely loaded by your customer. You can send this application deployment to the field (the customer) as a file in an email or automate it using the cloud. You have options. Of course, when you send the application deployment out to the field, you would not send the key with it. They key is securely stored inside your application, in your in-field update code. Check out our [In-Field Update](in-field-update.md) tutorial for implementation information.
+
+---
 
 ## Secure RAM
 SITCore devices provide security for your sensitive data by using RAM that is inside the processor, making it almost impossible to get at your data. However, sometimes additional RAM is needed by your application. TinyCLR OS allows you to extend the heap into external SDRAM (if supported by your hardware). Please refer to the [External Memory](external-memory.md) page for more info. However, the impact upon data security must be considered when the heap is extended.

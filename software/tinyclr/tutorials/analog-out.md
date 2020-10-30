@@ -26,8 +26,12 @@ while (true) {
 > [!Tip]
 > Do not use analog outputs to control the power of an LED or a motor. Use [PWM](pwm.md) for that.
 
+---
+
 ## PWM
 PWM can also be used to output an analog voltage. [Click here](pwm.md) for details.
+
+---
 
 ## Audio Playback
 WAV audio playback can be done using an analog output pin. See [Audio Playback](audio-playback.md).

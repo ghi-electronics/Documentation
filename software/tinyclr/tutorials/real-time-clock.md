@@ -75,6 +75,8 @@ Current Time    : 01/01/2019 11:15:36
 Current RTC Time: 01/01/2019 11:15:36
 ```
 
+---
+
 ## System Clock
 
 You can get the current system time using `DateTime.Now`. The system clock starts running at power up, but until you set the clock, the time and date will be incorrect. 
@@ -90,6 +92,8 @@ To set the system clock to the RTC time, use the following command:
 ```cs
 GHIElectronics.TinyCLR.Native.SystemTime.SetTime(rtc.Now);
 ```
+
+---
 
 ## SNTP
 
@@ -138,6 +142,8 @@ The above method is used as follows, with the argument indicating how many hours
 DateTime dateTime = GetNetworkTime(-5);
 ```
 
+---
+
 ## Battery Backed Memory
 
 SITCore devices include 4 KBytes of battery backed memory. This memory accepts and returns byte arrays of data. The commands and their overloads for accessing this memory are as follows:
@@ -180,6 +186,8 @@ for (int i=0; i < 5; i++) {
     Debug.WriteLine(readData[i].ToString()); //Displays 1, 2, 3, 4, 5
 }
 ```
+
+---
 
 ## RTC Calibration
 

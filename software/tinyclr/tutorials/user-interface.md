@@ -38,6 +38,8 @@ namespace UserInterfaceExample {
 }
 ```
 
+---
+
 ## Windows
 
 While you can have multiple windows in your UI application, it is mandatory to have at least one window. Here is a complete example that shows a window with a gradient brush background. The code is for SCM20260D Dev board with the 4.3 inch display.
@@ -209,6 +211,8 @@ namespace SC20100_N18_WPF{
     }
 }
 ```
+
+---
 
 ## Elements
 A window is not very useful without some elements (controls). There are many available standard elements, and you can make your own custom elements as well. All elements descend from the `UIElement` class. Explore the `GHIElectronics.TinyCLR.UI.Controls` namespace to see what's available.

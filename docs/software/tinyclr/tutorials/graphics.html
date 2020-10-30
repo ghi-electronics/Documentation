@@ -8,7 +8,7 @@
     <title>Graphics </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Graphics ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -184,7 +184,8 @@ namespace GraphicsSample {
     VerticalSyncPulseWidth = 1,
     VerticalSyncPolarity = false,
 });
-</code></pre><h2 id="non-native-displays">Non-Native Displays</h2>
+</code></pre><hr>
+<h2 id="non-native-displays">Non-Native Displays</h2>
 <p>Our SC20100S Dev Board has a non-native SPI display installed on it. There are special considerations for non-native displays -- instead of the data being automatically written to the display using the microcontroller&#39;s DMA, you must format and then transfer the data to the display yourself. Only the SC20260B SITCore chip has the resources to support native displays. Any device the uses the SC20100S chip can only support non-native displays.</p>
 <p>At the bottom of the next code sample, you will notice a Graphics_OnFlushEvent() event handler. This method gets called when the display is flushed. In this case, there is a DrawBuffer method that is part of the ST7735 display driver that writes to the display over SPI. Because this method is available, you need only call it within the Graphics_OnFlushEvent() event handler to write the buffer to the display. If you are using a display without a driver, you will have to correctly format the display data and send it to the display yourself inside this event handler.</p>
 <h3 id="sc20100s-dev-board-code-sample">SC20100S Dev Board Code Sample</h3>
@@ -268,13 +269,16 @@ namespace GraphicsSample {
         }
     }
 }
-</code></pre><h2 id="helper-methods">Helper Methods</h2>
+</code></pre><hr>
+<h2 id="helper-methods">Helper Methods</h2>
 <p>With parallel displays, (also called native displays), the <code>DisplayController.ActiveConfiguration</code> can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display&#39;s resolution. The following line of code draws a line from corner to corner, no matter the display resolution.</p>
 <pre><code class="lang-cs">screen.DrawLine(new Pen(Color.Red), 0, 0, displayController.ActiveConfiguration.Width - 1,
     displayController.ActiveConfiguration.Height - 1);
 </code></pre><p>It is important to note that drawing functions process graphics in RAM independently from the display. The display driver then transfers the pixels from internal memory to the display when <code>Graphics.Flush</code> is called. Learn more about <a href="displays.html">display</a> support.</p>
+<hr>
 <h2 id="images">Images</h2>
 <p>TinyCLR OS supports the BMP, GIF, and JPG. See the <a href="image-decoders.html">Image Decoders</a> page.</p>
+<hr>
 <h2 id="fonts">Fonts</h2>
 <p>Fonts are well supported. They are covered <a href="font-support.html">here</a>.</p>
 </article>
@@ -285,12 +289,13 @@ namespace GraphicsSample {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/graphics.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/SubjectDividers/software/tinyclr/tutorials/graphics.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

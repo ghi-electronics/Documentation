@@ -135,6 +135,8 @@ class Program {
 }
 ```
 
+---
+
 ## Switching to Command Mode
 
 When a PPP connection is set up successfully, you can switch the modem from data mode to command mode with the `+++` escape sequence. To prevent the `+++` escape sequence from being misinterpreted as data, the following guidelines should be followed: 
@@ -143,6 +145,8 @@ When a PPP connection is set up successfully, you can switch the modem from data
 2) Send `+++` quickly, sending all three characters within one second. 
  
 When the `+++` sequence is received, the modem will switch from data mode to command mode and reply with an "OK" response. 
+
+---
 
 ## Switching to Data Mode
 When the modem is in command mode, sending the `ATO` command will switch the modem to Data Mode. Wait for the "CONNECT 150000000" response after sending the `ATO` command to make sure the modem is in data mode. All data sent will now be treated as PPP frames.
@@ -193,6 +197,8 @@ networkController.Resume();
 
 > [!NOTE]
 > When sending "+++", do not send "\r" or "\n" at the end. While most AT commands need end of line characters, +++ does not.
+
+---
 
 ## Security Clarification
 

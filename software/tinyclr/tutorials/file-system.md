@@ -6,7 +6,7 @@ The file system library is subset of the full .NET file system support. Most exa
 > The USB drive must have an MBR record, not a GPT table.
 > FAT16 and FAT32 file systems are supported.
 
-## Fat File Sytem
+## Fat File System
 
 ### USB Mass Storage
 This allows file access on USB devices with MSC class, such as USB memory sticks. See the [USB](usb.md) page.
@@ -53,6 +53,8 @@ var controller = StorageController.FromName
 
 controller.Provider.Read(address, buffer, 0, buffer.Length, -1);
 ```
+
+---
 
 ## Tiny File System (TFS)
 

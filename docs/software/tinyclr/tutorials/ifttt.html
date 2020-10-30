@@ -8,7 +8,7 @@
     <title>IFTTT </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="IFTTT ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -81,7 +81,7 @@
 
 <hr>
 <h2 id="if-this-then-that-iot-example">If This Then That IOT Example.</h2>
-<p>If This Then That (IFTTT) is a free service allowing users to automate tasks by using simple conditional statements to create scripts or Applets (previously called &quot;recipes&quot;). Some similar platforms you might want to check out include <a href="https://www.twilio.com/">Twilio</a>, <a href="https://thingspeak.com/">ThingSpeak</a>, <a href="https://www.yonomi.co/">Yonomi</a>, and <a href="https://www.home-assistant.io/">Home Assistant</a>. IFTTT can be used to respond to both events on websites and events from devices. Some uses include:</p>
+<p>If This Then That (IFTTT) is a service allowing users to automate tasks by using simple conditional statements to create scripts or Applets (previously called &quot;recipes&quot;). Some similar platforms you might want to check out include <a href="https://www.twilio.com/">Twilio</a>, <a href="https://thingspeak.com/">ThingSpeak</a>, <a href="https://www.yonomi.co/">Yonomi</a>, and <a href="https://www.home-assistant.io/">Home Assistant</a>. IFTTT can be used to respond to both events on websites and events from devices. Some uses include:</p>
 <ul>
 <li>Turn on the lights when you come home.</li>
 <li>Send a text message if rain is forecast.</li>
@@ -96,14 +96,14 @@
 </ul>
 <p>The possibilities are almost endless. Here we will take you step by step through the process using IFTTT to send an email notification of a button being pressed on a SITCore Dev Board. First we will set up an IFTTT account, then create and test the needed applets, and finally program the SITCore to trigger the IFTTT applet.</p>
 <h3 id="create-an-ifttt-account">Create an IFTTT Account</h3>
-<p>Signing up for IFTTT is easy and free -- just go to <a href="https://ifttt.com">IFTTT.com</a> and click on the <code>Sign up</code> button in the upper right hand corner of the screen. You can sign up using your Google or Facebook account, or use an e-mail address and password to sign in. IFTTT will usually offer to set up a sample connection right after you sign up -- just hit the &quot;X&quot; in the upper right corner to skip this step. Click on the <code>Get more</code> button under the message <code>Start connecting your world</code> to get started.</p>
+<p>Signing up for IFTTT is easy and they offer a free limited account, but it only allows up to 3 applets. Their paid service offers unlimited applet creation, queries, conditional logic and multiple actions -- just go to <a href="https://ifttt.com">IFTTT.com</a> and click on the <code>Sign up</code> button in the upper right hand corner of the screen. You can sign up using your Google or Facebook account, or use an e-mail address and password to sign in. IFTTT will usually offer to set up a sample connection right after you sign up -- just hit the &quot;X&quot; in the upper right corner to skip this step. Click on the <code>Get more</code> button under the message <code>Start connecting your world</code> to get started.</p>
 <p><img src="images/ifttt-start-connecting.png" alt="IFTTT Start Connecting"></p>
 <h3 id="create-the-ifttt-applets">Create the IFTTT Applets</h3>
-<p>Two IFTTT applets will be needed for this project. An Email Applet will be send and email when a button is pushed. A Webhooks Applet will be used to receive an HTTP GET request from the FEZ when the temperature goes below ten degrees. Finally, an If This Then That Applet will call the Email Applet when triggered by the Webhooks Applet.</p>
+<p>Two IFTTT applets will be needed for this project. An Email Applet will be send an email when a button is pushed. A Webhooks Applet will be used to receive an HTTP GET request from the FEZ when the temperature goes below ten degrees. Finally, an If This Then That Applet will call the Email Applet when triggered by the Webhooks Applet.</p>
 <h4 id="create-the-webhooks-applet">Create the Webhooks Applet</h4>
-<p>After signing up and getting to the <code>Explore</code> page, scroll down the page until you find the <code>Create your own</code> button and click on it.</p>
+<p>After signing up click on <code>Create</code> button in the top menu. </p>
 <p><img src="images/ifttt-create-your-own.png" alt="IFTTT Create Your Own"></p>
-<p>You will then be presented with a screen that may seem to provide no option forward. Click on <code>+This</code> to get to the next step.</p>
+<p>You will then be presented with a screen that may seem to provide no option forward. Click on <code>If This Add</code> to get to the next step.</p>
 <p><img src="images/ifttt-if-this.png" alt="IFTTT If This Then That"></p>
 <p>Search for <code>webhooks</code> and click on that option.</p>
 <p><img src="images/ifttt-choose-webhooks.png" alt="IFTTT Choose Webhooks SMS"></p>
@@ -120,11 +120,15 @@
 <p>Now click on the <code>Send me an email</code> box.</p>
 <p><img src="images/ifttt-send-me-an-email.png" alt="IFTTT Send me an email"></p>
 <p>You should now be on the <code>Complete action fields</code> screen. Click on the <code>Create action</code> button without making any changes. This will tell IFTTT to use the default method of constructing the subject line and body of the notification email.</p>
-<p>This should take you to the <code>Review and finish</code> screen. Click on the <code>Finish</code> button.</p>
+<p><img src="images/ifttt-complete-action.png" alt="IFTTT Complete action fields"></p>
+<p>This will then take you back to the main If Then page. Click on continue</p>
+<p><img src="images/ifttt-continue.png" alt="IFTTT Continue"></p>
+<p>Finally we&#39;re at the <code>Review and finish</code> screen. Click on the <code>Finish</code> button.</p>
 <h4 id="get-your-key">Get Your Key</h4>
 <p>Now we just have to get the key that is sent from the SITCore to trigger the event. You should now be at a screen with the text &quot;If Maker Event &quot;button_press&quot;, then Send me an email at. . . Click on the Webhooks icon as shown below:</p>
 <p><img src="images/ifttt-click-webhooks-icon.png" alt="IFTTT Click Webhooks icon"></p>
 <p>Then click on the <code>Documentation</code> button near the upper right of the next screen. This will bring up a page with your unique key. Including this key in an HTTP GET or POST request to the IFTTT website will trigger your event.</p>
+<p><img src="images/ifttt-webhooks-key.png" alt="IFTTT Webhooks Key"></p>
 <p>To test the IFTTT event, you can enter the following line into the address bar of your web brower (replace Your_Key_Here with your key) : <a href="https://maker.ifttt.com/trigger/button_press/with/key/Your_Key_Here">https://maker.ifttt.com/trigger/button_press/with/key/Your_Key_Here</a></p>
 <h3 id="setup-the-sitcore">Setup the SITCore</h3>
 <p>To setup the FEZ we will have to connect a temperature sensor and then program the FEZ to send the proper HTTP GET request when the temperature drops below 10 degrees.</p>
@@ -215,12 +219,13 @@ class Program {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/ifttt.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/DAC/software/tinyclr/tutorials/ifttt.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

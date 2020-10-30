@@ -45,6 +45,8 @@ catch {
 }
 ```
 
+---
+
 ## HTTP Server
 
 TinyCLR OS provides an HttpListener class which can be used to make an HTTP Server. This code needs an active network connection on the same local network as your client application to work properly.
@@ -93,6 +95,8 @@ listener.Stop();
 From your client device (smartphone, PC...), enter the server ip address into your web browser. In our case it's 192.168.1.6. The response is shown as below:
 
 ![Server response](images/http-server.png)
+
+---
 
 ## HTTPS
 
