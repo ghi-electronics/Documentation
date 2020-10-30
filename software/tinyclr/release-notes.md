@@ -2,6 +2,107 @@
 ---
 ![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
 
+## 2.1.0 - Preview1
+
+### Released 2020-11-02
+
+### Visual Studio Project System
+
+#### Changes
+- Updated version number version 2.1.100
+
+#### Known Issues
+- None
+
+### Libraries
+
+#### Changes
+- Updated version number 2.1.0-preview1
+- Added Unique ID
+- Fixed Socket.Poll(-1) cause system slow
+- Fixed Multicast
+- Correct SPI6 clock source
+- Throw an exception if active USB client in usb debug mode.
+- Fixed Wifi doesn't fire event when disconnect from hotspot
+- Added analog temperature reading, VREFINT, VSENSE channels (GHIElectronics.TinyCLR.Pins)    
+- Fixed Uart RTS doesn't go high when buffer full
+- Fixed USB Host: FS.Unmount() failed without Flush
+- TFS: Improved and removed "StorageDriver"
+- Storage: Add EraseAll() api
+- Fixed CAN CanWriteMessage property always return true.
+- Add frequency counter (known as DigitalSignal)
+- Fix system time inaccurate 
+- Added slow clock mode (240MHz)
+- Fixed JSON cannot deserialize long integers
+- Support write out bitmap file (24 bit BMP format)
+- Support native CRC
+- Support RegularExpression 
+- Rename AdcChannel to Adc (GHIElectronics.TinyCLR.Pins)    
+- Rename DacChannel to Dac (GHIElectronics.TinyCLR.Pins)
+- Added Timer.Capture (GHIElectronics.TinyCLR.Pins)
+- Added Timer.Pwm (GHIElectronics.TinyCLR.Pins - Changed from PwmChannel)    
+- MQTT: Add MQTT pass the topic to the received message function  
+- Fixed Mobus TCP
+- Fixed Uart parity Odd/Even doesn't work with 8 bit data      
+- Fixed Initializing the ATWINC with null ssid and password hangs system.
+
+#### Known Issues
+- Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
+- Debug breakpoints sometimes hang for 5-6 seconds before resuming normally (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/659)
+- Exception filter causes lockup when exception thrown from instance method (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/652)
+- GetChars throwing on certain byte values (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/651)
+- Double ToString() show number incorrectly sometime  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/629)
+- Running out of stack kills Visual studio (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/586)
+- Network operations on any thread block all threads  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/525)
+- String does not implement IEnumerable  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/323)
+- Equals() throws unsupported instruction exception  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/502)
+
+### TinyCLR Config
+
+#### Changes
+- Updated version number 2.1.0-preview1 
+
+#### Known Issues
+- Erase all doesn't erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+- None.
+
+#### Known Issues
+- None.
+
+### Firmware
+
+#### Changes
+- Updated version number 2.1.0.10000
+- Speed up system speed 15%
+- Use Timer Counter (TIM) for System Timer instead of CortexM SystemTick
+- Fixed SDCard writing sometime failed.
+- Improved SDCard speed.
+- Open HiRes Timer register for Marshal
+- Open TEMPERATURE_TS1_CALIBRATION, TEMPERATURE_TS2_CALIBRATION registers for Marshal
+- Open TTCAN, CAN clock calibration for Marshal
+- Graphics: Improved color table. Support color table for all modes (8888, 888, 565, 323).
+- SC20260: Reduced power consumption SDRAM in Sleep and Shutdown mode.
+
+#### Known Issue
+- None.
+
+### Drivers
+
+#### Changes
+- Updated version number 2.1.0-preview1
+
+#### Known Issues
+ - SSD1351-Draw at position X may need offset = 10 to correct position. (https://github.com/ghi-electronics/TinyCLR-Drivers/issues/109)
+
+---
+
+---
+
 ## 2.0.0 - Release
 
 ### Released 2020-08-21
