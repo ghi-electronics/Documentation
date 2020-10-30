@@ -57,6 +57,8 @@ public class MySerializableClass {
 >[!WARNING]
 > GHI Electronics does not own or have rights to the code in this repository: https://github.com/Apress/exp-.net-micro-framework. It is your responsibility to adhere to the license provided by the owner of this code.
 
+---
+
 ## JSON
 
 TinyCLR OS includes a built in JSON library.
@@ -80,6 +82,8 @@ for (var i = 0; i < intArray.Length; i++) {
 }
 Debug.WriteLine("Array test succeeded");
 ```
+
+---
 
 ## XML
 TinyCLR OS supports both the writing and reading of XML (eXtensible Markup Language) files through its XmlReader and XmlWriter classes. Full documentation of XML is beyond the scope of this document, but for more information Microsoft's [.NET XML documentation](https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmldocument?view=netcore-3.1) is a good place to start. Please note that the TinyCLR implementation of XML is not fully .NET compatible, for example the asynchronous API is not supported.

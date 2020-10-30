@@ -55,6 +55,8 @@ static void DoTestCDC {
 }
 ```
 
+---
+
 ## WinUSB
 The WinUSB drivers are unique to Windows and take advantage of the power and speed of USB to provide faster communication than CDC. The speed is limited by the data processing on the IoT device. Windows 10 loads the drivers automatically, Windows 7 requires drivers.
 

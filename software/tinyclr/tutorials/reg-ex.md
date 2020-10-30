@@ -4,7 +4,7 @@ The RegEx class can be used to quickly parse large amounts of text to find speci
 
 The Regex class is defined in the System.Text.Regular Expressions namespace. The RegEx class constructor takes a pattern string as a parameter with other optional parameters.
  
-The following code snippet creates a RegEx from a pattern. Here pattern is to match a word starting with char ‘M’.
+The following code snippet creates a RegEx from a pattern. Here pattern is to match a word starting with char `M`.
 
 ```cs
 // Create a pattern for a word that starts with letter "M"  

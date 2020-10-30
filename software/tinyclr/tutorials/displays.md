@@ -9,6 +9,8 @@ The display drivers are meant to transfer the pixel data from memory to the actu
 ## Built-in TFT Displays
 These displays connect to special dedicated pins on the processor. Internally, the display controller automatically transfers (refreshes) the display directly from memory without any processor interaction, using DMA. When the system needs to update the display, it simply writes to memory. Neither the operating system nor the application program are burdened with display processing. The down side to this is that the system needs to have enough RAM to handle the display. An 800x600 display with 16bpp needs 960,000 bytes!
 
+---
+
 ## Virtual Displays
 The internal graphics services can be mapped to work with virtual display displays. This is done by accessing graphics memory directly, and then writing the graphics memory contents to the desired display.
 ```cs
@@ -19,10 +21,14 @@ private static void Graphics_OnFlushEvent(IntPtr hdc, byte[] data) {
 
 See the [Graphics Tutorial](graphics.md) for more information and sample code.
 
+---
+
 ## Character Displays
 ![Character Display](images/character-display.jpg)
 
 These displays are capable of only showing characters. Most of these displays use the HD44780 controller. They are available in different sizes, but two lines of 16 characters is most common. These displays only require GPIO pins and can be used with TinyCLR. Sample code for HD44780 displays can be found in our GitHub [Samples Repo](https://github.com/ghi-electronics/TinyCLR-Samples).
+
+---
 
 ## Low Level Display Access
 TinyCLR also provides low level display access as part of the `GHIElectronics.TinyCLR.Devices.Display` library. These methods provide a simple way to write to a display without need for the `System.Drawing` library or an added font resource file.

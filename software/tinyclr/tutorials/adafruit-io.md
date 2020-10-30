@@ -86,6 +86,8 @@ Deploy your program to your SITCore IoT device, once launched the gauge on our D
 
 ![Adafruit running dashboard](images/adaIO-message-vs.jpg)
 
+---
+
 ## Using MQTT
 
 ```cs

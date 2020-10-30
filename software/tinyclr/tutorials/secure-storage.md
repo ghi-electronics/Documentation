@@ -66,6 +66,8 @@ for (uint block = 0; block < data.Length / configStorage.BlockSize; block++) {
 Debug.WriteLine("Configuration storage is good to go!!!");
 ```
 
+---
+
 ## One Time Programmable Area
 
 > [!Note]

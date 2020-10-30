@@ -26,6 +26,8 @@ private static void ldrButton_ValueChanged(GpioPin sender, GpioPinValueChangedEv
 
 ```
 
+---
+
 ## Shutdown
 In this mode the system completely shuts down. It can only be awakened by reset, power cycle, or by toggling the WKUP pin.
 
@@ -42,6 +44,8 @@ The following code shuts down the system. The `false` argument configures the sy
 Power.Shutdown(true, DateTime.MaxValue); 
 
 ```
+
+---
 
 ## Sleep or Shutdown for a Specific Time
 
@@ -63,6 +67,8 @@ Power.Shutdown(true, DateTime.Now.AddSeconds(90); //Will wake up after 90 second
                                                   //when WKUP is pressed.
 
 ```
+
+---
 
 ## Software Reset
 

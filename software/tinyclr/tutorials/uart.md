@@ -42,6 +42,8 @@ while (true) {
 }
 ```
 
+---
+
 ## UART Settings
 We've expanded the available UART settings to better support serial protocols such as RS-485 and DMX. Here's a complete list of the available settings:
 - BaudRate: Communication speed in bits per second.
@@ -55,6 +57,8 @@ We've expanded the available UART settings to better support serial protocols su
 - InvertBinaryData: Used to invert the data polarity without inverting the start and stop bit polarity.
 - SwapTxRxPin: Swaps the transmit and receive pins. Very useful for correcting board layout mistakes!
 - InvertDePolarity: Inverts the polarity of the `Driver Enable` pin used for RS-485.
+
+---
 
 ## Break Generation
 It is sometimes necessary to generate a `break` signal before transmission to let the receiver(s) know that a new data frame is starting. Such is the case when using the DMX protocol, which is often used for stage lighting.
@@ -84,6 +88,8 @@ while (uart.BytesToWrite > 0) Thread.Sleep(0); //Make sure UART is done transmit
 //The following line sends a break of 100 uS before sending the data.
 uart.Write(txBuffer, 0, txBuffer.Length, TimeSpan.FromTicks(1000));
 ```
+
+---
 
 ## Event Handlers
 TinyCLR's UART API included the following event listeners:
@@ -128,6 +134,8 @@ private static void MyUart_DataReceived(UartController sender, DataReceivedEvent
 
 > [!Tip] 
 > Once you type += after the event, hit the tab key and Visual Studio will automatically create the event for you.
+
+---
 
 ## RS232
 UART uses the processor's voltage levels (logic levels) for transferring data. On the SITCore this is 0 to 3.3 volts. In the early days of computers, UARTs used -12 to +12 volts to communicate reliably over longer distances. This is known as the RS232 standard.

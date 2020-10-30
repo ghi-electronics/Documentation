@@ -9,14 +9,22 @@ Not having a unique MAC address can be a problem. If two devices with the same M
 
 The WINC1500 WiFi module supported by SITCore devices ships with a manufacturer assigned unique MAC address. This address is used by default, although you can provide your own MAC address if desired.
 
+---
+
 ## Secure Sockets
 TLS is natively support. See the [TLS page](tls.md) for details.
+
+---
 
 ## .NET Sockets
 TinyCLR OS's support of sockets is very similar to .NET socket support. Most .NET socket code should run with little modification. Socket support is provided as part of the TinyCLR OS core. Tiny CLR sockets work similar to .NET sockets -- most .NET examples are applicable to TinyCLR.
 
+---
+
 ## TCP/UDP
 TCP and UDP are the core of the Internet protocols and are supported through standard .NET Sockets. The web is full of examples on using TCP and UDP Sockets that should work as is or with minor changes.
+
+---
 
 ## DHCP
 TinyCLR OS supports both static and dynamic IP addressing. Note that static IP addressing does not work with [PPP](ppp.md).
@@ -37,6 +45,7 @@ networkInterfaceSetting.DnsAddresses = new IPAddress[] { new IPAddress(new byte[
     { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
 ```
 
+---
 
 ## DNS
 The TinyCLR Dns class can be used to resolve a URL into its IP address by using the following code:
