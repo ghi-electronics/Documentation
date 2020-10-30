@@ -140,3 +140,8 @@ for (int i = 0; i < Winc15x0Interface.FirmwareSupports.Length; i++) {
 //   (e.g.  http://192.168.0.137/m2m_ota_3a0.bin).
 bool success = Winc15x0Interface.FirmwareUpdate(string url, int timeout);
 ```
+
+## Multicast IP
+
+For WINC1500 WiFi module, to set multicast IP address, this IP need to be converted to multicast MAC address and used as Wifi MAC Addresses.
+
