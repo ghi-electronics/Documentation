@@ -39,17 +39,56 @@ We offer multiple single board computers to provide the lowest possible barrier 
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
 
+---
+
 ## Power Consumption
 The 'Running' power consumption totals include all other on board components, such as WiFi & Display.
 
-|                            | FEZ Bit         | Fez Duino       | FEZ Feather     | Fez Portal              | FEZ Stick       |
-|----------------------------|-----------------|-----------------|-----------------|-------------------------|-----------------|
-| **Running**                | 305mA           | 295mA           | 285mA           | 535mA                   | 194mA           |
-| **Sleep**                  | 187mA           | 187mA           | 179mA           | 200mA                   | 163mA           |
-| **Hibernate**              | 11mA            | 11mA            | 9mA             | 37mA                    | 6mA             |
-| **Shutdown**               | 2mA             | 5mA             | 90uA            | 20mA                    | 810uA           |
+### FEZ Portal
+
+|                        | 480MHz          |   240MHz        |           
+|------------------------|-----------------|-----------------|
+| **Running**            | 375mA           | 345mA           |
+| **Idle**               | 270mA           | 255mA           |
+| **Sleep**              | 17mA            | 17mA            | 
+| **Shutdown**           | 9.7mA           | 9.7mA           |
+
+> [!Tip]
+> Display backlight is included when Running and in Idle, but off in Sleep and Shutdown.
+
+> [!Tip]
+> Enabling WiFi adds up to 300mA.
+
+### FEZ Duino/Stick/Feather
+
+|                       | 480MHz          |   240MHz        |          
+|-----------------------|-----------------|-----------------|
+| **Running**           | 205mA           | 110mA           |
+| **Idle**              | 170mA           | 97mA            |
+| **Sleep**             | 6.5mA           | 6.5mA           |
+| **Shutdown**          | 40uA            | 40uA            |
+
+> [!Tip]
+> Enabling WiFi (when available) adds up to 300mA. Battery charging on FEZ Feather adds up to 500mA.
+
+### FEZ Bit
+
+|                       | 480MHz          |   240MHz        |          
+|-----------------------|-----------------|-----------------|
+| **Running**           | 232mA           | 140mA           |
+| **Idle**              | 190mA           | 127mA           |
+| **Sleep**             | 8.5mA           | 8.5mA           |
+| **Shutdown**          | 90uA            | 90uA            |
+
+> [!Tip]
+> Display backlight is included when Running and in Idle, but off in Sleep and Shutdown.
+
+> [!Tip]
+> Enabling WiFi adds up to 300mA.
 
 See the [Power Management](http://docs.ghielectronics.com/software/tinyclr/tutorials/power-management.html) tutorial 
+
+---
 
 ## FEZ Bit
 
@@ -118,6 +157,8 @@ The **FEZ Bit**, while seemingly more of a "maker" board, provides a convenient 
 > [!Note]
 > All boards with a barrel power jack accept a 5.5 x 2.1 mm power plug. The pin is positive, the sleeve is negative. While these boards accept a wide voltage range, they use linear voltage regulators that run hotter with higher input voltages. Generally we recommend an input voltage of 6 to 12 volts, but if your project draws a lot of current, use a lower voltage to keep the regulator cooler. A one amp power supply should provide enough current for most needs.
 
+---
+
 ## FEZ Duino
 
 ![FEZ Duino](images/fez_duino.jpg)
@@ -145,6 +186,8 @@ The **FEZ Duino** provides female headers that make use of the popular Arduino p
 | **Buttons**       | LDR = PE3   |
 |                   | APP = PB7   |
 
+---
+
 ## FEZ Feather
 
 ![FEZ Feather](images/fez_feather.jpg)
@@ -168,7 +211,6 @@ Make sure the battery polarity is correct as shown below (red wire to plus, blac
 
 [FEZ Feather 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Feather%20Rev%20B.step)
 
-
 ### FEZ Feather Peripheral Pins
 
 |                   |             |
@@ -184,11 +226,13 @@ Make sure the battery polarity is correct as shown below (red wire to plus, blac
 | **Buttons**       | LDR = PE3   |
 |                   | APP = PB7   |
 
+---
+
 ## FEZ Portal
 
 ![FEZ Portal](images/fez_portal.jpg)
 
-Already one of our most popular SITCore single board computers, The **FEZ Portal** is a 4.3" 480x272 display with capacitive touch that is programmable in C#. As the display and controller are one unit, it's even easier to make a product with touch as you only have to mount a single board that's only slightly larger than the display.
+Already one of our most popular SITCore single board computers, The **FEZ Portal** is a 4.3" 480x272 display with capacitive touch that is programmable in C#. As the display and controller are one unit, it's even easier to make a product with touch as you only have to mount a single board that's only slightly larger than the display. Display uses part# ER-TFT043-3 available at [buydisplay.com](https://www.buydisplay.com/) 
 
 [FEZ Portal Schematic](pdfs/fez-portal-rev-c-schematic.pdf)
 
@@ -215,6 +259,8 @@ Already one of our most popular SITCore single board computers, The **FEZ Portal
 |                   |                 |
 | **Buttons**       | LDR = PE3       |
 |                   | APP = PB7       |
+
+---
 
 ## FEZ Stick
 

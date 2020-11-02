@@ -5,60 +5,7 @@
 ## Overview
 The SITCore SoCs provide a low cost way to add .NET computing power to any embedded product. Available as either a 100 pin LQFP or a 265 ball BGA, the SITCore SoCs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more.
 
-## Specifications
-
-| Spec                   | SC20100S/B                | SC20260B             |
-|------------------------|---------------------------|----------------------|
-| **Core**               | ARM Cortex-M7 32 bit      | ARM Cortex-M7 32 bit |
-| **Speed**              | 480 MHz                   | 480 MHz              |
-| **Internal RAM**       | 1 MByte                   | 1 MByte              |
-| **Internal Flash**     | 2 MByte                   | 2 MByte              |
-| **Instruction Cache**  | 16 KByte                  | 16 KByte             |
-| **Data Cache**         | 16 KByte                  | 16 KByte             |
-| **Package**            | S/ LQFP100 14 x 14 mm     | 265-TFBGA 14 x 14 mm |
-|                        | B/ 100-TFBGA 8 x 8 mm 
-| **Temperature Range**  | -40C to +85C              | -40C to +85C         |
-
-*Note: Resources are shared between your application and the operating system.*
-
-## Peripherals
-
-| Peripheral                 | SC20100S/B                | SC20260B              |
-|----------------------------|---------------------------|-----------------------|
-| **GPIO**                   | 74                        | 163                   |
-| **SPI**                    | 3                         | 3                     |
-| **I2C**                    | 2                         | 3                     |
-| **UART**                   | 8 (4 with handshaking)    | 8 (4 with handshaking)|
-| **CAN**                    | 2                         | 2                     |
-| **PWM**                    | 16                        | 29                    |
-| **ADC**                    | 12                        | 21                    |
-| **DAC**                    | 2                         | 2                     |
-| **SD/SDIP/MMC**            | 1                         | 1                     |
-| **Quad SPI**               | 1                         | 1                     |
-| **USB Host**               | 1                         | 1                     |
-| **USB Client**             | 1                         | 1                     |
-| **Ethernet**               | 1                         | 1                     |
-| **LCD TFT**                | 0                         | 1                     |
-| **Graphics**               | via SPI                   | 16BPP TFT             |
-| **Camera**                 | 0                         | 1                     |
-
-*Note: As many pins share peripherals, not all peripherals will be available.*
-
-## Power Consumption
-|                            | SC20100S/B      | SC20260B        |              
-|----------------------------|-----------------|-----------------|
-| **Running**                | 194mA           | 194mA           | 
-| **Sleep**                  | 163mA           | 163mA           | 
-| **Hibernate**              | 6mA             | 6mA             | 
-| **Shutdown**               | 810uA           | 810uA           |
-
-See the [Power Management](http://docs.ghielectronics.com/software/tinyclr/tutorials/power-management.html) tutorial 
-
-### Using Interrupts (IRQs)
-
-The microcontrollers we use in our SITCore line of products do not support concurrent interrupts with the same pin number, even if the pins are on different ports (the port is denoted by the second letter of the GPIO pin name -- PA1 is pin 1 on port A). Therefore, interrupts are available on only 16 pins at any given time. For example, pins PA1 and PB1 cannot be used as interrupt pins at the same time, but PA1 and PB2 can. PA1 and PA2 can also be used with interrupts simultaneously.
-
-## Features
+### Features
 
 * Low power modes including three independently controllable power domains
 * RTC
@@ -83,6 +30,71 @@ The microcontrollers we use in our SITCore line of products do not support concu
   * Generation
   * Capture
   * Pulse measurement
+
+---
+
+## Specifications
+
+| Spec                   | SC20100S/B                | SC20260B             |
+|------------------------|---------------------------|----------------------|
+| **Core**               | ARM Cortex-M7 32 bit      | ARM Cortex-M7 32 bit |
+| **Speed**              | 480 MHz                   | 480 MHz              |
+| **Internal RAM**       | 1 MByte                   | 1 MByte              |
+| **Internal Flash**     | 2 MByte                   | 2 MByte              |
+| **Instruction Cache**  | 16 KByte                  | 16 KByte             |
+| **Data Cache**         | 16 KByte                  | 16 KByte             |
+| **Package**            | S/ LQFP100 14 x 14 mm     | 265-TFBGA 14 x 14 mm |
+|                        | B/ 100-TFBGA 8 x 8 mm 
+| **Temperature Range**  | -40C to +85C              | -40C to +85C         |
+
+*Note: Resources are shared between your application and the operating system.*
+
+---
+
+## Peripherals
+
+| Peripheral                 | SC20100S/B                | SC20260B              |
+|----------------------------|---------------------------|-----------------------|
+| **GPIO**                   | 74                        | 163                   |
+| **SPI**                    | 3                         | 3                     |
+| **I2C**                    | 2                         | 3                     |
+| **UART**                   | 8 (4 with handshaking)    | 8 (4 with handshaking)|
+| **CAN**                    | 2                         | 2                     |
+| **PWM**                    | 16                        | 29                    |
+| **ADC**                    | 12                        | 21                    |
+| **DAC**                    | 2                         | 2                     |
+| **SD/SDIP/MMC**            | 1                         | 1                     |
+| **Quad SPI**               | 1                         | 1                     |
+| **USB Host**               | 1                         | 1                     |
+| **USB Client**             | 1                         | 1                     |
+| **Ethernet**               | 1                         | 1                     |
+| **LCD TFT**                | 0                         | 1                     |
+| **Graphics**               | via SPI                   | 16BPP TFT             |
+| **Camera**                 | 0                         | 1                     |
+
+*Note: As many pins share peripherals, not all peripherals will be available.*
+
+---
+
+## Power Consumption
+
+|                            | 480MHz          |   240MHz        |          
+|----------------------------|-----------------|-----------------|
+| **Running**                | 205mA           | 110mA           |
+| **Idle**                   | 170mA           | 97mA            |
+| **Sleep**                  | 6.5mA           | 6.5mA           |
+| **Shutdown**               | 40uA            | 40uA            |
+
+
+See the [Power Management](http://docs.ghielectronics.com/software/tinyclr/tutorials/power-management.html) tutorial
+
+---
+
+## Using Interrupts (IRQs)
+
+The microcontrollers we use in our SITCore line of products do not support concurrent interrupts with the same pin number, even if the pins are on different ports (the port is denoted by the second letter of the GPIO pin name -- PA1 is pin 1 on port A). Therefore, interrupts are available on only 16 pins at any given time. For example, pins PA1 and PB1 cannot be used as interrupt pins at the same time, but PA1 and PB2 can. PA1 and PA2 can also be used with interrupts simultaneously.
+
+---
     
 ## Pinouts
 
@@ -95,6 +107,9 @@ The microcontrollers we use in our SITCore line of products do not support concu
 [![SC20260B Pinout](images/sc20260b-pinout.gif)](pdfs/sc20260b-pinout.pdf)
 
 *Analog Only
+
+---
+
 ## Device Startup
 The SITCore is held in reset while the RESET pin is low. Releasing RESET will begin the system startup process.
 
@@ -108,6 +123,8 @@ Which components get executed on startup is controlled by manipulating the LDR p
 Additionally, the communications interface between the host PC and the SITCore is selected on startup through the MOD pin, which is pulled high on startup. The USB interface is selected when MOD is high and UART1 is selected when MOD is low.
 
 The above discussed functions of the LDR, APP, and MOD pins are only available during startup. After startup, the pins return to the default GPIO state and are available as a GPIO (or peripheral pin) in your application. Check out the [Special Pins](../../software/tinyclr/special-pins.md) page for more information.
+
+---
 
 ## TinyCLR OS
 TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.
@@ -124,6 +141,8 @@ You can also update the firmware manually. Download the [firmware](../../softwar
 
 ### Start Coding
 Now that you have installed the bootloader and firmware on the SITCore, you can setup your host computer and start programming.  Go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.
+
+---
 
 ## Design Considerations
 
@@ -215,6 +234,7 @@ The lead-free reflow profiles used by GHI Electronics are shown below. The profi
 
 [![Reflow Chart](../netmf/images/reflow-profile.gif)](http://files.ghielectronics.com/downloads/Documents/Datasheets/WS483%20SAC305%20Solder%20Paste%20Datasheet.pdf)
 
+---
 
 ## SITCore Dev Boards
 
