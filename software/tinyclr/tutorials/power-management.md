@@ -101,10 +101,20 @@ Some modules include an on-board Ethernet PHY. This can be disabled by setting a
 
 ## Software Reset
 
-You can reset your device from within your application with the following command:
+TinyCLR OS provides two reset modes within your application:
+
+### Reset Application
+This command allows to reset your application:
 
 ```cs
 GHIElectronics.TinyCLR.Native.Power.Reset();
+```
+
+### Reset to Bootloader mode
+
+The command below will boot the device in GHI Bootloader mode:
+```cs
+GHIElectronics.TinyCLR.Native.Power.Reset(false);
 ```
 
 ---
