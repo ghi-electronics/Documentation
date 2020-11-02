@@ -188,7 +188,7 @@ Make sure the battery polarity is correct as shown below (red wire to plus, blac
 
 ![FEZ Portal](images/fez_portal.jpg)
 
-Already one of our most popular SITCore single board computers, The **FEZ Portal** is a 4.3" 480x272 display with capacitive touch that is programmable in C#. As the display and controller are one unit, it's even easier to make a product with touch as you only have to mount a single board that's only slightly larger than the display.
+Already one of our most popular SITCore single board computers, The **FEZ Portal** is a 4.3" 480x272 display with capacitive touch that is programmable in C#. As the display and controller are one unit, it's even easier to make a product with touch as you only have to mount a single board that's only slightly larger than the display. Display Brightness is 300 Cd/m2
 
 [FEZ Portal Schematic](pdfs/fez-portal-rev-c-schematic.pdf)
 
