@@ -4,12 +4,12 @@
 
 ## 2.1.0 - Preview1
 
-### Released 2020-11-02
+### Released 2020-11-03
 
 ### Visual Studio Project System
 
 #### Changes
-- Updated version number version 2.1.100
+- Updated version number 2.1.100
 
 #### Known Issues
 - None
