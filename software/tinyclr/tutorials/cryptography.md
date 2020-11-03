@@ -40,6 +40,8 @@ The above code outputs the following:
 Decrypted: Data to encrypt.
 ```
 
+---
+
 ## RSA
 RSA public key cryptography has become the most popular asymmetric cryptography scheme on the Internet. While public key cryptography systems solve the problem of secure key sharing that exists in symmetric cryptography, they are much more computationally intensive. As a result, cryptography systems such as RSA are often used only to securely transfer the key for a symmetric cryptography method such as XTEA. Once the key has been sent, the computationally less intensive symmetric cryptography system is then used to encode and decode the bulk of the data.
 

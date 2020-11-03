@@ -8,7 +8,7 @@
     <title>Collections </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Collections ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -141,6 +141,7 @@ Values:
     Fault: Blown fuse
 ----------
 </code></pre><p>In the above sample, <code>rmaList.Clear()</code> will remove all elements from <code>rmaList</code>, <code>rmaList.RemoveAt(1)</code> will remove only the second element in the list, and <code>rmaList.Remove(record)</code> will remove the first element that is equal to <code>record</code>.</p>
+<hr>
 <h2 id="hashtables">Hashtables</h2>
 <p>Hash tables are used to store information in a way that associates each data element, or value, with a key that can be used to look up that value. Hash tables make it easy to quickly retrieve information that would otherwise be difficult to organize in an efficient manner.</p>
 <p>For example, imagine trying to look up a phone number from a given name. You could make a two dimension array of names and phone numbers and then iterate through the array looking for the correct name, but this would be slow with a large array. Hash tables solve this problem by using a hash function to convert a key, in this case a name, into an array index that points directly to the data element you are looking for. This allows you to quickly retrieve the data directly instead of searching for it. </p>
@@ -174,7 +175,8 @@ Key = BTN2    Value = PB7
 Key = BTN3    Value = PD7
 Key = WKUP    Value = PA0
 Key = APP    Value = PB7
-</code></pre><h2 id="stacks">Stacks</h2>
+</code></pre><hr>
+<h2 id="stacks">Stacks</h2>
 <p>Stacks are first in, last out (or last in, first out) collections of objects. The <code>Push</code> method is used to add items to a stack, and the <code>Pop</code> method is used to remove items from a stack. There is also a <code>Peek</code> method that returns the item at the top of the stack without removing it from the stack.</p>
 <pre><code class="lang-cs">private static void Main() {
     var sitCoreDevices = new System.Collections.Stack();
@@ -219,7 +221,8 @@ Items in queue:
     SCM20260D
     SC20260B
     SC20100S
-</code></pre><h2 id="queues">Queues</h2>
+</code></pre><hr>
+<h2 id="queues">Queues</h2>
 <p>Queues are first in, first out collections of objects. To add items to a queue, the <code>enqueue</code> method is used. To remove items, the <code>dequeue</code> method is used.</p>
 <pre><code class="lang-cs">private static void Main() {
     var sitCoreDevices = new System.Collections.Queue();
@@ -278,7 +281,8 @@ Items in queue:
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

@@ -8,7 +8,7 @@
     <title>Font Support </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Font Support ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -92,6 +92,7 @@ screen.Flush();
 ImportRange 32 126
 </code></pre><div class="TIP"><h5>Tip</h5><p>This <a href="http://informatix.miloush.net/microframework/Utilities/TinyFontTool.aspx"><strong>third-party tool</strong></a> can be handy for generating compatible fonts.</p>
 </div>
+<hr>
 <h2 id="font-definition">Font Definition</h2>
 <p>The .fntdef file options are as follows:</p>
 <div class="NOTE"><h5>Note</h5><p>The order of statements in the .fntdef file matters. For example, properties such as AntiAlias must be specified before the InputRange property.</p>
@@ -167,8 +168,8 @@ ImportRange 32 126
 </li>
 </ul>
 <p>Syntax for running FontConverter is GHIElectronics.TinyCLR.FontConverter.exe <em>input-font</em> <em>output-font</em>. For example <code>GHIElectronics.TinyCLR.FontConverter.exe Arial.fntdef Arial.tcfnt</code>.</p>
-<h2 id="resources">Resources</h2>
 <hr>
+<h2 id="resources">Resources</h2>
 <p>Fonts can be added to your application as a resource. <a href="resources.html">Click here</a> for more information.</p>
 </article>
           </div>
@@ -183,7 +184,8 @@ ImportRange 32 126
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

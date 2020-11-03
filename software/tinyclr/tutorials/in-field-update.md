@@ -78,6 +78,8 @@ class Program {
 }
 ```
 
+---
+
 ## Update via File
 
 The file updater reads files from memory, SD card or USB port, and then handles the update directly without the need for external memory. This update works on systems with or without external memory. You cannot update the firmware using this method, only the application.
@@ -122,6 +124,8 @@ class Program {
     }
 }
 ```
+
+---
 
 ## Firmware and Application Must Match
 It is important that the firmware on your chip is the same version expected by your application. To make sure your application and firmware match, it is best to update both simultaneously if possible.

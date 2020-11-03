@@ -26,8 +26,12 @@ uBuffer.Dispose();
 
 ```
 
+---
+
 ## Graphical Memory
 When the [graphics](graphics.md) engine detects available external memory, it automatically uses it. Also, garbage collection will dispose of unmanaged graphics buffers automatically. You do not have to dispose of unmanaged graphics buffers like you do for unmanaged non-graphic buffers.
+
+---
 
 ## Helper Methods
 

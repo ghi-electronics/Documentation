@@ -8,7 +8,7 @@
     <title>USB </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="USB ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -83,6 +83,7 @@
 <p>TinyCLR OS supports both USB Client and USB Host and includes support for using USB keyboards, mice, and mass storage devices with your SITCore devices.</p>
 <h2 id="usb-client">USB Client</h2>
 <p>USB client support is mainly used for deploying and debugging applications. It can also be used to transfer data between a SITCore device and a PC. See <a href="usb-cdc-winusb.html">USB CDC &amp; WinUSB</a> for details.</p>
+<hr>
 <h2 id="usb-host">USB Host</h2>
 <p>The USB Host API supports USB keyboards, mice, raw devices, and USB MSC (Mass Storage Class), which allows file access on USB memory devices. The following code sample shows how to detect devices as they are connected to your SITCore device&#39;s USB host port.</p>
 <div class="NOTE"><h5>Note</h5><p>USB hubs are not currently supported. Special USB memory devices that have multiple interfaces or built in hubs will not work.</p>
@@ -226,7 +227,8 @@
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

@@ -40,8 +40,9 @@ try {
 
     var client = new Mqtt(clientSetting);
 
-    client.PublishReceivedChanged += (a, b) => { Debug.WriteLine
-        ("Received message: " + Encoding.UTF8.GetString(b.Data)); };
+    client.PublishReceivedChanged += (p1, p2, p3, p4, p5, p6) => {
+    Debug.WriteLine("Received message: " + Encoding.UTF8.GetString(p3));
+    };
                 
     var connectSetting = new MqttConnectionSetting {
         ClientId = deviceId,

@@ -8,7 +8,7 @@
     <title>SITCore System on Modules </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="SITCore System on Modules ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -83,6 +83,38 @@
 <p><img src="images/module-options-size.jpg" alt="SITCore SoMs"></p>
 <h2 id="overview">Overview</h2>
 <p>The SITCore SoMs provide a low cost way to add .NET computing power to any embedded product. They are available in a 200 pin SO-DIMM format or as surface mount modules. The SITCore SoMs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more. The surface mount versions are great for harsh or high vibration environments.</p>
+<h3 id="features">Features</h3>
+<ul>
+<li>Low power modes including three independently controllable power domains</li>
+<li>RTC</li>
+<li>Watchdog</li>
+<li>Threading</li>
+<li>TCP/IP with SSL<ul>
+<li>Full .NET socket interface</li>
+<li>Ethernet</li>
+<li>PPP</li>
+</ul>
+</li>
+<li>Graphics<ul>
+<li>Images</li>
+<li>Fonts</li>
+<li>Controls</li>
+</ul>
+</li>
+<li>File System<ul>
+<li>Full .NET file interface</li>
+<li>SD cards</li>
+<li>USB drives</li>
+</ul>
+</li>
+<li>Signal controls<ul>
+<li>Generation</li>
+<li>Capture</li>
+<li>Pulse measurement</li>
+</ul>
+</li>
+</ul>
+<hr>
 <h2 id="specifications">Specifications</h2>
 <table>
 <thead>
@@ -123,6 +155,7 @@
 </tbody>
 </table>
 <p><em>Note: Resources are shared between your application and the operating system.</em></p>
+<hr>
 <h2 id="peripherals">Peripherals</h2>
 <table>
 <thead>
@@ -250,82 +283,119 @@
 </tbody>
 </table>
 <p><em>Note: As many pins share peripherals, not all peripherals will be available.</em></p>
+<hr>
 <h2 id="power-consumption">Power Consumption</h2>
+<h3 id="scm20260de">SCM20260D/E</h3>
 <table>
 <thead>
 <tr>
 <th></th>
-<th>SCM20100E</th>
-<th>SCM20260N</th>
-<th>SCM20260E</th>
-<th>SCM20260D</th>
+<th>480MHz</th>
+<th>240MHz</th>
+<th>w/ Ethernet</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Running</strong></td>
-<td>265mA</td>
-<td>217mA</td>
-<td>305mA</td>
-<td>305mA</td>
+<td>205mA</td>
+<td>110mA</td>
+<td>+90mA</td>
+</tr>
+<tr>
+<td><strong>Idle</strong></td>
+<td>170mA</td>
+<td>97mA</td>
+<td>+90mA</td>
 </tr>
 <tr>
 <td><strong>Sleep</strong></td>
-<td>182mA</td>
-<td>188mA</td>
-<td>185mA</td>
-<td>185mA</td>
-</tr>
-<tr>
-<td><strong>Hibernate</strong></td>
-<td>26mA</td>
-<td>22mA</td>
-<td>24mA</td>
-<td>27mA</td>
+<td>6.5mA</td>
+<td>6.5mA</td>
+<td>+18mA</td>
 </tr>
 <tr>
 <td><strong>Shutdown</strong></td>
-<td>19mA</td>
-<td>15mA</td>
-<td>17mA</td>
-<td>17mA</td>
+<td>40uA</td>
+<td>40uA</td>
+<td>+18mA</td>
 </tr>
 </tbody>
 </table>
-<p>See the <a href="http://docs.ghielectronics.com/software/tinyclr/tutorials/power-management.html">Power Management</a> tutorial </p>
-<h3 id="using-interrupts-irqs">Using Interrupts (IRQs)</h3>
+<h3 id="scm20260n">SCM20260N</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>480MHz</th>
+<th>240MHz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Running</strong></td>
+<td>205mA</td>
+<td>110mA</td>
+</tr>
+<tr>
+<td><strong>Idle</strong></td>
+<td>170mA</td>
+<td>97mA</td>
+</tr>
+<tr>
+<td><strong>Sleep</strong></td>
+<td>6.5mA</td>
+<td>6.5mA</td>
+</tr>
+<tr>
+<td><strong>Shutdown</strong></td>
+<td>40uA</td>
+<td>40uA</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scm20100e">SCM20100E</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>480MHz</th>
+<th>240MHz</th>
+<th>w/ Ethernet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Running</strong></td>
+<td>205mA</td>
+<td>110mA</td>
+<td>+90mA</td>
+</tr>
+<tr>
+<td><strong>Idle</strong></td>
+<td>170mA</td>
+<td>97mA</td>
+<td>+90mA</td>
+</tr>
+<tr>
+<td><strong>Sleep</strong></td>
+<td>6.5mA</td>
+<td>6.5mA</td>
+<td>+18mA</td>
+</tr>
+<tr>
+<td><strong>Shutdown</strong></td>
+<td>40uA</td>
+<td>40uA</td>
+<td>+18mA</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="http://docs.ghielectronics.com/software/tinyclr/tutorials/power-management.html">Power Management</a> tutorial</p>
+<hr>
+<h2 id="using-interrupts-irqs">Using Interrupts (IRQs)</h2>
 <p>The microcontrollers we use in our SITCore line of products do not support concurrent interrupts with the same pin number, even if the pins are on different ports (the port is denoted by the second letter of the GPIO pin name -- PA1 is pin 1 on port A). Therefore, interrupts are available on only 16 pins at any given time. For example, pins PA1 and PB1 cannot be used as interrupt pins at the same time, but PA1 and PB2 can. PA1 and PA2 can also be used with interrupts simultaneously.</p>
-<h2 id="features">Features</h2>
-<ul>
-<li>Low power modes including three independently controllable power domains</li>
-<li>RTC</li>
-<li>Watchdog</li>
-<li>Threading</li>
-<li>TCP/IP with SSL<ul>
-<li>Full .NET socket interface</li>
-<li>Ethernet</li>
-<li>PPP</li>
-</ul>
-</li>
-<li>Graphics<ul>
-<li>Images</li>
-<li>Fonts</li>
-<li>Controls</li>
-</ul>
-</li>
-<li>File System<ul>
-<li>Full .NET file interface</li>
-<li>SD cards</li>
-<li>USB drives</li>
-</ul>
-</li>
-<li>Signal controls<ul>
-<li>Generation</li>
-<li>Capture</li>
-<li>Pulse measurement</li>
-</ul>
-</li>
-</ul>
+<hr>
 <h2 id="module-pinouts">Module Pinouts</h2>
 <h3 id="scm20100e-pinout">SCM20100E Pinout</h3>
 <p><a href="pdfs/scm20100e-pinout.pdf"><img src="images/scm20100e-pinout.gif" alt="SCm20100E Pinout"></a></p>
@@ -335,6 +405,7 @@
 <p><a href="pdfs/scm20260e-pinout.pdf"><img src="images/scm20260e-pinout.gif" alt="SCm20260E Pinout"></a></p>
 <h3 id="scm20260d-pinout">SCM20260D Pinout</h3>
 <p><a href="pdfs/scm20260d-pinout.pdf"><img src="images/scm20260d-pinout.gif" alt="SCm20260D Pinout"></a></p>
+<hr>
 <h2 id="schematics">Schematics</h2>
 <ul>
 <li><a href="pdfs/scm20100e-rev-b-schematic.pdf">SCM20100E Schematic</a></li>
@@ -349,6 +420,7 @@
 <li><a href="http://files.ghielectronics.com/downloads/3D/SITCore/SoM/SCM20260E%20Rev%20B.step">SCM20260E STEP File</a></li>
 <li><a href="http://files.ghielectronics.com/downloads/3D/SITCore/SoM/SCM20260D%20Rev%20C.step">SCM20260D STEP File</a></li>
 </ul>
+<hr>
 <h2 id="getting-started">Getting Started</h2>
 <p>As the SITCore modules are based on the SITCore chipset, please refer to the <a href="soc.html">SITCore SoC page</a> for information on device startup, loading TinyCLR OS firmware, and writing and deploying your application.</p>
 <h2 id="design-considerations">Design Considerations</h2>
@@ -387,6 +459,7 @@
 <p>SITCore SoMs are not sealed for moisture. Baking modules before reflow is recommended and required in a humid environment. The process of reflow can damage the SoM if the temperature is too high or exposure is too long.</p>
 <p>The lead-free reflow profiles used by GHI Electronics are shown below. The profiles are based on AIM SAC 305 solder (3% silver, 0.5% copper). The thermal mass of the assembled board and the sensitivity of the components on it affect the total dwell time. Differences in the two profiles are where they reach their respective peak temperatures as well as the time above liquids (TAL). The shorter profile applies to smaller assemblies, whereas the longer profile applies to larger assemblies such as back-planes or high-density boards. The process window is described by the shaded area. These profiles are only starting-points and general guidance. The particulars of the oven and the assembly will determine the final process.</p>
 <p><a href="http://files.ghielectronics.com/downloads/Documents/Datasheets/WS483%20SAC305%20Solder%20Paste%20Datasheet.pdf"><img src="../netmf/images/reflow-profile.gif" alt="Reflow Chart"></a></p>
+<hr>
 <h2 id="sitcore-dev-boards">SITCore Dev Boards</h2>
 <p>We offer SITCore development boards to get you started as quickly and easily as possible. These boards allow you to start programming in minutes, and are suitable for both prototypes and production. Click <a href="dev.html">here</a> for details.</p>
 </article>
@@ -402,7 +475,8 @@
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

@@ -118,6 +118,8 @@ displayController.SetConfiguration(new ParallelDisplayControllerSettings {
 });
 ```
 
+---
+
 ## Non-Native Displays
 
 Our SC20100S Dev Board has a non-native SPI display installed on it. There are special considerations for non-native displays -- instead of the data being automatically written to the display using the microcontroller's DMA, you must format and then transfer the data to the display yourself. Only the SC20260B SITCore chip has the resources to support native displays. Any device the uses the SC20100S chip can only support non-native displays.
@@ -212,6 +214,8 @@ namespace GraphicsSample {
 }
 ```
 
+---
+
 ## Helper Methods
 With parallel displays, (also called native displays), the `DisplayController.ActiveConfiguration` can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display's resolution. The following line of code draws a line from corner to corner, no matter the display resolution.
 
@@ -222,9 +226,13 @@ screen.DrawLine(new Pen(Color.Red), 0, 0, displayController.ActiveConfiguration.
 
 It is important to note that drawing functions process graphics in RAM independently from the display. The display driver then transfers the pixels from internal memory to the display when `Graphics.Flush` is called. Learn more about [display](displays.md) support.
 
+---
+
 ## Images
 
 TinyCLR OS supports the BMP, GIF, and JPG. See the [Image Decoders](image-decoders.md) page.
+
+---
 
 ## Fonts
 

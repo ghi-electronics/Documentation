@@ -8,7 +8,7 @@
     <title>Real Time Clock </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Real Time Clock ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -137,13 +137,15 @@ Current Time    : 01/01/2019 11:15:35
 Current RTC Time: 01/01/2019 11:15:35
 Current Time    : 01/01/2019 11:15:36
 Current RTC Time: 01/01/2019 11:15:36
-</code></pre><h2 id="system-clock">System Clock</h2>
+</code></pre><hr>
+<h2 id="system-clock">System Clock</h2>
 <p>You can get the current system time using <code>DateTime.Now</code>. The system clock starts running at power up, but until you set the clock, the time and date will be incorrect. </p>
 <p>The following command is used to set the time:</p>
 <pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.SystemTime.SetTime(DateTime utcTime);
 </code></pre><p>To set the system clock to the RTC time, use the following command:</p>
 <pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.SystemTime.SetTime(rtc.Now);
-</code></pre><h2 id="sntp">SNTP</h2>
+</code></pre><hr>
+<h2 id="sntp">SNTP</h2>
 <p>You can use SNTP (Simple Network Time Protocol) to accurately set the time in your application. The following method will return the current date and time after retrieving it from an NTP server. Your device will need an active network connection for this code to work.</p>
 <pre><code class="lang-cs">public static DateTime GetNetworkTime(int CorrectLocalTime = 0) {
     const string ntpServer = &quot;pool.ntp.org&quot;;
@@ -181,7 +183,8 @@ Current RTC Time: 01/01/2019 11:15:36
 }
 </code></pre><p>The above method is used as follows, with the argument indicating how many hours to add to convert UTC time to your local time zone:</p>
 <pre><code class="lang-cs">DateTime dateTime = GetNetworkTime(-5);
-</code></pre><h2 id="battery-backed-memory">Battery Backed Memory</h2>
+</code></pre><hr>
+<h2 id="battery-backed-memory">Battery Backed Memory</h2>
 <p>SITCore devices include 4 KBytes of battery backed memory. This memory accepts and returns byte arrays of data. The commands and their overloads for accessing this memory are as follows:</p>
 <pre><code class="lang-cs">BackupMemorySize; //Returns 4096, total size in bytes of battery backed memory.
 
@@ -213,7 +216,8 @@ rtc.ReadBackupMemory(readData);
 for (int i=0; i &lt; 5; i++) {
     Debug.WriteLine(readData[i].ToString()); //Displays 1, 2, 3, 4, 5
 }
-</code></pre><h2 id="rtc-calibration">RTC Calibration</h2>
+</code></pre><hr>
+<h2 id="rtc-calibration">RTC Calibration</h2>
 <p>RTC also provides a calibration feature. </p>
 <pre><code>rtc.Calibrate(int pulse);
 </code></pre><p><code>pulse</code> is how many ticks to add (positive) or remove (negative) every 32 seconds. Use 0 to disable.</p>
@@ -231,7 +235,8 @@ for (int i=0; i &lt; 5; i++) {
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

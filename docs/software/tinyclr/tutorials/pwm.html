@@ -8,7 +8,7 @@
     <title>PWM </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="PWM ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -87,8 +87,8 @@
 </div>
 <h2 id="energy-level">Energy Level</h2>
 <p>PWM is perfect for dimming an LED or controlling the speed of a motor. When the duty cycle is 50%, half the energy is transferred to the attached load.</p>
-<pre><code class="lang-cs">var controller = PwmController.FromName(SC20260.PwmChannel.Controller3.Id);
-var led = controller.OpenChannel(SC20260.PwmChannel.Controller3.PB0);
+<pre><code class="lang-cs">var controller = PwmController.FromName(SC20260.Timer.Pwm.Controller3.Id);
+var led = controller.OpenChannel(SC20260.Timer.Pwm.Controller3.PB0);
 controller.SetDesiredFrequency(10000);
 
 double duty = 0.5, speed = 0.01;
@@ -106,7 +106,8 @@ while (true) {
 
     Thread.Sleep(10);   //Always give the system time to think!
 }  
-</code></pre><h2 id="musical-tones">Musical Tones</h2>
+</code></pre><hr>
+<h2 id="musical-tones">Musical Tones</h2>
 <p>Musical notes have specific frequencies; C for example is about 261Hz. Plugging these numbers into an array and knowing the length of each tone is all that is needed to play some simple music. When playing notes by changing the frequency, keep the duty cycle set to 0.5.</p>
 <p>The following example is written for the SC20100S Dev Board.</p>
 <pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Pwm;
@@ -142,8 +143,8 @@ class Program {
                               QUARTER, QUARTER, QUARTERDOT, EIGHTH, WHOLE};
 
     private static void Main() {
-        var controller = PwmController.FromName(SC20100.PwmChannel.Controller14.Id);
-        var toneOut = controller.OpenChannel(SC20100.PwmChannel.Controller14.PA7);
+        var controller = PwmController.FromName(SC20100.Timer.Pwm.Controller14.Id);
+        var toneOut = controller.OpenChannel(SC20100.Timer.Pwm.Controller14.PA7);
         toneOut.SetActiveDutyCyclePercentage(0.5);
 
         while (true) {
@@ -160,7 +161,8 @@ class Program {
         }
     }
 }
-</code></pre><h2 id="servo-motors">Servo Motors</h2>
+</code></pre><hr>
+<h2 id="servo-motors">Servo Motors</h2>
 <p>A servo motor is a motor that has a small internal circuit allowing you to control it using electrical pulses. Servo motors are available as either continuous or positional servos. While they look identical, a positional servo only turns to a given position and then holds that position until you tell it to move to another position. A continuous servo motor will rotate continuously in one direction until it is told to either stop or reverse direction.</p>
 <p>The pulse that controls servos is sent every 20 ms. This pulse will usually have a width between 1 ms and 2 ms which varies depending on the make and model of the motor. The position of a positional servo is based on the width of the pulse, with a 1.5 ms pulse moving to the middle of travel (90-degree position). With a rotational servo, 1.5ms will stop the motor, 1 ms is full speed, and 2 ms is full speed in the opposite direction. </p>
 <div class="TIP"><h5>Tip</h5><p>As a rule, servos have three wires. Be sure the central wire is connected to 5V. The lighter color wire on one side of the connector is a signal and should be connected to a PWM pin. The third one, which is usually a darker color, is ground.</p>
@@ -176,14 +178,14 @@ using System.Threading;
 class Program {
     private static void Main() {
         ServoMotor servo1 = new ServoMotor(ServoMotor.ServoType.Positional,
-            PwmController.FromName(SC20100.PwmChannel.Controller15.Id),
-            SC20100.PwmChannel.Controller15.PE6);
+            PwmController.FromName(SC20100.Timer.Pwm.Controller15.Id),
+            SC20100.Timer.Pwm.Controller15.PE6);
 
         servo1.ConfigurePulseParameters(0.5, 2.4);  //Settings for TowerPro SG90 micro servo.
 
         ServoMotor servo2 = new ServoMotor(ServoMotor.ServoType.Continuous,
-            PwmController.FromName(SC20100.PwmChannel.Controller2.Id),
-            SC20100.PwmChannel.Controller2.PA3);
+            PwmController.FromName(SC20100.Timer.Pwm.Controller2.Id),
+            SC20100.Timer.Pwm.Controller2.PA3);
 
         servo1.Set(0);
         Thread.Sleep(1000);
@@ -286,7 +288,8 @@ namespace GHIElectronics.TinyCLR.Devices.Servo {
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

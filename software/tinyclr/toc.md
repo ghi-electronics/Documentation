@@ -14,6 +14,7 @@
 ### [External Memory](tutorials/external-memory.md)
 ### [Unmanaged Heap](tutorials/unmanaged-heap.md)
 ### [NuGet Based Libraries](tutorials/nuget.md)
+### [Device Info](tutorials/device-info.md)
 
 ## Modern OS Features
 ### [Multithreading](tutorials/multithreading.md)
@@ -23,6 +24,7 @@
 ### [Encoding & Decoding](tutorials/encoding-decoding.md)
 ### [Application Domain](tutorials/application-domain.md)
 ### [Marshal](tutorials/marshal.md)
+### [RegEx](tutorials/reg-ex.md)
 
 ## Multimedia
 ### [Graphics](tutorials/graphics.md)

@@ -73,6 +73,7 @@ Values:
 
 In the above sample, `rmaList.Clear()` will remove all elements from `rmaList`, `rmaList.RemoveAt(1)` will remove only the second element in the list, and `rmaList.Remove(record)` will remove the first element that is equal to `record`.
 
+---
 
 ## Hashtables
 Hash tables are used to store information in a way that associates each data element, or value, with a key that can be used to look up that value. Hash tables make it easy to quickly retrieve information that would otherwise be difficult to organize in an efficient manner.
@@ -115,6 +116,8 @@ Key = BTN3    Value = PD7
 Key = WKUP    Value = PA0
 Key = APP    Value = PB7
 ```
+
+---
 
 ## Stacks
 
@@ -168,6 +171,8 @@ Items in queue:
     SC20260B
     SC20100S
 ```
+
+---
 
 ## Queues
 

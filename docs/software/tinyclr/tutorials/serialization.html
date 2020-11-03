@@ -8,7 +8,7 @@
     <title>Serialization </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Serialization ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -129,6 +129,7 @@ public class MySerializableClass {
 </div>
 <div class="WARNING"><h5>Warning</h5><p>GHI Electronics does not own or have rights to the code in this repository: <a href="https://github.com/Apress/exp-.net-micro-framework">https://github.com/Apress/exp-.net-micro-framework</a>. It is your responsibility to adhere to the license provided by the owner of this code.</p>
 </div>
+<hr>
 <h2 id="json">JSON</h2>
 <p>TinyCLR OS includes a built in JSON library.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Data.Json.</p>
@@ -147,7 +148,8 @@ for (var i = 0; i &lt; intArray.Length; i++) {
     }
 }
 Debug.WriteLine(&quot;Array test succeeded&quot;);
-</code></pre><h2 id="xml">XML</h2>
+</code></pre><hr>
+<h2 id="xml">XML</h2>
 <p>TinyCLR OS supports both the writing and reading of XML (eXtensible Markup Language) files through its XmlReader and XmlWriter classes. Full documentation of XML is beyond the scope of this document, but for more information Microsoft&#39;s <a href="https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmldocument?view=netcore-3.1">.NET XML documentation</a> is a good place to start. Please note that the TinyCLR implementation of XML is not fully .NET compatible, for example the asynchronous API is not supported.</p>
 <div class="NOTE"><h5>Note</h5><p>XmlReader and XmlWriter both implement the IDisposable interface.</p>
 </div>
@@ -245,7 +247,8 @@ while (!reader.EOF) {
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

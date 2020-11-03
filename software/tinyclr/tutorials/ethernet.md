@@ -90,6 +90,8 @@ private static void NetworkController_NetworkAddressChanged
 }
 ```
 
+---
+
 ## ENC28J60
 
 This example uses the ENC28J60 click on our SC20260D Dev Board.
@@ -186,6 +188,8 @@ private static void NetworkController_NetworkAddressChanged
     linkReady = address[0] != 0;
 }
 ```
+
+---
 
 ## Event Handlers
 

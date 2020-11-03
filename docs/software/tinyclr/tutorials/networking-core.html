@@ -8,7 +8,7 @@
     <title>Networking Core </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Networking Core ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -85,12 +85,16 @@
 <p>Before using SITCore&#39;s built in PHY and ENC28 Ethernet networking, you have to set a MAC address or an exception will be raised. While you may not need a unique MAC address for internal testing, you will need to set a valid and unique MAC address before shipping your product. If you do not have access to an appropriate MAC address, you can either use an online MAC address generator, which is not ideal, or you can use a MAC address from an old computer or network card that is no longer used.</p>
 <p>Not having a unique MAC address can be a problem. If two devices with the same MAC address are present on the same local network subnet, neither device will be able to communicate properly.</p>
 <p>The WINC1500 WiFi module supported by SITCore devices ships with a manufacturer assigned unique MAC address. This address is used by default, although you can provide your own MAC address if desired.</p>
+<hr>
 <h2 id="secure-sockets">Secure Sockets</h2>
 <p>TLS is natively support. See the <a href="tls.html">TLS page</a> for details.</p>
+<hr>
 <h2 id="net-sockets">.NET Sockets</h2>
 <p>TinyCLR OS&#39;s support of sockets is very similar to .NET socket support. Most .NET socket code should run with little modification. Socket support is provided as part of the TinyCLR OS core. Tiny CLR sockets work similar to .NET sockets -- most .NET examples are applicable to TinyCLR.</p>
+<hr>
 <h2 id="tcpudp">TCP/UDP</h2>
 <p>TCP and UDP are the core of the Internet protocols and are supported through standard .NET Sockets. The web is full of examples on using TCP and UDP Sockets that should work as is or with minor changes.</p>
+<hr>
 <h2 id="dhcp">DHCP</h2>
 <p>TinyCLR OS supports both static and dynamic IP addressing. Note that static IP addressing does not work with <a href="ppp.html">PPP</a>.</p>
 <p>The following line of code enables dynamic DHCP. For static IP, set <code>IsDhcpEnabled</code> to <code>false</code>.</p>
@@ -101,7 +105,8 @@ networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0
 networkInterfaceSetting.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
 networkInterfaceSetting.DnsAddresses = new IPAddress[] { new IPAddress(new byte[]
     { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
-</code></pre><h2 id="dns">DNS</h2>
+</code></pre><hr>
+<h2 id="dns">DNS</h2>
 <p>The TinyCLR Dns class can be used to resolve a URL into its IP address by using the following code:</p>
 <pre><code class="lang-cs">var hostEntry = Dns.GetHostEntry(hostName);
 
@@ -129,7 +134,8 @@ else {
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

@@ -8,7 +8,7 @@
     <title>PPP </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="PPP ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -208,10 +208,12 @@
         return false;
     }
 }
-</code></pre><h2 id="switching-to-command-mode">Switching to Command Mode</h2>
+</code></pre><hr>
+<h2 id="switching-to-command-mode">Switching to Command Mode</h2>
 <p>When a PPP connection is set up successfully, you can switch the modem from data mode to command mode with the <code>+++</code> escape sequence. To prevent the <code>+++</code> escape sequence from being misinterpreted as data, the following guidelines should be followed: </p>
 <p>1) Do not send any other characters within one second (before or after) of sending <code>+++</code>.<br>2) Send <code>+++</code> quickly, sending all three characters within one second. </p>
 <p>When the <code>+++</code> sequence is received, the modem will switch from data mode to command mode and reply with an &quot;OK&quot; response. </p>
+<hr>
 <h2 id="switching-to-data-mode">Switching to Data Mode</h2>
 <p>When the modem is in command mode, sending the <code>ATO</code> command will switch the modem to Data Mode. Wait for the &quot;CONNECT 150000000&quot; response after sending the <code>ATO</code> command to make sure the modem is in data mode. All data sent will now be treated as PPP frames.</p>
 <p>The following example switches from Data mode to Command Mode, sends a few AT commands, then switches back to Data mode. TinyCLR OS provides two functions, Suspend() and Resume() that are needed for this example. This code uses SC20260.UartPort.Uart8 for PPP configuration.</p>
@@ -256,6 +258,7 @@ networkController.Resume();
 ...
 </code></pre><div class="NOTE"><h5>Note</h5><p>When sending &quot;+++&quot;, do not send &quot;\r&quot; or &quot;\n&quot; at the end. While most AT commands need end of line characters, +++ does not.</p>
 </div>
+<hr>
 <h2 id="security-clarification">Security Clarification</h2>
 <p>Most users of embedded systems that connect to mobile networks assume they are secure, but often they are not. Typically, a serial connection with AT commands is used to communicate with the modem. While the data over the air is secure, all data transmitted over the serial connection is raw unencrypted data that can be easily scoped. This is not the case with TinyCLR OS.</p>
 <p>With TinyCLR OS, serial data between the device and the modem is encrypted. All data handling is done internally inside the core processor, which is extremely difficult to hack into.</p>
@@ -272,7 +275,8 @@ networkController.Resume();
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

@@ -8,7 +8,7 @@
     <title>File System </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="File System ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -84,7 +84,7 @@
 <div class="NOTE"><h5>Note</h5><p>The USB drive must have an MBR record, not a GPT table.
 FAT16 and FAT32 file systems are supported.</p>
 </div>
-<h2 id="fat-file-sytem">Fat File Sytem</h2>
+<h2 id="fat-file-system">Fat File System</h2>
 <h3 id="usb-mass-storage">USB Mass Storage</h3>
 <p>This allows file access on USB devices with MSC class, such as USB memory sticks. See the <a href="usb.html">USB</a> page.</p>
 <h3 id="sd-card">SD Card</h3>
@@ -119,12 +119,15 @@ FileSystem.Flush(sd.Hdc);
         (SC20100.StorageController.SdCard);
 
 controller.Provider.Read(address, buffer, 0, buffer.Length, -1);
-</code></pre><h2 id="tiny-file-system-tfs">Tiny File System (TFS)</h2>
+</code></pre><hr>
+<h2 id="tiny-file-system-tfs">Tiny File System (TFS)</h2>
 <p>Tiny File System(TFS) can be used to access any memory storage as a file system. All that is needed is a basic driver to Read, Write, and Erase these storages. </p>
 <p>Below is an example that uses 16MB of built in QSPI as a file system.</p>
 <div class="NOTE"><h5>Note</h5><p>This example requires the <code>GHIElectronics.TinyCLR.IO.TinyFileSystem</code></p>
 </div>
-<pre><code class="lang-cs">var tfs = new TinyFileSystem(new QspiMemory());
+<pre><code class="lang-cs">const int CLUSTER_SIZE = 1024;
+
+var tfs = new TinyFileSystem(new QspiMemory(), CLUSTER_SIZE);
 
 if (!tfs.CheckIfFormatted()) {
     //Do Format if necessary 
@@ -156,64 +159,76 @@ using (var fsRead = tfs.Open(&quot;settings.dat&quot;, FileMode.Open)) {
 }
 </code></pre><p>Below is a basic driver implementation utiliing QSPI:</p>
 <pre><code class="lang-cs">using System;
+using GHIElectronics.TinyCLR.Pins;
 using GHIElectronics.TinyCLR.Devices.Storage;
 using GHIElectronics.TinyCLR.Devices.Storage.Provider;
-using GHIElectronics.TinyCLR.IO.TinyFileSystem;
-using GHIElectronics.TinyCLR.Pins;
 
-public sealed class QspiMemory : StorageDriver {
-    public override int Capacity =&gt; 0x1000000;
-    public override int PageSize =&gt; 0x100;
-    public override int SectorSize =&gt; 0x1000;
-    public override int BlockSize =&gt; 0x10000;
-    private StorageController qspiController;
+public sealed class QspiMemory : IStorageControllerProvider
+{
+    public StorageDescriptor Descriptor =&gt; this.descriptor;
+
+    private StorageDescriptor descriptor = new StorageDescriptor()
+    {
+        CanReadDirect = false,
+        CanWriteDirect = false,
+        CanExecuteDirect = false,
+        EraseBeforeWrite = true,
+        Removable = true,
+        RegionsContiguous = true,
+        RegionsEqualSized = true,
+        RegionCount = 0x100,
+        RegionAddresses = new long[] { 0 },
+        RegionSizes = new int[] { 0x1000 },
+    };
+
     private IStorageControllerProvider qspiDrive;
 
     public QspiMemory() {
-        qspiController = StorageController.FromName(SC20260.StorageController.QuadSpi);
-        qspiDrive = qspiController.Provider;
+        qspiDrive = StorageController.FromName(SC20260.StorageController.QuadSpi).Provider;        
+        this.Open();
+    }
+
+    public void Open()
+    {
         qspiDrive.Open();
     }
 
-    public override void EraseBlock(int block, int count) {
-        if ((block + count) * BlockSize &gt; Capacity) throw new ArgumentException(&quot;Invalid block + count&quot;);
+    public void Close()
+    {
+        qspiDrive.Close();
+    }
 
-        var address = block * BlockSize;
+    public void Dispose()
+    {
+        qspiDrive.Dispose();
+    }
 
-        for (var i = 0; i &lt; count; i++) {
-            qspiDrive.Erase(address, BlockSize, TimeSpan.FromSeconds(100));
-            address += BlockSize;
+    public int Erase(long address, int count, TimeSpan timeout)
+    {
+        return qspiDrive.Erase(address, count, timeout);
+    }
+
+    public bool IsErased(long address, int count)
+    {
+        return qspiDrive.IsErased(address, count);
+    }
+
+    public int Read(long address, int count, byte[] buffer, int offset, TimeSpan timeout)
+    {
+        return qspiDrive.Read(address, count, buffer, offset, timeout);
+    }
+
+    public int Write(long address, int count, byte[] buffer, int offset, TimeSpan timeout)
+    {
+        return qspiDrive.Write(address, count, buffer, offset, timeout);
+    }
+
+    public void EraseAll(TimeSpan timeout)
+    {
+        for (var sector = 0; sector &lt; this.Descriptor.RegionCount; sector++)
+        {
+            qspiDrive.Erase(sector * this.Descriptor.RegionSizes[0], this.Descriptor.RegionSizes[0], timeout);
         }
-    }
-
-    public override void EraseChip() {
-        var block = this.Capacity / this.SectorSize;
-        var address = 0;
-
-        while (block &gt; 0) {
-            qspiDrive.Erase(address, SectorSize, TimeSpan.FromSeconds(100));
-            address += SectorSize;
-            block--;
-        }
-    }
-
-    public override void EraseSector(int sector, int count) {
-        if ((sector + count) * SectorSize &gt; Capacity) throw new ArgumentException(&quot;Invalid sector + count&quot;);
-
-        var address = sector * SectorSize;
-
-        for (var i = 0; i &lt; count; i++) {
-            qspiDrive.Erase(address, BlockSize, TimeSpan.FromSeconds(100));
-            address += SectorSize;
-        }
-    }
-
-    public override void ReadData(int address, byte[] data, int index, int count) {
-        qspiDrive.Read(address, count, data, index, TimeSpan.FromSeconds(1));
-    }
-
-    public override void WriteData(int address, byte[] data, int index, int count) {
-        qspiDrive.Write(address, count, data, index, TimeSpan.FromSeconds(1));
     }
 }
 </code></pre></article>
@@ -229,7 +244,8 @@ public sealed class QspiMemory : StorageDriver {
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

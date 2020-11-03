@@ -8,7 +8,7 @@
     <title>Memory Management </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Memory Management ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -179,6 +179,7 @@ for (int i=0; i&lt;10000; i++) {
 System.GC.WaitForPendingFinalizers();
 </code></pre><h3 id="battery-backed-ram">Battery Backed RAM</h3>
 <p>SITCore devices support 4 KBytes of battery backed RAM. Details can be found in the <a href="real-time-clock.html">Real Time Clock Tutorial</a>.</p>
+<hr>
 <h2 id="flash-memory">Flash Memory</h2>
 <p>Flash memory does not lose its contents on power loss. There are special requirements to write to Flash, but you can read Flash just like RAM. When deploying a program, the <code>TinyCLR Device Deployment</code> window will show what is being loaded and how large it is. It will then show how much free Flash is still available.</p>
 <blockquote><p>Assemblies deployed. There are 2,408,408 bytes left in the deployment area.</p>
@@ -187,9 +188,7 @@ System.GC.WaitForPendingFinalizers();
 <h3 id="resources">Resources</h3>
 <p>TinyCLR OS allows resources, like fonts and images, to be merged into the project as a resource and then deployed to the device&#39;s Flash. Those resources can then be fetched into RAM and used at runtime. The <a href="resources.html">Resource</a> tutorial has more details.</p>
 <h3 id="direct-access">Direct Access</h3>
-<p>Unsupported at this time.</p>
-<div class="TIP"><h5>Tip</h5><p>You can only read from flash, not write.</p>
-</div>
+<p>Writing to Flash (persistent storage) is supported securely through <a href="secure-storage.html">secure storage.</a></p>
 </article>
           </div>
           
@@ -203,7 +202,8 @@ System.GC.WaitForPendingFinalizers();
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

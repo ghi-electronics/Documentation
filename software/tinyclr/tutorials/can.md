@@ -29,6 +29,8 @@ High speed CAN is set up as a linear bus of 120 ohm nominal twisted pair wiring 
 
 Low speed or fault tolerant CAN uses a linear bus, star bus, or multiple star buses.  Fault tolerant CAN buses are terminated differently than linear CAN buses and require a termination resistor at each node.  The value of these resistors depends on the network but should equal about 100 ohms per CAN line in total.
 
+---
+
 ## Standard CAN
 The TinyCLR CAN API provides several methods for configuring the CAN bus and sending and receiving standard CAN messages. This also forms the basis upon which CAN-FD is provided.
 
@@ -102,6 +104,8 @@ Filters can be set to automatically accept or ignore messages based on their arb
 `AddMaskFilter()` can be used to specify an individual arbitration ID or a range of arbitration IDs that will be accepted regardless of the group filter settings. If the arbitration ID of the message is bitwise anded with the given mask argument, and the result is equal to the compare argument you provide, the message will be accepted.
 
 In the sample code below, CAN messages with arbitration IDs of `0x11`, `0x13`, and `0x5678` will be accepted in addition to the arbitration IDs specified by the group filters.
+
+---
 
 ## Sample Code
 The following sample code is written for our SITCore SC20100S Dev Board.
@@ -190,6 +194,8 @@ class Program {
         => Debug.WriteLine("Error " + e.ToString());
 }
 ```
+
+---
 
 ## CAN-FD
 CAN-FD allows for faster data transmission and larger data packet size to increase throughput. At the same time, CAN-FD is compatible with traditional CAN -- CAN-FD and standard CAN nodes can even coexist on the same CAN bus!

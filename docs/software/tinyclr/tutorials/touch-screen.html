@@ -8,7 +8,7 @@
     <title>Touch Screen </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Touch Screen ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -83,6 +83,7 @@
 <h2 id="introduction">Introduction</h2>
 <p>Displays may optionally include a touch sensitive screen to detect user touch input. Touch Screens can be resistive or capacitive.</p>
 <p><img src="../images/ucm-touch-display.jpg" alt="UD435"></p>
+<hr>
 <h2 id="resistive-touch">Resistive Touch</h2>
 <p>A resistive touch screen measures the resistance across the X and Y axes to determine the touch position. While it is possible to use GPIO and ADC, it is better to use dedicated chips. The only advantage of resistive touch over capacitive is that resistive touch works through a change in resistance induced by finger pressure, meaning you can use it while wearing gloves. However, resistive touch is not very accurate and requires calibration.</p>
 <p>Unless you have specific reason to use resistive touch, capacitive touch is preferred.</p>
@@ -140,7 +141,8 @@ while (this.active) {
 
     Thread.Sleep(20);
 }
-</code></pre><h2 id="capacitive-touch">Capacitive Touch</h2>
+</code></pre><hr>
+<h2 id="capacitive-touch">Capacitive Touch</h2>
 <p>Capacitive touch screens are used on most modern devices, including phones. They are very accurate and capable of detecting multiple simultaneous touches.</p>
 <p>A special capacitive controller chip must be used to read the touch panel. This chip is usually mounted right on the flat cable going to the touch panel. These chips are usually I2C or SPI, with I2C being more common.</p>
 <p>The capacitive displays used in our development options use a touch controller from FocalTech.</p>
@@ -171,7 +173,8 @@ touch.TouchMove += (_, e) =&gt; {
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

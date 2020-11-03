@@ -8,7 +8,7 @@
     <title>Power Management </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Power Management ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -82,6 +82,22 @@
 <hr>
 <p>TinyCLR OS currently supports the Sleep and Shutdown power saving modes. 
 In sleep mode, any GPIO interrupt can be used to wake the board, but in Shutdown mode, only the WKUP pin can wake up the board. You can also program the device to wake up after a specified time.</p>
+<h2 id="idle">Idle</h2>
+<p>The system enters this state whenever it is idle, such as when waiting on events and there are no running threads. This is automatic and they user is not required to take any action.</p>
+<h2 id="slow-clock-speed">Slow Clock Speed</h2>
+<p>The system can operate at half speed, saving 40% power consumption with the following commands:</p>
+<pre><code class="lang-cs">if (Power.GetSystemClock() == SystemClock.High){
+    Power.SetSystemClock(SystemClock.Low);
+    Power.Reset();
+}
+</code></pre><p>Switch back to full speed:</p>
+<pre><code class="lang-cs">if (Power.GetSystemClock() == SystemClock.Low){
+    Power.SetSystemClock(SystemClock.High);
+    Power.Reset();
+}
+</code></pre><div class="NOTE"><h5>Note</h5><p>Changing the clock speed requires a software reset in the code. Calling this reset detaches the debugger. 
+If necessary you&#39;ll need to redeploy to the device to continue debugging.</p>
+</div>
 <h2 id="sleep">Sleep</h2>
 <p>In this mode the system goes to sleep to save power and wakes up and resumes processing when the assigned interrupt is received. Any GPIO interrupt can be used to wake from Sleep. The following example runs on both the SC20100 and SCM20260D Dev boards and uses the LDR button to wake up. </p>
 <div class="NOTE"><h5>Note</h5><p>Don&#39;t forget to configure the interrupt and interrupt handler for the pin that will be used to wake up from Sleep.</p>
@@ -98,7 +114,11 @@ Power.Sleep();
 //The system is Sleeping.
 //Pressing the LDR Button (PE3) wakes up the system.
 private static void ldrButton_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e) { }
-</code></pre><h2 id="shutdown">Shutdown</h2>
+</code></pre><p>To sleep for a specific time:</p>
+<pre><code class="lang-cs">Power.Sleep(DateTime.Now.AddSeconds(90)); //Will wake up after 90 seconds.
+                                          //A GPIO can also wake up the system.
+</code></pre><hr>
+<h2 id="shutdown">Shutdown</h2>
 <p>In this mode the system completely shuts down. It can only be awakened by reset, power cycle, or by toggling the WKUP pin.</p>
 <p>The following code shuts down the system. The <code>false</code> argument configures the system to wake up when the WKUP pin goes from high to low. Make the argument <code>true</code> to wake up when WKUP goes high.</p>
 <div class="NOTE"><h5>Note</h5><p>Waking from Shutdown mode always resets the system. Your application will start over, it will not resume where it left off.</p>
@@ -107,20 +127,44 @@ private static void ldrButton_ValueChanged(GpioPin sender, GpioPinValueChangedEv
 </div>
 <pre><code class="lang-cs">//The next line shuts down the system.
 Power.Shutdown(true, DateTime.MaxValue); 
-</code></pre><h2 id="sleep-or-shutdown-for-a-specific-time">Sleep or Shutdown for a Specific Time</h2>
-<p>To sleep for a specific time:</p>
-<pre><code class="lang-cs">Power.Sleep(DateTime.Now.AddSeconds(90)); //Will wake up after 90 seconds.
-                                          //A GPIO can also wake up the system.
 </code></pre><p>To shutdown for a specific time:</p>
 <pre><code class="lang-cs">Power.Shutdown(false, DateTime.Now.AddSeconds(90); //Will wake up after 90 seconds.
                                                    //WKUP pin has no effect.
 </code></pre><p>To shutdown for a specific time or when the WKUP pin changes state (whichever comes first):</p>
 <pre><code class="lang-cs">Power.Shutdown(true, DateTime.Now.AddSeconds(90); //Will wake up after 90 seconds or
                                                   //when WKUP is pressed.
-</code></pre><h2 id="software-reset">Software Reset</h2>
-<p>You can also reset your device from within your application with the following command:</p>
+</code></pre><hr>
+<h2 id="on-board-ethernet">On-board Ethernet</h2>
+<p>Some modules include an on-board Ethernet PHY. This can be disabled by setting a specific GPIO to <strong>low</strong>. Below are the pin numbers.</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Pin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SCM20260E/D</td>
+<td>PG3</td>
+</tr>
+<tr>
+<td>SCM20100E</td>
+<td>PD8</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="software-reset">Software Reset</h2>
+<p>TinyCLR OS provides two reset modes within your application:</p>
+<h3 id="reset-application">Reset Application</h3>
+<p>This command allows to reset your application:</p>
 <pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.Power.Reset();
-</code></pre></article>
+</code></pre><h3 id="reset-to-bootloader-mode">Reset to Bootloader mode</h3>
+<p>The command below will boot the device in GHI Bootloader mode:</p>
+<pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.Power.Reset(false);
+</code></pre><hr>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -133,7 +177,8 @@ Power.Shutdown(true, DateTime.MaxValue);
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

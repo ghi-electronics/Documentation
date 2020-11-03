@@ -5,6 +5,30 @@
 ## Overview
 The SITCore SoMs provide a low cost way to add .NET computing power to any embedded product. They are available in a 200 pin SO-DIMM format or as surface mount modules. The SITCore SoMs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more. The surface mount versions are great for harsh or high vibration environments.
 
+### Features
+* Low power modes including three independently controllable power domains
+* RTC
+* Watchdog
+* Threading
+* TCP/IP with SSL
+  * Full .NET socket interface
+  * Ethernet
+  * PPP
+* Graphics
+  * Images
+  * Fonts
+  * Controls
+* File System
+  * Full .NET file interface
+  * SD cards
+  * USB drives
+* Signal controls
+  * Generation
+  * Capture
+  * Pulse measurement
+
+---
+
 ## Specifications
 
 | Spec                   | All SITCore SoMs          |
@@ -18,6 +42,8 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 | **Temperature Range**  | -40C to +85C              |
 
 *Note: Resources are shared between your application and the operating system.*
+
+---
 
 ## Peripherals
 
@@ -42,42 +68,47 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
 
+---
+
 ## Power Consumption
-|                            | SCM20100E       |   SCM20260N     |   SCM20260E     |   SCM20260D     |              
-|----------------------------|-----------------|-----------------|-----------------|-----------------|
-| **Running**                | 265mA           | 217mA           | 305mA           | 305mA           | 
-| **Sleep**                  | 182mA           | 188mA           | 185mA           | 185mA           | 
-| **Hibernate**              | 26mA            | 22mA            | 24mA            | 27mA            | 
-| **Shutdown**               | 19mA            | 15mA            | 17mA            | 17mA            |
 
-See the [Power Management](http://docs.ghielectronics.com/software/tinyclr/tutorials/power-management.html) tutorial 
+### SCM20260D/E
 
-### Using Interrupts (IRQs)
+|                 | 480MHz          |   240MHz        |   w/ Ethernet   |             
+|----------------------------|-----------------|-----------------|-----------------|
+| **Running**                | 205mA           | 110mA           | +90mA           |
+| **Idle**                   | 170mA           | 97mA            | +90mA           | 
+| **Sleep**                  | 6.5mA           | 6.5mA           | +18mA           | 
+| **Shutdown**               | 40uA            | 40uA            | +18mA           | 
+
+### SCM20260N
+
+|                   | 480MHz          |   240MHz        |        
+|----------------------------|-----------------|-----------------|
+| **Running**                | 205mA           | 110mA           |
+| **Idle**                   | 170mA           | 97mA            |
+| **Sleep**                  | 6.5mA           | 6.5mA           |
+| **Shutdown**               | 40uA            | 40uA            |
+
+### SCM20100E
+
+|                   | 480MHz          |   240MHz        |   w/ Ethernet   |             
+|----------------------------|-----------------|-----------------|-----------------|
+| **Running**                | 205mA           | 110mA           | +90mA           |
+| **Idle**                   | 170mA           | 97mA            | +90mA           | 
+| **Sleep**                  | 6.5mA           | 6.5mA           | +18mA           | 
+| **Shutdown**               | 40uA            | 40uA            | +18mA           | 
+
+See the [Power Management](http://docs.ghielectronics.com/software/tinyclr/tutorials/power-management.html) tutorial
+
+---
+
+## Using Interrupts (IRQs)
 
 The microcontrollers we use in our SITCore line of products do not support concurrent interrupts with the same pin number, even if the pins are on different ports (the port is denoted by the second letter of the GPIO pin name -- PA1 is pin 1 on port A). Therefore, interrupts are available on only 16 pins at any given time. For example, pins PA1 and PB1 cannot be used as interrupt pins at the same time, but PA1 and PB2 can. PA1 and PA2 can also be used with interrupts simultaneously.
 
-## Features
-* Low power modes including three independently controllable power domains
-* RTC
-* Watchdog
-* Threading
-* TCP/IP with SSL
-  * Full .NET socket interface
-  * Ethernet
-  * PPP
-* Graphics
-  * Images
-  * Fonts
-  * Controls
-* File System
-  * Full .NET file interface
-  * SD cards
-  * USB drives
-* Signal controls
-  * Generation
-  * Capture
-  * Pulse measurement
-    
+---
+
 ## Module Pinouts
 
 ### SCM20100E Pinout
@@ -92,6 +123,8 @@ The microcontrollers we use in our SITCore line of products do not support concu
 ### SCM20260D Pinout
 [![SCm20260D Pinout](images/scm20260d-pinout.gif)](pdfs/scm20260d-pinout.pdf)
 
+---
+
 ## Schematics
 - [SCM20100E Schematic](pdfs/scm20100e-rev-b-schematic.pdf)
 - [SCM20260N Schematic](pdfs/scm20260n-rev-c-schematic.pdf)
@@ -103,6 +136,8 @@ The microcontrollers we use in our SITCore line of products do not support concu
 - [SCM20260N STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SoM/SCM20260N%20Rev%20C.step)
 - [SCM20260E STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SoM/SCM20260E%20Rev%20B.step)
 - [SCM20260D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SoM/SCM20260D%20Rev%20C.step)
+
+---
 
 ## Getting Started
 As the SITCore modules are based on the SITCore chipset, please refer to the [SITCore SoC page](soc.md) for information on device startup, loading TinyCLR OS firmware, and writing and deploying your application.
@@ -161,6 +196,7 @@ The lead-free reflow profiles used by GHI Electronics are shown below. The profi
 
 [![Reflow Chart](../netmf/images/reflow-profile.gif)](http://files.ghielectronics.com/downloads/Documents/Datasheets/WS483%20SAC305%20Solder%20Paste%20Datasheet.pdf)
 
+---
 
 ## SITCore Dev Boards
 

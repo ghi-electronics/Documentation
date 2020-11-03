@@ -32,6 +32,9 @@ var controller = SpiController.FromName(SC20100.SpiBus.Spi3);
 Debug.WriteLine(controller.MinClockFrequency.ToString()); //Prints minimum SPI clock in Hertz.
 Debug.WriteLine(controller.MaxClockFrequency.ToString()); //Prints maximum SPI clock in Hertz.
 ```
+
+---
+
 ## Most Significant Bit (MSB) and Least Significant Bit (LSB)
 SITCore supports switching between MSB and LSB.
 
@@ -45,6 +48,8 @@ var spiSettings = new SpiConnectionSettings() {
 };
 
 ```
+
+---
 
 ## Sample Code
 

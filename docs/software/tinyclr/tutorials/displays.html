@@ -8,7 +8,7 @@
     <title>Displays </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Displays ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -85,15 +85,18 @@
 <p>The display drivers are meant to transfer the pixel data from memory to the actual display. The <a href="graphics.html">graphics</a> tutorial shows how drawing is done in memory.</p>
 <h2 id="built-in-tft-displays">Built-in TFT Displays</h2>
 <p>These displays connect to special dedicated pins on the processor. Internally, the display controller automatically transfers (refreshes) the display directly from memory without any processor interaction, using DMA. When the system needs to update the display, it simply writes to memory. Neither the operating system nor the application program are burdened with display processing. The down side to this is that the system needs to have enough RAM to handle the display. An 800x600 display with 16bpp needs 960,000 bytes!</p>
+<hr>
 <h2 id="virtual-displays">Virtual Displays</h2>
 <p>The internal graphics services can be mapped to work with virtual display displays. This is done by accessing graphics memory directly, and then writing the graphics memory contents to the desired display.</p>
 <pre><code class="lang-cs">private static void Graphics_OnFlushEvent(IntPtr hdc, byte[] data) {
        st7735.DrawBuffer(data);
 }
 </code></pre><p>See the <a href="graphics.html">Graphics Tutorial</a> for more information and sample code.</p>
+<hr>
 <h2 id="character-displays">Character Displays</h2>
 <p><img src="images/character-display.jpg" alt="Character Display"></p>
 <p>These displays are capable of only showing characters. Most of these displays use the HD44780 controller. They are available in different sizes, but two lines of 16 characters is most common. These displays only require GPIO pins and can be used with TinyCLR. Sample code for HD44780 displays can be found in our GitHub <a href="https://github.com/ghi-electronics/TinyCLR-Samples">Samples Repo</a>.</p>
+<hr>
 <h2 id="low-level-display-access">Low Level Display Access</h2>
 <p>TinyCLR also provides low level display access as part of the <code>GHIElectronics.TinyCLR.Devices.Display</code> library. These methods provide a simple way to write to a display without need for the <code>System.Drawing</code> library or an added font resource file.</p>
 <div class="TIP"><h5>Tip</h5><p>The low level support should only be used in advanced edge cases only.</p>
@@ -168,7 +171,8 @@ namespace LowLevelDisplayAccess{
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

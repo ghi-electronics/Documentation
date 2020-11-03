@@ -8,7 +8,7 @@
     <title>Encoding &amp; Decoding </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Encoding &amp; Decoding ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -99,7 +99,8 @@ System.Text.Encoding.UTF8.GetChars(byte[] bytes, int byteIndex, int byteCount)
 </code></pre><h4 id="convert-from-byte-array-to-string">Convert From Byte Array to String</h4>
 <pre><code class="lang-cs">System.Text.Encoding.UTF8.GetString(byte[] bytes)
 System.Text.Encoding.UTF8.GetString(byte[] bytes, int index, int count)
-</code></pre><h2 id="bitconverter">BitConverter</h2>
+</code></pre><hr>
+<h2 id="bitconverter">BitConverter</h2>
 <p>The BitConverter class is used to convert from one data type to another. For example, to convert an integer into a byte array:</p>
 <pre><code class="lang-cs">var byteArray = System.BitConverter.GetBytes(23);
 //byteArray[0] = 23, byteArray[1] = 0, byteArray[2] = 0, byteArray[3] = 0
@@ -143,7 +144,8 @@ System.BitConverter.ToUInt64(byte[] bytes, int startIndex)
 System.BitConverter.Int64BitsToDouble(long value)
 </code></pre><h4 id="swap-endianness">Swap Endianness</h4>
 <pre><code class="lang-cs">System.BitConverter.SwapEndianness(byte[] data, int groupSize)
-</code></pre><h2 id="string-handling">String Handling</h2>
+</code></pre><hr>
+<h2 id="string-handling">String Handling</h2>
 <h3 id="tostring-supported-conversions">ToString() Supported Conversions</h3>
 <p>As TinyCLR OS is a subset of the full desktop .NET development system, not all desktop .NET features are supported. The following <code>ToString()</code> arguments are supported:</p>
 <pre><code class="lang-cs">Debug.WriteLine(123.ToString(&quot;N4&quot;)); //Outputs 123.0000
@@ -185,7 +187,8 @@ Debug.WriteLine(sb.ToString()); //Will output &quot;0123456789&quot;
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

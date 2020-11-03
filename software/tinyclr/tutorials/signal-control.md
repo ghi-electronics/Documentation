@@ -2,6 +2,91 @@
 ---
 ![HC-SR04 ultrasonic sensor](images/signal-control.jpg)
 
+## DigitalSignal
+
+The DigitalSignal is used to handle digital signals! Unlike the other features on this page, DigitalSignal is accurate because it is hardware-backed and runs in a non-blocking manner.
+
+Being hardware backed, this feature only runs on specific pins. Those pins can be found under the pins library, such as `SC20260.Timer.Capture.Controller?.xxx`. 
+
+>[!TIP]
+> Timers are also used with other features, such as PWM. Once a timer is reserved for DigitalSignal, it is no longer available for other features. However, the system includes many timer controllers.
+
+There are two uses for DigitalSignal, to capture a stream of durations (signal analyzer) or a pulse counter. Both features can be used to capture on `RisingEdge` or `FallingEdge`. If both edges are desired, use `RisingEdge | FallingEdge`. Capturing starts immediately unless `waitForEdge` is set to `true`.
+
+> [!WARNING]
+> The `waitForEdge` uses interrupt pin internally to start the capturing cycle. Same rules apply as GPIO interrupt pins, for example when using PB3 to capture with `waitForEdge` equals `true`, PA3, PC3, PD3...etc can't be used for interrupts. See [GPIO](gpio.md) for details on interrupt pins.
+
+### Capture
+The Capture feature return an array of timestamps of individual durations. The returned values are in nanoseconds?
+
+> [!TIP]
+> Digital Signal is limited to the timer max value, which comes to be about 17.89 seconds. The `waitForEdge` helps by only starting the timer when there is an active pulse.
+
+```cs
+var digitalSignalPin = GpioController.GetDefault().OpenPin(SC20260.Timer.Capture.Controller5.PB3);
+
+var digitalSignal = new DigitalSignal(digitalSignalPin);
+bool waitForEdge = false;// Start capturing as soon as Capture is called
+
+// Subscribe event when done capturing
+digitalSignal.OnCaptureReady += Digital_OnCaptureReady;
+                      
+// start capture 100 samples, timeout is 15seconds
+digitalSignal.Capture(100, GpioPinEdge.RisingEdge | GpioPinEdge.FallingEdge, waitForEdge, TimeSpan.FromSeconds(15));
+
+// Wait for finish capture
+// do other work
+Thread.Sleep(Timeout.Infinite); 
+
+// The event
+private static void Digital_OnCaptureReady(DigitalSignal sender, uint[] buffer, uint count, GpioPinValue pinValue) {
+    if (count == 0) {
+        Debug.WriteLine("no data was captured!");
+        return;
+    }
+    for (int i = 0; i < count; i++) {
+        Debug.WriteLine("Sample [" + i +"]: "+ buffer[i]+" ns");
+    }
+}
+```
+> [!NOTE]
+> The first captured pulse will likely have an inaccurate (shorter) value due to system prep time.
+
+### ReadPulse
+ReadPulse can be used to measure frequency and other analyses that require measuring time duration for specific pulse count.
+
+```cs
+var digitalSignalPin = GpioController.GetDefault().OpenPin(SC20260.Timer.Capture.Controller5.PB3);
+var digitalSignal = new DigitalSignal(digitalSignalPin);
+bool waitForEdge = true;// wait for first pulse before starting the measurement
+
+// Subscribe event when done reading
+digitalSignal.OnReadPulseReady += Digital_OnReadPulseReady;           
+
+// Start reading 1000 pulses
+digitalSignal.ReadPulse(1000, GpioPinEdge.RisingEdge, waitForEdge);
+
+// do other work...
+Thread.Sleep(Timeout.Infinite);
+
+// the event
+private static void Digital_OnReadPulseReady(DigitalSignal sender, TimeSpan duration, uint count, GpioPinValue pinValue) {
+    var ticks = duration.Ticks;
+    var microsecond = ((double)duration.Ticks) / 10;
+    var millisecond = ((double)duration.Ticks) / 10000;
+    var freq = (count / microsecond) * 1000000;
+
+    Debug.WriteLine("GpioPinValue = " + ((pinValue == GpioPinValue.High) ? "High" : "Low"));
+    Debug.WriteLine("PulseCount = " + count);
+    Debug.WriteLine("Duration ticks = " + ticks);
+    Debug.WriteLine("Duration microsecond = " + microsecond);
+    Debug.WriteLine("Duration millisecond = " + millisecond);
+    Debug.WriteLine("freq = " + freq / 1000.0 + " KHz");
+}
+```
+
+---
+
 ## Pulse Feedback
 
 The PulseFeedback class can be used in three different modes. These modes are used to measure Echo Duration, Duration Until Echo, and Drain Duration.
@@ -21,9 +106,7 @@ To test this code, I plugged the sensor directly into the SCM20260D Dev board an
 > [!Note]
 > The HC-SR04 ultrasonic distance sensor requires a 5 volt power supply. While the module accepts 3.3 volt logic on the Trig and Echo pins, it will not work with a 3.3 volt supply for power.
 
->[!TIP]
->Needed Nuget: GHIElectronics.TinyCLR.Devices.Signals
->
+
 ```cs
 var gpio = GpioController.GetDefault();
 var distanceTriggerPin = gpio.OpenPin(SC20260.GpioPin.PA15);
@@ -60,8 +143,8 @@ The following code reads the distance in centimeters from a Polaroid 6500 Rangin
 
 
 >[!TIP]
->Needed Nuget: GHIElectronics.TinyCLR.Devices.Signals
-1`
+>Needed Nuget: GHIElectronics.TinyCLR.Devices.Signals`
+
 ```cs
 var gpio = GpioController.GetDefault();
 var distanceTriggerPin = gpio.OpenPin(SC20260.GpioPin.PA15);
@@ -88,7 +171,6 @@ while (true) {
     Thread.Sleep(1000);
 }
 ```
-
 
 ### Drain Duration
 
@@ -120,6 +202,8 @@ while (true) {
 }
 ```
 
+---
+
 ## Signal Capture
 
 The SignalCapture class monitors a pin and records any changes (high-low or low-high transitions) of the pin to an array. It is a digital waveform recorder. Each array element is the number of microseconds between each signal change.
@@ -144,6 +228,7 @@ while (true) {
     Thread.Sleep(100);
 }
 ```
+---
 
 ## Signal Generator
 

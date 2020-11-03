@@ -8,7 +8,7 @@ This example shows how to communicate with AWS using MQTT. You'll also need to s
 >Add using statement:
 > using System.Security.Cryptography.X509Certificates;
 
-```cs
+```
 var iotEndPoint = "Need your Rest API Endpoint";
 var iotPort = 8883;
 var deviceId = "Need your Device ID";
@@ -38,8 +38,9 @@ var clientSetting = new MqttClientSetting
 
 var iotClient = new Mqtt(clientSetting);
 
-iotClient.PublishReceivedChanged += (a, b) => { Debug.WriteLine
-    ("Received message: " + Encoding.UTF8.GetString(b.Data)); };
+iotClient.PublishReceivedChanged += (p1, p2, p3, p4, p5, p6) => {
+Debug.WriteLine("Received message: " + Encoding.UTF8.GetString(p3));
+};
 
 iotClient.SubscribedChanged += (a, b) => { Debug.WriteLine("Subscribed"); };
 

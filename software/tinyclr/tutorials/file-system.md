@@ -6,7 +6,7 @@ The file system library is subset of the full .NET file system support. Most exa
 > The USB drive must have an MBR record, not a GPT table.
 > FAT16 and FAT32 file systems are supported.
 
-## Fat File Sytem
+## Fat File System
 
 ### USB Mass Storage
 This allows file access on USB devices with MSC class, such as USB memory sticks. See the [USB](usb.md) page.
@@ -54,6 +54,8 @@ var controller = StorageController.FromName
 controller.Provider.Read(address, buffer, 0, buffer.Length, -1);
 ```
 
+---
+
 ## Tiny File System (TFS)
 
 Tiny File System(TFS) can be used to access any memory storage as a file system. All that is needed is a basic driver to Read, Write, and Erase these storages. 
@@ -64,7 +66,9 @@ Below is an example that uses 16MB of built in QSPI as a file system.
 > This example requires the `GHIElectronics.TinyCLR.IO.TinyFileSystem`
 
 ```cs
-var tfs = new TinyFileSystem(new QspiMemory());
+const int CLUSTER_SIZE = 1024;
+
+var tfs = new TinyFileSystem(new QspiMemory(), CLUSTER_SIZE);
             
 if (!tfs.CheckIfFormatted()) {
     //Do Format if necessary 
@@ -99,64 +103,76 @@ Below is a basic driver implementation utiliing QSPI:
 
 ```cs
 using System;
+using GHIElectronics.TinyCLR.Pins;
 using GHIElectronics.TinyCLR.Devices.Storage;
 using GHIElectronics.TinyCLR.Devices.Storage.Provider;
-using GHIElectronics.TinyCLR.IO.TinyFileSystem;
-using GHIElectronics.TinyCLR.Pins;
 
-public sealed class QspiMemory : StorageDriver {
-    public override int Capacity => 0x1000000;
-    public override int PageSize => 0x100;
-    public override int SectorSize => 0x1000;
-    public override int BlockSize => 0x10000;
-    private StorageController qspiController;
+public sealed class QspiMemory : IStorageControllerProvider
+{
+    public StorageDescriptor Descriptor => this.descriptor;
+
+    private StorageDescriptor descriptor = new StorageDescriptor()
+    {
+        CanReadDirect = false,
+        CanWriteDirect = false,
+        CanExecuteDirect = false,
+        EraseBeforeWrite = true,
+        Removable = true,
+        RegionsContiguous = true,
+        RegionsEqualSized = true,
+        RegionCount = 0x100,
+        RegionAddresses = new long[] { 0 },
+        RegionSizes = new int[] { 0x1000 },
+    };
+
     private IStorageControllerProvider qspiDrive;
-
+    
     public QspiMemory() {
-        qspiController = StorageController.FromName(SC20260.StorageController.QuadSpi);
-        qspiDrive = qspiController.Provider;
+        qspiDrive = StorageController.FromName(SC20260.StorageController.QuadSpi).Provider;        
+        this.Open();
+    }
+
+    public void Open()
+    {
         qspiDrive.Open();
     }
 
-    public override void EraseBlock(int block, int count) {
-        if ((block + count) * BlockSize > Capacity) throw new ArgumentException("Invalid block + count");
+    public void Close()
+    {
+        qspiDrive.Close();
+    }
 
-        var address = block * BlockSize;
+    public void Dispose()
+    {
+        qspiDrive.Dispose();
+    }
 
-        for (var i = 0; i < count; i++) {
-            qspiDrive.Erase(address, BlockSize, TimeSpan.FromSeconds(100));
-            address += BlockSize;
+    public int Erase(long address, int count, TimeSpan timeout)
+    {
+        return qspiDrive.Erase(address, count, timeout);
+    }
+
+    public bool IsErased(long address, int count)
+    {
+        return qspiDrive.IsErased(address, count);
+    }
+
+    public int Read(long address, int count, byte[] buffer, int offset, TimeSpan timeout)
+    {
+        return qspiDrive.Read(address, count, buffer, offset, timeout);
+    }
+
+    public int Write(long address, int count, byte[] buffer, int offset, TimeSpan timeout)
+    {
+        return qspiDrive.Write(address, count, buffer, offset, timeout);
+    }
+
+    public void EraseAll(TimeSpan timeout)
+    {
+        for (var sector = 0; sector < this.Descriptor.RegionCount; sector++)
+        {
+            qspiDrive.Erase(sector * this.Descriptor.RegionSizes[0], this.Descriptor.RegionSizes[0], timeout);
         }
-    }
-    
-    public override void EraseChip() {
-        var block = this.Capacity / this.SectorSize;
-        var address = 0;
-                
-        while (block > 0) {
-            qspiDrive.Erase(address, SectorSize, TimeSpan.FromSeconds(100));
-            address += SectorSize;
-            block--;
-        }
-    }
-    
-    public override void EraseSector(int sector, int count) {
-        if ((sector + count) * SectorSize > Capacity) throw new ArgumentException("Invalid sector + count");
-
-        var address = sector * SectorSize;
-
-        for (var i = 0; i < count; i++) {
-            qspiDrive.Erase(address, BlockSize, TimeSpan.FromSeconds(100));
-            address += SectorSize;
-        }
-    }
-   
-    public override void ReadData(int address, byte[] data, int index, int count) {
-        qspiDrive.Read(address, count, data, index, TimeSpan.FromSeconds(1));
-    }
-    
-    public override void WriteData(int address, byte[] data, int index, int count) {
-        qspiDrive.Write(address, count, data, index, TimeSpan.FromSeconds(1));
     }
 }
 ```

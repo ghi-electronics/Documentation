@@ -8,7 +8,7 @@
     <title>SPI </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="SPI ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -120,7 +120,8 @@
 <pre><code class="lang-cs">var controller = SpiController.FromName(SC20100.SpiBus.Spi3);
 Debug.WriteLine(controller.MinClockFrequency.ToString()); //Prints minimum SPI clock in Hertz.
 Debug.WriteLine(controller.MaxClockFrequency.ToString()); //Prints maximum SPI clock in Hertz.
-</code></pre><h2 id="most-significant-bit-msb-and-least-significant-bit-lsb">Most Significant Bit (MSB) and Least Significant Bit (LSB)</h2>
+</code></pre><hr>
+<h2 id="most-significant-bit-msb-and-least-significant-bit-lsb">Most Significant Bit (MSB) and Least Significant Bit (LSB)</h2>
 <p>SITCore supports switching between MSB and LSB.</p>
 <pre><code>var spiSettings = new SpiConnectionSettings() {               
     DataFrameFormat = SpiDataFrame.MsbFirst // MSB
@@ -129,7 +130,8 @@ Debug.WriteLine(controller.MaxClockFrequency.ToString()); //Prints maximum SPI c
 var spiSettings = new SpiConnectionSettings() {
     DataFrameFormat = SpiDataFrame.LsbFirst // LSB
 };
-</code></pre><h2 id="sample-code">Sample Code</h2>
+</code></pre><hr>
+<h2 id="sample-code">Sample Code</h2>
 <pre><code class="lang-cs">var cs = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PE4);
 
 var settings = new SpiConnectionSettings() {
@@ -158,7 +160,8 @@ device.TransferFullDuplex(...);    //This is the only one that truly represents 
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

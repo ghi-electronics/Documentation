@@ -8,7 +8,7 @@
     <title>External Memory </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="External Memory ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -84,11 +84,14 @@
 <h2 id="external-ram">External RAM</h2>
 <p>Devices with external RAM have the option of utilizing this memory as <a href="unmanaged-heap.html">Unmanaged Heap</a>. Unmanaged heap is great for storing large amounts of data, but it is not considered secure. Bitmaps and large buffers are automatically stored in unmanaged heap.</p>
 <p>Developers also have the option of extending core managed heap into unsecure external memory, in which case there is no longer any unmanaged heap space. This feature is a trade off between security and convenience -- it provides a large amount of managed heap space, but data is stored outside of the microcontroller chip where it&#39;s less secure. Please see the <a href="ip-protection.html">IP Protection</a> page for more information.</p>
-<p><a href="../tinyclr-config.html">TinyCLR Config</a> can be used to extend the heap into external SDRAM, as well as the following method:</p>
+<p><a href="../tinyclr-config.html">TinyCLR Config</a> can be used to extend the heap into external SDRAM, as well as the following method, you&#39;ll also have to follow with software reset method:</p>
 <pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.Memory.ExtendHeap()
-</code></pre><h2 id="external-flash">External Flash</h2>
-<p>Devices with external flash have the option of using up to 8 MBytes of this memory for deployment. This is done by using <a href="../tinyclr-config.html">TinyCLR Config</a> to enable external flash, or by using the following method:</p>
+GHIElectronics.TinyCLR.Native.Power.Reset();
+</code></pre><hr>
+<h2 id="external-flash">External Flash</h2>
+<p>Devices with external flash have the option of using up to 8 MBytes of this memory for deployment. This is done by using <a href="../tinyclr-config.html">TinyCLR Config</a> to enable external flash, or by using the following method, you&#39;ll also have to follow with software reset method:</p>
 <pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.Flash.EnableExternalFlash()
+GHIElectronics.TinyCLR.Native.Power.Reset();
 </code></pre><p>On SITCore devices that include external flash, there is another 8 MBytes we are reserving for future use.</p>
 <p>As external memory chips can possibly be probed, enabling external flash has important security implications. See the <a href="ip-protection.html">IP Protection</a> page for more information.</p>
 </article>
@@ -104,7 +107,8 @@
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

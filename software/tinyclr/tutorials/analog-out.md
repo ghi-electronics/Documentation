@@ -9,7 +9,7 @@ This example will generate a triangular waveform.
 
 ```cs
 var dac = DacController.GetDefault();
-var analog = dac.OpenChannel(SC20100.DacChannel.PA4);
+var analog = dac.OpenChannel(SC20100.Dac.PA4);
 
 double d = 0.5;
 double dd = 0.01;
@@ -26,8 +26,12 @@ while (true) {
 > [!Tip]
 > Do not use analog outputs to control the power of an LED or a motor. Use [PWM](pwm.md) for that.
 
+---
+
 ## PWM
 PWM can also be used to output an analog voltage. [Click here](pwm.md) for details.
+
+---
 
 ## Audio Playback
 WAV audio playback can be done using an analog output pin. See [Audio Playback](audio-playback.md).

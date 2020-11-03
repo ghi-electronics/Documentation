@@ -8,7 +8,7 @@
     <title>Adafruit IO </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Adafruit IO ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -123,6 +123,7 @@ var feed = &quot;your username/feeds/ToggleSwitch&quot;;
 </code></pre><p>Deploy your program to your SITCore IoT device, once launched the gauge on our Dashboard will start at 50 and increment by 5 every 2 seconds. Clicking on the &#39;Toggle Switch&#39; will send the value to our device, which can be seen in Visual Studio&#39;s output window. </p>
 <p><img src="images/adaIO-complete-dashboard.jpg" alt="Adafruit running dashboard"></p>
 <p><img src="images/adaIO-message-vs.jpg" alt="Adafruit running dashboard"></p>
+<hr>
 <h2 id="using-mqtt">Using MQTT</h2>
 <pre><code class="lang-cs">var caCertSource = Properties.Resources.GetBytes(Properties.Resources.BinaryResources.DigiCertGlobalRootG2);
 X509Certificate CaCert = new X509Certificate(caCertSource);
@@ -181,13 +182,14 @@ try {
 catch (Exception e) {
 
 }
-Thread.Sleep(-1);
+Thread.Sleep(Timeout.Infinite);
 }
-private static void Client_PublishReceivedChanged(object sender, MqttPacket packet) {
-    if (packet.Data[0] == &#39;1&#39;) { //Toggle is set to &#39;1&#39;
+
+private static void Client_PublishReceivedChanged(object sender, string topic, byte[] data, bool duplicate, QoSLevel qosLevel, bool retain) {
+    if (data[0] == &#39;1&#39;) { //Toggle is set to &#39;1&#39;
         Debug.WriteLine(&quot;ToggleSwitch set to 1&quot;);
     }
-    if (packet.Data[0] == &#39;0&#39;) {  //Toggle is set to &#39;0&#39;
+    if (data[0] == &#39;0&#39;) {  //Toggle is set to &#39;0&#39;
         Debug.WriteLine(&quot;ToggleSwitch set to 0&quot;);
     }
 }
@@ -294,7 +296,8 @@ using (var getRequest = HttpWebRequest.Create(url) as HttpWebRequest) {
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

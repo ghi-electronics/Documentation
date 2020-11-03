@@ -5,6 +5,8 @@ TinyCLR OS supports both USB Client and USB Host and includes support for using 
 ## USB Client
 USB client support is mainly used for deploying and debugging applications. It can also be used to transfer data between a SITCore device and a PC. See [USB CDC & WinUSB](usb-cdc-winusb.md) for details.
 
+---
+
 ## USB Host
 The USB Host API supports USB keyboards, mice, raw devices, and USB MSC (Mass Storage Class), which allows file access on USB memory devices. The following code sample shows how to detect devices as they are connected to your SITCore device's USB host port.
 
