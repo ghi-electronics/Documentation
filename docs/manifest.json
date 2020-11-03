@@ -3462,9 +3462,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/sitcore/soc.md",
       "output": {
@@ -4654,7 +4651,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/downloads.html",
-          "hash": "IolbOFxSAyO3imDag/KQJA=="
+          "hash": "QDeFeK8la2A8Gi7zq9SVoQ=="
         }
       },
       "is_incremental": false,
@@ -5551,9 +5548,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/font-support.md",
       "output": {
@@ -7241,19 +7235,17 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 171,
-          "skipped_file_count": 0
+          "skipped_file_count": 170
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
