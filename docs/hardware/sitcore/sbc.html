@@ -300,56 +300,118 @@
 </tbody>
 </table>
 <p><em>Note: As many pins share peripherals, not all peripherals will be available.</em></p>
+<hr>
 <h2 id="power-consumption">Power Consumption</h2>
 <p>The &#39;Running&#39; power consumption totals include all other on board components, such as WiFi &amp; Display.</p>
+<h3 id="fez-portal">FEZ Portal</h3>
 <table>
 <thead>
 <tr>
 <th></th>
-<th>FEZ Bit</th>
-<th>Fez Duino</th>
-<th>FEZ Feather</th>
-<th>Fez Portal</th>
-<th>FEZ Stick</th>
+<th>480MHz</th>
+<th>240MHz</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Running</strong></td>
-<td>305mA</td>
-<td>295mA</td>
-<td>285mA</td>
-<td>535mA</td>
-<td>194mA</td>
+<td>375mA</td>
+<td>345mA</td>
+</tr>
+<tr>
+<td><strong>Idle</strong></td>
+<td>270mA</td>
+<td>255mA</td>
 </tr>
 <tr>
 <td><strong>Sleep</strong></td>
-<td>187mA</td>
-<td>187mA</td>
-<td>179mA</td>
-<td>200mA</td>
-<td>163mA</td>
-</tr>
-<tr>
-<td><strong>Hibernate</strong></td>
-<td>11mA</td>
-<td>11mA</td>
-<td>9mA</td>
-<td>37mA</td>
-<td>6mA</td>
+<td>17mA</td>
+<td>17mA</td>
 </tr>
 <tr>
 <td><strong>Shutdown</strong></td>
-<td>2mA</td>
-<td>5mA</td>
-<td>90uA</td>
-<td>20mA</td>
-<td>810uA</td>
+<td>9.7mA</td>
+<td>9.7mA</td>
 </tr>
 </tbody>
 </table>
+<div class="TIP"><h5>Tip</h5><p>Display backlight is included when Running and in Idle, but off in Sleep and Shutdown.</p>
+</div>
+<div class="TIP"><h5>Tip</h5><p>Enabling WiFi adds up to 300mA.</p>
+</div>
+<h3 id="fez-duinostickfeather">FEZ Duino/Stick/Feather</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>480MHz</th>
+<th>240MHz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Running</strong></td>
+<td>205mA</td>
+<td>110mA</td>
+</tr>
+<tr>
+<td><strong>Idle</strong></td>
+<td>170mA</td>
+<td>97mA</td>
+</tr>
+<tr>
+<td><strong>Sleep</strong></td>
+<td>6.5mA</td>
+<td>6.5mA</td>
+</tr>
+<tr>
+<td><strong>Shutdown</strong></td>
+<td>40uA</td>
+<td>40uA</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP"><h5>Tip</h5><p>Enabling WiFi (when available) adds up to 300mA. Battery charging on FEZ Feather adds up to 500mA.</p>
+</div>
+<h3 id="fez-bit">FEZ Bit</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>480MHz</th>
+<th>240MHz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Running</strong></td>
+<td>232mA</td>
+<td>140mA</td>
+</tr>
+<tr>
+<td><strong>Idle</strong></td>
+<td>190mA</td>
+<td>127mA</td>
+</tr>
+<tr>
+<td><strong>Sleep</strong></td>
+<td>8.5mA</td>
+<td>8.5mA</td>
+</tr>
+<tr>
+<td><strong>Shutdown</strong></td>
+<td>90uA</td>
+<td>90uA</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP"><h5>Tip</h5><p>Display backlight is included when Running and in Idle, but off in Sleep and Shutdown.</p>
+</div>
+<div class="TIP"><h5>Tip</h5><p>Enabling WiFi adds up to 300mA.</p>
+</div>
 <p>See the <a href="http://docs.ghielectronics.com/software/tinyclr/tutorials/power-management.html">Power Management</a> tutorial </p>
-<h2 id="fez-bit">FEZ Bit</h2>
+<hr>
+<h2 id="fez-bit-1">FEZ Bit</h2>
 <p><img src="images/fez_bit.jpg" alt="FEZ Bit"></p>
 <p>The <strong>FEZ Bit</strong>, while seemingly more of a &quot;maker&quot; board, provides a convenient way to easily use the multitude of inexpensive Micro:bit accessories that have flooded the market. As the number of Micro:bit accessories continues to grow, this board will be valued as a way to use these accessories to quickly assemble prototypes and test new product concepts.</p>
 <div class="CAUTION"><h5>Caution</h5><p>The 3.3v regulator may run hot, especially when WiFi is in use. You can add 3.3V regulator externally to eliminate this heat issue, and this is needed if adding any external components that draw more than 10mA.</p>
@@ -545,6 +607,7 @@
 </table>
 <div class="NOTE"><h5>Note</h5><p>All boards with a barrel power jack accept a 5.5 x 2.1 mm power plug. The pin is positive, the sleeve is negative. While these boards accept a wide voltage range, they use linear voltage regulators that run hotter with higher input voltages. Generally we recommend an input voltage of 6 to 12 volts, but if your project draws a lot of current, use a lower voltage to keep the regulator cooler. A one amp power supply should provide enough current for most needs.</p>
 </div>
+<hr>
 <h2 id="fez-duino">FEZ Duino</h2>
 <p><img src="images/fez_duino.jpg" alt="FEZ Duino"></p>
 <p>The <strong>FEZ Duino</strong> provides female headers that make use of the popular Arduino pinout. Once again, we are trying to make it as easy and inexpensive as possible to build prototypes and try out new concepts by taking advantage of an existing accessory ecosystem.</p>
@@ -602,6 +665,7 @@
 </tr>
 </tbody>
 </table>
+<hr>
 <h2 id="fez-feather">FEZ Feather</h2>
 <p><img src="images/fez_feather.jpg" alt="FEZ Feather"></p>
 <p>The Adafruit Feather form factor boards are made to be stackable and have built-in support for 3.7V LiPo batteries with a charging circuit. The <strong>FEZ Feather</strong> provides both through hole pads and castellated edges making it both breadboard friendly and easy to build into products.</p>
@@ -666,9 +730,10 @@
 </tr>
 </tbody>
 </table>
-<h2 id="fez-portal">FEZ Portal</h2>
+<hr>
+<h2 id="fez-portal-1">FEZ Portal</h2>
 <p><img src="images/fez_portal.jpg" alt="FEZ Portal"></p>
-<p>Already one of our most popular SITCore single board computers, The <strong>FEZ Portal</strong> is a 4.3&quot; 480x272 display with capacitive touch that is programmable in C#. As the display and controller are one unit, it&#39;s even easier to make a product with touch as you only have to mount a single board that&#39;s only slightly larger than the display.</p>
+<p>Already one of our most popular SITCore single board computers, The <strong>FEZ Portal</strong> is a 4.3&quot; 480x272 display with capacitive touch that is programmable in C#. As the display and controller are one unit, it&#39;s even easier to make a product with touch as you only have to mount a single board that&#39;s only slightly larger than the display. Display uses part# ER-TFT043-3 available at <a href="https://www.buydisplay.com/">buydisplay.com</a> </p>
 <p><a href="pdfs/fez-portal-rev-c-schematic.pdf">FEZ Portal Schematic</a></p>
 <p><a href="http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Portal%20Rev%20C.step">FEZ Portal 3D STEP File</a></p>
 <h3 id="fez-portal-peripheral-pins">FEZ Portal Peripheral Pins</h3>
@@ -746,6 +811,7 @@
 </tr>
 </tbody>
 </table>
+<hr>
 <h2 id="fez-stick">FEZ Stick</h2>
 <p><img src="images/fez_stick.jpg" alt="FEZ Stick"></p>
 <p>The <strong>FEZ Stick</strong> is simply the least expensive way to easily get started with TinyCLR OS. While providing an inexpensive way for the uninitiated to try TinyCLR OS, we&#39;ve provided castellated edges as well as through hole pads to make it breadboard friendly and easy to embed into products. Also, there&#39;s actually space for two click modules, making this a very versatile board at a very affordable price!</p>
@@ -790,7 +856,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/DAC/hardware/sitcore/sbc.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/hardware/sitcore/sbc.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
