@@ -4,7 +4,7 @@
 
 ## 2.1.0 - Preview1
 
-### Released 2020-11-02
+### Released 2020-11-03
 
 ### Visual Studio Project System
 
