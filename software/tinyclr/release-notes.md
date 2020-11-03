@@ -9,7 +9,7 @@
 ### Visual Studio Project System
 
 #### Changes
-- Updated version number version 2.1.100
+- Updated version number 2.1.100
 
 #### Known Issues
 - None
