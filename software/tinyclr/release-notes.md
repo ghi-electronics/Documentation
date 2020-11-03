@@ -17,34 +17,34 @@
 ### Libraries
 
 #### Changes
-- Updated version number 2.1.0-preview1
-- Added Unique ID
-- Fixed Socket.Poll(-1) cause system slow
-- Fixed Multicast
-- Correct SPI6 clock source
-- Throw an exception if active USB client in usb debug mode.
-- Fixed Wifi doesn't fire event when disconnect from hotspot
+- Updated version number 2.1.0-preview1.
+- Added Unique ID.
+- Fixed Socket.Poll(-1) cause system slow.
+- Fixed multicast.
+- Correct SPI6 clock source.
+- Prevent active USB client in usb debug mode.
+- Fixed WiFi doesn't fire event when disconnected from a hotspot.
 - Added analog temperature reading, VREFINT, VSENSE channels (GHIElectronics.TinyCLR.Pins)    
-- Fixed Uart RTS doesn't go high when buffer full
-- Fixed USB Host: FS.Unmount() failed without Flush
-- TFS: Improved and removed "StorageDriver"
-- Storage: Add EraseAll() api
-- Fixed CAN CanWriteMessage property always return true.
-- Add frequency counter (known as DigitalSignal)
-- Fix system time inaccurate 
-- Added slow clock mode (240MHz)
-- Fixed JSON cannot deserialize long integers
-- Support write out bitmap file (24 bit BMP format)
-- Support native CRC
-- Support RegularExpression 
+- Fixed Uart RTS pin doesn't go high when buffer full.
+- Fixed USB Host: FS.Unmount() failed without calling Flush()
+- TFS: Improved and removed "StorageDriver".
+- Storage: Added EraseAll() api.
+- Fixed CAN 'CanWriteMessage' property always return true.
+- Added DigitalSignal.
+- System timer now is accurate.. 
+- Supports slow clock mode (240MHz)
+- Fixed JSON cannot deserialize long integers.
+- Supports write out bitmap file (24 bit BMP format).
+- Supports native CRC.
+- Supports RegularExpression.
 - Rename AdcChannel to Adc (GHIElectronics.TinyCLR.Pins)    
 - Rename DacChannel to Dac (GHIElectronics.TinyCLR.Pins)
 - Added Timer.Capture (GHIElectronics.TinyCLR.Pins)
 - Added Timer.Pwm (GHIElectronics.TinyCLR.Pins - Changed from PwmChannel)    
-- MQTT: Add MQTT pass the topic to the received message function  
-- Fixed Mobus TCP
-- Fixed Uart parity Odd/Even doesn't work with 8 bit data      
-- Fixed Initializing the ATWINC with null ssid and password hangs system.
+- MQTT: Add MQTT pass the topic to the received message function. 
+- Fixed Mobus TCP.
+- Fixed Uart parity Odd/Even doesn't work with 8 bit data.      
+- Fixed initializing the ATWINC with null ssid and password hangs system.
 
 #### Known Issues
 - Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
@@ -56,6 +56,7 @@
 - Network operations on any thread block all threads  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/525)
 - String does not implement IEnumerable  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/323)
 - Equals() throws unsupported instruction exception  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/502)
+- Empty string - Dns.GetHostEntry("") doesn't work https://github.com/ghi-electronics/TinyCLR-Libraries/issues/724
 
 ### TinyCLR Config
 
@@ -79,12 +80,12 @@
 #### Changes
 - Updated version number 2.1.0.10000
 - Speed up system speed 15%
-- Use Timer Counter (TIM) for System Timer instead of CortexM SystemTick
-- Fixed SDCard writing sometime failed.
+- Use Timer Counter (TIM) for system timer.
+- Fixed SDCard writting failed sometime.
 - Improved SDCard speed.
-- Open HiRes Timer register for Marshal
-- Open TEMPERATURE_TS1_CALIBRATION, TEMPERATURE_TS2_CALIBRATION registers for Marshal
-- Open TTCAN, CAN clock calibration for Marshal
+- Open HiRes Timer register for Marshal.
+- Open TEMPERATURE_TS1_CALIBRATION, TEMPERATURE_TS2_CALIBRATION registers for Marshal.
+- Open TTCAN, CAN clock calibration for Marshal.
 - Graphics: Improved color table. Support color table for all modes (8888, 888, 565, 323).
 - SC20260: Reduced power consumption SDRAM in Sleep and Shutdown mode.
 
