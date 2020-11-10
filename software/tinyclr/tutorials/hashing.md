@@ -40,7 +40,6 @@ var crcVal1 = crc16.ComputeHash(data, 0, data.Length);
 
 // Uses chunks of the array to build the hash
 crc16.Reset(); // reset seed = 0;
-
 var crcSeed1 = crc16.ComputeHash(data, 0, 3);
 var crcSeed2 = crc16.ComputeHash(data, 3, 1);         
 var crcVal2 = crc16.ComputeHash(data, 4, 4); 
