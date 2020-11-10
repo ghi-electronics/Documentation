@@ -86,6 +86,40 @@ private static void Digital_OnReadPulseReady(DigitalSignal sender, TimeSpan dura
 ```
 
 ---
+### Abort
+One `ReadPulse` call, one event. Each time a `ReadPulse` is called it reads the alloted amount of time then triggers an event.   If `ReadPulse` is called multiple times it must wait until finished. There may be a need to abort `ReadPulse`, before it's finished. When `Abort` is called it always trigger the `ReadPulse` event, stops reading, and returns the data collected.
+
+
+
+```cs
+var digitalSignalPin = GpioController.GetDefault().OpenPin(SC20260.Timer.Capture.Controller5.PB3);
+var digitalSignal = new DigitalSignal(digitalSignalPin);
+var waitForEdge = false;
+
+digitalSignal.OnReadPulseReady += Digital_OnReadPulseReady
+
+while (true) {
+    if (digitalSignal.CanReadPulse) {
+        digitalSignal.ReadPulse(1000, GpioPinEdge.RisingEdge, waitForEdge);                  
+        Thread.Sleep(1000);                    
+        digitalSignal.Abort();
+    }
+}
+      
+private static void Digital_OnReadPulseReady(DigitalSignal sender, TimeSpan duration, uint count, GpioPinValue pinValue) {
+    if (count > 0) {
+        var microsecond = ((double)duration.Ticks) / 10;
+        var freq = (count / microsecond) * 1000000;
+        Debug.WriteLine("freq = " + freq / 1000.0 + " KHz");
+    }
+    else {
+        Debug.WriteLine("No clock found.");
+    }
+}
+```
+>[!TIP] In the sample code above you can use PWM to provide the pulse needed to verify the code. Keep in mind that Timer shares controllers with PWM so a different controller needs to be used. 
+
+---
 
 ## Pulse Feedback
 
