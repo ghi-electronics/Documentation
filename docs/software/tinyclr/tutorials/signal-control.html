@@ -150,6 +150,36 @@ private static void Digital_OnReadPulseReady(DigitalSignal sender, TimeSpan dura
     Debug.WriteLine(&quot;freq = &quot; + freq / 1000.0 + &quot; KHz&quot;);
 }
 </code></pre><hr>
+<h3 id="abort">Abort</h3>
+<p>Each time a <code>ReadPulse</code> or <code>Capture</code> is called, an event is triggered when the operation is completed. In some cases, it may be desired to terminate the operation early, using <code>Abort</code>. When aborted, an event is still triggered, which will contain whatever data/pulses was collected from the trigger to the time <code>Abort</code> was called.</p>
+<pre><code class="lang-cs">var digitalSignalPin = GpioController.GetDefault().OpenPin(SC20260.Timer.Capture.Controller5.PB3);
+var digitalSignal = new DigitalSignal(digitalSignalPin);
+var waitForEdge = false;
+
+digitalSignal.OnReadPulseReady += Digital_OnReadPulseReady
+
+while (true) {
+    if (digitalSignal.CanReadPulse) {
+        digitalSignal.ReadPulse(1000, GpioPinEdge.RisingEdge, waitForEdge);                  
+        Thread.Sleep(1000);                    
+        digitalSignal.Abort();
+        Debug.WriteLine(&quot;Aborted&quot;);
+    }
+}
+
+private static void Digital_OnReadPulseReady(DigitalSignal sender, TimeSpan duration, uint count, GpioPinValue pinValue) {
+    if (count &gt; 0) {
+        var microsecond = ((double)duration.Ticks) / 10;
+        var freq = (count / microsecond) * 1000000;
+        Debug.WriteLine(&quot;freq = &quot; + freq / 1000.0 + &quot; KHz&quot;);
+    }
+    else {
+        Debug.WriteLine(&quot;No clock found.&quot;);
+    }
+}
+</code></pre><div class="TIP"><h5>Tip</h5><p>In the sample code above you can use PWM to provide the pulse needed to verify the code. Keep in mind that both PWM and DigitalSignal share resources, so a different Timer controller must be used.</p>
+</div>
+<hr>
 <h2 id="pulse-feedback">Pulse Feedback</h2>
 <p>The PulseFeedback class can be used in three different modes. These modes are used to measure Echo Duration, Duration Until Echo, and Drain Duration.</p>
 <h3 id="echo-duration">Echo Duration</h3>
