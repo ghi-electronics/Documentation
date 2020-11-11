@@ -87,9 +87,7 @@ private static void Digital_OnReadPulseReady(DigitalSignal sender, TimeSpan dura
 
 ---
 ### Abort
-One `ReadPulse` call, one event. Each time a `ReadPulse` is called it reads the alloted amount of time then triggers an event.   If `ReadPulse` is called multiple times it must wait until finished. There may be a need to abort `ReadPulse`, before it's finished. When `Abort` is called it always trigger the `ReadPulse` event, stops reading, and returns the data collected.
-
-
+Each time a `ReadPulse` or `Capture` is called, an event is triggered when the operation is completed. In some cases, it may be desired to terminate the operation early, using `Abort`. When aborted, an event is still triggered, which will contain whatever data/pulses was collected from the trigger to the time `Abort` was called.
 
 ```cs
 var digitalSignalPin = GpioController.GetDefault().OpenPin(SC20260.Timer.Capture.Controller5.PB3);
@@ -103,6 +101,7 @@ while (true) {
         digitalSignal.ReadPulse(1000, GpioPinEdge.RisingEdge, waitForEdge);                  
         Thread.Sleep(1000);                    
         digitalSignal.Abort();
+        Debug.WriteLine("Aborted");
     }
 }
       
@@ -117,7 +116,7 @@ private static void Digital_OnReadPulseReady(DigitalSignal sender, TimeSpan dura
     }
 }
 ```
->[!TIP] In the sample code above you can use PWM to provide the pulse needed to verify the code. Keep in mind that Timer shares controllers with PWM so a different controller needs to be used. 
+>[!TIP] In the sample code above you can use PWM to provide the pulse needed to verify the code. Keep in mind that both PWM and DigitalSignal share resources, so a different Timer controller must be used.
 
 ---
 
