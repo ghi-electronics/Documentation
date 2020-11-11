@@ -80,14 +80,32 @@
 <h1 id="hashing">Hashing</h1>
 
 <hr>
-<p>TinyCLR OS currently supports the very popular MD5 hash function. While MD5 is no longer used as a cryptographic hash function, it is still used as a checksum to guard against unintentional corruption of data. For example, our <a href="../downloads.html">Downloads</a> page lists the MD5 hash value of each TinyCLR OS file. When you download one of these files, you can calculate the MD5 hash value of the downloaded file to make sure it matches the MD5 hash value we provide. This ensures the file was downloaded correctly and matches the original.</p>
+<h2 id="md5">MD5</h2>
+<p>TinyCLR OS supports MD5 hash function.</p>
 <p> The following commands will calculate the MD5 hash value of a byte array:</p>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core and GHIElectronics.TinyCLR.Cryptography</p>
 </div>
 <pre><code class="lang-cs">var md5 = GHIElectronics.TinyCLR.Cryptography.MD5.Create();
 var hashValue = md5.ComputeHash(data); //data is a byte array.
-</code></pre><p>There is also an overload of the <code>ComputeHash</code> method that takes an <code>offset</code> into the byte array and a <code>count</code> of how many bytes to process. </p>
-</article>
+</code></pre><h2 id="crc16">CRC16</h2>
+<p>TinyCLR OS also supports CRC16.</p>
+<pre><code class="lang-cs">ComputeHash(byte[] data, int offset, int count);
+</code></pre><p>Large amounts of data can be calculated in chunks and the hash is concatenated automatically. Calling <code>Reset</code> resets the seed value.</p>
+<pre><code class="lang-cs">var crc16 = new Crc16();
+var data = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 };
+
+// Uses entire array to build the hash
+crc16.Reset(); // reset seed = 0;
+var crcVal1 = crc16.ComputeHash(data, 0, data.Length);
+
+// Uses chunks of the array to build the hash
+crc16.Reset(); // reset seed = 0;
+var crcSeed1 = crc16.ComputeHash(data, 0, 3);
+var crcSeed2 = crc16.ComputeHash(data, 3, 1);         
+var crcVal2 = crc16.ComputeHash(data, 4, 4); 
+
+// `crcVal1` and `crcVal2` will match.
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
