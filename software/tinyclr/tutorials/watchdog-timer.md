@@ -8,14 +8,27 @@ A watchdog timer is used to reset the system if the system fails or locks up. A 
 ```cs
 // Set watchdog to 5 seconds and reset it every 4 seconds
 
-Watchdog.Enable(5000);
+static WatchdogController watchdogController = WatchdogController.GetDefault();
 
-While(true){
-              // reset the timer
-              Watchdog.Reset()
-              Thread.Sleep(4000);
-}
+static void Main()
+  {
+    watchdogController.Enable(5000);
 
+    Thread watchdogResetThread = new Thread(WatchdogReset);
+    watchdogResetThread.Start();
+
+    while (true)
+    {
+      // Add code
+      Thread.Sleep(Timeout.Infinite);
+    }
+  }
+  
+private static void WatchdogReset()
+  {
+    watchdogController.Reset();
+    Thread.Sleep(4000);
+  }
 ```
 
 > [!Note]
