@@ -1,4 +1,4 @@
-# WiFi
+﻿# WiFi
 ---
 First introduced over twenty years ago, WiFi has become the most popular wireless networking technology. Our SITCore line of products includes native support for the Microchip [ATWINC1500](https://www.microchip.com/wwwproducts/en/ATwinc1500) series of WiFi modules. These modules are available pre-certified from FCC, CE, and other regulatory agencies. For added security, WiFi module communication is handled through SPI, not through AT commands.
 
@@ -143,5 +143,16 @@ bool success = Winc15x0Interface.FirmwareUpdate(string url, int timeout);
 
 ## Multicast IP
 
-For WINC1500 WiFi module, to set multicast IP address, this IP need to be converted to multicast MAC address and used as Wifi MAC Addresses.
+There is no way to set-up Multicast IP directly within WINC1500 WiFi module API. In order to achieve this we need to convert a Multicast IP to a MAC Address using a converter tool found [here](http://dqnetworks.ie/toolsinfo.d/multicastaddressing.html). 
+
+Assuming that the Multicast IP address needed is 239.255.255.254 enter this in the tool and convert to a Multicast MAC address
+
+![ConverterTool](images/mac-address.jpg)
+
+This is Multicast MAC address needed to setup the WiFi module for Multicast networking
+
+```cs 
+networkInterfaceSetting.MacAddress = new byte[] {​​​​​​​​ 0x01, 0x00, 0x5e, 0x7f, 0xff, 0xfe }​​​​​​​​;
+```
+
 
