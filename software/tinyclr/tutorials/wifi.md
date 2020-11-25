@@ -147,10 +147,19 @@ This capture shows Multicast IP address 239.255.255.254 for example.
 This Multicast MAC address is then used as below.
 
 ```cs 
-networkInterfaceSetting.MacAddress = new byte[] {​​​​​​​​ 0x01, 0x00, 0x5e, 0x7f, 0xff, 0xfe }​​​​​​​​;
+Winc15x0Interface.AddMulticastMacAddress(new byte[] {​​​​​​​​ 0x01, 0x00, 0x5e, 0x7f, 0xff, 0xfe }​​​​​​​​);
 ```
+
+If more than one Multicast MAC address is needed, just call AddMulticastMacAddress multiple time.
+
+There is also an API allows remove multicast mac address from the list as well.
+
+```cs 
+Winc15x0Interface.RemoveMulticastMacAddress(new byte[] {​​​​​​​​ 0x01, 0x00, 0x5e, 0x7f, 0xff, 0xfe }​​​​​​​​);
+```
+
 >[!TIP]
-> The WiFi module will continue to use its unique MAC address for non-multicaset transfers.
+>Needed Nugets: GHIElectronics.TinyCLR.Drivers.Microchip.Winc15x0
 
 ---
 
