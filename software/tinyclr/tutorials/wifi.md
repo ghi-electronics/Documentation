@@ -191,7 +191,7 @@ WiFiNetworkInterfaceSettings wifiSettings = new WiFiNetworkInterfaceSettings() {
     Password = "Your Password",
 };
 //...
-WiFiNetworkInterfaceSettings wifiSettings.AccessPointClientLinkConnectedChanged += (a, b, c) => {
+WiFiNetworkInterfaceSettings wifiSettings.AccessPointClientConnectionChanged += (a, b, c) => {
     Debug.WriteLine("Provided IP = " + b.ToString());
     Debug.WriteLine("Connected device's MAC Address = " + c);
 };
