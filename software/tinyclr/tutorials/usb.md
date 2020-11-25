@@ -1,12 +1,55 @@
 # USB
 ---
-TinyCLR OS supports both USB Client and USB Host and includes support for using USB keyboards, mice, and mass storage devices with your SITCore devices.
+TinyCLR OS supports both USB Client and USB Host.
 
 ## USB Client
-USB client support is mainly used for deploying and debugging applications. It can also be used to transfer data between a SITCore device and a PC. See [USB CDC & WinUSB](usb-cdc-winusb.md) for details.
+USB client support is used for deploying and debugging applications. However, deploying and debugging can be switched to a serial mode, freeing the USB Client port. The port can be configured to support multiple modes.
+
+> [!Note]
+> The debug interface needs to be switched to serial (UART) to free up the USB Client port for PC communication. This is accomplished by pulling the MOD pin low during reset as detailed on the [SITCore System on Chip](../../../hardware/sitcore/soc.md) page. It is beneficial to add a 1K pull down on MOD to keep the device in serial debug mode indefinitely.
+
+> [!Tip]
+> These can all be found in the GHIElectronics.TinyCLR.Devices.UsbClient namespace
+
+### USB Mouse
+In this mode, SITCore acts as a USB mouse.
+
+```cs
+var usbclientController = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
+
+var usbClientSetting = new UsbClientSetting() {
+};
+ 
+var mouse = new Mouse(usbclientController, usbClientSetting);
+mouse.DeviceStateChanged += UsbClientDeviceStateChanged;
+mouse.Enable();
+
+```
+
+### USB Keyboard
+A USB Keyboard is simulated in this mode.
+
+```cs
+var usbclientController = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
+
+var usbClientSetting = new UsbClientSetting() {
+};
+
+var kb = new Keyboard(usbclientController, usbClientSetting);
+
+var key = new Key[] { Key.T, Key.R, Key.A, Key.N, Key.Space, Key.Q, Key.U, Key.O, Key.C, Key.Space, Key.D, Key.A, Key.T, Key.Enter };
+
+for(var i; i < key.Length; i++) $$$$$$$$$$$$$$$$$$$$$$$$$$$
+    kb.Stroke(key[i]);
+
+```
+### CDC & WinUSB
+These two modes are used to transfer data between a SITCore device and a PC. See [USB CDC & WinUSB](usb-cdc-winusb.md) for details.
+
+### USB Raw
+For advanced users, virtually any type of USB device can be created using USB Raw. The USB mouse driver inside [GHIElectronics.TinyCLR.Devices.UsbClient](https://github.com/ghi-electronics/TinyCLR-Libraries) is a good example of how this can be achieved.   
 
 ---
-
 ## USB Host
 The USB Host API supports USB keyboards, mice, raw devices, and USB MSC (Mass Storage Class), which allows file access on USB memory devices. The following code sample shows how to detect devices as they are connected to your SITCore device's USB host port.
 
