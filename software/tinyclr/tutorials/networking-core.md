@@ -24,6 +24,45 @@ TinyCLR OS's support of sockets is very similar to .NET socket support. Most .NE
 ## TCP/UDP
 TCP and UDP are the core of the Internet protocols and are supported through standard .NET Sockets. The web is full of examples on using TCP and UDP Sockets that should work as is or with minor changes.
 
+TCP example:
+```cs
+var s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp)){               
+    try {
+        var ip = IPAddress.Parse("192.168.1.87");                 
+        s.Connect(new IPEndPoint(ip, 80));           
+        s.Send(System.Text.UTF8Encoding.UTF8.GetBytes("I am SITCore\n\r"));
+    }
+    catch {
+    }               
+}
+```
+
+UDP example:
+```cs
+var socket = new System.Net.Sockets.Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+var ip = new IPAddress(new byte[] { 192, 168, 1, 87 });
+var endPoint = new IPEndPoint(ip, 2000);
+
+socket.Connect(endPoint);
+
+byte[] bytesToSend = Encoding.UTF8.GetBytes(msg);
+
+while (true) {
+    socket.SendTo(bytesToSend, bytesToSend.Length, SocketFlags.None, endPoint);
+    while (socket.Poll(2000000, SelectMode.SelectRead)){
+        if (socket.Available > 0){
+            byte[] inBuf = new byte[socket.Available];
+            var recEndPoint = new IPEndPoint(IPAddress.Any, 0);
+            socket.ReceiveFrom(inBuf, ref recEndPoint);
+            if (!recEndPoint.Equals(endPoint))// Check if the received packet is from the 192.168.0.2
+                continue;
+            Debug.WriteLine(new String(Encoding.UTF8.GetChars(inBuf)));
+        }
+    }
+    Thread.Sleep(100);
+}     
+```
+
 ---
 
 ## DHCP
