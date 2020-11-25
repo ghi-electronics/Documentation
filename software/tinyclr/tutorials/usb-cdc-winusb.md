@@ -9,24 +9,24 @@ The USB Communications Device Class (CDC) is natively supported by Windows and L
 > Needed Nugets: GHIElectronics.TinyCLR.Devices.UsbClient
 
 ```cs
-var usbclient = UsbClientController.GetDefault();
+var usbclientController = UsbClientController.GetDefault();
     
 var usbClientSetting = new UsbClientSetting(){
-        Mode = UsbClientMode.WinUsb,
+        Mode = UsbClientMode.Cdc,
         ManufactureName = "Manufacture_Name",
         ProductName = "Product_Name",
-        SerialNumber = "12345678",
-        Guid = "{your guid}",
-        ProductId = 0x1234,
-        VendorId = 0x5678,
+        SerialNumber = "12345678",            
 };
-            
-usbclient.SetActiveSetting(usbClientSetting);
-usbclient.Enable();
-usbclient.DeviceStateChanged += (a,b) => Debug.WriteLine("Connection changed."); 
-usbclient.DataReceived += (a,count) => Debug.WriteLine("Data received:" + count);
 
-while (usbclient.DeviceState != DeviceState.Configured);
+var cdc = new Cdc(usbclientController, usbClientSetting);
+
+cdc.DeviceStateChanged += (a,b) => Debug.WriteLine("Connection changed."); 
+cdc.DataReceived += (a,count) => Debug.WriteLine("Data received:" + count);
+
+cdc.Enable();
+
+
+while (cdc.DeviceState != DeviceState.Configured);
         Debug.WriteLine("UsbClient Connected");
 
 // The example will read data from port to dataR array
@@ -34,17 +34,17 @@ while (usbclient.DeviceState != DeviceState.Configured);
 // Write dataW array back to port
 
 while (true){
-    var len = usbclient.ByteToRead;
+    var len = cdc.Stream.ByteToRead;
 
     if (len > 0){
         var dataR = new byte[len];
         var dataW = new byte[len];
-        int read = usbclient.Read(dataR);
+        int read = cdc.Stream.Read(dataR);
 
         for (var i = 0; i < read; i++){
             dataW[i] = (byte)(dataR[i] + 1);
         }
-        usbclient.Write(dataW);
+        cdc.Stream.Write(dataW);
     }
     Thread.Sleep(100);
 }
@@ -60,7 +60,7 @@ The WinUSB drivers are unique to Windows and take advantage of the power and spe
 > Unlike CDC mode, a disadvantage of WinUSB is that it requires a special code on the PC side to read and write to the device.
 
 ```cs
-var usbclient = UsbClientController.GetDefault();
+var usbclientController = UsbClientController.GetDefault();
     
 var usbClientSetting = new UsbClientSetting(){
     Mode = UsbClientMode.WinUsb,
@@ -68,16 +68,17 @@ var usbClientSetting = new UsbClientSetting(){
     ProductName = "Product_Name",
     SerialNumber = "12345678",
     Guid = "{your guid}",
-    ProductId = 0x1234,
-    VendorId = 0x5678,
 };
-            
-usbclient.SetActiveSetting(usbClientSetting);       
-usbclient.Enable();
-usbclient.DeviceStateChanged += (a,b) => Debug.WriteLine("Connection changed."); 
-usbclient.DataReceived += (a,count) => Debug.WriteLine("Data received:" + count);
 
-while (usbclient.DeviceState != DeviceState.Configured) ;
+var winUsb = new WinUsb(usbclientController, usbClientSetting);
+
+winUsb.DeviceStateChanged += (a,b) => Debug.WriteLine("Connection changed."); 
+winUsb.DataReceived += (a,count) => Debug.WriteLine("Data received:" + count);
+                 
+winUsb.Enable();
+
+
+while (winUsb.DeviceState != DeviceState.Configured) ;
         Debug.WriteLine("UsbClient Connected");
 
 // The example will read data from port to dataR array
@@ -85,17 +86,17 @@ while (usbclient.DeviceState != DeviceState.Configured) ;
 // Write dataW array back to port
     
 while (true){
-    var len = usbclient.ByteToRead;
+    var len = winUsb.Stream.ByteToRead;
 
     if (len > 0){
         var dataR = new byte[len];
         var dataW = new byte[len];
-        int read = usbclient.Read(dataR);
+        int read = winUsb.Stream.Read(dataR);
 
         for (var i = 0; i < read; i++){
             dataW[i] = (byte)(dataR[i] + 1);
         }
-        usbclient.Write(dataW);
+        winUsb.Stream.Write(dataW);
     }
     Thread.Sleep(100);
 }

@@ -18,6 +18,9 @@ In this mode, SITCore acts as a USB mouse.
 var usbclientController = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
 
 var usbClientSetting = new UsbClientSetting() {
+    ManufactureName = "Manufacture_Name",
+    ProductName = "Product_Name",
+    SerialNumber = "serialnumber",  
 };
  
 var mouse = new Mouse(usbclientController, usbClientSetting);
@@ -33,6 +36,9 @@ A USB Keyboard is simulated in this mode.
 var usbclientController = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
 
 var usbClientSetting = new UsbClientSetting() {
+    ManufactureName = "Manufacture_Name",
+    ProductName = "Product_Name",
+    SerialNumber = "serialnumber",
 };
 
 var kb = new Keyboard(usbclientController, usbClientSetting);
