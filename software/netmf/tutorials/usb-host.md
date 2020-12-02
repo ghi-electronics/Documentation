@@ -25,7 +25,7 @@ public class Program
 
         Controller.Start();
 
-        Thread.Sleep(-1);
+        Thread.Sleep(Timeout.Infinite);
     }
 
     private static void Controller_DeviceConnectFailed(object sender, EventArgs e)
@@ -65,7 +65,7 @@ public class Program
 
         Controller.Start();
 
-        Thread.Sleep(-1);
+        Thread.Sleep(Timeout.Infinite);
     }
 
     private static void Controller_KeyboardConnected(object sender, Keyboard keyboard)
@@ -157,7 +157,7 @@ public class Program
 
         Controller.Start();
 
-        Thread.Sleep(-1);
+        Thread.Sleep(Timeout.Infinite);
     }
 
     private static void Controller_UsbSerialConnected(object sender, UsbSerial usbSerial)
@@ -201,7 +201,7 @@ public class Program
 
         Controller.Start();
 
-        Thread.Sleep(-1);
+        Thread.Sleep(Timeout.Infinite);
     }
 
     private static void Controller_MassStorageConnected(object sender, MassStorage massStorage)
@@ -251,7 +251,7 @@ public class Program
         
         Controller.Start();
 
-        Thread.Sleep(-1);
+        Thread.Sleep(Timeout.Infinite);
     }
 
     private static void Controller_WebcamConnected(object sender, Webcam webcam)
@@ -295,7 +295,7 @@ public class Program
 
         Controller.Start();
 
-        Thread.Sleep(-1);
+        Thread.Sleep(Timeout.Infinite);
     }
 
     private static void Controller_UnknownDeviceConnected(object sender, Controller.UnknownDeviceConnectedEventArgs e)

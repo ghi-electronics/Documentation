@@ -27,8 +27,7 @@ X509Certificate ClientCert = new X509Certificate(clientCertSource);
 
 ClientCert.PrivateKey = privateKeyData;    
 
-var clientSetting = new MqttClientSetting
-{
+var clientSetting = new MqttClientSetting {
     BrokerName = iotEndPoint,
     BrokerPort = iotPort,
     CaCertificate = CaCert,
@@ -46,8 +45,7 @@ iotClient.SubscribedChanged += (a, b) => { Debug.WriteLine("Subscribed"); };
 
 Debug.WriteLine("Connecting....")
 
-var connectSetting = new MqttConnectionSetting
-{
+var connectSetting = new MqttConnectionSetting {
     ClientId = deviceId,
     UserName = null,
     Password = null

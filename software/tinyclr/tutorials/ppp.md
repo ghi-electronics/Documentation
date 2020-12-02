@@ -157,8 +157,8 @@ The following example switches from Data mode to Command Mode, sends a few AT co
 //PPP is connected
 //....
 
-networkController.Suspend(); //Suspend PPP, release UART Port from TinyCLR OS.
-{
+networkController.Suspend(); { //Suspend PPP, release UART Port from TinyCLR OS.
+
     //Open UART.
     var serial = GHIElectronics.TinyCLR.Devices.Uart.UartController.FromName
         (SC20260.UartPort.Uart8);
