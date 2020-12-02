@@ -65,24 +65,43 @@ while (true) {
 
 ---
 
-## DHCP
-TinyCLR OS supports both static and dynamic IP addressing. Note that static IP addressing does not work with [PPP](ppp.md).
-
-The following line of code enables dynamic DHCP. For static IP, set `IsDhcpEnabled` to `false`.
+## IP Assignment
+TinyCLR OS supports both static and dynamic IP addressing. With either method, an event is fired providing the local IP settings.
 
 ```cs
-networkInterfaceSetting2.IsDhcpEnabled = true;
+networkController.NetworkAddressChanged += NetworkController_NetworkAddressChanged;
+// ...
+private static void NetworkController_NetworkAddressChanged
+    (NetworkController sender, NetworkAddressChangedEventArgs e) {
+    var ipProperties = sender.GetIPProperties();
+}
 ```
 
-With static IP addressing, you must provide the following settings. These settings will be ignored if dynamic DHCP is enabled.
+> [!Tip]
+> Static IP addressing does not work with [PPP](ppp.md).
+
+### Static IP
+
+With static IP addressing, the following settings must be provided.
 
 ```cs
+networkInterfaceSetting.IsDhcpEnabled = false;
 networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
 networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
 networkInterfaceSetting.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
 networkInterfaceSetting.DnsAddresses = new IPAddress[] { new IPAddress(new byte[]
     { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
 ```
+### Dynamic IP
+
+The following line of code enables dynamic IP, which start by trying to lease an IP from a DHCP server. If that fails, the system will self-assign an IP address through AutoIP mechanism. This can take a while but an event is fired when an IP is available.
+
+```cs
+networkInterfaceSetting.IsDhcpEnabled = true;
+```
+
+> [!Tip]
+> AutoIP addresses always fall within the 169.254.x.x range to determine if an IP was generated using AutoIP
 
 ---
 
