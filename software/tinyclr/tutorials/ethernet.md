@@ -15,7 +15,7 @@ Here is a simple example:
 ```cs
 static bool linkReady = false;
 
-static void EthernetTest(){
+static void EthernetTest() {
     //Reset external phy.
     var gpioController = GpioController.GetDefault();
     var resetPin = gpioController.OpenPin(SC20260.GpioPin.PG3);
@@ -64,12 +64,12 @@ static void EthernetTest(){
 }
 
 private static void NetworkController_NetworkLinkConnectedChanged
-    (NetworkController sender, NetworkLinkConnectedChangedEventArgs e){
+    (NetworkController sender, NetworkLinkConnectedChangedEventArgs e) {
     //Raise connect/disconnect event.
 }
 
 private static void NetworkController_NetworkAddressChanged
-    (NetworkController sender, NetworkAddressChangedEventArgs e){
+    (NetworkController sender, NetworkAddressChangedEventArgs e) {
 
     var ipProperties = sender.GetIPProperties();
     var address = ipProperties.Address.GetAddressBytes();
@@ -88,7 +88,7 @@ This example uses the ENC28J60 click on our SC20260D Dev Board.
 >Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins
 
 ```cs
-static void Enc28Test(){
+static void Enc28Test() {
     var networkController = NetworkController.FromName
         ("ENC28J60.NetworkController");
 
@@ -174,12 +174,12 @@ NetworkController provides two events:
 
 ```cs
 private static void NetworkController_NetworkLinkConnectedChanged
-    (NetworkController sender, NetworkLinkConnectedChangedEventArgs e){
+    (NetworkController sender, NetworkLinkConnectedChangedEventArgs e) {
     // Raise event connect/disconnect
 }
 
 private static void NetworkController_NetworkAddressChanged
-    (NetworkController sender, NetworkAddressChangedEventArgs e){
+    (NetworkController sender, NetworkAddressChangedEventArgs e) {
 
     var ipProperties = sender.GetIPProperties();
     var address = ipProperties.Address.GetAddressBytes();
