@@ -38,7 +38,7 @@ public class Program
 
         can.SendMessage(new ControllerAreaNetwork.Message() { Data = new byte[] { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08 }, ArbitrationId = 0x12345678, Length = 8, IsRemoteTransmissionRequest = false, IsExtendedId = true });
 
-        Thread.Sleep(-1);
+        Thread.Sleep(Timeout.Infinite);
     }
 
     private static void can_MessageAvailable(ControllerAreaNetwork sender, ControllerAreaNetwork.MessageAvailableEventArgs e)

@@ -32,7 +32,6 @@ while (true) {
     Thread.Sleep(10);   //Always give the system time to think!
 }  
 ```
-
 ---
 
 ## Musical Tones
@@ -92,7 +91,6 @@ class Program {
         }
     }
 }
-
 ```
 
 ---
@@ -140,10 +138,9 @@ class Program {
         Thread.Sleep(5000);
         servo2.Stop();
 
-        Thread.Sleep(-1);
+        Thread.Sleep(Timeout.Infinite);
     }
 }
-
 ```
 
 This is the servo.cs class that provides the methods used in the above code to control the servos:
@@ -221,5 +218,4 @@ namespace GHIElectronics.TinyCLR.Devices.Servo {
         public void Stop() => this.servo.Stop();
     }
 }
-
 ```

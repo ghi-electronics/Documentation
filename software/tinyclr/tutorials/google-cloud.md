@@ -76,7 +76,7 @@ if (returnCode == ConnectReturnCode.ConnectionAccepted) {
     }
 }
 
-Thread.Sleep(-1);
+Thread.Sleep(Timeout.Infinite);
         
 static void Gcp_SetupMqttTopics(Mqtt client, string deviceId) {
     // The configuration topic is used for acknowledged changes.

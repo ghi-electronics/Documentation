@@ -175,7 +175,7 @@ public class Program
 		
 		startTask.Invoke(5);
 
-		Thread.Sleep(-1);
+		Thread.Sleep(Timeout.Infinite);
 	}
 
 	private static void RuntimeLoadableProcedures_NativeEvent(object sender, RuntimeLoadableProcedures.NativeEventEventArgs e)

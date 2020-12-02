@@ -99,7 +99,7 @@ using (var fsRead = tfs.Open("settings.dat", FileMode.Open)) {
     }
 }
 ```
-Below is a basic driver implementation utiliing QSPI:
+Below is a basic driver implementation utilizing QSPI:
 
 ```cs
 using System;
@@ -107,12 +107,10 @@ using GHIElectronics.TinyCLR.Pins;
 using GHIElectronics.TinyCLR.Devices.Storage;
 using GHIElectronics.TinyCLR.Devices.Storage.Provider;
 
-public sealed class QspiMemory : IStorageControllerProvider
-{
+public sealed class QspiMemory : IStorageControllerProvider {
     public StorageDescriptor Descriptor => this.descriptor;
 
-    private StorageDescriptor descriptor = new StorageDescriptor()
-    {
+    private StorageDescriptor descriptor = new StorageDescriptor(){
         CanReadDirect = false,
         CanWriteDirect = false,
         CanExecuteDirect = false,
@@ -132,45 +130,36 @@ public sealed class QspiMemory : IStorageControllerProvider
         this.Open();
     }
 
-    public void Open()
-    {
+    public void Open() {
         qspiDrive.Open();
     }
 
-    public void Close()
-    {
+    public void Close() {
         qspiDrive.Close();
     }
 
-    public void Dispose()
-    {
+    public void Dispose() {
         qspiDrive.Dispose();
     }
 
-    public int Erase(long address, int count, TimeSpan timeout)
-    {
+    public int Erase(long address, int count, TimeSpan timeout) {
         return qspiDrive.Erase(address, count, timeout);
     }
 
-    public bool IsErased(long address, int count)
-    {
+    public bool IsErased(long address, int count) {
         return qspiDrive.IsErased(address, count);
     }
 
-    public int Read(long address, int count, byte[] buffer, int offset, TimeSpan timeout)
-    {
+    public int Read(long address, int count, byte[] buffer, int offset, TimeSpan timeout) {
         return qspiDrive.Read(address, count, buffer, offset, timeout);
     }
 
-    public int Write(long address, int count, byte[] buffer, int offset, TimeSpan timeout)
-    {
+    public int Write(long address, int count, byte[] buffer, int offset, TimeSpan timeout) {
         return qspiDrive.Write(address, count, buffer, offset, timeout);
     }
 
-    public void EraseAll(TimeSpan timeout)
-    {
-        for (var sector = 0; sector < this.Descriptor.RegionCount; sector++)
-        {
+    public void EraseAll(TimeSpan timeout) {
+        for (var sector = 0; sector < this.Descriptor.RegionCount; sector++) {
             qspiDrive.Erase(sector * this.Descriptor.RegionSizes[0], this.Descriptor.RegionSizes[0], timeout);
         }
     }
