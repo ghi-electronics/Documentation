@@ -2,6 +2,84 @@
 ---
 ![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
 
+## 2.1.0 - Preview2
+
+### Released 2020-12-04
+
+### Visual Studio Project System
+
+#### Changes
+- Updated version number 2.1.200
+
+#### Known Issues
+- Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
+- Debug breakpoints sometimes hang for 5-6 seconds before resuming normally (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/659)
+
+### Libraries
+
+#### Changes
+- Updated version number 2.1.0-preview2.
+- Fixed Json Boolean type.
+- Fixed MQTT IsConnected property never set to false
+- Added WiFI AccessPoint mode
+- Added DHCP Server for WiFi in AccessPoint mode.
+- Fixed Tim.Capture.Controller5 and Tim.Capture.Controller2 swapped.
+- Rewrite USBClient Api (CDC and WinUsb) 
+- Added Raw HID, Mouse (Absolute and Relative mode), Keyboard, Joystick for USBClient.
+
+#### Known Issues
+- Exception filter causes lockup when exception thrown from instance method (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/652)
+- GetChars throwing on certain byte values (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/651)
+- Double ToString() show number incorrectly sometime  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/629)
+- Running out of stack kills Visual studio (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/586)
+- Network operations on any thread block all threads  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/525)
+- String does not implement IEnumerable  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/323)
+- Equals() throws unsupported instruction exception  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/502)
+
+### TinyCLR Config
+
+#### Changes
+- Updated version number 2.1.0-preview2 
+
+#### Known Issues
+- Erase all doesn't erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+- None.
+
+#### Known Issues
+- None.
+
+### Firmware
+
+#### Changes
+- Updated version number 2.1.0.20000.
+- Added AutoIP.
+- Fixed CAN stop receiving message once internal fifo is full.
+- Fixed Reuse socket address doesn't work.
+- Fixed Dns.GetHostEntry("") doesn't work.
+- Fixed digital signal doesn't work at low frequency.
+- Fixed WiFI doesn't connect to an Open AP.
+- Fixed Gpio interrupt native timestamp not accurate.
+- Fixed Set PWM in low frequency lock the system for long time.
+
+#### Known Issue
+- None.
+
+### Drivers
+
+#### Changes
+- Updated version number 2.1.0-preview2.
+- WinC15xx: Added Set/Remove multicast address.
+
+#### Known Issues
+ - SSD1351-Draw at position X may need offset = 10 to correct position. (https://github.com/ghi-electronics/TinyCLR-Drivers/issues/109)
+
+---
+
 ## 2.1.0 - Preview1
 
 ### Released 2020-11-03
@@ -99,8 +177,6 @@
 
 #### Known Issues
  - SSD1351-Draw at position X may need offset = 10 to correct position. (https://github.com/ghi-electronics/TinyCLR-Drivers/issues/109)
-
----
 
 ---
 
