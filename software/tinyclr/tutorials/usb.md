@@ -29,6 +29,20 @@ mouse.Enable();
 
 ```
 
+#### Absolute and Relative mode
+Default, SITCore acts as a USB mouse in relative mode. To enable absolute:
+
+```
+var absoluteMode = true;
+var mouse = new Mouse(usbclientController, usbClientSetting, absoluteMode);
+```
+or
+
+```
+var absoluteMode = true;
+var mouse = new Mouse(usbclientController, absoluteMode);
+```
+
 ### USB Keyboard
 A USB Keyboard is simulated in this mode.
 
