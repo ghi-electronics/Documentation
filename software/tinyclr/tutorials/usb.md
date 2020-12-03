@@ -43,7 +43,7 @@ var usbClientSetting = new UsbClientSetting() {
 
 var kb = new Keyboard(usbclientController, usbClientSetting);
 
-var key = new Key[] { Key.T, Key.R, Key.A, Key.N, Key.Space, Key.Q, Key.U, Key.O, Key.C, Key.Space, Key.D, Key.A, Key.T, Key.Enter };
+var key = new Key[] { Key.G, Key.H, Key.I, Key.Space, Key.E, Key.L, Key.E, Key.C, Key.T, Key.R, Key.O, Key.N, Key.I, Key.C, Key.S };
 
 for(var i; i < key.Length; i++)
     kb.Stroke(key[i]);
