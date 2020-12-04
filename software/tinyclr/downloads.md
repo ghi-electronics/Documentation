@@ -75,6 +75,18 @@ File | Date | Status | MD5
 
 ---
 
+## USB Drivers
+
+> [!Tip]
+> Only needed for Windows 7 and 8.
+
+File | Date | Status | MD5
+--- | --- | --- | ---
+[Window 7](http://files.ghielectronics.com/downloads/TinyCLR/Drivers/GHI%20TinyCLR%20WinUsb%20Win7.zip) | 2020-12-04 | Preview | AE1462EA84EA5579A5DDA1A241B9B708
+[Window 8](http://files.ghielectronics.com/downloads/TinyCLR/Drivers/GHI%20TinyCLR%20WinUsb%20Win8.zip) | 2020-12-04 | Preview | 158086B77406B126DABFEE02011A57F4
+
+---
+
 ## TinyCLR OS 1.0
 
 These downloads are provided with no support and are not recommended for commercial designs.
