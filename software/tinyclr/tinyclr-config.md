@@ -54,13 +54,15 @@ Click on the `...` button next to the `Create App` button and select a directory
 ### Installing a Deployment File
 To install an encrypted deployment file on your device, first use TinyCLR Config to connect to your device. Click on the `...` button next to the `Update App` button and select the deployment file (should have a .tca extension). Enter the correct key in the text box next to the `Generate Key` button. The key is a series of hexadecimal pairs that are separated by hyphens. Now click on the `Update App` button. If the key matches the deployment file, the application will be deployed to your device.
 
+## USB Drivers
 
+> [!Tip]
+> Only needed for Windows 7 and 8.
 
-
-
-
-
-
+File | Date | Status | MD5
+--- | --- | --- | ---
+[Window 7](http://files.ghielectronics.com/downloads/TinyCLR/Drivers/GHI%20TinyCLR%20WinUsb%20Win7.zip) | 2020-12-04 | Preview | 1A6EB8B0E31635A62C6B2ABA5AA5D514
+[Window 8](http://files.ghielectronics.com/downloads/TinyCLR/Drivers/GHI%20TinyCLR%20WinUsb%20Win7.zip) | 2020-12-04 | Preview | 59C708184BD357E389F37CE87B6D2FB5
 
 ***
 
