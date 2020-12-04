@@ -95,8 +95,7 @@ backlight.Write(GpioPinValue.High);
 var displayController = Display.DisplayController.GetDefault();
 
 var controllerSetting = 
-    new ParallelDisplayControllerSettings
-{
+    new ParallelDisplayControllerSettings {
     Width = 480,
     Height = 272,
     DataFormat = DisplayDataFormat.Rgb565,
@@ -134,15 +133,12 @@ ov9655.SetResolution(Ov9655.Resolution.Vga);
 
 byte temp = 0;
 
-while (true)
-{
-    try
-    {
+while (true) {
+    try {
         ov9655.Capture(data, 100);
         displayController.DrawBuffer(0, 0, 0, 0, 480, 270, 640, data, 0);
     }
-    catch (System.Exception)
-    { 
+    catch (System.Exception) { 
     }
 }
 </code></pre></article>

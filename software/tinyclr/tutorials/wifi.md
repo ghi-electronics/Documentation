@@ -1,10 +1,15 @@
-# WiFi
+﻿# WiFi
 ---
-First introduced over twenty years ago, WiFi has become the most popular wireless networking technology. Our SITCore line of products includes native support for the Microchip [ATWINC1500](https://www.microchip.com/wwwproducts/en/ATwinc1500) series of WiFi modules. These modules are available pre-certified from FCC, CE, and other regulatory agencies. For added security, WiFi module communication is handled through SPI, not through AT commands.
+SITCore line of products includes native support for the Microchip [ATWINC1500](https://www.microchip.com/wwwproducts/en/ATwinc1500) series of WiFi modules. These modules are available pre-certified from FCC, CE, and other regulatory agencies. For added security, WiFi module communication is handled through SPI, not through AT commands.
+
+>[!IMPORTANT]
+>To take security to the next level, all network cryptography and security are done internally inside SITCore and not inside the WiFi module, meaning the data going over SPI is all encrypted and secure.
 
 The sample code is meant for the FEZ Portal with it's built in WiFi module. If you want to use a bare ATWINC1500 module instead, you'll need to connect interrupt, reset, and chip select lines in addition to the SPI lines (MOSI, MISO, SCK).
 
-This example uses the FEZ Portal with its built in ATWINC1500 WiFi module.
+> [!IMPORTANT] 
+> If using WiFi 7 click module, there is an enable pin which needs to be pulled high.
+
 
 >[!TIP]
 >Needed Nugets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Devices.Uart, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Networking, and GHIElectronics.TinyCLR.Pins.
@@ -98,22 +103,12 @@ private static void NetworkController_NetworkAddressChanged
         "." + address[3]);
 }
 ```
-
-> [!IMPORTANT] 
-> There is an enable pin which needs to be pulled high on the WiFI 7 click module. 
-
-```cs
-var enablePin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PI0);
-            
-enablePin.SetDriveMode(GpioPinDriveMode.Output);
-enablePin.Write(GpioPinValue.High);
-```
-
+---
 ## WINC1500 Utilities
 
-We provide the static Winc15x0Interface class to access some of the native functions of the WINC1500 WiFi module. Commands for getting the WiFi module's MAC address, getting RSSI (Relative Signal Strength Indicator), scanning for access points, checking the firmware version, and over-the-air (OTA) firmware update are supported.
+The Winc15x0Interface class provides to access some of the native functions of the WINC1500 WiFi module. Such as getting the WiFi module's MAC address, getting RSSI (Relative Signal Strength Indicator), scanning for access points, checking the firmware version, and over-the-air (OTA) firmware update.
 
-Unless you provide your own MAC address, the MAC address of the WiFi module will be used by default. More information about MAC addresses can be found [here](networking-core.md).
+Unless provided, the MAC address of the WiFi module will be automatically used by default.
 
 ```cs
 //Scan for WiFi access points:
@@ -140,8 +135,67 @@ for (int i = 0; i < Winc15x0Interface.FirmwareSupports.Length; i++) {
 //   (e.g.  http://192.168.0.137/m2m_ota_3a0.bin).
 bool success = Winc15x0Interface.FirmwareUpdate(string url, int timeout);
 ```
-
+---
 ## Multicast IP
 
-For WINC1500 WiFi module, to set multicast IP address, this IP need to be converted to multicast MAC address and used as Wifi MAC Addresses.
+Multicast works as expected on all other network interfaces; however, in order to achieve this on WiFi, we need to convert a Multicast IP to a multicast MAC Address. Any online tool like [this](http://dqnetworks.ie/toolsinfo.d/multicastaddressing.html) can be used.
+
+This capture shows Multicast IP address 239.255.255.254 for example.
+
+![ConverterTool](images/mac-address.jpg)
+
+This Multicast MAC address is then used as below.
+
+```cs 
+Winc15x0Interface.AddMulticastMacAddress(new byte[] {​​​​​​​​ 0x01, 0x00, 0x5e, 0x7f, 0xff, 0xfe }​​​​​​​​);
+```
+
+If more than one Multicast MAC address is needed, just call AddMulticastMacAddress multiple time.
+
+There is also an API allows remove multicast mac address from the list as well.
+
+```cs 
+Winc15x0Interface.RemoveMulticastMacAddress(new byte[] {​​​​​​​​ 0x01, 0x00, 0x5e, 0x7f, 0xff, 0xfe }​​​​​​​​);
+```
+
+>[!TIP]
+>Needed Nugets: GHIElectronics.TinyCLR.Drivers.Microchip.Winc15x0
+
+---
+
+## AccessPoint
+SITCore devices can be set up as a WiFi `AccessPoint`. This creates a 1-to-1 connection between SITCore and other hardware devices through WiFi without the need to connect to a switch. An example might be, connecting a phone directly to the SITCore hardware. This may be necessary in some situations where access to a network isn't possible and a user needs to connect to the device directly. 
+
+>[!TIP]
+>AccessPoint only supports connecting to one device at a time.
+
+Setting up a device as an access point works just like the default `Station` mode except the `Ssid` and now the one the device is broadcasting.
+
+```cs
+var networkInterfaceSetting = new WiFiNetworkInterfaceSettings() {
+    Ssid = "Your SSID",
+    Password = "Your Password",
+    Mode = WiFiMode.AccessPoint,
+};
+
+```
+
+>[!TIP]
+>Only WEP password security is supported. Do not set the `Password` for an open network.
+
+`AccessPoint` can provide an IP address to the connected device when `networkInterfaceSetting.IsDhcpEnabled = true;` through a simple internal DHCP server. If desired, an event is triggered on completion.
+
+```cs
+WiFiNetworkInterfaceSettings wifiSettings = new WiFiNetworkInterfaceSettings() {
+    Ssid = "Your SSID",
+    Password = "Your Password",
+};
+//...
+WiFiNetworkInterfaceSettings wifiSettings.AccessPointClientConnectionChanged += (a, b, c) => {
+    Debug.WriteLine("Provided IP = " + b.ToString());
+    Debug.WriteLine("Connected device's MAC Address = " + c);
+};
+```
+The usual connection event is fired just like in `Station` mode, except in this case it is fired when an external device is connected `NetworkController.NetworkLinkConnectedChanged`.
+
 

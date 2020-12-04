@@ -24,26 +24,84 @@ TinyCLR OS's support of sockets is very similar to .NET socket support. Most .NE
 ## TCP/UDP
 TCP and UDP are the core of the Internet protocols and are supported through standard .NET Sockets. The web is full of examples on using TCP and UDP Sockets that should work as is or with minor changes.
 
----
-
-## DHCP
-TinyCLR OS supports both static and dynamic IP addressing. Note that static IP addressing does not work with [PPP](ppp.md).
-
-The following line of code enables dynamic DHCP. For static IP, set `IsDhcpEnabled` to `false`.
-
+TCP example:
 ```cs
-networkInterfaceSetting2.IsDhcpEnabled = true;
+var s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp)){               
+    try {
+        var ip = IPAddress.Parse("192.168.1.87");                 
+        s.Connect(new IPEndPoint(ip, 80));           
+        s.Send(System.Text.UTF8Encoding.UTF8.GetBytes("I am SITCore\n\r"));
+    }
+    catch {
+    }               
+}
 ```
 
-With static IP addressing, you must provide the following settings. These settings will be ignored if dynamic DHCP is enabled.
+UDP example:
+```cs
+var socket = new System.Net.Sockets.Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+var ip = new IPAddress(new byte[] { 192, 168, 1, 87 });
+var endPoint = new IPEndPoint(ip, 2000);
+
+socket.Connect(endPoint);
+
+byte[] bytesToSend = Encoding.UTF8.GetBytes(msg);
+
+while (true) {
+    socket.SendTo(bytesToSend, bytesToSend.Length, SocketFlags.None, endPoint);
+    while (socket.Poll(2000000, SelectMode.SelectRead)){
+        if (socket.Available > 0){
+            byte[] inBuf = new byte[socket.Available];
+            var recEndPoint = new IPEndPoint(IPAddress.Any, 0);
+            socket.ReceiveFrom(inBuf, ref recEndPoint);
+            if (!recEndPoint.Equals(endPoint))// Check if the received packet is from the 192.168.0.2
+                continue;
+            Debug.WriteLine(new String(Encoding.UTF8.GetChars(inBuf)));
+        }
+    }
+    Thread.Sleep(100);
+}     
+```
+
+---
+
+## IP Assignment
+TinyCLR OS supports both static and dynamic IP addressing. With either method, an event is fired providing the local IP settings.
 
 ```cs
+networkController.NetworkAddressChanged += NetworkController_NetworkAddressChanged;
+// ...
+private static void NetworkController_NetworkAddressChanged
+    (NetworkController sender, NetworkAddressChangedEventArgs e) {
+    var ipProperties = sender.GetIPProperties();
+}
+```
+
+> [!Tip]
+> Static IP addressing does not work with [PPP](ppp.md).
+
+### Static IP
+
+With static IP addressing, the following settings must be provided.
+
+```cs
+networkInterfaceSetting.IsDhcpEnabled = false;
 networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
 networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
 networkInterfaceSetting.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
 networkInterfaceSetting.DnsAddresses = new IPAddress[] { new IPAddress(new byte[]
     { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
 ```
+### Dynamic IP
+
+The following line of code enables dynamic IP, which start by trying to lease an IP from a DHCP server. If that fails, the system will self-assign an IP address through AutoIP mechanism. This can take a while but an event is fired when an IP is available.
+
+```cs
+networkInterfaceSetting.IsDhcpEnabled = true;
+```
+
+> [!Tip]
+> AutoIP addresses always fall within the 169.254.x.x range to determine if an IP was generated using AutoIP
 
 ---
 

@@ -58,7 +58,7 @@ for (uint block = 0; block < data.Length / configStorage.BlockSize; block++) {
 
         if (data[block * configStorage.BlockSize + byteIndex] != dataBlock[byteIndex]) {
             Debug.WriteLine("Configuration storage data is corrupted!");
-            Thread.Sleep(-1);
+            Thread.Sleep(Timeout.Infinite);
         }
     }
 }

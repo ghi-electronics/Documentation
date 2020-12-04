@@ -11,7 +11,7 @@ The system enters this state whenever it is idle, such as when waiting on events
 The system can operate at half speed, saving 40% power consumption with the following commands:
 
 ```cs
-if (Power.GetSystemClock() == SystemClock.High){
+if (Power.GetSystemClock() == SystemClock.High) {
     Power.SetSystemClock(SystemClock.Low);
     Power.Reset();
 }
@@ -20,7 +20,7 @@ if (Power.GetSystemClock() == SystemClock.High){
 Switch back to full speed:
 
 ```cs
-if (Power.GetSystemClock() == SystemClock.Low){
+if (Power.GetSystemClock() == SystemClock.Low) {
     Power.SetSystemClock(SystemClock.High);
     Power.Reset();
 }

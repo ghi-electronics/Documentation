@@ -80,9 +80,64 @@
 <h1 id="usb">USB</h1>
 
 <hr>
-<p>TinyCLR OS supports both USB Client and USB Host and includes support for using USB keyboards, mice, and mass storage devices with your SITCore devices.</p>
+<p>TinyCLR OS supports both USB Client and USB Host.</p>
 <h2 id="usb-client">USB Client</h2>
-<p>USB client support is mainly used for deploying and debugging applications. It can also be used to transfer data between a SITCore device and a PC. See <a href="usb-cdc-winusb.html">USB CDC &amp; WinUSB</a> for details.</p>
+<p>USB client support is used for deploying and debugging applications. However, deploying and debugging can be switched to a serial mode, freeing the USB Client port. The port can be configured to support multiple modes.</p>
+<div class="NOTE"><h5>Note</h5><p>The debug interface needs to be switched to serial (UART) to free up the USB Client port for PC communication. This is accomplished by pulling the MOD pin low during reset as detailed on the <a href="../../../hardware/sitcore/soc.html">SITCore System on Chip</a> page. It is beneficial to add a 1K pull down on MOD to keep the device in serial debug mode indefinitely.</p>
+</div>
+<div class="TIP"><h5>Tip</h5><p>These can all be found in the GHIElectronics.TinyCLR.Devices.UsbClient namespace</p>
+</div>
+<h3 id="usb-mouse">USB Mouse</h3>
+<p>In this mode, SITCore acts as a USB mouse. The driver supports absolute and relative modes. In absolute mode, the <code>MoveCursor</code> method will move the cursor from current location, where ever it might be. Meaning, <code>MoveCursor(10,0)</code> followed by <code>MoveCursor(-10,0)</code> will move the cursor and immediately move it back where it started.</p>
+<p>In absolute mode, <code>MoveCursor</code> sets the cursor from (0,0), which is in the top left corner of the screen.</p>
+<pre><code class="lang-cs">var usbclientController = GetDefault();
+var absolutePosition = true;
+var mouse = new Mouse(usbclientController, absolutePosition);
+
+mouse.DeviceStateChanged += UsbClientDeviceStateChanged;
+mouse.Enable();
+
+//...
+
+private static void UsbClientDeviceStateChanged(RawDevice sender, DeviceState state) {
+var i = 0.0;
+    if (state == DeviceState.Configured) {
+        new Thread(() =&gt; {
+            while (true) {
+                ((Mouse)sender).MoveCursor(
+                    Mouse.MaxRange /4 + (int)(Math.Cos(i) * Mouse.MaxRange / 10),
+                    Mouse.MaxRange /4 + (int)(Math.Sin(i) * Mouse.MaxRange / 10));
+                i+=0.03;
+                Thread.Sleep(50);
+            }
+        }).Start();
+    }
+}
+</code></pre><h3 id="usb-keyboard">USB Keyboard</h3>
+<p>A USB Keyboard is simulated in this mode. The keys used can be <code>Press</code>, <code>Release</code> or <code>Stroke</code> (which is same as a <code>Press</code> followed by <code>Release</code>).</p>
+<pre><code class="lang-cs">var usbClientSetting = new UsbClientSetting() {
+    ManufactureName = &quot;Manufacture_Name&quot;,
+    ProductName = &quot;Product_Name&quot;,
+    SerialNumber = &quot;serialnumber&quot;,
+};
+var usbclientController = UsbClientController.GetDefault();
+var kb = new Keyboard(usbclientController, usbClientSetting);
+var key = new Key[] { Key.G, Key.H, Key.I, Key.Space, Key.E, Key.L, Key.E, Key.C, Key.T, Key.R, Key.O, Key.N, Key.I, Key.C, Key.S };
+kb.Enable();
+
+while (kb.DeviceState != DeviceState.Configured)
+    Thread.Sleep(100);// wait or use events
+
+kb.Press(Key.LeftShift);// hold shift down
+for (var i = 0; i &lt; key.Length; i++) {
+    kb.Stroke(key[i]);
+    Thread.Sleep(500);// type it twice a second
+}
+kb.Release(Key.LeftShift);// release shift
+</code></pre><h3 id="cdc--winusb">CDC &amp; WinUSB</h3>
+<p>These two modes are used to transfer data between a SITCore device and a PC. See <a href="usb-cdc-winusb.html">USB CDC &amp; WinUSB</a> for details.</p>
+<h3 id="usb-raw">USB Raw</h3>
+<p>For advanced users, virtually any type of USB device can be created using USB Raw. The USB mouse driver inside <a href="https://github.com/ghi-electronics/TinyCLR-Libraries">GHIElectronics.TinyCLR.Devices.UsbClient</a> is a good example of how this can be achieved.   </p>
 <hr>
 <h2 id="usb-host">USB Host</h2>
 <p>The USB Host API supports USB keyboards, mice, raw devices, and USB MSC (Mass Storage Class), which allows file access on USB memory devices. The following code sample shows how to detect devices as they are connected to your SITCore device&#39;s USB host port.</p>
