@@ -61,8 +61,8 @@ To install an encrypted deployment file on your device, first use TinyCLR Config
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[Window 7](http://files.ghielectronics.com/downloads/TinyCLR/Drivers/GHI%20TinyCLR%20WinUsb%20Win7.zip) | 2020-12-04 | Preview | 1A6EB8B0E31635A62C6B2ABA5AA5D514
-[Window 8](http://files.ghielectronics.com/downloads/TinyCLR/Drivers/GHI%20TinyCLR%20WinUsb%20Win7.zip) | 2020-12-04 | Preview | 59C708184BD357E389F37CE87B6D2FB5
+[Window 7](http://files.ghielectronics.com/downloads/TinyCLR/Drivers/GHI%20TinyCLR%20WinUsb%20Win7.zip) | 2020-12-04 | Preview | AE1462EA84EA5579A5DDA1A241B9B708
+[Window 8](http://files.ghielectronics.com/downloads/TinyCLR/Drivers/GHI%20TinyCLR%20WinUsb%20Win7.zip) | 2020-12-04 | Preview | 158086B77406B126DABFEE02011A57F4
 
 ***
 
