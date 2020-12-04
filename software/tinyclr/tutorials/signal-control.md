@@ -116,7 +116,9 @@ private static void Digital_OnReadPulseReady(DigitalSignal sender, TimeSpan dura
     }
 }
 ```
->[!TIP] In the sample code above you can use PWM to provide the pulse needed to verify the code. Keep in mind that both PWM and DigitalSignal share resources, so a different Timer controller must be used.
+
+> [!TIP] 
+> In the sample code above you can use PWM to provide the pulse needed to verify the code. Keep in mind that both PWM and DigitalSignal share resources, so a different Timer controller must be used.
 
 ---
 

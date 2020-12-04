@@ -86,12 +86,12 @@ In sleep mode, any GPIO interrupt can be used to wake the board, but in Shutdown
 <p>The system enters this state whenever it is idle, such as when waiting on events and there are no running threads. This is automatic and they user is not required to take any action.</p>
 <h2 id="slow-clock-speed">Slow Clock Speed</h2>
 <p>The system can operate at half speed, saving 40% power consumption with the following commands:</p>
-<pre><code class="lang-cs">if (Power.GetSystemClock() == SystemClock.High){
+<pre><code class="lang-cs">if (Power.GetSystemClock() == SystemClock.High) {
     Power.SetSystemClock(SystemClock.Low);
     Power.Reset();
 }
 </code></pre><p>Switch back to full speed:</p>
-<pre><code class="lang-cs">if (Power.GetSystemClock() == SystemClock.Low){
+<pre><code class="lang-cs">if (Power.GetSystemClock() == SystemClock.Low) {
     Power.SetSystemClock(SystemClock.High);
     Power.Reset();
 }

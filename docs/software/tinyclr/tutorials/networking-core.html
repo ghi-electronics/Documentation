@@ -94,18 +94,64 @@
 <hr>
 <h2 id="tcpudp">TCP/UDP</h2>
 <p>TCP and UDP are the core of the Internet protocols and are supported through standard .NET Sockets. The web is full of examples on using TCP and UDP Sockets that should work as is or with minor changes.</p>
-<hr>
-<h2 id="dhcp">DHCP</h2>
-<p>TinyCLR OS supports both static and dynamic IP addressing. Note that static IP addressing does not work with <a href="ppp.html">PPP</a>.</p>
-<p>The following line of code enables dynamic DHCP. For static IP, set <code>IsDhcpEnabled</code> to <code>false</code>.</p>
-<pre><code class="lang-cs">networkInterfaceSetting2.IsDhcpEnabled = true;
-</code></pre><p>With static IP addressing, you must provide the following settings. These settings will be ignored if dynamic DHCP is enabled.</p>
-<pre><code class="lang-cs">networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
+<p>TCP example:</p>
+<pre><code class="lang-cs">var s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp)){               
+    try {
+        var ip = IPAddress.Parse(&quot;192.168.1.87&quot;);                 
+        s.Connect(new IPEndPoint(ip, 80));           
+        s.Send(System.Text.UTF8Encoding.UTF8.GetBytes(&quot;I am SITCore\n\r&quot;));
+    }
+    catch {
+    }               
+}
+</code></pre><p>UDP example:</p>
+<pre><code class="lang-cs">var socket = new System.Net.Sockets.Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+var ip = new IPAddress(new byte[] { 192, 168, 1, 87 });
+var endPoint = new IPEndPoint(ip, 2000);
+
+socket.Connect(endPoint);
+
+byte[] bytesToSend = Encoding.UTF8.GetBytes(msg);
+
+while (true) {
+    socket.SendTo(bytesToSend, bytesToSend.Length, SocketFlags.None, endPoint);
+    while (socket.Poll(2000000, SelectMode.SelectRead)){
+        if (socket.Available &gt; 0){
+            byte[] inBuf = new byte[socket.Available];
+            var recEndPoint = new IPEndPoint(IPAddress.Any, 0);
+            socket.ReceiveFrom(inBuf, ref recEndPoint);
+            if (!recEndPoint.Equals(endPoint))// Check if the received packet is from the 192.168.0.2
+                continue;
+            Debug.WriteLine(new String(Encoding.UTF8.GetChars(inBuf)));
+        }
+    }
+    Thread.Sleep(100);
+}     
+</code></pre><hr>
+<h2 id="ip-assignment">IP Assignment</h2>
+<p>TinyCLR OS supports both static and dynamic IP addressing. With either method, an event is fired providing the local IP settings.</p>
+<pre><code class="lang-cs">networkController.NetworkAddressChanged += NetworkController_NetworkAddressChanged;
+// ...
+private static void NetworkController_NetworkAddressChanged
+    (NetworkController sender, NetworkAddressChangedEventArgs e) {
+    var ipProperties = sender.GetIPProperties();
+}
+</code></pre><div class="TIP"><h5>Tip</h5><p>Static IP addressing does not work with <a href="ppp.html">PPP</a>.</p>
+</div>
+<h3 id="static-ip">Static IP</h3>
+<p>With static IP addressing, the following settings must be provided.</p>
+<pre><code class="lang-cs">networkInterfaceSetting.IsDhcpEnabled = false;
+networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
 networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
 networkInterfaceSetting.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
 networkInterfaceSetting.DnsAddresses = new IPAddress[] { new IPAddress(new byte[]
     { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
-</code></pre><hr>
+</code></pre><h3 id="dynamic-ip">Dynamic IP</h3>
+<p>The following line of code enables dynamic IP, which start by trying to lease an IP from a DHCP server. If that fails, the system will self-assign an IP address through AutoIP mechanism. This can take a while but an event is fired when an IP is available.</p>
+<pre><code class="lang-cs">networkInterfaceSetting.IsDhcpEnabled = true;
+</code></pre><div class="TIP"><h5>Tip</h5><p>AutoIP addresses always fall within the 169.254.x.x range to determine if an IP was generated using AutoIP</p>
+</div>
+<hr>
 <h2 id="dns">DNS</h2>
 <p>The TinyCLR Dns class can be used to resolve a URL into its IP address by using the following code:</p>
 <pre><code class="lang-cs">var hostEntry = Dns.GetHostEntry(hostName);

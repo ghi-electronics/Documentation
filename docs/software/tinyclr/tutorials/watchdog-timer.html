@@ -80,19 +80,30 @@
 <h1 id="watchdog">Watchdog</h1>
 
 <hr>
-<p>A watchdog timer is used to reset the system if the system fails or locks up. A watchdog timer is a countdown timer that will reset the system when the timer reaches zero. During normal operation, the application will regularly reset the watchdog timer so it never reaches zero and doesn&#39;t reset the system. However, when the system fails or locks up, the timer will time out and reset the system.</p>
+<p>A watchdog timer is used to reset the system if the system fails or locks up. </p>
+<p>During normal operation, the application will regularly reset the watchdog timer so it never reaches zero and doesn&#39;t reset the system. </p>
 <div class="NOTE"><h5>Note</h5><p>Once Watchdog is enabled it can&#39;t be disabled without resetting the system or a power cycle.</p>
 </div>
-<pre><code class="lang-cs">// Set watchdog to 5 seconds and reset it every 4 seconds
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Devices.Watchdog </p>
+</div>
+<p>It&#39;s recommend to run Watchdog inside a thread in the application.  </p>
+<pre><code class="lang-cs">new Thread(RunWatchDog).Start();
 
-Watchdog.Enable(5000);
+static void RunWatchDog() {
 
-While(true){
-              // reset the timer
-              Watchdog.Reset()
-              Thread.Sleep(4000);
+    // Set watchdog to 5 seconds and reset it every 4 seconds
+    var WatchDog = WatchdogController.GetDefault();
+    WatchDog.Enable(5000);
+
+    while (true) {
+        //reset the timer
+        WatchDog.Reset();
+        Thread.Sleep(4000);
+    }
 }
-</code></pre><div class="NOTE"><h5>Note</h5><p>Enabling the watchdog timer when debugging is a bad idea since the system will probably reset while stepping through code.</p>
+</code></pre><div class="TIP"><h5>Tip</h5><p>Set your Watchdog timer to a reasonable amount of time, setting it too low will cause the application to constantly reset. </p>
+</div>
+<div class="NOTE"><h5>Note</h5><p>Enabling the watchdog timer when debugging is a bad idea since the system will probably reset while stepping through code.</p>
 </div>
 </article>
           </div>
