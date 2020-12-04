@@ -12,57 +12,61 @@ USB client support is used for deploying and debugging applications. However, de
 > These can all be found in the GHIElectronics.TinyCLR.Devices.UsbClient namespace
 
 ### USB Mouse
-In this mode, SITCore acts as a USB mouse.
+In this mode, SITCore acts as a USB mouse. The driver supports absolute and relative modes. In absolute mode, the `MoveCursor` method will move the cursor from current location, where ever it might be. Meaning, `MoveCursor(10,0)` followed by `MoveCursor(-10,0)` will move the cursor and immediately move it back where it started.
+
+In absolute mode, `MoveCursor` sets the cursor from (0,0), which is in the top left corner of the screen.
 
 ```cs
-var usbclientController = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
+var usbclientController = GetDefault();
+var absolutePosition = true;
+var mouse = new Mouse(usbclientController, absolutePosition);
 
-var usbClientSetting = new UsbClientSetting() {
-    ManufactureName = "Manufacture_Name",
-    ProductName = "Product_Name",
-    SerialNumber = "serialnumber",  
-};
- 
-var mouse = new Mouse(usbclientController, usbClientSetting);
 mouse.DeviceStateChanged += UsbClientDeviceStateChanged;
 mouse.Enable();
 
-```
+//...
 
-#### Absolute and Relative mode
-Default, SITCore acts as a USB mouse in relative mode. To enable absolute:
-
-```
-var absoluteMode = true;
-var mouse = new Mouse(usbclientController, usbClientSetting, absoluteMode);
-```
-or
-
-```
-var absoluteMode = true;
-var mouse = new Mouse(usbclientController, absoluteMode);
+private static void UsbClientDeviceStateChanged(RawDevice sender, DeviceState state) {
+var i = 0.0;
+    if (state == DeviceState.Configured) {
+        new Thread(() => {
+            while (true) {
+                ((Mouse)sender).MoveCursor(
+                    Mouse.MaxRange /4 + (int)(Math.Cos(i) * Mouse.MaxRange / 10),
+                    Mouse.MaxRange /4 + (int)(Math.Sin(i) * Mouse.MaxRange / 10));
+                i+=0.03;
+                Thread.Sleep(50);
+            }
+        }).Start();
+    }
+}
 ```
 
 ### USB Keyboard
-A USB Keyboard is simulated in this mode.
+A USB Keyboard is simulated in this mode. The keys used can be `Press`, `Release` or `Stroke` (which is same as a `Press` followed by `Release`).
 
 ```cs
-var usbclientController = GHIElectronics.TinyCLR.Devices.UsbClient.UsbClientController.GetDefault();
-
 var usbClientSetting = new UsbClientSetting() {
     ManufactureName = "Manufacture_Name",
     ProductName = "Product_Name",
     SerialNumber = "serialnumber",
 };
-
+var usbclientController = UsbClientController.GetDefault();
 var kb = new Keyboard(usbclientController, usbClientSetting);
-
 var key = new Key[] { Key.G, Key.H, Key.I, Key.Space, Key.E, Key.L, Key.E, Key.C, Key.T, Key.R, Key.O, Key.N, Key.I, Key.C, Key.S };
+kb.Enable();
 
-for(var i; i < key.Length; i++)
+while (kb.DeviceState != DeviceState.Configured)
+    Thread.Sleep(100);// wait or use events
+
+kb.Press(Key.LeftShift);// hold shift down
+for (var i = 0; i < key.Length; i++) {
     kb.Stroke(key[i]);
-
+    Thread.Sleep(500);// type it twice a second
+}
+kb.Release(Key.LeftShift);// release shift
 ```
+
 ### CDC & WinUSB
 These two modes are used to transfer data between a SITCore device and a PC. See [USB CDC & WinUSB](usb-cdc-winusb.md) for details.
 
