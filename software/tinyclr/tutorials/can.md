@@ -105,8 +105,10 @@ Filters can be set to automatically accept or ignore messages based on their arb
 
 In the sample code below, CAN messages with arbitration IDs of `0x11`, `0x13`, and `0x5678` will be accepted in addition to the arbitration IDs specified by the group filters.
 
----
+> [!Tip]
+> SITCore hardware supports up to 128 filter slots; however, each extended ID uses 2 slots.
 
+---
 ## Sample Code
 The following sample code is written for our SITCore SC20100S Dev Board.
 
