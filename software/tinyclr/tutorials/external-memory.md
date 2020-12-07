@@ -25,6 +25,9 @@ GHIElectronics.TinyCLR.Native.Power.Reset();
 ```
 Since external memory chips can be probed, TinyCLR supports `Secure Assemblies`. See the [IP Protection](ip-protection.md) page for more information.
 
+> [!TIP]
+> [TinyCLR Config](../tinyclr-config.md) can be used to display the internal `Deployment Map`.
+
 The entire 16MB of flash, or 8MB when deployment is extended, can be used directly by reading/writing raw sectors. However, using the available [Tiny File System](file-system.md) is recommended.
 
 
