@@ -60,7 +60,7 @@ controller.Provider.Read(address, buffer, 0, buffer.Length, -1);
 
 Tiny File System(TFS) can be used to access any memory storage as a file system. All that is needed is a basic driver to Read, Write, and Erase these storages. 
 
-Below is an example that uses 16MB of built in QSPI as a file system.
+Below is an example that uses the external QSPI flash through TFS. It automatically sets the size appropriately depending on whether the deployment is extended or not, as explained on the [External Flash](external-memory.md) page.
 
 > [!Note]
 > This example requires the `GHIElectronics.TinyCLR.IO.TinyFileSystem`
@@ -110,7 +110,8 @@ using GHIElectronics.TinyCLR.Devices.Storage.Provider;
 public sealed class QspiMemory : IStorageControllerProvider {
     public StorageDescriptor Descriptor => this.descriptor;
 
-    private StorageDescriptor descriptor = new StorageDescriptor(){
+    private StorageDescriptor descriptor = new StorageDescriptor()
+    {        
         CanReadDirect = false,
         CanWriteDirect = false,
         CanExecuteDirect = false,
@@ -118,9 +119,9 @@ public sealed class QspiMemory : IStorageControllerProvider {
         Removable = true,
         RegionsContiguous = true,
         RegionsEqualSized = true,
-        RegionCount = 0x100,
         RegionAddresses = new long[] { 0 },
-        RegionSizes = new int[] { 0x1000 },
+        RegionSizes = new int[] { 4 * 1024 },
+        RegionCount = Flash.IsEnabledExternalFlash() ? (8 * 1024 * 1024) : (16 * 1024 * 1024) / (SectorSize),
     };
 
     private IStorageControllerProvider qspiDrive;
