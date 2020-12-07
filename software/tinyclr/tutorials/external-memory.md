@@ -15,14 +15,20 @@ GHIElectronics.TinyCLR.Native.Power.Reset();
 ---
 
 ## External Flash
-Devices with external flash have the option of using up to 8 MBytes of this memory for deployment. This is done by using [TinyCLR Config](../tinyclr-config.md) to enable external flash, or by using the following method, you'll also have to follow with software reset method:
+An optional 16MB QSPI external flash can be used to increase the available flash memory. In fact, most SITCore SoMs/boards already include this 16MB external flash.
+
+8MB of the optional external flash can be used to extend the deployment region, which holds the application and its resources. This is done by using [TinyCLR Config](../tinyclr-config.md) or by using the following method:
+
 ```cs
 GHIElectronics.TinyCLR.Native.Flash.EnableExternalFlash()
 GHIElectronics.TinyCLR.Native.Power.Reset();
 ```
-On SITCore devices that include external flash, there is another 8 MBytes we are reserving for future use.
+Since external memory chips can be probed, TinyCLR supports `Secure Assemblies`. See the [IP Protection](ip-protection.md) page for more information.
 
-As external memory chips can possibly be probed, enabling external flash has important security implications. See the [IP Protection](ip-protection.md) page for more information.
+> [!TIP]
+> [TinyCLR Config](../tinyclr-config.md) can be used to display the internal `Deployment Map`.
+
+The entire 16MB of flash, or 8MB when deployment is extended, can be used directly by reading/writing raw sectors. However, using the available [Tiny File System](file-system.md) is recommended.
 
 
 
