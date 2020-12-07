@@ -88,7 +88,7 @@
 <div class="TIP"><h5>Tip</h5><p>These can all be found in the GHIElectronics.TinyCLR.Devices.UsbClient namespace</p>
 </div>
 <h3 id="usb-mouse">USB Mouse</h3>
-<p>In this mode, SITCore acts as a USB mouse. The driver supports absolute and relative modes. In absolute mode, the <code>MoveCursor</code> method will move the cursor from current location, where ever it might be. Meaning, <code>MoveCursor(10,0)</code> followed by <code>MoveCursor(-10,0)</code> will move the cursor and immediately move it back where it started.</p>
+<p>In this mode, SITCore acts as a USB mouse. The driver supports absolute and relative modes. In relative mode, the <code>MoveCursor</code> method will move the cursor from current location, where ever it might be. Meaning, <code>MoveCursor(10,0)</code> followed by <code>MoveCursor(-10,0)</code> will move the cursor and immediately move it back where it started.</p>
 <p>In absolute mode, <code>MoveCursor</code> sets the cursor from (0,0), which is in the top left corner of the screen.</p>
 <pre><code class="lang-cs">var usbclientController = GetDefault();
 var absolutePosition = true;

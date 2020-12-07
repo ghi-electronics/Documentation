@@ -12,7 +12,7 @@ USB client support is used for deploying and debugging applications. However, de
 > These can all be found in the GHIElectronics.TinyCLR.Devices.UsbClient namespace
 
 ### USB Mouse
-In this mode, SITCore acts as a USB mouse. The driver supports absolute and relative modes. In absolute mode, the `MoveCursor` method will move the cursor from current location, where ever it might be. Meaning, `MoveCursor(10,0)` followed by `MoveCursor(-10,0)` will move the cursor and immediately move it back where it started.
+In this mode, SITCore acts as a USB mouse. The driver supports absolute and relative modes. In relative mode, the `MoveCursor` method will move the cursor from current location, where ever it might be. Meaning, `MoveCursor(10,0)` followed by `MoveCursor(-10,0)` will move the cursor and immediately move it back where it started.
 
 In absolute mode, `MoveCursor` sets the cursor from (0,0), which is in the top left corner of the screen.
 
