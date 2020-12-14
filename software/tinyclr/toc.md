@@ -25,6 +25,7 @@
 ### [Application Domain](tutorials/application-domain.md)
 ### [Marshal](tutorials/marshal.md)
 ### [RegEx](tutorials/regex.md)
+### [Stream](tutorials/stream.md)
 
 ## Multimedia
 ### [Graphics](tutorials/graphics.md)
