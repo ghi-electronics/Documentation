@@ -4,6 +4,18 @@ The `GHIElectronics.TinyCLR.Drawing` NuGet package includes the backbone for all
 
 Shape examples are `Graphics.FillEllipse`, `Graphics.DrawLine` and `Graphics.DrawRectangle`. These methods need `Pen` and `Brush` that are also part of `Graphics`.
 
+Besides the basic methods above, there are some additional useful methods found inside the Graphics library. 
+
+| Method                      | Description                                                |
+|-----------------------------|------------------------------------------------------------|
+| `TileImage`             | Used to tile the image over a any area on the screen.|
+| `DrawTextInRect`        | Confines text to a specific rectangle area of the screen. Parameters can be set to justify or word wrap the text inside the rectangle's area.|
+| `SetClippingRectangle`  | Creates a rectangle area on the screen where only the area within that rectangle is drawn.|
+| `MakeTransparent`      | Used to select a color within an image that appears transparent.|
+| `Scale9Image`           | Used to scale the size of an image. You can also stretch specific areas within the image itself, opacity can also be controlled.|
+| `MeasureString`        | Used to measure a string size in pixels, when using a specific font.|
+
+
 ## Native Displays
 Native display support in TinyCLR OS is handled automatically using the microcontroller's DMA to transfer data to the display without slowing down your application. Because of this, native displays can be much larger in size and resolution while using less processor time than non-native displays. Additionally, native displays usually transfer data in parallel as opposed to the serial transfer usually used with non-native displays, so the data is transferred much more quickly.
 
