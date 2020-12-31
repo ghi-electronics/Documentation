@@ -2,6 +2,97 @@
 ---
 ![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
 
+## 2.1.0 - Preview3
+
+### Released 2021-01-06
+
+### Visual Studio Project System
+
+#### Changes
+- Updated version number 2.1.300
+
+#### Known Issues
+- Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
+- Debug breakpoints sometimes hang for 5-6 seconds before resuming normally (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/659)
+
+### Libraries
+
+#### Changes
+- Updated version number 2.1.0-preview3.
+- Change IFU Api. Support network stream, file stream, memory stream.
+- IFU: Support update firmware on SC20100.
+- UART: Rename USART to UART
+- Improved Digital Signal: Use double (fraction) for more accurate.
+- Improve networking sending speed.
+- WiFI: Fixed DHCP Server Null-pointer Exception
+- Fixed DNS address not retrieved from DHCP
+- Fixed WiFi: Socket closed if call Scan() 
+- Graphic: Support Flush(x, y, width, height)
+- Graphic: Support sending buffer to SPI display with custom size
+- Graphic: Flush event support multi screens.
+- Add DrawTextInRect
+- Fixed Rotate Bitmap crash.
+- Fixed SPI: support sending more than 64KB
+- Json: Support compact formatting.
+- Fixed File open for read in share mode not work.
+- UsbClient: Rename ByteToRead to BytesToRead 
+- Slow Clock: Support persist mode.
+- Add Software PWM.
+- Add Mdns
+- Add sampling time for ADC
+- Add VNC
+
+
+#### Known Issues
+- Exception filter causes lockup when exception thrown from instance method (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/652)
+- GetChars throwing on certain byte values (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/651)
+- Double ToString() show number incorrectly sometime  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/629)
+- Running out of stack kills Visual studio (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/586)
+- Network operations on any thread block all threads  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/525)
+- String does not implement IEnumerable  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/323)
+- Equals() throws unsupported instruction exception  (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/502)
+
+### TinyCLR Config
+
+#### Changes
+- Updated version number 2.1.0-preview3 
+- Add Persist slow clock option in Device Configuration.
+- No longer support glb file format.
+
+#### Known Issues
+- Erase all doesn't erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+- None.
+
+#### Known Issues
+- None.
+
+### Firmware
+
+#### Changes
+- Updated version number 2.1.0.30000.
+- Reduced external deployment size from 8MB to 6MB.
+- Improved Network sending speed.
+
+#### Known Issue
+- None.
+
+### Drivers
+
+#### Changes
+- Updated version number 2.1.0-preview3.
+- Add motor servo driver.
+- Add ILI9341 SPI 320x240 driver.
+
+#### Known Issues
+- None.
+
+---
+
 ## 2.1.0 - Preview2
 
 ### Released 2020-12-04
