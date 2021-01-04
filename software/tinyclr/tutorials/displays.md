@@ -14,7 +14,7 @@ These displays connect to special dedicated pins on the processor. Internally, t
 ## Virtual Displays
 The internal graphics services can be mapped to work with virtual display displays. This is done by accessing graphics memory directly, and then writing the graphics memory contents to the desired display.
 ```cs
-private static void Graphics_OnFlushEvent(IntPtr hdc, byte[] data) {
+private static void Graphics_OnFlushEvent(Graphics sender, byte[] data, int x, int y, int width, int height, int originalWidth) {
        st7735.DrawBuffer(data);
 }
 ```
