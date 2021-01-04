@@ -93,6 +93,29 @@ class Program {
 }
 ```
 
+## Software PWM
+Because hardware PWM work at high speed and accurate, but it is limitted to some speical pins that support PWM internally.
+TinyCLR provide software PWM that work on any pins, and same API as hardware PWM.
+
+
+```
+
+var softwarePwmController = PwmController.FromName(SC20260.Timer.Pwm.Software.Id);
+var pwmPinPB3 = softwarePwmController.OpenChannel(SC20260.GpioPin.PB3);
+
+softwarePwmController.SetDesiredFrequency(1000); // set frequency 1KHz
+pwmPinPB3.SetActiveDutyCyclePercentage(0.5);
+
+pwmPinPB3.Start();
+
+Thread.Sleep(10 * 1000); //Delay 10 second
+
+pwmPinPB3.Stop();
+
+```
+
+The range thatsofware pwm can support is from 15.4Hz to 10KHz.
+
 ---
 
 ## Servo Motors
@@ -108,114 +131,29 @@ This example is written for the SC20100S Dev Board. It will turn the positional 
 > [!Tip]
 > Most servos will have a 1 ms minimum pulse width and a 2 ms maximum pulse width, but check the specs of the motor to be sure.
 
-```cs
-using GHIElectronics.TinyCLR.Pins;
-using GHIElectronics.TinyCLR.Devices.Pwm;
-using GHIElectronics.TinyCLR.Devices.Servo;
-using System.Threading;
-
-class Program {
-    private static void Main() {
-        ServoMotor servo1 = new ServoMotor(ServoMotor.ServoType.Positional,
-            PwmController.FromName(SC20100.Timer.Pwm.Controller15.Id),
-            SC20100.Timer.Pwm.Controller15.PE6);
-        
-        servo1.ConfigurePulseParameters(0.5, 2.4);  //Settings for TowerPro SG90 micro servo.
-
-        ServoMotor servo2 = new ServoMotor(ServoMotor.ServoType.Continuous,
-            PwmController.FromName(SC20100.Timer.Pwm.Controller2.Id),
-            SC20100.Timer.Pwm.Controller2.PA3);
-
-        servo1.Set(0);
-        Thread.Sleep(1000);
-        servo1.Set(180);
-        Thread.Sleep(1000);
-        servo1.Stop();
-
-        servo2.Set(100);
-        Thread.Sleep(5000);
-        servo2.Set(-100);
-        Thread.Sleep(5000);
-        servo2.Stop();
-
-        Thread.Sleep(Timeout.Infinite);
-    }
-}
-```
-
-This is the servo.cs class that provides the methods used in the above code to control the servos:
+> [!Tip]
+> Needed NuGets: System.Threading, GHIElectronics.TinyCLR.Pins, GHIElectronics.TinyCLR.Devices.Pwm, GHIElectronics.TinyCLR.Drivers.Motor.Servo
 
 ```cs
-using GHIElectronics.TinyCLR.Devices.Pwm;
-using System;
+var softwarePwmController = PwmController.FromName(SC20260.Timer.Pwm.Software.Id);
+var pwmPinPB3 = softwarePwmController.OpenChannel(SC20260.GpioPin.PB3);
 
-namespace GHIElectronics.TinyCLR.Devices.Servo {
-    public class ServoMotor {
-        private PwmChannel servo;
-        private ServoType type;
+var servo = new ServoController(PwmController.FromName(SC20260.Timer.Pwm.Software.Id), pwmPinPB3);
 
-        private double minPulseLength;
-        private double maxPulseLength;
-        public double position { get; set; }
+servo.Set(0); // 0 degree
 
-        public enum ServoType {
-            Positional,
-            Continuous
-        }
+Thread.Sleep(2000);
 
-        public ServoMotor(ServoType type, PwmController controller, int PwmPin) {
-            this.servo = controller.OpenChannel(PwmPin);
-            this.ConfigurePulseParameters(1.0, 2.0);
-            controller.SetDesiredFrequency(50);
+servo.Set(45.0); // 45 degree
 
-            this.type = type;
-            this.position = 0;
-        }
+Thread.Sleep(2000);
 
-        public void ConfigurePulseParameters(double minimumPulseWidth,
-            double maximumPulseWidth) {
+servo.Set(90.0);  // 90 degree
 
-            if (minimumPulseWidth > 1.5 || minimumPulseWidth < 0.1)
-                throw new ArgumentOutOfRangeException("Must be between 0.1 and 1.5 ms");
+Thread.Sleep(2000);
 
-            if (maximumPulseWidth > 3 || maximumPulseWidth < 1.6)
-                throw new ArgumentOutOfRangeException("Must be between 1.6 and 3 ms");
+servo.Set(180.0); // 180 degree
 
-            this.minPulseLength = minimumPulseWidth;
-            this.maxPulseLength = maximumPulseWidth;
-        }
-
-        public void Set(double value) {
-            if (this.type == ServoType.Positional) {
-                this.PositionalSetPosition(value);
-                this.position = value;
-            }
-            else {
-                this.ContinousSetSpeed(value);
-            }
-        }
-
-        private void PositionalSetPosition(double angle) {
-            if (angle < 0 || angle > 180)
-                throw new ArgumentOutOfRangeException("degrees",
-                    "degrees must be between 0 and 180.");
-
-            var duty = ((angle / 180.0 * (this.maxPulseLength - this.minPulseLength))
-                + this.minPulseLength) / 20;
-
-            this.servo.SetActiveDutyCyclePercentage(duty);
-            this.servo.Start();
-        }
-
-        private void ContinousSetSpeed(double speed) {
-            if (speed < -100 || speed > 100)
-                throw new ArgumentOutOfRangeException("speed",
-                    "speed must be between -100 and 100.");
-
-            PositionalSetPosition(speed / 100 * 90 + 90);
-        }
-
-        public void Stop() => this.servo.Stop();
-    }
-}
+Thread.Sleep(4000);
+ 
 ```
