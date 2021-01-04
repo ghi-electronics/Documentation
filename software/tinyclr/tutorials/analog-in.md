@@ -22,3 +22,34 @@ while (true) {
     Thread.Sleep(100);
 }
 ```
+
+## Support Sampling timing
+
+```cs
+var adc1 = AdcController.FromName(SC20100.Adc.Controller1.Id);
+
+var adcPC0 = adc1.OpenChannel(SC20260.Adc.Controller1.PC0);
+
+adcPC0.SamplingTime = TimeSpan.FromTicks(1000); // 100us sampling.
+
+```
+
+### Sampling Time range
+
+SamplingTime range is from 1.5 to 810.5 clock cyles, with one cyle is 15.625ns.
+
+Only these value below are accepted:
+```cs
+ADC_SAMPLETIME_1.5;
+ADC_SAMPLETIME_2.5;
+ADC_SAMPLETIME_8.5;
+ADC_SAMPLETIME_16.5;
+ADC_SAMPLETIME_32.5;
+ADC_SAMPLETIME_64.5;
+ADC_SAMPLETIME_387.5;
+ADC_SAMPLETIME_810.5;
+```
+
+If the SamplingTime is between two values above, the higher values will be picked and used.
+
+Default is 8.5 cycles.

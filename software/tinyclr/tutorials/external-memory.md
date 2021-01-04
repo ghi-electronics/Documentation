@@ -20,7 +20,7 @@ An optional 16MB QSPI external flash can be used to increase the available flash
 8MB of the optional external flash can be used to extend the deployment region, which holds the application and its resources. This is done by using [TinyCLR Config](../tinyclr-config.md) or by using the following method:
 
 ```cs
-GHIElectronics.TinyCLR.Native.Flash.EnableExternalFlash()
+GHIElectronics.TinyCLR.Native.Flash.EnableExtendDeployment()
 GHIElectronics.TinyCLR.Native.Power.Reset();
 ```
 Since external memory chips can be probed, TinyCLR supports `Secure Assemblies`. See the [IP Protection](ip-protection.md) page for more information.
