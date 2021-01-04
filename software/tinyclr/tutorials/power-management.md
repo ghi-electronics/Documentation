@@ -10,16 +10,9 @@ The system enters this state whenever it is idle, such as when waiting on events
 
 The system can operate at half speed, saving 40% power consumption with the following commands:
 
-> [!Note]
-
-> "persist" is false means the flag is temporary saved into RAM which will be lost if disconnect power.
-> "persist" is true means the flag is saved to flash which is only clear when reflash firmware.
-
 ```cs
-var persist = false; // false: temporary save into RAM. True: Save to Flash which is only clear when reflash firmware.
-
 if (Power.GetSystemClock() == SystemClock.High) {
-    Power.SetSystemClock(SystemClock.Low, persist);
+    Power.SetSystemClock(SystemClock.Low, false);
     Power.Reset();
 }
 ```
@@ -27,16 +20,17 @@ if (Power.GetSystemClock() == SystemClock.High) {
 Switch back to full speed (only if "persist" was in RAM ):
 
 ```cs
-var persist = false; // false: temporary save into RAM. True: Save to Flash which is only clear when reflash firmware.
-
 if (Power.GetSystemClock() == SystemClock.Low) {
-    Power.SetSystemClock(SystemClock.High, persist);
+    Power.SetSystemClock(SystemClock.High, false);
     Power.Reset();
 }
 ```
-> [!Note]
-> Changing the clock speed requires a software reset in the code. Calling this reset detaches the debugger. 
-> If necessary you'll need to redeploy to the device to continue debugging.
+
+Calling `Power.Reset()` will retain the set clock speed but hardware reset or power cycle will revert to the default state. However, the clock can permanently be set to low speed, and only reversed with firmware update or complete device erase.
+
+```cs
+Power.SetSystemClock(SystemClock.High, false);
+```
 
 ## Sleep 
 In this mode the system goes to sleep to save power and wakes up and resumes processing when the assigned interrupt is received. Any GPIO interrupt can be used to wake from Sleep. The following example runs on both the SC20100 and SCM20260D Dev boards and uses the LDR button to wake up. 

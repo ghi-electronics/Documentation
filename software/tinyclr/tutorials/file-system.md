@@ -60,7 +60,7 @@ controller.Provider.Read(address, buffer, 0, buffer.Length, -1);
 
 Tiny File System(TFS) can be used to access any memory storage as a file system. All that is needed is a basic driver to Read, Write, and Erase these storages. 
 
-Below is an example that uses the external QSPI flash through TFS. It automatically sets the size appropriately depending on whether the deployment is extended or not, as explained on the [External Flash](external-memory.md) page.
+Below is an example that uses the external flash through TFS.
 
 > [!Note]
 > This example requires the `GHIElectronics.TinyCLR.IO.TinyFileSystem`
@@ -99,7 +99,7 @@ using (var fsRead = tfs.Open("settings.dat", FileMode.Open)) {
     }
 }
 ```
-Below is a basic driver implementation utilizing QSPI:
+Below is a basic driver implementation utilizing QSPI external flash. It automatically sets the size appropriately depending on whether the deployment is extended or not, as explained on the [External Flash](external-memory.md) page. It however gives you the option to fix the size to 2MB, as the remaining 8MB can optionally be used by [InField Update](in-field-update.md).
 
 ```cs
 using System;
@@ -109,6 +109,7 @@ using GHIElectronics.TinyCLR.Devices.Storage.Provider;
 
 public sealed class QspiMemory : IStorageControllerProvider {
     public StorageDescriptor Descriptor => this.descriptor;
+    bool fixTo2MB = false;
 
     private StorageDescriptor descriptor = new StorageDescriptor()
     {        
@@ -121,8 +122,12 @@ public sealed class QspiMemory : IStorageControllerProvider {
         RegionsEqualSized = true,
         RegionAddresses = new long[] { 0 },
         RegionSizes = new int[] { 4 * 1024 },
-        RegionCount = Flash.IsEnabledExternalFlash() ? (8 * 1024 * 1024) : (16 * 1024 * 1024) / (SectorSize),
+        RegionCount = (2 * 1024 * 1024) / (SectorSize),
+
     };
+
+    if(fixTo2MB == false)
+        descriptor.RegionCount = Flash.IsEnabledExtendDeployment ? (10 * 1024 * 1024 / SectorSize) : (16 * 1024 * 1024 / SectorSize);
 
     private IStorageControllerProvider qspiDrive;
     

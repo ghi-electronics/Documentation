@@ -17,18 +17,20 @@ Once your device is connected, you can ping the device using the `Ping` command 
 The deployment map can be used to gauge the resources used by your application, but more importantly it allows you to make sure assemblies are stored in secure internal flash memory. See the [IP Protection](tutorials/ip-protection.md) page for more information about secure assemblies.
 
 ### Device Configuration
-![Device Configuration](images/device-configuration.png)
+![Device Configuration](images/device-config.png)
 
 The device configuration options have very important implications for system security. For more information on protecting your application and data, please refer to the [IP Protection](tutorials/ip-protection.md) page of this documentation.
 
 #### Firmware Configuration
-The `Extend heap` and `Enable external flash` firmware configuration options both expand internal memory by allowing the use of external memory chips. Once external heap or flash are enabled, you will need to reflash the firmware or completely erase the device to disable external memory.
+The `Extend heap` and `Enable external flash` firmware configuration options both expand internal memory by allowing the use of external memory chips. Once external heap or flash are enabled, you will need to re-flash the firmware or completely erase the device to disable external memory.
 
 `Extend heap` extends internal RAM and only works on devices that include external SDRAM. There is also a method, `GHIElectronics.TinyCLR.Native.Memory.ExtendHeap()`, that can be used to extend the heap from within your code. See the [External Memory](tutorials/external-memory.md) page for more information.
 
-`Enable external flash` extends internal flash memory and only works devices that include external flash memory. To extend flash from within an application, use the `GHIElectronics.TinyCLR.Native.Flash.EnableExternalFlash()` method. See the [External Memory](tutorials/external-memory.md) page for more information.
+`Enable deployment` extends internal flash memory and only works devices that include external flash memory. To extend flash from within an application, use the `GHIElectronics.TinyCLR.Native.Flash.EnableExtendDeployment()` method. See the [External Memory](tutorials/external-memory.md) page for more information.
 
 Data stored in external SDRAM or flash memory is less secure than data stored internally. See the [IP Protection](tutorials/ip-protection.md) page for more information.
+
+`Persist slow clock` Sets the system clock speed to run at half speed, saving 40% power consumption. 
 
 #### Deployment Configuration
 For added security, the debug interface can be disabled. Note that once this is done, you will not be able to update the firmware or debug your application until you completely erase your device. You can update your application code, but only through TinyCLR Config or [In-Field-Update](tutorials/in-field-update.md). You can also disable the debug interface from within your code. Please refer to the [IP Protection](tutorials/ip-protection.md) page for more information about disabling the debug interface.
