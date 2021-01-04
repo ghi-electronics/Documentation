@@ -21,7 +21,7 @@ while (true) {
 Changing sampling time can be configured as follows:
 
 ```cs
-adcChannel.SamplingTime = TimeSpan.FromTicks(1000); // Set to 100us (a tick is 100ns)
+adcChannel.SamplingTime = TimeSpan.FromTicks(10); // Set to 1us (a tick is 100ns)
 ```
 SITCore allows these sampling times. If the SamplingTime is between two values above, the higher values will be used.
 
@@ -36,4 +36,4 @@ Ticks | Time
 126 | 12664ns
 
 > [!Tip]
-> Default is 8.5 cycles.
+> Default is 1 tick.
