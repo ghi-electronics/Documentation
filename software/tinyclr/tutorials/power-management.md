@@ -10,18 +10,27 @@ The system enters this state whenever it is idle, such as when waiting on events
 
 The system can operate at half speed, saving 40% power consumption with the following commands:
 
+> [!Note]
+
+> "persist" is false means the flag is temporary saved into RAM which will be lost if disconnect power.
+> "persist" is true means the flag is saved to flash which is only clear when reflash firmware.
+
 ```cs
+var persist = false; // false: temporary save into RAM. True: Save to Flash which is only clear when reflash firmware.
+
 if (Power.GetSystemClock() == SystemClock.High) {
-    Power.SetSystemClock(SystemClock.Low);
+    Power.SetSystemClock(SystemClock.Low, persist);
     Power.Reset();
 }
 ```
 
-Switch back to full speed:
+Switch back to full speed (only if "persist" was in RAM ):
 
 ```cs
+var persist = false; // false: temporary save into RAM. True: Save to Flash which is only clear when reflash firmware.
+
 if (Power.GetSystemClock() == SystemClock.Low) {
-    Power.SetSystemClock(SystemClock.High);
+    Power.SetSystemClock(SystemClock.High, persist);
     Power.Reset();
 }
 ```
