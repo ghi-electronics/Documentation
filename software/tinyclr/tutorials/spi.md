@@ -70,3 +70,69 @@ device.Write(new byte[] { 1, 2 }); //Write something.
 device.TransferSequential(...);    //This is good for reading registers.
 device.TransferFullDuplex(...);    //This is the only one that truly represents how SPI works.
 ```
+
+## Builtin API support SPI displays
+
+Most of time, the screen just need to be updated on small area, not need to refresh all screen. This can be done in c# easily by calculating needed area with x, y, width, height. 
+Althought data sending to spi is smaller which supposed to be faster, but calculating to get these data by C# is very slow.
+TinyCLR OS provide API that supports calculating and send in native.
+
+```
+var controller = SpiController.FromName(SC20100.SpiBus.Spi4);
+var device = controller.GetDevice(settings);
+
+var x = 10; 
+var y = 20;
+var width = 100;
+var height = 100;
+var originalWidth = 160;
+var buffer = yourBuffer;
+
+device.Write(buffer, x, y, width, height, originalWidth, 1, 1);
+```
+
+> [!Tip]
+> Software SPI doesn't support this fearure.
+
+## Support large display with less memory
+Below is an example draw an image with 160x120 to a screen 320x240 full screen.
+Remember that, TinyCLR also has Sctrest Scale9Image and StretchImage that can create another image that bigger or smaller from original image.
+But these function still cost a lot of memory.
+
+SPI in TinyCLR OS has a feature support zoom and send to target display without increasing memory.
+
+
+```
+var controller = SpiController.FromName(SC20100.SpiBus.Spi4);
+var device = controller.GetDevice(settings);
+
+var x = 0; 
+var y = 0;
+var width = 160;
+var height = 120;
+var originalWidth = 160;
+var buffer = yourBuffer;
+var columnMultiplier = 2;
+var rowMultiplier = 2;
+
+device.Write(buffer, x, y, width, height, originalWidth, columnMultiplier, rowMultiplier);
+
+```
+
+When columnMultiplier = 2 that will send to target display with 2x Width.
+When rowMultiplier = 2 that will send to target display with 2x Heigh.
+
+Smallest of columnMultiplier, rowMultiplier is 1.
+
+> [!Tip]
+> Software SPI doesn't support this fearure.
+
+
+
+
+
+
+
+
+
+
