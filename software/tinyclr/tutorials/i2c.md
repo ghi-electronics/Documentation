@@ -21,18 +21,19 @@ device.WriteRead(...);              //This is good for reading register
 ```
 
 ## Software I2C
-
-The I2C bus is relatively simple and can be "bit banged" using software. The advantage of bit banging is that any two GPIO pins can be used, not just the pins that support hardware I2C. However, software I2C requires more system resources and runs slower.
-
-This example initializes a software I2C driver. Once initialized, it's used the same as hardware I2C.
+Users have the option to drive (bit bang) I2C bus in software over any of the available GPIOs.
 
 ```cs
-var provider = new I2cControllerSoftwareProvider
-    (SC20260.GpioPin.PA0, SC20260.GpioPin.PA1, false);
-
-var controller = I2cController.FromProvider(provider);
-
-var device = controller.GetDevice(new I2cConnectionSettings(0x1C, 100_000) {
-    AddressFormat = I2cAddressFormat.SevenBit
-});
+var provider = new GHIElectronics.TinyCLR.Devices.I2c.Provider.
+    I2cControllerSoftwareProvider(sdaPin, sclPin);
 ```
+
+The internal pull-ups on the GPIO pins used by software I2C can be enabled. This is sufficient in most cases but adding 2.2K external is better.
+
+```cs
+var provider = new GHIElectronics.TinyCLR.Devices.I2c.Provider.
+    I2cControllerSoftwareProvider(sdaPin, sclPin, true);
+```
+
+> [!Tip]
+> Software generated buses are slower and use more resources, but can be used on any pins.

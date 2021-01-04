@@ -7,13 +7,10 @@ TinyCLR OS allows for secure, encrypted, In-Field Update (IFU) of your applicati
 
 In-Field Update only work with streams, these stream can be MemoryStream, FileStream or NetworkStream.
 
-> [!Note]
-> For device has external flash, by set agrument "useExternalFlash" to true, no matter what stream are, this allow update both application and firmware.
-> For device has external memory, by using MemoryStream, this allow update both application and firmware.
-> For device has NO external memory, NO external Flash, no matter what streams are, but only application update are supported.
+ 
 
 ## Update via MemoryStream
-Systems with external memory can create a stream from bufer, which first copies the new update from a file, network, or bus, and stores it in a buffer. When the entire firmware file is in memory, the IFU will then check the stream for authenticity. Only then will it decrypt the data and flash it into the chip's internal memory.
+Systems with external memory can create a stream from buffer, which first copies the new update from a file, network, or bus, and stores it in a buffer. When the entire firmware file is in memory, the IFU will then check the stream for authenticity. Only then will it decrypt the data and flash it into the chip's internal memory.
 
 It doesn't matter to IFU if the memoryStream is created from managed heap or unmanaged heap. In most cases, unmanaged memory is the only memory large enough to hold the firmware buffer. However, if the managed heap has been extended to external memory (see the [External Memory](external-memory.md) page), then managed heap must be used as there is no longer any unmanaged heap space.
 
