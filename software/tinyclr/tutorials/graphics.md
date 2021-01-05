@@ -14,6 +14,7 @@ Besides the basic methods above, there are some additional useful methods found 
 | `MakeTransparent`      | Used to select a color within an image that appears transparent.|
 | `Scale9Image`           | Used to scale the size of an image. You can also stretch specific areas within the image itself, opacity can also be controlled.|
 | `MeasureString`        | Used to measure a string size in pixels, when using a specific font.|
+| `RotateImage`        | Used to rotate an image based on arguments passed.|
 
 ---
 
