@@ -227,10 +227,10 @@ screen.DrawLine(new Pen(Color.Red), 0, 0, displayController.ActiveConfiguration.
 
 ## Images
 
-TinyCLR OS supports the BMP, GIF, and JPG. See the [Image Decoders](image-decoders.md) page.
+TinyCLR OS supports BMP, GIF, and JPG file formats. See the [Image Decoders](image-decoders.md) page.
 
 ---
 
 ## Fonts
 
-Fonts are well supported. They are covered [here](font-support.md).
+Fonts are fully supported. They are covered [here](font-support.md).

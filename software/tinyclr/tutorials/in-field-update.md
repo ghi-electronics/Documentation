@@ -7,8 +7,12 @@ The constructor for IFU takes the two stream and a flag to require IFU to use th
 
 When external flash is used for buffering, IFU will overwrite the flash, minus the first 2MB and the area reserved for extending the application deployment area, as explained under `External Flash` [External Memory](external-memory.md) page. A [Tiny File System](file-system.md) usage of the first 2MB of external flash will survive IFU even when `useExternalFlash` is enabled.
 
-> [TIP!]
+> [!Tip]
 > The application and the firmware are buffered in external memories in encrypted fashion and has no security implication, keeping IFU done securely.
+
+> [!Warning]
+> Power interruption during `FlashAndReset` will cause the update to fail, requiring a manual update. However, it is safe during `Build`.
+
 
 ```cs
 var fwBuf = YourFirmwareBuffer;
@@ -23,7 +27,7 @@ var appKey = new byte[] { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 
 updater = new InFieldUpdate(memoryStreamFirmware, memoryStreamApplication, appKey, useExternalFlash);
 
-updater.Build(true, true);  
+updater.Build(true, true); // Build both firmware and application
 
 Debug.WriteLine("Firmware version: " + updater.FirmwareVersion);
 Debug.WriteLine("Application version: " + updater.ApplicaltionVersion);
@@ -31,17 +35,38 @@ Debug.WriteLine("Application version: " + updater.ApplicaltionVersion);
 updater.FlashAndReset();
 ```
 
-> [!Warning]
-> Power interruption during `FlashAndReset` will cause the update to fail making it necessary to manually update your board. However, it is safe during `Build`.
+It might be desired to only `Build` one stream at a time, but if IFU is constructed with two streams then both `Build` must be completed before `FlashAndReset`.
 
-## Without external memory
+```
+updater.Build(true, false);
+// do something
+// ...
+updater.Build(false, true);
+```
+> [!Tip]
+> Running IFU in a thread is desired to keep the system running while IFU finish `Build`. But once `FlashAndReset` is called the system is locked till done and reset automatically.
+
+---
+
+## Without External Eemory
 
 When no external memories are present (Flash nor RAM), only the application can be updated and only using file stream.
 
-> [NOTE!]
+> [!NOTE]
 > Very tiny applications can be theoretically be updated using memory streams, assuming the memory is enough to hold the entire new application.
 
 ---
+
+# Network Consideration
+Network stream determines the end of file transfer after a specific timeout, defaulted to 5 seconds. This can be increased in a slower network or decreased in a controlled network.
+```
+updater.ReadDataTimeout = TimeSpan.FromSeconds(5); // 5 seconds
+```
+
+The server providing the data needs to consider that IFU will need time to `Build` one stream a time, which can take a while especially when external flash buffering is enabled. For example, a 6MB Application buffered to external flash will need about 2 minutes.
+
+---
+
 ## Firmware and Application Matching
 
 It is important that the loaded firmware is the same version expected by the application. It is usually best to update both when possible.
