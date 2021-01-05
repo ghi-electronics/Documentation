@@ -87,18 +87,17 @@ In sleep mode, any GPIO interrupt can be used to wake the board, but in Shutdown
 <h2 id="slow-clock-speed">Slow Clock Speed</h2>
 <p>The system can operate at half speed, saving 40% power consumption with the following commands:</p>
 <pre><code class="lang-cs">if (Power.GetSystemClock() == SystemClock.High) {
-    Power.SetSystemClock(SystemClock.Low);
+    Power.SetSystemClock(SystemClock.Low, false);
     Power.Reset();
 }
-</code></pre><p>Switch back to full speed:</p>
+</code></pre><p>Switch back to full speed (only if &quot;persist&quot; was in RAM ):</p>
 <pre><code class="lang-cs">if (Power.GetSystemClock() == SystemClock.Low) {
-    Power.SetSystemClock(SystemClock.High);
+    Power.SetSystemClock(SystemClock.High, false);
     Power.Reset();
 }
-</code></pre><div class="NOTE"><h5>Note</h5><p>Changing the clock speed requires a software reset in the code. Calling this reset detaches the debugger. 
-If necessary you&#39;ll need to redeploy to the device to continue debugging.</p>
-</div>
-<h2 id="sleep">Sleep</h2>
+</code></pre><p>Calling <code>Power.Reset()</code> will retain the set clock speed but hardware reset or power cycle will revert to the default state. However, the clock can permanently be set to low speed, and only reversed with firmware update or complete device erase.</p>
+<pre><code class="lang-cs">Power.SetSystemClock(SystemClock.High, false);
+</code></pre><h2 id="sleep">Sleep</h2>
 <p>In this mode the system goes to sleep to save power and wakes up and resumes processing when the assigned interrupt is received. Any GPIO interrupt can be used to wake from Sleep. The following example runs on both the SC20100 and SCM20260D Dev boards and uses the LDR button to wake up. </p>
 <div class="NOTE"><h5>Note</h5><p>Don&#39;t forget to configure the interrupt and interrupt handler for the pin that will be used to wake up from Sleep.</p>
 </div>

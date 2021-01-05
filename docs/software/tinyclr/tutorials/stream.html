@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Resources </title>
+    <title>Stream Class </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Resources ">
+    <meta name="title" content="Stream Class ">
     <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -77,20 +77,33 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="resources">Resources</h1>
+<h1 id="stream-class">Stream Class</h1>
 
 <hr>
-<p>Resource files can be used to store strings, images, audio files, and other binary or text files that will be used by your application.</p>
-<p>Right-click on your project and <code>Add-&gt;New Item...</code>. From here select <code>Resource File</code>.</p>
-<p>You can now drag resources right into the file.</p>
-<p><img src="images/resources.jpg" alt="Resources"></p>
-<p>In the background, a file is generated to reflect the added resources. Using the resource will look similar to <code>var resourceData = Resource.GetBytes(Resource.BinaryResources.data);</code></p>
-<div class="TIP"><h5>Tip</h5><p>If you are copying example code that uses resource files, some changes may be needed to match the resources&#39; names in your project.</p>
+<p>Provides a generic view of a sequence of bytes. This is an abstract class.</p>
+<div class="TIP"><h5>Tip</h5><p>Need Nugets: GHIElectronics.TinyCLR.Core</p>
 </div>
-<h2 id="partial-loading">Partial loading</h2>
-<p>Large resources can be partially loaded in RAM as needed.</p>
-<pre><code class="lang-cs">var resourceId = (short)Resources.BinaryResources.YourResourceId;
-var data = (byte[])(Resources.ResourceManager.GetObject(resourceId, offset, readSize));
+<h2 id="filestream">FileStream</h2>
+<pre><code class="lang-cs">var fileStream = new FileStream(@&quot;A:\filename.tca&quot;, FileMode.Open);
+
+// Allocate a buffer with size fileStream.Length
+var buffer = new byte[fileStream.Length];
+
+// Read data
+fileStream.Read(buffer, 0, buffer.Length);
+</code></pre><h2 id="memorystream">MemoryStream</h2>
+<pre><code class="lang-cs">var bufferIn = new byte[3] { 1, 2, 3 };
+
+var memoryStream = new System.IO.MemoryStream();
+
+memoryStream.Seek(0, System.IO.SeekOrigin.Begin);
+memoryStream.Write(bufferIn, 0, bufferIn.Length);
+
+var bufferOut = memoryStream.ToArray();
+
+// bufferIn and bufferOut match
+</code></pre><h2 id="networkstream">NetworkStream</h2>
+<pre><code class="lang-cs">var myNetworkStream = new NetworkStream(networkSocket);
 </code></pre></article>
           </div>
           
@@ -99,7 +112,7 @@ var data = (byte[])(Resources.ResourceManager.GetObject(resourceId, offset, read
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/partial_loading_resource/software/tinyclr/tutorials/resources.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/stream.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

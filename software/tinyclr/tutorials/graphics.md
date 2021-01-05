@@ -4,19 +4,27 @@ The `GHIElectronics.TinyCLR.Drawing` NuGet package includes the backbone for all
 
 Shape examples are `Graphics.FillEllipse`, `Graphics.DrawLine` and `Graphics.DrawRectangle`. These methods need `Pen` and `Brush` that are also part of `Graphics`.
 
-## Native Displays
-Native display support in TinyCLR OS is handled automatically using the microcontroller's DMA to transfer data to the display without slowing down your application. Because of this, native displays can be much larger in size and resolution while using less processor time than non-native displays. Additionally, native displays usually transfer data in parallel as opposed to the serial transfer usually used with non-native displays, so the data is transferred much more quickly.
+Besides the basic methods above, there are some additional useful methods found inside the Graphics library. 
 
-### SCM20260D Dev Board Code Sample
+| Method                      | Description                                                |
+|-----------------------------|------------------------------------------------------------|
+| `TileImage`             | Used to tile the image over a any area on the screen.|
+| `DrawTextInRect`        | Confines text to a specific rectangle area of the screen. Parameters can be set to justify or word wrap the text inside the rectangle's area.|
+| `SetClippingRectangle`  | Creates a rectangle area on the screen where only the area within that rectangle is drawn.|
+| `MakeTransparent`      | Used to select a color within an image that appears transparent.|
+| `Scale9Image`           | Used to scale the size of an image. You can also stretch specific areas within the image itself, opacity can also be controlled.|
+| `MeasureString`        | Used to measure a string size in pixels, when using a specific font.|
+
+---
+
+## Native Displays
+Native display support in TinyCLR OS is handled automatically using the microcontroller's DMA to transfer data in parallel to the display without slowing down your application.
+
 The following example runs on the SCM20260D Dev Board with either the 4.3" or 7" display. You will need to add a font and a small JPG image as [resources](resources.md) to run the code as is.
 
-#### With 4.3" Display
 
 > [!Tip]
 > Needed Nugets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.
-
-> [!Tip]
-> Make sure you change the namespace to match your project!
 
 ```cs
 using GHIElectronics.TinyCLR.Devices.Display;
@@ -94,9 +102,8 @@ namespace GraphicsSample {
 }
 ```
 
-#### With 7" Display
+Same example but with 7 inch display, replace the display configuration code with the following code:
 
-If you are using the UD700 7 inch display, replace the display configuration code with the following code:
 ```cs
 displayController.SetConfiguration(new ParallelDisplayControllerSettings {
     Width = 800,
@@ -120,21 +127,13 @@ displayController.SetConfiguration(new ParallelDisplayControllerSettings {
 
 ---
 
-## Non-Native Displays
+## Virtual Displays
+Displays can be virtual, meaning the system handles the drawing in RAM and when `Flush` is called an event is fired with the graphics data that needs to be transferred to the display. This for example can be an SPI display or over-the-network display.
 
-Our SC20100S Dev Board has a non-native SPI display installed on it. There are special considerations for non-native displays -- instead of the data being automatically written to the display using the microcontroller's DMA, you must format and then transfer the data to the display yourself. Only the SC20260B SITCore chip has the resources to support native displays. Any device the uses the SC20100S chip can only support non-native displays.
-
-At the bottom of the next code sample, you will notice a Graphics_OnFlushEvent() event handler. This method gets called when the display is flushed. In this case, there is a DrawBuffer method that is part of the ST7735 display driver that writes to the display over SPI. Because this method is available, you need only call it within the Graphics_OnFlushEvent() event handler to write the buffer to the display. If you are using a display without a driver, you will have to correctly format the display data and send it to the display yourself inside this event handler.
-
-### SC20100S Dev Board Code Sample
-
-The following sample code runs on our SC20100S Dev Board with its built in display. You will need to add a font and a small JPG image as [resources](resources.md) to run the code as is.
+The following sample code runs on our SC20100S Dev Board with its SPI-based display. You will need to add a font and a small JPG image as [resources](resources.md) to run the code as is.
 
 > [!Tip]
 > Needed Nugets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.
-
-> [!Tip]
-> Make sure you change the namespace to match your project! 
 
 ```cs
 using GHIElectronics.TinyCLR.Devices.Gpio;
@@ -207,7 +206,7 @@ namespace GraphicsSample {
             Thread.Sleep(Timeout.Infinite);
         }
 
-        private static void Graphics_OnFlushEvent(IntPtr hdc, byte[] data) {
+        private static void Graphics_OnFlushEvent(Graphics sender, byte[] data, int x, int y, int width, int height, int originalWidth) {
             st7735.DrawBuffer(data);
         }
     }
@@ -217,14 +216,12 @@ namespace GraphicsSample {
 ---
 
 ## Helper Methods
-With parallel displays, (also called native displays), the `DisplayController.ActiveConfiguration` can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display's resolution. The following line of code draws a line from corner to corner, no matter the display resolution.
+With parallel native displays the `DisplayController.ActiveConfiguration` can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display's resolution. The following line of code draws a line from corner to corner, no matter the display resolution.
 
 ```cs
 screen.DrawLine(new Pen(Color.Red), 0, 0, displayController.ActiveConfiguration.Width - 1,
     displayController.ActiveConfiguration.Height - 1);
 ```
-
-It is important to note that drawing functions process graphics in RAM independently from the display. The display driver then transfers the pixels from internal memory to the display when `Graphics.Flush` is called. Learn more about [display](displays.md) support.
 
 ---
 

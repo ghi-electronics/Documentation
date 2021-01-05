@@ -6,52 +6,13 @@ The master selects which slave it will swap the data with using the SSEL (Slave 
 
 In its simplest terms, the master will swap data between itself and the slave. You cannot write data without reading data at the same time. However, often you want to write data and don't care about the incoming data. To do this you can use the Write method. Keep in mind that the Write method is discarding whatever data the slave is sending back.
 
+> [!Tip]
+> Note that a board running TinyCLR OS is always the SPI master, not the slave.
+
 In TinyCLR OS, SPI transfers are dynamically sent in batches that are internally optimized to allow for maximum speed back-to-back transfers. This is helpful when sending large buffers, such as when refreshing displays.
 
 > [!Tip]
 > Some SPI devices (slaves) can have more than one select pin, like the VS1053 MP3 decoder chip that uses one select pin for data and the other for commands. Both share the three data transfer pins (SCK, MOSI, MISO).
-
-> [!Tip]
-> SPI needs more wires than other similar buses, but it can transfer data very quickly. A SPI port with a clock speed of 30Mhz transfers 30 million bits in one second. 
-
-> [!Tip]
-> Note that a board running TinyCLR OS is always the SPI master, not the slave.
-
-## SPI Clock Speed
-SITCore SPI ports do not use the same clock, so different SPI ports have different minimum and maximum clock speeds:
-
-SPI Controllers | 1, 2 & 3 | 4 & 5   | 6
-----------------|----------|---------|----------
-Minimum Speed   | 188 kHz  | 469 kHz | 250K
-Maximum Speed   | 24 MHz   | 60 MHz  | 32MHz
-
-
-The `MinClockFrequency` and `MaxClockFrequency` fields can be used to verify the range of valid clock speeds for a given SPI port:
-```cs
-var controller = SpiController.FromName(SC20100.SpiBus.Spi3);
-Debug.WriteLine(controller.MinClockFrequency.ToString()); //Prints minimum SPI clock in Hertz.
-Debug.WriteLine(controller.MaxClockFrequency.ToString()); //Prints maximum SPI clock in Hertz.
-```
-
----
-
-## Most Significant Bit (MSB) and Least Significant Bit (LSB)
-SITCore supports switching between MSB and LSB.
-
-```
-var spiSettings = new SpiConnectionSettings() {               
-    DataFrameFormat = SpiDataFrame.MsbFirst // MSB
-};
-
-var spiSettings = new SpiConnectionSettings() {
-    DataFrameFormat = SpiDataFrame.LsbFirst // LSB
-};
-
-```
-
----
-
-## Sample Code
 
 ```cs
 var cs = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PE4);
@@ -70,3 +31,90 @@ device.Write(new byte[] { 1, 2 }); //Write something.
 device.TransferSequential(...);    //This is good for reading registers.
 device.TransferFullDuplex(...);    //This is the only one that truly represents how SPI works.
 ```
+
+---
+
+## SPI Clock Speed
+SITCore SPI controllers support different clock ranges.
+
+SPI Controllers | 1, 2 & 3 | 4 & 5   | 6
+----------------|----------|---------|----------
+Minimum Speed   | 188 kHz  | 469 kHz | 250K
+Maximum Speed   | 24 MHz   | 60 MHz  | 32MHz
+
+
+The `MinClockFrequency` and `MaxClockFrequency` fields can be used at runtime.
+
+```cs
+var controller = SpiController.FromName(SC20100.SpiBus.Spi3);
+Debug.WriteLine(controller.MinClockFrequency.ToString());
+Debug.WriteLine(controller.MaxClockFrequency.ToString());
+```
+---
+
+## Bit Ordering
+
+TinyCLR supports switching between sending the most significant bit first (MSb) or least significant bit first (LSb).
+
+```cs
+var spiSettings = new SpiConnectionSettings() {               
+    DataFrameFormat = SpiDataFrame.MsbFirst // MSb
+};
+
+var spiSettings = new SpiConnectionSettings() {
+    DataFrameFormat = SpiDataFrame.LsbFirst // LSb
+};
+```
+
+---
+
+## Software SPI
+Users have the option to drive (bit bang) SPI bus in software over any of the available GPIOs.
+
+```cs
+var provider = new GHIElectronics.TinyCLR.Devices.
+    Spi.Provider.SpiControllerSoftwareProvider(mosi, miso, clk);
+```
+> [!Tip]
+> Software generated buses are slower and use more resources, but can be used on any pins.
+
+
+## SPI Display Helper
+
+When partially updating a section of the SPI display, SPI includes a `Write` method to extract and send the needed data. Partial updates are faster than updating the full screen due to sending fewer bytes over SPI bus.
+
+```cs
+var x = 10; 
+var y = 20;
+var width = 100;
+var height = 100;
+var originalWidth = 160;
+
+spi.Write(graphicsBuffer, x, y, width, height, originalWidth, 1, 1);
+```
+
+> [!Tip]
+> Software SPI doesn't support this method.
+
+## Pixel Multiplier
+This feature allows pixels to be multiplied across the screen, allowing larger displays to be used with lesser memory. For example, a 320x240 display can be used with 160x120 graphics buffer if both multipliers, the column and the row, are set to 2. The system will be able to drive the display with only 25% of the needed memory, trading off the resolution.
+
+> [!Tip]
+> The column and row multipliers are independent from each other. A 320x240 display can be driven with a 320x120 graphics when column multiplier is set to 1 and the row multiplier is set to 2.
+
+```cs
+spi.Write(buffer, x, y, width, height, originalWidth, columnMultiplier, rowMultiplier);
+```
+
+> [!Tip]
+> Software SPI doesn't support this feature.
+
+
+
+
+
+
+
+
+
+

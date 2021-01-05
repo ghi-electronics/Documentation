@@ -6,20 +6,15 @@ There are also non-graphical character displays and those work through a simple 
 
 The display drivers are meant to transfer the pixel data from memory to the actual display. The [graphics](graphics.md) tutorial shows how drawing is done in memory.
 
-## Built-in TFT Displays
+---
+
+## Native Displays
 These displays connect to special dedicated pins on the processor. Internally, the display controller automatically transfers (refreshes) the display directly from memory without any processor interaction, using DMA. When the system needs to update the display, it simply writes to memory. Neither the operating system nor the application program are burdened with display processing. The down side to this is that the system needs to have enough RAM to handle the display. An 800x600 display with 16bpp needs 960,000 bytes!
 
 ---
 
 ## Virtual Displays
-The internal graphics services can be mapped to work with virtual display displays. This is done by accessing graphics memory directly, and then writing the graphics memory contents to the desired display.
-```cs
-private static void Graphics_OnFlushEvent(IntPtr hdc, byte[] data) {
-       st7735.DrawBuffer(data);
-}
-```
-
-See the [Graphics Tutorial](graphics.md) for more information and sample code.
+The internal graphics services can be mapped to work with virtual display displays, such as SPI displays. See the [Graphics](graphics.md) tutorial for more information and sample code.
 
 ---
 
