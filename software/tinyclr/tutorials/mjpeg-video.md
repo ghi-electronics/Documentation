@@ -77,7 +77,7 @@ class Program {
         GC.WaitForPendingFinalizers();
     }
 
-    private static void Graphics_OnFlushEvent(System.IntPtr hdc, byte[] data) {
+    private static void Graphics_OnFlushEvent(System.Graphics sender, byte[] data, int x, int y, int width, int height, int originalWidth) {
         st7735.DrawBuffer(data);
     }
 }

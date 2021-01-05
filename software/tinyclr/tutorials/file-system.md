@@ -102,17 +102,13 @@ using (var fsRead = tfs.Open("settings.dat", FileMode.Open)) {
 Below is a basic driver implementation utilizing QSPI external flash. It automatically sets the size appropriately depending on whether the deployment is extended or not, as explained on the [External Flash](external-memory.md) page. It however gives you the option to fix the size to 2MB, as the remaining 8MB can optionally be used by [InField Update](in-field-update.md).
 
 ```cs
-using System;
-using GHIElectronics.TinyCLR.Pins;
-using GHIElectronics.TinyCLR.Devices.Storage;
-using GHIElectronics.TinyCLR.Devices.Storage.Provider;
-
-public sealed class QspiMemory : IStorageControllerProvider {
+public sealed class QspiMemory : IStorageControllerProvider
+{
     public StorageDescriptor Descriptor => this.descriptor;
-    bool fixTo2MB = false;
+    const int SectorSize = 4 * 1024;
 
     private StorageDescriptor descriptor = new StorageDescriptor()
-    {        
+    {
         CanReadDirect = false,
         CanWriteDirect = false,
         CanExecuteDirect = false,
@@ -121,51 +117,76 @@ public sealed class QspiMemory : IStorageControllerProvider {
         RegionsContiguous = true,
         RegionsEqualSized = true,
         RegionAddresses = new long[] { 0 },
-        RegionSizes = new int[] { 4 * 1024 },
-        RegionCount = (2 * 1024 * 1024) / (SectorSize),
-
+        RegionSizes = new int[] { SectorSize },
+        RegionCount = (2 * 1024 * 1024) / (SectorSize)
     };
 
-    if(fixTo2MB == false)
-        descriptor.RegionCount = Flash.IsEnabledExtendDeployment ? (10 * 1024 * 1024 / SectorSize) : (16 * 1024 * 1024 / SectorSize);
-
     private IStorageControllerProvider qspiDrive;
-    
-    public QspiMemory() {
-        qspiDrive = StorageController.FromName(SC20260.StorageController.QuadSpi).Provider;        
+
+    public QspiMemory() : this(2 * 1024 * 1024)
+    {
+
+    }
+
+    public QspiMemory(uint size)
+    {
+        var maxSize = Flash.IsEnabledExtendDeployment ? (10 * 1024 * 1024) : (16 * 1024 * 1024);
+
+        if (size > maxSize)
+            throw new ArgumentOutOfRangeException("size too large.");
+
+        if (size <= SectorSize)
+            throw new ArgumentOutOfRangeException("size too small.");
+
+        if (size != descriptor.RegionCount * SectorSize)
+        {
+            descriptor.RegionCount = (int)(size / SectorSize);
+        }
+
+        qspiDrive = StorageController.FromName(SC20260.StorageController.QuadSpi).Provider;
+
         this.Open();
     }
 
-    public void Open() {
+    public void Open()
+    {
         qspiDrive.Open();
     }
 
-    public void Close() {
+    public void Close()
+    {
         qspiDrive.Close();
     }
 
-    public void Dispose() {
+    public void Dispose()
+    {
         qspiDrive.Dispose();
     }
 
-    public int Erase(long address, int count, TimeSpan timeout) {
+    public int Erase(long address, int count, TimeSpan timeout)
+    {
         return qspiDrive.Erase(address, count, timeout);
     }
 
-    public bool IsErased(long address, int count) {
+    public bool IsErased(long address, int count)
+    {
         return qspiDrive.IsErased(address, count);
     }
 
-    public int Read(long address, int count, byte[] buffer, int offset, TimeSpan timeout) {
+    public int Read(long address, int count, byte[] buffer, int offset, TimeSpan timeout)
+    {
         return qspiDrive.Read(address, count, buffer, offset, timeout);
     }
 
-    public int Write(long address, int count, byte[] buffer, int offset, TimeSpan timeout) {
+    public int Write(long address, int count, byte[] buffer, int offset, TimeSpan timeout)
+    {
         return qspiDrive.Write(address, count, buffer, offset, timeout);
     }
 
-    public void EraseAll(TimeSpan timeout) {
-        for (var sector = 0; sector < this.Descriptor.RegionCount; sector++) {
+    public void EraseAll(TimeSpan timeout)
+    {
+        for (var sector = 0; sector < this.Descriptor.RegionCount; sector++)
+        {
             qspiDrive.Erase(sector * this.Descriptor.RegionSizes[0], this.Descriptor.RegionSizes[0], timeout);
         }
     }

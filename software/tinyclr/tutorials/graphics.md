@@ -219,7 +219,7 @@ namespace GraphicsSample {
             Thread.Sleep(Timeout.Infinite);
         }
 
-        private static void Graphics_OnFlushEvent(IntPtr hdc, byte[] data) {
+        private static void Graphics_OnFlushEvent(Graphics sender, byte[] data, int x, int y, int width, int height, int originalWidth) {
             st7735.DrawBuffer(data);
         }
     }
