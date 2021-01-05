@@ -63,7 +63,7 @@ The Firmware is the TinyCLR OS that lives on your hardware. The firmware version
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.1.0.3000 (Preview3)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore%20Firmware%20v2.1.0.3000.ghi) | 2021-01-06 | Preview | B25FA5A204E9458E9B17F5BF00C846C8
+[v2.1.0.3000 (Preview3)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore%20Firmware%20v2.1.0.3000.ghi) | 2021-01-06 | Preview | 97CEB0EF6D3594069759C4778425D003
 [v2.1.0.2000 (Preview2)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore%20Firmware%20v2.1.0.2000.ghi) | 2020-12-04 | Preview | 178F0BF5350ACFFF5F49790863606937
 [v2.1.0.1000 (Preview1)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore%20Firmware%20v2.1.0.1000.ghi) | 2020-11-03 | Preview | 43E956E45C5C822D3221234D80765AC7
 [v2.0.0.8000 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore%20Firmware%20v2.0.0.ghi) | 2020-08-05 | Production | AE9DC4E117D04CE058AB305896F273DE
