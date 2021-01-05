@@ -84,8 +84,6 @@
 <div class="TIP"><h5>Tip</h5><p>Note that the analog channel number is not the pin number. You need to determine the channel number of a specific pin using your system&#39;s documentation.</p>
 </div>
 <p>The resolution of the ADC determines its accuracy. An 8bit ADC has 256 steps to work with, 3.3V/256=0.013V. This means an increase of 0.013V will increase the ADC value by one. In other words, a voltage change of less than 0.013V has no effect.</p>
-<div class="TIP"><h5>Tip</h5><p>When multiple ADC are available on a system, you must select the right controller instead of using the default controller through GetDefault()</p>
-</div>
 <pre><code class="lang-cs">var adc = AdcController.FromName(SC20100.Adc.Controller1.Id);
 var analog = adc.OpenChannel(SC20100.Adc.Controller1.PA0);
 
@@ -94,7 +92,51 @@ while (true) {
     Debug.WriteLine(&quot;An-&gt; &quot; + d.ToString(&quot;N2&quot;));
     Thread.Sleep(100);
 }
-</code></pre></article>
+</code></pre><h2 id="support-sampling-timing">Support Sampling timing</h2>
+<p>Changing sampling time can be configured as follows:</p>
+<pre><code class="lang-cs">adcChannel.SamplingTime = TimeSpan.FromTicks(10); // Set to 1us (a tick is 100ns)
+</code></pre><p>SITCore allows these sampling times. If the SamplingTime is between two values above, the higher values will be used.</p>
+<table>
+<thead>
+<tr>
+<th>Ticks</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>23ns</td>
+</tr>
+<tr>
+<td>1</td>
+<td>132ns</td>
+</tr>
+<tr>
+<td>2</td>
+<td>257ns</td>
+</tr>
+<tr>
+<td>5</td>
+<td>507ns</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1007ns</td>
+</tr>
+<tr>
+<td>60</td>
+<td>6054ns</td>
+</tr>
+<tr>
+<td>126</td>
+<td>12664ns</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP"><h5>Tip</h5><p>Default is 1 tick.</p>
+</div>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

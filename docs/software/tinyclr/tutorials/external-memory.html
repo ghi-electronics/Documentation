@@ -90,13 +90,13 @@ GHIElectronics.TinyCLR.Native.Power.Reset();
 </code></pre><hr>
 <h2 id="external-flash">External Flash</h2>
 <p>An optional 16MB QSPI external flash can be used to increase the available flash memory. In fact, most SITCore SoMs/boards already include this 16MB external flash.</p>
-<p>8MB of the optional external flash can be used to extend the deployment region, which holds the application and its resources. This is done by using <a href="../tinyclr-config.html">TinyCLR Config</a> or by using the following method:</p>
-<pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.Flash.EnableExternalFlash()
+<p>The top 6MB of the optional external flash can be used to extend the deployment region, which holds the application and its resources. This is done by using <a href="../tinyclr-config.html">TinyCLR Config</a> or through code:</p>
+<pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.Flash.EnableExtendDeployment()
 GHIElectronics.TinyCLR.Native.Power.Reset();
 </code></pre><p>Since external memory chips can be probed, TinyCLR supports <code>Secure Assemblies</code>. See the <a href="ip-protection.html">IP Protection</a> page for more information.</p>
 <div class="TIP"><h5>Tip</h5><p><a href="../tinyclr-config.html">TinyCLR Config</a> can be used to display the internal <code>Deployment Map</code>.</p>
 </div>
-<p>The entire 16MB of flash, or 8MB when deployment is extended, can be used directly by reading/writing raw sectors. However, using the available <a href="file-system.html">Tiny File System</a> is recommended.</p>
+<p>The entire 16MB of flash, or 10MB when deployment is extended, can be used directly by reading/writing raw sectors or using <a href="file-system.html">Tiny File System</a>.</p>
 </article>
           </div>
           

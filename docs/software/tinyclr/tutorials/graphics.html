@@ -82,14 +82,46 @@
 <hr>
 <p>The <code>GHIElectronics.TinyCLR.Drawing</code> NuGet package includes the backbone for all graphics needs. It has support for shapes, fonts and bitmaps.</p>
 <p>Shape examples are <code>Graphics.FillEllipse</code>, <code>Graphics.DrawLine</code> and <code>Graphics.DrawRectangle</code>. These methods need <code>Pen</code> and <code>Brush</code> that are also part of <code>Graphics</code>.</p>
+<p>Besides the basic methods above, there are some additional useful methods found inside the Graphics library. </p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TileImage</code></td>
+<td>Used to tile the image over a any area on the screen.</td>
+</tr>
+<tr>
+<td><code>DrawTextInRect</code></td>
+<td>Confines text to a specific rectangle area of the screen. Parameters can be set to justify or word wrap the text inside the rectangle&#39;s area.</td>
+</tr>
+<tr>
+<td><code>SetClippingRectangle</code></td>
+<td>Creates a rectangle area on the screen where only the area within that rectangle is drawn.</td>
+</tr>
+<tr>
+<td><code>MakeTransparent</code></td>
+<td>Used to select a color within an image that appears transparent.</td>
+</tr>
+<tr>
+<td><code>Scale9Image</code></td>
+<td>Used to scale the size of an image. You can also stretch specific areas within the image itself, opacity can also be controlled.</td>
+</tr>
+<tr>
+<td><code>MeasureString</code></td>
+<td>Used to measure a string size in pixels, when using a specific font.</td>
+</tr>
+</tbody>
+</table>
+<hr>
 <h2 id="native-displays">Native Displays</h2>
-<p>Native display support in TinyCLR OS is handled automatically using the microcontroller&#39;s DMA to transfer data to the display without slowing down your application. Because of this, native displays can be much larger in size and resolution while using less processor time than non-native displays. Additionally, native displays usually transfer data in parallel as opposed to the serial transfer usually used with non-native displays, so the data is transferred much more quickly.</p>
-<h3 id="scm20260d-dev-board-code-sample">SCM20260D Dev Board Code Sample</h3>
+<p>Native display support in TinyCLR OS is handled automatically using the microcontroller&#39;s DMA to transfer data in parallel to the display without slowing down your application.</p>
 <p>The following example runs on the SCM20260D Dev Board with either the 4.3&quot; or 7&quot; display. You will need to add a font and a small JPG image as <a href="resources.html">resources</a> to run the code as is.</p>
-<h4 id="with-43-display">With 4.3&quot; Display</h4>
 <div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.</p>
-</div>
-<div class="TIP"><h5>Tip</h5><p>Make sure you change the namespace to match your project!</p>
 </div>
 <pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Display;
 using GHIElectronics.TinyCLR.Devices.Gpio;
@@ -164,8 +196,7 @@ namespace GraphicsSample {
         }
     }
 }
-</code></pre><h4 id="with-7-display">With 7&quot; Display</h4>
-<p>If you are using the UD700 7 inch display, replace the display configuration code with the following code:</p>
+</code></pre><p>Same example but with 7 inch display, replace the display configuration code with the following code:</p>
 <pre><code class="lang-cs">displayController.SetConfiguration(new ParallelDisplayControllerSettings {
     Width = 800,
     Height = 480,
@@ -185,14 +216,10 @@ namespace GraphicsSample {
     VerticalSyncPolarity = false,
 });
 </code></pre><hr>
-<h2 id="non-native-displays">Non-Native Displays</h2>
-<p>Our SC20100S Dev Board has a non-native SPI display installed on it. There are special considerations for non-native displays -- instead of the data being automatically written to the display using the microcontroller&#39;s DMA, you must format and then transfer the data to the display yourself. Only the SC20260B SITCore chip has the resources to support native displays. Any device the uses the SC20100S chip can only support non-native displays.</p>
-<p>At the bottom of the next code sample, you will notice a Graphics_OnFlushEvent() event handler. This method gets called when the display is flushed. In this case, there is a DrawBuffer method that is part of the ST7735 display driver that writes to the display over SPI. Because this method is available, you need only call it within the Graphics_OnFlushEvent() event handler to write the buffer to the display. If you are using a display without a driver, you will have to correctly format the display data and send it to the display yourself inside this event handler.</p>
-<h3 id="sc20100s-dev-board-code-sample">SC20100S Dev Board Code Sample</h3>
-<p>The following sample code runs on our SC20100S Dev Board with its built in display. You will need to add a font and a small JPG image as <a href="resources.html">resources</a> to run the code as is.</p>
+<h2 id="virtual-displays">Virtual Displays</h2>
+<p>Displays can be virtual, meaning the system handles the drawing in RAM and when <code>Flush</code> is called an event is fired with the graphics data that needs to be transferred to the display. This for example can be an SPI display or over-the-network display.</p>
+<p>The following sample code runs on our SC20100S Dev Board with its SPI-based display. You will need to add a font and a small JPG image as <a href="resources.html">resources</a> to run the code as is.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.</p>
-</div>
-<div class="TIP"><h5>Tip</h5><p>Make sure you change the namespace to match your project! </p>
 </div>
 <pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Devices.Spi;
@@ -264,18 +291,17 @@ namespace GraphicsSample {
             Thread.Sleep(Timeout.Infinite);
         }
 
-        private static void Graphics_OnFlushEvent(IntPtr hdc, byte[] data) {
+        private static void Graphics_OnFlushEvent(Graphics sender, byte[] data, int x, int y, int width, int height, int originalWidth) {
             st7735.DrawBuffer(data);
         }
     }
 }
 </code></pre><hr>
 <h2 id="helper-methods">Helper Methods</h2>
-<p>With parallel displays, (also called native displays), the <code>DisplayController.ActiveConfiguration</code> can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display&#39;s resolution. The following line of code draws a line from corner to corner, no matter the display resolution.</p>
+<p>With parallel native displays the <code>DisplayController.ActiveConfiguration</code> can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display&#39;s resolution. The following line of code draws a line from corner to corner, no matter the display resolution.</p>
 <pre><code class="lang-cs">screen.DrawLine(new Pen(Color.Red), 0, 0, displayController.ActiveConfiguration.Width - 1,
     displayController.ActiveConfiguration.Height - 1);
-</code></pre><p>It is important to note that drawing functions process graphics in RAM independently from the display. The display driver then transfers the pixels from internal memory to the display when <code>Graphics.Flush</code> is called. Learn more about <a href="displays.html">display</a> support.</p>
-<hr>
+</code></pre><hr>
 <h2 id="images">Images</h2>
 <p>TinyCLR OS supports the BMP, GIF, and JPG. See the <a href="image-decoders.html">Image Decoders</a> page.</p>
 <hr>
