@@ -48,11 +48,11 @@ updater.Build(false, true);
 
 ---
 
-## Without External Eemory
+## Without External Memory
 
 When no external memories are present (Flash nor RAM), only the application can be updated and only using file stream.
 
-> [!NOTE]
+> [!Note]
 > Very tiny applications can be theoretically be updated using memory streams, assuming the memory is enough to hold the entire new application.
 
 ---
