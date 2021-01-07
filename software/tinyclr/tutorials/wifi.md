@@ -32,7 +32,7 @@ static void Wifi_Example() {
     SpiNetworkCommunicationInterfaceSettings netInterfaceSettings =
         new SpiNetworkCommunicationInterfaceSettings();
 
-    var cs = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PG12);
+    var cs = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA6);
 
     var settings = new SpiConnectionSettings() {
         ChipSelectLine = cs,
@@ -49,11 +49,11 @@ static void Wifi_Example() {
 
     netInterfaceSettings.SpiSettings = settings;
     netInterfaceSettings.InterruptPin = GpioController.GetDefault().
-        OpenPin(SC20260.GpioPin.PG6);
+        OpenPin(SC20260.GpioPin.PF10);
 
     netInterfaceSettings.InterruptEdge = GpioPinEdge.FallingEdge;
     netInterfaceSettings.InterruptDriveMode = GpioPinDriveMode.InputPullUp;
-    netInterfaceSettings.ResetPin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PI8);
+    netInterfaceSettings.ResetPin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PC3);
     netInterfaceSettings.ResetActiveState = GpioPinValue.Low;
 
     var networkController = NetworkController.FromName

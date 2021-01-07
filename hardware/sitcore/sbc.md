@@ -255,7 +255,7 @@ Already one of our most popular SITCore single board computers, The **FEZ Portal
 |                   | IRQ = PF10      |
 |                   | CS = PA6        |
 |                   | EN = PA8        |
-|                   | RST = PF8       |
+|                   | RST = PC3       |
 |                   |                 |
 | **Buttons**       | LDR = PE3       |
 |                   | APP = PB7       |
