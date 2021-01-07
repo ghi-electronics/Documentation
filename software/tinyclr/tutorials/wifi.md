@@ -71,8 +71,8 @@ static void Wifi_Example() {
         { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
 
     wifiSettings.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
-    wifiSettings.IsDhcpEnabled = true;
-    wifiSettings.IsDynamicDnsEnabled = true;
+    wifiSettings.DhcpEnabled = true;
+    wifiSettings.DynamicDnsEnabled = true;
     wifiSettings.TlsEntropy = new byte[] { 0, 1, 2, 3 };
 
     networkController.SetInterfaceSettings(wifiSettings);
@@ -183,7 +183,7 @@ var networkInterfaceSetting = new WiFiNetworkInterfaceSettings() {
 >[!TIP]
 >Only WEP password security is supported. Do not set the `Password` for an open network.
 
-`AccessPoint` can provide an IP address to the connected device when `networkInterfaceSetting.IsDhcpEnabled = true;` through a simple internal DHCP server. If desired, an event is triggered on completion.
+`AccessPoint` can provide an IP address to the connected device when `networkInterfaceSetting.DhcpEnabled = true;` through a simple internal DHCP server. If desired, an event is triggered on completion.
 
 ```cs
 WiFiNetworkInterfaceSettings wifiSettings = new WiFiNetworkInterfaceSettings() {
