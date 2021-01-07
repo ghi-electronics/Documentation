@@ -5,7 +5,7 @@ External memory is typically not secure as it can be probed by hackers. However,
 ## External RAM
 Devices with external RAM have the option of utilizing this memory as [Unmanaged Heap](unmanaged-heap.md). Unmanaged heap is great for storing large amounts of data, but it is not considered secure. Bitmaps and large buffers are automatically stored in unmanaged heap.
 
-Developers also have the option of extending core managed heap into unsecure external memory, in which case there is no longer any unmanaged heap space. This feature is a trade off between security and convenience -- it provides a large amount of managed heap space, but data is stored outside of the microcontroller chip where it's less secure. Please see the [IP Protection](ip-protection.md) page for more information.
+Developers also have the option of extending core managed heap into unsecure external memory, in which case, it removes unmanaged heap space. This feature is a trade off between security and convenience -- it provides a large amount of managed heap space, but data is stored outside of the microcontroller chip where it's less secure. Please see the [IP Protection](ip-protection.md) page for more information.
 
 [TinyCLR Config](../tinyclr-config.md) can be used to extend the heap into external SDRAM, as well as the following method, you'll also have to follow with software reset method:
 ```cs
@@ -30,6 +30,4 @@ Since external memory chips can be probed, TinyCLR supports `Secure Assemblies`.
 > [TinyCLR Config](../tinyclr-config.md) can be used to display the internal `Deployment Map`.
 
 The entire 16MB of flash, or 10MB when deployment is extended, can be used directly by reading/writing raw sectors or using [Tiny File System](file-system.md).
-
-
 
