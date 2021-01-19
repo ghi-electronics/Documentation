@@ -1,6 +1,4 @@
 # Upgrading
-
-<!---# Upgrading to SITCore-->
 ---
 ![Upgrading to SITCore](images/upgrade-sign.jpg)
 
@@ -41,7 +39,7 @@ Our SCM20260E is a drop in replacement for the G120E except for a few issues tha
 
 ## G400S to SITCore
 
-Unfortunately, there is no drop-in replacement for the G400S. The recommended replacement is the SCM20260E, which has considerably more horsepower and available resources.
+There is no drop-in replacement for the G400S. The recommended replacement is the SCM20260E, which has considerably more horsepower and available resources.
 
 ## G400D to SITCore
 
