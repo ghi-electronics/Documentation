@@ -1,16 +1,20 @@
-# Upgrading to SITCore
+# Upgrading
+
+<!---# Upgrading to SITCore-->
 ---
 ![Upgrading to SITCore](images/upgrade-sign.jpg)
 
-To complement our ten year Longevity Promise, we provide [SITCore products](../sitcore/intro.md) that are drop in replacements for most of our more mature SoMs and chipsets. We strive to keep your product viable as long as possible with no or minimal changes to your hardware.
+To complement our ten year Longevity Promise, we provide [products](../sitcore/intro.md) that are drop in replacements for most of our more mature SoMs and chipsets. We strive to keep customers products viable as long as possible with no or minimal changes to hardware.
 
 ## G30 to SITCore
 
-While we offer no SITCore in an LQFP64 package, the recommended replacement (the SC20100S) has considerably more horsepower and available resources. As nearly all new designs will require some form of IoT connectivity, the SC20100S provides much greater value for new designs or redesigns of existing products.
+There is currently no LQFP64 package options for SITCore. The recommended replacement is SC20100S 100LQFP, with considerably more horsepower and available resources.
 
 ## G80 to SITCore
 
-Unfortunately the LQFP100 version of the SITCore processor is unavailable in a version that is pin compatible with the G80, so changes to your circuit board will be needed. However, many of the pins on the SC20100S have the same function as on the G80, and the other pins are close to their previous position. Our experience has shown that upgrading a circuit board design from the G80 to the SC20100S can easily be accomplished in a matter of hours.
+The SITCore SC20100S is LQFP100 with near identical pinout and compatibility with the G80, however it is not a drop-in replacement and some small changes are necessary. The table below provides a pinout comparison.
+
+[SC20100S to G80 Pinout Map](pdfs/sc20100s-g80-pinoutmap.pdf)  
 
 ## G120 to SITCore
 
@@ -37,7 +41,7 @@ Our SCM20260E is a drop in replacement for the G120E except for a few issues tha
 
 ## G400S to SITCore
 
-Unfortunately, we do not offer a SITCore drop in replacement for the G400S. The recommended replacement is the SCM20260E, which has considerably more horsepower and available resources. As nearly all new designs will require some form of IoT connectivity, the SCM20260E provides much greater value for new designs or redesigns of older products.
+Unfortunately, there is no drop-in replacement for the G400S. The recommended replacement is the SCM20260E, which has considerably more horsepower and available resources.
 
 ## G400D to SITCore
 

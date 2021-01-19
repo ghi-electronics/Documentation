@@ -35,13 +35,15 @@ device.TransferFullDuplex(...);    //This is the only one that truly represents 
 ---
 
 ## SPI Clock Speed
-SITCore SPI controllers support different clock ranges.
+SITCore SPI controllers support different clock ranges.   
 
 SPI Controllers | 1, 2 & 3 | 4 & 5   | 6
 ----------------|----------|---------|----------
 Minimum Speed   | 188 kHz  | 469 kHz | 250K
 Maximum Speed   | 24 MHz   | 60 MHz  | 32MHz
 
+> [!Note]
+> Supported clock speeds are derived/divisible from the Maximum clock frequency. If the requested clock is not divisible, the next lower frequency will be used. This is to keep the clock speed as high as possible, but still at or below the requested speed. For example, on 60Mhz clock, the available options are 60Mhz, 30Mhz, 20Mhz, 15Mhz...etc. If the desired frequency is set to 29Mhz then 20Mhz will be used.
 
 The `MinClockFrequency` and `MaxClockFrequency` fields can be used at runtime.
 

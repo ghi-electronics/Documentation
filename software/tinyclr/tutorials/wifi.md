@@ -25,7 +25,7 @@ using System.Net;
 using System.Threading;
 
 static void Wifi_Example() {
-    var enablePin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PI0);
+    var enablePin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA8);
     enablePin.SetDriveMode(GpioPinDriveMode.Output);
     enablePin.Write(GpioPinValue.High);
 
