@@ -1,6 +1,6 @@
 # Upgrading
 ---
-![Upgrading to SITCore](images/upgrade-sign.jpg)
+![Upgrading](images/upgrade-sign.jpg)
 
 To complement our ten year Longevity Promise, we provide [products](../sitcore/intro.md) that are drop in replacements for most of our more mature SoMs and chipsets. We strive to keep customers products viable as long as possible with no or minimal changes to hardware.
 
