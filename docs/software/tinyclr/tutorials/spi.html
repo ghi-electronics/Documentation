@@ -19,8 +19,7 @@
     
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -105,7 +104,7 @@ device.TransferSequential(...);    //This is good for reading registers.
 device.TransferFullDuplex(...);    //This is the only one that truly represents how SPI works.
 </code></pre><hr>
 <h2 id="spi-clock-speed">SPI Clock Speed</h2>
-<p>SITCore SPI controllers support different clock ranges.</p>
+<p>SITCore SPI controllers support different clock ranges.   </p>
 <table>
 <thead>
 <tr>
@@ -130,6 +129,8 @@ device.TransferFullDuplex(...);    //This is the only one that truly represents 
 </tr>
 </tbody>
 </table>
+<div class="NOTE"><h5>Note</h5><p>Supported clock speeds are derived/divisible from the Maximum clock frequency. If the requested clock is not divisible, the next lower frequency will be used. This is to keep the clock speed as high as possible, but still at or below the requested speed. For example, on 60Mhz clock, the available options are 60Mhz, 30Mhz, 20Mhz, 15Mhz...etc. If the desired frequency is set to 29Mhz then 20Mhz will be used.</p>
+</div>
 <p>The <code>MinClockFrequency</code> and <code>MaxClockFrequency</code> fields can be used at runtime.</p>
 <pre><code class="lang-cs">var controller = SpiController.FromName(SC20100.SpiBus.Spi3);
 Debug.WriteLine(controller.MinClockFrequency.ToString());
@@ -181,9 +182,22 @@ spi.Write(graphicsBuffer, x, y, width, height, originalWidth, 1, 1);
                   </li>
                 </ul>
               </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
+              </div>
+          
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
           </div>

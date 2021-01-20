@@ -19,8 +19,7 @@
     
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -98,14 +97,14 @@ using System.Net;
 using System.Threading;
 
 static void Wifi_Example() {
-    var enablePin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PI0);
+    var enablePin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA8);
     enablePin.SetDriveMode(GpioPinDriveMode.Output);
     enablePin.Write(GpioPinValue.High);
 
     SpiNetworkCommunicationInterfaceSettings netInterfaceSettings =
         new SpiNetworkCommunicationInterfaceSettings();
 
-    var cs = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PG12);
+    var cs = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA6);
 
     var settings = new SpiConnectionSettings() {
         ChipSelectLine = cs,
@@ -122,11 +121,11 @@ static void Wifi_Example() {
 
     netInterfaceSettings.SpiSettings = settings;
     netInterfaceSettings.InterruptPin = GpioController.GetDefault().
-        OpenPin(SC20260.GpioPin.PG6);
+        OpenPin(SC20260.GpioPin.PF10);
 
     netInterfaceSettings.InterruptEdge = GpioPinEdge.FallingEdge;
     netInterfaceSettings.InterruptDriveMode = GpioPinDriveMode.InputPullUp;
-    netInterfaceSettings.ResetPin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PI8);
+    netInterfaceSettings.ResetPin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PC3);
     netInterfaceSettings.ResetActiveState = GpioPinValue.Low;
 
     var networkController = NetworkController.FromName
@@ -144,8 +143,8 @@ static void Wifi_Example() {
         { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
 
     wifiSettings.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
-    wifiSettings.IsDhcpEnabled = true;
-    wifiSettings.IsDynamicDnsEnabled = true;
+    wifiSettings.DhcpEnabled = true;
+    wifiSettings.DynamicDnsEnabled = true;
     wifiSettings.TlsEntropy = new byte[] { 0, 1, 2, 3 };
 
     networkController.SetInterfaceSettings(wifiSettings);
@@ -227,7 +226,7 @@ bool success = Winc15x0Interface.FirmwareUpdate(string url, int timeout);
 };
 </code></pre><div class="TIP"><h5>Tip</h5><p>Only WEP password security is supported. Do not set the <code>Password</code> for an open network.</p>
 </div>
-<p><code>AccessPoint</code> can provide an IP address to the connected device when <code>networkInterfaceSetting.IsDhcpEnabled = true;</code> through a simple internal DHCP server. If desired, an event is triggered on completion.</p>
+<p><code>AccessPoint</code> can provide an IP address to the connected device when <code>networkInterfaceSetting.DhcpEnabled = true;</code> through a simple internal DHCP server. If desired, an event is triggered on completion.</p>
 <pre><code class="lang-cs">WiFiNetworkInterfaceSettings wifiSettings = new WiFiNetworkInterfaceSettings() {
     Ssid = &quot;Your SSID&quot;,
     Password = &quot;Your Password&quot;,
@@ -250,9 +249,22 @@ WiFiNetworkInterfaceSettings wifiSettings.AccessPointClientConnectionChanged += 
                   </li>
                 </ul>
               </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
+              </div>
+          
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
           </div>

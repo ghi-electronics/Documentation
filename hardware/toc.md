@@ -12,7 +12,7 @@
 ## [G120/G120E](netmf/g120.md)
 ## [G400S](netmf/g400s.md)
 ## [G400D](netmf/g400d.md)
-## [Upgrading to SITCore](netmf/upgrade.md)
+## [Upgrading](netmf/upgrade.md)
 
 # [Legacy](legacy/intro.md)
 

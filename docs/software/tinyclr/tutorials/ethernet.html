@@ -19,8 +19,7 @@
     
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -117,8 +116,8 @@ static void EthernetTest() {
          new System.Net.IPAddress(new byte[] { 75, 75, 75, 76 })};
 
     networkInterfaceSetting.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
-    networkInterfaceSetting.IsDhcpEnabled = true;
-    networkInterfaceSetting.IsDynamicDnsEnabled = true;
+    networkInterfaceSetting.DhcpEnabled = true;
+    networkInterfaceSetting.DynamicDnsEnabled = true;
 
     networkInterfaceSetting.TlsEntropy = new byte[] { 0, 1, 2, 3 };
 
@@ -196,8 +195,8 @@ private static void NetworkController_NetworkAddressChanged
         { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
 
     networkInterfaceSetting.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
-    networkInterfaceSetting.IsDhcpEnabled = true;
-    networkInterfaceSetting.IsDynamicDnsEnabled = true;
+    networkInterfaceSetting.DhcpEnabled = true;
+    networkInterfaceSetting.DynamicDnsEnabled = true;
 
     networkInterfaceSetting.TlsEntropy = new byte[] { 0, 1, 2, 3 };
 
@@ -265,9 +264,22 @@ private static void NetworkController_NetworkAddressChanged
                   </li>
                 </ul>
               </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
+              </div>
+          
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
           </div>

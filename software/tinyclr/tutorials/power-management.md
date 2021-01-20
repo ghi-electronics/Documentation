@@ -62,7 +62,7 @@ Power.Sleep(DateTime.Now.AddSeconds(90)); //Will wake up after 90 seconds.
 ---
 
 ## Shutdown
-In this mode the system completely shuts down. It can only be awakened by reset, power cycle, or by toggling the WKUP pin.
+In this mode the system completely shuts down. It can only be awakened by reset, power cycle, or by toggling the WKUP pin. When `Shutdown` is used the system is turned completely off, internal pull-up resistors are also disabled. 
 
 The following code shuts down the system. The `false` argument configures the system to wake up when the WKUP pin goes from high to low. Make the argument `true` to wake up when WKUP goes high.
 

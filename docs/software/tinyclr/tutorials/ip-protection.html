@@ -19,8 +19,7 @@
     
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -80,31 +79,16 @@
 <h1 id="ip-protection">IP Protection</h1>
 
 <hr>
-<p>Designed with security as a top priority, TinyCLR OS provides protection for both code and data.</p>
-<h2 id="application-protection">Application Protection</h2>
-<p>Companies need a way to protect their applications from piracy -- TinyCLR OS running on SITCore devices gives you exactly what you need!</p>
-<h3 id="secure-assemblies">Secure Assemblies</h3>
-<p>Secure assemblies are assemblies that are deployed only to flash memory internal to the processor. As this secure code never leaves the SITCore processor, it is very difficult for anyone to access or copy your code. By default, all assemblies are deployed to internal flash memory. Unless external flash is enabled, assemblies will never be deployed to external flash.</p>
-<p>However, if external flash is enabled, assemblies will be deployed to external flash when the amount of internal flash is running low. In such cases, we have provided a way to protect your most sensitive code. By tagging an assembly as secure, you can ensure that it will never be deployed to external flash. If there is not enough internal flash to hold all of the secure assemblies, an out of memory exception will be raised.</p>
-<p>To tag an assembly as secure, you will have to edit the <code>AssemblyInfo.cs</code> file in the <code>Properties</code> folder within your project&#39;s folder. Change the line <code>[assembly: AssemblyConfiguration(&quot;&quot;)]</code> to <code>[assembly: AssemblyConfiguration(&quot;secure&quot;)]</code> (the word &quot;secure&quot; is case insensitive). If this is not done, by default the assembly will not be secure. Note that this only matters when external flash is enabled, and the size of the assemblies is larger than the internal flash capacity.</p>
-<p>During deployment Visual Studio will display an allocation table showing both the secure and unsecure assemblies and their address, so it is easy to check the security status of your assemblies. This is found in the <code>TinyCLR Device Deployment</code> Visual Studio output window.</p>
-<h3 id="disabling-the-debug-interface">Disabling the Debug Interface</h3>
-<p>As USB and serial ports are used for application deployment and debugging, these interfaces can also be used by unauthorized parties to read or pirate your application. TinyCLR OS supports disabling of the debug interface to prevent unauthorized access. You can disable the debug interface with the <a href="../tinyclr-config.html">TinyCLR Config</a> utility program or with the following method:</p>
-<pre><code class="lang-cs">GHIElectronics.TinyCLR.Update.Application.Lock()
-</code></pre><p>As this instruction is stored internally in non-volatile flash, it is persistent, and the chip can only be unlocked by completely erasing the device through the bootloader. This also erases your application, so locking the chip provides a great deal of security for your application.</p>
-<p>You can also check what interface is active, or if it is disabled:</p>
-<pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.DeviceInformation.DebugInterface
-</code></pre><p>Once you lock your device, everyone, including you and GHI Electronics, is locked out of accessing and debugging your application. So how do you update the application code on your device?</p>
-<p>The first step is to create an encrypted copy of the application. This is easily done using the <a href="../tinyclr-config.html">TinyCLR Config</a> tool. You need to enter a key, or the tool will generate a key for you. The tool will then read the application, encrypt it, and store the encrypted application and the key as files on your machine. Of course, this needs to be done before you disable the debug interface on your device!</p>
-<p>You can now use application deployment to deploy to other devices. This is good for mass production as well. If you are sending the deployment to a contract manufacturer, remember to send the key too!</p>
-<h3 id="in-field-update">In-Field Update</h3>
-<p>You can use <a href="../tinyclr-config.html">TinyCLR Config</a> to create an encrypted application deployment that can be securely loaded by your customer. You can send this application deployment to the field (the customer) as a file in an email or automate it using the cloud. You have options. Of course, when you send the application deployment out to the field, you would not send the key with it. They key is securely stored inside your application, in your in-field update code. Check out our <a href="in-field-update.html">In-Field Update</a> tutorial for implementation information.</p>
+<p>Designed with security as a top priority, TinyCLR OS provides protection for both user&#39;s code and user&#39;s data.</p>
+<h2 id="securing-code">Securing Code</h2>
+<p>By default, user&#39;s code is stored securely on the internal flash memory. It can only be reached by the USB or serial debug interfaces, which can be disabled using the <a href="../tinyclr-config.html">TinyCLR Config</a> utility program or using <code>GHIElectronics.TinyCLR.Update.Application.Lock()</code>. This <code>Lock</code> can only be undone by a complete system Erase All, from TinyCLR Config. The current active debug interface can be read through <code>GHIElectronics.TinyCLR.Native.DeviceInformation.DebugInterface</code>.</p>
+<p>The system supports extending the deployment region, where user&#39;s code/assemblies are stored, into external unsecured flash memory. To keep important data secure, the system supports <code>Secure Assemblies</code>. Those assemblies are loaded into the internal secure flash. To tag an assembly as secure, users must edit the <code>AssemblyInfo.cs</code> file in the <code>Properties</code> folder within the project&#39;s folder. Change the line <code>[assembly: AssemblyConfiguration(&quot;&quot;)]</code> to <code>[assembly: AssemblyConfiguration(&quot;secure&quot;)]</code> (the word &quot;secure&quot; is not case sensitive).  During deployment Visual Studio will display an allocation table showing both the secure and unsecure assemblies and their address, a quick way to verify secure assemblies. This is found in the <code>TinyCLR Device Deployment</code> Visual Studio output window.</p>
+<p>The <a href="in-field-update.html">In-Field Update</a> page covers the details on updating a locked system.</p>
 <hr>
-<h2 id="secure-ram">Secure RAM</h2>
-<p>SITCore devices provide security for your sensitive data by using RAM that is inside the processor, making it almost impossible to get at your data. However, sometimes additional RAM is needed by your application. TinyCLR OS allows you to extend the heap into external SDRAM (if supported by your hardware). Please refer to the <a href="external-memory.html">External Memory</a> page for more info. However, the impact upon data security must be considered when the heap is extended.</p>
-<h3 id="extending-heap">Extending Heap</h3>
-<p>While extending the heap into external SDRAM provides more RAM for your application, it also reduces security as it is possible for bad actors to probe the memory interface and reconstruct your data.</p>
-<p>If you are storing sensitive data in RAM, extending heap memory will reduce security. To keep data secure it is best not to extend the heap. If you need more RAM and must extend the heap, encrypt, or obfuscate sensitive data before storing it in RAM if possible. The other option is to include a physical barrier to the circuit, such as potting the circuit board, to make it more difficult to probe the data.</p>
+<h2 id="securing-data">Securing Data</h2>
+<p>The entire system, including user&#39;s keys, cryptography, and everything else are stored on the internal RAM, accessible only by the system itself and the user&#39;s application. When external RAM is utilized, it is only there for the graphics engine. Having images stored in unsecure memory has very little security concerns, unless for example, a key is shown on one of the images. There is also a special <code>LargeBuffer</code> feature that allocates memory from the external RAM, where the user is aware and is in control of what to do with this unsecure buffer.</p>
+<p>If desired, designs that require large heaps of RAM for the entire application have the option to extend the heap to fully encapsulate the external memory, making the system data unsecure. However, external RAM (SDRAM) isn&#39;t probed easily like external flash (QSPI) even if used for extended heap, not secure in this case but more challenging to probe.</p>
+<p>Refer to the <a href="external-memory.html">External Memory</a> page for more info.</p>
 </article>
           </div>
           
@@ -117,9 +101,22 @@
                   </li>
                 </ul>
               </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
+              </div>
+          
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
           </div>

@@ -19,8 +19,7 @@
     
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -140,7 +139,7 @@ private static void NetworkController_NetworkAddressChanged
 </div>
 <h3 id="static-ip">Static IP</h3>
 <p>With static IP addressing, the following settings must be provided.</p>
-<pre><code class="lang-cs">networkInterfaceSetting.IsDhcpEnabled = false;
+<pre><code class="lang-cs">networkInterfaceSetting.DhcpEnabled = false;
 networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
 networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
 networkInterfaceSetting.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
@@ -148,7 +147,7 @@ networkInterfaceSetting.DnsAddresses = new IPAddress[] { new IPAddress(new byte[
     { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
 </code></pre><h3 id="dynamic-ip">Dynamic IP</h3>
 <p>The following line of code enables dynamic IP, which start by trying to lease an IP from a DHCP server. If that fails, the system will self-assign an IP address through AutoIP mechanism. This can take a while but an event is fired when an IP is available.</p>
-<pre><code class="lang-cs">networkInterfaceSetting.IsDhcpEnabled = true;
+<pre><code class="lang-cs">networkInterfaceSetting.DhcpEnabled = true;
 </code></pre><div class="TIP"><h5>Tip</h5><p>AutoIP addresses always fall within the 169.254.x.x range to determine if an IP was generated using AutoIP</p>
 </div>
 <hr>
@@ -179,9 +178,22 @@ else {
                   </li>
                 </ul>
               </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
+              </div>
+          
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
           </div>

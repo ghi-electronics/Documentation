@@ -85,7 +85,7 @@ private static void NetworkController_NetworkAddressChanged
 With static IP addressing, the following settings must be provided.
 
 ```cs
-networkInterfaceSetting.IsDhcpEnabled = false;
+networkInterfaceSetting.DhcpEnabled = false;
 networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
 networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
 networkInterfaceSetting.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
@@ -97,7 +97,7 @@ networkInterfaceSetting.DnsAddresses = new IPAddress[] { new IPAddress(new byte[
 The following line of code enables dynamic IP, which start by trying to lease an IP from a DHCP server. If that fails, the system will self-assign an IP address through AutoIP mechanism. This can take a while but an event is fired when an IP is available.
 
 ```cs
-networkInterfaceSetting.IsDhcpEnabled = true;
+networkInterfaceSetting.DhcpEnabled = true;
 ```
 
 > [!Tip]

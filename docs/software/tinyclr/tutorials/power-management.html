@@ -19,8 +19,7 @@
     
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -118,7 +117,7 @@ private static void ldrButton_ValueChanged(GpioPin sender, GpioPinValueChangedEv
                                           //A GPIO can also wake up the system.
 </code></pre><hr>
 <h2 id="shutdown">Shutdown</h2>
-<p>In this mode the system completely shuts down. It can only be awakened by reset, power cycle, or by toggling the WKUP pin.</p>
+<p>In this mode the system completely shuts down. It can only be awakened by reset, power cycle, or by toggling the WKUP pin. When <code>Shutdown</code> is used the system is turned completely off, internal pull-up resistors are also disabled. </p>
 <p>The following code shuts down the system. The <code>false</code> argument configures the system to wake up when the WKUP pin goes from high to low. Make the argument <code>true</code> to wake up when WKUP goes high.</p>
 <div class="NOTE"><h5>Note</h5><p>Waking from Shutdown mode always resets the system. Your application will start over, it will not resume where it left off.</p>
 </div>
@@ -175,9 +174,22 @@ Power.Shutdown(true, DateTime.MaxValue);
                   </li>
                 </ul>
               </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
+              </div>
+          
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
           </div>

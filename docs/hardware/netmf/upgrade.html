@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Upgrading to SITCore </title>
+    <title>Upgrading </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Upgrading to SITCore ">
+    <meta name="title" content="Upgrading ">
     <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
@@ -19,8 +19,7 @@
     
     <meta property="docfx:rel" content="../../">
     <meta property="docfx:newtab" content="true">
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -77,15 +76,16 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="upgrading-to-sitcore">Upgrading to SITCore</h1>
+<h1 id="upgrading">Upgrading</h1>
 
 <hr>
-<p><img src="images/upgrade-sign.jpg" alt="Upgrading to SITCore"></p>
-<p>To complement our ten year Longevity Promise, we provide <a href="../sitcore/intro.html">SITCore products</a> that are drop in replacements for most of our more mature SoMs and chipsets. We strive to keep your product viable as long as possible with no or minimal changes to your hardware.</p>
+<p><img src="images/upgrade-sign.jpg" alt="Upgrading"></p>
+<p>To complement our ten year Longevity Promise, we provide <a href="../sitcore/intro.html">products</a> that are drop in replacements for most of our more mature SoMs and chipsets. We strive to keep customers products viable as long as possible with no or minimal changes to hardware.</p>
 <h2 id="g30-to-sitcore">G30 to SITCore</h2>
-<p>While we offer no SITCore in an LQFP64 package, the recommended replacement (the SC20100S) has considerably more horsepower and available resources. As nearly all new designs will require some form of IoT connectivity, the SC20100S provides much greater value for new designs or redesigns of existing products.</p>
+<p>There is currently no LQFP64 package options for SITCore. The recommended replacement is SC20100S 100LQFP, with considerably more horsepower and available resources.</p>
 <h2 id="g80-to-sitcore">G80 to SITCore</h2>
-<p>Unfortunately the LQFP100 version of the SITCore processor is unavailable in a version that is pin compatible with the G80, so changes to your circuit board will be needed. However, many of the pins on the SC20100S have the same function as on the G80, and the other pins are close to their previous position. Our experience has shown that upgrading a circuit board design from the G80 to the SC20100S can easily be accomplished in a matter of hours.</p>
+<p>The SITCore SC20100S is LQFP100 with near identical pinout and compatibility with the G80, however it is not a drop-in replacement and some small changes are necessary. The table below provides a pinout comparison.</p>
+<p><a href="pdfs/sc20100s-g80-pinoutmap.pdf">SC20100S to G80 Pinout Map</a>  </p>
 <h2 id="g120-to-sitcore">G120 to SITCore</h2>
 <p>Our SCM20260N is a drop in replacement for the G120 with the following differences that will rarely be an issue.</p>
 <ul>
@@ -106,7 +106,7 @@
 </ul>
 <p><a href="pdfs/scm20260e-g120e-pinoutmap.pdf">SCM20260E to G120E Pinout Map</a></p>
 <h2 id="g400s-to-sitcore">G400S to SITCore</h2>
-<p>Unfortunately, we do not offer a SITCore drop in replacement for the G400S. The recommended replacement is the SCM20260E, which has considerably more horsepower and available resources. As nearly all new designs will require some form of IoT connectivity, the SCM20260E provides much greater value for new designs or redesigns of older products.</p>
+<p>There is no drop-in replacement for the G400S. The recommended replacement is the SCM20260E, which has considerably more horsepower and available resources.</p>
 <h2 id="g400d-to-sitcore">G400D to SITCore</h2>
 <p>Our SCM20260D is a drop in replacement for the G400D, with just a couple of differences that will rarely be an issue.</p>
 <ul>
@@ -128,9 +128,22 @@
                   </li>
                 </ul>
               </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+              </div>
+          
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
           </div>

@@ -19,8 +19,7 @@
     
     <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -82,8 +81,8 @@
 <hr>
 <p>External memory is typically not secure as it can be probed by hackers. However, external memory provides the large amount of storage required by some applications.</p>
 <h2 id="external-ram">External RAM</h2>
-<p>Devices with external RAM have the option of utilizing this memory as <a href="unmanaged-heap.html">Unmanaged Heap</a>. Unmanaged heap is great for storing large amounts of data, but it is not considered secure. Bitmaps and large buffers are automatically stored in unmanaged heap.</p>
-<p>Developers also have the option of extending core managed heap into unsecure external memory, in which case there is no longer any unmanaged heap space. This feature is a trade off between security and convenience -- it provides a large amount of managed heap space, but data is stored outside of the microcontroller chip where it&#39;s less secure. Please see the <a href="ip-protection.html">IP Protection</a> page for more information.</p>
+<p>Devices with external RAM have the option of utilizing this memory as <a href="unmanaged-heap.html">Unmanaged Heap</a>. Unmanaged heap is great for storing large amounts of data, but it is not considered secure. Bitmaps and <code>UnmanagedBuffer</code> are automatically stored in unmanaged heap.</p>
+<p>Developers also have the option of extending core managed heap into unsecure external memory, in which case, it removes unmanaged heap space. This feature is a trade off between security and convenience -- it provides a large amount of managed heap space, but data is stored outside of the microcontroller chip where it&#39;s less secure. Please see the <a href="ip-protection.html">IP Protection</a> page for more information.</p>
 <p><a href="../tinyclr-config.html">TinyCLR Config</a> can be used to extend the heap into external SDRAM, as well as the following method, you&#39;ll also have to follow with software reset method:</p>
 <pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.Memory.ExtendHeap()
 GHIElectronics.TinyCLR.Native.Power.Reset();
@@ -109,9 +108,22 @@ GHIElectronics.TinyCLR.Native.Power.Reset();
                   </li>
                 </ul>
               </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
+              </div>
+          
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
           </div>

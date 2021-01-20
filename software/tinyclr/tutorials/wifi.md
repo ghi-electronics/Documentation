@@ -25,14 +25,14 @@ using System.Net;
 using System.Threading;
 
 static void Wifi_Example() {
-    var enablePin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PI0);
+    var enablePin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA8);
     enablePin.SetDriveMode(GpioPinDriveMode.Output);
     enablePin.Write(GpioPinValue.High);
 
     SpiNetworkCommunicationInterfaceSettings netInterfaceSettings =
         new SpiNetworkCommunicationInterfaceSettings();
 
-    var cs = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PG12);
+    var cs = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA6);
 
     var settings = new SpiConnectionSettings() {
         ChipSelectLine = cs,
@@ -49,11 +49,11 @@ static void Wifi_Example() {
 
     netInterfaceSettings.SpiSettings = settings;
     netInterfaceSettings.InterruptPin = GpioController.GetDefault().
-        OpenPin(SC20260.GpioPin.PG6);
+        OpenPin(SC20260.GpioPin.PF10);
 
     netInterfaceSettings.InterruptEdge = GpioPinEdge.FallingEdge;
     netInterfaceSettings.InterruptDriveMode = GpioPinDriveMode.InputPullUp;
-    netInterfaceSettings.ResetPin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PI8);
+    netInterfaceSettings.ResetPin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PC3);
     netInterfaceSettings.ResetActiveState = GpioPinValue.Low;
 
     var networkController = NetworkController.FromName
@@ -71,8 +71,8 @@ static void Wifi_Example() {
         { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
 
     wifiSettings.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
-    wifiSettings.IsDhcpEnabled = true;
-    wifiSettings.IsDynamicDnsEnabled = true;
+    wifiSettings.DhcpEnabled = true;
+    wifiSettings.DynamicDnsEnabled = true;
     wifiSettings.TlsEntropy = new byte[] { 0, 1, 2, 3 };
 
     networkController.SetInterfaceSettings(wifiSettings);
@@ -183,7 +183,7 @@ var networkInterfaceSetting = new WiFiNetworkInterfaceSettings() {
 >[!TIP]
 >Only WEP password security is supported. Do not set the `Password` for an open network.
 
-`AccessPoint` can provide an IP address to the connected device when `networkInterfaceSetting.IsDhcpEnabled = true;` through a simple internal DHCP server. If desired, an event is triggered on completion.
+`AccessPoint` can provide an IP address to the connected device when `networkInterfaceSetting.DhcpEnabled = true;` through a simple internal DHCP server. If desired, an event is triggered on completion.
 
 ```cs
 WiFiNetworkInterfaceSettings wifiSettings = new WiFiNetworkInterfaceSettings() {
