@@ -1,6 +1,6 @@
 # Getting Started
 ---
-![Getting Started](images/getting-started-noborder.jpg)
+![Getting Started](images/getting-started.png)
 
 This page explains how to set up the TinyCLR programming environment.  It covers device and computer setup and deployment of a "hello world" program to a SITCore device.
 
@@ -125,4 +125,4 @@ To find the best hardware for your TinyCLR application, go to the [**SITCore**](
 
 To learn more about TinyCLR embedded programming check out our [**tutorials**](tutorials/intro.md).
 
-You can also visit our main website at [**www.ghielectronics.com**](http://www.ghielectronics.com) and our community forums at [**forums.ghielectronics.com**](https://forums.ghielectronics.com/).
+You can also visit our main website at [**main website**](http://www.ghielectronics.com) and our  [**community forum**](https://forums.ghielectronics.com/).

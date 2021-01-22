@@ -1,6 +1,6 @@
 # USBizi
 ---
-![USBizi 144](images/usbizi-144.jpg) ![USBizi 100](images/usbizi-100.jpg)
+![USBizi 144 & 100](images/usbizi.jpg)
 
 USBizi was the first single chip .NET Micro Framework (NETMF) on the market. It was available in 100pin and 144pin LQFP packages.
 

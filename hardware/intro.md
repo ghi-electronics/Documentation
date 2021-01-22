@@ -1,12 +1,25 @@
 # Hardware
 ---
 
-|  |  |
-|---|---|
-| **SITCore** </br> Secure IoT SoCs, SoMs and Dev Boards that run C# with full debugging over USB. [**Learn More...**](sitcore/intro.md) | **NETMF Modules** </br> A mature product line that is still in production running Microsoft's .NET Micro Framework. [**Learn More...**](netmf/intro.md) |
-| [![SITCore SC20100S](sitcore/images/sitcore.jpg)](sitcore/intro.md) | [![G120](netmf/images/netmf-modules.jpg)](netmf/intro.md) |
-| **Legacy** </br> Support for discontinued products. [**Learn More...**](legacy/intro.md)| **Legal** </br> License, Disclaimer, Security. [**More...**](../hardware/legal.md) |
-| [![SITCore Dev Board](legacy/images/legacy-soms.jpg)](legacy/intro.md) | [![Legal](sitcore/images/legal-hardware.jpg)](../hardware/legal.md) |
-***
+## SITCore
 
-You can also visit our main website at [**www.ghielectronics.com**](http://www.ghielectronics.com) and our community forums at [**forums.ghielectronics.com**](https://forums.ghielectronics.com/).
+ [![SITCore SC20100S](sitcore/images/sitcore.png)](sitcore/intro.md) 
+
+Secure IoT SoCs, SoMs and Dev Boards that run C# with full debugging over USB. </br> [**Learn More...**](sitcore/intro.md) 
+
+---
+## Legacy
+
+[![Legacy Products](legacy/images/legacy-soms.jpg)](legacy/intro.md)
+
+Support for discontinued products. </br> [**Learn More...**](legacy/intro.md) 
+
+---
+## Legal
+
+[![Legal](sitcore/images/legal-hardware.jpg)](../hardware/legal.md)
+
+License, Disclaimer, Security. </br> [**More...**](../hardware/legal.md)  
+
+---
+You can also visit our main website at [**main website**](http://www.ghielectronics.com) and our  [**community forum**](https://forums.ghielectronics.com/).

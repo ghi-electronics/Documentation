@@ -1,23 +1,58 @@
-# TinyCLR OS Introduction
+## TinyCLR OS Introduction
+
 ---
-![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
+
+
+![TinyCLR Logo](images/tinyclr-logo.png)
 
 TinyCLR OS started with Microsoft's .NET Micro Framework and continues to enable managed .NET development and debugging using Visual Studio on embedded devices. All you need to get started is Visual Studio (free version available), a TinyCLR device, and a USB cable.
 
-|  |  |
-|--|--|
-|  **Getting Started** </br> Deploy your first TinyCLR program. [**Learn more...**](getting-started.md)  |  **Configuration** </br> Special pins, bootloader, TinyCLR Config [**Learn more...**](configuration.md) |
-|  [![Getting Started](images/getting-started.jpg)](getting-started.md)   |  [![TinyCLR Config](images/tinyclr-config.gif)](configuration.md)  |
-|  **Tutorials** </br> Learn TinyCLR embedded programming. [**Learn more...**](tutorials/intro.md)  |  **Downloads** </br> Visual Studio and device downloads. [**Learn more...**](downloads.md)  |
-|  [![Tutorials](images/tutorials.jpg)](tutorials/intro.md)  |  [![Download](images/download.jpg)](downloads.md) | 
-| **Release Notes** </br> Find the latest changes to TinyCLR. [**Learn more...**](release-notes.md)  |  **Resources** </br> External additional TinyCLR resources. [**Learn more...**](resources.md) |
-|  [![Release Notes](images/tinyclr-logo.jpg)](release-notes.md)  |  [![Resources](images/resources.png)](resources.md)  |
-|   **Limitations** </br> How TinyCLR OS is different from full .NET. [**Learn more...**](limitations.md) |  |
-|  [![Limitations](images/limitations.png)](limitations.md)  |  |
+---
+## Getting Started
+[![Getting Started](images/getting-started.png)](getting-started.md)
 
-***
+Deploy your first TinyCLR program. </br> [**Learn more...**](getting-started.md) 
+
+---
+## Configuration
+[![TinyCLR Config](images/tinyclr-config.png)](configuration.md)
+
+Special pins, bootloader, TinyCLR Config </br> [**Learn more...**](configuration.md)
+
+---
+## Tutorials
+[![Tutorials](images/tutorials.png)](tutorials/intro.md)
+
+Learn TinyCLR embedded programming. </br> [**Learn more...**](tutorials/intro.md)   
+
+---
+## Downloads
+[![Downloads](images/downloads.png)](downloads.md)
+
+Visual Studio and device downloads. </br> [**Learn more...**](downloads.md)
+
+---
+## Release Notes
+[![Release Notes](images/tinyclr-logo.png)](release-notes.md)
+
+Find the latest changes to TinyCLR. </br> [**Learn more...**](release-notes.md) 
+
+---
+## Resources
+[![Resources](images/resources.png)](resources.md)
+
+ External additional TinyCLR resources. </br> [**Learn more...**](resources.md) 
+
+---
+## Limitations
+[![Limitations](images/limitations.png)](limitations.md) 
+
+How TinyCLR OS is different from full .NET. </br> [**Learn more...**](limitations.md) 
+
+
+---
 
 To learn more about TinyCLR embedded programming check out our [**tutorials**](tutorials/intro.md).
 
-You can also visit our main website at [**www.ghielectronics.com**](http://www.ghielectronics.com) and our community forums at [**forums.ghielectronics.com**](https://forums.ghielectronics.com/).
+You can also visit our main website at [**main website**](http://www.ghielectronics.com) and our  [**community forum**](https://forums.ghielectronics.com/).
 

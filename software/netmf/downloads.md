@@ -1,6 +1,6 @@
 # NETMF Downloads
 ---
-![Downloads](../../software/tinyclr/images/download-noborder.jpg)
+![Downloads](../../software/tinyclr/images/downloads.png)
 
 ## General Resources
 * [.NET Micro Framework for Beginners](http://files.ghielectronics.com/downloads/Documents/Guides/NETMF%20for%20Beginners.pdf) (ebook PDF)
