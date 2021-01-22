@@ -1,6 +1,6 @@
 # Downloads
 ---
-![Download](images/download-noborder.jpg)
+![Download](images/downloads.png)
 
 This page includes downloads for the SITCore line of products as well as some of our earlier product lines. See individual product pages for details.
 

@@ -34,7 +34,7 @@ while (cdc.DeviceState != DeviceState.Configured);
 // Write dataW array back to port
 
 while (true){
-    var len = cdc.Stream.BytesToRead;
+    var len = cdc.Stream.ByteToRead;
 
     if (len > 0){
         var dataR = new byte[len];
@@ -86,7 +86,7 @@ while (winUsb.DeviceState != DeviceState.Configured) ;
 // Write dataW array back to port
     
 while (true){
-    var len = winUsb.Stream.BytesToRead;
+    var len = winUsb.Stream.ByteToRead;
 
     if (len > 0){
         var dataR = new byte[len];

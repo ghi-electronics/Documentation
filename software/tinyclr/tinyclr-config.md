@@ -1,6 +1,6 @@
 # TinyCLR Config
 ---
-![TinyCLR Config](images/tinyclr-config.gif)
+![TinyCLR Config](images/tinyclr-config.png)
 
 TinyCLR Config is a stand-alone tool to help manage TinyCLR OS devices, including firmware installation and creating encrypted application deployments and loading them onto SITCore devices. There is also a Debug panel that shows any debug data coming from the connected device.
 
