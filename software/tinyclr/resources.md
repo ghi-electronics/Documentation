@@ -1,6 +1,6 @@
 # Resources
 ---
-![.NET vs TinyCLR OS](images/resources-noborder.png)
+![.NET vs TinyCLR OS](images/resources.png)
 
 ## Professional Community
 Our forum consists of intelligent professionals building commercial products based on SITCore and TinyCLR OS. And it is monitored and supported by our staff.

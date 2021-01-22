@@ -1,6 +1,6 @@
 # .NET Micro Framework Tutorials
 
-![Tutorials](../../tinyclr/images/tutorials.jpg)
+![Tutorials](../../tinyclr/images/tutorials.png)
 
 ## Topics
 

@@ -1,6 +1,6 @@
 # .NET Micro Framework Getting Started
 ---
-![Getting Started](../tinyclr/images/getting-started-noborder.jpg)
+![Getting Started](../tinyclr/images/getting-started.png)
 
 ## Installation Steps
 

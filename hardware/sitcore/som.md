@@ -1,6 +1,6 @@
 # SITCore System on Modules
 ---
-![SITCore SoMs](images/module-options-size.jpg)
+![SITCore SoMs](images/module-options-size.png)
 
 ## Overview
 The SITCore SoMs provide a low cost way to add .NET computing power to any embedded product. They are available in a 200 pin SO-DIMM format or as surface mount modules. The SITCore SoMs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more. The surface mount versions are great for harsh or high vibration environments.
