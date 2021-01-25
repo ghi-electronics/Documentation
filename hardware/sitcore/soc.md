@@ -220,8 +220,19 @@ Conformal coating or other protection is recommended in severe environments to r
 
 Follow the crystal manufacturer's guidelines for load capacitance, otherwise the oscillation frequency may be changed slightly. If the two load capacitors have the same value, one half the value of one load capacitor added to the capacitance of the oscillator traces should be equal to the manufacturer's recommended load capacitance.
 
+### RTC Power
+The VBAT pin is required to power up the RTC. As the pin must always receive power, two diodes can be used to merge the main 3.3v and a 3v button battery into VBAT. If RTC is not needed, connect VBAT to the main power source. 
+SITCore also supports a charging mode on VBAT pin. When charging mode is enabled, a super cap can be used instead of a battery. 
+
+See the [RTC tutorial](../../software/tinyclr/tutorials/real-time-clock.md) for further details. 
+
 ### QuadSPI External Flash
-We have tested two 16 MByte QuadSPI flash chips with SITCore SoCs. These are the Winbond Electronics W25Q128JVSIM TR and W25Q128JVSIQ TR. If you want to add external flash to your design, sticking with one of these two chips should ensure compatibility with both the SoC and TinyCLR OS.
+SITCore supports 16 MByte external QuadSPI flash chips. The options are in the table below.
+
+|    Manufacture      |  Part Number |
+|---------------------|--------------|
+| Winbond Electronics | W25Q128JVSIM |
+| Winbond Electronics | W25Q128JVSIQ |
 
 ### Reset
 SITCore processors have a permanent internal pull up resistor that is connected to the RESET (NRST) pin. No external pull up resistor is needed.
