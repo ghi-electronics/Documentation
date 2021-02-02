@@ -186,6 +186,9 @@ The **FEZ Duino** provides female headers that make use of the popular Arduino p
 | **Buttons**       | LDR = PE3   |
 |                   | APP = PB7   |
 
+> [!Warning]
+> FEZ Duino REV. A & B, The cap used on barrel jack is 6.3v but the input voltage can be as high as 12v. Use the barrel jack at your own risk or replace cap with a higher voltage. This only effects the power barrel jack. Everything else functions as expected if using USB for power.
+
 ---
 
 ## FEZ Feather
