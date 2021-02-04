@@ -6,7 +6,7 @@ MQTT is a light weight messaging protocol for sensors that is supported by all m
 The following is a simple example of MQTT:
 
 >[!TIP]
->Needed Nugets: GHIElectronics.TinyCLR.Networking.Mqtt
+>Needed NuGets: GHIElectronics.TinyCLR.Networking.Mqtt
 
 ```cs
 var caCertificate = new X509Certificate(UTF8Encoding.UTF8.GetBytes("Your certificate"));

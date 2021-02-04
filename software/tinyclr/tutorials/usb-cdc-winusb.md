@@ -6,7 +6,7 @@ These protocols facilitate communication between the SITCore device and a PC. Th
 The USB Communications Device Class (CDC) is natively supported by Windows and Linux. It is a way for a PC to use a USB port as a virtual serial port. Once loaded, the PC will use this port like any other serial port (COM port). Windows 10 works without the need for any drivers, but earlier operating systems may need a driver. While it works with most operating systems, CDC is typically limited to 64 KBytes/second.
 
 > [!TIP]
-> Needed Nugets: GHIElectronics.TinyCLR.Devices.UsbClient
+> Needed NuGets: GHIElectronics.TinyCLR.Devices.UsbClient
 
 ```cs
 var usbclientController = UsbClientController.GetDefault();

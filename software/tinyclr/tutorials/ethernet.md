@@ -10,7 +10,7 @@ Ethernet is supported through the internal MAC, by adding an external PHY (100BA
 Here is a simple example:
 
 >[!TIP]
->Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Pins
+>Needed NuGets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Pins
 
 ```cs
 static bool linkReady = false;
@@ -85,7 +85,7 @@ private static void NetworkController_NetworkAddressChanged
 This example uses the ENC28J60 click on our SC20260D Dev Board.
 
 >[!TIP]
->Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins
+>Needed NuGets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins
 
 ```cs
 static void Enc28Test() {

@@ -15,8 +15,8 @@ This code plays an 8 bit mono WAV file with a sample rate of 8 kHz. The WAV file
 var dac = DacController.GetDefault();
 var analogOut = dac.OpenChannel(SC20100.DacChannel.PA4);
 
-var byteFile = Properties.Resources.GetBytes
-    (Properties.Resources.BinaryResources.yourWavFileResource);
+var byteFile = Resources.GetBytes
+    (Resources.BinaryResources.yourWavFileResource);
 
 var wavFile = new Wav(byteFile);
 var dataIndex = wavFile.GetDataIndex();

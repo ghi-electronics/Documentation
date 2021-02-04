@@ -3,7 +3,7 @@
 Provides a generic view of a sequence of bytes. This is an abstract class.
 
 >[!TIP]
->Need Nugets: GHIElectronics.TinyCLR.Core
+>Need NuGets: GHIElectronics.TinyCLR.Core
 
 ## FileStream
 

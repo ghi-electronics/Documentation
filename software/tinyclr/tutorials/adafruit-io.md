@@ -9,7 +9,7 @@ First add an Adafruit Certificate to our resources and then add it to line of co
 ![Adafruit IO Add Certificate](images/adaIO-add-cert.jpg)
 
 ```cs
-var caCertSource = Properties.Resources.GetBytes(Properties.Resources.BinaryResources.DigiCertGlobalRootG2);
+var caCertSource = Resources.GetBytes(Resources.BinaryResources.DigiCertGlobalRootG2);
 ```
 Next, we'll create a 'Dashboard', from the Dashboards page. Click on 'Create a New Dashboard' found inside the 'Actions' dropdown. 
 
@@ -91,7 +91,7 @@ Deploy your program to your SITCore IoT device, once launched the gauge on our D
 ## Using MQTT
 
 ```cs
-var caCertSource = Properties.Resources.GetBytes(Properties.Resources.BinaryResources.DigiCertGlobalRootG2);
+var caCertSource = Resources.GetBytes(Resources.BinaryResources.DigiCertGlobalRootG2);
 X509Certificate CaCert = new X509Certificate(caCertSource);
 
 var mqttHost = "io.adafruit.com";
