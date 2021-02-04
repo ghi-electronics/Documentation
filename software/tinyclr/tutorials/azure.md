@@ -4,7 +4,7 @@ This example shows how to communicate with Azure IoT Hub using MQTT. You'll also
 
 
 >[!TIP]
->Needed Nugets: GHIElectronics.TinyCLR.Networking.Mqtt
+>Needed NuGets: GHIElectronics.TinyCLR.Networking.Mqtt
 >
 >Add using statement:
 > using System.Security.Cryptography.X509Certificates;

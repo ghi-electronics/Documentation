@@ -12,7 +12,7 @@ The sample code is meant for the FEZ Portal with it's built in WiFi module. If y
 
 
 >[!TIP]
->Needed Nugets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Devices.Uart, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Networking, and GHIElectronics.TinyCLR.Pins.
+>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Devices.Uart, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Networking, and GHIElectronics.TinyCLR.Pins.
 
 ```cs
 using GHIElectronics.TinyCLR.Devices.Gpio;
@@ -159,7 +159,7 @@ Winc15x0Interface.RemoveMulticastMacAddress(new byte[] {​​​​​​​​
 ```
 
 >[!TIP]
->Needed Nugets: GHIElectronics.TinyCLR.Drivers.Microchip.Winc15x0
+>Needed NuGets: GHIElectronics.TinyCLR.Drivers.Microchip.Winc15x0
 
 ---
 
