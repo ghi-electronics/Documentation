@@ -142,9 +142,9 @@ var deviceId = "MyDevice";
 Finally, we need to link the CA Certificates we placed in our project resources to our code as shown in the example below.
 
 ```cs
-var caCertSorce = Properties.Resources.GetBytes(Properties.Resources.BinaryResources.AmazonRootCA1);
-var clientCertSource = Properties.Resources.GetBytes(Properties.Resources.BinaryResources._3a59c69926_certificate_pem);
-var privateKeyData = Properties.Resources.GetBytes(Properties.Resources.BinaryResources._3a59c69926_private_pem);
+var caCertSorce = Resources.GetBytes(Resources.BinaryResources.AmazonRootCA1);
+var clientCertSource = Resources.GetBytes(Resources.BinaryResources._3a59c69926_certificate_pem);
+var privateKeyData = Resources.GetBytes(Resources.BinaryResources._3a59c69926_private_pem);
 ```
 You can now deploy your program in Visual Studio, to connect your device to AWS. Clicking on the 'Activity' Tab on our device dashboard will show the active connection. 
 

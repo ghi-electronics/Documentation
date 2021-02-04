@@ -73,7 +73,7 @@ In the first line of code above, you need to add an Azure Certificate and place 
 
 ```cs
  var caCert = 
-new X509Certificate(Properties.Resources.GetByte(Properties.Resources.BinaryResources.zura));
+new X509Certificate(Resources.GetByte(Resources.BinaryResources.zura));
 ```
 
 The example code also requires iotHubName and deviceId, which are available only when you open an Azure account. To create the iotHubName and deviceId you can follow these instructions found on their website.
