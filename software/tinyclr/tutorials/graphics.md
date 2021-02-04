@@ -176,10 +176,10 @@ namespace GraphicsSample {
             // Create bitmap buffer
             var screen = Graphics.FromImage(new Bitmap(SCREEN_WIDTH, SCREEN_HEIGHT));
 
-            var image = Resources.GetBitmap(Properties.Resources.BitmapResources.
+            var image = Resources.GetBitmap(Resources.BitmapResources.
                 smallJpegBackground);
 
-            var font = Resources.GetFont(Properties.Resources.FontResources.small);
+            var font = Resources.GetFont(Resources.FontResources.small);
 
             screen.Clear();
 
