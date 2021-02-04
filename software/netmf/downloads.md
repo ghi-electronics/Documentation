@@ -40,7 +40,7 @@ Apr 30, 2013 | 4.3 RTM | [NETMF and Gadgeteer Package 2013 R1 Update 1](http://f
 Feb 14, 2013 | 4.2 QFE2 | [NETMF and Gadgeteer Package 2013 R1](http://files.ghielectronics.com/downloads/NETMF/SDKs/NETMF%20and%20Gadgeteer%20Package%202013%20R1.zip)
 Feb 17, 2012 | 4.1 RTM | [NETMF 4.1 SDK, for Embedded Master, USBizi and ChipworkX](https://ghistorage.blob.core.windows.net/downloads/NETMF/SDKs/NETMF%204.1%20SDK.zip) (Includes IoT book for FEZ Panda)
 
-## Community Provided
+## Glide
 Created by the community, shared here without GHI Electronics support.
 
 [Glide Designer](http://files.ghielectronics.com/downloads/NETMF/GlideStudioBeta30.zip)
