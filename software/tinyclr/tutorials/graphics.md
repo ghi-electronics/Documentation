@@ -28,11 +28,11 @@ The following example runs on the SCM20260D Dev Board with either the 4.3" or 7"
 > Needed Nugets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.
 
 ```cs
+using System.Drawing;
+using System.Threading;
 using GHIElectronics.TinyCLR.Devices.Display;
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
-using System.Drawing;
-using System.Threading;
 
 namespace GraphicsSample {
     class Program {
@@ -70,8 +70,8 @@ namespace GraphicsSample {
 
             var screen = Graphics.FromHdc(displayController.Hdc);
 
-            var image = Resource1.GetBitmap(Resource1.BitmapResources.smallJpegBackground);
-            var font = Resource1.GetFont(Resource1.FontResources.small);
+            var image = Resources.GetBitmap(Resources.BitmapResources.smallJpegBackground);
+            var font = Resources.GetFont(Resources.FontResources.small);
 
             screen.Clear();
 
@@ -91,7 +91,7 @@ namespace GraphicsSample {
             screen.FillRectangle(new SolidBrush(Color.Teal), 330, 150, 140, 100);
 
             screen.DrawLine(new Pen(Color.White), 10, 271, 470, 271);
-            screen.SetPixel(240, 200, 0xFF0000);
+            screen.SetPixel(240, 200, Color.White);
 
             screen.DrawString("Hello world!", font, new SolidBrush(Color.Blue), 210, 255);
 
@@ -137,13 +137,13 @@ The following sample code runs on our SC20100S Dev Board with its SPI-based disp
 > Needed Nugets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.
 
 ```cs
+using System;
+using System.Drawing;
+using System.Threading;
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Devices.Spi;
 using GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735;
 using GHIElectronics.TinyCLR.Pins;
-using System;
-using System.Drawing;
-using System.Threading;
 
 namespace GraphicsSample {
     class Program {
@@ -176,10 +176,10 @@ namespace GraphicsSample {
             // Create bitmap buffer
             var screen = Graphics.FromImage(new Bitmap(SCREEN_WIDTH, SCREEN_HEIGHT));
 
-            var image = Properties.Resources.GetBitmap(Properties.Resources.BitmapResources.
+            var image = Resources.GetBitmap(Properties.Resources.BitmapResources.
                 smallJpegBackground);
 
-            var font = Properties.Resources.GetFont(Properties.Resources.FontResources.small);
+            var font = Resources.GetFont(Properties.Resources.FontResources.small);
 
             screen.Clear();
 
@@ -199,7 +199,7 @@ namespace GraphicsSample {
             screen.FillRectangle(new SolidBrush(Color.Teal), 110, 80, 40, 25);
 
             screen.DrawLine(new Pen(Color.White), 10, 127, 150, 127);
-            screen.SetPixel(80, 92, 0xFF0000);
+            screen.SetPixel(80, 92, Color.White);
 
             screen.DrawString("Hello world!", font, new SolidBrush(Color.Blue), 50, 110);
 
