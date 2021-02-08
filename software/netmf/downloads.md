@@ -41,6 +41,7 @@ Feb 14, 2013 | 4.2 QFE2 | [NETMF and Gadgeteer Package 2013 R1](http://files.ghi
 Feb 17, 2012 | 4.1 RTM | [NETMF 4.1 SDK, for Embedded Master, USBizi and ChipworkX](https://ghistorage.blob.core.windows.net/downloads/NETMF/SDKs/NETMF%204.1%20SDK.zip) (Includes IoT book for FEZ Panda)
 
 ## Glide
-Created by the community, shared here without GHI Electronics support.
+Glide is a graphics library that shipped with an on-line designer that is no longer available. GlideStudio is a community provided program to replace the discontinues official designer.
+This is a community-created non-supported download.
 
 [Glide Designer](http://files.ghielectronics.com/downloads/NETMF/GlideStudioBeta30.zip)

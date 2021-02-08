@@ -5,6 +5,10 @@ SITCore line of products includes native support for the Microchip [ATWINC1500](
 >[!IMPORTANT]
 >To take security to the next level, all network cryptography and security are done internally inside SITCore and not inside the WiFi module, meaning the data going over SPI is all encrypted and secure.
 
+# Supported Modules
+ATWINC1500 & 1510 both work identically with SITCore, except the 1510 has more memory that SITCore doesn't need. The part number with the correct firmware that has been tested with TinyCLR is ATWINC1500-MR210PB. A module with a different firmware version can still be used, but a firmware update becomes necessary. Using the exact version eliminates the need for this step. 
+
+# Sample Code
 The sample code is meant for the FEZ Portal with it's built in WiFi module. If you want to use a bare ATWINC1500 module instead, you'll need to connect interrupt, reset, and chip select lines in addition to the SPI lines (MOSI, MISO, SCK).
 
 > [!IMPORTANT] 
