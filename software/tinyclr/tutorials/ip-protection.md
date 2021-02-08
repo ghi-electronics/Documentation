@@ -12,7 +12,7 @@ The [In-Field Update](in-field-update.md) page covers the details on updating a 
 ---
 
 ## Securing Data
-The entire system, including user's keys, cryptography, and everything else are stored on the internal RAM, accessible only by the system itself and the user's application. When external RAM is utilized, it is only there for the graphics engine. Having images stored in unsecure memory has very little security concerns, unless for example, a key is shown on one of the images. There is also a special `LargeBuffer` feature that allocates memory from the external RAM, where the user is aware and is in control of what to do with this unsecure buffer.
+The entire system, including user's keys, cryptography, and everything else are stored on the internal RAM, accessible only by the system itself and the user's application. When external RAM is utilized, it is only there for the graphics engine. Having images stored in unsecure memory has very little security concerns, unless for example, a key is shown on one of the images. There is also a special `UnmanagedBuffer` class that allocates memory from `Unmanaged Heap`, where the user is aware and is in control of what to do with this unsecure buffer.
 
 If desired, designs that require large heaps of RAM for the entire application have the option to extend the heap to fully encapsulate the external memory, making the system data unsecure. However, external RAM (SDRAM) isn't probed easily like external flash (QSPI) even if used for extended heap, not secure in this case but more challenging to probe.
 

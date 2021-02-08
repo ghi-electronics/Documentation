@@ -26,6 +26,7 @@ uBuffer.Dispose();
 
 ```
 
+> [!Tip] Optionally, utilize teh built-in https://docs.ghielectronics.com/software/tinyclr/tutorials/cryptography.html services to encrypt the data before it isloaded into `UnmanagedBuffer`
 ---
 
 ## Graphical Memory
