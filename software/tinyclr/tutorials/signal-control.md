@@ -47,9 +47,9 @@ Starting a second write will cause the signal to first go low, which may not be 
 Calling `Generate` will return immediately (non-blocking) allowing the system to do other tasks while the signal is being generated in the background. When the signal is generated completely, an event is fired. To aid in signal handling, the event provides the final resting level of the signal.
 
 ```cs
-OnWriteReady => OnGenerateReady;
+OnGenerateFinished => OnGenerateFinished;
 
-dsig.OnGenerateReady += (a, b) => {
+dsig.OnGenerateFinished += (a, b) => {
     if (b == GpioPinValue.High)
         Debug.WriteLine("Write done, end state high");
     else
@@ -70,7 +70,7 @@ var digitalSignal = new DigitalSignal(digitalSignalPin);
 bool waitForEdge = false;// Start capturing as soon as Capture is called
 
 // Subscribe event when done capturing
-digitalSignal.OnCaptureReady += Digital_OnCaptureReady;
+digitalSignal.OnCaptureFinished += Digital_OnCaptureFinished;
                       
 // start capture 100 samples, timeout is 15seconds
 digitalSignal.Capture(100, GpioPinEdge.RisingEdge | GpioPinEdge.FallingEdge, waitForEdge, TimeSpan.FromSeconds(15));
@@ -80,7 +80,7 @@ digitalSignal.Capture(100, GpioPinEdge.RisingEdge | GpioPinEdge.FallingEdge, wai
 Thread.Sleep(Timeout.Infinite); 
 
 // The event
-private static void Digital_OnCaptureReady(DigitalSignal sender, uint[] buffer, uint count, GpioPinValue pinValue) {
+private static void Digital_OnCaptureFinished(DigitalSignal sender, uint[] buffer, uint count, GpioPinValue pinValue) {
     if (count == 0) {
         Debug.WriteLine("no data was captured!");
         return;
@@ -102,7 +102,7 @@ var digitalSignal = new DigitalSignal(digitalSignalPin);
 bool waitForEdge = true;// wait for first pulse before starting the measurement
 
 // Subscribe event when done reading
-digitalSignal.OnReadPulseReady += Digital_OnReadPulseReady;           
+digitalSignal.OnReadPulseFinished += Digital_OnReadPulseFinished;           
 
 // Start reading 1000 pulses
 digitalSignal.ReadPulse(1000, GpioPinEdge.RisingEdge, waitForEdge);
@@ -111,7 +111,7 @@ digitalSignal.ReadPulse(1000, GpioPinEdge.RisingEdge, waitForEdge);
 Thread.Sleep(Timeout.Infinite);
 
 // the event
-private static void Digital_OnReadPulseReady(DigitalSignal sender, TimeSpan duration, uint count, GpioPinValue pinValue) {
+private static void Digital_OnReadPulseFinished(DigitalSignal sender, TimeSpan duration, uint count, GpioPinValue pinValue) {
     var ticks = duration.Ticks;
     var microsecond = ((double)duration.Ticks) / 10;
     var millisecond = ((double)duration.Ticks) / 10000;
@@ -135,7 +135,7 @@ var digitalSignalPin = GpioController.GetDefault().OpenPin(SC20260.Timer.Capture
 var digitalSignal = new DigitalSignal(digitalSignalPin);
 var waitForEdge = false;
 
-digitalSignal.OnReadPulseReady += Digital_OnReadPulseReady
+digitalSignal.OnReadPulseFinished += Digital_OnReadPulseFinished
 
 while (true) {
     if (digitalSignal.CanReadPulse) {
@@ -146,7 +146,7 @@ while (true) {
     }
 }
       
-private static void Digital_OnReadPulseReady(DigitalSignal sender, TimeSpan duration, uint count, GpioPinValue pinValue) {
+private static void Digital_OnReadPulseFinished(DigitalSignal sender, TimeSpan duration, uint count, GpioPinValue pinValue) {
     if (count > 0) {
         var microsecond = ((double)duration.Ticks) / 10;
         var freq = (count / microsecond) * 1000000;
