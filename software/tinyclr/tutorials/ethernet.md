@@ -46,8 +46,6 @@ static void EthernetTest() {
     networkInterfaceSetting.DhcpEnabled = true;
     networkInterfaceSetting.DynamicDnsEnabled = true;
 
-    networkInterfaceSetting.TlsEntropy = new byte[] { 0, 1, 2, 3 };
-
     networkController.SetInterfaceSettings(networkInterfaceSetting);
     networkController.SetCommunicationInterfaceSettings(networkCommunicationInterfaceSettings);
 
@@ -131,8 +129,6 @@ static void Enc28Test() {
     networkInterfaceSetting.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
     networkInterfaceSetting.DhcpEnabled = true;
     networkInterfaceSetting.DynamicDnsEnabled = true;
-
-    networkInterfaceSetting.TlsEntropy = new byte[] { 0, 1, 2, 3 };
 
     networkController.SetInterfaceSettings(networkInterfaceSetting);
     networkController.SetCommunicationInterfaceSettings(networkCommunicationInterfaceSettings);
