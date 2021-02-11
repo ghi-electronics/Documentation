@@ -235,3 +235,6 @@ TinyCLR OS supports BMP, GIF, and JPG file formats. See the [Image Decoders](ima
 ## Fonts
 
 Fonts are fully supported. They are covered [here](font-support.md).
+
+## Color Space
+Internally, TinyCLR uses 5:6:5 RGB 16BPP color space. There are helper methods to convert to other color spaces. See [Encoding & Decoding](encoding-decoding.md) for more details.
