@@ -6,18 +6,59 @@
 
 The DigitalSignal is used to handle digital signals! Unlike the other features on this page, DigitalSignal is accurate because it is hardware-backed and runs in a non-blocking manner.
 
-Being hardware backed, this feature only runs on specific pins. Those pins can be found under the pins library, such as `SC20260.Timer.Capture.Controller?.xxx`. 
+Being hardware backed, this feature only runs on specific pins. Those pins can be found under the pins library, under `SC20260.Timer.DigitalSignal.Controller?.xxx.
 
 >[!TIP]
-> Timers are also used with other features, such as PWM. Once a timer is reserved for DigitalSignal, it is no longer available for other features. However, the system includes many timer controllers.
+> Timers are also used with other features, such as PWM. Once a `Timer` is reserved for DigitalSignal, it is no longer available for other features.
 
-There are two uses for DigitalSignal, to capture a stream of durations (signal analyzer) or a pulse counter. Both features can be used to capture on `RisingEdge` or `FallingEdge`. If both edges are desired, use `RisingEdge | FallingEdge`. Capturing starts immediately unless `waitForEdge` is set to `true`.
+There are two uses for DigitalSignal, reading a signal (capture) and sending a signal (generate). The capture feature also support capturing a stream of durations (signal analyzer) or a pulse counter.
 
-> [!WARNING]
-> The `waitForEdge` uses interrupt pin internally to start the capturing cycle. Same rules apply as GPIO interrupt pins, for example when using PB3 to capture with `waitForEdge` equals `true`, PA3, PC3, PD3...etc can't be used for interrupts. See [GPIO](gpio.md) for details on interrupt pins.
+### Generate
+Using the `Generate` function allows the user to create a very accurate signal generator.  
+
+```cs
+Generate(uint[]data, uint offset, uint count)
+```
+
+`data` is the length of each pulse in ticks. By default, each tick is 100ns. 
+
+
+There is a limitation to the `data` being used: The `data` array length is limited to 64K elements. Also, adding individual elements together in the array can also not exceed 0xFFFFFFFF in total.
+ 
+![Default Timing](images/write1.jpg)
+  
+```cs
+Generate(uint[]data, uint offset, uint count, unit multiplier)
+```
+
+Allowable multiplier values range from 25 to 250,000 (250us). There are also 2 rules to the allowed values: 1,000,000,000 % multiplier must result in zero and  240,000,000 % (1,000,000,000 / multiplier) must also be zero.
+
+The signal generator always start with a signal at low level. It then toggles the signal every x time. The time is fetched from the array given, one by one. Note that by sending an even count of pulses, teh signal will terminate with a high-level as shown below.
+
+![Signal Example](images/write2.jpg)
+
+Starting a second write will cause the signal to first go low, which may not be desired, as it causes an extra pulse on the next `Generate`. This pulse has a variable with. Making sure that the data `Length` is always an odd number will assure that the signal will terminate at a low-level.
+
+![Signal Example](images/write3.jpg) 
+
+
+> [!TIP] Software-generated `SignalGenerator` below gives more flexibility but runs in system blocking mode. While `SignalGenerator` is all Hardware-driven making it very accurate, non-blocking and it does not use processor time.
+
+Calling `Generate` will return immediately (non-blocking) allowing the system to do other tasks while the signal is being generated in the background. When the signal is generated completely, an event is fired. To aid in signal handling, the event provides the final resting level of the signal.
+
+```cs
+OnWriteReady => OnGenerateReady;
+
+dsig.OnGenerateReady += (a, b) => {
+    if (b == GpioPinValue.High)
+        Debug.WriteLine("Write done, end state high");
+    else
+        Debug.WriteLine("Write done, end state low");
+   };
+```
 
 ### Capture
-The Capture feature return an array of timestamps of individual durations. The returned values are in nanoseconds?
+The Capture feature returns an array of timestamps of individual durations. The returned values are in nanoseconds.
 
 > [!TIP]
 > Digital Signal is limited to the timer max value, which comes to be about 17.89 seconds. The `waitForEdge` helps by only starting the timer when there is an active pulse.
@@ -50,7 +91,7 @@ private static void Digital_OnCaptureReady(DigitalSignal sender, uint[] buffer, 
 }
 ```
 > [!NOTE]
-> The first captured pulse will likely have an inaccurate (shorter) value due to system prep time.
+> The first captured pulse will likely have an inaccurate (shorter) value due to system prep-time.
 
 ### ReadPulse
 ReadPulse can be used to measure frequency and other analyses that require measuring time duration for specific pulse count.
@@ -87,7 +128,7 @@ private static void Digital_OnReadPulseReady(DigitalSignal sender, TimeSpan dura
 
 ---
 ### Abort
-Each time a `ReadPulse` or `Capture` is called, an event is triggered when the operation is completed. In some cases, it may be desired to terminate the operation early, using `Abort`. When aborted, an event is still triggered, which will contain whatever data/pulses was collected from the trigger to the time `Abort` was called.
+An event is fired when any `DigitalSignal` operation is completed. In some cases, it may be desired to terminate the operation early, using `Abort`. When aborted, an event is still triggered, which will contain whatever data/pulses was collected from the trigger to the time `Abort` was called.
 
 ```cs
 var digitalSignalPin = GpioController.GetDefault().OpenPin(SC20260.Timer.Capture.Controller5.PB3);
@@ -118,7 +159,7 @@ private static void Digital_OnReadPulseReady(DigitalSignal sender, TimeSpan dura
 ```
 
 > [!TIP] 
-> In the sample code above you can use PWM to provide the pulse needed to verify the code. Keep in mind that both PWM and DigitalSignal share resources, so a different Timer controller must be used.
+> In the sample code above you can use PWM to provide the pulse needed to verify the code. Keep in mind that both PWM and `DigitalSignal` share resources, so a different Timer controller must be used.
 
 ---
 

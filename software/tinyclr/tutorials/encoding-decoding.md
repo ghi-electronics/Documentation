@@ -1,8 +1,8 @@
 # Encoding & Decoding
 ---
-TinyCLR OS provides the following methods for converting data and handling strings.
+TinyCLR OS provides many internal fast methods to handle many encoding and decoding tasks.
 
-## Encoding
+## Strings and Arrays
 
 The Encoding class is used to convert between strings, character arrays, and byte arrays. For example, to convert from a byte array to a string:
 
@@ -11,9 +11,7 @@ var string = System.Text.Encoding.UTF8.GetString(new byte[] { 65, 66, 67, 68, 69
 //string = "ABCDE"
 ```
 
-### Encoding Overloads
-
-#### Convert From String to Byte Array
+Convert From String to Byte Array
 
 ```cs
 System.Text.Encoding.UTF8.GetBytes(string s)
@@ -24,19 +22,31 @@ System.Text.Encoding.UTF8.GetBytes(string s, int charIndex, int charCount, byte[
     int byteIndex)
 ```
 
-#### Convert From Byte Array to Character Array
+Convert From Byte Array to Character Array
 
 ```cs
 System.Text.Encoding.UTF8.GetChars(byte[] bytes)
 System.Text.Encoding.UTF8.GetChars(byte[] bytes, int byteIndex, int byteCount)
 ```
 
-#### Convert From Byte Array to String
+Convert From Byte Array to String
 
 ```cs
 System.Text.Encoding.UTF8.GetString(byte[] bytes)
 System.Text.Encoding.UTF8.GetString(byte[] bytes, int index, int count)
 ```
+
+---
+
+## Base64
+Base64 is a standard way to convert binary data into readable ASCII readable.
+
+```
+var base64EncodedString = System.Convert.FromBase64String(string);
+var base64EncodedChar = System.Convert.FromBase64CharArray(char[]);
+var convertedFromBase64 = System.Convert.ToBase64String(byte[]);
+```
+RFC4648 Base64 standard is supported by adding `Convert.UseRFC4648Encoding = true;`.
 
 ---
 
@@ -157,6 +167,56 @@ for (int i=48; i<58; i++) {
 }
 
 Debug.WriteLine(sb.ToString()); //Will output "0123456789"
+```
+
+### Color Space
+Internally TinyCLR uses the 5:6:5 RGB 16BPP color space, requiring two bytes per pixel. Users may find the need to use a different color space.
+
+```
+ Convert(byte[] inArray, byte[] outArray, ColorFormat colorFormat, RgbFormat rgbFormat, byte alpha, byte[] colorTable)
+```
+
+Users must create `outArray` of a length that is determined based on the `ColorFormat` the user is converting to. The table below will help in determining `outArray` buffer size.
+
+| Color Space Desired    | size of `outArray` buffer|
+|------------------------|---------------------------|
+| **3:5:2**              | `inArray.Length` x 0.5   |
+| **4:4:4**              | `inArray.Length` x 0.75  |
+| **5:6:5**              | `inArray.Length` x 1     |
+| **8:8:8**              | `inArray.Length` x 1.5   |
+| **8:8:8:8**            | `inArray.Length` x 2.0   |
+
+`RgbFormat` is used to swap colors is necessary.
+
+> [!TIP] Converting to from 5:6:5 to 5:6:5 doesn't convert the color space but it is useful to change the `RgbFormat` or scale using  `colorTable`.
+
+
+ or scalinis an available option, which is already TinyCLR's default format. This is because the overload of the function allows for swapping the order of the RGB channels. It also allows for the use of a custom color table created by the user. 
+
+The 64 values in `colorTable` maps each RGB original colors (6bit max from 5:6:5) to a new scaled color (up to 8bit in 8:8:8). This is optional as `Convert` will be default simply shift 6 bit up into 8 bits. This is an example of `colorTable` with more ideal results
+
+```cs
+var ColorTable565To888 = new byte[64]{ 0,2,4,8,12,16,20,24,28,32,36,40,44,48,52,56,60,64,68,72,76,80,85,89,93,97,101,105,109,113,117,121,125,129,133,137,141,145,149,153,157,161,165,170,174,178,182,186,190,194,198,202,206,210,214,218,222,226,230,234,238,242,246,250 };
+```
+
+> [!TIP] 
+> The custom color table option is only available in 5:6:5, 8:8:8, and 8:8:8:8 color spaces.
+
+The `alpha` is only used with the 8:8:8:8 color space to set the alpha channel value, between 0(transparent) to 255(opaque).
+
+### 1Bpp
+
+The `ConvertTo1Bpp` function converts the internal 5:6:5 color space to 1BPP. ANy color will result in 1 and only black will result in 0.
+
+```
+ConvertTo1Bpp(byte[] inArray, byte[] outArray, uint width)
+```
+`width` is the pixel-width of the image that was used to create `inArray`. The `outArray` buffer size is = `inArray.Length` x 0.0625
+
+By default, `ConvertTo1Bpp` groups each 8 pixels vertically, which is what most 1BPP display use. There is an overload that include `BitFormat` to change to horizontal if desired.
+
+```
+ConvertTo1Bpp(byte[] inArray, byte[] outArray, uint width, BitFormat bitFormat)
 ```
 
 
