@@ -35,7 +35,7 @@ By default, the MOD pin is pulled high during reset allowing for deployment and 
 
 ## WKUP
 
-The WKUP pin can be used to wake up the processor from special power saving modes. The WKUP pin can be configured to use an internal pull-up or pull-down, so no external pull resistor is needed. When WKUP functionality is not needed, this pin can be used as a GPIO or peripheral pin. See the [Power Management](../../software/tinyclr/tutorials/power-management.md) page for more information.
+The WKUP pin is used to wake the system up from Shut Down mode. See the [Power Management](../../software/tinyclr/tutorials/power-management.md) page for more information.
 
 ## Vbat
 

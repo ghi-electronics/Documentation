@@ -1,6 +1,8 @@
 # UART 
 ---
-Serial data ports, called UARTs, transfer data between devices using two pins: TXD (transmit data) and RXD (receive data). UART stands for Universal Asynchronous Receiver Transmitter. Asynchronous means there is no clock signal to synchronize the two devices. The devices agree on a data rate, called the baud rate, and send a start bit the beginning of each transmitted character to keep the devices synchronized. 
+Serial data ports, called UARTs, transfer data between devices using two pins: TXD (transmit data) and RXD (receive data). UART stands for Universal Asynchronous Receiver Transmitter. Asynchronous means there is no clock signal to synchronize the two devices. The devices agree on a data rate, called the baud rate, and send a start bit the beginning of each transmitted character to keep the devices synchronized.
+
+Some of the UARTs also have additional pins (RTS and CTS) to control data flow. These pins are only activated when `Handshaking = UartHandshake.RequestToSend`.
 
 > [!Tip]
 > the TXD on one end (output) goes to the RXD on the other side (input) and vice versa.
@@ -45,7 +47,7 @@ while (true) {
 ---
 
 ## UART Settings
-We've expanded the available UART settings to better support serial protocols such as RS-485 and DMX. Here's a complete list of the available settings:
+The UART settings are expanded to better support serial protocols such as RS-485 and DMX. Here's a complete list of the available settings:
 - BaudRate: Communication speed in bits per second.
 - DataBits: Number of data bits in each byte. Usually set to eight.
 - Parity: Parity bit setting. Disabled when set to `UartParity.None`.
@@ -56,7 +58,21 @@ We've expanded the available UART settings to better support serial protocols su
 - InvertRxPolarity: Used to invert high and low states of the receive pin. Useful for hardware that inverts this signal.
 - InvertBinaryData: Used to invert the data polarity without inverting the start and stop bit polarity.
 - SwapTxRxPin: Swaps the transmit and receive pins. Very useful for correcting board layout mistakes!
-- InvertDePolarity: Inverts the polarity of the `Driver Enable` pin used for RS-485.
+- InvertDePolarity: Inverts the polarity of the `Driver Enable` pin used for RS485.
+
+---
+
+## RS485 and Driver Enable
+Transceivers, such as RS485, may require a DE (Driver Enable) pin. On SITCore, DE pin is same pin as RTS. The UART settings can be used to enable this feature through `EnableDePin` and `InvertDePolarity`.
+
+---
+## RS232
+UART uses the processor's voltage levels (logic levels) for transferring data. On the SITCore this is 0 to 3.3 volts. In the early days of computers, UARTs used -12 to +12 volts to communicate reliably over longer distances. This is known as the RS232 standard.
+
+Some PCs still include serial ports, but those are RS232 serial ports. A voltage level shifter is needed to properly connect a logic level UART to an RS232 device.
+
+> [!Warning]
+> Connecting your device to an RS232 port without a proper voltage level shifter can damage your device.
 
 ---
 
@@ -64,7 +80,7 @@ We've expanded the available UART settings to better support serial protocols su
 It is sometimes necessary to generate a `break` signal before transmission to let the receiver(s) know that a new data frame is starting. Such is the case when using the DMX protocol, which is often used for stage lighting.
 
 > [!NOTE]
-> You must wait for the previous transmission of finish before starting a new transmission that incorporates a break signal.
+> The previous transmission must finish before starting a new transmission that incorporates a break signal.
 
 The following code sample shows how to transmit an array of bytes using the DMX protocol:
 ```cs
@@ -104,7 +120,6 @@ private static void Main() {
     rxBuffer = new byte[txBuffer.Length];
 
     myUart = UartController.FromName(SC20100.UartPort.Uart7);
-
     var uartSetting = new UartSetting()
             {
                 BaudRate = 115200,
@@ -113,15 +128,10 @@ private static void Main() {
                 StopBits = UartStopBitCount.One,
                 Handshaking = UartHandshake.None,
             };
-
-      myUart.SetActiveSettings(uartSetting);
-
+    myUart.SetActiveSettings(uartSetting);
     myUart.Enable();
-
     myUart.DataReceived += MyUart_DataReceived;
-
     myUart.Write(txBuffer, 0, txBuffer.Length);
-
     while (true)
         Thread.Sleep(20);
 }
@@ -135,12 +145,5 @@ private static void MyUart_DataReceived(UartController sender, DataReceivedEvent
 > [!Tip] 
 > Once you type += after the event, hit the tab key and Visual Studio will automatically create the event for you.
 
----
+ 
 
-## RS232
-UART uses the processor's voltage levels (logic levels) for transferring data. On the SITCore this is 0 to 3.3 volts. In the early days of computers, UARTs used -12 to +12 volts to communicate reliably over longer distances. This is known as the RS232 standard.
-
-Some PCs still include serial ports, but those are RS232 serial ports. A voltage level shifter is needed to properly connect a logic level UART to an RS232 device.
-
-> [!Warning]
-> Connecting your device to an RS232 port without a proper voltage level shifter can damage your device.
