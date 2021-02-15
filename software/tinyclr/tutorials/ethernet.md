@@ -23,10 +23,10 @@ static void EthernetTest() {
     resetPin.SetDriveMode(GpioPinDriveMode.Output); 
   
     resetPin.Write(GpioPinValue.Low);
-    System.Threading.Thread.Sleep(100);
+    Thread.Sleep(100);
 
     resetPin.Write(GpioPinValue.High);
-    System.Threading.Thread.Sleep(100);
+    Thread.Sleep(100);
 
     var networkController = NetworkController.FromName(SC20260.NetworkController.EthernetEmac);
 
@@ -57,8 +57,8 @@ static void EthernetTest() {
     networkController.Enable();
 
     while (linkReady == false) ;
-    System.Diagnostics.Debug.WriteLine("Network is ready to use");
-    System.Threading.Thread.Sleep(Time.Infinite);
+    Debug.WriteLine("Network is ready to use");
+    Thread.Sleep(Timeout.Infinite);
 }
 
 private static void NetworkController_NetworkLinkConnectedChanged
