@@ -34,17 +34,17 @@ static void EthernetTest() {
 
     var networkCommunicationInterfaceSettings = new BuiltInNetworkCommunicationInterfaceSettings();
 
-    networkInterfaceSetting.Address = new System.Net.IPAddress(new byte[] { 192, 168, 1, 122 });
-    networkInterfaceSetting.SubnetMask = new System.Net.IPAddress(new byte[] { 255, 255, 255, 0 });
-    networkInterfaceSetting.GatewayAddress = new System.Net.IPAddress(new byte[] { 192, 168, 1, 1 });
+    networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
+    networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
+    networkInterfaceSetting.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
 
-    networkInterfaceSetting.DnsAddresses = new System.Net.IPAddress[] 
-        {new System.Net.IPAddress(new byte[] { 75, 75, 75, 75 }),
-         new System.Net.IPAddress(new byte[] { 75, 75, 75, 76 })};
+    networkInterfaceSetting.DnsAddresses = new IPAddress[] 
+        {new IPAddress(new byte[] { 75, 75, 75, 75 }),
+         new IPAddress(new byte[] { 75, 75, 75, 76 })};
 
     networkInterfaceSetting.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
-    networkInterfaceSetting.DhcpEnabled = true;
-    networkInterfaceSetting.DynamicDnsEnabled = true;
+    networkInterfaceSetting.DhcpEnable = true;
+    networkInterfaceSetting.DynamicDnsEnable = true;
 
     networkController.SetInterfaceSettings(networkInterfaceSetting);
     networkController.SetCommunicationInterfaceSettings(networkCommunicationInterfaceSettings);
@@ -73,6 +73,7 @@ private static void NetworkController_NetworkAddressChanged
     var address = ipProperties.Address.GetAddressBytes();
 
     linkReady = address[0] != 0;
+    Debug.WriteLine("IP: " + address[0] + "." + address[1] + "." + address[2] + "." + address[3]);
 }
 ```
 
@@ -127,8 +128,8 @@ static void Enc28Test() {
         { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
 
     networkInterfaceSetting.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
-    networkInterfaceSetting.DhcpEnabled = true;
-    networkInterfaceSetting.DynamicDnsEnabled = true;
+    networkInterfaceSetting.DhcpEnable = true;
+    networkInterfaceSetting.DynamicDnsEnable = true;
 
     networkController.SetInterfaceSettings(networkInterfaceSetting);
     networkController.SetCommunicationInterfaceSettings(networkCommunicationInterfaceSettings);
@@ -160,6 +161,7 @@ private static void NetworkController_NetworkAddressChanged
     var address = ipProperties.Address.GetAddressBytes();
            
     linkReady = address[0] != 0;
+    Debug.WriteLine("IP: " + address[0] + "." + address[1] + "." + address[2] + "." + address[3]);
 }
 ```
 ---
