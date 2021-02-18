@@ -75,8 +75,8 @@ static void Wifi_Example() {
         { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
 
     wifiSettings.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
-    wifiSettings.DhcpEnabled = true;
-    wifiSettings.DynamicDnsEnabled = true;
+    wifiSettings.DhcpEnable = true;
+    wifiSettings.DynamicDnsEnable = true;
 
     networkController.SetInterfaceSettings(wifiSettings);
     networkController.SetCommunicationInterfaceSettings(netInterfaceSettings);
