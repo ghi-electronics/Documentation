@@ -51,7 +51,7 @@ class Program {
     const int NOTE_F = 349;
     const int NOTE_G = 392;
 
-    const int WHOLE_DURATION = 24;
+    const int WHOLE_DURATION = 2000;
     const int EIGHTH = WHOLE_DURATION / 8;
     const int QUARTER = WHOLE_DURATION / 4;
     const int QUARTERDOT = WHOLE_DURATION / 3;
@@ -73,8 +73,8 @@ class Program {
                               QUARTER, QUARTER, QUARTERDOT, EIGHTH, WHOLE};
 
     private static void Main() {
-        var controller = PwmController.FromName(SC20100.Timer.Pwm.Controller14.Id);
-        var toneOut = controller.OpenChannel(SC20100.Timer.Pwm.Controller14.PA7);
+        var controller = PwmController.FromName(SC20100.Timer.Pwm.Controller3.Id);
+        var toneOut = controller.OpenChannel(SC20100.Timer.Pwm.Controller3.PB1);
         toneOut.SetActiveDutyCyclePercentage(0.5);
 
         while (true) {
