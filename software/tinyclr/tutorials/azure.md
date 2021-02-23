@@ -100,18 +100,37 @@ We can also retrieve the Connection String for the newly created Device here too
 
 ![Device Details](images/string.png)
 
-Once we have the Connection String, there are several ways to generate an SAS, the easiest is to use [Azure IoT Explorer](https://docs.microsoft.com/en-us/azure/iot-pnp/howto-use-iot-explorer)
+Once we have the Connection String, there are several ways to generate an SAS:
+## Azure IoT Explorer
+Use [Azure IoT Explorer](https://docs.microsoft.com/en-us/azure/iot-pnp/howto-use-iot-explorer)
 
 Paste the Connection String you obtained inside the Connection Information box, then click 'Update'. This will automatically generate the Key Name, Key Value and Target. You can select how many days the SAS you are generating will be good for. Finally click the 'Generate SAS' button. 
 
 ![Azure IoT Explorer](images/azure_explorer.jpg)
 Copy the SAS text generated and set to variable 'password' in our code. As shown here:
 ```cs
-var password = "SharedAccessSignature sr=GHI-test &sig=AQiUrZZyIBym2WQMpio0I2qkdOvbCPaaR9BQq3C13Q%3d&se=1633448319&skn=iothubowner";
+var password = "SharedAccessSignature sr=yourDeviceId &sig=ddddddddddddQq3C13Q%3d&se=1633448319&skn=iothubowner";
 ```
 >[!TIP]
 >Values used above are for reference only and will not work in your code, you must create and generate your own connection string and SAS
 >
+
+## GHI SAS Nuget
+
+```cs
+// Data, time is important for calculate expire time.
+SystemTime.SetTime(new DateTime(2021, 2, 23));
+
+var sas = new SharedAccessSignatureBuilder()
+{
+    Key = "your key",
+    KeyName = "iothubowner",
+    Target = "Your.azure-devices.net",
+    TimeToLive = TimeSpan.FromDays(1) // at least 1 day.
+};
+
+var password = sas.ToSignature();
+```
 
 Now we can send and receive data to our IoT device from the Azure IoT Explorer and see the results in the output window of Visual Studio and Azure IoT Explorer. To receive data from your IoT device, add a message to send in this line of the code.
 
