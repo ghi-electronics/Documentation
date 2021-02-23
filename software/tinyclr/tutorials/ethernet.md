@@ -89,7 +89,7 @@ This example uses the ENC28J60 click on our SC20260D Dev Board.
 ```cs
 static void Enc28Test() {
     var networkController = NetworkController.FromName
-        ("ENC28J60.NetworkController");
+        (@"GHIElectronics.TinyCLR.NativeApis.ENC28J60.NetworkController\0");
 
     var networkInterfaceSetting = new EthernetNetworkInterfaceSettings();
 
