@@ -27,6 +27,9 @@ The LDR pin is used to enter the GHI Electronics bootloader mode. The LDR pin is
 
 The APP pin is used to prevent the application from running. The APP pin is checked shortly after startup and reset. When the APP pin is high your application will run normally. If the APP pin is low when the bootloader is finished, the bootloader will not transfer execution to your application. There is no need for an external pull up on the APP pin as it is pulled high by an internal pull up.
 
+> [!TIP]
+> APP and MOD become inactive when the debug interface is set to none. See [IP Protection](ip-protection.md) for details.
+
 ## MOD
 
 The MOD pin is used to select the debugging/deployment interface. The MOD pin is pulled high by an internal pull up resistor -- there is no need to add a pull up resistor to the MOD pin when designing a custom circuit board.
