@@ -69,7 +69,7 @@
 ### [Hashing](tutorials/hashing.md)
 
 ## Additional Features
-### [USB CDC and WinUSB](tutorials/usb-cdc-winusb.md)
+### [USB to PC Transfer](tutorials/usb-pc-transfer.md)
 ### [SQLite Database](tutorials/sqlite-database.md)
 ### [File System](tutorials/file-system.md)
 ### [SD/MMC Cards](tutorials/sd-cards.md)
