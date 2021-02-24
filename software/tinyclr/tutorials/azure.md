@@ -100,25 +100,9 @@ Developers must retrieve the Connection String for the newly created Device. Thi
 
 ![Device Details](images/string.png)
  
+## Azure Device Explorer
 
-## SAS Nuget
-
-```cs
-// Data, time is important for calculate expire time.
-SystemTime.SetTime(new DateTime(2021, 2, 23));
-
-var sas = new SharedAccessSignatureBuilder()
-{
-    Key = "your key",
-    KeyName = "iothubowner",
-    Target = "Your.azure-devices.net",
-    TimeToLive = TimeSpan.FromDays(1) // at least 1 day.
-};
-
-var password = sas.ToSignature();
-```
-
-Azure can send and receive data to the IoT device using Azure IoT Explorer. To receive data from the IoT device, add a message to send in this line of the code.
+To simplify testing, users can send and receive data to the IoT device using Azure IoT Device Explorer. To receive data from the IoT device, add a message to send in this line of the code.
 
 ```cs
 client.Publish(topicDeviceToServer, Encoding.UTF8.GetBytes
@@ -133,6 +117,6 @@ To send a message from Azure to the IoT device, select the 'Messages To Device' 
 
 ![Message Recieved](images/azure_message_sent.jpg)
 
-The message will appear in the 'Output' window of Visual Studio.
+Using the earlier code will send the incoming message the 'Output' window of Visual Studio.
 
 ![VS Output Window](images/vs_output.jpg) 
