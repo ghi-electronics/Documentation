@@ -217,6 +217,7 @@ namespace GraphicsSample {
 ---
 
 ## Helper Methods
+
 With parallel native displays the `DisplayController.ActiveConfiguration` can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display's resolution. The following line of code draws a line from corner to corner, no matter the display resolution.
 
 ```cs
@@ -236,5 +237,14 @@ TinyCLR OS supports BMP, GIF, and JPG file formats. See the [Image Decoders](ima
 
 Fonts are fully supported. They are covered [here](font-support.md).
 
+---
+
 ## Color Space
+
 Internally, TinyCLR uses 5:6:5 RGB 16BPP color space. There are helper methods to convert to other color spaces. See [Encoding & Decoding](encoding-decoding.md) for more details.
+
+---
+
+## VNC
+
+VNC (Virtual Network Computing) is a simple remote desktop that with available terminals supported by major operating systems. It is covered [here](vnc.md).

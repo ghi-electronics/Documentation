@@ -37,6 +37,7 @@
 ### [Camera](tutorials/camera.md)
 ### [MJPEG Video](tutorials/mjpeg-video.md)
 ### [Audio Playback](tutorials/audio-playback.md)
+### [VNC](tutorials/vnc.md)
 
 ## Networking Protocols
 ### [Networking Core](tutorials/networking-core.md)
