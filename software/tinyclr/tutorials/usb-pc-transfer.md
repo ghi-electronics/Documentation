@@ -1,4 +1,4 @@
-# USB CDC & Win USB
+# PC Data Transfer
 ---
 These protocols facilitate communication between the SITCore device and a PC. The [USB](usb.md) page has more details and is a prerequisite to this tutorial.
 
@@ -101,6 +101,28 @@ while (true){
     Thread.Sleep(100);
 }
 ```
----
+## WebUSB
+Some modern browsers, like Chrome and Edge, include a way to give access to the USB from the web content. TinyCLR CDC and WinUSB already include the necessary descriptors to enable WebUSB. This [repo]( https://github.com/ghi-electronics/TinyCLR-WebUSB) includes a full `WebUSBApp` example to load onto the device, that is any TinyCLR device. Once loaded, visit https://ghi-electronics.github.io/TinyCLR-WebUSB/ to connect to the device.
+
+![WebUSB Connect](images/webusb-connect.jpg)
+
+User will see `TinyCLR WebUsb` device as an option to `Connect`
+
+![WebUSB Select](images/webusb-select.jpg)
+
+On successful connection the input drop downs are enabled. 
+
+![WebUSB Select](images/webusb-pin-select.jpg)
+
+After selecting `Update State` the device sends back a message indicating the outcome. 
+
+![WebUSB Success](images/webusb-success.jpg)
+
+In this case the `PB0` is set `HIGH` and the LED turns on.
+
+![WebUSB LED](images/webusb-dev.jpg)
+
+The secret sauce is in using the correct endpoints, which are fixed in both CDC and WinUSB drivers. This line can be used to initiate the class `let webusb = new WebUSB(2, 1);` which is found inside `webusb.js` file
+
 
 

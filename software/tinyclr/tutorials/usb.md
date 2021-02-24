@@ -67,8 +67,8 @@ for (var i = 0; i < key.Length; i++) {
 kb.Release(Key.LeftShift);// release shift
 ```
 
-### CDC & WinUSB
-These two modes are used to transfer data between a SITCore device and a PC. See [USB CDC & WinUSB](usb-cdc-winusb.md) for details.
+### PC Data Transfer
+This feature is used to transfer data between a SITCore device and a PC. See [PC Data Transfer](usb-pc-transfer.md) for details.
 
 ### USB Raw
 For advanced users, virtually any type of USB device can be created using USB Raw. The USB mouse driver inside [GHIElectronics.TinyCLR.Devices.UsbClient](https://github.com/ghi-electronics/TinyCLR-Libraries) is a good example of how this can be achieved.   
