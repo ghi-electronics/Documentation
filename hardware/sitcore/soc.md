@@ -101,12 +101,8 @@ The microcontrollers we use in our SITCore line of products do not support concu
 ### SC20100S/B Pinout
 [![SC20100S Pinout](images/sc20100s-b-pinout.gif)](pdfs/sc20100s-b-pinout.pdf)
 
-*Connect to VDD on both S or B packages
-
 ### SC20260B Pinout
 [![SC20260B Pinout](images/sc20260b-pinout.gif)](pdfs/sc20260b-pinout.pdf)
-
-*Analog Only
 
 ---
 
