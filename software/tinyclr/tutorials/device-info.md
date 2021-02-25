@@ -32,3 +32,8 @@ Returns `ManufacturerName` information.
 ```cs
 Debug.WriteLine(DeviceInformation.ManufacturerName);
 ```
+
+## Changing DeviceName
+```cs
+DeviceInformation.SetPersistDeviceName("New Device Name");
+```
