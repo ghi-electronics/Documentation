@@ -8,7 +8,7 @@ The DigitalSignal is used to handle digital signals! Unlike the other features o
 
 Being hardware backed, this feature only runs on specific pins. Those pins can be found under the pins library, under `SC20260.Timer.DigitalSignal.Controller?.xxx.
 
->[!TIP]
+> [!TIP]
 > Timers are also used with other features, such as PWM. Once a `Timer` is reserved for DigitalSignal, it is no longer available for other features.
 
 There are two uses for DigitalSignal, reading a signal (capture) and sending a signal (generate). The capture feature also support capturing a stream of durations (signal analyzer) or a pulse counter.
@@ -42,7 +42,8 @@ Starting a second write will cause the signal to first go low, which may not be 
 ![Signal Example](images/write3.jpg) 
 
 
-> [!TIP] Software-generated `SignalGenerator` below gives more flexibility but runs in system blocking mode. While `SignalGenerator` is all Hardware-driven making it very accurate, non-blocking and it does not use processor time.
+> [!TIP] 
+> Software-generated `SignalGenerator` below gives more flexibility but runs in system blocking mode. While `SignalGenerator` is all Hardware-driven making it very accurate, non-blocking and it does not use processor time.
 
 Calling `Generate` will return immediately (non-blocking) allowing the system to do other tasks while the signal is being generated in the background. When the signal is generated completely, an event is fired. To aid in signal handling, the event provides the final resting level of the signal.
 

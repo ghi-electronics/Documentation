@@ -99,7 +99,7 @@ private static void UsbClientDeviceStateChanged(RawDevice sender, DeviceState st
 ```
 
 ### PC Data Transfer
-This feature is used to transfer data between the hardware and a PC. See [PC Data Transfer](usb-pc-transfer.md) for details.
+This feature is used to transfer data between the hardware and a PC. See [PC Data Comm](usb-pc-comm.md) for details.
 
 ### USB Raw
 For advanced users, virtually any type of USB device can be created using USB Raw. The USB mouse driver inside [GHIElectronics.TinyCLR.Devices.UsbClient](https://github.com/ghi-electronics/TinyCLR-Libraries) is a good example of how this can be achieved.   

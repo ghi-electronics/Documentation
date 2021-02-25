@@ -188,10 +188,8 @@ Users must create `outArray` of a length that is determined based on the `ColorF
 
 `RgbFormat` is used to swap colors is necessary.
 
-> [!TIP] Converting to from 5:6:5 to 5:6:5 doesn't convert the color space but it is useful to change the `RgbFormat` or scale using  `colorTable`.
-
-
- or scalinis an available option, which is already TinyCLR's default format. This is because the overload of the function allows for swapping the order of the RGB channels. It also allows for the use of a custom color table created by the user. 
+> [!TIP] 
+> Converting to from 5:6:5 to 5:6:5 doesn't convert the color space but it is useful to change the `RgbFormat` or scale using  `colorTable`.
 
 The 64 values in `colorTable` maps each RGB original colors (6bit max from 5:6:5) to a new scaled color (up to 8bit in 8:8:8). This is optional as `Convert` will be default simply shift 6 bit up into 8 bits. This is an example of `colorTable` with more ideal results
 

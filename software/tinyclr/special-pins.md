@@ -28,7 +28,7 @@ The LDR pin is used to enter the GHI Electronics bootloader mode. The LDR pin is
 The APP pin is used to prevent the application from running. The APP pin is checked shortly after startup and reset. When the APP pin is high your application will run normally. If the APP pin is low when the bootloader is finished, the bootloader will not transfer execution to your application. There is no need for an external pull up on the APP pin as it is pulled high by an internal pull up.
 
 > [!TIP]
-> APP and MOD become inactive when the debug interface is set to none. See [IP Protection](ip-protection.md) for details.
+> APP and MOD become inactive when the debug interface is set to none. See [IP Protection](tutorials/ip-protection.md) for details.
 
 ## MOD
 
@@ -38,7 +38,7 @@ By default, the MOD pin is pulled high during reset allowing for deployment and 
 
 ## WKUP
 
-The WKUP pin is used to wake the system up from Shut Down mode. See the [Power Management](../../software/tinyclr/tutorials/power-management.md) page for more information.
+The WKUP pin is used to wake the system up from Shut Down mode. See the [Power Management](tutorials/power-management.md) page for more information.
 
 ## Vbat
 
