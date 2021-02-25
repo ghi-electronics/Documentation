@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>USB CDC &amp; Win USB </title>
+    <title>VNC (Virtual Network Computing) </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="USB CDC &amp; Win USB ">
+    <meta name="title" content="VNC (Virtual Network Computing) ">
     <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -76,100 +76,69 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="usb-cdc--win-usb">USB CDC &amp; Win USB</h1>
+<h1 id="vnc-virtual-network-computing">VNC (Virtual Network Computing)</h1>
 
 <hr>
-<p>These protocols facilitate communication between the SITCore device and a PC. The <a href="usb.html">USB</a> page has more details and is a prerequisite to this tutorial.</p>
-<h2 id="usb-cdc">USB CDC</h2>
-<p>The USB Communications Device Class (CDC) is natively supported by Windows and Linux. It is a way for a PC to use a USB port as a virtual serial port. Once loaded, the PC will use this port like any other serial port (COM port). Windows 10 works without the need for any drivers, but earlier operating systems may need a driver. While it works with most operating systems, CDC is typically limited to 64 KBytes/second.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Devices.UsbClient</p>
+<p>Users can use a VNC viewer to remotely view and control SITCore hardware from a PC, Phone or Tablet. Tested and compatible with the following VNC viewers:</p>
+<ol>
+<li>TightVNC Viewer 2.8.27</li>
+<li>TightVNC Java Viewer 2.8.3</li>
+<li>UltraVNC 1.2.4.0</li>
+<li>bVNC: Secure VNC Viewer APP</li>
+</ol>
+<div class="TIP"><h5>Tip</h5><p>RealVNC is not supported.</p>
 </div>
-<pre><code class="lang-cs">var usbclientController = UsbClientController.GetDefault();
-
-var usbClientSetting = new UsbClientSetting(){
-        Mode = UsbClientMode.Cdc,
-        ManufactureName = &quot;Manufacture_Name&quot;,
-        ProductName = &quot;Product_Name&quot;,
-        SerialNumber = &quot;12345678&quot;,            
-};
-
-var cdc = new Cdc(usbclientController, usbClientSetting);
-
-cdc.DeviceStateChanged += (a,b) =&gt; Debug.WriteLine(&quot;Connection changed.&quot;); 
-cdc.DataReceived += (a,count) =&gt; Debug.WriteLine(&quot;Data received:&quot; + count);
-
-cdc.Enable();
-
-
-while (cdc.DeviceState != DeviceState.Configured);
-        Debug.WriteLine(&quot;UsbClient Connected&quot;);
-
-// The example will read data from port to dataR array
-// Copy dataR to dataW array, plus 1 for each element
-// Write dataW array back to port
-
-while (true){
-    var len = cdc.Stream.ByteToRead;
-
-    if (len &gt; 0){
-        var dataR = new byte[len];
-        var dataW = new byte[len];
-        int read = cdc.Stream.Read(dataR);
-
-        for (var i = 0; i &lt; read; i++){
-            dataW[i] = (byte)(dataR[i] + 1);
-        }
-        cdc.Stream.Write(dataW);
-    }
-    Thread.Sleep(100);
-}
-</code></pre><hr>
-<h2 id="winusb">WinUSB</h2>
-<p>The WinUSB drivers are unique to Windows and take advantage of the power and speed of USB to provide faster communication than CDC. The speed is limited by the data processing on the IoT device. Windows 10 loads the drivers automatically, Windows 7 requires drivers.</p>
-<div class="NOTE"><h5>Note</h5><p>Unlike CDC mode, a disadvantage of WinUSB is that it requires a special code on the PC side to read and write to the device.</p>
+<p>The only requirement to connect is the IP address of the Remote Host (SITCore device).</p>
+<p><img src="images/vnc-client.jpg" alt="TightVNC"></p>
+<p>The Preferred encoding format should be set to Raw.</p>
+<p><img src="images/vnc-connection.jpg" alt="TightVNC"></p>
+<p>From here, the TinyCLR <code>Graphics</code> will appear in the VNC client window. </p>
+<p><img src="images/vnc-screen.jpg" alt="TightVNC"></p>
+<p>Additionally, the <code>VncServer</code> receives Mouse coordinates &amp; click status from the VNC client and are returned in the <code>PointerChangedEvent</code>.</p>
+<p><img src="images/vnc-debug.jpg" alt="TightVNC"></p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Vnc;</p>
 </div>
-<pre><code class="lang-cs">var usbclientController = UsbClientController.GetDefault();
+<pre><code class="lang-cs">static VncServer vncServer;
 
-var usbClientSetting = new UsbClientSetting(){
-    Mode = UsbClientMode.WinUsb,
-    ManufactureName = &quot;Manufacture_Name&quot;,
-    ProductName = &quot;Product_Name&quot;,
-    SerialNumber = &quot;12345678&quot;,
-    Guid = &quot;{your guid}&quot;,
-};
+static void Main(){
+// To do: Setup the preferred network connection here
+// ...
 
-var winUsb = new WinUsb(usbclientController, usbClientSetting);
+// Start VNC 
+vncServer = new VncServer(&quot;VNC Viewer&quot;, 5900, 320, 240);
+vncServer.PointerChangedEvent += S_PointerChangedEvent;
+vncServer.Start();
+Debug.WriteLine(&quot;VNC started&quot;);
 
-winUsb.DeviceStateChanged += (a,b) =&gt; Debug.WriteLine(&quot;Connection changed.&quot;); 
-winUsb.DataReceived += (a,count) =&gt; Debug.WriteLine(&quot;Data received:&quot; + count);
+// Start Drawing!
+Graphics vncDisplay = Graphics.FromImage(new Bitmap(320, 240));
+var font = Resources.GetFont(Resources.FontResources.Arial);
+var cnt = 0;
 
-winUsb.Enable();
+Graphics.OnFlushEvent += Graphics_OnFlushEvent;
 
+    while (true) {
+        vncDisplay.Clear();
+        vncDisplay.DrawString(cnt + &quot; SITCore VNC ! &quot;, font, new SolidBrush(Color.Yellow), 15, 20);
+        vncDisplay.DrawEllipse(new Pen(Color.Red), cnt, 160, 40, 40);
 
-while (winUsb.DeviceState != DeviceState.Configured) ;
-        Debug.WriteLine(&quot;UsbClient Connected&quot;);
-
-// The example will read data from port to dataR array
-// Copy dataR to dataW array, plus 1 for each element
-// Write dataW array back to port
-
-while (true){
-    var len = winUsb.Stream.ByteToRead;
-
-    if (len &gt; 0){
-        var dataR = new byte[len];
-        var dataW = new byte[len];
-        int read = winUsb.Stream.Read(dataR);
-
-        for (var i = 0; i &lt; read; i++){
-            dataW[i] = (byte)(dataR[i] + 1);
-        }
-        winUsb.Stream.Write(dataW);
+        vncDisplay.Flush();
+        if ((cnt += 5) &gt; 320) {
+            cnt = 0;
+            vncDisplay.Clear();
+        }        
+        Thread.Sleep(10);
     }
-    Thread.Sleep(100);
 }
-</code></pre><hr>
-</article>
+
+private static void S_PointerChangedEvent(int x, int y, bool pressed) {
+    Debug.WriteLine(&quot;x = &quot; + x + &quot;, y = &quot; + y + &quot;, press: &quot; + pressed);
+}
+
+private static void Graphics_OnFlushEvent(Graphics sender, byte[] data, int x, int y, int width, int height, int originalWidth) {
+        vncServer.Send(data, x, y, width, height);
+}
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -177,7 +146,7 @@ while (true){
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/usb-cdc-winusb.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/vnc.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -196,10 +165,13 @@ while (true){
               </div>
           
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              <h5>In This Article</h5>
+              <div></div>
+              <p><a class="back-to-top" href="#top">Back to top</a><p>
               </nav>
             </div>
           </div>
+          
         </div>
       </div>
       
@@ -210,7 +182,7 @@ while (true){
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2020 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            <span>Copyright © 2021 GHI Electronics, LLC<br>Generated by DocFX</span>
             
           </div>
         </div>

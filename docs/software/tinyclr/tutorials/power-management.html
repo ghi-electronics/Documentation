@@ -79,25 +79,24 @@
 <h1 id="power-management">Power Management</h1>
 
 <hr>
-<p>TinyCLR OS currently supports the Sleep and Shutdown power saving modes. 
-In sleep mode, any GPIO interrupt can be used to wake the board, but in Shutdown mode, only the WKUP pin can wake up the board. You can also program the device to wake up after a specified time.</p>
+<p>TinyCLR OS supports multiple power-saving modes.</p>
 <h2 id="idle">Idle</h2>
 <p>The system enters this state whenever it is idle, such as when waiting on events and there are no running threads. This is automatic and they user is not required to take any action.</p>
 <h2 id="slow-clock-speed">Slow Clock Speed</h2>
-<p>The system can operate at half speed, saving 40% power consumption with the following commands:</p>
-<pre><code class="lang-cs">if (Power.GetSystemClock() == SystemClock.High) {
-    Power.SetSystemClock(SystemClock.Low, false);
+<p>The system can operate at half speed, saving about 40% power consumption. The system can switch speed (with a required soft reset) but it can optionally persist the slow clock.</p>
+<pre><code class="lang-cs">var PersistClock = false;
+if (Power.GetSystemClock() == SystemClock.High) {
+    Power.SetSystemClock(SystemClock.Low, PersistClock);
     Power.Reset();
 }
-</code></pre><p>Switch back to full speed (only if &quot;persist&quot; was in RAM ):</p>
+</code></pre><p>Switch back to full speed (only if &quot;PersistClock&quot; was false):</p>
 <pre><code class="lang-cs">if (Power.GetSystemClock() == SystemClock.Low) {
     Power.SetSystemClock(SystemClock.High, false);
     Power.Reset();
 }
-</code></pre><p>Calling <code>Power.Reset()</code> will retain the set clock speed but hardware reset or power cycle will revert to the default state. However, the clock can permanently be set to low speed, and only reversed with firmware update or complete device erase.</p>
-<pre><code class="lang-cs">Power.SetSystemClock(SystemClock.High, false);
-</code></pre><h2 id="sleep">Sleep</h2>
-<p>In this mode the system goes to sleep to save power and wakes up and resumes processing when the assigned interrupt is received. Any GPIO interrupt can be used to wake from Sleep. The following example runs on both the SC20100 and SCM20260D Dev boards and uses the LDR button to wake up. </p>
+</code></pre><p>Calling <code>Power.Reset()</code> will retain the set clock speed but hardware reset or power cycle will revert to the default state.</p>
+<h2 id="sleep">Sleep</h2>
+<p>In this mode, most of the system features are disabled. A GPIO or RTC interrupt can be used to wake the system and resume operations.</p>
 <div class="NOTE"><h5>Note</h5><p>Don&#39;t forget to configure the interrupt and interrupt handler for the pin that will be used to wake up from Sleep.</p>
 </div>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins</p>
@@ -106,25 +105,25 @@ In sleep mode, any GPIO interrupt can be used to wake the board, but in Shutdown
 ldrButton.SetDriveMode(GpioPinDriveMode.InputPullUp);
 ldrButton.ValueChanged += ldrButton_ValueChanged;
 
-//The next line starts Sleep.
+Debug.WriteLine(&quot;System is going to sleep...&quot;);
 Power.Sleep();
+Debug.WriteLine(&quot;This will print after system wakeup&quot;);
 
-//The system is Sleeping.
-//Pressing the LDR Button (PE3) wakes up the system.
+// An event is needed to activate the interrupts internally
 private static void ldrButton_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e) { }
-</code></pre><p>To sleep for a specific time:</p>
+</code></pre><p>To sleep for a specific time, using RTC:</p>
 <pre><code class="lang-cs">Power.Sleep(DateTime.Now.AddSeconds(90)); //Will wake up after 90 seconds.
-                                          //A GPIO can also wake up the system.
 </code></pre><hr>
 <h2 id="shutdown">Shutdown</h2>
-<p>In this mode the system completely shuts down. It can only be awakened by reset, power cycle, or by toggling the WKUP pin. When <code>Shutdown</code> is used the system is turned completely off, internal pull-up resistors are also disabled. </p>
-<p>The following code shuts down the system. The <code>false</code> argument configures the system to wake up when the WKUP pin goes from high to low. Make the argument <code>true</code> to wake up when WKUP goes high.</p>
+<p>In this mode the system completely shuts down. It can only be awakened by reset, power cycle, RTC, or by toggling the WKUP pin, which will also reset the system. When <code>Shutdown</code> is used the system is turned completely off, internal pull-up resistors are also disabled. Adding pull-up or pull-down resistor on WKUP pin is required.</p>
 <div class="NOTE"><h5>Note</h5><p>Waking from Shutdown mode always resets the system. Your application will start over, it will not resume where it left off.</p>
 </div>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Native, and GHIElectronics.TinyCLR.Pins</p>
 </div>
-<pre><code class="lang-cs">//The next line shuts down the system.
-Power.Shutdown(true, DateTime.MaxValue); 
+<p>The following code shuts down the system to only wake up using WKUP pin.</p>
+<pre><code class="lang-cs">Power.Shutdown(true, DateTime.MaxValue); 
+</code></pre><p>By default, a rising edge on WKUP pin is needed to wake the system up. The system also allows for using a falling edge instead.</p>
+<pre><code class="lang-cs">Power.WakeupEdge = WakeupEdge.Falling;
 </code></pre><p>To shutdown for a specific time:</p>
 <pre><code class="lang-cs">Power.Shutdown(false, DateTime.Now.AddSeconds(90); //Will wake up after 90 seconds.
                                                    //WKUP pin has no effect.
@@ -162,6 +161,8 @@ Power.Shutdown(true, DateTime.MaxValue);
 <p>The command below will boot the device in GHI Bootloader mode:</p>
 <pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.Power.Reset(false);
 </code></pre><hr>
+<h3 id="reset-source">Reset Source</h3>
+<p>The cause of the previous reset can be found through <code>ResetSource</code>. This is useful to determine if, for example, a watchdog or was the reason for the reset.</p>
 </article>
           </div>
           
@@ -189,10 +190,13 @@ Power.Shutdown(true, DateTime.MaxValue);
               </div>
           
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              <h5>In This Article</h5>
+              <div></div>
+              <p><a class="back-to-top" href="#top">Back to top</a><p>
               </nav>
             </div>
           </div>
+          
         </div>
       </div>
       
@@ -203,7 +207,7 @@ Power.Shutdown(true, DateTime.MaxValue);
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2020 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            <span>Copyright © 2021 GHI Electronics, LLC<br>Generated by DocFX</span>
             
           </div>
         </div>

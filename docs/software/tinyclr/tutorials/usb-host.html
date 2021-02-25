@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>USB Host </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="USB Host ">
+    <meta name="generator" content="docfx 2.56.4.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="usb-host">USB Host</h1>
+
+<p>The USB Host API supports USB keyboards, mice, joysticks, raw devices, and USB MSC (Mass Storage Class), which allows file access on USB memory devices. The following code sample shows how to detect devices as they are connected to your SITCore device&#39;s USB host port.</p>
+<div class="NOTE"><h5>Note</h5><p>USB hubs are not currently supported. Special USB memory devices that have multiple interfaces or built in hubs will not work.</p>
+</div>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Storage, GHIElectronics.TinyCLR.Devices.UsbHost, GHIElectronics.TinyCLR.IO, GHIElectronics.TinyCLR.Native, and GHIElectronics.TinyCLR.Pins.</p>
+</div>
+<pre><code class="lang-cs">using System.IO;
+using System.Diagnostics;
+using System.Threading;
+using GHIElectronics.TinyCLR.Devices.UsbHost;
+using GHIElectronics.TinyCLR.Devices.UsbHost.Descriptors;
+using GHIElectronics.TinyCLR.Devices.Storage;
+using GHIElectronics.TinyCLR.IO;
+using GHIElectronics.TinyCLR.Pins;
+
+class Program {
+    static void Main() {
+        var usbHostController = UsbHostController.GetDefault();
+
+        usbHostController.OnConnectionChangedEvent +=
+            UsbHostController_OnConnectionChangedEvent;
+
+        usbHostController.Enable();
+
+        Thread.Sleep(Timeout.Infinite);
+    }
+
+    private static void UsbHostController_OnConnectionChangedEvent
+        (UsbHostController sender, DeviceConnectionEventArgs e) {
+
+        Debug.WriteLine(&quot;e.Id = &quot; + e.Id + &quot; \n&quot;);
+        Debug.WriteLine(&quot;e.InterfaceIndex = &quot; + e.InterfaceIndex + &quot; \n&quot;);
+        Debug.WriteLine(&quot;e.PortNumber = &quot; + e.PortNumber);
+        Debug.WriteLine(&quot;e.Type = &quot; + ((object)(e.Type)).
+            ToString() + &quot; \n&quot;);
+
+        Debug.WriteLine(&quot;e.VendorId = &quot; + e.VendorId + &quot; \n&quot;);
+        Debug.WriteLine(&quot;e.ProductId = &quot; + e.ProductId + &quot; \n&quot;);
+
+        switch (e.DeviceStatus) {
+            case DeviceConnectionStatus.Connected:
+                switch (e.Type) {
+                    case BaseDevice.DeviceType.Keyboard:
+                        var keyboard = new Keyboard(e.Id, e.InterfaceIndex);
+                        keyboard.KeyUp += Keyboard_KeyUp;
+                        keyboard.KeyDown += Keyboard_KeyDown;
+                        break;
+
+                    case BaseDevice.DeviceType.Mouse:
+                        var mouse = new Mouse(e.Id, e.InterfaceIndex);
+                        mouse.ButtonChanged += Mouse_ButtonChanged;
+                        mouse.CursorMoved += Mouse_CursorMoved;
+                        break;
+
+                    case BaseDevice.DeviceType.Joystick:
+                        var joystick = new Joystick(e.Id, e.InterfaceIndex);
+                        joystick.CursorMoved += Joystick_CursorMoved;
+                        joystick.HatSwitchPressed += Joystick_HatSwitchPressed;
+                        joystick.ButtonChanged += Joystick_ButtonChanged;
+                        break;
+
+                    case BaseDevice.DeviceType.MassStorage:
+                        var storageController = StorageController.FromName
+                            (SC20260.StorageController.UsbHostMassStorage);
+                        var driver = FileSystem.Mount(storageController.Hdc);
+                        var driveInfo = new DriveInfo(driver.Name);
+
+                        Debug.WriteLine(&quot;Free: &quot; + driveInfo.TotalFreeSpace);
+                        Debug.WriteLine(&quot;TotalSize: &quot; + driveInfo.TotalSize);
+                        Debug.WriteLine(&quot;VolumeLabel:&quot; + driveInfo.VolumeLabel);
+                        Debug.WriteLine(&quot;RootDirectory: &quot; + driveInfo.RootDirectory);
+                        Debug.WriteLine(&quot;DriveFormat: &quot; + driveInfo.DriveFormat);
+
+                        break;
+
+                    default:
+                        var rawDevice = new RawDevice(e.Id, e.InterfaceIndex, e.Type);
+                        var devDesc = rawDevice.GetDeviceDescriptor();
+                        var cfgDesc = rawDevice.GetConfigurationDescriptor(0);
+                        var endpointData = new byte[7];
+
+                        endpointData[0] = 7;        //Length in bytes of this descriptor.
+                        endpointData[1] = 5;        //Descriptor type (endpoint).
+                        endpointData[2] = 0x81;     //Input endpoint address.
+                        endpointData[3] = 3;        //Transfer type is interrupt endpoint.
+                        endpointData[4] = 8;        //Max packet size LSB.
+                        endpointData[5] = 0;        //Max packet size MSB.
+                        endpointData[6] = 10;       //Polling interval.
+
+                        var endpoint = new Endpoint(endpointData, 0);
+
+                        var pipe = rawDevice.OpenPipe(endpoint);
+                        pipe.TransferTimeout = 10;
+
+                        var data = new byte[8];
+                        var read = pipe.Transfer(data);
+
+                        if (read &gt; 0) {
+                            Debug.WriteLine(&quot;Raw Device has new data &quot;
+                                + data[0] + &quot;, &quot; + data[1] + &quot;, &quot; + data[2] + &quot;, &quot; + data[3]);
+                        }
+
+                        else if (read == 0) {
+                            Debug.WriteLine(&quot;No new data&quot;);
+                        }
+
+                        Thread.Sleep(500);
+                        break;
+                }
+                break;
+
+            case DeviceConnectionStatus.Disconnected:
+                Debug.WriteLine(&quot;Device Disconnected&quot;);
+                //Unmount filesystem if it was mounted.
+                break;
+
+            case DeviceConnectionStatus.Bad:
+                Debug.WriteLine(&quot;Bad Device&quot;);
+                break;
+        }
+    }
+    private static void Keyboard_KeyDown(Keyboard sender, Keyboard.KeyboardEventArgs args) {
+        Debug.WriteLine(&quot;Key pressed: &quot; + ((object)args.Which).ToString());
+        Debug.WriteLine(&quot;Key pressed ASCII: &quot; +
+            ((object)args.ASCII).ToString());
+    }
+    private static void Keyboard_KeyUp(Keyboard sender, Keyboard.KeyboardEventArgs args) {
+        Debug.WriteLine(&quot;Key released: &quot; + ((object)args.Which).ToString());
+        Debug.WriteLine(&quot;Key released ASCII: &quot; + ((object)args.ASCII).ToString());
+    }
+    private static void Mouse_CursorMoved(Mouse sender, Mouse.CursorMovedEventArgs e) {
+        Debug.WriteLine(&quot;Mouse moved to: &quot; + e.NewPosition.X + &quot;, &quot; + e.NewPosition.Y);
+    }
+    private static void Mouse_ButtonChanged(Mouse sender, Mouse.ButtonChangedEventArgs args) {
+        Debug.WriteLine(&quot;Mouse button changed: &quot; + ((object)args.Which).ToString());
+    }
+    private static void Joystick_ButtonChanged(Joystick sender, Joystick.ButtonChangedEventArgs e) {
+        Debug.WriteLine(&quot;Joystick button changed  = &quot; + ((object)(e.Which)).ToString());
+    }
+    private static void Joystick_HatSwitchPressed(Joystick sender, Joystick.HatSwitchPressedEventArgs e) {
+        Debug.WriteLine(&quot;Joystick direction  = &quot; + ((object)(e.Direction)).ToString());
+    }
+    private static void Joystick_CursorMoved(Joystick sender, Joystick.CursorMovedEventArgs e) {
+        Debug.WriteLine(&quot;Joystick.move  = &quot; + e.NewPosition.X + &quot;, &quot; + e.NewPosition.Y);
+    }
+}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/usb-host.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <p><a class="back-to-top" href="#top">Back to top</a><p>
+              </nav>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2021 GHI Electronics, LLC<br>Generated by DocFX</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
