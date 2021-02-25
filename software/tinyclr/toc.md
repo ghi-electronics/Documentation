@@ -69,7 +69,7 @@
 ### [Hashing](tutorials/hashing.md)
 
 ## Additional Features
-### [USB to PC Transfer](tutorials/usb-pc-transfer.md)
+### [USB PC Comm](tutorials/usb-pc-comm.md)
 ### [SQLite Database](tutorials/sqlite-database.md)
 ### [File System](tutorials/file-system.md)
 ### [SD/MMC Cards](tutorials/sd-cards.md)

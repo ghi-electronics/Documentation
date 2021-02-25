@@ -1,4 +1,4 @@
-# PC Data Transfer
+# USB PC Communication
 ---
 These protocols facilitate communication between the SITCore device and a PC. The [USB](usb.md) page has more details and is a prerequisite to this tutorial.
 
