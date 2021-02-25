@@ -4,7 +4,7 @@ This example shows how to communicate with Google Cloud Platform using MQTT. You
 
 
 >[!TIP]
->Needed Nugets: GHIElectronics.TinyCLR.Networking.Mqtt
+>Needed NuGets: GHIElectronics.TinyCLR.Networking.Mqtt
 >
 >Add using statement:
 > using System.Security.Cryptography.X509Certificates;
@@ -26,7 +26,7 @@ var clientId = $"projects/{projectId}" +
 
 var message = "My message";
 
-var caCertSource = Properties.Resources.GetBytes(Properties.Resources.BinaryResources."GOOGLE Root CERT");
+var caCertSource = Resources.GetBytes(Resources.BinaryResources."GOOGLE Root CERT");
 
 X509Certificate CaCert = new X509Certificate(caCertSource);
 
@@ -200,7 +200,7 @@ var gatewayId = "SITCoreGatewayIoT";
 We need to add a Google Root CA Certificate to our resources and add it to this line of our code. 
 
 ```cs
-var caCertSource = Properties.Resources.GetBytes(Properties.Resources.BinaryResources."GOOGLE Root CERT");
+var caCertSource = Resources.GetBytes(Resources.BinaryResources."GOOGLE Root CERT");
 ```
 
 Lastly when connect to google cloud, you also need a JWT (JSON Web Token) to be used as password if using MQTT.

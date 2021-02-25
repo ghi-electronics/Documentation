@@ -169,7 +169,7 @@ The **FEZ Duino** provides female headers that make use of the popular Arduino p
 
 [FEZ Duino 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Duino%20Rev%20B.step)
 
-![FEZ Feather](images/fez_duino_diagram.gif)
+![FEZ Feather](images/fez_duino_diagram.png)
 
 ### FEZ Duino Peripheral Pins
 
@@ -185,6 +185,9 @@ The **FEZ Duino** provides female headers that make use of the popular Arduino p
 |                   |             |
 | **Buttons**       | LDR = PE3   |
 |                   | APP = PB7   |
+
+> [!Warning]
+> FEZ Duino REV. A & B, The cap used on barrel jack is 6.3v but the input voltage can be as high as 12v. Use the barrel jack at your own risk or replace cap with a higher voltage. This only effects the power barrel jack. Everything else functions as expected if using USB for power.
 
 ---
 
@@ -267,6 +270,8 @@ Already one of our most popular SITCore single board computers, The **FEZ Portal
 ![FEZ Stick](images/fez_stick.jpg)
 
 The **FEZ Stick** is simply the least expensive way to easily get started with TinyCLR OS. While providing an inexpensive way for the uninitiated to try TinyCLR OS, we've provided castellated edges as well as through hole pads to make it breadboard friendly and easy to embed into products. Also, there's actually space for two click modules, making this a very versatile board at a very affordable price!
+
+![FEZ Stick Side Pads](images/fez-stick-side-pads.jpg)
 
 > [!Note]
 > FEZ Stick REV. B pin PB13 MISO is mislabeled on the silk screen and should read PE13 MISO

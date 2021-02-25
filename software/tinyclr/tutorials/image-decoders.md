@@ -11,7 +11,7 @@ var screen = Graphics.FromImage(new Bitmap(displayController.ActiveConfiguration
     displayController.ActiveConfiguration.Height));
 
 //Image is in a resource file named "jpegImageFile":
-var imageBitmap = Resource1.GetBitmap(Resource1.BitmapResources.jpegImageFile);
+var imageBitmap = Resources.GetBitmap(Resources.BitmapResources.jpegImageFile);
 
 var b1 = new Bitmap(dataArray, BitmapImageType.Jpeg);
 var b2 = new Bitmap(dataArray, BitmapImageType.Gif);

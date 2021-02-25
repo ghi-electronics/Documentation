@@ -37,6 +37,7 @@
 ### [Camera](tutorials/camera.md)
 ### [MJPEG Video](tutorials/mjpeg-video.md)
 ### [Audio Playback](tutorials/audio-playback.md)
+### [VNC](tutorials/vnc.md)
 
 ## Networking Protocols
 ### [Networking Core](tutorials/networking-core.md)
@@ -68,7 +69,7 @@
 ### [Hashing](tutorials/hashing.md)
 
 ## Additional Features
-### [USB CDC and WinUSB](tutorials/usb-cdc-winusb.md)
+### [USB PC Comm](tutorials/usb-pc-comm.md)
 ### [SQLite Database](tutorials/sqlite-database.md)
 ### [File System](tutorials/file-system.md)
 ### [SD/MMC Cards](tutorials/sd-cards.md)

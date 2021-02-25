@@ -35,7 +35,7 @@ The CAN calculator needs the microcontroller's CAN clock speed. For the SITCore 
 Filters can be set to automatically accept or ignore messages based on their arbitration ID.
 
 > [!Tip]
-> SITCore hardware supports up to 128 filter slots; however, each extended ID uses 2 slots.
+>Each CAN channel supports up to 64 standard IDs and 32 Extended IDs
 
 ### Range Filter
 `AddRangeFilter()` allows you to set a range of arbitration IDs that will be accepted as valid messages. Messages with arbitration IDs outside of this range will be ignored. You can add more than one range filter. In the sample code below, the range filters will accept messages with arbitration IDs ranging from `0x12` to `0x20` and also between `0x500` and `0x1000` inclusive.

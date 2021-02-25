@@ -3,7 +3,7 @@
 This example shows how to communicate with AWS using MQTT. You'll also need to set up a Network Interface connection on the device such as [WiFi](wifi.md) to Connect to AWS in your program.
 
 >[!TIP]
->Needed Nugets: GHIElectronics.TinyCLR.Networking.Mqtt
+>Needed NuGets: GHIElectronics.TinyCLR.Networking.Mqtt
 >
 >Add using statement:
 > using System.Security.Cryptography.X509Certificates;
@@ -142,9 +142,9 @@ var deviceId = "MyDevice";
 Finally, we need to link the CA Certificates we placed in our project resources to our code as shown in the example below.
 
 ```cs
-var caCertSorce = Properties.Resources.GetBytes(Properties.Resources.BinaryResources.AmazonRootCA1);
-var clientCertSource = Properties.Resources.GetBytes(Properties.Resources.BinaryResources._3a59c69926_certificate_pem);
-var privateKeyData = Properties.Resources.GetBytes(Properties.Resources.BinaryResources._3a59c69926_private_pem);
+var caCertSorce = Resources.GetBytes(Resources.BinaryResources.AmazonRootCA1);
+var clientCertSource = Resources.GetBytes(Resources.BinaryResources._3a59c69926_certificate_pem);
+var privateKeyData = Resources.GetBytes(Resources.BinaryResources._3a59c69926_private_pem);
 ```
 You can now deploy your program in Visual Studio, to connect your device to AWS. Clicking on the 'Activity' Tab on our device dashboard will show the active connection. 
 

@@ -1,6 +1,6 @@
 # Release Notes
 ---
-![TinyCLR Logo](images/tinyclr-logo-noborder.jpg)
+![TinyCLR Logo](images/tinyclr-logo.png)
 
 ## 2.1.0 - Preview3
 

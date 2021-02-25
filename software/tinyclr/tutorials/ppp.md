@@ -6,7 +6,7 @@ Point to Point Protocol (PPP) started in the days of dial up Internet and is sti
 This example uses the LTE IoT 2 click module on the SCM20260D Dev Boards to establish a connection and read a web page. We've also successfully tested the SIMCOM SIM900 and NimbeLink's Skywire cellular embedded modems.
 
 >[!TIP]
->Needed Nugets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Devices.Uart, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Networking, and GHIElectronics.TinyCLR.Pins.
+>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Devices.Uart, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Networking, and GHIElectronics.TinyCLR.Pins.
 
 ```cs
 class Program {

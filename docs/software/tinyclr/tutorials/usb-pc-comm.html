@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>USB PC Communication </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="USB PC Communication ">
+    <meta name="generator" content="docfx 2.56.4.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="usb-pc-communication">USB PC Communication</h1>
+
+<hr>
+<p>These protocols facilitate communication between the SITCore device and a PC. The <a href="usb.html">USB</a> page has more details and is a prerequisite to this tutorial.</p>
+<p>By default, USB client support is used for deploying and debugging applications. However, deploying and debugging can be switched to a serial mode using MOD pin, freeing the USB Client port to serve other purposes.</p>
+<p> The USB port can also be freed by completely disabling the USB debug interface, which is a feature of <a href="ip-protection.html">ip protection</a>.</p>
+<h2 id="usb-cdc">USB CDC</h2>
+<p>The USB Communications Device Class (CDC) is natively supported by Windows and Linux. It is a way for a PC to use a USB port as a virtual serial port. Once loaded, the PC will use this port like any other serial port (COM port). Windows 10 works without the need for any drivers, but earlier operating systems may need a driver. While it works with most operating systems, CDC is typically limited to 64 KBytes/second.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Devices.UsbClient</p>
+</div>
+<pre><code class="lang-cs">var usbclientController = UsbClientController.GetDefault();
+
+var usbClientSetting = new UsbClientSetting(){
+        Mode = UsbClientMode.Cdc,
+        ManufactureName = &quot;Manufacture_Name&quot;,
+        ProductName = &quot;Product_Name&quot;,
+        SerialNumber = &quot;12345678&quot;,            
+};
+
+var cdc = new Cdc(usbclientController, usbClientSetting);
+
+cdc.DeviceStateChanged += (a,b) =&gt; Debug.WriteLine(&quot;Connection changed.&quot;); 
+cdc.DataReceived += (a,count) =&gt; Debug.WriteLine(&quot;Data received:&quot; + count);
+
+cdc.Enable();
+
+
+while (cdc.DeviceState != DeviceState.Configured);
+        Debug.WriteLine(&quot;UsbClient Connected&quot;);
+
+// The example will read data from port to dataR array
+// Copy dataR to dataW array, plus 1 for each element
+// Write dataW array back to port
+
+while (true){
+    var len = cdc.Stream.ByteToRead;
+
+    if (len &gt; 0){
+        var dataR = new byte[len];
+        var dataW = new byte[len];
+        int read = cdc.Stream.Read(dataR);
+
+        for (var i = 0; i &lt; read; i++){
+            dataW[i] = (byte)(dataR[i] + 1);
+        }
+        cdc.Stream.Write(dataW);
+    }
+    Thread.Sleep(100);
+}
+</code></pre><hr>
+<h2 id="winusb">WinUSB</h2>
+<p>The WinUSB drivers are unique to Windows and take advantage of the power and speed of USB to provide faster communication than CDC. The speed is limited by the data processing on the IoT device. Windows 10 loads the drivers automatically, Windows 7 requires drivers.</p>
+<div class="NOTE"><h5>Note</h5><p>Unlike CDC mode, a disadvantage of WinUSB is that it requires a special code on the PC side to read and write to the device.</p>
+</div>
+<pre><code class="lang-cs">var usbclientController = UsbClientController.GetDefault();
+
+var usbClientSetting = new UsbClientSetting(){
+    Mode = UsbClientMode.WinUsb,
+    ManufactureName = &quot;Manufacture_Name&quot;,
+    ProductName = &quot;Product_Name&quot;,
+    SerialNumber = &quot;12345678&quot;,
+    Guid = &quot;{your guid}&quot;,
+};
+
+var winUsb = new WinUsb(usbclientController, usbClientSetting);
+
+winUsb.DeviceStateChanged += (a,b) =&gt; Debug.WriteLine(&quot;Connection changed.&quot;); 
+winUsb.DataReceived += (a,count) =&gt; Debug.WriteLine(&quot;Data received:&quot; + count);
+
+winUsb.Enable();
+
+
+while (winUsb.DeviceState != DeviceState.Configured) ;
+        Debug.WriteLine(&quot;UsbClient Connected&quot;);
+
+// The example will read data from port to dataR array
+// Copy dataR to dataW array, plus 1 for each element
+// Write dataW array back to port
+
+while (true){
+    var len = winUsb.Stream.ByteToRead;
+
+    if (len &gt; 0){
+        var dataR = new byte[len];
+        var dataW = new byte[len];
+        int read = winUsb.Stream.Read(dataR);
+
+        for (var i = 0; i &lt; read; i++){
+            dataW[i] = (byte)(dataR[i] + 1);
+        }
+        winUsb.Stream.Write(dataW);
+    }
+    Thread.Sleep(100);
+}
+</code></pre><h2 id="webusb">WebUSB</h2>
+<p>Some modern browsers, like Chrome and Edge, include a way to give access to the USB from the web content. TinyCLR CDC and WinUSB already include the necessary descriptors to enable WebUSB. This <a href="https://github.com/ghi-electronics/TinyCLR-WebUSB">repo</a> includes a full <code>WebUSBApp</code> example to load onto the device, that is any TinyCLR device. Once loaded, visit <a href="https://ghi-electronics.github.io/TinyCLR-WebUSB/">https://ghi-electronics.github.io/TinyCLR-WebUSB/</a> to connect to the device.</p>
+<p><img src="images/webusb-connect.jpg" alt="WebUSB Connect"></p>
+<p>User will see <code>TinyCLR WebUsb</code> device as an option to <code>Connect</code></p>
+<p><img src="images/webusb-select.jpg" alt="WebUSB Select"></p>
+<p>On successful connection the input drop downs are enabled. </p>
+<p><img src="images/webusb-pin-select.jpg" alt="WebUSB Select"></p>
+<p>After selecting <code>Update State</code> the device sends back a message indicating the outcome. </p>
+<p><img src="images/webusb-success.jpg" alt="WebUSB Success"></p>
+<p>In this case the <code>PB0</code> is set <code>HIGH</code> and the LED turns on.</p>
+<p><img src="images/webusb-dev.jpg" alt="WebUSB LED"></p>
+<p>The secret sauce is in using the correct endpoints, which are fixed in both CDC and WinUSB drivers. This line can be used to initiate the class <code>let webusb = new WebUSB(2, 1);</code> which is found inside <code>webusb.js</code> file</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/usb-pc-comm.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <p><a class="back-to-top" href="#top">Back to top</a><p>
+              </nav>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2021 GHI Electronics, LLC<br>Generated by DocFX</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

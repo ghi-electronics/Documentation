@@ -10,7 +10,7 @@ Ethernet is supported through the internal MAC, by adding an external PHY (100BA
 Here is a simple example:
 
 >[!TIP]
->Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Pins
+>Needed NuGets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Pins
 
 ```cs
 static bool linkReady = false;
@@ -23,10 +23,10 @@ static void EthernetTest() {
     resetPin.SetDriveMode(GpioPinDriveMode.Output); 
   
     resetPin.Write(GpioPinValue.Low);
-    System.Threading.Thread.Sleep(100);
+    Thread.Sleep(100);
 
     resetPin.Write(GpioPinValue.High);
-    System.Threading.Thread.Sleep(100);
+    Thread.Sleep(100);
 
     var networkController = NetworkController.FromName(SC20260.NetworkController.EthernetEmac);
 
@@ -34,19 +34,17 @@ static void EthernetTest() {
 
     var networkCommunicationInterfaceSettings = new BuiltInNetworkCommunicationInterfaceSettings();
 
-    networkInterfaceSetting.Address = new System.Net.IPAddress(new byte[] { 192, 168, 1, 122 });
-    networkInterfaceSetting.SubnetMask = new System.Net.IPAddress(new byte[] { 255, 255, 255, 0 });
-    networkInterfaceSetting.GatewayAddress = new System.Net.IPAddress(new byte[] { 192, 168, 1, 1 });
+    networkInterfaceSetting.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
+    networkInterfaceSetting.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
+    networkInterfaceSetting.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
 
-    networkInterfaceSetting.DnsAddresses = new System.Net.IPAddress[] 
-        {new System.Net.IPAddress(new byte[] { 75, 75, 75, 75 }),
-         new System.Net.IPAddress(new byte[] { 75, 75, 75, 76 })};
+    networkInterfaceSetting.DnsAddresses = new IPAddress[] 
+        {new IPAddress(new byte[] { 75, 75, 75, 75 }),
+         new IPAddress(new byte[] { 75, 75, 75, 76 })};
 
     networkInterfaceSetting.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
-    networkInterfaceSetting.DhcpEnabled = true;
-    networkInterfaceSetting.DynamicDnsEnabled = true;
-
-    networkInterfaceSetting.TlsEntropy = new byte[] { 0, 1, 2, 3 };
+    networkInterfaceSetting.DhcpEnable = true;
+    networkInterfaceSetting.DynamicDnsEnable = true;
 
     networkController.SetInterfaceSettings(networkInterfaceSetting);
     networkController.SetCommunicationInterfaceSettings(networkCommunicationInterfaceSettings);
@@ -59,8 +57,8 @@ static void EthernetTest() {
     networkController.Enable();
 
     while (linkReady == false) ;
-    System.Diagnostics.Debug.WriteLine("Network is ready to use");
-    System.Threading.Thread.Sleep(Time.Infinite);
+    Debug.WriteLine("Network is ready to use");
+    Thread.Sleep(Timeout.Infinite);
 }
 
 private static void NetworkController_NetworkLinkConnectedChanged
@@ -75,6 +73,7 @@ private static void NetworkController_NetworkAddressChanged
     var address = ipProperties.Address.GetAddressBytes();
 
     linkReady = address[0] != 0;
+    Debug.WriteLine("IP: " + address[0] + "." + address[1] + "." + address[2] + "." + address[3]);
 }
 ```
 
@@ -85,12 +84,12 @@ private static void NetworkController_NetworkAddressChanged
 This example uses the ENC28J60 click on our SC20260D Dev Board.
 
 >[!TIP]
->Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins
+>Needed NuGets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins
 
 ```cs
 static void Enc28Test() {
     var networkController = NetworkController.FromName
-        ("ENC28J60.NetworkController");
+        (@"GHIElectronics.TinyCLR.NativeApis.ENC28J60.NetworkController\0");
 
     var networkInterfaceSetting = new EthernetNetworkInterfaceSettings();
 
@@ -129,10 +128,8 @@ static void Enc28Test() {
         { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
 
     networkInterfaceSetting.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
-    networkInterfaceSetting.DhcpEnabled = true;
-    networkInterfaceSetting.DynamicDnsEnabled = true;
-
-    networkInterfaceSetting.TlsEntropy = new byte[] { 0, 1, 2, 3 };
+    networkInterfaceSetting.DhcpEnable = true;
+    networkInterfaceSetting.DynamicDnsEnable = true;
 
     networkController.SetInterfaceSettings(networkInterfaceSetting);
     networkController.SetCommunicationInterfaceSettings(networkCommunicationInterfaceSettings);
@@ -164,6 +161,7 @@ private static void NetworkController_NetworkAddressChanged
     var address = ipProperties.Address.GetAddressBytes();
            
     linkReady = address[0] != 0;
+    Debug.WriteLine("IP: " + address[0] + "." + address[1] + "." + address[2] + "." + address[3]);
 }
 ```
 ---

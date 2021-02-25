@@ -6,12 +6,12 @@ TLS is how the Internet securely works, for banks, airports and security systems
 Below is simple example showing how to connect to https://www.google.com 
 
 >[!TIP]
->Needed Nugets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Networking.Http
+>Needed NuGets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Networking.Http
 
 ```cs
 var url = "https://www.google.com";
 
-var certificates = Resources.GetBytes(Properties.Resources.BinaryResources.GlobalSign);
+var certificates = Resources.GetBytes(Resources.BinaryResources.GlobalSign);
 
 X509Certificate[] certx509 = new X509Certificate[] { new X509Certificate(certificates) };
 
@@ -47,7 +47,14 @@ catch {
 }
 ```
 
+## Entropy
+TinyCLR OS uses the internal True Random Number (TRNG) generator to seed the entropy needed. Users can optionally provide their own.
+
+```cs
+networkInterfaceSetting.TlsEntropy = new byte[] { 0, 1, 2, 3 };
+```
+
 You need a root certificate to access secure websites. TinyCLR OS accepts certificates in both text and binary formats. The following instructions show how to download certificates:
 
-![How to dowload certificate](images/download_google_certificate.png)
+![How to download certificate](images/download_google_certificate.png)
 

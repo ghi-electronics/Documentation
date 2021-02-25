@@ -5,6 +5,10 @@ SITCore line of products includes native support for the Microchip [ATWINC1500](
 >[!IMPORTANT]
 >To take security to the next level, all network cryptography and security are done internally inside SITCore and not inside the WiFi module, meaning the data going over SPI is all encrypted and secure.
 
+# Supported Modules
+ATWINC1500 & 1510 both work identically with SITCore, except the 1510 has more memory that SITCore doesn't need. The part number with the correct firmware that has been tested with TinyCLR is ATWINC1500-MR210PB. A module with a different firmware version can still be used, but a firmware update becomes necessary. Using the exact version eliminates the need for this step. 
+
+# Sample Code
 The sample code is meant for the FEZ Portal with it's built in WiFi module. If you want to use a bare ATWINC1500 module instead, you'll need to connect interrupt, reset, and chip select lines in addition to the SPI lines (MOSI, MISO, SCK).
 
 > [!IMPORTANT] 
@@ -12,7 +16,7 @@ The sample code is meant for the FEZ Portal with it's built in WiFi module. If y
 
 
 >[!TIP]
->Needed Nugets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Devices.Uart, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Networking, and GHIElectronics.TinyCLR.Pins.
+>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Devices.Uart, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Networking, and GHIElectronics.TinyCLR.Pins.
 
 ```cs
 using GHIElectronics.TinyCLR.Devices.Gpio;
@@ -71,9 +75,8 @@ static void Wifi_Example() {
         { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
 
     wifiSettings.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
-    wifiSettings.DhcpEnabled = true;
-    wifiSettings.DynamicDnsEnabled = true;
-    wifiSettings.TlsEntropy = new byte[] { 0, 1, 2, 3 };
+    wifiSettings.DhcpEnable = true;
+    wifiSettings.DynamicDnsEnable = true;
 
     networkController.SetInterfaceSettings(wifiSettings);
     networkController.SetCommunicationInterfaceSettings(netInterfaceSettings);
@@ -159,7 +162,7 @@ Winc15x0Interface.RemoveMulticastMacAddress(new byte[] {​​​​​​​​
 ```
 
 >[!TIP]
->Needed Nugets: GHIElectronics.TinyCLR.Drivers.Microchip.Winc15x0
+>Needed NuGets: GHIElectronics.TinyCLR.Drivers.Microchip.Winc15x0
 
 ---
 

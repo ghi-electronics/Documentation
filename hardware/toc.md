@@ -6,17 +6,17 @@
 ## [Single Board Computers](sitcore/sbc.md)
 ## [Development Boards](sitcore/dev.md)
 
-# [NETMF Modules](netmf/intro.md)
-## [G30](netmf/g30.md)
-## [G80](netmf/g80.md)
-## [G120/G120E](netmf/g120.md)
-## [G400S](netmf/g400s.md)
-## [G400D](netmf/g400d.md)
-## [Upgrading](netmf/upgrade.md)
-
 # [Legacy](legacy/intro.md)
 
-## [SoMs](legacy/som.md)
+## [NETMF SoMs](netmf/intro.md)
+### [G30](netmf/g30.md)
+### [G80](netmf/g80.md)
+### [G120/G120E](netmf/g120.md)
+### [G400S](netmf/g400s.md)
+### [G400D](netmf/g400d.md)
+### [Upgrading](netmf/upgrade.md)
+
+## [Older SoMs](legacy/som.md)
 ### [ChipworkX](netmf/chipworkx.md)
 ### [Embedded Master](netmf/embedded-master.md)
 ### [EMX](netmf/emx.md)

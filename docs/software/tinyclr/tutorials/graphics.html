@@ -124,13 +124,13 @@
 <h2 id="native-displays">Native Displays</h2>
 <p>Native display support in TinyCLR OS is handled automatically using the microcontroller&#39;s DMA to transfer data in parallel to the display without slowing down your application.</p>
 <p>The following example runs on the SCM20260D Dev Board with either the 4.3&quot; or 7&quot; display. You will need to add a font and a small JPG image as <a href="resources.html">resources</a> to run the code as is.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.</p>
 </div>
-<pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Display;
+<pre><code class="lang-cs">using System.Drawing;
+using System.Threading;
+using GHIElectronics.TinyCLR.Devices.Display;
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
-using System.Drawing;
-using System.Threading;
 
 namespace GraphicsSample {
     class Program {
@@ -168,8 +168,8 @@ namespace GraphicsSample {
 
             var screen = Graphics.FromHdc(displayController.Hdc);
 
-            var image = Resource1.GetBitmap(Resource1.BitmapResources.smallJpegBackground);
-            var font = Resource1.GetFont(Resource1.FontResources.small);
+            var image = Resources.GetBitmap(Resources.BitmapResources.smallJpegBackground);
+            var font = Resources.GetFont(Resources.FontResources.small);
 
             screen.Clear();
 
@@ -189,7 +189,7 @@ namespace GraphicsSample {
             screen.FillRectangle(new SolidBrush(Color.Teal), 330, 150, 140, 100);
 
             screen.DrawLine(new Pen(Color.White), 10, 271, 470, 271);
-            screen.SetPixel(240, 200, 0xFF0000);
+            screen.SetPixel(240, 200, Color.White);
 
             screen.DrawString(&quot;Hello world!&quot;, font, new SolidBrush(Color.Blue), 210, 255);
 
@@ -222,15 +222,15 @@ namespace GraphicsSample {
 <h2 id="virtual-displays">Virtual Displays</h2>
 <p>Displays can be virtual, meaning the system handles the drawing in RAM and when <code>Flush</code> is called an event is fired with the graphics data that needs to be transferred to the display. This for example can be an SPI display or over-the-network display.</p>
 <p>The following sample code runs on our SC20100S Dev Board with its SPI-based display. You will need to add a font and a small JPG image as <a href="resources.html">resources</a> to run the code as is.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed Nugets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.</p>
 </div>
-<pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Gpio;
+<pre><code class="lang-cs">using System;
+using System.Drawing;
+using System.Threading;
+using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Devices.Spi;
 using GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735;
 using GHIElectronics.TinyCLR.Pins;
-using System;
-using System.Drawing;
-using System.Threading;
 
 namespace GraphicsSample {
     class Program {
@@ -263,10 +263,10 @@ namespace GraphicsSample {
             // Create bitmap buffer
             var screen = Graphics.FromImage(new Bitmap(SCREEN_WIDTH, SCREEN_HEIGHT));
 
-            var image = Properties.Resources.GetBitmap(Properties.Resources.BitmapResources.
+            var image = Resources.GetBitmap(Resources.BitmapResources.
                 smallJpegBackground);
 
-            var font = Properties.Resources.GetFont(Properties.Resources.FontResources.small);
+            var font = Resources.GetFont(Resources.FontResources.small);
 
             screen.Clear();
 
@@ -286,7 +286,7 @@ namespace GraphicsSample {
             screen.FillRectangle(new SolidBrush(Color.Teal), 110, 80, 40, 25);
 
             screen.DrawLine(new Pen(Color.White), 10, 127, 150, 127);
-            screen.SetPixel(80, 92, 0xFF0000);
+            screen.SetPixel(80, 92, Color.White);
 
             screen.DrawString(&quot;Hello world!&quot;, font, new SolidBrush(Color.Blue), 50, 110);
 
@@ -310,6 +310,12 @@ namespace GraphicsSample {
 <hr>
 <h2 id="fonts">Fonts</h2>
 <p>Fonts are fully supported. They are covered <a href="font-support.html">here</a>.</p>
+<hr>
+<h2 id="color-space">Color Space</h2>
+<p>Internally, TinyCLR uses 5:6:5 RGB 16BPP color space. There are helper methods to convert to other color spaces. See <a href="encoding-decoding.html">Encoding &amp; Decoding</a> for more details.</p>
+<hr>
+<h2 id="vnc">VNC</h2>
+<p>VNC (Virtual Network Computing) is a simple remote desktop that with available terminals supported by major operating systems. It is covered <a href="vnc.html">here</a>.</p>
 </article>
           </div>
           
@@ -337,10 +343,13 @@ namespace GraphicsSample {
               </div>
           
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              <h5>In This Article</h5>
+              <div></div>
+              <p><a class="back-to-top" href="#top">Back to top</a><p>
               </nav>
             </div>
           </div>
+          
         </div>
       </div>
       
@@ -351,7 +360,7 @@ namespace GraphicsSample {
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2020 GHI Electronics, LLC<br>Generated by <strong>DocFX</strong></span>
+            <span>Copyright © 2021 GHI Electronics, LLC<br>Generated by DocFX</span>
             
           </div>
         </div>

@@ -1,6 +1,6 @@
 # The UCM Standard
 ---
-![UCM SOM](images/som-noborder.jpg)
+![UCM SOM](../netmf/images/som.jpg)
 
 The UCM Standard defines a consistent hardware and software interface for the most widely used microcontroller peripherals.  Universal Compute Modules are based on the 200 pin SO-DIMM form factor.  They adhere to a standard pinout across models making it easy to change modules to adapt to the needs of your product.  
 
@@ -312,4 +312,6 @@ JTAG is a serial interface which allows communication between the processor and 
 
 Want to quickly build your prototype?  Check out the UCM [**Development Options**](development-options.md).
 
-You can also visit our main website at [**www.ghielectronics.com**](http://www.ghielectronics.com) and our community forums at [**forums.ghielectronics.com**](https://forums.ghielectronics.com/).
+---
+
+You can also visit our main website at [**main website**](http://www.ghielectronics.com) and our  [**community forum**](https://forums.ghielectronics.com/).
