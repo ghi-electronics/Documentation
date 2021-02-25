@@ -5,7 +5,7 @@ Dynamically configure your system through these services that acquire `DeviceInf
 
 Returns devices `UniqueId`
 ```cs
-var deviceId = DeviceInformation.UniqueId;
+var deviceId = DeviceInformation.GetUniqueId();
 ```
 
 Returns `DeviceName`.
@@ -33,7 +33,5 @@ Returns `ManufacturerName` information.
 Debug.WriteLine(DeviceInformation.ManufacturerName);
 ```
 
-## Changing DeviceName
-```cs
-DeviceInformation.SetPersistDeviceName("New Device Name");
-```
+## Device Name
+Devices have common name that is they ship with. This can be read using `DeviceInformation.DeviceName`. This name also shows on the USB debug interface. The name can changed only once through `DeviceInformation.SetPersistDeviceName("New Device Name")`. Once set, a complete device erase is required before changing the name again.
