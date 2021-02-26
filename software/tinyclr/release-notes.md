@@ -2,6 +2,98 @@
 ---
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.1.0 - Preview4
+
+### Released 2021-02-26
+
+### Visual Studio Project System
+
+#### Changes
+- None.
+
+#### Known Issues
+- Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
+- Debug breakpoints sometimes hang for 5-6 seconds before resuming normally (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/659)
+
+### Libraries
+
+#### Changes
+- Added SetPersistDeviceName allows user set friendly name.
+- USB host: Added Joystick.
+- USB host: Rework HID polling interval
+- USBClient: Add BOS support WebUsb
+- USBClient: Correct endpoint bmAttribute for CDC/WinUsb
+- Fixed Graphic flushing with custom size.
+- Added convert RGB565 to RGB444.
+- Added convert RGB565 to 1BPP.
+- Rework VNC api.
+- Fixed File System hangs when reach EOF.
+- Added HMAC SHA256.
+- Fixed Converter class hidden.
+- Added NetworkStream sending retry.
+- Optimized ArrayList
+- Changed DeviceInformation.UniqueID from propery to function.
+- Fixed Power reset source incorrect.
+- Added DigitalSignal Generator.
+- Added array Copy2D allows extract image from array with custom size.
+- IFU: Added activity led.
+
+#### Known Issues
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug+
+
+### Firmware
+
+#### Changes
+- Fixed crashed when set a breakpoint at bitmap array.
+- Fixed PPP crashed if no TLS Entropy provide.
+- Use Double-precision floating-point argument for compiling.
+- Fixed could not deploy via USB debug after enabled USBClient controller.
+- Fixed system slow after connected an HID device.
+- App button is free to use once disabled debug interface.
+- Fixed reading EnableSlowClock flag might crash system.
+- Random: Changed to hardware true random generator.
+- Socket: Raise exception if Read/Write has timeout.
+- Fixed exception when draw to N18 high SPI frequency.
+- Fixed enable CAN2 corrupted CAN1 filter.
+- Fix big lag when set PWM in very low frequency.
+- Fix ADC Controller GetDefault throws exception
+- Add support wakeup pin rising or failing edge.
+- Raise out of memory exeption of Allocate unmanaged memory failed.
+
+#### Known Issue
+- None.
+
+### Drivers
+
+#### Changes
+- Added Azure SAS generator.
+- ST7735 support RGB444
+- Add ERC12864 (128x64)
+- Fixed FT5xx6 touch has nothing when rotate screen.
+- NeoPixel constructor supports software and hardware signal generator.
+
+#### Known Issues
+- None.
+
+### TinyCLR Config
+
+#### Changes
+- None.
+
+#### Known Issues
+- Erase all doesn't erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+- None.
+
+#### Known Issues
+- None.
+
+---
+
 ## 2.1.0 - Preview3
 
 ### Released 2021-01-05
