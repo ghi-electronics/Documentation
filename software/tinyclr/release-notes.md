@@ -20,22 +20,22 @@
 #### Changes
 - Added SetPersistDeviceName allows user set friendly name.
 - USB host: Added Joystick.
-- USB host: Rework HID polling interval
-- USBClient: Add BOS support WebUsb
-- USBClient: Correct endpoint bmAttribute for CDC/WinUsb
-- Fixed Graphic flushing with custom size.
+- USB host: Rework HID polling interval.
+- USBClient: Add BOS support WebUsb.
+- USBClient: Correct endpoint bmAttribute for Cdc/WinUsb.
+- Fixed Graphic Flush() with custom size.
 - Added convert RGB565 to RGB444.
 - Added convert RGB565 to 1BPP.
 - Rework VNC api.
 - Fixed File System hangs when reach EOF.
 - Added HMAC SHA256.
 - Fixed Converter class hidden.
-- Added NetworkStream sending retry.
-- Optimized ArrayList
+- Added 'Retry' NetworkStream (Send)
+- Optimized ArrayList.
 - Changed DeviceInformation.UniqueID from propery to function.
-- Fixed Power reset source incorrect.
+- Fixed get power reset source incorrect.
 - Added DigitalSignal Generator.
-- Added array Copy2D allows extract image from array with custom size.
+- Added array Copy2D.
 - IFU: Added activity led.
 
 #### Known Issues
@@ -45,20 +45,20 @@
 
 #### Changes
 - Fixed crashed when set a breakpoint at bitmap array.
-- Fixed PPP crashed if no TLS Entropy provide.
+- Fixed PPP crashed if no TLS Entropy provided.
 - Use Double-precision floating-point argument for compiling.
 - Fixed could not deploy via USB debug after enabled USBClient controller.
 - Fixed system slow after connected an HID device.
 - App button is free to use once disabled debug interface.
 - Fixed reading EnableSlowClock flag might crash system.
-- Random: Changed to hardware true random generator.
+- Random Class: Changed to hardware true random generator.
 - Socket: Raise exception if Read/Write has timeout.
 - Fixed exception when draw to N18 high SPI frequency.
 - Fixed enable CAN2 corrupted CAN1 filter.
 - Fix big lag when set PWM in very low frequency.
-- Fix ADC Controller GetDefault throws exception
-- Add support wakeup pin rising or failing edge.
-- Raise out of memory exeption of Allocate unmanaged memory failed.
+- Fix DAC Controller GetDefault throws exception
+- Added support wakeup pin by rising or failing edge.
+- Raise OutOfMemory exception of Allocate unmanaged memory failed.
 
 #### Known Issue
 - None.
