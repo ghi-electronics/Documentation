@@ -35,6 +35,7 @@
 - Changed DeviceInformation.UniqueID from propery to function.
 - Fixed get power reset source incorrect.
 - Added DigitalSignal Generator.
+- GHIElectronics.TinyCLR.Pins: Rename Timer.Capture to Timer.DigitalSignal
 - Added array Copy2D.
 - IFU: Added activity led.
 
