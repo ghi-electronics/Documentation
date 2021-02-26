@@ -245,7 +245,7 @@ Internally, TinyCLR uses 5:6:5 RGB 16BPP color space. There are helper methods t
 
 ---
 ## 2D Matrix copy
-The built-in native 2D Matrix extract/copy is an simple, fast and efficient way to crop out an area of an image.
+The built-in native 2D Matrix extract/copy is an simple, fast and efficient way to crop out an area of an image. `GroupSize` is the pixel size in bytes. TinyCLR OS is 16bpp graphics, that is `GroupSize = 2`.
 
 ```cs
 var groupSize = 2;
