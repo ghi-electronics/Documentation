@@ -120,7 +120,7 @@ pwmPinPB3.Stop();
 ---
 
 ## Servo Motors
-Servo motors use PWM to generate the necessary signal. A NuGet package is provided to simplify the use of servos.
+Servo motors use PWM to generate the necessary signal. A NuGet package is provided to simplify the use of servos. The example below uses the software PWM feature, allowing any digital pin to be used. Hardware PWM can be used as well.
 
 > [!Tip] 
 > As a rule, servos have three wires. Be sure the central wire is connected to 5V. The lighter color wire on one side of the connector is a signal and should be connected to a PWM pin. The third one, which is usually a darker color, is ground.
