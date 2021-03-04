@@ -38,6 +38,7 @@
 - GHIElectronics.TinyCLR.Pins: Rename Timer.Capture to Timer.DigitalSignal
 - Added array Copy2D.
 - IFU: Added activity led.
+- Fixed Socket Send/Receive block the system.
 
 #### Known Issues
 - https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug+
@@ -79,7 +80,8 @@
 ### TinyCLR Config
 
 #### Changes
-- None.
+- Added update device name.
+- Fixed Connect to Bootloader take long time.
 
 #### Known Issues
 - Erase all doesn't erase external flash.
