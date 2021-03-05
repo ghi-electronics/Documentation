@@ -14,7 +14,7 @@ A resistive touch screen measures the resistance across the X and Y axes to dete
 
 Unless you have specific reason to use resistive touch, capacitive touch is preferred.
 
-The NuGet package `GHIElectronics.TinyCLR.Drivers.Touch.ResistiveTouch` simplifies the process of adding resistive touch to a project. The code example below details how it is implemented.  
+The NuGet package `GHIElectronics.TinyCLR.Drivers.Touch.ResistiveTouch` simplifies the process of adding resistive touch to a project. The code example below details how it is used.  
 
 ```cs
 var touch = new ResistiveTouchController(
