@@ -14,61 +14,33 @@ A resistive touch screen measures the resistance across the X and Y axes to dete
 
 Unless you have specific reason to use resistive touch, capacitive touch is preferred.
 
-This is a simple example showing how to read a resistive display. A better approach would be to use a resistive touch controller chip that works over SPI or I2C.
+The NuGet package `GHIElectronics.TinyCLR.Drivers.Touch.ResistiveTouch` simplifies the process of adding resistive touch to a project. The code example below details how it is implemented.  
 
 ```cs
-var adc = AdcController.GetDefault();
-var gpio = GpioController.GetDefault();
-int x, y;
+var touch = new ResistiveTouchController(
+    320, // Screen width
+    240, // Screen height
+    SC20260.GpioPin.PA0,  // digital pin support analog
+    SC20260.GpioPin.PA3,  // digital pin support analog
+    SC20260.GpioPin.PA5,  // digital pin
+    SC20260.GpioPin.PC3,  // digital pin
+    SC20260.Adc.Controller1.Id, // Analog controller id
+    SC20260.Adc.Controller1.PA0, // analog channel id
+    SC20260.Adc.Controller1.PA3 // analog channel id
+    );
 
-while (this.active) {
-    // Read X
-    {
-        var XR = gpio.OpenPin(this.PinXR);
-        XR.SetDriveMode(GpioPinDriveMode.Output);
-        XR.Write(GpioPinValue.High);
-        var XL = gpio.OpenPin(this.PinXL);
-        XL.SetDriveMode(GpioPinDriveMode.Output);
-        XL.Write(GpioPinValue.Low);
+touch.ScaleX = new Scale(20, 280); // option to get more accurate point
+touch.ScaleY = new Scale(20, 200); // option to get more accurate point
 
-        var YD = gpio.OpenPin(this.PinYD);
-        YD.SetDriveMode(GpioPinDriveMode.Input);
-        var YU = adc.OpenChannel(this.ChannelYUA);
+while (true)
+{
+    Thread.Sleep(100); // poll interval every 100ms
 
-        x = (int)(YU.ReadRatio()*1000);
-        XR.Dispose();
-        XL.Dispose();
-        YU.Dispose();
-        YD.Dispose();
-    }
+    var x = touch.X;
+    var y = touch.Y;
 
-    // Read Y
-    {
-        var YD = gpio.OpenPin(this.PinYD);
-        YD.SetDriveMode(GpioPinDriveMode.Output);
-        YD.Write(GpioPinValue.High);
-        var YU = gpio.OpenPin(this.PinYU);
-        YU.SetDriveMode(GpioPinDriveMode.Output);
-        YU.Write(GpioPinValue.Low);
-
-        var XR = gpio.OpenPin(this.PinXR);
-        XR.SetDriveMode(GpioPinDriveMode.Input);
-        var XL = adc.OpenChannel(this.ChannelXLA);
-
-        y = (int)(XL.ReadRatio()*1000);
-        XR.Dispose();
-        XL.Dispose();
-        YU.Dispose();
-        YD.Dispose();
-    }
-
-    if (x > 50 && y > 50) {
-        var sx = this.Scale(x, 50, 830, 0, 320);
-        var sy = this.Scale(y, 150, 830, 0, 240);
-        this.TouchMove?.Invoke(this, new TouchEventArgs(sx, sy));
-    }
-
-    Thread.Sleep(20);
+    if (x >= 0 && y >= 0) // detected touch
+        Debug.WriteLine("X: " + x +", Y = " + y);
 }
 ```
 
