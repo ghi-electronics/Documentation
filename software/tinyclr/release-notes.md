@@ -4,12 +4,12 @@
 
 ## 2.1.0 - Preview4
 
-### Released 2021-02-26
+### Released 2021-03-08
 
 ### Visual Studio Project System
 
 #### Changes
-- None.
+- Prevent deploying and assembly that is larger than 6MB, not supported.
 
 #### Known Issues
 - Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
@@ -39,6 +39,7 @@
 - Added array Copy2D.
 - IFU: Added activity led.
 - Fixed Socket Send/Receive block the system.
+- Json: Support object polymorphism.
 
 #### Known Issues
 - https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug+
@@ -69,10 +70,11 @@
 
 #### Changes
 - Added Azure SAS generator.
-- ST7735 support RGB444
-- Add ERC12864 (128x64)
+- ST7735 support RGB444.
+- Add ERC12864 (128x64).
 - Fixed FT5xx6 touch has nothing when rotate screen.
 - NeoPixel constructor supports software and hardware signal generator.
+- Added resistive touch driver.
 
 #### Known Issues
 - None.
