@@ -4,7 +4,7 @@
 
 ## 2.1.0 - Preview4
 
-### Released 2021-02-26
+### Released 2021-03-08
 
 ### Visual Studio Project System
 
@@ -69,10 +69,11 @@
 
 #### Changes
 - Added Azure SAS generator.
-- ST7735 support RGB444
-- Add ERC12864 (128x64)
+- ST7735 support RGB444.
+- Add ERC12864 (128x64).
 - Fixed FT5xx6 touch has nothing when rotate screen.
 - NeoPixel constructor supports software and hardware signal generator.
+- Added resistive touch driver.
 
 #### Known Issues
 - None.
