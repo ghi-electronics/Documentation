@@ -2,6 +2,102 @@
 ---
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.1.0 - Preview4
+
+### Released 2021-03-08
+
+### Visual Studio Project System
+
+#### Changes
+- Prevent deploying an assembly that is larger than 6MB, not supported.
+
+#### Known Issues
+- Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
+- Debug breakpoints sometimes hang for 5-6 seconds before resuming normally (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/659)
+
+### Libraries
+
+#### Changes
+- Added SetPersistDeviceName allows user set device name, mainly used for USB.
+- USB host: Added Joystick.
+- USB host: Rework HID polling interval.
+- USBClient: Add BOS support WebUSB.
+- USBClient: Correct endpoint bmAttribute for Cdc/WinUSB.
+- Fixed Graphic Flush() with custom size.
+- Added convert RGB565 to RGB444.
+- Added convert RGB565 to 1BPP.
+- Rework VNC API.
+- Fixed File System hangs when reach EOF.
+- Added HMAC SHA256.
+- Fixed Converter class hidden.
+- Added 'Retry' NetworkStream (Send)
+- Optimized ArrayList.
+- Changed DeviceInformation.UniqueID from propery to function.
+- Fixed get power reset source incorrect.
+- Added DigitalSignal Generator.
+- GHIElectronics.TinyCLR.Pins: Rename Timer.Capture to Timer.DigitalSignal
+- Added array Copy2D.
+- IFU: Added activity led.
+- Socket Send and Receive are now non-blocking.
+
+#### Known Issues
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug+
+
+### Firmware
+
+#### Changes
+- Fixed VS crash when set a breakpoint at bitmap array.
+- Fixed PPP now automatically includes default TLS Entropy.
+- Use Double-precision floating-point argument for compiling.
+- Fixed could not deploy via USB debug after enabled USBClient controller.
+- Fixed system slow after connected an HID device.
+- App button is free to use once disabled debug interface.
+- Fixed reading EnableSlowClock flag might crash system.
+- Random Class: Changed to hardware true random generator.
+- Socket: Raise exception if Read/Write has timeout.
+- Fixed exception when draw to N18 high SPI frequency.
+- Fixed enable CAN2 corrupted CAN1 filter.
+- Fix lag when set PWM in very low frequency.
+- Fix DAC Controller GetDefault throws exception
+- Added support wakeup pin by rising or failing edge.
+- Raise OutOfMemory exception of Allocate unmanaged memory failed.
+
+#### Known Issue
+- None.
+
+### Drivers
+
+#### Changes
+- Added Azure SAS generator.
+- ST7735 support RGB444.
+- Add ERC12864 (128x64).
+- Fixed FT5xx6 touch has nothing when rotate screen.
+- NeoPixel constructor supports software and hardware signal generator.
+- Added resistive touch driver.
+
+#### Known Issues
+- None.
+
+### TinyCLR Config
+
+#### Changes
+- Added update device name.
+- Fixed Connect to Bootloader take long time.
+
+#### Known Issues
+- Erase all doesn't erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+- None.
+
+#### Known Issues
+- None.
+
+---
+
 ## 2.1.0 - Preview3
 
 ### Released 2021-01-05

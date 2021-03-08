@@ -244,6 +244,25 @@ Fonts are fully supported. They are covered [here](font-support.md).
 Internally, TinyCLR uses 5:6:5 RGB 16BPP color space. There are helper methods to convert to other color spaces. See [Encoding & Decoding](encoding-decoding.md) for more details.
 
 ---
+## 2D Matrix copy
+The built-in native 2D Matrix extract/copy is an simple, fast and efficient way to crop out an area of an image. `GroupSize` is the pixel size in bytes. TinyCLR OS is 16bpp graphics, that is `GroupSize = 2`.
+
+```cs
+var groupSize = 2;
+var screenWidth = 160;
+var screenHeight = 128;
+ 
+var screen = new Bitmap(screenWidth, screenHeight);
+
+var imageNew = new byte[80 * 80 * 2];
+var x = 5;
+var y = 5;
+var width = 80;
+var height = 80;
+
+Array.Copy2D(screen.GetBitmap(), imageNew, x, y, width, height, screenWidth, groupSize);
+```
+---
 
 ## VNC
 

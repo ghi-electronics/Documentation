@@ -35,3 +35,6 @@ Debug.WriteLine(DeviceInformation.ManufacturerName);
 
 ## Device Name
 Devices have common name that is they ship with. This can be read using `DeviceInformation.DeviceName`. This name also shows on the USB debug interface. The name can changed only once through `DeviceInformation.SetPersistDeviceName("New Device Name")`. Once set, a complete device erase is required before changing the name again.
+
+> [!TIP]
+> Since Windows caches the name when loading the driver, Windows `Device Manager` will still show the old name. Simply right-click on the device and uninstall the driver. The next time it installs the drivers it will update with the new name.

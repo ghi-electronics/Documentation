@@ -67,6 +67,13 @@ The server providing the data needs to consider that IFU will need time to `Buil
 
 ---
 
+## IFU 2.0 to 2.1
+Starting release 2.1, IFU is reworked to support complete firmware and application update using external flash (when available) or external RAM (when available). Unfortunately, using IFU to update from 2.1 to 2.2 is only possible if the deployment region was not extended to use external flash.
+
+A work around to update 2.0 to 2.1 is by updating 2.0 to a new 2.1 temporary application that does not use external flash. Once this temp application is loaded then the final application with external flash can be deployed.
+
+---
+
 ## Firmware and Application Matching
 
 It is important that the loaded firmware is the same version expected by the application. It is usually best to update both when possible.
