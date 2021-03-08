@@ -123,6 +123,10 @@ updater.Build(false, true);
 <pre><code>updater.ReadDataTimeout = TimeSpan.FromSeconds(5); // 5 seconds
 </code></pre><p>The server providing the data needs to consider that IFU will need time to <code>Build</code> one stream a time, which can take a while especially when external flash buffering is enabled. For example, a 6MB Application buffered to external flash will need about 2 minutes.</p>
 <hr>
+<h2 id="ifu-20-to-21">IFU 2.0 to 2.1</h2>
+<p>Starting release 2.1, IFU is reworked to support complete firmware and application update using external flash (when available) or external RAM (when available). Unfortunately, using IFU to update from 2.1 to 2.2 is only possible if the deployment region was not extended to use external flash.</p>
+<p>A work around to update 2.0 to 2.1 is by updating 2.0 to a new 2.1 temporary application that does not use external flash. Once this temp application is loaded then the final application with external flash can be deployed.</p>
+<hr>
 <h2 id="firmware-and-application-matching">Firmware and Application Matching</h2>
 <p>It is important that the loaded firmware is the same version expected by the application. It is usually best to update both when possible.</p>
 </article>

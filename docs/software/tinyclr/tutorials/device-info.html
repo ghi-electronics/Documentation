@@ -97,6 +97,8 @@ Debug.WriteLine(major +&quot;.&quot;+ minor +&quot;.&quot;+ build +&quot;.&quot;
 <pre><code class="lang-cs">Debug.WriteLine(DeviceInformation.ManufacturerName);
 </code></pre><h2 id="device-name">Device Name</h2>
 <p>Devices have common name that is they ship with. This can be read using <code>DeviceInformation.DeviceName</code>. This name also shows on the USB debug interface. The name can changed only once through <code>DeviceInformation.SetPersistDeviceName(&quot;New Device Name&quot;)</code>. Once set, a complete device erase is required before changing the name again.</p>
+<div class="TIP"><h5>Tip</h5><p>Since Windows caches the name when loading the driver, Windows <code>Device Manager</code> will still show the old name. Simply right-click on the device and uninstall the driver. The next time it installs the drivers it will update with the new name.</p>
+</div>
 </article>
           </div>
           
