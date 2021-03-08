@@ -9,7 +9,7 @@
 ### Visual Studio Project System
 
 #### Changes
-- None.
+- Prevent deploying and assembly that is larger than 6MB, not supported.
 
 #### Known Issues
 - Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
