@@ -85,7 +85,7 @@
 <h3 id="visual-studio-project-system">Visual Studio Project System</h3>
 <h4 id="changes">Changes</h4>
 <ul>
-<li>Prevent deploying and assembly that is larger than 6MB, not supported.</li>
+<li>Prevent deploying an assembly that is larger than 6MB, not supported.</li>
 </ul>
 <h4 id="known-issues">Known Issues</h4>
 <ul>
@@ -95,15 +95,15 @@
 <h3 id="libraries">Libraries</h3>
 <h4 id="changes-1">Changes</h4>
 <ul>
-<li>Added SetPersistDeviceName allows user set friendly name.</li>
+<li>Added SetPersistDeviceName allows user set device name, mainly used for USB.</li>
 <li>USB host: Added Joystick.</li>
 <li>USB host: Rework HID polling interval.</li>
-<li>USBClient: Add BOS support WebUsb.</li>
-<li>USBClient: Correct endpoint bmAttribute for Cdc/WinUsb.</li>
+<li>USBClient: Add BOS support WebUSB.</li>
+<li>USBClient: Correct endpoint bmAttribute for Cdc/WinUSB.</li>
 <li>Fixed Graphic Flush() with custom size.</li>
 <li>Added convert RGB565 to RGB444.</li>
 <li>Added convert RGB565 to 1BPP.</li>
-<li>Rework VNC api.</li>
+<li>Rework VNC API.</li>
 <li>Fixed File System hangs when reach EOF.</li>
 <li>Added HMAC SHA256.</li>
 <li>Fixed Converter class hidden.</li>
@@ -115,8 +115,7 @@
 <li>GHIElectronics.TinyCLR.Pins: Rename Timer.Capture to Timer.DigitalSignal</li>
 <li>Added array Copy2D.</li>
 <li>IFU: Added activity led.</li>
-<li>Fixed Socket Send/Receive block the system.</li>
-<li>Json: Support object polymorphism.</li>
+<li>Socket Send and Receive are now non-blocking.</li>
 </ul>
 <h4 id="known-issues-1">Known Issues</h4>
 <ul>
@@ -125,8 +124,8 @@
 <h3 id="firmware">Firmware</h3>
 <h4 id="changes-2">Changes</h4>
 <ul>
-<li>Fixed crashed when set a breakpoint at bitmap array.</li>
-<li>Fixed PPP crashed if no TLS Entropy provided.</li>
+<li>Fixed VS crash when set a breakpoint at bitmap array.</li>
+<li>Fixed PPP now automatically includes default TLS Entropy.</li>
 <li>Use Double-precision floating-point argument for compiling.</li>
 <li>Fixed could not deploy via USB debug after enabled USBClient controller.</li>
 <li>Fixed system slow after connected an HID device.</li>
@@ -136,7 +135,7 @@
 <li>Socket: Raise exception if Read/Write has timeout.</li>
 <li>Fixed exception when draw to N18 high SPI frequency.</li>
 <li>Fixed enable CAN2 corrupted CAN1 filter.</li>
-<li>Fix big lag when set PWM in very low frequency.</li>
+<li>Fix lag when set PWM in very low frequency.</li>
 <li>Fix DAC Controller GetDefault throws exception</li>
 <li>Added support wakeup pin by rising or failing edge.</li>
 <li>Raise OutOfMemory exception of Allocate unmanaged memory failed.</li>
