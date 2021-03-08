@@ -9,7 +9,7 @@
 ### Visual Studio Project System
 
 #### Changes
-- Prevent deploying and assembly that is larger than 6MB, not supported.
+- Prevent deploying an assembly that is larger than 6MB, not supported.
 
 #### Known Issues
 - Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
@@ -18,15 +18,15 @@
 ### Libraries
 
 #### Changes
-- Added SetPersistDeviceName allows user set friendly name.
+- Added SetPersistDeviceName allows user set device name, mainly used for USB.
 - USB host: Added Joystick.
 - USB host: Rework HID polling interval.
-- USBClient: Add BOS support WebUsb.
-- USBClient: Correct endpoint bmAttribute for Cdc/WinUsb.
+- USBClient: Add BOS support WebUSB.
+- USBClient: Correct endpoint bmAttribute for Cdc/WinUSB.
 - Fixed Graphic Flush() with custom size.
 - Added convert RGB565 to RGB444.
 - Added convert RGB565 to 1BPP.
-- Rework VNC api.
+- Rework VNC API.
 - Fixed File System hangs when reach EOF.
 - Added HMAC SHA256.
 - Fixed Converter class hidden.
@@ -38,8 +38,7 @@
 - GHIElectronics.TinyCLR.Pins: Rename Timer.Capture to Timer.DigitalSignal
 - Added array Copy2D.
 - IFU: Added activity led.
-- Fixed Socket Send/Receive block the system.
-- Json: Support object polymorphism.
+- Socket Send and Receive are now non-blocking.
 
 #### Known Issues
 - https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug+
@@ -47,8 +46,8 @@
 ### Firmware
 
 #### Changes
-- Fixed crashed when set a breakpoint at bitmap array.
-- Fixed PPP crashed if no TLS Entropy provided.
+- Fixed VS crash when set a breakpoint at bitmap array.
+- Fixed PPP now automatically includes default TLS Entropy.
 - Use Double-precision floating-point argument for compiling.
 - Fixed could not deploy via USB debug after enabled USBClient controller.
 - Fixed system slow after connected an HID device.
@@ -58,7 +57,7 @@
 - Socket: Raise exception if Read/Write has timeout.
 - Fixed exception when draw to N18 high SPI frequency.
 - Fixed enable CAN2 corrupted CAN1 filter.
-- Fix big lag when set PWM in very low frequency.
+- Fix lag when set PWM in very low frequency.
 - Fix DAC Controller GetDefault throws exception
 - Added support wakeup pin by rising or failing edge.
 - Raise OutOfMemory exception of Allocate unmanaged memory failed.
