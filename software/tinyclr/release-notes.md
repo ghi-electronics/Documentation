@@ -39,6 +39,7 @@
 - Added array Copy2D.
 - IFU: Added activity led.
 - Fixed Socket Send/Receive block the system.
+- Json: Support object polymorphism.
 
 #### Known Issues
 - https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug+
