@@ -40,7 +40,7 @@ var crcVal2 = crc16.ComputeHash(data, 4, 4);
 ```
 
 ## HMAC-SHA256
-HMAC-SHA256 offers better security than standard SHA, and is utilized inside the SAS(Shared Access Signature) NuGet, used by [Microsoft Azure](azure.md)
+HMAC-SHA256 offers better security than standard SHA256. It is also required for SAS(Shared Access Signature), needed for [Microsoft Azure](azure.md).
 
 ```cs
 var key = new byte[] { 1, 2, 3, 4, 5, 6 };
