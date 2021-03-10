@@ -99,3 +99,5 @@
 # [Release Notes](release-notes.md)
 # [Resources](resources.md)
 # [Limitations](limitations.md)
+
+# [Legal](../../hardware/legal.md)

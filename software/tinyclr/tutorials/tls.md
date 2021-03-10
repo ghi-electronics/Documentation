@@ -54,7 +54,8 @@ TinyCLR OS uses the internal True Random Number (TRNG) generator to seed the ent
 networkInterfaceSetting.TlsEntropy = new byte[] { 0, 1, 2, 3 };
 ```
 
-You need a root certificate to access secure websites. TinyCLR OS accepts certificates in both text and binary formats. The following instructions show how to download certificates:
+## Root Certificate
+A root certificate is needed to access secure websites. TinyCLR OS accepts certificates in both text and binary formats. The following instructions show how to download certificates:
 
 ![How to download certificate](images/download_google_certificate.png)
 
