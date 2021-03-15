@@ -55,7 +55,36 @@ networkInterfaceSetting.TlsEntropy = new byte[] { 0, 1, 2, 3 };
 ```
 
 ## Root Certificate
-A root certificate is needed to access secure websites. TinyCLR OS accepts certificates in both text and binary formats. The following instructions show how to download certificates:
+A root certificate is needed to access secure websites. TinyCLR OS accepts certificates in both text and binary formats. The following instructions show how to download certificates using Google as an example:
 
-![How to download certificate](images/download_google_certificate.png)
+First click on the `lock` icon inside the URL window. 
 
+![Download Root Certificate Step 1](images/tls-step1.png)
+
+Select `Certificate (Valid)` option. 
+
+![Download Root Certificate Step 2](images/tls-step2.png)
+
+Select the `Certificate Path` TAB and click on the top Root certificate, select the Root Certificate
+
+![Download Root Certificate Step 3](images/tls-step3.png)
+
+Next navigate to the `Details` TAB and click on the `Copy to File` button.
+
+![Download Root Certificate Step 4](images/tls-step4.png)
+
+The Certificate Export Wizard page will appear, click `Next`
+
+![Download Root Certificate Step 5](images/tls-step5.png)
+
+Select the `Base-64 encoded X.509(.CER)` file format and click `Next`
+
+![Download Root Certificate Step 6](images/tls-step6.png)
+
+Name the file and browse to the location to save. Then click `Next`
+
+![Download Root Certificate Step 7](images/tls-step7.png)
+
+An export confirmation message will appear, click `OK` and then click `Finish`
+
+![Download Root Certificate Step 8](images/tls-step8.png)
