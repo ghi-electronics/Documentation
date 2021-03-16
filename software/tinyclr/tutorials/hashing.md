@@ -1,7 +1,6 @@
 # Hashing
 ---
 ## MD5
-
 TinyCLR OS supports MD5 hash function.
 
  The following commands will calculate the MD5 hash value of a byte array:
@@ -15,7 +14,7 @@ var hashValue = md5.ComputeHash(data); //data is a byte array.
 ```
 
 ## CRC16
-TinyCLR OS also supports CRC16.
+TinyCLR OS supports CRC16.
 
 ```cs
 ComputeHash(byte[] data, int offset, int count);
@@ -39,3 +38,14 @@ var crcVal2 = crc16.ComputeHash(data, 4, 4);
 
 // `crcVal1` and `crcVal2` will match.
 ```
+
+## HMAC-SHA256
+HMAC-SHA256 offers better security than standard SHA256. It is also required for SAS(Shared Access Signature), needed for [Microsoft Azure](azure.md).
+
+```cs
+var key = new byte[] { 1, 2, 3, 4, 5, 6 };
+var message = "this is for test";
+var hash = new HMACSHA256(key);
+var result = hash.ComputeHash(System.Text.UTF8Encoding.UTF8.GetBytes(message));
+```
+
