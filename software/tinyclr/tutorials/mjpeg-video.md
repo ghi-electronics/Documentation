@@ -5,7 +5,7 @@ The MJPEG video format is simply a chain of JPG images that are stored in a sing
 The following code sample runs on the SC20100S Dev Board and plays an MJPEG video file that is stored on a USB flash drive.
 
 > [!Tip]
-> Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Devices.Storage, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Drivers.Media, GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735, GHIElectronics.TinyCLR.IO, GHIElectronics.TinyCLR.Native, and GHIElectronics.TinyCLR.Pins.
+> Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Devices.Storage, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Media, GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735, GHIElectronics.TinyCLR.IO, GHIElectronics.TinyCLR.Native, and GHIElectronics.TinyCLR.Pins.
 
 ```cs
 class Program {
