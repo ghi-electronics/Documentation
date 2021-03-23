@@ -123,3 +123,15 @@ else {
     throw new Exception("Server not found."); ;
 }
 ```
+---
+## mDNS
+Multicast DNS is a local name resolution service over local networks. Please note that not all operating systems support mDNS.
+
+```cs
+networkInterfaceSetting.MulticastDnsEnable = true;
+
+networkController.Enable();
+
+MulticastDns.Start("MyServer", TimeSpan.FromSeconds(1*60*60));    // TTL set to 1 hour
+
+```
