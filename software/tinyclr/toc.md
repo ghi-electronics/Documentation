@@ -95,9 +95,20 @@
 ### [Modbus](tutorials/modbus.md)
 ### [1-Wire](tutorials/1-wire.md)
 
+# [Drivers](drivers/intro.md)
+## [Codec](drivers/codec.md)
+## [Connectivity](drivers/connectivity.md)
+## [Display](drivers/display.md)
+## [Imaging](drivers/imaging.md)
+## [IO Control](drivers/io-control.md)
+## [LED](drivers/led.md)
+## [Memory](drivers/memory.md)
+## [Motor](drivers/motor.md)
+## [Sensor](drivers/sensor.md)
+## [Software Utility](drivers/software-utility.md)
+
 # [Downloads](downloads.md)
 # [Release Notes](release-notes.md)
 # [Resources](resources.md)
 # [Limitations](limitations.md)
-
 # [Legal](../../hardware/legal.md)
