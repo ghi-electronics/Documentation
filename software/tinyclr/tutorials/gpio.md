@@ -1,4 +1,4 @@
-# General Purpose Input Output (GPIO)
+﻿# General Purpose Input Output (GPIO)
 ---
 Microcontrollers include pins that can be controlled through software. They can be logical inputs or outputs, hence the name "general purpose input/output".
 
@@ -96,3 +96,27 @@ pin.DebounceTimeout = TimeSpan.FromMilliseconds(10);
 Digital input events rely on internal GPIO interrupts to work. On SITCore, these interrupts are only available on 16 pins at any given time, the pin number must be unique, over all of the available ports. For example: PA1 and PB1 cannot both be used as interrupts at the same time. However, PA1 and PB2, or even PA1 and PA2, can be used simultaneously.
 
 Consider other internal system functions that need interrupts, such as WiFi. Those also reserve one of the 16 available interrupts.
+
+## LowLevel Access
+**For advanced users only**, there is a ways to `SetAlternate()` function and also to control `ReservePin()`. The chip internally may support certain peripheral on more that one pin. We select default ones and those are the one that everyone must use and they are the ones listed in the official pinout. However, advanced users only have the option to move the peripheral, or one of pins on that peripheral, to an alternate pin.
+
+> [!Warning]
+> This advanced feature does not check what alternate functions are valid.
+
+This example will move MOSI2 pin from PB2 to PC7, assuming AF6
+
+```cs
+// start by creating SPI2 to initialize the feature on PB2
+// now transfer...
+var settings = new Settings {​​​​​​​
+    mode = PortMode.AlternateFunction,
+    speed = OutputSpeed.VeryHigh,
+    direction = PullDirection.None,
+    alternate = AlternateFunction.AF6,
+    type  = OutputType.PushPull
+}​​​​​​​;
+LowLevelController.TransferSettings(SC20100.GpioPin.PB2, SC20100.GpioPin.PC7, settings);
+```
+
+> [!Note]
+> The LowLevel feature can't be used to remap UARTs
