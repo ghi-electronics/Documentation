@@ -115,7 +115,7 @@ var settings = new Settings {​​​​​​​
     alternate = AlternateFunction.AF6,
     type  = OutputType.PushPull
 }​​​​​​​;
-LowLevelController.TransferSettings(SC20100.GpioPin.PB2, SC20100.GpioPin.PC7, settings);
+LowLevelController.TransferFeature(SC20100.GpioPin.PB2, SC20100.GpioPin.PC7, settings);
 ```
 
 > [!Note]

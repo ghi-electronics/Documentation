@@ -15,6 +15,9 @@ Basic Graphics contains many useful methods for adding simple graphics. Included
 
 The driver is agnostic of what display is being used and simply works by calling `SetPixel` method that must be overridden by the user. The user has 2 options, either send the pixel directly to the display or buffer the pixels in a "Video RAM" working buffer and then flush to the screen when desired. Setting th pixels directly on the screen requires zero memory but it is extremely slow.
 
+>[!Note]
+>The Basic Graphic driver supports pixel multiplier. Meaning a 160x128 display can be treated as an 80x64 display. It is lower resolution but 10kb vs 40kb of RAM. More about pixel multiplier can be found in the [SPI](../tutorials/spi.md) tutorial 
+
 An example on how to override the SetPixel method:
 
 >[!TIP]
@@ -32,7 +35,7 @@ public class BasicGraphicDemo : BasicGraphic{
 }
 ```
 
-Now, the Basic Graphics driver can be used
+Now, the Basic Graphics driver can be used.
 
 ```cs
 var basicGfx = new BasicGraphicDemo(1, 1);
