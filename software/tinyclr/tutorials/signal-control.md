@@ -253,7 +253,11 @@ while (true) {
 
 ![Drain duration timing](images/drain-duration.gif)
 
-The final mode is DrainDuration. This mode is often used to implement capacitive touch. When calling Trigger, the pulse line will be held in the specified state for the specified time and then set to an input. When a resistor and capacitor are connected to this pin and ground, the pin will fall to ground after a short period of time dependent upon the size of the capacitor and the size of the resistor in parallel with it. The image below shows a sample circuit. Note that this mode can only be used with a single pin.
+In this DrainDuration mode is used to implement capacitive touch. When calling Trigger, the pulse line will be held in the specified state for the specified time and then set to an input. It then measures the time for the pin to change its state.
+
+Only the pulse line is used in this mode. Echo pin is ignored.
+
+The image below shows a sample circuit. Note that this mode can only be used with a single pin.
 
 ![Capacitive touch schematic](images/capacitive-touch-schematic.gif)
 
@@ -269,7 +273,6 @@ var pulseFeedback = new PulseFeedback(capacitiveSensePin,
     DisableInterrupts = false,
     Timeout = System.TimeSpan.FromSeconds(1),
     PulseLength = System.TimeSpan.FromTicks(100),
-    EchoValue = GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.High,
     PulseValue = GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.High,
 };
 

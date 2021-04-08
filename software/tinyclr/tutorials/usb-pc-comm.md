@@ -29,7 +29,6 @@ cdc.DataReceived += (a,count) => Debug.WriteLine("Data received:" + count);
 
 cdc.Enable();
 
-
 while (cdc.DeviceState != DeviceState.Configured);
         Debug.WriteLine("UsbClient Connected");
 
@@ -80,7 +79,6 @@ winUsb.DeviceStateChanged += (a,b) => Debug.WriteLine("Connection changed.");
 winUsb.DataReceived += (a,count) => Debug.WriteLine("Data received:" + count);
                  
 winUsb.Enable();
-
 
 while (winUsb.DeviceState != DeviceState.Configured) ;
         Debug.WriteLine("UsbClient Connected");
