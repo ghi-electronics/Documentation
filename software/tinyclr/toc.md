@@ -67,6 +67,7 @@
 ### [TLS](tutorials/tls.md)
 ### [Cryptography](tutorials/cryptography.md)
 ### [Hashing](tutorials/hashing.md)
+### [Passwords](tutorials/password.md)
 
 ## Additional Features
 ### [USB PC Comm](tutorials/usb-pc-comm.md)
