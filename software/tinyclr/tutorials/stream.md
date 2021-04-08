@@ -38,7 +38,50 @@ var bufferOut = memoryStream.ToArray();
 var myNetworkStream = new NetworkStream(networkSocket);
 ```
 
+## UartStream
 
+```cs
+public class UartStream : Stream {
+
+    private UartController uart;
+    public UartStream(UartController uart) => this.uart = uart;
+    
+    public override bool CanRead => true;
+    public override bool CanSeek => false;
+    public override bool CanWrite => true;
+
+    public override long Length => throw new NotImplementedException();
+
+    public override long Position { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+    public override void Flush() => this.uart.Flush();
+
+    public override int Read(byte[] buffer, int offset, int count) {
+        var read = 0;
+        while (read < count){
+            while (this.uart.BytesToRead == 0) ;
+
+            read += this.uart.Read(buffer, offset + read, count - read);
+        }
+
+        return read;
+    }
+
+    public override long Seek(long offset, SeekOrigin origin) => throw new NotImplementedException();
+
+    public override void SetLength(long value) => throw new NotImplementedException();
+
+    public override void Write(byte[] buffer, int offset, int count){
+        var write = 0;
+
+        while (write < count){
+            write += this.uart.Write(buffer, offset + write, count - write);
+        }
+    }
+
+    public override bool DataAvailable => this.uart.BytesToRead > 0;
+}
+```
 
 
 
