@@ -61,7 +61,7 @@ static void Wifi_Example() {
     netInterfaceSettings.ResetActiveState = GpioPinValue.Low;
 
     var networkController = NetworkController.FromName
-        ("GHIElectronics.TinyCLR.NativeApis.ATWINC15xx.NetworkController");
+        (SC20260.NetworkController.ATWinc15x0);
 
     WiFiNetworkInterfaceSettings wifiSettings = new WiFiNetworkInterfaceSettings() {
         Ssid = "Your SSID",
@@ -112,6 +112,9 @@ private static void NetworkController_NetworkAddressChanged
 The Winc15x0Interface class provides to access some of the native functions of the WINC1500 WiFi module. Such as getting the WiFi module's MAC address, getting RSSI (Relative Signal Strength Indicator), scanning for access points, checking the firmware version, and over-the-air (OTA) firmware update.
 
 Unless provided, the MAC address of the WiFi module will be automatically used by default.
+
+>[!TIP]
+>Needed NuGets: GHIElectronics.TinyCLR.Drivers.Microchip.Winc15x0
 
 ```cs
 //Scan for WiFi access points:
