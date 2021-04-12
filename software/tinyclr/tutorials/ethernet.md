@@ -28,7 +28,7 @@ static void EthernetTest() {
     resetPin.Write(GpioPinValue.High);
     Thread.Sleep(100);
 
-    var networkController = NetworkController.FromName(SC20260.NetworkController.Enc28j60);
+    var networkController = NetworkController.FromName(SC20260.NetworkController.EthernetEmac);
 
     var networkInterfaceSetting = new EthernetNetworkInterfaceSettings();
 
@@ -89,7 +89,7 @@ This example uses the ENC28J60 click on our SC20260D Dev Board.
 ```cs
 static void Enc28Test() {
     var networkController = NetworkController.FromName
-        (@"GHIElectronics.TinyCLR.NativeApis.ENC28J60.NetworkController\0");
+        (SC20260.NetworkController.Enc28j60);
 
     var networkInterfaceSetting = new EthernetNetworkInterfaceSettings();
 
