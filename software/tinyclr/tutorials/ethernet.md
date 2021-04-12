@@ -28,7 +28,7 @@ static void EthernetTest() {
     resetPin.Write(GpioPinValue.High);
     Thread.Sleep(100);
 
-    var networkController = NetworkController.FromName(SC20260.NetworkController.EthernetEmac);
+    var networkController = NetworkController.FromName(SC20260.NetworkController.Enc28j60);
 
     var networkInterfaceSetting = new EthernetNetworkInterfaceSettings();
 

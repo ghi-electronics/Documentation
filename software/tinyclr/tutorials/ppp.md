@@ -54,7 +54,7 @@ class Program {
 
     static void TestPPP() {
         var networkController = NetworkController.
-            FromName("GHIElectronics.TinyCLR.NativeApis.Ppp.NetworkController");
+            FromName(SC20260.NetworkController.Ppp);
 
         PppNetworkInterfaceSettings networkInterfaceSetting = new PppNetworkInterfaceSettings() {
                 AuthenticationType = PppAuthenticationType.Pap,
