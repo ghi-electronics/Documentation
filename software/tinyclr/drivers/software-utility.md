@@ -13,23 +13,26 @@ Basic Graphics driver is used when deployment space is needed for projects and s
 
 Basic Graphics contains many useful methods for adding simple graphics. Included in the driver are `SetPixel`,`DrawLine`,`DrawRectangle`,`DrawCircle`,`DrawString`,`DrawText`, and `DrawCharacter`.
 
-The driver is agnostic of what display is being used and simply works by calling `SetPixel` method that must be overridden by the user. The user has 2 options, either send the pixel directly to the display or buffer the pixels in a "Video RAM" working buffer and then flush to the screen when desired. Setting th pixels directly on the screen requires zero memory but it is extremely slow.
+There are two ways to use BasicGraphics, the first one is agnostic of what display is being used and simply works by calling `SetPixel` method that must be overridden by the user. The user has 2 options, either send the pixel directly to the display or buffer the pixels in a "Video RAM" working buffer and then flush to the screen when desired. Setting the pixels directly on the screen requires zero memory but it is extremely slow.
 
->[!Note]
->The Basic Graphic driver supports pixel multiplier. Meaning a 160x128 display can be treated as an 80x64 display. It is lower resolution but 10kb vs 40kb of RAM. More about pixel multiplier can be found in the [SPI](../tutorials/spi.md) tutorial 
-
-An example on how to override the SetPixel method:
+In the second way, which is the easier way, BasicGraphics will handle allocating the needed video buffer and handles the SetPixel. It already has 2 pixel options, 16BPP 5:6:5 and 1BPP.
 
 >[!TIP]
->Needed NuGet: GHIElectronics.TinyCLR.Drivers.BasicGraphic
+>Needed NuGet: GHIElectronics.TinyCLR.Drivers.BasicGraphics
+
+An example of the first options, that overrides the `SetPixel` and `Clear` methods. BasicGraphics will not allocate any memory.
 
 ```cs
-public class BasicGraphicDemo : BasicGraphic{
+public class BasicGraphicsImp : BasicGraphics{
     public override void SetPixel(int x, int y, uint color){
         // add code to buffer pixels or send directly to display
     }
+    public override void Clear(){
+       // add optional clear if buffer is used
+    }
+    // You may need to add this to send an optional buffer...
     public void Flush(){
-        // add code to send the buffer to the display
+        // ... for example
         lcd.DrawBufferNative(this.buffer);
     }
 }
@@ -38,7 +41,7 @@ public class BasicGraphicDemo : BasicGraphic{
 Now, the Basic Graphics driver can be used.
 
 ```cs
-var basicGfx = new BasicGraphicDemo(1, 1);
+var basicGfx = new BasicGraphicsImp();
 var colorBlue = 0x00FF0000U;
 var colorGreen = 0x0000FF00U;
 var colorRed = 0x00000FFU;
@@ -55,35 +58,30 @@ for (var i = 20; i < 140; i ++)
     basicGfx.DrawCircle((uint)color.Next(), i, 100, 15);
 
 basicGfx.Flush();
-
-Thread.Sleep(Timeout.Infinite);
 ```
 
-while each display is different, here is en example that renders SetPixel to 16BPP 5:6:5 to a buffer
+This example uses the second option where a buffer is allocated automatically. This is the preferred option for using BasicGraphics.
 
 ```cs
-public override void SetPixel(int x, int y, uint color){
-    if (x < 0 || y < 0 || x >= this.Width || y >= this.Height) return;
-    var idx = (y * this.Width + x) * 2;
-    var clr = color;
-    this.buffer[idx + 0] = (byte)(((clr & 0b0000_0000_0000_0000_0001_1100_0000_0000) >> 5) | ((clr & 0b0000_0000_0000_0000_0000_0000_1111_1000) >> 3));
-    this.buffer[idx + 1] = (byte)(((clr & 0b0000_0000_1111_1000_0000_0000_0000_0000) >> 16) | ((clr & 0b0000_0000_0000_0000_1110_0000_0000_0000) >> 13));
-}
-```
+var basicGfx = new BasicGraphics(160, 128, ColorFormat.Rgb565);
+var colorBlue = 0x00FF0000U;
+var colorGreen = 0x0000FF00U;
+var colorRed = 0x00000FFU;
+var colorWhite = 0x00FFFFFFU;
 
-This example renders SetPixel to a 1BPP to a buffer
+basicGfx.Clear()
 
-```cs
-public override void SetPixel(int x, int y, uint color){
-    if (x < 0 || y < 0 || x >= this.Width || y >= this.Height) return;
-    var index = (y / 8) * this.Width + x;
-    if (color != 0){
-        this.buffer[index] |= (byte)(1 << (y % 8));
-    }
-    else{
-        this.buffer[index] &= (byte)(~(1 << (y % 8)));
-    }
-}
+basicGfx.DrawText("Hi Insiders!", colorGreen, 15, 15, 2, 1);
+basicGfx.DrawText("SITCore", colorBlue, 35, 40, 2, 2);
+basicGfx.DrawText("SC13xxx", colorRed, 35, 60, 2, 2);
+
+Random color = new Random();
+for (var i = 20; i < 140; i ++)
+    basicGfx.DrawCircle((uint)color.Next(), i, 100, 15);
+
+// now send to display, using the specific display driver.
+MyDisplaySendBuffer(basicGfx.Buffer);
+
 ```
 
 ## IR
