@@ -47,7 +47,7 @@ var colorGreen = 0x0000FF00U;
 var colorRed = 0x00000FFU;
 var colorWhite = 0x00FFFFFFU;
 
-basicGfx.Clear()
+basicGfx.Clear();
 
 basicGfx.DrawText("Hi Insiders!", colorGreen, 15, 15, 2, 1);
 basicGfx.DrawText("SITCore", colorBlue, 35, 40, 2, 2);
