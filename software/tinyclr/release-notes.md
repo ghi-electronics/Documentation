@@ -290,7 +290,7 @@
 - Prevent active USB client in usb debug mode.
 - Fixed WiFi doesn't fire event when disconnected from a hotspot.
 - Added analog temperature reading, VREFINT, VSENSE channels (GHIElectronics.TinyCLR.Pins)    
-- Fixed Uart RTS pin doesn't go high when buffer full.
+- Fixed UART RTS pin doesn't go high when buffer full.
 - Fixed USB Host: FS.Unmount() failed without calling Flush()
 - TFS: Improved and removed "StorageDriver".
 - Storage: Added EraseAll() api.
@@ -308,8 +308,8 @@
 - Added Timer.Pwm (GHIElectronics.TinyCLR.Pins - Changed from PwmChannel)    
 - MQTT: Add MQTT pass the topic to the received message function. 
 - Fixed Mobus TCP.
-- Fixed Uart parity Odd/Even doesn't work with 8 bit data.      
-- Fixed initializing the ATWINC with null ssid and password hangs system.
+- Fixed UART parity Odd/Even doesn't work with 8 bit data.      
+- Fixed initializing the ATWINC with null SSID and password hangs system.
 
 #### Known Issues
 - Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
@@ -400,7 +400,7 @@ Production ready release!
 - Power consumption is high in Shutdown mode (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/667)
 - USB Host: Unmount FS may cause system hang in Disconnected event. See workaround: https://github.com/ghi-electronics/TinyCLR-Libraries/issues/665
 - System time need to be more accurate (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/664)
-- Uart Rx buffer full doesn't make RTS pin go high (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/669)
+- UART Rx buffer full doesn't make RTS pin go high (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/669)
 
 ### TinyCLR Config
 
@@ -504,9 +504,9 @@ Fixed final bug, making it ready for production.
 ### Firmware
 
 #### Changes
-- Uart: Fixed can not release CTS, RTS pins when close UART
-- Uart: Enable FIFO mode.
-- Uart: Flush() will wait until last byte transfer completed.
+- UART: Fixed can not release CTS, RTS pins when close UART
+- UART: Enable FIFO mode.
+- UART: Flush() will wait until last byte transfer completed.
 - QSPI: Fixed total size was wrong.
 - Disable some peripherals interrupt during deploy application.
 - Fix freeze in some cases when update application by TinyCLR Config.
@@ -577,7 +577,7 @@ Complete software package prepping for production.
 - Equals() throws an unsupported instruction exception: https://github.com/ghi-electronics/TinyCLR-Libraries/issues/502.
 - Double.ToString() sometimes shows incorrect number. https://github.com/ghi-electronics/TinyCLR-Libraries/issues/629.
 - CAN: CanWriteMessage always return true: https://github.com/ghi-electronics/TinyCLR-Libraries/issues/635
-- Uart: Break Signal need to wait to last byte transfer complete https://github.com/ghi-electronics/TinyCLR-Libraries/issues/634
+- UART: Break Signal need to wait to last byte transfer complete https://github.com/ghi-electronics/TinyCLR-Libraries/issues/634
 
 ### TinyCLR Config
 
