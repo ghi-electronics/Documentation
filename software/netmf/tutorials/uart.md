@@ -3,7 +3,7 @@
 
 UART transfers data between two pins TXD (transmit) and RXD (receive). Normally, the pins are on different processors. Data is sent from TXD, in a sequence, at a predefined speed. The receiver checks data on RXD.
 
-Usually systems want to send and recieve as well, so there will be a TXD and RXD on one end with another set on the other end. The connection in between is rossed so TXD on one end goes to RXD on the other end and vice versa.
+Usually systems want to send and receive as well, so there will be a TXD and RXD on one end with another set on the other end. The connection in between is crossed so TXD on one end goes to RXD on the other end and vice versa.
 
 ## UART Technical Details
 
@@ -28,7 +28,7 @@ In other words, do not connect a PC's serial port to a micro directly. Use a lev
 ## Example using UART
 The following program sends a counter value 10 times per second. The data is sent at 115200 baud so make sure that the receiving end is setup the same way. This program sends the data on COM1 of your NETMF device. This COM number has nothing to do with COM number on your PC. For example, you may have a USB serial port on your PC that maps to COM8 and so you need to open COM8 on your PC, not COM1. The NETMF program will still use COM1 because it uses UART0 (COM1).
 
-The data sent can be shown on a terminal program, like teraterm. Note how we ended the string with "\r\n". The "\r" is code to tell the terminal to "return" back to the beginning of the line and "\n" is to add "new" line. When data is received on UART, it is automatically queued a side so you wouldn't lose any data.
+The data sent can be shown on a terminal program, like Tera Term. Note how we ended the string with "\r\n". The "\r" is code to tell the terminal to "return" back to the beginning of the line and "\n" is to add "new" line. When data is received on UART, it is automatically queued a side so you wouldn't lose any data.
  
 > [!Tip]
 > Using serial ports require the Microsoft.SPOT.Hardware.SerialPort. If your program uses the enums Parity or StopBits, the Microsoft.SPOT.Hardware assembly is needed.
@@ -42,9 +42,9 @@ public class Program
 {
     public static void Main()
     {
-        SerialPort UART = new SerialPort("COM1", 115200);
+        SerialPort uart = new SerialPort("COM1", 115200);
         int counter = 0;
-        UART.Open();
+        uart.Open();
         while (true)
         {
             // create a string
@@ -53,7 +53,7 @@ public class Program
             // convert the string to bytes
             byte[] buffer = Encoding.UTF8.GetBytes(counter_string);
             // send the bytes on the serial port
-            UART.Write(buffer, 0, buffer.Length);
+            uart.Write(buffer, 0, buffer.Length);
             // increment the counter;
             counter++;
             //wait...
@@ -75,15 +75,15 @@ public class Program
 {
     public static void Main()
     {
-        SerialPort UART = new SerialPort("COM1", 115200);
+        SerialPort uart = new SerialPort("COM1", 115200);
         int read_count = 0;
         byte[] rx_byte = new byte[1];
 
-        UART.Open();
+        uart.Open();
         while (true)
         {
             // read one byte
-            read_count = UART.Read(rx_byte, 0, 1);
+            read_count = uart.Read(rx_byte, 0, 1);
             if (read_count > 0)// do we have data?
             {
                 // create a string
@@ -92,7 +92,7 @@ public class Program
                 // convert the string to bytes
                 byte[] buffer = Encoding.UTF8.GetBytes(counter_string);
                 // send the bytes on the serial port
-                UART.Write(buffer, 0, buffer.Length);
+                uart.Write(buffer, 0, buffer.Length);
                 //wait...
                 Thread.Sleep(10);
             }
@@ -114,24 +114,24 @@ public class Program
 {
     public static void Main()
     {
-        SerialPort UART = new SerialPort("COM1", 115200);
+        SerialPort uart = new SerialPort("COM1", 115200);
         int read_count = 0;
         byte[] tx_data;
         byte[] rx_data = new byte[10];
         tx_data = Encoding.UTF8.GetBytes("FEZ");
-        UART.ReadTimeout = 0;
-        UART.Open();
+        uart.ReadTimeout = 0;
+        uart.Open();
 
         while (true)
         {
             // flush all data
-            UART.Flush();
+            uart.Flush();
             // send some data
-            UART.Write(tx_data, 0, tx_data.Length);
+            uart.Write(tx_data, 0, tx_data.Length);
             // wait to make sure data is transmitted
             Thread.Sleep(100);
             // read the data
-            read_count = UART.Read(rx_data, 0, rx_data.Length);
+            read_count = uart.Read(rx_data, 0, rx_data.Length);
             if (read_count != 3)
             {
                 // we sent 3 so we should have 3 back
