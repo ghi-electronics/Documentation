@@ -118,5 +118,4 @@ var settings = new Settings {​​​​​​​
 LowLevelController.TransferFeature(SC20100.GpioPin.PB2, SC20100.GpioPin.PC7, settings);
 ```
 
-> [!Note]
-> The LowLevel feature can't be used to remap UARTs
+`SetAlternate()` can not be called at will and must be called at a specific time. It must be called after creating the controller for CAN, DMCI, QSPI, SDcard, SPI, and I2C. When using PWM the function must be used after enabling the channel. Both UART & Native Display can be remapped after calling `SetActiveSettings()`.
