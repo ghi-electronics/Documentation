@@ -71,9 +71,9 @@ var string = System.Text.Encoding.UTF8.GetString(new byte[] { 65, 66, 67, 68, 69
 //string = "ABCDE"
 ```
 
-### BitConverter Overloads
+## BitConverter Overloads
 
-#### Convert to a Byte Array
+### Convert to a Byte Array
 
 ```cs
 System.BitConverter.GetBytes(char value)
@@ -88,7 +88,7 @@ System.BitConverter.GetBytes(ushort value)
 System.BitConverter.GetBytes(bool value)
 ```
 
-#### Convert from a Byte Array
+### Convert from a Byte Array
 
 ```cs
 System.BitConverter.ToBoolean(byte[] bytes, int startIndex)
@@ -106,14 +106,14 @@ System.BitConverter.ToUInt32(byte[] bytes, int startIndex)
 System.BitConverter.ToUInt64(byte[] bytes, int startIndex)
 ```
 
-#### Convert Between Double and Long
+### Convert Between Double and Long
 
 ```cs
 System.BitConverter.DoubleToInt64Bits(double value)
 System.BitConverter.Int64BitsToDouble(long value)
 ```
 
-#### Swap Endianness
+### Swap Endianness
 
 ```cs
 System.BitConverter.SwapEndianness(byte[] data, int groupSize)
@@ -126,6 +126,7 @@ System.BitConverter.SwapEndianness(byte[] data, int groupSize)
 ### ToString() Supported Conversions
 
 As TinyCLR OS is a subset of the full desktop .NET development system, not all desktop .NET features are supported. The following `ToString()` arguments are supported:
+
 ```cs
 Debug.WriteLine(123.ToString("N4")); //Outputs 123.0000
 Debug.WriteLine(123.ToString("F4")); //Outputs 123.0000
@@ -135,6 +136,7 @@ Debug.WriteLine(123.ToString("X4")); //Outputs 007B
 ```
 
 The following `ToString()` arguments are not supported and will raise an exception:
+
 ```cs
 Debug.WriteLine(123.ToString("E4")); //'E' option not supported
 Debug.WriteLine(123.ToString("R4")); //'R' option not supported
@@ -169,11 +171,14 @@ for (int i=48; i<58; i++) {
 Debug.WriteLine(sb.ToString()); //Will output "0123456789"
 ```
 
-### Color Space
+---
+
+## Color Space
 Internally TinyCLR uses the 5:6:5 RGB 16BPP color space, requiring two bytes per pixel. Users may find the need to use a different color space.
 
+### Conversion
 ```
- Convert(byte[] inArray, byte[] outArray, ColorFormat colorFormat, RgbFormat rgbFormat, byte alpha, byte[] colorTable)
+Convert(byte[] inArray, byte[] outArray, ColorFormat colorFormat, RgbFormat rgbFormat, byte alpha, byte[] colorTable)
 ```
 
 Users must create `outArray` of a length that is determined based on the `ColorFormat` the user is converting to. The table below will help in determining `outArray` buffer size.
@@ -202,9 +207,9 @@ var ColorTable565To888 = new byte[64]{ 0,2,4,8,12,16,20,24,28,32,36,40,44,48,52,
 
 The `alpha` is only used with the 8:8:8:8 color space to set the alpha channel value, between 0(transparent) to 255(opaque).
 
-### 1Bpp
+### 1Bpp Conversion
 
-The `ConvertTo1Bpp` function converts the internal 5:6:5 color space to 1BPP. ANy color will result in 1 and only black will result in 0.
+The `ConvertTo1Bpp` function converts the internal 5:6:5 color space to 1BPP. Any color will result in 1 and only black will result in 0.
 
 ```
 ConvertTo1Bpp(byte[] inArray, byte[] outArray, uint width)
