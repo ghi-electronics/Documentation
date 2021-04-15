@@ -138,8 +138,9 @@ for (int i = 0; i < Winc15x0Interface.FirmwareSupports.Length; i++) {
 
 //Download and install firmware from an OTA download (web) server:
 //   Must upload firmware file to root folder in server
-//   (e.g.  http://192.168.0.137/m2m_ota_3a0.bin).
-bool success = Winc15x0Interface.FirmwareUpdate(string url, int timeout);
+//   (e.g.  http://192.168.0.100/m2m_ota_3a0.bin).
+
+bool otaUpdate = Winc15x0Interface.FirmwareUpdate("http://192.168.0.100/m2m_ota_3a0.bin", TimeSpan.FromMilliseconds(5000));
 ```
 ---
 ## Multicast IP
