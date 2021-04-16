@@ -1,6 +1,111 @@
 # Release Notes
 ---
 ![TinyCLR Logo](images/tinyclr-logo.png)
+## 2.1.0 - RC1
+
+### Released 2021-04-15
+
+### Visual Studio Project System
+
+#### Changes
+- Fixed generating assemblies take too long on large projects.
+- Added System.Diagnostic to application template.
+- Removed TCP/IP port.
+
+#### Known Issues
+- Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
+- Debug breakpoints sometimes hang for 5-6 seconds before resuming normally (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/659)
+
+### Libraries
+
+#### Changes
+- Rework IFU API
+- Add DataAvailable property to Stream.
+- Rewrote USB stream timeout match to Network stream.
+- Removed Application.Lock()
+- Rewrote DeviceInformation class. Allow to set debug port, disable APP pin, lock debug...
+- UI TextBox: Added border.
+- Fixed missing PB14, PB15 GpioPin class.
+- Add STM32L4, STM13048 GpioPin class.
+- Add SHA1, HMAC-SHA1 cryptography.
+- Remove VNC nuget.
+- Remove Media nuget.
+- Add Gpio low level allow transfer feature.
+- JsonConverter supports enum.
+- Fixed Ota doesn't work because SSID length hardcode to 3.
+- Fixed crashed when flush partial rotate screen (native LCD).
+- Fixed Enable/Disable has no effect with UART.
+- Fixed CDC stop response with large package.
+- Network: Fixed GetIPProperties sometime null.
+- PWM: Fixed open channel fail then close the pin althought the pin is reserved for other function.
+- Remove checking Wakeup pin (PA0) if call Shutdown().
+
+#### Known Issues
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+- Signal PulseFeedback: Enable pullup or pulldown internally.
+- Disable global interrupt when QSPI is writing/erasing.
+- Raise exception if enable some configuration on non-support devices (example enable heap on SC20100)
+
+##### SC20xxx
+- Rework IFU.
+- Rework deployment configuration.
+
+##### SC13xxx
+- Initial.
+
+#### Known Issue
+- None.
+
+### Drivers
+
+#### Changes
+- Added Media nuget.
+- Fixed WAV play only 1 second.
+- Added VNC nuget.
+- Fixed VNC allocate memory every frame
+- Fixed VNC stop when much mouse events received.
+- Added QR barcode.
+- Added Infrared NecIR driver
+- Added BasicGraphics (useful for low memory devices)
+- Added ST7789 driver
+- Deleted SPWF04Sx driver
+- Added OneTimePassword
+- Corrected Neopixel company name.
+- Added DrawBufferNative on some screen don't support 16bit.
+- Added TexasInstruments.ADC121
+- Added Microchip.MCP4725
+- Added ScaniaJ1939
+- Added Gps.Nmea0183
+- Wifi Ota update: Timeout changed from interger to TimeSpan.
+- Uniform SetColor(), Flush(), Clear() for all leds driver
+- SetDrawWindow take agrument (0, 0, width-1, hight-1) for full screen.
+
+#### Known Issues
+- None.
+
+### TinyCLR Config
+
+#### Changes
+- Fixed usb friendly name duplicate.
+- Detect GHI bootloader by GHI VID.
+- Allow to set USB, Serial debug port, disable application pin.
+- Detect mismatch versions.
+
+#### Known Issues
+- Erase all doesn't erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+- None.
+
+#### Known Issues
+- None.
 
 ## 2.1.0 - Preview4
 
