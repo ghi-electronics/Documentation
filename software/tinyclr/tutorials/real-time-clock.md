@@ -1,35 +1,12 @@
 # Real Time Clock
 ---
-The Real Time Clock (RTC) is a circuit that runs off a small battery or a super capacitor. It has its own crystal and keeps running even when the system is powered off. Not all hardware has a built in RTC, so check your hardware's documentation for more details.
-
-Generally, the RTC is accurate to plus or minus two seconds per day. However, this error may be larger for boards operating in high or low temperature environments.
+The Real Time Clock (RTC) is a circuit that runs off a small battery or a super capacitor connected to VBAT. It needs its own crystal and keeps running even when the main system and its clocks are powered off.
 
 In the event the RTC battery was drained or the RTC was never initialized, the RTC will not have a correct value. Use the `rtc.IsValid` method to determine if the time was set correctly.
 
-## Setting Vbat Charge Mode
 
->[!Important]
->Make sure the RTC battery charge mode is correctly set. Charging a lithium coin cell may cause damage to the cell and could cause it to leak. Not charging a supercap will result in a discharged supercap and loss of correct time and battery backed ram data when your board is powered down.
-
-The RTC is powered by a battery or supercap when your board is powered down. It is important to correctly set the charge mode based on the RTC power source. Lithium coin cells, such as the common CR2032, may be damaged and could possibly leak if recharging is attempted. Supercaps need to be charged every few days or so (depending on supercap size) or they will lose power. More information is found in the Vbat section of the [Special Pins](../special-pins.md) page.
-
-```cs
-var rtc = GHIElectronics.TinyCLR.Devices.Rtc.RtcController.GetDefault();
-
-//The following line turns off charging. Used for lithium coin cells.
-rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.None);
-
-//The following line charges slowly through a 5 K resistor. Used for supercaps.
-rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Slow)
-
-//The following line charges quickly through a 1.5 K resistor.
-//   This is the mode we use for the supercaps on SITCore Dev boards.
-rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Fast)
-```
-
-
->[!Tip]
->Needed NuGets: GHIElectronics.TinyCLR.Devices.Rtc, GHIElectronics.TinyCLR.Native
+> [!Tip]
+> Needed NuGets: GHIElectronics.TinyCLR.Devices.Rtc, GHIElectronics.TinyCLR.Native
 
 ```cs
 using GHIElectronics.TinyCLR.Devices.Rtc;
@@ -73,6 +50,30 @@ Current Time    : 01/01/2019 11:15:35
 Current RTC Time: 01/01/2019 11:15:35
 Current Time    : 01/01/2019 11:15:36
 Current RTC Time: 01/01/2019 11:15:36
+```
+
+## Clock Source
+When the RTC is initialized, it tries to use an external 32,768Khz crystal. This is usually what is recommended as it provides an accurate time. If crystal is not available, the RTC will fall back and run using an internal RC. The internal RC is not as accurate as an external crystal and temperature will skew the time.
+
+## VBAT
+
+VBAT mode can be set in "charger mode" where it can charge an attached a supercap. Typically, VBAT requires 1.2 to 3.6 volts for correct operation.
+
+> [!Important]
+> Make sure the RTC battery charge mode is correctly set. Charging a lithium coin cell may cause damage to the cell and could cause it to leak. Not charging a supercap will result in a discharged supercap and loss of correct time and battery backed ram data when your board is powered down.
+
+```cs
+var rtc = GHIElectronics.TinyCLR.Devices.Rtc.RtcController.GetDefault();
+
+//The following line turns off charging. Used for lithium coin cells.
+rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.None);
+
+//The following line charges slowly through a 5 K resistor. Used for supercaps.
+rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Slow)
+
+//The following line charges quickly through a 1.5 K resistor.
+//   This is the mode we use for the supercaps on SITCore Dev boards.
+rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Fast)
 ```
 
 ---
@@ -166,8 +167,8 @@ Note that the battery backed memory is not managed at all. There is no allocate,
 
 Here is a simple example that displays the size of the battery backed memory, and then writes and reads five bytes of data.
 
->[!Tip]
->Needed NuGet: GHIElectronics.TinyCLR.Devices.Rtc
+> [!Tip]
+> Needed NuGet: GHIElectronics.TinyCLR.Devices.Rtc
 
 ```cs
 var rtc = RtcController.GetDefault();

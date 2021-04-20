@@ -969,7 +969,7 @@ This preview release includes many bug fixes, a few new and updated features, an
 - Fixed bug when sharing SPI bus with multiple devices.
 - Fixed incorrect timestamping of events.
 - Added support for microcontroller temperature sensor.
-- Added support for Vbat voltage monitoring.
+- Added support for VBAT voltage monitoring.
 - Added support for ADC internal reference voltage.
 - Fixed I2C bug with messages larger than 255 bytes.
 - Corrected I2C clock bug.
