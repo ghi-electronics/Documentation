@@ -53,6 +53,7 @@
 ##### SC20xxx
 - Rework IFU.
 - Rework deployment configuration.
+- Improved ENC28J60 driver.
 
 ##### SC13xxx
 - Initial.
@@ -68,7 +69,6 @@
 - Added VNC nuget.
 - Fixed VNC allocate memory every frame
 - Fixed VNC stop when much mouse events received.
-- Added QR barcode.
 - Added Infrared NecIR driver
 - Added BasicGraphics (useful for low memory devices)
 - Added ST7789 driver
