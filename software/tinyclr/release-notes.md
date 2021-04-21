@@ -3,7 +3,7 @@
 ![TinyCLR Logo](images/tinyclr-logo.png)
 ## 2.1.0 - RC1
 
-### Released 2021-04-15
+### Released 2021-04-23
 
 ### Visual Studio Project System
 
@@ -53,6 +53,7 @@
 ##### SC20xxx
 - Rework IFU.
 - Rework deployment configuration.
+- Improved ENC28J60 driver.
 
 ##### SC13xxx
 - Initial.
@@ -68,7 +69,6 @@
 - Added VNC nuget.
 - Fixed VNC allocate memory every frame
 - Fixed VNC stop when much mouse events received.
-- Added QR barcode.
 - Added Infrared NecIR driver
 - Added BasicGraphics (useful for low memory devices)
 - Added ST7789 driver
