@@ -3,7 +3,7 @@
 ![TinyCLR Logo](images/tinyclr-logo.png)
 ## 2.1.0 - RC1
 
-### Released 2021-04-15
+### Released 2021-04-23
 
 ### Visual Studio Project System
 
