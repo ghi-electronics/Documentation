@@ -5,7 +5,12 @@ This page contains a collection of supported displays. On devices that support i
 
 For devices with internal graphics support, the [Graphics](../tutorials/graphics.md) tutorial, under "Virtual Displays" has a full working example on how to use the display drivers on this page. Simply change the display controller the appropriate one.
 
-Similarly, devices that do not support internal native graphics can use the Basic Graphics under [Software Utilities](software-utility.md) instead. For displays that run natively 16BPP 5:6:5 the `DrawBuffer` is used exactly same as native graphics support. For displays that have other formats, like 1BPP, RAM can be saved by using the `DrawBufferNative` instead. In this case, the `SetPixel` method that is implemented by the user will determine the pixel format.
+Similarly, devices that do not support internal native graphics can use the `BasicGraphics` instead, detailed under [Software Utilities](software-utility.md). 
+
+Displays that support 16BPP 5:6:5, which is native to TinyCLR, `DrawBuffer` is provided. Displays that have other formats, like 1BPP, `DrawBufferNative` is provided instead. The developer is responsible for converting the TinyCLR native format to whatever the display expects. TinyCLR includes helper methods to convert color space, detailed under the [Encoding Decoding](../tutorials/encoding-decoding.md) tutorial.
+
+> [!TIP]
+> `BasicGraphics` supports 1BPP natively, and it is recommended when using basic 1BPP displays. This saves memory and eliminates the need for converting from 16BPP to 1BPP.
 
 ---
 
