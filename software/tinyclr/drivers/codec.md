@@ -10,9 +10,21 @@ This codec takes a SPI stream of audio, like MP3, and decodes it to an audio out
 >[!TIP]
 >Needed NuGet: GHIElectronics.TinyCLR.Drivers.VlsiSolution.VS1053B
 
-```cs
-// to be added!
+This example plays a small MP3 from a resource. Similarly, large file data can be fetched from other external resources.
 
+```cs
+//SC13048 Dev Board
+var gpio = GpioController.GetDefault();
+var dreq = gpio.OpenPin(SC13048.GpioPin.PA4);
+var reset = gpio.OpenPin(SC13048.GpioPin.PB15);
+var dataChipSelect = gpio.OpenPin(SC13048.GpioPin.PA0);
+var commandChipSelect = gpio.OpenPin(SC13048.GpioPin.PB2);
+var spi = SpiController.FromName(SC13048.SpiBus.Spi1);
+
+mp3decoder = new VS1053BController(spi, dreq, reset, dataChipSelect, commandChipSelect);
+var mp3Bytes = Resources.GetBytes(Resource1.BinaryResources.Song);
+mp3decoder.SetVolume(250, 250);
+mp3decoder.SendData(mp3Bytes);
 ```
 ---
 
