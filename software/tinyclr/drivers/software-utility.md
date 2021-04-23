@@ -2,6 +2,7 @@
 ---
 
 ## Azure SAS
+
 This utility NuGet adds SAS generation used in Azure. See [Microsoft Azure](../tutorials/azure.md) tutorial for more info.
 
 >[!TIP]
@@ -83,7 +84,6 @@ for (var i = 20; i < 140; i ++)
 
 // now send to display, using the specific display driver.
 MyDisplaySendBuffer(basicGfx.Buffer);
-
 ```
 
 ## IR
@@ -109,23 +109,16 @@ private static void Ir_OnDataRecievedEvent(byte address, byte command) {
 private static void Ir_OnRepeatEvent() {
     // we have repeat
 }
-
-
 ```
 ## QR Code Generator
+
 This driver converts a string to an image, which can be displays on screen for example.
 
->[!TIP]
->Needed NuGet:
+**In the works!**
 
-```cs
-To be added
-```
 
 ## GPS Parser
->[!TIP]
->Needed NuGet:
 
-```cs
-To be added
-```
+**In the works!**
+
+
