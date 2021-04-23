@@ -2,6 +2,7 @@
 ---
 
 ## Azure SAS
+
 This utility NuGet adds SAS generation used in Azure. See [Microsoft Azure](../tutorials/azure.md) tutorial for more info.
 
 >[!TIP]
@@ -113,19 +114,14 @@ private static void Ir_OnRepeatEvent() {
 
 ```
 ## QR Code Generator
+
 This driver converts a string to an image, which can be displays on screen for example.
 
->[!TIP]
->Needed NuGet:
+**In the works!**
 
-```cs
-To be added
-```
 
 ## GPS Parser
->[!TIP]
->Needed NuGet:
 
-```cs
-To be added
-```
+**In the works!**
+
+
