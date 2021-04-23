@@ -84,7 +84,6 @@ for (var i = 20; i < 140; i ++)
 
 // now send to display, using the specific display driver.
 MyDisplaySendBuffer(basicGfx.Buffer);
-
 ```
 
 ## IR
