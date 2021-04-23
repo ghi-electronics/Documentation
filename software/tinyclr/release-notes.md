@@ -3,7 +3,7 @@
 ![TinyCLR Logo](images/tinyclr-logo.png)
 ## 2.1.0 - RC1
 
-### Released 2021-04-15
+### Released 2021-04-26
 
 ### Visual Studio Project System
 
@@ -28,8 +28,8 @@
 - Fixed missing PB14, PB15 GpioPin class.
 - Add STM32L4, STM13048 GpioPin class.
 - Add SHA1, HMAC-SHA1 cryptography.
-- Remove VNC nuget.
-- Remove Media nuget.
+- Moved VNC NuGet to drivers.
+- Moved Media NuGet to drivers.
 - Add Gpio low level allow transfer feature.
 - JsonConverter supports enum.
 - Fixed Ota doesn't work because SSID length hardcode to 3.
@@ -37,7 +37,7 @@
 - Fixed Enable/Disable has no effect with UART.
 - Fixed CDC stop response with large package.
 - Network: Fixed GetIPProperties sometime null.
-- PWM: Fixed open channel fail then close the pin althought the pin is reserved for other function.
+- PWM: Fixed open channel fail then close the pin although the pin is reserved for other function.
 - Remove checking Wakeup pin (PA0) if call Shutdown().
 
 #### Known Issues
@@ -57,15 +57,15 @@
 ##### SC13xxx
 - Initial.
 
-#### Known Issue
+#### Known Issues
 - None.
 
 ### Drivers
 
 #### Changes
-- Added Media nuget.
+- Added Media NuGet.
 - Fixed WAV play only 1 second.
-- Added VNC nuget.
+- Added VNC NuGet.
 - Fixed VNC allocate memory every frame
 - Fixed VNC stop when much mouse events received.
 - Added QR barcode.
@@ -75,14 +75,14 @@
 - Deleted SPWF04Sx driver
 - Added OneTimePassword
 - Corrected Neopixel company name.
-- Added DrawBufferNative on some screen don't support 16bit.
+- Added DrawBufferNative on some screens don't support 16bit.
 - Added TexasInstruments.ADC121
 - Added Microchip.MCP4725
 - Added ScaniaJ1939
 - Added Gps.Nmea0183
-- Wifi Ota update: Timeout changed from interger to TimeSpan.
-- Uniform SetColor(), Flush(), Clear() for all leds driver
-- SetDrawWindow take agrument (0, 0, width-1, hight-1) for full screen.
+- Wi-Fi OTA update: Timeout changed from integer to TimeSpan.
+- Uniform SetColor(), Flush(), Clear() for all LEDs driver
+- SetDrawWindow take argument (0, 0, width-1, hight-1) for full screen.
 
 #### Known Issues
 - None.
@@ -90,13 +90,13 @@
 ### TinyCLR Config
 
 #### Changes
-- Fixed usb friendly name duplicate.
+- Fixed USB friendly name duplicate.
 - Detect GHI bootloader by GHI VID.
 - Allow to set USB, Serial debug port, disable application pin.
 - Detect mismatch versions.
 
 #### Known Issues
-- Erase all doesn't erase external flash.
+- Erase all does not erase external flash.
 - Sometimes fails to connect until board is reset.
     
 ### TinyCLR Font Converter
@@ -106,6 +106,8 @@
 
 #### Known Issues
 - None.
+
+---
 
 ## 2.1.0 - Preview4
 
