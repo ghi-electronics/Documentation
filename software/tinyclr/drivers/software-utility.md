@@ -110,8 +110,6 @@ private static void Ir_OnDataRecievedEvent(byte address, byte command) {
 private static void Ir_OnRepeatEvent() {
     // we have repeat
 }
-
-
 ```
 ## QR Code Generator
 
