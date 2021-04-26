@@ -1,12 +1,6 @@
 # Cryptography
 ---
-TinyCLR OS supports XTEA symmetric cryptography and RSA public key (asymmetric) cryptography. XTEA has a fixed key size of 128 bits, while RSA key sizes can be 1024 or 2048 bits. RSA keys are generated automatically when `RSACryptoServiceProvider()` is instantiated, but for XTEA a key must be provided.
-
-For those unfamiliar with encryption, symmetric cryptography schemes such as XTEA use a single key which must be shared among all individuals who need to send or receive messages. This single key is used to both encrypt and decrypt messages. This creates a possible security problem as the key must be shared, but only among authorized individuals. 
-
-Asymmetric encryption methods such as RSA use public and private key pairs and are designed to eliminate the problem of securely sharing a key. The public key can be shared openly as it is only used to encrypt messages. Only the private key can decrypt messages, and this key is not shared. Asymmetric encryption is much more computationally intensive.
-
-Check out the Wikipedia [XTEA](https://en.wikipedia.org/wiki/XTEA) and [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) pages for more information.
+TinyCLR OS supports multiple algorithms.  
 
 ## XTEA
 XTEA encryption is a symmetrical encryption method that always uses a 128 bit key. Keys of any other size will throw an exception. XTEA encryption also requires the data to you are encrypting to be a multiple of eight bytes in length.

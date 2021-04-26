@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Software Utility Drivers </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Software Utility Drivers ">
+    <meta name="generator" content="docfx 2.57.2.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="software-utility-drivers">Software Utility Drivers</h1>
+
+<hr>
+<h2 id="azure-sas">Azure SAS</h2>
+<p>This utility NuGet adds SAS generation used in Azure. See <a href="../tutorials/azure.html">Microsoft Azure</a> tutorial for more info.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.Azure.SAS</p>
+</div>
+<h2 id="basic-graphics">Basic Graphics</h2>
+<p>Basic Graphics driver is used when deployment space is needed for projects and simple graphics are only needed. </p>
+<p>Basic Graphics contains many useful methods for adding simple graphics. Included in the driver are <code>SetPixel</code>,<code>DrawLine</code>,<code>DrawRectangle</code>,<code>DrawCircle</code>,<code>DrawString</code>, and <code>DrawCharacter</code>. It also includes support for a micro 5px font through <code>DrawTinyCharacter</code> and <code>DrawTinyString</code>.</p>
+<p>There are 2 differences between <code>DrawCharacter</code> and <code>DrawTinyCharacter</code>, beside the font size! DrawCharacter can accept scaling to enlarge the font, <code>DrawTinyCharacter</code> does not. Also, <code>DrawCharacter</code> will only set pixels and does not clears blanks. <code>DrawTinyCharacter</code> has the same behavior by default but it has a <code>clear</code> option to set the blanks to 0(black).</p>
+<p>There are two ways to use BasicGraphics, the first one is agnostic of what display is being used and simply works by calling <code>SetPixel</code> method that must be overridden by the user. The user has 2 options, either send the pixel directly to the display or buffer the pixels in a &quot;Video RAM&quot; working buffer and then flush to the screen when desired. Setting the pixels directly on the screen requires zero memory but it is extremely slow.</p>
+<p>In the second way, which is the easier way, BasicGraphics will handle allocating the needed video buffer and handles the SetPixel. It already has 2 pixel options, 16BPP 5:6:5 and 1BPP.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.BasicGraphics</p>
+</div>
+<p>An example of the first options, that overrides the <code>SetPixel</code> and <code>Clear</code> methods. BasicGraphics will not allocate any memory.</p>
+<pre><code class="lang-cs">public class BasicGraphicsImp : BasicGraphics{
+    public override void SetPixel(int x, int y, uint color){
+        // add code to buffer pixels or send directly to display
+    }
+    public override void Clear(){
+       // add optional clear if buffer is used
+    }
+    // You may need to add this to send an optional buffer...
+    public void Flush(){
+        // ... for example
+        lcd.DrawBufferNative(this.buffer);
+    }
+}
+</code></pre><p>Now, the Basic Graphics driver can be used.</p>
+<pre><code class="lang-cs">var basicGfx = new BasicGraphicsImp();
+var colorBlue = 0x00FF0000U;
+var colorGreen = 0x0000FF00U;
+var colorRed = 0x00000FFU;
+var colorWhite = 0x00FFFFFFU;
+
+basicGfx.Clear();
+
+basicGfx.DrawText(&quot;Hi Insiders!&quot;, colorGreen, 15, 15, 2, 1);
+basicGfx.DrawText(&quot;SITCore&quot;, colorBlue, 35, 40, 2, 2);
+basicGfx.DrawText(&quot;SC13xxx&quot;, colorRed, 35, 60, 2, 2);
+
+Random color = new Random();
+for (var i = 20; i &lt; 140; i ++)
+    basicGfx.DrawCircle((uint)color.Next(), i, 100, 15);
+
+basicGfx.Flush();
+</code></pre><p>This example uses the second option where a buffer is allocated automatically. This is the preferred option for using BasicGraphics.</p>
+<pre><code class="lang-cs">var basicGfx = new BasicGraphics(160, 128, ColorFormat.Rgb565);
+var colorBlue = 0x00FF0000U;
+var colorGreen = 0x0000FF00U;
+var colorRed = 0x00000FFU;
+var colorWhite = 0x00FFFFFFU;
+
+basicGfx.Clear()
+
+basicGfx.DrawText(&quot;Hi Insiders!&quot;, colorGreen, 15, 15, 2, 1);
+basicGfx.DrawText(&quot;SITCore&quot;, colorBlue, 35, 40, 2, 2);
+basicGfx.DrawText(&quot;SC13xxx&quot;, colorRed, 35, 60, 2, 2);
+
+Random color = new Random();
+for (var i = 20; i &lt; 140; i ++)
+    basicGfx.DrawCircle((uint)color.Next(), i, 100, 15);
+
+// now send to display, using the specific display driver.
+MyDisplaySendBuffer(basicGfx.Buffer);
+</code></pre><h2 id="ir">IR</h2>
+<p>Infrared remotes are very common and use multiple standards. NCR is very common and a driver is included. A remote with NCR standard will send an 8bit address and an 8bit command with every key press. A repeat signal will be sent as long as the key is continuously pressed.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.Infrared.NecIR</p>
+</div>
+<pre><code class="lang-cs">static void Main() {
+
+    var recievePin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PH6);
+    var ir = new NecIRDecoder(recievePin);
+
+    ir.OnDataReceivedEvent += Ir_OnDataRecievedEvent;            
+    ir.OnRepeatEvent += Ir_OnRepeatEvent;
+}
+
+private static void Ir_OnDataRecievedEvent(byte address, byte command) {
+    // we have a new key press
+}
+private static void Ir_OnRepeatEvent() {
+    // we have repeat
+}
+</code></pre><h2 id="qr-code-generator">QR Code Generator</h2>
+<p>This driver converts a string to an image, which can be displays on screen for example.</p>
+<p><strong>In the works!</strong></p>
+<h2 id="gps-parser">GPS Parser</h2>
+<p><strong>In the works!</strong></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/drivers/software-utility.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <p><a class="back-to-top" href="#top">Back to top</a><p>
+              </nav>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2021 GHI Electronics, LLC<br>Generated by DocFX</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

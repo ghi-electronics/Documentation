@@ -61,7 +61,7 @@ static void Wifi_Example() {
     netInterfaceSettings.ResetActiveState = GpioPinValue.Low;
 
     var networkController = NetworkController.FromName
-        ("GHIElectronics.TinyCLR.NativeApis.ATWINC15xx.NetworkController");
+        (SC20260.NetworkController.ATWinc15x0);
 
     WiFiNetworkInterfaceSettings wifiSettings = new WiFiNetworkInterfaceSettings() {
         Ssid = "Your SSID",
@@ -113,6 +113,9 @@ The Winc15x0Interface class provides to access some of the native functions of t
 
 Unless provided, the MAC address of the WiFi module will be automatically used by default.
 
+>[!TIP]
+>Needed NuGets: GHIElectronics.TinyCLR.Drivers.Microchip.Winc15x0
+
 ```cs
 //Scan for WiFi access points:
 string[] ssidList = Winc15x0Interface.Scan();
@@ -135,8 +138,9 @@ for (int i = 0; i < Winc15x0Interface.FirmwareSupports.Length; i++) {
 
 //Download and install firmware from an OTA download (web) server:
 //   Must upload firmware file to root folder in server
-//   (e.g.  http://192.168.0.137/m2m_ota_3a0.bin).
-bool success = Winc15x0Interface.FirmwareUpdate(string url, int timeout);
+//   (e.g.  http://192.168.0.100/m2m_ota_3a0.bin).
+
+bool otaUpdate = Winc15x0Interface.FirmwareUpdate("http://192.168.0.100/m2m_ota_3a0.bin", TimeSpan.FromMilliseconds(5000));
 ```
 ---
 ## Multicast IP

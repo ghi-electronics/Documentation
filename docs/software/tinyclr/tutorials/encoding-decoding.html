@@ -8,7 +8,7 @@
     <title>Encoding &amp; Decoding </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Encoding &amp; Decoding ">
-    <meta name="generator" content="docfx 2.56.4.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -118,8 +118,8 @@ byteArray = System.BitConverter.GetBytes(65536);
 
 var string = System.Text.Encoding.UTF8.GetString(new byte[] { 65, 66, 67, 68, 69 });
 //string = &quot;ABCDE&quot;
-</code></pre><h3 id="bitconverter-overloads">BitConverter Overloads</h3>
-<h4 id="convert-to-a-byte-array">Convert to a Byte Array</h4>
+</code></pre><h2 id="bitconverter-overloads">BitConverter Overloads</h2>
+<h3 id="convert-to-a-byte-array">Convert to a Byte Array</h3>
 <pre><code class="lang-cs">System.BitConverter.GetBytes(char value)
 System.BitConverter.GetBytes(double value)
 System.BitConverter.GetBytes(float value)
@@ -130,7 +130,7 @@ System.BitConverter.GetBytes(uint value)
 System.BitConverter.GetBytes(ulong value)
 System.BitConverter.GetBytes(ushort value)
 System.BitConverter.GetBytes(bool value)
-</code></pre><h4 id="convert-from-a-byte-array">Convert from a Byte Array</h4>
+</code></pre><h3 id="convert-from-a-byte-array">Convert from a Byte Array</h3>
 <pre><code class="lang-cs">System.BitConverter.ToBoolean(byte[] bytes, int startIndex)
 System.BitConverter.ToChar(byte[] bytes, int startIndex)
 System.BitConverter.ToDouble(byte[] bytes, int startIndex)
@@ -144,10 +144,10 @@ System.BitConverter.ToString(byte[] bytes, int startIndex, int length)
 System.BitConverter.ToUInt16(byte[] bytes, int startIndex)
 System.BitConverter.ToUInt32(byte[] bytes, int startIndex)
 System.BitConverter.ToUInt64(byte[] bytes, int startIndex)
-</code></pre><h4 id="convert-between-double-and-long">Convert Between Double and Long</h4>
+</code></pre><h3 id="convert-between-double-and-long">Convert Between Double and Long</h3>
 <pre><code class="lang-cs">System.BitConverter.DoubleToInt64Bits(double value)
 System.BitConverter.Int64BitsToDouble(long value)
-</code></pre><h4 id="swap-endianness">Swap Endianness</h4>
+</code></pre><h3 id="swap-endianness">Swap Endianness</h3>
 <pre><code class="lang-cs">System.BitConverter.SwapEndianness(byte[] data, int groupSize)
 </code></pre><hr>
 <h2 id="string-handling">String Handling</h2>
@@ -179,9 +179,11 @@ for (int i=48; i&lt;58; i++) {
 }
 
 Debug.WriteLine(sb.ToString()); //Will output &quot;0123456789&quot;
-</code></pre><h3 id="color-space">Color Space</h3>
+</code></pre><hr>
+<h2 id="color-space">Color Space</h2>
 <p>Internally TinyCLR uses the 5:6:5 RGB 16BPP color space, requiring two bytes per pixel. Users may find the need to use a different color space.</p>
-<pre><code> Convert(byte[] inArray, byte[] outArray, ColorFormat colorFormat, RgbFormat rgbFormat, byte alpha, byte[] colorTable)
+<h3 id="conversion">Conversion</h3>
+<pre><code>Convert(byte[] inArray, byte[] outArray, ColorFormat colorFormat, RgbFormat rgbFormat, byte alpha, byte[] colorTable)
 </code></pre><p>Users must create <code>outArray</code> of a length that is determined based on the <code>ColorFormat</code> the user is converting to. The table below will help in determining <code>outArray</code> buffer size.</p>
 <table>
 <thead>
@@ -221,8 +223,8 @@ Debug.WriteLine(sb.ToString()); //Will output &quot;0123456789&quot;
 </code></pre><div class="TIP"><h5>Tip</h5><p>The custom color table option is only available in 5:6:5, 8:8:8, and 8:8:8:8 color spaces.</p>
 </div>
 <p>The <code>alpha</code> is only used with the 8:8:8:8 color space to set the alpha channel value, between 0(transparent) to 255(opaque).</p>
-<h3 id="1bpp">1Bpp</h3>
-<p>The <code>ConvertTo1Bpp</code> function converts the internal 5:6:5 color space to 1BPP. ANy color will result in 1 and only black will result in 0.</p>
+<h3 id="1bpp-conversion">1Bpp Conversion</h3>
+<p>The <code>ConvertTo1Bpp</code> function converts the internal 5:6:5 color space to 1BPP. Any color will result in 1 and only black will result in 0.</p>
 <pre><code>ConvertTo1Bpp(byte[] inArray, byte[] outArray, uint width)
 </code></pre><p><code>width</code> is the pixel-width of the image that was used to create <code>inArray</code>. The <code>outArray</code> buffer size is = <code>inArray.Length</code> x 0.0625</p>
 <p>By default, <code>ConvertTo1Bpp</code> groups each 8 pixels vertically, which is what most 1BPP display use. There is an overload that include <code>BitFormat</code> to change to horizontal if desired.</p>

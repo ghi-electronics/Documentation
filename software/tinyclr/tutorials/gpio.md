@@ -1,30 +1,22 @@
-# General Purpose Input Output (GPIO)
+﻿# General Purpose Input Output (GPIO)
 ---
-Microcontrollers include pins that can be controlled through software. They can be inputs or outputs, hence the name "general purpose input/output," or GPIO for short.
+Microcontrollers include pins that can be controlled through software. They can be logical inputs or outputs, hence the name "general purpose input/output".
 
 > [!Tip]
 > GPIO is found in the GHIElectronics.TinyCLR.Devices.Gpio NuGet package and pin definitions are found in the  GHIElectronics.TinyCLR.Pins package.
 
 ## Digital Outputs
-A digital output pin can be set to either high or low. There are different ways of describing these two states. High can also be called "true" or "one;" low can be called "false" or "zero".
-If the processor is powered from 3.3V, then the state high means that there is 3.3V on the output pin. It is not going to be exactly 3.3V but very close. When the pin is set to low, it's voltage will be very close to zero.
+A digital output pin can be set to either high or low.  High means that there is approx. 3.3V on the output pin. When the pin is set to low, it's voltage will be very close to zero.
 
 ### Maximum Output Current
 
-Each SITCore GPIO pin can sink and source up to 8 mA of current, and up to 20 mA with relaxed output voltage ratings.
-
-For example, the maximum output low voltage is 0.4 volts when the I/O current is +8 mA, but could be as high as 1.3 volts when the I/O current is +20 mA.
-
-The minimum output high voltage is Vdd - 0.4 volts (2.9 volts with 3.3 volt supply) when the I/O current is -8 mA, but could be as low as Vdd - 1.3 (2.0 volts with 3.3 volt supply) volts when the I/O current is -20 mA.
-
-The total output current sunk or sourced by the sum of all I/Os and control pins must not exceed 140 mA.
+GPIO pins typically support up to 8 mA of current, and up to 20 mA with relaxed output voltage ratings.
 
 > [!Warning]
 > Never connect two output pins together. If they are connected and one is high and the other is low, the entire processor can be damaged.
 
-> [!Warning]
-> Digital pins on microcontrollers are weak. They can only be used to control small LEDs or transistors. Those transistors can, in turn, control devices with high power needs like a motor.
-
+> [!Tip]
+> Digital pins on microcontrollers are weak. They can only be used to control small LEDs or drive transistors. Those transistors can, in turn, control devices with high power needs like a motor.
 
 ```cs
 var led = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PH6);
@@ -38,21 +30,17 @@ while (true) {
     Thread.Sleep(100);
 }
 ```
-
 ---
 
 ## Digital Inputs
-Digital inputs sense the state of an input pin based on its voltage. The pin can be high or low. Every pin has a maximum and minimum supported voltage. For example, the typical minimum voltage on most pins is 0 volts; a negative voltage may damage the pin or the processor. Also, the maximum that can be applied to most pins must be less than or equal to the processor's power supply voltage. Since most processors run on 3.3V, the highest voltage a pin should see is 3.3V. However, some processors that are powered by 3.3V are 5V tolerant -- they can withstand up to 5V on their inputs. The SITCore is 5V tolerant.
+Digital inputs sense the state of a pin based on its voltage. Minimum voltage on most pins is 0 volts; a negative voltage may damage the pin or the processor. Most processors run on 3.3V, the highest voltage a pin should see is 3.3V. However, some processors that are powered by 3.3V are 5V tolerant -- they can withstand up to 5V on their inputs. SITCore is 5V tolerant.
 
 > [!Warning] 
 > 5V tolerant doesn't mean the processor can be powered by 5V, only that the input pins can tolerate 5V.
 
-Unconnected input pins are called "floating." They are in a high impedance state and are susceptible to surrounding noise which can make the pin read high or low. A resistor can be added to pull the pin high or low. Modern processors include internal pull-up and pull-down resistors that are controlled by software. Note that a pull-up resistor doesn't necessarily make a pin high -- something connected to the pin can still pull it low.
+Unconnected input pins are called "floating." A resistor can be added to pull the pin high or low. Modern processors include internal pull-up and pull-down resistors that are controlled by software.
 
-In this example, a button is connected between ground and an input pin. We will enable the pull-up resistor making that pin high when the button is not pressed.  When the button is pressed, it will overpower the pull-up and make the input low. We will read the status of the button and pass its state to an LED. 
-
-> [!Tip]
-> Never use an infinite loop without giving the system time to think. Add a short sleep to the loop, or use events instead.
+The code sample below uses an internal pull-up resistor to set the button high. When the button is pressed the `GpioPinValue` goes low. 
 
 ```cs
 var gpio = GpioController.GetDefault();
@@ -67,22 +55,13 @@ while (true) {
     Thread.Sleep(10);   //Always give the system time to think!
 }
 ```
-
 ---
 
 ## Digital Input Events
 
-In the previous example the program loops forever.  The input attached to the button is checked during each iteration of the loop. The pin may be checked millions of times before the button is pressed! This method of checking inputs is called "polled input."
+Using events to check an input instead of polling the input (using a loop) is often preferred. The following code demonstrates a GPIO pin event (interrupt) on the SCM20260D Dev board.
 
-Using events to check an input instead of polling the input is often preferred. Once an event is set up it will automatically check the input on its own, freeing up the program to do other things. Also, it is possible to miss a change in input if you don't check (or poll) the input often enough. Events use interrupts to check inputs so you don't have to worry about missing anything.
-
-When an event occurs, the program stops what it is doing and control is transferred to an event handler. An event handler is code you write that responds to the event. 
-
-Let's use event driven programming to respond to a button and turn an LED on and off. We will raise an event when the value on the button's input pin changes because the button is pressed or released.
-
-You will see a reference to a "falling edge" in the following code. A falling edge occurs when the state of a pin goes from high to low. A rising edge is just the opposite -- it occurs when a pin goes from low to high.
-
-The following code demonstrates a GPIO pin event (interrupt) on the SCM20260D Dev board. This example works exactly the same as the example above, but uses events instead of polling.
+You will see a reference to a "falling edge" in the following code. A falling edge occurs when the state of a pin goes from high to low. A rising edge is just the opposite -- it occurs when a pin goes from low to high. 
 
 ```cs
 private static void Main() {
@@ -90,6 +69,7 @@ private static void Main() {
 
     var button = gpio.OpenPin(SC20260.GpioPin.PD7);
     button.SetDriveMode(GpioPinDriveMode.InputPullUp);
+    button.ValueChangedEdge = GpioPinEdge.FallingEdge | GpioPinEdge.RisingEdge;
     button.ValueChanged += Button_ValueChanged;
 
     //Do other tasks here ...
@@ -105,13 +85,37 @@ private static void Button_ValueChanged(GpioPin sender, GpioPinValueChangedEvent
 }
 ```
 
-> [!Tip] 
-> Once you type += after the event, hit the tab key and Visual Studio will automatically create the event for you.
+When a mechanical button is pressed it generates multiple edges that are caused by the contact physically bouncing. The built in debounce feature filters out any edges coming in faster than a specific time, which is set to 20ms be default. The debounce value can be changed using software.
 
-### Pin Interrupts
-Input events use interrupts (IRQs). Interrupts are only available on 16 pins at any given time. Of those 16 pins, the pin number must be unique. For
-example: PA1 and PB1 cannot both be used as interrupts at the same time. However, PA1 and PB2, or even PA1 and PA2, can be used simultaneously with interrupts.
+```cs
+pin.DebounceTimeout = TimeSpan.FromMilliseconds(10);
+```
 
-It is also important to consider what interrupt pins are used by the system's internal functions, such as WiFi and touch screen interrupt pins. These interrupts invalidate interrupts with the same pin number on any GPIO port. 
+## SITCore Interrupt limitation
 
-If your product design relies on interrupts, be very careful when allocating GPIO pins to make sure interrupts are available on all needed pins.
+Digital input events rely on internal GPIO interrupts to work. On SITCore, these interrupts are only available on 16 pins at any given time, the pin number must be unique, over all of the available ports. For example: PA1 and PB1 cannot both be used as interrupts at the same time. However, PA1 and PB2, or even PA1 and PA2, can be used simultaneously.
+
+Consider other internal system functions that need interrupts, such as WiFi. Those also reserve one of the 16 available interrupts.
+
+## LowLevel Access
+**For advanced users only**, there is a ways to `SetAlternate()` function and also to control `ReservePin()`. The chip internally may support certain peripheral on more that one pin. We select default ones and those are the one that everyone must use and they are the ones listed in the official pinout. However, advanced users only have the option to move the peripheral, or one of pins on that peripheral, to an alternate pin.
+
+> [!Warning]
+> This advanced feature does not check what alternate functions are valid.
+
+This example will move MOSI2 pin from PB2 to PC7, assuming AF6
+
+```cs
+// start by creating SPI2 to initialize the feature on PB2
+// now transfer...
+var settings = new Settings {​​​​​​​
+    mode = PortMode.AlternateFunction,
+    speed = OutputSpeed.VeryHigh,
+    direction = PullDirection.None,
+    alternate = AlternateFunction.AF6,
+    type  = OutputType.PushPull
+}​​​​​​​;
+LowLevelController.TransferFeature(SC20100.GpioPin.PB2, SC20100.GpioPin.PC7, settings);
+```
+
+`SetAlternate()` can not be called at will and must be called at a specific time. It must be called after creating the controller for CAN, DMCI, QSPI, SDcard, SPI, and I2C. When using PWM the function must be used after enabling the channel. Both UART & Native Display can be remapped after calling `SetActiveSettings()`.

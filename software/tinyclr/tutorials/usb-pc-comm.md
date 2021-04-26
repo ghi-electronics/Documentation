@@ -29,7 +29,6 @@ cdc.DataReceived += (a,count) => Debug.WriteLine("Data received:" + count);
 
 cdc.Enable();
 
-
 while (cdc.DeviceState != DeviceState.Configured);
         Debug.WriteLine("UsbClient Connected");
 
@@ -38,7 +37,7 @@ while (cdc.DeviceState != DeviceState.Configured);
 // Write dataW array back to port
 
 while (true){
-    var len = cdc.Stream.ByteToRead;
+    var len = cdc.Stream.BytesToRead;
 
     if (len > 0){
         var dataR = new byte[len];
@@ -81,7 +80,6 @@ winUsb.DataReceived += (a,count) => Debug.WriteLine("Data received:" + count);
                  
 winUsb.Enable();
 
-
 while (winUsb.DeviceState != DeviceState.Configured) ;
         Debug.WriteLine("UsbClient Connected");
 
@@ -90,7 +88,7 @@ while (winUsb.DeviceState != DeviceState.Configured) ;
 // Write dataW array back to port
     
 while (true){
-    var len = winUsb.Stream.ByteToRead;
+    var len = winUsb.Stream.BytesToRead;
 
     if (len > 0){
         var dataR = new byte[len];

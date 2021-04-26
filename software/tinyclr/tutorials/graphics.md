@@ -167,7 +167,7 @@ namespace GraphicsSample {
             backlight.Write(GpioPinValue.High);
 
             st7735.SetDataAccessControl(true, true, false, false); //Rotate the screen.
-            st7735.SetDrawWindow(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+            st7735.SetDrawWindow(0, 0, SCREEN_WIDTH-1, SCREEN_HEIGHT-1);
             st7735.Enable();
 
             // Create flush event

@@ -8,7 +8,7 @@
     <title>Debugging </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Debugging ">
-    <meta name="generator" content="docfx 2.56.4.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -80,11 +80,9 @@
 
 <hr>
 <p>TinyCLR OS allows developers to debug tiny IoT device just like you would debug an application on a full PC, right from  within Visual Studio, over USB or Serial. Set breakpoints, step through code, and examine variables without the need for specialized hardware or software.</p>
-<div class="TIP"><h5>Tip</h5><p>APP and MOD become inactive when the debug interface is set to none. See <a href="ip-protection.html">IP Protection</a> for details.</p>
+<p>By default, the system checks the MOD pin to determine the debug interface, USB or Serial. The user has the option to disable MOD pin feature and force (or disable) the debug interface. See <a href="device-info.html">Device Info</a> for details.</p>
+<div class="TIP"><h5>Tip</h5><p>Information on using the Visual Studio debugger can be found in Microsoft&#39;s documentation <a href="https://docs.microsoft.com/en-us/visualstudio/debugger/debugger-feature-tour?view=vs-2019">here</a>.</p>
 </div>
-<p>On power up, the system checks the MOD pin to determine the debug interface, USB or Serial.</p>
-<p>You can also detect which debug interface is being used in your code as shown below, see <a href="device-info.html">Device Info</a>.</p>
-<p>Information on using the Visual Studio debugger can be found in Microsoft&#39;s documentation <a href="https://docs.microsoft.com/en-us/visualstudio/debugger/debugger-feature-tour?view=vs-2019">here</a>.</p>
 </article>
           </div>
           

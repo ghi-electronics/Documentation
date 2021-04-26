@@ -3,6 +3,7 @@
 ![SITCore SC20100S](images/system-on-chip.jpg)
 
 ## Overview
+
 The SITCore SoCs provide a low cost way to add .NET computing power to any embedded product. Available as either a 100 pin LQFP or a 265 ball BGA, the SITCore SoCs let you design IoT products that are secure, easily integrated with the cloud, and can be easily managed and updated from the cloud for deployments of one to a million or more.
 
 ### Features
@@ -99,14 +100,17 @@ The microcontrollers we use in our SITCore line of products do not support concu
 ## Pinouts
 
 ### SC20100S/B Pinout
+
 [![SC20100S Pinout](images/sc20100s-b-pinout.gif)](pdfs/sc20100s-b-pinout.pdf)
 
 ### SC20260B Pinout
+
 [![SC20260B Pinout](images/sc20260b-pinout.gif)](pdfs/sc20260b-pinout.pdf)
 
 ---
 
 ## Device Startup
+
 The SITCore is held in reset while the RESET pin is low. Releasing RESET will begin the system startup process.
 
 There are three different components of the device firmware:
@@ -114,7 +118,7 @@ There are three different components of the device firmware:
 2. TinyCLR: used to load, debug, and execute the managed application.
 3. Managed application: the program developed by you or your software developer.
 
-Which components get executed on startup is controlled by manipulating the LDR pin. It is pulled high on startup during normal program execution. When low, the device waits in the GHI Electronics Bootloader. Otherwise, the managed application is executed. The APP pin is used to stop the application from running.
+Which components get executed on startup is controlled by manipulating the LDR pin. It is pulled high on startup during normal program execution. When low, the device waits in the GHI Electronics Bootloader. Otherwise, the managed application is executed. The APP pin is used to stop the managed application from running.
 
 Additionally, the communications interface between the host PC and the SITCore is selected on startup through the MOD pin, which is pulled high on startup. The USB interface is selected when MOD is high and UART1 is selected when MOD is low.
 
@@ -123,6 +127,7 @@ The above discussed functions of the LDR, APP, and MOD pins are only available d
 ---
 
 ## TinyCLR OS
+
 TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.
 
 ### Loading the Firmware
@@ -136,6 +141,7 @@ TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the 
 You can also update the firmware manually. Download the [firmware](../../software/tinyclr/downloads.md) and learn how to use the [GHI Electronics Bootloader](../../software/tinyclr/bootloader.md) manually
 
 ### Start Coding
+
 Now that you have installed the bootloader and firmware on the SITCore, you can setup your host computer and start programming.  Go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.
 
 ---
@@ -143,6 +149,7 @@ Now that you have installed the bootloader and firmware on the SITCore, you can 
 ## Design Considerations
 
 ### Footprints
+
 ####This is the recommended footprint for the SC20100S:
 ![SC20100S Footprint](images/sc20100s-footprint.gif)
 
@@ -155,6 +162,7 @@ Now that you have installed the bootloader and firmware on the SITCore, you can 
 ![SC20260B Design Rules](images/sc20260b-design-rules.gif)
 
 ### Required Pins
+
 Exposing the following pins is required in every design to enable device programming, updates, and recovery:
 * RESET
 * LDR
@@ -165,22 +173,27 @@ Exposing the following pins is required in every design to enable device program
 For information on these and other important pins, please refer to the [Special Pins](../../software/tinyclr/special-pins.md) page.
 
 ### Debug Interface
+
 All SITCore products provide two debug and deployment interfaces: USB and serial. Whether USB or serial debugging is selected is determined by the state of the MOD pin during startup and reset. If the MOD pin is held high during startup, the USB debug interface will be selected. If the MOD pin is held low during startup, the serial debug interface will be selected.
 
 All SITCore products using our 100 pin chips (the SC20100S and SC20100B) use UART1 for the serial debug interface. SITCore products built around the 260 pin SC20260B chip use UART5 for the serial debug interface.
 
 ### Power Supply
+
 A clean power source, suitable for digital circuitry, is needed to power SITCore SoCs. Voltages should be regulated to within 10% or better of the specified voltage. Decoupling capacitors of 0.1 uF are needed near every power pin. Additionally, a large capacitor, typically 47 uF, should be placed near the SoC if the power supply is more than few inches away.
 
 ### Analog Considerations
+
 It is a good idea to provide a separate filtered supply line for the `Vdda`, and `Vref+` pins. Additionally, on the 260 pin devices, you may want to provide a separate filtered ground connection for the `Vssa` and `Vref-` pins. While this is not needed for ADC operation, it does help to ensure more accurate ADC readings by reducing analog supply noise.
 
 ### Crystals
+
 SITCore SoCs require an external 8 MHz crystal and two load capacitors to function. For the RTC to function, a 32.768 kHz crystal two load capacitors are required.
 
 There is a lot to consider when selecting a crystal -- especially the RTC crystal. This is one reason our SoMs are so popular, as the difficult design choices have already been made for you. For more information on crystal selection for SITCore SoCs, please consult [AN2867](https://www.st.com/resource/en/application_note/cd00221665-oscillator-design-guide-for-stm8afals-stm32-mcus-and-mpus-stmicroelectronics.pdf) from STMicroelectronics.
 
 ### Main Crystal
+
 Most 8 MHz quartz crystals and ceramic resonators from various manufacturer will work with SITCore SoCs. The table below will tell you what to look for based on the crystal's maximum equivalent series resistance (ESR), shunt capacitance (C0), and load capacitance (CL). Keeping the total capacitance of C0 + CL well below the recommended maximum will provide more of a safety margin for stable and reliable oscillator operation.
 
 |                        |                                         |
@@ -196,6 +209,7 @@ Most 8 MHz quartz crystals and ceramic resonators from various manufacturer will
 | 300                    | 18                                      |
 
 ### RTC Crystal
+
 It's more difficult finding crystals that will work reliably with the RTC. This is because the RTC oscillator is an extremely low power oscillator to increase RTC battery life. Start by looking for crystals with low load capacitance. The table below will help. For reliable operation, the total capacitance of C0 (crystal shunt capacitance) and CL (crystal load capacitance) must be less than the recommended max total of C0 and CL.
 
 |                           |                                         |
@@ -223,6 +237,7 @@ SITCore also supports a charging mode on VBAT pin. When charging mode is enabled
 See the [RTC tutorial](../../software/tinyclr/tutorials/real-time-clock.md) for further details. 
 
 ### QuadSPI External Flash
+
 SITCore supports 16 MByte external QuadSPI flash chips. The options are in the table below.
 
 |    Manufacture      |  Part Number |
@@ -231,6 +246,7 @@ SITCore supports 16 MByte external QuadSPI flash chips. The options are in the t
 | Winbond Electronics | W25Q128JVSIQ |
 
 ### Reset
+
 SITCore processors have a permanent internal pull up resistor that is connected to the RESET (NRST) pin. No external pull up resistor is needed.
 
 ### Oven Reflow Profile

@@ -8,7 +8,7 @@
     <title>SITCore System on Chip </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="SITCore System on Chip ">
-    <meta name="generator" content="docfx 2.56.4.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -323,7 +323,7 @@
 <li>TinyCLR: used to load, debug, and execute the managed application.</li>
 <li>Managed application: the program developed by you or your software developer.</li>
 </ol>
-<p>Which components get executed on startup is controlled by manipulating the LDR pin. It is pulled high on startup during normal program execution. When low, the device waits in the GHI Electronics Bootloader. Otherwise, the managed application is executed. The APP pin is used to stop the application from running.</p>
+<p>Which components get executed on startup is controlled by manipulating the LDR pin. It is pulled high on startup during normal program execution. When low, the device waits in the GHI Electronics Bootloader. Otherwise, the managed application is executed. The APP pin is used to stop the managed application from running.</p>
 <p>Additionally, the communications interface between the host PC and the SITCore is selected on startup through the MOD pin, which is pulled high on startup. The USB interface is selected when MOD is high and UART1 is selected when MOD is low.</p>
 <p>The above discussed functions of the LDR, APP, and MOD pins are only available during startup. After startup, the pins return to the default GPIO state and are available as a GPIO (or peripheral pin) in your application. Check out the <a href="../../software/tinyclr/special-pins.html">Special Pins</a> page for more information.</p>
 <hr>

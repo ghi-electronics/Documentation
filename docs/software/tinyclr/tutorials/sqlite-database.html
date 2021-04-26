@@ -8,7 +8,7 @@
     <title>SQLite Database </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="SQLite Database ">
-    <meta name="generator" content="docfx 2.56.4.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -80,6 +80,8 @@
 
 <hr>
 <p>According to the SQLite homepage, &quot;SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine. SQLite is the most widely deployed SQL database engine in the world.&quot; SQLite lets you set up a database that resides entirely in a single file on a persistent storage device.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Data.SQLite</p>
+</div>
 <p>The code below is a simple example that creates a database file in RAM (SD cards and USB drives can be used as well). A table is created, a few rows are filled, and then this data is read from the database. This data is then iterated over and printed out. ColumnOriginNames returns the name of each of the columns.</p>
 <pre><code class="lang-cs">using System.Collections;
 using System.Diagnostics;

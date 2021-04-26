@@ -8,7 +8,7 @@
     <title>Special Pins </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Special Pins ">
-    <meta name="generator" content="docfx 2.56.4.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -86,56 +86,26 @@
 <li>APP (PB7)</li>
 <li>MOD (PD7)</li>
 <li>WKUP (PA0)</li>
-<li>Vbat</li>
+<li>VBAT</li>
 </ul>
-<p>All special pins except RESET and Vbat can be used as GPIO or peripheral pins, however it is up to you to make sure your use of these pins does not interfere with their use as special pins if needed. We strongly recommend exposing all special pins in your SITCore designs. You will also need to expose the debug interface(s) you plan to use to deploy and debug your application.</p>
-<p>In addition to exposing these pins, it is important to follow the design considerations on the <a href="../../hardware/sitcore/soc.html">System on Chip</a> or <a href="../../hardware/sitcore/som.html">System on Module</a> page that corresponds to the SITCore product your are using.</p>
+<p>All special pins except RESET and VBAT can be used as GPIO or peripheral pins, however it is up to the designer to make sure these pins do not interfere with their special features.</p>
 <h2 id="reset">RESET</h2>
 <p>The SITCore chip is held in reset while the RESET(NRST) pin is held low. Releasing RESET and allowing it to go high will begin the system startup process.</p>
-<p>All SITCore processors have a permanent internal pull up resistor on the RESET pin. An external pull up resistor is not required on the RESET(NRST) pin when designing your own circuit boards.</p>
+<p>All SITCore processors have a permanent internal pull up resistor on the RESET pin. An external pull up resistor is not required on the RESET(NRST) pin.</p>
 <h2 id="ldr">LDR</h2>
-<p>The LDR pin is used to enter the GHI Electronics bootloader mode. The LDR pin is normally pulled high during startup or reset, allowing the managed application to execute. When the LDR pin is pulled low during startup or reset, the device enters GHI Electronics bootloader mode, which is used to load the SITCore firmware. There is no need for a pull up resistor on the LDR pin as the LDR pin is pulled high through a pull up resistor internal to the processor.</p>
+<p>The LDR pin is normally pulled high during startup or reset, allowing TinyCLR OS to run. When the LDR pin is pulled low during startup or reset, the device enters GHI Electronics bootloader mode, which is used to load the firmware. LDR has an internal pull up resistor.</p>
+<p>The <a href="bootloader.html">Bootloader</a> page details its use.</p>
 <h2 id="app">APP</h2>
-<p>The APP pin is used to prevent the application from running. The APP pin is checked shortly after startup and reset. When the APP pin is high your application will run normally. If the APP pin is low when the bootloader is finished, the bootloader will not transfer execution to your application. There is no need for an external pull up on the APP pin as it is pulled high by an internal pull up.</p>
-<div class="TIP"><h5>Tip</h5><p>APP and MOD become inactive when the debug interface is set to none. See <a href="tutorials/ip-protection.html">IP Protection</a> for details.</p>
-</div>
+<p>The APP pin is used to prevent the application from running. The APP pin is checked shortly after startup. When the APP pin is high the application will run normally; otherwise, the system will not run the application and hold waiting for new deployment. The pin has an internal pull up resistor.</p>
+<p>If desired, the APP pin feature can be disabled so the application can&#39;t be stopped. See <a href="tutorials/device-info.html">Device Info</a> for more details.</p>
 <h2 id="mod">MOD</h2>
-<p>The MOD pin is used to select the debugging/deployment interface. The MOD pin is pulled high by an internal pull up resistor -- there is no need to add a pull up resistor to the MOD pin when designing a custom circuit board.</p>
-<p>By default, the MOD pin is pulled high during reset allowing for deployment and debugging over USB. Pulling the MOD pin low during startup or reset allows for deployment and debugging over UART. Note that our SITCore Dev Boards include a FT232R USB to serial converter chip to provide a convenient way to connect a PC to the board&#39;s serial debug/deploy port.</p>
+<p>The MOD pin is used to select the debugging/deployment interface, as explained in the <a href="tutorials/debugging.html">Debugging</a> tutorial.</p>
 <h2 id="wkup">WKUP</h2>
 <p>The WKUP pin is used to wake the system up from Shut Down mode. See the <a href="tutorials/power-management.html">Power Management</a> page for more information.</p>
-<h2 id="vbat">Vbat</h2>
-<p>The Vbat pin on SITCore SoCs and SoMs is used to provide battery power to the <a href="tutorials/real-time-clock.html">Real Time Clock</a> (RTC). This pin also provides power for battery backed memory (see the <a href="tutorials/real-time-clock.html">Real Time Clock</a> page for details).</p>
-<p>If you require either RTC or battery backed memory, the Vbat pin must be connected to the positive terminal of a supercap or battery. The negative terminal of the battery or supercap needs a connection to GND.</p>
-<p>Vbat requires 1.2 to 3.6 volts for correct operation. This is usually provided by either a CR2032 lithium coin cell or a supercap, but other options are available. SITCore Dev boards use a 33 mF 3.3 volt supercap.</p>
-<p>The best Vbat option depends on your application. If your board needs to keep correct time while being unpowered for more than a few days, a battery may be a better choice than a supercap. The disadvantage to batteries is they eventually discharge and must be replaced. Supercaps are rechargeable and should last for the life of the product.</p>
-<p>It is important that your application correctly sets the charging status of the Vbat pin. Trying to charge a lithium coin cell may damage it and could possibly cause it to leak. Supercaps need to be charged every few days or so (depending on supercap size) before they lose their charge. Information on setting Vbat charge status is found on the <a href="tutorials/real-time-clock.html">Real Time Clock</a> page.</p>
+<h2 id="vbat">VBAT</h2>
+<p>The VBAT pin on SITCore SoCs and SoMs is used to provide battery power to the <a href="tutorials/real-time-clock.html">Real Time Clock</a> (RTC). The tutorial also include the battery backed memory.</p>
 <h2 id="debug-interface">Debug Interface</h2>
-<p>Don&#39;t forget to expose either the USB client or UART interface (or both) that you plan on using to deploy and debug your application code. See the <a href="../../hardware/sitcore/soc.html">System on Chip (SoC)</a> page for details.</p>
-<h2 id="other-recommended-pin-usage">Other Recommended Pin Usage</h2>
-<p>When designing your own board, we recommend that you add the following peripherals using the stated pins to maintain consistency with our dev boards and sample software.</p>
-<table>
-<thead>
-<tr>
-<th>Peripheral</th>
-<th>Recommended SITCore I/O Assignment</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>User LED</td>
-<td>100 pin devices: PE11</td>
-</tr>
-<tr>
-<td></td>
-<td>260 pin devices: PB0</td>
-</tr>
-<tr>
-<td>Buzzer</td>
-<td>PB1</td>
-</tr>
-</tbody>
-</table>
+<p>For debugging, a design must have either the USB client or UART interface (or both).</p>
 </article>
           </div>
           
