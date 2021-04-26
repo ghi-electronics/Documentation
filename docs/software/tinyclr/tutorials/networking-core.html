@@ -8,7 +8,7 @@
     <title>Networking Core </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Networking Core ">
-    <meta name="generator" content="docfx 2.56.4.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -166,6 +166,14 @@ if ((hostEntry != null) &amp;&amp; (hostEntry.AddressList.Length &gt; 0)) {
 else {
     throw new Exception(&quot;Server not found.&quot;); ;
 }
+</code></pre><hr>
+<h2 id="mdns">mDNS</h2>
+<p>Multicast DNS is a local name resolution service over local networks. Please note that not all operating systems support mDNS.</p>
+<pre><code class="lang-cs">networkInterfaceSetting.MulticastDnsEnable = true;
+
+networkController.Enable();
+
+MulticastDns.Start(&quot;MyServer&quot;, TimeSpan.FromSeconds(1*60*60));    // TTL set to 1 hour
 </code></pre></article>
           </div>
           

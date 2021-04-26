@@ -8,7 +8,7 @@
     <title>Cryptography </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Cryptography ">
-    <meta name="generator" content="docfx 2.56.4.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -79,10 +79,7 @@
 <h1 id="cryptography">Cryptography</h1>
 
 <hr>
-<p>TinyCLR OS supports XTEA symmetric cryptography and RSA public key (asymmetric) cryptography. XTEA has a fixed key size of 128 bits, while RSA key sizes can be 1024 or 2048 bits. RSA keys are generated automatically when <code>RSACryptoServiceProvider()</code> is instantiated, but for XTEA a key must be provided.</p>
-<p>For those unfamiliar with encryption, symmetric cryptography schemes such as XTEA use a single key which must be shared among all individuals who need to send or receive messages. This single key is used to both encrypt and decrypt messages. This creates a possible security problem as the key must be shared, but only among authorized individuals. </p>
-<p>Asymmetric encryption methods such as RSA use public and private key pairs and are designed to eliminate the problem of securely sharing a key. The public key can be shared openly as it is only used to encrypt messages. Only the private key can decrypt messages, and this key is not shared. Asymmetric encryption is much more computationally intensive.</p>
-<p>Check out the Wikipedia <a href="https://en.wikipedia.org/wiki/XTEA">XTEA</a> and <a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">RSA</a> pages for more information.</p>
+<p>TinyCLR OS supports multiple algorithms.  </p>
 <h2 id="xtea">XTEA</h2>
 <p>XTEA encryption is a symmetrical encryption method that always uses a 128 bit key. Keys of any other size will throw an exception. XTEA encryption also requires the data to you are encrypting to be a multiple of eight bytes in length.</p>
 <p>XTEA encryption is not only dependent upon the supplied key, but also the &quot;number of rounds&quot; or iterations the encryption algorithm uses to encode and decode information. TinyCLR OS always uses 32 rounds. So, for example, if you are using a PC to decode data that was encoded using TinyCLR OS, make sure that both the correct key and number of rounds (32) are used on the PC side.</p>

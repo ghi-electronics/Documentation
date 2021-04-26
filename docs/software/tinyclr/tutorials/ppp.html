@@ -8,7 +8,7 @@
     <title>PPP </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="PPP ">
-    <meta name="generator" content="docfx 2.56.4.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -128,7 +128,7 @@
 
     static void TestPPP() {
         var networkController = NetworkController.
-            FromName(&quot;GHIElectronics.TinyCLR.NativeApis.Ppp.NetworkController&quot;);
+            FromName(SC20260.NetworkController.Ppp);
 
         PppNetworkInterfaceSettings networkInterfaceSetting = new PppNetworkInterfaceSettings() {
                 AuthenticationType = PppAuthenticationType.Pap,

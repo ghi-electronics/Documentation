@@ -8,7 +8,7 @@
     <title>WiFi </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="WiFi ">
-    <meta name="generator" content="docfx 2.56.4.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -132,7 +132,7 @@ static void Wifi_Example() {
     netInterfaceSettings.ResetActiveState = GpioPinValue.Low;
 
     var networkController = NetworkController.FromName
-        (&quot;GHIElectronics.TinyCLR.NativeApis.ATWINC15xx.NetworkController&quot;);
+        (SC20260.NetworkController.ATWinc15x0);
 
     WiFiNetworkInterfaceSettings wifiSettings = new WiFiNetworkInterfaceSettings() {
         Ssid = &quot;Your SSID&quot;,
@@ -180,6 +180,8 @@ private static void NetworkController_NetworkAddressChanged
 <h2 id="winc1500-utilities">WINC1500 Utilities</h2>
 <p>The Winc15x0Interface class provides to access some of the native functions of the WINC1500 WiFi module. Such as getting the WiFi module&#39;s MAC address, getting RSSI (Relative Signal Strength Indicator), scanning for access points, checking the firmware version, and over-the-air (OTA) firmware update.</p>
 <p>Unless provided, the MAC address of the WiFi module will be automatically used by default.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Drivers.Microchip.Winc15x0</p>
+</div>
 <pre><code class="lang-cs">//Scan for WiFi access points:
 string[] ssidList = Winc15x0Interface.Scan();
 
@@ -201,8 +203,9 @@ for (int i = 0; i &lt; Winc15x0Interface.FirmwareSupports.Length; i++) {
 
 //Download and install firmware from an OTA download (web) server:
 //   Must upload firmware file to root folder in server
-//   (e.g.  http://192.168.0.137/m2m_ota_3a0.bin).
-bool success = Winc15x0Interface.FirmwareUpdate(string url, int timeout);
+//   (e.g.  http://192.168.0.100/m2m_ota_3a0.bin).
+
+bool otaUpdate = Winc15x0Interface.FirmwareUpdate(&quot;http://192.168.0.100/m2m_ota_3a0.bin&quot;, TimeSpan.FromMilliseconds(5000));
 </code></pre><hr>
 <h2 id="multicast-ip">Multicast IP</h2>
 <p>Multicast works as expected on all other network interfaces; however, in order to achieve this on WiFi, we need to convert a Multicast IP to a multicast MAC Address. Any online tool like <a href="http://dqnetworks.ie/toolsinfo.d/multicastaddressing.html">this</a> can be used.</p>
