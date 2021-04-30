@@ -7,8 +7,8 @@
 
 This utility NuGet adds additional services to the WiFi support. See [WiFi Tutorial](../tutorials/wifi.md) for more info.
 
->[!TIP]
->Needed NuGet: GHIElectronics.TinyCLR.Drivers.Microchip.Winc15x0
+> [!TIP]
+> Needed NuGet: GHIElectronics.TinyCLR.Drivers.Microchip.Winc15x0
 
 
 

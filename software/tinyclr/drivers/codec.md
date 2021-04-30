@@ -7,8 +7,8 @@
 
 This codec takes a SPI stream of audio, like MP3, and decodes it to an audio output.
 
->[!TIP]
->Needed NuGet: GHIElectronics.TinyCLR.Drivers.VlsiSolution.VS1053B
+> [!TIP]
+> Needed NuGet: GHIElectronics.TinyCLR.Drivers.VlsiSolution.VS1053B
 
 This example plays a small MP3 from a resource. Similarly, large file data can be fetched from other external resources.
 
