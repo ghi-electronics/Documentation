@@ -7,7 +7,7 @@
 
 This example uses the WS2812 LED but applies to all matrices.
 
->[!TIP]
+> [!TIP]
 >Needed NuGets: GHIElectronics.TinyCLR.Drivers.Worldsemi.WS2812, GHIElectronics.TinyCLR.Drivers.BasicGraphis
 
 LedMatrix Class
@@ -71,10 +71,10 @@ while (true){
 
 The WS2812 uses digital signal or signal generator to control LEDs. Read more about digital signals [here](../tutorials/signal-control.md). Digital signal can only use specific pins, but is very accurate. Signal generator can be used on any pins but is less accurate. 
 
->[!Note]
+> [!Note]
 >These LEDs are commonly referred to as Neopixel
 
->[!TIP]
+> [!TIP]
 >Needed NuGet: GHIElectronics.TinyCLR.Drivers.Worldsemi.WS2812
 
 Digital Signal
@@ -107,7 +107,7 @@ led.Flush();
 
 ## APA102C
 
->[!TIP]
+> [!TIP]
 >Needed NuGet: GHIElectronics.TinyCLR.Drivers.ShijiLighting.APA102C
 
 The APA102C is very similar to the Neopixel WS2812 except it uses standard 3 wire SPI, while the Neopixel uses a single wire and it's own proprietary format. 
@@ -133,7 +133,7 @@ led.Flush();
 ---
 ## LPD8806
 
->[!TIP]
+> [!TIP]
 >Needed NuGet: GHIElectronics.TinyCLR.Drivers.GreeledElectronics.LPD8806
 
 ```cs
