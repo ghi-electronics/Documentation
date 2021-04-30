@@ -19,8 +19,8 @@ Displays that support 16BPP 5:6:5, which is native to TinyCLR, `DrawBuffer` is p
 
 An SPI color display controller, typically 160x128 pixels. 
 
->[!TIP]
->Needed NuGet: GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735
+> [!TIP]
+> Needed NuGet: GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735
 
 ---
 
@@ -29,8 +29,8 @@ An SPI color display controller, typically 160x128 pixels.
 
 An SPI color display controller, typically 240x240 pixels.
 
->[!TIP]
->Needed NuGet: GHIElectronics.TinyCLR.Drivers.Sitronix.ST7789
+> [!TIP]
+> Needed NuGet: GHIElectronics.TinyCLR.Drivers.Sitronix.ST7789
 
 ---
 
@@ -39,8 +39,8 @@ An SPI color display controller, typically 240x240 pixels.
 
 An SPI based mono color display controller, typically 128x64 pixels.
 
->[!TIP]
->Needed NuGet: GHIElectronics.TinyCLR.Drivers.EastRising.ERC12864
+> [!TIP]
+> Needed NuGet: GHIElectronics.TinyCLR.Drivers.EastRising.ERC12864
 
 ---
 
@@ -49,8 +49,8 @@ An SPI based mono color display controller, typically 128x64 pixels.
 
 An SPI based mono color display controller, typically 320x240 pixels.
 
->[!TIP]
->Needed NuGet: GHIElectronics.TinyCLR.Drivers.HiLetgo.ILI9341
+> [!TIP]
+> Needed NuGet: GHIElectronics.TinyCLR.Drivers.HiLetgo.ILI9341
 
 ---
 
@@ -59,8 +59,8 @@ An SPI based mono color display controller, typically 320x240 pixels.
 
 An I2C mono color display controller, typically 128x64 pixels.
 
->[!TIP]
->Needed NuGet: GHIElectronics.TinyCLR.Drivers.SolomonSystech.SSD1306
+> [!TIP]
+> Needed NuGet: GHIElectronics.TinyCLR.Drivers.SolomonSystech.SSD1306
 
 ---
 
@@ -69,8 +69,8 @@ An I2C mono color display controller, typically 128x64 pixels.
 
 An I2C color display controller, typically 128x128 pixels. 
 
->[!TIP]
->Needed NuGet: GHIElectronics.TinyCLR.Drivers.SolomonSystech.SSD1351
+> [!TIP]
+> Needed NuGet: GHIElectronics.TinyCLR.Drivers.SolomonSystech.SSD1351
 
 ---
 
