@@ -109,6 +109,12 @@
 ## [Sensor](drivers/sensor.md)
 ## [Software Utility](drivers/software-utility.md)
 
+# DUE Scripts
+## [API](due/api.md)
+## [Statements](due/statements.md)
+## [Standard library](due/standardlib.md)
+## [Extensions](due/extensions.md)
+
 # [Downloads](downloads.md)
 # [Release Notes](release-notes.md)
 # [Resources](resources.md)
