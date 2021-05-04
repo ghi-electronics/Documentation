@@ -34,7 +34,7 @@ The behavior can be change, to forward the output to a serial port or a display 
 
 ## The `end` statement
 
-BrainDUE supports multiple code block types. When basic-style is selected, the end statement marks the end of a block.
+DUE supports multiple code block types. When basic-style is selected, the end statement marks the end of a block.
 
 ```
 if x > 10
