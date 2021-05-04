@@ -2,7 +2,7 @@
 ---
 
 ## Why DUE?
-DUE stands for Dynamic, Universal and Extensible. A user-friendly scripting language with full debugging capabilities.
+DUE stands for Dynamic, Universal and Extensible. A user-friendly scripting language with full [debugging](debugging.md) capabilities.
 
 ### Dynamic
 Arguably, DUE is the most user-friendly programming language out there! It is so Dynamic, it supports multiple coding styles.
@@ -46,7 +46,7 @@ C-style and BASIC-style ignore white-space as how the style work. The Python-sty
 
 DUE uses syntax that is universally used and common among most popular programming languages. Comments, variables, constants are some of the examples.
 
-While not found in most scripting languages, DUE has full built-in debugging capability similar to any world-class language.
+While not found in most scripting languages, DUE has full built-in [debugging](debugging.md) capability similar to any world-class language.
 
 ### Extensible
 
@@ -56,7 +56,7 @@ Users can extend the DUE available functions, right from C#. Learn more at the [
 
 ## Getting Started
 
-The [API](api.md) has examples on how to use DUE `ScriptEngine` to write a script using the available [statements](statements.md). DUES comes with several [Standard Library](standardlib.md) functions. Developers have a ways to securely add [Extensions](extensions.md) to give DUE additional functionality.
+The [API](api.md) has examples on how to use DUE `ScriptEngine` to write a script using the available [statements](statements.md). DUES comes with several [Standard Library](standardlib.md) functions. Developers have a ways to securely add [Extensions](extensions.md) to give DUE additional functionality. When programs get to be more complex, [debugging](debugging.md) will come in handy.
 
 
 ## Comments
