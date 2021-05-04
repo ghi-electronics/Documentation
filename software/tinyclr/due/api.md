@@ -24,11 +24,10 @@ script.Run(@"
 ");
 ```
 ## Invoke
-A function that is found in a script can be executed from C# directly.
+A function that is found in a script can be executed from C# directly using `script.Invoke("OnOff")`. 
 
-```cs
-script.Invoke("OnOff");
-```
+Arguments are passed to `Invoke` with a returned result, `sum = Invoke("Add", a, b)`.
+
 ## GetFunction
 
 A faster way to invoke a function will be by reference
