@@ -73,7 +73,7 @@ Now this script is ran:
 
 ```
 x=5
-func Foo(var s)
+func Foo(s)
 	print s
 end
 ```
