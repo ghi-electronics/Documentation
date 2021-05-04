@@ -1,7 +1,17 @@
-## DUE - Standard Library
+# DUE - Standard Library
+
 ---
 
-|Function                               |Description                                                            |
+## General
+
+| Function			                    |Description                                                            |
+|:--------------------------------------|:----------------------------------------------------------------------|
+|Delay(int ms)                          |Sleeps for specified duration in milliseconds                          |
+|Millis()			                    |Returns the number of current time in milliseconds                     |
+
+## Array & Strings
+
+| Function			                    |Description                                                            |
 |:--------------------------------------|:----------------------------------------------------------------------|
 |Len(object o)                          |Returns the length of an array or string                               |
 |Left(object o, int count)              |Returns array or string based on count from left of the object         |
@@ -9,6 +19,14 @@
 |Mid(object o, int index, int count)    |Returns an array or string based on index and count                    |
 |IndexOf(object o, object value)        |Returns the Index of an array or string based on object value passed   |
 |Val(string s)                          |Returns string as a Double                                             |
+|Append(ArrayList arr, object value)    |Appends a value to an array                                            |
+|RemoveAt(ArrayList arr, int value)     |Removes a value from an array at a specific array index                |
+|InsertAt(ArrayList arr, object value)  |Inserts a value into an array at a specific array index                |
+
+# Math
+
+| Function			                    |Description                                                            |
+|:--------------------------------------|:----------------------------------------------------------------------|
 |IsNan(double d)                        |Returns either 1 or 0 based on value passed                            |
 |Abs(double d)                          |Returns the absolute value of a number                                 |
 |Sqrt(double d)                         |Returns the square root of a number                                    |
@@ -22,12 +40,3 @@
 |Trunc(double d)                        |Returns the integer part of number by removing fractional digits       |
 |Round(double d)                        |Returns the value of a number rounded to the nearest integer           |
 |Rnd()                                  |Returns the next pseudorandom double                                   |
-|Delay(int ms)                          |Sleeps for specified duration in milliseconds                          |
-|Locate(int row, int col)               |Sets the cursor position inside the console                            |
-|Print(object o)                        |Writes the object to the console                                       |
-|Cls()                                  |Clears the console                                                     |
-|Append(ArrayList arr, object value)    |Appends a value to an array                                            |
-|RemoveAt(ArrayList arr, int value)     |Removes a value from an array at a specific array index                |
-|InsertAt(ArrayList arr, object value)  |Inserts a value into an array at a specific array index                |
-|TicksPerMillisecond                    |??????                                                                 |
-|Millis()                               |??????                                                                 |

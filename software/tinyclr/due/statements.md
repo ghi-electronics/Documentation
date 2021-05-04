@@ -1,42 +1,41 @@
-## DUE - Statements
+# DUE - Statements
+
 ---
 
-# Language Statements
+## Language Statements
 
 |Statement              |Description                                                            |
 |:----------------------|:----------------------------------------------------------------------|
-|cls                    |Clears the console and moves the cursor to the top left corner         |
+|print/cls/locate       |Special Output Console Statements								|
 |print                  |Prints the following expression to the console and moves to the next line |
 |locate                 |Locates where the print will take place in rows, columns               |
 |if/elseif/else         |Conditional execution of the code                                      |
 |while                  |Executes a block of code until the condition is false                  |
 |break                  |Breaks out of the current while loop                                   |
 |continue               |Continues the current while loop skipping the rest of the body         |
+|return		            |Returns a value from a function				         |
 |end                    |Used in BASIC-style to indicate the end of `if` or `while`             |
 |var                    |Declares a variable                                        |
 |const                  |Declares a constant, a variable that can't be modified!    |
 |func                   |Declares a function block                                  |
-## Output Statements
-cls, print and locate statements effect the output window. They differ from the built-in functions by not requiring parentheses. Also, unlike the built-in drawing functions, they immediately modify the screen, not requiring a screen refresh command.
+|AND/OR					|Boolean operators											|
 
-The example code below will print a counter on a specific spot on the screen.
+## Console Statements
 
-```
-cls
-var i=0
-while 1
-  locate 5, 3 // this is row,column character location and not x,y pixels
-  print i
-  i=i+1
-end
-```
+These statements are a quick and dirty way to output information. By default, `locate` and `cls` do not do anything but `print` will simply call `Debug.WriteLine` internally.
 
-## Execution Statement
-while, if, continue and break work just like most globally acceptable programming languages.
+The behavior can be change, to forward the output to a serial port or a display for example. See [API](api.md) page from more details.
+
+> [!TIP]
+> print will format double `ToString("N4")`
+
+## Execution Statements
+`while`, `if`/`elseif`/`else`, `continue`, `break` and 'return' work just like most globally-acceptable programming languages.
 
 ## The `end` statement
 
-DUE supports multiple code block types. When basic-style is selected, the end statement marks the end of a block.
+BrainDUE supports multiple code block types. When basic-style is selected, the end statement marks the end of a block.
+
 ```
 if x > 10
   print x
@@ -56,31 +55,32 @@ if (x>10){
   print(x);
 end
 ```
+
 ## var
+
+`var` is how variables are created. `var` will automatically select the correct type and will even change the type on the next assignment, like change it from numerical to string.
+
 ### Numerical
-Variables are always double-type and must always have a starting value `var x = 10` is good but `var x` is not allowed. When converting to strings, fractions are fixed at 2 decimal places but if fraction is 0 then fractions are eliminated, meaning `54.342234` will be always treated as `54.34` but 48.00 will be treated as `48`. Note that `33.2` will also be converted to 2 decimal places `33.20`.
+Variables are always double-type and must always have a starting value `var x = 10` is good but `var x` is not allowed.
 
 ### Strings
-Strings are supported `string s = "TinyCLR"` Assigning a number to a string will automatically convert to strings
-```
-var s = "BrainDUE "
-var x = 2.2
-s = s+x
-// s is now "BrainDUE 2.20"
-```
+
+`var s = "Hello DUE"` creates a variable of a string type. 
+
+Just like modern languages, strings can be combined. `var s = "Hello " + "DUE"`. 
+
+With strings, numerical variable or constants are automatically converted to strings internally. `print "x= " + x`.
+
+Both single quote and double-quote are supported and work the same. `print 'hi'`.
 
 ### Arrays
-Arrays are supported.
+
+Arrays, and arrays of arrays, are supported. It is important to note that arrays hold an array of `var` and each `var` in itself can be any kind, even another array.
 
 ```
 var numbers = [1, 2, 3, 4]
-var names = ["Gus", "Dat", "Greg"]
-```
-
-Arrays can have mixed data types
-
-```
-var namesAndAges = ["Gus", 32, "Dat", 20, "Greg", 30]
+var names = ["DUE", "is", "amazing"]
+var mix = ["Hi", 55, 96.34]
 ```
 
 Arrays can even contain other arrays
@@ -89,20 +89,39 @@ Arrays can even contain other arrays
 var setsOfNumbers = [[1,3,5], [2,4,6]]
 ```
 
-Array elements can be accessed. Remember array indexes start at 0
+Array elements are indexed starting zero.
 
 ```
 var numbers = [1, 2, 3, 4]
-print(numbers[2]) // Will access the 3rd element in the array
+print numbers[2] // Will access the 3rd element in the array
 ```
+
+Creating an empty array is supported `var arr = []`.
+
+> [!TIP]
+> Creating an empty array of specific length is supported through the `Array` functions from [Standard Library](standardlib.md).
+
 ## const
-const is a special type of variable that can't be changed
+
+`const` is a special type of variable that can't be changed.
 
 ```
 const x = 5
-// this is not allowed
+const s = "Hello"
+// these are not allowed
 x = 10
+s = "Bye!"
 ```
+
+Arrays are slightly different as in the values can be changed but not the array itself.
+
+```
+const a = [1, 2, 5]
+a[2] = 3
+// this is not allowed
+a = 5
+```
+
 
 ## Functions (func)
 
@@ -115,7 +134,7 @@ end
 printsomething()
 ```
 
-Of course, we can use curly brackets instead, and add semicolons!
+Of course, curly brackets can be used instead, and even semicolons!
 
 ```
 func printsomething() {
@@ -143,5 +162,22 @@ end
 
 var answer = add(32, 10)
 ```
+Functions can also be added from C# through [Extensions](extensions.md).
 
 ---
+
+## Boolean Operators
+
+Some programming languages use && and some use AND to check of 2 statements are true, similarly they have || and OR.
+
+```
+if speed > 100 AND temp < 32
+	print "Slow down!"
+end
+if (speed > 200 && temp < -40) {
+	print("Goodbye!");
+}
+```
+## Bitwise Operators
+
+Not currently supported.
