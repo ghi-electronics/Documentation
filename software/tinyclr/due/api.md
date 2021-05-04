@@ -62,22 +62,3 @@ class ConsoleExample : IConsole {
 ## ResetEnvironment
 
 When a script is executed, it leaves all declared functions and variables available in the environment. Can be accessed though later scripts.
-
-## Understanding Environment
-
-The `ScriptEngine` takes a script and compiles it and then it will run any top level statements. Any functions and variables are loaded in the environment, and will still be there even when execution has completed.
-
-This script `Foo(x)` will raise an error. There is no `Foo` function and no variable `x` in the script.
-
-Now this script is ran:
-
-```
-x=5
-func Foo(s)
-	print s
-end
-```
-
-While the earlier script will not do anything, it actually load the environment with a variable and a function.
-
-Running the first script now works fine `Foo(x)`.

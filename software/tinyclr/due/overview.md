@@ -68,6 +68,29 @@ print x // This is also a comment
 #this is a python-style comment
 ```
 
+## Understanding Environment
+
+The `ScriptEngine` takes a script and compiles it and then it will run any top level statements. Any functions and variables are loaded in the environment, and will still be there even when execution has completed.
+
+This script `Foo(x)` will raise an error. There is no `Foo` function and no variable `x` in the script.
+
+Now this script is ran:
+
+```
+x=5
+func Foo(s)
+	print s
+end
+```
+
+While the earlier script will not do anything, it actually load the environment with a variable and a function.
+
+Running the first script now works fine `Foo(x)`.
+
+Additionally, `Run` only returns when it has completed running the script. If the script has an infinite loop then `Run` will never return. A good option would be to spin a thread for `Run`. The rest fo teh system will continue to run normally and the thread can be terminated to abort `Run` is desired.
+
+---
+
 ## Samples
 
 ### Recursion
