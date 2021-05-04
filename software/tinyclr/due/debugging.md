@@ -54,5 +54,7 @@ e.Action = DebugAction.Continue; // Run until next breakpoint
 > [!TIP]
 > `e.Action` will default to `DebugAction.Continue` if not set.
 
+Clearing breakpoints is done through `ScriptEngine.ClearBreakpoint`. The entire list of breakpoint can be fetched using `ScriptEngine.GetBreakpoints`, which return an array of line numbers.
+
 ## Pausing 
 When a program is `Run` with Continue option and there is no breakpoints, the current thread will continue to be active. If pause is needed, the `Run` must be called in a secondary thread, allowing the first thread to call `script.Pause()`. This only works when `Run` is fired with debug flag is set to true.
