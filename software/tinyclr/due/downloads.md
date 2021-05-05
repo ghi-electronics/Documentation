@@ -11,6 +11,11 @@ File | Date | Status | Requires | MD5
 --- | --- | --- | --- | ---
 [v1.0.0-preview1](http://files.ghielectronics.com/downloads/TinyCLR/DUE/GHIElectronics.TinyCLR.DUE.1.0.0-preview1.nupkg) | 2021-05-06 | Preview | TinyCLR 2.1 RC1 |???
 
+## Roadmap
+
+DUE Language was just born and we are all focused around the user experience. There will be 2 important stages for DUE's future. The first stage is in making sure the language is complete and serves most needs. The second stage will be in introducing the IDE debugger....you heard that right!
+
+Beyond above, we are going to make DUE 100 times faster! We can do that easily but we are not ready for it yet. Not only that, DUE can, and should, run on every hardware! It is designed from the ground up to be very lean and mean.
 
 ## Release notes
 
