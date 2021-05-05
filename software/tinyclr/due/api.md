@@ -69,6 +69,21 @@ public class Variable {
 }
 ```
 
+```cs
+script.Run(@"
+const PI = 3.14159265359		
+var x = 5
+var y = 50		
+");
+
+var variableList = script.GetGlobalVariables();
+
+foreach (var v in variableList) {
+	Debug.WriteLine($"{v.Name} = {v.Value} Is constant = {v.IsConstant}");
+}
+```
+
+
 Returned variables objects types can be: int, double, string and ArrayList.
 
 ## GetAllFunctions
