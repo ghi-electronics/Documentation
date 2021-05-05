@@ -68,6 +68,9 @@ public class Variable {
 	public bool IsConstant { get; private set; }
 }
 ```
+
+Returned variables objects types can be: int, double, string and ArrayList.
+
 ## GetAllFunctions
 
 Returns an array of strings with all the function signatures found in current environment.
