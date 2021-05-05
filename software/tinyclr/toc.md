@@ -116,6 +116,7 @@
 ## [Standard library](due/standardlib.md)
 ## [Extensions](due/extensions.md)
 ## [Debugging](due/debugging.md)
+## [Downloads](due/downloads.md)
 
 # [Downloads](downloads.md)
 # [Release Notes](release-notes.md)
