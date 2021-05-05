@@ -57,6 +57,23 @@ class ConsoleExample : IConsole {
 	public void Print(string s) => Debug.WriteLine(s);
 }
 ```
+## GetGlobalVariables
+
+Returns an array of `Variable` objects for all the global variables. `Variable` has the name, value and a flag indicting if it is a constant or not.
+
+```cs
+public class Variable {
+	public string Name { get; private set; }
+	public object Value { get; private set; }
+	public bool IsConstant { get; private set; }
+}
+```
+## GetAllFunctions
+
+Returns an array of strings with all the function signatures found in current environment.
+
+> [!NOTE]
+> Extensions functions arguments names are returned as arg0..argN. However, the DUE functions will have the parameter name as specified in the source code.
 
 ## ResetEnvironment
 

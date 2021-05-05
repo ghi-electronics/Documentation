@@ -13,6 +13,7 @@
 
 | Function			                    |Description                                                            |
 |:--------------------------------------|:----------------------------------------------------------------------|
+|StrFmt(double d, string format)		|Returns a formatted string representation of a variable ("N4" format for example) |
 |Len(object o)                          |Returns the length of an array or string                               |
 |Left(object o, int count)              |Returns array or string based on count from left of the object         |
 |Right(object o, int count)             |Returns an array or string based on count from right of the object     |
