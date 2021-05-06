@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>DUE - Statements </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="DUE - Statements ">
+    <meta name="generator" content="docfx 2.57.2.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="due---statements">DUE - Statements</h1>
+
+<hr>
+<h2 id="language-statements">Language Statements</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Statement</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">print/cls/locate</td>
+<td style="text-align:left">Special Output Console Statements</td>
+</tr>
+<tr>
+<td style="text-align:left">print</td>
+<td style="text-align:left">Prints the following expression to the console and moves to the next line</td>
+</tr>
+<tr>
+<td style="text-align:left">locate</td>
+<td style="text-align:left">Locates where the print will take place in rows, columns</td>
+</tr>
+<tr>
+<td style="text-align:left">if/elseif/else</td>
+<td style="text-align:left">Conditional execution of the code</td>
+</tr>
+<tr>
+<td style="text-align:left">while</td>
+<td style="text-align:left">Executes a block of code until the condition is false</td>
+</tr>
+<tr>
+<td style="text-align:left">break</td>
+<td style="text-align:left">Breaks out of the current while loop</td>
+</tr>
+<tr>
+<td style="text-align:left">continue</td>
+<td style="text-align:left">Continues the current while loop skipping the rest of the body</td>
+</tr>
+<tr>
+<td style="text-align:left">return</td>
+<td style="text-align:left">Returns a value from a function</td>
+</tr>
+<tr>
+<td style="text-align:left">end</td>
+<td style="text-align:left">Used in BASIC-style to indicate the end of <code>if</code> or <code>while</code></td>
+</tr>
+<tr>
+<td style="text-align:left">var</td>
+<td style="text-align:left">Declares a variable</td>
+</tr>
+<tr>
+<td style="text-align:left">const</td>
+<td style="text-align:left">Declares a constant, a variable that can&#39;t be modified!</td>
+</tr>
+<tr>
+<td style="text-align:left">func</td>
+<td style="text-align:left">Declares a function block</td>
+</tr>
+<tr>
+<td style="text-align:left">AND/OR</td>
+<td style="text-align:left">Boolean operators</td>
+</tr>
+</tbody>
+</table>
+<h2 id="console-statements">Console Statements</h2>
+<p>These statements are a quick and dirty way to output information. By default, <code>locate</code> and <code>cls</code> do not do anything but <code>print</code> will simply call <code>Debug.WriteLine</code> internally.</p>
+<p>The behavior can be change, to forward the output to a serial port or a display for example. See <a href="api.html">API</a> page from more details.</p>
+<div class="TIP"><h5>Tip</h5><p>print will format double <code>ToString(&quot;N4&quot;)</code></p>
+</div>
+<h2 id="execution-statements">Execution Statements</h2>
+<p><code>while</code>, <code>if</code>/<code>elseif</code>/<code>else</code>, <code>continue</code>, <code>break</code> and &#39;return&#39; work just like most globally-acceptable programming languages.</p>
+<h2 id="the-end-statement">The <code>end</code> statement</h2>
+<p>DUE supports multiple code block types. When basic-style is selected, the end statement marks the end of a block.</p>
+<pre><code>if x &gt; 10
+  print x
+end
+</code></pre><p>In the case other style is used, like C-style, using end is not needed and not allowed.</p>
+<pre><code>if (x&gt;10) {
+  print(x);
+}
+</code></pre><p>This is not allowed</p>
+<pre><code>if (x&gt;10){
+  print(x);
+end
+</code></pre><h2 id="var">var</h2>
+<p><code>var</code> is how variables are created. <code>var</code> will automatically select the correct type and will even change the type on the next assignment, like change it from numerical to string.</p>
+<h3 id="numerical">Numerical</h3>
+<p>Variables are always double-type and must always have a starting value <code>var x = 10</code> is good but <code>var x</code> is not allowed.</p>
+<h3 id="strings">Strings</h3>
+<p><code>var s = &quot;Hello DUE&quot;</code> creates a variable of a string type. </p>
+<p>Just like modern languages, strings can be combined. <code>var s = &quot;Hello &quot; + &quot;DUE&quot;</code>. </p>
+<p>With strings, numerical variable or constants are automatically converted to strings internally. <code>print &quot;x= &quot; + x</code>.</p>
+<p>Both single quote and double-quote are supported and work the same. <code>print &#39;hi&#39;</code>.</p>
+<h3 id="arrays">Arrays</h3>
+<p>Arrays, and arrays of arrays, are supported. It is important to note that arrays hold an array of <code>var</code> and each <code>var</code> in itself can be any kind, even another array.</p>
+<pre><code>var numbers = [1, 2, 3, 4]
+var names = [&quot;DUE&quot;, &quot;is&quot;, &quot;amazing&quot;]
+var mix = [&quot;Hi&quot;, 55, 96.34]
+</code></pre><p>Arrays can even contain other arrays</p>
+<pre><code>var setsOfNumbers = [[1,3,5], [2,4,6]]
+</code></pre><p>Array elements are indexed starting zero.</p>
+<pre><code>var numbers = [1, 2, 3, 4]
+print numbers[2] // Will access the 3rd element in the array
+</code></pre><p>Creating an empty array is supported <code>var arr = []</code>.</p>
+<div class="TIP"><h5>Tip</h5><p>Creating an empty array of specific length is supported through the <code>Array</code> functions from <a href="standardlib.html">Standard Library</a>.</p>
+</div>
+<h2 id="const">const</h2>
+<p><code>const</code> is a special type of variable that can&#39;t be changed.</p>
+<pre><code>const x = 5
+const s = &quot;Hello&quot;
+// these are not allowed
+x = 10
+s = &quot;Bye!&quot;
+</code></pre><p>Arrays are slightly different as in the values can be changed but not the array itself.</p>
+<pre><code>const a = [1, 2, 5]
+a[2] = 3
+// this is not allowed
+a = 5
+</code></pre><h2 id="functions-func">Functions (func)</h2>
+<p>Functions are added using <code>func</code> statement.</p>
+<pre><code>func printsomething()
+  print(&quot;Hello There!&quot;)
+end
+printsomething()
+</code></pre><p>Of course, curly brackets can be used instead, and even semicolons!</p>
+<pre><code>func printsomething() {
+  print &quot;Hello There!&quot;;
+}
+printsomething()
+</code></pre><p>Passing arguments to functions is supported.</p>
+<pre><code>func greet(name)
+  print &quot;Hello &quot; + name
+end
+
+greet(&quot;Gus&quot;)
+// This will show Hello Gus on the output window
+</code></pre><p>Functions can also return values</p>
+<pre><code>func add(x, y) 
+  return x + y
+end
+
+var answer = add(32, 10)
+</code></pre><p>Functions can also be added from C# through <a href="extensions.html">Extensions</a>.</p>
+<hr>
+<h2 id="boolean-operators">Boolean Operators</h2>
+<p>Some programming languages use &amp;&amp; and some use AND to check of 2 statements are true, similarly they have || and OR.</p>
+<pre><code>if speed &gt; 100 AND temp &lt; 32
+    print &quot;Slow down!&quot;
+end
+if (speed &gt; 200 &amp;&amp; temp &lt; -40) {
+    print(&quot;Goodbye!&quot;);
+}
+</code></pre><h2 id="bitwise-operators">Bitwise Operators</h2>
+<p>Not currently supported.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/Due/software/tinyclr/due/statements.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <p><a class="back-to-top" href="#top">Back to top</a><p>
+              </nav>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2021 GHI Electronics, LLC<br>Generated by DocFX</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

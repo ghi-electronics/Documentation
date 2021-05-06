@@ -4650,9 +4650,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/configuration.md",
       "output": {
@@ -4665,9 +4662,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/downloads.md",
       "output": {
@@ -4688,7 +4682,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/drivers/codec.html",
-          "hash": "LlpxJKG4kCVpTmXDXbxTjB3OPa5TFCT1q6KqH3kGDms="
+          "hash": "77gETADSFFiiHrgwsNbYwDUNVWsJx9b/blHfywMvOSY="
         }
       },
       "is_incremental": false,
@@ -4700,7 +4694,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/drivers/connectivity.html",
-          "hash": "UPDC9ABB3v0zFAw3nSDP0IMoQldrdEnC4HWDMrfFZfQ="
+          "hash": "MhAE1t3yQM8hh+B+940NY1hFlkvL5wRhVUordqOE4Hs="
         }
       },
       "is_incremental": false,
@@ -4715,7 +4709,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/drivers/display.html",
-          "hash": "WudfF/32WmpwL38yzpmNfp5XrhdLeqATJfISHHmoHms="
+          "hash": "KVGTpFkD/NocZgJob5V47PHhtsxiNqXkKexUutqhGSY="
         }
       },
       "is_incremental": false,
@@ -4921,6 +4915,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "software/tinyclr/drivers/images/WS2812.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "software/tinyclr/drivers/images/WS2812.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/tinyclr/drivers/images/ledmatrices.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "software/tinyclr/drivers/images/ledmatrices.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "software/tinyclr/drivers/images/servo.png",
       "output": {
         "resource": {
@@ -4936,7 +4952,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/drivers/imaging.html",
-          "hash": "GSzjZPXySM9dAjqQDDc+M/ntJsTcFPYzjTMGYRtG/wU="
+          "hash": "d7OIwOS2GTkEnoVsQNCO5WBUMUeaX7LC+Fwl7p9QgNM="
         }
       },
       "is_incremental": false,
@@ -4963,7 +4979,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/drivers/io-control.html",
-          "hash": "KBL7zhBTcbRZCUH5yAxaXv+4e6IP4jcNKPjeLS7tZCQ="
+          "hash": "10LL3KFTRj2n/b5qNnSEnp6oJsc9vJZMCQQIhGg2f3c="
         }
       },
       "is_incremental": false,
@@ -4978,7 +4994,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/drivers/led.html",
-          "hash": "VfOLkrlL5kgIDOoFanKvb2vp2Zh4gM1/ZEkuounY6qM="
+          "hash": "oR7F4mIz74OKgtCZcatK9pXkCeJuWERst2ZjgMgc5fE="
         }
       },
       "is_incremental": false,
@@ -4990,7 +5006,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/drivers/memory.html",
-          "hash": "AJhS0RwRtJB9Qj7IbFUeyw3uVt3TAVtiW3Bs0ha5X0k="
+          "hash": "HUpwh399ejAivphQvqjBptyDqUl7JYPGVt//Feb+oEs="
         }
       },
       "is_incremental": false,
@@ -5002,7 +5018,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/drivers/motor.html",
-          "hash": "51y9YL6I2coMzVk6RRsxu613SrZYYO+upwIp4IR+YAM="
+          "hash": "eOJndhnJ0Ayc54y/Oj670I2RjaxfYvAJdFWXnu4xMt4="
         }
       },
       "is_incremental": false,
@@ -5017,7 +5033,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/drivers/sensor.html",
-          "hash": "GMoGVdn876DJx5ZLJ9/RpFr5j/hPICA4Qtvi0cAmsyI="
+          "hash": "DH9Wpi2wadiTO+oVGMpcaMR1QxAOtPMkcJxLhMjeAOQ="
         }
       },
       "is_incremental": false,
@@ -5029,7 +5045,97 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/drivers/software-utility.html",
-          "hash": "BuXDJZgTM8K+EfZxPakop+Riqz5IjHuXOnRoaBnznlQ="
+          "hash": "mvCf0iGaOCEeeAE3PYLrTCnu+IaHZR5OnOMEi/cyg40="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/tinyclr/due/api.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/tinyclr/due/api.html",
+          "hash": "TGUoT8Kx8tV9UQ1Pu0XHxXs24Et6OEhn383UM0yQr7M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/tinyclr/due/debugging.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/tinyclr/due/debugging.html",
+          "hash": "NAMXixI8z4Ulw/uFvbXoQdON4luhweldUWwfjRHzOeg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/tinyclr/due/downloads.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/tinyclr/due/downloads.html",
+          "hash": "yZ7t8KhjN5J+MDN5PfuF22tf1IqI4K0vGnm96t6q2fM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/tinyclr/due/extensions.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/tinyclr/due/extensions.html",
+          "hash": "63WYGQjCQYN10LVNXgNkBm7KZllJJbay1iATgWMoX0s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "software/tinyclr/due/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/tinyclr/due/overview.html",
+          "hash": "04zjMDm0/kw6AyYcI6Iq2hX6D/Tu2o3Fk+NBgpanoQk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/tinyclr/due/standardlib.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/tinyclr/due/standardlib.html",
+          "hash": "61IbTOpiH2YJeN9jnPRv4JSgGC7tmzB6TXX0ewlWkM0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "software/tinyclr/due/statements.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/tinyclr/due/statements.html",
+          "hash": "esfiff00oXizlC2fVkbo3q71WCBj9FSbNGbopizexLQ="
         }
       },
       "is_incremental": false,
@@ -5565,9 +5671,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/intro.md",
       "output": {
@@ -5585,16 +5688,13 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/limitations.html",
-          "hash": "RDNj7rF5XVKIfmv4wqcC6hT+XtMEhalsB5mP5Nv4JXo="
+          "hash": "fsK9R++ekeiW6yvK9Spj4FD/Al3sme890orxou1TuLw="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/release-notes.md",
       "output": {
@@ -5612,7 +5712,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/resources.html",
-          "hash": "AmCI5QBjwwnnpWoGjxcUdfMkVwWGPYRZqZ1f2iPHmes="
+          "hash": "Ij6Xslb7+SNdypg0aU4clb2DG43Ucjm8SqVIgGk1sXE="
         }
       },
       "is_incremental": false,
@@ -5648,7 +5748,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/toc.html",
-          "hash": "FR8laU/spyQ85wxur7pDSgpSwnFm5zojfp0uagW3vek="
+          "hash": "u6pf6w+xvbBG2t8vyfpy6yMVGlZCP7uw1bjdPY6aPHE="
         }
       },
       "is_incremental": false,
@@ -5667,9 +5767,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/adafruit-io.md",
       "output": {
@@ -5694,9 +5791,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/analog-out.md",
       "output": {
@@ -5721,9 +5815,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/audio-playback.md",
       "output": {
@@ -5753,7 +5844,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/azure.html",
-          "hash": "NwpqeisbabcAke/AOLpEp/mrvj0cG/kHH10q2TAIhDc="
+          "hash": "4b0aL8b9C9j2Zf4hvr9Qgo4lVxjPiZLLr5U/DslmrWs="
         }
       },
       "is_incremental": false,
@@ -5772,9 +5863,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/can.md",
       "output": {
@@ -5799,9 +5887,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/collections.md",
       "output": {
@@ -5826,9 +5911,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/cryptography.md",
       "output": {
@@ -5865,9 +5947,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/displays.md",
       "output": {
@@ -5880,9 +5959,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/encoding-decoding.md",
       "output": {
@@ -5895,9 +5971,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/ethernet.md",
       "output": {
@@ -5910,9 +5983,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/external-memory.md",
       "output": {
@@ -5925,9 +5995,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/file-system.md",
       "output": {
@@ -5940,9 +6007,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/font-support.md",
       "output": {
@@ -5967,9 +6031,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/gpio.md",
       "output": {
@@ -5982,9 +6043,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/graphics.md",
       "output": {
@@ -5997,9 +6055,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/hashing.md",
       "output": {
@@ -6012,9 +6067,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/http-https.md",
       "output": {
@@ -7449,9 +7501,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/in-field-update.md",
       "output": {
@@ -7476,9 +7525,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/ip-protection.md",
       "output": {
@@ -7503,9 +7549,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/memory.md",
       "output": {
@@ -7542,9 +7585,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/mqtt.md",
       "output": {
@@ -7569,9 +7609,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/networking-core.md",
       "output": {
@@ -7608,9 +7645,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/power-management.md",
       "output": {
@@ -7623,9 +7657,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/ppp.md",
       "output": {
@@ -7638,9 +7669,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/pwm.md",
       "output": {
@@ -7653,9 +7681,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/real-time-clock.md",
       "output": {
@@ -7728,9 +7753,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/secure-storage.md",
       "output": {
@@ -7743,9 +7765,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/serialization.md",
       "output": {
@@ -7758,9 +7777,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/signal-control.md",
       "output": {
@@ -7773,9 +7789,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/spi.md",
       "output": {
@@ -7860,9 +7873,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/touch-screen.md",
       "output": {
@@ -7875,9 +7885,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/uart.md",
       "output": {
@@ -7890,9 +7897,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/unmanaged-heap.md",
       "output": {
@@ -7929,9 +7933,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/usb-pc-comm.md",
       "output": {
@@ -7956,9 +7957,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/user-interface.md",
       "output": {
@@ -7995,9 +7993,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/wifi.md",
       "output": {
@@ -8034,8 +8029,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 189,
-          "skipped_file_count": 188
+          "total_file_count": 196,
+          "skipped_file_count": 176
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

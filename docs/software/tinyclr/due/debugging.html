@@ -5,19 +5,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Resources </title>
+    <title>DUE - Debugging </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Resources ">
+    <meta name="title" content="DUE - Debugging ">
     <meta name="generator" content="docfx 2.57.2.0">
     
-    <link rel="shortcut icon" href="../../images/favicon.ico">
-    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../styles/docfx.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
     
-    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:rel" content="../../../">
     <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
@@ -33,8 +33,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="../../index.html">
-                <img id="logo" class="svg" src="../../images/logo.png" alt="">
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -76,27 +76,50 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="resources">Resources</h1>
+<h1 id="due---debugging">DUE - Debugging</h1>
 
 <hr>
-<p><img src="images/resources.png" alt=".NET vs TinyCLR OS"></p>
-<h2 id="professional-community">Professional Community</h2>
-<p>Our forum consists of intelligent professionals building commercial products based on SITCore and TinyCLR OS. And it is monitored and supported by our staff.</p>
-<p><a href="https://forums.ghielectronics.com/">https://forums.ghielectronics.com/</a></p>
-<h2 id="samples-repo">Samples Repo</h2>
-<p>The samples repo a collection of projects we have built around TinyCLR OS, including the samples we ship on SITCore boards.</p>
-<p><a href="https://github.com/ghi-electronics/TinyCLR-Samples">https://github.com/ghi-electronics/TinyCLR-Samples</a></p>
-<h2 id="drivers-repo">Drivers Repo</h2>
-<p>These are drivers built for common devices used by us and our commercial customers. These drivers are also available as NuGet packages. Feel free to use the sources to build your own. All of these drivers are documented <a href="drivers/intro.html">here</a> inside documentation.</p>
-<p><a href="https://github.com/ghi-electronics/TinyCLR-Drivers">https://github.com/ghi-electronics/TinyCLR-Drivers</a></p>
-<h2 id="libraries-repo">Libraries Repo</h2>
-<p>These are the entire set of libraries included with TinyCLR OS. Use to get a deeper understanding of the operating system. We do not recommend making changes but recommendations are welcome.</p>
-<p><a href="https://github.com/ghi-electronics/TinyCLR-Libraries">https://github.com/ghi-electronics/TinyCLR-Libraries</a></p>
-<p>This is also the home for all public TinyCLR OS issues</p>
-<p><a href="https://github.com/ghi-electronics/TinyCLR-Libraries/issues">https://github.com/ghi-electronics/TinyCLR-Libraries/issues</a></p>
-<h2 id="docs-repo">Docs Repo</h2>
-<p>Basically, everything you see here comes from this repo. </p>
-<p><a href="https://github.com/ghi-electronics/Documentation">https://github.com/ghi-electronics/Documentation</a></p>
+<p>No modern system should exist if it does not have debugging, and DUE has just what is needed.</p>
+<h2 id="stepping">Stepping</h2>
+<p>Debugging is simply enabled through a flag on the <code>Run</code> method. <code>script.Run()</code></p>
+<pre><code class="lang-cs">var script = new ScriptEngine(typeof(GpioExtension));
+
+script.Run(@&quot;
+    var led = DigitalPin(4*16+11)//PE11
+    func OnOff()
+        writePin(led, On)
+        Delay(100)
+        writePin(led, Off)
+        Delay(100)
+    end
+&quot;, true);// enable debugging
+</code></pre><p>Once debugging option is enabled, an event <code>script.DebugEvent += DebugStep_DebugEvent</code> is raised for every program step. In teh event handler, the user has the option to continue, step into or step over.</p>
+<pre><code class="lang-cs">private static void DebugStep_DebugEvent(ScriptEngine sender, DebugEventArgs e) {
+    Debug.WriteLine($&quot;Executing: {e.SrcLine} : {e.SrcCol}..{e.SrcCol + e.SrcLength}&quot;);
+    Debug.WriteLine(&quot;Locals&quot;);
+    foreach(var v in e.Locals) {
+        Debug.WriteLine($&quot;{v.Name} = {v.Value}&quot;);
+    }
+    Debug.WriteLine(&quot;&quot;);
+    e.Action = DebugAction.StepInto; // Step into next statement
+}
+</code></pre><h2 id="breakpoints">Breakpoints</h2>
+<p>A breakpoint is set through <code>script.SetBreakpoint(lineNumber)</code>. Once execution hits a breakpoint, the debug event is raised with <code>e.Breakpoint</code> set to true.</p>
+<pre><code class="lang-cs">private static void DebugBreakpoint_DebugEvent(ScriptEngine sender, DebugEventArgs e) {
+if (e.Breakpoint) {
+    // we hit a breakpoint
+    }
+} else {
+    // This will get hit once on start up, because when we start debugging the debugger breaks on the first
+    // executable statement, without requiring an explicit breakpoint
+}
+e.Action = DebugAction.Continue; // Run until next breakpoint
+}
+</code></pre><div class="TIP"><h5>Tip</h5><p><code>e.Action</code> will default to <code>DebugAction.Continue</code> if not set.</p>
+</div>
+<p>Clearing breakpoints is done through <code>ScriptEngine.ClearBreakpoint</code>. The entire list of breakpoint can be fetched using <code>ScriptEngine.GetBreakpoints</code>, which return an array of line numbers.</p>
+<h2 id="pausing">Pausing</h2>
+<p>When a program is <code>Run</code> with Continue option and there is no breakpoints, the current thread will continue to be active. If pause is needed, the <code>Run</code> must be called in a secondary thread, allowing the first thread to call <code>script.Pause()</code>. This only works when <code>Run</code> is fired with debug flag is set to true.</p>
 </article>
           </div>
           
@@ -105,7 +128,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/Due/software/tinyclr/resources.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/Due/software/tinyclr/due/debugging.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -120,7 +143,7 @@
                 <div class="icon">
                   <i aria-hidden="true">☾</i>
                 </div>
-                <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+                <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
           
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
@@ -148,8 +171,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>
 </html>
