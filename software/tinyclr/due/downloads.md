@@ -30,3 +30,4 @@ Released 2021-05-06 | Requires TinyCLR OS 2.1 RC1
 #### Known Issues
 
 - DUE supports loading multiple scripts but messaging about debugging and errors do not indicate which script.
+- `Pause` is not currently supported.

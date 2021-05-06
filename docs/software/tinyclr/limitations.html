@@ -84,6 +84,7 @@
 <ol>
 <li>There is no support for multidimensional arrays, use jagged arrays instead. Simply use [1][1] instead of [1,1].</li>
 <li>Each assembly is limited to 64KB. If you have gigantic code, just split your solution into multiple assemblies. This approach improves code maintainability as well. Resource files are not subject to this limitation, so if you are adding large lookup tables or binary objects, include them as a resource.</li>
+<li>There is a limit of 64 total assemblies.</li>
 <li>TinyCLR does not support generics. While this is less of a limitation on an embedded device than on the desktop, we understand that professional .NET developers will miss this feature. However, on small embedded systems implementing generics can reduce performance.</li>
 <li>The async/await pattern is not supported.</li>
 <li>All libraries, networking sockets for example, are tweaked to be a subset of the full .NET framework that will perform well on embedded devices. These tweaks have allowed us to support essential IoT features like CAN and USB.</li>
@@ -96,7 +97,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/limitations.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/Due/software/tinyclr/limitations.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Sensor Drivers </title>
+    <title>DUE - Standard Library </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Sensor Drivers ">
+    <meta name="title" content="DUE - Standard Library ">
     <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -76,31 +76,142 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="sensor-drivers">Sensor Drivers</h1>
+<h1 id="due---standard-library">DUE - Standard Library</h1>
 
 <hr>
-<h2 id="resistive-touch">Resistive Touch</h2>
-<p>This driver uses 2 analog and 2 digital pins to read a display&#39;s resistive touch panel. The results are not very accurate but it is a low-cost options. Please see the <a href="../tutorials/touch-screen.html">Touch Screen</a> tutorial for more info.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.Touch.ResisitiveTouch</p>
-</div>
-<hr>
-<h2 id="ft5xx6-and-gsl1680">FT5xx6 and GSL1680</h2>
-<p><img src="images/GSL1680.png" alt="GSL1680"></p>
-<p>These are common display capacitive touch controller chips. PPlease see the <a href="../tutorials/touch-screen.html">Touch Screen</a> tutorial for more info.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Drivers.FocalTech.FT5xx6 or GHIElectronics.TinyCLR.Drivers.GSL1680</p>
-</div>
-<hr>
-<h2 id="lis2hh12">LIS2HH12</h2>
-<p><img src="images/LIS2HH12.png" alt="LIS2HH12"></p>
-<p>A 3-axis accelerometer </p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.STMicroelectronics.LIS2HH12</p>
-</div>
-<hr>
-<h2 id="msgeq7">MSGEQ7</h2>
-<p><img src="images/MSGEQ7.png" alt="MSGEQ7"></p>
-<p>Equalizer sensor filter.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.MixedSignalIntegrated.MSGEQ7</p>
-</div>
+<h2 id="general">General</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Function</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Delay(int ms)</td>
+<td style="text-align:left">Sleeps for specified duration in milliseconds</td>
+</tr>
+<tr>
+<td style="text-align:left">Millis()</td>
+<td style="text-align:left">Returns the number of current time in milliseconds</td>
+</tr>
+</tbody>
+</table>
+<h2 id="array--strings">Array &amp; Strings</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Function</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">StrFmt(double d, string format)</td>
+<td style="text-align:left">Returns a formatted string representation of a variable (&quot;N4&quot; format for example)</td>
+</tr>
+<tr>
+<td style="text-align:left">Len(object o)</td>
+<td style="text-align:left">Returns the length of an array or string</td>
+</tr>
+<tr>
+<td style="text-align:left">Left(object o, int count)</td>
+<td style="text-align:left">Returns array or string based on count from left of the object</td>
+</tr>
+<tr>
+<td style="text-align:left">Right(object o, int count)</td>
+<td style="text-align:left">Returns an array or string based on count from right of the object</td>
+</tr>
+<tr>
+<td style="text-align:left">Mid(object o, int index, int count)</td>
+<td style="text-align:left">Returns an array or string based on index and count</td>
+</tr>
+<tr>
+<td style="text-align:left">IndexOf(object o, object value)</td>
+<td style="text-align:left">Returns the Index of an array or string based on object value passed</td>
+</tr>
+<tr>
+<td style="text-align:left">Val(string s)</td>
+<td style="text-align:left">Returns string as a Double</td>
+</tr>
+<tr>
+<td style="text-align:left">Append(ArrayList arr, object value)</td>
+<td style="text-align:left">Appends a value to an array</td>
+</tr>
+<tr>
+<td style="text-align:left">RemoveAt(ArrayList arr, int value)</td>
+<td style="text-align:left">Removes a value from an array at a specific array index</td>
+</tr>
+<tr>
+<td style="text-align:left">InsertAt(ArrayList arr, object value)</td>
+<td style="text-align:left">Inserts a value into an array at a specific array index</td>
+</tr>
+</tbody>
+</table>
+<h1 id="math">Math</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Function</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">IsNan(double d)</td>
+<td style="text-align:left">Returns either 1 or 0 based on value passed</td>
+</tr>
+<tr>
+<td style="text-align:left">Abs(double d)</td>
+<td style="text-align:left">Returns the absolute value of a number</td>
+</tr>
+<tr>
+<td style="text-align:left">Sqrt(double d)</td>
+<td style="text-align:left">Returns the square root of a number</td>
+</tr>
+<tr>
+<td style="text-align:left">Sin(double rad)</td>
+<td style="text-align:left">Returns the sine of an number</td>
+</tr>
+<tr>
+<td style="text-align:left">Cos(double rad)</td>
+<td style="text-align:left">Returns the cosine of an number</td>
+</tr>
+<tr>
+<td style="text-align:left">Tan(double rad)</td>
+<td style="text-align:left">Returns the tangent of an number</td>
+</tr>
+<tr>
+<td style="text-align:left">Acos(double rad)</td>
+<td style="text-align:left">Returns the arc cosine value of a number</td>
+</tr>
+<tr>
+<td style="text-align:left">Asin(double rad)</td>
+<td style="text-align:left">Returns the arc sine value of a number</td>
+</tr>
+<tr>
+<td style="text-align:left">Atan(double rad)</td>
+<td style="text-align:left">Returns the arctangent value of a number</td>
+</tr>
+<tr>
+<td style="text-align:left">Atan2(double y, double x)</td>
+<td style="text-align:left">Returns the arctangent of x &amp; y</td>
+</tr>
+<tr>
+<td style="text-align:left">Trunc(double d)</td>
+<td style="text-align:left">Returns the integer part of number by removing fractional digits</td>
+</tr>
+<tr>
+<td style="text-align:left">Round(double d)</td>
+<td style="text-align:left">Returns the value of a number rounded to the nearest integer</td>
+</tr>
+<tr>
+<td style="text-align:left">Rnd()</td>
+<td style="text-align:left">Returns the next pseudorandom double</td>
+</tr>
+</tbody>
+</table>
 </article>
           </div>
           
@@ -109,7 +220,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/Due/software/tinyclr/drivers/sensor.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/Due/software/tinyclr/due/standardlib.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
