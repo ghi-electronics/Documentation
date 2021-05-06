@@ -3,10 +3,10 @@
 This example shows how to communicate with Azure IoT Hub using MQTT. User will need to set up a Network Interface connection on the device such as [WiFi](wifi.md) to Connect to Azure.
 
 
->[!TIP]
->Needed NuGets: GHIElectronics.TinyCLR.Networking.Mqtt, GHIElectronics.TinyCLR.Drivers.Azure.SAS
+> [!TIP]
+> Needed NuGets: GHIElectronics.TinyCLR.Networking.Mqtt, GHIElectronics.TinyCLR.Drivers.Azure.SAS
 >
->Add using statement:
+> Add using statement:
 > using System.Security.Cryptography.X509Certificates;
 > using System.Security.Authentication;
 

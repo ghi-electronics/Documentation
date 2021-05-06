@@ -6,8 +6,8 @@
 
 16-channel servo/PWM driver that uses I2C
 
->[!TIP]
->Needed NuGet: GHIElectronics.TinyCLR.Drivers.Nxp.PCA9685
+> [!TIP]
+> Needed NuGet: GHIElectronics.TinyCLR.Drivers.Nxp.PCA9685
 
 ---
 
@@ -16,8 +16,8 @@
 
 CMOS decade counter. Good for scanning a matrix of LEDs or buttons.
 
->[!TIP]
->Needed NuGet: GHIElectronics.TinyCLR.Drivers.TexasInstruments.CD4017B
+> [!TIP]
+> Needed NuGet: GHIElectronics.TinyCLR.Drivers.TexasInstruments.CD4017B
 
 ---
 
@@ -26,6 +26,6 @@ CMOS decade counter. Good for scanning a matrix of LEDs or buttons.
 
 Shift register, taking a serial data, like from SPI or pin bit-banging to output 8 parallel outputs. For example, drive 8 LEDs using SPI.
 
->[!TIP]
->Needed NuGet: GHIElectronics.TinyCLR.Drivers.TexasInstruments.SNx4HC595
+> [!TIP]
+> Needed NuGet: GHIElectronics.TinyCLR.Drivers.TexasInstruments.SNx4HC595
 

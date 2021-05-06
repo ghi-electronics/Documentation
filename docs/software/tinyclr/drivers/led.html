@@ -79,7 +79,61 @@
 <h1 id="led-drivers">LED Drivers</h1>
 
 <hr>
-<p><img src="images/APA102C.png" alt="LPD8806"></p>
+<h2 id="led-matrices">LED Matrices</h2>
+<p><img src="images/ledmatrices.jpg" alt="LED Matrix"></p>
+<p>This example uses the WS2812 LED but applies to all matrices.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Drivers.Worldsemi.WS2812, GHIElectronics.TinyCLR.Drivers.BasicGraphis</p>
+</div>
+<p>LedMatrix Class</p>
+<pre><code class="lang-cs">class LedMatrix : BasicGraphics{
+    private int row, column;
+    WS2812Controller leds;
+
+    public LedMatrix(GpioPin pin, int row, int column){
+        this.row = row;
+        this.column = column;
+        var sg = new SignalGenerator(pin);
+        this.leds = new WS2812Controller(sg, this.row * this.column);           
+        Clear();
+    }
+
+    public override void Clear(){
+        leds.Clear();
+    }
+
+    public override void SetPixel(int x, int y, uint color){
+        if (x &lt; 0 || x &gt;= this.column) return;
+        if (y &lt; 0 || y &gt;= this.row) return;
+
+        // even columns are inverted
+        if((x &amp; 0x01) !=0){
+            y = this.row -1 - y;
+        }
+
+        var index = x * this.row + y;
+
+        leds.SetColor(index, (int) (color &gt;&gt; 16) &amp; 0xff, (int)(color &gt;&gt; 8) &amp; 0xff, (int)(color &gt;&gt; 0) &amp; 0xff);
+    }
+    public void Flush(){
+        leds.Flush();
+    }
+}
+</code></pre><p>Use the LEDMatrix Class as shown</p>
+<pre><code class="lang-cs">var pin = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PC6);
+var screen = new LedMatrix(pin, 8, 32);
+
+screen.Clear();
+var col = LedMatrix.ColorFromRgb(0, 20, 50);
+
+var c = 0;
+while (true){
+    screen.Clear();
+    screen.DrawString(c++.ToString(), col, 0, 0);
+    screen.Flush();
+    Thread.Sleep(10);
+}
+</code></pre><hr>
+<p><img src="images/WS2812.jpg" alt="WS2812"></p>
 <h2 id="ws2812">WS2812</h2>
 <p>The WS2812 uses digital signal or signal generator to control LEDs. Read more about digital signals <a href="../tutorials/signal-control.html">here</a>. Digital signal can only use specific pins, but is very accurate. Signal generator can be used on any pins but is less accurate. </p>
 <div class="NOTE"><h5>Note</h5><p>These LEDs are commonly referred to as Neopixel</p>
@@ -105,9 +159,11 @@ var led = new WS2812Controller(signalGen, 24);
 led.SetColor(1, 255, 0, 0); // 2nd LED is Red
 led.Flush();
 </code></pre><hr>
+<p><img src="images/APA102C.png" alt="APA102C"></p>
 <h2 id="apa102c">APA102C</h2>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.ShijiLighting.APA102C</p>
 </div>
+<p>The APA102C is very similar to the Neopixel WS2812 except it uses standard 3 wire SPI, while the Neopixel uses a single wire and it&#39;s own proprietary format. </p>
 <pre><code class="lang-cs">var cs = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PE4);
 
 var settings = new SpiConnectionSettings() {
@@ -148,7 +204,7 @@ led.Flush();
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/drivers/led.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/Due/software/tinyclr/drivers/led.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

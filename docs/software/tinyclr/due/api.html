@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Sensor Drivers </title>
+    <title>DUE - API </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Sensor Drivers ">
+    <meta name="title" content="DUE - API ">
     <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -76,31 +76,69 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="sensor-drivers">Sensor Drivers</h1>
+<h1 id="due---api">DUE - API</h1>
 
 <hr>
-<h2 id="resistive-touch">Resistive Touch</h2>
-<p>This driver uses 2 analog and 2 digital pins to read a display&#39;s resistive touch panel. The results are not very accurate but it is a low-cost options. Please see the <a href="../tutorials/touch-screen.html">Touch Screen</a> tutorial for more info.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.Touch.ResisitiveTouch</p>
+<p>The DUE API is designed to give full access of the <code>ScriptEngine</code> in a simple user-friendly way.</p>
+<div class="TIP"><h5>Tip</h5><p>We will assume <code>GpioExtension</code> sample from <a href="extensions.html">Extensions</a> is being used.</p>
 </div>
-<hr>
-<h2 id="ft5xx6-and-gsl1680">FT5xx6 and GSL1680</h2>
-<p><img src="images/GSL1680.png" alt="GSL1680"></p>
-<p>These are common display capacitive touch controller chips. PPlease see the <a href="../tutorials/touch-screen.html">Touch Screen</a> tutorial for more info.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Drivers.FocalTech.FT5xx6 or GHIElectronics.TinyCLR.Drivers.GSL1680</p>
+<h2 id="run">Run</h2>
+<p>This method will execute a script.</p>
+<pre><code class="lang-cs">var script = new ScriptEngine(typeof(GpioExtension));
+
+script.Run(@&quot;
+    var led = DigitalPin(4*16+11)//PE11
+    func OnOff()
+        writePin(led, On)
+        Delay(100)
+        writePin(led, Off)
+        Delay(100)
+    end
+&quot;);
+</code></pre><h2 id="invoke">Invoke</h2>
+<p>A function that is found in a script can be executed from C# directly using <code>script.Invoke(&quot;OnOff&quot;)</code>. </p>
+<p>Arguments are passed to <code>Invoke</code> with a returned result, <code>sum = Invoke(&quot;Add&quot;, a, b)</code>.</p>
+<h2 id="getfunction">GetFunction</h2>
+<p>A faster way to invoke a function will be by reference</p>
+<pre><code class="lang-cs">var OnOffPointer = script.GetFunction(&quot;OnOff&quot;);
+script.Invoke(OnOffPointer);
+</code></pre><h2 id="getvariable">GetVariable</h2>
+<p>Returns the value of a specific variable <code>x = script.GetVariable(&quot;x&quot;)</code></p>
+<p>The return value is an object. In the case of returned variable being an array in DUE, ArrayList is returned.</p>
+<h2 id="setvariable">SetVariable</h2>
+<p>Sets a variable that lives in a DUE script from C# <code>script.SetVariable(&quot;x&quot;,123)</code>.</p>
+<h2 id="setconsole">SetConsole</h2>
+<p>Redirects the Console Statements.</p>
+<pre><code class="lang-cs">class ConsoleExample : IConsole {
+    public void Cls() { }
+    public void Locate(int row, int col) { }
+    public void Print(string s) =&gt; Debug.WriteLine(s);
+}
+</code></pre><h2 id="getglobalvariables">GetGlobalVariables</h2>
+<p>Returns an array of <code>Variable</code> objects for all the global variables. <code>Variable</code> has the name, value and a flag indicting if it is a constant or not.</p>
+<pre><code class="lang-cs">public class Variable {
+    public string Name { get; private set; }
+    public object Value { get; private set; }
+    public bool IsConstant { get; private set; }
+}
+</code></pre><pre><code class="lang-cs">script.Run(@&quot;
+const PI = 3.14159265359        
+var x = 5
+var y = 50      
+&quot;);
+
+var variableList = script.GetGlobalVariables();
+
+foreach (var v in variableList) {
+    Debug.WriteLine($&quot;{v.Name} = {v.Value} Is constant = {v.IsConstant}&quot;);
+}
+</code></pre><p>Returned variables objects types can be: int, double, string and ArrayList.</p>
+<h2 id="getallfunctions">GetAllFunctions</h2>
+<p>Returns an array of strings with all the function signatures found in current environment.</p>
+<div class="NOTE"><h5>Note</h5><p>Extensions functions arguments names are returned as arg0..argN. However, the DUE functions will have the parameter name as specified in the source code.</p>
 </div>
-<hr>
-<h2 id="lis2hh12">LIS2HH12</h2>
-<p><img src="images/LIS2HH12.png" alt="LIS2HH12"></p>
-<p>A 3-axis accelerometer </p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.STMicroelectronics.LIS2HH12</p>
-</div>
-<hr>
-<h2 id="msgeq7">MSGEQ7</h2>
-<p><img src="images/MSGEQ7.png" alt="MSGEQ7"></p>
-<p>Equalizer sensor filter.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.MixedSignalIntegrated.MSGEQ7</p>
-</div>
+<h2 id="resetenvironment">ResetEnvironment</h2>
+<p>When a script is executed, it leaves all declared functions and variables available in the environment. Can be accessed though later scripts.</p>
 </article>
           </div>
           
@@ -109,7 +147,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/Due/software/tinyclr/drivers/sensor.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/Due/software/tinyclr/due/api.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

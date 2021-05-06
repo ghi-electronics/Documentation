@@ -5,8 +5,8 @@
 
 This utility NuGet adds SAS generation used in Azure. See [Microsoft Azure](../tutorials/azure.md) tutorial for more info.
 
->[!TIP]
->Needed NuGet: GHIElectronics.TinyCLR.Drivers.Azure.SAS
+> [!TIP]
+> Needed NuGet: GHIElectronics.TinyCLR.Drivers.Azure.SAS
 
 ## Basic Graphics
 
@@ -20,8 +20,8 @@ There are two ways to use BasicGraphics, the first one is agnostic of what displ
 
 In the second way, which is the easier way, BasicGraphics will handle allocating the needed video buffer and handles the SetPixel. It already has 2 pixel options, 16BPP 5:6:5 and 1BPP.
 
->[!TIP]
->Needed NuGet: GHIElectronics.TinyCLR.Drivers.BasicGraphics
+> [!TIP]
+> Needed NuGet: GHIElectronics.TinyCLR.Drivers.BasicGraphics
 
 An example of the first options, that overrides the `SetPixel` and `Clear` methods. BasicGraphics will not allocate any memory.
 
@@ -90,8 +90,8 @@ MyDisplaySendBuffer(basicGfx.Buffer);
 
 Infrared remotes are very common and use multiple standards. NCR is very common and a driver is included. A remote with NCR standard will send an 8bit address and an 8bit command with every key press. A repeat signal will be sent as long as the key is continuously pressed.
 
->[!TIP]
->Needed NuGet: GHIElectronics.TinyCLR.Drivers.Infrared.NecIR
+> [!TIP]
+> Needed NuGet: GHIElectronics.TinyCLR.Drivers.Infrared.NecIR
 
 ```cs
 static void Main() {

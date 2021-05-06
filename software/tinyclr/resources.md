@@ -14,7 +14,7 @@ https://github.com/ghi-electronics/TinyCLR-Samples
 
 ## Drivers Repo
 
-These are drivers built for common devices used by us and our commercial customers. These drivers are also available as NuGet packages. Feel free to use the sources to build your own.
+These are drivers built for common devices used by us and our commercial customers. These drivers are also available as NuGet packages. Feel free to use the sources to build your own. All of these drivers are documented [here](drivers/intro.md) inside documentation.
 
 https://github.com/ghi-electronics/TinyCLR-Drivers
 
