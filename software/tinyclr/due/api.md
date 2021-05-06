@@ -23,7 +23,11 @@ script.Run(@"
 	end
 ");
 ```
+
+`Run` only returns when it has completed running the script. If the script has an infinite loop then `Run` will never return. A good option would be to spin a thread for `Run`. The rest of the system will continue to run normally and the thread can be terminated to abort `Run` is desired.
+
 ## Invoke
+
 A function that is found in a script can be executed from C# directly using `script.Invoke("OnOff")`. 
 
 Arguments are passed to `Invoke` with a returned result, `sum = Invoke("Add", a, b)`.
