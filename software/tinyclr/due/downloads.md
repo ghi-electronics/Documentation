@@ -23,4 +23,10 @@ Beyond above, we are going to make DUE 100 times faster! We can do that easily b
 
 Released 2021-05-06 | Requires TinyCLR OS 2.1 RC1
 
+#### Changes
+
 - Initial Release!
+
+#### Known Issues
+
+- DUE supports loading multiple scripts but messaging about debugging and errors do not indicate which script.
