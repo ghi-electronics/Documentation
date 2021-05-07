@@ -95,7 +95,8 @@ script.Run(@&quot;
         Delay(100)
     end
 &quot;);
-</code></pre><h2 id="invoke">Invoke</h2>
+</code></pre><p><code>Run</code> only returns when it has completed running the script. If the script has an infinite loop then <code>Run</code> will never return. A good option would be to spin a thread for <code>Run</code>. The rest of the system will continue to run normally and the thread can be terminated to abort <code>Run</code> is desired.</p>
+<h2 id="invoke">Invoke</h2>
 <p>A function that is found in a script can be executed from C# directly using <code>script.Invoke(&quot;OnOff&quot;)</code>. </p>
 <p>Arguments are passed to <code>Invoke</code> with a returned result, <code>sum = Invoke(&quot;Add&quot;, a, b)</code>.</p>
 <h2 id="getfunction">GetFunction</h2>
@@ -108,12 +109,46 @@ script.Invoke(OnOffPointer);
 <h2 id="setvariable">SetVariable</h2>
 <p>Sets a variable that lives in a DUE script from C# <code>script.SetVariable(&quot;x&quot;,123)</code>.</p>
 <h2 id="setconsole">SetConsole</h2>
-<p>Redirects the Console Statements.</p>
-<pre><code class="lang-cs">class ConsoleExample : IConsole {
-    public void Cls() { }
-    public void Locate(int row, int col) { }
-    public void Print(string s) =&gt; Debug.WriteLine(s);
+<p>Redirects the Console Statements. For example, the output can be forwarded to a display.</p>
+<pre><code class="lang-cs">class MyConsole : IConsole {
+    private int row = 0;
+    private const int charHeight = 9;
+
+    // I2C Display
+    static I2cController i2c = I2cController.FromName(SC13048.I2cBus.I2c1);
+    static SSD1306Controller ssd1306 = new SSD1306Controller(i2c.GetDevice(new I2cConnectionSettings(0x3d)));
+
+    // Basic Graphics
+    static BasicGraphics basicGfx = new BasicGraphics(128, 64, ColorFormat.OneBpp);
+    public void Cls() { 
+        basicGfx.Clear();
+        this.row = 0;
+    }
+    public void Locate(int row, int col) { }// deprecated!
+    public void Print(string s) {
+        if (row &gt;= (basicGfx.Height / charHeight)) {
+            Cls();
+            row = 0;
+        }
+        basicGfx.DrawString(s, BasicGraphics.ColorFromRgb(0xff, 0xff, 0xff), 0, row * charHeight);
+        ssd1306.DrawBufferNative(basicGfx.Buffer);
+        row++;
+    }
 }
+</code></pre><p>The <code>IConsole</code> interface is then passed tothe engine.</p>
+<pre><code class="lang-cs">var script = new ScriptEngine();
+var console = new MyConsole();
+script.SetConsole(console);
+script.Run(@&quot;
+    cls
+    print(&#39;Hello World!&#39;)   
+    cls // will clear the previous prints
+    print(&#39;Hello World!&#39;)   
+    print   
+    print &#39;TinyCLR&#39;
+    print &quot;&quot;with DUE&quot;&quot;   
+    print &#39;is the best!&#39;
+&quot;);
 </code></pre><h2 id="getglobalvariables">GetGlobalVariables</h2>
 <p>Returns an array of <code>Variable</code> objects for all the global variables. <code>Variable</code> has the name, value and a flag indicting if it is a constant or not.</p>
 <pre><code class="lang-cs">public class Variable {
@@ -147,7 +182,7 @@ foreach (var v in variableList) {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/Due/software/tinyclr/due/api.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/due/api.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
