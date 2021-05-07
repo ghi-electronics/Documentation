@@ -52,15 +52,53 @@ Sets a variable that lives in a DUE script from C# `script.SetVariable("x",123)`
 
 ## SetConsole
 
-Redirects the Console Statements.
+Redirects the Console Statements. For example, the output can be forwarded to a display.
 
 ```cs
-class ConsoleExample : IConsole {
-	public void Cls() { }
-	public void Locate(int row, int col) { }
-	public void Print(string s) => Debug.WriteLine(s);
+class MyConsole : IConsole {
+    private int row = 0;
+    private const int charHeight = 9;
+
+    // I2C Display
+    static I2cController i2c = I2cController.FromName(SC13048.I2cBus.I2c1);
+    static SSD1306Controller ssd1306 = new SSD1306Controller(i2c.GetDevice(new I2cConnectionSettings(0x3d)));
+
+    // Basic Graphics
+    static BasicGraphics basicGfx = new BasicGraphics(128, 64, ColorFormat.OneBpp);
+    public void Cls() { 
+        basicGfx.Clear();
+        this.row = 0;
+    }
+    public void Locate(int row, int col) { }// deprecated!
+    public void Print(string s) {
+        if (row >= (basicGfx.Height / charHeight)) {
+            Cls();
+            row = 0;
+        }
+        basicGfx.DrawString(s, BasicGraphics.ColorFromRgb(0xff, 0xff, 0xff), 0, row * charHeight);
+        ssd1306.DrawBufferNative(basicGfx.Buffer);
+        row++;
+    }
 }
 ```
+The `IConsole` interface is then passed tothe engine.
+
+```cs
+var script = new ScriptEngine();
+var console = new MyConsole();
+script.SetConsole(console);
+script.Run(@"
+    cls
+    print('Hello World!')   
+    cls // will clear the previous prints
+    print('Hello World!')   
+    print   
+    print 'TinyCLR'
+    print ""with DUE""   
+    print 'is the best!'
+");
+```
+
 ## GetGlobalVariables
 
 Returns an array of `Variable` objects for all the global variables. `Variable` has the name, value and a flag indicting if it is a constant or not.

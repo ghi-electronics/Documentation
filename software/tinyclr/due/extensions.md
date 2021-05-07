@@ -1,5 +1,7 @@
 ## DUE - Extensions
+
 ---
+
 Extensions are user defined functions that reside in the environment until called, they are just like any other functions in the script however these functions are provided from the TinyCLR C# side.
 
 

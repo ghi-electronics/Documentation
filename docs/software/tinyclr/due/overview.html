@@ -118,13 +118,12 @@ print x // This is also a comment
 <p>The <code>ScriptEngine</code> takes a script and compiles it and then it will run any top level statements. Any functions and variables are loaded in the environment, and will still be there even when execution has completed.</p>
 <p>This script <code>Foo(x)</code> will raise an error. There is no <code>Foo</code> function and no variable <code>x</code> in the script.</p>
 <p>Now this script is ran:</p>
-<pre><code>x=5
+<pre><code>var x=5
 func Foo(s)
     print s
 end
-</code></pre><p>While the earlier script will not do anything, it actually load the environment with a variable and a function.</p>
+</code></pre><p>While the earlier script will not do anything, it actually loads the environment with a variable and a function.</p>
 <p>Running the first script now works fine <code>Foo(x)</code>.</p>
-<p>Additionally, <code>Run</code> only returns when it has completed running the script. If the script has an infinite loop then <code>Run</code> will never return. A good option would be to spin a thread for <code>Run</code>. The rest fo teh system will continue to run normally and the thread can be terminated to abort <code>Run</code> is desired.</p>
 <hr>
 <h2 id="samples">Samples</h2>
 <h3 id="recursion">Recursion</h3>
@@ -203,7 +202,7 @@ var result = pi_digits(20)
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/Due/software/tinyclr/due/overview.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/due/overview.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -6,7 +6,7 @@
 
 |Statement              |Description                                                            |
 |:----------------------|:----------------------------------------------------------------------|
-|print/cls/locate       |Special Output Console Statements								|
+|print/cls		        |Special Output Console Statements								|
 |print                  |Prints the following expression to the console and moves to the next line |
 |locate                 |Locates where the print will take place in rows, columns               |
 |if/elseif/else         |Conditional execution of the code                                      |
@@ -22,7 +22,7 @@
 
 ## Console Statements
 
-These statements are a quick and dirty way to output information. By default, `locate` and `cls` do not do anything but `print` will simply call `Debug.WriteLine` internally.
+These statements are a quick and dirty way to output information. By default, `cls` does not do anything but `print` will simply call `Debug.WriteLine` internally.
 
 The behavior can be change, to forward the output to a serial port or a display for example. See [API](api.md) page from more details.
 
