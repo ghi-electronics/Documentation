@@ -81,7 +81,7 @@ class MyConsole : IConsole {
     }
 }
 ```
-The `IConsole` interface is then passed tothe engine.
+The `IConsole` interface is then passed to the engine.
 
 ```cs
 var script = new ScriptEngine();
