@@ -1,4 +1,5 @@
 # Display Drivers
+
 ---
 
 This page contains a collection of supported displays. On devices that support internal graphics, a user can subscribe to the drawing event, which in turn sends the image to the screen

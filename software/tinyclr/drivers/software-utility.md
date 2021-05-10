@@ -1,4 +1,5 @@
 # Software Utility Drivers
+
 ---
 
 ## Azure SAS
@@ -52,9 +53,9 @@ var colorWhite = 0x00FFFFFFU;
 
 basicGfx.Clear();
 
-basicGfx.DrawText("Hi Insiders!", colorGreen, 15, 15, 2, 1);
-basicGfx.DrawText("SITCore", colorBlue, 35, 40, 2, 2);
-basicGfx.DrawText("SC13xxx", colorRed, 35, 60, 2, 2);
+basicGfx.DrawString("Hi Insiders!", colorGreen, 15, 15, 2, 1);
+basicGfx.DrawString("SITCore", colorBlue, 35, 40, 2, 2);
+basicGfx.DrawString("SC13xxx", colorRed, 35, 60, 2, 2);
 
 Random color = new Random();
 for (var i = 20; i < 140; i ++)
@@ -74,9 +75,9 @@ var colorWhite = 0x00FFFFFFU;
 
 basicGfx.Clear()
 
-basicGfx.DrawText("Hi Insiders!", colorGreen, 15, 15, 2, 1);
-basicGfx.DrawText("SITCore", colorBlue, 35, 40, 2, 2);
-basicGfx.DrawText("SC13xxx", colorRed, 35, 60, 2, 2);
+basicGfx.DrawString("Hi Insiders!", colorGreen, 15, 15, 2, 1);
+basicGfx.DrawString("SITCore", colorBlue, 35, 40, 2, 2);
+basicGfx.DrawString("SC13xxx", colorRed, 35, 60, 2, 2);
 
 Random color = new Random();
 for (var i = 20; i < 140; i ++)
