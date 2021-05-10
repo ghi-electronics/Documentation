@@ -34,7 +34,7 @@ File | Date | Status | MD5
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.1.0.5000 (RC1)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.5000.ghi) | 2021-04-26 | Release Candidate | 4EF12D4B69133A6EEDD4D73A35B0CCFD
+[v2.1.0.5100 (RC1)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.5100.ghi) | 2021-05-10 | Release Candidate | C77237FACD87F23530CF8B5B2D984830
 
 
 ## TinyCLR Config
