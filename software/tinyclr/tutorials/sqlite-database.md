@@ -18,12 +18,11 @@ namespace SQLiteSample {
             using (var db = new SQLiteDatabase()) {
 
                 Debug.WriteLine("Executing 1...");
-                db.ExecuteNonQuery("CREATE Table Test
-                    (Var1 TEXT, Var2 INTEGER, Var3 DOUBLE);");
+                db.ExecuteNonQuery(
+                    "CREATE Table Test Var1 TEXT, Var2 INTEGER, Var3 DOUBLE);");
 
                 Debug.WriteLine("Executing 2...");
-                db.ExecuteNonQuery("INSERT INTO Test
-                    (Var1, Var2, Var3) VALUES ('Hello, World!', 25, 3.14);");
+                db.ExecuteNonQuery("INSERT INTO Test(Var1, Var2, Var3) VALUES ('Hello, World!', 25, 3.14);");
 
                 Debug.WriteLine("Executing 3...");
                 db.ExecuteNonQuery("INSERT INTO Test
@@ -44,8 +43,7 @@ namespace SQLiteSample {
 
                 //Debug.WriteLine(str);
 
-                foreach (ArrayList i in result.Data)
-                {
+                foreach (ArrayList i in result.Data){
                     str = "";
 
                     foreach (object j in i)
