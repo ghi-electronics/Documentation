@@ -3474,9 +3474,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/sitcore/soc.md",
       "output": {
@@ -4662,12 +4659,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/downloads.md",
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/downloads.html",
-          "hash": "+G2ssbUA2+VG6SWrOVSEdtMD7nP5h9088Nv58Iva/+A="
+          "hash": "G3zMID6MrRw7zqfvGRXcTInTDhb9uZFucJ/HVqMoUS8="
         }
       },
       "is_incremental": false,
@@ -4701,9 +4701,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/drivers/display.md",
       "output": {
@@ -5045,7 +5042,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/drivers/software-utility.html",
-          "hash": "D42CdO4Yd+efJVicqHdLAFbRBRzDRcY2SBIrhDU2PFw="
+          "hash": "2RkbwLtne7H3PoPEGXToqnkxfi/MPgplPfnn+Z++6F4="
         }
       },
       "is_incremental": false,
@@ -7800,7 +7797,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/sqlite-database.html",
-          "hash": "3Owajxvr6+da4+rrKQ+NKGWi429Pihr/LQ4iM5bCtgg="
+          "hash": "3souOrlWfdMxMziTSYtNkxkPuEXM7lNR0sgmztjIfLg="
         }
       },
       "is_incremental": false,
@@ -8024,7 +8021,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 196,
-          "skipped_file_count": 186
+          "skipped_file_count": 193
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
