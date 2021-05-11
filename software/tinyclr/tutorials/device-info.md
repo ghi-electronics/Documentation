@@ -18,9 +18,15 @@ if (DeviceInformation.DebugInterface == DebugInterface.Usb)
    Debug.WriteLine("Debug is in USB mode");
 ```
 
-The return results from `` only states the current interface but it does not know if that is due to MOD pin being set in that mode or the interface was forced to that specific interface. The `DeviceInformation.IsModePinDisabled` can be used to determine if MOD was used.
+The return results from `DeviceInformation.DebugInterface` only states the current interface but it does not know if that is due to MOD pin being set in that mode or the interface was forced to that specific interface. The `DeviceInformation.IsModePinDisabled` can be used to determine if MOD was used.
+
+As an alternate option, users can change the debug interface using [TinyCLR Config](/tutorials/tinclr-config.md) tool.
+
+> [!NOTE]
+> Once the debug interfaces changed or disabled, it may not be possible to communicate with the device anymore. However, changing or disabling the interface does not affect the [bootloader](/tutorials/bootloader.md). Users can always enter the bootloader, which will be in serial or USB depending on MOD pin. From there a `Erase All` can be issues, manually or though the TinyCLR Config tool.
 
 ## APP Pin
+
 The [Special Pin](../special-pins.md) APP's feature can be disabled using:
 
 ```cs
@@ -38,6 +44,7 @@ var deviceId = DeviceInformation.GetUniqueId();
 ```
 
 ## Firmware Info
+
 Returns devices firmware `Version`.
 ```cs
 var major = (ushort)((DeviceInformation.Version >> 48) & 0xFFFF);
@@ -48,12 +55,14 @@ Debug.WriteLine(major +"."+ minor +"."+ build +"."+ revision);
 ```
 
 ## Manufacture Name
+
 Returns `ManufacturerName` information.  
 ```cs
 Debug.WriteLine(DeviceInformation.ManufacturerName);
 ```
 
 ## Device Name
+
 Devices have a default name that they ship with. This can be read using `DeviceInformation.DeviceName`. This name also shows on the USB debug interface. The name can changed only once through `DeviceInformation.SetPersistDeviceName("New Device Name")`. Once set, a complete device erase is required before changing the name again.
 
 > [!TIP]
