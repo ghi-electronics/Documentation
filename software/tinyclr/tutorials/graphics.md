@@ -1,4 +1,5 @@
 # Graphics
+
 ---
 The `GHIElectronics.TinyCLR.Drawing` NuGet package includes the backbone for all graphics needs. It has support for shapes, fonts and bitmaps.
 
@@ -18,7 +19,13 @@ Besides the basic methods above, there are some additional useful methods found 
 
 ---
 
+## BasicGraphics
+
+`BasicGraphics` driver is a simpler alternative that runs on all devices, including small devices without native display support. Learn more about `BasicGraphics` [here.](../drivers/software-utility.md)
+
+
 ## Native Displays
+
 Native display support in TinyCLR OS is handled automatically using the microcontroller's DMA to transfer data in parallel to the display without slowing down your application.
 
 The following example runs on the SCM20260D Dev Board with either the 4.3" or 7" display. You will need to add a font and a small JPG image as [resources](resources.md) to run the code as is.
@@ -129,6 +136,7 @@ displayController.SetConfiguration(new ParallelDisplayControllerSettings {
 ---
 
 ## Virtual Displays
+
 Displays can be virtual, meaning the system handles the drawing in RAM and when `Flush` is called an event is fired with the graphics data that needs to be transferred to the display. This for example can be an SPI display or over-the-network display.
 
 The following sample code runs on our SC20100S Dev Board with its SPI-based display. You will need to add a font and a small JPG image as [resources](resources.md) to run the code as is.
@@ -159,10 +167,10 @@ namespace GraphicsSample {
                 spi.GetDevice(ST7735Controller.GetConnectionSettings
                 (SpiChipSelectType.Gpio, gpio.OpenPin(SC20100.GpioPin.PD10))), //CS pin.
                 gpio.OpenPin(SC20100.GpioPin.PC4), //RS pin.
-                gpio.OpenPin(SC20100.GpioPin.PA15) //RESET pin.
+                gpio.OpenPin(SC20100.GpioPin.PE15) //RESET pin.
             );
 
-            var backlight = gpio.OpenPin(SC20100.GpioPin.PE5);
+            var backlight = gpio.OpenPin(SC20100.GpioPin.PA15);
             backlight.SetDriveMode(GpioPinDriveMode.Output);
             backlight.Write(GpioPinValue.High);
 
@@ -245,6 +253,7 @@ Internally, TinyCLR uses 5:6:5 RGB 16BPP color space. There are helper methods t
 
 ---
 ## 2D Matrix copy
+
 The built-in native 2D Matrix extract/copy is an simple, fast and efficient way to crop out an area of an image. `GroupSize` is the pixel size in bytes. TinyCLR OS is 16bpp graphics, that is `GroupSize = 2`.
 
 ```cs
