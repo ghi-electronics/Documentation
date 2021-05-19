@@ -37,3 +37,54 @@ Ticks | Time
 
 > [!Tip]
 > Default is 1 tick.
+
+## Temperature sensor
+
+SITCore support reading temperature sensor.
+
+```cs
+void ReadTemperatureSensor()
+{
+    var sc20xxx = DeviceInformation.DeviceName.IndexOf("SC20") >= 0 ? true : false;
+
+    var ts_reg1 = sc20xxx ? (IntPtr)0x1FF1E820 : (IntPtr)0x1FFF75A8;
+    var ts_reg2 = sc20xxx ? (IntPtr)0x1FF1E840 : (IntPtr)0x1FFF75CA;
+    var enable_reg = sc20xxx ? (IntPtr)((0x40000000U + 0x18020000 + 0x6300 + 8)) : (IntPtr)(0x40000000U + 0x08000000U + 0x08040300U + 8);
+
+    var controller = sc20xxx ? AdcController.FromName(SC20100.Adc.Controller3.Id) : AdcController.FromName(SC13048.Adc.Controller1.Id);
+    var channel = sc20xxx ? controller.OpenChannel(SC20100.Adc.Controller3.InternalTemperatureSensor) : controller.OpenChannel(SC13048.Adc.Controller1.InternalTemperatureSensor);            
+    var enable_val = Marshal.ReadInt32(enable_reg);
+
+    enable_val |= (1 << 23);
+
+    Marshal.WriteInt32(enable_reg, enable_val);
+
+    while (true)
+    {
+        var v = channel.ReadValue() * 1.0;
+
+     
+        var ts1 = Marshal.ReadInt32(ts_reg1);
+        var ts2 = Marshal.ReadInt32(ts_reg2);
+
+        if (!sc20xxx)
+        {
+            ts1 &= 0xFFFF;
+            ts2 &= 0xFFFF;
+            v *= 1.1;
+        }
+
+        var t1 = (110 - 30) * 1.0;
+        var t2 = (ts2 - ts1) * 1.0;
+        var t3 = (v - ts1) * 1.0;
+
+        var temperature = t1 / t2 * t3 + 30;
+
+        Debug.WriteLine("T = " + temperature + " Celsius");                
+
+        Thread.Sleep(1000);
+    }
+    
+}
+
+```
