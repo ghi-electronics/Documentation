@@ -74,6 +74,27 @@ led=Pin("PA8",Pin.OUT_PP)
 led.high();
 ```
 
+It is also possible to add a loop through REPL. Once a loop statement is entered (ending with `:`) the REPL will automatically indent the following line.
+
+To end the indentation and execute the block, press backspace or del, then enter.
+
+```
+>>> for i in range(10):
+...     print(i)
+...
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+>>>
+```
+
 ---
 
 ## main.py
