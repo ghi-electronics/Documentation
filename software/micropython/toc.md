@@ -16,6 +16,7 @@
 ## Data Buses
 ### [I2C](tutorials/i2c.md)
 ### [SPI](tutorials/spi.md)
+### [UART](tutorials/uart.md)
 
 # [Downloads](downloads.md)
 # [Legal](../../hardware/legal.md)
