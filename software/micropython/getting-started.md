@@ -46,7 +46,54 @@ If the firmware was loaded successfully, the PC will see a virtual memory driver
 
 ---
 
+## REPL
+
+Read Evaluate Print Loop is a very quick way to command and control a MicroPython-running device.
+
+First find out the correct COM port and then start a new Tera Term connection to that port, just like we did with the boot loader. Once connected, the device will respond with something like:
+
+```
+MicroPython v1.15-21-g4dc8024-dirty on 2021-04-30; GHI Electronics SITCore v0.1.0 with SC13048
+>>>
+```
+
+The device can now accept Python code! Try `print(x)` and the device will respond with an error about `x`. Now try `x=10` and then `print(x)`.
+
+```
+>>> x=10
+>>> print(x)
+10
+>>>
+```
+
+This is an example code to turn an activate an LED on pin PA8
+
+```
+from machine import Pin
+led=Pin("PA8",Pin.OUT_PP)
+led.high();
+```
+
+---
+
+## main.py
+
+This special file gets executed in power up. Open the file, from the device's virtual driver, and modify its content to a blink LED. Change the pin number to the LED on the device being used.
+
+```
+from machine import Pin
+import time
+led=Pin("PA8",Pin.OUT_PP)
+while True
+	led.high();
+	time.sleep(0.5)
+	led.low();
+	time.sleep(0.5)
+```
+Save `main.py` and reset the board. The led should be blinking. Use ctrl+C on the terminal to stop the program and go back to REPL.
+
+---
 
 ## Tutorials
 
-The [**tutorials**](tutorials/intro.md) is a good next step.
+Now that the device is running MicroPythin, the [**tutorials**](tutorials/intro.md) is a good next step.
