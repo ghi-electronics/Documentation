@@ -32,7 +32,7 @@ The device is now ready for the MicroPython firmware.
 Download the firmware from the [Downloads](downloads.md) page.
 
 > [!Tip]
-> MicroPython is not available for all products.
+> MicroPython is not available on all products.
 
 Back to Tera Term, press `U` followed by enter. The device will respond with `Are you sure (Y/N)?` Now press 'Y' followed by enter.'
 
@@ -71,7 +71,7 @@ This is an example code to turn an activate an LED on pin PA8
 ```
 from machine import Pin
 led=Pin("PA8",Pin.OUT_PP)
-led.high();
+led.high()
 ```
 
 It is also possible to add a loop through REPL. Once a loop statement is entered (ending with `:`) the REPL will automatically indent the following line.
@@ -94,6 +94,9 @@ To end the indentation and execute the block, press backspace or del, then enter
 9
 >>>
 ```
+
+> [!Tip]
+> For a quick help on a any module, use the help function, like use `help(machine)`.
 
 ---
 
