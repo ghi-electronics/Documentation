@@ -8,6 +8,11 @@
 ### [Time](tutorials/time.md)
 ### [RTC](tutorials/rtc.md)
 
+## Multimedia
+### [Display](tutorials/displays.md)
+### [Graphics](tutorials/graphics.md)
+### [Sounds](tutorials/sounds.md)
+
 ## Pin Level Control
 ### [GPIO](tutorials/gpio.md)
 ### [PWM](tutorials/pwm.md)
