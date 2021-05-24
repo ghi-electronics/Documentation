@@ -7,14 +7,16 @@
 This page explains how to load and use MicroPython on the GHI Electronics supported devices.
 
 ---
+
 ## The Terminal Software
+
 Tera Term is the recommended terminal software but any other software should work. Tera Term is free and widely used. Download Tera Term from the [downloads](downloads.md) page or directly or search the web for downloads.
 
 Unzip the downloaded file and run `ttermpro.exe`. The software will look like the image below.
 
 ![Tera Term](images/teraterm.png)
 
-Go ahead and clock cancel on this page.
+Go ahead and click cancel on this page.
 
 The next step is to put the device in `Loader` mode. This is accomplished by setting LDR pin low during reset or power up. On devices that have LDR button, just hold the LDR button down and continue to hold it down while reseting the board and then release the LDR button. This step will bring the device into loader mode, which will load a new virtual serial port. On windows, the `Device Manager` will look something like the image below.
 
@@ -24,11 +26,12 @@ Go back to Tera Term and, from the top menu, select `File->New connection...`. A
 
 ![Tera Term COM](images/teraterm-opencom.png)
 
-Hit the enter key and the device should respond with `Invalid Command.` Try to hit `v` followed by enter and the device will respond with the boot loader verions number.
+Hit the enter key and the device should respond with `Invalid Command.` Try to hit `v` followed by enter and the device will respond with the boot loader versions number.
 
 The device is now ready for the MicroPython firmware.
 
 ## The MicroPyhon Firmware
+
 Download the firmware from the [Downloads](downloads.md) page.
 
 > [!Tip]
@@ -43,6 +46,12 @@ From top menu, `File->Transfer->XMODEM->Send...`. This is an important, commonly
 Select the downloaded MicroPython file (glb file type) from earlier step. Progress window will show the update status. When upload has completed, reset the board.
 
 If the firmware was loaded successfully, the PC will see a virtual memory driver, just like a USB memory drive. The drive will contain multiple files, one of them is `main.py`, which is what MicroPyhton automatically runs on power up. The device will also bring up a vistual COM port, just like the one used in loader mode but this COM is for the REPL interface.
+
+---
+
+## Activity LED
+
+PA8 pin is a special pin that is used by the system to indicate status. For example, the pin goes high when saving to the internal storage. The Python script can safely use PA8 but anytime the system needs to indicate something it will override the pin and then release it back to the script.
 
 ---
 
@@ -66,7 +75,7 @@ The device can now accept Python code! Try `print(x)` and the device will respon
 >>>
 ```
 
-This is an example code to turn an activate an LED on pin PA8
+This is example code to turn on activate an LED on pin PA8
 
 ```
 from machine import Pin
@@ -114,7 +123,8 @@ while True
 	led.low();
 	time.sleep(0.5)
 ```
-Save `main.py` and reset the board. The led should be blinking. Use ctrl+C on the terminal to stop the program and go back to REPL.
+
+Save `main.py` and wait for the activity LED/pin to go low, then reset the board. The led should be blinking. Use ctrl+C on the terminal to stop the program and go back to REPL.
 
 ---
 
