@@ -14,6 +14,7 @@ Being hardware backed, this feature only runs on specific pins. Those pins can b
 There are two uses for DigitalSignal, reading a signal (capture) and sending a signal (generate). The capture feature also support capturing a stream of durations (signal analyzer) or a pulse counter.
 
 ### Generate
+
 Using the `Generate` function allows the user to create a very accurate signal generator.  
 
 ```cs
@@ -95,6 +96,7 @@ private static void Digital_OnCaptureFinished(DigitalSignal sender, uint[] buffe
 > The first captured pulse will likely have an inaccurate (shorter) value due to system prep-time.
 
 ### ReadPulse
+
 ReadPulse can be used to measure frequency and other analyses that require measuring time duration for specific pulse count.
 
 ```cs
@@ -129,6 +131,7 @@ private static void Digital_OnReadPulseFinished(DigitalSignal sender, TimeSpan d
 
 ---
 ### Abort
+
 An event is fired when any `DigitalSignal` operation is completed. In some cases, it may be desired to terminate the operation early, using `Abort`. When aborted, an event is still triggered, which will contain whatever data/pulses was collected from the trigger to the time `Abort` was called.
 
 ```cs
@@ -272,7 +275,7 @@ var pulseFeedback = new PulseFeedback(capacitiveSensePin,
 
     DisableInterrupts = false,
     Timeout = System.TimeSpan.FromSeconds(1),
-    PulseLength = System.TimeSpan.FromTicks(100),
+    PulseLength = System.TimeSpan.FromMilliseconds(1),
     PulseValue = GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.High,
 };
 

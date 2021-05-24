@@ -13,38 +13,38 @@ This example uses the WS2812 LED but applies to all matrices.
 
 LedMatrix Class
 ```cs
-class LedMatrix : BasicGraphics{
-    private int row, column;
-    WS2812Controller leds;
+class LedMatrix : BasicGraphics {
+	private uint row, column;
+	WS2812Controller leds;
 
-    public LedMatrix(GpioPin pin, int row, int column){
-        this.row = row;
-        this.column = column;
-        var sg = new SignalGenerator(pin);
-        this.leds = new WS2812Controller(sg, this.row * this.column);           
-        Clear();
-    }
+	public LedMatrix(GpioPin pin, uint column, uint row) { 
+		this.row = row;
+		this.column = column;
+		this.leds = new WS2812Controller(pin, this.row * this.column, WS2812Controller.DataFormat.rgb565);
 
-    public override void Clear(){
-        leds.Clear();
-    }
+		Clear();
+	}
 
-    public override void SetPixel(int x, int y, uint color){
-        if (x < 0 || x >= this.column) return;
-        if (y < 0 || y >= this.row) return;
+	public override void Clear() {
+		leds.Clear();
+	}
 
-        // even columns are inverted
-        if((x & 0x01) !=0){
-            y = this.row -1 - y;
-        }
-            
-        var index = x * this.row + y;
+	public override void SetPixel(int x, int y, uint color) {
+		if (x < 0 || x >= this.column) return;
+		if (y < 0 || y >= this.row) return;
 
-        leds.SetColor(index, (int) (color >> 16) & 0xff, (int)(color >> 8) & 0xff, (int)(color >> 0) & 0xff);
-    }
-    public void Flush(){
-        leds.Flush();
-    }
+		// even columns are inverted
+		if ((x & 0x01) != 0) {
+			y = (int)(this.row - 1 - y);
+		}
+
+		var index = x * this.row + y;
+
+		leds.SetColor((int)index, (byte)(color >> 16), (byte)(color >> 8), (byte)(color >> 0));
+	}
+	public void Flush() {
+		leds.Flush();
+	}
 }
 ```
 Use the LEDMatrix Class as shown

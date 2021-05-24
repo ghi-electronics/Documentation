@@ -87,7 +87,10 @@ DeviceInformation.SetDebugInterface(DebugInterface.Serial);
 <p>The current debug interface can be determined as follows:</p>
 <pre><code class="lang-cs">if (DeviceInformation.DebugInterface == DebugInterface.Usb)
    Debug.WriteLine(&quot;Debug is in USB mode&quot;);
-</code></pre><p>The return results from <code>` only states the current interface but it does not know if that is due to MOD pin being set in that mode or the interface was forced to that specific interface. The</code>DeviceInformation.IsModePinDisabled` can be used to determine if MOD was used.</p>
+</code></pre><p>The return results from <code>DeviceInformation.DebugInterface</code> only states the current interface but it does not know if that is due to MOD pin being set in that mode or the interface was forced to that specific interface. The <code>DeviceInformation.IsModePinDisabled</code> can be used to determine if MOD was used.</p>
+<p>As an alternate option, users can change the debug interface using <a href="/tutorials/tinclr-config.md">TinyCLR Config</a> tool.</p>
+<div class="NOTE"><h5>Note</h5><p>Once the debug interfaces changed or disabled, it may not be possible to communicate with the device anymore. However, changing or disabling the interface does not affect the <a href="/tutorials/bootloader.md">bootloader</a>. Users can always enter the bootloader, which will be in serial or USB depending on MOD pin. From there a <code>Erase All</code> can be issues, manually or though the TinyCLR Config tool.</p>
+</div>
 <h2 id="app-pin">APP Pin</h2>
 <p>The <a href="../special-pins.html">Special Pin</a> APP&#39;s feature can be disabled using:</p>
 <pre><code class="lang-cs">DeviceInformation.AppPinDisable();

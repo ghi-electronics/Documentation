@@ -2117,9 +2117,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/netmf/g30.md",
       "output": {
@@ -2156,9 +2153,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/netmf/g80.md",
       "output": {
@@ -2633,9 +2627,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/netmf/intro.md",
       "output": {
@@ -2728,12 +2719,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/sitcore/dev.md",
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/dev.html",
-          "hash": "GK3m2F+lmKDp9EHH4XFLDXdTUzYyoL8+tVks5EEa5QE="
+          "hash": "iPQAXRbyCZ4lBUzrQOUvYyUS3Ve5ws9Xal16ToPdxX8="
         }
       },
       "is_incremental": false,
@@ -2796,6 +2790,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/fez-flea.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/fez-flea.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/fez-pico-pinout.png",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/fez-pico-pinout.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "hardware/sitcore/images/fez-stick-side-pads.jpg",
       "output": {
         "resource": {
@@ -2844,6 +2860,28 @@
       "output": {
         "resource": {
           "relative_path": "hardware/sitcore/images/fez_feather.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/fez_flea_pinout.png",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/fez_flea_pinout.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/fez_pico.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/fez_pico.jpg"
         }
       },
       "is_incremental": false,
@@ -2950,10 +2988,32 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "hardware/sitcore/images/sbc.png",
+      "source_relative_path": "hardware/sitcore/images/sc13048q-footprint.gif",
       "output": {
         "resource": {
-          "relative_path": "hardware/sitcore/images/sbc.png"
+          "relative_path": "hardware/sitcore/images/sc13048q-footprint.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/sc13048q-pinout.gif",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/sc13048q-pinout.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/sc13048q.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/sc13048q.jpg"
         }
       },
       "is_incremental": false,
@@ -3159,6 +3219,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/sitcore-sbc.png",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/sitcore-sbc.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "hardware/sitcore/images/sitcore.png",
       "output": {
         "resource": {
@@ -3213,9 +3284,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/sitcore/intro.md",
       "output": {
@@ -3273,6 +3341,39 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "hardware/sitcore/pdfs/fez-flea-rev-b-schematic.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/pdfs/fez-flea-rev-b-schematic.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/pdfs/fez-pico-pinout.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/pdfs/fez-pico-pinout.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/pdfs/fez-pico-rev-d-schematic.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/pdfs/fez-pico-rev-d-schematic.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "hardware/sitcore/pdfs/fez-portal-rev-c-schematic.pdf",
       "output": {
         "resource": {
@@ -3288,6 +3389,28 @@
       "output": {
         "resource": {
           "relative_path": "hardware/sitcore/pdfs/fez-stick-rev-b-schematic.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/pdfs/fez_flea_pinout.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/pdfs/fez_flea_pinout.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/pdfs/sc13048q-dev-rev-b-schematic.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/pdfs/sc13048q-dev-rev-b-schematic.pdf"
         }
       },
       "is_incremental": false,
@@ -3467,19 +3590,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/sbc.html",
-          "hash": "ghkubX6tPmSTOPRosVj6XgfYJXjsZVsESBJz7Bqzjqs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "hardware/sitcore/soc.md",
-      "output": {
-        ".html": {
-          "relative_path": "hardware/sitcore/soc.html",
-          "hash": "zHiBQt8OPc4RDtC/gh1/Zb4a6Ei0G7WuaQoUvV8BFt4="
+          "hash": "L5Z0a/wKqf1iUmd6Z7QPX8XJlO4NDXZk4R6IUQZ+oFs="
         }
       },
       "is_incremental": false,
@@ -3489,6 +3600,18 @@
       "log_codes": [
         "InvalidYamlHeader"
       ],
+      "type": "Conceptual",
+      "source_relative_path": "hardware/sitcore/soc.md",
+      "output": {
+        ".html": {
+          "relative_path": "hardware/sitcore/soc.html",
+          "hash": "bgkcesZ7ZT8sdXV2ndgWwoiI1IIGPEwfswWVaw36wm8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "hardware/sitcore/som.md",
       "output": {
@@ -3513,9 +3636,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/ucm/development-options.md",
       "output": {
@@ -3934,15 +4054,284 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
           "hash": "hJsq3Vu5GUTpqJNh5Xxb368fPxTSa0Y+8xnWqEYS4CA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "software/micropython/downloads.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/micropython/downloads.html",
+          "hash": "fdT4iRI7RmDHKqKQM6MHSpCL58tSDABQ+rUjUTKVeok="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/micropython/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/micropython/getting-started.html",
+          "hash": "kjd3Hw7xY62JFKyUpQnBc4Amtfz33ede38fx1Og/zrU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/micropython/images/device-manager-com.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/micropython/images/device-manager-com.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/micropython/images/downloads.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/micropython/images/downloads.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/micropython/images/getting-started.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/micropython/images/getting-started.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/micropython/images/teraterm-opencom.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/micropython/images/teraterm-opencom.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/micropython/images/teraterm.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/micropython/images/teraterm.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/micropython/images/tutorials.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/micropython/images/tutorials.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/micropython/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/micropython/intro.html",
+          "hash": "OuROL7xRuWap1UJQO7VNzXj3ji79X05tlvDzYB6yfTg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "software/micropython/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/micropython/toc.html",
+          "hash": "QS2Mdm4c03QrmoHmAO6e/Nraci47AZXOSXWrEVtwc2w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/micropython/tutorials/analog-in.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/micropython/tutorials/analog-in.html",
+          "hash": "NWj0Ra4I+xj+n7MfgXQW216SDR3m1N2z/ZPWKWPKmis="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/micropython/tutorials/displays.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/micropython/tutorials/displays.html",
+          "hash": "gCjnnP21t7SvrvLAMHs8yZiuftJI0H7w66yO88aABMs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/micropython/tutorials/gpio.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/micropython/tutorials/gpio.html",
+          "hash": "ka85EDtxAyD59RfsOra++azAgMt7clcPxLOlNOnJPQ4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/micropython/tutorials/graphics.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/micropython/tutorials/graphics.html",
+          "hash": "8hfJzrg91VZmENiB3xsfX1/OolOm44EXplwIZTwaev0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/micropython/tutorials/i2c.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/micropython/tutorials/i2c.html",
+          "hash": "RI3cZdPdIjYkgxSqeAlGzOV/FhSFmNWG30OXUPYenOY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/micropython/tutorials/images/tutorials.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/micropython/tutorials/images/tutorials.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/micropython/tutorials/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/micropython/tutorials/intro.html",
+          "hash": "w9Zu0Jid6qhs8B56pLqc+RckrQ5p9uGvy8PHktY/2iY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/micropython/tutorials/pwm.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/micropython/tutorials/pwm.html",
+          "hash": "r1cyfZmdAtxz+PmoJv8uk1BHWkdEqi2sajqxC1onWa0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/micropython/tutorials/rtc.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/micropython/tutorials/rtc.html",
+          "hash": "Y9u9c0qdIc6ppoy+mvP/zQ2lB/tK4btxwaxx4iVNS4I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/micropython/tutorials/sounds.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/micropython/tutorials/sounds.html",
+          "hash": "2eB511txfnYuMq6vEUmubkM1C6tCG6xcCSp0CKWeL1E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/micropython/tutorials/spi.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/micropython/tutorials/spi.html",
+          "hash": "tLlAUDtMYZXG75qwi8I9yXJHR8/oYmmBBYpdMGh1Lic="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/micropython/tutorials/time.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/micropython/tutorials/time.html",
+          "hash": "CAfe18v/tulfrw9yJMLdrR+FLP/kRy/7445O3jvjZ94="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/micropython/tutorials/uart.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/micropython/tutorials/uart.html",
+          "hash": "ckk/uTaFYLDs1K4asfWFliY6uNWcknlU4yR6j3VX/M0="
         }
       },
       "is_incremental": false,
@@ -4172,9 +4561,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/netmf/intro.md",
       "output": {
@@ -4961,7 +5347,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/drivers/intro.html",
-          "hash": "fhrKjB5pujKM6ODWIAouorpN29iCCtWzFhTY6sXcIRg="
+          "hash": "b8K4L4iFli50s28Oaz6vdl8A/fbNGgALGGJhVBuVs8I="
         }
       },
       "is_incremental": false,
@@ -4991,7 +5377,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/drivers/led.html",
-          "hash": "ajqvkvNZXm+3JmcxHBmhp4gOCQ6KRu42edczttXa/sk="
+          "hash": "6r3Mac5gfZ3iGytLPNH13q//yxtw66iFAqAen8wHuPk="
         }
       },
       "is_incremental": false,
@@ -5042,7 +5428,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/drivers/software-utility.html",
-          "hash": "2RkbwLtne7H3PoPEGXToqnkxfi/MPgplPfnn+Z++6F4="
+          "hash": "Zx+JZok09/9RMdu6Egu3WqXjqa1Nt/XZI1Wrxagdkao="
         }
       },
       "is_incremental": false,
@@ -5662,12 +6048,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/intro.md",
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/intro.html",
-          "hash": "HtZcjTJso3bJdCzQcHznCjPa5OnN7z7oCDK9ERpmDWg="
+          "hash": "REBB8BJKt7+NC8d7m5Ro1LPzG5RR8lWgFixVfKPXJ+Y="
         }
       },
       "is_incremental": false,
@@ -5775,7 +6164,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/analog-in.html",
-          "hash": "98mcLvaAze9Q0/wFpunWHiXsBK8EC34OShoftxNMqy4="
+          "hash": "9sEO/NDuFVeIbRilEx4dexbt2V26UKttYJMLtfw3ya8="
         }
       },
       "is_incremental": false,
@@ -5931,7 +6320,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/device-info.html",
-          "hash": "Nlurhn0fdB+xVbmvW+arr0vk2CjiQ2HGINvFiw79MZU="
+          "hash": "CqOhbcCqwm7bTGMTO++j4AnVdSMZ5et/Ydr9HJLuyWQ="
         }
       },
       "is_incremental": false,
@@ -6039,7 +6428,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/graphics.html",
-          "hash": "4ZPbjX2R36pUv3Bacj/PyymGh4LOam0Hhht0PvD2P0M="
+          "hash": "roDjPX/dQTQyBwDMHJQyBgjJXN5pLZ7T1a8HRvoELmE="
         }
       },
       "is_incremental": false,
@@ -6099,7 +6488,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/image-decoders.html",
-          "hash": "NfqZn+o7FuOetdSMkdlnq6rUP/yHEdyjDxm1/BtrhmQ="
+          "hash": "fUUTW/v2YzS2U0a+CnvwhGODMJmb5x3kzh5sPO1/62c="
         }
       },
       "is_incremental": false,
@@ -7768,12 +8157,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/signal-control.md",
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/signal-control.html",
-          "hash": "qdRU+81PG3DjDKZVZQCbQTdz8HJsqhx2MvOGvjAJaN4="
+          "hash": "qKTe/OO9ekH/RxhbIAN3yzf2Uu2UJxB8nEBj3P5ca08="
         }
       },
       "is_incremental": false,
@@ -7797,7 +8189,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/sqlite-database.html",
-          "hash": "3souOrlWfdMxMziTSYtNkxkPuEXM7lNR0sgmztjIfLg="
+          "hash": "najiB5JKC+6/VSaluyrHxa4Y3MLKuIBJ4oKDA6Zmztk="
         }
       },
       "is_incremental": false,
@@ -8020,8 +8412,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 196,
-          "skipped_file_count": 193
+          "total_file_count": 211,
+          "skipped_file_count": 209
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

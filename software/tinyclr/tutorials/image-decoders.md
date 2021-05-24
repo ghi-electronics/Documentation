@@ -23,5 +23,13 @@ var imageY = 0;
 screen.DrawImage(imageBitmap, imageX, imageY);
 ```
 
+## Saving Bitmaps 
+Image class supports saving Bitmaps in a file stream format using the following code sample:
+
+```cs
+var bm = new Bitmap(data, width, height);
+bm.Save(yourFilestream, System.Drawing.Imaging.ImageFormat.Bmp);
+```
+
 ## Video playback
 Video playback can be achieved through [Motion JPEG](mjpeg-video.md).

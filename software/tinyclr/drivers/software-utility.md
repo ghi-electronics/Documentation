@@ -11,11 +11,9 @@ This utility NuGet adds SAS generation used in Azure. See [Microsoft Azure](../t
 
 ## Basic Graphics
 
-Basic Graphics driver is used when deployment space is needed for projects and simple graphics are only needed. 
+`BasicGraphics` driver is a simpler alternative that runs on all devices, including small devices without native display support. It contains many useful methods for adding simple graphics,including: `SetPixel`, `DrawLine`, `DrawRectangle`, `DrawCircle`, `DrawString`, and `DrawCharacter`. It also includes support for a micro 5px font through `DrawTinyCharacter` and `DrawTinyString`.
 
-Basic Graphics contains many useful methods for adding simple graphics. Included in the driver are `SetPixel`,`DrawLine`,`DrawRectangle`,`DrawCircle`,`DrawString`, and `DrawCharacter`. It also includes support for a micro 5px font through `DrawTinyCharacter` and `DrawTinyString`.
-
-There are 2 differences between `DrawCharacter` and `DrawTinyCharacter`, beside the font size! DrawCharacter can accept scaling to enlarge the font, `DrawTinyCharacter` does not. Also, `DrawCharacter` will only set pixels and does not clears blanks. `DrawTinyCharacter` has the same behavior by default but it has a `clear` option to set the blanks to 0(black).
+There are 2 differences between `DrawCharacter` and `DrawTinyCharacter`, beside the font size! DrawCharacter can accept scaling to enlarge the font, `DrawTinyCharacter` does not. Also, `DrawCharacter` will only set pixels and does not clear blanks. `DrawTinyCharacter` has the same behavior by default but it has a `clear` option to set the blanks to 0 (black).
 
 There are two ways to use BasicGraphics, the first one is agnostic of what display is being used and simply works by calling `SetPixel` method that must be overridden by the user. The user has 2 options, either send the pixel directly to the display or buffer the pixels in a "Video RAM" working buffer and then flush to the screen when desired. Setting the pixels directly on the screen requires zero memory but it is extremely slow.
 

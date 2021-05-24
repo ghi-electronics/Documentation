@@ -130,7 +130,192 @@ namespace SQLiteSample {
         }
     }
 }
-</code></pre><h2 id="more-info">More Info</h2>
+</code></pre><h2 id="omitted-commands--features">Omitted commands &amp; features</h2>
+<p>In order to reduce the memory requirements, some commands and features of SQLite have been omitted. Below is a table of those omitted features.
+For more information regarding these omissions see the <a href="https://www.sqlite.org/compile.html">SQLite Website.</a> </p>
+<table>
+<thead>
+<tr>
+<th>Omitted Command or Feature</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ALTER TABLE</strong></td>
+<td>Executing the statement causes a parse error</td>
+</tr>
+<tr>
+<td><strong>ANALYZE</strong></td>
+<td>Command omitted from the build</td>
+</tr>
+<tr>
+<td><strong>ATTACH</strong></td>
+<td>ATTACH and DETACH commands are omitted</td>
+</tr>
+<tr>
+<td><strong>REINDEX</strong></td>
+<td>Executing the statement causes a parse error</td>
+</tr>
+<tr>
+<td><strong>AUTOMATIC INDEX</strong></td>
+<td>Feature omitted from the build</td>
+</tr>
+<tr>
+<td><strong>AUTHORIZATION</strong></td>
+<td>Authorization callback feature omitted</td>
+</tr>
+<tr>
+<td><strong>AUTOINCREMENT</strong></td>
+<td>Feature omitted from the build</td>
+</tr>
+<tr>
+<td><strong>AUTOVACCUM</strong></td>
+<td>Feature omitted from the build</td>
+</tr>
+<tr>
+<td><strong>BETWEEN OPTIMIZATION</strong></td>
+<td>Disables WHERE clause terms that use BETWEEN operator</td>
+</tr>
+<tr>
+<td><strong>BLOB LITERAL</strong></td>
+<td>Not possible to specify a blob in an SQL statement using X&#39;ABCD&#39; syntax</td>
+</tr>
+<tr>
+<td><strong>COMPOUND SELECT</strong></td>
+<td>SELECT that use UNION, UNION ALL, INTERSECT or EXCEPT will cause a parse error.</td>
+</tr>
+<tr>
+<td><strong>INSERT</strong></td>
+<td>Cannot insert more than a single row using an INSERT INTO...VALUES statement</td>
+</tr>
+<tr>
+<td><strong>CTE</strong></td>
+<td>Common Table Expressions omitted from the build</td>
+</tr>
+<tr>
+<td><strong>DATETIME FUNCS</strong></td>
+<td>SQL functions julianday(), date(), time(), datetime() and strftime() are not available</td>
+</tr>
+<tr>
+<td><strong>DEPRECATED</strong></td>
+<td>Omitted support for interfaces marked deprecated by SQLite</td>
+</tr>
+<tr>
+<td><strong>EXPLAIN</strong></td>
+<td>Executing the statement causes a parse error</td>
+</tr>
+<tr>
+<td><strong>FLAG PRAGMAS</strong></td>
+<td>PRAGMA commands that query and set boolean properties omitted</td>
+</tr>
+<tr>
+<td><strong>FOREIGN KEY</strong></td>
+<td>Foreign key constraint syntax is not recognized</td>
+</tr>
+<tr>
+<td><strong>HEX INTEGER</strong></td>
+<td>Support for Hexadecimal integer literals omitted</td>
+</tr>
+<tr>
+<td><strong>INCRBLOB</strong></td>
+<td>Support for incremental BLOB I/O omitted</td>
+</tr>
+<tr>
+<td><strong>INTEGRITY CHECK</strong></td>
+<td>Support for integrity check pragma omitted</td>
+</tr>
+<tr>
+<td><strong>LIKE OPTIMIZATION</strong></td>
+<td>Feature to help resolve LIKE and GLOB operators in a WHERE clause omitted</td>
+</tr>
+<tr>
+<td><strong>LOAD EXTENSION</strong></td>
+<td>Extension loading mechanism omitted</td>
+</tr>
+<tr>
+<td><strong>LOCALTIME</strong></td>
+<td>&quot;localtime&quot; modifier from the date and time functions omitted</td>
+</tr>
+<tr>
+<td><strong>LOOKASIDE</strong></td>
+<td>Lookaside memory allocator omitted</td>
+</tr>
+<tr>
+<td><strong>OR OPTIMIZATION</strong></td>
+<td>Index together with terms of a WHERE clause connected by the OR operator, disabled.</td>
+</tr>
+<tr>
+<td><strong>PAGER PRAGMAS</strong></td>
+<td>Pragmas related to the pager subsystem omitted from the build</td>
+</tr>
+<tr>
+<td><strong>PRAGMA</strong></td>
+<td>P ragma command has been omitted</td>
+</tr>
+<tr>
+<td><strong>PROGRESS CALLBACK</strong></td>
+<td>&quot;progress&quot; callbacks capability during long-running SQL statements omitted.</td>
+</tr>
+<tr>
+<td><strong>QUICKBALANCE</strong></td>
+<td>Omitted an alternative, faster B-Tree balancing routine.</td>
+</tr>
+<tr>
+<td><strong>SCHEMA PRAGMAS</strong></td>
+<td>Pragmas for querying the database schema from the build omitted</td>
+</tr>
+<tr>
+<td><strong>SCHEMA VERSION PRAGMAS</strong></td>
+<td>Pragmas for querying &amp; modifying the database schema and user versions omitted</td>
+</tr>
+<tr>
+<td><strong>SHARED CACHE</strong></td>
+<td>Support for shared-cache mode has been omitted</td>
+</tr>
+<tr>
+<td><strong>SUBQUERY</strong></td>
+<td>Support for sub-selects and the IN() operator are omitted.</td>
+</tr>
+<tr>
+<td><strong>TCL VARIABLE</strong></td>
+<td>&quot;$&quot; syntax used to automatically bind SQL variables to TCL variables is omitted.</td>
+</tr>
+<tr>
+<td><strong>TEMPDB</strong></td>
+<td>Support for TEMP or TEMPORARY tables omitted</td>
+</tr>
+<tr>
+<td><strong>TRACE</strong></td>
+<td>Sqlite3_profile() and sqlite3_trace() interfaces and their associated logic omitted</td>
+</tr>
+<tr>
+<td><strong>TRIGGER</strong></td>
+<td>TRIGGER objects omitted. CREATE TRIGGER or DROP TRIGGER commands are unavailable</td>
+</tr>
+<tr>
+<td><strong>TRUNCATE OPTIMIZATION</strong></td>
+<td>Removing this feature only affects the speed of operation</td>
+</tr>
+<tr>
+<td><strong>UTF16</strong></td>
+<td>Support for UTF16 text encoding has been omitted.</td>
+</tr>
+<tr>
+<td><strong>VIRTUALTABLE</strong></td>
+<td>Virtual Table mechanism in SQLite omitted.</td>
+</tr>
+<tr>
+<td><strong>XFER OPT</strong></td>
+<td>Removed optimization that help INSERT INTO...SELECT...run faster</td>
+</tr>
+<tr>
+<td><strong>WAL</strong></td>
+<td>Write-ahead log capability omitted.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="more-info">More Info</h2>
 <p>Further details on SQLite can be found at the official SQLite website <a href="http://www.sqlite.org/">http://www.sqlite.org/</a></p>
 </article>
           </div>

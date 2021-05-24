@@ -1,41 +1,38 @@
 # Single Board Computers
 ---
-![Single Board Computer](images/sbc.png)
+![Single Board Computer](images/sitcore-sbc.png)
 
 We offer multiple single board computers to provide the lowest possible barrier to entering the world of TinyCLR OS. Most of these boards have WiFi and they all support the complete TinyCLR feature set. These boards are great for trying out TinyCLR OS, building prototypes, or incorporating into products.
 
-> [!Note]
-> All SITCore single board computers use a USB-C connector for application deployment and debugging. While USB-C has many advantages, we've also noticed some flaws. Every USB-A to USB-C cable tested worked as expected. Testing USB-C to USB-C cables gave interesting and unexpected results. Most USB-C hubs also do not work when using USB-C to USB-C cables. If you are having problems deploying or debugging, try connecting the board directly to your computer with a USB-A to USB-C cable.
-
 ## Specifications and Peripherals
 
-|                            |                 |                 |                 |                         |                 |
-|----------------------------|-----------------|-----------------|-----------------|-------------------------|-----------------|
-|                            | **FEZ Bit**     | **Fez Duino**   | **FEZ Feather** | **Fez Portal**          | **FEZ Stick**   |
-| **Core**                   | SC20100S        | SC20100S        | SC20100S        | SC20260N                | SC20100S        |
-| **External SDRAM**         | X               | X               | X               | 32 MByte                | X               |
-| **External Flash**         | X               | 16 MByte        | X               | 16 MByte                | X               |
-| **Display**                | 1.8" 160x128    | X               | X               | 4.3" 480x272 Cap. Touch | X               |
-| **Click Connectors**       | X               | X               | X               | 1                       | 2               |
-| **WiFi**                   | Yes             | Yes             | Yes             | Yes                     | X               |
-| **Micro SD**               | Yes             | Yes             | X               | Yes                     | X               |
-| **User LED**               | Yes             | Yes             | Yes             | Yes                     | Yes             |
-| **Buzzer**                 | Yes             | X               | X               | Yes                     | X               |
-| **Accelerometer**          | Yes             | X               | X               | X                       | X               |
-| **User Buttons**           | Yes             | Yes             | Yes             | Yes                     | Yes             |
-| **USB Client**             | Yes             | Yes             | Yes             | Yes                     | Yes             |
-| **USB Host Connector**     | X               | Yes             | X               | Yes                     | Yes             |
-| **LiPo Charger**           | X               | X               | Yes             | X                       | X               |
-| **Power Barrel**           | X               | Yes             | X               | X                       | X               |
-| **GPIO**                   | 19              | 38              | 31              | 45                      | 33              |
-| **SPI**                    | 1               | 2               | 2               | 3                       | 2               |
-| **I2C**                    | 1               | 2               | 1               | 1                       | 2               |
-| **UART**                   | 3 (0 w/ HS)     | 5 (2 w/ HS)     | 5 (1 w/ HS)     | 6 (1 w/ HS)             | 3 (1 w/ HS)     |
-| **CAN**                    | 1               | 1               | 1               | 2                       | 1               |
-| **PWM**                    | 8               | 12              | 8               | 17                      | 6               |
-| **ADC**                    | 8               | 11              | 6               | 10                      | 3               |
-| **DAC**                    | 1               | 2               | 1               | 2                       | X               |
-| **SD/SDIP/MMC**            | 1               | 1               | 1               | 1                       | 1               |
+|                        |                 |                |                 |                 |                 |                |                         |
+|------------------------|-----------------|----------------|-----------------|-----------------|-----------------|----------------|-------------------------|
+|                        | **FEZ Flea**    | **FEZ Pico**   | **FEZ Feather** | **FEZ Stick**   | **FEZ Bit**     | **Fez Duino**  | **Fez Portal**          | 
+| **Core**               | SC13048Q        | SC13048Q       | SC20100S        | SC20100S        | SC20100S        | SC20100S       | SC20260N                | 
+| **External SDRAM**     | X               | X              | X               | X               | X               | X              | 32 MByte                |
+| **External Flash**     | X               | X              | X               | X               | X               | 16 MByte       | 16 MByte                |
+| **Display**            | X               | X              | X               | X               | 1.8" 160x128    | X              | 4.3" 480x272 Cap. Touch |
+| **Click Connectors**   | X               | X              | X               | 2               | X               | X              | 1                       |
+| **WiFi**               | X               | X              | Yes             | X               | Yes             | Yes            | Yes                     |
+| **Micro SD**           | X               | X              | X               | X               | Yes             | Yes            | Yes                     |
+| **User LED**           | Yes             | Yes            | Yes             | Yes             | Yes             | Yes            | Yes                     |
+| **Buzzer**             | X               | X              | X               | X               | Yes             | X              | Yes                     |
+| **Accelerometer**      | X               | X              | X               | X               | Yes             | X              | X                       |
+| **User Buttons**       | X               | X              | Yes             | Yes             | Yes             | Yes            | Yes                     |
+| **USB Client**         | Yes             | Yes            | Yes             | Yes             | Yes             | Yes            | Yes                     |
+| **USB Host Connector** | X               | X              | X               | Yes             | X               | Yes            | Yes                     |
+| **LiPo Charger**       | X               | X              | Yes             | X               | X               | X              | X                       |
+| **Power Barrel**       | X               | X              | X               | X               | X               | Yes            | X                       |
+| **GPIO**               | 11              | 26             | 31              | 33              | 19              | 38             | 45                      |
+| **SPI**                | 1               | 2              | 2               | 2               | 1               | 2              | 3                       |
+| **I2C**                | 2               | 1              | 1               | 2               | 1               | 2              | 1                       |
+| **UART**               | 3 (1 w/ HS)     | 3 (1 w/ HS)    | 5 (1 w/ HS)     | 3 (1 w/ HS)     | 3 (0 w/ HS)     | 5 (2 w/ HS)    | 6 (1 w/ HS)             |
+| **CAN**                | X               | 1              | 1               | 1               | 1               | 1              | 2                       |
+| **PWM**                | 4               | 7              | 8               | 6               | 8               | 12             | 17                      |
+| **ADC**                | 6               | 5              | 6               | 3               | 8               | 11             | 10                      | 
+| **DAC**                | 1               | 1              | 1               | X               | 1               | 2              | 2                       | 
+| **SD/SDIP/MMC**        | X               | X              | 1               | 1               | 1               | 1              | 1                       | 
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
 
@@ -44,22 +41,16 @@ We offer multiple single board computers to provide the lowest possible barrier 
 ## Power Consumption
 The 'Running' power consumption totals include all other on board components, such as WiFi & Display.
 
-### FEZ Portal
+### FEZ Flea/Pico Power
 
-|                        | 480MHz          |   240MHz        |           
-|------------------------|-----------------|-----------------|
-| **Running**            | 375mA           | 345mA           |
-| **Idle**               | 270mA           | 255mA           |
-| **Sleep**              | 17mA            | 17mA            | 
-| **Shutdown**           | 9.7mA           | 9.7mA           |
+|                       | 80MHz           | 40MHz           |          
+|-----------------------|-----------------|-----------------|
+| **Running**           | 12.6mA          | 7.5mA           |
+| **Idle**              | 6.2mA           | 4.2mA           |
+| **Sleep**             | 1.4mA           | 1.4mA           |
+| **Shutdown**          | 23uA            | 23uA            |
 
-> [!Tip]
-> Display backlight is included when Running and in Idle, but off in Sleep and Shutdown.
-
-> [!Tip]
-> Enabling WiFi adds up to 300mA.
-
-### FEZ Duino/Stick/Feather
+### FEZ Duino/Stick/Feather Power
 
 |                       | 480MHz          |   240MHz        |          
 |-----------------------|-----------------|-----------------|
@@ -71,7 +62,7 @@ The 'Running' power consumption totals include all other on board components, su
 > [!Tip]
 > Enabling WiFi (when available) adds up to 300mA. Battery charging on FEZ Feather adds up to 500mA.
 
-### FEZ Bit
+### FEZ Bit Power
 
 |                       | 480MHz          |   240MHz        |          
 |-----------------------|-----------------|-----------------|
@@ -86,7 +77,141 @@ The 'Running' power consumption totals include all other on board components, su
 > [!Tip]
 > Enabling WiFi adds up to 300mA.
 
+### FEZ Portal Power
+
+|                        | 480MHz          |   240MHz        |           
+|------------------------|-----------------|-----------------|
+| **Running**            | 375mA           | 345mA           |
+| **Idle**               | 270mA           | 255mA           |
+| **Sleep**              | 17mA            | 17mA            | 
+| **Shutdown**           | 9.7mA           | 9.7mA           |
+
+> [!Tip]
+> Display backlight is included when Running and in Idle, but off in Sleep and Shutdown.
+
+> [!Tip]
+> Enabling WiFi adds up to 300mA.
+
 See the [Power Management](http://docs.ghielectronics.com/software/tinyclr/tutorials/power-management.html) tutorial 
+
+---
+
+## USB-C Functionality
+
+All SITCore single board computers use a USB-C connector for application deployment and debugging. While USB-C has many advantages, we've also noticed some flaws. Every USB-A to USB-C cable tested worked as expected. Testing USB-C to USB-C cables gave interesting and unexpected results. Most USB-C hubs also do not work when using USB-C to USB-C cables. If you are having problems deploying or debugging, try connecting the board directly to your computer with a USB-A to USB-C cable.
+
+---
+
+## FEZ Flea
+
+![FEZ Flea](images/fez-flea.jpg)
+
+The **FEZ Flea** is the most cost effective way to dive into TinyCLR OS. With it's Seeeduino Xiao form factor it can be used with many existing accessories on the market. The board also has castellated  and through-hole pins. Making it ideal for using as a SoM or on a breadboard.
+
+[FEZ Flea Schematic](pdfs/fez-flea-rev-b-schematic.pdf)
+
+[FEZ Flea STEP file](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Flea%20Rev%20B.step)
+
+[![FEZ Flea](images/fez_flea_pinout.png)](pdfs/fez_flea_pinout.pdf)
+
+### FEZ Flea Peripheral Pin
+
+|                   |             |
+|-------------------|-------------|
+| **User LED**      | PA8         |
+|                   |             |
+| **Button**        | LDR = PC13  |
+
+---
+
+## FEZ Pico
+
+![FEZ Pico](images/fez_pico.jpg)
+
+The **FEZ Pico** uses the Raspberry Pi Pico form factor allowing it drop into existing Pico accessories. The FEZ Pico also contains an JST connector for adding after market expandability. 
+
+[FEZ Pico Schematic](pdfs/fez-pico-rev-d-schematic.pdf)
+
+[FEZ Pico STEP file](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Pico%20Rev%20D.step)
+
+[![FEZ Pico](images/fez-pico-pinout.png)](pdfs/fez-pico-pinout.pdf)
+
+### FEZ Pico Peripheral Pin
+
+|                   |             |
+|-------------------|-------------|
+| **User LED**      | PA8         |
+|                   |             |
+| **Button**        | LDR = PC13  |
+
+---
+
+## FEZ Feather
+
+![FEZ Feather](images/fez_feather.jpg)
+
+The Adafruit Feather form factor boards are made to be stackable and have built-in support for 3.7V LiPo batteries with a charging circuit. The **FEZ Feather** provides both through hole pads and castellated edges making it both breadboard friendly and easy to build into products.
+
+>[!Caution]
+>Lithium Polymoer(Li-Po) batteries are significantly more volatile than other rechargable batteries. Make sure you have an understand of how to properly charge and use them before connecting to the FEZ Feather. Never attempt to charge a damaged or swollen battery. Never leave battery charging unattended. Improper use could result in fire.
+
+>[!Warning]
+>Be very careful to ensure the correct polarity of LiPo batteries before connecting them to the FEZ Feather. Reverse polarity will damage the charging circuit, and not all batteries are wired correctly. GHI Electronics is not responsible for, and will not warranty, damage caused by incorrectly connected batteries.
+
+Make sure the battery polarity is correct as shown below (red wire to plus, black to minus):
+
+![FEZ Feather Battery Connection](images/battery-connect.jpg)
+
+>[!Caution]
+>The 3.3v regulator may run hot, especially when WiFi is in use. You can add 3.3V regulator externally to eliminate this heat issue, and this is needed if adding any external components that draw more than 10mA.
+
+[FEZ Feather Schematic](pdfs/fez-feather-rev-b-schematic.pdf)
+
+[FEZ Feather 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Feather%20Rev%20B.step)
+
+### FEZ Feather Peripheral Pins
+
+|                   |             |
+|-------------------|-------------|
+| **User LED**      | PE11        |
+|                   |             |
+| **WiFi**          | SPI = SPI3  |
+|                   | IRQ = PB12  |
+|                   | CS = PD15   |
+|                   | EN = PA8    |
+|                   | RST = PB13  |
+|                   |             |
+| **Buttons**       | LDR = PE3   |
+|                   | APP = PB7   |
+
+---
+
+## FEZ Stick
+
+![FEZ Stick](images/fez_stick.jpg)
+
+The **FEZ Stick** is a cost effective way to easily get started with TinyCLR OS. While providing an inexpensive way for the uninitiated to try TinyCLR OS, we've provided castellated edges as well as through hole pads to make it breadboard friendly and easy to embed into products. Also, there's actually space for two click modules, making this a very versatile board at a very affordable price!
+
+![FEZ Stick Side Pads](images/fez-stick-side-pads.jpg)
+
+> [!Note]
+> FEZ Stick REV. B pin PB13 MISO is mislabeled on the silk screen and should read PE13 MISO
+
+>[!Caution]
+>The onboard 3.3v regulator is only capable of running external components of an additional 50mA. If more current is necessary, then add an additional external 3.3V regulator.
+
+[FEZ Stick Schematic](pdfs/fez-stick-rev-b-schematic.pdf)
+
+[FEZ Stick 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Stick%20Rev%20B.step)
+
+### FEZ Stick Peripheral Pins
+
+|                   |             |
+|-------------------|-------------|
+| **User LED**      | PE11        |
+|                   |             |
+| **Buttons**       | LDR = PE3   |
+|                   | APP = PB7   |
 
 ---
 
@@ -191,45 +316,6 @@ The **FEZ Duino** provides female headers that make use of the popular Arduino p
 
 ---
 
-## FEZ Feather
-
-![FEZ Feather](images/fez_feather.jpg)
-
-The Adafruit Feather form factor boards are made to be stackable and have built-in support for 3.7V LiPo batteries with a charging circuit. The **FEZ Feather** provides both through hole pads and castellated edges making it both breadboard friendly and easy to build into products.
-
->[!Caution]
->Lithium Polymoer(Li-Po) batteries are significantly more volatile than other rechargable batteries. Make sure you have an understand of how to properly charge and use them before connecting to the FEZ Feather. Never attempt to charge a damaged or swollen battery. Never leave battery charging unattended. Improper use could result in fire.
-
->[!Warning]
->Be very careful to ensure the correct polarity of LiPo batteries before connecting them to the FEZ Feather. Reverse polarity will damage the charging circuit, and not all batteries are wired correctly. GHI Electronics is not responsible for, and will not warranty, damage caused by incorrectly connected batteries.
-
-Make sure the battery polarity is correct as shown below (red wire to plus, black to minus):
-
-![FEZ Feather Battery Connection](images/battery-connect.jpg)
-
->[!Caution]
->The 3.3v regulator may run hot, especially when WiFi is in use. You can add 3.3V regulator externally to eliminate this heat issue, and this is needed if adding any external components that draw more than 10mA.
-
-[FEZ Feather Schematic](pdfs/fez-feather-rev-b-schematic.pdf)
-
-[FEZ Feather 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Feather%20Rev%20B.step)
-
-### FEZ Feather Peripheral Pins
-
-|                   |             |
-|-------------------|-------------|
-| **User LED**      | PE11        |
-|                   |             |
-| **WiFi**          | SPI = SPI3  |
-|                   | IRQ = PB12  |
-|                   | CS = PD15   |
-|                   | EN = PA8    |
-|                   | RST = PB13  |
-|                   |             |
-| **Buttons**       | LDR = PE3   |
-|                   | APP = PB7   |
-
----
 
 ## FEZ Portal
 
@@ -264,36 +350,3 @@ Already one of our most popular SITCore single board computers, The **FEZ Portal
 |                   | APP = PB7       |
 
 ---
-
-## FEZ Stick
-
-![FEZ Stick](images/fez_stick.jpg)
-
-The **FEZ Stick** is simply the least expensive way to easily get started with TinyCLR OS. While providing an inexpensive way for the uninitiated to try TinyCLR OS, we've provided castellated edges as well as through hole pads to make it breadboard friendly and easy to embed into products. Also, there's actually space for two click modules, making this a very versatile board at a very affordable price!
-
-![FEZ Stick Side Pads](images/fez-stick-side-pads.jpg)
-
-> [!Note]
-> FEZ Stick REV. B pin PB13 MISO is mislabeled on the silk screen and should read PE13 MISO
-
->[!Caution]
->The onboard 3.3v regulator is only capable of running external components of an additional 50mA. If more current is necessary, then add an additional external 3.3V regulator.
-
-[FEZ Stick Schematic](pdfs/fez-stick-rev-b-schematic.pdf)
-
-[FEZ Stick 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Stick%20Rev%20B.step)
-
-
-### FEZ Stick Peripheral Pins
-
-|                   |             |
-|-------------------|-------------|
-| **User LED**      | PE11        |
-|                   |             |
-| **Buttons**       | LDR = PE3   |
-|                   | APP = PB7   |
-
-
-
-
-
