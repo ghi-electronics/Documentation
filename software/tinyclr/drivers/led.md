@@ -17,10 +17,10 @@ class LedMatrix : BasicGraphics {
 	private uint row, column;
 	WS2812Controller leds;
 
-	public LedMatrix(GpioPin pin, uint column, uint row) : base(column, row, ColorFormat.Rgb565) {
+	public LedMatrix(GpioPin pin, uint column, uint row) { 
 		this.row = row;
 		this.column = column;
-		this.leds = new WS2812Controller(pin, this.row * this.column, this.Buffer);
+		this.leds = new WS2812Controller(pin, this.row * this.column, WS2812Controller.DataFormat.rgb565);
 
 		Clear();
 	}
