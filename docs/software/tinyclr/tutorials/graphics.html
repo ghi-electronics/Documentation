@@ -121,6 +121,8 @@
 </tbody>
 </table>
 <hr>
+<h2 id="basicgraphics">BasicGraphics</h2>
+<p><code>BasicGraphics</code> driver is a simpler alternative that runs on all devices, including small devices without native display support. Learn more about <code>BasicGraphics</code> <a href="../drivers/software-utility.html">here.</a></p>
 <h2 id="native-displays">Native Displays</h2>
 <p>Native display support in TinyCLR OS is handled automatically using the microcontroller&#39;s DMA to transfer data in parallel to the display without slowing down your application.</p>
 <p>The following example runs on the SCM20260D Dev Board with either the 4.3&quot; or 7&quot; display. You will need to add a font and a small JPG image as <a href="resources.html">resources</a> to run the code as is.</p>
@@ -246,10 +248,10 @@ namespace GraphicsSample {
                 spi.GetDevice(ST7735Controller.GetConnectionSettings
                 (SpiChipSelectType.Gpio, gpio.OpenPin(SC20100.GpioPin.PD10))), //CS pin.
                 gpio.OpenPin(SC20100.GpioPin.PC4), //RS pin.
-                gpio.OpenPin(SC20100.GpioPin.PA15) //RESET pin.
+                gpio.OpenPin(SC20100.GpioPin.PE15) //RESET pin.
             );
 
-            var backlight = gpio.OpenPin(SC20100.GpioPin.PE5);
+            var backlight = gpio.OpenPin(SC20100.GpioPin.PA15);
             backlight.SetDriveMode(GpioPinDriveMode.Output);
             backlight.Write(GpioPinValue.High);
 

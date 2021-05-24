@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Device Information </title>
+    <title>GPIO </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Device Information ">
+    <meta name="title" content="GPIO ">
     <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -76,43 +76,34 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="device-information">Device Information</h1>
+<h1 id="gpio">GPIO</h1>
 
 <hr>
-<h2 id="debug-interface">Debug Interface</h2>
-<p>MOD pin is normally used to select the debug interface as explained in the <a href="debugging.html">Debugging</a> tutorial. However, the MOD pin feature can be disabled and the debug interface can be forced to a specific interface.</p>
-<pre><code class="lang-cs">DeviceInformation.SetDebugInterface(DebugInterface.Usb);
-DeviceInformation.SetDebugInterface(DebugInterface.Serial);
-</code></pre><p>The debug interface can be completely disabled for the managed application&#39;s <a href="ip-protection.html">IP Protection</a> <code>DeviceInformation.SetDebugInterface(DebugInterface.Disable);</code></p>
-<p>The current debug interface can be determined as follows:</p>
-<pre><code class="lang-cs">if (DeviceInformation.DebugInterface == DebugInterface.Usb)
-   Debug.WriteLine(&quot;Debug is in USB mode&quot;);
-</code></pre><p>The return results from <code>DeviceInformation.DebugInterface</code> only states the current interface but it does not know if that is due to MOD pin being set in that mode or the interface was forced to that specific interface. The <code>DeviceInformation.IsModePinDisabled</code> can be used to determine if MOD was used.</p>
-<p>As an alternate option, users can change the debug interface using <a href="/tutorials/tinclr-config.md">TinyCLR Config</a> tool.</p>
-<div class="NOTE"><h5>Note</h5><p>Once the debug interfaces changed or disabled, it may not be possible to communicate with the device anymore. However, changing or disabling the interface does not affect the <a href="/tutorials/bootloader.md">bootloader</a>. Users can always enter the bootloader, which will be in serial or USB depending on MOD pin. From there a <code>Erase All</code> can be issues, manually or though the TinyCLR Config tool.</p>
+<p>Microcontrollers include pins that can be controlled through software. They can be logical inputs or outputs, hence the name &quot;general purpose input/output&quot;.</p>
+<p>The <code>Pin</code> class is uses to access GPIOs, located in the <code>machine</code> library.</p>
+<pre><code>from machine import Pin
+</code></pre><h2 id="digital-outputs">Digital Outputs</h2>
+<p>A digital output pin can be set to either high or low. High means that there is approx. 3.3V on the output pin. When the pin is set to low, it&#39;s voltage will be very close to zero.</p>
+<pre><code>led=Pin(&quot;PA8&quot;,Pin.OUT_PP)
+led.high()
+</code></pre><h2 id="digital-inputs">Digital Inputs</h2>
+<p>Digital inputs sense the state of a pin based on its voltage. Minimum voltage on most pins is 0 volts; a negative voltage may damage the pin or the processor. Most processors run on 3.3V, the highest voltage a pin should see is 3.3V. However, some processors that are powered by 3.3V are 5V tolerant -- they can withstand up to 5V on their inputs. SITCore is 5V tolerant.</p>
+<div class="WARNING"><h5>Warning</h5><p>5V tolerant doesn&#39;t mean the processor can be powered by 5V, only that the input pins can tolerate 5V.</p>
 </div>
-<h2 id="app-pin">APP Pin</h2>
-<p>The <a href="../special-pins.html">Special Pin</a> APP&#39;s feature can be disabled using:</p>
-<pre><code class="lang-cs">DeviceInformation.AppPinDisable();
-var appDisPin = DeviceInformation.IsAppPinDisabled();
-</code></pre><p><a href="../tinyclr-config.html">TinyCLR Config</a> tool can also be used to disable APP feature.</p>
-<h2 id="unique-id">Unique ID</h2>
-<p>Returns devices <code>UniqueId</code></p>
-<pre><code class="lang-cs">var deviceId = DeviceInformation.GetUniqueId();
-</code></pre><h2 id="firmware-info">Firmware Info</h2>
-<p>Returns devices firmware <code>Version</code>.</p>
-<pre><code class="lang-cs">var major = (ushort)((DeviceInformation.Version &gt;&gt; 48) &amp; 0xFFFF);
-var minor = (ushort)((DeviceInformation.Version &gt;&gt; 32) &amp; 0xFFFF);
-var build = (ushort)((DeviceInformation.Version &gt;&gt; 16) &amp; 0xFFFF);
-var revision = (ushort)((DeviceInformation.Version &gt;&gt; 0) &amp; 0xFFFF);
-Debug.WriteLine(major +&quot;.&quot;+ minor +&quot;.&quot;+ build +&quot;.&quot;+ revision);
-</code></pre><h2 id="manufacture-name">Manufacture Name</h2>
-<p>Returns <code>ManufacturerName</code> information.  </p>
-<pre><code class="lang-cs">Debug.WriteLine(DeviceInformation.ManufacturerName);
-</code></pre><h2 id="device-name">Device Name</h2>
-<p>Devices have a default name that they ship with. This can be read using <code>DeviceInformation.DeviceName</code>. This name also shows on the USB debug interface. The name can changed only once through <code>DeviceInformation.SetPersistDeviceName(&quot;New Device Name&quot;)</code>. Once set, a complete device erase is required before changing the name again.</p>
-<div class="TIP"><h5>Tip</h5><p>Since Windows caches the name when loading the driver, Windows <code>Device Manager</code> will still show the old name. Simply right-click on the device and uninstall the driver. The next time it installs the drivers it will update with the new name.</p>
-</div>
+<p>Unconnected input pins are called &quot;floating.&quot; A resistor can be added to pull the pin high or low. Modern processors include internal pull-up and pull-down resistors that are controlled by software.</p>
+<p>The code sample below uses an internal pull-up resistor to set the button high. When the button is pressed the <code>GpioPinValue</code> goes low. </p>
+<pre><code>button = Pin(&quot;PB7&quot;, Pin.IN, Pin.PULL_UP)
+button.value()
+</code></pre><h2 id="digital-input-interrupts">Digital Input Interrupts</h2>
+<p>Instead of polling a pin to determine it state, a function can be called when a pin is changed.</p>
+<pre><code>def ButtonHandler(p)
+    print(&quot;Pressed&quot;, p)
+
+button = Pin(&quot;PB7&quot;, Pin.IN, Pin.PULL_UP)
+button.irq(trigger=Pin.IRQ_FALLING, handler=ButtonHandler)
+</code></pre><p>Whenever the button is pressed (Falling Edge), the <code>print</code> will show &quot;Button&quot; flowed by the pin that caused the event. In this case it will show:</p>
+<pre><code>Button Pin(Pin.cpu.B7, mode=Pin.IN, pull=Pin.PULL_UP)
+</code></pre><p>For further clarification, try <code>print(button)</code> and observe the output <code>Pin(Pin.cpu.B7, mode=Pin.IN, pull=Pin.PULL_UP)</code>.</p>
 </article>
           </div>
           
@@ -121,7 +112,7 @@ Debug.WriteLine(major +&quot;.&quot;+ minor +&quot;.&quot;+ build +&quot;.&quot;
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/device-info.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/micropython/tutorials/gpio.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

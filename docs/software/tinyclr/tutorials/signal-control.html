@@ -278,7 +278,7 @@ var pulseFeedback = new PulseFeedback(capacitiveSensePin,
 
     DisableInterrupts = false,
     Timeout = System.TimeSpan.FromSeconds(1),
-    PulseLength = System.TimeSpan.FromTicks(100),
+    PulseLength = System.TimeSpan.FromMilliseconds(1),
     PulseValue = GHIElectronics.TinyCLR.Devices.Gpio.GpioPinValue.High,
 };
 

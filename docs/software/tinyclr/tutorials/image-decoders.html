@@ -97,6 +97,10 @@ var imageX = 0;
 var imageY = 0;
 
 screen.DrawImage(imageBitmap, imageX, imageY);
+</code></pre><h2 id="saving-bitmaps">Saving Bitmaps</h2>
+<p>Image class supports saving Bitmaps in a file stream format using the following code sample:</p>
+<pre><code class="lang-cs">var bm = new Bitmap(data, width, height);
+bm.Save(yourFilestream, System.Drawing.Imaging.ImageFormat.Bmp);
 </code></pre><h2 id="video-playback">Video playback</h2>
 <p>Video playback can be achieved through <a href="mjpeg-video.html">Motion JPEG</a>.</p>
 </article>

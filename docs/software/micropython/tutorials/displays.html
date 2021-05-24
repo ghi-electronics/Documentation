@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Device Information </title>
+    <title>Displays </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Device Information ">
+    <meta name="title" content="Displays ">
     <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -76,43 +76,12 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="device-information">Device Information</h1>
+<h1 id="displays">Displays</h1>
 
 <hr>
-<h2 id="debug-interface">Debug Interface</h2>
-<p>MOD pin is normally used to select the debug interface as explained in the <a href="debugging.html">Debugging</a> tutorial. However, the MOD pin feature can be disabled and the debug interface can be forced to a specific interface.</p>
-<pre><code class="lang-cs">DeviceInformation.SetDebugInterface(DebugInterface.Usb);
-DeviceInformation.SetDebugInterface(DebugInterface.Serial);
-</code></pre><p>The debug interface can be completely disabled for the managed application&#39;s <a href="ip-protection.html">IP Protection</a> <code>DeviceInformation.SetDebugInterface(DebugInterface.Disable);</code></p>
-<p>The current debug interface can be determined as follows:</p>
-<pre><code class="lang-cs">if (DeviceInformation.DebugInterface == DebugInterface.Usb)
-   Debug.WriteLine(&quot;Debug is in USB mode&quot;);
-</code></pre><p>The return results from <code>DeviceInformation.DebugInterface</code> only states the current interface but it does not know if that is due to MOD pin being set in that mode or the interface was forced to that specific interface. The <code>DeviceInformation.IsModePinDisabled</code> can be used to determine if MOD was used.</p>
-<p>As an alternate option, users can change the debug interface using <a href="/tutorials/tinclr-config.md">TinyCLR Config</a> tool.</p>
-<div class="NOTE"><h5>Note</h5><p>Once the debug interfaces changed or disabled, it may not be possible to communicate with the device anymore. However, changing or disabling the interface does not affect the <a href="/tutorials/bootloader.md">bootloader</a>. Users can always enter the bootloader, which will be in serial or USB depending on MOD pin. From there a <code>Erase All</code> can be issues, manually or though the TinyCLR Config tool.</p>
-</div>
-<h2 id="app-pin">APP Pin</h2>
-<p>The <a href="../special-pins.html">Special Pin</a> APP&#39;s feature can be disabled using:</p>
-<pre><code class="lang-cs">DeviceInformation.AppPinDisable();
-var appDisPin = DeviceInformation.IsAppPinDisabled();
-</code></pre><p><a href="../tinyclr-config.html">TinyCLR Config</a> tool can also be used to disable APP feature.</p>
-<h2 id="unique-id">Unique ID</h2>
-<p>Returns devices <code>UniqueId</code></p>
-<pre><code class="lang-cs">var deviceId = DeviceInformation.GetUniqueId();
-</code></pre><h2 id="firmware-info">Firmware Info</h2>
-<p>Returns devices firmware <code>Version</code>.</p>
-<pre><code class="lang-cs">var major = (ushort)((DeviceInformation.Version &gt;&gt; 48) &amp; 0xFFFF);
-var minor = (ushort)((DeviceInformation.Version &gt;&gt; 32) &amp; 0xFFFF);
-var build = (ushort)((DeviceInformation.Version &gt;&gt; 16) &amp; 0xFFFF);
-var revision = (ushort)((DeviceInformation.Version &gt;&gt; 0) &amp; 0xFFFF);
-Debug.WriteLine(major +&quot;.&quot;+ minor +&quot;.&quot;+ build +&quot;.&quot;+ revision);
-</code></pre><h2 id="manufacture-name">Manufacture Name</h2>
-<p>Returns <code>ManufacturerName</code> information.  </p>
-<pre><code class="lang-cs">Debug.WriteLine(DeviceInformation.ManufacturerName);
-</code></pre><h2 id="device-name">Device Name</h2>
-<p>Devices have a default name that they ship with. This can be read using <code>DeviceInformation.DeviceName</code>. This name also shows on the USB debug interface. The name can changed only once through <code>DeviceInformation.SetPersistDeviceName(&quot;New Device Name&quot;)</code>. Once set, a complete device erase is required before changing the name again.</p>
-<div class="TIP"><h5>Tip</h5><p>Since Windows caches the name when loading the driver, Windows <code>Device Manager</code> will still show the old name. Simply right-click on the device and uninstall the driver. The next time it installs the drivers it will update with the new name.</p>
-</div>
+<p>See the <a href="graphics.html">Graphics</a> tutorial on details on how to draw using the display drivers below.</p>
+<h2 id="ss1306">SS1306</h2>
+<p>Drivers for this commonly available display are built in. Pull in the drivers using <code>from displays pull ssd1306</code>.</p>
 </article>
           </div>
           
@@ -121,7 +90,7 @@ Debug.WriteLine(major +&quot;.&quot;+ minor +&quot;.&quot;+ build +&quot;.&quot;
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/device-info.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/micropython/tutorials/displays.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
