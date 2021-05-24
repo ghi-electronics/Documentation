@@ -18,7 +18,7 @@ Reasons to use TinyCLR OS over MicroPython:
 * Full fledged debugging experience.
 * Works with world-class Microsoft Visual Studio.
 * NuGet cloud hosted libraries.
-* C# is C's bug sister, which is the global language for coding, especially on small devices.
+* C# is C's big sister, which is the global language for coding, especially on small devices.
 
 The GHI Electronics fork of MicroPython is found [here](https://www.github.com/ghi-electronics/micropython). 
 
