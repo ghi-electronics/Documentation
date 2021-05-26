@@ -26,7 +26,7 @@ if (Power.GetSystemClock() == SystemClock.Low) {
 }
 ```
 
-Calling `Power.Reset()` will retain the set clock speed but hardware reset or power cycle will revert to the default state.
+When not persisted, calling `Power.Reset()` will retain the set clock speed, but hardware reset (reset pin) or power cycle will revert to the default state.
 
 ## Sleep 
 In this mode, most of the system features are disabled. A GPIO or RTC interrupt can be used to wake the system and resume operations.
