@@ -24,15 +24,16 @@ device.WriteRead(...);              //This is good for reading register
 Users have the option to drive (bit bang) I2C bus in software over any of the available GPIOs.
 
 ```cs
-var provider = new GHIElectronics.TinyCLR.Devices.I2c.Provider.
-    I2cControllerSoftwareProvider(sdaPin, sclPin);
+var sda = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PB9);
+var scl = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PB8);
+
+var controllers = I2cController.FromName(SC20260.I2cBus.Software, sda, scl);
 ```
 
 The internal pull-ups on the GPIO pins used by software I2C can be enabled. This is sufficient in most cases but adding 2.2K external is better.
 
 ```cs
-var provider = new GHIElectronics.TinyCLR.Devices.I2c.Provider.
-    I2cControllerSoftwareProvider(sdaPin, sclPin, true);
+var controllers = I2cController.FromName(SC20260.I2cBus.Software, sda, scl, true);
 ```
 
 > [!Tip]
