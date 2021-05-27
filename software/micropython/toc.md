@@ -24,4 +24,5 @@
 ### [UART](tutorials/uart.md)
 
 # [Downloads](downloads.md)
+# [Release Notes](release-notes.md)
 # [Legal](../../hardware/legal.md)

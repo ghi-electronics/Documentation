@@ -46,3 +46,11 @@ Learn MicroPython embedded programming. </br> [**Learn more...**](tutorials/intr
 Necessary Downloads. </br> [**Learn more...**](downloads.md)
 
 ---
+
+## Release Notes
+
+[![Release Notes](images/tinyclr-logo.png)](release-notes.md)
+
+Find the latest changes to MicroPython. </br> [**Learn more...**](release-notes.md) 
+
+---

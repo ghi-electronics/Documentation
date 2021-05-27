@@ -20,6 +20,7 @@ Preview | Preview of the next release, not quite ready for production use.
 
 File | Date | Status | Core | MD5
 --- | --- | --- | --- | ---
+[SC13xxx v0.2.0](http://files.ghielectronics.com/downloads/MicroPython/Firmwares/SITCore/SITCore-SC13-MP-Firmware-v0.2.0.glb) | 2021-05-27 | Preview | v1.15-21 | D955CAED3261E44CE385B678987F94BF
 [SC13xxx v0.1.0](http://files.ghielectronics.com/downloads/MicroPython/Firmwares/SITCore/SITCore-SC13-MP-Firmware-v0.1.0.glb) | 2021-04-30 | Preview | v1.15-21 | A5FABF3250B796C5AC9C112FB7F30AA0
 
 ## Tera Term
@@ -34,20 +35,3 @@ File | Date | Status | Core | MD5
 ## Roadmap
 
 MicroPython port to some of GHI Electronics devices is available to enhance the developer's productivity. While the main focus is still on TinyCLR OS, the adoption rate will determine how much resources will go into evolving MicroPython.
-
----
-
-## Release notes
-
-### 0.1.0 Preview
-
-Released 2021-04-30
-
-
-#### Changes
-
-- Initial Release!
-
-#### Known Issues
-
-- TBD on future releases!
