@@ -23,6 +23,6 @@
 ### [SPI](tutorials/spi.md)
 ### [UART](tutorials/uart.md)
 
-# [Release Notes](release-notes.md)
 # [Downloads](downloads.md)
+# [Release Notes](release-notes.md)
 # [Legal](../../hardware/legal.md)

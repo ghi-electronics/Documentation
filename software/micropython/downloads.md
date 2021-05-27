@@ -35,20 +35,3 @@ File | Date | Status | Core | MD5
 ## Roadmap
 
 MicroPython port to some of GHI Electronics devices is available to enhance the developer's productivity. While the main focus is still on TinyCLR OS, the adoption rate will determine how much resources will go into evolving MicroPython.
-
----
-
-## Release notes
-
-### 0.1.0 Preview
-
-Released 2021-04-30
-
-
-#### Changes
-
-- Initial Release!
-
-#### Known Issues
-
-- TBD on future releases!
