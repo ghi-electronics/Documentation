@@ -4,6 +4,8 @@
 
 Pulse Width Modulation is used to generate frequencies on a pin, or to control the level of power given to a pin.
 
+Current implementation prides PWM through `Timer`.
+
 This example will sweep through frequency:
 
 ```py

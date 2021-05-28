@@ -25,3 +25,6 @@ print("Hello")
 time.sleep_ms(1000)
 print("there!")
 ```
+## Up Time
+
+The `time.time()` returns the seconds count since the system reset.
