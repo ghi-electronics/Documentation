@@ -2,6 +2,8 @@
 
 # [Getting Started](getting-started.md)
 
+# [Debugging](debugging.md)
+
 # [Tutorials](tutorials/intro.md)
 
 ## Multimedia

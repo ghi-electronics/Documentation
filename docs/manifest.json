@@ -4067,6 +4067,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "software/micropython/debugging.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/micropython/debugging.html",
+          "hash": "zTQNMG2arOROHD8jFZdBB7IjKWuvbirwCeSp8V/Eqgg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "software/micropython/downloads.md",
       "output": {
         ".html": {
@@ -4117,6 +4129,17 @@
       "output": {
         "resource": {
           "relative_path": "software/micropython/images/getting-started.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/micropython/images/headlights.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/micropython/images/headlights.png"
         }
       },
       "is_incremental": false,
@@ -4196,7 +4219,7 @@
       "output": {
         ".html": {
           "relative_path": "software/micropython/toc.html",
-          "hash": "X30YxLeC+spfABt2S/Ej3C/NYWSiqEfY/vcXWCtEC/k="
+          "hash": "t9Ybzernk4Hho2ldVxAmNO0OCoSlQ90nHxjwTkh3LsU="
         }
       },
       "is_incremental": false,
@@ -8435,8 +8458,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 212,
-          "skipped_file_count": 212
+          "total_file_count": 213,
+          "skipped_file_count": 213
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
