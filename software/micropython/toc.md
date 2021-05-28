@@ -4,10 +4,6 @@
 
 # [Tutorials](tutorials/intro.md)
 
-## OS Features
-### [Time](tutorials/time.md)
-### [RTC](tutorials/rtc.md)
-
 ## Multimedia
 ### [Display](tutorials/displays.md)
 ### [Graphics](tutorials/graphics.md)
@@ -22,6 +18,10 @@
 ### [I2C](tutorials/i2c.md)
 ### [SPI](tutorials/spi.md)
 ### [UART](tutorials/uart.md)
+
+## Other Features
+### [Time](tutorials/time.md)
+### [RTC](tutorials/rtc.md)
 
 # [Downloads](downloads.md)
 # [Release Notes](release-notes.md)

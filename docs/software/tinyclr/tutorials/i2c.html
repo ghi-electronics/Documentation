@@ -93,11 +93,12 @@ device.Write(new byte[] { 1, 2 });  //Write something
 device.WriteRead(...);              //This is good for reading register
 </code></pre><h2 id="software-i2c">Software I2C</h2>
 <p>Users have the option to drive (bit bang) I2C bus in software over any of the available GPIOs.</p>
-<pre><code class="lang-cs">var provider = new GHIElectronics.TinyCLR.Devices.I2c.Provider.
-    I2cControllerSoftwareProvider(sdaPin, sclPin);
+<pre><code class="lang-cs">var sda = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PB9);
+var scl = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PB8);
+
+var controllers = I2cController.FromName(SC20260.I2cBus.Software, sda, scl);
 </code></pre><p>The internal pull-ups on the GPIO pins used by software I2C can be enabled. This is sufficient in most cases but adding 2.2K external is better.</p>
-<pre><code class="lang-cs">var provider = new GHIElectronics.TinyCLR.Devices.I2c.Provider.
-    I2cControllerSoftwareProvider(sdaPin, sclPin, true);
+<pre><code class="lang-cs">var controllers = I2cController.FromName(SC20260.I2cBus.Software, sda, scl, true);
 </code></pre><div class="TIP"><h5>Tip</h5><p>Software generated buses are slower and use more resources, but can be used on any pins.</p>
 </div>
 </article>

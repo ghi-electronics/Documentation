@@ -16,6 +16,8 @@
 
 - No PWM. Use timer instead.
 
+---
+
 ## v0.1.0 
 
 ### Released 2021-04-30
