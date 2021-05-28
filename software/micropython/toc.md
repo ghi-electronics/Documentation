@@ -4,10 +4,6 @@
 
 # [Tutorials](tutorials/intro.md)
 
-## OS Features
-### [Time](tutorials/time.md)
-### [RTC](tutorials/rtc.md)
-
 ## Multimedia
 ### [Display](tutorials/displays.md)
 ### [Graphics](tutorials/graphics.md)
@@ -23,5 +19,10 @@
 ### [SPI](tutorials/spi.md)
 ### [UART](tutorials/uart.md)
 
+## Other Features
+### [Time](tutorials/time.md)
+### [RTC](tutorials/rtc.md)
+
 # [Downloads](downloads.md)
+# [Release Notes](release-notes.md)
 # [Legal](../../hardware/legal.md)

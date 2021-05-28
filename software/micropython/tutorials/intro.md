@@ -1,4 +1,4 @@
-# TinyCLR Tutorials
+# MicroPython Tutorials
 ---
 ![Learn More](../images/tutorials.png)
 

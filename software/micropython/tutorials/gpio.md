@@ -6,7 +6,7 @@ Microcontrollers include pins that can be controlled through software. They can 
 
 The `Pin` class is uses to access GPIOs, located in the `machine` library.
 
-```
+```py
 from machine import Pin
 ```
 
@@ -14,7 +14,7 @@ from machine import Pin
 
 A digital output pin can be set to either high or low. High means that there is approx. 3.3V on the output pin. When the pin is set to low, it's voltage will be very close to zero.
 
-```
+```py
 led=Pin("PA8",Pin.OUT_PP)
 led.high()
 ```
@@ -30,7 +30,7 @@ Unconnected input pins are called "floating." A resistor can be added to pull th
 
 The code sample below uses an internal pull-up resistor to set the button high. When the button is pressed the `GpioPinValue` goes low. 
 
-```
+```py
 button = Pin("PB7", Pin.IN, Pin.PULL_UP)
 button.value()
 ```
@@ -39,7 +39,7 @@ button.value()
 
 Instead of polling a pin to determine it state, a function can be called when a pin is changed.
 
-```
+```py
 def ButtonHandler(p)
 	print("Pressed", p)
 
@@ -49,7 +49,7 @@ button.irq(trigger=Pin.IRQ_FALLING, handler=ButtonHandler)
 
 Whenever the button is pressed (Falling Edge), the `print` will show "Button" flowed by the pin that caused the event. In this case it will show:
 
-```
+```py
 Button Pin(Pin.cpu.B7, mode=Pin.IN, pull=Pin.PULL_UP)
 ```
 

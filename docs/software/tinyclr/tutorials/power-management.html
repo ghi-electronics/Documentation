@@ -94,7 +94,7 @@ if (Power.GetSystemClock() == SystemClock.High) {
     Power.SetSystemClock(SystemClock.High, false);
     Power.Reset();
 }
-</code></pre><p>Calling <code>Power.Reset()</code> will retain the set clock speed but hardware reset or power cycle will revert to the default state.</p>
+</code></pre><p>When not persisted, calling <code>Power.Reset()</code> will retain the set clock speed, but hardware reset (reset pin) or power cycle will revert to the default state.</p>
 <h2 id="sleep">Sleep</h2>
 <p>In this mode, most of the system features are disabled. A GPIO or RTC interrupt can be used to wake the system and resume operations.</p>
 <div class="NOTE"><h5>Note</h5><p>Don&#39;t forget to configure the interrupt and interrupt handler for the pin that will be used to wake up from Sleep.</p>

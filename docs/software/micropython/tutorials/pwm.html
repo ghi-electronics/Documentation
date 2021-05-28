@@ -80,8 +80,9 @@
 
 <hr>
 <p>Pulse Width Modulation is used to generate frequencies on a pin, or to control the level of power given to a pin.</p>
+<p>Current implementation prides PWM through <code>Timer</code>.</p>
 <p>This example will sweep through frequency:</p>
-<pre><code>from machine import Pin, Timer
+<pre><code class="lang-py">from machine import Pin, Timer
 import time
 
 p = Pin(&#39;PA5&#39;) # PA5 has TIM2, CH1
@@ -92,7 +93,7 @@ for f in range(500, 1800):
     tim.freq(f)
     time.sleep(0.01)
 </code></pre><p>This example will brighten up an LED, from 1% to 100%, by changing the duty cycle:</p>
-<pre><code>from machine import Pin, Timer
+<pre><code class="lang-py">from machine import Pin, Timer
 import time
 
 p = Pin(&#39;PA5&#39;) # PA5 has TIM2, CH1

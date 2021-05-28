@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> </title>
+    <title>Graphics </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" ">
+    <meta name="title" content="Graphics ">
     <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -76,8 +76,27 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h1 id="graphics">Graphics</h1>
 
-</article>
+<hr>
+<p>The built in <a href="displays.html">Display</a> support includes a graphics library. the flowing methods draw to a frame buffer. Calling <code>display.show()</code> will send the frame buffer to the screen.</p>
+<pre><code class="lang-py">display.fill(0)                         # fill entire screen with color=0
+display.pixel(0, 10)                    # get pixel at x=0, y=10
+display.pixel(0, 10, 1)                 # set pixel at x=0, y=10 to color=1
+display.hline(0, 8, 4, 1)               # draw horizontal line x=0, y=8, width=4, color=1
+display.vline(0, 8, 4, 1)               # draw vertical line x=0, y=8, height=4, color=1
+display.line(0, 0, 127, 63, 1)          # draw a line from 0,0 to 127,63
+display.rect(10, 10, 107, 43, 1)        # draw a rectangle outline 10,10 to 107,43, color=1
+display.fill_rect(10, 10, 107, 43, 1)   # draw a solid rectangle 10,10 to 107,43, color=1
+display.text(&#39;Hello World&#39;, 0, 0, 1)    # draw some text at x=0, y=0, color=1
+display.scroll(20, 0)                   # scroll 20 pixels to the right
+</code></pre><p>It is also possible to create other frame buffers, which are then rendered on top the display&#39;s frame buffer.&#39;</p>
+<pre><code class="lang-py">import framebuf
+fbuf = framebuf.FrameBuffer(bytearray(8 * 8 * 1), 8, 8, framebuf.MONO_VLSB)
+fbuf.line(0, 0, 7, 7, 1)
+display.blit(fbuf, 10, 10, 0)           # draw on top at x=10, y=10, key=0
+display.show()
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
