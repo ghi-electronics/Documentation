@@ -8,7 +8,7 @@ See the [Graphics](graphics.md) tutorial on details on how to draw using the dis
 
 Drivers for this commonly available display are built in. Pull in the drivers using `from displays pull ssd1306`.
 
-```
+```py
 from machine import I2C
 import ssd1306
 
@@ -22,7 +22,7 @@ display.show()
 
 The display driver also includes other helper methods.
 
-```
+```py
 display.poweroff()     # power off the display, pixels persist in memory
 display.poweron()      # power on the display, pixels redrawn
 display.contrast(0)    # dim

@@ -6,7 +6,7 @@ Pulse Width Modulation is used to generate frequencies on a pin, or to control t
 
 This example will sweep through frequency:
 
-```
+```py
 from machine import Pin, Timer
 import time
 
@@ -21,7 +21,7 @@ for f in range(500, 1800):
 
 This example will brighten up an LED, from 1% to 100%, by changing the duty cycle:
 
-```
+```py
 from machine import Pin, Timer
 import time
 

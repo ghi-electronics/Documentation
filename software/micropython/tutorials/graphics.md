@@ -2,10 +2,10 @@
 
 ---
 
-The built in [Display](display.md) support includes a graphics library. the flowing methods draw to a frame buffer. Calling `display.show()` will send the frame buffer to the screen.
+The built in [Display](displays.md) support includes a graphics library. the flowing methods draw to a frame buffer. Calling `display.show()` will send the frame buffer to the screen.
 
 
-```
+```py
 display.fill(0)                         # fill entire screen with color=0
 display.pixel(0, 10)                    # get pixel at x=0, y=10
 display.pixel(0, 10, 1)                 # set pixel at x=0, y=10 to color=1
@@ -20,7 +20,7 @@ display.scroll(20, 0)                   # scroll 20 pixels to the right
 
 It is also possible to create other frame buffers, which are then rendered on top the display's frame buffer.'
 
-```
+```py
 import framebuf
 fbuf = framebuf.FrameBuffer(bytearray(8 * 8 * 1), 8, 8, framebuf.MONO_VLSB)
 fbuf.line(0, 0, 7, 7, 1)
