@@ -128,6 +128,6 @@ Save `main.py` and wait for the activity LED/pin to go low, then reset the board
 
 ---
 
-## Tutorials
+## Next Steps
 
-Now that the device is running MicroPythin, the [**tutorials**](tutorials/intro.md) is a good next step.
+Now that the device is running MicroPython, we can start learning about [debugging](debugging.md) tricks. And then the [tutorials](tutorials/intro.md) is a good next step.
