@@ -14,6 +14,6 @@ void main() {
     var t = new Thread(Blinker);
     t.Start();
     // do secondary task
-    Thread.Sleep(Timout.Infinite);
+    Thread.Sleep(Timeout.Infinite);
 }
 ```
