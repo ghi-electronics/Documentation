@@ -324,6 +324,11 @@
     "title": "Downloads",
     "keywords": "Downloads Software status legend: Status Meaning Production (RTW) Ready to be used commercially (ready to wear). Release Candidate (RC) Could become a production release if proven solid. Preview Preview of the next release, not quite ready for production use. Firmwares SITCore SC13xxx File Date Status Core MD5 SC13xxx v0.2.0 2021-05-27 Preview v1.15-21 D955CAED3261E44CE385B678987F94BF SC13xxx v0.1.0 2021-04-30 Preview v1.15-21 A5FABF3250B796C5AC9C112FB7F30AA0 Tera Term TeraTerm serial terminal is available free from https://ttssh2.osdn.jp/index.html.en but also available here for convenience. File Date Status Core MD5 TeraTerm v4.105 2019-12-07 RTW v4.105 DD0FFA0F6DF6179AE1383368DCB6C08E Roadmap MicroPython port to some of GHI Electronics devices is available to enhance the developer's productivity. While the main focus is still on TinyCLR OS, the adoption rate will determine how much resources will go into evolving MicroPython."
   },
+  "software/micropython/editors.html": {
+    "href": "software/micropython/editors.html",
+    "title": "Editors",
+    "keywords": "Editors While it is possible to simply use MicvroPython on SITCore with zero installation, adding an editor would make for a better user experience. There are many available options but this page will highlight https://www.thonny.org/ Thonny This an a lean Python editor that is easy to install and use. It works for full Python development but it is as useful for MicroPython. We first need to visit https://www.thonny.org/ and download the version compatible with the OS being used. In our example here, we are using Windows. The editor is now ready to edit and run full Python programs. To use Thonny with SITCore, we first need to plug in the SITCore device, such as FEZ Flea, and load it with MicroPython firmware as detailed in Getting Started . Then from the top menu Run->Select Interpreter... We need the MicroPython (generic) option and on the 'Port' drop down we need to select the REPL COM port. We will add a new file with the following code and save it. from machine import Pin led=Pin(\"PA8\",Pin.OUT_PP) led.high() Tip PA8 on SITCore SC13048 is activity LED and found on all boards. This LED can be used by the user as well. We can now click the run icon or hit F5. This will send the script to the device and the LED will come on. The shell window is the REPL interface, showing any error messages. It is also useful for entering code. led.low() will turn the LED off. We will test an infinite loop. from machine import Pin import time led=Pin(\"PA8\",Pin.OUT_PP) while True: led.low() time.sleep(0.3) led.high() time.sleep(0.3) To stop the running program, we can use ctrl+C (stop) or ctrl+D (soft reset). Or we can click the stop icon."
+  },
   "software/micropython/getting-started.html": {
     "href": "software/micropython/getting-started.html",
     "title": "Getting Started",
@@ -897,7 +902,7 @@
   "software/tinyclr/tutorials/multithreading.html": {
     "href": "software/tinyclr/tutorials/multithreading.html",
     "title": "Multithreading",
-    "keywords": "Multithreading TinyCLR OS is a single process system, only running your application. This is in fact a good security feature! However, TinyCLR OS supports threading similar to full .NET. void Blinker() { // LED on Thread.Sleep(100); // LED off Thread.Sleep(100); } void main() { var t = new Thread(Blinker); t.Start(); // do secondary task Thread.Sleep(Timout.Infinite); }"
+    "keywords": "Multithreading TinyCLR OS is a single process system, only running your application. This is in fact a good security feature! However, TinyCLR OS supports threading similar to full .NET. void Blinker() { // LED on Thread.Sleep(100); // LED off Thread.Sleep(100); } void main() { var t = new Thread(Blinker); t.Start(); // do secondary task Thread.Sleep(Timeout.Infinite); }"
   },
   "software/tinyclr/tutorials/networking-core.html": {
     "href": "software/tinyclr/tutorials/networking-core.html",
