@@ -4090,9 +4090,18 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
+      "type": "Conceptual",
+      "source_relative_path": "software/micropython/editors.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/micropython/editors.html",
+          "hash": "5PxEx4/3dhNBwKcgbcnc9Fn/DtdLs+lSe7KRWpbyx3A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "software/micropython/getting-started.md",
       "output": {
@@ -4150,6 +4159,39 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "software/micropython/images/mp-generic-serial.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/micropython/images/mp-generic-serial.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/micropython/images/run-script.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/micropython/images/run-script.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/micropython/images/select-interpreter.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/micropython/images/select-interpreter.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "software/micropython/images/teraterm-opencom.png",
       "output": {
         "resource": {
@@ -4165,6 +4207,28 @@
       "output": {
         "resource": {
           "relative_path": "software/micropython/images/teraterm.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/micropython/images/thonny-shell.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/micropython/images/thonny-shell.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/micropython/images/thonny.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/micropython/images/thonny.png"
         }
       },
       "is_incremental": false,
@@ -4222,7 +4286,7 @@
       "output": {
         ".html": {
           "relative_path": "software/micropython/toc.html",
-          "hash": "t9Ybzernk4Hho2ldVxAmNO0OCoSlQ90nHxjwTkh3LsU="
+          "hash": "qwhDL1n9xxWAHEXj/+jSfZD6LEbRB+Kpb9THSNeCeh8="
         }
       },
       "is_incremental": false,
@@ -8028,7 +8092,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/multithreading.html",
-          "hash": "tdGq8Aeg4LB0lPJqRo58JBGhyZYvE5QIgUy3dkWviao="
+          "hash": "0Hju6yeqZ5tYNkFn2bFB0DOOtnILVkRKaGThxPFH4M0="
         }
       },
       "is_incremental": false,
@@ -8461,8 +8525,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 213,
-          "skipped_file_count": 212
+          "total_file_count": 214,
+          "skipped_file_count": 214
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

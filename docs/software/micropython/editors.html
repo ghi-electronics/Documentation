@@ -5,19 +5,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Multithreading </title>
+    <title>Editors </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Multithreading ">
+    <meta name="title" content="Editors ">
     <meta name="generator" content="docfx 2.57.2.0">
     
-    <link rel="shortcut icon" href="../../../images/favicon.ico">
-    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../styles/main.css">
-    <meta property="docfx:navrel" content="../../../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
-    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:rel" content="../../">
     <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
@@ -33,8 +33,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="../../../index.html">
-                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -76,24 +76,43 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="multithreading">Multithreading</h1>
+<h1 id="editors">Editors</h1>
 
 <hr>
-<p>TinyCLR OS is a single process system, only running your application. This is in fact a good security feature! However, TinyCLR OS supports threading similar to full .NET.</p>
-<pre><code class="lang-cs">void Blinker() {
-    // LED on
-    Thread.Sleep(100);
-    // LED off
-    Thread.Sleep(100);
-}
+<p>While it is possible to simply use MicvroPython on SITCore with zero installation, adding an editor would make for a better user experience.</p>
+<p>There are many available options but this page will highlight <a href="https://www.thonny.org/">https://www.thonny.org/</a></p>
+<h1 id="thonny">Thonny</h1>
+<p><img src="images/thonny.png" alt="Thonny"></p>
+<p>This an a lean Python editor that is easy to install and use. It works for full Python development but it is as useful for MicroPython.</p>
+<p>We first need to visit <a href="https://www.thonny.org/">https://www.thonny.org/</a> and download the version compatible with the OS being used. In our example here, we are using Windows.</p>
+<p>The editor is now ready to edit and run full Python programs. To use Thonny with SITCore, we first need to plug in the SITCore device, such as FEZ Flea, and load it with MicroPython firmware as detailed in <a href="getting-started.html">Getting Started</a>. Then from the top menu <code>Run-&gt;Select Interpreter...</code></p>
+<p><img src="images/select-interpreter.png" alt="Select Interpreter"></p>
+<p>We need the <code>MicroPython (generic)</code> option and on the &#39;Port&#39; drop down we need to select the REPL COM port.</p>
+<p><img src="images/mp-generic-serial.png" alt="MicroPython Generic Serial"></p>
+<p>We will add a new file with the following code and save it.</p>
+<pre><code class="lang-py">from machine import Pin
 
-void main() {
-    var t = new Thread(Blinker);
-    t.Start();
-    // do secondary task
-    Thread.Sleep(Timeout.Infinite);
-}
-</code></pre></article>
+led=Pin(&quot;PA8&quot;,Pin.OUT_PP)
+led.high()
+</code></pre><div class="TIP"><h5>Tip</h5><p>PA8 on SITCore SC13048 is activity LED and found on all boards. This LED can be used by the user as well.</p>
+</div>
+<p>We can now click the run icon or hit F5. This will send the script to the device and the LED will come on.</p>
+<p><img src="images/run-script.png" alt="Run Script"></p>
+<p>The shell window is the REPL interface, showing any error messages. It is also useful for entering code. <code>led.low()</code> will turn the LED off.</p>
+<p><img src="images/thonny-shell.png" alt="Thonny Shell"></p>
+<p>We will test an infinite loop.</p>
+<pre><code class="lang-py">from machine import Pin
+import time
+
+led=Pin(&quot;PA8&quot;,Pin.OUT_PP)
+
+while True:
+    led.low()
+    time.sleep(0.3)
+    led.high()
+    time.sleep(0.3)
+</code></pre><p>To stop the running program, we can use ctrl+C (stop) or ctrl+D (soft reset). Or we can click the stop icon.</p>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -101,7 +120,7 @@ void main() {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/multithreading.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/micropython/editors.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -116,7 +135,7 @@ void main() {
                 <div class="icon">
                   <i aria-hidden="true">☾</i>
                 </div>
-                <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
+                <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
               </div>
           
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
@@ -144,8 +163,8 @@ void main() {
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
   </body>
 </html>
