@@ -93,7 +93,9 @@
 <p>There is a limitation to the <code>data</code> being used: The <code>data</code> array length is limited to 64K elements. Also, adding individual elements together in the array can also not exceed 0xFFFFFFFF in total.</p>
 <p><img src="images/write1.jpg" alt="Default Timing"></p>
 <pre><code class="lang-cs">Generate(uint[]data, uint offset, uint count, unit multiplier)
-</code></pre><p>Allowable multiplier values range from 25 to 250,000 (250us). There are also 2 rules to the allowed values: 1,000,000,000 % multiplier must result in zero and  240,000,000 % (1,000,000,000 / multiplier) must also be zero.</p>
+</code></pre><p>Depends on the devices, allowable multiplier values range are different:</p>
+<p>On SC20xxx, allowable multiplier values range from 25 to 250,000 (250us). There are also 2 rules to the allowed values: 1,000,000,000 % multiplier must result in zero and  240,000,000 (240MHz) % (1,000,000,000 / multiplier) must also be zero. There is no different between full speed and half speed because clock source is 240MHz always.</p>
+<p>On SC13xxx, allowable multiplier values range from 25 to 800,000 (800us). There are also 2 rules to the allowed values: 1,000,000,000 % multiplier must result in zero and  80,000,000 (80MHz) % (1,000,000,000 / multiplier) must also be zero. When device run at half speed, the clock source is 40MHz, and max ranges is 25 to 1,600,000 (1.6ms);</p>
 <p>The signal generator always start with a signal at low level. It then toggles the signal every x time. The time is fetched from the array given, one by one. Note that by sending an even count of pulses, teh signal will terminate with a high-level as shown below.</p>
 <p><img src="images/write2.jpg" alt="Signal Example"></p>
 <p>Starting a second write will cause the signal to first go low, which may not be desired, as it causes an extra pulse on the next <code>Generate</code>. This pulse has a variable with. Making sure that the data <code>Length</code> is always an odd number will assure that the signal will terminate at a low-level.</p>

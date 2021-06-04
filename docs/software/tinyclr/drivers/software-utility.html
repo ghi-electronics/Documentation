@@ -141,6 +141,34 @@ for (var i = 20; i &lt; 140; i ++)
 
 // now send to display, using the specific display driver.
 MyDisplaySendBuffer(basicGfx.Buffer);
+</code></pre><h2 id="managed-file-system">Managed File System</h2>
+<p>This full FAT file system C# implementation includes SD SPI drivers and is made available for systems that do not have a native built in file system support or if using SD cares over SPI is desired.</p>
+<pre><code class="lang-cs">var dataWrite = new byte[5] { 6, 7, 8, 9, 10 };
+var dataRead = new byte[dataWrite.Length];
+
+var spiController = SpiController.FromName(SC13048.SpiBus.Spi1);
+var chipselect = GpioController.GetDefault().OpenPin(SC13048.GpioPin.PB2);
+
+var managedFS = new ManagedFileSystem(spiController, chipselect);
+
+managedFS.Mount();
+
+Debug.WriteLine(&quot;Volumme: &quot; + managedFS.VolumeLabel);
+Debug.WriteLine(&quot;Total Size: &quot; + managedFS.TotalSize);
+Debug.WriteLine(&quot;Free: &quot; + managedFS.TotalFreeSpace);
+
+managedFS.CreateDirectory(@&quot;\TEST1&quot;);
+
+var fileWrite = managedFS.OpenFile(@&quot;\TEST1\TEST2.txt&quot;, FileMode.Write | FileMode.CreateAlways);
+
+managedFS.WriteFile(fileWrite, dataWrite, 0, (uint)dataWrite.Length);
+managedFS.FlushFile(fileWrite);
+managedFS.CloseFile(fileWrite);
+
+var fileRead = managedFS.OpenFile(@&quot;\TEST1\TEST2.txt&quot;, FileMode.Read);
+
+managedFS.ReadFile(fileRead, dataRead, 0, (uint)dataRead.Length);
+managedFS.CloseFile(fileRead);
 </code></pre><h2 id="ir">IR</h2>
 <p>Infrared remotes are very common and use multiple standards. NCR is very common and a driver is included. A remote with NCR standard will send an 8bit address and an 8bit command with every key press. A repeat signal will be sent as long as the key is continuously pressed.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.Infrared.NecIR</p>

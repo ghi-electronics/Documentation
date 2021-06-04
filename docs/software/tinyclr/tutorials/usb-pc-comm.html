@@ -169,7 +169,9 @@ while (true){
     Thread.Sleep(100);
 }
 </code></pre><h2 id="webusb">WebUSB</h2>
-<p>Some modern browsers, like Chrome and Edge, include a way to give access to the USB from the web content. TinyCLR CDC and WinUSB already include the necessary descriptors to enable WebUSB. This <a href="https://github.com/ghi-electronics/TinyCLR-WebUSB">repo</a> includes a full <code>WebUSBApp</code> example to load onto the device, that is any TinyCLR device. Once loaded, visit <a href="https://ghi-electronics.github.io/TinyCLR-WebUSB/">https://ghi-electronics.github.io/TinyCLR-WebUSB/</a> to connect to the device.</p>
+<p>Some modern browsers, like Chrome and Edge, include a way to give access to the USB from the web content. TinyCLR CDC and WinUSB already include the necessary descriptors to enable WebUSB. This <a href="https://github.com/ghi-electronics/TinyCLR-WebUSB">repo</a> includes a full <code>WebUSBApp</code> and <code>SerialWebUSBApp</code> examples to load onto the device, that is any TinyCLR device. Once loaded, visit <a href="https://ghi-electronics.github.io/TinyCLR-WebUSB/">https://ghi-electronics.github.io/TinyCLR-WebUSB/</a> to connect to the device.</p>
+<div class="NOTE"><h5>Note</h5><p>For CDC (Serial Web USB), needs to load <code>SerialWebUSBApp</code> into the device and visit <a href="https://ghi-electronics.github.io/TinyCLR-WebUSB/serialwebusb.html">https://ghi-electronics.github.io/TinyCLR-WebUSB/serialwebusb.html</a></p>
+</div>
 <p><img src="images/webusb-connect.jpg" alt="WebUSB Connect"></p>
 <p>User will see <code>TinyCLR WebUsb</code> device as an option to <code>Connect</code></p>
 <p><img src="images/webusb-select.jpg" alt="WebUSB Select"></p>
