@@ -31,8 +31,11 @@ There is a limitation to the `data` being used: The `data` array length is limit
 ```cs
 Generate(uint[]data, uint offset, uint count, unit multiplier)
 ```
+Depends on the devices, allowable multiplier values range are different:
 
-Allowable multiplier values range from 25 to 250,000 (250us). There are also 2 rules to the allowed values: 1,000,000,000 % multiplier must result in zero and  240,000,000 % (1,000,000,000 / multiplier) must also be zero.
+On SC20xxx, allowable multiplier values range from 25 to 250,000 (250us). There are also 2 rules to the allowed values: 1,000,000,000 % multiplier must result in zero and  240,000,000 (240MHz) % (1,000,000,000 / multiplier) must also be zero. There is no different between full speed and half speed because clock source is 240MHz always.
+
+On SC13xxx, allowable multiplier values range from 25 to 800,000 (800us). There are also 2 rules to the allowed values: 1,000,000,000 % multiplier must result in zero and  80,000,000 (80MHz) % (1,000,000,000 / multiplier) must also be zero. When device run at half speed, the clock source is 40MHz, and max ranges is 25 to 1,600,000 (1.6ms);
 
 The signal generator always start with a signal at low level. It then toggles the signal every x time. The time is fetched from the array given, one by one. Note that by sending an even count of pulses, teh signal will terminate with a high-level as shown below.
 
