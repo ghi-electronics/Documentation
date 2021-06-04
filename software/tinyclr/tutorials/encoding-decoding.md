@@ -116,7 +116,7 @@ System.BitConverter.Int64BitsToDouble(long value)
 ### Swap Endianness
 
 ```cs
-System.BitConverter.SwapEndianness(byte[] data, int groupSize)
+SwapEndianness(byte[] data, int groupSize, int index, int size);
 ```
 
 ---
