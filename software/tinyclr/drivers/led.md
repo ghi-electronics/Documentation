@@ -4,7 +4,7 @@
 
 ## LED Matrices
 
-![LED Matrix](./images/ledmatrices.jpg)
+![LED Matrix](./images/led-matrices.png)
 
 This example uses the WS2812 LED but applies to all matrices.
 

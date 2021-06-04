@@ -12,7 +12,7 @@ The file system library is subset of the full .NET file system support. Most exa
 This allows file access on USB devices with MSC class, such as USB memory sticks. See the [USB](usb.md) page.
 
 ### SD Card
-SD and MMC cards are fully supported as detailed on the [SD tutorial](sd-cards.md) page.
+SD and MMC cards are fully supported as detailed on the [SD tutorial](sd-cards.md) page. Additionally, SPI SD drivers are also supported through the `ManagedFileSystem` software utility [drivers](/software-utility.md).
 
 The example below requires the `GHIElectronics.TinyCLR.IO` and `GHIElectronics.TinyCLR.Devices.Storage` libraries and a device with an SD card.
 
@@ -43,6 +43,10 @@ file.Flush();
 FileSystem.Flush(sd.Hdc);
 
 ```
+
+
+
+
 
 ### Low-level Access
 You can access the raw underlying data of the storage provider by using the `Provider` property of the controller. Be careful when using this interface, however, as it bypasses any file system present and writes directly to the device. This is useful for implementing your own or otherwise unsupported file systems.

@@ -84,6 +84,38 @@ for (var i = 20; i < 140; i ++)
 // now send to display, using the specific display driver.
 MyDisplaySendBuffer(basicGfx.Buffer);
 ```
+## Managed File System
+
+This full FAT file system C# implementation includes SD SPI drivers and is made available for systems that do not have a native built in file system support or if using SD cares over SPI is desired.
+
+```cs
+var dataWrite = new byte[5] { 6, 7, 8, 9, 10 };
+var dataRead = new byte[dataWrite.Length];
+
+var spiController = SpiController.FromName(SC13048.SpiBus.Spi1);
+var chipselect = GpioController.GetDefault().OpenPin(SC13048.GpioPin.PB2);
+
+var managedFS = new ManagedFileSystem(spiController, chipselect);
+
+managedFS.Mount();
+
+Debug.WriteLine("Volumme: " + managedFS.VolumeLabel);
+Debug.WriteLine("Total Size: " + managedFS.TotalSize);
+Debug.WriteLine("Free: " + managedFS.TotalFreeSpace);
+
+managedFS.CreateDirectory(@"\TEST1");
+
+var fileWrite = managedFS.OpenFile(@"\TEST1\TEST2.txt", FileMode.Write | FileMode.CreateAlways);
+
+managedFS.WriteFile(fileWrite, dataWrite, 0, (uint)dataWrite.Length);
+managedFS.FlushFile(fileWrite);
+managedFS.CloseFile(fileWrite);
+
+var fileRead = managedFS.OpenFile(@"\TEST1\TEST2.txt", FileMode.Read);
+
+managedFS.ReadFile(fileRead, dataRead, 0, (uint)dataRead.Length);
+managedFS.CloseFile(fileRead);
+``` 
 
 ## IR
 

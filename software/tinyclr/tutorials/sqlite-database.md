@@ -7,7 +7,7 @@ According to the SQLite homepage, "SQLite is a software library that implements 
 
 
 
-The code below is a simple example that creates a database file in RAM (SD cards and USB drives can be used as well). A table is created, a few rows are filled, and then this data is read from the database. This data is then iterated over and printed out. ColumnOriginNames returns the name of each of the columns.
+The code below is a simple example that creates a database file in RAM (SD cards and USB drives can be used as well). A table is created, a few rows are filled, and then this data is read from the database. This data is then iterated over and printed out. ColumnNames returns the name of each of the columns.
 
 ```cs
 using System.Collections;
@@ -20,32 +20,57 @@ namespace SQLiteSample {
             using (var db = new SQLiteDatabase()) {
 
                 Debug.WriteLine("Executing 1...");
-                db.ExecuteNonQuery(
-                    "CREATE Table Test Var1 TEXT, Var2 INTEGER, Var3 DOUBLE);");
+                db.ExecuteNonQuery("CREATE TABLE Test (Var1 TEXT, Var2 INTEGER, Var3 DOUBLE);");
 
                 Debug.WriteLine("Executing 2...");
                 db.ExecuteNonQuery("INSERT INTO Test(Var1, Var2, Var3) VALUES ('Hello, World!', 25, 3.14);");
 
                 Debug.WriteLine("Executing 3...");
-                db.ExecuteNonQuery("INSERT INTO Test
-                    (Var1, Var2, Var3) VALUES ('Goodbye, World!', 15, 6.28);");
+                db.ExecuteNonQuery("INSERT INTO Test(Var1, Var2, Var3) VALUES('Goodbye, World!', 15, 6.28); ");
 
                 Debug.WriteLine("Executing 4...");
-                var result = db.ExecuteQuery
-                    ("SELECT Var1, Var2, Var3 FROM Test WHERE Var2 > 10;");
+                db.ExecuteNonQuery("INSERT INTO Test (Var1) VALUES('Red'),('Blue'),('Green'),('White');");
 
                 Debug.WriteLine("Executing 5...");
-                Debug.WriteLine(result.ColumnCount.ToString() + " " +
-                    result.RowCount.ToString());
+                var result1 = db.ExecuteQuery("SELECT Var1 FROM Test;");
+
+                Debug.WriteLine("Executing 6...");
+                var result2 = db.ExecuteQuery("SELECT Var1, Var2, Var3 FROM Test WHERE Var2 > 10;");
+
+                Debug.WriteLine("Executing 7...");
+                var result3 = db.ExecuteQuery("SELECT Var1, Var2, Var3 FROM Test WHERE Var2 BETWEEN 24 AND 26");
+
+                Debug.WriteLine("Executing 7...");
+                Debug.WriteLine(result2.ColumnCount.ToString() + " " +
+                    result2.RowCount.ToString());
 
                 var str = "";
 
-                //foreach (var j in result.ColumnNames)
+                //foreach (var j in result1.ColumnNames)
                 //    str += j + " ";
 
                 //Debug.WriteLine(str);
 
-                foreach (ArrayList i in result.Data){
+                foreach (ArrayList i in result1.Data) {
+                    str = "";
+
+                    foreach (object j in i)
+                        str += j.ToString() + " ";
+
+                    Debug.WriteLine(str);
+                
+                }
+
+                foreach (ArrayList i in result2.Data) {
+                    str = "";
+
+                    foreach (object j in i)
+                        str += j.ToString() + " ";
+
+                    Debug.WriteLine(str);
+                }
+
+                foreach (ArrayList i in result3.Data) {
                     str = "";
 
                     foreach (object j in i)
@@ -74,10 +99,7 @@ For more information regarding these omissions see the [SQLite Website.](https:/
 | **AUTHORIZATION**          | Authorization callback feature omitted                        |
 | **AUTOINCREMENT**          | Feature omitted from the build                                |
 | **AUTOVACCUM**             | Feature omitted from the build                                |
-| **BETWEEN OPTIMIZATION**   | Disables WHERE clause terms that use BETWEEN operator                   |
 | **BLOB LITERAL**           | Not possible to specify a blob in an SQL statement using X'ABCD' syntax |
-| **COMPOUND SELECT**        | SELECT that use UNION, UNION ALL, INTERSECT or EXCEPT will cause a parse error. |
-| **INSERT**                 | Cannot insert more than a single row using an INSERT INTO...VALUES statement  |
 | **CTE**                    | Common Table Expressions omitted from the build  |
 | **DATETIME FUNCS**         | SQL functions julianday(), date(), time(), datetime() and strftime() are not available  |
 | **DEPRECATED**             | Omitted support for interfaces marked deprecated by SQLite  |
