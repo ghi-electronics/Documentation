@@ -107,7 +107,7 @@ This example will move MOSI2 pin from PB2 to PC7, assuming AF6
 var settings = new Settings {​​​​​​​
     mode = PortMode.AlternateFunction,
     speed = OutputSpeed.VeryHigh,
-    direction = PullDirection.None,
+    driveDirection = PullDirection.None,
     alternate = AlternateFunction.AF6,
     type  = OutputType.PushPull
 }​​​​​​​;

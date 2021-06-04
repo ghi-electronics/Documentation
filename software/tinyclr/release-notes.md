@@ -23,22 +23,21 @@
 
 #### Changes
 
-- Added I2C4
-- Added temperature sensor
-- SwapEndianness: Added support offset, count
+- Added temperature sensor.
+- SwapEndianness: Added support offset, count.
 - Rewrite Software I2C API, support threadsafe.
-- RTC: Added flag to detect internal RC used
-- Fixed Alarm wake up immediately if set period time more than 24 hours
+- RTC: Added flag to detect internal RC used.
+- Fixed Alarm wake up immediately if set period time more than 24 hours.
 - Fixed Ethernet doesn't work on some modules.
-- Improved ENC
-- Fixed Uart event doesn't work if subcribe event after Enable()
+- Improved ENC.
+- Fixed Uart event doesn't work if subcribe event after Enable().
 - Fixed UART / CAN crashed if unsubcribe event.
 - Fixed Digital Signal work incorrectly if large buffer.
 - Fixed slow clock in RAM mode (non-persist) failed.
 - Fixed PPP doesn't raise event if connection lost.
 - Fixed PPP failed when call Disable().
 - Fixed insert multi row failed SQLite.
-- Enabled Threadsafe SQLite
+- Enabled Threadsafe SQLite.
 - Increase openned socket from 20 to 32.
 - Fixed IFU crashed when use memory stream and large external tca.
 
@@ -51,7 +50,7 @@
 
 #### Changes
 
-- Improved SPI, SPI pins set to GPIO::High (they were very high that causes bad on MP3 click module)
+- Improved SPI, SPI pins set to GPIO::High (they were very high that causes bad on MP3 click module).
 - Fixed Shutdown still draw high power consumption after enable external ram.
 - Add native NeoPixel driver.
 
@@ -62,8 +61,9 @@
 
 ##### SC13xxx
 
-- Added 20KB deployment
-- Fixed CDC
+- Added 20KB deployment.
+- Fixed CDC.
+- Added I2C4.
 
 #### Known Issues
 
@@ -74,7 +74,7 @@
 #### Changes
 
 - Rewrote neopixel driver WS2812, using native, support 16/24 bit.
-- Added managed file system (SD SPI)
+- Added managed file system (SD SPI).
 - Improve OV9655 camera driver.
 
 #### Known Issues
@@ -85,7 +85,7 @@
 
 #### Changes
 
-- Add support glb format (micropython firmware)
+- Add support glb format (micropython firmware).
 
 #### Known Issues
 

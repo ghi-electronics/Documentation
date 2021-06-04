@@ -70,7 +70,7 @@ while (true){
 
 ## WS2812
 
-The WS2812 uses digital signal or signal generator to control LEDs. Read more about digital signals [here](../tutorials/signal-control.md). Digital signal can only use specific pins, but is very accurate. Signal generator can be used on any pins but is less accurate. 
+The WS2812 driver is implemented in native, support rgb565 and rgb888
 
 > [!Note]
 > These LEDs are commonly referred to as Neopixel
@@ -78,30 +78,18 @@ The WS2812 uses digital signal or signal generator to control LEDs. Read more ab
 > [!TIP]
 > Needed NuGet: GHIElectronics.TinyCLR.Drivers.Worldsemi.WS2812
 
-Digital Signal
+
 ```cs
-var gpio = GpioController.GetDefault();
-var digitalSignalPin = gpio.OpenPin(SC20260.Timer.DigitalSignal.Controller5.PA0);
-var digitalSignal = new DigitalSignal(digitalSignalPin);
+const int NUM_LED = 4; // 4 leds
+var pin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA0);
+pin.SetDriveMode(GpioPinDriveMode.Output);
+leds = new WS2812Controller(pin, NUM_LED, WS2812Controller.DataFormat.rgb888);
+leds.SetColor(0, 0xFF, 0, 0); // red
+leds.SetColor(1, 0, 0xFF, 0); // green
+leds.SetColor(2, 0, 0, 0xFF); // blue
+leds.SetColor(3, 0xFF, 0xFF, 0xFF); // white
 
-var led = new WS2812Controller (digitalSignal, 24);
-
-led.SetColor(1, 255, 0, 0); // 2nd LED is Red
-led.Flush();
 ```
-
-Signal Generator
-```cs
-var gpio = GpioController.GetDefault();
-var signalPin = gpio.OpenPin(SC20260.GpioPin.PE11);
-var signalGen = new SignalGenerator(signalPin);
-
-var led = new WS2812Controller(signalGen, 24);
-
-led.SetColor(1, 255, 0, 0); // 2nd LED is Red
-led.Flush();
-```
-
 ---
 
 ![APA102C](./images/APA102C.png)
