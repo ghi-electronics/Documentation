@@ -80,7 +80,7 @@
 
 <hr>
 <h2 id="led-matrices">LED Matrices</h2>
-<p><img src="images/ledmatrices.jpg" alt="LED Matrix"></p>
+<p><img src="images/led-matrices.png" alt="LED Matrix"></p>
 <p>This example uses the WS2812 LED but applies to all matrices.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Drivers.Worldsemi.WS2812, GHIElectronics.TinyCLR.Drivers.BasicGraphis</p>
 </div>
@@ -135,29 +135,19 @@ while (true){
 </code></pre><hr>
 <p><img src="images/WS2812.jpg" alt="WS2812"></p>
 <h2 id="ws2812">WS2812</h2>
-<p>The WS2812 uses digital signal or signal generator to control LEDs. Read more about digital signals <a href="../tutorials/signal-control.html">here</a>. Digital signal can only use specific pins, but is very accurate. Signal generator can be used on any pins but is less accurate. </p>
+<p>The WS2812 driver is implemented natively. It supports 565 and 888 color formats.</p>
 <div class="NOTE"><h5>Note</h5><p>These LEDs are commonly referred to as Neopixel</p>
 </div>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.Worldsemi.WS2812</p>
 </div>
-<p>Digital Signal</p>
-<pre><code class="lang-cs">var gpio = GpioController.GetDefault();
-var digitalSignalPin = gpio.OpenPin(SC20260.Timer.DigitalSignal.Controller5.PA0);
-var digitalSignal = new DigitalSignal(digitalSignalPin);
-
-var led = new WS2812Controller (digitalSignal, 24);
-
-led.SetColor(1, 255, 0, 0); // 2nd LED is Red
-led.Flush();
-</code></pre><p>Signal Generator</p>
-<pre><code class="lang-cs">var gpio = GpioController.GetDefault();
-var signalPin = gpio.OpenPin(SC20260.GpioPin.PE11);
-var signalGen = new SignalGenerator(signalPin);
-
-var led = new WS2812Controller(signalGen, 24);
-
-led.SetColor(1, 255, 0, 0); // 2nd LED is Red
-led.Flush();
+<pre><code class="lang-cs">const int NUM_LED = 4; // 4 leds
+var pin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA0);
+pin.SetDriveMode(GpioPinDriveMode.Output);
+leds = new WS2812Controller(pin, NUM_LED, WS2812Controller.DataFormat.rgb888);
+leds.SetColor(0, 0xFF, 0, 0); // red
+leds.SetColor(1, 0, 0xFF, 0); // green
+leds.SetColor(2, 0, 0, 0xFF); // blue
+leds.SetColor(3, 0xFF, 0xFF, 0xFF); // white
 </code></pre><hr>
 <p><img src="images/APA102C.png" alt="APA102C"></p>
 <h2 id="apa102c">APA102C</h2>

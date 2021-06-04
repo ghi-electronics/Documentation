@@ -3,6 +3,107 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.1.0 - RC2
+
+### Released 2021-06-04
+
+### Visual Studio Project System
+
+#### Changes
+
+- Fixed VS crashed sometime.
+- Add C#9 template.
+
+#### Known Issues
+
+- Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
+- Debug breakpoints sometimes hang for 5-6 seconds before resuming normally (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/659)
+
+### Libraries
+
+#### Changes
+
+- Added temperature sensor.
+- SwapEndianness: Added support offset, count.
+- Rewrite thread-safe Software I2C API.
+- RTC: Added flag to detect internal RC used.
+- Fixed Alarm wake up immediately if set period time more than 24 hours.
+- Fixed Ethernet doesn't work on some modules.
+- Improved ENC.
+- Fixed UART event doesn't work if subscribe event after Enable().
+- Fixed UART / CAN crashed if unsubscribe event.
+- Fixed Digital Signal work incorrectly if large buffer.
+- Fixed slow clock in RAM mode (non-persist) failed.
+- Fixed PPP doesn't raise event if connection lost.
+- Fixed PPP failed when call Disable().
+- Fixed insert multi row failed SQLite.
+- Enabled Threadsafe SQLite.
+- Increase network socket from 20 to 32.
+- Fixed IFU crashed when use memory stream and large external tca.
+
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+
+- Improved SPI, SPI pins set to GPIO::High (they were very high that causes bad on MP3 click module).
+- Fixed Shutdown still draw high power consumption after enable external ram.
+- Add native NeoPixel driver.
+
+##### SC20xxx
+
+- Fixed Ethernet doesn't work on some modules.
+- Improve ENC28J60.
+
+##### SC13xxx
+
+- Added 20KB to deployment.
+- Fixed CDC.
+- Added I2C4.
+
+#### Known Issues
+
+- None.
+
+### Drivers
+
+#### Changes
+
+- Rewrote neopixel WS2812 natively, supporting 16/24 bit.
+- Added managed file system (SD SPI).
+- Improve OV9655 camera driver.
+
+#### Known Issues
+
+- None.
+
+### TinyCLR Config
+
+#### Changes
+
+- Add support glb format (micropython firmware).
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+---
+
 ## 2.1.0 - RC1
 
 ### Released 2021-04-26

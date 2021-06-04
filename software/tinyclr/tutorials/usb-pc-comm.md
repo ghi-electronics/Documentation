@@ -104,7 +104,10 @@ while (true){
 }
 ```
 ## WebUSB
-Some modern browsers, like Chrome and Edge, include a way to give access to the USB from the web content. TinyCLR CDC and WinUSB already include the necessary descriptors to enable WebUSB. This [repo]( https://github.com/ghi-electronics/TinyCLR-WebUSB) includes a full `WebUSBApp` example to load onto the device, that is any TinyCLR device. Once loaded, visit https://ghi-electronics.github.io/TinyCLR-WebUSB/ to connect to the device.
+Some modern browsers, like Chrome and Edge, include a way to give access to the USB from the web content. TinyCLR CDC and WinUSB already include the necessary descriptors to enable WebUSB. This [repo]( https://github.com/ghi-electronics/TinyCLR-WebUSB) includes a full `WebUSBApp` and `SerialWebUSBApp` examples to load onto the device, that is any TinyCLR device. Once loaded, visit https://ghi-electronics.github.io/TinyCLR-WebUSB/ to connect to the device.
+
+> [!NOTE]
+> For CDC (Serial Web USB), needs to load `SerialWebUSBApp` into the device and visit https://ghi-electronics.github.io/TinyCLR-WebUSB/serialwebusb.html
 
 ![WebUSB Connect](images/webusb-connect.jpg)
 

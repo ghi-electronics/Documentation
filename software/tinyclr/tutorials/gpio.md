@@ -8,10 +8,6 @@ Microcontrollers include pins that can be controlled through software. They can 
 ## Digital Outputs
 A digital output pin can be set to either high or low.  High means that there is approx. 3.3V on the output pin. When the pin is set to low, it's voltage will be very close to zero.
 
-### Maximum Output Current
-
-GPIO pins typically support up to 8 mA of current, and up to 20 mA with relaxed output voltage ratings.
-
 > [!Warning]
 > Never connect two output pins together. If they are connected and one is high and the other is low, the entire processor can be damaged.
 
@@ -111,7 +107,7 @@ This example will move MOSI2 pin from PB2 to PC7, assuming AF6
 var settings = new Settings {​​​​​​​
     mode = PortMode.AlternateFunction,
     speed = OutputSpeed.VeryHigh,
-    direction = PullDirection.None,
+    driveDirection = PullDirection.None,
     alternate = AlternateFunction.AF6,
     type  = OutputType.PushPull
 }​​​​​​​;

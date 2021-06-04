@@ -84,8 +84,6 @@
 </div>
 <h2 id="digital-outputs">Digital Outputs</h2>
 <p>A digital output pin can be set to either high or low.  High means that there is approx. 3.3V on the output pin. When the pin is set to low, it&#39;s voltage will be very close to zero.</p>
-<h3 id="maximum-output-current">Maximum Output Current</h3>
-<p>GPIO pins typically support up to 8 mA of current, and up to 20 mA with relaxed output voltage ratings.</p>
 <div class="WARNING"><h5>Warning</h5><p>Never connect two output pins together. If they are connected and one is high and the other is low, the entire processor can be damaged.</p>
 </div>
 <div class="TIP"><h5>Tip</h5><p>Digital pins on microcontrollers are weak. They can only be used to control small LEDs or drive transistors. Those transistors can, in turn, control devices with high power needs like a motor.</p>
@@ -156,7 +154,7 @@ private static void Button_ValueChanged(GpioPin sender, GpioPinValueChangedEvent
 var settings = new Settings {​​​​​​​
     mode = PortMode.AlternateFunction,
     speed = OutputSpeed.VeryHigh,
-    direction = PullDirection.None,
+    driveDirection = PullDirection.None,
     alternate = AlternateFunction.AF6,
     type  = OutputType.PushPull
 }​​​​​​​;
