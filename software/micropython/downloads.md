@@ -20,7 +20,7 @@ Preview | Preview of the next release, not quite ready for production use.
 
 File | Date | Status | Core | MD5
 --- | --- | --- | --- | ---
-[SC13xxx v0.2.1](http://files.ghielectronics.com/downloads/MicroPython/Firmwares/SITCore/SITCore-SC13-MP-Firmware-v0.2.1.glb) | 2021-06-09 | Preview | v1.15-21 | 38B3E5A86E98698E8E75556A0C7060AF
+[SC13xxx v0.2.1](http://files.ghielectronics.com/downloads/MicroPython/Firmwares/SITCore/SITCore-SC13-MP-Firmware-v0.2.1.glb) | 2021-06-10 | Preview | v1.15-21 | 8BDCFED1E1065E4791379D3EF0F59D7B
 [SC13xxx v0.2.0](http://files.ghielectronics.com/downloads/MicroPython/Firmwares/SITCore/SITCore-SC13-MP-Firmware-v0.2.0.glb) | 2021-05-27 | Preview | v1.15-21 | D955CAED3261E44CE385B678987F94BF
 [SC13xxx v0.1.0](http://files.ghielectronics.com/downloads/MicroPython/Firmwares/SITCore/SITCore-SC13-MP-Firmware-v0.1.0.glb) | 2021-04-30 | Preview | v1.15-21 | A5FABF3250B796C5AC9C112FB7F30AA0
 
