@@ -12,7 +12,7 @@
 #### Changes
 
 - Fixed deploying sometime stop 20-30 seconds.
-- Add warning when deploy an assembly larger than regions size.
+- Added warning when deploy an assembly larger than regions size.
 
 #### Known Issues
 
@@ -44,8 +44,8 @@
 
 #### Changes
 
-- BasicGraphic: Add Image class
-- Add BasicNet
+- BasicGraphic: Added Image class.
+- Added BasicNet.
 
 #### Known Issues
 
