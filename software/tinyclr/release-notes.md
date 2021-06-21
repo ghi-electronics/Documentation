@@ -3,6 +3,77 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.1.0 - Release
+
+### Released 2021-06-23
+
+### Visual Studio Project System
+
+#### Changes
+
+- Fixed deploying sometime stop 20-30 seconds.
+- Added warning when deploy an assembly larger than regions size.
+
+#### Known Issues
+
+- Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
+- Debug breakpoints sometimes hang for 5-6 seconds before resuming normally (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/659)
+
+### Libraries
+
+#### Changes
+
+- None.
+
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+### Drivers
+
+#### Changes
+
+- BasicGraphic: Added Image class.
+- Added BasicNet.
+
+#### Known Issues
+
+- None.
+
+### TinyCLR Config
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+---
+
 ## 2.1.0 - RC2
 
 ### Released 2021-06-04
