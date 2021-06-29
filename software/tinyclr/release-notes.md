@@ -5,7 +5,7 @@
 
 ## 2.1.0 - Release
 
-### Released 2021-06-23
+### Released 2021-06-30
 
 ### Visual Studio Project System
 
@@ -23,7 +23,9 @@
 
 #### Changes
 
-- None.
+- Fixed USBClient WinUSB, Cdc failed when sending multiple of 64 bytes.
+- Fixed UART crashed when enable handshaking on SC13xxx
+- Fixed enabling SoftwarePWM cause Timer 16 stop working on SC13xxx
 
 
 #### Known Issues
@@ -34,8 +36,15 @@
 
 #### Changes
 
+##### SC20xxx:
+
 - None.
 
+##### SC13xxx
+
+- Increased secure storage from 2K to 8K
+
+ 
 #### Known Issues
 
 - None.
@@ -46,6 +55,7 @@
 
 - BasicGraphic: Added Image class.
 - Added BasicNet.
+- Add Rotary Encoder.
 
 #### Known Issues
 
