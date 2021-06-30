@@ -35,7 +35,7 @@ Shift register, taking a serial data, like from SPI or pin bit-banging to output
 ## Rotary Encoder
 ![Rotary](./images/Rotary.png)
 
-A rotary encoder, also called a shaft encoder, is an electro-mechanical device that converts the angular position to analog or digital output signals.
+A rotary encoder is an electro-mechanical device that converts the angular position to analog or digital output signals.
 
 > [!TIP]
 > Needed NuGet: GHIElectronics.TinyCLR.Drivers.Encoder
