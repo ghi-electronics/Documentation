@@ -55,6 +55,7 @@
 
 - Added BasicNet.
 - Add Rotary Encoder.
+- Improved BasicGraphics performance.
 
 #### Known Issues
 
