@@ -53,7 +53,6 @@
 
 #### Changes
 
-- BasicGraphic: Added Image class.
 - Added BasicNet.
 - Add Rotary Encoder.
 
