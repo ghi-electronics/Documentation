@@ -188,6 +188,60 @@ private static void Ir_OnDataRecievedEvent(byte address, byte command) {
 private static void Ir_OnRepeatEvent() {
     // we have repeat
 }
+</code></pre><h2 id="basic-network">Basic Network</h2>
+<p>Basic Network works with W5500 module.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Drivers.BasicNet, GHIElectronics.TinyCLR.Drivers.BasicNet.Sockets, GHIElectronics.TinyCLR.Drivers.WIZnet.W5500</p>
+</div>
+<pre><code class="lang-cs">var cs = GpioController.GetDefault().OpenPin(SC13048.GpioPin.PB2);
+var reset = GpioController.GetDefault().OpenPin(SC13048.GpioPin.PB15);
+var interrupt = GpioController.GetDefault().OpenPin(SC13048.GpioPin.PA0);
+
+var spiController = SpiController.FromName(SC13048.SpiBus.Spi1);
+
+var networkController = new W5500Controller(spiController, cs, reset, interrupt); 
+var isReady = false;
+
+networkController.NetworkAddressChanged += (a, b) =&gt;
+{
+    isReady = networkController.Address.GetAddressBytes()[0] != 0 &amp;&amp; networkController.Address.GetAddressBytes()[1] != 0;
+};
+
+NetworkInterfaceSettings networkSettings = new NetworkInterfaceSettings()
+{
+    Address = new IPAddress(new byte[] { 192, 168, 0, 200 }),
+    SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 }),
+    GatewayAddress = new IPAddress(new byte[] { 192, 168, 0, 1 }),
+    DnsAddresses = new IPAddress[] { new IPAddress(new byte[] { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) },
+
+    MacAddress = new byte[] { your mac },
+    DhcpEnable = false,
+    DynamicDnsEnable = false,                
+};
+
+
+networkController.SetInterfaceSettings(networkSettings);
+networkController.Enable();
+
+while (isReady == false) ; // wait for valid IP addrress. 
+
+var dns = new Dns(networkController);
+var host = dns.GetHostEntry(&quot;www.example.com&quot;);
+var ep = new IPEndPoint(host.AddressList[0], 80);
+
+// Streaming socket
+var socket = new Socket(networkController, AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+socket.Connect(ep);
+
+
+var content = &quot;GET / HTTP/1.1\r\nHost: www.example.com\r\nConnection: close\r\n\r\n&quot;;
+socket.Send(Encoding.UTF8.GetBytes(content));
+
+var received = socket.Receive(SocketFlags.None);
+
+if (received.Length &gt; 0) {
+    var recvdContent = new string(Encoding.UTF8.GetChars(received));
+    Debug.WriteLine(&quot;Received : \r\n&quot; + recvdContent);
+}
 </code></pre><h2 id="qr-code-generator">QR Code Generator</h2>
 <p>This driver converts a string to an image, which can be displays on screen for example.</p>
 <p><strong>In the works!</strong></p>

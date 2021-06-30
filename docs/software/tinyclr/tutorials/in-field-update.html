@@ -87,6 +87,8 @@
 <pre><code class="lang-cs">var firmwareVersion = updater.VerifyFirmware();
 var applicationVersion = updater.VerifyApplication();
 </code></pre><p>The system is now ready for flash and reset <code>updater.FlashAndReset()</code>. It is critical that the system is not reset or power is lost during reset. Depending on the application size, this can take a few seconds. A power loss will result in a nonfunctional device that needs to be manually update.</p>
+<div class="NOTE"><h5>Note</h5><p>When update uses external flash (QSPI) as temporary buffer, the block size must be 1K, 2K, 4K, 8K...etc. We recommend using 1K as the firmware and tca files are always multiple of 1K.</p>
+</div>
 <h2 id="memory-requirements">Memory Requirements</h2>
 <p>Firmware update needs to have a temp buffer that is the size of the firmware itself. For applications, the temporary buffer needs to be the size of the internal deployment, plus the external deployment if implemented, by &quot;extending deployment&quot;. Systems with large external RAM will usually select RAM update. For systems without external RAM, an external QSPI flash becomes necessary. When external flash is used for buffering, IFU will overwrite the entire flash, minus the first 2MB and the area reserved for extending the application deployment area, as explained under <code>External Flash</code> on the <a href="external-memory.html">External Memory</a> page. A <a href="file-system.html">Tiny File System</a> usage of the first 2MB of external flash will survive IFU even when <code>useExternalFlash</code> is enabled.</p>
 <h2 id="activity-pin">Activity Pin</h2>

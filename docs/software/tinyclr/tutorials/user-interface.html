@@ -284,9 +284,18 @@ namespace SC20100_N18_WPF{
     };
     return txt;
 }
-</code></pre><h3 id="label-textblock-and-textbox">Label, TextBlock, and TextBox</h3>
-<p>A TextBlock just displays text that cannot be changed at runtime. A TextBlock could be used for a window title, for example. A Label is like a TextBlock, but Label text can be changed at runtime. The Label control can also host controls other than text strings. The TextBox allows for both single line and multiple line text input.</p>
-<h3 id="panel">Panel</h3>
+</code></pre><h3 id="textbox">TextBox</h3>
+<p>The TextBox allows for both single line and multiple line text input.</p>
+<pre><code class="lang-cs">var textBox = new TextBox() {
+    Text = &quot;This is TextBox&quot;,
+    Font = fontB,
+    Width = 120,
+    Height = 25,
+    HorizontalAlignment = HorizontalAlignment.Center,
+    VerticalAlignment = VerticalAlignment.Center,
+
+};
+</code></pre><h3 id="panel">Panel</h3>
 <p>A <code>Window</code> can carry only a single <code>Child</code>, that is a single element. This is not a concern because the single element can be a container, like a <code>Panel</code>, which holds multiple elements. You can even have panels within panels with each having its own elements. This example will introduce shapes found in the <code>GHIElectronics.TinyCLR.UI.Shapes</code> namespace. It also shows an example of the <code>TextBox</code> element. We will also set margins for a better look.</p>
 <pre><code class="lang-cs">private static UIElement Elements() {
     var panel = new Panel();
