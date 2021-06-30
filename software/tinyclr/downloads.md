@@ -21,7 +21,7 @@ The Firmware is the TinyCLR OS that lives on your hardware. The firmware version
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.1.0.6000 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.1.0.ghi) | 2021-06-30 | Release | E2D7B1BD4BF21C5F1A5C4EF88865732D
+[v2.1.0.6000 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.1.0.6000.ghi) | 2021-06-30 | Release | E2D7B1BD4BF21C5F1A5C4EF88865732D
 [v2.1.0.6000 (RC2)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.1.0.6000.ghi) | 2021-06-04 | Release Candidate | E2D7B1BD4BF21C5F1A5C4EF88865732D
 [v2.1.0.5000 (RC1)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.1.0.5000.ghi) | 2021-04-26 | Release Candidate | 19A4CA62B3248C787599623B547D31A8
 [v2.0.0.8000 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore%20Firmware%20v2.0.0.ghi) | 2020-08-05 | Production | AE9DC4E117D04CE058AB305896F273DE
@@ -32,7 +32,7 @@ File | Date | Status | MD5
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.1.0.6100 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.ghi) | 2021-06-30 | Release | E4CD5D819192E4260DAB6D4140E434B6
+[v2.1.0.6100 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.6100.ghi) | 2021-06-30 | Release | E4CD5D819192E4260DAB6D4140E434B6
 [v2.1.0.6000 (RC2)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.6000.ghi) | 2021-06-04 | Release Candidate | 77CF2F7B6E629CE1E1AEEA332F9DC64E
 [v2.1.0.5100 (RC1)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.5100.ghi) | 2021-05-10 | Release Candidate | C77237FACD87F23530CF8B5B2D984830
 

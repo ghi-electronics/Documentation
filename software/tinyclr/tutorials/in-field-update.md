@@ -19,7 +19,7 @@ var applicationVersion = updater.VerifyApplication();
 The system is now ready for flash and reset `updater.FlashAndReset()`. It is critical that the system is not reset or power is lost during reset. Depending on the application size, this can take a few seconds. A power loss will result in a nonfunctional device that needs to be manually update.
 
 > [!Note]
-> When update uses external flash (QSPI) as temporary buffer, the block size must be 1K or 2K or multiple of 4K. Eaiser just keep 1K because the firmware and tca files are always multiple of 1K.
+> When update uses external flash (QSPI) as temporary buffer, the block size must be 1K, 2K, 4K, 8K...etc. We recommend using 1K as the firmware and tca files are always multiple of 1K.
 
 ## Memory Requirements
 

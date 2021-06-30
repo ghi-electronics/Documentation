@@ -171,7 +171,7 @@ private static void NetworkController_NetworkAddressChanged
 > [!TIP]
 > Needed NuGets: GHIElectronics.TinyCLR.Drivers.BasicNet, GHIElectronics.TinyCLR.Drivers.BasicNet.Sockets, GHIElectronics.TinyCLR.Drivers.WIZnet.W5500
 
-This is designed specially for SC13048 which doesn't have builtin stack. But SC20260 or SC20100 also work well.
+The Wiznet W5500 chipset has a built-in TCP/IP stack making it ideal for SC13048, which doesn't have built-in networking support, but it works with SC20xxx as well.
 
 The example below does 'http GET' using ETH WIZ Click, on SC13048 Development board.
 
