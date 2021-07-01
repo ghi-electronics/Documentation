@@ -34,6 +34,7 @@ Our SCM20260E is a drop in replacement for the G120E except for a few issues tha
 * SCM20260E pad 57 (PD3/UART2 CTS) does not have PWM as on G120E pad 57 (P3.18/UART2 CTS/PWM2). 
 * SCM20260E pad T5 (PJ6/LCD R7) does not have UART RX as on G120E pad T5 (P2.9/LCD R4/UART5 RX). As this is an LCD pin, this will rarely be an issue.
 * SCM20260E pad T16 (PJ6/LCD R7) does not have UART TX as on G120E pad T16 (P1.29/LCD B4/UART5 TX). As this is an LCD pin, this will rarely be an issue.
+* SD Power pin is not available. Instead, there is regular GPIO pin.
 
 [SCM20260E to G120E Pinout Map](pdfs/scm20260e-g120e-pinoutmap.pdf)
 

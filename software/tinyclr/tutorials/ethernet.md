@@ -166,6 +166,68 @@ private static void NetworkController_NetworkAddressChanged
 ```
 ---
 
+## W5500
+
+> [!TIP]
+> Needed NuGets: GHIElectronics.TinyCLR.Drivers.BasicNet, GHIElectronics.TinyCLR.Drivers.BasicNet.Sockets, GHIElectronics.TinyCLR.Drivers.WIZnet.W5500
+
+The Wiznet W5500 chipset has a built-in TCP/IP stack making it ideal for SC13048, which doesn't have built-in networking support, but it works with SC20xxx as well.
+
+The example below does 'http GET' using ETH WIZ Click, on SC13048 Development board.
+
+```cs
+var cs = GpioController.GetDefault().OpenPin(SC13048.GpioPin.PB2);
+var reset = GpioController.GetDefault().OpenPin(SC13048.GpioPin.PB15);
+var interrupt = GpioController.GetDefault().OpenPin(SC13048.GpioPin.PA0);
+
+var spiController = SpiController.FromName(SC13048.SpiBus.Spi1);
+
+var networkController = new W5500Controller(spiController, cs, reset, interrupt); 
+var isReady = false;
+
+networkController.NetworkAddressChanged += (a, b) =>
+{
+    isReady = networkController.Address.GetAddressBytes()[0] != 0 && networkController.Address.GetAddressBytes()[1] != 0;
+};
+
+NetworkInterfaceSettings networkSettings = new NetworkInterfaceSettings()
+{
+    Address = new IPAddress(new byte[] { 192, 168, 0, 200 }),
+    SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 }),
+    GatewayAddress = new IPAddress(new byte[] { 192, 168, 0, 1 }),
+    DnsAddresses = new IPAddress[] { new IPAddress(new byte[] { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) },
+
+    MacAddress = new byte[] { your mac },
+    DhcpEnable = false,
+    DynamicDnsEnable = false,                
+};
+            
+
+networkController.SetInterfaceSettings(networkSettings);
+networkController.Enable();
+
+while (isReady == false) ; // wait for valid IP addrress. 
+
+var dns = new Dns(networkController);
+var host = dns.GetHostEntry("www.example.com");
+var ep = new IPEndPoint(host.AddressList[0], 80);
+
+// Streaming socket
+var socket = new Socket(networkController, AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+socket.Connect(ep);
+
+
+var content = "GET / HTTP/1.1\r\nHost: www.example.com\r\nConnection: close\r\n\r\n";
+socket.Send(Encoding.UTF8.GetBytes(content));
+
+var received = socket.Receive(SocketFlags.None);
+
+if (received.Length > 0) {
+    var recvdContent = new string(Encoding.UTF8.GetChars(received));
+    Debug.WriteLine("Received : \r\n" + recvdContent);
+}
+```
+
 ## Event Handlers
 
 NetworkController provides two events:

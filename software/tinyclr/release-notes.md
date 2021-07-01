@@ -3,6 +3,87 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.1.0 - Release
+
+### Released 2021-06-30
+
+### Visual Studio Project System
+
+#### Changes
+
+- Fixed deploying sometime stop 20-30 seconds.
+- Added warning when deploy an assembly larger than regions size.
+
+#### Known Issues
+
+- Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
+- Debug breakpoints sometimes hang for 5-6 seconds before resuming normally (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/659)
+
+### Libraries
+
+#### Changes
+
+- Fixed USBClient WinUSB, Cdc failed when sending multiple of 64 bytes.
+- Fixed UART crashed when enable handshaking on SC13xxx
+- Fixed enabling SoftwarePWM cause Timer 16 stop working on SC13xxx
+
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+
+##### SC20xxx:
+
+- None.
+
+##### SC13xxx
+
+- Increased secure storage from 2K to 8K
+
+ 
+#### Known Issues
+
+- None.
+
+### Drivers
+
+#### Changes
+
+- Added BasicNet.
+- Add Rotary Encoder.
+- Improved BasicGraphics performance.
+
+#### Known Issues
+
+- None.
+
+### TinyCLR Config
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+---
+
 ## 2.1.0 - RC2
 
 ### Released 2021-06-04

@@ -82,7 +82,6 @@ The WS2812 driver is implemented natively. It supports 565 and 888 color formats
 ```cs
 const int NUM_LED = 4; // 4 leds
 var pin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA0);
-pin.SetDriveMode(GpioPinDriveMode.Output);
 leds = new WS2812Controller(pin, NUM_LED, WS2812Controller.DataFormat.rgb888);
 leds.SetColor(0, 0xFF, 0, 0); // red
 leds.SetColor(1, 0, 0xFF, 0); // green

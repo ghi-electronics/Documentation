@@ -3,7 +3,11 @@
 There are two secure storage areas you may find useful: the configuration storage area and the one-time programmable storage area.
 
 ## Configuration Storage
-This 128 KByte secure storage area is organized as 4096 blocks of 32 bytes each. Configuration storage can be erased and modified. Performing an `erase all` in TinyCLR Config will wipe out this area. As this area is comprised of a single sector of flash memory, only the whole storage area can be erased. Partial erases are not possible.
+On SC20260 (and SC20100), there is 128 KByte secure storage area is organized as 4096 blocks of 32 bytes each. 
+
+On SC13048 there is 8KB secure storage, organized as 256 blocks of 32 bytes each.
+
+Configuration storage can be erased and modified. Performing an `erase all` in TinyCLR Config will wipe out this area. As this area is comprised of a single sector of flash memory, only the whole storage area can be erased. Partial erases are not possible.
 
 > [!Tip]
 > Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.SecureStorage
@@ -73,7 +77,8 @@ Debug.WriteLine("Configuration storage is good to go!!!");
 > [!Note]
 > If all 32 bytes of any OTP flash block contain 0xFF, the block is considered unused. If you write only 0xFF to the contents of a block, the block will be regarded as unused and you will be able to rewrite the block. 
 
-The one time programmable (OTP) secure flash region is organized into 2048 blocks of 32 bytes each. Once you write to a block, that block can be read but never changed.
+
+The one time programmable (OTP) secure flash region is organized into 2048 blocks on SC20260 (or SC20100), and 64 blocks on SC13048 of 32 bytes each. Once you write to a block, that block can be read but never changed.
 
 There is no way to modify written data. Erasing the entire device `Erase All` in TinyCLR Config will not erase or modify this area.
 
@@ -84,3 +89,6 @@ OTP secure storage is instantiated as follows:
 ```cs
 var otpStorage = new SecureStorageController(SecureStorage.Otp);
 ```
+
+> [!Note]
+> SC13048 allows write one time on each block, even data all is 0xFF.

@@ -235,8 +235,20 @@ private static UIElement Elements() {
 }
 ```
 
-### Label, TextBlock, and TextBox
-A TextBlock just displays text that cannot be changed at runtime. A TextBlock could be used for a window title, for example. A Label is like a TextBlock, but Label text can be changed at runtime. The Label control can also host controls other than text strings. The TextBox allows for both single line and multiple line text input.
+### TextBox
+The TextBox allows for both single line and multiple line text input.
+
+```cs
+var textBox = new TextBox() {
+    Text = "This is TextBox",
+    Font = fontB,
+    Width = 120,
+    Height = 25,
+    HorizontalAlignment = HorizontalAlignment.Center,
+    VerticalAlignment = VerticalAlignment.Center,
+
+};
+```
 
 ### Panel
 A `Window` can carry only a single `Child`, that is a single element. This is not a concern because the single element can be a container, like a `Panel`, which holds multiple elements. You can even have panels within panels with each having its own elements. This example will introduce shapes found in the `GHIElectronics.TinyCLR.UI.Shapes` namespace. It also shows an example of the `TextBox` element. We will also set margins for a better look.
