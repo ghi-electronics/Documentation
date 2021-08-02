@@ -2,7 +2,7 @@
 
 ---
 
-![Downloads](images/downloads.png)
+![Downloads](images/download.png)
 
 Software status legend:
 

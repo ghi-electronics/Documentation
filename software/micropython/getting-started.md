@@ -2,7 +2,7 @@
 
 ---
 
-![Getting Started](images/getting-started.png)
+![Getting Started](images/getting-started2.png)
 
 This page explains how to load and use MicroPython on the GHI Electronics supported devices.
 

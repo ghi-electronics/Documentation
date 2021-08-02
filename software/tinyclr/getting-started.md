@@ -1,6 +1,6 @@
 # Getting Started
 ---
-![Getting Started](images/getting-started.png)
+![Getting Started](images/getting-started2.png)
 
 This page explains how to set up the TinyCLR programming environment.  It covers device and computer setup and deployment of a "hello world" program to a SITCore device.
 

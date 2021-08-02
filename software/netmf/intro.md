@@ -14,7 +14,7 @@
 
 ---
 ## Getting Started
-[![Getting Started](../tinyclr/images/getting-started.png)](getting-started.md)
+[![Getting Started](../tinyclr/images/getting-started2.png)](getting-started.md)
 
 Deploy your first NETMF program. </br> [**Learn more...**](getting-started.md)  
 
@@ -25,7 +25,7 @@ Deploy your first NETMF program. </br> [**Learn more...**](getting-started.md)
 
 ---
 ## Downloads
-[![Download](../tinyclr/images/downloads.png)](downloads.md)
+[![Download](../tinyclr/images/download.png)](downloads.md)
 
 Visual Studio and device downloads. </br> [**Learn more...**](downloads.md)
 

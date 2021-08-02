@@ -1,7 +1,7 @@
 # Downloads
 
 ---
-![Download](images/downloads.png)
+![Download](images/download.png)
 
 This page includes downloads for the SITCore line of products as well as some of our earlier product lines. See individual product pages for details.
 

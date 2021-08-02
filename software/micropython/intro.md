@@ -25,7 +25,7 @@ The GHI Electronics fork of MicroPython is found [here](https://www.github.com/g
 ---
 ## Getting Started
 
-[![Getting Started](images/getting-started.png)](getting-started.md)
+[![Getting Started](images/getting-started2.png)](getting-started.md)
 
 Deploy your first MicroPython program. </br> [**Learn more...**](getting-started.md) 
 
@@ -33,7 +33,7 @@ Deploy your first MicroPython program. </br> [**Learn more...**](getting-started
 
 ## Tutorials
 
-[![Tutorials](images/tutorials.png)](tutorials/intro.md)
+[![Tutorials](images/tutorials2.png)](tutorials/intro.md)
 
 Learn MicroPython embedded programming. </br> [**Learn more...**](tutorials/intro.md)   
 
@@ -41,7 +41,7 @@ Learn MicroPython embedded programming. </br> [**Learn more...**](tutorials/intr
 
 ## Downloads
 
-[![Downloads](images/downloads.png)](downloads.md)
+[![Downloads](images/download.png)](downloads.md)
 
 Necessary Downloads. </br> [**Learn more...**](downloads.md)
 
@@ -49,7 +49,7 @@ Necessary Downloads. </br> [**Learn more...**](downloads.md)
 
 ## Release Notes
 
-[![Release Notes](images/tinyclr-logo.png)](release-notes.md)
+[![Release Notes](images/tinyclr-logo2.png)](release-notes.md)
 
 Find the latest changes to MicroPython. </br> [**Learn more...**](release-notes.md) 
 
