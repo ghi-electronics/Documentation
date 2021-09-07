@@ -125,8 +125,6 @@ To reduce garbage collection, minimize the use of dynamically allocated buffers 
 
 You can use `System.GC.GetTotalMemory(true)` to find out how much memory is being used. the "true" argument forces full garbage collection. Checking free memory often during program execution will let you know if the amount of free memory is decreasing and how quickly. 
 
-`System.Diagnostics.Debug.GC(true)` will force garbage collection. You might use this to ensure that garbage collection occurs during a period when responsiveness is less important.
-
 `System.Diagnostics.Debug.EnableGCMessages(true)` can be used to make sure that garbage collection messages are sent out over the debug port.
 
 TinyCLR also supports unmanaged heap space. Unmanaged heap space can be used for large graphic buffers, for example. In unmanaged heap space, it is up to the programmer to make sure memory is correctly allocated and deallocated. Read more about unmanaged heap space [here](unmanaged-heap.md).
