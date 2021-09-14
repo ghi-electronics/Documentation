@@ -38,8 +38,8 @@
 
 ##### SC13xxx
 
-- Fix UART error event buffer full never raised.
-- Fix CAN error event buffer full never raised.
+- Fix UART event buffer full never called.
+- Fix CAN event buffer full never called.
 - Fix CAN stop receiving after buffer full.
 - Fix UART / CAN out of memory if many error events occurs.
 - Free more ~8K for heap.
