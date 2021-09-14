@@ -1,6 +1,89 @@
 # Release Notes
 ---
 
+## 2.1.0.6200 - Release
+
+### Released 2021-09-14
+
+### Visual Studio Project System
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
+- Debug breakpoints sometimes hang for 5-6 seconds before resuming normally (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/659)
+
+### Libraries
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+
+##### SC20xxx:
+
+- Fix Ethernet not working on some modules.
+- Fix SPI thrown exception sometime.
+- Improve LCD high frequency clock to support HDMI.
+
+##### SC13xxx
+
+- Fix UART error event buffer full never raised.
+- Fix CAN error event buffer full never raised.
+- Fix CAN stop receiving after buffer full.
+- Fix UART / CAN out of memory if many error events occurs.
+- Free more ~8K for heap.
+- Add RTC backup ram.
+- Fix PWM has big delay when changed to low frequencies.
+ 
+#### Known Issues
+
+- None.
+
+### Drivers
+
+#### Changes
+
+- Add TFP410 driver support HDMI
+- Fixed BasicGraphics DrawTextEx double x, y position.
+
+#### Known Issues
+
+- None.
+
+### TinyCLR Config
+
+#### Changes
+
+- No warning if detect compatable firmware.
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+---
+
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
 ## 2.1.0 - Release
