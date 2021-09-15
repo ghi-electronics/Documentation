@@ -62,9 +62,13 @@ The board can be powered through either the USB client connectors or the barrel 
 
 ### SC20260 Dev Display Options
 
+One of the headers on the SCM20260 Dev board includes all necessary parallel display signals. It also includes I2C and a couple of GPIOs allowing for support of capacitive touch panels. Out-of-the-box, the SCM20260 Dev board includes a 4.3" display with capacitive touch.
+
+#### UD435 Display Adaptor
+
 ![UD435](images/ud435.jpg)
 
-One of the headers on the SCM20260 Dev board includes all necessary parallel display signals. It also includes I2C and a couple of GPIOs allowing for support of capacitive touch panels. Out-of-the-box, the SCM20260 Dev board includes a 4.3" display with capacitive touch.
+This display is included with the SCM20260D Dev board.
 
 * Display Module: [ER-TFT043-3](https://www.buydisplay.com/)
 * Touch Panel: [ER-TPC043-2](https://www.buydisplay.com/)
@@ -94,6 +98,21 @@ Vertical Back Porch | 23
 Vertical Front Porch | 7
 Vertical Sync Polarity | low
 Vertical Sync Pulse Width | 1
+
+#### HDMI Adaptor
+
+![hdmi](images/hdmi.jpg)
+
+This optional HDMI adaptor can be used instead of the display to provide an HDMI option. The board utilizes TI's TFP410 HDMI transmitter chip. 
+
+A NuGet driver library is provided as well. The driver automatically sets all the configuration internally.
+
+```cs
+var hdmi = new TFP410Controller(i2cController, Resolution.HD720p, DisplayOrientation.Degrees0, resetPin);
+displayController.SetConfiguration(hdmi.Configuration);
+```
+
+[SITCore HDMI Adaptor Schematic](pdfs/scd-hdmi-a-schematic.pdf)
 
 ### SC20260 Dev Camera Options
 
