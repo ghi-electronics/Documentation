@@ -101,7 +101,7 @@ Vertical Sync Pulse Width | 1
 
 #### HDMI Adaptor
 
-![hdmi](images/hdmi.jpg)
+![hdmi](images/sitcore-hdmi.jpg)
 
 This optional HDMI adaptor can be used instead of the display to provide an HDMI option. The board utilizes TI's TFP410 HDMI transmitter chip. 
 
