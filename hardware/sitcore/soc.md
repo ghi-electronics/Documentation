@@ -132,7 +132,6 @@ The microcontrollers we use in our SITCore line of products do not support concu
 
 ---
 
-    
 ## Pinouts
 
 GPIO pins are rated is 20mA per pin, 140mA total on all pins, and 5 volt tolerant.
