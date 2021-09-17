@@ -1,6 +1,6 @@
 # SITCore System on Chip
 ---
-![SITCore SC20100S](images/system-on-chip.jpg)
+![SITCore SC20100S](images/system-on-chip.png)
 
 ## Overview
 

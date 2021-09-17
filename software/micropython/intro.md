@@ -2,6 +2,8 @@
 
 ---
 
+![MP Logo](images/micropython.png)
+
 MicroPython brings the Python scripting language to small microcontrollers. While TinyCLR OS with .NET C# and full debugging is the recommended path for building secure and modern devices there are instances where using MicroPython can be useful.
 
 The MicroPython project is found at http://www.micropython.org/. GHI Electronics makes a ready-to-use MicroPython build for some of its products.

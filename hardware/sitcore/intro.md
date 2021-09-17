@@ -3,7 +3,7 @@
 Our SITCore line of products provides an easy way to create secure IoT and embedded devices that are programmable in C# using Visual Studio. Designed with security as a top priority, your intellectual property is protected through device code protection, secure encrypted in-field and OTA update, and secure booting.
 
 ## System on Chip
-[![SITCore SC20100S](images/system-on-chip.jpg)](soc.md) 
+[![SITCore SC20100S](images/system-on-chip.png)](soc.md) 
 
  Secure IoT chips that run C# and support debugging over USB. </br> [**Learn More...**](soc.md) 
 
@@ -15,13 +15,13 @@ Available as a surface mount module and a 200 pin SO-DIMM module. </br> [**Learn
 
 ---
 ## Development Boards
-[![SITCore Dev Board](images/sitcore-dev-boards.jpg)](dev.md) 
+[![SITCore Dev Board](images/sitcore-dev-boards.png)](dev.md) 
 
 Get started quickly with one of our development boards -- you'll be programming in minutes! </br> [**Learn More...**](dev.md) 
 
 ---
 ## Single Board Computers
-[![Single Board Computer](images/sitcore-feather.png)](sbc.md)
+[![Single Board Computers](images/sitcore-sbc-line.png)](sbc.md)
 
 Our single board computers provide the lowest barrier of entry to the world of TinyCLR OS </br> [**Learn More...**](sbc.md)
 
