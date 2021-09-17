@@ -87,40 +87,8 @@ Make sure your device is plugged into the computer's USB port. Now hit the start
 
 Congratulations!  You're on your way to becoming a TinyCLR embedded developer!
 
-### The NuGet Packages
+To add NuGet packages to your project follow the  [**NuGet tutorial**](tutorials/nuget.md)
 
-NuGet packages are typically hosted online on www.NuGet.org. 
-
-The steps below explain how to add online-hosted NuGet libraries to your project. If you are using a pre-release, the libraries must be [downloaded](downloads.md) and installed as a local feed.
-
-1. Start Visual Studio and create a new `TinyCLR Application` under `C# > TinyCLR`. New to Visual Studio or C#? Take a look at the [getting started guide from Microsoft](https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/with-visual-studio).
-2. Right click on your Project in the Solution Explorer panel and select `Manage NuGet Packages`.  If the Solution Explorer window is not visible, open it by selecting `Solution Explorer` in the `View` menu. You can also select `Manage NuGet Packages...` in the `Project` menu of Visual Studio.
-![View Show Solution Explorer](images/select-manage-nuget-packages.gif)
-
-3. Make sure the package source is set to "Package source" or "All."
-![Set package source](images/package-source.png)
-
-4. In the search box type "tinyclr." **You may have to check the "Include prerelease" box to find the libraries.**
-![Search for TinyCLR](images/search-for-tinyclr.png)
-5. Selecting the `Browse` tab will show all the TinyCLR NuGet packages.
-![Browse NuGet Feed](images/browse-nuget-feed.png)
-
-6. To install one of the packages click on the down arrow to the right of the package version.
-![Add Nuget Package](images/add-nuget-package.png)
-
-You can also select the package and click on the `Install` button in the center panel.
-![Nuget-package-install-button](images/nuget-install-button.png)
-
-7. Click `OK` to accept the proposed changes.
-![Accept changes](images/accept-changes.png)
-
-8. Accept the licensing agreement to install the package.
-![Accept Agreement for NuGet](images/accept-agreement-for-nuget.png)
-
-> [!Note]
-> Pre-release libraries are not hosted on NuGet.org, use the local feed feature to fetch the needed libraries from your local machine, found on the [**Downloads**](downloads.md) page.
-
-***
 To find the best hardware for your TinyCLR application, go to the [**SITCore**](../../hardware/sitcore/intro.md) page in the hardware section of this documentation.
 
 To learn more about TinyCLR embedded programming check out our [**tutorials**](tutorials/intro.md).

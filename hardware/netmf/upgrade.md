@@ -1,8 +1,23 @@
 # Upgrading
+
 ---
-![Upgrading](images/upgrade-sign.jpg)
+
+
+![Upgrading](images/upgrade-sign.png)
 
 To complement our ten year Longevity Promise, we provide [products](../sitcore/intro.md) that are drop in replacements for most of our more mature SoMs and chipsets. We strive to keep customers products viable as long as possible with no or minimal changes to hardware.
+
+## Speed Comparison
+
+| Processor      | Speed           | OS             |
+| ---------------| ----------------|----------------|
+| SC20xxx        | 1.75 seconds    | TinyCLR 2.1    |
+| G400           | 3.3 seconds     | NETMF 4.3      |
+| G80            | 7.6 seconds     | NETMF 4.3      |
+| G30            | 18 seconds      | NETMF 4.3      |
+| SC13xxx        | 21 seconds      | TinyCLR 2.1    |
+| G120           | 29 seconds      | NETMF 4.3      |
+| EMX            | 74 seconds      | NETMF 4.3      |
 
 ## G30 to SITCore
 

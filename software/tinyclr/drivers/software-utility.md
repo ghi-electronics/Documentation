@@ -206,11 +206,15 @@ if (received.Length > 0) {
 
 This driver converts a string to an image, which can be displays on screen for example.
 
-**In the works!**
+No NuGet is provided but source code is found [here](https://github.com/ghi-electronics/TinyCLR-Drivers/tree/dev/Barcode).
 
 
 ## GPS Parser
 
-**In the works!**
+This driver parses standard NEMA strings
+
+```cs
+
+```
 
 

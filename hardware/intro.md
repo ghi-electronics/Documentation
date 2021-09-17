@@ -10,14 +10,14 @@ Secure IoT SoCs, SoMs and Dev Boards that run C# with full debugging over USB. <
 ---
 ## Legacy
 
-[![Legacy Products](legacy/images/legacy-soms.jpg)](legacy/intro.md)
+[![Legacy Products](legacy/images/legacy-soms.png)](legacy/intro.md)
 
 Support for discontinued products. </br> [**Learn More...**](legacy/intro.md) 
 
 ---
 ## Legal
 
-[![Legal](sitcore/images/legal-hardware.jpg)](../hardware/legal.md)
+[![Legal](sitcore/images/legal-hardware.png)](../hardware/legal.md)
 
 License, Disclaimer, Security. </br> [**More...**](../hardware/legal.md)  
 
