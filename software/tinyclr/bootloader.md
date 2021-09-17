@@ -42,6 +42,7 @@ Most commands require confirmation. Send Y or y followed by a new-line to procee
 - R: Runs the firmware if present.
 - B: Increases the baud rate in serial mode to 921,600.
 - X: Upload a `ghi` file to the device using 1K XMODEM. Only send *.ghi files meant for your device.
+- U: Upload a `glb` file to the device. 
 
 ## USB Drivers
 

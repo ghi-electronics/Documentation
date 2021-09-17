@@ -29,7 +29,7 @@ There are many online CAN calculators that can be used to help you with CAN timi
 
 ![CAN bit segments](images/can-bit-segments.png)
 
-The CAN calculator needs the microcontroller's CAN clock speed. For the SITCore series, this is 48 MHz, and can easily be found with `SourceClock` property.
+The CAN calculator needs the microcontroller's CAN clock speed. For the SITCore series SC20xxx, this is 48 MHz. For the SC13xxx the speed is 40MHz. These can easily be found with `SourceClock` property.
 
 ## Filtering
 Filters can be set to automatically accept or ignore messages based on their arbitration ID.

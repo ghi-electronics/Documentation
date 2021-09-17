@@ -26,7 +26,7 @@ These products have matured. They are in full production; however, NETMF softwar
 
 ---
 ## Upgrading 
-[![Upgrade to SITCore](images/upgrade-sign.jpg)](upgrade.md)
+[![Upgrade to SITCore](images/upgrade-sign.png)](upgrade.md)
 </br> [**Learn more...**](upgrade.md) 
 
 ---

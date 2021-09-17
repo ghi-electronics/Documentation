@@ -4,7 +4,7 @@ Similar data can often be handled more efficiently when stored and manipulated a
 
 For more info go to https://docs.microsoft.com/en-us/dotnet/standard/collections/index.
 
-TinyCLR OS collections support ArrayLists, Hashtables, Stacks, and Queues.
+TinyCLR OS collections support ArrayLists, Hash tables, Stacks, and Queues.
 
 ## ArrayLists
 
@@ -75,7 +75,7 @@ In the above sample, `rmaList.Clear()` will remove all elements from `rmaList`, 
 
 ---
 
-## Hashtables
+## Hash tables
 Hash tables are used to store information in a way that associates each data element, or value, with a key that can be used to look up that value. Hash tables make it easy to quickly retrieve information that would otherwise be difficult to organize in an efficient manner.
 
 For example, imagine trying to look up a phone number from a given name. You could make a two dimension array of names and phone numbers and then iterate through the array looking for the correct name, but this would be slow with a large array. Hash tables solve this problem by using a hash function to convert a key, in this case a name, into an array index that points directly to the data element you are looking for. This allows you to quickly retrieve the data directly instead of searching for it. 
@@ -98,23 +98,30 @@ processorPin.Add("BTN1", "PE3");
 processorPin.Add("BTN2", "PB7");
 processorPin.Add("BTN3", "PD7");
 
+//If a key does not exist, setting the default Item property
+//for that key adds a new key/value pair.
+
+processorPin["BTN4"] = "PD9";
+
 //When you use foreach to enumerate hash table elements, the elements are retrieved
 //    as DictionaryEntry objects.
 
 foreach (System.Collections.DictionaryEntry de in processorPin) {
     System.Diagnostics.Debug.WriteLine("Key = " + de.Key + "    Value = " + de.Value);
 }
+
 ```
 
 The above code outputs the following:
 ```
-Key = MOD    Value = PD7
-Key = LDR    Value = PE3
+Key = MOD     Value = PD7
+Key = LDR     Value = PE3
 Key = BTN1    Value = PE3
 Key = BTN2    Value = PB7
 Key = BTN3    Value = PD7
+Key = BTN4    Value = PD9
 Key = WKUP    Value = PA0
-Key = APP    Value = PB7
+Key = APP     Value = PB7 
 ```
 
 ---

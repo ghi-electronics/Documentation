@@ -2,7 +2,7 @@
 
 ---
 
-![Development Options](images/sitcore-dev-boards.jpg)
+![Development Options](images/sitcore-dev-boards.png)
 
 We offer three development boards making it possible to start programming applications within minutes without designing or building new hardware. These boards are not only suitable for prototypes, but for short production runs as well.
 
