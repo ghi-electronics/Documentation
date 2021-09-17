@@ -55,7 +55,8 @@
 #### Changes
 
 - Add TFP410 driver support HDMI
-- Fixed BasicGraphics DrawTextEx double x, y position.
+- Fixed BasicGraphics DrawTextEx x, y position is doubled.
+- No longer support WiFi update by buffer.
 
 #### Known Issues
 
