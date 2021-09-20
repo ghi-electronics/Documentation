@@ -1,9 +1,12 @@
 # Release Notes
+
 ---
 
-## 2.1.0.6200 - Release
+![TinyCLR Logo](images/tinyclr-logo.png)
 
-### Released 2021-09-14
+## 2.1.0.6200 - RTW Release
+
+### Released 2021-09-20
 
 ### Visual Studio Project System
 
@@ -33,7 +36,7 @@
 ##### SC20xxx:
 
 - Fix Ethernet not working on some modules.
-- Fix SPI thrown exception sometime.
+- Fix SPI throw exception sometime.
 - Improve LCD high frequency clock to support HDMI.
 - Fix CAN stop receiving message after full buffer if error event not subscribed.
 
@@ -43,7 +46,7 @@
 - Fix CAN event buffer full never called.
 - Fix CAN stop receiving after buffer full.
 - Fix UART / CAN out of memory if many error events occurs.
-- Free more ~8K for heap.
+- Free up an additional ~8K for heap.
 - Add RTC backup ram.
 - Fix PWM has big delay when changed to low frequencies.
  
@@ -67,7 +70,7 @@
 
 #### Changes
 
-- No warning if detect compatable firmware.
+- No warning if detect compatible firmware.
 
 #### Known Issues
 
@@ -86,9 +89,7 @@
 
 ---
 
-![TinyCLR Logo](images/tinyclr-logo.png)
-
-## 2.1.0 - Release
+## 2.1.0 - RTW Release
 
 ### Released 2021-06-30
 
