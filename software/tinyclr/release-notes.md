@@ -35,6 +35,7 @@
 - Fix Ethernet not working on some modules.
 - Fix SPI thrown exception sometime.
 - Improve LCD high frequency clock to support HDMI.
+- Fix CAN stop receiving message after full buffer if error event not subscribed.
 
 ##### SC13xxx
 
