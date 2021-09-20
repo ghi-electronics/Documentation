@@ -214,7 +214,31 @@ No NuGet is provided but source code is found [here](https://github.com/ghi-elec
 This driver parses standard NEMA strings
 
 ```cs
+// Find NEMA strings and parce (probably in a seperate thread)
+// Read UART, find start and end and then send byte array to parser 
+// strings start with $ and end with CR
+new Thread(() =>
+{
+	Parser.Parse(UTF8Encoding.UTF8.GetBytes("NEMA strings"));
+	Thread.Sleep(1);
+}
+).Start();
 
+// parsed data are available from the class
+while (true) {
+	
+	if (Parser.RMCSentence.DataStatus == Parser.DataStatus.Valid) {
+		//Do something
+		
+
+	}
+	if (Parser.GLLSentence.DataStatus == Parser.DataStatus.Valid) {
+		//Do something
+	}
+	// ...etc
+	
+	Thread.Sleep(1);
+}
 ```
 
 
