@@ -219,8 +219,11 @@ This driver parses standard NEMA strings
 // strings start with $ and end with CR
 new Thread(() =>
 {
-	Parser.Parse(UTF8Encoding.UTF8.GetBytes("NEMA strings"));
-	Thread.Sleep(1);
+	while (true) {
+		Parser.Parse(UTF8Encoding.UTF8.GetBytes("NEMA strings"));
+		Thread.Sleep(1);
+	
+	}
 }
 ).Start();
 
