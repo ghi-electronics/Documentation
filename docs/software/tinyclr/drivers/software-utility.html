@@ -244,10 +244,39 @@ if (received.Length &gt; 0) {
 }
 </code></pre><h2 id="qr-code-generator">QR Code Generator</h2>
 <p>This driver converts a string to an image, which can be displays on screen for example.</p>
-<p><strong>In the works!</strong></p>
+<p>No NuGet is provided but source code is found <a href="https://github.com/ghi-electronics/TinyCLR-Drivers/tree/dev/Barcode">here</a>.</p>
 <h2 id="gps-parser">GPS Parser</h2>
-<p><strong>In the works!</strong></p>
-</article>
+<p>This driver parses standard NEMA strings</p>
+<pre><code class="lang-cs">// Find NEMA strings and parse (probably in a seperate thread)
+// Read UART, find start and end and then send byte array to parser 
+// strings start with $ and end with CR
+new Thread(() =&gt;
+{
+
+    while (true) {
+        Parser.Parse(UTF8Encoding.UTF8.GetBytes(&quot;NEMA string&quot;));
+        Thread.Sleep(1);
+
+    }
+}
+).Start();
+
+// parsed data are available from the class
+while (true) {
+
+    if (Parser.RMCSentence.DataStatus == Parser.DataStatus.Valid) {
+        //Do something
+
+
+    }
+    if (Parser.GLLSentence.DataStatus == Parser.DataStatus.Valid) {
+        //Do something
+    }
+    // ...etc
+
+    Thread.Sleep(1);
+}
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

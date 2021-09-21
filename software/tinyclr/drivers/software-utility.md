@@ -206,11 +206,43 @@ if (received.Length > 0) {
 
 This driver converts a string to an image, which can be displays on screen for example.
 
-**In the works!**
+No NuGet is provided but source code is found [here](https://github.com/ghi-electronics/TinyCLR-Drivers/tree/dev/Barcode).
 
 
 ## GPS Parser
 
-**In the works!**
+This driver parses standard NEMA strings
+
+```cs
+// Find NEMA strings and parse (probably in a seperate thread)
+// Read UART, find start and end and then send byte array to parser 
+// strings start with $ and end with CR
+new Thread(() =>
+{
+	
+	while (true) {
+		Parser.Parse(UTF8Encoding.UTF8.GetBytes("NEMA string"));
+		Thread.Sleep(1);
+	
+	}
+}
+).Start();
+
+// parsed data are available from the class
+while (true) {
+	
+	if (Parser.RMCSentence.DataStatus == Parser.DataStatus.Valid) {
+		//Do something
+		
+
+	}
+	if (Parser.GLLSentence.DataStatus == Parser.DataStatus.Valid) {
+		//Do something
+	}
+	// ...etc
+	
+	Thread.Sleep(1);
+}
+```
 
 

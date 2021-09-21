@@ -1,6 +1,6 @@
 # SITCore System on Chip
 ---
-![SITCore SC20100S](images/system-on-chip.jpg)
+![SITCore SC20100S](images/system-on-chip.png)
 
 ## Overview
 
@@ -131,8 +131,10 @@ See the [Power Management](http://docs.ghielectronics.com/software/tinyclr/tutor
 The microcontrollers we use in our SITCore line of products do not support concurrent interrupts with the same pin number, even if the pins are on different ports (the port is denoted by the second letter of the GPIO pin name -- PA1 is pin 1 on port A). Therefore, interrupts are available on only 16 pins at any given time. For example, pins PA1 and PB1 cannot be used as interrupt pins at the same time, but PA1 and PB2 can. PA1 and PA2 can also be used with interrupts simultaneously.
 
 ---
-    
+
 ## Pinouts
+
+GPIO pins are rated is 20mA per pin, 140mA total on all pins, and 5 volt tolerant.
 
 ### SC13048Q Pinout
 
@@ -167,7 +169,7 @@ The above discussed functions of the LDR, APP, and MOD pins are only available d
 
 ## TinyCLR OS
 
-TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.
+TinyCLR OS provides a way to program the SITCore in C# from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.
 
 ### Loading the Firmware
 

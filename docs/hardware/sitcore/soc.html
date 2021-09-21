@@ -79,7 +79,7 @@
 <h1 id="sitcore-system-on-chip">SITCore System on Chip</h1>
 
 <hr>
-<p><img src="images/system-on-chip.jpg" alt="SITCore SC20100S"></p>
+<p><img src="images/system-on-chip.png" alt="SITCore SC20100S"></p>
 <h2 id="overview">Overview</h2>
 <p>The SITCore SoCs provide a low cost way to add .NET computing power to any embedded product. Available as either a 48 pin QFN, a 100 pin LQFP or a 265 ball BGA, the SITCore SoCs let you design IoT products that are secure, easily integrated with the cloud, and can be easily manage and updated from the cloud for deployments of one to a million or more.</p>
 <h3 id="sc20xxx-features">SC20xxx Features</h3>
@@ -421,6 +421,7 @@
 <p>The microcontrollers we use in our SITCore line of products do not support concurrent interrupts with the same pin number, even if the pins are on different ports (the port is denoted by the second letter of the GPIO pin name -- PA1 is pin 1 on port A). Therefore, interrupts are available on only 16 pins at any given time. For example, pins PA1 and PB1 cannot be used as interrupt pins at the same time, but PA1 and PB2 can. PA1 and PA2 can also be used with interrupts simultaneously.</p>
 <hr>
 <h2 id="pinouts">Pinouts</h2>
+<p>GPIO pins are rated is 20mA per pin, 140mA total on all pins, and 5 volt tolerant.</p>
 <h3 id="sc13048q-pinout">SC13048Q Pinout</h3>
 <p><a href="pdfs/sc13048q-pinout.pdf"><img src="images/sc13048q-pinout.gif" alt="SC13048Q Pinout"></a></p>
 <h3 id="sc20100sb-pinout">SC20100S/B Pinout</h3>
@@ -441,7 +442,7 @@
 <p>The above discussed functions of the LDR, APP, and MOD pins are only available during startup. After startup, the pins return to the default GPIO state and are available as a GPIO (or peripheral pin) in your application. Check out the <a href="../../software/tinyclr/special-pins.html">Special Pins</a> page for more information.</p>
 <hr>
 <h2 id="tinyclr-os">TinyCLR OS</h2>
-<p>TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page for instructions.</p>
+<p>TinyCLR OS provides a way to program the SITCore in C# from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page for instructions.</p>
 <h3 id="loading-the-firmware">Loading the Firmware</h3>
 <ol>
 <li>Activate the bootloader, hold the LDR signal low while resetting the board.</li>

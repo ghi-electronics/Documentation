@@ -10,6 +10,7 @@ Software status legend:
 Status | Meaning
 --- | ---
 Production (RTW) | Ready to be used commercially (ready to wear).
+Update | An update to a production release, still RTW.
 Release Candidate (RC) | Could become a production release if proven solid.
 Preview | Preview of the next release, not quite ready for production use.
 
@@ -21,7 +22,8 @@ The Firmware is the TinyCLR OS that lives on your hardware. The firmware version
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.1.0.6000 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.1.0.6000.ghi) | 2021-06-30 | Release | E2D7B1BD4BF21C5F1A5C4EF88865732D
+[v2.1.0.6200 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.1.0.6200.ghi) | 2021-09-21 | Update | ED93AA54B58BA9FCDE1FC8707B0032BE
+[v2.1.0.6000 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.1.0.6000.ghi) | 2021-06-30 | Production | E2D7B1BD4BF21C5F1A5C4EF88865732D
 [v2.1.0.6000 (RC2)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.1.0.6000.ghi) | 2021-06-04 | Release Candidate | E2D7B1BD4BF21C5F1A5C4EF88865732D
 [v2.1.0.5000 (RC1)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.1.0.5000.ghi) | 2021-04-26 | Release Candidate | 19A4CA62B3248C787599623B547D31A8
 [v2.0.0.8000 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore%20Firmware%20v2.0.0.ghi) | 2020-08-05 | Production | AE9DC4E117D04CE058AB305896F273DE
@@ -32,7 +34,8 @@ File | Date | Status | MD5
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.1.0.6100 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.6100.ghi) | 2021-06-30 | Release | E4CD5D819192E4260DAB6D4140E434B6
+[v2.1.0.6200 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.6200.ghi) | 2021-09-21 | Update | 574408495A41FFD9C7AE79C37AC3ECC3
+[v2.1.0.6100 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.6100.ghi) | 2021-06-30 | Production | E4CD5D819192E4260DAB6D4140E434B6
 [v2.1.0.6000 (RC2)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.6000.ghi) | 2021-06-04 | Release Candidate | 77CF2F7B6E629CE1E1AEEA332F9DC64E
 [v2.1.0.5100 (RC1)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.5100.ghi) | 2021-05-10 | Release Candidate | C77237FACD87F23530CF8B5B2D984830
 
@@ -43,7 +46,8 @@ TinyCLR Config is a tool used to update and configure your TinyCLR device.
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.1.0](http://files.ghielectronics.com/downloads/TinyCLR/Config/TinyCLR-Config-Setup-v2.1.0.msi) | 2021-06-30 | Release | 4CCC489BCC4A396916F3E09D66E208BB
+[v2.1.0.6200](http://files.ghielectronics.com/downloads/TinyCLR/Config/TinyCLR-Config-Setup-v2.1.0.6200.msi) | 2021-09-21 | Update | A417207CF63A9BFD206BC22C40C66D33
+[v2.1.0](http://files.ghielectronics.com/downloads/TinyCLR/Config/TinyCLR-Config-Setup-v2.1.0.msi) | 2021-06-30 | Production | 4CCC489BCC4A396916F3E09D66E208BB
 [v2.1.0-rc2](http://files.ghielectronics.com/downloads/TinyCLR/Config/TinyCLR-Config-Setup-v2.1.0-rc2.msi) | 2021-06-04 | Release Candidate | AF235926E98E2CF120E2038AA354B49A
 [v2.1.0-rc1](http://files.ghielectronics.com/downloads/TinyCLR/Config/TinyCLR-Config-Setup-v2.1.0-rc1.msi) | 2021-04-26 | Release Candidate | B739CCBE3268F0293CED7632088E854B
 [v2.0.0](http://files.ghielectronics.com/downloads/TinyCLR/Config/TinyCLR%20Config%20Setup%20v2.0.0.msi) | 2020-08-21 | Production | 9DF8B05E50699505FBAD23F783CF67EA
@@ -56,7 +60,7 @@ The extension is what gets loaded on Visual Studio to allow it to communicate wi
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.1.0](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.1.0.vsix) | 2021-06-30 | Release | CF90D2E902DB2B4DC5A3643A8E9E2778
+[v2.1.700](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.1.0.vsix) | 2021-06-30 | Production | CF90D2E902DB2B4DC5A3643A8E9E2778
 [v2.1.0-rc2](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.1.0-rc2.vsix) | 2021-06-04 | Release Candidate | 1FBB75384617C0E5E03F54FCF8C9CBD5
 [v2.1.0-rc1](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.1.0-rc1.vsix) | 2021-04-26 | Release Candidate | 71B6518F55EED3AFD47845AD0F34C4D6
 [v2.0.0](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR%20OS%20Project%20System%20v2.0.0.vsix) | 2020-08-21 | Production | 09A7643877101E9138E1C5C1E517E2CA
@@ -65,7 +69,7 @@ File | Date | Status | MD5
 
 ## Libraries
 
-Libraries provide prebuilt software routines for performing many common tasks. It is preferred to access these libraries through NuGet.org by using Visual Studio's default package source (https://api.nuget.org/v3/index.json).
+Libraries provide prebuilt software routines for performing many common tasks. It is preferred to access these libraries through NuGet.org by using Visual Studio's default package source.
 
 > [!Note]
 > Make sure to check the `Include prerelease` box in Visual Studio's NuGet package manager if you're not using the production release.
@@ -74,7 +78,8 @@ The libraries are provided here in case you're having trouble with the online so
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.1.0](http://files.ghielectronics.com/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.1.0.zip) | 2021-06-30 | Release | A02ACD56474A1E5664D05C9A66F91F07
+[v2.1.1](http://files.ghielectronics.com/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.1.1.zip) | 2021-09-21 | Update | CEF977522F3ADEAFE8D984FC62CD07B1
+[v2.1.0](http://files.ghielectronics.com/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.1.0.zip) | 2021-06-30 | Production | A02ACD56474A1E5664D05C9A66F91F07
 [v2.1.0-rc2](http://files.ghielectronics.com/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.1.0-rc2.zip) | 2021-06-04 | Release Candidate | 0E23C7C2888B514D7F546A78D7F80598
 [v2.1.0-rc1](http://files.ghielectronics.com/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.1.0-rc1.zip) | 2021-04-26 | Release Candidate | 7F9752274034039B4CEF73AB430F2D71
 [v2.0.0](http://files.ghielectronics.com/downloads/TinyCLR/Libraries/TinyCLR%20OS%20Libraries%20v2.0.0.zip) | 2020-08-21 | Production | E182BF265B7D814C92FE2B5DAE7D2BDC
