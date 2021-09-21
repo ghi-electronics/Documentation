@@ -79,8 +79,40 @@
 <h1 id="nuget">NuGet</h1>
 
 <hr>
-<p>All libraries are hosted in the cloud using the industry standard NuGet format. Not only is it easy to install and upgrade libraries, it is also easy to create and publish custom libraries.</p>
-<p>Information on adding NuGet Libraries to a developers application can be found on the <a href="../getting-started.html">Getting Started</a> page.</p>
+<p>All libraries are hosted in the cloud using the industry standard NuGet format on www.NuGet.org. Not only is it easy to install and upgrade libraries, it is also easy to create and publish custom libraries.</p>
+<p>The steps below explain how to add online-hosted NuGet libraries to your project. If you are using a pre-release, the libraries must be <a href="../downloads.html">downloaded</a> and installed as a local feed.</p>
+<ol>
+<li>Start Visual Studio and create a new <code>TinyCLR Application</code> under <code>C# &gt; TinyCLR</code>. New to Visual Studio or C#? Take a look at the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/with-visual-studio">getting started guide from Microsoft</a>.</li>
+<li><p>Right click on your Project in the Solution Explorer panel and select <code>Manage NuGet Packages</code>.  If the Solution Explorer window is not visible, open it by selecting <code>Solution Explorer</code> in the <code>View</code> menu. You can also select <code>Manage NuGet Packages...</code> in the <code>Project</code> menu of Visual Studio.
+<img src="images/select-manage-nuget-packages.gif" alt="View Show Solution Explorer"></p>
+</li>
+<li><p>Make sure the package source is set to &quot;Package source&quot; or &quot;All.&quot;</p>
+</li>
+</ol>
+<p><img src="images/package-source.png" alt="Set package source"></p>
+<ol>
+<li>In the search box type &quot;tinyclr.&quot; <strong>You may have to check the &quot;Include prerelease&quot; box to find the libraries.</strong>
+<img src="images/search-for-tinyclr.png" alt="Search for TinyCLR"></li>
+<li><p>Selecting the <code>Browse</code> tab will show all the TinyCLR NuGet packages.
+<img src="images/browse-nuget-feed.png" alt="Browse NuGet Feed"></p>
+</li>
+<li><p>To install one of the packages click on the down arrow to the right of the package version.
+<img src="images/add-nuget-package.png" alt="Add Nuget Package"></p>
+</li>
+</ol>
+<p>You can also select the package and click on the <code>Install</code> button in the center panel.
+<img src="images/nuget-install-button.png" alt="Nuget-package-install-button"></p>
+<ol>
+<li>Click <code>OK</code> to accept the proposed changes.</li>
+</ol>
+<p><img src="images/accept-changes.png" alt="Accept changes"></p>
+<ol>
+<li>Accept the licensing agreement to install the package.</li>
+</ol>
+<p><img src="images/accept-agreement-for-nuget.png" alt="Accept Agreement for NuGet"></p>
+<div class="NOTE"><h5>Note</h5><p>Pre-release libraries are not hosted on NuGet.org, use the local feed feature to fetch the needed libraries from your local machine, found on the [<strong>Downloads</strong>](.. /downloads.md) page.</p>
+</div>
+<hr>
 <p>For information on creating custom NuGet Packages, <a href="https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package">this page</a> from Microsoft is a good place to start.</p>
 <div class="TIP"><h5>Tip</h5><p>Developers can use the NuGet Package Manager Console to reinstall NuGets <code>Update-Package -reinstall</code>. More details are found on <a href="https://docs.microsoft.com/en-us/nuget/reference/ps-reference/ps-ref-update-package">Visual Studio Docs</a> website.</p>
 </div>

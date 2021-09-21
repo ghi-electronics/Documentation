@@ -79,7 +79,7 @@
 <h1 id="sitcore-dev-boards">SITCore Dev Boards</h1>
 
 <hr>
-<p><img src="images/sitcore-dev-boards.jpg" alt="Development Options"></p>
+<p><img src="images/sitcore-dev-boards.png" alt="Development Options"></p>
 <p>We offer three development boards making it possible to start programming applications within minutes without designing or building new hardware. These boards are not only suitable for prototypes, but for short production runs as well.</p>
 <h2 id="sitcore-sc13048q-dev-board">SITCore SC13048Q Dev Board</h2>
 <p><img src="images/sc13048q.jpg" alt="Development Options"></p>
@@ -111,8 +111,10 @@
 <div class="NOTE"><h5>Note</h5><p>All boards with a barrel power jack accept a 5.5 x 2.1 mm power plug. The pin is positive, the sleeve is negative.</p>
 </div>
 <h3 id="sc20260-dev-display-options">SC20260 Dev Display Options</h3>
-<p><img src="images/ud435.jpg" alt="UD435"></p>
 <p>One of the headers on the SCM20260 Dev board includes all necessary parallel display signals. It also includes I2C and a couple of GPIOs allowing for support of capacitive touch panels. Out-of-the-box, the SCM20260 Dev board includes a 4.3&quot; display with capacitive touch.</p>
+<h4 id="ud435-display-adaptor">UD435 Display Adaptor</h4>
+<p><img src="images/ud435.jpg" alt="UD435"></p>
+<p>This display is included with the SCM20260D Dev board.</p>
 <ul>
 <li>Display Module: <a href="https://www.buydisplay.com/">ER-TFT043-3</a></li>
 <li>Touch Panel: <a href="https://www.buydisplay.com/">ER-TPC043-2</a></li>
@@ -191,6 +193,13 @@
 </tr>
 </tbody>
 </table>
+<h4 id="hdmi-adaptor">HDMI Adaptor</h4>
+<p><img src="images/sitcore-hdmi.jpg" alt="hdmi"></p>
+<p>This optional HDMI adaptor can be used instead of the display to provide an HDMI option. The board utilizes TI&#39;s TFP410 HDMI transmitter chip. </p>
+<p>A NuGet driver library is provided as well. The driver automatically sets all the configuration internally.</p>
+<pre><code class="lang-cs">var hdmi = new TFP410Controller(i2cController, Resolution.HD720p, DisplayOrientation.Degrees0, resetPin);
+displayController.SetConfiguration(hdmi.Configuration);
+</code></pre><p><a href="pdfs/scd-hdmi-a-schematic.pdf">SITCore HDMI Adaptor Schematic</a></p>
 <h3 id="sc20260-dev-camera-options">SC20260 Dev Camera Options</h3>
 <p>The SC20260 SoC and its related SoMs include a parallel Digital Camera Interface. The Dev Board exposes the camera signals on a dedicated header. While any compatible display can be connected, the pinout matches the popular OV9655 breakout board, available from many sources around the web and shown below:</p>
 <p><img src="images/ov9655-breakout.jpg" alt="OV9655 Breakout"></p>
