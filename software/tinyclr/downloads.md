@@ -78,7 +78,7 @@ The libraries are provided here in case you're having trouble with the online so
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.1.1](http://files.ghielectronics.com/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.1.1.zip) | 2021-09-21 | Update | 761ECFB356D1CF87D75807D98E23FAFA
+[v2.1.1](http://files.ghielectronics.com/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.1.1.zip) | 2021-09-21 | Update | CEF977522F3ADEAFE8D984FC62CD07B1
 [v2.1.0](http://files.ghielectronics.com/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.1.0.zip) | 2021-06-30 | Production | A02ACD56474A1E5664D05C9A66F91F07
 [v2.1.0-rc2](http://files.ghielectronics.com/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.1.0-rc2.zip) | 2021-06-04 | Release Candidate | 0E23C7C2888B514D7F546A78D7F80598
 [v2.1.0-rc1](http://files.ghielectronics.com/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.1.0-rc1.zip) | 2021-04-26 | Release Candidate | 7F9752274034039B4CEF73AB430F2D71
