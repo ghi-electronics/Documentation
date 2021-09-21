@@ -169,7 +169,7 @@ The above discussed functions of the LDR, APP, and MOD pins are only available d
 
 ## TinyCLR OS
 
-TinyCLR OS provides a way to program the SITCore in C# or Visual Basic from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.
+TinyCLR OS provides a way to program the SITCore in C# from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR [Getting Started](../../software/tinyclr/getting-started.md) page for instructions.
 
 ### Loading the Firmware
 
