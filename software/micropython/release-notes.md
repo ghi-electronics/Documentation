@@ -1,6 +1,18 @@
 # Release Notes
 ---
 
+## v0.2.3 
+
+### Released 2021-09-21
+
+### Changes
+
+- Add necessary libraries to support BrainPad.
+
+### Known Issues
+
+- No PWM. Use timer instead.
+
 ## v0.2.0 
 
 ### Released 2021-05-27
