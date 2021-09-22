@@ -25,6 +25,9 @@ CAN bit timing is a complex topic that requires considerable knowledge of the CA
 | 500K    | 13 | 2 | 6  | 1 | False | 87.5% | 0.31% | 100M
 | 1M      | 13 | 2 | 3  | 1 | False | 87.5% | 0.31% | 40M
 
+> [!Note]
+The table above is calculated base on 40MHz clock source.
+
 There are many online CAN calculators that can be used to help you with CAN timing, for [example](http://www.bittiming.can-wiki.info/).
 
 ![CAN bit segments](images/can-bit-segments.png)
@@ -35,10 +38,14 @@ The CAN calculator needs the microcontroller's CAN clock speed. For the SITCore 
 Filters can be set to automatically accept or ignore messages based on their arbitration ID.
 
 > [!Tip]
->Each CAN channel supports up to 64 standard IDs and 32 Extended IDs
+>On SC20xxx, each CAN channel supports up to 64 standard IDs and 32 Extended IDs. SC13xxx supports up to 14 filters.
+
 
 ### Range Filter
 `AddRangeFilter()` allows you to set a range of arbitration IDs that will be accepted as valid messages. Messages with arbitration IDs outside of this range will be ignored. You can add more than one range filter. In the sample code below, the range filters will accept messages with arbitration IDs ranging from `0x12` to `0x20` and also between `0x500` and `0x1000` inclusive.
+
+> [!Note]
+Only SC20xxx supports Range Filter, SC13xxx doesn't.
 
 ### Mask Filter
 `AddMaskFilter()` can be used to specify an individual arbitration ID or a range of arbitration IDs that will be accepted regardless of the group filter settings. If the arbitration ID of the message is bitwise anded with the given mask argument, and the result is equal to the compare argument you provide, the message will be accepted.
