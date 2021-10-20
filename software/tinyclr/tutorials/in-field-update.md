@@ -40,40 +40,61 @@ updater.ActivityPin = indicatorLed;
 > The application and the firmware are buffered in external memories in encrypted fashion and has no security implication, keeping IFU done securely.
 
 > [!Warning]
-> Power interruption during `FlashAndReset` will cause the update to fail, requiring a manual update. However, it is safe during `Build`.
+> Power interruption during `FlashAndReset` will cause the update to fail, requiring a manual update.
+
+The example below show how to use IFU, firmware and application data are loaded from SDCard.
 
 
 ```cs
-var fwBuf = YourFirmwareBuffer;
-var appBuf = YourApplicationBuffer;
+var qspiController = StorageController.FromName(SC20260.StorageController.QuadSpi);
+var indicatorPin = GpioController.GetDefault().OpenPin(SC13048.GpioPin.PB5);
 
-var memoryStreamFirmware = new MemoryStream(fwBuf);
-var memoryStreamApplication = new MemoryStream(appBuf);
-var useExternalFlash = true;
+var appKey = new byte[] { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }; // your key, assumming they are all zero as example.
 
-// key is generated along with the application from TinyCLR Config tool
-var appKey = new byte[] { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
+var updater = new InFieldUpdate(qspiController)
+{
+	ActivityPin = indicatorPin
+};
 
-updater = new InFieldUpdate(memoryStreamFirmware, memoryStreamApplication, appKey, useExternalFlash);
+var dataChunk = new byte[1 * 1024]; // must be multiple of 1K
 
-updater.Build(true, true); // Build both firmware and application
+var filestreamApp = new FileStream(@"A:\your_app.tca", FileMode.Open);
+var filestreamFw = new FileStream(@"A:\ghi_firmware.ghi", FileMode.Open);
 
-Debug.WriteLine("Firmware version: " + updater.FirmwareVersion);
-Debug.WriteLine("Application version: " + updater.ApplicaltionVersion);
+// Buffer application
+var idxApp = 0;
+
+while (idxApp < filestreamApp.Length)
+{
+	var count = filestreamApp.Read(dataChunk, 0, dataChunk.Length);
+	idxApp += updater.LoadApplicationChunk(dataChunk, 0, count);
+}
+
+// Buffer firmware
+var idxFirmware = 0;
+while (idxFirmware < filestreamFw.Length)
+{	
+	var count = filestreamFw.Read(dataChunk, 0, dataChunk.Length);
+
+	idxFirmware += updater.LoadFirmwareChunk(dataChunk, 0, count);	
+}
+
+//Load key
+updater.LoadApplicationKey(appKey);
+
+Debug.WriteLine("Verifying application.... ");
+Debug.WriteLine("Application version: " + updater.VerifyApplication());
+
+Debug.WriteLine("Verify firmware.... ");
+Debug.WriteLine("Firmware version: " + updater.VerifyFirmware());
+
+// Flashing
 
 updater.FlashAndReset();
 ```
 
-It might be desired to only `Build` one stream at a time, but if IFU is constructed with two streams then both `Build` must be completed before `FlashAndReset`.
-
-```
-updater.Build(true, false);
-// do something
-// ...
-updater.Build(false, true);
-```
 > [!Tip]
-> Running IFU in a thread is desired to keep the system running while IFU finish `Build`. But once `FlashAndReset` is called the system is locked till done and reset automatically.
+> Once `FlashAndReset` is called the system is locked till done and reset automatically.
 
 ---
 
@@ -84,7 +105,7 @@ When no external memories are present (Flash nor RAM) and standard IFU is not an
 ```cs
 // Open a file stream to an application file on an SD card or USB memory
 // ...
-var updater = new ApplicationdUpdate(filestream, appKey)
+var updater = new ApplicationUpdate(filestream, appKey)
 var applicationVersion = updater.Verify();
 updater.ActivityPin = indicatorPin; // optional
 updater.FlashAndReset();
@@ -94,7 +115,7 @@ updater.FlashAndReset();
 
 ## IFU 2.0 to 2.1
 
-Starting release 2.1, IFU is reworked to support complete firmware and application update using external flash (when available) or external RAM (when available). Unfortunately, using IFU to update from 2.1 to 2.2 is only possible if the deployment region was not extended to use external flash.
+Starting release 2.1, IFU is reworked to support complete firmware and application update using external flash (when available) or external RAM (when available). Unfortunately, using IFU to update from 2.0 to 2.1 is only possible if the deployment region was not extended to use external flash.
 
 A work around to update 2.0 to 2.1 is by updating 2.0 to a new 2.1 temporary application that does not use external flash. Once this temp application is loaded then the final application with external flash can be deployed.
 
