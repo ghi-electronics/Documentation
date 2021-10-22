@@ -4,6 +4,83 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.1.0.6300 - RTW Release
+
+### Released 2021-10-22
+
+### Visual Studio Project System
+
+#### Changes
+
+- Supports Visual Studio 2022 (preview1)
+
+#### Known Issues
+
+- Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
+- Debug breakpoints sometimes hang for 5-6 seconds before resuming normally (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/659)
+
+### Libraries
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+
+##### SC20xxx:
+
+- Fixed Ethernet enable lockup system few seconds if no cable connected.
+- Fixed OutOpenDrain raise exception.
+- Correct reset source flags
+
+##### SC13xxx
+
+- Fixed OutOpenDrain raise exception.
+- Correct reset source flags
+ 
+#### Known Issues
+
+- None.
+
+### Drivers
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+### TinyCLR Config
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+---
+
 ## 2.1.0.6200 - RTW Release
 
 ### Released 2021-09-20
