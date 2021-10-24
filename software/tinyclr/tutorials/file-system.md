@@ -16,9 +16,6 @@ SD and MMC cards are fully supported as detailed on the [SD tutorial](sd-cards.m
 
 The example below requires the `GHIElectronics.TinyCLR.IO` and `GHIElectronics.TinyCLR.Devices.Storage` libraries and a device with an SD card.
 
-> [!Note]
-> Make sure the namespace statement in the following code is changed to match the namespace of your project.
-
 ```cs
 var sd = StorageController.FromName(SC20100.StorageController.SdCard);
 var drive = FileSystem.Mount(sd.Hdc);
