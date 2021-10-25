@@ -44,14 +44,14 @@ Now, the Basic Graphics driver can be used.
 
 ```cs
 var basicGfx = new BasicGraphicsImp();
-var colorBlue = 0x00FF0000U;
-var colorGreen = 0x0000FF00U;
-var colorRed = 0x00000FFU;
-var colorWhite = 0x00FFFFFFU;
+var colorBlue = BasicGraphics.ColorFromRgb(0,0,255);
+var colorGreen = BasicGraphics.ColorFromRgb(0,255,0);
+var colorRed = BasicGraphics.ColorFromRgb(255,0,0);
+var colorWhite = BasicGraphics.ColorFromRgb(255,255,255);
 
 basicGfx.Clear();
 
-basicGfx.DrawString("Hi Insiders!", colorGreen, 15, 15, 2, 1);
+basicGfx.DrawString("TinyCLR OS!", colorGreen, 15, 15, 2, 1);
 basicGfx.DrawString("SITCore", colorBlue, 35, 40, 2, 2);
 basicGfx.DrawString("SC13xxx", colorRed, 35, 60, 2, 2);
 
@@ -66,14 +66,14 @@ This example uses the second option where a buffer is allocated automatically. T
 
 ```cs
 var basicGfx = new BasicGraphics(160, 128, ColorFormat.Rgb565);
-var colorBlue = 0x00FF0000U;
-var colorGreen = 0x0000FF00U;
-var colorRed = 0x00000FFU;
-var colorWhite = 0x00FFFFFFU;
+var colorBlue = BasicGraphics.ColorFromRgb(0,0,255);
+var colorGreen = BasicGraphics.ColorFromRgb(0,255,0);
+var colorRed = BasicGraphics.ColorFromRgb(255,0,0);
+var colorWhite = BasicGraphics.ColorFromRgb(255,255,255);
 
 basicGfx.Clear()
 
-basicGfx.DrawString("Hi Insiders!", colorGreen, 15, 15, 2, 1);
+basicGfx.DrawString("TinyCLR OS!", colorGreen, 15, 15, 2, 1);
 basicGfx.DrawString("SITCore", colorBlue, 35, 40, 2, 2);
 basicGfx.DrawString("SC13xxx", colorRed, 35, 60, 2, 2);
 
