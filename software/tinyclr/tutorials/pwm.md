@@ -133,7 +133,7 @@ Servo motors use PWM to generate the necessary signal. A NuGet package is provid
 var softwarePwmController = PwmController.FromName(SC20260.Timer.Pwm.Software.Id);
 var pwmPinPB3 = softwarePwmController.OpenChannel(SC20260.GpioPin.PB3);
 
-var servo = new ServoController(PwmController.FromName(SC20260.Timer.Pwm.Software.Id), pwmPinPB3);
+var servo = new ServoController(softwarePwmController, pwmPinPB3);
 
 servo.Set(0); // 0 degree
 
