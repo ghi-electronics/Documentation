@@ -87,6 +87,7 @@ leds.SetColor(0, 0xFF, 0, 0); // red
 leds.SetColor(1, 0, 0xFF, 0); // green
 leds.SetColor(2, 0, 0, 0xFF); // blue
 leds.SetColor(3, 0xFF, 0xFF, 0xFF); // white
+leds.Flush();
 ```
 
 ---
