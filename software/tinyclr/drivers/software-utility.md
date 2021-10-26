@@ -122,7 +122,7 @@ managedFS.CloseFile(fileRead);
 Infrared remotes are very common and use multiple standards. NCR is very common and a driver is included. A remote with NCR standard will send an 8bit address and an 8bit command with every key press. A repeat signal will be sent as long as the key is continuously pressed.
 
 > [!TIP]
-> Needed NuGet: GHIElectronics.TinyCLR.Drivers.Infrared.NecIR
+> Needed NuGet: GHIElectronics.TinyCLR.Drivers.Infrared
 
 ```cs
 static void Main() {
