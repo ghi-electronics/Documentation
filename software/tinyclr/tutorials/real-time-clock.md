@@ -69,11 +69,11 @@ var rtc = GHIElectronics.TinyCLR.Devices.Rtc.RtcController.GetDefault();
 rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.None);
 
 //The following line charges slowly through a 5 K resistor. Used for supercaps.
-rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Slow)
+rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Slow);
 
 //The following line charges quickly through a 1.5 K resistor.
 //   This is the mode we use for the supercaps on SITCore Dev boards.
-rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Fast)
+rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Fast);
 ```
 
 ---
