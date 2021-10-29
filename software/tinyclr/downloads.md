@@ -58,17 +58,16 @@ File | Date | Status | MD5
 
 ## Visual Studio Project System
 
-### Visual Studio 2022
 The extension is what gets loaded on Visual Studio to allow it to communicate with a TinyCLR OS device. It also includes project templates.
+
+### Visual Studio 2022
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.1.0.1000](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-v2.1.0.1000.vsix) | 2021-10-22 | Preview | 14BACC855F5B65841F0A014743CCE963
+[v2.1.800](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-v2.1.800.vsix) | 2021-10-22 | Release Candidate | ???
 
 
 ### Visual Studio 2019 
-
-The extension is what gets loaded on Visual Studio to allow it to communicate with a TinyCLR OS device. It also includes project templates.
 
 File | Date | Status | MD5
 --- | --- | --- | ---
