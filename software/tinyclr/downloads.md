@@ -22,7 +22,7 @@ The Firmware is the TinyCLR OS that lives on your hardware. The firmware version
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.1.0.6300 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.1.0.6300.ghi) | 2021-10-22 | Update | D679687CC79373BAB58FB43EFB893F10
+[v2.1.0.6300 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.1.0.6300.ghi) | 2021-10-29 | Update | C1296B03E58C497792C5C1436E93523B
 [v2.1.0.6200 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.1.0.6200.ghi) | 2021-09-21 | Update | ED93AA54B58BA9FCDE1FC8707B0032BE
 [v2.1.0.6000 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.1.0.6000.ghi) | 2021-06-30 | Production | E2D7B1BD4BF21C5F1A5C4EF88865732D
 [v2.1.0.6000 (RC2)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.1.0.6000.ghi) | 2021-06-04 | Release Candidate | E2D7B1BD4BF21C5F1A5C4EF88865732D
@@ -35,7 +35,7 @@ File | Date | Status | MD5
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.1.0.6300 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.6300.ghi) | 2021-10-22 | Update | 3D21D7D74FD2585EFC239A8F4914FCD2
+[v2.1.0.6300 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.6300.ghi) | 2021-10-29 | Update | 3D21D7D74FD2585EFC239A8F4914FCD2
 [v2.1.0.6200 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.6200.ghi) | 2021-09-21 | Update | 574408495A41FFD9C7AE79C37AC3ECC3
 [v2.1.0.6100 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.6100.ghi) | 2021-06-30 | Production | E4CD5D819192E4260DAB6D4140E434B6
 [v2.1.0.6000 (RC2)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.6000.ghi) | 2021-06-04 | Release Candidate | 77CF2F7B6E629CE1E1AEEA332F9DC64E
@@ -64,7 +64,7 @@ The extension is what gets loaded on Visual Studio to allow it to communicate wi
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.1.800](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-v2.1.800.vsix) | 2021-10-22 | Release Candidate | ???
+[v2.1.800](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-v2.1.800.vsix) | 2021-10-29 | Release Candidate | 2F1F46A6D189A2D4AEFBAA861DC7D594
 
 
 ### Visual Studio 2019 
