@@ -12,7 +12,7 @@
 
 #### Changes
 
-- Supports Visual Studio 2022 (preview1)
+- Supports Visual Studio 2022 (Release Candidate)
 
 #### Known Issues
 
@@ -37,7 +37,8 @@
 
 - Fixed Ethernet enable lockup system few seconds if no cable connected.
 - Fixed OutOpenDrain raise exception.
-- Correct reset source flags
+- Corrected reset source flags
+- Fixed calling WiFi's utilities crashed if no SetCommunicationInterfaceSettings
 
 ##### SC13xxx
 
