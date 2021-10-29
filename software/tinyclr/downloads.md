@@ -22,7 +22,7 @@ The Firmware is the TinyCLR OS that lives on your hardware. The firmware version
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.1.0.6300 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.1.0.6300.ghi) | 2021-10-29 | Update | C1296B03E58C497792C5C1436E93523B
+[v2.1.0.6300 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.1.0.6300.ghi) | 2021-10-29 | Update | 3A0E2F90AC2C3CF72F1ED7DB8506D689
 [v2.1.0.6200 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.1.0.6200.ghi) | 2021-09-21 | Update | ED93AA54B58BA9FCDE1FC8707B0032BE
 [v2.1.0.6000 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.1.0.6000.ghi) | 2021-06-30 | Production | E2D7B1BD4BF21C5F1A5C4EF88865732D
 [v2.1.0.6000 (RC2)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.1.0.6000.ghi) | 2021-06-04 | Release Candidate | E2D7B1BD4BF21C5F1A5C4EF88865732D
@@ -48,6 +48,7 @@ TinyCLR Config is a tool used to update and configure your TinyCLR device.
 
 File | Date | Status | MD5
 --- | --- | --- | ---
+[v2.1.0.6300](http://files.ghielectronics.com/downloads/TinyCLR/Config/TinyCLR-Config-Setup-v2.1.0.6300.msi) | 2021-10-29 | Update | F9AADBCCB75298279E9FE459B7A24244
 [v2.1.0.6200](http://files.ghielectronics.com/downloads/TinyCLR/Config/TinyCLR-Config-Setup-v2.1.0.6200.msi) | 2021-09-21 | Update | A417207CF63A9BFD206BC22C40C66D33
 [v2.1.0](http://files.ghielectronics.com/downloads/TinyCLR/Config/TinyCLR-Config-Setup-v2.1.0.msi) | 2021-06-30 | Production | 4CCC489BCC4A396916F3E09D66E208BB
 [v2.1.0-rc2](http://files.ghielectronics.com/downloads/TinyCLR/Config/TinyCLR-Config-Setup-v2.1.0-rc2.msi) | 2021-06-04 | Release Candidate | AF235926E98E2CF120E2038AA354B49A
@@ -64,7 +65,7 @@ The extension is what gets loaded on Visual Studio to allow it to communicate wi
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.1.800](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-v2.1.800.vsix) | 2021-10-29 | Release Candidate | 2F1F46A6D189A2D4AEFBAA861DC7D594
+[v2.1.800](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-v2.1.800.vsix) | 2021-10-29 | Release Candidate | F68E44705132A521817D75D765407047
 
 
 ### Visual Studio 2019 

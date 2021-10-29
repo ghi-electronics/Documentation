@@ -23,7 +23,7 @@
 
 #### Changes
 
-- None.
+- Add FEZ's family.
 
 #### Known Issues
 
@@ -38,7 +38,7 @@
 - Fixed Ethernet enable lockup system few seconds if no cable connected.
 - Fixed OutOpenDrain raise exception.
 - Corrected reset source flags
-- Fixed calling WiFi's utilities crashed if no SetCommunicationInterfaceSettings
+- Fixed using WINC15's utilities crashed if not call SetCommunicationInterfaceSettings.
 
 ##### SC13xxx
 
@@ -53,7 +53,7 @@
 
 #### Changes
 
-- None.
+- Fixed LIS2HH12 driver.
 
 #### Known Issues
 
@@ -63,7 +63,7 @@
 
 #### Changes
 
-- None.
+- Fixed not add (GHI Electronics) to COM port if bootloader v2.1.3 or older.
 
 #### Known Issues
 
