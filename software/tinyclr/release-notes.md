@@ -23,7 +23,7 @@
 
 #### Changes
 
-- Add FEZ's family.
+- Added FEZ's family.
 
 #### Known Issues
 
@@ -63,7 +63,7 @@
 
 #### Changes
 
-- Fixed not add (GHI Electronics) to COM port if bootloader v2.1.3 or older.
+- Fixed COM port has no (GHI Electronics) if bootloader v2.1.3 or older.
 
 #### Known Issues
 
