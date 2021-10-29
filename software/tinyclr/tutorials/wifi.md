@@ -73,8 +73,7 @@ static void Wifi_Example() {
     wifiSettings.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
     wifiSettings.DnsAddresses = new IPAddress[] { new IPAddress(new byte[]
         { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
-
-    wifiSettings.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
+    
     wifiSettings.DhcpEnable = true;
     wifiSettings.DynamicDnsEnable = true;
 
@@ -115,6 +114,7 @@ Unless provided, the MAC address of the WiFi module will be automatically used b
 
 >[!TIP]
 >Needed NuGets: GHIElectronics.TinyCLR.Drivers.Microchip.Winc15x0
+>CommunicationInterfaceSettings function need to be called to make sure that WiFi configuration (spibus, chipselect, interrupt pins etc...) is config before using WINC1500's utilities.
 
 ```cs
 //Scan for WiFi access points:
