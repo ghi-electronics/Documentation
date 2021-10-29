@@ -10,6 +10,7 @@ ATWINC1500 & 1510 both work identically with SITCore, except the 1510 has more m
 
 # Sample Code
 The sample code is meant for the FEZ Portal with it's built in WiFi module. If you want to use a bare ATWINC1500 module instead, you'll need to connect interrupt, reset, and chip select lines in addition to the SPI lines (MOSI, MISO, SCK).
+The user can overide the WiFi built-in MAC address, but not recommended.
 
 > [!IMPORTANT] 
 > If using WiFi 7 click module, there is an enable pin which needs to be pulled high.
@@ -29,17 +30,24 @@ using System.Net;
 using System.Threading;
 
 static void Wifi_Example() {
-    var enablePin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA8);
+	var enablePinNumber = SC20260.GpioPin.PA8;
+	var chipSelectPinNumber = SC20260.GpioPin.PA6;
+	var irqPinNumber = SC20260.GpioPin.PF10;
+	var resetPinNumber = SC20260.GpioPin.PC3;
+	var spiControllerName = SC20260.SpiBus.Spi3;
+	var gpioControllerName = SC20260.GpioPin.Id;
+			
+    var enablePin = GpioController.GetDefault().OpenPin(enablePinNumber);
     enablePin.SetDriveMode(GpioPinDriveMode.Output);
     enablePin.Write(GpioPinValue.High);
 
     SpiNetworkCommunicationInterfaceSettings netInterfaceSettings =
         new SpiNetworkCommunicationInterfaceSettings();
 
-    var cs = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA6);
+    var chipselect = GpioController.GetDefault().OpenPin(chipSelectPinNumber);
 
     var settings = new SpiConnectionSettings() {
-        ChipSelectLine = cs,
+        ChipSelectLine = chipselect,
         ClockFrequency = 4000000,
         Mode = SpiMode.Mode0,
         ChipSelectType = SpiChipSelectType.Gpio,
@@ -47,36 +55,30 @@ static void Wifi_Example() {
         ChipSelectSetupTime = TimeSpan.FromTicks(10)
     };
 
-    netInterfaceSettings.SpiApiName = SC20260.SpiBus.Spi3;
-
-    netInterfaceSettings.GpioApiName = SC20260.GpioPin.Id;
-
+    // netInterfaceSettings
+	netInterfaceSettings.SpiApiName = spiControllerName;
     netInterfaceSettings.SpiSettings = settings;
-    netInterfaceSettings.InterruptPin = GpioController.GetDefault().
-        OpenPin(SC20260.GpioPin.PF10);
+	
+	netInterfaceSettings.GpioApiName = gpioControllerName;    
 
+    netInterfaceSettings.InterruptPin = GpioController.GetDefault().OpenPin(irqPinNumber);
     netInterfaceSettings.InterruptEdge = GpioPinEdge.FallingEdge;
     netInterfaceSettings.InterruptDriveMode = GpioPinDriveMode.InputPullUp;
-    netInterfaceSettings.ResetPin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PC3);
+	
+    netInterfaceSettings.ResetPin = GpioController.GetDefault().OpenPin(resetPinNumber);
     netInterfaceSettings.ResetActiveState = GpioPinValue.Low;
 
-    var networkController = NetworkController.FromName
-        (SC20260.NetworkController.ATWinc15x0);
-
-    WiFiNetworkInterfaceSettings wifiSettings = new WiFiNetworkInterfaceSettings() {
+    // Wifi setting
+	var wifiSettings = new WiFiNetworkInterfaceSettings() {
         Ssid = "Your SSID",
         Password = "Your Password",
     };
-
-    wifiSettings.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
-    wifiSettings.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
-    wifiSettings.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
-    wifiSettings.DnsAddresses = new IPAddress[] { new IPAddress(new byte[]
-        { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
     
     wifiSettings.DhcpEnable = true;
     wifiSettings.DynamicDnsEnable = true;
 
+	var networkController = NetworkController.FromName(SC20260.NetworkController.ATWinc15x0);
+	
     networkController.SetInterfaceSettings(wifiSettings);
     networkController.SetCommunicationInterfaceSettings(netInterfaceSettings);
     networkController.SetAsDefaultController();
@@ -110,11 +112,9 @@ private static void NetworkController_NetworkAddressChanged
 
 The Winc15x0Interface class provides to access some of the native functions of the WINC1500 WiFi module. Such as getting the WiFi module's MAC address, getting RSSI (Relative Signal Strength Indicator), scanning for access points, checking the firmware version, and over-the-air (OTA) firmware update.
 
-Unless provided, the MAC address of the WiFi module will be automatically used by default.
-
 >[!TIP]
 >Needed NuGets: GHIElectronics.TinyCLR.Drivers.Microchip.Winc15x0
->CommunicationInterfaceSettings function need to be called to make sure that WiFi configuration (spibus, chipselect, interrupt pins etc...) is config before using WINC1500's utilities.
+>SetCommunicationInterfaceSettings function needs to be called before using this driver.
 
 ```cs
 //Scan for WiFi access points:
