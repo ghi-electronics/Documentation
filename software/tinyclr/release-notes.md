@@ -38,7 +38,7 @@
 - Fixed Ethernet enable lockup system few seconds if no cable connected.
 - Fixed OutOpenDrain raise exception.
 - Corrected reset source flags
-- Fixed using WINC15's utilities crashed if not call SetCommunicationInterfaceSettings.
+- Fixed WiFi crashed if Enable() without interface configuration.
 
 ##### SC13xxx
 
