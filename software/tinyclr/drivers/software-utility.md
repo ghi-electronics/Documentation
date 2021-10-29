@@ -44,14 +44,14 @@ Now, the Basic Graphics driver can be used.
 
 ```cs
 var basicGfx = new BasicGraphicsImp();
-var colorBlue = 0x00FF0000U;
-var colorGreen = 0x0000FF00U;
-var colorRed = 0x00000FFU;
-var colorWhite = 0x00FFFFFFU;
+var colorBlue = BasicGraphics.ColorFromRgb(0,0,255);
+var colorGreen = BasicGraphics.ColorFromRgb(0,255,0);
+var colorRed = BasicGraphics.ColorFromRgb(255,0,0);
+var colorWhite = BasicGraphics.ColorFromRgb(255,255,255);
 
 basicGfx.Clear();
 
-basicGfx.DrawString("Hi Insiders!", colorGreen, 15, 15, 2, 1);
+basicGfx.DrawString("TinyCLR OS!", colorGreen, 15, 15, 2, 1);
 basicGfx.DrawString("SITCore", colorBlue, 35, 40, 2, 2);
 basicGfx.DrawString("SC13xxx", colorRed, 35, 60, 2, 2);
 
@@ -66,14 +66,14 @@ This example uses the second option where a buffer is allocated automatically. T
 
 ```cs
 var basicGfx = new BasicGraphics(160, 128, ColorFormat.Rgb565);
-var colorBlue = 0x00FF0000U;
-var colorGreen = 0x0000FF00U;
-var colorRed = 0x00000FFU;
-var colorWhite = 0x00FFFFFFU;
+var colorBlue = BasicGraphics.ColorFromRgb(0,0,255);
+var colorGreen = BasicGraphics.ColorFromRgb(0,255,0);
+var colorRed = BasicGraphics.ColorFromRgb(255,0,0);
+var colorWhite = BasicGraphics.ColorFromRgb(255,255,255);
 
 basicGfx.Clear()
 
-basicGfx.DrawString("Hi Insiders!", colorGreen, 15, 15, 2, 1);
+basicGfx.DrawString("TinyCLR OS!", colorGreen, 15, 15, 2, 1);
 basicGfx.DrawString("SITCore", colorBlue, 35, 40, 2, 2);
 basicGfx.DrawString("SC13xxx", colorRed, 35, 60, 2, 2);
 
@@ -122,7 +122,7 @@ managedFS.CloseFile(fileRead);
 Infrared remotes are very common and use multiple standards. NCR is very common and a driver is included. A remote with NCR standard will send an 8bit address and an 8bit command with every key press. A repeat signal will be sent as long as the key is continuously pressed.
 
 > [!TIP]
-> Needed NuGet: GHIElectronics.TinyCLR.Drivers.Infrared.NecIR
+> Needed NuGet: GHIElectronics.TinyCLR.Drivers.Infrared
 
 ```cs
 static void Main() {
