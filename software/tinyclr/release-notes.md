@@ -6,17 +6,17 @@
 
 ## 2.1.0.6300 - RTW Release
 
-### Released 2021-10-29
+### Released 2021-01-01
 
 ### Visual Studio Project System
 
 #### Changes
 
 - Supports Visual Studio 2022 (Release Candidate)
+- Reduced time when deploy application to device.
 
 #### Known Issues
 
-- Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
 - Debug breakpoints sometimes hang for 5-6 seconds before resuming normally (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/659)
 
 ### Libraries
@@ -44,6 +44,7 @@
 
 - Fixed OutOpenDrain raise exception.
 - Correct reset source flags
+- Raised NotSupport Exception if shutdown with failing edge.
  
 #### Known Issues
 
