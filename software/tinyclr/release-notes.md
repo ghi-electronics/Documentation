@@ -4,6 +4,84 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.1.0.6300 - RTW Release
+
+### Released 2021-10-29
+
+### Visual Studio Project System
+
+#### Changes
+
+- Supports Visual Studio 2022 (Release Candidate)
+
+#### Known Issues
+
+- Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
+- Debug breakpoints sometimes hang for 5-6 seconds before resuming normally (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/659)
+
+### Libraries
+
+#### Changes
+
+- Added FEZ's family.
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+
+##### SC20xxx:
+
+- Fixed Ethernet enable lockup system few seconds if no cable connected.
+- Fixed OutOpenDrain raise exception.
+- Corrected reset source flags
+- Fixed WiFi crashed if Enable() without interface configuration.
+
+##### SC13xxx
+
+- Fixed OutOpenDrain raise exception.
+- Correct reset source flags
+ 
+#### Known Issues
+
+- None.
+
+### Drivers
+
+#### Changes
+
+- Fixed LIS2HH12 driver.
+
+#### Known Issues
+
+- None.
+
+### TinyCLR Config
+
+#### Changes
+
+- Fixed COM port has no (GHI Electronics) if bootloader v2.1.3 or older.
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+---
+
 ## 2.1.0.6200 - RTW Release
 
 ### Released 2021-09-20

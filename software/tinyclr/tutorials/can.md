@@ -152,6 +152,9 @@ To send the data at higher speed you will also need to set two bit timings, one 
 
 The following code shows the changes needed to make the above code sample use CAN-FD with speeds of 250 kilobaud and 1 megabaud.
 
+> [!Note]
+Only SC20xxx supports CAN-FD, SC13xxx doesn't support this feature.
+
 ```cs
 var propagationPhase1 = 13; //250 kilobaud settings
 var phase2 = 2;

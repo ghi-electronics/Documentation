@@ -24,7 +24,23 @@ These are common display capacitive touch controller chips. PPlease see the [Tou
 ## LIS2HH12
 ![LIS2HH12](./images/LIS2HH12.png)
 
-A 3-axis accelerometer 
+A 3-axis accelerometer. The driver set to 2g as default. Output value is in range -1024 to 1024.
+
+> [!TIP]
+> Needed NuGet: GHIElectronics.TinyCLR.Drivers.STMicroelectronics.LIS2HH12
+
+```cs
+var lis2hh12 = new LIS2HH12Controller(I2cController.FromName(FEZBit.I2cBus.Accelerometer));
+
+while (true) {
+	
+	Debug.WriteLine("X = " + lis2hh12.X);               
+	Debug.WriteLine("Y = " + lis2hh12.Y);               
+	Debug.WriteLine("Z = " + lis2hh12.Z);               
+
+	Thread.Sleep(500);
+}
+```
 
 >[!TIP]
  >Needed NuGet: GHIElectronics.TinyCLR.Drivers.STMicroelectronics.LIS2HH12
