@@ -131,23 +131,21 @@ Key = APP     Value = PB7
 Stacks are first in, last out (or last in, first out) collections of objects. The `Push` method is used to add items to a stack, and the `Pop` method is used to remove items from a stack. There is also a `Peek` method that returns the item at the top of the stack without removing it from the stack.
 
 ```cs
-private static void Main() {
-    var sitCoreDevices = new System.Collections.Stack();
-    sitCoreDevices.Push("SC20100S");
-    sitCoreDevices.Push("SC20260B");
-    sitCoreDevices.Push("SCM20260D");
-    sitCoreDevices.Push("SCM20260E");
-    sitCoreDevices.Push("SCM20260N");
+var sitCoreDevices = new System.Collections.Stack();
+sitCoreDevices.Push("SC20100S");
+sitCoreDevices.Push("SC20260B");
+sitCoreDevices.Push("SCM20260D");
+sitCoreDevices.Push("SCM20260E");
+sitCoreDevices.Push("SCM20260N");
         
-    PrintValues(sitCoreDevices);
+PrintValues(sitCoreDevices);
 
-    System.Diagnostics.Debug.WriteLine("Popped: " + sitCoreDevices.Pop().ToString());
-    System.Diagnostics.Debug.WriteLine(" ");
+System.Diagnostics.Debug.WriteLine("Popped: " + sitCoreDevices.Pop().ToString());
+System.Diagnostics.Debug.WriteLine(" ");
 
-    PrintValues(sitCoreDevices);
-}
+PrintValues(sitCoreDevices);
 
-public static void PrintValues(System.Collections.Stack myQueue) {
+void PrintValues(System.Collections.Stack myQueue) {
     System.Diagnostics.Debug.WriteLine("Count: " + myQueue.Count);
     System.Diagnostics.Debug.WriteLine("Items in queue:");
 
@@ -186,25 +184,23 @@ Items in queue:
 Queues are first in, first out collections of objects. To add items to a queue, the `enqueue` method is used. To remove items, the `dequeue` method is used.
 
 ```cs
-private static void Main() {
-    var sitCoreDevices = new System.Collections.Queue();
-    sitCoreDevices.Enqueue("SC20100S");
-    sitCoreDevices.Enqueue("SC20260B");
-    sitCoreDevices.Enqueue("SCM20260D");
-    sitCoreDevices.Enqueue("SCM20260E");
-    sitCoreDevices.Enqueue("SCM20260N");
+var sitCoreDevices = new System.Collections.Queue();
+sitCoreDevices.Enqueue("SC20100S");
+sitCoreDevices.Enqueue("SC20260B");
+sitCoreDevices.Enqueue("SCM20260D");
+sitCoreDevices.Enqueue("SCM20260E");
+sitCoreDevices.Enqueue("SCM20260N");
         
-    PrintValues(sitCoreDevices);
+PrintValues(sitCoreDevices);
 
-    System.Diagnostics.Debug.WriteLine("Dequeued: " +
-        sitCoreDevices.Dequeue().ToString());
+System.Diagnostics.Debug.WriteLine("Dequeued: " +
+    sitCoreDevices.Dequeue().ToString());
 
-    System.Diagnostics.Debug.WriteLine(" ");
+System.Diagnostics.Debug.WriteLine(" ");
 
-    PrintValues(sitCoreDevices);
-}
+PrintValues(sitCoreDevices);
 
-public static void PrintValues(System.Collections.Queue myQueue) {
+void PrintValues(System.Collections.Queue myQueue) {
     System.Diagnostics.Debug.WriteLine("Count: " + myQueue.Count);
     System.Diagnostics.Debug.WriteLine("Items in queue:");
 

@@ -4,7 +4,7 @@ The Adafruit cloud, Adafruit IO, is a cloud service primarily aimed at the maker
 
 We'll need create a few things for our code. We'll need an Adafruit Certificate, a dashboardID, a username, a password key, and a feed to subscribe to. 
 
-First add an Adafruit Certificate to our resources and then add it to line of code below.
+First download the required Adafruit Root Certificate and add to resources. The [TLS Client](tls-client.md) shows how to download the root certificate.
 
 ![Adafruit IO Add Certificate](images/adaIO-add-cert.jpg)
 

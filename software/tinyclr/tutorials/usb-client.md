@@ -22,7 +22,7 @@ mouse.Enable();
 
 //...
 
-private static void UsbClientDeviceStateChanged(RawDevice sender, DeviceState state) {
+void UsbClientDeviceStateChanged(RawDevice sender, DeviceState state) {
 var i = 0.0;
     if (state == DeviceState.Configured) {
         new Thread(() => {
@@ -83,7 +83,7 @@ Thread.Sleep(Timeout.Infinite);
 
 //...
 
-private static void UsbClientDeviceStateChanged(RawDevice sender, DeviceState state) {
+void UsbClientDeviceStateChanged(RawDevice sender, DeviceState state) {
     if (state == DeviceState.Configured) {
         new Thread(() => {
             Joystick joystick = (Joystick)sender;

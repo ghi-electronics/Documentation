@@ -1,12 +1,12 @@
 # Special Pins
 ---
 
-There are a number of predefined pins that have special functionality on SITCore SoMs and SoCs: 
-* RESET (NRST)
-* LDR (PE3)
-* APP (PB7)
-* MOD (PD7)
-* WKUP (PA0)
+Beside power and standard GPIO pins, there are a number of predefined pins that have special functionality on SITCore SoMs and SoCs: 
+* RESET
+* LDR
+* APP
+* MOD
+* WKUP
 * VBAT
 
 All special pins except RESET and VBAT can be used as GPIO or peripheral pins, however it is up to the designer to make sure these pins do not interfere with their special features.
@@ -39,8 +39,8 @@ The WKUP pin is used to wake the system up from Shut Down mode. See the [Power M
 
 ## VBAT
 
-The VBAT pin on SITCore SoCs and SoMs is used to provide battery power to the [Real Time Clock](tutorials/real-time-clock.md) (RTC). The tutorial also include the battery backed memory.
+The VBAT pin on SITCore SoCs and SoMs is used to provide battery power to the [Real Time Clock](tutorials/real-time-clock.md) (RTC) and its battery backed memory.
 
 ## Debug Interface
 
-For debugging, a design must have either the USB client or UART interface (or both).
+USB or Serial can be used for [debugging](tutorials/debugging.md).

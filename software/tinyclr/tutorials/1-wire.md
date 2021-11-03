@@ -50,7 +50,6 @@ foreach (byte[] serialNumber in oneWireDevices) {
 
     Debug.WriteLine("--------");
 }
-Thread.Sleep(Timeout.Infinite);
 ```
 
 Sample output:
