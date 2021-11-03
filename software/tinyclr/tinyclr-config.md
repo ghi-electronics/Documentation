@@ -9,7 +9,9 @@ You can download TinyCLR Config from the [Downloads](downloads.md) page.
 ## Connecting a Device
 When TinyCLR Config opens, you will notice a `Device` section near the top of its window. Connect your device to your PC's USB port and click on the `Select a device` drop down text box. The name of your device should appear. Click on the device and hit the `Connect` button.
 
-Once your device is connected, you can ping the device using the `Ping` command in the `Utilities` menu. In the `Assemblies` menu there is an `Assemblies Listing` command that will list all the assemblies installed on the connected device along with their version number. There are also options in the `Utilities` menu to reboot the device, show a deployment map, or update the device configuration.
+The `Assemblies` menu there is an `Assemblies Listing` command that will list all the assemblies installed on the connected device along with their version number.
+
+The `Utilities` top menu has options to ping the device using the `Ping` command. There are also options in the `Utilities` menu to reboot the device, show a deployment map, or update the device configuration.
 
 ### Deployment Map
 ![Deployment Map](images/deployment-map.png)
@@ -17,27 +19,27 @@ Once your device is connected, you can ping the device using the `Ping` command 
 The deployment map can be used to gauge the resources used by your application, but more importantly it allows you to make sure assemblies are stored in secure internal flash memory. See the [IP Protection](tutorials/ip-protection.md) page for more information about secure assemblies.
 
 ### Device Configuration
-![Device Configuration](images/device-config.png)
 
-The device configuration options have very important implications for system security. For more information on protecting your application and data, please refer to the [IP Protection](tutorials/ip-protection.md) page of this documentation.
+The device configuration window contains options that have important implications on the system and its security.
+
+There are two regions for holding configurations, the Firmware Config and the Application Config.
 
 #### Firmware Configuration
-The `Extend heap` and `Enable external flash` firmware configuration options both expand internal memory by allowing the use of external memory chips. Once external heap or flash are enabled, you will need to re-flash the firmware or completely erase the device to disable external memory.
+These firmware settings are stored in flash and can only be modified by reflashing the firmware or by doing an `Erase all`.
 
-`Extend heap` extends internal RAM and only works on devices that include external SDRAM. There is also a method, `GHIElectronics.TinyCLR.Native.Memory.ExtendHeap()`, that can be used to extend the heap from within your code. See the [External Memory](tutorials/external-memory.md) page for more information.
+The `Extend heap` uses the external RAM for the system, which reduces the level of security. This is explained further under [External Memory](tutorials/external-memory.md).
 
-`Enable deployment` extends internal flash memory and only works devices that include external flash memory. To extend flash from within an application, use the `GHIElectronics.TinyCLR.Native.Flash.EnableExtendDeployment()` method. See the [External Memory](tutorials/external-memory.md) page for more information.
+`Persist slow clock` Sets the system clock speed to run at half speed, saving about 40% power consumption. See [Power Management](tutorials/power-management.md).
 
-Data stored in external SDRAM or flash memory is less secure than data stored internally. See the [IP Protection](tutorials/ip-protection.md) page for more information.
+'Disable APP pin', `Debug Mode` and `Device Name` options change/disable the MOD and APP pins behavior. Those pins are explained under [Device Info](tutorials/device-info.md).
 
-`Persist slow clock` Sets the system clock speed to run at half speed, saving 40% power consumption. 
+#### Application Configuration
+There Application configuration are stored and flash and can only be reset by doing an 'Erase all` only. Updating the firmware will have no effect.
 
-#### Deployment Configuration
-For added security, the debug interface can be disabled. Note that once this is done, you will not be able to update the firmware or debug your application until you completely erase your device. You can update your application code, but only through TinyCLR Config or [In-Field-Update](tutorials/in-field-update.md). You can also disable the debug interface from within your code. Please refer to the [IP Protection](tutorials/ip-protection.md) page for more information about disabling the debug interface.
+For added security, the debug interface can be disabled. Secure designs will disable the interface and implement [In-Field-Update](tutorials/in-field-update.md). You can also disable the debug interface from within your code. Please refer to the [IP Protection](tutorials/ip-protection.md) page for more information about disabling the debug interface.
 
-
-## Managing Firmware
-TinyCLR Config can be used to install new firmware on a connected device. The firmware is the TinyCLR software installed on your device that runs and manages your application program.
+## Managing TinyCLR Firmware
+TinyCLR Config can be used to install/update TinyCLR firmware on a connected device. The `firmware` is the TinyCLR software installed on your device that runs and manages your application program.
 
 To update your firmware, click on the `...` button to the left of the `Update Firmware` button. A dialog box will open so you can select your firmware file. Only .ghi and .glb files will be recognized. After selecting your firmware file, click on the `Update Firmware` button to copy it to your device.
 
@@ -55,7 +57,3 @@ Click on the `...` button next to the `Create App` button and select a directory
 
 ### Installing a Deployment File
 To install an encrypted deployment file on your device, first use TinyCLR Config to connect to your device. Click on the `...` button next to the `Update App` button and select the deployment file (should have a .tca extension). Enter the correct key in the text box next to the `Generate Key` button. The key is a series of hexadecimal pairs that are separated by hyphens. Now click on the `Update App` button. If the key matches the deployment file, the application will be deployed to your device.
-
-***
-
-Visit our main website at [**www.ghielectronics.com**](http://www.ghielectronics.com) and our community forums at [**forums.ghielectronics.com**](https://forums.ghielectronics.com/).

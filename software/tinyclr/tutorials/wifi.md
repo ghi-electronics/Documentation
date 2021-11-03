@@ -29,77 +29,76 @@ using System.Diagnostics;
 using System.Net;
 using System.Threading;
 
-static void Wifi_Example() {
-	var enablePinNumber = SC20260.GpioPin.PA8;
-	var chipSelectPinNumber = SC20260.GpioPin.PA6;
-	var irqPinNumber = SC20260.GpioPin.PF10;
-	var resetPinNumber = SC20260.GpioPin.PC3;
-	var spiControllerName = SC20260.SpiBus.Spi3;
-	var gpioControllerName = SC20260.GpioPin.Id;
+var enablePinNumber = SC20260.GpioPin.PA8;
+var chipSelectPinNumber = SC20260.GpioPin.PA6;
+var irqPinNumber = SC20260.GpioPin.PF10;
+var resetPinNumber = SC20260.GpioPin.PC3;
+var spiControllerName = SC20260.SpiBus.Spi3;
+var gpioControllerName = SC20260.GpioPin.Id;
 			
-    var enablePin = GpioController.GetDefault().OpenPin(enablePinNumber);
-    enablePin.SetDriveMode(GpioPinDriveMode.Output);
-    enablePin.Write(GpioPinValue.High);
+var enablePin = GpioController.GetDefault().OpenPin(enablePinNumber);
+enablePin.SetDriveMode(GpioPinDriveMode.Output);
+enablePin.Write(GpioPinValue.High);
 
-    SpiNetworkCommunicationInterfaceSettings netInterfaceSettings =
-        new SpiNetworkCommunicationInterfaceSettings();
+SpiNetworkCommunicationInterfaceSettings netInterfaceSettings =
+    new SpiNetworkCommunicationInterfaceSettings();
 
-    var chipselect = GpioController.GetDefault().OpenPin(chipSelectPinNumber);
+var chipselect = GpioController.GetDefault().OpenPin(chipSelectPinNumber);
 
-    var settings = new SpiConnectionSettings() {
-        ChipSelectLine = chipselect,
-        ClockFrequency = 4000000,
-        Mode = SpiMode.Mode0,
-        ChipSelectType = SpiChipSelectType.Gpio,
-        ChipSelectHoldTime = TimeSpan.FromTicks(10),
-        ChipSelectSetupTime = TimeSpan.FromTicks(10)
-    };
+var settings = new SpiConnectionSettings() {
+    ChipSelectLine = chipselect,
+    ClockFrequency = 4000000,
+    Mode = SpiMode.Mode0,
+    ChipSelectType = SpiChipSelectType.Gpio,
+    ChipSelectHoldTime = TimeSpan.FromTicks(10),
+    ChipSelectSetupTime = TimeSpan.FromTicks(10)
+};
 
-    // netInterfaceSettings
-	netInterfaceSettings.SpiApiName = spiControllerName;
-    netInterfaceSettings.SpiSettings = settings;
+// netInterfaceSettings
+netInterfaceSettings.SpiApiName = spiControllerName;
+netInterfaceSettings.SpiSettings = settings;
 	
-	netInterfaceSettings.GpioApiName = gpioControllerName;    
+netInterfaceSettings.GpioApiName = gpioControllerName;    
 
-    netInterfaceSettings.InterruptPin = GpioController.GetDefault().OpenPin(irqPinNumber);
-    netInterfaceSettings.InterruptEdge = GpioPinEdge.FallingEdge;
-    netInterfaceSettings.InterruptDriveMode = GpioPinDriveMode.InputPullUp;
+netInterfaceSettings.InterruptPin = GpioController.GetDefault().OpenPin(irqPinNumber);
+netInterfaceSettings.InterruptEdge = GpioPinEdge.FallingEdge;
+netInterfaceSettings.InterruptDriveMode = GpioPinDriveMode.InputPullUp;
 	
-    netInterfaceSettings.ResetPin = GpioController.GetDefault().OpenPin(resetPinNumber);
-    netInterfaceSettings.ResetActiveState = GpioPinValue.Low;
+netInterfaceSettings.ResetPin = GpioController.GetDefault().OpenPin(resetPinNumber);
+netInterfaceSettings.ResetActiveState = GpioPinValue.Low;
 
-    // Wifi setting
-	var wifiSettings = new WiFiNetworkInterfaceSettings() {
-        Ssid = "Your SSID",
-        Password = "Your Password",
-    };
+// Wifi setting
+var wifiSettings = new WiFiNetworkInterfaceSettings() {
+    Ssid = "Your SSID",
+    Password = "Your Password",
+};
     
-    wifiSettings.DhcpEnable = true;
-    wifiSettings.DynamicDnsEnable = true;
+wifiSettings.DhcpEnable = true;
+wifiSettings.DynamicDnsEnable = true;
 
-	var networkController = NetworkController.FromName(SC20260.NetworkController.ATWinc15x0);
+var networkController = NetworkController.FromName(SC20260.NetworkController.ATWinc15x0);
 	
-    networkController.SetInterfaceSettings(wifiSettings);
-    networkController.SetCommunicationInterfaceSettings(netInterfaceSettings);
-    networkController.SetAsDefaultController();
+networkController.SetInterfaceSettings(wifiSettings);
+networkController.SetCommunicationInterfaceSettings(netInterfaceSettings);
+networkController.SetAsDefaultController();
 
-    networkController.NetworkAddressChanged += NetworkController_NetworkAddressChanged;
+networkController.NetworkAddressChanged += NetworkController_NetworkAddressChanged;
 
-    networkController.NetworkLinkConnectedChanged +=
-        NetworkController_NetworkLinkConnectedChanged;
+networkController.NetworkLinkConnectedChanged +=
+    NetworkController_NetworkLinkConnectedChanged;
 
-    networkController.Enable();
+networkController.Enable();
 
-    // Network is ready to use
-    Thread.Sleep(Timeout.Infinite);
-}
+// Network is ready to use
+Thread.Sleep(Timeout.Infinite);
 
-private static void NetworkController_NetworkLinkConnectedChanged
+
+void NetworkController_NetworkLinkConnectedChanged
     (NetworkController sender, NetworkLinkConnectedChangedEventArgs e) {
     // Raise event connect/disconnect
 }
 
-private static void NetworkController_NetworkAddressChanged
+void NetworkController_NetworkAddressChanged
     (NetworkController sender, NetworkAddressChangedEventArgs e) {
     var ipProperties = sender.GetIPProperties();
     var address = ipProperties.Address.GetAddressBytes();

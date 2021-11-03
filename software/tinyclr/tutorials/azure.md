@@ -2,6 +2,8 @@
 ---
 This example shows how to communicate with Azure IoT Hub using MQTT. User will need to set up a Network Interface connection on the device such as [WiFi](wifi.md) to Connect to Azure.
 
+First download the required Azure Root Certificate and add to resources. The [TLS Client](tls-client.md) shows how to download the root certificate.
+
 
 > [!TIP]
 > Needed NuGets: GHIElectronics.TinyCLR.Networking.Mqtt, GHIElectronics.TinyCLR.Drivers.Azure.SAS
@@ -96,27 +98,7 @@ The example code also requires iotHubName and deviceId, which are available only
 
 [Create an IoT Hub & Device ID](https://docs.microsoft.com/en-us/azure/iot-hub/tutorial-connectivity)
 
-Developers must retrieve the Connection String for the newly created Device. This key is used inside the code to generate a Shared Access Signature(SAS). This SAS is used inside the program as the `password`
-
-![Device Details](images/string.png)
  
-## Azure Device Explorer
-
-To simplify testing, users can send and receive data to the IoT device using Azure IoT Device Explorer. To receive data from the IoT device, add a message to send in this line of the code.
-
-```cs
-client.Publish(topicDeviceToServer, Encoding.UTF8.GetBytes
-("The message"), QoSLevel.MostOnce, false, packetId++);
-```
-Select the 'Data' Tab in the Azure IoT Explorer program and click the 'Monitor' button.
-Deploy the program or reset the device, it will automatically send "The message" to the Azure IoT Explorer. 
-
-![Message Sent](images/azure_message_recieved.jpg)
-
-To send a message from Azure to the IoT device, select the 'Messages To Device' tab in Azure IoT Explorer. Type your message in the Message Box and hit 'Send'. 
-
-![Message Recieved](images/azure_message_sent.jpg)
-
 Using the earlier code will send the incoming message the 'Output' window of Visual Studio.
 
 ![VS Output Window](images/vs_output.jpg) 

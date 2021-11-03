@@ -125,14 +125,11 @@ Infrared remotes are very common and use multiple standards. NCR is very common 
 > Needed NuGet: GHIElectronics.TinyCLR.Drivers.Infrared
 
 ```cs
-static void Main() {
+var recievePin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PH6);
+var ir = new NecIRDecoder(recievePin);
 
-    var recievePin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PH6);
-    var ir = new NecIRDecoder(recievePin);
-
-    ir.OnDataReceivedEvent += Ir_OnDataRecievedEvent;            
-    ir.OnRepeatEvent += Ir_OnRepeatEvent;
-}
+ir.OnDataReceivedEvent += Ir_OnDataRecievedEvent;            
+ir.OnRepeatEvent += Ir_OnRepeatEvent;
 
 private static void Ir_OnDataRecievedEvent(byte address, byte command) {
     // we have a new key press

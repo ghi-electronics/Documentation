@@ -115,28 +115,26 @@ TinyCLR's UART API included the following event listeners:
 * ErrorReceived
 
 ```cs
-private static void Main() {
-    txBuffer = new byte[] { 0x41, 0x42, 0x43, 0x44, 0x45, 0x46 }; //A, B, C, D, E, F
-    rxBuffer = new byte[txBuffer.Length];
+txBuffer = new byte[] { 0x41, 0x42, 0x43, 0x44, 0x45, 0x46 }; //A, B, C, D, E, F
+rxBuffer = new byte[txBuffer.Length];
 
-    myUart = UartController.FromName(SC20100.UartPort.Uart7);
-    var uartSetting = new UartSetting()
-            {
-                BaudRate = 115200,
-                DataBits = 8,
-                Parity = UartParity.None,
-                StopBits = UartStopBitCount.One,
-                Handshaking = UartHandshake.None,
-            };
-    myUart.SetActiveSettings(uartSetting);
-    myUart.Enable();
-    myUart.DataReceived += MyUart_DataReceived;
-    myUart.Write(txBuffer, 0, txBuffer.Length);
-    while (true)
-        Thread.Sleep(20);
-}
+myUart = UartController.FromName(SC20100.UartPort.Uart7);
+var uartSetting = new UartSetting()
+        {
+            BaudRate = 115200,
+            DataBits = 8,
+            Parity = UartParity.None,
+            StopBits = UartStopBitCount.One,
+            Handshaking = UartHandshake.None,
+        };
+myUart.SetActiveSettings(uartSetting);
+myUart.Enable();
+myUart.DataReceived += MyUart_DataReceived;
+myUart.Write(txBuffer, 0, txBuffer.Length);
+Thread.Sleep(-1);
 
-private static void MyUart_DataReceived(UartController sender, DataReceivedEventArgs e) {
+
+void MyUart_DataReceived(UartController sender, DataReceivedEventArgs e) {
     var bytesReceived = myUart.Read(rxBuffer, 0, e.Count);
     Debug.WriteLine(Encoding.UTF8.GetString(rxBuffer, 0, bytesReceived));
 }

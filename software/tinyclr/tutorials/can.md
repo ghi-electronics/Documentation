@@ -67,78 +67,76 @@ using System;
 using System.Diagnostics;
 using System.Threading;
 
-class Program {
-    private static void Main() {
-        var LdrButton = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE3);
-        LdrButton.SetDriveMode(GpioPinDriveMode.InputPullUp);
+var LdrButton = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE3);
+LdrButton.SetDriveMode(GpioPinDriveMode.InputPullUp);
 
-        var can = CanController.FromName(SC20100.CanBus.Can1);
+var can = CanController.FromName(SC20100.CanBus.Can1);
 
-        var propagationPhase1 = 13;
-        var phase2 = 2;
-        var baudratePrescaler = 3;
-        var synchronizationJumpWidth = 1;
-        var useMultiBitSampling = false;
+var propagationPhase1 = 13;
+var phase2 = 2;
+var baudratePrescaler = 3;
+var synchronizationJumpWidth = 1;
+var useMultiBitSampling = false;
 
-        can.SetNominalBitTiming(new CanBitTiming(propagationPhase1, phase2, baudratePrescaler,
-            synchronizationJumpWidth, useMultiBitSampling));        
+can.SetNominalBitTiming(new CanBitTiming(propagationPhase1, phase2, baudratePrescaler,
+    synchronizationJumpWidth, useMultiBitSampling));        
 
-        var message = new CanMessage() {
-            Data = new byte[] { 0x48, 0x65, 0x6C, 0x6C, 0x6F, 0x2E, 0x20, 0x20 },
-            ArbitrationId = 0x11,
-            Length = 6,
-            RemoteTransmissionRequest = false,
-            ExtendedId = false,
-            FdCan = false,
-            BitRateSwitch = false
-        };
+var message = new CanMessage() {
+    Data = new byte[] { 0x48, 0x65, 0x6C, 0x6C, 0x6F, 0x2E, 0x20, 0x20 },
+    ArbitrationId = 0x11,
+    Length = 6,
+    RemoteTransmissionRequest = false,
+    ExtendedId = false,
+    FdCan = false,
+    BitRateSwitch = false
+};
 
-        //The following filter will accept arbitration IDs from 0x12 to 0x20 inclusive.
-        can.Filter.AddRangeFilter(Filter.IdType.Standard, 0x12, 0x20);
+//The following filter will accept arbitration IDs from 0x12 to 0x20 inclusive.
+can.Filter.AddRangeFilter(Filter.IdType.Standard, 0x12, 0x20);
 
-        //The following filter will accept arbitration IDs from 0x500 to 0x1000 inclusive.
-        can.Filter.AddRangeFilter(Filter.IdType.Standard, 0x500, 0x1000);
+//The following filter will accept arbitration IDs from 0x500 to 0x1000 inclusive.
+can.Filter.AddRangeFilter(Filter.IdType.Standard, 0x500, 0x1000);
 
-        //The following filter will accept arbitration IDs of 0x11 and 0x13.
-        can.Filter.AddMaskFilter(Filter.IdType.Standard, 0x11, 0xFD);
+//The following filter will accept arbitration IDs of 0x11 and 0x13.
+can.Filter.AddMaskFilter(Filter.IdType.Standard, 0x11, 0xFD);
 
-        //The following filter will accept arbitration IDs of 5678 only.
-        can.Filter.AddMaskFilter(Filter.IdType.Standard, 0x5678, 0xFFFF);
+//The following filter will accept arbitration IDs of 5678 only.
+can.Filter.AddMaskFilter(Filter.IdType.Standard, 0x5678, 0xFFFF);
 
-        can.MessageReceived += Can_MessageReceived;
-        can.ErrorReceived += Can_ErrorReceived;
+can.MessageReceived += Can_MessageReceived;
+can.ErrorReceived += Can_ErrorReceived;
         
-        can.Enable();
+can.Enable();
 
-        while (true) {
-            if (LdrButton.Read() == GpioPinValue.Low)
-                can.WriteMessage(message);
+while (true) {
+    if (LdrButton.Read() == GpioPinValue.Low)
+        can.WriteMessage(message);
 
-            Thread.Sleep(100);
-        }
-    }
-
-    private static void Can_MessageReceived(CanController sender,
-        MessageReceivedEventArgs e) {
-
-        sender.ReadMessage(out var message);
-
-        Debug.WriteLine("Arbitration ID: 0x" + message.ArbitrationId.ToString("X8"));
-        Debug.WriteLine("Is extended ID: " + message.ExtendedId.ToString());
-        Debug.WriteLine("Is remote transmission request: "
-            + message.RemoteTransmissionRequest.ToString());
-
-        Debug.WriteLine("Time stamp: " + message.Timestamp.ToString());
-
-        var data = "";
-        for (var i = 0; i < message.Length; i++) data += Convert.ToChar(message.Data[i]);
-
-        Debug.WriteLine("Data: " + data);
-    }
-
-    private static void Can_ErrorReceived(CanController sender, ErrorReceivedEventArgs e)
-        => Debug.WriteLine("Error " + e.ToString());
+    Thread.Sleep(100);
 }
+
+
+void Can_MessageReceived(CanController sender,
+    MessageReceivedEventArgs e) {
+
+    sender.ReadMessage(out var message);
+
+    Debug.WriteLine("Arbitration ID: 0x" + message.ArbitrationId.ToString("X8"));
+    Debug.WriteLine("Is extended ID: " + message.ExtendedId.ToString());
+    Debug.WriteLine("Is remote transmission request: "
+        + message.RemoteTransmissionRequest.ToString());
+
+    Debug.WriteLine("Time stamp: " + message.Timestamp.ToString());
+
+    var data = "";
+    for (var i = 0; i < message.Length; i++) data += Convert.ToChar(message.Data[i]);
+
+    Debug.WriteLine("Data: " + data);
+}
+
+void Can_ErrorReceived(CanController sender, ErrorReceivedEventArgs e)
+    => Debug.WriteLine("Error " + e.ToString());
+
 ```
 
 ---

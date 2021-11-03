@@ -117,7 +117,7 @@ digitalSignal.ReadPulse(1000, GpioPinEdge.RisingEdge, waitForEdge);
 Thread.Sleep(Timeout.Infinite);
 
 // the event
-private static void Digital_OnReadPulseFinished(DigitalSignal sender, TimeSpan duration, uint count, GpioPinValue pinValue) {
+void Digital_OnReadPulseFinished(DigitalSignal sender, TimeSpan duration, uint count, GpioPinValue pinValue) {
     var ticks = duration.Ticks;
     var microsecond = ((double)duration.Ticks) / 10;
     var millisecond = ((double)duration.Ticks) / 10000;
@@ -153,7 +153,7 @@ while (true) {
     }
 }
       
-private static void Digital_OnReadPulseFinished(DigitalSignal sender, TimeSpan duration, uint count, GpioPinValue pinValue) {
+void Digital_OnReadPulseFinished(DigitalSignal sender, TimeSpan duration, uint count, GpioPinValue pinValue) {
     if (count > 0) {
         var microsecond = ((double)duration.Ticks) / 10;
         var freq = (count / microsecond) * 1000000;

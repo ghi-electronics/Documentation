@@ -7,9 +7,6 @@ The sample code below loads and executes a small assembly from a USB flash drive
 > [!Tip]
 > Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Storage, GHIElectronics.TinyCLR.IO, GHIElectronics.TinyCLR.Native, and GHIElectronics.TinyCLR.Pins.
 
-
-
-
 ```cs
 var storageController = StorageController.
     FromName(SC20260.StorageController.

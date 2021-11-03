@@ -60,19 +60,17 @@ Using events to check an input instead of polling the input (using a loop) is of
 You will see a reference to a "falling edge" in the following code. A falling edge occurs when the state of a pin goes from high to low. A rising edge is just the opposite -- it occurs when a pin goes from low to high. 
 
 ```cs
-private static void Main() {
-    var gpio = GpioController.GetDefault();
+var gpio = GpioController.GetDefault();
 
-    var button = gpio.OpenPin(SC20260.GpioPin.PD7);
-    button.SetDriveMode(GpioPinDriveMode.InputPullUp);
-    button.ValueChangedEdge = GpioPinEdge.FallingEdge | GpioPinEdge.RisingEdge;
-    button.ValueChanged += Button_ValueChanged;
+var button = gpio.OpenPin(SC20260.GpioPin.PD7);
+button.SetDriveMode(GpioPinDriveMode.InputPullUp);
+button.ValueChangedEdge = GpioPinEdge.FallingEdge | GpioPinEdge.RisingEdge;
+button.ValueChanged += Button_ValueChanged;
 
-    //Do other tasks here ...
-    Thread.Sleep(Timeout.Infinite);
-}
+//Do other tasks here ...
+Thread.Sleep(Timeout.Infinite);
 
-private static void Button_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e) {
+void Button_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e) {
     if (e.Edge == GpioPinEdge.FallingEdge) {
         // Pin went low
     } else {

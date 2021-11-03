@@ -10,10 +10,8 @@ void Blinker() {
     Thread.Sleep(100);
 }
 
-void main() {
-    var t = new Thread(Blinker);
-    t.Start();
-    // do secondary task
-    Thread.Sleep(Timeout.Infinite);
-}
+var t = new Thread(Blinker);
+t.Start();
+// do secondary task
+Thread.Sleep(Timeout.Infinite);
 ```
