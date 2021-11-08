@@ -6,7 +6,7 @@
 
 ## 2.1.0.6300 - RTW Release
 
-### Released 2021-10-29
+### Released 2021-11-08
 
 ### Visual Studio Project System
 
