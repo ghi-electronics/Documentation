@@ -183,23 +183,21 @@ Key = APP     Value = PB7
 </code></pre><hr>
 <h2 id="stacks">Stacks</h2>
 <p>Stacks are first in, last out (or last in, first out) collections of objects. The <code>Push</code> method is used to add items to a stack, and the <code>Pop</code> method is used to remove items from a stack. There is also a <code>Peek</code> method that returns the item at the top of the stack without removing it from the stack.</p>
-<pre><code class="lang-cs">private static void Main() {
-    var sitCoreDevices = new System.Collections.Stack();
-    sitCoreDevices.Push(&quot;SC20100S&quot;);
-    sitCoreDevices.Push(&quot;SC20260B&quot;);
-    sitCoreDevices.Push(&quot;SCM20260D&quot;);
-    sitCoreDevices.Push(&quot;SCM20260E&quot;);
-    sitCoreDevices.Push(&quot;SCM20260N&quot;);
+<pre><code class="lang-cs">var sitCoreDevices = new System.Collections.Stack();
+sitCoreDevices.Push(&quot;SC20100S&quot;);
+sitCoreDevices.Push(&quot;SC20260B&quot;);
+sitCoreDevices.Push(&quot;SCM20260D&quot;);
+sitCoreDevices.Push(&quot;SCM20260E&quot;);
+sitCoreDevices.Push(&quot;SCM20260N&quot;);
 
-    PrintValues(sitCoreDevices);
+PrintValues(sitCoreDevices);
 
-    System.Diagnostics.Debug.WriteLine(&quot;Popped: &quot; + sitCoreDevices.Pop().ToString());
-    System.Diagnostics.Debug.WriteLine(&quot; &quot;);
+System.Diagnostics.Debug.WriteLine(&quot;Popped: &quot; + sitCoreDevices.Pop().ToString());
+System.Diagnostics.Debug.WriteLine(&quot; &quot;);
 
-    PrintValues(sitCoreDevices);
-}
+PrintValues(sitCoreDevices);
 
-public static void PrintValues(System.Collections.Stack myQueue) {
+void PrintValues(System.Collections.Stack myQueue) {
     System.Diagnostics.Debug.WriteLine(&quot;Count: &quot; + myQueue.Count);
     System.Diagnostics.Debug.WriteLine(&quot;Items in queue:&quot;);
 
@@ -229,25 +227,23 @@ Items in queue:
 </code></pre><hr>
 <h2 id="queues">Queues</h2>
 <p>Queues are first in, first out collections of objects. To add items to a queue, the <code>enqueue</code> method is used. To remove items, the <code>dequeue</code> method is used.</p>
-<pre><code class="lang-cs">private static void Main() {
-    var sitCoreDevices = new System.Collections.Queue();
-    sitCoreDevices.Enqueue(&quot;SC20100S&quot;);
-    sitCoreDevices.Enqueue(&quot;SC20260B&quot;);
-    sitCoreDevices.Enqueue(&quot;SCM20260D&quot;);
-    sitCoreDevices.Enqueue(&quot;SCM20260E&quot;);
-    sitCoreDevices.Enqueue(&quot;SCM20260N&quot;);
+<pre><code class="lang-cs">var sitCoreDevices = new System.Collections.Queue();
+sitCoreDevices.Enqueue(&quot;SC20100S&quot;);
+sitCoreDevices.Enqueue(&quot;SC20260B&quot;);
+sitCoreDevices.Enqueue(&quot;SCM20260D&quot;);
+sitCoreDevices.Enqueue(&quot;SCM20260E&quot;);
+sitCoreDevices.Enqueue(&quot;SCM20260N&quot;);
 
-    PrintValues(sitCoreDevices);
+PrintValues(sitCoreDevices);
 
-    System.Diagnostics.Debug.WriteLine(&quot;Dequeued: &quot; +
-        sitCoreDevices.Dequeue().ToString());
+System.Diagnostics.Debug.WriteLine(&quot;Dequeued: &quot; +
+    sitCoreDevices.Dequeue().ToString());
 
-    System.Diagnostics.Debug.WriteLine(&quot; &quot;);
+System.Diagnostics.Debug.WriteLine(&quot; &quot;);
 
-    PrintValues(sitCoreDevices);
-}
+PrintValues(sitCoreDevices);
 
-public static void PrintValues(System.Collections.Queue myQueue) {
+void PrintValues(System.Collections.Queue myQueue) {
     System.Diagnostics.Debug.WriteLine(&quot;Count: &quot; + myQueue.Count);
     System.Diagnostics.Debug.WriteLine(&quot;Items in queue:&quot;);
 

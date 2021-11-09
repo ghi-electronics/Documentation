@@ -106,14 +106,14 @@
 }
 </code></pre><p>Now, the Basic Graphics driver can be used.</p>
 <pre><code class="lang-cs">var basicGfx = new BasicGraphicsImp();
-var colorBlue = 0x00FF0000U;
-var colorGreen = 0x0000FF00U;
-var colorRed = 0x00000FFU;
-var colorWhite = 0x00FFFFFFU;
+var colorBlue = BasicGraphics.ColorFromRgb(0,0,255);
+var colorGreen = BasicGraphics.ColorFromRgb(0,255,0);
+var colorRed = BasicGraphics.ColorFromRgb(255,0,0);
+var colorWhite = BasicGraphics.ColorFromRgb(255,255,255);
 
 basicGfx.Clear();
 
-basicGfx.DrawString(&quot;Hi Insiders!&quot;, colorGreen, 15, 15, 2, 1);
+basicGfx.DrawString(&quot;TinyCLR OS!&quot;, colorGreen, 15, 15, 2, 1);
 basicGfx.DrawString(&quot;SITCore&quot;, colorBlue, 35, 40, 2, 2);
 basicGfx.DrawString(&quot;SC13xxx&quot;, colorRed, 35, 60, 2, 2);
 
@@ -124,14 +124,14 @@ for (var i = 20; i &lt; 140; i ++)
 basicGfx.Flush();
 </code></pre><p>This example uses the second option where a buffer is allocated automatically. This is the preferred option for using BasicGraphics.</p>
 <pre><code class="lang-cs">var basicGfx = new BasicGraphics(160, 128, ColorFormat.Rgb565);
-var colorBlue = 0x00FF0000U;
-var colorGreen = 0x0000FF00U;
-var colorRed = 0x00000FFU;
-var colorWhite = 0x00FFFFFFU;
+var colorBlue = BasicGraphics.ColorFromRgb(0,0,255);
+var colorGreen = BasicGraphics.ColorFromRgb(0,255,0);
+var colorRed = BasicGraphics.ColorFromRgb(255,0,0);
+var colorWhite = BasicGraphics.ColorFromRgb(255,255,255);
 
 basicGfx.Clear()
 
-basicGfx.DrawString(&quot;Hi Insiders!&quot;, colorGreen, 15, 15, 2, 1);
+basicGfx.DrawString(&quot;TinyCLR OS!&quot;, colorGreen, 15, 15, 2, 1);
 basicGfx.DrawString(&quot;SITCore&quot;, colorBlue, 35, 40, 2, 2);
 basicGfx.DrawString(&quot;SC13xxx&quot;, colorRed, 35, 60, 2, 2);
 
@@ -171,16 +171,13 @@ managedFS.ReadFile(fileRead, dataRead, 0, (uint)dataRead.Length);
 managedFS.CloseFile(fileRead);
 </code></pre><h2 id="ir">IR</h2>
 <p>Infrared remotes are very common and use multiple standards. NCR is very common and a driver is included. A remote with NCR standard will send an 8bit address and an 8bit command with every key press. A repeat signal will be sent as long as the key is continuously pressed.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.Infrared.NecIR</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.Infrared</p>
 </div>
-<pre><code class="lang-cs">static void Main() {
+<pre><code class="lang-cs">var recievePin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PH6);
+var ir = new NecIRDecoder(recievePin);
 
-    var recievePin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PH6);
-    var ir = new NecIRDecoder(recievePin);
-
-    ir.OnDataReceivedEvent += Ir_OnDataRecievedEvent;            
-    ir.OnRepeatEvent += Ir_OnRepeatEvent;
-}
+ir.OnDataReceivedEvent += Ir_OnDataRecievedEvent;            
+ir.OnRepeatEvent += Ir_OnRepeatEvent;
 
 private static void Ir_OnDataRecievedEvent(byte address, byte command) {
     // we have a new key press
@@ -284,7 +281,7 @@ while (true) {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/drivers/software-utility.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/refresh/software/tinyclr/drivers/software-utility.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

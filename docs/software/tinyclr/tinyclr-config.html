@@ -84,23 +84,24 @@
 <p>You can download TinyCLR Config from the <a href="downloads.html">Downloads</a> page.</p>
 <h2 id="connecting-a-device">Connecting a Device</h2>
 <p>When TinyCLR Config opens, you will notice a <code>Device</code> section near the top of its window. Connect your device to your PC&#39;s USB port and click on the <code>Select a device</code> drop down text box. The name of your device should appear. Click on the device and hit the <code>Connect</code> button.</p>
-<p>Once your device is connected, you can ping the device using the <code>Ping</code> command in the <code>Utilities</code> menu. In the <code>Assemblies</code> menu there is an <code>Assemblies Listing</code> command that will list all the assemblies installed on the connected device along with their version number. There are also options in the <code>Utilities</code> menu to reboot the device, show a deployment map, or update the device configuration.</p>
+<p>The <code>Assemblies</code> menu there is an <code>Assemblies Listing</code> command that will list all the assemblies installed on the connected device along with their version number.</p>
+<p>The <code>Utilities</code> top menu has options to ping the device using the <code>Ping</code> command. There are also options in the <code>Utilities</code> menu to reboot the device, show a deployment map, or update the device configuration.</p>
 <h3 id="deployment-map">Deployment Map</h3>
 <p><img src="images/deployment-map.png" alt="Deployment Map"></p>
 <p>The deployment map can be used to gauge the resources used by your application, but more importantly it allows you to make sure assemblies are stored in secure internal flash memory. See the <a href="tutorials/ip-protection.html">IP Protection</a> page for more information about secure assemblies.</p>
 <h3 id="device-configuration">Device Configuration</h3>
-<p><img src="images/device-config.png" alt="Device Configuration"></p>
-<p>The device configuration options have very important implications for system security. For more information on protecting your application and data, please refer to the <a href="tutorials/ip-protection.html">IP Protection</a> page of this documentation.</p>
+<p>The device configuration window contains options that have important implications on the system and its security.</p>
+<p>There are two regions for holding configurations, the Firmware Config and the Application Config.</p>
 <h4 id="firmware-configuration">Firmware Configuration</h4>
-<p>The <code>Extend heap</code> and <code>Enable external flash</code> firmware configuration options both expand internal memory by allowing the use of external memory chips. Once external heap or flash are enabled, you will need to re-flash the firmware or completely erase the device to disable external memory.</p>
-<p><code>Extend heap</code> extends internal RAM and only works on devices that include external SDRAM. There is also a method, <code>GHIElectronics.TinyCLR.Native.Memory.ExtendHeap()</code>, that can be used to extend the heap from within your code. See the <a href="tutorials/external-memory.html">External Memory</a> page for more information.</p>
-<p><code>Enable deployment</code> extends internal flash memory and only works devices that include external flash memory. To extend flash from within an application, use the <code>GHIElectronics.TinyCLR.Native.Flash.EnableExtendDeployment()</code> method. See the <a href="tutorials/external-memory.html">External Memory</a> page for more information.</p>
-<p>Data stored in external SDRAM or flash memory is less secure than data stored internally. See the <a href="tutorials/ip-protection.html">IP Protection</a> page for more information.</p>
-<p><code>Persist slow clock</code> Sets the system clock speed to run at half speed, saving 40% power consumption. </p>
-<h4 id="deployment-configuration">Deployment Configuration</h4>
-<p>For added security, the debug interface can be disabled. Note that once this is done, you will not be able to update the firmware or debug your application until you completely erase your device. You can update your application code, but only through TinyCLR Config or <a href="tutorials/in-field-update.html">In-Field-Update</a>. You can also disable the debug interface from within your code. Please refer to the <a href="tutorials/ip-protection.html">IP Protection</a> page for more information about disabling the debug interface.</p>
-<h2 id="managing-firmware">Managing Firmware</h2>
-<p>TinyCLR Config can be used to install new firmware on a connected device. The firmware is the TinyCLR software installed on your device that runs and manages your application program.</p>
+<p>These firmware settings are stored in flash and can only be modified by reflashing the firmware or by doing an <code>Erase all</code>.</p>
+<p>The <code>Extend heap</code> uses the external RAM for the system, which reduces the level of security. This is explained further under <a href="tutorials/external-memory.html">External Memory</a>.</p>
+<p><code>Persist slow clock</code> Sets the system clock speed to run at half speed, saving about 40% power consumption. See <a href="tutorials/power-management.html">Power Management</a>.</p>
+<p>&#39;Disable APP pin&#39;, <code>Debug Mode</code> and <code>Device Name</code> options change/disable the MOD and APP pins behavior. Those pins are explained under <a href="tutorials/device-info.html">Device Info</a>.</p>
+<h4 id="application-configuration">Application Configuration</h4>
+<p>There Application configuration are stored and flash and can only be reset by doing an &#39;Erase all` only. Updating the firmware will have no effect.</p>
+<p>For added security, the debug interface can be disabled. Secure designs will disable the interface and implement <a href="tutorials/in-field-update.html">In-Field-Update</a>. You can also disable the debug interface from within your code. Please refer to the <a href="tutorials/ip-protection.html">IP Protection</a> page for more information about disabling the debug interface.</p>
+<h2 id="managing-tinyclr-firmware">Managing TinyCLR Firmware</h2>
+<p>TinyCLR Config can be used to install/update TinyCLR firmware on a connected device. The <code>firmware</code> is the TinyCLR software installed on your device that runs and manages your application program.</p>
 <p>To update your firmware, click on the <code>...</code> button to the left of the <code>Update Firmware</code> button. A dialog box will open so you can select your firmware file. Only .ghi and .glb files will be recognized. After selecting your firmware file, click on the <code>Update Firmware</code> button to copy it to your device.</p>
 <p>In the <code>Erase</code> menu, the <code>Erase All</code> selection will erase the firmware on the device, but will also erase the application. While it&#39;s not necessary to delete the firmware or the application to install new firmware, it can sometimes help if your device stops working properly.</p>
 <h2 id="managing-your-application">Managing Your Application</h2>
@@ -111,8 +112,6 @@
 <p>Click on the <code>...</code> button next to the <code>Create App</code> button and select a directory and enter a filename for your deployment file. Now press the <code>Create App</code> button. The encrypted deployment file and a text file with the key will be saved in the directory you selected.</p>
 <h3 id="installing-a-deployment-file">Installing a Deployment File</h3>
 <p>To install an encrypted deployment file on your device, first use TinyCLR Config to connect to your device. Click on the <code>...</code> button next to the <code>Update App</code> button and select the deployment file (should have a .tca extension). Enter the correct key in the text box next to the <code>Generate Key</code> button. The key is a series of hexadecimal pairs that are separated by hyphens. Now click on the <code>Update App</code> button. If the key matches the deployment file, the application will be deployed to your device.</p>
-<hr>
-<p>Visit our main website at <a href="http://www.ghielectronics.com"><strong>www.ghielectronics.com</strong></a> and our community forums at <a href="https://forums.ghielectronics.com/"><strong>forums.ghielectronics.com</strong></a>.</p>
 </article>
           </div>
           
@@ -121,7 +120,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tinyclr-config.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/refresh/software/tinyclr/tinyclr-config.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

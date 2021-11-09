@@ -79,13 +79,13 @@
 <h1 id="special-pins">Special Pins</h1>
 
 <hr>
-<p>There are a number of predefined pins that have special functionality on SITCore SoMs and SoCs: </p>
+<p>Beside power and standard GPIO pins, there are a number of predefined pins that have special functionality on SITCore SoMs and SoCs: </p>
 <ul>
-<li>RESET (NRST)</li>
-<li>LDR (PE3)</li>
-<li>APP (PB7)</li>
-<li>MOD (PD7)</li>
-<li>WKUP (PA0)</li>
+<li>RESET</li>
+<li>LDR</li>
+<li>APP</li>
+<li>MOD</li>
+<li>WKUP</li>
 <li>VBAT</li>
 </ul>
 <p>All special pins except RESET and VBAT can be used as GPIO or peripheral pins, however it is up to the designer to make sure these pins do not interfere with their special features.</p>
@@ -103,9 +103,9 @@
 <h2 id="wkup">WKUP</h2>
 <p>The WKUP pin is used to wake the system up from Shut Down mode. See the <a href="tutorials/power-management.html">Power Management</a> page for more information.</p>
 <h2 id="vbat">VBAT</h2>
-<p>The VBAT pin on SITCore SoCs and SoMs is used to provide battery power to the <a href="tutorials/real-time-clock.html">Real Time Clock</a> (RTC). The tutorial also include the battery backed memory.</p>
+<p>The VBAT pin on SITCore SoCs and SoMs is used to provide battery power to the <a href="tutorials/real-time-clock.html">Real Time Clock</a> (RTC) and its battery backed memory.</p>
 <h2 id="debug-interface">Debug Interface</h2>
-<p>For debugging, a design must have either the USB client or UART interface (or both).</p>
+<p>USB or Serial can be used for <a href="tutorials/debugging.html">debugging</a>.</p>
 </article>
           </div>
           
@@ -114,7 +114,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/special-pins.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/refresh/software/tinyclr/special-pins.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

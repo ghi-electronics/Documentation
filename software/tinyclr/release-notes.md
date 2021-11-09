@@ -13,17 +13,18 @@
 #### Changes
 
 - Supports Visual Studio 2022 (Release Candidate)
+- Fixed: Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
+- Fixed: Debug breakpoints sometimes hang for 5-6 seconds before resuming normally (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/659)
 
 #### Known Issues
 
-- Sometimes a longer delay than usual during deployment. (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/660)
-- Debug breakpoints sometimes hang for 5-6 seconds before resuming normally (https://github.com/ghi-electronics/TinyCLR-Libraries/issues/659)
+- None.
 
 ### Libraries
 
 #### Changes
 
-- Added FEZ's family.
+- Added FEZ family to pins.
 
 #### Known Issues
 

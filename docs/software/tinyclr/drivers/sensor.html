@@ -92,8 +92,20 @@
 <hr>
 <h2 id="lis2hh12">LIS2HH12</h2>
 <p><img src="images/LIS2HH12.png" alt="LIS2HH12"></p>
-<p>A 3-axis accelerometer </p>
+<p>A 3-axis accelerometer. The driver set to 2g as default. Output value is in range -1024 to 1024.</p>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.STMicroelectronics.LIS2HH12</p>
+</div>
+<pre><code class="lang-cs">var lis2hh12 = new LIS2HH12Controller(I2cController.FromName(FEZBit.I2cBus.Accelerometer));
+
+while (true) {
+
+    Debug.WriteLine(&quot;X = &quot; + lis2hh12.X);               
+    Debug.WriteLine(&quot;Y = &quot; + lis2hh12.Y);               
+    Debug.WriteLine(&quot;Z = &quot; + lis2hh12.Z);               
+
+    Thread.Sleep(500);
+}
+</code></pre><div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.STMicroelectronics.LIS2HH12</p>
 </div>
 <hr>
 <h2 id="msgeq7">MSGEQ7</h2>

@@ -100,7 +100,6 @@
 </div>
 <pre><code class="lang-cs">static VncServer vncServer;
 
-static void Main(){
 // To do: Setup the preferred network connection here
 // ...
 
@@ -131,11 +130,11 @@ Graphics.OnFlushEvent += Graphics_OnFlushEvent;
     }
 }
 
-private static void S_PointerChangedEvent(int x, int y, bool pressed) {
+void S_PointerChangedEvent(int x, int y, bool pressed) {
     Debug.WriteLine(&quot;x = &quot; + x + &quot;, y = &quot; + y + &quot;, press: &quot; + pressed);
 }
 
-private static void Graphics_OnFlushEvent(Graphics sender, byte[] data, int x, int y, int width, int height, int originalWidth) {
+void Graphics_OnFlushEvent(Graphics sender, byte[] data, int x, int y, int width, int height, int originalWidth) {
         vncServer.Send(data, x, y, width, height);
 }
 </code></pre></article>

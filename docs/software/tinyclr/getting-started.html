@@ -81,17 +81,15 @@
 <hr>
 <p><img src="images/getting-started.png" alt="Getting Started"></p>
 <p>This page explains how to set up the TinyCLR programming environment.  It covers device and computer setup and deployment of a &quot;hello world&quot; program to a SITCore device.</p>
-<div class="TIP"><h5>Tip</h5><p>If you&#39;re an existing user of NETMF and still want to use it in addition to TinyCLR OS, don&#39;t worry. TinyCLR is completely independent of NETMF and works side-by-side with no issues.</p>
-</div>
 <h2 id="compatible-hardware">Compatible Hardware</h2>
-<p>TinyCLR OS is made to run on our SITCore line of SoCs, SoMs, dev boards and single board computers. Check out the <a href="../../hardware/sitcore/intro.html"><strong>SITCore</strong></a> page in the hardware section of this documentation to find the device best suited for your project.</p>
+<p>TinyCLR OS is made to run on our SITCore line of products. Check out the <a href="../../hardware/sitcore/intro.html"><strong>SITCore</strong></a> page in the hardware section of this documentation to find the device best suited for your project.</p>
 <h2 id="tinyclr-device-setup">TinyCLR Device Setup</h2>
 <p>To use TinyCLR with a device you must first install the latest version of the TinyCLR firmware on the device.</p>
 <p>The TinyCLR firmware includes the Common Language Runtime (CLR) which converts compiled code into machine instructions and manages program execution.  The TinyCLR firmware is also responsible for interacting with Microsoft Visual Studio to load and debug your application programs.</p>
 <p>Use the <a href="tinyclr-config.html">TinyCLR Config</a> tool to update the firmware on your device to the latest version.</p>
 <h2 id="development-machine-setup">Development Machine Setup</h2>
 <ol>
-<li>If you don&#39;t already have Visual Studio 2019, download and install one of the latest editions. Any edition will work, including the free community edition: <a href="https://www.visualstudio.com/downloads/">Visual Studio Community 2019</a>.</li>
+<li>If you don&#39;t already have Visual Studio 2022, download and install one of the latest editions. Any edition will work, including the free community edition: <a href="https://www.visualstudio.com/downloads/">Visual Studio Community</a>.</li>
 <li>Make sure to select the <code>.NET desktop development</code> workload when installing Visual Studio.</li>
 <li><p>Download and install the newest TinyCLR Visual Studio Project System by going to <code>Extensions</code> &gt; <code>Manage Extensions</code>. In the <code>Manage Extensions</code> dialog box select <code>Online</code> in the left panel. Type <code>tinyclr</code> into the <code>Search</code> text box in the upper right of the window to search for and install the <code>TinyCLR OS Project System</code>. You&#39;ll need to restart Visual Studio to let the extension installer complete the installation.</p>
 <p> Alternately you can download the Visual Studio Project System from our <a href="downloads.html">Downloads</a> page and open or double click on the file to install the extension.</p>
@@ -110,7 +108,7 @@
 <p><img src="images/select-template.png" alt="Select C# TinyCLR Application template"></p>
 <p>We&#39;re going to stick with the default name and location. If you use a different name, make sure the program&#39;s namespace statement matches the namespace of your program. Now click on the &quot;Create&quot; button.</p>
 <p><img src="images/configure-project.png" alt="Configure project"></p>
-<p>Now cut and paste the following code into the <code>Program.cs</code> window. Make sure to install the <code>GHIElectronics.TinyCLR.Core</code>, <code>GHIElectronics.TinyCLR.Devices.Gpio</code>, <code>GHIElectronics.TinyCLR.Native</code>, and <code>GHIElectronics.TinyCLR.Pins</code> NuGet packages. If not sure how, the following section explains how this can be done.</p>
+<p>Now cut and paste the following code into the <code>Program.cs</code> window. Make sure to install both <code>GHIElectronics.TinyCLR.Devices.Gpio</code> and <code>GHIElectronics.TinyCLR.Pins</code> <a href="tutorials/nuget.html">NuGet packages</a>.</p>
 <pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
 using System.Threading;
@@ -134,14 +132,36 @@ namespace TinyCLRApplication1 {
         }
     }
 }
-</code></pre><p>You may have to change line 11 depending on which board you are using.</p>
-<p><img src="images/hit-start-button.png" alt="Hit Start button"></p>
+</code></pre><p><img src="images/hit-start-button.png" alt="Hit Start button"></p>
 <p>Make sure your device is plugged into the computer&#39;s USB port. Now hit the start button as shown on the above image (or hit the F5 key). If you&#39;ve done everything correctly, the program will compile and deploy to your device. The left most LED on the dev board should blink if you&#39;ve done everything correctly.</p>
-<p>Congratulations!  You&#39;re on your way to becoming a TinyCLR embedded developer!</p>
-<p>To add NuGet packages to your project follow the  <a href="tutorials/nuget.html"><strong>NuGet tutorial</strong></a></p>
-<p>To find the best hardware for your TinyCLR application, go to the <a href="../../hardware/sitcore/intro.html"><strong>SITCore</strong></a> page in the hardware section of this documentation.</p>
+<h2 id="top-level-statements">Top Level Statements</h2>
+<p>The use of C#9 Top Level Statements allows for easier to read example code snippets. The docs will utilize top level statements when possible.</p>
+<p>The TinyCLR project system templates include a C#9 application template. To use Top Level Statements:</p>
+<ol>
+<li>Start a new project, but this time select <code>TinyCLR Application C#9</code>.</li>
+<li>install both <code>GHIElectronics.TinyCLR.Devices.Gpio</code> and <code>GHIElectronics.TinyCLR.Pins</code> <a href="tutorials/nuget.html">NuGet packages</a>.</li>
+<li>Copy/paste the code below. Note how it is identical to the earlier code, but now it is top-level-statement!</li>
+</ol>
+<pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Gpio;
+using GHIElectronics.TinyCLR.Pins;
+using System.Threading;
+
+
+//Use &quot;SC20100.GpioPin.PE11&quot; on SC20100S Dev Board.
+//Use &quot;SC20260.GpioPin.PB0&quot; on SCM20260D Dev Board.
+var LED = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PB0);
+LED.SetDriveMode(GpioPinDriveMode.Output);
+
+while (true) {
+    LED.Write(GpioPinValue.High);
+    Thread.Sleep(100);
+
+    LED.Write(GpioPinValue.Low);
+    Thread.Sleep(100);
+}
+</code></pre><p>Congratulations!  You&#39;re on your way to becoming a TinyCLR embedded developer!</p>
+<p>To find the best hardware for your TinyCLR application, go to the <a href="../../hardware/sitcore/intro.html">SITCore Docs</a> page in the hardware section of this documentation. or visit the <a href="https://www.ghielectronics.com/">GHI Electronics website</a>.</p>
 <p>To learn more about TinyCLR embedded programming check out our <a href="tutorials/intro.html"><strong>tutorials</strong></a>.</p>
-<p>You can also visit our main website at <a href="http://www.ghielectronics.com"><strong>main website</strong></a> and our  <a href="https://forums.ghielectronics.com/"><strong>community forum</strong></a>.</p>
 </article>
           </div>
           
@@ -150,7 +170,7 @@ namespace TinyCLRApplication1 {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/getting-started.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/refresh/software/tinyclr/getting-started.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

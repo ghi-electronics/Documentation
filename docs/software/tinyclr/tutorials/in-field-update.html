@@ -98,45 +98,68 @@ updater.ActivityPin = indicatorLed;
 </code></pre><h2 id="example-code">Example Code</h2>
 <div class="TIP"><h5>Tip</h5><p>The application and the firmware are buffered in external memories in encrypted fashion and has no security implication, keeping IFU done securely.</p>
 </div>
-<div class="WARNING"><h5>Warning</h5><p>Power interruption during <code>FlashAndReset</code> will cause the update to fail, requiring a manual update. However, it is safe during <code>Build</code>.</p>
+<div class="WARNING"><h5>Warning</h5><p>Power interruption during <code>FlashAndReset</code> will cause the update to fail, requiring a manual update.</p>
 </div>
-<pre><code class="lang-cs">var fwBuf = YourFirmwareBuffer;
-var appBuf = YourApplicationBuffer;
+<p>The example below show how to use IFU, firmware and application data are loaded from SDCard.</p>
+<pre><code class="lang-cs">var qspiController = StorageController.FromName(SC20260.StorageController.QuadSpi);
+var indicatorPin = GpioController.GetDefault().OpenPin(SC13048.GpioPin.PB5);
 
-var memoryStreamFirmware = new MemoryStream(fwBuf);
-var memoryStreamApplication = new MemoryStream(appBuf);
-var useExternalFlash = true;
+var appKey = new byte[] { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }; // your key, assumming they are all zero as example.
 
-// key is generated along with the application from TinyCLR Config tool
-var appKey = new byte[] { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
+var updater = new InFieldUpdate(qspiController)
+{
+    ActivityPin = indicatorPin
+};
 
-updater = new InFieldUpdate(memoryStreamFirmware, memoryStreamApplication, appKey, useExternalFlash);
+var dataChunk = new byte[1 * 1024]; // must be multiple of 1K
 
-updater.Build(true, true); // Build both firmware and application
+var filestreamApp = new FileStream(@&quot;A:\your_app.tca&quot;, FileMode.Open);
+var filestreamFw = new FileStream(@&quot;A:\ghi_firmware.ghi&quot;, FileMode.Open);
 
-Debug.WriteLine(&quot;Firmware version: &quot; + updater.FirmwareVersion);
-Debug.WriteLine(&quot;Application version: &quot; + updater.ApplicaltionVersion);
+// Buffer application
+var idxApp = 0;
+
+while (idxApp &lt; filestreamApp.Length)
+{
+    var count = filestreamApp.Read(dataChunk, 0, dataChunk.Length);
+    idxApp += updater.LoadApplicationChunk(dataChunk, 0, count);
+}
+
+// Buffer firmware
+var idxFirmware = 0;
+while (idxFirmware &lt; filestreamFw.Length)
+{   
+    var count = filestreamFw.Read(dataChunk, 0, dataChunk.Length);
+
+    idxFirmware += updater.LoadFirmwareChunk(dataChunk, 0, count);  
+}
+
+//Load key
+updater.LoadApplicationKey(appKey);
+
+Debug.WriteLine(&quot;Verifying application.... &quot;);
+Debug.WriteLine(&quot;Application version: &quot; + updater.VerifyApplication());
+
+Debug.WriteLine(&quot;Verify firmware.... &quot;);
+Debug.WriteLine(&quot;Firmware version: &quot; + updater.VerifyFirmware());
+
+// Flashing
 
 updater.FlashAndReset();
-</code></pre><p>It might be desired to only <code>Build</code> one stream at a time, but if IFU is constructed with two streams then both <code>Build</code> must be completed before <code>FlashAndReset</code>.</p>
-<pre><code>updater.Build(true, false);
-// do something
-// ...
-updater.Build(false, true);
-</code></pre><div class="TIP"><h5>Tip</h5><p>Running IFU in a thread is desired to keep the system running while IFU finish <code>Build</code>. But once <code>FlashAndReset</code> is called the system is locked till done and reset automatically.</p>
+</code></pre><div class="TIP"><h5>Tip</h5><p>Once <code>FlashAndReset</code> is called the system is locked till done and reset automatically.</p>
 </div>
 <hr>
 <h2 id="applicationupdate">ApplicationUpdate</h2>
 <p>When no external memories are present (Flash nor RAM) and standard IFU is not an options, the application (not firmware) can still be updated from a file located on SD card or USB memory.</p>
 <pre><code class="lang-cs">// Open a file stream to an application file on an SD card or USB memory
 // ...
-var updater = new ApplicationdUpdate(filestream, appKey)
+var updater = new ApplicationUpdate(filestream, appKey)
 var applicationVersion = updater.Verify();
 updater.ActivityPin = indicatorPin; // optional
 updater.FlashAndReset();
 </code></pre><hr>
 <h2 id="ifu-20-to-21">IFU 2.0 to 2.1</h2>
-<p>Starting release 2.1, IFU is reworked to support complete firmware and application update using external flash (when available) or external RAM (when available). Unfortunately, using IFU to update from 2.1 to 2.2 is only possible if the deployment region was not extended to use external flash.</p>
+<p>Starting release 2.1, IFU is reworked to support complete firmware and application update using external flash (when available) or external RAM (when available). Unfortunately, using IFU to update from 2.0 to 2.1 is only possible if the deployment region was not extended to use external flash.</p>
 <p>A work around to update 2.0 to 2.1 is by updating 2.0 to a new 2.1 temporary application that does not use external flash. Once this temp application is loaded then the final application with external flash can be deployed.</p>
 <hr>
 <h2 id="firmware-and-application-matching">Firmware and Application Matching</h2>

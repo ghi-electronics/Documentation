@@ -85,7 +85,8 @@
 <h1 id="supported-modules">Supported Modules</h1>
 <p>ATWINC1500 &amp; 1510 both work identically with SITCore, except the 1510 has more memory that SITCore doesn&#39;t need. The part number with the correct firmware that has been tested with TinyCLR is ATWINC1500-MR210PB. A module with a different firmware version can still be used, but a firmware update becomes necessary. Using the exact version eliminates the need for this step. </p>
 <h1 id="sample-code">Sample Code</h1>
-<p>The sample code is meant for the FEZ Portal with it&#39;s built in WiFi module. If you want to use a bare ATWINC1500 module instead, you&#39;ll need to connect interrupt, reset, and chip select lines in addition to the SPI lines (MOSI, MISO, SCK).</p>
+<p>The sample code is meant for the FEZ Portal with it&#39;s built in WiFi module. If you want to use a bare ATWINC1500 module instead, you&#39;ll need to connect interrupt, reset, and chip select lines in addition to the SPI lines (MOSI, MISO, SCK).
+The user can overide the WiFi built-in MAC address, but not recommended.</p>
 <div class="IMPORTANT"><h5>Important</h5><p>If using WiFi 7 click module, there is an enable pin which needs to be pulled high.</p>
 </div>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Devices.Uart, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Networking, and GHIElectronics.TinyCLR.Pins.</p>
@@ -99,77 +100,76 @@ using System.Diagnostics;
 using System.Net;
 using System.Threading;
 
-static void Wifi_Example() {
-    var enablePin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA8);
-    enablePin.SetDriveMode(GpioPinDriveMode.Output);
-    enablePin.Write(GpioPinValue.High);
+var enablePinNumber = SC20260.GpioPin.PA8;
+var chipSelectPinNumber = SC20260.GpioPin.PA6;
+var irqPinNumber = SC20260.GpioPin.PF10;
+var resetPinNumber = SC20260.GpioPin.PC3;
+var spiControllerName = SC20260.SpiBus.Spi3;
+var gpioControllerName = SC20260.GpioPin.Id;
 
-    SpiNetworkCommunicationInterfaceSettings netInterfaceSettings =
-        new SpiNetworkCommunicationInterfaceSettings();
+var enablePin = GpioController.GetDefault().OpenPin(enablePinNumber);
+enablePin.SetDriveMode(GpioPinDriveMode.Output);
+enablePin.Write(GpioPinValue.High);
 
-    var cs = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA6);
+SpiNetworkCommunicationInterfaceSettings netInterfaceSettings =
+    new SpiNetworkCommunicationInterfaceSettings();
 
-    var settings = new SpiConnectionSettings() {
-        ChipSelectLine = cs,
-        ClockFrequency = 4000000,
-        Mode = SpiMode.Mode0,
-        ChipSelectType = SpiChipSelectType.Gpio,
-        ChipSelectHoldTime = TimeSpan.FromTicks(10),
-        ChipSelectSetupTime = TimeSpan.FromTicks(10)
-    };
+var chipselect = GpioController.GetDefault().OpenPin(chipSelectPinNumber);
 
-    netInterfaceSettings.SpiApiName = SC20260.SpiBus.Spi3;
+var settings = new SpiConnectionSettings() {
+    ChipSelectLine = chipselect,
+    ClockFrequency = 4000000,
+    Mode = SpiMode.Mode0,
+    ChipSelectType = SpiChipSelectType.Gpio,
+    ChipSelectHoldTime = TimeSpan.FromTicks(10),
+    ChipSelectSetupTime = TimeSpan.FromTicks(10)
+};
 
-    netInterfaceSettings.GpioApiName = SC20260.GpioPin.Id;
+// netInterfaceSettings
+netInterfaceSettings.SpiApiName = spiControllerName;
+netInterfaceSettings.SpiSettings = settings;
 
-    netInterfaceSettings.SpiSettings = settings;
-    netInterfaceSettings.InterruptPin = GpioController.GetDefault().
-        OpenPin(SC20260.GpioPin.PF10);
+netInterfaceSettings.GpioApiName = gpioControllerName;    
 
-    netInterfaceSettings.InterruptEdge = GpioPinEdge.FallingEdge;
-    netInterfaceSettings.InterruptDriveMode = GpioPinDriveMode.InputPullUp;
-    netInterfaceSettings.ResetPin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PC3);
-    netInterfaceSettings.ResetActiveState = GpioPinValue.Low;
+netInterfaceSettings.InterruptPin = GpioController.GetDefault().OpenPin(irqPinNumber);
+netInterfaceSettings.InterruptEdge = GpioPinEdge.FallingEdge;
+netInterfaceSettings.InterruptDriveMode = GpioPinDriveMode.InputPullUp;
 
-    var networkController = NetworkController.FromName
-        (SC20260.NetworkController.ATWinc15x0);
+netInterfaceSettings.ResetPin = GpioController.GetDefault().OpenPin(resetPinNumber);
+netInterfaceSettings.ResetActiveState = GpioPinValue.Low;
 
-    WiFiNetworkInterfaceSettings wifiSettings = new WiFiNetworkInterfaceSettings() {
-        Ssid = &quot;Your SSID&quot;,
-        Password = &quot;Your Password&quot;,
-    };
+// Wifi setting
+var wifiSettings = new WiFiNetworkInterfaceSettings() {
+    Ssid = &quot;Your SSID&quot;,
+    Password = &quot;Your Password&quot;,
+};
 
-    wifiSettings.Address = new IPAddress(new byte[] { 192, 168, 1, 122 });
-    wifiSettings.SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 });
-    wifiSettings.GatewayAddress = new IPAddress(new byte[] { 192, 168, 1, 1 });
-    wifiSettings.DnsAddresses = new IPAddress[] { new IPAddress(new byte[]
-        { 75, 75, 75, 75 }), new IPAddress(new byte[] { 75, 75, 75, 76 }) };
+wifiSettings.DhcpEnable = true;
+wifiSettings.DynamicDnsEnable = true;
 
-    wifiSettings.MacAddress = new byte[] { 0x00, 0x4, 0x00, 0x00, 0x00, 0x00 };
-    wifiSettings.DhcpEnable = true;
-    wifiSettings.DynamicDnsEnable = true;
+var networkController = NetworkController.FromName(SC20260.NetworkController.ATWinc15x0);
 
-    networkController.SetInterfaceSettings(wifiSettings);
-    networkController.SetCommunicationInterfaceSettings(netInterfaceSettings);
-    networkController.SetAsDefaultController();
+networkController.SetInterfaceSettings(wifiSettings);
+networkController.SetCommunicationInterfaceSettings(netInterfaceSettings);
+networkController.SetAsDefaultController();
 
-    networkController.NetworkAddressChanged += NetworkController_NetworkAddressChanged;
+networkController.NetworkAddressChanged += NetworkController_NetworkAddressChanged;
 
-    networkController.NetworkLinkConnectedChanged +=
-        NetworkController_NetworkLinkConnectedChanged;
+networkController.NetworkLinkConnectedChanged +=
+    NetworkController_NetworkLinkConnectedChanged;
 
-    networkController.Enable();
+networkController.Enable();
 
-    // Network is ready to use
-    Thread.Sleep(Timeout.Infinite);
-}
+// Network is ready to use
+Thread.Sleep(Timeout.Infinite);
 
-private static void NetworkController_NetworkLinkConnectedChanged
+
+void NetworkController_NetworkLinkConnectedChanged
     (NetworkController sender, NetworkLinkConnectedChangedEventArgs e) {
     // Raise event connect/disconnect
 }
 
-private static void NetworkController_NetworkAddressChanged
+void NetworkController_NetworkAddressChanged
     (NetworkController sender, NetworkAddressChangedEventArgs e) {
     var ipProperties = sender.GetIPProperties();
     var address = ipProperties.Address.GetAddressBytes();
@@ -179,8 +179,8 @@ private static void NetworkController_NetworkAddressChanged
 </code></pre><hr>
 <h2 id="winc1500-utilities">WINC1500 Utilities</h2>
 <p>The Winc15x0Interface class provides to access some of the native functions of the WINC1500 WiFi module. Such as getting the WiFi module&#39;s MAC address, getting RSSI (Relative Signal Strength Indicator), scanning for access points, checking the firmware version, and over-the-air (OTA) firmware update.</p>
-<p>Unless provided, the MAC address of the WiFi module will be automatically used by default.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Drivers.Microchip.Winc15x0</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Drivers.Microchip.Winc15x0
+SetCommunicationInterfaceSettings function needs to be called before using this driver.</p>
 </div>
 <pre><code class="lang-cs">//Scan for WiFi access points:
 string[] ssidList = Winc15x0Interface.Scan();

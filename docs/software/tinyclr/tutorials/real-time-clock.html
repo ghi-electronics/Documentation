@@ -89,30 +89,26 @@ using System;
 using System.Diagnostics;
 using System.Threading;
 
-class Program {
-    static void Main() {
-        var rtc = RtcController.GetDefault();
+var rtc = RtcController.GetDefault();
 
-        if (rtc.IsValid) {
-            Debug.WriteLine(&quot;RTC is Valid&quot;);
-            // RTC is good so let&#39;s use it
-            SystemTime.SetTime(rtc.Now);
-        }
-        else {
-            Debug.WriteLine(&quot;RTC is Invalid&quot;);
-            // RTC is not valid. Get user input to set it
-            // This example will simply set it to January 1st 2020 at 11:11:11
-            var MyTime = new DateTime(2020, 1, 1, 11, 11, 11);
-            rtc.Now = MyTime;
-            SystemTime.SetTime(MyTime);
-        }
+if (rtc.IsValid) {
+    Debug.WriteLine(&quot;RTC is Valid&quot;);
+    // RTC is good so let&#39;s use it
+    SystemTime.SetTime(rtc.Now);
+}
+else {
+    Debug.WriteLine(&quot;RTC is Invalid&quot;);
+    // RTC is not valid. Get user input to set it
+    // This example will simply set it to January 1st 2020 at 11:11:11
+    var MyTime = new DateTime(2020, 1, 1, 11, 11, 11);
+    rtc.Now = MyTime;
+    SystemTime.SetTime(MyTime);
+}
 
-        while (true) {
-            Debug.WriteLine(&quot;Current Time    : &quot; + DateTime.Now);
-            Debug.WriteLine(&quot;Current RTC Time: &quot; + rtc.Now);
-            Thread.Sleep(1000);
-        }
-    }
+while (true) {
+    Debug.WriteLine(&quot;Current Time    : &quot; + DateTime.Now);
+    Debug.WriteLine(&quot;Current RTC Time: &quot; + rtc.Now);
+    Thread.Sleep(1000);
 }
 </code></pre><p>The output will show both times and they should match. If the RTC time is invalid when you first run the program, the program will detect the invalid time and will set the RTC.</p>
 <pre><code>RTC is Valid
@@ -132,11 +128,11 @@ Current RTC Time: 01/01/2019 11:15:36
 rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.None);
 
 //The following line charges slowly through a 5 K resistor. Used for supercaps.
-rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Slow)
+rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Slow);
 
 //The following line charges quickly through a 1.5 K resistor.
 //   This is the mode we use for the supercaps on SITCore Dev boards.
-rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Fast)
+rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Fast);
 </code></pre><hr>
 <h2 id="system-clock">System Clock</h2>
 <p>You can get the current system time using <code>DateTime.Now</code>. The system clock starts running at power up, but until you set the clock, the time and date will be incorrect. </p>

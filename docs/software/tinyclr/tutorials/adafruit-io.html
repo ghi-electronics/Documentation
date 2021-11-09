@@ -81,7 +81,7 @@
 <hr>
 <p>The Adafruit cloud, Adafruit IO, is a cloud service primarily aimed at the maker market. While Adafruit IO is more limited than the major players in cloud services, it is very easy to use and there&#39;s a free option making this a great way to test IoT proofs of concept and prototypes.</p>
 <p>We&#39;ll need create a few things for our code. We&#39;ll need an Adafruit Certificate, a dashboardID, a username, a password key, and a feed to subscribe to. </p>
-<p>First add an Adafruit Certificate to our resources and then add it to line of code below.</p>
+<p>First download the required Adafruit Root Certificate and add to resources. The <a href="tls-client.html">TLS Client</a> shows how to download the root certificate.</p>
 <p><img src="images/adaIO-add-cert.jpg" alt="Adafruit IO Add Certificate"></p>
 <pre><code class="lang-cs">var caCertSource = Resources.GetBytes(Resources.BinaryResources.DigiCertGlobalRootG2);
 </code></pre><p>Next, we&#39;ll create a &#39;Dashboard&#39;, from the Dashboards page. Click on &#39;Create a New Dashboard&#39; found inside the &#39;Actions&#39; dropdown. </p>
@@ -290,7 +290,7 @@ using (var getRequest = HttpWebRequest.Create(url) as HttpWebRequest) {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/adafruit-io.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/refresh/software/tinyclr/tutorials/adafruit-io.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
