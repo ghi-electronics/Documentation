@@ -15,30 +15,26 @@ using System;
 using System.Diagnostics;
 using System.Threading;
 
-class Program {
-    static void Main() {
-        var rtc = RtcController.GetDefault();
+var rtc = RtcController.GetDefault();
 
-        if (rtc.IsValid) {
-            Debug.WriteLine("RTC is Valid");
-            // RTC is good so let's use it
-            SystemTime.SetTime(rtc.Now);
-        }
-        else {
-            Debug.WriteLine("RTC is Invalid");
-            // RTC is not valid. Get user input to set it
-            // This example will simply set it to January 1st 2020 at 11:11:11
-            var MyTime = new DateTime(2020, 1, 1, 11, 11, 11);
-            rtc.Now = MyTime;
-            SystemTime.SetTime(MyTime);
-        }
+if (rtc.IsValid) {
+    Debug.WriteLine("RTC is Valid");
+    // RTC is good so let's use it
+    SystemTime.SetTime(rtc.Now);
+}
+else {
+    Debug.WriteLine("RTC is Invalid");
+    // RTC is not valid. Get user input to set it
+    // This example will simply set it to January 1st 2020 at 11:11:11
+    var MyTime = new DateTime(2020, 1, 1, 11, 11, 11);
+    rtc.Now = MyTime;
+    SystemTime.SetTime(MyTime);
+}
 
-        while (true) {
-            Debug.WriteLine("Current Time    : " + DateTime.Now);
-            Debug.WriteLine("Current RTC Time: " + rtc.Now);
-            Thread.Sleep(1000);
-        }
-    }
+while (true) {
+    Debug.WriteLine("Current Time    : " + DateTime.Now);
+    Debug.WriteLine("Current RTC Time: " + rtc.Now);
+    Thread.Sleep(1000);
 }
 ```
 
@@ -69,11 +65,11 @@ var rtc = GHIElectronics.TinyCLR.Devices.Rtc.RtcController.GetDefault();
 rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.None);
 
 //The following line charges slowly through a 5 K resistor. Used for supercaps.
-rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Slow)
+rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Slow);
 
 //The following line charges quickly through a 1.5 K resistor.
 //   This is the mode we use for the supercaps on SITCore Dev boards.
-rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Fast)
+rtc.SetChargeMode(GHIElectronics.TinyCLR.Devices.Rtc.BatteryChargeMode.Fast);
 ```
 
 ---
@@ -197,6 +193,6 @@ RTC also provides a calibration feature.
 ```
 rtc.Calibrate(int pulse);
 ```
-```pulse``` is how many ticks to add (positive) or remove (negative) every 32 seconds. Use 0 to disable.
+`pulse` is how many ticks to add (positive) or remove (negative) every 32 seconds. Use 0 to disable.
 
-Maximum ```pulse``` is +/-512, meaning RTC frequency can be adjust between -487.1ppm to 488.5ppm.
+Maximum `pulse` is +/-512, meaning RTC frequency can be adjust between -487.1ppm to 488.5ppm.

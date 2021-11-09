@@ -4,7 +4,7 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
-TinyCLR OS started with Microsoft's .NET Micro Framework and continues to enable managed .NET development and debugging using Visual Studio on embedded devices. All you need to get started is Visual Studio (free version available), a TinyCLR device, and a USB cable.
+TinyCLR OS started with Microsoft's .NET Micro Framework and continues to enable managed .NET development and debugging using Visual Studio on embedded devices. All you need to get started is Visual Studio (free version available), a [SITCore device](../../hardware/sitcore/intro.md), and a USB cable.
 
 ---
 ## Getting Started

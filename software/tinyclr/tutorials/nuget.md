@@ -36,13 +36,6 @@ You can also select the package and click on the `Install` button in the center 
 > [!Note]
 > Pre-release libraries are not hosted on NuGet.org, use the local feed feature to fetch the needed libraries from your local machine, found on the [**Downloads**](.. /downloads.md) page.
 
-***
-
-
-
-
-
-
 For information on creating custom NuGet Packages, [this page](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package) from Microsoft is a good place to start.
 
 > [!Tip]

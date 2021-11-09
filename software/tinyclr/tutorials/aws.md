@@ -2,11 +2,9 @@
 ---
 This example shows how to communicate with AWS using MQTT. You'll also need to set up a Network Interface connection on the device such as [WiFi](wifi.md) to Connect to AWS in your program.
 
->[!TIP]
->Needed NuGets: GHIElectronics.TinyCLR.Networking.Mqtt
->
->Add using statement:
-> using System.Security.Cryptography.X509Certificates;
+First download the required AWS Root Certificate and add to resources. The [TLS Client](tls-client.md) shows how to download the root certificate.
+
+There is also a Client certificate that needs to be downloaded from the AWS account, detailed below.
 
 ```
 var iotEndPoint = "Need your Rest API Endpoint";

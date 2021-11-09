@@ -70,21 +70,19 @@ The MJPEG video format is simply a chain of JPG images that are stored in a sing
 > Needed NuGet: GHIElectronics.TinyCLR.Drivers.Media
 
 ```cs
-private static void StartDecoding(){
-    var stream = new FileStream($@"A:\128x160.mjpeg", FileMode.Open);
+var stream = new FileStream($@"A:\128x160.mjpeg", FileMode.Open);
 
-    var settings = new Mjpeg.Setting();
-    settings.BufferSize = 16 * 1024;
-    settings.BufferCount = 3;
+var settings = new Mjpeg.Setting();
+settings.BufferSize = 16 * 1024;
+settings.BufferCount = 3;
 
-    var mjpegDecoder = new Mjpeg(settings);
+var mjpegDecoder = new Mjpeg(settings);
 
-    mjpegDecoder.FrameDecodedEvent += MjpegDecoder_FrameDecodedEvent;
+mjpegDecoder.FrameDecodedEvent += MjpegDecoder_FrameDecodedEvent;
 
-    mjpegDecoder.StartDecode(stream); // Non-block function
+mjpegDecoder.StartDecode(stream); // Non-block function
 
-    Thread.Sleep(Timeout.Infinite);
-}
+Thread.Sleep(Timeout.Infinite);
 
 private static void MjpegDecoder_FrameDecodedEvent(byte[] data) {
     using (var image = new Bitmap(data, 0, data.Length,BitmapImageType.Jpeg)){

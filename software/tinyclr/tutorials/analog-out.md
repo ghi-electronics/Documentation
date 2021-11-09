@@ -1,11 +1,14 @@
 # Analog Out
 ---
 ## DAC
-A Digital to Analog Converter (DAC) will convert a digital input (number) to an analog output (voltage). The voltage of a DAC usually swings from very close to zero volts up to nearly the voltage of the microcontroller (usually 3.3 volts). This output voltage is only a weak signal and is not meant to drive a load. An op-amp or similar circuit can be added to drive a load, such as a speaker.
+A Digital to Analog Converter (DAC) will convert a digital input (number) to an analog output (voltage). 
 
-The analog out on a microcontroller has a given resolution, which in large part determines its precision or accuracy. Check the device documentation for details. For example, an 8-bit DAC has 256 possible output voltage levels and a resolution of 3.3V/256 or 0.013 volts.
+The voltage of a DAC usually swings from very close to zero volts up to nearly the voltage of the microcontroller (usually 3.3 volts). This output voltage is only a weak signal and is not meant to drive a load. An op-amp or similar circuit can be added to drive a load, such as a speaker.
 
-This example will generate a triangular waveform.
+The param accepted by the api is from 0.0 to 1.0. This is ratio from 0V to the microcontroller's voltage source, 3.3V on SITCore.
+
+> [!Note]
+SC20xxx and SC13xxx support 12 bit resolution.
 
 ```cs
 var dac = DacController.GetDefault();

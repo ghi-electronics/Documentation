@@ -32,7 +32,6 @@ Additionally, the `VncServer` receives Mouse coordinates & click status from the
 ```cs
 static VncServer vncServer;
 
-static void Main(){
 // To do: Setup the preferred network connection here
 // ...
     
@@ -63,11 +62,11 @@ Graphics.OnFlushEvent += Graphics_OnFlushEvent;
     }
 }
 
-private static void S_PointerChangedEvent(int x, int y, bool pressed) {
+void S_PointerChangedEvent(int x, int y, bool pressed) {
     Debug.WriteLine("x = " + x + ", y = " + y + ", press: " + pressed);
 }
 
-private static void Graphics_OnFlushEvent(Graphics sender, byte[] data, int x, int y, int width, int height, int originalWidth) {
+void Graphics_OnFlushEvent(Graphics sender, byte[] data, int x, int y, int width, int height, int originalWidth) {
         vncServer.Send(data, x, y, width, height);
 }
 ```

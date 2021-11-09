@@ -206,7 +206,7 @@ NetworkInterfaceSettings networkSettings = new NetworkInterfaceSettings()
 networkController.SetInterfaceSettings(networkSettings);
 networkController.Enable();
 
-while (isReady == false) ; // wait for valid IP addrress. 
+while (isReady == false) ; // wait for valid IP address. 
 
 var dns = new Dns(networkController);
 var host = dns.GetHostEntry("www.example.com");
