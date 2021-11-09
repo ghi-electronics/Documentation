@@ -171,15 +171,19 @@
 </tr>
 </tbody>
 </table>
+<div class="NOTE"><h5>Note</h5><p>The table above is calculated base on 40MHz clock source.</p>
+</div>
 <p>There are many online CAN calculators that can be used to help you with CAN timing, for <a href="http://www.bittiming.can-wiki.info/">example</a>.</p>
 <p><img src="images/can-bit-segments.png" alt="CAN bit segments"></p>
 <p>The CAN calculator needs the microcontroller&#39;s CAN clock speed. For the SITCore series SC20xxx, this is 48 MHz. For the SC13xxx the speed is 40MHz. These can easily be found with <code>SourceClock</code> property.</p>
 <h2 id="filtering">Filtering</h2>
 <p>Filters can be set to automatically accept or ignore messages based on their arbitration ID.</p>
-<div class="TIP"><h5>Tip</h5><p>Each CAN channel supports up to 64 standard IDs and 32 Extended IDs</p>
+<div class="TIP"><h5>Tip</h5><p>On SC20xxx, each CAN channel supports up to 64 standard IDs and 32 Extended IDs. SC13xxx supports up to 14 filters.</p>
 </div>
 <h3 id="range-filter">Range Filter</h3>
 <p><code>AddRangeFilter()</code> allows you to set a range of arbitration IDs that will be accepted as valid messages. Messages with arbitration IDs outside of this range will be ignored. You can add more than one range filter. In the sample code below, the range filters will accept messages with arbitration IDs ranging from <code>0x12</code> to <code>0x20</code> and also between <code>0x500</code> and <code>0x1000</code> inclusive.</p>
+<div class="NOTE"><h5>Note</h5><p>Only SC20xxx supports Range Filter, SC13xxx doesn&#39;t.</p>
+</div>
 <h3 id="mask-filter">Mask Filter</h3>
 <p><code>AddMaskFilter()</code> can be used to specify an individual arbitration ID or a range of arbitration IDs that will be accepted regardless of the group filter settings. If the arbitration ID of the message is bitwise anded with the given mask argument, and the result is equal to the compare argument you provide, the message will be accepted.</p>
 <p>In the sample code below, CAN messages with arbitration IDs of <code>0x11</code>, <code>0x13</code>, and <code>0x5678</code> will be accepted in addition to the arbitration IDs specified by the group filters.</p>
@@ -194,84 +198,83 @@ using System;
 using System.Diagnostics;
 using System.Threading;
 
-class Program {
-    private static void Main() {
-        var LdrButton = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE3);
-        LdrButton.SetDriveMode(GpioPinDriveMode.InputPullUp);
+var LdrButton = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE3);
+LdrButton.SetDriveMode(GpioPinDriveMode.InputPullUp);
 
-        var can = CanController.FromName(SC20100.CanBus.Can1);
+var can = CanController.FromName(SC20100.CanBus.Can1);
 
-        var propagationPhase1 = 13;
-        var phase2 = 2;
-        var baudratePrescaler = 3;
-        var synchronizationJumpWidth = 1;
-        var useMultiBitSampling = false;
+var propagationPhase1 = 13;
+var phase2 = 2;
+var baudratePrescaler = 3;
+var synchronizationJumpWidth = 1;
+var useMultiBitSampling = false;
 
-        can.SetNominalBitTiming(new CanBitTiming(propagationPhase1, phase2, baudratePrescaler,
-            synchronizationJumpWidth, useMultiBitSampling));        
+can.SetNominalBitTiming(new CanBitTiming(propagationPhase1, phase2, baudratePrescaler,
+    synchronizationJumpWidth, useMultiBitSampling));        
 
-        var message = new CanMessage() {
-            Data = new byte[] { 0x48, 0x65, 0x6C, 0x6C, 0x6F, 0x2E, 0x20, 0x20 },
-            ArbitrationId = 0x11,
-            Length = 6,
-            RemoteTransmissionRequest = false,
-            ExtendedId = false,
-            FdCan = false,
-            BitRateSwitch = false
-        };
+var message = new CanMessage() {
+    Data = new byte[] { 0x48, 0x65, 0x6C, 0x6C, 0x6F, 0x2E, 0x20, 0x20 },
+    ArbitrationId = 0x11,
+    Length = 6,
+    RemoteTransmissionRequest = false,
+    ExtendedId = false,
+    FdCan = false,
+    BitRateSwitch = false
+};
 
-        //The following filter will accept arbitration IDs from 0x12 to 0x20 inclusive.
-        can.Filter.AddRangeFilter(Filter.IdType.Standard, 0x12, 0x20);
+//The following filter will accept arbitration IDs from 0x12 to 0x20 inclusive.
+can.Filter.AddRangeFilter(Filter.IdType.Standard, 0x12, 0x20);
 
-        //The following filter will accept arbitration IDs from 0x500 to 0x1000 inclusive.
-        can.Filter.AddRangeFilter(Filter.IdType.Standard, 0x500, 0x1000);
+//The following filter will accept arbitration IDs from 0x500 to 0x1000 inclusive.
+can.Filter.AddRangeFilter(Filter.IdType.Standard, 0x500, 0x1000);
 
-        //The following filter will accept arbitration IDs of 0x11 and 0x13.
-        can.Filter.AddMaskFilter(Filter.IdType.Standard, 0x11, 0xFD);
+//The following filter will accept arbitration IDs of 0x11 and 0x13.
+can.Filter.AddMaskFilter(Filter.IdType.Standard, 0x11, 0xFD);
 
-        //The following filter will accept arbitration IDs of 5678 only.
-        can.Filter.AddMaskFilter(Filter.IdType.Standard, 0x5678, 0xFFFF);
+//The following filter will accept arbitration IDs of 5678 only.
+can.Filter.AddMaskFilter(Filter.IdType.Standard, 0x5678, 0xFFFF);
 
-        can.MessageReceived += Can_MessageReceived;
-        can.ErrorReceived += Can_ErrorReceived;
+can.MessageReceived += Can_MessageReceived;
+can.ErrorReceived += Can_ErrorReceived;
 
-        can.Enable();
+can.Enable();
 
-        while (true) {
-            if (LdrButton.Read() == GpioPinValue.Low)
-                can.WriteMessage(message);
+while (true) {
+    if (LdrButton.Read() == GpioPinValue.Low)
+        can.WriteMessage(message);
 
-            Thread.Sleep(100);
-        }
-    }
-
-    private static void Can_MessageReceived(CanController sender,
-        MessageReceivedEventArgs e) {
-
-        sender.ReadMessage(out var message);
-
-        Debug.WriteLine(&quot;Arbitration ID: 0x&quot; + message.ArbitrationId.ToString(&quot;X8&quot;));
-        Debug.WriteLine(&quot;Is extended ID: &quot; + message.ExtendedId.ToString());
-        Debug.WriteLine(&quot;Is remote transmission request: &quot;
-            + message.RemoteTransmissionRequest.ToString());
-
-        Debug.WriteLine(&quot;Time stamp: &quot; + message.Timestamp.ToString());
-
-        var data = &quot;&quot;;
-        for (var i = 0; i &lt; message.Length; i++) data += Convert.ToChar(message.Data[i]);
-
-        Debug.WriteLine(&quot;Data: &quot; + data);
-    }
-
-    private static void Can_ErrorReceived(CanController sender, ErrorReceivedEventArgs e)
-        =&gt; Debug.WriteLine(&quot;Error &quot; + e.ToString());
+    Thread.Sleep(100);
 }
+
+
+void Can_MessageReceived(CanController sender,
+    MessageReceivedEventArgs e) {
+
+    sender.ReadMessage(out var message);
+
+    Debug.WriteLine(&quot;Arbitration ID: 0x&quot; + message.ArbitrationId.ToString(&quot;X8&quot;));
+    Debug.WriteLine(&quot;Is extended ID: &quot; + message.ExtendedId.ToString());
+    Debug.WriteLine(&quot;Is remote transmission request: &quot;
+        + message.RemoteTransmissionRequest.ToString());
+
+    Debug.WriteLine(&quot;Time stamp: &quot; + message.Timestamp.ToString());
+
+    var data = &quot;&quot;;
+    for (var i = 0; i &lt; message.Length; i++) data += Convert.ToChar(message.Data[i]);
+
+    Debug.WriteLine(&quot;Data: &quot; + data);
+}
+
+void Can_ErrorReceived(CanController sender, ErrorReceivedEventArgs e)
+    =&gt; Debug.WriteLine(&quot;Error &quot; + e.ToString());
 </code></pre><hr>
 <h2 id="can-fd">CAN-FD</h2>
 <p>CAN-FD allows for faster data transmission and larger data packet size to increase throughput. At the same time, CAN-FD is compatible with traditional CAN -- CAN-FD and standard CAN nodes can even coexist on the same CAN bus!</p>
 <p>CAN-FD can be used by setting the <code>FdCan</code> property of your CAN message to <code>true</code>. This setting will allow you to send up to 64 bytes of data per CAN message.</p>
 <p>To send the data at higher speed you will also need to set two bit timings, one for the normal, slower speed (<code>SetNominalBitTiming()</code>), and one for the faster speed (<code>SetDataBitTiming()</code>). You will also have to set the <code>BitRateSwitch</code> property of the CAN message to <code>true.</code></p>
 <p>The following code shows the changes needed to make the above code sample use CAN-FD with speeds of 250 kilobaud and 1 megabaud.</p>
+<div class="NOTE"><h5>Note</h5><p>Only SC20xxx supports CAN-FD, SC13xxx doesn&#39;t support this feature.</p>
+</div>
 <pre><code class="lang-cs">var propagationPhase1 = 13; //250 kilobaud settings
 var phase2 = 2;
 var baudratePrescaler = 12;
@@ -307,7 +310,7 @@ var message = new CanMessage() {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/can.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/refresh/software/tinyclr/tutorials/can.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

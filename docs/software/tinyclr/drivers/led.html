@@ -142,11 +142,12 @@ while (true){
 </div>
 <pre><code class="lang-cs">const int NUM_LED = 4; // 4 leds
 var pin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA0);
-leds = new WS2812Controller(pin, NUM_LED, WS2812Controller.DataFormat.rgb888);
+var leds = new WS2812Controller(pin, NUM_LED, WS2812Controller.DataFormat.rgb888);
 leds.SetColor(0, 0xFF, 0, 0); // red
 leds.SetColor(1, 0, 0xFF, 0); // green
 leds.SetColor(2, 0, 0, 0xFF); // blue
 leds.SetColor(3, 0xFF, 0xFF, 0xFF); // white
+leds.Flush();
 </code></pre><hr>
 <p><img src="images/APA102C.png" alt="APA102C"></p>
 <h2 id="apa102c">APA102C</h2>

@@ -80,10 +80,8 @@
 
 <hr>
 <p>This example shows how to communicate with AWS using MQTT. You&#39;ll also need to set up a Network Interface connection on the device such as <a href="wifi.html">WiFi</a> to Connect to AWS in your program.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Networking.Mqtt</p>
-<p>Add using statement:
-using System.Security.Cryptography.X509Certificates;</p>
-</div>
+<p>First download the required AWS Root Certificate and add to resources. The <a href="tls-client.html">TLS Client</a> shows how to download the root certificate.</p>
+<p>There is also a Client certificate that needs to be downloaded from the AWS account, detailed below.</p>
 <pre><code>var iotEndPoint = &quot;Need your Rest API Endpoint&quot;;
 var iotPort = 8883;
 var deviceId = &quot;Need your Device ID&quot;;
@@ -199,7 +197,7 @@ var privateKeyData = Resources.GetBytes(Resources.BinaryResources._3a59c69926_pr
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/aws.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/refresh/software/tinyclr/tutorials/aws.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

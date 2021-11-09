@@ -134,73 +134,65 @@ using GHIElectronics.TinyCLR.Devices.Display;
 using GHIElectronics.TinyCLR.Devices.Gpio;
 using GHIElectronics.TinyCLR.Pins;
 
-namespace GraphicsSample {
-    class Program {
-        private static void Main() {
-            GpioPin backlight = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA15);
-            backlight.SetDriveMode(GpioPinDriveMode.Output);
-            backlight.Write(GpioPinValue.High);
+GpioPin backlight = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA15);
+backlight.SetDriveMode(GpioPinDriveMode.Output);
+backlight.Write(GpioPinValue.High);
 
-            var displayController = DisplayController.GetDefault();
+var displayController = DisplayController.GetDefault();
 
-            // Enter the proper display configurations
-            displayController.SetConfiguration(new ParallelDisplayControllerSettings {
-                Width = 480,
-                Height = 272,
-                DataFormat = DisplayDataFormat.Rgb565,
-                Orientation = DisplayOrientation.Degrees0, //Rotate display.
-                PixelClockRate = 10000000,
-                PixelPolarity = false,
-                DataEnablePolarity = false,
-                DataEnableIsFixed = false,
-                HorizontalFrontPorch = 2,
-                HorizontalBackPorch = 2,
-                HorizontalSyncPulseWidth = 41,
-                HorizontalSyncPolarity = false,
-                VerticalFrontPorch = 2,
-                VerticalBackPorch = 2,
-                VerticalSyncPulseWidth = 10,
-                VerticalSyncPolarity = false,
-            });
+// Enter the proper display configurations
+displayController.SetConfiguration(new ParallelDisplayControllerSettings {
+    Width = 480,
+    Height = 272,
+    DataFormat = DisplayDataFormat.Rgb565,
+    Orientation = DisplayOrientation.Degrees0, //Rotate display.
+    PixelClockRate = 10000000,
+    PixelPolarity = false,
+    DataEnablePolarity = false,
+    DataEnableIsFixed = false,
+    HorizontalFrontPorch = 2,
+    HorizontalBackPorch = 2,
+    HorizontalSyncPulseWidth = 41,
+    HorizontalSyncPolarity = false,
+    VerticalFrontPorch = 2,
+    VerticalBackPorch = 2,
+    VerticalSyncPulseWidth = 10,
+    VerticalSyncPolarity = false,
+});
 
-            displayController.Enable(); //This line turns on the display I/O and starts
-                                        //  refreshing the display. Native displays are
-                                        //  continually refreshed automatically after this
-                                        //  command is executed.
+displayController.Enable(); //This line turns on the display I/O and starts
+                            //  refreshing the display. Native displays are
+                            //  continually refreshed automatically after this
+                            //  command is executed.
 
-            var screen = Graphics.FromHdc(displayController.Hdc);
+var screen = Graphics.FromHdc(displayController.Hdc);
 
-            var image = Resources.GetBitmap(Resources.BitmapResources.smallJpegBackground);
-            var font = Resources.GetFont(Resources.FontResources.small);
+var image = Resources.GetBitmap(Resources.BitmapResources.smallJpegBackground);
+var font = Resources.GetFont(Resources.FontResources.small);
 
-            screen.Clear();
+screen.Clear();
 
-            screen.FillEllipse(new SolidBrush(System.Drawing.Color.FromArgb
-                (255, 255, 0, 0)), 0, 0, 240, 136);
+screen.FillEllipse(new SolidBrush(System.Drawing.Color.FromArgb
+    (255, 255, 0, 0)), 0, 0, 240, 136);
 
-            screen.FillEllipse(new SolidBrush(System.Drawing.Color.FromArgb
-                (255, 0, 0, 255)), 240, 0, 240, 136);
+screen.FillEllipse(new SolidBrush(System.Drawing.Color.FromArgb
+    (255, 0, 0, 255)), 240, 0, 240, 136);
 
-            screen.FillEllipse(new SolidBrush(System.Drawing.Color.FromArgb
-                (128, 0, 255, 0)), 120, 0, 240, 136);
+screen.FillEllipse(new SolidBrush(System.Drawing.Color.FromArgb
+    (128, 0, 255, 0)), 120, 0, 240, 136);
 
-            screen.DrawImage(image, 216, 122);
+screen.DrawImage(image, 216, 122);
 
-            screen.DrawRectangle(new Pen(Color.Yellow), 10, 150, 140, 100);
-            screen.DrawEllipse(new Pen(Color.Purple), 170, 150, 140, 100);
-            screen.FillRectangle(new SolidBrush(Color.Teal), 330, 150, 140, 100);
+screen.DrawRectangle(new Pen(Color.Yellow), 10, 150, 140, 100);
+screen.DrawEllipse(new Pen(Color.Purple), 170, 150, 140, 100);
+screen.FillRectangle(new SolidBrush(Color.Teal), 330, 150, 140, 100);
 
-            screen.DrawLine(new Pen(Color.White), 10, 271, 470, 271);
-            screen.SetPixel(240, 200, Color.White);
+screen.DrawLine(new Pen(Color.White), 10, 271, 470, 271);
+screen.SetPixel(240, 200, Color.White);
 
-            screen.DrawString(&quot;Hello world!&quot;, font, new SolidBrush(Color.Blue), 210, 255);
+screen.DrawString(&quot;Hello world!&quot;, font, new SolidBrush(Color.Blue), 210, 255);
 
-            screen.Flush();
-
-            Thread.Sleep(Timeout.Infinite);
-        }
-    }
-}
+screen.Flush();
 </code></pre><p>Same example but with 7 inch display, replace the display configuration code with the following code:</p>
 <pre><code class="lang-cs">displayController.SetConfiguration(new ParallelDisplayControllerSettings {
     Width = 800,
