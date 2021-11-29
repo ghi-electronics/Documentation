@@ -36,7 +36,7 @@ File | Date | Status | MD5
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.1.0.6400 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.6300.ghi) | 2021-11-29 | Update | D65C153A2405D05D3AF244E1E27A00C6
+[v2.1.0.6400 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.6400.ghi) | 2021-11-29 | Update | D65C153A2405D05D3AF244E1E27A00C6
 [v2.1.0.6300 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.6300.ghi) | 2021-11-09 | Update | 13D16E476E494940CE1358EFEFD32E26
 [v2.1.0.6200 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.6200.ghi) | 2021-09-21 | Update | 574408495A41FFD9C7AE79C37AC3ECC3
 [v2.1.0.6100 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.1.0.6100.ghi) | 2021-06-30 | Production | E4CD5D819192E4260DAB6D4140E434B6
