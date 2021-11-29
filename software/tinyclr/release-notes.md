@@ -12,7 +12,8 @@
 
 #### Changes
 
-- None.
+- VS2022: Release candidate is moved to production.
+- VS2019: None.
 
 #### Known Issues
 
