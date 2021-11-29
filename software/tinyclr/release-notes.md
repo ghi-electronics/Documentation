@@ -4,6 +4,83 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.1.0.6400 - RTW Release
+
+### Released 2021-11-29
+
+### Visual Studio Project System
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+### Libraries
+
+#### Changes
+
+- Fixed Modbus blocks other threads.
+- Fixed RadioButton doesn't support multi groups.
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+
+##### SC20xxx:
+
+- Fixed network crashed randomly.
+- Fixed IsDriveModeSupported always return false if OpenDrain mode.
+- Fixed Abort always return few ticks (ReadPulse) 
+
+##### SC13xxx
+
+- Fixed IsDriveModeSupported always return false if OpenDrain mode.
+- Fixed Abort always return few ticks (ReadPulse) 
+ 
+#### Known Issues
+
+- None.
+
+### Drivers
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+### TinyCLR Config
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+---
+
 ## 2.1.0.6300 - RTW Release
 
 ### Released 2021-11-09
