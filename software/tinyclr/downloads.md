@@ -67,6 +67,7 @@ The extension is what gets loaded on Visual Studio to allow it to communicate wi
 
 File | Date | Status | MD5
 --- | --- | --- | ---
+[v2.1.801](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-v2.1.801.vsix) | 2021-11-29 | Production | F57E1BD812B1331F530864F853BE7854
 [v2.1.801](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-v2.1.801.vsix) | 2021-11-09 | Release Candidate | F57E1BD812B1331F530864F853BE7854
 
 
