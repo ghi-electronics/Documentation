@@ -1,6 +1,7 @@
 # [Hardware](intro.md)
 
 # [SITCore](sitcore/intro.md)
+## [Getting Started](sitcore/getting-started.md)
 ## [System on Chip](sitcore/soc.md)
 ## [System on Modules](sitcore/som.md)
 ## [Single Board Computers](sitcore/sbc.md)
