@@ -1984,9 +1984,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/intro.md",
       "output": {
@@ -2021,9 +2018,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/legacy/intro.md",
       "output": {
@@ -2120,9 +2114,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/netmf/g30.md",
       "output": {
@@ -2159,9 +2150,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/netmf/g80.md",
       "output": {
@@ -2636,9 +2624,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/netmf/intro.md",
       "output": {
@@ -2731,15 +2716,24 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/sitcore/dev.md",
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/dev.html",
           "hash": "9D4fy5PxR721aqanuXT/pLgCjcDnK4FuybCtf6I2IMo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "hardware/sitcore/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "hardware/sitcore/getting-started.html",
+          "hash": "lkNUb54GkOo2zJ6IO8KKnG3Ha7vlgj3bw8MFheYSJuI="
         }
       },
       "is_incremental": false,
@@ -3315,7 +3309,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/intro.html",
-          "hash": "onG/L4xNzcbaZGH2SSPXLlYynmJoWVvVhvSemZ1qfg4="
+          "hash": "y+CzP+ZYV6J7L+dKf9lz0LXys1YoPIyP0vEa44FZl2k="
         }
       },
       "is_incremental": false,
@@ -3619,9 +3613,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/sitcore/sbc.md",
       "output": {
@@ -3634,9 +3625,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/sitcore/soc.md",
       "output": {
@@ -3649,9 +3637,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/sitcore/som.md",
       "output": {
@@ -3669,16 +3654,13 @@
       "output": {
         ".html": {
           "relative_path": "hardware/toc.html",
-          "hash": "GCQ7yrI9GOwGZs3b2uScXz3mJ56J7feWJ/BzjSYQIss="
+          "hash": "Sk1kU9geIrf9RiDSMRHGWRYsZTBT+R7ht07KRB2bMhc="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/ucm/development-options.md",
       "output": {
@@ -3878,9 +3860,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/ucm/intro.md",
       "output": {
@@ -3893,9 +3872,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/ucm/standard.md",
       "output": {
@@ -5244,7 +5220,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/downloads.html",
-          "hash": "ImtL+oqZSjuYmKV5FtehD6HUz1l364n4RqlVPI4Nrlk="
+          "hash": "9dYxSNtrfkXX/dOxoQzpQPHd5J1tE6ucumpWqgtgSvc="
         }
       },
       "is_incremental": false,
@@ -6160,9 +6136,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/intro.md",
       "output": {
@@ -6195,7 +6168,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/release-notes.html",
-          "hash": "eMDtNBijSc7I07eHf22czvm/6KInIqc3HNxQPMbqbss="
+          "hash": "xjyYB9yRxW/AIKBPpAUcWDKFWauzZY53guh7wqUEZSM="
         }
       },
       "is_incremental": false,
@@ -8663,19 +8636,17 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 213,
-          "skipped_file_count": 0
+          "total_file_count": 214,
+          "skipped_file_count": 212
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

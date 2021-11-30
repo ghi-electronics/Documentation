@@ -1,6 +1,12 @@
 # SITCore
 ---
-Our SITCore line of products provides an easy way to create secure IoT and embedded devices that are programmable in C# using Visual Studio, thanks to [TinyCLR OS](../../software/tinyclr/intro.md). Designed with security as a top priority, your intellectual property is protected through device code protection, secure encrypted in-field and OTA update, and secure booting.
+The SITCore line of products provides an easy way to create secure IoT and embedded devices that are programmable in C# using Visual Studio, thanks to [TinyCLR OS](../../software/tinyclr/intro.md). Designed with security as a top priority, your intellectual property is protected through device code protection, secure encrypted in-field and OTA update, and secure booting.
+
+## Getting Started
+
+Get started qickly with SITCore and TinyCLR OS. </br> [**Learn More...**](getting-started.md) 
+
+---
 
 ## System on Chip
 [![SITCore SC20100S](images/system-on-chip.png)](soc.md) 
