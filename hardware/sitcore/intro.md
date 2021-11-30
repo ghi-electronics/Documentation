@@ -4,7 +4,7 @@ The SITCore line of products provides an easy way to create secure IoT and embed
 
 ## Getting Started
 
-Get started qickly with SITCore and TinyCLR OS. </br> [**Learn More...**](getting-started.md) 
+Get started quickly with SITCore and TinyCLR OS. </br> [**Learn More...**](getting-started.md) 
 
 ---
 
