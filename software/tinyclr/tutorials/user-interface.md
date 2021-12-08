@@ -521,6 +521,51 @@ Register Touch event, items in scrollViewer will go up or down every time touche
     }
 ```
 
+### Slider
+
+```cs
+	var slider = new Slider(30, 150);
+
+	slider.Direction = Orientation.Vertical;
+	slider.OnValueChanged += (a, b) => Debug.WriteLine("new value = " + b.Value);	
+```
+
+### DataGrid
+
+```cs
+var gridWidth = 400;
+var rowCount = 5;
+var columnWidth = 60;
+var rowHeight = 60;
+var font = "Your Font";
+
+var dataGrid = new DataGrid(gridWidth, rowHeight, rowCount, font);
+
+var colum1 = new DataGridColumn("Column 1", columnWidth);
+var colum2 = new DataGridColumn("Column 2", columnWidth);
+var colum3 = new DataGridColumn("Column 3", columnWidth);
+
+
+var item123 = new DataGridItem(new string[] { "item 1", "item 2", "item 3" });
+var item456 = new DataGridItem(new string[] { "item 4", "item 5", "item 6" });
+
+// Add column
+dataGrid.AddColumn(colum1);
+dataGrid.AddColumn(colum2);
+dataGrid.AddColumn(colum3);
+
+
+// Add Item
+dataGrid.AddItem(item123);
+dataGrid.AddItem(item456);
+
+// Touch Event
+dataGrid.TapCellEvent += (a, b) =>
+{
+	Debug.WriteLine(b.ToString());
+};
+```
+
 ### The Dispatcher
 
 The User Interface libraries rely on a dispatcher to handle system events and update invalidated elements. All elements are changed and updated from within the dispatcher. In this example, we will show the time on the screen. The time will be in a text box that is updated every second using a `Timer`. Since timers run in their own thread, a dispatcher invoke is needed.
