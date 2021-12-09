@@ -521,6 +521,21 @@ Register Touch event, items in scrollViewer will go up or down every time touche
     }
 ```
 
+### MessageBox
+
+```cs
+	var font = "user font";
+	var messageBox = new MessageBox(font);
+
+	messageBox.Show("Is this messageBox?", "MessageBox caption", MessageBox.MessageBoxButtons.YesNo);
+
+	messageBox.ButtonClick += (a, b) =>
+	{
+		Debug.WriteLine(b.DialogResult.ToString());
+
+	};
+```
+
 ### Slider
 
 ```cs
@@ -537,7 +552,7 @@ Register Touch event, items in scrollViewer will go up or down every time touche
 	var rowCount = 5;
 	var columnWidth = 60;
 	var rowHeight = 60;
-	var font = "Your Font";
+	var font = "user font";
 
 	var dataGrid = new DataGrid(gridWidth, rowHeight, rowCount, font);
 
