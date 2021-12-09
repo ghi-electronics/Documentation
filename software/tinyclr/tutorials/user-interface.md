@@ -495,75 +495,90 @@ private static UIElement Elements() {
 The scroll viewer allows for viewing content that is larger than the viewing area. User input is used to shift the content within the viewing area.
 
 ```cs
-    // Create a scrollviewer
-    var scrollViewer = new ScrollViewer {
-        Background = new SolidColorBrush(Colors.Gray),
+// Create a scrollviewer
+var scrollViewer = new ScrollViewer {
+	Background = new SolidColorBrush(Colors.Gray),
 
-        // scroll line by line with 10 pixels per line
-        ScrollingStyle = ScrollingStyle.LineByLine,
-        LineWidth = 10,
-        LineHeight = 10    
-    };
+	// scroll line by line with 10 pixels per line
+	ScrollingStyle = ScrollingStyle.LineByLine,
+	LineWidth = 10,
+	LineHeight = 10    
+};
     
 ```
 
 Register Touch event, items in scrollViewer will go up or down every time touched. 
 
 ```cs
-    scrollViewer.TouchUp += ScrollViewer_TouchUp;
+scrollViewer.TouchUp += ScrollViewer_TouchUp;
 ```
 
 ```cs
-    private void ScrollViewer_TouchUp(object sender, GHIElectronics.TinyCLR.UI.Input.TouchEventArgs e) {
-        var s = (ScrollViewer)sender;
+private void ScrollViewer_TouchUp(object sender, GHIElectronics.TinyCLR.UI.Input.TouchEventArgs e) {
+	var s = (ScrollViewer)sender;
 
-        s.LineDown();
-    }
+	s.LineDown();
+}
+```
+
+### MessageBox
+
+```cs
+var font = "user font";
+var messageBox = new MessageBox(font);
+
+messageBox.Show("Is this messageBox?", "MessageBox caption", MessageBox.MessageBoxButtons.YesNo);
+
+messageBox.ButtonClick += (a, b) =>
+{
+	Debug.WriteLine(b.DialogResult.ToString());
+
+};
 ```
 
 ### Slider
 
 ```cs
-	var slider = new Slider(30, 150);
+var slider = new Slider(30, 150);
 
-	slider.Direction = Orientation.Vertical;
-	slider.OnValueChanged += (a, b) => Debug.WriteLine("new value = " + b.Value);	
+slider.Direction = Orientation.Vertical;
+slider.OnValueChanged += (a, b) => Debug.WriteLine("new value = " + b.Value);	
 ```
 
 ### DataGrid
 
 ```cs
-	var gridWidth = 400;
-	var rowCount = 5;
-	var columnWidth = 60;
-	var rowHeight = 60;
-	var font = "Your Font";
+var gridWidth = 400;
+var rowCount = 5;
+var columnWidth = 60;
+var rowHeight = 60;
+var font = "user font";
 
-	var dataGrid = new DataGrid(gridWidth, rowHeight, rowCount, font);
+var dataGrid = new DataGrid(gridWidth, rowHeight, rowCount, font);
 
-	var colum1 = new DataGridColumn("Column 1", columnWidth);
-	var colum2 = new DataGridColumn("Column 2", columnWidth);
-	var colum3 = new DataGridColumn("Column 3", columnWidth);
-
-
-	var item123 = new DataGridItem(new string[] { "item 1", "item 2", "item 3" });
-	var item456 = new DataGridItem(new string[] { "item 4", "item 5", "item 6" });
-
-	// Add column
-	dataGrid.AddColumn(colum1);
-	dataGrid.AddColumn(colum2);
-	dataGrid.AddColumn(colum3);
+var colum1 = new DataGridColumn("Column 1", columnWidth);
+var colum2 = new DataGridColumn("Column 2", columnWidth);
+var colum3 = new DataGridColumn("Column 3", columnWidth);
 
 
-	// Add Item
-	dataGrid.AddItem(item123);
-	dataGrid.AddItem(item456);
+var item123 = new DataGridItem(new string[] { "item 1", "item 2", "item 3" });
+var item456 = new DataGridItem(new string[] { "item 4", "item 5", "item 6" });
 
-	// Touch Event
-	dataGrid.TapCellEvent += (a, b) =>
-	{
-		Debug.WriteLine(b.ToString());
-	};
+// Add column
+dataGrid.AddColumn(colum1);
+dataGrid.AddColumn(colum2);
+dataGrid.AddColumn(colum3);
+
+
+// Add Item
+dataGrid.AddItem(item123);
+dataGrid.AddItem(item456);
+
+// Touch Event
+dataGrid.TapCellEvent += (a, b) =>
+{
+	Debug.WriteLine(b.ToString());
+};
 ```
 
 ### The Dispatcher
