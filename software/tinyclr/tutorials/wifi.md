@@ -116,6 +116,9 @@ The Winc15x0Interface class provides to access some of the native functions of t
 >SetCommunicationInterfaceSettings function needs to be called before using this driver.
 
 ```cs
+//Initialize the WiFi interface first before using any of the below functions... SetCommunicationInterfaceSettings
+// ...
+
 //Scan for WiFi access points:
 string[] ssidList = Winc15x0Interface.Scan();
 
