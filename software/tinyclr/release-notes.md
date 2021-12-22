@@ -4,6 +4,87 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.1.0.6500 - RTW Release
+
+### Released 2021-12-21
+
+### Visual Studio Project System
+
+#### Changes
+
+- VS2022: Fixed template doesn't include GHIElectronics.TinyCLR.Core libirary as default.
+- VS2019: None.
+
+#### Known Issues
+
+- None.
+
+### Libraries
+
+#### Changes
+
+- UI: Add Slider, DataGrid
+- UI: Rework MessageBox
+- UI: Fixed Exceptions in event handlers leave the UI corrupted https://github.com/ghi-electronics/TinyCLR-Libraries/issues/498
+- UI: Fixed Expand support for hardware UI buttons https://github.com/ghi-electronics/TinyCLR-Libraries/issues/812
+- UI: Fixed No vertical alignment for TextBox text https://github.com/ghi-electronics/TinyCLR-Libraries/issues/1082
+- UI: Fixed There is no password field option for the textbox https://github.com/ghi-electronics/TinyCLR-Libraries/issues/1066
+- UI: Fixed Onscreen keyboard miss-aligned with 4.3 https://github.com/ghi-electronics/TinyCLR-Libraries/issues/1087
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+
+##### SC20xxx:
+
+- Fixed WiFi AP mode Password doesn't work.
+
+##### SC13xxx
+
+- None
+ 
+#### Known Issues
+
+- None.
+
+### Drivers
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+### TinyCLR Config
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+---
+
+
 ## 2.1.0.6400 - RTW Release
 
 ### Released 2021-11-29
