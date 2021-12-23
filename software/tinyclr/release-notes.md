@@ -12,7 +12,7 @@
 
 #### Changes
 
-- VS2022: Fixed template doesn't include GHIElectronics.TinyCLR.Core libirary as default.
+- VS2022: Fixed template doesn't include GHIElectronics.TinyCLR.Core library as default.
 - VS2019: None.
 
 #### Known Issues
