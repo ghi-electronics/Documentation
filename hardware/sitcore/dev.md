@@ -8,7 +8,7 @@ We offer three development boards making it possible to start programming applic
 
 ## SITCore SC13048Q Dev Board
 
-![Development Options](images/sc13048q.jpg)
+![Development Options](images/sc13048q.png)
 
 The SC13048Q Dev Board includes an SC13048Q soldered to the board and a built in 1.8 inch color serial display. It has a 10 pin socket header for connecting peripherals. Peripheral connectors include mikroBus connector, external power, CAN, USB host and client and RTC backup supercap.  It also has a buzzer, LEDs, a reset button, and user programmable boot buttons.
 
@@ -28,7 +28,7 @@ The board can be powered through either the USB client connectors or the barrel 
 
 ## SITCore SC20100S Dev Board
 
-![Development Options](images/sc20100.jpg)
+![Development Options](images/sc20100s.png)
 
 The SC20100S Dev Board includes an SC20100S soldered to the board and a built in 1.8 inch color serial display. It has a 40 pin socket headers for connecting peripherals. Peripheral connectors include two mikroBus connectors, external power, CAN, USB host and client, RTC supercap and an SD card slot.  It also has a buzzer, LEDs, a reset button, and user programmable boot buttons.
 
@@ -45,7 +45,7 @@ The board can be powered through either the USB client connectors or the barrel 
 
 ## SITCore SCM20260D Dev Board
 
-![Development Options](images/SCM20260D.jpg)
+![Development Options](images/scm20260d.png)
 
 The SCM20260D Dev Board is the fastest and easiest way to start developing with the SCM20260D. This board includes an SCM20260D DIMM module and a 4.3 inch capacitive touch display. It provides standard connectors for input/output, and two 40 pin socket headers for connecting peripherals and a display. Peripheral connectors include two mikroBus connectors, external power, Ethernet, CAN, USB host and client, RTC supercap, DCMI interface and an SD card slot.  It also has a buzzer, LEDs, a reset button, and user programmable boot buttons.
 
@@ -66,7 +66,7 @@ One of the headers on the SCM20260 Dev board includes all necessary parallel dis
 
 #### UD435 Display Adaptor
 
-![UD435](images/ud435.jpg)
+![UD435](images/ud435.png)
 
 This display is included with the SCM20260D Dev board.
 
@@ -101,7 +101,7 @@ Vertical Sync Pulse Width | 1
 
 #### HDMI Adaptor
 
-![hdmi](images/sitcore-hdmi.jpg)
+![hdmi](images/sitcore-hdmi.png)
 
 This optional HDMI adaptor can be used instead of the display to provide an HDMI option. The board utilizes TI's TFP410 HDMI transmitter chip. 
 
@@ -118,7 +118,7 @@ displayController.SetConfiguration(hdmi.Configuration);
 
 The SC20260 SoC and its related SoMs include a parallel Digital Camera Interface. The Dev Board exposes the camera signals on a dedicated header. While any compatible display can be connected, the pinout matches the popular OV9655 breakout board, available from many sources around the web and shown below:
 
-![OV9655 Breakout](images/ov9655-breakout.jpg)
+![OV9655 Breakout](images/ov9655-breakout.png)
 
 It is important to note that some of these breakout boards ship with voltage regulators that don't seem to work properly, while others work well. Please understand that these are just our observations -- we cannot guarantee the functionality or quality of any third party products.
 

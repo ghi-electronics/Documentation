@@ -1,6 +1,6 @@
 # Single Board Computers
 ---
-![Single Board Computer](images/sitcore-sbc.png)
+![Single Board Computer](images/sitcore-sbc-fulline.png)
 
 We offer multiple single board computers to provide the lowest possible barrier to entering the world of TinyCLR OS. Most of these boards have WiFi and they all support the complete TinyCLR feature set. These boards are great for trying out TinyCLR OS, building prototypes, or incorporating into products.
 
@@ -104,7 +104,7 @@ All SITCore single board computers use a USB-C connector for application deploym
 
 ## FEZ Flea
 
-![FEZ Flea](images/fez-flea.jpg)
+![FEZ Flea](images/fez-flea.png)
 
 The **FEZ Flea** is the most cost effective way to dive into TinyCLR OS. With it's Seeeduino Xiao form factor it can be used with many existing accessories on the market. The board also has castellated  and through-hole pins. Making it ideal for using as a SoM or on a breadboard.
 
@@ -126,7 +126,7 @@ The **FEZ Flea** is the most cost effective way to dive into TinyCLR OS. With it
 
 ## FEZ Pico
 
-![FEZ Pico](images/fez_pico.jpg)
+![FEZ Pico](images/fez-pico.png)
 
 The **FEZ Pico** uses the Raspberry Pi Pico form factor allowing it drop into existing Pico accessories. The FEZ Pico also contains an JST connector for adding after market expandability. 
 
@@ -148,7 +148,7 @@ The **FEZ Pico** uses the Raspberry Pi Pico form factor allowing it drop into ex
 
 ## FEZ Feather
 
-![FEZ Feather](images/fez_feather.jpg)
+![FEZ Feather](images/fez-feather.png)
 
 The Adafruit Feather form factor boards are made to be stackable and have built-in support for 3.7V LiPo batteries with a charging circuit. The **FEZ Feather** provides both through hole pads and castellated edges making it both breadboard friendly and easy to build into products.
 
@@ -188,7 +188,7 @@ Make sure the battery polarity is correct as shown below (red wire to plus, blac
 
 ## FEZ Stick
 
-![FEZ Stick](images/fez_stick.jpg)
+![FEZ Stick](images/fez-stick.png)
 
 The **FEZ Stick** is a cost effective way to easily get started with TinyCLR OS. While providing an inexpensive way for the uninitiated to try TinyCLR OS, we've provided castellated edges as well as through hole pads to make it breadboard friendly and easy to embed into products. Also, there's actually space for two click modules, making this a very versatile board at a very affordable price!
 
@@ -217,7 +217,7 @@ The **FEZ Stick** is a cost effective way to easily get started with TinyCLR OS.
 
 ## FEZ Bit
 
-![FEZ Bit](images/fez_bit.jpg)
+![FEZ Bit](images/fez-bit.png)
 
 The **FEZ Bit**, while seemingly more of a "maker" board, provides a convenient way to easily use the multitude of inexpensive Micro:bit accessories that have flooded the market. As the number of Micro:bit accessories continues to grow, this board will be valued as a way to use these accessories to quickly assemble prototypes and test new product concepts.
 
@@ -286,7 +286,7 @@ The **FEZ Bit**, while seemingly more of a "maker" board, provides a convenient 
 
 ## FEZ Duino
 
-![FEZ Duino](images/fez_duino.jpg)
+![FEZ Duino](images/fez-duino.png)
 
 The **FEZ Duino** provides female headers that make use of the popular Arduino pinout. Once again, we are trying to make it as easy and inexpensive as possible to build prototypes and try out new concepts by taking advantage of an existing accessory ecosystem.
 
@@ -319,7 +319,7 @@ The **FEZ Duino** provides female headers that make use of the popular Arduino p
 
 ## FEZ Portal
 
-![FEZ Portal](images/fez_portal.jpg)
+![FEZ Portal](images/fez-portal.png)
 
 Already one of our most popular SITCore single board computers, The **FEZ Portal** is a 4.3" 480x272 display with capacitive touch that is programmable in C#. As the display and controller are one unit, it's even easier to make a product with touch as you only have to mount a single board that's only slightly larger than the display. Display uses part# ER-TFT043-3 available at [buydisplay.com](https://www.buydisplay.com/) 
 
