@@ -28,25 +28,28 @@ Use the [TinyCLR Config](tinyclr-config.md) tool to update the firmware on your 
 
 ![Install TinyCLR Extension](images/install-tinyclr-extension.gif)
 
+
+
+
 ## Starting a New Project
 
 Let's blink an LED on a SITCore board.
 
 Open Visual Studio and select `Create a new project`.
 
-![Create a new project](images/create-new-project.png)
+![Create a new project](images/create-new-project.gif)
 
 In the `Create a new project window`, select `TinyCLROS` from the `platforms` drop down list.
 
-![Select platform](images/select-platform.png)
+![Select platform](images/select-platform.gif)
 
 Now select the C# TinyCLR Application template and click the `Next` button.
 
-![Select C# TinyCLR Application template](images/select-template.png)
+![Select C# TinyCLR Application template](images/select-template.gif)
 
 We're going to stick with the default name and location. If you use a different name, make sure the program's namespace statement matches the namespace of your program. Now click on the "Create" button.
 
-![Configure project](images/configure-project.png)
+![Configure project](images/configure-project.gif)
 
 Now cut and paste the following code into the `Program.cs` window. Make sure to install both `GHIElectronics.TinyCLR.Devices.Gpio` and `GHIElectronics.TinyCLR.Pins` [NuGet packages](tutorials/nuget.md).
 
