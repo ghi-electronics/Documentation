@@ -6,7 +6,7 @@
 
 ## 2.1.0.6500 - RTW Release
 
-### Released 2021-12-21
+### Released 2021-12-28
 
 ### Visual Studio Project System
 
@@ -30,6 +30,7 @@
 - UI: Fixed No vertical alignment for TextBox text https://github.com/ghi-electronics/TinyCLR-Libraries/issues/1082
 - UI: Fixed There is no password field option for the textbox https://github.com/ghi-electronics/TinyCLR-Libraries/issues/1066
 - UI: Fixed Onscreen keyboard miss-aligned with 4.3 https://github.com/ghi-electronics/TinyCLR-Libraries/issues/1087
+- Json: Throw not supported exception if ArrayList found.
 
 #### Known Issues
 
