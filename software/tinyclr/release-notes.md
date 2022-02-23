@@ -4,6 +4,106 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.2.0.2000 - Preview2
+
+### Released 2022-02-23
+
+### Visual Studio Project System
+
+#### Changes
+
+- VS2022: Change version.
+- VS2019: None.
+
+#### Known Issues
+
+- None.
+
+### Libraries
+
+#### Changes
+
+- Added CPU usage statistic
+- Added I2C slave
+- Added USB Client MassStorage.
+- CDC and WinUsb: Allow send multiple of 64 bytes instead of had to split (63+1)
+- Add Debug.Write
+- Add Timeout.InfiniteTimeSpan
+- Add Gpio.Toggle()
+- Remove sealed
+- UI: Add Gauge, Chart.
+- UI: Fixed touch DataGrid
+- Pins: Add Feather.SpiBus.WiFi
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+
+##### SC20xxx:
+
+- USB Client MassStorage for QSPI, SD, USB thumb drive.
+- Fixed PWM glitch.
+- Fixed UART thresold.
+- Fixed UART couldn't active setting twice if enable hand
+- Fixed couldn't mount on some USB thumb drive.
+- Fixed Gpio Interrupt.
+- Fixed Ethernet direct mode.
+- Fixed DrawLine n pixels thick is wrong if n=2 or higher.
+- Fixed GetBitmap() return not enough data.
+- Fixed CAN full event not raised.
+- UART, CAN data received, error events interval down from 100ms to ms 
+
+
+##### SC13xxx
+
+- Fixed PWM glitch.
+- Fixed UART thresold.
+- Fixed UART couldn't active setting twice if enable hand
+- Fixed Gpio Interrupt.
+- Fixed CAN full event not raised.
+- UART, CAN data received, error events interval down from 100ms to ms 
+ 
+#### Known Issues
+
+- None.
+
+### Drivers
+
+#### Changes
+
+- Resistive Touch: Allow two different ADC controller for YU and XL pins.
+
+#### Known Issues
+
+- None.
+
+### TinyCLR Config
+
+#### Changes
+
+- Update version.
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+---
+
 ## 2.1.0.6500 - RTW Release
 
 ### Released 2021-12-28
