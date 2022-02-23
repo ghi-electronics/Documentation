@@ -72,7 +72,7 @@ The extension is what gets loaded on Visual Studio to allow it to communicate wi
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.2.0.2] (Preview2)(http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.2.0-preview2.vsix) | 2022-02-23 | Preview | 93FE481A20544EC0ED2882ABE842D4CF
+[v2.2.0.2-Preview2](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.2.0-preview2.vsix) | 2022-02-23 | Preview | 93FE481A20544EC0ED2882ABE842D4CF
 [v2.1.802](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-v2.1.802.vsix) | 2021-12-28 | Production | 6E14FA7C2487A5F14F8A7CD675CB5F57
 [v2.1.801](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-v2.1.801.vsix) | 2021-11-29 | Production | F57E1BD812B1331F530864F853BE7854
 [v2.1.801](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-v2.1.801.vsix) | 2021-11-09 | Release Candidate | F57E1BD812B1331F530864F853BE7854
@@ -100,7 +100,7 @@ The libraries are provided here in case you're having trouble with the online so
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.2.0.2000] (Preview2)(http://files.ghielectronics.com/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.2.0-preview2.zip) | 2022-02-23 | Preview | 8C183CEE540FF54170A3965EE6C4932E
+[v2.2.0.2000-Preview2](http://files.ghielectronics.com/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.2.0-preview2.zip) | 2022-02-23 | Preview | 8C183CEE540FF54170A3965EE6C4932E
 [v2.1.2](http://files.ghielectronics.com/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.1.2.zip) | 2021-12-28 | Update | 4B4E28448C70B2914EB8F66864D7EE1F
 [v2.1.1](http://files.ghielectronics.com/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.1.1.zip) | 2021-11-29 | Update | 08EA1E78BF10B71728408EC9B2A3BDAD
 [v2.1.0](http://files.ghielectronics.com/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.1.0.zip) | 2021-06-30 | Production | A02ACD56474A1E5664D05C9A66F91F07
