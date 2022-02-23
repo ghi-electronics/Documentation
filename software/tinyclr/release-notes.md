@@ -55,7 +55,6 @@
 - Fixed DrawLine n pixels thick is wrong if n=2 or higher.
 - Fixed GetBitmap() return not enough data.
 - Fixed CAN full event not raised.
-- UART, CAN data received, error events interval down from 100ms to ms 
 
 
 ##### SC13xxx
@@ -65,7 +64,7 @@
 - Fixed UART couldn't active setting twice if enable hand
 - Fixed Gpio Interrupt.
 - Fixed CAN full event not raised.
-- UART, CAN data received, error events interval down from 100ms to ms 
+- UART, CAN data received, error events interval down from 100ms to 10ms 
  
 #### Known Issues
 
@@ -75,7 +74,7 @@
 
 #### Changes
 
-- Resistive Touch: Allow two different ADC controller for YU and XL pins.
+- Resistive Touch: Allow two different ADC controllers for YU and XL pins.
 
 #### Known Issues
 
