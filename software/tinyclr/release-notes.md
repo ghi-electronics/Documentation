@@ -27,10 +27,10 @@
 - Added I2C slave
 - Added USB Client MassStorage.
 - CDC and WinUsb: Allow send multiple of 64 bytes instead of had to split (63+1)
-- Add Debug.Write
-- Add Timeout.InfiniteTimeSpan
-- Add Gpio.Toggle()
-- Remove sealed
+- Added Debug.Write
+- Added Timeout.InfiniteTimeSpan
+- Added Gpio.Toggle()
+- Removed sealed
 - UI: Add Gauge, Chart.
 - UI: Fixed touch DataGrid
 - Pins: Add Feather.SpiBus.WiFi
