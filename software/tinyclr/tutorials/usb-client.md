@@ -98,6 +98,117 @@ void UsbClientDeviceStateChanged(RawDevice sender, DeviceState state) {
 }
 ```
 
+### USB MassStorage
+
+#### SD card
+
+```cs
+var sd = StorageController.FromName(SC20100.StorageController.SdCard);
+
+var usbclientController = UsbClientController.GetDefault();
+
+var usbclient_masstorage = new MassStorage(usbclientController);
+
+var ready = false;
+usbclient_masstorage.DeviceStateChanged += (a, b) =>
+{
+	Debug.WriteLine("state : " + b.ToString());
+
+	if (b == DeviceState.Configured)
+	ready = true;
+};
+
+usbclient_masstorage.AttachLogicalUnit(sd.Hdc);            
+
+usbclient_masstorage.Enable();
+
+while (!ready) ;
+
+// Wait few seconds for PC set up new drive
+```
+
+#### QSPI
+
+```cs
+var qspi = StorageController.FromName(SC20100.StorageController.QuadSpi);
+
+var usbclientController = UsbClientController.GetDefault();
+
+var usbclient_masstorage = new MassStorage(usbclientController);
+
+var ready = false;
+usbclient_masstorage.DeviceStateChanged += (a, b) =>
+{
+	Debug.WriteLine("state : " + b.ToString());
+
+	if (b == DeviceState.Configured)
+	ready = true;
+};
+
+usbclient_masstorage.AttachLogicalUnit(qspi.Hdc);            
+
+usbclient_masstorage.Enable();
+
+while (!ready) ;
+
+// Wait few seconds for PC set up new drive
+```
+
+#### USB thumb drive
+
+```cs
+var usbHostController = UsbHostController.GetDefault();
+
+StorageController strogareController = null;
+
+var usbHostReady = false;
+
+usbHostController.OnConnectionChangedEvent += (a, b) =>
+{
+	switch (b.DeviceStatus)
+	{
+		case DeviceConnectionStatus.Connected:
+			switch (b.Type)
+			{
+				case BaseDevice.DeviceType.MassStorage:
+					strogareController = StorageController.FromName(SC20260.StorageController.UsbHostMassStorage);
+
+
+
+					usbHostReady = true;
+					break;
+			}
+			break;
+	}
+};
+
+usbHostController.Enable();
+
+while (!usbHostReady) ;
+
+var usbclientController = UsbClientController.GetDefault();
+
+var usbclient_masstorage = new MassStorage(usbclientController);
+
+var ready = false;
+
+usbclient_masstorage.DeviceStateChanged += (a, b) =>
+{
+	Debug.WriteLine("state : " + b.ToString());
+
+	if (b == DeviceState.Configured)
+		ready = true;
+};
+
+usbclient_masstorage.AttachLogicalUnit(strogareController.Hdc);            
+
+usbclient_masstorage.Enable();
+
+while (!ready) ;
+
+// Wait few seconds for PC set up new drive
+```
+
 ### PC Data Transfer
 This feature is used to transfer data between the hardware and a PC. See [PC Data Comm](usb-pc-comm.md) for details.
 
