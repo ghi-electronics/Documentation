@@ -98,7 +98,8 @@ void UsbClientDeviceStateChanged(RawDevice sender, DeviceState state) {
 }
 ```
 
-### USB MassStorage
+### USB Mass Storage
+Devices running TinyCLR OS can act as a Mass Storage Device. 
 
 #### SD card
 
@@ -110,8 +111,7 @@ var usbclientController = UsbClientController.GetDefault();
 var usbclient_masstorage = new MassStorage(usbclientController);
 
 var ready = false;
-usbclient_masstorage.DeviceStateChanged += (a, b) =>
-{
+usbclient_masstorage.DeviceStateChanged += (a, b) => {
 	Debug.WriteLine("state : " + b.ToString());
 
 	if (b == DeviceState.Configured)
@@ -137,8 +137,7 @@ var usbclientController = UsbClientController.GetDefault();
 var usbclient_masstorage = new MassStorage(usbclientController);
 
 var ready = false;
-usbclient_masstorage.DeviceStateChanged += (a, b) =>
-{
+usbclient_masstorage.DeviceStateChanged += (a, b) => {
 	Debug.WriteLine("state : " + b.ToString());
 
 	if (b == DeviceState.Configured)
@@ -149,7 +148,7 @@ usbclient_masstorage.AttachLogicalUnit(qspi.Hdc);
 
 usbclient_masstorage.Enable();
 
-while (!ready) ;
+while (!ready);
 
 // Wait few seconds for PC set up new drive
 ```
@@ -163,18 +162,12 @@ StorageController strogareController = null;
 
 var usbHostReady = false;
 
-usbHostController.OnConnectionChangedEvent += (a, b) =>
-{
-	switch (b.DeviceStatus)
-	{
+usbHostController.OnConnectionChangedEvent += (a, b) => {
+	switch (b.DeviceStatus) {
 		case DeviceConnectionStatus.Connected:
-			switch (b.Type)
-			{
+			switch (b.Type) {
 				case BaseDevice.DeviceType.MassStorage:
 					strogareController = StorageController.FromName(SC20260.StorageController.UsbHostMassStorage);
-
-
-
 					usbHostReady = true;
 					break;
 			}
@@ -184,7 +177,7 @@ usbHostController.OnConnectionChangedEvent += (a, b) =>
 
 usbHostController.Enable();
 
-while (!usbHostReady) ;
+while (!usbHostReady);
 
 var usbclientController = UsbClientController.GetDefault();
 
@@ -192,8 +185,7 @@ var usbclient_masstorage = new MassStorage(usbclientController);
 
 var ready = false;
 
-usbclient_masstorage.DeviceStateChanged += (a, b) =>
-{
+usbclient_masstorage.DeviceStateChanged += (a, b) => {
 	Debug.WriteLine("state : " + b.ToString());
 
 	if (b == DeviceState.Configured)
@@ -204,7 +196,7 @@ usbclient_masstorage.AttachLogicalUnit(strogareController.Hdc);
 
 usbclient_masstorage.Enable();
 
-while (!ready) ;
+while (!ready);
 
 // Wait few seconds for PC set up new drive
 ```
