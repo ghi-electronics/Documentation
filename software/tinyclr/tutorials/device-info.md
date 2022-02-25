@@ -3,23 +3,21 @@
 
 ## CPU usage statistic
 
+CPU usage statistic measures between 0 and 100%
+
 ```cs
-while (true)
-{                
+while (true) {                
 	
 	Thread.Sleep(100);	
 
 	// Check CPU every one second
-	if ((DateTime.Now - last).TotalMilliseconds >= 1000)
-	{
+	if ((DateTime.Now - last).TotalMilliseconds >= 1000) {
 		var cpuUsage = DeviceInformation.GetCpuUsageStatistic();
 		
 		Debug.WriteLine("Cpu usage = " + cpuUsage + " %");
 		
-		last = DateTime.Now;
-		
+		last = DateTime.Now;	
 	}
-
 }
 ```
 

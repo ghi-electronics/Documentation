@@ -25,8 +25,8 @@
 
 - Added CPU usage statistic
 - Added I2C slave
-- Added USB Client MassStorage.
-- CDC and WinUsb: Allow send multiple of 64 bytes instead of had to split (63+1)
+- Added USB Client Mass Storage.
+- CDC and WinUSB: Allow send multiple of 64 bytes instead of splitting (63+1)
 - Added Debug.Write
 - Added Timeout.InfiniteTimeSpan
 - Added Gpio.Toggle()
@@ -45,14 +45,14 @@
 
 ##### SC20xxx:
 
-- USB Client MassStorage for QSPI, SD, USB thumb drive.
+- USB Client Mass Storage for QSPI, SD, USB thumb drive.
 - Fixed PWM glitch.
-- Fixed UART thresold.
-- Fixed UART couldn't active setting twice if enable hand
-- Fixed couldn't mount on some USB thumb drive.
+- Fixed UART threshold.
+- Fixed UART couldn't activate a second time if handshaking was enabled first time.
+- Fixed couldn't mount on some USB thumb drives.
 - Fixed Gpio Interrupt.
 - Fixed Ethernet direct mode.
-- Fixed DrawLine n pixels thick is wrong if n=2 or higher.
+- Fixed DrawLine n pixels thickness is wrong if n=2 or higher.
 - Fixed GetBitmap() return not enough data.
 - Fixed CAN full event not raised.
 
@@ -60,8 +60,8 @@
 ##### SC13xxx
 
 - Fixed PWM glitch.
-- Fixed UART thresold.
-- Fixed UART couldn't active setting twice if enable hand
+- Fixed UART threshold.
+- Fixed UART couldn't activate a second time if handshaking was enabled first time.
 - Fixed Gpio Interrupt.
 - Fixed CAN full event not raised.
 - UART, CAN data received, error events interval down from 100ms to 10ms 
