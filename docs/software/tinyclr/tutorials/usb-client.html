@@ -161,6 +161,96 @@ void UsbClientDeviceStateChanged(RawDevice sender, DeviceState state) {
         }).Start();
     }
 }
+</code></pre><h3 id="usb-mass-storage">USB Mass Storage</h3>
+<p>Devices running TinyCLR OS can act as a Mass Storage Device, giving a connected PC access to files. For example, a datalogger can save parameters to an internal SD card but, when USB cable is connected, the datalogger can stop logging data and give the USB bus access to the SD card. This allows a PC to then read the files as if it is reading any USB storage device.</p>
+<h4 id="sd-card">SD card</h4>
+<pre><code class="lang-cs">var sd = StorageController.FromName(SC20100.StorageController.SdCard);
+
+var usbclientController = UsbClientController.GetDefault();
+
+var usbclient_masstorage = new MassStorage(usbclientController);
+
+var ready = false;
+usbclient_masstorage.DeviceStateChanged += (a, b) =&gt; {
+    Debug.WriteLine(&quot;state : &quot; + b.ToString());
+
+    if (b == DeviceState.Configured)
+    ready = true;
+};
+
+usbclient_masstorage.AttachLogicalUnit(sd.Hdc);            
+
+usbclient_masstorage.Enable();
+
+while (!ready) ;
+
+// Wait few seconds for PC set up new drive
+</code></pre><h4 id="qspi">QSPI</h4>
+<pre><code class="lang-cs">var qspi = StorageController.FromName(SC20100.StorageController.QuadSpi);
+
+var usbclientController = UsbClientController.GetDefault();
+
+var usbclient_masstorage = new MassStorage(usbclientController);
+
+var ready = false;
+usbclient_masstorage.DeviceStateChanged += (a, b) =&gt; {
+    Debug.WriteLine(&quot;state : &quot; + b.ToString());
+
+    if (b == DeviceState.Configured)
+    ready = true;
+};
+
+usbclient_masstorage.AttachLogicalUnit(qspi.Hdc);            
+
+usbclient_masstorage.Enable();
+
+while (!ready);
+
+// Wait few seconds for PC set up new drive
+</code></pre><h4 id="usb-thumb-drive">USB thumb drive</h4>
+<pre><code class="lang-cs">var usbHostController = UsbHostController.GetDefault();
+
+StorageController strogareController = null;
+
+var usbHostReady = false;
+
+usbHostController.OnConnectionChangedEvent += (a, b) =&gt; {
+    switch (b.DeviceStatus) {
+        case DeviceConnectionStatus.Connected:
+            switch (b.Type) {
+                case BaseDevice.DeviceType.MassStorage:
+                    strogareController = StorageController.FromName(SC20260.StorageController.UsbHostMassStorage);
+                    usbHostReady = true;
+                    break;
+            }
+            break;
+    }
+};
+
+usbHostController.Enable();
+
+while (!usbHostReady);
+
+var usbclientController = UsbClientController.GetDefault();
+
+var usbclient_masstorage = new MassStorage(usbclientController);
+
+var ready = false;
+
+usbclient_masstorage.DeviceStateChanged += (a, b) =&gt; {
+    Debug.WriteLine(&quot;state : &quot; + b.ToString());
+
+    if (b == DeviceState.Configured)
+        ready = true;
+};
+
+usbclient_masstorage.AttachLogicalUnit(strogareController.Hdc);            
+
+usbclient_masstorage.Enable();
+
+while (!ready);
+
+// Wait few seconds for PC set up new drive
 </code></pre><h3 id="pc-data-transfer">PC Data Transfer</h3>
 <p>This feature is used to transfer data between the hardware and a PC. See <a href="usb-pc-comm.html">PC Data Comm</a> for details.</p>
 <h3 id="usb-raw">USB Raw</h3>

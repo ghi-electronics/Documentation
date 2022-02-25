@@ -9,15 +9,58 @@ The two wires for I2C communication are called the SDA and SCL lines. SDA stands
 > [!Note]
 > I2C bus speed can be either 100,000 bits/second (standard mode) or 400,000 bits/second (fast mode).
 
-This is a partial demo showing the use of I2C.
+## I2C Master
+
+This is a partial demo showing the use of I2C in master mode.
 
 ```cs
 var settings = new I2cConnectionSettings(0x1C, 100_000); //The slave's address and the bus speed.
 var controller = I2cController.FromName(SC20100.I2cBus.I2c1);
 var device = controller.GetDevice(settings);
 
-device.Write(new byte[] { 1, 2 });  //Write something
-device.WriteRead(...);              //This is good for reading register
+device.Write(new byte[] { 1, 2 }); //Write something
+device.WriteRead(...); //This is good for reading register
+```
+
+## I2C Slave
+
+This is a partial demo showing the use of I2C in slave mode.
+
+```cs
+var i2cControllers = I2cController.FromName(SC20260.I2cBus.I2c1);
+         
+i2cControllers.ReadBufferSize = 1024; // Default 256
+i2cControllers.WriteBufferSize = 1024; // Default 256 
+
+i2cControllers.ClearReadBuffer(); // Clear 
+i2cControllers.ClearWriteBuffer(); // Clear
+
+var i2cSetting = new I2cConnectionSettings(0x48, I2cMode.Slave); // Enable slave mode
+
+i2cSetting.EnableClockStretching = true;
+
+var i2cDevice = i2cControllers.GetDevice(i2cSetting);
+	  
+i2cDevice.ErrorReceived += (sender, args) => Debug.WriteLine("Error received " + args.Error);
+
+i2cDevice.FrameReceived += (sender, args) => {
+	switch (args.Event) {
+		case I2cTransaction.MasterWrite:
+			Debug.WriteLine("Mastester is writing");
+			break;
+
+		case I2cTransaction.MasterRead:
+			Debug.WriteLine("Mastester is reading");
+			// Send data
+			sender.Write(data);
+			break;
+
+		case I2cTransaction.MasterStop:
+			Debug.WriteLine("Done a frame!");
+			break;
+	}
+};
+
 ```
 
 ## Software I2C

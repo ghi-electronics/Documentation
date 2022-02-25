@@ -1,6 +1,26 @@
 # Device Information
 ---
 
+## CPU usage statistic
+
+CPU usage statistic measures between 0 and 100%
+
+```cs
+while (true) {                
+	
+	Thread.Sleep(100);	
+
+	// Check CPU every one second
+	if ((DateTime.Now - last).TotalMilliseconds >= 1000) {
+		var cpuUsage = DeviceInformation.GetCpuUsageStatistic();
+		
+		Debug.WriteLine("Cpu usage = " + cpuUsage + " %");
+		
+		last = DateTime.Now;	
+	}
+}
+```
+
 ## Debug Interface
 
 MOD pin is normally used to select the debug interface as explained in the [Debugging](debugging.md) tutorial. However, the MOD pin feature can be disabled and the debug interface can be forced to a specific interface.
