@@ -2636,9 +2636,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/netmf/intro.md",
       "output": {
@@ -2700,7 +2697,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/netmf/upgrade.html",
-          "hash": "TlWyw8oGppvSpv6aDj8Ke8unZqZJJCVE/DMEK9V/ZMY="
+          "hash": "ZmdVoCfGhWC3CNZnPqk+GhbLQEU5Ay4bLYb+tn/5avw="
         }
       },
       "is_incremental": false,
@@ -3657,9 +3654,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/sitcore/soc.md",
       "output": {
@@ -3901,9 +3895,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/ucm/intro.md",
       "output": {
@@ -5267,7 +5258,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/downloads.html",
-          "hash": "JM+5+/fUx1YbQB8x1srFGXYgLf4VAiPAEFyVOR1CodU="
+          "hash": "w0MIto9s/JLmjTB7V9Kr9uMp4K6hRbQ7/a0UTxXXYHY="
         }
       },
       "is_incremental": false,
@@ -6183,9 +6174,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/intro.md",
       "output": {
@@ -6218,7 +6206,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/release-notes.html",
-          "hash": "/ejWiC+9KttzjtsAyH74U722i7EjmmyqPivql/9CfPg="
+          "hash": "mmxQYobG5BWzVWi0MF7d8znBnvwq1WdcaSyJRkV8xZ4="
         }
       },
       "is_incremental": false,
@@ -6464,7 +6452,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/device-info.html",
-          "hash": "PDDY/74h4PpjWGLA8MZDb/euR6LhnNoUkxS/nmbzuKs="
+          "hash": "+LFYOW54rURm0d9E6LT+Fx+c4WcnhZSYcl8XRGbhmag="
         }
       },
       "is_incremental": false,
@@ -6546,9 +6534,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/font-support.md",
       "output": {
@@ -6638,7 +6623,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/i2c.html",
-          "hash": "hsJ9aaNfJrhMqQJSHOwbXUqFj+/1/TeXvFo6a9cD/BM="
+          "hash": "rdM0isoMVXtqCdYXAOh7oCRM1A3lg6jeIXkFjvpJ/Hs="
         }
       },
       "is_incremental": false,
@@ -8571,7 +8556,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/usb-client.html",
-          "hash": "LAUUKxH/YeHfptV8XkWCyc3nU2pIBNUKaCR8VShdaQ0="
+          "hash": "W1hUm5uLU6ueOyMrTkiadXOnVXVIOvlrXQfRIoCJCPA="
         }
       },
       "is_incremental": false,
@@ -8686,19 +8671,17 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 214,
-          "skipped_file_count": 0
+          "skipped_file_count": 213
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

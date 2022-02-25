@@ -79,7 +79,22 @@
 <h1 id="device-information">Device Information</h1>
 
 <hr>
-<h2 id="debug-interface">Debug Interface</h2>
+<h2 id="cpu-usage-statistic">CPU usage statistic</h2>
+<p>CPU usage statistic measures between 0 and 100%</p>
+<pre><code class="lang-cs">while (true) {                
+
+    Thread.Sleep(100);  
+
+    // Check CPU every one second
+    if ((DateTime.Now - last).TotalMilliseconds &gt;= 1000) {
+        var cpuUsage = DeviceInformation.GetCpuUsageStatistic();
+
+        Debug.WriteLine(&quot;Cpu usage = &quot; + cpuUsage + &quot; %&quot;);
+
+        last = DateTime.Now;    
+    }
+}
+</code></pre><h2 id="debug-interface">Debug Interface</h2>
 <p>MOD pin is normally used to select the debug interface as explained in the <a href="debugging.html">Debugging</a> tutorial. However, the MOD pin feature can be disabled and the debug interface can be forced to a specific interface.</p>
 <pre><code class="lang-cs">DeviceInformation.SetDebugInterface(DebugInterface.Usb);
 DeviceInformation.SetDebugInterface(DebugInterface.Serial);
