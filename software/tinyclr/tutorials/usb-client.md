@@ -135,7 +135,8 @@ while (!ready) ;
 #### QSPI
 
 >[!NOTE]
-> QSPI in USB Mass Storage client mode will use 16MB of flash. Any data in QSPI will be lost once formatted.
+> When external flash is used for external deployment or any other purposes (Tiny FileSystem), do not enable QSPI for USB Mass Storage. 
+> USB Mass Storage uses entire 16MB of QSPI. Once formatted, all data will be lost!
 
 ```cs
 var qspi = StorageController.FromName(SC20100.StorageController.QuadSpi);
