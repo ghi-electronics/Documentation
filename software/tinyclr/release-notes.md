@@ -41,7 +41,7 @@
 - Reduces power consumption when system idle.
 - Native Filesystem now work with MSC QSPI
 - Increase QSPI MSC 16MB.
-- Ethernet BuiltIn: Reduce timeout from 4 seconds to 2 second if no cable connected.
+- Ethernet Built-in: Reduce timeout from 4 seconds to 2 second if no cable connected.
 - Fixed system crashed when deploy tca file on external flash.
 
 ##### SC13xxx
@@ -68,7 +68,7 @@
 
 #### Changes
 
-- Fixed can't re-connect the device after deploy tca file.
+- Fixed can't re-connect the device after deploying tca file.
 
 #### Known Issues
 
