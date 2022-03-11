@@ -4,6 +4,88 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.2.0.3000 - RC1
+
+### Released 2022-03-09
+
+### Visual Studio Project System
+
+#### Changes
+
+- VS2022: Change version.
+- VS2019: None.
+
+#### Known Issues
+
+- None.
+
+### Libraries
+
+#### Changes
+
+- Added CRC16 seed
+- Added USB Host mouse absolute mode
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+
+##### SC20xxx:
+
+- Reduce CPU workload. 
+- Reduce CPU temperature when system idle.
+- Reduces power consumption when system idle.
+- Native Filesystem now work with MSC QSPI
+- Increase QSPI MSC 16MB.
+- Ethernet Built-in: Reduce timeout from 4 seconds to 2 second if no cable connected.
+- Fixed system crashed when deploy tca file on external flash.
+
+##### SC13xxx
+
+- Fixed Thread.Sleep(1) or Thread.Sleep(2) still use 100% CPU
+- Fixed CPU 100% after data received event.
+- Fixed system crashed when deploy tca file on external flash.
+ 
+#### Known Issues
+
+- None.
+
+### Drivers
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+### TinyCLR Config
+
+#### Changes
+
+- Fixed can't re-connect the device after deploying tca file.
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+
 ## 2.2.0.2000 - Preview2
 
 ### Released 2022-02-23
