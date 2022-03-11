@@ -186,6 +186,9 @@ while (!ready) ;
 
 // Wait few seconds for PC set up new drive
 </code></pre><h4 id="qspi">QSPI</h4>
+<div class="NOTE"><h5>Note</h5><p>When external flash is used for external deployment or any other purposes (Tiny FileSystem), do not enable QSPI for USB Mass Storage. 
+USB Mass Storage uses entire 16MB of QSPI. Once formatted, all data will be lost!</p>
+</div>
 <pre><code class="lang-cs">var qspi = StorageController.FromName(SC20100.StorageController.QuadSpi);
 
 var usbclientController = UsbClientController.GetDefault();

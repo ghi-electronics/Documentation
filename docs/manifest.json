@@ -2636,6 +2636,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/netmf/intro.md",
       "output": {
@@ -3654,6 +3657,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/sitcore/soc.md",
       "output": {
@@ -3895,6 +3901,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/ucm/intro.md",
       "output": {
@@ -5258,7 +5267,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/downloads.html",
-          "hash": "w0MIto9s/JLmjTB7V9Kr9uMp4K6hRbQ7/a0UTxXXYHY="
+          "hash": "59BMZXTflkxBK6xVBABEJXGYoNAEk/zQJ4YUkfXeDhU="
         }
       },
       "is_incremental": false,
@@ -6174,6 +6183,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/intro.md",
       "output": {
@@ -6206,7 +6218,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/release-notes.html",
-          "hash": "mmxQYobG5BWzVWi0MF7d8znBnvwq1WdcaSyJRkV8xZ4="
+          "hash": "qEgjOY489dnSIcDof0N/lDSsP5tiLWP1w810tVn/h7U="
         }
       },
       "is_incremental": false,
@@ -6534,6 +6546,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/font-support.md",
       "output": {
@@ -8556,7 +8571,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/usb-client.html",
-          "hash": "W1hUm5uLU6ueOyMrTkiadXOnVXVIOvlrXQfRIoCJCPA="
+          "hash": "nM2fA+9cXkk+Q/x7oxFLhmQYOq4rpshXow/Dy2Y/lb0="
         }
       },
       "is_incremental": false,
@@ -8671,17 +8686,19 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 214,
-          "skipped_file_count": 213
+          "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
