@@ -102,17 +102,9 @@ leds.Flush();
 The APA102C is very similar to the Neopixel WS2812 except it uses standard 3 wire SPI, while the Neopixel uses a single wire and it's own proprietary format. 
 
 ```cs
-var cs = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PE4);
-
-var settings = new SpiConnectionSettings() {
-    ChipSelectType = SpiChipSelectType.Gpio,
-    ChipSelectLine = cs,
-    Mode = SpiMode.Mode1,
-    ClockFrequency = 4_000_000,
-};
-
+const int NUMOFLED = YourNumLed;
 var spiBus = SpiController.FromName(SC20100.SpiBus.Spi4);
-var led = new APA102CCController(spiBus, 24);
+var led = new APA102CCController(spiBus, NUMOFLED);
 
 led.SetColor(1, 255, 0, 0); // 2nd LED is Red
 led.Flush();
@@ -126,17 +118,9 @@ led.Flush();
 > Needed NuGet: GHIElectronics.TinyCLR.Drivers.GreeledElectronics.LPD8806
 
 ```cs
-var cs = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PE4);
-
-var settings = new SpiConnectionSettings() {
-    ChipSelectType = SpiChipSelectType.Gpio,
-    ChipSelectLine = cs,
-    Mode = SpiMode.Mode1,
-    ClockFrequency = 4_000_000,
-};
-
+const int NUMOFLED = YourNumLed;
 var spiBus = SpiController.FromName(SC20100.SpiBus.Spi4);
-var led = new LPD8806Controller(spiBus, 24);
+var led = new LPD8806Controller(spiBus, NUMOFLED); 
 
 led.SetColor(1, 255, 0, 0); // 2nd LED is Red
 led.Flush();
