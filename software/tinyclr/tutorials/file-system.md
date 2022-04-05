@@ -52,7 +52,10 @@ You can access the raw underlying data of the storage provider by using the `Pro
 var controller = StorageController.FromName
         (SC20100.StorageController.SdCard);
 
-controller.Provider.Read(address, buffer, 0, buffer.Length, -1);
+controller.Provider.Open(); // open
+controller.Provider.Read(address, buffer, 0, buffer.Length, TimeSpan.FromSeconds(5));
+controller.Provider.Close(); // close
+
 ```
 
 ---
