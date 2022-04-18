@@ -4,9 +4,9 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
-## 2.2.0.4000 - RC1
+## 2.2.0.4000 - RTW
 
-### Released 2022-04-08
+### Released 2022-04-18
 
 ### Visual Studio Project System
 
