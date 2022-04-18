@@ -37,10 +37,12 @@
 
 - Fix ADC: close channel effect to other channel if same controller.
 - Fix MSC QSPI
+- Fix PWM: Change dutycyle change polarity.
 
 ##### SC13xxx
 
 - Fix ADC: close channel effect to other channel if same controller.
+- Fix PWM: Change dutycyle change polarity.
  
 #### Known Issues
 
