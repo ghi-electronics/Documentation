@@ -8,7 +8,7 @@
     <title>File System </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="File System ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -58,11 +58,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
+          <div class="search-list"></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -115,7 +115,9 @@ FileSystem.Flush(sd.Hdc);
 <pre><code class="lang-cs">var controller = StorageController.FromName
         (SC20100.StorageController.SdCard);
 
-controller.Provider.Read(address, buffer, 0, buffer.Length, -1);
+controller.Provider.Open(); // open
+controller.Provider.Read(address, buffer, 0, buffer.Length, TimeSpan.FromSeconds(5));
+controller.Provider.Close(); // close
 </code></pre><hr>
 <h2 id="tiny-file-system-tfs">Tiny File System (TFS)</h2>
 <p>Tiny File System(TFS) can be used to access any memory storage as a file system. All that is needed is a basic driver to Read, Write, and Erase these storages. </p>
@@ -271,7 +273,7 @@ using (var fsRead = tfs.Open(&quot;settings.dat&quot;, FileMode.Open)) {
               </div>
           
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5>In This Article</h5>
+              <h5></h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
               </nav>

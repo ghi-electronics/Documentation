@@ -8,7 +8,7 @@
     <title>LED Drivers </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="LED Drivers ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -58,11 +58,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
+          <div class="search-list"></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -154,17 +154,9 @@ leds.Flush();
 <div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.ShijiLighting.APA102C</p>
 </div>
 <p>The APA102C is very similar to the Neopixel WS2812 except it uses standard 3 wire SPI, while the Neopixel uses a single wire and it&#39;s own proprietary format. </p>
-<pre><code class="lang-cs">var cs = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PE4);
-
-var settings = new SpiConnectionSettings() {
-    ChipSelectType = SpiChipSelectType.Gpio,
-    ChipSelectLine = cs,
-    Mode = SpiMode.Mode1,
-    ClockFrequency = 4_000_000,
-};
-
+<pre><code class="lang-cs">const int NUMOFLED = YourNumLed;
 var spiBus = SpiController.FromName(SC20100.SpiBus.Spi4);
-var led = new APA102CCController(spiBus, 24);
+var led = new APA102CCController(spiBus, NUMOFLED);
 
 led.SetColor(1, 255, 0, 0); // 2nd LED is Red
 led.Flush();
@@ -172,17 +164,9 @@ led.Flush();
 <h2 id="lpd8806">LPD8806</h2>
 <div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.GreeledElectronics.LPD8806</p>
 </div>
-<pre><code class="lang-cs">var cs = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PE4);
-
-var settings = new SpiConnectionSettings() {
-    ChipSelectType = SpiChipSelectType.Gpio,
-    ChipSelectLine = cs,
-    Mode = SpiMode.Mode1,
-    ClockFrequency = 4_000_000,
-};
-
+<pre><code class="lang-cs">const int NUMOFLED = YourNumLed;
 var spiBus = SpiController.FromName(SC20100.SpiBus.Spi4);
-var led = new LPD8806Controller(spiBus, 24);
+var led = new LPD8806Controller(spiBus, NUMOFLED); 
 
 led.SetColor(1, 255, 0, 0); // 2nd LED is Red
 led.Flush();
@@ -213,7 +197,7 @@ led.Flush();
               </div>
           
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5>In This Article</h5>
+              <h5></h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
               </nav>
