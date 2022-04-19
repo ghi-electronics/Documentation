@@ -4,6 +4,82 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.2.0.4000 - RTW
+
+### Released 2022-04-18
+
+### Visual Studio Project System
+
+#### Changes
+
+- VS2022: Added generate Tca and raw application.
+- VS2019: None.
+
+#### Known Issues
+
+- None.
+
+### Libraries
+
+#### Changes
+
+- Increased version.
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+
+##### SC20xxx:
+
+- Fixed ADC: close channel effect to other channel if same controller.
+- MSC: Fixed QSPI 
+- MSC: Added event when select eject from PC.
+- Fixed PWM: Change dutycyle change polarity.
+
+##### SC13xxx
+
+- Fix ADC: close channel effect to other channel if same controller.
+- Fix PWM: Change dutycyle change polarity.
+ 
+#### Known Issues
+
+- None.
+
+### Drivers
+
+#### Changes
+
+- Increased version.
+
+#### Known Issues
+
+- None.
+
+### TinyCLR Config
+
+#### Changes
+
+- Increased version.
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
 ## 2.2.0.3000 - RC1
 
 ### Released 2022-03-09
