@@ -78,6 +78,7 @@ The extension is what gets loaded on Visual Studio to allow it to communicate wi
 
 File | Date | Status | MD5
 --- | --- | --- | ---
+[v2.2.0.4100-RTW](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.2.0.4100.vsix) | 2022-04-20 | Update | 437F2F1BAA03D803F173AF19645C5BED
 [v2.2.0.4000-RTW](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.2.0.4000.vsix) | 2022-04-18 | Production | C461A9ABCE1052136966DDB1F61A4C61
 [v2.2.0.3000-RC1](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.2.0.3000-rc1.vsix) | 2022-03-09 | RC1 | FBA1E3352F3E3B6926F045CAD2B4C903
 [v2.2.0.2-Preview2](http://files.ghielectronics.com/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.2.0-preview2.vsix) | 2022-02-23 | Preview | 93FE481A20544EC0ED2882ABE842D4CF

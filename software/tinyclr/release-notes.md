@@ -13,6 +13,7 @@
 #### Changes
 
 - VS2022: Added generate Tca and raw application.
+- VS2022: Fixed deploying external flash with large image white color (0xFF) failed sometime.
 - VS2019: None.
 
 #### Known Issues
