@@ -64,7 +64,7 @@ byte temp = 0;
 
 while (true) {
     try {
-        ov9655.Capture(data, 100);
+        ov9655.Capture(data, 500);
         displayController.DrawBuffer(0, 0, 0, 0, 480, 270, 640, data, 0);
     }
     catch (System.Exception) { 
