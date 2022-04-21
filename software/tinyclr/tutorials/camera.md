@@ -71,6 +71,9 @@ while (true) {
 }
 
 private static void Ov9655_FrameReceived(byte[] data, int size) {
+	// 480 is screen width
+	// 272 is screen height
+	// 640 is original image width with VGA = 640
 	displayController.DrawBuffer(0, 0, 0, 0, 480, 272, 640, data, 0);
 }
 ```
