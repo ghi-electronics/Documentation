@@ -62,10 +62,7 @@ byte temp = 0;
 
 while (true) {
     try {
-        ov9655.Capture();
-		
-		
-        
+        ov9655.Capture();		
     }
     catch (System.Exception) { 
     }
