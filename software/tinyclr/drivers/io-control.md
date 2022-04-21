@@ -40,3 +40,19 @@ A rotary encoder is an electro-mechanical device that converts the angular posit
 > [!TIP]
 > Needed NuGet: GHIElectronics.TinyCLR.Drivers.Encoder
 
+```cs
+var gpioController = GpioController.GetDefault();
+            
+var pinA = gpioController.OpenPin(SC20100.GpioPin.PC0); 
+var pinB = gpioController.OpenPin(SC20100.GpioPin.PE5); 
+
+var encoder = new EncoderController(pinA, pinB);
+
+encoder.OnCounterChangedEvent += (counter) =>
+{
+	Debug.WriteLine("Counter = " + counter);
+};
+
+Thread.Sleep(-1);
+```
+

@@ -47,28 +47,34 @@ displayController.SetConfiguration(controllerSetting);
 displayController.Enable();
 
 var screen = Graphics.FromHdc(displayController.Hdc);
-var controller = I2cController.GetDefault();
+var controller = I2cController.FromName(SC20260.I2cBus.I2c1);
 
 // Camera
-var ov9655 = new Ov9655(controller);
+var ov9655 = new Ov9655Controller(controller);
+ov9655.FrameReceived += Ov9655_FrameReceived;
 var id = ov9655.ReadId();
 
 Debug.WriteLine("id = " + id);
 
-var ptr = Memory.UnmanagedMemory.Allocate(640 * 480 * 2);
-var data = Memory.UnmanagedMemory.ToBytes(ptr, 640 * 480 * 2);
-
-ov9655.SetResolution(Ov9655.Resolution.Vga);
+ov9655.SetResolution(Ov9655Controller.Resolution.Vga);
 
 byte temp = 0;
 
 while (true) {
     try {
-        ov9655.Capture(data, 100);
-        displayController.DrawBuffer(0, 0, 0, 0, 480, 270, 640, data, 0);
+        ov9655.Capture();		
     }
     catch (System.Exception) { 
     }
+	
+	Thread.Sleep(10);
+}
+
+private static void Ov9655_FrameReceived(byte[] data, int size) {
+	// 480 is screen width
+	// 272 is screen height
+	// 640 is original image width with VGA = 640
+	displayController.DrawBuffer(0, 0, 0, 0, 480, 272, 640, data, 0);
 }
 ```
 
