@@ -128,7 +128,7 @@ The **FEZ Flea** is the most cost effective way to dive into TinyCLR OS. With it
 
 ![FEZ Pico](images/fez-pico.png)
 
-The **FEZ Pico** uses the Raspberry Pi Pico form factor allowing it drop into existing Pico accessories. The FEZ Pico also contains an JST connector for adding after market expandability. 
+The **FEZ Pico** uses the Raspberry Pi Pico form factor allowing it drop into existing Pico accessories. The FEZ Pico adds JST connector compatible with Sparkfun Qwiic modules and Adafruit Stemma modules. This allows for easy expandability.
 
 [FEZ Pico Schematic](pdfs/fez-pico-rev-d-schematic.pdf)
 
