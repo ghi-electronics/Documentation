@@ -93,13 +93,13 @@
 <p>The SITCore chip is held in reset while the RESET(NRST) pin is held low. Releasing RESET and allowing it to go high will begin the system startup process.</p>
 <p>All SITCore processors have a permanent internal pull up resistor on the RESET pin. An external pull up resistor is not required on the RESET(NRST) pin.</p>
 <h2 id="ldr">LDR</h2>
-<p>The LDR pin is normally pulled high during startup or reset, allowing TinyCLR OS to run. When the LDR pin is pulled low during startup or reset, the device enters GHI Electronics bootloader mode, which is used to load the firmware. LDR has an internal pull up resistor.</p>
+<p>The LDR pin is normally pulled high internally during startup or reset, allowing TinyCLR OS to run. When the LDR pin is pulled low during startup or reset, the device enters GHI Electronics bootloader mode, which is used to load the firmware. LDR has an internal pull up resistor.</p>
 <p>The <a href="bootloader.html">Bootloader</a> page details its use.</p>
 <h2 id="app">APP</h2>
-<p>The APP pin is used to prevent the application from running. The APP pin is checked shortly after startup. When the APP pin is high the application will run normally; otherwise, the system will not run the application and hold waiting for new deployment. The pin has an internal pull up resistor.</p>
+<p>The APP pin is used to prevent the application from running. The APP pin is checked shortly after startup. When the APP pin is high (internall pull up) the application will run normally; otherwise, the system will not run the application and hold waiting for new deployment. The pin has an internal pull up resistor.</p>
 <p>If desired, the APP pin feature can be disabled so the application can&#39;t be stopped. See <a href="tutorials/device-info.html">Device Info</a> for more details.</p>
 <h2 id="mod">MOD</h2>
-<p>The MOD pin is used to select the debugging/deployment interface, as explained in the <a href="tutorials/debugging.html">Debugging</a> tutorial.</p>
+<p>The MOD pin is used to select the debugging/deployment interface, as explained in the <a href="tutorials/debugging.html">Debugging</a> tutorial. An internal pull up keeps the pin high during power up to select USB debugging. Setting the pin low will switch to serial debugging.</p>
 <h2 id="wkup">WKUP</h2>
 <p>The WKUP pin is used to wake the system up from Shut Down mode. See the <a href="tutorials/power-management.html">Power Management</a> page for more information.</p>
 <h2 id="vbat">VBAT</h2>

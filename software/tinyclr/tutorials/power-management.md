@@ -125,4 +125,11 @@ GHIElectronics.TinyCLR.Native.Power.Reset(false);
 
 ### Reset Source
 
-The cause of the previous reset can be found through `ResetSource`. This is useful to determine if, for example, a watchdog or was the reason for the reset.
+The cause of the previous reset can be found through `GetResetSource`. This is useful to determine if, for example, a watchdog or was the reason for the reset.
+
+> [!Tip]
+> Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Native
+
+```cs
+var resetSource = Power.GetResetSource();
+```

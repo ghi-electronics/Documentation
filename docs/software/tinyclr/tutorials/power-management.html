@@ -162,8 +162,11 @@ private static void ldrButton_ValueChanged(GpioPin sender, GpioPinValueChangedEv
 <pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.Power.Reset(false);
 </code></pre><hr>
 <h3 id="reset-source">Reset Source</h3>
-<p>The cause of the previous reset can be found through <code>ResetSource</code>. This is useful to determine if, for example, a watchdog or was the reason for the reset.</p>
-</article>
+<p>The cause of the previous reset can be found through <code>GetResetSource</code>. This is useful to determine if, for example, a watchdog or was the reason for the reset.</p>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Native</p>
+</div>
+<pre><code class="lang-cs">var resetSource = Power.GetResetSource();
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
