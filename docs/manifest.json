@@ -2739,7 +2739,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/dev.html",
-          "hash": "e5XXWgZK2oSCor4P3c5YDQ=="
+          "hash": "CVaeSQVKWtMfRIsw4d1xHw=="
         }
       },
       "is_incremental": false,
@@ -3330,9 +3330,17 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
+      "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/ud700.png",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/ud700.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "hardware/sitcore/intro.md",
       "output": {
@@ -3650,16 +3658,13 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/sbc.html",
-          "hash": "FDvAD4G5WEi80PXGgaqjkg=="
+          "hash": "0MASJakvSgjrtNx0AJs+TQ=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/sitcore/soc.md",
       "output": {
@@ -3672,9 +3677,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/sitcore/som.md",
       "output": {
@@ -5244,9 +5246,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/configuration.md",
       "output": {
@@ -6242,7 +6241,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/special-pins.html",
-          "hash": "kn92SOpLWVq4lPdt9judNQ=="
+          "hash": "wW3QL6sb7k3y7i9Lq2Pduw=="
         }
       },
       "is_incremental": false,
@@ -6452,7 +6451,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/debugging.html",
-          "hash": "EKvon576JPaFQlh1QDBelQ=="
+          "hash": "XnM0pTeatLYGKFXb1/rO+g=="
         }
       },
       "is_incremental": false,
@@ -8277,7 +8276,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/power-management.html",
-          "hash": "9JURRxC/QB+Od4uu83g4pw=="
+          "hash": "CgpD0r/75Bss1VS9Dn7QLA=="
         }
       },
       "is_incremental": false,
@@ -8699,18 +8698,18 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 214,
+          "skipped_file_count": 209
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 214,
-          "skipped_file_count": 213
         }
       }
     },

@@ -62,7 +62,7 @@ The board can be powered through either the USB client connectors or the barrel 
 
 ### SC20260 Dev Display Options
 
-One of the headers on the SCM20260 Dev board includes all necessary parallel display signals. It also includes I2C and a couple of GPIOs allowing for support of capacitive touch panels. Out-of-the-box, the SCM20260 Dev board includes a 4.3" display with capacitive touch.
+One of the headers on the SCM20260 Dev board includes all necessary parallel display signals. It also includes I2C and a couple of GPIOs allowing for support of capacitive touch panels. Out-of-the-box, the SCM20260 Dev board includes a 4.3" display with capacitive touch. A 7" display is also available. 
 
 #### UD435 Display Adaptor
 
@@ -85,8 +85,8 @@ Property | Value
 ---------|---------
 Width | 480
 Height | 272
-DataFormat | RGB565
-Pixel Clock Rate | 8 MHz <= x <= 16MHz
+DataFormat | RGB56
+Pixel Clock Rate | 8_000_000 <= x <= 24_000_000 //MHz
 Pixel Polarity | low
 DataEnable Is Fixed | false
 DataEnable Polarity | low
@@ -97,6 +97,41 @@ Horizontal Sync Pulse Width | 1
 Vertical Back Porch | 23
 Vertical Front Porch | 7
 Vertical Sync Polarity | low
+Vertical Sync Pulse Width | 1
+
+#### UD700 Display Adaptor
+
+![UD700](images/ud700.png)
+
+This display is a special order option. [Contact Us](https://www.ghielectronics.com/contact/).
+
+* Display Module: [ER-TFT070A2-4](https://www.buydisplay.com/)
+* Touch Panel: [ER-TPC07-4](https://www.buydisplay.com/)
+
+[7" Display Module Schematic](pdfs/ud435-rev-b-schematic.pdf)
+
+This display module has a 7" 800x480 TFT display with a capacitive touch screen. It plugs directly into the SCM20260D Dev Board and uses I2C1 for capacitive touch and PJ14 for the touch interrupt. The backlight is controllable through PA15.
+
+The [TinyCLR Samples repo](https://github.com/ghi-electronics/TinyCLR-Samples) has usage examples. You can learn more in the [Graphics](../../software/tinyclr/tutorials/graphics.md) and [Display](../../software/tinyclr/tutorials/displays.md) sections of the TinyCLR tutorials.
+
+See below for the display configuration values:
+
+Property | Value
+---------|---------
+Width | 800
+Height | 480
+DataFormat | RGB565
+Pixel Clock Rate | 8_000_000 <= x <= 24_000_000 //MHz
+Pixel Polarity | false
+DataEnable Is Fixed | false
+DataEnable Polarity | low
+Horizontal Back Porch | 46
+Horizontal Front Porch | 16
+Horizontal Sync Polarity | false
+Horizontal Sync Pulse Width | 1
+Vertical Back Porch | 23
+Vertical Front Porch | 7
+Vertical Sync Polarity | false
 Vertical Sync Pulse Width | 1
 
 #### HDMI Adaptor

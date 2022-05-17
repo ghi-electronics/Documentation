@@ -111,7 +111,7 @@
 <div class="NOTE"><h5>Note</h5><p>All boards with a barrel power jack accept a 5.5 x 2.1 mm power plug. The pin is positive, the sleeve is negative.</p>
 </div>
 <h3 id="sc20260-dev-display-options">SC20260 Dev Display Options</h3>
-<p>One of the headers on the SCM20260 Dev board includes all necessary parallel display signals. It also includes I2C and a couple of GPIOs allowing for support of capacitive touch panels. Out-of-the-box, the SCM20260 Dev board includes a 4.3&quot; display with capacitive touch.</p>
+<p>One of the headers on the SCM20260 Dev board includes all necessary parallel display signals. It also includes I2C and a couple of GPIOs allowing for support of capacitive touch panels. Out-of-the-box, the SCM20260 Dev board includes a 4.3&quot; display with capacitive touch. A 7&quot; display is also available. </p>
 <h4 id="ud435-display-adaptor">UD435 Display Adaptor</h4>
 <p><img src="images/ud435.png" alt="UD435"></p>
 <p>This display is included with the SCM20260D Dev board.</p>
@@ -141,11 +141,11 @@
 </tr>
 <tr>
 <td>DataFormat</td>
-<td>RGB565</td>
+<td>RGB56</td>
 </tr>
 <tr>
 <td>Pixel Clock Rate</td>
-<td>8 MHz &lt;= x &lt;= 16MHz</td>
+<td>8_000_000 &lt;= x &lt;= 24_000_000 //MHz</td>
 </tr>
 <tr>
 <td>Pixel Polarity</td>
@@ -186,6 +186,87 @@
 <tr>
 <td>Vertical Sync Polarity</td>
 <td>low</td>
+</tr>
+<tr>
+<td>Vertical Sync Pulse Width</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ud700-display-adaptor">UD700 Display Adaptor</h4>
+<p><img src="images/ud700.png" alt="UD700"></p>
+<p>This display is a special order option. <a href="https://www.ghielectronics.com/contact/">Contact Us</a>.</p>
+<ul>
+<li>Display Module: <a href="https://www.buydisplay.com/">ER-TFT070A2-4</a></li>
+<li>Touch Panel: <a href="https://www.buydisplay.com/">ER-TPC07-4</a></li>
+</ul>
+<p><a href="pdfs/ud435-rev-b-schematic.pdf">7&quot; Display Module Schematic</a></p>
+<p>This display module has a 7&quot; 800x480 TFT display with a capacitive touch screen. It plugs directly into the SCM20260D Dev Board and uses I2C1 for capacitive touch and PJ14 for the touch interrupt. The backlight is controllable through PA15.</p>
+<p>The <a href="https://github.com/ghi-electronics/TinyCLR-Samples">TinyCLR Samples repo</a> has usage examples. You can learn more in the <a href="../../software/tinyclr/tutorials/graphics.html">Graphics</a> and <a href="../../software/tinyclr/tutorials/displays.html">Display</a> sections of the TinyCLR tutorials.</p>
+<p>See below for the display configuration values:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Width</td>
+<td>800</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>480</td>
+</tr>
+<tr>
+<td>DataFormat</td>
+<td>RGB565</td>
+</tr>
+<tr>
+<td>Pixel Clock Rate</td>
+<td>8_000_000 &lt;= x &lt;= 24_000_000 //MHz</td>
+</tr>
+<tr>
+<td>Pixel Polarity</td>
+<td>false</td>
+</tr>
+<tr>
+<td>DataEnable Is Fixed</td>
+<td>false</td>
+</tr>
+<tr>
+<td>DataEnable Polarity</td>
+<td>low</td>
+</tr>
+<tr>
+<td>Horizontal Back Porch</td>
+<td>46</td>
+</tr>
+<tr>
+<td>Horizontal Front Porch</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Horizontal Sync Polarity</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Horizontal Sync Pulse Width</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Vertical Back Porch</td>
+<td>23</td>
+</tr>
+<tr>
+<td>Vertical Front Porch</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Vertical Sync Polarity</td>
+<td>false</td>
 </tr>
 <tr>
 <td>Vertical Sync Pulse Width</td>
