@@ -4,6 +4,79 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.2.0.4200 - RTW
+
+### Released 2022-05-18
+
+### Visual Studio Project System
+
+#### Changes
+
+- VS2022: Increased version.
+- VS2019: None.
+
+#### Known Issues
+
+- None.
+
+### Libraries
+
+#### Changes
+
+- I2C: Master mode, fixed WriteReadPartial throw NotSupport exception.
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+
+##### SC20xxx:
+
+- None.
+
+##### SC13xxx
+
+- None.
+ 
+#### Known Issues
+
+- None.
+
+### Drivers
+
+#### Changes
+
+- Increased version.
+
+#### Known Issues
+
+- None.
+
+### TinyCLR Config
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+
 ## 2.2.0.4000 - RTW
 
 ### Released 2022-04-18

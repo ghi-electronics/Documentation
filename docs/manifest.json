@@ -5266,7 +5266,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/downloads.html",
-          "hash": "JBQK/Fa8G2Cd7VQeCyqK/Q=="
+          "hash": "nXv0HZQKXX8xJrIbPkommA=="
         }
       },
       "is_incremental": false,
@@ -6182,9 +6182,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/intro.md",
       "output": {
@@ -6217,7 +6214,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/release-notes.html",
-          "hash": "kWXadVp41+MHjs9NI5KXFg=="
+          "hash": "fayKYwaZnbKbuTDWP1ub3A=="
         }
       },
       "is_incremental": false,
@@ -6545,9 +6542,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/font-support.md",
       "output": {
@@ -8698,18 +8692,18 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 214,
-          "skipped_file_count": 209
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 214,
+          "skipped_file_count": 213
         }
       }
     },
