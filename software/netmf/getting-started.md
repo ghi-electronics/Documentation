@@ -13,7 +13,7 @@ Download and install [Microsoft's Visual Studio 2013 Community Edition](http://g
 * Open the file's folder and install **MicroFrameworkSDK.MSI** and **netmfvs2013.vsix**.
 
 ### Install Microsoft .NET Gadgeteer Core (for Gadgeteer users only)
-Download and install [Microsoft .NET Gadgeteer Core](http://gadgeteer.codeplex.com/downloads/get/1519812).
+Download and install [Microsoft .NET Gadgeteer Core](https://ghistorage.blob.core.windows.net/downloads/NETMF/SDKs/MS-GadgeteerCore.msi).
 For more information on the future of Gadgeteer, please see this [news post](https://forums.ghielectronics.com/t/the-future-of-gadgeteer/197).
 
 ### Install GHI Electronic's NETMF SDK
