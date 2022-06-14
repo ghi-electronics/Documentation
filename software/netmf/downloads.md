@@ -17,7 +17,7 @@ The lastest version of Visual Studio that works with NETMF is VS2013.  The Commu
 
 ## Microsoft .NET Gadgeteer Core
 
-[Microsoft .NET Gadgeteer Core](http://gadgeteer.codeplex.com/downloads/get/1519812)
+[Microsoft .NET Gadgeteer Core](https://ghistorage.blob.core.windows.net/downloads/NETMF/SDKs/MS-GadgeteerCore.msi)
 
 Download the archived zip file. It contains everything you will need. If you need to find a specific library, you can look at realeaseList.json file found in the release folder. You’ll be able to see accurately the filenames you need for each file and its path under the releases directory.
 
