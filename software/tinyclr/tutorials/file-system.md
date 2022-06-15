@@ -1,6 +1,6 @@
 # File System
 ---
-The file system library is subset of the full .NET file system support. Most example should work with without minor changes. The internal drivers fully support FAT16 or FAT32 file systems, with no limitations beyond the FAT file system itself!
+The file system library is a subset of the full .NET file system support. Most examples should work with only minor changes. The internal drivers fully support FAT16 or FAT32 file systems, with no limitations beyond the FAT file system itself!
 
 > [!Note]
 > The USB drive must have an MBR record, not a GPT table.
