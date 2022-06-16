@@ -175,9 +175,8 @@ TinyCLR OS provides a way to program the SITCore in C# from the Microsoft Visual
 
 1. Activate the bootloader, hold the LDR signal low while resetting the board.
 2. Open [TinyCLR Config](../../software/tinyclr/tinyclr-config.md) tool.
-3. Click the loader tab.
-4. Select the correct COM port. If you are not seeing it then the device is not in the loader mode.
-5. Click the `Update to Latest` button.
+3. Select the correct COM port and 'Connect' to the device. If you are not seeing it then the device is not in the loader mode.
+4. Download the [firmware](../../software/tinyclr/downloads.md). Select the downloaded firmware in TinyCLR Config and click 'Update Firmware'. 
 
 You can also update the firmware manually. Download the [firmware](../../software/tinyclr/downloads.md) and learn how to use the [GHI Electronics Bootloader](../../software/tinyclr/bootloader.md) manually
 

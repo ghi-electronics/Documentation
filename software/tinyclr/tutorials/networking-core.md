@@ -12,7 +12,7 @@ The WINC1500 WiFi module supported by SITCore devices ships with a manufacturer 
 ---
 
 ## Secure Sockets
-TLS is natively support. See the [TLS page](tls.md) for details.
+TLS is natively supported. See the [TLS page](tls.md) for details.
 
 ---
 
