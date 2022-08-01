@@ -12,7 +12,7 @@ The file system library is a subset of the full .NET file system support. Most e
 This allows file access on USB devices with MSC class, such as USB memory sticks. See the [USB](usb.md) page.
 
 ### SD Card
-SD and MMC cards are fully supported as detailed on the [SD tutorial](sd-cards.md) page. Additionally, SPI SD drivers are also supported through the `ManagedFileSystem` software utility [drivers](/software-utility.md).
+SD and MMC cards are fully supported as detailed on the [SD tutorial](sd-cards.md) page. Additionally, SPI SD drivers are also supported through the `ManagedFileSystem` software utility [drivers](../drivers/software-utility.md).
 
 The example below requires the `GHIElectronics.TinyCLR.IO` and `GHIElectronics.TinyCLR.Devices.Storage` libraries and a device with an SD card.
 
