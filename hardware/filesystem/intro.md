@@ -2,7 +2,7 @@
 ---
 ![ALFAT SD Board](images/file-system.jpg)
 
-This page has the technical details and manuals for the File System products. The main website's [File System page](https://www.ghielectronics.com/products/filesystem) has more info as well.
+This page has the technical details and manuals for the File System products.
 
 ## ALFAT Evaluation Kit
 ![F40](images/alfat-eval.jpg)
