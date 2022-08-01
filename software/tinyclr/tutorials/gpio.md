@@ -92,7 +92,7 @@ Digital input events rely on internal GPIO interrupts to work. On SITCore, these
 Consider other internal system functions that need interrupts, such as WiFi. Those also reserve one of the 16 available interrupts.
 
 ## LowLevel Access
-**For advanced users only**, there is a ways to `SetAlternate()` function and also to control `ReservePin()`. The chip internally may support certain peripheral on more that one pin. We select default ones and those are the one that everyone must use and they are the ones listed in the official pinout. However, advanced users only have the option to move the peripheral, or one of pins on that peripheral, to an alternate pin.
+**For advanced users only**, there is a ways to `SetAlternate()` function and also to control `ReservePin()`. The chip internally may support certain peripheral on more that one pin. We select default ones and those are the one that everyone must use and they are the ones listed in the official pinout. However, advanced users only have the option to move the peripheral, or one of the pins on that peripheral, to an alternate pin.
 
 > [!Warning]
 > This advanced feature does not check what alternate functions are valid.
