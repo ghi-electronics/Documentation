@@ -92,12 +92,12 @@ Digital input events rely on internal GPIO interrupts to work. On SITCore, these
 Consider other internal system functions that need interrupts, such as WiFi. Those also reserve one of the 16 available interrupts.
 
 ## LowLevel Access
-**For advanced users only**. To use this here is the ways to `SetAlternate()` function and also to control `ReservePin()`. This requires you to reference the orignal chip manufactures datasheet to see which pins offer alternative functions. This unsupported feature requires an understanding of chip registers and how they work.  The chip internally may support certain peripheral on more that one pin. We select default ones and those are the one that everyone must use and they are the ones listed in the official pinout. However, advanced users have the option to move the peripheral, or one of the pins on that peripheral, to an alternate pin.
+**For advanced users only**. 
 
 > [!Warning]
-> This advanced feature does not check what alternate functions are valid.
+> This advanced feature does not check what alternate functions are valid. This advanced feature does not reserve the destination pin.
 
-This example will move MOSI2 pin from PB2 to PC7, assuming AF6
+This example will move MOSI2 pin from PB2 to PC7, assuming AF6 (AF6 mean Alternate Function 6)
 
 ```cs
 // start by creating SPI2 to initialize the feature on PB2
@@ -110,6 +110,9 @@ var settings = new Settings {​​​​​​​
     type  = OutputType.PushPull
 }​​​​​​​;
 LowLevelController.TransferFeature(SC20100.GpioPin.PB2, SC20100.GpioPin.PC7, settings);
-```
 
-`SetAlternate()` can not be called at will and must be called at a specific time. It must be called after creating the controller for CAN, DMCI, QSPI, SDcard, SPI, and I2C. When using PWM the function must be used after enabling the channel. Both UART & Native Display can be remapped after calling `SetActiveSettings()`.
+// SC20100.GpioPin.PB2: Becomes default state (input)
+// SC20100.GpioPin.PC7: Becomes AF6
+
+```
+This advanced feature needs to be called right before Enable() (or Open() if Uart, Start() if PWM etc... - depends on peripherals) for working properly.
