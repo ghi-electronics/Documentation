@@ -95,7 +95,8 @@ Consider other internal system functions that need interrupts, such as WiFi. Tho
 **For advanced users only**. 
 
 > [!Warning]
-> This advanced feature does not check what alternate functions are valid. This advanced feature does not reserve the destination pin.
+> This advanced feature does not check what alternate functions are valid. 
+> This advanced feature does not reserve the destination pin.
 
 This example will move MOSI2 pin from PB2 to PC7, assuming AF6 (AF6 mean Alternate Function 6)
 
@@ -115,4 +116,5 @@ LowLevelController.TransferFeature(SC20100.GpioPin.PB2, SC20100.GpioPin.PC7, set
 // SC20100.GpioPin.PC7: Becomes AF6
 
 ```
+
 This advanced feature needs to be called right before Enable() (or Open() if Uart, Start() if PWM etc... - depends on peripherals) for working properly.
