@@ -118,7 +118,3 @@ LowLevelController.TransferFeature(SC20100.GpioPin.PB2, SC20100.GpioPin.PC7, set
 ```
 
 This advanced feature needs to be called right before Enable() (or Open() if Uart, Start() if PWM etc... - depends on peripherals) for working properly.
-
-
-
-
