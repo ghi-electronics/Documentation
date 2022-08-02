@@ -92,7 +92,7 @@ Digital input events rely on internal GPIO interrupts to work. On SITCore, these
 Consider other internal system functions that need interrupts, such as WiFi. Those also reserve one of the 16 available interrupts.
 
 ## LowLevel Access
-**For advanced users only**. 
+**For advanced users only** 
 
 > [!Warning]
 > This advanced feature does not check what alternate functions are valid. 
@@ -118,3 +118,7 @@ LowLevelController.TransferFeature(SC20100.GpioPin.PB2, SC20100.GpioPin.PC7, set
 ```
 
 This advanced feature needs to be called right before Enable() (or Open() if Uart, Start() if PWM etc... - depends on peripherals) for working properly.
+
+
+
+
