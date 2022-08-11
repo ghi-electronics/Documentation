@@ -1,6 +1,6 @@
 # Debugging
 ---
-TinyCLR OS allows developers to debug tiny IoT device just like you would debug an application on a full PC, right from  within Visual Studio, over USB or Serial. Set breakpoints, step through code, and examine variables without the need for specialized hardware or software.
+TinyCLR OS allows developers to debug tiny IoT devices just like you would debug an application on a full PC, right from  within Visual Studio, over USB or Serial. Set breakpoints, step through code, and examine variables without the need for specialized hardware or software.
 
 By default, the system checks the [MOD pin](../special-pins.md) to determine the debug interface, USB or Serial. The user has the option to disable MOD pin feature and force (or disable) the debug interface. See [Device Info](device-info.md) for details.
 

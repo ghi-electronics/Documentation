@@ -1,6 +1,6 @@
 # File System
 ---
-The file system library is subset of the full .NET file system support. Most example should work with without minor changes. The internal drivers fully support FAT16 or FAT32 file systems, with no limitations beyond the FAT file system itself!
+The file system library is a subset of the full .NET file system support. Most examples should work with only minor changes. The internal drivers fully support FAT16 or FAT32 file systems, with no limitations beyond the FAT file system itself!
 
 > [!Note]
 > The USB drive must have an MBR record, not a GPT table.
@@ -12,7 +12,7 @@ The file system library is subset of the full .NET file system support. Most exa
 This allows file access on USB devices with MSC class, such as USB memory sticks. See the [USB](usb.md) page.
 
 ### SD Card
-SD and MMC cards are fully supported as detailed on the [SD tutorial](sd-cards.md) page. Additionally, SPI SD drivers are also supported through the `ManagedFileSystem` software utility [drivers](/software-utility.md).
+SD and MMC cards are fully supported as detailed on the [SD tutorial](sd-cards.md) page. Additionally, SPI SD drivers are also supported through the `ManagedFileSystem` software utility [drivers](../drivers/software-utility.md).
 
 The example below requires the `GHIElectronics.TinyCLR.IO` and `GHIElectronics.TinyCLR.Devices.Storage` libraries and a device with an SD card.
 
