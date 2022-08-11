@@ -27,7 +27,7 @@ uBuffer.Dispose();
 ```
 
 > [!Tip] 
-> Optionally, users may utilizing the built-in [cryptography](cryptography.md) services to encrypt the data before it is loaded into the `UnmanagedBuffer`
+> Optionally, users may utilize the built-in [cryptography](cryptography.md) services to encrypt the data before it is loaded into the `UnmanagedBuffer`
 
 ---
 
