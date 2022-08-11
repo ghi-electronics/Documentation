@@ -27,7 +27,7 @@ We offer multiple single board computers to provide the lowest possible barrier 
 | **GPIO**               | 11              | 26             | 31              | 33              | 19              | 38             | 45                      |
 | **SPI**                | 1               | 2              | 2               | 2               | 1               | 2              | 3                       |
 | **I2C**                | 2               | 1              | 1               | 2               | 1               | 2              | 1                       |
-| **UART**               | 3 (1 w/ HS)     | 3 (1 w/ HS)    | 5 (1 w/ HS)     | 3 (1 w/ HS)     | 3 (0 w/ HS)     | 5 (2 w/ HS)    | 6 (1 w/ HS)             |
+| **UART**               | 3 (1 w/ HS)     | 3 (1 w/ HS)    | 5 (1 w/ HS)     | 2 (0 w/ HS)     | 3 (0 w/ HS)     | 5 (2 w/ HS)    | 6 (1 w/ HS)             |
 | **CAN**                | X               | 1              | 1               | 1               | 1               | 1              | 2                       |
 | **PWM**                | 4               | 7              | 8               | 6               | 8               | 12             | 17                      |
 | **ADC**                | 6               | 5              | 6               | 3               | 8               | 11             | 10                      | 

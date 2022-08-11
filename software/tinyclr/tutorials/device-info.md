@@ -40,7 +40,7 @@ if (DeviceInformation.DebugInterface == DebugInterface.Usb)
 
 The return results from `DeviceInformation.DebugInterface` only states the current interface but it does not know if that is due to MOD pin being set in that mode or the interface was forced to that specific interface. The `DeviceInformation.IsModePinDisabled` can be used to determine if MOD was used.
 
-As an alternate option, users can change the debug interface using [TinyCLR Config](/tutorials/tinclr-config.md) tool.
+As an alternate option, users can change the debug interface using [TinyCLR Config](../tinyclr-config.md) tool.
 
 > [!NOTE]
 > Once the debug interfaces changed or disabled, it may not be possible to communicate with the device anymore. However, changing or disabling the interface does not affect the [bootloader](/tutorials/bootloader.md). Users can always enter the bootloader, which will be in serial or USB depending on MOD pin. From there a `Erase All` can be issues, manually or though the TinyCLR Config tool.
