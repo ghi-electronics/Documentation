@@ -95,8 +95,9 @@ var uTable = uBuffer.Bytes;
 // Properly release the objects. This is unmanaged so it is mandatory!
 uTable = null;
 uBuffer.Dispose();
-</code></pre><div class="TIP"><h5>Tip</h5><h2 id="optionally-users-may-utilizing-the-built-in-cryptographycryptographymd-services-to-encrypt-the-data-before-it-is-loaded-into-the-unmanagedbuffer">Optionally, users may utilizing the built-in <a href="cryptography.html">cryptography</a> services to encrypt the data before it is loaded into the <code>UnmanagedBuffer</code></h2>
+</code></pre><div class="TIP"><h5>Tip</h5><p>Optionally, users may utilize the built-in <a href="cryptography.html">cryptography</a> services to encrypt the data before it is loaded into the <code>UnmanagedBuffer</code></p>
 </div>
+<hr>
 <h2 id="graphical-memory">Graphical Memory</h2>
 <p>When the <a href="graphics.html">graphics</a> engine detects available external memory, it automatically uses it. Also, garbage collection will dispose of unmanaged graphics buffers automatically. You do not have to dispose of unmanaged graphics buffers like you do for unmanaged non-graphic buffers.</p>
 <hr>
