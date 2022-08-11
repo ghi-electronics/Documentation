@@ -8,7 +8,7 @@
     <title>General Purpose Input Output (GPIO) </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="General Purpose Input Output (GPIO) ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.59.3.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -58,11 +58,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -143,10 +143,11 @@ void Button_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e) {
 <p>Digital input events rely on internal GPIO interrupts to work. On SITCore, these interrupts are only available on 16 pins at any given time, the pin number must be unique, over all of the available ports. For example: PA1 and PB1 cannot both be used as interrupts at the same time. However, PA1 and PB2, or even PA1 and PA2, can be used simultaneously.</p>
 <p>Consider other internal system functions that need interrupts, such as WiFi. Those also reserve one of the 16 available interrupts.</p>
 <h2 id="lowlevel-access">LowLevel Access</h2>
-<p><strong>For advanced users only</strong>, there is a ways to <code>SetAlternate()</code> function and also to control <code>ReservePin()</code>. The chip internally may support certain peripheral on more that one pin. We select default ones and those are the one that everyone must use and they are the ones listed in the official pinout. However, advanced users only have the option to move the peripheral, or one of pins on that peripheral, to an alternate pin.</p>
-<div class="WARNING"><h5>Warning</h5><p>This advanced feature does not check what alternate functions are valid.</p>
+<p><strong>For advanced users only</strong></p>
+<div class="WARNING"><h5>Warning</h5><p>This advanced feature does not check what alternate functions are valid.
+This advanced feature does not reserve the destination pin.</p>
 </div>
-<p>This example will move MOSI2 pin from PB2 to PC7, assuming AF6</p>
+<p>This example will move MOSI2 pin from PB2 to PC7, assuming AF6 (AF6 mean Alternate Function 6)</p>
 <pre><code class="lang-cs">// start by creating SPI2 to initialize the feature on PB2
 // now transfer...
 var settings = new Settings {​​​​​​​
@@ -157,7 +158,10 @@ var settings = new Settings {​​​​​​​
     type  = OutputType.PushPull
 }​​​​​​​;
 LowLevelController.TransferFeature(SC20100.GpioPin.PB2, SC20100.GpioPin.PC7, settings);
-</code></pre><p><code>SetAlternate()</code> can not be called at will and must be called at a specific time. It must be called after creating the controller for CAN, DMCI, QSPI, SDcard, SPI, and I2C. When using PWM the function must be used after enabling the channel. Both UART &amp; Native Display can be remapped after calling <code>SetActiveSettings()</code>.</p>
+
+// SC20100.GpioPin.PB2: Becomes default state (input)
+// SC20100.GpioPin.PC7: Becomes AF6
+</code></pre><p>This advanced feature needs to be called right before Enable() (or Open() if Uart, Start() if PWM etc... - depends on peripherals) for working properly. </p>
 </article>
           </div>
           
@@ -185,7 +189,7 @@ LowLevelController.TransferFeature(SC20100.GpioPin.PB2, SC20100.GpioPin.PC7, set
               </div>
           
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
               </nav>

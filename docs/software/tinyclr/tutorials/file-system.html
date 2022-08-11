@@ -8,7 +8,7 @@
     <title>File System </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="File System ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.59.3.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -58,11 +58,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -79,7 +79,7 @@
 <h1 id="file-system">File System</h1>
 
 <hr>
-<p>The file system library is subset of the full .NET file system support. Most example should work with without minor changes. The internal drivers fully support FAT16 or FAT32 file systems, with no limitations beyond the FAT file system itself!</p>
+<p>The file system library is a subset of the full .NET file system support. Most examples should work with only minor changes. The internal drivers fully support FAT16 or FAT32 file systems, with no limitations beyond the FAT file system itself!</p>
 <div class="NOTE"><h5>Note</h5><p>The USB drive must have an MBR record, not a GPT table.
 FAT16 and FAT32 file systems are supported.</p>
 </div>
@@ -87,7 +87,7 @@ FAT16 and FAT32 file systems are supported.</p>
 <h3 id="usb-mass-storage">USB Mass Storage</h3>
 <p>This allows file access on USB devices with MSC class, such as USB memory sticks. See the <a href="usb.html">USB</a> page.</p>
 <h3 id="sd-card">SD Card</h3>
-<p>SD and MMC cards are fully supported as detailed on the <a href="sd-cards.html">SD tutorial</a> page. Additionally, SPI SD drivers are also supported through the <code>ManagedFileSystem</code> software utility <a href="/software-utility.md">drivers</a>.</p>
+<p>SD and MMC cards are fully supported as detailed on the <a href="sd-cards.html">SD tutorial</a> page. Additionally, SPI SD drivers are also supported through the <code>ManagedFileSystem</code> software utility <a href="../drivers/software-utility.html">drivers</a>.</p>
 <p>The example below requires the <code>GHIElectronics.TinyCLR.IO</code> and <code>GHIElectronics.TinyCLR.Devices.Storage</code> libraries and a device with an SD card.</p>
 <pre><code class="lang-cs">var sd = StorageController.FromName(SC20100.StorageController.SdCard);
 var drive = FileSystem.Mount(sd.Hdc);
@@ -273,7 +273,7 @@ using (var fsRead = tfs.Open(&quot;settings.dat&quot;, FileMode.Open)) {
               </div>
           
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
               </nav>

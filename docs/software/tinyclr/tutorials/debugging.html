@@ -8,7 +8,7 @@
     <title>Debugging </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Debugging ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.59.3.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -58,11 +58,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -79,7 +79,7 @@
 <h1 id="debugging">Debugging</h1>
 
 <hr>
-<p>TinyCLR OS allows developers to debug tiny IoT device just like you would debug an application on a full PC, right from  within Visual Studio, over USB or Serial. Set breakpoints, step through code, and examine variables without the need for specialized hardware or software.</p>
+<p>TinyCLR OS allows developers to debug tiny IoT devices just like you would debug an application on a full PC, right from  within Visual Studio, over USB or Serial. Set breakpoints, step through code, and examine variables without the need for specialized hardware or software.</p>
 <p>By default, the system checks the <a href="../special-pins.html">MOD pin</a> to determine the debug interface, USB or Serial. The user has the option to disable MOD pin feature and force (or disable) the debug interface. See <a href="device-info.html">Device Info</a> for details.</p>
 <p>When serial debugging is selected, it defaults to UART0 on SC13 and to UART5 on SC20.</p>
 <div class="TIP"><h5>Tip</h5><p>Information on using the Visual Studio debugger can be found in Microsoft&#39;s documentation <a href="https://docs.microsoft.com/en-us/visualstudio/debugger/debugger-feature-tour?view=vs-2019">here</a>.</p>
@@ -111,7 +111,7 @@
               </div>
           
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
               </nav>
