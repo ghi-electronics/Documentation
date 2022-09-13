@@ -323,6 +323,10 @@ The **FEZ Duino** provides female headers that make use of the popular Arduino p
 
 Already one of our most popular SITCore single board computers, The **FEZ Portal** is a 4.3" 480x272 display with capacitive touch that is programmable in C#. As the display and controller are one unit, it's even easier to make a product with touch as you only have to mount a single board that's only slightly larger than the display. Display uses part# ER-TFT043-3 available at [buydisplay.com](https://www.buydisplay.com/) 
 
+> [!Note]
+> I2C address on touch screen controller is 0x38. Use software I2C if a device has same address need to be connected.
+
+
 [FEZ Portal Schematic](pdfs/fez-portal-rev-c-schematic.pdf)
 
 [FEZ Portal 3D STEP File](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Portal%20Rev%20C.step)
@@ -330,23 +334,24 @@ Already one of our most popular SITCore single board computers, The **FEZ Portal
 
 ### FEZ Portal Peripheral Pins
 
-|                   |                 |
-|-------------------|-----------------|
-| **User LED**      | PB0             |
-|                   |                 |
-| **Buzzer**        | PB1             |
-|                   |                 |
-| **Display**       | BL = PA15       |
-|                   | Touch I2C = I2C1|
-|                   | Touch IRQ = PG9 |
-|                   |                 |
-| **WiFi**          | SPI = SPI3      |
-|                   | IRQ = PF10      |
-|                   | CS = PA6        |
-|                   | EN = PA8        |
-|                   | RST = PC3       |
-|                   |                 |
-| **Buttons**       | LDR = PE3       |
-|                   | APP = PB7       |
+|                   |                 			|
+|-------------------|---------------------------|
+| **User LED**      | PB0             			|
+|                   |                 			|
+| **Buzzer**        | PB1             			|
+|                   |                 			|
+| **Display**       | BL = PA15       			|
+|                   | Touch I2C = I2C1			|
+|                   | Touch I2C Address = 0x38 	|
+|                   | Touch IRQ = PG9 			|
+|                   |                 			|
+| **WiFi**          | SPI = SPI3      			|
+|                   | IRQ = PF10      			|
+|                   | CS = PA6        			|
+|                   | EN = PA8        			|
+|                   | RST = PC3       			|
+|                   |                 			|
+| **Buttons**       | LDR = PE3       			|
+|                   | APP = PB7       			|
 
 ---
