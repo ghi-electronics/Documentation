@@ -4,6 +4,83 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.2.0.5000 - RTW
+
+### Released 2022-09-16
+
+### Visual Studio Project System
+
+#### Changes
+
+- VS2022: Rebuild, changed version.
+- VS2019: None.
+
+#### Known Issues
+
+- None.
+
+### Libraries
+
+#### Changes
+
+- Json: Limited preservation of order
+- UI: Exposed Button.IsPressed
+- UI: Fixed Slider value is always zero after initialize.
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+
+##### SC20xxx:
+
+- Add option to reduce SDCard clock (using Marshall class)
+- Fixed native flush exception when orientation is not zero degree.
+- Improved mounting on some USB sticks.
+
+##### SC13xxx
+
+- None (rebuild, changed version)
+ 
+#### Known Issues
+
+- None.
+
+### Drivers
+
+#### Changes
+
+- WS2812: Add option to swap RGB.
+
+#### Known Issues
+
+- None.
+
+### TinyCLR Config
+
+#### Changes
+
+- None (rebuild, changed version)
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+
 ## 2.2.0.4200 - RTW
 
 ### Released 2022-05-18
