@@ -12,7 +12,7 @@
 
 #### Changes
 
-- VS2022: Rebuild, changed version.
+- VS2022: Rebuild, increment version.
 - VS2019: None.
 
 #### Known Issues
@@ -43,7 +43,7 @@
 
 ##### SC13xxx
 
-- None (rebuild, changed version)
+- None (rebuild, increment version)
  
 #### Known Issues
 
@@ -63,7 +63,7 @@
 
 #### Changes
 
-- None (rebuild, changed version)
+- None (rebuild, increment version)
 
 #### Known Issues
 
@@ -89,7 +89,7 @@
 
 #### Changes
 
-- VS2022: Increased version.
+- VS2022: Increment version.
 - VS2019: None.
 
 #### Known Issues
@@ -174,7 +174,7 @@
 
 #### Changes
 
-- Increased version.
+- Increment version.
 
 #### Known Issues
 
@@ -204,7 +204,7 @@
 
 #### Changes
 
-- Increased version.
+- Increment version.
 
 #### Known Issues
 
@@ -214,7 +214,7 @@
 
 #### Changes
 
-- Increased version.
+- Increment version.
 
 #### Known Issues
 
@@ -239,7 +239,7 @@
 
 #### Changes
 
-- VS2022: Change version.
+- VS2022: Increment version.
 - VS2019: None.
 
 #### Known Issues
@@ -321,7 +321,7 @@
 
 #### Changes
 
-- VS2022: Change version.
+- VS2022: Increment version.
 - VS2019: None.
 
 #### Known Issues
@@ -393,7 +393,7 @@
 
 #### Changes
 
-- Update version.
+- Increment version.
 
 #### Known Issues
 
@@ -1164,7 +1164,7 @@
 
 #### Changes
 
-- Updated version number 2.1.300
+- Increment version number 2.1.300
 
 #### Known Issues
 
@@ -1175,7 +1175,7 @@
 
 #### Changes
 
-- Updated version number 2.1.0-preview3.
+- Increment version number 2.1.0-preview3.
 - Change IFU API. Support network stream, file stream, memory stream.
 - IFU: Support update firmware on SC20100.
 - UART: Rename USART to UART
@@ -1213,7 +1213,7 @@
 
 #### Changes
 
-- Updated version number 2.1.0-preview3 
+- Increment version number 2.1.0-preview3 
 - Add Persist slow clock option in Device Configuration.
 - No longer support .glb file format.
 
@@ -1236,7 +1236,7 @@
 
 #### Changes
 
-- Updated version number 2.1.0.30000.
+- Increment version number 2.1.0.30000.
 - Reduced external deployment size from 8MB to 6MB.
 - Improved Network sending speed.
 
@@ -1248,7 +1248,7 @@
 
 #### Changes
 
-- Updated version number 2.1.0-preview3.
+- Increment version number 2.1.0-preview3.
 - Add motor servo driver.
 - Add ILI9341 SPI 320x240 driver.
 
@@ -1270,7 +1270,7 @@
 
 #### Changes
 
-- Updated version number 2.1.200
+- Increment version number 2.1.200
 
 #### Known Issues
 
@@ -1304,7 +1304,7 @@
 
 #### Changes
 
-- Updated version number 2.1.0-preview2 
+- Increment version number 2.1.0-preview2 
 
 #### Known Issues
 
@@ -1325,7 +1325,7 @@
 
 #### Changes
 
-- Updated version number 2.1.0.20000.
+- Increment version number 2.1.0.20000.
 - Added AutoIP.
 - Fixed CAN stop receiving message once internal FIFO is full.
 - Fixed Reuse socket address doesn't work.
@@ -1342,7 +1342,7 @@
 
 #### Changes
 
-- Updated version number 2.1.0-preview2.
+- Increment version number 2.1.0-preview2.
 - WinC15xx: Added Set/Remove multicast address.
 
 #### Known Issues
@@ -1363,7 +1363,7 @@
 
 #### Changes
 
-- Updated version number 2.1.100
+- Increment version number 2.1.100
 
 #### Known Issues
 - None
@@ -1372,7 +1372,7 @@
 
 #### Changes
 
-- Updated version number 2.1.0-preview1.
+- Increment version number 2.1.0-preview1.
 - Added Unique ID.
 - Fixed Socket.Poll(-1) cause system slow.
 - Fixed multicast.
@@ -1417,7 +1417,7 @@
 ### TinyCLR Config
 
 #### Changes
-- Updated version number 2.1.0-preview1 
+- Increment version number 2.1.0-preview1 
 
 #### Known Issues
 - Erase all doesn't erase external flash.
@@ -1435,7 +1435,7 @@
 
 #### Changes
 
-- Updated version number 2.1.0.10000
+- Increment version number 2.1.0.10000
 - Speed up system speed 15%
 - Use Timer Counter (TIM) for system timer.
 - Fixed SDCard writing failed sometime.
@@ -1454,7 +1454,7 @@
 
 #### Changes
 
-- Updated version number 2.1.0-preview1
+- Increment version number 2.1.0-preview1
 
 #### Known Issues
 
@@ -1476,7 +1476,7 @@ Production ready release!
 
 #### Changes
 
-- Updated version number 2.0.0
+- Increment version number 2.0.0
 
 #### Known Issues
 
@@ -1486,7 +1486,7 @@ Production ready release!
 
 #### Changes
 
-- Updated version number 2.0.0
+- Increment version number 2.0.0
 
 #### Known Issues
 
@@ -1510,7 +1510,7 @@ Production ready release!
 
 #### Changes
 
-- Updated version number 2.0.0
+- Increment version number 2.0.0
 - Fixed text. 
 
 #### Known Issues
@@ -1542,7 +1542,7 @@ Production ready release!
 
 #### Changes
 
-- Updated version number 2.0.0
+- Increment version number 2.0.0
 
 #### Known Issues
 
