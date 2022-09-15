@@ -8,7 +8,7 @@
     <title>DUE - Debugging </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="DUE - Debugging ">
-    <meta name="generator" content="docfx 2.59.3.0">
+    <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -58,11 +58,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
+          <div class="search-list"></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -86,41 +86,43 @@
 
 script.Run(@&quot;
     var led = DigitalPin(4*16+11)//PE11
+
     func OnOff()
         writePin(led, On)
         Delay(100)
         writePin(led, Off)
         Delay(100)
     end
-&quot;, true);// enable debugging
+
+    OnOff()
+
+&quot;, GHIElectronics.TinyCLR.DUE.Debugging.DebugLevel.Line);// enable debugging
 </code></pre><p>Once debugging option is enabled, an event <code>script.DebugEvent += DebugStep_DebugEvent</code> is raised for every program step. In teh event handler, the user has the option to continue, step into or step over.</p>
-<pre><code class="lang-cs">private static void DebugStep_DebugEvent(ScriptEngine sender, DebugEventArgs e) {
-    Debug.WriteLine($&quot;Executing: {e.SrcLine} : {e.SrcCol}..{e.SrcCol + e.SrcLength}&quot;);
+<pre><code class="lang-cs">private static DebugAction Script_DebugEvent(IDebuggee debuggee) {
+    Debug.WriteLine($&quot;Executing: {debuggee.SrcLine} : {debuggee.SrcCol}..{debuggee.SrcCol + debuggee.SrcLength}&quot;);
     Debug.WriteLine(&quot;Locals&quot;);
-    foreach(var v in e.Locals) {
+    foreach (var v in debuggee.GetLocals())
+    {
         Debug.WriteLine($&quot;{v.Name} = {v.Value}&quot;);
     }
     Debug.WriteLine(&quot;&quot;);
-    e.Action = DebugAction.StepInto; // Step into next statement
+
+
+    return DebugAction.StepInto; // Step into next statement
 }
 </code></pre><h2 id="breakpoints">Breakpoints</h2>
-<p>A breakpoint is set through <code>script.SetBreakpoint(lineNumber)</code>. Once execution hits a breakpoint, the debug event is raised with <code>e.Breakpoint</code> set to true.</p>
-<pre><code class="lang-cs">private static void DebugBreakpoint_DebugEvent(ScriptEngine sender, DebugEventArgs e) {
-if (e.Breakpoint) {
-    // we hit a breakpoint
+<p>A breakpoint is set through <code>script.ToggleBreakpoint(lineNumber)</code>. Once execution hits a breakpoint, the debug event is raised with <code>e.Breakpoint</code> set to true.</p>
+<pre><code class="lang-cs">private static DebugAction Script_DebugEvent(IDebuggee debuggee) {
+    if (e.Breakpoint) {
+        // we hit a breakpoint
+        }
+    } else {
+        // This will get hit once on start up, because when we start debugging the debugger breaks on the first
+        // executable statement, without requiring an explicit breakpoint
     }
-} else {
-    // This will get hit once on start up, because when we start debugging the debugger breaks on the first
-    // executable statement, without requiring an explicit breakpoint
+    return DebugAction.Continue; // Run until next breakpoint
 }
-e.Action = DebugAction.Continue; // Run until next breakpoint
-}
-</code></pre><div class="TIP"><h5>Tip</h5><p><code>e.Action</code> will default to <code>DebugAction.Continue</code> if not set.</p>
-</div>
-<p>Clearing breakpoints is done through <code>ScriptEngine.ClearBreakpoint</code>. The entire list of breakpoint can be fetched using <code>ScriptEngine.GetBreakpoints</code>, which return an array of line numbers.</p>
-<h2 id="pausing">Pausing</h2>
-<p>When a program is <code>Run</code> with Continue option and there is no breakpoints, the current thread will continue to be active. If pause is needed, the <code>Run</code> must be called in a secondary thread, allowing the first thread to call <code>script.Pause()</code>. This only works when <code>Run</code> is fired with debug flag is set to true.</p>
-</article>
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -147,7 +149,7 @@ e.Action = DebugAction.Continue; // Run until next breakpoint
               </div>
           
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5>In This Article</h5>
+              <h5></h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
               </nav>
