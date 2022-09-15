@@ -24,7 +24,7 @@ script.Run(@"
 ");
 ```
 
-`Run` only returns when it has completed running the script. If the script has an infinite loop then `Run` will never return. A good option would be to spin a thread for `Run`. The rest of the system will continue to run normally and the thread can be terminated to abort `Run` is desired.
+`Run` only returns when it has completed running the script. If the script has an infinite loop then `Run` will never return. A good option would be to spin a thread for `Run`. The rest of the system will continue to run normally and the thread can be terminated to abort `Run` when desired.
 
 ## SetConsole
 

@@ -23,7 +23,7 @@
 
 #### Changes
 
-- Json: Limited preservation of order
+- JSON: Limited preservation of order
 - UI: Exposed Button.IsPressed
 - UI: Fixed Slider value is always zero after initialize.
 
