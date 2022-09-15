@@ -95,7 +95,7 @@ script.Run(@&quot;
         Delay(100)
     end
 &quot;);
-</code></pre><p><code>Run</code> only returns when it has completed running the script. If the script has an infinite loop then <code>Run</code> will never return. A good option would be to spin a thread for <code>Run</code>. The rest of the system will continue to run normally and the thread can be terminated to abort <code>Run</code> is desired.</p>
+</code></pre><p><code>Run</code> only returns when it has completed running the script. If the script has an infinite loop then <code>Run</code> will never return. A good option would be to spin a thread for <code>Run</code>. The rest of the system will continue to run normally and the thread can be terminated to abort <code>Run</code> when desired.</p>
 <h2 id="setconsole">SetConsole</h2>
 <p>Redirects the Console Statements. For example, the output can be forwarded to a display.</p>
 <pre><code class="lang-cs">class MyConsole : IConsole {
