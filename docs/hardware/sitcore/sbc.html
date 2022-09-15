@@ -8,7 +8,7 @@
     <title>Single Board Computers </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Single Board Computers ">
-    <meta name="generator" content="docfx 2.59.3.0">
+    <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -58,11 +58,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
+          <div class="search-list"></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -918,6 +918,8 @@
 <h2 id="fez-portal">FEZ Portal</h2>
 <p><img src="images/fez-portal.png" alt="FEZ Portal"></p>
 <p>Already one of our most popular SITCore single board computers, The <strong>FEZ Portal</strong> is a 4.3&quot; 480x272 display with capacitive touch that is programmable in C#. As the display and controller are one unit, it&#39;s even easier to make a product with touch as you only have to mount a single board that&#39;s only slightly larger than the display. Display uses part# ER-TFT043-3 available at <a href="https://www.buydisplay.com/">buydisplay.com</a> </p>
+<div class="NOTE"><h5>Note</h5><p>I2C address on touch screen controller is 0x38. Use software I2C if a device has same address need to be connected.</p>
+</div>
 <p><a href="pdfs/fez-portal-rev-c-schematic.pdf">FEZ Portal Schematic</a></p>
 <p><a href="http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Portal%20Rev%20C.step">FEZ Portal 3D STEP File</a></p>
 <h3 id="fez-portal-peripheral-pins">FEZ Portal Peripheral Pins</h3>
@@ -952,6 +954,10 @@
 <tr>
 <td></td>
 <td>Touch I2C = I2C1</td>
+</tr>
+<tr>
+<td></td>
+<td>Touch I2C Address = 0x38</td>
 </tr>
 <tr>
 <td></td>
@@ -1023,7 +1029,7 @@
               </div>
           
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5>In This Article</h5>
+              <h5></h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
               </nav>
