@@ -46,9 +46,6 @@ ExtensionFuncSample(""x: "" + x)
 ");
 ```
 
-Similar to any other functions in DUE, extensions can also be invoked from the engine directly `engine.Invoke("ExtensionFuncSample","Hello DUE!")`.
-
-
 ## Example
 
 ```cs
@@ -90,5 +87,12 @@ static class GpioExtension {
             throw new InterpreterException("Not a valid pin");
         }
     }
+	
+	// Delay - sleep 
+	public static void Delay(int ms)
+	{
+		Thread.Sleep(ms);
+	}
+
 }
 ```
