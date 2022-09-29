@@ -5,6 +5,10 @@ Unlike digital input pins, which can only read high or low, analog pins can read
 > [!Tip]
 > Note that the analog channel number is not the pin number. You need to determine the channel number of a specific pin using your system's documentation.
 
+> [!Note] 
+> The ADC resolution based on SITCore device: SC20xxx = 16 bit, SC13xxx = 12 bit.
+
+
 The resolution of the ADC determines its accuracy. An 8bit ADC has 256 steps to work with, 3.3V/256=0.013V. This means an increase of 0.013V will increase the ADC value by one. In other words, a voltage change of less than 0.013V has no effect.
 
 ```cs
@@ -18,6 +22,9 @@ while (true) {
 }
 ```
 ## Support Sampling timing
+
+> [!Note] Support Sampling Timing is only supported on SC20xxx.
+
 Changing sampling time can be configured as follows:
 
 ```cs
@@ -37,6 +44,28 @@ Ticks | Time
 
 > [!Tip]
 > Default is 1 tick.
+
+```cs
+var adcchannel1 = adc3.OpenChannel(SC20260.Adc.Controller3.PF10);
+var adcchannel2 = adc3.OpenChannel(SC20260.Adc.Controller3.PF8);
+
+adcchannel1.SamplingTime = TimeSpan.FromTicks(100);
+adcchannel2.SamplingTime = TimeSpan.FromTicks(100);
+
+Debug.WriteLine("Resolution " + adc3.ResolutionInBits); // show resolution in bit
+
+while (true)
+{
+     var v1 = adcchannel1.ReadValue() * 3.3 / 0xFFFF; // 16 bits
+     var v2 = adcchannel2.ReadValue() * 3.3 / 0xFFFF; // 16 bits
+        
+     Debug.WriteLine("v1 = " + v1);
+     Debug.WriteLine("v2 = " + v2);
+
+     Thread.Sleep(1000); // This sleep is not sampling time, just show message every one second
+}
+
+```
 
 ## Temperature sensor
 
