@@ -25,7 +25,14 @@ adcChannel.SamplingTime = TimeSpan.FromTicks(10); // Set to 1us (a tick is 100ns
 ```
 SITCore allows these sampling times. If the SamplingTime is between two values above, the higher values will be used.
 
-Ticks | Time
+> [!Note]
+> SITCore ADC resolution by device
+> 
+> SC20xxx = 16 bit
+> 
+> SC13xxx = 12 bit
+
+Ticks | SC20xxx (Full/Half Speed)
 ------- | ------
 0 | 23ns
 1 | 132ns
@@ -34,6 +41,26 @@ Ticks | Time
 10 | 1007ns
 60 | 6054ns
 126 | 12664ns
+
+Ticks | SC13xxx (Full Speed) 
+------- | ------  
+0 | 81ns 
+1 | 156ns
+3 | 306ns
+5 | 593ns
+11 | 1156ns
+30 | 3094ns
+80 | 8006ns
+
+Ticks | SC13xxx (Half Speed) 
+------- | ------  
+1 | 162ns 
+3 | 312ns
+6 | 612ns
+11 | 1187ns
+23 | 2312ns
+60 | 6187ns
+160 | 16012ns
 
 > [!Tip]
 > Default is 1 tick.
