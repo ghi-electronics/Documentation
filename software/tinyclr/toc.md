@@ -80,6 +80,7 @@
 ### [Real Time Clock](tutorials/real-time-clock.md)
 ### [Timers](tutorials/timers.md)
 ### [Resources](tutorials/resources.md)
+### [Specialized](tutorials/specialized.md)
 
 ## Pin Level Control
 ### [GPIO](tutorials/gpio.md)
