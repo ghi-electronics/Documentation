@@ -31,7 +31,7 @@ We offer multiple single board computers to provide the lowest possible barrier 
 | **CAN**                | X               | 1              | 1               | 1               | 1               | 1              | 2                       |
 | **PWM**                | 4               | 7              | 8               | 6               | 8               | 12             | 17                      |
 | **ADC**                | 6               | 6              | 6               | 3               | 8               | 11             | 10                      | 
-| **DAC**                | 1               | 1              | 1               | X               | 1               | 2              | 2                       | 
+| **DAC**                | 2               | 2              | 1               | X               | 1               | 2              | 2                       | 
 | **SD/SDIP/MMC**        | X               | X              | 1               | 1               | 1               | 1              | 1                       | 
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
