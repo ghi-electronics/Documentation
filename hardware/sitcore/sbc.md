@@ -112,7 +112,7 @@ The **FEZ Flea** is the most cost effective way to dive into TinyCLR OS. With it
 
 [FEZ Flea STEP file](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Flea%20Rev%20B.step)
 
-[![FEZ Flea](images/fez_flea_pinout.png)](pdfs/fez_flea_pinout.pdf)
+[![FEZ Flea](images/fez-flea-pinout.png)](pdfs/fez-flea-pinout.pdf)
 
 ### FEZ Flea Peripheral Pin
 
