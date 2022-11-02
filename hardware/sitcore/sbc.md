@@ -30,8 +30,8 @@ We offer multiple single board computers to provide the lowest possible barrier 
 | **UART**               | 3 (1 w/ HS)     | 3 (1 w/ HS)    | 5 (1 w/ HS)     | 2 (0 w/ HS)     | 3 (0 w/ HS)     | 5 (2 w/ HS)    | 6 (1 w/ HS)             |
 | **CAN**                | X               | 1              | 1               | 1               | 1               | 1              | 2                       |
 | **PWM**                | 4               | 7              | 8               | 6               | 8               | 12             | 17                      |
-| **ADC**                | 6               | 5              | 6               | 3               | 8               | 11             | 10                      | 
-| **DAC**                | 1               | 1              | 1               | X               | 1               | 2              | 2                       | 
+| **ADC**                | 6               | 6              | 6               | 3               | 8               | 11             | 10                      | 
+| **DAC**                | 2               | 2              | 1               | X               | 1               | 2              | 2                       | 
 | **SD/SDIP/MMC**        | X               | X              | 1               | 1               | 1               | 1              | 1                       | 
 
 *Note: As many pins share peripherals, not all peripherals will be available.*
@@ -112,7 +112,7 @@ The **FEZ Flea** is the most cost effective way to dive into TinyCLR OS. With it
 
 [FEZ Flea STEP file](http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Flea%20Rev%20B.step)
 
-[![FEZ Flea](images/fez_flea_pinout.png)](pdfs/fez_flea_pinout.pdf)
+[![FEZ Flea](images/fez-flea-pinout.png)](pdfs/fez-flea-pinout.pdf)
 
 ### FEZ Flea Peripheral Pin
 
@@ -128,7 +128,7 @@ The **FEZ Flea** is the most cost effective way to dive into TinyCLR OS. With it
 
 ![FEZ Pico](images/fez-pico.png)
 
-The **FEZ Pico** uses the Raspberry Pi Pico form factor allowing it drop into existing Pico accessories. The FEZ Pico adds JST connector compatible with Sparkfun Qwiic modules and Adafruit Stemma modules. This allows for easy expandability.
+The **FEZ Pico** uses the Raspberry Pi Pico form factor allowing it drop into existing Pico accessories. The FEZ Pico adds JST connector compatible with Sparkfun Qwiic modules and Adafruit STEMMA modules. This allows for easy expandability.
 
 [FEZ Pico Schematic](pdfs/fez-pico-rev-d-schematic.pdf)
 
@@ -153,7 +153,7 @@ The **FEZ Pico** uses the Raspberry Pi Pico form factor allowing it drop into ex
 The Adafruit Feather form factor boards are made to be stackable and have built-in support for 3.7V LiPo batteries with a charging circuit. The **FEZ Feather** provides both through hole pads and castellated edges making it both breadboard friendly and easy to build into products.
 
 >[!Caution]
->Lithium Polymoer(Li-Po) batteries are significantly more volatile than other rechargable batteries. Make sure you have an understand of how to properly charge and use them before connecting to the FEZ Feather. Never attempt to charge a damaged or swollen battery. Never leave battery charging unattended. Improper use could result in fire.
+>Lithium Polymoer(Li-Po) batteries are significantly more volatile than other rechargable batteries. Make sure you have an understanding of how to properly charge and use them before connecting to the FEZ Feather. Never attempt to charge a damaged or swollen battery. Never leave battery charging unattended. Improper use could result in fire.
 
 >[!Warning]
 >Be very careful to ensure the correct polarity of LiPo batteries before connecting them to the FEZ Feather. Reverse polarity will damage the charging circuit, and not all batteries are wired correctly. GHI Electronics is not responsible for, and will not warranty, damage caused by incorrectly connected batteries.
