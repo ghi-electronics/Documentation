@@ -2836,6 +2836,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "hardware/sitcore/images/fez-flea-pinout.png",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/images/fez-flea-pinout.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "hardware/sitcore/images/fez-flea.png",
       "output": {
         "resource": {
@@ -2906,17 +2917,6 @@
       "output": {
         "resource": {
           "relative_path": "hardware/sitcore/images/fez_duino_pinout.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "hardware/sitcore/images/fez_flea_pinout.png",
-      "output": {
-        "resource": {
-          "relative_path": "hardware/sitcore/images/fez_flea_pinout.png"
         }
       },
       "is_incremental": false,
@@ -3401,6 +3401,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "hardware/sitcore/pdfs/fez-flea-pinout.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/sitcore/pdfs/fez-flea-pinout.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "hardware/sitcore/pdfs/fez-flea-rev-b-schematic.pdf",
       "output": {
         "resource": {
@@ -3449,17 +3460,6 @@
       "output": {
         "resource": {
           "relative_path": "hardware/sitcore/pdfs/fez-stick-rev-b-schematic.pdf"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "hardware/sitcore/pdfs/fez_flea_pinout.pdf",
-      "output": {
-        "resource": {
-          "relative_path": "hardware/sitcore/pdfs/fez_flea_pinout.pdf"
         }
       },
       "is_incremental": false,
@@ -3661,7 +3661,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/sitcore/sbc.html",
-          "hash": "+s4VEtiBXOZF0o7c+gd+/Q=="
+          "hash": "wFk8RG97CJIqMa1TkE8Rrg=="
         }
       },
       "is_incremental": false,
@@ -6277,7 +6277,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/toc.html",
-          "hash": "xp4hYOGHnIgbEFDomHHYkw=="
+          "hash": "tTRdyG91F+5GrFBxWEKEOw=="
         }
       },
       "is_incremental": false,
@@ -6316,7 +6316,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/analog-in.html",
-          "hash": "t/neNbR7Hl5fLW6Q3fA6tQ=="
+          "hash": "487KwZmBjSpcMV5p3BS4zg=="
         }
       },
       "is_incremental": false,
@@ -6463,7 +6463,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/debugging.html",
-          "hash": "vJIq7HwcfXFVGtZEox0zAw=="
+          "hash": "VkT+8eajp3lsJF1AsxuXkA=="
         }
       },
       "is_incremental": false,
@@ -6622,7 +6622,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/hashing.html",
-          "hash": "aN4uqODTRJCoFjOuENx2NA=="
+          "hash": "c28XjNL1KkGLOvqYeojH3Q=="
         }
       },
       "is_incremental": false,
@@ -8449,6 +8449,21 @@
         "InvalidYamlHeader"
       ],
       "type": "Conceptual",
+      "source_relative_path": "software/tinyclr/tutorials/specialized.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/tinyclr/tutorials/specialized.html",
+          "hash": "reg9NYIfG4v8aqcc/ErOGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
+      "type": "Conceptual",
       "source_relative_path": "software/tinyclr/tutorials/spi.md",
       "output": {
         ".html": {
@@ -8636,7 +8651,7 @@
       "output": {
         ".html": {
           "relative_path": "software/tinyclr/tutorials/user-interface.html",
-          "hash": "B7hOQtZvnLRw0TXr9lRhxg=="
+          "hash": "bsK1Kw7hb0wR2wk9F3VwzA=="
         }
       },
       "is_incremental": false,
@@ -8705,6 +8720,13 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -8715,14 +8737,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 214,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 215,
           "skipped_file_count": 0
         }
       }

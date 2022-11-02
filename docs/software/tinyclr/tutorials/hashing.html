@@ -79,6 +79,8 @@
 <h1 id="hashing">Hashing</h1>
 
 <hr>
+<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core and GHIElectronics.TinyCLR.Cryptography</p>
+</div>
 <h2 id="md5">MD5</h2>
 <p>TinyCLR OS supports MD5 hash function.</p>
 <p> The following commands will calculate the MD5 hash value of a byte array:</p>
@@ -90,21 +92,17 @@ var hashValue = md5.ComputeHash(data); //data is a byte array.
 <h2 id="crc16">CRC16</h2>
 <p>TinyCLR OS supports CRC16.</p>
 <pre><code class="lang-cs">ComputeHash(byte[] data, int offset, int count);
-</code></pre><p>Large amounts of data can be calculated in chunks and the hash is concatenated automatically. Calling <code>Reset</code> resets the seed value.</p>
+</code></pre><p>Large amounts of data can be calculated in chunks and the hash is concatenated automatically. </p>
 <pre><code class="lang-cs">var crc16 = new Crc16();
 var data = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 };
 
 // Uses entire array to build the hash
-crc16.Reset(); // reset seed = 0;
 var crcVal1 = crc16.ComputeHash(data, 0, data.Length);
 
 // Uses chunks of the array to build the hash
-crc16.Reset(); // reset seed = 0;
-var crcSeed1 = crc16.ComputeHash(data, 0, 3);
-var crcSeed2 = crc16.ComputeHash(data, 3, 1);         
-var crcVal2 = crc16.ComputeHash(data, 4, 4); 
+var crc1 = crc16.ComputeHash(data, 0, 3);
 
-// `crcVal1` and `crcVal2` will match.
+var crc1_2 = crc16.ComputeHash(data, 3, 1, crc1);         
 </code></pre><hr>
 <h2 id="sha1">SHA1</h2>
 <p>SHA-1 is most often used to verify that a file has been unaltered. This is done by producing a checksum before the file has been transmitted, and then again once it reaches its destination.</p>

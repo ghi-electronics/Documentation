@@ -81,7 +81,12 @@
 <hr>
 <p>TinyCLR OS allows developers to debug tiny IoT devices just like you would debug an application on a full PC, right from  within Visual Studio, over USB or Serial. Set breakpoints, step through code, and examine variables without the need for specialized hardware or software.</p>
 <p>By default, the system checks the <a href="../special-pins.html">MOD pin</a> to determine the debug interface, USB or Serial. The user has the option to disable MOD pin feature and force (or disable) the debug interface. See <a href="device-info.html">Device Info</a> for details.</p>
-<p>When serial debugging is selected, it defaults to UART0 on SC13 and to UART5 on SC20.</p>
+<p>When serial debugging is selected, it defaults to:</p>
+<ul>
+<li>UART1 on SC13xxx</li>
+<li>UART1 on SC20100</li>
+<li>UART5 on SC20260</li>
+</ul>
 <div class="TIP"><h5>Tip</h5><p>Information on using the Visual Studio debugger can be found in Microsoft&#39;s documentation <a href="https://docs.microsoft.com/en-us/visualstudio/debugger/debugger-feature-tour?view=vs-2019">here</a>.</p>
 </div>
 </article>

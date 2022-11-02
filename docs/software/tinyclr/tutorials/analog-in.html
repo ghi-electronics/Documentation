@@ -95,11 +95,15 @@ while (true) {
 <p>Changing sampling time can be configured as follows:</p>
 <pre><code class="lang-cs">adcChannel.SamplingTime = TimeSpan.FromTicks(10); // Set to 1us (a tick is 100ns)
 </code></pre><p>SITCore allows these sampling times. If the SamplingTime is between two values above, the higher values will be used.</p>
+<div class="NOTE"><h5>Note</h5><p>SITCore ADC resolution by device</p>
+<p>SC20xxx = 16 bit</p>
+<p>SC13xxx = 12 bit</p>
+</div>
 <table>
 <thead>
 <tr>
 <th>Ticks</th>
-<th>Time</th>
+<th>SC20xxx (Full/Half Speed)</th>
 </tr>
 </thead>
 <tbody>
@@ -130,6 +134,82 @@ while (true) {
 <tr>
 <td>126</td>
 <td>12664ns</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Ticks</th>
+<th>SC13xxx (Full Speed)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>81ns</td>
+</tr>
+<tr>
+<td>1</td>
+<td>156ns</td>
+</tr>
+<tr>
+<td>3</td>
+<td>306ns</td>
+</tr>
+<tr>
+<td>5</td>
+<td>593ns</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1156ns</td>
+</tr>
+<tr>
+<td>30</td>
+<td>3094ns</td>
+</tr>
+<tr>
+<td>80</td>
+<td>8006ns</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Ticks</th>
+<th>SC13xxx (Half Speed)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>162ns</td>
+</tr>
+<tr>
+<td>3</td>
+<td>312ns</td>
+</tr>
+<tr>
+<td>6</td>
+<td>612ns</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1187ns</td>
+</tr>
+<tr>
+<td>23</td>
+<td>2312ns</td>
+</tr>
+<tr>
+<td>60</td>
+<td>6187ns</td>
+</tr>
+<tr>
+<td>160</td>
+<td>16012ns</td>
 </tr>
 </tbody>
 </table>

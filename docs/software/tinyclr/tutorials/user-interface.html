@@ -558,6 +558,24 @@ dataGrid.TapCellEvent += (a, b) =&gt;
 {
     Debug.WriteLine(b.ToString());
 };
+</code></pre><h3 id="chart">Chart</h3>
+<pre><code class="lang-cs">var chartData = new ArrayList();
+
+var random = new Random();
+for (var i = 0; i &lt; 10; i++) {
+    chartData.Add(new DataItem() { Value = random.Next(100), Name = $&quot;N{i}&quot; });
+}
+
+var chart = new Chart(400, 200) {
+
+    Font = &#39;your font&#39;, // need font
+    DivisionAxisX = 1,
+    DivisionAxisY = 10,
+    RadiusPoint = 10,
+    ChartTitle = &quot;TinyCLR Chart&quot;,
+    Items = chartData,
+    Mode = ChartMode.RectangleMode
+};
 </code></pre><h3 id="the-dispatcher">The Dispatcher</h3>
 <p>The User Interface libraries rely on a dispatcher to handle system events and update invalidated elements. All elements are changed and updated from within the dispatcher. In this example, we will show the time on the screen. The time will be in a text box that is updated every second using a <code>Timer</code>. Since timers run in their own thread, a dispatcher invoke is needed.</p>
 <pre><code class="lang-cs">static void Counter(object o) {
