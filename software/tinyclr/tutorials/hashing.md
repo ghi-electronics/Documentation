@@ -34,11 +34,10 @@ var data = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 };
 var crcVal1 = crc16.ComputeHash(data, 0, data.Length);
 
 // Uses chunks of the array to build the hash
-var crcSeed1 = crc16.ComputeHash(data, 0, 3);
-var crcSeed2 = crc16.ComputeHash(data, 3, 1);         
-var crcVal2 = crc16.ComputeHash(data, 4, 4); 
+var crc1 = crc16.ComputeHash(data, 0, 3);
 
-// `crcVal1` and `crcVal2` will match.
+var crc1_2 = crc16.ComputeHash(data, 3, 1, crc1);         
+
 ```
 ---
 
