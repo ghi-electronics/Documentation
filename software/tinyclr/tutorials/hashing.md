@@ -8,9 +8,6 @@ TinyCLR OS supports MD5 hash function.
 
  The following commands will calculate the MD5 hash value of a byte array:
 
-> [!Tip]
-> Needed NuGets: GHIElectronics.TinyCLR.Core and GHIElectronics.TinyCLR.Cryptography
-
 ```cs
 var md5 = GHIElectronics.TinyCLR.Cryptography.MD5.Create();
 var hashValue = md5.ComputeHash(data); //data is a byte array.
