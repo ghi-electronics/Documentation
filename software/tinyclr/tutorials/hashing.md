@@ -1,5 +1,8 @@
 # Hashing
 ---
+> [!Tip]
+> Needed NuGets: GHIElectronics.TinyCLR.Core and GHIElectronics.TinyCLR.Cryptography
+
 ## MD5
 TinyCLR OS supports MD5 hash function.
 
@@ -21,18 +24,16 @@ TinyCLR OS supports CRC16.
 ComputeHash(byte[] data, int offset, int count);
 ```
 
-Large amounts of data can be calculated in chunks and the hash is concatenated automatically. Calling `Reset` resets the seed value.
+Large amounts of data can be calculated in chunks and the hash is concatenated automatically. 
 
 ```cs
 var crc16 = new Crc16();
 var data = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 };
             
 // Uses entire array to build the hash
-crc16.Reset(); // reset seed = 0;
 var crcVal1 = crc16.ComputeHash(data, 0, data.Length);
 
 // Uses chunks of the array to build the hash
-crc16.Reset(); // reset seed = 0;
 var crcSeed1 = crc16.ComputeHash(data, 0, 3);
 var crcSeed2 = crc16.ComputeHash(data, 3, 1);         
 var crcVal2 = crc16.ComputeHash(data, 4, 4); 
