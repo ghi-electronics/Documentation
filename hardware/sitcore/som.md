@@ -88,7 +88,7 @@ The SITCore SoMs provide a low cost way to add .NET computing power to any embed
 | **Running**                | 205mA           | 110mA           |
 | **Idle**                   | 170mA           | 97mA            |
 | **Sleep**                  | 6.5mA           | 6.5mA           |
-| **Shutdown**               | 40uA            | 40uA            |
+| **Shutdown**               | 1.4mA           | 1.4mA           |
 
 ### SCM20100E
 
