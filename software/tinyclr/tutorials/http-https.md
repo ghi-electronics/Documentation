@@ -86,7 +86,7 @@ while (true) {
     output.Write(buffer, 0, buffer.Length);
 
     //You must close the output stream.
-    response.Close();
+    output.Close();
 }
 
 listener.Stop();
