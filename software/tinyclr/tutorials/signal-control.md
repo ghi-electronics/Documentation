@@ -69,9 +69,9 @@ The Capture feature returns an array of timestamps of individual durations. The 
 > Digital Signal is limited to the timer max value, which comes to be about 17.89 seconds. The `waitForEdge` helps by only starting the timer when there is an active pulse.
 
 ```cs
-var digitalSignalPin = GpioController.GetDefault().OpenPin(SC20260.Timer.Capture.Controller5.PB3);
-
+var digitalSignalPin = GpioController.GetDefault().OpenPin(SC20260.Timer.DigitalSignal.Controller2.PB3);
 var digitalSignal = new DigitalSignal(digitalSignalPin);
+
 bool waitForEdge = false;// Start capturing as soon as Capture is called
 
 // Subscribe event when done capturing
@@ -103,8 +103,9 @@ private static void Digital_OnCaptureFinished(DigitalSignal sender, uint[] buffe
 ReadPulse can be used to measure frequency and other analyses that require measuring time duration for specific pulse count.
 
 ```cs
-var digitalSignalPin = GpioController.GetDefault().OpenPin(SC20260.Timer.Capture.Controller5.PB3);
+var digitalSignalPin = GpioController.GetDefault().OpenPin(SC20260.Timer.DigitalSignal.Controller2.PB3);
 var digitalSignal = new DigitalSignal(digitalSignalPin);
+
 bool waitForEdge = true;// wait for first pulse before starting the measurement
 
 // Subscribe event when done reading
@@ -138,8 +139,9 @@ void Digital_OnReadPulseFinished(DigitalSignal sender, TimeSpan duration, uint c
 An event is fired when any `DigitalSignal` operation is completed. In some cases, it may be desired to terminate the operation early, using `Abort`. When aborted, an event is still triggered, which will contain whatever data/pulses was collected from the trigger to the time `Abort` was called.
 
 ```cs
-var digitalSignalPin = GpioController.GetDefault().OpenPin(SC20260.Timer.Capture.Controller5.PB3);
+var digitalSignalPin = GpioController.GetDefault().OpenPin(SC20260.Timer.DigitalSignal.Controller2.PB3);
 var digitalSignal = new DigitalSignal(digitalSignalPin);
+
 var waitForEdge = false;
 
 digitalSignal.OnReadPulseFinished += Digital_OnReadPulseFinished
