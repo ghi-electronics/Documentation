@@ -162,7 +162,7 @@ code sample
 code sample
 ```
 
->[!Note] On SC13 devices only: The I2C pins are different on BrainPad Pulse vs FEZ boards. PB15 is used to determine how I2C should work. Pay attention to the state of PB15 on power up, Pulse has it pulled up through 10k resistor.
+> [!NOTE] On SC13 devices only: The I2C pins are different on BrainPad Pulse vs FEZ boards. PB15 is used to determine how I2C should work. Pay attention to the state of PB15 on power up, Pulse has it pulled up through 10k resistor.
 
 ---
 
@@ -204,13 +204,14 @@ code sample
 **pin:** pin number  <br>
 **degree:**  0 to 180
 
->[!Tip] most servo motors need 5V to work.
+> [!TIP] most servo motors need 5V to work.
+
 ---
 
 ## Distance Sensor
 - **distance(pulse, echo)** - uses ultrasonic sonic sensor to read distance.
 
->[!Tip] most sensors need 5V to work.
+> [!TIP] most sensors need 5V to work.
 
 ---
 
@@ -237,7 +238,8 @@ code sample
 **Return:** 1 if button was pressed and continues to return 1 until the button is released
 
 
->{!Tip} Will always return zero if not enabled
+> [!TIP] Will always return zero if not enabled
+
 ---
 
 
@@ -302,7 +304,7 @@ These functions are added to suppiort  the builty in desplays fopudjn on the nra
 **scaleWidth:** xxx <br>
 **scaleHeight:** xxx <br>
 
->[!Tip]scale is multiplier for the pixel in width and height to make the font larger
+> [!TIP]scale is multiplier for the pixel in width and height to make the font larger
 
 
 - **LcdStream()** 
