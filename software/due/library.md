@@ -2,7 +2,7 @@
 
 ---
 
-These library functions are available on all DUE-supported hardware, for user defined funtions, see [langage](language.md) page
+These library functions are available on all DUE-supported hardware, for user defined funtions, see [language](language.md) page
 
 ---
 ## Digital
@@ -10,7 +10,7 @@ These library functions are available on all DUE-supported hardware, for user de
 These functions provide access to digital pins.
 
 ### Digital Write
-- **dwrite(pin, state)**  - Sets a digital output <br>
+- **DWrite(pin, state)**  - Sets a digital output <br>
 **pin:** pin number <br> **state:** 1 = high or 0 = low
 
 ```basic
@@ -24,7 +24,7 @@ next
 
 ### Digital Read
 
-- **dread(pin, pull)** - Read a digital pin output <br>
+- **DRead(pin, pull)** - Read a digital pin output <br>
 **pin:** 0-9, <br> **pull:** Sets the internal pull resistors to -> 0=none, 1=up, 2=down <br>
 **Returns:** 1 = high or  0 = low 
 
@@ -41,13 +41,13 @@ end
 
 ### Analog Write
 
-- **awrite(pin, dutyCyle)**  - Sets an analog output <br>
+- **AWrite(pin, dutyCyle)**  - Sets an analog output <br>
 **pin:** pin number
 dutyCylcle 0 to 1000
  fized to 50hz
 
 ```basic
-awrite(1)
+AWrite(1,500)
 ```
 
 ### Analog Read
@@ -56,7 +56,7 @@ awrite(1)
 **pin:** pin number
 
 ```basic
-aread(1)
+ARead(1)
 ```
 
 ---
@@ -79,7 +79,7 @@ for x = 0 to 8
     NeoSet(x,x*10,0,0)
 next
 NeoShow(8)
-wait(1000)
+Wait(1000)
 NeoSet(0,200,0,200)
 NeoShow(8)
 ```
@@ -122,7 +122,7 @@ code sample
 ## SPI
 
 
-- **spibyte(byte)** - sends a byte <br>
+- **SpiByte(byte)** - sends a byte <br>
 **byte:** - value 0 to 255 <br>
 **Return:**  Read byte value
 
@@ -130,10 +130,10 @@ code sample
 code sample
 ```
 
-- **spisteam(writeCount, readCount, cs)** - Streams data directly to the SPI device <br>
+- **SpiSteam(writeCount, readCount, cs)** - Streams data directly to the SPI device <br>
 **writeCount:** xxxxx <br>
 **readCount:** xxxxx <br>
-**CS:** set to -1 if not needed
+**cs:** set to -1 if not needed
 
 ```basic
 code sample
@@ -153,7 +153,7 @@ code sample
 code sample
 ```
 
-- **i2cstream(address, writeCount, readCount)** -  <br>
+- **i2cStream(address, writeCount, readCount)** -  <br>
 **address:** address of the I2C device <br>
 **writeCount:** xxxxx <br>
 **readCount:** xxxxx <br>
@@ -168,16 +168,16 @@ code sample
 
 ## UART
 
-- **uartInit(baudRate)** - Sets the baudrate UART   <br>
+- **UartInit(baudRate)** - Sets the baudrate UART   <br>
 **baudRate:** Any commonly used standard baudrates 
 
-- **uartRead()** - Read  <br>
+- **UartRead()** - Read  <br>
 **Return:** Returns a byte from UART
 
-- **uartWrite(data)** - Write  <br>
+- **UartWrite(data)** - Write  <br>
 **data:** Data byte to send on UART
 
-- **uartCount()** - Count  <br>
+- **UartCount()** - Count  <br>
 **Return:** How many bytes have been buffered and ready to be read
 
 
@@ -204,6 +204,7 @@ code sample
 **pin:** pin number  <br>
 **degree:**  0 to 180
 
+>[!Tip] most servo motors need 5V to work.
 ---
 
 ## Distance Sensor
@@ -242,10 +243,10 @@ code sample
 ## Device Specific
 These functions are added to suppiort  the builty in desplays fopudjn on the nrainpad pul;se, same for teh built in buzer.
 
-## Sound
+## Sounds
 
-- **Sounds(frequency, duration, volume)** <br>
-**frequency:** sound frequency  <br>
+- **Sound(frequency, duration, volume)** <br>
+**frequency:** sound frequency in Hz <br>
 **duration:** in milliseconds. 0 is always on <br>
 **volume:** 0 to 100
 
