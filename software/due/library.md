@@ -238,6 +238,7 @@ code sample
 
 
 >{!Tip} Will always return zero if not enabled
+---
 
 
 ## Device Specific
@@ -250,22 +251,61 @@ These functions are added to suppiort  the builty in desplays fopudjn on the nra
 **duration:** in milliseconds. 0 is always on <br>
 **volume:** 0 to 100
 
+---
+
 ## LCD
 
-- **LcdClear(color)** 
+- **LcdClear(color)**  <br>
+**color:** xxx
 
-- **LcdShow()** 
+- **LcdShow()** sends the display buffer to the LCD.
 
-- **LcdLine(color, x1,y1,x2,y2)** 
-- **LcdPixel(color, x, y)** 
-- **LcdCircle(color, x,y,diameter)** 
-- **LcdRect(color, x1, y1, x2, y2)** 
-- **LcdText(text, color, x, y)** 
-- **LcdTextS(text, color, x, y, scaleWidth, scaleHeight)** 
-scale is multiopelr for the pixels in width and height to make the font larger
+- **LcdLine(color, x1,y1,x2,y2)** <br>
+**color:** xxx <br>
+**x1:** xxx <br>
+**y1:** xxx <br>
+**x1:** xxx <br>
+**y1:** xxx 
+
+- **LcdPixel(color, x, y)** <br>
+**color:** xxx <br>
+**x:** xxx <br>
+**y:** xxx 
 
 
-- **DispStream()** 
+- **LcdCircle(color, x,y,diameter)** <br>
+**color:** xxx <br>
+**x:** xxx <br>
+**y:** xxx <br>
+**diameter:** xxx 
+
+- **LcdRect(color, x1, y1, x2, y2)** <br>
+**color:** xxx <br>
+**x1:** xxx <br>
+**y1:** xxx <br>
+**x1:** xxx <br>
+**y1:** xxx 
+
+
+- **LcdText(text, color, x, y)** <br>
+**text:** xxx <br>
+**color:** xxx <br>
+**x:** xxx <br>
+**y:** xxx 
+
+
+- **LcdTextS(text, color, x, y, scaleWidth, scaleHeight)** <br>
+**text:** xxx <br>
+**color:** xxx <br>
+**x:** xxx <br>
+**y:** xxx <br>
+**scaleWidth:** xxx <br>
+**scaleHeight:** xxx <br>
+
+>[!Tip]scale is multiplier for the pixel in width and height to make the font larger
+
+
+- **LcdStream()** 
 
 
 
