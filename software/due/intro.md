@@ -1,21 +1,18 @@
 # DUE Scripting Language
 ---
 
-it can be coded and laode
+![Downloads](images/duelogo.png)
+
+It can be accessed from any modern OS and any language/system that have access to serial ports.
 
 
-it can be accessed from any modern os and any laguage/system thAT HASVE ACCESS TO SERIAL PIORTS
-
-
-See the dopwnloads page for currently suppiorted languages
+See the [downloads](downloads.md) page for currently supported languages.
 
 ## Why DUE?
 DUE stands for Dynamic, Universal and Extensible. A user-friendly scripting language that allows for internal real-time processing. 
 
 ### Dynamic
 Arguably, DUE script is the most user-friendly programming language out there!
-
-
 
 
 ## Comments
@@ -36,7 +33,7 @@ Now this script is ran:
 
 ```
 x=5
-func Foo(s)
+@Foo(s)
 	print s
 end
 ```
