@@ -8,7 +8,7 @@ These library functions are available on all DUE-supported hardware, for user de
 
 ## System Functions
                        
-- **Echo(enable)**  - 0 = Enables echo , 1 = Disables echo<br>
+- **Echo(enable)**  <br>
 **enable:** 0 = Enable echo , 1 = Disable echo
 
 - **Version**  - Returns the current firmware version on the device <br>
