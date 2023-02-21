@@ -11,7 +11,7 @@ These library functions are available on all DUE-supported hardware, for user de
 - **Echo(enable)**  <br>
 **enable:** 0 = Enable echo , 1 = Disable echo
 
-- **Version**  - Returns the current firmware version on the device <br>
+- **Version**  - Returns the current firmware version of DUE <br>
 
 - **Print(text)**  - Prints the value of the argument to the console on the same line <br>
 **text:** String or variable
