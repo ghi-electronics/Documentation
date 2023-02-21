@@ -7,17 +7,24 @@ These library functions are available on all DUE-supported hardware, for user de
 ---
 
 ## System Functions
+                       
+- **Echo(enable)**  - 0 = Enables echo , 1 = Disables echo<br>
+**enable:** 0 = Enable echo , 1 = Disable echo
 
-- **Print()**  - Prints the value of the argument to the console on the same line <br>
+- **Version**  - Returns the current firmware version on the device <br>
 
-- **PrintLn()**  - Prints the value of the argument to the console then moves to the next line <br>
+- **Print(text)**  - Prints the value of the argument to the console on the same line <br>
+**text:** String or variable
 
+- **PrintLn(text)**  - Prints the value of the argument to the console then moves to the next line <br>
+**text:** String or variable
 
-- **GetTicks()** - read system current ticks in microseconds  
+- **GetTicks()** - read system current ticks in microseconds  <br>
 
-- **Wait()** - holds program from running for milliseconds 
+- **Wait(duration)** - holds program from running <br>
+**duration:** duration = milliseconds
 
-- **Reset(loader)** - Resets the board
+- **Reset(loader)** - Resets the board <br>
 **loader:** 0 = system reset,  1 = reset and stay in loader mode
 
 ---
@@ -27,7 +34,7 @@ These library functions are available on all DUE-supported hardware, for user de
 
 These functions provide access to digital pins.
 
-### Digital Write
+##### Digital Write
 - **DWrite(pin, state)**  - Sets a pins digital output <br>
 **pin:** pin number <br> **state:** 1 = high or 0 = low
 
@@ -40,7 +47,7 @@ for x = 1 to 10
 next
 ```
 
-### Digital Read
+##### Digital Read
 
 - **DRead(pin, pull)** - Read a digital pin output <br>
 **pin:** 0-9 <br> 
@@ -60,7 +67,7 @@ end
 
 These functions provide access to analog pins. 
 
-### Analog Write
+##### Analog Write
 
 - **AWrite(pin, dutyCycle)**  - Writes to pin using PWM <br>
 **pin:** pin number<br>
@@ -76,7 +83,7 @@ goto loop
 
 ```
 
-### Analog Read
+##### Analog Read
 
 - **ARead(pin)**  - Read an analog output <br>
 **pin:** pin number <br>
@@ -286,7 +293,7 @@ These functions are added to support the built in display & buzzer found on the 
 **volume:** 0 to 100
 
 ```basic
-code sample
+Sound(256,1000,50) # Plays middle C note for 1 second at 50% volume
 ```
 
 ---
@@ -304,7 +311,7 @@ LcdClear(0)
 LcdShow()
 ```
 
-### Draw Line
+##### Draw Line
 
 - **LcdLine(color, x1,y1,x2,y2)** <br>
 **color:** 0 = black, 1 = white <br>
@@ -319,7 +326,7 @@ LcdLine(1,0,0,128,64)
 LcdShow()
 ```
 
-### Set Pixel
+##### Set Pixel
 
 - **LcdPixel(color, x, y)** <br>
 **color:** 0 = black, 1 = white <br>
@@ -332,7 +339,7 @@ LcdPixel(1,64,32)
 LcdShow()
 ```
 
-### Draw Circle
+##### Draw Circle
 
 - **LcdCircle(color, x,y,radius)** <br>
 **color:** 0 = black, 1 = white <br>
@@ -346,7 +353,7 @@ LcdCircle(1,64,32,31)
 LcdShow()
 ```
 
-### Draw Rectangle
+##### Draw Rectangle
 
 - **LcdRect(color, x1, y1, x2, y2)** <br>
 **color:** 0 = black, 1 = white <br>
@@ -361,10 +368,10 @@ LcdRect(1,10,10,118,54)
 LcdShow()
 ```
 
-### Draw Text
+##### Draw Text
 
-- **LcdText("text", color, x, y)** <br>
-**text:** String message <br>
+- **LcdText(text, color, x, y)** <br>
+**text:** Takes either a variable or "string"<br>
 **color:** 0 = black, 1 = white <br>
 **x:** x position <br>
 **y:** y position
@@ -374,7 +381,7 @@ LcdClear(0)
 LcdText("Hello World",1,10,10)
 LcdShow()
 ```
-### Draw Scaled Text
+##### Draw Scaled Text
 
 - **LcdTextS("text", color, x, y, scaleWidth, scaleHeight)** <br>
 **text:** String message <br>
@@ -392,7 +399,9 @@ LcdShow()
 
 > [!TIP]Scale is multiplier for the pixel in width and height to make the font larger
 
+##### LCD Stream
 
+Stream is used to send chunks of data to the device. 
 
 - **LcdStream()** 
 
