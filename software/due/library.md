@@ -1,8 +1,8 @@
-# DUE - Library
+# Due - Library
 
 ---
 
-These library functions are available on all DUE-supported hardware, for user defined functions, see [language](language.md) page
+These library functions are available on all Due-supported hardware, for user defined functions, see [language](language.md) page
 
 ---
 
@@ -11,7 +11,7 @@ These library functions are available on all DUE-supported hardware, for user de
 - **Echo(enable)**  <br>
 **enable:** 0 = Enable echo , 1 = Disable echo
 
-- **Version**  - Returns the current firmware version of DUE <br>
+- **Version**  - Returns the current firmware version of Due <br>
 
 - **Print(text)**  - Prints the value of the argument to the console on the same line <br>
 **text:** String or variable
@@ -73,7 +73,8 @@ These functions provide access to analog pins.
 **pin:** pin number<br>
 **dutyCycle:** 0 to 1000
 
-> [!NOTE] Frequency is fixed to 50hz.
+> [!NOTE] 
+> Frequency is fixed to 50hz.
 
 ```basic
 @loop
@@ -135,7 +136,8 @@ NeoShow(8)
 - **NeoStream(count)** - Streams data directly to LEDs.Needs NeoShow() to see affect<br>
  **count:** The count of LEDs to "stream"
 
-> [!TIP] Data must be in GRB order and must be 3 x count bytes
+> [!TIP] 
+> Data must be in GRB order and must be 3 x count bytes
  
 ---
 ## Frequency
@@ -146,7 +148,8 @@ Frequency is fixed to pin 0
 **duration:** 0 to forever <br>
 **dutyCycle:** 0 to 1000
 
->[!NOTE] Freq() is a non-blocking function, calling Freq() a second time before the duration of the first call is over will end the function despite the duration of first calls argument.
+> [!NOTE] 
+> Freq() is a non-blocking function, calling Freq() a second time before the duration of the first call is over will end the function despite the duration of first calls argument.
 
 ```basic
 @Loop
@@ -226,7 +229,8 @@ code sample
 code sample
 ```
 
-> [!NOTE] On SC13 devices only: The I2C pins are different on BrainPad Pulse vs FEZ boards. PB15 is used to determine how I2C should work. Pay attention to the state of PB15 on power up, Pulse has it pulled up through 10k resistor.
+> [!NOTE] 
+> On SC13 devices only: The I2C pins are different on BrainPad Pulse vs FEZ boards. PB15 is used to determine how I2C should work. Pay attention to the state of PB15 on power up, Pulse has it pulled up through 10k resistor.
 
 ---
 
@@ -274,7 +278,8 @@ goto Loop
 **pin:** pin number  <br>
 **degree:**  0 to 180
 
-> [!TIP] many servo motors need 5V to work.
+> [!TIP] 
+> Many servo motors need 5V to work.
 
 ```basic
 @Loop
@@ -293,7 +298,8 @@ goto Loop
 **echo:**  The pin number that is connected to echo signal<br>
 **Returns:**  Distance in centimeters
 
-> [!TIP] most sensors need 5V to work.
+> [!TIP]
+> most sensors need 5V to work.
 
 ```basic
 @Loop
@@ -318,9 +324,11 @@ goto Loop
 **pin:** pin number, 'a', or 'b' <br>
 **Returns:** 1 if button was pressed and continues to return 1 until the button is released
 
->[!NOTE] **'a'** is ASCII a or 97, **'b'** is ASCII b or 98
+> [!NOTE] 
+> **'a'** is ASCII a or 97, **'b'** is ASCII b or 98
 
-> [!TIP] Will always return zero if not enabled
+> [!TIP] 
+> Will always return zero if not enabled
 
 ```basic
 BtnEnable('a',1)
@@ -345,7 +353,8 @@ These functions are added to support the built in display & buzzer found on the 
 **duration:** in milliseconds. 0 is always on <br>
 **volume:** 0 to 100
 
->[!NOTE] Sound() uses Freq() which is a non-blocking function. Calling Sound() could end the duration of the previous Sound() despite the set duration inside the argument. See Freq() section for more details. 
+>[!NOTE] 
+> Sound() uses Freq() which is a non-blocking function. Calling Sound() could end the duration of the previous Sound() despite the set duration inside the argument. See Freq() section for more details. 
 
 ```basic
 Sound(256,1000,50) 
@@ -452,7 +461,8 @@ LcdText("Hello",1,0,0,2,2)
 LcdShow()
 ```
 
-> [!TIP]Scale is multiplier for the pixel in width and height to make the font larger
+> [!TIP]
+> Scale is multiplier for the pixel in width and height to make the font larger
 
 ##### LCD Stream
 

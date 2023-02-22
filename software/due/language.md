@@ -1,4 +1,4 @@
-# DUE - Language
+# Due - Language
 
 ## Immediate & Record Modes
 
@@ -13,7 +13,7 @@ A user will know they are in this mode when their cursor prompt is the
 ```
 
 > [!NOTE]
-Immediate Mode is the default mode when device is first connected.
+> Immediate Mode is the default mode when device is first connected.
 
 ##### Record Mode
 To enter into *Record* mode, the user enters the **$** character.
@@ -60,7 +60,7 @@ print (x) # This is also a comment
 ---
 
 ## Variables
-DUE can hold up to 26 variables one for letters a-z. The only data type used in DUE is integers. All variables created are global in nature. 
+Due can hold up to 26 variables one for letters a-z. The only data type used in Due is integers. All variables created are global in nature. 
 
 ---
 
@@ -111,62 +111,49 @@ not one
 
 ## Functions
 
-### Built-In Functions
+Functions in due are implements in a simple form. They do nto take arguemtns and do nto retun values. However, the built in library functions do take arguments nd return values, learn more about the [library](library.md) functions. 
 
-A list of the built-in functions can be found in the [library](library.md) section. 
+User functions resides in nonvolatile memory using recording mode. They can then be "run" or called from immediate mode.
 
-### User Functions
+> [!NOTE]
+> While these are called fnctions, they are actually just labels.
 
-User defined functions or labels are pseudo functions, that act like a "function". Unlike normal programming language functions these do not take arguments or return values. Global variables inside DUE can be used instead of sending arguments or returning values. 
-
-The user function resides in the environment until called, these "functions" are stored in flash until the chip is cleared.
-
-##### Defining a User "Function"
-
-A user "function" is created by simply using the **@** symbol in front of the name of the function you'd like to create. These names are limited to 6 characters. Once you've created a "function" any preceding commands entered go inside that function. The "function" can be closed with the **return** command. 
+A user function is created by using the **@** symbol in front of the name of the function you'd like to create. These names are limited to 6 characters. Once you've created a "function" any preceding commands entered go inside that function. Function are typically endedd with a return. 
 
 ```basic
 $@Mine
 $add code here
-$return run
+$return
 ```
-"Functions" that are not closed with the **return** command can be called using the **goto** command. This is handy when a closed loop is needed. 
+
+The function can then be called by its name with **()**. Note how this can be done externally from any system with access to Due interface, like Python.
 
 ```basic
-$@Mine
+>Mine()
+```
+A goto can also be used to call a function but in this case the function is treated as a label and a **return** shuld not be expected. 
+
+```basic
+$@Loop
 $add code here
-$goto mine 
+$goto loop 
 ```
-
 
 > [!TIP]
-> DUE variables are global and any changes inside functions will affect variable values outside those functions.
+> Due variables are global and any changes inside functions will affect variable values outside those functions.
 
-##### Calling User "Function"
+**Calling User "Function"**
 
-The DUE script engine does all the necessary magic internally. The user only needs to call the "function" by it's name() or command *goto*. "Functions" can be called in either *Immediate* or *Record* modes.
-
-```basic
-Mine()
-```
-
-```basic
-goto Mine
-```
-
-A list of the built-in functions can be found in the [library](library.md) section. 
-
-> [!TIP]
-Again user defined "functions" do not take arguments and do not return values. Think of this as a "gosub".
 
 
 
 ---
-## Extending DUE with User Functions
+## Extending Due
 
 User "functions" stored in flash, can be called externally. This allows a function to be called from ANY outside source or program. 
 
 
+This will enter recording mode and then records a function
 ```basic
 $
 @Count
@@ -175,7 +162,8 @@ println(x)
 next
 return
 ```
-The above "function" can be called from inside *Immediate* mode as an example
+
+The above "function" can now be called from inside *Immediate* mode as an example. Make sure to switch to immediate mode!
 
 ```basic
 >a=5
