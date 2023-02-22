@@ -77,8 +77,14 @@ These functions provide access to analog pins.
 
 ```basic
 @loop
-for i=0 to 1000 step 100:AWrite(0,i):Wait(100):next
-for i=1000 to 0 step -100:AWrite(0,i):Wait(100):next
+for i=0 to 1000 step 100
+    AWrite(0,i)
+    Wait(100)
+next
+for i=1000 to 0 step -100
+    AWrite(0,i) 
+    Wait(100)
+next
 goto loop
 
 ```
@@ -91,7 +97,11 @@ goto loop
 
 ```basic
 @loop
-for i=0 to 100:x=ARead(0):println(x):wait(100):next
+for i=0 to 100
+    x=ARead(0)
+    PrintLn(x)  
+    Wait(100)
+next
 goto loop
 ```
 
@@ -131,13 +141,24 @@ NeoShow(8)
 ## Frequency
 
 Frequency is fixed to pin 0
-- **Frequency(frequency, duration, dutyCycle)** - provides an accurate hardware generated PWM signal <br>
-**pin:** pin number <br>
+- **Freq(frequency, duration, dutyCycle)** - provides an accurate hardware generated PWM signal <br>
+**frequency:** frequency <br>
 **duration:** 0 to forever <br>
 **dutyCycle:** 0 to 1000
 
+>[!NOTE] Freq() is a non-blocking function, calling Freq() a second time before the duration of the first call is over will end the function despite the duration of first calls argument.
+
 ```basic
-code sample
+@Loop
+for x=1 to 1000
+    Freq(x,500,500)
+    Wait(200)
+next
+for x=1000 to 1 step -1
+    Freq(x,500,500)
+    Wait(200)
+next
+goto Loop
 ```
 
 ---
@@ -152,7 +173,12 @@ IR decoder is fixed to pin 2
 **Return:** Tracks the past 16 key presses and returns them. -1 if none.
 
 ```basic
-code sample
+IrEnable(1)
+@Loop
+x=IrRead()
+if x >=0: Println(x):end
+Wait(1000)
+goto Loop
 ```
 
 ---
@@ -193,8 +219,8 @@ code sample
 
 - **I2cStream(address, writeCount, readCount)** -  <br>
 **address:** address of the I2C device <br>
-**writeCount:** xxxxx <br>
-**readCount:** xxxxx <br>
+**writeCount:** <br>
+**readCount:** <br>
 
 ```basic
 code sample
@@ -231,32 +257,52 @@ code sample
 **pin:** pin number
 
 ```basic
-code sample
+@Loop
+a=TouchRead(0):b=TouchRead(1):c=TouchRead(2)
+if a>0:Println("pin 0"):end 
+if b>0:Println("pin 1"):end
+if c>0:Println("pin 2"):end 
+wait(100)
+goto Loop
 ```
 
 ---
 
 ## Servo Motor
 
-- **ServoSet(pin, degree)** - Initializes the pin for    <br>
+- **ServoSet(pin, degree)** - Sets servo motor connected to pin to a specific position<br>
 **pin:** pin number  <br>
 **degree:**  0 to 180
 
-> [!TIP] most servo motors need 5V to work.
+> [!TIP] many servo motors need 5V to work.
 
 ```basic
-code sample
+@Loop
+ServoSet(0,0)
+Wait(1000)
+ServoSet(0,180)
+Wait(1000)
+goto Loop
 ```
 
 ---
 
 ## Distance Sensor
-- **Distance(pulse, echo)** - uses ultrasonic sonic sensor to read distance.
+- **ReadDistance(trigger, echo)** - uses ultrasonic sonic sensor to read distance.<br>
+**trigger:** The pin number that is connected to trigger (pulse) signal<br>
+**echo:**  The pin number that is connected to echo signal<br>
+**Returns:**  Distance in centimeters
 
 > [!TIP] most sensors need 5V to work.
 
 ```basic
-code sample
+@Loop
+x = Distance(0,1) 
+if x>0 
+    PrintLn(x)
+end
+Wait(100)
+goto Loop
 ```
 
 ---
@@ -264,19 +310,26 @@ code sample
 
 ## Buttons
 
-- **BtnEnable(pin, enable)** <br>
-**pin:** pin number  <br>
+- **BtnEnable(pin, enable)** - sets up a button to be used <br>
+**pin:** pin number, 'a', or 'b' <br>
 **enable:** 1 = enable, 0 = disabled  <br>
 
-- **BtnDown(pin)** <br>
-**pin:** pin number  <br>
+- **BtnDown(pin)** Returns a value when button is pressed<br>
+**pin:** pin number, 'a', or 'b' <br>
 **Returns:** 1 if button was pressed and continues to return 1 until the button is released
 
+>[!NOTE] **'a'** is ASCII a or 97, **'b'** is ASCII b or 98
 
 > [!TIP] Will always return zero if not enabled
 
 ```basic
-code sample
+BtnEnable('a',1)
+@Loop
+x=BtnDown('a')
+if x=1
+    Println("Button A")
+end
+goto Loop
 ```
 
 ---
@@ -292,8 +345,10 @@ These functions are added to support the built in display & buzzer found on the 
 **duration:** in milliseconds. 0 is always on <br>
 **volume:** 0 to 100
 
+>[!NOTE] Sound() uses Freq() which is a non-blocking function. Calling Sound() could end the duration of the previous Sound() despite the set duration inside the argument. See Freq() section for more details. 
+
 ```basic
-Sound(256,1000,50) # Plays middle C note for 1 second at 50% volume
+Sound(256,1000,50) 
 ```
 
 ---

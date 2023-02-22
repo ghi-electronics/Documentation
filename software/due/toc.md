@@ -4,5 +4,7 @@
 
 # [Library](library.md)
 
+# [Samples](samples.md)
+
 # [Downloads](downloads.md)
 

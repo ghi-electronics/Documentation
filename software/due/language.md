@@ -2,6 +2,8 @@
 
 ## Immediate & Record Modes
 
+*Immediate* mode, commands are executed immediately. In *Record* mode, commands are stored in flash and executed with the **run** command. 
+
 ##### Immediate Mode
 A user will know they are in this mode when their cursor prompt is the  
 **_>_** character. All statements are executed as soon as entered.
@@ -63,7 +65,7 @@ DUE can hold up to 26 variables one for letters a-z. The only data type used in 
 ---
 
 ## Single Line Commands
-Code can be concatenated together in a single line with each command joined by a **:**
+Code can be concatenated together in a single line with each command joined by a **:** When coding in **Immediate** mode multi-line statements need to be coded as a single line command. When using **Record mode** multi-line statements can be used. 
 
 ```basic 
 x=10:print(x):x=15:print(x)
@@ -72,7 +74,6 @@ x=10:print(x):x=15:print(x)
 
 ## Looping & Conditional Statements
 
-When coding in **Immediate** mode multi-line statements need to be coded as a single line command. When using **Record mode** multi-line statements can be used. 
 
 |Statement              |Description                                                            |
 |:----------------------|:----------------------------------------------------------------------|
@@ -86,7 +87,7 @@ When coding in **Immediate** mode multi-line statements need to be coded as a si
 for i=1 to 1000 step 10: println(i):next
 ```
 
-### If statement in Record mode
+### If-Else statement used in Record mode
 
 ```basic 
 $
@@ -116,33 +117,67 @@ A list of the built-in functions can be found in the [library](library.md) secti
 
 ### User Functions
 
-User defined functions are functions that reside in the environment until called, they are just like any other functions however these functions are stored in flash until the chip is cleared.
+User defined functions or labels are pseudo functions, that act like a "function". Unlike normal programming language functions these do not take arguments or return values. Global variables inside DUE can be used instead of sending arguments or returning values. 
 
-##### Defining User Functions
+The user function resides in the environment until called, these "functions" are stored in flash until the chip is cleared.
 
-An user function is created by simply using the **@** symbol in front of the name of the function you'd like to create. Once you've created a function any preceding commands entered go inside that function. The function can be closed with the **return** command. Functions that are not closed with the **return** command can be called using the **goto** command. 
+##### Defining a User "Function"
+
+A user "function" is created by simply using the **@** symbol in front of the name of the function you'd like to create. These names are limited to 6 characters. Once you've created a "function" any preceding commands entered go inside that function. The "function" can be closed with the **return** command. 
 
 ```basic
->@Mine
->add code here
->return 
+$@Mine
+$add code here
+$return run
+```
+"Functions" that are not closed with the **return** command can be called using the **goto** command. This is handy when a closed loop is needed. 
+
+```basic
+$@Mine
+$add code here
+$goto mine 
 ```
 
+
 > [!TIP]
-> Keep in mind that variables in DUE are global and any changes inside functions will affect variable values outside those functions.
+> DUE variables are global and any changes inside functions will affect variable values outside those functions.
 
-##### Calling User Functions
+##### Calling User "Function"
 
-The DUE script engine does all the necessary magic internally. The user only needs to call the function by it's name() and hit enter.
+The DUE script engine does all the necessary magic internally. The user only needs to call the "function" by it's name() or command *goto*. "Functions" can be called in either *Immediate* or *Record* modes.
 
-```cs
->Mine()
+```basic
+Mine()
+```
+
+```basic
+goto Mine
 ```
 
 A list of the built-in functions can be found in the [library](library.md) section. 
 
 > [!TIP]
-User defined functions do not take arguments and do not return values. Think of this as a "gosub".
+Again user defined "functions" do not take arguments and do not return values. Think of this as a "gosub".
+
+
 
 ---
+## Extending DUE with User Functions
 
+User "functions" stored in flash, can be called externally. This allows a function to be called from ANY outside source or program. 
+
+
+```basic
+$
+@Count
+for x=0 to a
+println(x)
+next
+return
+```
+The above "function" can be called from inside *Immediate* mode as an example
+
+```basic
+>a=5
+>Count()
+```
