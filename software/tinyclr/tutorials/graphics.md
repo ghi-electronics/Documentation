@@ -12,7 +12,7 @@ Besides the basic methods above, there are some additional useful methods found 
 | `TileImage`             | Used to tile the image over a any area on the screen.|
 | `DrawTextInRect`        | Confines text to a specific rectangle area of the screen. Parameters can be set to justify or word wrap the text inside the rectangle's area.|
 | `SetClippingRectangle`  | Creates a rectangle area on the screen where only the area within that rectangle is drawn.|
-| `MakeTransparent`      | Used to select a color within an image that appears transparent.|
+| `MakeTransparent`      | Used to select a color within an image that appears transparent. Alpha needs to be set to 0 (0x00)|
 | `Scale9Image`           | Used to scale the size of an image. You can also stretch specific areas within the image itself, opacity can also be controlled.|
 | `MeasureString`        | Used to measure a string size in pixels, when using a specific font.|
 | `RotateImage`        | Used to rotate an image based on arguments passed.|
