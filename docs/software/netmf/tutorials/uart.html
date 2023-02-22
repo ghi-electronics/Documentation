@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>UART </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UART ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -84,18 +84,20 @@
 <h2 id="uart-technical-details">UART Technical Details</h2>
 <p>The &quot; baud rate&quot;  is number of bits are transmitted per second; standard baud rates are 9600, 119200, 115200 and others.</p>
 <p>Direct connection between TXD/RXD pins use their high/low voltages for bits (&quot;TTL level,&quot; 0V to 3.3V).</p>
-<p>NETMF supports serial ports (UART) in the same way as the full .NET framework. Serial ports on PC&#39;s and on NETMF are called &quot;COM ports.&quot;  Their names start with COM1 and go up (there is no COM0). Processors usually start with UART0 not UART1 (so, COM1 is UART0... etc.)</p>
+<p>NETMF supports serial ports (UART) in the same way as the full .NET framework. Serial ports on PC's and on NETMF are called &quot;COM ports.&quot;  Their names start with COM1 and go up (there is no COM0). Processors usually start with UART0 not UART1 (so, COM1 is UART0... etc.)</p>
 <h2 id="software-uart">Software UART</h2>
-<p>Through GHI&#39;s SignalGenerator, a system can simulate a UART data. This is beneficial as any GPIO pin can be used to send the UART data. A good example is a serial character display. These typically do not require speed and not updated frequently. If all UARTs are being used, any GPIO can be used to simulate a UART transmission.</p>
+<p>Through GHI's SignalGenerator, a system can simulate a UART data. This is beneficial as any GPIO pin can be used to send the UART data. A good example is a serial character display. These typically do not require speed and not updated frequently. If all UARTs are being used, any GPIO can be used to simulate a UART transmission.</p>
 <h2 id="rs232">RS232</h2>
 <p>Processor pins can be set at 0 for low or at the power level for high, 3.3V for example. This means connecting outputs on a micro to inputs on another is safe. These levels are called TTL. In our case here a TTL UART levels.</p>
 <p>To overcome distances, the very old standard RS232 defined the low state to be +12V. Sounds like it is backwards but this is how it is! This port is found on many systems and found on many PCs. It has been disappearing from PCs lately but this can be easily added using a USB to serial cable.</p>
-<p>We can&#39;t connect the RS232 levels to TTL levels directly. This is easily solved by adding a small circuitry that converts the RS232 levels to TTL, like the MAX232 chip.
-In other words, do not connect a PC&#39;s serial port to a micro directly. Use a level converter in between.</p>
+<p>We can't connect the RS232 levels to TTL levels directly. This is easily solved by adding a small circuitry that converts the RS232 levels to TTL, like the MAX232 chip.
+In other words, do not connect a PC's serial port to a micro directly. Use a level converter in between.</p>
 <h2 id="example-using-uart">Example using UART</h2>
 <p>The following program sends a counter value 10 times per second. The data is sent at 115200 baud so make sure that the receiving end is setup the same way. This program sends the data on COM1 of your NETMF device. This COM number has nothing to do with COM number on your PC. For example, you may have a USB serial port on your PC that maps to COM8 and so you need to open COM8 on your PC, not COM1. The NETMF program will still use COM1 because it uses UART0 (COM1).</p>
-<p>The data sent can be shown on a terminal program, like Tera Term. Note how we ended the string with &quot;\r\n&quot;. The &quot;\r&quot; is code to tell the terminal to &quot;return&quot; back to the beginning of the line and &quot;\n&quot; is to add &quot;new&quot; line. When data is received on UART, it is automatically queued a side so you wouldn&#39;t lose any data.</p>
-<div class="TIP"><h5>Tip</h5><p>Using serial ports require the Microsoft.SPOT.Hardware.SerialPort. If your program uses the enums Parity or StopBits, the Microsoft.SPOT.Hardware assembly is needed.</p>
+<p>The data sent can be shown on a terminal program, like Tera Term. Note how we ended the string with &quot;\r\n&quot;. The &quot;\r&quot; is code to tell the terminal to &quot;return&quot; back to the beginning of the line and &quot;\n&quot; is to add &quot;new&quot; line. When data is received on UART, it is automatically queued a side so you wouldn't lose any data.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Using serial ports require the Microsoft.SPOT.Hardware.SerialPort. If your program uses the enums Parity or StopBits, the Microsoft.SPOT.Hardware assembly is needed.</p>
 </div>
 <pre><code class="lang-cs">using System.IO.Ports;
 using System.Text;
@@ -124,7 +126,8 @@ public class Program
         }
     }
 }
-</code></pre><h2 id="receiving-data">Receiving Data</h2>
+</code></pre>
+<h2 id="receiving-data">Receiving Data</h2>
 <p>This example will wait until a byte is received on the port and then print it telling you what was sent from the other end.</p>
 <pre><code class="lang-cs">using System.Threading;
 using System.IO.Ports;
@@ -158,7 +161,8 @@ public class Program
         }
     }
 }
-</code></pre><h2 id="sending-and-receiving">Sending and Receiving</h2>
+</code></pre>
+<h2 id="sending-and-receiving">Sending and Receiving</h2>
 <p>This example is a loop-back. Connect a wire from TX to RX on your board and it will send data and make sure it is receiving it correctly.</p>
 <pre><code class="lang-cs">using System.IO.Ports;
 using System.Text;
@@ -211,11 +215,14 @@ public class Program
         }
     }
 }
-</code></pre><div class="TIP"><h5>Tip</h5><p>For .NET Gadgeteer examples, see the Device to PC communications document.</p>
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>For .NET Gadgeteer examples, see the Device to PC communications document.</p>
 </div>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -238,18 +245,18 @@ public class Program
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -257,13 +264,13 @@ public class Program
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

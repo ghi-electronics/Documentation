@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Sensor Drivers </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Sensor Drivers ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -80,42 +80,53 @@
 
 <hr>
 <h2 id="resistive-touch">Resistive Touch</h2>
-<p>This driver uses 2 analog and 2 digital pins to read a display&#39;s resistive touch panel. The results are not very accurate but it is a low-cost options. Please see the <a href="../tutorials/touch-screen.html">Touch Screen</a> tutorial for more info.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.Touch.ResisitiveTouch</p>
+<p>This driver uses 2 analog and 2 digital pins to read a display's resistive touch panel. The results are not very accurate but it is a low-cost options. Please see the <a href="../tutorials/touch-screen.html">Touch Screen</a> tutorial for more info.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.Touch.ResisitiveTouch</p>
 </div>
 <hr>
 <h2 id="ft5xx6-and-gsl1680">FT5xx6 and GSL1680</h2>
 <p><img src="images/GSL1680.png" alt="GSL1680"></p>
 <p>These are common display capacitive touch controller chips. PPlease see the <a href="../tutorials/touch-screen.html">Touch Screen</a> tutorial for more info.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Drivers.FocalTech.FT5xx6 or GHIElectronics.TinyCLR.Drivers.GSL1680</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Drivers.FocalTech.FT5xx6 or GHIElectronics.TinyCLR.Drivers.GSL1680</p>
 </div>
 <hr>
 <h2 id="lis2hh12">LIS2HH12</h2>
 <p><img src="images/LIS2HH12.png" alt="LIS2HH12"></p>
 <p>A 3-axis accelerometer. The driver set to 2g as default. Output value is in range -1024 to 1024.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.STMicroelectronics.LIS2HH12</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.STMicroelectronics.LIS2HH12</p>
 </div>
 <pre><code class="lang-cs">var lis2hh12 = new LIS2HH12Controller(I2cController.FromName(FEZBit.I2cBus.Accelerometer));
 
 while (true) {
+	
+	Debug.WriteLine(&quot;X = &quot; + lis2hh12.X);               
+	Debug.WriteLine(&quot;Y = &quot; + lis2hh12.Y);               
+	Debug.WriteLine(&quot;Z = &quot; + lis2hh12.Z);               
 
-    Debug.WriteLine(&quot;X = &quot; + lis2hh12.X);               
-    Debug.WriteLine(&quot;Y = &quot; + lis2hh12.Y);               
-    Debug.WriteLine(&quot;Z = &quot; + lis2hh12.Z);               
-
-    Thread.Sleep(500);
+	Thread.Sleep(500);
 }
-</code></pre><div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.STMicroelectronics.LIS2HH12</p>
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.STMicroelectronics.LIS2HH12</p>
 </div>
 <hr>
 <h2 id="msgeq7">MSGEQ7</h2>
 <p><img src="images/MSGEQ7.png" alt="MSGEQ7"></p>
 <p>Equalizer sensor filter.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.MixedSignalIntegrated.MSGEQ7</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.MixedSignalIntegrated.MSGEQ7</p>
 </div>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -138,18 +149,18 @@ while (true) {
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -157,13 +168,13 @@ while (true) {
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Ethernet </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Ethernet ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -80,11 +80,15 @@
 
 <hr>
 <p>Ethernet is supported through the internal MAC, by adding an external PHY (100BASE), and also by using an ENC28J60 over <a href="spi.html">SPI</a> bus (10BASE). Some available modules include the necessary PHY, so the user will only need to add an Ethernet connector with magnets.</p>
-<div class="IMPORTANT"><h5>Important</h5><p>You will need to ship each device with a valid and unique MAC address. More information about MAC addresses can be found <a href="networking-core.html">here</a>.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>You will need to ship each device with a valid and unique MAC address. More information about MAC addresses can be found <a href="networking-core.html">here</a>.</p>
 </div>
 <h2 id="built-in-ethernet">Built-in Ethernet</h2>
 <p>Here is a simple example:</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Pins</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Pins</p>
 </div>
 <pre><code class="lang-cs">static bool linkReady = false;
 
@@ -94,7 +98,7 @@ static void EthernetTest() {
     var resetPin = gpioController.OpenPin(SC20260.GpioPin.PG3);
 
     resetPin.SetDriveMode(GpioPinDriveMode.Output); 
-
+  
     resetPin.Write(GpioPinValue.Low);
     Thread.Sleep(100);
 
@@ -148,10 +152,13 @@ private static void NetworkController_NetworkAddressChanged
     linkReady = address[0] != 0;
     Debug.WriteLine(&quot;IP: &quot; + address[0] + &quot;.&quot; + address[1] + &quot;.&quot; + address[2] + &quot;.&quot; + address[3]);
 }
-</code></pre><hr>
+</code></pre>
+<hr>
 <h2 id="enc28j60">ENC28J60</h2>
 <p>This example uses the ENC28J60 click on our SC20260D Dev Board.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Pins</p>
 </div>
 <pre><code class="lang-cs">static void Enc28Test() {
     var networkController = NetworkController.FromName
@@ -177,7 +184,7 @@ private static void NetworkController_NetworkAddressChanged
 
     networkCommunicationInterfaceSettings.GpioApiName = SC20260.GpioPin.Id;
 
-
+    
     networkCommunicationInterfaceSettings.SpiSettings = settings;
     networkCommunicationInterfaceSettings.InterruptPin = GetDefault().OpenPin(SC20260.GpioPin.PG6);
 
@@ -225,16 +232,19 @@ private static void NetworkController_NetworkAddressChanged
 
     var ipProperties = sender.GetIPProperties();
     var address = ipProperties.Address.GetAddressBytes();
-
+           
     linkReady = address[0] != 0;
     Debug.WriteLine(&quot;IP: &quot; + address[0] + &quot;.&quot; + address[1] + &quot;.&quot; + address[2] + &quot;.&quot; + address[3]);
 }
-</code></pre><hr>
+</code></pre>
+<hr>
 <h2 id="w5500">W5500</h2>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Drivers.BasicNet, GHIElectronics.TinyCLR.Drivers.BasicNet.Sockets, GHIElectronics.TinyCLR.Drivers.WIZnet.W5500</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Drivers.BasicNet, GHIElectronics.TinyCLR.Drivers.BasicNet.Sockets, GHIElectronics.TinyCLR.Drivers.WIZnet.W5500</p>
 </div>
-<p>The Wiznet W5500 chipset has a built-in TCP/IP stack making it ideal for SC13048, which doesn&#39;t have built-in networking support, but it works with SC20xxx as well.</p>
-<p>The example below does &#39;http GET&#39; using ETH WIZ Click, on SC13048 Development board.</p>
+<p>The Wiznet W5500 chipset has a built-in TCP/IP stack making it ideal for SC13048, which doesn't have built-in networking support, but it works with SC20xxx as well.</p>
+<p>The example below does 'http GET' using ETH WIZ Click, on SC13048 Development board.</p>
 <pre><code class="lang-cs">var cs = GpioController.GetDefault().OpenPin(SC13048.GpioPin.PB2);
 var reset = GpioController.GetDefault().OpenPin(SC13048.GpioPin.PB15);
 var interrupt = GpioController.GetDefault().OpenPin(SC13048.GpioPin.PA0);
@@ -260,7 +270,7 @@ NetworkInterfaceSettings networkSettings = new NetworkInterfaceSettings()
     DhcpEnable = false,
     DynamicDnsEnable = false,                
 };
-
+            
 
 networkController.SetInterfaceSettings(networkSettings);
 networkController.Enable();
@@ -285,7 +295,8 @@ if (received.Length &gt; 0) {
     var recvdContent = new string(Encoding.UTF8.GetChars(received));
     Debug.WriteLine(&quot;Received : \r\n&quot; + recvdContent);
 }
-</code></pre><h2 id="event-handlers">Event Handlers</h2>
+</code></pre>
+<h2 id="event-handlers">Event Handlers</h2>
 <p>NetworkController provides two events:</p>
 <pre><code class="lang-cs">private static void NetworkController_NetworkLinkConnectedChanged
     (NetworkController sender, NetworkLinkConnectedChangedEventArgs e) {
@@ -302,12 +313,13 @@ private static void NetworkController_NetworkAddressChanged
     var interfaceProperties = sender.GetInterfaceProperties();
 
     for (int i = 0; i &lt; dnsCount; i++){
-        var dns = ipProperties.DnsAddresses[i].GetAddressBytes();
+	    var dns = ipProperties.DnsAddresses[i].GetAddressBytes();
     }
 }
-</code></pre></article>
+</code></pre>
+</article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -330,18 +342,18 @@ private static void NetworkController_NetworkAddressChanged
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -349,13 +361,13 @@ private static void NetworkController_NetworkAddressChanged
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

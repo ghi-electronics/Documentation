@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Getting Started </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../styles/docfx.css">
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../index.html">
                 <img id="logo" class="svg" src="../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -95,9 +95,11 @@
 <p>The device is now ready for the MicroPython firmware.</p>
 <h2 id="the-micropyhon-firmware">The MicroPyhon Firmware</h2>
 <p>Download the firmware from the <a href="downloads.html">Downloads</a> page.</p>
-<div class="TIP"><h5>Tip</h5><p>MicroPython is not available on all products.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>MicroPython is not available on all products.</p>
 </div>
-<p>Back to Tera Term, press <code>U</code> followed by enter. The device will respond with <code>Are you sure (Y/N)?</code> Now press &#39;Y&#39; followed by enter.&#39;</p>
+<p>Back to Tera Term, press <code>U</code> followed by enter. The device will respond with <code>Are you sure (Y/N)?</code> Now press 'Y' followed by enter.'</p>
 <p>The device will now will be sending <code>CCCCCCC.....</code> indicating that it is ready for the MicroPython file.</p>
 <p>From top menu, <code>File-&gt;Transfer-&gt;XMODEM-&gt;Send...</code>. This is an important, commonly missed step, you MUST select the <code>1K</code> checkbox!</p>
 <p>Select the downloaded MicroPython file (glb file type) from earlier step. Progress window will show the update status. When upload has completed, reset the board.</p>
@@ -111,16 +113,19 @@
 <p>First find out the correct COM port and then start a new Tera Term connection to that port, just like we did with the boot loader. Once connected, the device will respond with something like:</p>
 <pre><code>MicroPython v1.15-21-g4dc8024-dirty on 2021-04-30; GHI Electronics SITCore v0.1.0 with SC13048
 &gt;&gt;&gt;
-</code></pre><p>The device can now accept Python code! Try <code>print(x)</code> and the device will respond with an error about <code>x</code>. Now try <code>x=10</code> and then <code>print(x)</code>.</p>
+</code></pre>
+<p>The device can now accept Python code! Try <code>print(x)</code> and the device will respond with an error about <code>x</code>. Now try <code>x=10</code> and then <code>print(x)</code>.</p>
 <pre><code>&gt;&gt;&gt; x=10
 &gt;&gt;&gt; print(x)
 10
 &gt;&gt;&gt;
-</code></pre><p>This is example code to turn on activate an LED on pin PA8</p>
+</code></pre>
+<p>This is example code to turn on activate an LED on pin PA8</p>
 <pre><code>from machine import Pin
 led=Pin(&quot;PA8&quot;,Pin.OUT_PP)
 led.high()
-</code></pre><p>It is also possible to add a loop through REPL. Once a loop statement is entered (ending with <code>:</code>) the REPL will automatically indent the following line.</p>
+</code></pre>
+<p>It is also possible to add a loop through REPL. Once a loop statement is entered (ending with <code>:</code>) the REPL will automatically indent the following line.</p>
 <p>To end the indentation and execute the block, press backspace or del, then enter.</p>
 <pre><code>&gt;&gt;&gt; for i in range(10):
 ...     print(i)
@@ -136,26 +141,30 @@ led.high()
 8
 9
 &gt;&gt;&gt;
-</code></pre><div class="TIP"><h5>Tip</h5><p>For a quick help on a any module, use the help function, like use <code>help(machine)</code>.</p>
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>For a quick help on a any module, use the help function, like use <code>help(machine)</code>.</p>
 </div>
 <hr>
 <h2 id="mainpy">main.py</h2>
-<p>This special file gets executed in power up. Open the file, from the device&#39;s virtual driver, and modify its content to a blink LED. Change the pin number to the LED on the device being used.</p>
+<p>This special file gets executed in power up. Open the file, from the device's virtual driver, and modify its content to a blink LED. Change the pin number to the LED on the device being used.</p>
 <pre><code>from machine import Pin
 import time
 led=Pin(&quot;PA8&quot;,Pin.OUT_PP)
 while True
-    led.high();
-    time.sleep(0.5)
-    led.low();
-    time.sleep(0.5)
-</code></pre><p>Save <code>main.py</code> and wait for the activity LED/pin to go low, then reset the board. The led should be blinking. Use ctrl+C on the terminal to stop the program and go back to REPL.</p>
+	led.high();
+	time.sleep(0.5)
+	led.low();
+	time.sleep(0.5)
+</code></pre>
+<p>Save <code>main.py</code> and wait for the activity LED/pin to go low, then reset the board. The led should be blinking. Use ctrl+C on the terminal to stop the program and go back to REPL.</p>
 <hr>
 <h2 id="next-steps">Next Steps</h2>
 <p>Now that the device is running MicroPython, we can start learning about <a href="debugging.html">debugging</a> tricks. And then the <a href="tutorials/intro.html">tutorials</a> is a good next step.</p>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -178,18 +187,18 @@ while True
                 </div>
                 <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -197,13 +206,13 @@ while True
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>

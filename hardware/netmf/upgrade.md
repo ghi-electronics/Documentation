@@ -39,6 +39,7 @@ The SCM20260N is a drop in replacement for the G120 with the following differenc
 * SCM20260N pad 80 (PK6/LCD B7) and pad 88 (PJ6/LCD R7) do not have UART TX and RX as found on G120 pads 80 and 88. As this is an LCD pin, this will rarely be an issue.
 * Pad 15 on the SCM20260N (PI2/SPI2 MISO/TIM8 CH4 + PD3/USART2 CTS through a 330 ohm resistor) provides USART CTS connected through a 330 ohm resistor to maintain compatibility with Pad 15 on the G120 (P0.17/UART2 CTS/SPI1 MISO).
 * Serial mode deploying and debugging defaults to UART5 on the SCM20260E versus UART1 on the G120. This is only a concern if serial mode deploying/debugging is needed.
+* G120 IO pins default to pull-ups where on SITCore they are high impedance. 
 
 [SCM20260N to G120 Pinout Map](pdfs/scm20260n-g120-pinoutmap.pdf)
 
@@ -52,6 +53,7 @@ The SCM20260E is a drop in replacement for the G120E except for a few difference
 * SCM20260E pad T5 (PJ6/LCD R7) does not have UART RX as on G120E pad T5 (P2.9/LCD R4/UART5 RX). As this is an LCD pin, this will rarely be an issue.
 * SCM20260E pad T16 (PJ6/LCD R7) does not have UART TX as on G120E pad T16 (P1.29/LCD B4/UART5 TX). As this is an LCD pin, this will rarely be an issue.
 * SD Power pin is not available. Instead, there is regular GPIO pin.
+* G120E IO pins default to pull-ups where on SITCore they are high impedance. 
 
 [SCM20260E to G120E Pinout Map](pdfs/scm20260e-g120e-pinoutmap.pdf)
 

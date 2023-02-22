@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Debugging </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Debugging ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../styles/docfx.css">
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../index.html">
                 <img id="logo" class="svg" src="../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -79,7 +79,7 @@
 <h1 id="debugging">Debugging</h1>
 
 <hr>
-<p>While MicroPython does not have the full debugging experience found with Visual Studio and TinyCLR OS, the built in REPL provides some interesting uses. Thanks to the MicroPython&#39;s built-in compiler and runtime engine.</p>
+<p>While MicroPython does not have the full debugging experience found with Visual Studio and TinyCLR OS, the built in REPL provides some interesting uses. Thanks to the MicroPython's built-in compiler and runtime engine.</p>
 <p>There are 2 very important hot-keys that are always handy, ctrl+C to exit from a looping program and going back to REPL and ctrl+D to soft reset the OS.</p>
 <p>Assuming there is a robot with I2C-controlled headlight and we need to write a driver for those headlights. The first step would be to create a file in the virtual drive that show up when connecting the MicroPython running board.</p>
 <p><img src="images/headlights.png" alt="headlights"></p>
@@ -90,16 +90,19 @@ buf4= bytearray(4)
 buf4[0]=0x01
 
 def set(r,g,b):
-    buf4[1]=r
-    buf4[2]=g
-    buf4[3]=b
-    i2c4.writeto(0x01, buf4)
+	buf4[1]=r
+	buf4[2]=g
+	buf4[3]=b
+	i2c4.writeto(0x01, buf4)
 
 set(100,100,0)
-</code></pre><p>When saving the file, we need to make sure to observe the activity LED to make sure the file is done saving, which takes few seconds.</p>
+</code></pre>
+<p>When saving the file, we need to make sure to observe the activity LED to make sure the file is done saving, which takes few seconds.</p>
 <p>The REPL interface can now be used to <code>import</code> the driver we have just created, <code>import headlights</code>.</p>
 <p>Looking at the driver example, it creates a <code>set</code> function and then it calls it with colors 100,100,0 for RGB (Yellow).</p>
-<div class="TIP"><h5>Tip</h5><p><code>import</code> only works once on any module. Calling it a second time has no effect.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p><code>import</code> only works once on any module. Calling it a second time has no effect.</p>
 </div>
 <p>We now can set the headlight colors, purple for example <code>headlights.set(100,0,100)</code>.</p>
 <p>Another option now is to include a flashing lights loop on power up, using <code>main.py</code> file.</p>
@@ -108,15 +111,16 @@ set(100,100,0)
 import time
 
 while True:
-    headlights.set(100,0,0)
-    time.sleep(0.2)
-    headlights.set(0,0,100)
-    time.sleep(0.2)
-</code></pre><p>Do not reset the board manually, instead use ctrl+D to soft reset. The LEDs will flash red and blue, like a police car!</p>
+	headlights.set(100,0,0)
+	time.sleep(0.2)
+	headlights.set(0,0,100)
+	time.sleep(0.2)
+</code></pre>
+<p>Do not reset the board manually, instead use ctrl+D to soft reset. The LEDs will flash red and blue, like a police car!</p>
 <p>To exit the loop and reuse REPL, use ctrl+C. And then turn the headlights off <code>headlights.set(0,0,0)</code>. The system does not need <code>import headlights</code> as this was done earlier when <code>main.py</code> was loaded.</p>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -139,18 +143,18 @@ while True:
                 </div>
                 <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -158,13 +162,13 @@ while True:
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>

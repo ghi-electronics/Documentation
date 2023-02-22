@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Graphics </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Graphics ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -81,7 +81,7 @@
 <hr>
 <p>The <code>GHIElectronics.TinyCLR.Drawing</code> NuGet package includes the backbone for all graphics needs. It has support for shapes, fonts and bitmaps.</p>
 <p>Shape examples are <code>Graphics.FillEllipse</code>, <code>Graphics.DrawLine</code> and <code>Graphics.DrawRectangle</code>. These methods need <code>Pen</code> and <code>Brush</code> that are also part of <code>Graphics</code>.</p>
-<p>Besides the basic methods above, there are some additional useful methods found inside the Graphics library. </p>
+<p>Besides the basic methods above, there are some additional useful methods found inside the Graphics library.</p>
 <table>
 <thead>
 <tr>
@@ -96,7 +96,7 @@
 </tr>
 <tr>
 <td><code>DrawTextInRect</code></td>
-<td>Confines text to a specific rectangle area of the screen. Parameters can be set to justify or word wrap the text inside the rectangle&#39;s area.</td>
+<td>Confines text to a specific rectangle area of the screen. Parameters can be set to justify or word wrap the text inside the rectangle's area.</td>
 </tr>
 <tr>
 <td><code>SetClippingRectangle</code></td>
@@ -104,7 +104,7 @@
 </tr>
 <tr>
 <td><code>MakeTransparent</code></td>
-<td>Used to select a color within an image that appears transparent.</td>
+<td>Used to select a color within an image that appears transparent. Alpha needs to be set to 0 (0x00)</td>
 </tr>
 <tr>
 <td><code>Scale9Image</code></td>
@@ -124,9 +124,11 @@
 <h2 id="basicgraphics">BasicGraphics</h2>
 <p><code>BasicGraphics</code> driver is a simpler alternative that runs on all devices, including small devices without native display support. Learn more about <code>BasicGraphics</code> <a href="../drivers/software-utility.html">here.</a></p>
 <h2 id="native-displays">Native Displays</h2>
-<p>Native display support in TinyCLR OS is handled automatically using the microcontroller&#39;s DMA to transfer data in parallel to the display without slowing down your application.</p>
+<p>Native display support in TinyCLR OS is handled automatically using the microcontroller's DMA to transfer data in parallel to the display without slowing down your application.</p>
 <p>The following example runs on the SCM20260D Dev Board with either the 4.3&quot; or 7&quot; display. You will need to add a font and a small JPG image as <a href="resources.html">resources</a> to run the code as is.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.</p>
 </div>
 <pre><code class="lang-cs">using System.Drawing;
 using System.Threading;
@@ -193,7 +195,8 @@ screen.SetPixel(240, 200, Color.White);
 screen.DrawString(&quot;Hello world!&quot;, font, new SolidBrush(Color.Blue), 210, 255);
 
 screen.Flush();
-</code></pre><p>Same example but with 7 inch display, replace the display configuration code with the following code:</p>
+</code></pre>
+<p>Same example but with 7 inch display, replace the display configuration code with the following code:</p>
 <pre><code class="lang-cs">displayController.SetConfiguration(new ParallelDisplayControllerSettings {
     Width = 800,
     Height = 480,
@@ -212,11 +215,14 @@ screen.Flush();
     VerticalSyncPulseWidth = 1,
     VerticalSyncPolarity = false,
 });
-</code></pre><hr>
+</code></pre>
+<hr>
 <h2 id="virtual-displays">Virtual Displays</h2>
 <p>Displays can be virtual, meaning the system handles the drawing in RAM and when <code>Flush</code> is called an event is fired with the graphics data that needs to be transferred to the display. This for example can be an SPI display or over-the-network display.</p>
 <p>The following sample code runs on our SC20100S Dev Board with its SPI-based display. You will need to add a font and a small JPG image as <a href="resources.html">resources</a> to run the code as is.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Drivers.Sitronix.ST7735, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.</p>
 </div>
 <pre><code class="lang-cs">using System;
 using System.Drawing;
@@ -293,12 +299,14 @@ namespace GraphicsSample {
         }
     }
 }
-</code></pre><hr>
+</code></pre>
+<hr>
 <h2 id="helper-methods">Helper Methods</h2>
-<p>With parallel native displays the <code>DisplayController.ActiveConfiguration</code> can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display&#39;s resolution. The following line of code draws a line from corner to corner, no matter the display resolution.</p>
+<p>With parallel native displays the <code>DisplayController.ActiveConfiguration</code> can be used to read the configuration at any time. The Width and Height can be used to write code that automatically scales to the display's resolution. The following line of code draws a line from corner to corner, no matter the display resolution.</p>
 <pre><code class="lang-cs">screen.DrawLine(new Pen(Color.Red), 0, 0, displayController.ActiveConfiguration.Width - 1,
     displayController.ActiveConfiguration.Height - 1);
-</code></pre><hr>
+</code></pre>
+<hr>
 <h2 id="images">Images</h2>
 <p>TinyCLR OS supports BMP, GIF, and JPG file formats. See the <a href="image-decoders.html">Image Decoders</a> page.</p>
 <hr>
@@ -313,7 +321,7 @@ namespace GraphicsSample {
 <pre><code class="lang-cs">var groupSize = 2;
 var screenWidth = 160;
 var screenHeight = 128;
-
+ 
 var screen = new Bitmap(screenWidth, screenHeight);
 
 var imageNew = new byte[80 * 80 * 2];
@@ -323,12 +331,13 @@ var width = 80;
 var height = 80;
 
 Array.Copy2D(screen.GetBitmap(), imageNew, x, y, width, height, screenWidth, groupSize);
-</code></pre><hr>
+</code></pre>
+<hr>
 <h2 id="vnc">VNC</h2>
 <p>VNC (Virtual Network Computing) is a simple remote desktop that with available terminals supported by major operating systems. It is covered <a href="vnc.html">here</a>.</p>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -351,18 +360,18 @@ Array.Copy2D(screen.GetBitmap(), imageNew, x, y, width, height, screenWidth, gro
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -370,13 +379,13 @@ Array.Copy2D(screen.GetBitmap(), imageNew, x, y, width, height, screenWidth, gro
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

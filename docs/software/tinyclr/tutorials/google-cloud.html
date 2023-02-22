@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Google Cloud </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google Cloud ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -79,8 +79,10 @@
 <h1 id="google-cloud">Google Cloud</h1>
 
 <hr>
-<p>This example shows how to communicate with Google Cloud Platform using MQTT. You&#39;ll also need to set up a Network Interface connection on the device such as <a href="wifi.html">WiFi</a> to Connect to Google Cloud in your program.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Networking.Mqtt</p>
+<p>This example shows how to communicate with Google Cloud Platform using MQTT. You'll also need to set up a Network Interface connection on the device such as <a href="wifi.html">WiFi</a> to Connect to Google Cloud in your program.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Networking.Mqtt</p>
 <p>Add using statement:
 using System.Security.Cryptography.X509Certificates;</p>
 </div>
@@ -151,7 +153,7 @@ if (returnCode == ConnectReturnCode.ConnectionAccepted) {
 }
 
 Thread.Sleep(Timeout.Infinite);
-
+        
 static void Gcp_SetupMqttTopics(Mqtt client, string deviceId) {
     // The configuration topic is used for acknowledged changes.
     string mqttConfigTopic = $&quot;/devices/{deviceId}/config&quot;;
@@ -184,87 +186,96 @@ static void Gcp_AttachDevice(Mqtt client, string deviceId, string auth) {
 
     Thread.Sleep(5);
 }
-</code></pre><p>This example requires projectId, cloudRegion, registryId, gatewayId, and deviceId, which will be available when you register a Google Cloud account.</p>
+</code></pre>
+<p>This example requires projectId, cloudRegion, registryId, gatewayId, and deviceId, which will be available when you register a Google Cloud account.</p>
 <p>a client certificate and private key are also provided when you register your account.</p>
-<p>Let&#39;s create a new project. Click on &#39;Create Project&#39; on the Manage resources dashboard.</p>
+<p>Let's create a new project. Click on 'Create Project' on the Manage resources dashboard.</p>
 <p><img src="images/gcloud-create-project.jpg" alt="GCloud Create Project"></p>
-<p>Next we&#39;ll need to create a meaningful name, for this project will call it SITCoreIoT. </p>
+<p>Next we'll need to create a meaningful name, for this project will call it SITCoreIoT.</p>
 <p><img src="images/gcloud-name-project.jpg" alt="GCloud Name Project"></p>
-<p>In the search box type &#39;IoT Core&#39; and then select it. </p>
+<p>In the search box type 'IoT Core' and then select it.</p>
 <p><img src="images/gcloud-search-iotcore.jpg" alt="GCloud Search IoT Core"></p>
-<p>Next, we need to &#39;ENABLE&#39; the Google Cloud IoT API. </p>
+<p>Next, we need to 'ENABLE' the Google Cloud IoT API.</p>
 <p><img src="images/gcloud-enable-cloud.jpg" alt="GCloud Enable API"></p>
-<p>Next we&#39;ll need to create a Registry for our project. Click on &#39;CREATE REGISTRY&#39;</p>
+<p>Next we'll need to create a Registry for our project. Click on 'CREATE REGISTRY'</p>
 <p><img src="images/gcloud-create-registry.jpg" alt="GCloud Create Registry"></p>
-<p>We need to create a &#39;Registry ID&#39;, select a cloud &#39;Region&#39;, and a create a &#39;Topic&#39;. Finally, we need to click on the &#39;SHOW ADVANCED OPTIONS&#39; Tab to finish the creation</p>
+<p>We need to create a 'Registry ID', select a cloud 'Region', and a create a 'Topic'. Finally, we need to click on the 'SHOW ADVANCED OPTIONS' Tab to finish the creation</p>
 <p><img src="images/gcloud-registry-id.jpg" alt="GCloud Name Registry"></p>
-<p>For this exercise we only need MQTT, and we&#39;ve selected &#39;Debug&#39; under Cloud Logging. This isn&#39;t necessary but will allow us to see device activity in the log and may be useful for more complex programs. Finally click the &#39;CREATE&#39; button. </p>
+<p>For this exercise we only need MQTT, and we've selected 'Debug' under Cloud Logging. This isn't necessary but will allow us to see device activity in the log and may be useful for more complex programs. Finally click the 'CREATE' button.</p>
 <p><img src="images/gcloud-set-protocol.jpg" alt="GCloud Set Protocols"></p>
-<p>Once created we&#39;re taken to the Registry details dashboard. We need to create our device by clicking on &#39;Devices&#39; from the left menu. </p>
+<p>Once created we're taken to the Registry details dashboard. We need to create our device by clicking on 'Devices' from the left menu.</p>
 <p><img src="images/gcloud-create-device.jpg" alt="GCloud Create Device"></p>
-<p>From the Device dashboard, click on &#39;CREATE A DEVICE&#39; </p>
+<p>From the Device dashboard, click on 'CREATE A DEVICE'</p>
 <p><img src="images/gcloud-device-create.jpg" alt="GCloud Create Device"></p>
-<p>Before we continue, we&#39;ll need to generate both a Private and Public key that we can attach to our Device. This can be done with a program like OpenSSL (secure), or we can use a third-party site to generate one for us for testing (unsecure). For this exercise, we&#39;ll use a third-party site like:</p>
+<p>Before we continue, we'll need to generate both a Private and Public key that we can attach to our Device. This can be done with a program like OpenSSL (secure), or we can use a third-party site to generate one for us for testing (unsecure). For this exercise, we'll use a third-party site like:</p>
 <p><a href="https://cryptotools.net/rsagen">CryptoTool.net</a></p>
-<p>We need to select a Key Length of 2048, and then click &#39;Generate key pair&#39;. Next, we need to copy the Public Key to the clipboard and use it in a moment. Keep the window open, we&#39;ll need to use the Private key later. </p>
+<p>We need to select a Key Length of 2048, and then click 'Generate key pair'. Next, we need to copy the Public Key to the clipboard and use it in a moment. Keep the window open, we'll need to use the Private key later.</p>
 <p><img src="images/gcloud-generate-keys.jpg" alt="GCloud RSA Key"></p>
-<p>Now let&#39;s go back to the &#39;Create a device&#39; dashboard in Google. We need to create a name for our Device, this will be the &#39;Device ID&#39;. Before we click &#39;CREATE&#39; we need to click on the &#39;COMMUNICATION, CLOUD LOGGING, AUTENTICATION drop down. </p>
+<p>Now let's go back to the 'Create a device' dashboard in Google. We need to create a name for our Device, this will be the 'Device ID'. Before we click 'CREATE' we need to click on the 'COMMUNICATION, CLOUD LOGGING, AUTENTICATION drop down.</p>
 <p><img src="images/gcloud-set-deviceID.jpg" alt="GCloud Create Device ID"></p>
-<p>Here we&#39;ll paste the Public key we generated earlier. Make sure the Public key format is set to RS256. Then click on &#39;CREATE&#39; button. </p>
+<p>Here we'll paste the Public key we generated earlier. Make sure the Public key format is set to RS256. Then click on 'CREATE' button.</p>
 <p><img src="images/gcloud-paste-key.jpg" alt="GCloud Paste Public Key"></p>
-<p>Next we&#39;ll create a Gateway. From inside the Device details dashboard select &#39;Gateways&#39; from the menu on the left.</p>
+<p>Next we'll create a Gateway. From inside the Device details dashboard select 'Gateways' from the menu on the left.</p>
 <p><img src="images/gcloud-select-gateway.jpg" alt="GCloud Select Gateway"></p>
-<p>Click on the &#39;CREATE A GATEWAY&#39;</p>
+<p>Click on the 'CREATE A GATEWAY'</p>
 <p><img src="images/gcloud-create-gateway.jpg" alt="GCloud Create Gateway"></p>
-<p>Next will name our Gateway, this will be the &#39;Gateway ID&#39; that we will add to our code. Before we click &#39;CREATE&#39;, click on the &#39;COMMUNICATION, CLOUD LOGGING, AUTHENTICATION tab. </p>
+<p>Next will name our Gateway, this will be the 'Gateway ID' that we will add to our code. Before we click 'CREATE', click on the 'COMMUNICATION, CLOUD LOGGING, AUTHENTICATION tab.</p>
 <p><img src="images/gcloud-name-gateway.jpg" alt="GCloud Name Gateway"></p>
-<p>We have to add the same Public key we pasted earlier here too. Make sure that the key format is also set to RS256. Then click on &#39;CREATE&#39; button.</p>
+<p>We have to add the same Public key we pasted earlier here too. Make sure that the key format is also set to RS256. Then click on 'CREATE' button.</p>
 <p><img src="images/gcloud-gateway-RSA.jpg" alt="GCloud Gateway RSA"></p>
-<p>Finally, lets bind our Device to the Gateway. Click on &#39;BOUND DEVICES&#39; tab and then click on the &#39;BIND DEVICES&#39; button. Select our Device from the list and click &#39;BIND&#39; </p>
+<p>Finally, lets bind our Device to the Gateway. Click on 'BOUND DEVICES' tab and then click on the 'BIND DEVICES' button. Select our Device from the list and click 'BIND'</p>
 <p><img src="images/gcloud-bind-device.jpg" alt="GCloud Bind Device"></p>
-<p>We have the data we need now let&#39;s plug in all the IDs we created into our code</p>
+<p>We have the data we need now let's plug in all the IDs we created into our code</p>
 <pre><code class="lang-cs">var projectId = &quot;sitcoreiot&quot;;
 var cloudRegion = &quot;us-central1&quot;;
 var registryId = &quot;SITCore-IoT-Registry&quot;;
 var deviceId = &quot;MySITCore&quot;;
 var gatewayId = &quot;SITCoreGatewayIoT&quot;;
-</code></pre><p>We need to add a Google Root CA Certificate to our resources and add it to this line of our code. </p>
+</code></pre>
+<p>We need to add a Google Root CA Certificate to our resources and add it to this line of our code.</p>
 <pre><code class="lang-cs">var caCertSource = Resources.GetBytes(Resources.BinaryResources.&quot;GOOGLE Root CERT&quot;);
-</code></pre><p>Lastly when connect to google cloud, you also need a JWT (JSON Web Token) to be used as password if using MQTT.</p>
-<p>For an easy way to generate a JWT visit <a href="https://jwt.io/">https://jwt.io/</a>. However, if you are concerned about sharing your private key with a third party site, there are a multitude of other options. </p>
-<div class="WARNING"><h5>Warning</h5><p>By using <a href="https://jwt.io/">https://jwt.io/</a>, your private key is shared with a third-party. This should be used only for testing purpose.&quot;</p>
+</code></pre>
+<p>Lastly when connect to google cloud, you also need a JWT (JSON Web Token) to be used as password if using MQTT.</p>
+<p>For an easy way to generate a JWT visit <a href="https://jwt.io/">https://jwt.io/</a>. However, if you are concerned about sharing your private key with a third party site, there are a multitude of other options.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>By using <a href="https://jwt.io/">https://jwt.io/</a>, your private key is shared with a third-party. This should be used only for testing purpose.&quot;</p>
 </div>
 <p><img src="images/generate_jwt.png" alt="How to download generate JWT"></p>
-<p>We must change the &#39;PAYLOAD DATA&#39; to match the image above. There are two fields <code>iat</code> (issue at), and <code>exp</code> (expire), they contain time in Unix Timestamp format. </p>
+<p>We must change the 'PAYLOAD DATA' to match the image above. There are two fields <code>iat</code> (issue at), and <code>exp</code> (expire), they contain time in Unix Timestamp format.</p>
 <p>You can convert them online at <a href="https://www.epochconverter.com/">https://www.epochconverter.com/</a></p>
 <pre><code class="lang-cs">{
   &quot;iat&quot;: 1602616824,
   &quot;aud&quot;: &quot;sitcoreiot&quot;,  
   &quot;exp&quot;: 1602616858
 }
-</code></pre><p>Finally copy your Endoded Token into this line of code in your program:</p>
+</code></pre>
+<p>Finally copy your Endoded Token into this line of code in your program:</p>
 <pre><code class="lang-cs">var jwt = &quot;Paste your JWT here&quot;;
-</code></pre><div class="NOTE"><h5>Note</h5><p>The google cloud connection accepts a maximum expire time of 24 hours, meaning the timespan between <code>iat</code> and <code>exp</code> must be less than 24 hours.</p>
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The google cloud connection accepts a maximum expire time of 24 hours, meaning the timespan between <code>iat</code> and <code>exp</code> must be less than 24 hours.</p>
 </div>
-<p>To receive a message from Google Cloud click on the &#39;SEND COMMAND&#39; under the Gateway dashboard.</p>
+<p>To receive a message from Google Cloud click on the 'SEND COMMAND' under the Gateway dashboard.</p>
 <p><img src="images/gcloud-send-command.jpg" alt="GCloud Message in VS"></p>
-<p>Enter your message and click &#39;SEND&#39;</p>
+<p>Enter your message and click 'SEND'</p>
 <p><img src="images/gcloud-create-message.jpg" alt="GCloud Create Message"></p>
-<p>The device will receive your message and display it in the Output window of Visual Studio. </p>
+<p>The device will receive your message and display it in the Output window of Visual Studio.</p>
 <p><img src="images/gcloud-message-vs.jpg" alt="GCloud Message in VS"></p>
-<p>To view the messages being sent from the device to the cloud we need to add a subscription to &#39;MyTopic&#39;. To do this we need to go to the Registry dashboard and click on the topic we created called &#39;MyTopic&#39; </p>
+<p>To view the messages being sent from the device to the cloud we need to add a subscription to 'MyTopic'. To do this we need to go to the Registry dashboard and click on the topic we created called 'MyTopic'</p>
 <p><img src="images/gcloud-select-topic.jpg" alt="GCloud Send Message to Cloud"></p>
-<p>Once on the &#39;Pub/Sub&#39; dashboard, select &#39;Subscriptions&#39; from the side menu.</p>
+<p>Once on the 'Pub/Sub' dashboard, select 'Subscriptions' from the side menu.</p>
 <p><img src="images/gcloud-select-subscription.jpg" alt="GCloud Select Subscriptions"></p>
-<p>Next, click on &#39;CREATE SUBSCRIPTION&#39;</p>
+<p>Next, click on 'CREATE SUBSCRIPTION'</p>
 <p><img src="images/gcloud-create-subscription.jpg" alt="GCloud Create Subscription"></p>
-<p>Create a name for in the &#39;Subscription ID&#39; box and select topic we created earlier. There may be additional setting on this dashboard you can use, but for this tutorial we only need to set these two items. Click the &#39;CREATE&#39; button at the bottom. </p>
+<p>Create a name for in the 'Subscription ID' box and select topic we created earlier. There may be additional setting on this dashboard you can use, but for this tutorial we only need to set these two items. Click the 'CREATE' button at the bottom.</p>
 <p><img src="images/gcloud-name-subscription.jpg" alt="GCloud Name Subscription"></p>
-<p>Deploy the program to your device. Once connected, inside the &#39;Subscription details&#39; dashboard, click on &#39;VIEW MESSAGES&#39;, inside the &#39;Messages&#39; Pop-up click on the &#39;PULL&#39; button. This will display the latest messages being sent from the device. The tutorial program sends a new message every 5 seconds and then increments the count by one. We can also continue to send messages to the device from the &#39;Gateway&#39; dashboard as we did earlier. </p>
-<p> <img src="images/gcloud-view-messages.jpg" alt="GCloud View Messages"></p>
+<p>Deploy the program to your device. Once connected, inside the 'Subscription details' dashboard, click on 'VIEW MESSAGES', inside the 'Messages' Pop-up click on the 'PULL' button. This will display the latest messages being sent from the device. The tutorial program sends a new message every 5 seconds and then increments the count by one. We can also continue to send messages to the device from the 'Gateway' dashboard as we did earlier.</p>
+<p><img src="images/gcloud-view-messages.jpg" alt="GCloud View Messages"></p>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -287,18 +298,18 @@ var gatewayId = &quot;SITCoreGatewayIoT&quot;;
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -306,13 +317,13 @@ var gatewayId = &quot;SITCoreGatewayIoT&quot;;
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

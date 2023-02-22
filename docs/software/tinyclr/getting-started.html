@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Getting Started </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../styles/docfx.css">
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../index.html">
                 <img id="logo" class="svg" src="../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -89,24 +89,28 @@
 <p>Use the <a href="tinyclr-config.html">TinyCLR Config</a> tool to update the firmware on your device to the latest version.</p>
 <h2 id="development-machine-setup">Development Machine Setup</h2>
 <ol>
-<li>If you don&#39;t already have Visual Studio 2022, download and install one of the latest editions. Any edition will work, including the free community edition: <a href="https://www.visualstudio.com/downloads/">Visual Studio Community</a>.</li>
-<li>Make sure to select the <code>.NET desktop development</code> workload when installing Visual Studio.</li>
-<li><p>Download and install the newest TinyCLR Visual Studio Project System by going to <code>Extensions</code> &gt; <code>Manage Extensions</code>. In the <code>Manage Extensions</code> dialog box select <code>Online</code> in the left panel. Type <code>tinyclr</code> into the <code>Search</code> text box in the upper right of the window to search for and install the <code>TinyCLR OS Project System</code>. You&#39;ll need to restart Visual Studio to let the extension installer complete the installation.</p>
-<p> Alternately you can download the Visual Studio Project System from our <a href="downloads.html">Downloads</a> page and open or double click on the file to install the extension.</p>
+<li><p>If you don't already have Visual Studio 2022, download and install one of the latest editions. Any edition will work, including the free community edition: <a href="https://www.visualstudio.com/downloads/">Visual Studio Community</a>.</p>
+</li>
+<li><p>Make sure to select the <code>.NET desktop development</code> workload when installing Visual Studio.</p>
+</li>
+<li><p>Download and install the newest TinyCLR Visual Studio Project System by going to <code>Extensions</code> &gt; <code>Manage Extensions</code>. In the <code>Manage Extensions</code> dialog box select <code>Online</code> in the left panel. Type <code>tinyclr</code> into the <code>Search</code> text box in the upper right of the window to search for and install the <code>TinyCLR OS Project System</code>. You'll need to restart Visual Studio to let the extension installer complete the installation.</p>
+<p>Alternately you can download the Visual Studio Project System from our <a href="downloads.html">Downloads</a> page and open or double click on the file to install the extension.</p>
 </li>
 </ol>
-<div class="NOTE"><h5>Note</h5><p>Pre-releases of the Project System are not hosted online but are found on the <a href="downloads.html"><strong>Downloads</strong></a> page.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Pre-releases of the Project System are not hosted online but are found on the <a href="downloads.html"><strong>Downloads</strong></a> page.</p>
 </div>
 <p><img src="images/Install-tinyclr-extension.gif" alt="Install TinyCLR Extension"></p>
 <h2 id="starting-a-new-project">Starting a New Project</h2>
-<p>Let&#39;s blink an LED on a SITCore board.</p>
+<p>Let's blink an LED on a SITCore board.</p>
 <p>Open Visual Studio and select <code>Create a new project</code>.</p>
 <p><img src="images/create-new-project.gif" alt="Create a new project"></p>
 <p>In the <code>Create a new project window</code>, select <code>TinyCLROS</code> from the <code>platforms</code> drop down list.</p>
 <p><img src="images/select-platform.gif" alt="Select platform"></p>
 <p>Now select the C# TinyCLR Application template and click the <code>Next</code> button.</p>
 <p><img src="images/select-template.gif" alt="Select C# TinyCLR Application template"></p>
-<p>We&#39;re going to stick with the default name and location. If you use a different name, make sure the program&#39;s namespace statement matches the namespace of your program. Now click on the &quot;Create&quot; button.</p>
+<p>We're going to stick with the default name and location. If you use a different name, make sure the program's namespace statement matches the namespace of your program. Now click on the &quot;Create&quot; button.</p>
 <p><img src="images/configure-project.gif" alt="Configure project"></p>
 <p>Now cut and paste the following code into the <code>Program.cs</code> window. Make sure to install both <code>GHIElectronics.TinyCLR.Devices.Gpio</code> and <code>GHIElectronics.TinyCLR.Pins</code> <a href="tutorials/nuget.html">NuGet packages</a>.</p>
 <pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Gpio;
@@ -132,8 +136,9 @@ namespace TinyCLRApplication1 {
         }
     }
 }
-</code></pre><p><img src="images/hit-start-button.png" alt="Hit Start button"></p>
-<p>Make sure your device is plugged into the computer&#39;s USB port. Now hit the start button as shown on the above image (or hit the F5 key). If you&#39;ve done everything correctly, the program will compile and deploy to your device. The left most LED on the dev board should blink if you&#39;ve done everything correctly.</p>
+</code></pre>
+<p><img src="images/hit-start-button.png" alt="Hit Start button"></p>
+<p>Make sure your device is plugged into the computer's USB port. Now hit the start button as shown on the above image (or hit the F5 key). If you've done everything correctly, the program will compile and deploy to your device. The left most LED on the dev board should blink if you've done everything correctly.</p>
 <h2 id="top-level-statements">Top Level Statements</h2>
 <p>The use of C#9 Top Level Statements allows for easier to read example code snippets. The docs will utilize top level statements when possible.</p>
 <p>The TinyCLR project system templates include a C#9 application template. To use Top Level Statements:</p>
@@ -159,12 +164,13 @@ while (true) {
     LED.Write(GpioPinValue.Low);
     Thread.Sleep(100);
 }
-</code></pre><p>Congratulations!  You&#39;re on your way to becoming a TinyCLR embedded developer!</p>
+</code></pre>
+<p>Congratulations!  You're on your way to becoming a TinyCLR embedded developer!</p>
 <p>To find the best hardware for your TinyCLR application, go to the <a href="../../hardware/sitcore/intro.html">SITCore Docs</a> page in the hardware section of this documentation. or visit the <a href="https://www.ghielectronics.com/">GHI Electronics website</a>.</p>
 <p>To learn more about TinyCLR embedded programming check out our <a href="tutorials/intro.html"><strong>tutorials</strong></a>.</p>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -187,18 +193,18 @@ while (true) {
                 </div>
                 <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -206,13 +212,13 @@ while (true) {
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>

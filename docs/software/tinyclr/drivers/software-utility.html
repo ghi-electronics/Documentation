@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Software Utility Drivers </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Software Utility Drivers ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -81,14 +81,18 @@
 <hr>
 <h2 id="azure-sas">Azure SAS</h2>
 <p>This utility NuGet adds SAS generation used in Azure. See <a href="../tutorials/azure.html">Microsoft Azure</a> tutorial for more info.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.Azure.SAS</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.Azure.SAS</p>
 </div>
 <h2 id="basic-graphics">Basic Graphics</h2>
 <p><code>BasicGraphics</code> driver is a simpler alternative that runs on all devices, including small devices without native display support. It contains many useful methods for adding simple graphics,including: <code>SetPixel</code>, <code>DrawLine</code>, <code>DrawRectangle</code>, <code>DrawCircle</code>, <code>DrawString</code>, and <code>DrawCharacter</code>. It also includes support for a micro 5px font through <code>DrawTinyCharacter</code> and <code>DrawTinyString</code>.</p>
 <p>There are 2 differences between <code>DrawCharacter</code> and <code>DrawTinyCharacter</code>, beside the font size! DrawCharacter can accept scaling to enlarge the font, <code>DrawTinyCharacter</code> does not. Also, <code>DrawCharacter</code> will only set pixels and does not clear blanks. <code>DrawTinyCharacter</code> has the same behavior by default but it has a <code>clear</code> option to set the blanks to 0 (black).</p>
 <p>There are two ways to use BasicGraphics, the first one is agnostic of what display is being used and simply works by calling <code>SetPixel</code> method that must be overridden by the user. The user has 2 options, either send the pixel directly to the display or buffer the pixels in a &quot;Video RAM&quot; working buffer and then flush to the screen when desired. Setting the pixels directly on the screen requires zero memory but it is extremely slow.</p>
 <p>In the second way, which is the easier way, BasicGraphics will handle allocating the needed video buffer and handles the SetPixel. It already has 2 pixel options, 16BPP 5:6:5 and 1BPP.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.BasicGraphics</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.BasicGraphics</p>
 </div>
 <p>An example of the first options, that overrides the <code>SetPixel</code> and <code>Clear</code> methods. BasicGraphics will not allocate any memory.</p>
 <pre><code class="lang-cs">public class BasicGraphicsImp : BasicGraphics{
@@ -104,7 +108,8 @@
         lcd.DrawBufferNative(this.buffer);
     }
 }
-</code></pre><p>Now, the Basic Graphics driver can be used.</p>
+</code></pre>
+<p>Now, the Basic Graphics driver can be used.</p>
 <pre><code class="lang-cs">var basicGfx = new BasicGraphicsImp();
 var colorBlue = BasicGraphics.ColorFromRgb(0,0,255);
 var colorGreen = BasicGraphics.ColorFromRgb(0,255,0);
@@ -122,7 +127,8 @@ for (var i = 20; i &lt; 140; i ++)
     basicGfx.DrawCircle((uint)color.Next(), i, 100, 15);
 
 basicGfx.Flush();
-</code></pre><p>This example uses the second option where a buffer is allocated automatically. This is the preferred option for using BasicGraphics.</p>
+</code></pre>
+<p>This example uses the second option where a buffer is allocated automatically. This is the preferred option for using BasicGraphics.</p>
 <pre><code class="lang-cs">var basicGfx = new BasicGraphics(160, 128, ColorFormat.Rgb565);
 var colorBlue = BasicGraphics.ColorFromRgb(0,0,255);
 var colorGreen = BasicGraphics.ColorFromRgb(0,255,0);
@@ -141,7 +147,8 @@ for (var i = 20; i &lt; 140; i ++)
 
 // now send to display, using the specific display driver.
 MyDisplaySendBuffer(basicGfx.Buffer);
-</code></pre><h2 id="managed-file-system">Managed File System</h2>
+</code></pre>
+<h2 id="managed-file-system">Managed File System</h2>
 <p>This full FAT file system C# implementation includes SD SPI drivers and is made available for systems that do not have a native built in file system support or if using SD cares over SPI is desired.</p>
 <pre><code class="lang-cs">var dataWrite = new byte[5] { 6, 7, 8, 9, 10 };
 var dataRead = new byte[dataWrite.Length];
@@ -169,9 +176,12 @@ var fileRead = managedFS.OpenFile(@&quot;\TEST1\TEST2.txt&quot;, FileMode.Read);
 
 managedFS.ReadFile(fileRead, dataRead, 0, (uint)dataRead.Length);
 managedFS.CloseFile(fileRead);
-</code></pre><h2 id="ir">IR</h2>
+</code></pre>
+<h2 id="ir">IR</h2>
 <p>Infrared remotes are very common and use multiple standards. NCR is very common and a driver is included. A remote with NCR standard will send an 8bit address and an 8bit command with every key press. A repeat signal will be sent as long as the key is continuously pressed.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.Infrared</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.Infrared</p>
 </div>
 <pre><code class="lang-cs">var recievePin = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PH6);
 var ir = new NecIRDecoder(recievePin);
@@ -185,9 +195,12 @@ private static void Ir_OnDataRecievedEvent(byte address, byte command) {
 private static void Ir_OnRepeatEvent() {
     // we have repeat
 }
-</code></pre><h2 id="basic-network">Basic Network</h2>
+</code></pre>
+<h2 id="basic-network">Basic Network</h2>
 <p>Basic Network works with W5500 module.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Drivers.BasicNet, GHIElectronics.TinyCLR.Drivers.BasicNet.Sockets, GHIElectronics.TinyCLR.Drivers.WIZnet.W5500</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Drivers.BasicNet, GHIElectronics.TinyCLR.Drivers.BasicNet.Sockets, GHIElectronics.TinyCLR.Drivers.WIZnet.W5500</p>
 </div>
 <pre><code class="lang-cs">var cs = GpioController.GetDefault().OpenPin(SC13048.GpioPin.PB2);
 var reset = GpioController.GetDefault().OpenPin(SC13048.GpioPin.PB15);
@@ -214,7 +227,7 @@ NetworkInterfaceSettings networkSettings = new NetworkInterfaceSettings()
     DhcpEnable = false,
     DynamicDnsEnable = false,                
 };
-
+            
 
 networkController.SetInterfaceSettings(networkSettings);
 networkController.Enable();
@@ -239,7 +252,8 @@ if (received.Length &gt; 0) {
     var recvdContent = new string(Encoding.UTF8.GetChars(received));
     Debug.WriteLine(&quot;Received : \r\n&quot; + recvdContent);
 }
-</code></pre><h2 id="qr-code-generator">QR Code Generator</h2>
+</code></pre>
+<h2 id="qr-code-generator">QR Code Generator</h2>
 <p>This driver converts a string to an image, which can be displays on screen for example.</p>
 <p>No NuGet is provided but source code is found <a href="https://github.com/ghi-electronics/TinyCLR-Drivers/tree/dev/Barcode">here</a>.</p>
 <h2 id="gps-parser">GPS Parser</h2>
@@ -249,33 +263,34 @@ if (received.Length &gt; 0) {
 // strings start with $ and end with CR
 new Thread(() =&gt;
 {
-
-    while (true) {
-        Parser.Parse(UTF8Encoding.UTF8.GetBytes(&quot;NEMA string&quot;));
-        Thread.Sleep(1);
-
-    }
+	
+	while (true) {
+		Parser.Parse(UTF8Encoding.UTF8.GetBytes(&quot;NEMA string&quot;));
+		Thread.Sleep(1);
+	
+	}
 }
 ).Start();
 
 // parsed data are available from the class
 while (true) {
+	
+	if (Parser.RMCSentence.DataStatus == Parser.DataStatus.Valid) {
+		//Do something
+		
 
-    if (Parser.RMCSentence.DataStatus == Parser.DataStatus.Valid) {
-        //Do something
-
-
-    }
-    if (Parser.GLLSentence.DataStatus == Parser.DataStatus.Valid) {
-        //Do something
-    }
-    // ...etc
-
-    Thread.Sleep(1);
+	}
+	if (Parser.GLLSentence.DataStatus == Parser.DataStatus.Valid) {
+		//Do something
+	}
+	// ...etc
+	
+	Thread.Sleep(1);
 }
-</code></pre></article>
+</code></pre>
+</article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -298,18 +313,18 @@ while (true) {
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -317,13 +332,13 @@ while (true) {
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

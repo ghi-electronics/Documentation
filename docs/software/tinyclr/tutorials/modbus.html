@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Modbus </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Modbus ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -80,9 +80,11 @@
 
 <hr>
 <h2 id="modbus-rtu">Modbus RTU</h2>
-<p>Modbus is an asynchronous serial communications protocol that uses RS485 as its physical layer. It was developed for communicating with programmable logic controllers and is widely used for industrial applications. Modbus uses the a server/client relationship. With one server and up to 32 connections for Modbus RTU.  </p>
+<p>Modbus is an asynchronous serial communications protocol that uses RS485 as its physical layer. It was developed for communicating with programmable logic controllers and is widely used for industrial applications. Modbus uses the a server/client relationship. With one server and up to 32 connections for Modbus RTU.</p>
 <p>The following sample is written for the SC20100S Dev Board and uses UART5 for communication:</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Devices.Uart, GHIElectronics.TinyCLR.Pins, GHIElectronics.TinyCLR.Devices.Modbus</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Devices.Uart, GHIElectronics.TinyCLR.Pins, GHIElectronics.TinyCLR.Devices.Modbus</p>
 </div>
 <pre><code class="lang-cs">var serial = UartController.FromName(SC20100.UartPort.Uart5);
 
@@ -135,9 +137,10 @@ while (true) {
 
     Thread.Sleep(1000);
 }
-</code></pre><h2 id="modbus-ip">Modbus IP</h2>
+</code></pre>
+<h2 id="modbus-ip">Modbus IP</h2>
 <p>Modbus IP is Ethernet based Modbus that transfers data over standard Ethernet packets and devices. Modbus IP offers greater distances than Modbus RTU.</p>
-<p>In the example below setup the hardware as Modbus IP client. First create a <code>ModbusClient</code> class that is derived from ModbusDevice. `Modbus ID </p>
+<p>In the example below setup the hardware as Modbus IP client. First create a <code>ModbusClient</code> class that is derived from ModbusDevice. `Modbus ID</p>
 <pre><code class="lang-cs">public class ModbusClient : ModbusDevice{
     public ModbusSlave(byte deviceAddress, object syncObject = null)
        : base(deviceAddress, syncObject) { }
@@ -192,7 +195,8 @@ protected override ModbusErrorCode OnReadHoldingRegisters(bool isBroadcast, usho
 
 
 // override On&lt;ModusFunction&gt; methods here
-</code></pre><p>Now, we can set up the instantiate the Modbus client device inside our code.</p>
+</code></pre>
+<p>Now, we can set up the instantiate the Modbus client device inside our code.</p>
 <pre><code class="lang-cs">
 ModbusDevice ModbusTCP_Device;
 ModbusTCP_Device = new ModbusSlave(248);
@@ -200,9 +204,11 @@ ModbusTcpListener mbListner;
 mbListner = new ModbusTcpListener(ModbusTCP_Device, 502, 5, 1000);
 Thread.Sleep(100);
 ModbusTCP_Device.Start();
-</code></pre></article>
+
+</code></pre>
+</article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -225,18 +231,18 @@ ModbusTCP_Device.Start();
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -244,13 +250,13 @@ ModbusTCP_Device.Start();
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

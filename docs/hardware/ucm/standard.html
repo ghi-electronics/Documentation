@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>The UCM Standard </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="The UCM Standard ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../styles/docfx.css">
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../index.html">
                 <img id="logo" class="svg" src="../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -80,18 +80,22 @@
 
 <hr>
 <p><img src="../netmf/images/som.jpg" alt="UCM SOM"></p>
-<p>The UCM Standard defines a consistent hardware and software interface for the most widely used microcontroller peripherals.  Universal Compute Modules are based on the 200 pin SO-DIMM form factor.  They adhere to a standard pinout across models making it easy to change modules to adapt to the needs of your product.  </p>
+<p>The UCM Standard defines a consistent hardware and software interface for the most widely used microcontroller peripherals.  Universal Compute Modules are based on the 200 pin SO-DIMM form factor.  They adhere to a standard pinout across models making it easy to change modules to adapt to the needs of your product.</p>
 <p>When designing a product, consider following thee UCM standard pinout. This will make your design compatible with any of the UCM modules.</p>
 <p>Software also becomes more portable with the UCM standard. For example, our TinyCLR OS provides a library to automatically map the UCM standard names to the underlying system so that your program can use the UCM standard names only, making changing to a different module very easy.</p>
 <h2 id="the-so-dimm-socket">The SO-DIMM Socket</h2>
 <p><img src="images/200-pin-ddr2-so-dimm.jpg" alt="200 pin DDR2 SO-DIMM socket"></p>
 <p>All of our UCMs use the same 200 pin SO-DIMM socket that was originally made for DDR2 memory modules. The fastest way to get started with UCMs is by using the optional boards and displays described on the <a href="development-options.html">UCM Development Options</a> page. You can also incorporate any of our UCMs into your own custom design by adding the appropriate SO-DIMM socket to your circuit board.</p>
-<div class="TIP"><h5>Tip</h5><p>Make sure to expose the required pins in your design. Specific pins are needed for device programming, updates, recovery, and WiFi firmware updates. See device specifications for details.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Make sure to expose the required pins in your design. Specific pins are needed for device programming, updates, recovery, and WiFi firmware updates. See device specifications for details.</p>
 </div>
 <p>SO-DIMM stands for Small Outline Dual Inline Memory Module. There are two different 200 pin SO-DIMM sockets, those made for DDR memory and those made for DDR2 memory. They are identical except for the orientation notch which is in a slightly different position. These sockets are not interchangeable. There is also a 204 pin SO-DIMM socket for DDR3 memory with the notch positioned closer to the center of the module.</p>
-<div class="NOTE"><h5>Note</h5><p>Our UCMs are only compatible with DDR2 type 200 pin SO-DIMM sockets.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Our UCMs are only compatible with DDR2 type 200 pin SO-DIMM sockets.</p>
 </div>
-<p>Here is a link to the manufacturer&#39;s web page for the connector we use on our boards: <a href="http://www.te.com/usa-en/product-1565917-4.html">EMBOSS ASSY DDR2 SODIMM SOCKET 200P 5.2H</a></p>
+<p>Here is a link to the manufacturer's web page for the connector we use on our boards: <a href="http://www.te.com/usa-en/product-1565917-4.html">EMBOSS ASSY DDR2 SODIMM SOCKET 200P 5.2H</a></p>
 <h2 id="peripherals">Peripherals</h2>
 <table>
 <thead>
@@ -173,7 +177,9 @@
 </table>
 <p>*<em>Available peripherals vary by model</em></p>
 <p>Note that the system defines 12 GPIOs that are free from any other functions but most other peripheral pins also support GPIO, giving the user several more GPIO pin options -- keep in mind the standard does not guarantee this though.</p>
-<div class="TIP"><h5>Tip</h5><p>The <a href="../../software/tinyclr/tutorials/intro.html">TinyCLR tutorials</a> are a good resource on using these peripherals.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The <a href="../../software/tinyclr/tutorials/intro.html">TinyCLR tutorials</a> are a good resource on using these peripherals.</p>
 </div>
 <h3 id="uart-universal-asynchronous-receiver-transmitter">UART (Universal Asynchronous Receiver Transmitter)</h3>
 <p>UART is used to implement moderate speed full duplex asynchronous serial communication.  It is usually used for peer to peer communication between only two devices. It can transfer data using only one wire for each direction if both devices share a common ground.</p>
@@ -206,7 +212,7 @@
 <h3 id="dcmi-digital-camera-interface">DCMI (Digital Camera Interface)</h3>
 <p>A standard interface for compatible digital cameras.</p>
 <h3 id="vbat-battery-backup-for-rtc">VBAT (Battery Backup for RTC)</h3>
-<p>VBAT is used to provide battery voltage to a microcontroller&#39;s real time clock.  It allows the microcontroller to keep the correct time when the main power to the controller is disconnected (the device is turned off). </p>
+<p>VBAT is used to provide battery voltage to a microcontroller's real time clock.  It allows the microcontroller to keep the correct time when the main power to the controller is disconnected (the device is turned off).</p>
 <h3 id="jtag">JTAG</h3>
 <p>JTAG is a serial interface which allows communication between the processor and a host computer.  It is built into the microcontroller and provides a means of software debugging including the ability to stop program execution, single step through program instructions, and read and write to memory and processor registers.</p>
 <h2 id="pin-assignments">Pin Assignments</h2>
@@ -1026,7 +1032,7 @@
 <p>You can also visit our main website at <a href="http://www.ghielectronics.com"><strong>main website</strong></a> and our  <a href="https://forums.ghielectronics.com/"><strong>community forum</strong></a>.</p>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -1049,18 +1055,18 @@
                 </div>
                 <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -1068,13 +1074,13 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>

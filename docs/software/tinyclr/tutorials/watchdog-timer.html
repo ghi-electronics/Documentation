@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Watchdog </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Watchdog ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -79,15 +79,19 @@
 <h1 id="watchdog">Watchdog</h1>
 
 <hr>
-<p>A watchdog timer is used to reset the system if the system fails or locks up. </p>
-<p>During normal operation, the application will regularly reset the watchdog timer so it never reaches zero and doesn&#39;t reset the system. </p>
-<div class="NOTE"><h5>Note</h5><p>Once Watchdog is enabled it can&#39;t be disabled without resetting the system or a power cycle.</p>
+<p>A watchdog timer is used to reset the system if the system fails or locks up.</p>
+<p>During normal operation, the application will regularly reset the watchdog timer so it never reaches zero and doesn't reset the system.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Once Watchdog is enabled it can't be disabled without resetting the system or a power cycle.</p>
 </div>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Devices.Watchdog </p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Devices.Watchdog</p>
 </div>
-<p>It&#39;s recommend to run Watchdog inside a thread in the application.  </p>
+<p>It's recommend to run Watchdog inside a thread in the application.</p>
 <pre><code class="lang-cs">new Thread(RunWatchDog).Start();
-
+                 
 static void RunWatchDog() {
 
     // Set watchdog to 5 seconds and reset it every 4 seconds
@@ -100,13 +104,18 @@ static void RunWatchDog() {
         Thread.Sleep(4000);
     }
 }
-</code></pre><div class="TIP"><h5>Tip</h5><p>Set your Watchdog timer to a reasonable amount of time, setting it too low will cause the application to constantly reset. </p>
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Set your Watchdog timer to a reasonable amount of time, setting it too low will cause the application to constantly reset.</p>
 </div>
-<div class="NOTE"><h5>Note</h5><p>Enabling the watchdog timer when debugging is a bad idea since the system will probably reset while stepping through code.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Enabling the watchdog timer when debugging is a bad idea since the system will probably reset while stepping through code.</p>
 </div>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -129,18 +138,18 @@ static void RunWatchDog() {
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -148,13 +157,13 @@ static void RunWatchDog() {
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

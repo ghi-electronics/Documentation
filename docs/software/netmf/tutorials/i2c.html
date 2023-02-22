@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>I2C </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="I2C ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -131,8 +131,9 @@ public class Program
         }
     }
 }
-</code></pre><h2 id="multiple-devices">Multiple Devices</h2>
-<p>The I2C object on NETMF is a representation of the &quot;bus&quot; and not the &quot;device&quot; so you can&#39;t construct multiple I2C objects. To access multiple I2C devices you need to have multiple configurations and then when accessing device &quot;A&quot; we need to use configuration &quot;A&quot; and when accessing device &quot;B&quot; we need to use configuration &quot;B&quot;.</p>
+</code></pre>
+<h2 id="multiple-devices">Multiple Devices</h2>
+<p>The I2C object on NETMF is a representation of the &quot;bus&quot; and not the &quot;device&quot; so you can't construct multiple I2C objects. To access multiple I2C devices you need to have multiple configurations and then when accessing device &quot;A&quot; we need to use configuration &quot;A&quot; and when accessing device &quot;B&quot; we need to use configuration &quot;B&quot;.</p>
 <pre><code class="lang-cs">using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
 
@@ -148,7 +149,7 @@ public class Program
 
         //create I2C Bus object using one of the devices on the bus
         I2CDevice MyI2C = new I2CDevice(conDeviceA);
-        // Note you could have chosen to create the bus using the conDeviceB parameter, which ever you choose it will be the &quot;selected&quot; device on the bus to start with. Here&#39;s how you would do that:
+        // Note you could have chosen to create the bus using the conDeviceB parameter, which ever you choose it will be the &quot;selected&quot; device on the bus to start with. Here's how you would do that:
         // I2CDevice MyI2C = new I2CDevice(conDeviceB);
 
         //create transactions (we need 2 in this example)
@@ -162,7 +163,7 @@ public class Program
         byte[] RegisterValue = new byte[1];
         xActions[1] = I2CDevice.CreateReadTransaction(RegisterValue);
 
-        // Explicitly set the I2C bus to access device A by setting the I2C Config to the Device A&#39;s config.
+        // Explicitly set the I2C bus to access device A by setting the I2C Config to the Device A's config.
         MyI2C.Config = conDeviceA;
         if (MyI2C.Execute(xActions, 1000) == 0)
         {
@@ -173,7 +174,7 @@ public class Program
             Debug.Print(&quot;Register value: &quot; + RegisterValue[0].ToString());
         }
 
-        // Explicitly set the I2C bus to access device B by setting the I2C Config to the Device B&#39;s config.
+        // Explicitly set the I2C bus to access device B by setting the I2C Config to the Device B's config.
         MyI2C.Config = conDeviceB;
         if (MyI2C.Execute(xActions, 1000) == 0)
         {
@@ -185,9 +186,10 @@ public class Program
         }
     }
 }
-</code></pre></article>
+</code></pre>
+</article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -210,18 +212,18 @@ public class Program
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -229,13 +231,13 @@ public class Program
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

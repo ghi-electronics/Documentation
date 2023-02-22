@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>IO Control Drivers </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="IO Control Drivers ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -82,28 +82,36 @@
 <h2 id="pca9685">PCA9685</h2>
 <p><img src="images/PCA9685.png" alt="PCA9685"></p>
 <p>16-channel servo/PWM driver that uses I2C</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.Nxp.PCA9685</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.Nxp.PCA9685</p>
 </div>
 <hr>
 <h2 id="cd4017b">CD4017B</h2>
 <p><img src="images/CD4017B.png" alt="CD4017B"></p>
 <p>CMOS decade counter. Good for scanning a matrix of LEDs or buttons.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.TexasInstruments.CD4017B</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.TexasInstruments.CD4017B</p>
 </div>
 <hr>
 <h2 id="snx4hc595">SNx4HC595</h2>
 <p><img src="images/SNx4HC595.png" alt="SNx4HC595"></p>
 <p>Shift register, taking a serial data, like from SPI or pin bit-banging to output 8 parallel outputs. For example, drive 8 LEDs using SPI.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.TexasInstruments.SNx4HC595</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.TexasInstruments.SNx4HC595</p>
 </div>
 <hr>
 <h2 id="rotary-encoder">Rotary Encoder</h2>
 <p><img src="images/Rotary.png" alt="Rotary"></p>
 <p>A rotary encoder is an electro-mechanical device that converts the angular position to analog or digital output signals.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.Encoder</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGet: GHIElectronics.TinyCLR.Drivers.Encoder</p>
 </div>
 <pre><code class="lang-cs">var gpioController = GpioController.GetDefault();
-
+            
 var pinA = gpioController.OpenPin(SC20100.GpioPin.PC0); 
 var pinB = gpioController.OpenPin(SC20100.GpioPin.PE5); 
 
@@ -111,13 +119,14 @@ var encoder = new EncoderController(pinA, pinB);
 
 encoder.OnCounterChangedEvent += (counter) =&gt;
 {
-    Debug.WriteLine(&quot;Counter = &quot; + counter);
+	Debug.WriteLine(&quot;Counter = &quot; + counter);
 };
 
 Thread.Sleep(-1);
-</code></pre></article>
+</code></pre>
+</article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -140,18 +149,18 @@ Thread.Sleep(-1);
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -159,13 +168,13 @@ Thread.Sleep(-1);
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>GPIO </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="GPIO ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -82,31 +82,38 @@
 <p>Microcontrollers include pins that can be controlled through software. They can be logical inputs or outputs, hence the name &quot;general purpose input/output&quot;.</p>
 <p>The <code>Pin</code> class is uses to access GPIOs, located in the <code>machine</code> library.</p>
 <pre><code class="lang-py">from machine import Pin
-</code></pre><h2 id="digital-outputs">Digital Outputs</h2>
-<p>A digital output pin can be set to either high or low. High means that there is approx. 3.3V on the output pin. When the pin is set to low, it&#39;s voltage will be very close to zero.</p>
+</code></pre>
+<h2 id="digital-outputs">Digital Outputs</h2>
+<p>A digital output pin can be set to either high or low. High means that there is approx. 3.3V on the output pin. When the pin is set to low, it's voltage will be very close to zero.</p>
 <pre><code class="lang-py">led=Pin(&quot;PA8&quot;,Pin.OUT_PP)
 led.high()
-</code></pre><h2 id="digital-inputs">Digital Inputs</h2>
+</code></pre>
+<h2 id="digital-inputs">Digital Inputs</h2>
 <p>Digital inputs sense the state of a pin based on its voltage. Minimum voltage on most pins is 0 volts; a negative voltage may damage the pin or the processor. Most processors run on 3.3V, the highest voltage a pin should see is 3.3V. However, some processors that are powered by 3.3V are 5V tolerant -- they can withstand up to 5V on their inputs. SITCore is 5V tolerant.</p>
-<div class="WARNING"><h5>Warning</h5><p>5V tolerant doesn&#39;t mean the processor can be powered by 5V, only that the input pins can tolerate 5V.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>5V tolerant doesn't mean the processor can be powered by 5V, only that the input pins can tolerate 5V.</p>
 </div>
 <p>Unconnected input pins are called &quot;floating.&quot; A resistor can be added to pull the pin high or low. Modern processors include internal pull-up and pull-down resistors that are controlled by software.</p>
-<p>The code sample below uses an internal pull-up resistor to set the button high. When the button is pressed the <code>GpioPinValue</code> goes low. </p>
+<p>The code sample below uses an internal pull-up resistor to set the button high. When the button is pressed the <code>GpioPinValue</code> goes low.</p>
 <pre><code class="lang-py">button = Pin(&quot;PB7&quot;, Pin.IN, Pin.PULL_UP)
 button.value()
-</code></pre><h2 id="digital-input-interrupts">Digital Input Interrupts</h2>
+</code></pre>
+<h2 id="digital-input-interrupts">Digital Input Interrupts</h2>
 <p>Instead of polling a pin to determine it state, a function can be called when a pin is changed.</p>
 <pre><code class="lang-py">def ButtonHandler(p)
-    print(&quot;Pressed&quot;, p)
+	print(&quot;Pressed&quot;, p)
 
 button = Pin(&quot;PB7&quot;, Pin.IN, Pin.PULL_UP)
 button.irq(trigger=Pin.IRQ_FALLING, handler=ButtonHandler)
-</code></pre><p>Whenever the button is pressed (Falling Edge), the <code>print</code> will show &quot;Button&quot; flowed by the pin that caused the event. In this case it will show:</p>
+</code></pre>
+<p>Whenever the button is pressed (Falling Edge), the <code>print</code> will show &quot;Button&quot; flowed by the pin that caused the event. In this case it will show:</p>
 <pre><code class="lang-py">Button Pin(Pin.cpu.B7, mode=Pin.IN, pull=Pin.PULL_UP)
-</code></pre><p>For further clarification, try <code>print(button)</code> and observe the output <code>Pin(Pin.cpu.B7, mode=Pin.IN, pull=Pin.PULL_UP)</code>.</p>
+</code></pre>
+<p>For further clarification, try <code>print(button)</code> and observe the output <code>Pin(Pin.cpu.B7, mode=Pin.IN, pull=Pin.PULL_UP)</code>.</p>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -129,18 +136,18 @@ button.irq(trigger=Pin.IRQ_FALLING, handler=ButtonHandler)
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -148,13 +155,13 @@ button.irq(trigger=Pin.IRQ_FALLING, handler=ButtonHandler)
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

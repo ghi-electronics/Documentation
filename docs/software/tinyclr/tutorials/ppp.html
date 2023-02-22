@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>PPP </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="PPP ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -80,8 +80,10 @@
 
 <hr>
 <p>Point to Point Protocol (PPP) started in the days of dial up Internet and is still used today in cellular modems. While using PPP can be optional for small IoT systems, having a secure connection requires PPP. A <a href="networking-core.html">MAC address</a> is not needed for PPP.</p>
-<p>This example uses the LTE IoT 2 click module on the SCM20260D Dev Boards to establish a connection and read a web page. We&#39;ve also successfully tested the SIMCOM SIM900 and NimbeLink&#39;s Skywire cellular embedded modems.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Devices.Uart, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Networking, and GHIElectronics.TinyCLR.Pins.</p>
+<p>This example uses the LTE IoT 2 click module on the SCM20260D Dev Boards to establish a connection and read a web page. We've also successfully tested the SIMCOM SIM900 and NimbeLink's Skywire cellular embedded modems.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Devices.Uart, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Networking, and GHIElectronics.TinyCLR.Pins.</p>
 </div>
 <pre><code class="lang-cs">class Program {
     static bool linkReady = false;
@@ -119,7 +121,7 @@
         SendAT(serial, &quot;AT+CGDCONT=3,\&quot;IP\&quot;,\&quot;fast.t-mobile.com\&quot;&quot;);         //T-Mobile.
         SendAT(serial, &quot;AT+CGDCONT=4,\&quot;IPV4V6\&quot;,\&quot;NIMBLINK.GW12.VZWENTP\&quot;&quot;); //NimbeLink.
 
-        SendAT(serial, &quot;ATDT*99***1#&quot;); //Modem dial string. The &#39;1&#39; in this string points
+        SendAT(serial, &quot;ATDT*99***1#&quot;); //Modem dial string. The '1' in this string points
                                         //  to the Google Fi PDP context previously defined
                                         //  by the SendAT() method.
 
@@ -207,11 +209,15 @@
         return false;
     }
 }
-</code></pre><hr>
+</code></pre>
+<hr>
 <h2 id="switching-to-command-mode">Switching to Command Mode</h2>
-<p>When a PPP connection is set up successfully, you can switch the modem from data mode to command mode with the <code>+++</code> escape sequence. To prevent the <code>+++</code> escape sequence from being misinterpreted as data, the following guidelines should be followed: </p>
-<p>1) Do not send any other characters within one second (before or after) of sending <code>+++</code>.<br>2) Send <code>+++</code> quickly, sending all three characters within one second. </p>
-<p>When the <code>+++</code> sequence is received, the modem will switch from data mode to command mode and reply with an &quot;OK&quot; response. </p>
+<p>When a PPP connection is set up successfully, you can switch the modem from data mode to command mode with the <code>+++</code> escape sequence. To prevent the <code>+++</code> escape sequence from being misinterpreted as data, the following guidelines should be followed:</p>
+<ol>
+<li>Do not send any other characters within one second (before or after) of sending <code>+++</code>.</li>
+<li>Send <code>+++</code> quickly, sending all three characters within one second.</li>
+</ol>
+<p>When the <code>+++</code> sequence is received, the modem will switch from data mode to command mode and reply with an &quot;OK&quot; response.</p>
 <hr>
 <h2 id="switching-to-data-mode">Switching to Data Mode</h2>
 <p>When the modem is in command mode, sending the <code>ATO</code> command will switch the modem to Data Mode. Wait for the &quot;CONNECT 150000000&quot; response after sending the <code>ATO</code> command to make sure the modem is in data mode. All data sent will now be treated as PPP frames.</p>
@@ -255,7 +261,10 @@ networkController.Resume();
 
 // Continue network
 ...
-</code></pre><div class="NOTE"><h5>Note</h5><p>When sending &quot;+++&quot;, do not send &quot;\r&quot; or &quot;\n&quot; at the end. While most AT commands need end of line characters, +++ does not.</p>
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>When sending &quot;+++&quot;, do not send &quot;\r&quot; or &quot;\n&quot; at the end. While most AT commands need end of line characters, +++ does not.</p>
 </div>
 <hr>
 <h2 id="security-clarification">Security Clarification</h2>
@@ -263,7 +272,7 @@ networkController.Resume();
 <p>With TinyCLR OS, serial data between the device and the modem is encrypted. All data handling is done internally inside the core processor, which is extremely difficult to hack into.</p>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -286,18 +295,18 @@ networkController.Resume();
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -305,13 +314,13 @@ networkController.Resume();
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

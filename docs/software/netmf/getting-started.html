@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>.NET Micro Framework Getting Started </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content=".NET Micro Framework Getting Started ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../styles/docfx.css">
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../index.html">
                 <img id="logo" class="svg" src="../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -82,27 +82,29 @@
 <p><img src="../tinyclr/images/getting-started.png" alt="Getting Started"></p>
 <h2 id="installation-steps">Installation Steps</h2>
 <h3 id="install-visual-studio-community-edition">Install Visual Studio Community Edition</h3>
-<p>Download and install <a href="http://go.microsoft.com/fwlink/?LinkId=517284">Microsoft&#39;s Visual Studio 2013 Community Edition</a>.</p>
+<p>Download and install <a href="http://go.microsoft.com/fwlink/?LinkId=517284">Microsoft's Visual Studio 2013 Community Edition</a>.</p>
 <h3 id="install-microsoft-net-micro-framework">Install Microsoft .NET Micro Framework</h3>
 <ul>
 <li>Uninstall any currently installed NETMF SDKs.</li>
 <li>Download <a href="http://files.ghielectronics.com/downloads/NETMF/SDKs/MS%20NETMF%20QFE2.zip">Microsoft .NET Micro Framework 4.3 (QFE2)</a> and unzip the file.</li>
-<li>Open the file&#39;s folder and install <strong>MicroFrameworkSDK.MSI</strong> and <strong>netmfvs2013.vsix</strong>.</li>
+<li>Open the file's folder and install <strong>MicroFrameworkSDK.MSI</strong> and <strong>netmfvs2013.vsix</strong>.</li>
 </ul>
 <h3 id="install-microsoft-net-gadgeteer-core-for-gadgeteer-users-only">Install Microsoft .NET Gadgeteer Core (for Gadgeteer users only)</h3>
 <p>Download and install <a href="https://ghistorage.blob.core.windows.net/downloads/NETMF/SDKs/MS-GadgeteerCore.msi">Microsoft .NET Gadgeteer Core</a>.
 For more information on the future of Gadgeteer, please see this <a href="https://forums.ghielectronics.com/t/the-future-of-gadgeteer/197">news post</a>.</p>
-<h3 id="install-ghi-electronics-netmf-sdk">Install GHI Electronic&#39;s NETMF SDK</h3>
+<h3 id="install-ghi-electronics-netmf-sdk">Install GHI Electronic's NETMF SDK</h3>
 <p>Download and install GHI Electronics NETMF SDK 2016 R1 from our <a href="downloads.html">NETMF Downloads</a> page. When installing newer GHI Electronics NETMF SDKs, click the <code>Advanced</code> button on the opening dialog box and uncheck the boxes to install the FEZ CERB Family and G400/FEZ Hydra loader updaters (the first two options). If needed, these loaders can be installed separately as highlighted in the individual product pages.
 <img src="images/advanced-options.png" alt="Advanced options"></p>
-<p>Older GHI Electronics NETMF SDKs are also available on the <a href="downloads.html">NETMF Downloads</a> page. For the latest 2016 R1 SDK, we&#39;ve also made a zip archive of the sub-installers available so that you can install just the pieces you need in a quicker fashion.</p>
+<p>Older GHI Electronics NETMF SDKs are also available on the <a href="downloads.html">NETMF Downloads</a> page. For the latest 2016 R1 SDK, we've also made a zip archive of the sub-installers available so that you can install just the pieces you need in a quicker fashion.</p>
 <h3 id="get-started-with-net-micro-framework-for-beginners">Get Started with <em>.NET Micro Framework for Beginners</em></h3>
 <p>To help you get started we have a free e-book in .pdf format: <a href="http://files.ghielectronics.com/downloads/Documents/Guides/NETMF%20for%20Beginners.pdf"><em>.NET Micro Framework for Beginners</em></a></p>
 <h2 id="the-emulator">The Emulator</h2>
 <p>The NETMF SDK includes an emulator for running NETMF applications on the PC. For the first part of this project, the emulator will be used to run a very simple application; afterwards the same program is run on NETMF hardware.</p>
 <h2 id="create-a-new-project">Create a New Project</h2>
 <p>Open Visual Studio, select <code>File &gt; New Project</code>. There should be a <code>Micro Framework</code> option in the left menu. Click on it and then select <code>Console Application</code> in the center panel.</p>
-<div class="NOTE"><h5>Note</h5><p>The pictures used in this tutorial may vary slightly with different versions of the development platform.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The pictures used in this tutorial may vary slightly with different versions of the development platform.</p>
 </div>
 <p><img src="images/new-console-application.jpg" alt="New console application"></p>
 <p>Click the <code>OK</code> button to create a new project. The project has only one C# file, called <code>Program.cs</code>. C# source files are listed in the <code>Solution Explorer</code> window. If the Solution Explorer is not open, use the <code>View &gt; Solution Explorer</code> menu to open it.</p>
@@ -123,8 +125,11 @@ namespace MFConsoleApplication1
 
     }
 }
-</code></pre><p>For simplicity change the code to match the listing below:</p>
-<div class="TIP"><h5>Tip</h5><p>All example code should be copied directly from this page and pasted into the Visual Studio program editor.</p>
+</code></pre>
+<p>For simplicity change the code to match the listing below:</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>All example code should be copied directly from this page and pasted into the Visual Studio program editor.</p>
 </div>
 <pre><code>using Microsoft.SPOT;
 
@@ -135,13 +140,14 @@ public class Program
         Debug.Print(&quot;Amazing!&quot;);
     }
 }
-</code></pre><h2 id="selecting-transport">Selecting Transport</h2>
+</code></pre>
+<h2 id="selecting-transport">Selecting Transport</h2>
 <p>When compiling a NETMF Console Project, there are options in Video Studio that control where the program is loaded and run.</p>
-<p>Select the menu item for the project&#39;s properties:</p>
+<p>Select the menu item for the project's properties:</p>
 <p><img src="images/project-menu.jpg" alt="Project menu"></p>
 <p>In the Properties window, on the left side tabs, select <code>.NET Micro Framework</code> and make sure that <code>Transport:</code> is set to <code>Emulator.</code></p>
 <p><img src="images/project-properties.jpg" alt="Project properties"></p>
-<p>Console applications have their <code>Debug.Print</code> statements appear in Visual Studio&#39;s Output Window. The application in this example uses print statements.  If the Output window is not visible, open it by selecting <code>Output</code> in the <code>View</code> menu.</p>
+<p>Console applications have their <code>Debug.Print</code> statements appear in Visual Studio's Output Window. The application in this example uses print statements.  If the Output window is not visible, open it by selecting <code>Output</code> in the <code>View</code> menu.</p>
 <h2 id="executing">Executing</h2>
 <p>Press <code>F5</code> and Visual Studio will compile the program, load it into the emulator and run it.  The emulator displays a hypothetical NETMF device, complete with buttons and a screen. Do not close it.</p>
 <p><img src="images/emulator.jpg" alt="Emulator"></p>
@@ -160,7 +166,9 @@ public class Program
 <p><code>F11</code> can be used to single step execution line by line. <code>F5</code> can be used to let the program run.</p>
 <h2 id="running-on-hardware">Running on Hardware</h2>
 <p>Deploying and running NETMF applications on hardware is very simple.  Just connect the hardware, change an option in Visual Studio, and all loading, running, debugging, etc. are done on the device. The complete procedure is described below.</p>
-<div class="WARNING"><h5>Warning</h5><p>When working with hardware, take care not to expose the hardware to static electricity as it can damage the device.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>When working with hardware, take care not to expose the hardware to static electricity as it can damage the device.</p>
 </div>
 <h2 id="connect-and-power-up">Connect and Power-up</h2>
 <p>Connect the NETMF hardware to the PC using a USB cable. This is done one of two ways.</p>
@@ -173,7 +181,9 @@ public class Program
 <p>Before using a NETMF device, the embedded software must match the version of the SDK being used. Instructions for updating the embedded software are found on the <a href="tutorials/firmware-update.html">Firmware Update</a> page.</p>
 <p>If necessary, update your firmware, and then return here to continue the tutorial.</p>
 <p>Skipping the above step is <strong>the most common problem faced by beginners</strong>.</p>
-<div class="TIP"><h5>Tip</h5><p>Many USB hubs are poorly implemented in PCs. If Windows failed to recognize the NETMF device or had any connection problems, make sure the device is connected directly to the PC, not through a USB hub. If problems persist, try using a power transformer or powered USB hub to guarantee the device is getting sufficient power.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Many USB hubs are poorly implemented in PCs. If Windows failed to recognize the NETMF device or had any connection problems, make sure the device is connected directly to the PC, not through a USB hub. If problems persist, try using a power transformer or powered USB hub to guarantee the device is getting sufficient power.</p>
 </div>
 <h2 id="deploying-to-hardware">Deploying to Hardware</h2>
 <p>Once the board is connected, Visual Studio has a control to switch back and forth between the emulator and connected hardware.</p>
@@ -184,7 +194,7 @@ public class Program
 <p>We are currently updating the NETMF documentation found in our NETMF <a href="tutorials/intro.html">Tutorials</a>.</p>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -207,18 +217,18 @@ public class Program
                 </div>
                 <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -226,13 +236,13 @@ public class Program
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>

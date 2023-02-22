@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>DUE Scripting Language </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="DUE Scripting Language ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -87,20 +87,24 @@
 <pre><code>If temp &gt; 60
   Print &quot;Too Hot!&quot;
 end
-</code></pre><p>C-style</p>
+</code></pre>
+<p>C-style</p>
 <pre><code>if (temp &gt; 60) {
   print (&quot;Too Hot!&quot;);
 }
-</code></pre><p>Python-style</p>
+</code></pre>
+<p>Python-style</p>
 <pre><code>If (temp &gt; 60):
   Print (&quot;Too Hot!&quot;)
-</code></pre><p>DUE simply understand any of the most common formats. Users can even mix and match!</p>
-<p>Mixing styles between styles within the same block is not supported. </p>
+</code></pre>
+<p>DUE simply understand any of the most common formats. Users can even mix and match!</p>
+<p>Mixing styles between styles within the same block is not supported.</p>
 <p>This code is not allowed and will raise an error:</p>
 <pre><code>If (temp &gt; 60) {
   Print (&quot;Too Hot!&quot;)
 end
-</code></pre><p>C-style and BASIC-style ignore white-space as how the style work. The Python-style however needs the proper indentation, just like expected by the full python language.</p>
+</code></pre>
+<p>C-style and BASIC-style ignore white-space as how the style work. The Python-style however needs the proper indentation, just like expected by the full python language.</p>
 <h3 id="universal">Universal</h3>
 <p>DUE uses syntax that is universally used and common among most popular programming languages. Comments, variables, constants are some of the examples.</p>
 <p>While not found in most scripting languages, DUE has full built-in <a href="debugging.html">debugging</a> capability similar to any world-class language.</p>
@@ -114,15 +118,17 @@ end
 <pre><code>// This is a comment
 print x // This is also a comment 
 #this is a python-style comment
-</code></pre><h2 id="understanding-environment">Understanding Environment</h2>
+</code></pre>
+<h2 id="understanding-environment">Understanding Environment</h2>
 <p>The <code>ScriptEngine</code> takes a script and compiles it and then it will run any top level statements. Any functions and variables are loaded in the environment, and will still be there even when execution has completed.</p>
 <p>This script <code>Foo(x)</code> will raise an error. There is no <code>Foo</code> function and no variable <code>x</code> in the script.</p>
 <p>Now this script is ran:</p>
 <pre><code>var x=5
 func Foo(s)
-    print s
+	print s
 end
-</code></pre><p>While the earlier script will not do anything, it actually loads the environment with a variable and a function.</p>
+</code></pre>
+<p>While the earlier script will not do anything, it actually loads the environment with a variable and a function.</p>
 <p>Running the first script now works fine <code>Foo(x)</code>.</p>
 <hr>
 <h2 id="samples">Samples</h2>
@@ -133,7 +139,8 @@ end
 end
 
 print(factorial(5))
-</code></pre><h3 id="if">if</h3>
+</code></pre>
+<h3 id="if">if</h3>
 <pre><code>func ToWords(i)
     if i &lt; 10
         return i + &quot; units&quot;
@@ -150,13 +157,15 @@ print(ToWords(3))
 print(ToWords(55))
 print(ToWords(432))
 print(ToWords(2342))
-</code></pre><h3 id="while">while</h3>
+</code></pre>
+<h3 id="while">while</h3>
 <pre><code>var i = 1
 while i &lt;= 10
     print(i)
     i = i + 1
 end
-</code></pre><h3 id="pi">PI</h3>
+</code></pre>
+<h3 id="pi">PI</h3>
 <pre><code>const scale = 10000
 const arrinit = 2000
 
@@ -194,9 +203,10 @@ func pi_digits(digits)
 end
 
 var result = pi_digits(20)
-</code></pre></article>
+</code></pre>
+</article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -219,18 +229,18 @@ var result = pi_digits(20)
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -238,13 +248,13 @@ var result = pi_digits(20)
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
