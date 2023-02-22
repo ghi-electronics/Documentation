@@ -1,0 +1,183 @@
+# DUE - Language
+
+## Immediate & Record Modes
+
+*Immediate* mode, commands are executed immediately. In *Record* mode, commands are stored in flash and executed with the **run** command. 
+
+##### Immediate Mode
+A user will know they are in this mode when their cursor prompt is the  
+**_>_** character. All statements are executed as soon as entered.
+
+```basic 
+> print("Hello World")
+```
+
+> [!NOTE]
+Immediate Mode is the default mode when device is first connected.
+
+##### Record Mode
+To enter into *Record* mode, the user enters the **$** character.
+The character prompt will change to the **$** sign until *Record* mode is exited using the **>** character. All statements entered are stored directly in flash but not executed until **run** is entered. 
+
+|Statement              |Description                                                            |
+|:----------------------|:----------------------------------------------------------------------|
+|$                      |Sets the device in record mode                                      |
+|>                      |Exits record mode and returns to direct mode                                    |
+
+The following statements control the program recorded in flash, but can be used in both *Immediate or Record* modes. When used in *Record* mode these special statements execute, but are not added to the program in flash. 
+
+|Statement              |Description                                                            |
+|:----------------------|:----------------------------------------------------------------------|
+|run                    |Executes the program stored in flash                                     |
+|new                    |Erases the program stored in flash                                    |
+|list                   |Returns all the code in your program                                     |
+
+
+```basic 
+> $
+$ println (x)
+$ println (y)
+$ >
+> x=1:y=2
+> run
+1
+2
+>list
+println(x)
+println(y)
+>new
+```
+---
+
+## Comments
+The # character is used to identify a comment. Comments are ignored by the program, text added to help developers understand the code.
+
+```basic
+# This is a comment
+x=10
+print (x) # This is also a comment 
+```
+---
+
+## Variables
+DUE can hold up to 26 variables one for letters a-z. The only data type used in DUE is integers. All variables created are global in nature. 
+
+---
+
+## Single Line Commands
+Code can be concatenated together in a single line with each command joined by a **:** When coding in **Immediate** mode multi-line statements need to be coded as a single line command. When using **Record mode** multi-line statements can be used. 
+
+```basic 
+x=10:print(x):x=15:print(x)
+```
+---
+
+## Looping & Conditional Statements
+
+
+|Statement              |Description                                                            |
+|:----------------------|:----------------------------------------------------------------------|
+|for/to/step/next       |Incremental looping                                                 |
+|if/else/end            |Conditional execution of the code                                      |
+
+
+### For-Loop used in Immediate mode
+
+```basic 
+for i=1 to 1000 step 10: println(i):next
+```
+
+### If-Else statement used in Record mode
+
+```basic 
+$
+$new
+$if x=1
+$println("one")
+$else 
+$println("not one")
+$end
+$>
+>x = 1
+>run
+one
+>x = 2
+>run
+not one
+```
+
+
+---
+
+## Functions
+
+### Built-In Functions
+
+A list of the built-in functions can be found in the [library](library.md) section. 
+
+### User Functions
+
+User defined functions or labels are pseudo functions, that act like a "function". Unlike normal programming language functions these do not take arguments or return values. Global variables inside DUE can be used instead of sending arguments or returning values. 
+
+The user function resides in the environment until called, these "functions" are stored in flash until the chip is cleared.
+
+##### Defining a User "Function"
+
+A user "function" is created by simply using the **@** symbol in front of the name of the function you'd like to create. These names are limited to 6 characters. Once you've created a "function" any preceding commands entered go inside that function. The "function" can be closed with the **return** command. 
+
+```basic
+$@Mine
+$add code here
+$return run
+```
+"Functions" that are not closed with the **return** command can be called using the **goto** command. This is handy when a closed loop is needed. 
+
+```basic
+$@Mine
+$add code here
+$goto mine 
+```
+
+
+> [!TIP]
+> DUE variables are global and any changes inside functions will affect variable values outside those functions.
+
+##### Calling User "Function"
+
+The DUE script engine does all the necessary magic internally. The user only needs to call the "function" by it's name() or command *goto*. "Functions" can be called in either *Immediate* or *Record* modes.
+
+```basic
+Mine()
+```
+
+```basic
+goto Mine
+```
+
+A list of the built-in functions can be found in the [library](library.md) section. 
+
+> [!TIP]
+Again user defined "functions" do not take arguments and do not return values. Think of this as a "gosub".
+
+
+
+---
+## Extending DUE with User Functions
+
+User "functions" stored in flash, can be called externally. This allows a function to be called from ANY outside source or program. 
+
+
+```basic
+$
+@Count
+for x=0 to a
+println(x)
+next
+return
+```
+The above "function" can be called from inside *Immediate* mode as an example
+
+```basic
+>a=5
+>Count()
+```
