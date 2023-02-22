@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Adafruit IO </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Adafruit IO ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -79,47 +79,50 @@
 <h1 id="adafruit-io">Adafruit IO</h1>
 
 <hr>
-<p>The Adafruit cloud, Adafruit IO, is a cloud service primarily aimed at the maker market. While Adafruit IO is more limited than the major players in cloud services, it is very easy to use and there&#39;s a free option making this a great way to test IoT proofs of concept and prototypes.</p>
-<p>We&#39;ll need create a few things for our code. We&#39;ll need an Adafruit Certificate, a dashboardID, a username, a password key, and a feed to subscribe to. </p>
+<p>The Adafruit cloud, Adafruit IO, is a cloud service primarily aimed at the maker market. While Adafruit IO is more limited than the major players in cloud services, it is very easy to use and there's a free option making this a great way to test IoT proofs of concept and prototypes.</p>
+<p>We'll need create a few things for our code. We'll need an Adafruit Certificate, a dashboardID, a username, a password key, and a feed to subscribe to.</p>
 <p>First download the required Adafruit Root Certificate and add to resources. The <a href="tls-client.html">TLS Client</a> shows how to download the root certificate.</p>
 <p><img src="images/adaIO-add-cert.jpg" alt="Adafruit IO Add Certificate"></p>
 <pre><code class="lang-cs">var caCertSource = Resources.GetBytes(Resources.BinaryResources.DigiCertGlobalRootG2);
-</code></pre><p>Next, we&#39;ll create a &#39;Dashboard&#39;, from the Dashboards page. Click on &#39;Create a New Dashboard&#39; found inside the &#39;Actions&#39; dropdown. </p>
+</code></pre>
+<p>Next, we'll create a 'Dashboard', from the Dashboards page. Click on 'Create a New Dashboard' found inside the 'Actions' dropdown.</p>
 <p><img src="images/adaIO-create-dashboard.jpg" alt="Adafruit create Dashboard"></p>
-<p>Create a meaningful name for our Dashboard. This will be the &#39;dashboardID&#39; inside our code sample. </p>
+<p>Create a meaningful name for our Dashboard. This will be the 'dashboardID' inside our code sample.</p>
 <p><img src="images/adaIO-name-dashboard.jpg" alt="Adafruit name Dashboard"></p>
-<p>Click on our newly created &#39;Dashboard&#39;</p>
+<p>Click on our newly created 'Dashboard'</p>
 <p><img src="images/adaIO-select-dashboard.jpg" alt="Adafruit select Dashboard"></p>
-<p>This opens the Dashboard canvas for our project. This is where we will add blocks to control our IoT device. Click on &#39;+&#39; to create a new block. </p>
+<p>This opens the Dashboard canvas for our project. This is where we will add blocks to control our IoT device. Click on '+' to create a new block.</p>
 <p><img src="images/adaIO-create-block.jpg" alt="Adafruit create Block"></p>
-<p>Let&#39;s add our first block to the canvas. There are many kinds of blocks you can add, for this we&#39;ll first add a &#39;Toggle&#39; block. Click on the &#39;Toggle&#39; block. </p>
+<p>Let's add our first block to the canvas. There are many kinds of blocks you can add, for this we'll first add a 'Toggle' block. Click on the 'Toggle' block.</p>
 <p><img src="images/adaIO-select-toggle.jpg" alt="Adafruit select Toggle"></p>
-<p>We need to create a &#39;feed&#39; name to attach to our newly created block. Enter a name for the feed and click &#39;Create&#39;. In our example we&#39;ll call this block&#39;s feed &#39;ToggleSwitch&#39;</p>
+<p>We need to create a 'feed' name to attach to our newly created block. Enter a name for the feed and click 'Create'. In our example we'll call this block's feed 'ToggleSwitch'</p>
 <p><img src="images/adaIO-name-feed.jpg" alt="Adafruit name feed"></p>
-<p>Check the box of the newly created feed and click &#39;Next Step&#39;</p>
+<p>Check the box of the newly created feed and click 'Next Step'</p>
 <p><img src="images/adaIO-next-step.jpg" alt="Adafruit name feed"></p>
-<p>Here we can set the Text we want to use that appears on the button and the value the button will send when used. Let&#39;s change the Button value to 1 for on and 0 for off. Then click &#39;Create block&#39;</p>
+<p>Here we can set the Text we want to use that appears on the button and the value the button will send when used. Let's change the Button value to 1 for on and 0 for off. Then click 'Create block'</p>
 <p><img src="images/adaIO-block-settings.jpg" alt="Adafruit block settings"></p>
-<p>The new Toogle we created now appears in the Dashboard canvas, the blocks can be placed anywhere we like on the Dashboard. But let&#39;s add another block first. </p>
+<p>The new Toogle we created now appears in the Dashboard canvas, the blocks can be placed anywhere we like on the Dashboard. But let's add another block first.</p>
 <p><img src="images/adaIO-add-newblock.jpg" alt="Adafruit create another Blcok"></p>
-<p>Let&#39;s add a &#39;Gauge&#39; block to our canvas next. </p>
+<p>Let's add a 'Gauge' block to our canvas next.</p>
 <p><img src="images/adaIO-add-gauge.jpg" alt="Adafruit create another Blcok"></p>
-<p>Like we did the ToggleSwitch feed, we need to create a feed for the Gauge. We&#39;ll just call the feed &#39;Gauge&#39;, click on the &#39;Create&#39;, select the &#39;Gauge&#39; and click &#39;Next step&#39;</p>
+<p>Like we did the ToggleSwitch feed, we need to create a feed for the Gauge. We'll just call the feed 'Gauge', click on the 'Create', select the 'Gauge' and click 'Next step'</p>
 <p><img src="images/adaIO-name-gaugefeed.jpg" alt="Adafruit name gauge feed"></p>
-<p>There are several setting we can adjust but for this tutorial we&#39;ll just us the default and click on &#39;Create block&#39;</p>
+<p>There are several setting we can adjust but for this tutorial we'll just us the default and click on 'Create block'</p>
 <p><img src="images/adaIO-create-gaugeblock.jpg" alt="Adafruit name gauge feed"></p>
-<p>We can see that the gauge has been added to our Dashboard Canvas. The final element we need for our code is an &#39;Adafruit IO Key&#39;. Click on it located in the top menu. </p>
+<p>We can see that the gauge has been added to our Dashboard Canvas. The final element we need for our code is an 'Adafruit IO Key'. Click on it located in the top menu.</p>
 <p><img src="images/adaIO-select-key.jpg" alt="Adafruit select key"></p>
 <p>Copy the generated key...</p>
 <p><img src="images/adaIO-generate-key.jpg" alt="Adafruit generate key"></p>
-<p>...and paste in our code as shown in the example below. </p>
+<p>...and paste in our code as shown in the example below.</p>
 <pre><code class="lang-cs">var key = &quot;aio_XXJy54zT7H0X89PMZhUwlsfA7&quot;;
-</code></pre><p>We now have all the elements we need to complete the code in our sample. Here are the values we created and need to add. </p>
+</code></pre>
+<p>We now have all the elements we need to complete the code in our sample. Here are the values we created and need to add.</p>
 <pre><code class="lang-cs">var dashboardId = &quot;SITCore&quot;;
 var username = &quot;Your Username&quot;;
 var key = &quot;aio_XXJy54zT7H0X89PMZhUwlsfA7&quot;;
 var feed = &quot;your username/feeds/ToggleSwitch&quot;;
-</code></pre><p>Deploy your program to your SITCore IoT device, once launched the gauge on our Dashboard will start at 50 and increment by 5 every 2 seconds. Clicking on the &#39;Toggle Switch&#39; will send the value to our device, which can be seen in Visual Studio&#39;s output window. </p>
+</code></pre>
+<p>Deploy your program to your SITCore IoT device, once launched the gauge on our Dashboard will start at 50 and increment by 5 every 2 seconds. Clicking on the 'Toggle Switch' will send the value to our device, which can be seen in Visual Studio's output window.</p>
 <p><img src="images/adaIO-complete-dashboard.jpg" alt="Adafruit running dashboard"></p>
 <p><img src="images/adaIO-message-vs.jpg" alt="Adafruit running dashboard"></p>
 <hr>
@@ -185,14 +188,16 @@ Thread.Sleep(Timeout.Infinite);
 }
 
 private static void Client_PublishReceivedChanged(object sender, string topic, byte[] data, bool duplicate, QoSLevel qosLevel, bool retain) {
-    if (data[0] == &#39;1&#39;) { //Toggle is set to &#39;1&#39;
+    if (data[0] == '1') { //Toggle is set to '1'
         Debug.WriteLine(&quot;ToggleSwitch set to 1&quot;);
     }
-    if (data[0] == &#39;0&#39;) {  //Toggle is set to &#39;0&#39;
+    if (data[0] == '0') {  //Toggle is set to '0'
         Debug.WriteLine(&quot;ToggleSwitch set to 0&quot;);
     }
 }
-</code></pre><h2 id="using-html">Using HTML</h2>
+
+</code></pre>
+<h2 id="using-html">Using HTML</h2>
 <p>Your IoT device can communicate with Adafruit IO using simple HTTP GET and POST commands. However, to respond to input on your Adafruit IO dashboard you must repeatedly execute HTTP GET requests to poll the input. If you would rather use event driven input from Adafruit IO, MQTT is a better choice than HTML.</p>
 <p>The following code uses an HTTP POST request to send a value to an Adafruit IO feed named &quot;Gauge&quot; which is represented by a gauge on an Adafruit IO dashboard. It uses a secure connection, so you must have the Adafruit certificate loaded as a <a href="resources.html">resource</a>. There must be a working Internet connection for this code to work.</p>
 <pre><code class="lang-cs">var url = &quot;http://io.adafruit.com/api/feeds/temperature/data.json&quot;;
@@ -247,7 +252,8 @@ try {
 catch {
 
 }
-</code></pre><p>You can use an HTTP GET request to read the status of an Adafruit IO feed. The following code reads that status of a toggle block called &quot;Digital.&quot; You will need the rename the toggle&#39;s <code>Button On Text</code> to &quot;1&quot; and the <code>Button Off Text</code> to &quot;0&quot; on the Adafruit IO dashboard. There must be a working Internet connection for this code to work.</p>
+</code></pre>
+<p>You can use an HTTP GET request to read the status of an Adafruit IO feed. The following code reads that status of a toggle block called &quot;Digital.&quot; You will need the rename the toggle's <code>Button On Text</code> to &quot;1&quot; and the <code>Button Off Text</code> to &quot;0&quot; on the Adafruit IO dashboard. There must be a working Internet connection for this code to work.</p>
 <pre><code class="lang-cs">url = &quot;https://io.adafruit.com/api/v2/adafruit_io_username/
     feeds/toggleswitch/data?include=value&amp;limit=1&quot;;
 
@@ -282,9 +288,10 @@ using (var getRequest = HttpWebRequest.Create(url) as HttpWebRequest) {
         }
     }
 }
-</code></pre></article>
+</code></pre>
+</article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -307,18 +314,18 @@ using (var getRequest = HttpWebRequest.Create(url) as HttpWebRequest) {
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -326,13 +333,13 @@ using (var getRequest = HttpWebRequest.Create(url) as HttpWebRequest) {
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

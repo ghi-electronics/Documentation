@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>File System </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="File System ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -80,7 +80,9 @@
 
 <hr>
 <p>The file system library is a subset of the full .NET file system support. Most examples should work with only minor changes. The internal drivers fully support FAT16 or FAT32 file systems, with no limitations beyond the FAT file system itself!</p>
-<div class="NOTE"><h5>Note</h5><p>The USB drive must have an MBR record, not a GPT table.
+<div class="NOTE">
+<h5>Note</h5>
+<p>The USB drive must have an MBR record, not a GPT table.
 FAT16 and FAT32 file systems are supported.</p>
 </div>
 <h2 id="fat-file-system">Fat File System</h2>
@@ -110,7 +112,9 @@ file.Write(bytes, 0, bytes.Length);
 file.Flush();
 
 FileSystem.Flush(sd.Hdc);
-</code></pre><h3 id="low-level-access">Low-level Access</h3>
+
+</code></pre>
+<h3 id="low-level-access">Low-level Access</h3>
 <p>You can access the raw underlying data of the storage provider by using the <code>Provider</code> property of the controller. Be careful when using this interface, however, as it bypasses any file system present and writes directly to the device. This is useful for implementing your own or otherwise unsupported file systems.</p>
 <pre><code class="lang-cs">var controller = StorageController.FromName
         (SC20100.StorageController.SdCard);
@@ -118,16 +122,20 @@ FileSystem.Flush(sd.Hdc);
 controller.Provider.Open(); // open
 controller.Provider.Read(address, buffer, 0, buffer.Length, TimeSpan.FromSeconds(5));
 controller.Provider.Close(); // close
-</code></pre><hr>
+
+</code></pre>
+<hr>
 <h2 id="tiny-file-system-tfs">Tiny File System (TFS)</h2>
-<p>Tiny File System(TFS) can be used to access any memory storage as a file system. All that is needed is a basic driver to Read, Write, and Erase these storages. </p>
+<p>Tiny File System(TFS) can be used to access any memory storage as a file system. All that is needed is a basic driver to Read, Write, and Erase these storages.</p>
 <p>Below is an example that uses the external flash through TFS.</p>
-<div class="NOTE"><h5>Note</h5><p>This example requires the <code>GHIElectronics.TinyCLR.IO.TinyFileSystem</code></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This example requires the <code>GHIElectronics.TinyCLR.IO.TinyFileSystem</code></p>
 </div>
 <pre><code class="lang-cs">const int CLUSTER_SIZE = 1024;
 
 var tfs = new TinyFileSystem(new QspiMemory(), CLUSTER_SIZE);
-
+            
 if (!tfs.CheckIfFormatted()) {
     //Do Format if necessary 
     tfs.Format();
@@ -150,13 +158,14 @@ using (var fsWrite = tfs.Create(&quot;settings.dat&quot;)) {
 using (var fsRead = tfs.Open(&quot;settings.dat&quot;, FileMode.Open)) {
     using (var rdr = new StreamReader(fsRead)) {
         System.String line;
-
+        
         while ((line = rdr.ReadLine()) != null) {
                 Debug.WriteLine(line);
         }
     }
 }
-</code></pre><p>Below is a basic driver implementation utilizing QSPI external flash. It automatically sets the size appropriately depending on whether the deployment is extended or not, as explained on the <a href="external-memory.html">External Flash</a> page. It however gives you the option to fix the size to 2MB, as the remaining 8MB can optionally be used by <a href="in-field-update.html">InField Update</a>.</p>
+</code></pre>
+<p>Below is a basic driver implementation utilizing QSPI external flash. It automatically sets the size appropriately depending on whether the deployment is extended or not, as explained on the <a href="external-memory.html">External Flash</a> page. It however gives you the option to fix the size to 2MB, as the remaining 8MB can optionally be used by <a href="in-field-update.html">InField Update</a>.</p>
 <pre><code class="lang-cs">public sealed class QspiMemory : IStorageControllerProvider
 {
     public StorageDescriptor Descriptor =&gt; this.descriptor;
@@ -246,9 +255,10 @@ using (var fsRead = tfs.Open(&quot;settings.dat&quot;, FileMode.Open)) {
         }
     }
 }
-</code></pre></article>
+</code></pre>
+</article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -271,18 +281,18 @@ using (var fsRead = tfs.Open(&quot;settings.dat&quot;, FileMode.Open)) {
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -290,13 +300,13 @@ using (var fsRead = tfs.Open(&quot;settings.dat&quot;, FileMode.Open)) {
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

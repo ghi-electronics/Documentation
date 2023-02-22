@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Digital Inputs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Digital Inputs ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -79,11 +79,13 @@
 <h1 id="digital-inputs">Digital Inputs</h1>
 
 <hr>
-<p>Digital inputs sense if the state of its pin is high or low based on the voltage. Every pin has a maximum &amp; minimum supported voltages. For example, the typical minimum voltage on most pins is 0 volts -- a negative voltage may damage the pin or the processor. Also, the maximum that can be supplied to most pins must be less than the processor power source voltage. Since most processors run on 3.3V, the highest voltage a pin should see is 3.3V; however, some processors that are powered by 3.3V are 5V tolerant and are capable of accepting up to 5V on their inputs. Check the product&#39;s or the processor&#39;s manual for the tolerance level.</p>
-<div class="WARNING"><h5>Warning</h5><p>5V-tolerant doesn&#39;t mean the processor can be powered by 5V. Only the input pins can tolerate 5V.</p>
+<p>Digital inputs sense if the state of its pin is high or low based on the voltage. Every pin has a maximum &amp; minimum supported voltages. For example, the typical minimum voltage on most pins is 0 volts -- a negative voltage may damage the pin or the processor. Also, the maximum that can be supplied to most pins must be less than the processor power source voltage. Since most processors run on 3.3V, the highest voltage a pin should see is 3.3V; however, some processors that are powered by 3.3V are 5V tolerant and are capable of accepting up to 5V on their inputs. Check the product's or the processor's manual for the tolerance level.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>5V-tolerant doesn't mean the processor can be powered by 5V. Only the input pins can tolerate 5V.</p>
 </div>
 <h2 id="inputport">InputPort</h2>
-<p>An InputPort object is used to handle digital input pins. Most pins on the processor can be input or output. Unconnected input pins are &quot;floating&quot;. When a pin is an input and is not connected, it is open for any surrounding noise, which can make the pin high or low. To take care of this issue, modern processors include internal weak pull-down or pull-up resistors, that are usually controlled by software. Enabling the pull-up resistor will pull the pin high. Note that the pull-up resistor doesn&#39;t make a pin high but it pulls it high. If nothing is connected then the pin is high by default. External resistors can be added as well.</p>
+<p>An InputPort object is used to handle digital input pins. Most pins on the processor can be input or output. Unconnected input pins are &quot;floating&quot;. When a pin is an input and is not connected, it is open for any surrounding noise, which can make the pin high or low. To take care of this issue, modern processors include internal weak pull-down or pull-up resistors, that are usually controlled by software. Enabling the pull-up resistor will pull the pin high. Note that the pull-up resistor doesn't make a pin high but it pulls it high. If nothing is connected then the pin is high by default. External resistors can be added as well.</p>
 <p>In this example, a button is connected between ground and the input pin. We will also enable the pull-up resistor. This means that the pin will be high (pull-up) when button is not pressed and low (connected to ground) when the button is pressed. We will read the status of the button and pass its state to the LED. Note that the pin is high when the button is not pressed (pulled-high) and it is low when the button is pressed. This means the LED will turn off when the button is pressed.</p>
 <p>The following code requires the Microsoft.SPOT.Hardware assembly. Consult the device schematics or manuals for the proper pin numbers.</p>
 <pre><code class="lang-cs">using System.Threading;
@@ -106,8 +108,9 @@ public class Program
         }
     }
 }
-</code></pre><h2 id="interrupt-port">Interrupt Port</h2>
-<p>In the previous example, the program just looped, and looped, and looped -- each time checking the status of the pin attached to the button. The pin is checked maybe a million times before/after the button is pressed!  </p>
+</code></pre>
+<h2 id="interrupt-port">Interrupt Port</h2>
+<p>In the previous example, the program just looped, and looped, and looped -- each time checking the status of the pin attached to the button. The pin is checked maybe a million times before/after the button is pressed!</p>
 <p>Interrupt ports allows us to set a method that will be executed when the button is pressed (when pin is low for example).</p>
 <p>We can set the interrupt to fire (call the method) on many state changes on the pin: when a pin is low or maybe when it is high. The most common use is the &quot;on change.&quot; The change from low to high or high to low creates a signal edge. The rising edge occurs when the signal rises from low to high. The falling edge happen when the signal falls from high to low. For a more in-depth understanding of the difference between the &quot;change&quot; interrupt versus a &quot;level&quot; interrupt, use wikipedia -- the two articles of relevance are found by searching for &quot;Interrupt Port&quot; and &quot;edge level transition.&quot;</p>
 <p>In the example below, we are using the low edge to detect a button press. &quot;IntButton_OnInterrupt&quot; will automatically run when button is pressed.</p>
@@ -126,10 +129,10 @@ public class Program
                                                     Port.InterruptMode.InterruptEdgeLow);
 
         IntButton.OnInterrupt += new NativeEventHandler(IntButton_OnInterrupt);
-
-        // Other code can be added here
-        // ...
-        // We are just going to sleep in this example!
+		
+      	// Other code can be added here
+      	// ...
+      	// We are just going to sleep in this example!
         Thread.Sleep(Timeout.Infinite);
     }
 
@@ -138,16 +141,23 @@ public class Program
         Debug.Print(&quot;Button Pressed&quot;);
     }
 }
-</code></pre><p>When creating the new InterruptPort object, the second argument indicates whether the glitch filter is enabled (true) or disabled (false). This is typically needed when using the interrupt feature to debounce the button. Not enabling this feature may cause the button to trigger more than one event, even though the button is pressed once.</p>
-<div class="TIP"><h5>Tip</h5><p>In the event handler, like the one above : ...OnInterrupt(uint port, uint state..., the state argument is the state of the Pin after the edge transition. I.e. on a low to high edge, state will be high (true); likewise for high to low transitions.</p>
+</code></pre>
+<p>When creating the new InterruptPort object, the second argument indicates whether the glitch filter is enabled (true) or disabled (false). This is typically needed when using the interrupt feature to debounce the button. Not enabling this feature may cause the button to trigger more than one event, even though the button is pressed once.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>In the event handler, like the one above : ...OnInterrupt(uint port, uint state..., the state argument is the state of the Pin after the edge transition. I.e. on a low to high edge, state will be high (true); likewise for high to low transitions.</p>
 </div>
 <h2 id="tristate-port">Tristate Port</h2>
 <p>If we want a pin to be an input and output, what can we do? A pin can never be in and out simultaneously but we can make it output to set something and then make it input to read a response back. One way is to &quot;Dispose&quot; of the pin. We make an output port, use it and then dispose it; then we can make the pin input and read it.</p>
 <p>NETMF supports a better option called a Tristate port. Tristate means three states -- input, output low and output high. One minor issue about tristate pins is that if a pin is set to output and then you set it to output again an exception will occur. One common work-around for this is to check the direction of the pin before changing it. The direction of the pin is in its property &quot;Active&quot; where false means input and true is output.</p>
 <p>The code below requires the Microsoft.SPOT.Hardware assembly.</p>
-<div class="TIP"><h5>Tip</h5><p>Due to internal design, TristatePorts will only work with interrupt capable digital pins.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Due to internal design, TristatePorts will only work with interrupt capable digital pins.</p>
 </div>
-<div class="WARNING"><h5>Warning</h5><p>Be careful not to have the pin connected to a switch then set the pin to output.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Be careful not to have the pin connected to a switch then set the pin to output.</p>
 </div>
 <pre><code class="lang-cs">using System.Threading;
 using Microsoft.SPOT;
@@ -180,9 +190,10 @@ public class Program
 
     }
 }
-</code></pre></article>
+</code></pre>
+</article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -205,18 +216,18 @@ public class Program
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -224,13 +235,13 @@ public class Program
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

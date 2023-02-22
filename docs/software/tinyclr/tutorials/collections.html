@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Collections </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Collections ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -126,10 +126,11 @@
         }
     }
 }
-</code></pre><p>The above code outputs the following:</p>
+</code></pre>
+<p>The above code outputs the following:</p>
 <pre><code>Count: 2
 Capacity: 4
-
+ 
 Values:
     Date: 2020/2/21
     Model#: XY23
@@ -139,11 +140,12 @@ Values:
     Model#: XY42
     Fault: Blown fuse
 ----------
-</code></pre><p>In the above sample, <code>rmaList.Clear()</code> will remove all elements from <code>rmaList</code>, <code>rmaList.RemoveAt(1)</code> will remove only the second element in the list, and <code>rmaList.Remove(record)</code> will remove the first element that is equal to <code>record</code>.</p>
+</code></pre>
+<p>In the above sample, <code>rmaList.Clear()</code> will remove all elements from <code>rmaList</code>, <code>rmaList.RemoveAt(1)</code> will remove only the second element in the list, and <code>rmaList.Remove(record)</code> will remove the first element that is equal to <code>record</code>.</p>
 <hr>
 <h2 id="hash-tables">Hash tables</h2>
 <p>Hash tables are used to store information in a way that associates each data element, or value, with a key that can be used to look up that value. Hash tables make it easy to quickly retrieve information that would otherwise be difficult to organize in an efficient manner.</p>
-<p>For example, imagine trying to look up a phone number from a given name. You could make a two dimension array of names and phone numbers and then iterate through the array looking for the correct name, but this would be slow with a large array. Hash tables solve this problem by using a hash function to convert a key, in this case a name, into an array index that points directly to the data element you are looking for. This allows you to quickly retrieve the data directly instead of searching for it. </p>
+<p>For example, imagine trying to look up a phone number from a given name. You could make a two dimension array of names and phone numbers and then iterate through the array looking for the correct name, but this would be slow with a large array. Hash tables solve this problem by using a hash function to convert a key, in this case a name, into an array index that points directly to the data element you are looking for. This allows you to quickly retrieve the data directly instead of searching for it.</p>
 <p>The following code sample creates a hash table, adds elements to the hash table, and then reads back the value for each key.</p>
 <pre><code class="lang-cs">//Create a hash table.
 System.Collections.Hashtable processorPin = new System.Collections.Hashtable();
@@ -171,7 +173,9 @@ processorPin[&quot;BTN4&quot;] = &quot;PD9&quot;;
 foreach (System.Collections.DictionaryEntry de in processorPin) {
     System.Diagnostics.Debug.WriteLine(&quot;Key = &quot; + de.Key + &quot;    Value = &quot; + de.Value);
 }
-</code></pre><p>The above code outputs the following:</p>
+
+</code></pre>
+<p>The above code outputs the following:</p>
 <pre><code>Key = MOD     Value = PD7
 Key = LDR     Value = PE3
 Key = BTN1    Value = PE3
@@ -180,7 +184,8 @@ Key = BTN3    Value = PD7
 Key = BTN4    Value = PD9
 Key = WKUP    Value = PA0
 Key = APP     Value = PB7 
-</code></pre><hr>
+</code></pre>
+<hr>
 <h2 id="stacks">Stacks</h2>
 <p>Stacks are first in, last out (or last in, first out) collections of objects. The <code>Push</code> method is used to add items to a stack, and the <code>Pop</code> method is used to remove items from a stack. There is also a <code>Peek</code> method that returns the item at the top of the stack without removing it from the stack.</p>
 <pre><code class="lang-cs">var sitCoreDevices = new System.Collections.Stack();
@@ -189,7 +194,7 @@ sitCoreDevices.Push(&quot;SC20260B&quot;);
 sitCoreDevices.Push(&quot;SCM20260D&quot;);
 sitCoreDevices.Push(&quot;SCM20260E&quot;);
 sitCoreDevices.Push(&quot;SCM20260N&quot;);
-
+        
 PrintValues(sitCoreDevices);
 
 System.Diagnostics.Debug.WriteLine(&quot;Popped: &quot; + sitCoreDevices.Pop().ToString());
@@ -206,8 +211,9 @@ void PrintValues(System.Collections.Stack myQueue) {
 
     System.Diagnostics.Debug.WriteLine(&quot; &quot;);
 }
-</code></pre><p>The above code outputs the following:</p>
-<pre><code>The thread &#39;&lt;No Name&gt;&#39; (0x2) has exited with code 0 (0x0).
+</code></pre>
+<p>The above code outputs the following:</p>
+<pre><code>The thread '&lt;No Name&gt;' (0x2) has exited with code 0 (0x0).
 Count: 5
 Items in queue:
     SCM20260N
@@ -215,16 +221,17 @@ Items in queue:
     SCM20260D
     SC20260B
     SC20100S
-
+ 
 Popped: SCM20260N
-
+ 
 Count: 4
 Items in queue:
     SCM20260E
     SCM20260D
     SC20260B
     SC20100S
-</code></pre><hr>
+</code></pre>
+<hr>
 <h2 id="queues">Queues</h2>
 <p>Queues are first in, first out collections of objects. To add items to a queue, the <code>enqueue</code> method is used. To remove items, the <code>dequeue</code> method is used.</p>
 <pre><code class="lang-cs">var sitCoreDevices = new System.Collections.Queue();
@@ -233,7 +240,7 @@ sitCoreDevices.Enqueue(&quot;SC20260B&quot;);
 sitCoreDevices.Enqueue(&quot;SCM20260D&quot;);
 sitCoreDevices.Enqueue(&quot;SCM20260E&quot;);
 sitCoreDevices.Enqueue(&quot;SCM20260N&quot;);
-
+        
 PrintValues(sitCoreDevices);
 
 System.Diagnostics.Debug.WriteLine(&quot;Dequeued: &quot; +
@@ -252,7 +259,8 @@ void PrintValues(System.Collections.Queue myQueue) {
 
     System.Diagnostics.Debug.WriteLine(&quot; &quot;);
 }
-</code></pre><p>The above code outputs the following:</p>
+</code></pre>
+<p>The above code outputs the following:</p>
 <pre><code>Count: 5
 Items in queue:
     SC20100S
@@ -260,18 +268,19 @@ Items in queue:
     SCM20260D
     SCM20260N
     SCM20260E
-
+ 
 Dequeued: SC20100S
-
+ 
 Count: 4
 Items in queue:
     SC20260B
     SCM20260D
     SCM20260N
     SCM20260E
-</code></pre></article>
+</code></pre>
+</article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -294,18 +303,18 @@ Items in queue:
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -313,13 +322,13 @@ Items in queue:
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>.NET Gadgeteer Intro </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content=".NET Gadgeteer Intro ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../styles/docfx.css">
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../index.html">
                 <img id="logo" class="svg" src="../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -81,22 +81,23 @@
 <hr>
 <p><img src="images/gadgeteer.jpg" alt="Gadgeteer"></p>
 <p>.NET Gadgeteer is a discontinued technology that was initiated by Microsoft Research and taken to production by GHI Electronics in the year 2011. .NET Gadgeteer had a great few year run, where it was loved for its plug-and-play mainboard and modules.</p>
-<div class="TIP"><h5>Tip</h5><p>We will refer to .NET Gadgeteer as Gadgeteer throughout the rest of the documentation.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>We will refer to .NET Gadgeteer as Gadgeteer throughout the rest of the documentation.</p>
 </div>
 <p>The core of .NET Gadgeteer is .NET Micro Framework (NETMF). Like Gadgeteer, NETMF is no longer evolved by Microsoft and left for the community. <a href="../../software/netmf/intro.html">Learn more about NETMF</a></p>
 <p>Sadly, and after 5 years of building modules and mainboards, GHI Electronics had to <a href="https://forums.ghielectronics.com/t/the-future-of-gadgeteer/197">announce</a> the EOL for Gadgeteer; however, most of the Gadgeteer hardware can still be used <a href="#with-tinyclr-os">with TinyCLR OS</a>.</p>
 <p>External resources:</p>
 <ul>
-<li>Microsoft&#39;s .NET Gadgeteer website (down) <a href="http://www.gadgeteer.com/">http://www.gadgeteer.com/</a></li>
-<li>Microsoft&#39;s NETMF website (outdated) <a href="http://www.netmf.com/">http://www.netmf.com/</a></li>
+<li>Microsoft's .NET Gadgeteer website (down) <a href="http://www.gadgeteer.com/">http://www.gadgeteer.com/</a></li>
+<li>Microsoft's NETMF website (outdated) <a href="http://www.netmf.com/">http://www.netmf.com/</a></li>
 </ul>
 <p>Most of the Gadgeteer ecosystem is open-source:</p>
 <ul>
-<li>Microsoft&#39;s <a href="http://gadgeteer.codeplex.com/">.NET Gadgeteer Core</a></li>
-<li>GHI Electronics&#39; <a href="https://github.com/ghi-electronics/NETMF-Gadgeteer">Software sources and Hardware design files</a></li>
+<li>Microsoft's <a href="http://gadgeteer.codeplex.com/">.NET Gadgeteer Core</a></li>
+<li>GHI Electronics' <a href="https://github.com/ghi-electronics/NETMF-Gadgeteer">Software sources and Hardware design files</a></li>
 </ul>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wQlTLNOCl90" frameborder="0" allowfullscreen=""></iframe>
-
 <h2 id="socket-map">Socket Map</h2>
 <p>The magic of Gadgeteer is in its socket map</p>
 <table>
@@ -408,11 +409,11 @@
 </tr>
 <tr>
 <td>+3.3V</td>
-<td>Connection to the +3.3 V power net.</td>
+<td>Connection to the +3.3 V power net.</td>
 </tr>
 <tr>
 <td>+5V</td>
-<td>Connection to the +5 V power net.</td>
+<td>Connection to the +5 V power net.</td>
 </tr>
 <tr>
 <td>GND</td>
@@ -421,25 +422,28 @@
 </tbody>
 </table>
 <h2 id="using-net-gadgeteer">Using .NET Gadgeteer</h2>
-<p>To use .NET Gadgeteer&#39;s legacy software, install:</p>
+<p>To use .NET Gadgeteer's legacy software, install:</p>
 <ol>
 <li><a href="https://www.visualstudio.com/vs/older-downloads/">Visual Studio 20013</a> (community edition is also supported)</li>
-<li>Unzip and install netmfvs2013.vsix and MicroFramewrokSDK.msi from <a href="http://netmf.codeplex.com/downloads/get/1423115">here</a> </li>
-<li>Microsoft&#39;s <a href="http://gadgeteer.codeplex.com/downloads/get/1519812">Gadgeteer Core</a></li>
-<li>GHI Electronics&#39; <a href="../../software/netmf/downloads.html">NETMF SDK</a>. The latest is recommended.</li>
+<li>Unzip and install netmfvs2013.vsix and MicroFramewrokSDK.msi from <a href="http://netmf.codeplex.com/downloads/get/1423115">here</a></li>
+<li>Microsoft's <a href="http://gadgeteer.codeplex.com/downloads/get/1519812">Gadgeteer Core</a></li>
+<li>GHI Electronics' <a href="../../software/netmf/downloads.html">NETMF SDK</a>. The latest is recommended.</li>
 </ol>
 <p>The <a href="http://files.ghielectronics.com/downloads/Documents/Guides/NET%20Gadgeteer%20for%20Beginners.pdf">Gadgeteer for Beginners</a> guide is a good starting point.</p>
-<div class="TIP"><h5>Tip</h5><p>You can only use Visual Studio 2013, not a newer edition, unless you are using your Gadgeteer hardware <a href="#with-tinyclr-os">with TinyCLR OS</a>.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can only use Visual Studio 2013, not a newer edition, unless you are using your Gadgeteer hardware <a href="#with-tinyclr-os">with TinyCLR OS</a>.</p>
 </div>
 <h2 id="with-tinyclr-os">With TinyCLR OS</h2>
-<p>Most of the .NET Gadgeteer devices are still usable today, and with the latest technologies, thanks to efforts by GHI Electronics and the community. </p>
+<p>Most of the .NET Gadgeteer devices are still usable today, and with the latest technologies, thanks to efforts by GHI Electronics and the community.</p>
 <p>It all started in this video!</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5n6-FzcgJJM" frameborder="0" allowfullscreen=""></iframe>
-
 <p>This means you can still use all your beloved .NET Gadgeteer gear with <a href="../../software/tinyclr/intro.html">TinyCLR OS</a>.</p>
 <p>The first step needed to use TinyCLR OS is to load the GHI Electronics Bootloader v2 onto your mainboard, then use that to load the TinyCLR OS firmware. Each mainboard product page includes the needed instructions. Once those are loaded, you can start blinking the debug LED, detailed in the next section.</p>
 <h2 id="blinking-the-led">Blinking the LED</h2>
-<div class="TIP"><h5>Tip</h5><p>If you have never used TinyCLR OS before, <a href="../../software/tinyclr/tutorials/intro.html">start here</a></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you have never used TinyCLR OS before, <a href="../../software/tinyclr/tutorials/intro.html">start here</a></p>
 </div>
 <p>This example will blink the debug LED. You only need to add a power module to your mainboard.</p>
 <pre><code class="lang-cs">using System.Threading;
@@ -459,14 +463,17 @@ class Program {
         }
     }
 }
-</code></pre><div class="TIP"><h5>Tip</h5><p>The complete pin mapping is made available through <code>GHIElectronics.TinyCLR.Pins</code>. You should not need to use any schematics.
-Replace <code>FEZSpider</code> with your mainboard&#39;s name.</p>
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The complete pin mapping is made available through <code>GHIElectronics.TinyCLR.Pins</code>. You should not need to use any schematics.
+Replace <code>FEZSpider</code> with your mainboard's name.</p>
 </div>
 <h2 id="adding-gadgeteer-modules">Adding Gadgeteer Modules</h2>
 <p>You are now ready to start adding <a href="modules.html">modules</a>.</p>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -489,18 +496,18 @@ Replace <code>FEZSpider</code> with your mainboard&#39;s name.</p>
                 </div>
                 <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -508,13 +515,13 @@ Replace <code>FEZSpider</code> with your mainboard&#39;s name.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>

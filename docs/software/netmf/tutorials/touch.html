@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Touch </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Touch ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -131,9 +131,12 @@ public class Program : Application
         Debug.Print(&quot;Touch down at (&quot; + e.Touches[0].X.ToString() + &quot;, &quot; + e.Touches[0].Y.ToString() + &quot;)&quot;);
     }
 }
-</code></pre><h2 id="touch-in-gadgeteer">Touch In Gadgeteer</h2>
+</code></pre>
+<h2 id="touch-in-gadgeteer">Touch In Gadgeteer</h2>
 <p>Since Gadgeteer already creates an application instance, you cannot use the above example in a Gadgeteer program. You must instead use the pre-created application instance available under Application.Current. The below example shows you how to use touch in a Gadgeteer program.</p>
-<div class="TIP"><h5>Tip</h5><p>In the below example we still use a Bitmap object to draw to the display. Usually in Gadgeteer programs you will want to use the SimpleGraphics interface on a display module.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>In the below example we still use a Bitmap object to draw to the display. Usually in Gadgeteer programs you will want to use the SimpleGraphics interface on a display module.</p>
 </div>
 <pre><code class="lang-cs">using Microsoft.SPOT;
 using Microsoft.SPOT.Input;
@@ -174,7 +177,8 @@ public partial class Program
         Debug.Print(&quot;Touch down at (&quot; + e.Touches[0].X.ToString() + &quot;, &quot; + e.Touches[0].Y.ToString() + &quot;)&quot;);
     }
 }
-</code></pre><h2 id="calibration">Calibration</h2>
+</code></pre>
+<h2 id="calibration">Calibration</h2>
 <p>If your screen does not report touches close to where they actually were, your screen may need to be calibrated. NETMF provides functionality that can do this for you. It will give you a list of coordinates to touch at based on the configured screen size and then you give it the coordinates returned when you touch that spot on the display. It usually asks for five points: the four corners and the center.</p>
 <p>The below example takes care of all of this calibration for you. It requires the Microsoft.SPOT.Native, Microsoft.SPOT.Graphics, Microsoft.SPOT.TinyCore, and Microsoft.SPOT.Touch assemblies. You begin calibration by touching the screen once. After that, touch where each of the five circles is displayed in turn. After you do that, it will show you the calibration data and show a circle wherever you touch.</p>
 <pre><code class="lang-cs">using Microsoft.SPOT;
@@ -297,11 +301,13 @@ public class Program : Application
         this.lcd.Flush();
     }
 }
-</code></pre><p>After you calibrate your display, you can save the values in the four short arrays in the above program along with the number of calibration points. You can then pass these values at a later point, without running calibration again, to the below function.</p>
+</code></pre>
+<p>After you calibrate your display, you can save the values in the four short arrays in the above program along with the number of calibration points. You can then pass these values at a later point, without running calibration again, to the below function.</p>
 <pre><code class="lang-cs">Touch.ActiveTouchPanel.SetCalibration(calibrationPoints, screenX, screenY, uncalibratedX, uncalibratedY);
-</code></pre></article>
+</code></pre>
+</article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -324,18 +330,18 @@ public class Program : Application
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -343,13 +349,13 @@ public class Program : Application
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

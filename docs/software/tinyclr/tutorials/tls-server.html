@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>TLS Server </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="TLS Server ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -94,7 +94,8 @@ C = AT
 ST = MYSTATE
 L = MYLOCALITY
 O = MYORGANIZATION
-</code></pre><ol>
+</code></pre>
+<ol start="2">
 <li><code>server.cnf</code> - server certificate configuration</li>
 </ol>
 <pre><code class="lang-cs">[req]
@@ -109,7 +110,8 @@ ST = MYSTATE
 L = MYLOCALITY
 O = MYORGANIZATION
 CN = SCM20260D
-</code></pre><ol>
+</code></pre>
+<ol start="3">
 <li><code>server_v3.ext</code> - server certificate extension</li>
 </ol>
 <pre><code class="lang-cs">authorityKeyIdentifier=keyid,issuer
@@ -120,7 +122,8 @@ subjectAltName = @alt_names
 [alt_names]
 DNS.1 = SCM20260D
 IP.1 = 192.168.0.109
-</code></pre><p>The following steps produce a <code>ca.crt</code>(Certificate Authority) you can publish and import in your PC</p>
+</code></pre>
+<p>The following steps produce a <code>ca.crt</code>(Certificate Authority) you can publish and import in your PC</p>
 <ol>
 <li>edit <code>ca.cnf</code>
 change the values for C, ST, L and O</li>
@@ -143,16 +146,16 @@ important to include CN content from step before!</li>
 <code>$ openssl x509 -req -in server.csr -CA ca.crt -CAkey ca_privatekey.pem -CAcreateserial -out servercert.crt -days 365 -extfile server_v3.ext</code></li>
 </ol>
 <h3 id="importing-the-root-certificate">Importing the root certificate</h3>
-<p> Install the CA Certificate in &quot;Current User&quot; Store Location and &quot;Trusted Root Certification Authorities&quot; Certificate store</p>
+<p>Install the CA Certificate in &quot;Current User&quot; Store Location and &quot;Trusted Root Certification Authorities&quot; Certificate store</p>
 <ol>
 <li>Double click on <code>ca.crt</code> and click <code>Install Certificate..</code></li>
 </ol>
 <p><img src="images/tls-server1.png" alt="Importing Root Certificate Step 1"></p>
-<ol>
+<ol start="2">
 <li>Make sure <code>Current User</code> is selected.</li>
 </ol>
 <p><img src="images/tls-server2.png" alt="Importing Root Certificate Step 2"></p>
-<ol>
+<ol start="3">
 <li>Select <code>Place all certificates in the following store</code>. Click <code>Browse...</code> and select <code>Trusted Root Certification Authorities</code></li>
 </ol>
 <p><img src="images/tls-server3.png" alt="Importing Root Certificate Step 3"></p>
@@ -163,20 +166,25 @@ important to include CN content from step before!</li>
 <li>Either run certmgr.msc or search for cert in Windows 10 Settings and select &quot;Manage user certificates&quot; to open Cert Manager for Current User, not for Local Computer</li>
 </ol>
 <p><img src="images/tls-server5.png" alt="Removing a Root Certificate Step 1"></p>
-<ol>
+<ol start="2">
 <li>Select &quot;Trusted Root Certification Authorities&quot; and &quot;Certificates&quot;, on the right side find your certificate based on the values from <code>ca.cnf</code></li>
 </ol>
 <p><img src="images/tls-server6.png" alt="Removing a Root Certificate Step 2"></p>
 <p>This sample of code uses <code>X509Certificate</code>. Place the certificate inside the projects <code>Resources</code></p>
-<div class="TIP"><h5>Tip</h5><p>Add using statement: System.Security.Cryptography.X509Certificates;</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Add using statement: System.Security.Cryptography.X509Certificates;</p>
 </div>
 <pre><code class="lang-cs">byte[] servercert = Resources.GetBytes(Resources.BinaryResources.servercert);
 
 X509Certificate certificate = new X509Certificate(servercert){
     PrivateKey = Resources.GetBytes(Resources.BinaryResources.serverkey),
 };
-</code></pre><p>This sample of code uses <code>SslStream</code></p>
-<div class="TIP"><h5>Tip</h5><p>Add using statements:
+</code></pre>
+<p>This sample of code uses <code>SslStream</code></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Add using statements:
 using System.Net.Security &amp;
 using System.Net.Sockets</p>
 </div>
@@ -192,10 +200,12 @@ catch (InvalidOperationException){
 }
 stream.Write(byte[]buffer,int offset, int count);
 stream.Read(byte[]buffer, int offset, int count);
-</code></pre><p>For further information on OpenSSL can be found <a href="https://www.openssl.org">here.</a></p>
+
+</code></pre>
+<p>For further information on OpenSSL can be found <a href="https://www.openssl.org">here.</a></p>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -218,18 +228,18 @@ stream.Read(byte[]buffer, int offset, int count);
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -237,13 +247,13 @@ stream.Read(byte[]buffer, int offset, int count);
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

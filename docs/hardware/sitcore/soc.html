@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>SITCore System on Chip </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="SITCore System on Chip ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../styles/docfx.css">
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../index.html">
                 <img id="logo" class="svg" src="../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -88,30 +88,35 @@
 <li>RTC</li>
 <li>Watchdog</li>
 <li>Threading</li>
-<li>TCP/IP with SSL<ul>
+<li>TCP/IP with SSL
+<ul>
 <li>Full .NET socket interface</li>
 <li>Ethernet</li>
 <li>PPP</li>
 </ul>
 </li>
-<li>Graphics<ul>
+<li>Graphics
+<ul>
 <li>Images</li>
 <li>Fonts</li>
 <li>Controls</li>
 </ul>
 </li>
-<li>File System<ul>
+<li>File System
+<ul>
 <li>Full .NET file interface</li>
 <li>SD cards</li>
 <li>USB drives</li>
 </ul>
 </li>
-<li>Native extensions<ul>
+<li>Native extensions
+<ul>
 <li>Runtime Loadable Procedures</li>
 <li>Device register access</li>
 </ul>
 </li>
-<li>Signal controls<ul>
+<li>Signal controls
+<ul>
 <li>Generation</li>
 <li>Capture</li>
 <li>Pulse measurement</li>
@@ -215,7 +220,9 @@
 </tr>
 </tbody>
 </table>
-<div class="NOTE"><h5>Note</h5><p>Resources are shared between your application and the operating system.*</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Resources are shared between your application and the operating system.*</p>
 </div>
 <hr>
 <h2 id="peripherals">Peripherals</h2>
@@ -327,7 +334,9 @@
 </tr>
 </tbody>
 </table>
-<div class="NOTE"><h5>Note</h5><p>As many pins share peripherals, not all peripherals will be available.*</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>As many pins share peripherals, not all peripherals will be available.*</p>
 </div>
 <hr>
 <h2 id="sc20xxx-power-consumption">SC20xxx Power Consumption</h2>
@@ -414,7 +423,9 @@
 </tr>
 </tbody>
 </table>
-<div class="NOTE"><h5>Note</h5><p>Keep in mind that modules (SOM) may have other components that needs higher voltage, like QSPI and SDRAM. Those need to be accounted for.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Keep in mind that modules (SOM) may have other components that needs higher voltage, like QSPI and SDRAM. Those need to be accounted for.</p>
 </div>
 <hr>
 <h2 id="using-interrupts-irqs">Using Interrupts (IRQs)</h2>
@@ -447,8 +458,8 @@
 <ol>
 <li>Activate the bootloader, hold the LDR signal low while resetting the board.</li>
 <li>Open <a href="../../software/tinyclr/tinyclr-config.html">TinyCLR Config</a> tool.</li>
-<li>Select the correct COM port and &#39;Connect&#39; to the device. If you are not seeing it then the device is not in the loader mode.</li>
-<li>Download the <a href="../../software/tinyclr/downloads.html">firmware</a>. Select the downloaded firmware in TinyCLR Config and click &#39;Update Firmware&#39;. </li>
+<li>Select the correct COM port and 'Connect' to the device. If you are not seeing it then the device is not in the loader mode.</li>
+<li>Download the <a href="../../software/tinyclr/downloads.html">firmware</a>. Select the downloaded firmware in TinyCLR Config and click 'Update Firmware'.</li>
 </ol>
 <p>You can also update the firmware manually. Download the <a href="../../software/tinyclr/downloads.html">firmware</a> and learn how to use the <a href="../../software/tinyclr/bootloader.html">GHI Electronics Bootloader</a> manually</p>
 <h3 id="start-coding">Start Coding</h3>
@@ -486,7 +497,7 @@
 <h3 id="crystals">Crystals</h3>
 <p>There is a lot to consider when selecting a crystal -- especially the RTC crystal. Please consult <a href="https://www.st.com/resource/en/application_note/cd00221665-oscillator-design-guide-for-stm8afals-stm32-mcus-and-mpus-stmicroelectronics.pdf">AN2867</a> from STMicroelectronics.</p>
 <h3 id="main-crystal">Main Crystal</h3>
-<p>Most 8 MHz quartz crystals and ceramic resonators from various manufacturer will work with SITCore SoCs. The table below will tell you what to look for based on the crystal&#39;s maximum equivalent series resistance (ESR), shunt capacitance (C0), and load capacitance (CL). Keeping the total capacitance of C0 + CL well below the recommended maximum will provide more of a safety margin for stable and reliable oscillator operation.</p>
+<p>Most 8 MHz quartz crystals and ceramic resonators from various manufacturer will work with SITCore SoCs. The table below will tell you what to look for based on the crystal's maximum equivalent series resistance (ESR), shunt capacitance (C0), and load capacitance (CL). Keeping the total capacitance of C0 + CL well below the recommended maximum will provide more of a safety margin for stable and reliable oscillator operation.</p>
 <p>The SITCore SC13048 SoC main clock can also operate using an internal oscillators, with no need for any crystals, even when using USB. If an application requires better accuracy, like when running CAN for example, an external oscillator can be added.</p>
 <table>
 <thead>
@@ -536,7 +547,7 @@
 </table>
 <h3 id="rtc-crystal">RTC Crystal</h3>
 <p>It can be difficult to select the right RTC crystals, that is due to the RTC oscillator running on an extremely low power. The table below should help. For reliable operation, the total capacitance of C0 (crystal shunt capacitance) and CL (crystal load capacitance) must be less than the recommended max total of C0 and CL.</p>
-<p> The SITCore SC13048 SoC built in RTC can also operate using an internal oscillator when a 32.768Khz crystals is not present, however adding an external crystal gives better RTC accuracy.</p>
+<p>The SITCore SC13048 SoC built in RTC can also operate using an internal oscillator when a 32.768Khz crystals is not present, however adding an external crystal gives better RTC accuracy.</p>
 <table>
 <thead>
 <tr>
@@ -585,7 +596,7 @@
 </table>
 <p>When laying out your board, it is best to keep the crystal as close as possible to the SoC. The oscillator circuit should also be surrounded by a grounded guard ring or ground plane on the same layer to reduce noise.</p>
 <h3 id="rtc-power">RTC Power</h3>
-<p>The VBAT pin is optionally used to power up the RTC when the system main power is turned off. Also, SITCore chipsets and modules include a built in charging circuit internally, that can be enabled to charge an external supercap. See the <a href="../../software/tinyclr/tutorials/real-time-clock.html">RTC tutorial</a> for further details. </p>
+<p>The VBAT pin is optionally used to power up the RTC when the system main power is turned off. Also, SITCore chipsets and modules include a built in charging circuit internally, that can be enabled to charge an external supercap. See the <a href="../../software/tinyclr/tutorials/real-time-clock.html">RTC tutorial</a> for further details.</p>
 <h3 id="quadspi-external-flash">QuadSPI External Flash</h3>
 <p>SITCore supports 16 MByte external QuadSPI flash chips. The options are in the table below.</p>
 <table>
@@ -617,7 +628,7 @@
 <p>The SITCore development boards are ready to get any project started as quickly and easily as possible. Click <a href="dev.html">here</a> for details.</p>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -640,18 +651,18 @@
                 </div>
                 <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -659,13 +670,13 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>

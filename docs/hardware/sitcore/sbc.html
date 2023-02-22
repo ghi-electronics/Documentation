@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Single Board Computers </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Single Board Computers ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../styles/docfx.css">
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../index.html">
                 <img id="logo" class="svg" src="../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -351,7 +351,7 @@
 <p><em>Note: As many pins share peripherals, not all peripherals will be available.</em></p>
 <hr>
 <h2 id="power-consumption">Power Consumption</h2>
-<p>The &#39;Running&#39; power consumption totals include all other on board components, such as WiFi &amp; Display.</p>
+<p>The 'Running' power consumption totals include all other on board components, such as WiFi &amp; Display.</p>
 <h3 id="fez-fleapico-power">FEZ Flea/Pico Power</h3>
 <table>
 <thead>
@@ -416,7 +416,9 @@
 </tr>
 </tbody>
 </table>
-<div class="TIP"><h5>Tip</h5><p>Enabling WiFi (when available) adds up to 300mA. Battery charging on FEZ Feather adds up to 500mA.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Enabling WiFi (when available) adds up to 300mA. Battery charging on FEZ Feather adds up to 500mA.</p>
 </div>
 <h3 id="fez-bit-power">FEZ Bit Power</h3>
 <table>
@@ -450,9 +452,13 @@
 </tr>
 </tbody>
 </table>
-<div class="TIP"><h5>Tip</h5><p>Display backlight is included when Running and in Idle, but off in Sleep and Shutdown.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Display backlight is included when Running and in Idle, but off in Sleep and Shutdown.</p>
 </div>
-<div class="TIP"><h5>Tip</h5><p>Enabling WiFi adds up to 300mA.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Enabling WiFi adds up to 300mA.</p>
 </div>
 <h3 id="fez-portal-power">FEZ Portal Power</h3>
 <table>
@@ -486,18 +492,22 @@
 </tr>
 </tbody>
 </table>
-<div class="TIP"><h5>Tip</h5><p>Display backlight is included when Running and in Idle, but off in Sleep and Shutdown.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Display backlight is included when Running and in Idle, but off in Sleep and Shutdown.</p>
 </div>
-<div class="TIP"><h5>Tip</h5><p>Enabling WiFi adds up to 300mA.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Enabling WiFi adds up to 300mA.</p>
 </div>
-<p>See the <a href="http://docs.ghielectronics.com/software/tinyclr/tutorials/power-management.html">Power Management</a> tutorial </p>
+<p>See the <a href="http://docs.ghielectronics.com/software/tinyclr/tutorials/power-management.html">Power Management</a> tutorial</p>
 <hr>
 <h2 id="usb-c-functionality">USB-C Functionality</h2>
-<p>All SITCore single board computers use a USB-C connector for application deployment and debugging. While USB-C has many advantages, we&#39;ve also noticed some flaws. Every USB-A to USB-C cable tested worked as expected. Testing USB-C to USB-C cables gave interesting and unexpected results. Most USB-C hubs also do not work when using USB-C to USB-C cables. If you are having problems deploying or debugging, try connecting the board directly to your computer with a USB-A to USB-C cable.</p>
+<p>All SITCore single board computers use a USB-C connector for application deployment and debugging. While USB-C has many advantages, we've also noticed some flaws. Every USB-A to USB-C cable tested worked as expected. Testing USB-C to USB-C cables gave interesting and unexpected results. Most USB-C hubs also do not work when using USB-C to USB-C cables. If you are having problems deploying or debugging, try connecting the board directly to your computer with a USB-A to USB-C cable.</p>
 <hr>
 <h2 id="fez-flea">FEZ Flea</h2>
 <p><img src="images/fez-flea.png" alt="FEZ Flea"></p>
-<p>The <strong>FEZ Flea</strong> is the most cost effective way to dive into TinyCLR OS. With it&#39;s Seeeduino Xiao form factor it can be used with many existing accessories on the market. The board also has castellated  and through-hole pins. Making it ideal for using as a SoM or on a breadboard.</p>
+<p>The <strong>FEZ Flea</strong> is the most cost effective way to dive into TinyCLR OS. With it's Seeeduino Xiao form factor it can be used with many existing accessories on the market. The board also has castellated  and through-hole pins. Making it ideal for using as a SoM or on a breadboard.</p>
 <p><a href="pdfs/fez-flea-rev-b-schematic.pdf">FEZ Flea Schematic</a></p>
 <p><a href="http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Flea%20Rev%20B.step">FEZ Flea STEP file</a></p>
 <p><a href="pdfs/fez-flea-pinout.pdf"><img src="images/fez-flea-pinout.png" alt="FEZ Flea"></a></p>
@@ -558,13 +568,19 @@
 <h2 id="fez-feather">FEZ Feather</h2>
 <p><img src="images/fez-feather.png" alt="FEZ Feather"></p>
 <p>The Adafruit Feather form factor boards are made to be stackable and have built-in support for 3.7V LiPo batteries with a charging circuit. The <strong>FEZ Feather</strong> provides both through hole pads and castellated edges making it both breadboard friendly and easy to build into products.</p>
-<div class="CAUTION"><h5>Caution</h5><p>Lithium Polymoer(Li-Po) batteries are significantly more volatile than other rechargable batteries. Make sure you have an understanding of how to properly charge and use them before connecting to the FEZ Feather. Never attempt to charge a damaged or swollen battery. Never leave battery charging unattended. Improper use could result in fire.</p>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>Lithium Polymoer(Li-Po) batteries are significantly more volatile than other rechargable batteries. Make sure you have an understanding of how to properly charge and use them before connecting to the FEZ Feather. Never attempt to charge a damaged or swollen battery. Never leave battery charging unattended. Improper use could result in fire.</p>
 </div>
-<div class="WARNING"><h5>Warning</h5><p>Be very careful to ensure the correct polarity of LiPo batteries before connecting them to the FEZ Feather. Reverse polarity will damage the charging circuit, and not all batteries are wired correctly. GHI Electronics is not responsible for, and will not warranty, damage caused by incorrectly connected batteries.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Be very careful to ensure the correct polarity of LiPo batteries before connecting them to the FEZ Feather. Reverse polarity will damage the charging circuit, and not all batteries are wired correctly. GHI Electronics is not responsible for, and will not warranty, damage caused by incorrectly connected batteries.</p>
 </div>
 <p>Make sure the battery polarity is correct as shown below (red wire to plus, black to minus):</p>
 <p><img src="images/battery-connect.jpg" alt="FEZ Feather Battery Connection"></p>
-<div class="CAUTION"><h5>Caution</h5><p>The 3.3v regulator may run hot, especially when WiFi is in use. You can add 3.3V regulator externally to eliminate this heat issue, and this is needed if adding any external components that draw more than 10mA.</p>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>The 3.3v regulator may run hot, especially when WiFi is in use. You can add 3.3V regulator externally to eliminate this heat issue, and this is needed if adding any external components that draw more than 10mA.</p>
 </div>
 <p><a href="pdfs/fez-feather-rev-b-schematic.pdf">FEZ Feather Schematic</a></p>
 <p><a href="http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Feather%20Rev%20B.step">FEZ Feather 3D STEP File</a></p>
@@ -622,11 +638,15 @@
 <hr>
 <h2 id="fez-stick">FEZ Stick</h2>
 <p><img src="images/fez-stick.png" alt="FEZ Stick"></p>
-<p>The <strong>FEZ Stick</strong> is a cost effective way to easily get started with TinyCLR OS. While providing an inexpensive way for the uninitiated to try TinyCLR OS, we&#39;ve provided castellated edges as well as through hole pads to make it breadboard friendly and easy to embed into products. Also, there&#39;s actually space for two click modules, making this a very versatile board at a very affordable price!</p>
+<p>The <strong>FEZ Stick</strong> is a cost effective way to easily get started with TinyCLR OS. While providing an inexpensive way for the uninitiated to try TinyCLR OS, we've provided castellated edges as well as through hole pads to make it breadboard friendly and easy to embed into products. Also, there's actually space for two click modules, making this a very versatile board at a very affordable price!</p>
 <p><img src="images/fez-stick-side-pads.jpg" alt="FEZ Stick Side Pads"></p>
-<div class="NOTE"><h5>Note</h5><p>FEZ Stick REV. B pin PB13 MISO is mislabeled on the silk screen and should read PE13 MISO</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>FEZ Stick REV. B pin PB13 MISO is mislabeled on the silk screen and should read PE13 MISO</p>
 </div>
-<div class="CAUTION"><h5>Caution</h5><p>The onboard 3.3v regulator is only capable of running external components of an additional 50mA. If more current is necessary, then add an additional external 3.3V regulator.</p>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>The onboard 3.3v regulator is only capable of running external components of an additional 50mA. If more current is necessary, then add an additional external 3.3V regulator.</p>
 </div>
 <p><a href="pdfs/fez-stick-rev-b-schematic.pdf">FEZ Stick Schematic</a></p>
 <p><a href="http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Stick%20Rev%20B.step">FEZ Stick 3D STEP File</a></p>
@@ -661,7 +681,9 @@
 <h2 id="fez-bit">FEZ Bit</h2>
 <p><img src="images/fez-bit.png" alt="FEZ Bit"></p>
 <p>The <strong>FEZ Bit</strong>, while seemingly more of a &quot;maker&quot; board, provides a convenient way to easily use the multitude of inexpensive Micro:bit accessories that have flooded the market. As the number of Micro:bit accessories continues to grow, this board will be valued as a way to use these accessories to quickly assemble prototypes and test new product concepts.</p>
-<div class="CAUTION"><h5>Caution</h5><p>The 3.3v regulator may run hot, especially when WiFi is in use. You can add 3.3V regulator externally to eliminate this heat issue, and this is needed if adding any external components that draw more than 10mA.</p>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>The 3.3v regulator may run hot, especially when WiFi is in use. You can add 3.3V regulator externally to eliminate this heat issue, and this is needed if adding any external components that draw more than 10mA.</p>
 </div>
 <p><a href="pdfs/fez-bit-rev-b-schematic.pdf">FEZ Bit Schematic</a></p>
 <p><a href="http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Bit%20Rev%20B.step">FEZ Bit 3D STEP File</a></p>
@@ -852,7 +874,9 @@
 </tr>
 </tbody>
 </table>
-<div class="NOTE"><h5>Note</h5><p>All boards with a barrel power jack accept a 5.5 x 2.1 mm power plug. The pin is positive, the sleeve is negative. While these boards accept a wide voltage range, they use linear voltage regulators that run hotter with higher input voltages. Generally we recommend an input voltage of 6 to 12 volts, but if your project draws a lot of current, use a lower voltage to keep the regulator cooler. A one amp power supply should provide enough current for most needs.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>All boards with a barrel power jack accept a 5.5 x 2.1 mm power plug. The pin is positive, the sleeve is negative. While these boards accept a wide voltage range, they use linear voltage regulators that run hotter with higher input voltages. Generally we recommend an input voltage of 6 to 12 volts, but if your project draws a lot of current, use a lower voltage to keep the regulator cooler. A one amp power supply should provide enough current for most needs.</p>
 </div>
 <hr>
 <h2 id="fez-duino">FEZ Duino</h2>
@@ -912,13 +936,17 @@
 </tr>
 </tbody>
 </table>
-<div class="WARNING"><h5>Warning</h5><p>FEZ Duino REV. A &amp; B, The cap used on barrel jack is 6.3v but the input voltage can be as high as 12v. Use the barrel jack at your own risk or replace cap with a higher voltage. This only effects the power barrel jack. Everything else functions as expected if using USB for power.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>FEZ Duino REV. A &amp; B, The cap used on barrel jack is 6.3v but the input voltage can be as high as 12v. Use the barrel jack at your own risk or replace cap with a higher voltage. This only effects the power barrel jack. Everything else functions as expected if using USB for power.</p>
 </div>
 <hr>
 <h2 id="fez-portal">FEZ Portal</h2>
 <p><img src="images/fez-portal.png" alt="FEZ Portal"></p>
-<p>Already one of our most popular SITCore single board computers, The <strong>FEZ Portal</strong> is a 4.3&quot; 480x272 display with capacitive touch that is programmable in C#. As the display and controller are one unit, it&#39;s even easier to make a product with touch as you only have to mount a single board that&#39;s only slightly larger than the display. Display uses part# ER-TFT043-3 available at <a href="https://www.buydisplay.com/">buydisplay.com</a> </p>
-<div class="NOTE"><h5>Note</h5><p>I2C address on touch screen controller is 0x38. Use software I2C if a device has same address need to be connected.</p>
+<p>Already one of our most popular SITCore single board computers, The <strong>FEZ Portal</strong> is a 4.3&quot; 480x272 display with capacitive touch that is programmable in C#. As the display and controller are one unit, it's even easier to make a product with touch as you only have to mount a single board that's only slightly larger than the display. Display uses part# ER-TFT043-3 available at <a href="https://www.buydisplay.com/">buydisplay.com</a></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>I2C address on touch screen controller is 0x38. Use software I2C if a device has same address need to be connected.</p>
 </div>
 <p><a href="pdfs/fez-portal-rev-c-schematic.pdf">FEZ Portal Schematic</a></p>
 <p><a href="http://files.ghielectronics.com/downloads/3D/SITCore/SBC/FEZ%20Portal%20Rev%20C.step">FEZ Portal 3D STEP File</a></p>
@@ -1004,7 +1032,7 @@
 <hr>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -1027,18 +1055,18 @@
                 </div>
                 <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -1046,13 +1074,13 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>

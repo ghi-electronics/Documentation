@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Specialized </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Specialized ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="specialized">Specialized</h1>
+
+<hr>
+<p>Some of the specialized low-level features in this section are used to directly access hardware control or change the normal behavior of the SITCore processor.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>This section is for ADVANCED users. An understanding of how processors &amp; registers work is recommended.</p>
+</div>
+<hr>
+<h2 id="register-access">Register Access</h2>
+<p>The Marshal class allows us to directly access and modify some of the internal processor's registers. More on this can be found in the <a href="marshal.html">Marshal class</a> section.</p>
+<hr>
+<h2 id="sd-card-control">SD Card Control</h2>
+<p>A user may find it necessary to change the clock speed of the SD card. Using the Marshal class, we can directly access the processor and slow down the clock speed of the SD peripheral.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This may be necessary depending on the design of the final product, or the use of low-cost SD cards.</p>
+</div>
+<pre><code class="lang-cs">const int SD_CLOCK_ADDRESS_REG = 0x00000004;
+
+var clock_divider = 4; // 0,1,2,3 are 25MHz, 4: 12MHz, 5: 10MHz, 6: 8MHz...
+            
+Marshal.WriteInt32((IntPtr)SD_CLOCK_ADDRESS_REG, clock_divider);
+</code></pre>
+<hr>
+<h2 id="disable-interrupts">Disable Interrupts</h2>
+<p>Interrupts can be disabled and enabled. This is useful in timing critical tasks however interrupts shold only be disabled for a very short time.</p>
+<pre><code class="lang-cs">var isDisabled = Interrupt.IsDisabled();
+
+if (isDisabled == false){
+    Interrupt.Disable();
+}
+
+// code....
+
+if (isDisabled == false){
+    Interrupt.Enable();
+}
+</code></pre>
+<hr>
+<h2 id="alternate-functions">Alternate Functions</h2>
+<p>Some pins on a SITCore processor may offer alternate functions. There is an example in the <a href="gpio.html">GPIO</a> section on moving a feature from one pin to another.</p>
+<hr>
+<h2 id="temperature">Temperature</h2>
+<p>The processor's internal temperature can be read as shown in the the <a href="analog-in.html">Analog In</a> tutorial.</p>
+<hr>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/specialized.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
+              </div>
+
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <p><a class="back-to-top" href="#top">Back to top</a><p>
+              </p></nav>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

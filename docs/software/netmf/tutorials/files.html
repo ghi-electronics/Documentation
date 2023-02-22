@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Files </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Files ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -79,26 +79,32 @@
 <h1 id="files">Files</h1>
 
 <hr>
-<p>The file system features in NETMF are very similar to full .NET. There are no limits on file counts or sizes other than the limits of the FAT file system itself. NETMF supports FAT16 and FAT32.  </p>
+<p>The file system features in NETMF are very similar to full .NET. There are no limits on file counts or sizes other than the limits of the FAT file system itself. NETMF supports FAT16 and FAT32.</p>
 <p>With a few minor changes, NETMF file system access can be tested from within the Microsoft NETMF emulator. Changes include removing any of the GHI Electronics library dependencies.</p>
 <p>Unlike full .NET, NETMF does require mounting of media. NETMF also handles media names differently than full .NET. Media name differences are easily handled by accessing the root directory name at runtime and then using that name. Consequently, most online examples of how to use .NET to access files on PCs can be used with NETMF. In NETMF, other than differences for specific physical characteristics, usage of SD/MMC cards and USB memory devices are identical to .NET.</p>
-<p>This document splits it&#39;s examples into two sets. One for SD/MMC Card file system access and the other for USB Mass Storage. The core file operations (open, read, write, etc.) are identical between the two.</p>
-<div class="WARNING"><h5>Warning</h5><p>The file system does a lot of data buffering internally to speed up file access time and to increase the life of flash media. When you write data to a file, it is often saved somewhere in internal buffers rather than being written immediately to the media. To make sure the data is stored on the media, you need to flush the data.</p>
+<p>This document splits it's examples into two sets. One for SD/MMC Card file system access and the other for USB Mass Storage. The core file operations (open, read, write, etc.) are identical between the two.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>The file system does a lot of data buffering internally to speed up file access time and to increase the life of flash media. When you write data to a file, it is often saved somewhere in internal buffers rather than being written immediately to the media. To make sure the data is stored on the media, you need to flush the data.</p>
+</div>
+<blockquote>
 <p>Flushing (or closing) a file is the only way to guarantee that the data you are trying to write is on the actual media. In addition to the file data  there is other  information, such as directory information, that may not be written to the media when the file is flushed. For example, if you delete a file and remove the card from the system, the file is probably not actually erased because the directory structure was not flushed.</p>
-<p>Under current versions of .NET Micro Framework, there can be a variable time delay before the buffers are actually written to the media when using the FileStream&#39;s Flush method. This delay can reportedly be as long as a minute (see: <a href="https://netmf.codeplex.com/workitem/2149">https://netmf.codeplex.com/workitem/2149</a>). To guarantee that the file buffers and the meta-data are written to the media you need to flush the volume:</p>
+</blockquote>
+<blockquote>
+<p>Under current versions of .NET Micro Framework, there can be a variable time delay before the buffers are actually written to the media when using the FileStream's Flush method. This delay can reportedly be as long as a minute (see: <a href="https://netmf.codeplex.com/workitem/2149">https://netmf.codeplex.com/workitem/2149</a>). To guarantee that the file buffers and the meta-data are written to the media you need to flush the volume:</p>
 <ul>
 <li><code>VolumeInfo.GetVolumes()[0].FlushAll()</code> -or-</li>
 <li><code>Microsoft.SPOT.IO.VolumeInfo(&quot;\SD&quot;).FlushAll()</code>.</li>
 </ul>
 <p>Ideally, you would unmount the media before it is removed from the system. This may not be always possible -- FlushAll will guarantee your data is saved</p>
-</div>
-<div class="TIP"><h5>Tip</h5><p>The SD/MMC Card  examples shown below require the GHI.Hardware, Microsoft.SPOT.IO, and System.IO assemblies.</p>
+</blockquote>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The SD/MMC Card  examples shown below require the GHI.Hardware, Microsoft.SPOT.IO, and System.IO assemblies.</p>
 </div>
 <p>Some Microsoft documentation class descriptions, such as for Directory, place the library code in the mscorlib assembly; however, it is found in the System.IO assembly.</p>
 <h2 id="sd-card-show-files-in-root-directory">SD Card: Show Files in Root Directory</h2>
 <p>This example assumes the card is already inserted; it lists all files available in the root directory.</p>
-<div class="NOTE"><h5>Note</h5><p>Some SD card sockets/interfaces have an internal switch that closes when a card is inserted or ejected. Utilizing the switch is shown in the &quot;<a href="#sd-card-media-detection"><strong>SD Card: Media Detection</strong></a>&quot; example further down on this page.</p>
-</div>
 <pre><code class="lang-cs">using System.IO;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
@@ -159,7 +165,8 @@ class Program {
         sd_card.Unmount();
     }
 }
-</code></pre><h2 id="sd-card-writing-files">SD Card: Writing Files</h2>
+</code></pre>
+<h2 id="sd-card-writing-files">SD Card: Writing Files</h2>
 <p>There is more than one way to open files. I will only cover FileStream objects. This example will open a file and write a string to it. Since FileStream will only take byte arrays, we need to convert our string to a byte array.</p>
 <pre><code class="lang-cs">using System.Threading;
 using System.Text;
@@ -173,7 +180,7 @@ public class Program {
         // if necessary, check that SD is present here...
 
         SDCard sd_card = new SDCard();
-
+ 
         sd_card.Mount();
         bool fs_ready = false;
         RemovableMedia.Insert += (a, b) =&gt; {
@@ -197,7 +204,8 @@ public class Program {
         sd_card.Unmount();
     }
 }
-</code></pre><h2 id="sd-card-reading-a-file">SD Card: Reading a File</h2>
+</code></pre>
+<h2 id="sd-card-reading-a-file">SD Card: Reading a File</h2>
 <p>Take the SD Card used in the last example, put it in a PC and you will see the file.
 For this example, we use the same SD Card written to by the last example. The file is opened and read to verify its contents.</p>
 <pre><code class="lang-cs">using System.Threading;
@@ -242,7 +250,8 @@ public class Program {
         sd_card.Unmount();
     }
 }
-</code></pre><h2 id="sd-card-media-detection">SD Card: Media Detection</h2>
+</code></pre>
+<p>##SD Card: Media Detection</p>
 <p>The previous examples assumed that the card was already inserted and mostly ignored whether that media was formatted (contained a file system). The following example shows an application without such assumptions; additionally, it demonstrates the Format method.</p>
 <p>Together, <code>InsertEventHandler</code>, <code>EjectEventHandler</code>, and <code>IsSDCardPresent</code> are used to respond to physical card activities, which in turn are used to control mounting (<code>Mount</code>, <code>Unmount</code>) of the card. Once the card is mounted, the file-system can be used.</p>
 <pre><code class="lang-cs">using System;
@@ -259,10 +268,10 @@ public class Program
     // mounted file system do not occur until mount()
     // is fully done.
     private static AutoResetEvent evt = new AutoResetEvent(false);
-
-    //Make sure to set the pin to your sd card detect pin.
-    private static InputPort sdCardDetect = new InputPort(Cpu.Pin.GPIO_NONE, false, Port.ResistorMode.Disabled);
-
+  
+  	//Make sure to set the pin to your sd card detect pin.
+  	private static InputPort sdCardDetect = new InputPort(Cpu.Pin.GPIO_NONE, false, Port.ResistorMode.Disabled);
+  
     public static void Main() {
         RemovableMedia.Insert += new InsertEventHandler(RemovableMedia_Insert);
         RemovableMedia.Eject += new EjectEventHandler(RemovableMedia_Eject);
@@ -348,8 +357,9 @@ public class Program
         }
     }
 }
-</code></pre><h2 id="usb-mass-storage-devices">USB Mass Storage Devices</h2>
-<p>USB mass storage devices, such as memory sticks and card readers are supported by GHI&#39;s NETMF devices.
+</code></pre>
+<h2 id="usb-mass-storage-devices">USB Mass Storage Devices</h2>
+<p>USB mass storage devices, such as memory sticks and card readers are supported by GHI's NETMF devices.
 If you compare the following example with those above for SD Cards, you will see how easy it is to program for one, the other, or both with virtually identical code.</p>
 <pre><code class="lang-cs">using System;
 using System.Threading;
@@ -380,7 +390,7 @@ public class Program {
             usb_storage.Mount();  // fires the insert event when finished
         };
         Controller.Start();
-
+      
         evt.WaitOne(); // yield here until mounting and initializing is finished
 
         byte[] data;
@@ -437,11 +447,14 @@ public class Program {
         evt.Set(); // proceed with other processing
     }
 }
-</code></pre><div class="WARNING"><h5>Warning</h5><p>Media formatted as FAT12 will not work. This shouldn&#39;t be an issue since FAT12 is no longer in use.</p>
+</code></pre>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Media formatted as FAT12 will not work. This shouldn't be an issue since FAT12 is no longer in use.</p>
 </div>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -464,18 +477,18 @@ public class Program {
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -483,13 +496,13 @@ public class Program {
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

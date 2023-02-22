@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Bootloader </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Bootloader ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../images/favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../styles/docfx.css">
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../index.html">
                 <img id="logo" class="svg" src="../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -79,9 +79,11 @@
 <h1 id="bootloader">Bootloader</h1>
 
 <hr>
-<p>The GHI Electronics Bootloader is used to update the firmware on our devices. It is the first program to run and unless the device specific LDR pins are set (see device documentation for details), it will execute the firmware on the device (if present). </p>
+<p>The GHI Electronics Bootloader is used to update the firmware on our devices. It is the first program to run and unless the device specific LDR pins are set (see device documentation for details), it will execute the firmware on the device (if present).</p>
 <p>The bootloader communicates over a USB virtual serial port and a regular serial port. The interface used is controlled by a MODE pin. See your device specifications for details on interface configuration and selection and which version of the bootloader it runs.</p>
-<div class="TIP"><h5>Tip</h5><p>If you are running Windows 7 or Windows 8, you must install drivers for the bootloader to appear in Windows. See &quot;USB Drivers&quot; in the downloads section below.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you are running Windows 7 or Windows 8, you must install drivers for the bootloader to appear in Windows. See &quot;USB Drivers&quot; in the downloads section below.</p>
 </div>
 <h2 id="bootloader-v1">Bootloader v1</h2>
 <p>The original loader runs on Embedded Master, EMX, G120, G120E, G400D, G400S and USBizi. All results are terminated with LF (\n). Commands are executed as soon as they entered without waiting for a new-line. &quot;BL&quot; or &quot;Done.&quot; will be sent after each command.</p>
@@ -93,7 +95,9 @@
 <li>B: increases the baud rate in serial mode to 921,600.</li>
 <li>X: upload a file to the device using 1K XMODEM. Only send *.ghi files meant for your device. The firmware is automatically run after a successful upload.</li>
 </ul>
-<div class="TIP"><h5>Tip</h5><p>The USB interface on Version 1.0 doesn&#39;t work on Windows 7 and newer operating systems. Use the serial interface instead.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The USB interface on Version 1.0 doesn't work on Windows 7 and newer operating systems. Use the serial interface instead.</p>
 </div>
 <h2 id="bootloader-v2">Bootloader v2</h2>
 <p>This loader runs on G30, G80, UC25, UC55 and FEZ T18. All commands and results are terminated with CR and LF (\r\n). &quot;OK.&quot; will be sent after each successful command.</p>
@@ -115,7 +119,7 @@
 <li>Open any terminal software, for example <a href="http://ttssh2.osdn.jp/">Tera Term</a>.</li>
 <li>Select serial and pick the COM port associated with your board. (If unsure, check Device Manager)</li>
 <li>Press <code>V</code> and then enter. You will see back the boot loader version number (v2.x.x)</li>
-<li>Press <code>U</code> or <code>X</code> and then enter. Use <code>X</code> for firmware file type GHI and <code>U</code> for firmware file type GLB. </li>
+<li>Press <code>U</code> or <code>X</code> and then enter. Use <code>X</code> for firmware file type GHI and <code>U</code> for firmware file type GLB.</li>
 <li>Press <code>Y</code> to confirm then enter. You will now see <code>CCCC</code>...</li>
 <li>Go to <code>File</code> -&gt; <code>Transfer</code> -&gt; <code>XMODEM</code> -&gt; <code>Send</code>.</li>
 <li>IMPORTANT: Make sure you check the <code>1K</code> option.</li>
@@ -138,12 +142,14 @@
 <li>16 bit CRC-CCITT of the boot image bounded by the specified address and length.</li>
 </ol>
 <h3 id="upgrading-ghi-electronics-bootloader-v1-to-v2">Upgrading GHI Electronics Bootloader v1 to v2</h3>
-<div class="WARNING"><h5>Warning</h5><p>No longer supported!</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>No longer supported!</p>
 </div>
 <p>Some of our devices ship with v1 loader but require v2 loader to work with TinyCLR OS, such as G120.</p>
 <ol>
 <li>Download the bootloader file from the list below.</li>
-<li>Put your device in v1 mode (instructions are found on each product&#39;s documentation page).</li>
+<li>Put your device in v1 mode (instructions are found on each product's documentation page).</li>
 <li>The PC will now detect a virtual serial (COM) device. If you need drivers, they are in the <a href="intro.html">NETMF</a> SDK.</li>
 <li>Open any terminal software, we recommend <a href="http://ttssh2.osdn.jp/">Tera Term</a>.</li>
 <li>Select serial and pick the COM port associated with your board.</li>
@@ -330,7 +336,7 @@
 </table>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -353,18 +359,18 @@
                 </div>
                 <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -372,13 +378,13 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>

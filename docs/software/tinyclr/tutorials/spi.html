@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>SPI </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="SPI ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -81,11 +81,15 @@
 <hr>
 <p>SPI uses three or four wires for transferring data. A SPI bus consists of a single master and one or more slaves. The master will send the clock signal to the slaves over the SCK (Serial Clock) pin. It will also send data over MOSI (Master Out Slave In) pin, while reading incoming data on the MISO (Master In Slave Out) pin. The SCK line is used to determine how fast the data is moved. If you know electronics, this is simply a shift register.</p>
 <p>The master selects which slave it will swap the data with using the SSEL (Slave SELect) pin, sometimes called CS (Chip Select).</p>
-<p>In its simplest terms, the master will swap data between itself and the slave. You cannot write data without reading data at the same time. However, often you want to write data and don&#39;t care about the incoming data. To do this you can use the Write method. Keep in mind that the Write method is discarding whatever data the slave is sending back.</p>
-<div class="TIP"><h5>Tip</h5><p>Note that a board running TinyCLR OS is always the SPI master, not the slave.</p>
+<p>In its simplest terms, the master will swap data between itself and the slave. You cannot write data without reading data at the same time. However, often you want to write data and don't care about the incoming data. To do this you can use the Write method. Keep in mind that the Write method is discarding whatever data the slave is sending back.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Note that a board running TinyCLR OS is always the SPI master, not the slave.</p>
 </div>
 <p>In TinyCLR OS, SPI transfers are dynamically sent in batches that are internally optimized to allow for maximum speed back-to-back transfers. This is helpful when sending large buffers, such as when refreshing displays.</p>
-<div class="TIP"><h5>Tip</h5><p>Some SPI devices (slaves) can have more than one select pin, like the VS1053 MP3 decoder chip that uses one select pin for data and the other for commands. Both share the three data transfer pins (SCK, MOSI, MISO).</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Some SPI devices (slaves) can have more than one select pin, like the VS1053 MP3 decoder chip that uses one select pin for data and the other for commands. Both share the three data transfer pins (SCK, MOSI, MISO).</p>
 </div>
 <pre><code class="lang-cs">var cs = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PE4);
 
@@ -102,9 +106,10 @@ var device = controller.GetDevice(settings);
 device.Write(new byte[] { 1, 2 }); //Write something.
 device.TransferSequential(...);    //This is good for reading registers.
 device.TransferFullDuplex(...);    //This is the only one that truly represents how SPI works.
-</code></pre><hr>
+</code></pre>
+<hr>
 <h2 id="spi-clock-speed">SPI Clock Speed</h2>
-<p>SITCore SPI controllers support different clock ranges.   </p>
+<p>SITCore SPI controllers support different clock ranges.</p>
 <table>
 <thead>
 <tr>
@@ -129,13 +134,16 @@ device.TransferFullDuplex(...);    //This is the only one that truly represents 
 </tr>
 </tbody>
 </table>
-<div class="NOTE"><h5>Note</h5><p>Supported clock speeds are derived/divisible from the Maximum clock frequency. If the requested clock is not divisible, the next lower frequency will be used. This is to keep the clock speed as high as possible, but still at or below the requested speed. For example, on 60Mhz clock, the available options are 60Mhz, 30Mhz, 20Mhz, 15Mhz...etc. If the desired frequency is set to 29Mhz then 20Mhz will be used.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Supported clock speeds are derived/divisible from the Maximum clock frequency. If the requested clock is not divisible, the next lower frequency will be used. This is to keep the clock speed as high as possible, but still at or below the requested speed. For example, on 60Mhz clock, the available options are 60Mhz, 30Mhz, 20Mhz, 15Mhz...etc. If the desired frequency is set to 29Mhz then 20Mhz will be used.</p>
 </div>
 <p>The <code>MinClockFrequency</code> and <code>MaxClockFrequency</code> fields can be used at runtime.</p>
 <pre><code class="lang-cs">var controller = SpiController.FromName(SC20100.SpiBus.Spi3);
 Debug.WriteLine(controller.MinClockFrequency.ToString());
 Debug.WriteLine(controller.MaxClockFrequency.ToString());
-</code></pre><hr>
+</code></pre>
+<hr>
 <h2 id="bit-ordering">Bit Ordering</h2>
 <p>TinyCLR supports switching between sending the most significant bit first (MSb) or least significant bit first (LSb).</p>
 <pre><code class="lang-cs">var spiSettings = new SpiConnectionSettings() {               
@@ -145,12 +153,16 @@ Debug.WriteLine(controller.MaxClockFrequency.ToString());
 var spiSettings = new SpiConnectionSettings() {
     DataFrameFormat = SpiDataFrame.LsbFirst // LSb
 };
-</code></pre><hr>
+</code></pre>
+<hr>
 <h2 id="software-spi">Software SPI</h2>
 <p>Users have the option to drive (bit bang) SPI bus in software over any of the available GPIOs.</p>
 <pre><code class="lang-cs">var provider = new GHIElectronics.TinyCLR.Devices.
     Spi.Provider.SpiControllerSoftwareProvider(mosi, miso, clk);
-</code></pre><div class="TIP"><h5>Tip</h5><p>Software generated buses are slower and use more resources, but can be used on any pins.</p>
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Software generated buses are slower and use more resources, but can be used on any pins.</p>
 </div>
 <h2 id="spi-display-helper">SPI Display Helper</h2>
 <p>When partially updating a section of the SPI display, SPI includes a <code>Write</code> method to extract and send the needed data. Partial updates are faster than updating the full screen due to sending fewer bytes over SPI bus.</p>
@@ -161,18 +173,26 @@ var height = 100;
 var originalWidth = 160;
 
 spi.Write(graphicsBuffer, x, y, width, height, originalWidth, 1, 1);
-</code></pre><div class="TIP"><h5>Tip</h5><p>Software SPI doesn&#39;t support this method.</p>
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Software SPI doesn't support this method.</p>
 </div>
 <h2 id="pixel-multiplier">Pixel Multiplier</h2>
 <p>This feature allows pixels to be multiplied across the screen, allowing larger displays to be used with lesser memory. For example, a 320x240 display can be used with 160x120 graphics buffer if both multipliers, the column and the row, are set to 2. The system will be able to drive the display with only 25% of the needed memory, trading off the resolution.</p>
-<div class="TIP"><h5>Tip</h5><p>The column and row multipliers are independent from each other. A 320x240 display can be driven with a 320x120 graphics when column multiplier is set to 1 and the row multiplier is set to 2.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The column and row multipliers are independent from each other. A 320x240 display can be driven with a 320x120 graphics when column multiplier is set to 1 and the row multiplier is set to 2.</p>
 </div>
 <pre><code class="lang-cs">spi.Write(buffer, x, y, width, height, originalWidth, columnMultiplier, rowMultiplier);
-</code></pre><div class="TIP"><h5>Tip</h5><p>Software SPI doesn&#39;t support this feature.</p>
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Software SPI doesn't support this feature.</p>
 </div>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -195,18 +215,18 @@ spi.Write(graphicsBuffer, x, y, width, height, originalWidth, 1, 1);
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -214,13 +234,13 @@ spi.Write(graphicsBuffer, x, y, width, height, originalWidth, 1, 1);
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

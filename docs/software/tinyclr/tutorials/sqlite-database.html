@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>SQLite Database </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="SQLite Database ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -80,7 +80,9 @@
 
 <hr>
 <p>According to the SQLite homepage, &quot;SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine. SQLite is the most widely deployed SQL database engine in the world.&quot; SQLite lets you set up a database that resides entirely in a single file on a persistent storage device.</p>
-<div class="TIP"><h5>Tip</h5><p>Needed NuGets: GHIElectronics.TinyCLR.Data.SQLite</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Data.SQLite</p>
 </div>
 <p>The code below is a simple example that creates a database file in RAM (SD cards and USB drives can be used as well). A table is created, a few rows are filled, and then this data is read from the database. This data is then iterated over and printed out. ColumnNames returns the name of each of the columns.</p>
 <pre><code class="lang-cs">using System.Collections;
@@ -93,13 +95,13 @@ using (var db = new SQLiteDatabase()) {
     db.ExecuteNonQuery(&quot;CREATE TABLE Test (Var1 TEXT, Var2 INTEGER, Var3 DOUBLE);&quot;);
 
     Debug.WriteLine(&quot;Executing 2...&quot;);
-    db.ExecuteNonQuery(&quot;INSERT INTO Test(Var1, Var2, Var3) VALUES (&#39;Hello, World!&#39;, 25, 3.14);&quot;);
+    db.ExecuteNonQuery(&quot;INSERT INTO Test(Var1, Var2, Var3) VALUES ('Hello, World!', 25, 3.14);&quot;);
 
     Debug.WriteLine(&quot;Executing 3...&quot;);
-    db.ExecuteNonQuery(&quot;INSERT INTO Test(Var1, Var2, Var3) VALUES(&#39;Goodbye, World!&#39;, 15, 6.28); &quot;);
+    db.ExecuteNonQuery(&quot;INSERT INTO Test(Var1, Var2, Var3) VALUES('Goodbye, World!', 15, 6.28); &quot;);
 
     Debug.WriteLine(&quot;Executing 4...&quot;);
-    db.ExecuteNonQuery(&quot;INSERT INTO Test (Var1) VALUES(&#39;Red&#39;),(&#39;Blue&#39;),(&#39;Green&#39;),(&#39;White&#39;);&quot;);
+    db.ExecuteNonQuery(&quot;INSERT INTO Test (Var1) VALUES('Red'),('Blue'),('Green'),('White');&quot;);
 
     Debug.WriteLine(&quot;Executing 5...&quot;);
     var result1 = db.ExecuteQuery(&quot;SELECT Var1 FROM Test;&quot;);
@@ -128,7 +130,7 @@ using (var db = new SQLiteDatabase()) {
             str += j.ToString() + &quot; &quot;;
 
         Debug.WriteLine(str);
-
+                
     }
 
     foreach (ArrayList i in result2.Data) {
@@ -149,9 +151,10 @@ using (var db = new SQLiteDatabase()) {
         Debug.WriteLine(str);
     }
 }
-</code></pre><h2 id="omitted-commands--features">Omitted commands &amp; features</h2>
+</code></pre>
+<h2 id="omitted-commands--features">Omitted commands &amp; features</h2>
 <p>In order to reduce the memory requirements, some commands and features of SQLite have been omitted. Below is a table of those omitted features.
-For more information regarding these omissions see the <a href="https://www.sqlite.org/compile.html">SQLite Website.</a> </p>
+For more information regarding these omissions see the <a href="https://www.sqlite.org/compile.html">SQLite Website.</a></p>
 <table>
 <thead>
 <tr>
@@ -194,7 +197,7 @@ For more information regarding these omissions see the <a href="https://www.sqli
 </tr>
 <tr>
 <td><strong>BLOB LITERAL</strong></td>
-<td>Not possible to specify a blob in an SQL statement using X&#39;ABCD&#39; syntax</td>
+<td>Not possible to specify a blob in an SQL statement using X'ABCD' syntax</td>
 </tr>
 <tr>
 <td><strong>CTE</strong></td>
@@ -326,7 +329,7 @@ For more information regarding these omissions see the <a href="https://www.sqli
 <p>Further details on SQLite can be found at the official SQLite website <a href="http://www.sqlite.org/">http://www.sqlite.org/</a></p>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -349,18 +352,18 @@ For more information regarding these omissions see the <a href="https://www.sqli
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -368,13 +371,13 @@ For more information regarding these omissions see the <a href="https://www.sqli
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>

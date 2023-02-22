@@ -1,0 +1,552 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Due - Library </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Due - Library ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../../">
+  <meta property="docfx:newtab" content="true">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="due---library">Due - Library</h1>
+
+<hr>
+<p>These library functions are available on all Due-supported hardware, for user defined functions, see <a href="language.html">language</a> page</p>
+<hr>
+<h2 id="system-functions">System Functions</h2>
+<ul>
+<li><p><strong>Echo(enable)</strong>  <br>
+<strong>enable:</strong> 0 = Enable echo , 1 = Disable echo</p>
+</li>
+<li><p><strong>Version</strong>  - Returns the current firmware version of Due <br></p>
+</li>
+<li><p><strong>Print(text)</strong>  - Prints the value of the argument to the console on the same line <br>
+<strong>text:</strong> String or variable</p>
+</li>
+<li><p><strong>PrintLn(text)</strong>  - Prints the value of the argument to the console then moves to the next line <br>
+<strong>text:</strong> String or variable</p>
+</li>
+<li><p><strong>GetTicks()</strong> - read system current ticks in microseconds  <br></p>
+</li>
+<li><p><strong>Wait(duration)</strong> - holds program from running <br>
+<strong>duration:</strong> duration = milliseconds</p>
+</li>
+<li><p><strong>Reset(loader)</strong> - Resets the board <br>
+<strong>loader:</strong> 0 = system reset,  1 = reset and stay in loader mode</p>
+</li>
+</ul>
+<hr>
+<h2 id="digital">Digital</h2>
+<p>These functions provide access to digital pins.</p>
+<h5 id="digital-write">Digital Write</h5>
+<ul>
+<li><strong>DWrite(pin, state)</strong>  - Sets a pins digital output <br>
+<strong>pin:</strong> pin number <br> <strong>state:</strong> 1 = high or 0 = low</li>
+</ul>
+<pre><code class="lang-basic">for x = 1 to 10
+    DWrite(0,1)
+    Wait(200)
+    DWrite(0,0)
+    Wait(200)
+next
+</code></pre>
+<h5 id="digital-read">Digital Read</h5>
+<ul>
+<li><strong>DRead(pin, pull)</strong> - Read a digital pin output <br>
+<strong>pin:</strong> 0-9 <br>
+<strong>pull:</strong> Sets the internal pull resistors to -&gt; 0=none, 1=up, 2=down <br>
+<strong>Returns:</strong> 1 = high or  0 = low</li>
+</ul>
+<pre><code class="lang-basic">x = DRead(2,1)
+if x = 0
+    Print(&quot;low&quot;)
+else
+    Print(&quot;high&quot;)
+end
+</code></pre>
+<hr>
+<h2 id="analog">Analog</h2>
+<p>These functions provide access to analog pins.</p>
+<h5 id="analog-write">Analog Write</h5>
+<ul>
+<li><strong>AWrite(pin, dutyCycle)</strong>  - Writes to pin using PWM <br>
+<strong>pin:</strong> pin number<br>
+<strong>dutyCycle:</strong> 0 to 1000</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Frequency is fixed to 50hz.</p>
+</div>
+<pre><code class="lang-basic">@loop
+for i=0 to 1000 step 100
+    AWrite(0,i)
+    Wait(100)
+next
+for i=1000 to 0 step -100
+    AWrite(0,i) 
+    Wait(100)
+next
+goto loop
+
+</code></pre>
+<h5 id="analog-read">Analog Read</h5>
+<ul>
+<li><strong>ARead(pin)</strong>  - Read an analog output <br>
+<strong>pin:</strong> pin number <br>
+<strong>Returns:</strong> The analog value of the pin</li>
+</ul>
+<pre><code class="lang-basic">@loop
+for i=0 to 100
+    x=ARead(0)
+    PrintLn(x)  
+    Wait(100)
+next
+goto loop
+</code></pre>
+<hr>
+<h2 id="neopixel">Neopixel</h2>
+<p>Neopixel is fixed to pin number 1</p>
+<ul>
+<li><p><strong>NeoClear()</strong> - Clears all LEDs (in memory). Needs NeoShow() to see the affect</p>
+</li>
+<li><p><strong>NeoSet(index, red, green, blue)</strong> - Sets a specific LED to a color. Needs NeoShow() to see affect<br>
+<strong>index:</strong> The LED index where 0 is first one and supporting up to 256 LEDs<br>
+<strong>red, green, blue:</strong> Color levels, 0 to 255 <br></p>
+</li>
+<li><p><strong>NeoShow(count)</strong> -<br>
+<strong>count:</strong> The count of LEDs to update and show</p>
+</li>
+</ul>
+<p>This example assumes we have 8 LEDs and will set 8 LEDs to red, increasing the color intensity from 0 to 80.  Then it waits one second before it sets the first LED to bright purple!</p>
+<pre><code class="lang-basic">NeoClear()
+for x = 0 to 8
+    NeoSet(x,x*10,0,0)
+next
+NeoShow(8)
+Wait(1000)
+NeoSet(0,200,0,200)
+NeoShow(8)
+</code></pre>
+<ul>
+<li><strong>NeoStream(count)</strong> - Streams data directly to LEDs.Needs NeoShow() to see affect<br>
+<strong>count:</strong> The count of LEDs to &quot;stream&quot;</li>
+</ul>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Data must be in GRB order and must be 3 x count bytes</p>
+</div>
+<hr>
+<h2 id="frequency">Frequency</h2>
+<p>Frequency is fixed to pin 0</p>
+<ul>
+<li><strong>Freq(frequency, duration, dutyCycle)</strong> - provides an accurate hardware generated PWM signal <br>
+<strong>frequency:</strong> frequency <br>
+<strong>duration:</strong> 0 to forever <br>
+<strong>dutyCycle:</strong> 0 to 1000</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Freq() is a non-blocking function, calling Freq() a second time before the duration of the first call is over will end the function despite the duration of first calls argument.</p>
+</div>
+<pre><code class="lang-basic">@Loop
+for x=1 to 1000
+    Freq(x,500,500)
+    Wait(200)
+next
+for x=1000 to 1 step -1
+    Freq(x,500,500)
+    Wait(200)
+next
+goto Loop
+</code></pre>
+<hr>
+<h2 id="infrared">Infrared</h2>
+<p>IR decoder is fixed to pin 2</p>
+<ul>
+<li><p><strong>IrEnable(enable)</strong> - enables pin for IR signal capture <br>
+<strong>enable:</strong> 1 = enable, 0 = disable <br></p>
+</li>
+<li><p><strong>IrRead()</strong> - reads the value from the IR enabled pin <br>
+<strong>Return:</strong> Tracks the past 16 key presses and returns them. -1 if none.</p>
+</li>
+</ul>
+<pre><code class="lang-basic">IrEnable(1)
+@Loop
+x=IrRead()
+if x &gt;=0: Println(x):end
+Wait(1000)
+goto Loop
+</code></pre>
+<hr>
+<h2 id="spi">SPI</h2>
+<ul>
+<li><strong>SpiByte(byte)</strong> - sends a byte <br>
+<strong>byte:</strong> - value 0 to 255 <br>
+<strong>Return:</strong>  Read byte value</li>
+</ul>
+<pre><code class="lang-basic">code sample
+</code></pre>
+<ul>
+<li><strong>SpiSteam(writeCount, readCount, cs)</strong> - Streams data directly to the SPI device <br>
+<strong>writeCount:</strong> <br>
+<strong>readCount:</strong> <br>
+<strong>cs:</strong> set to -1 if not needed</li>
+</ul>
+<pre><code class="lang-basic">code sample
+</code></pre>
+<hr>
+<h2 id="i2c">I2C</h2>
+<ul>
+<li><strong>I2cBytes(address, writeCount, readCount)</strong> -  Reads and/or writes up to 4 bytes to/from I2C bus. Data is transfered to and from variables A, B, C, D<br>
+<strong>address:</strong> address of the I2C device <br>
+<strong>writeCount:</strong> <br>
+<strong>readCount:</strong> <br></li>
+</ul>
+<pre><code class="lang-basic">code sample
+</code></pre>
+<ul>
+<li><strong>I2cStream(address, writeCount, readCount)</strong> -  <br>
+<strong>address:</strong> address of the I2C device <br>
+<strong>writeCount:</strong> <br>
+<strong>readCount:</strong> <br></li>
+</ul>
+<pre><code class="lang-basic">code sample
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>On SC13 devices only: The I2C pins are different on BrainPad Pulse vs FEZ boards. PB15 is used to determine how I2C should work. Pay attention to the state of PB15 on power up, Pulse has it pulled up through 10k resistor.</p>
+</div>
+<hr>
+<h2 id="uart">UART</h2>
+<ul>
+<li><p><strong>UartInit(baudRate)</strong> - Sets the baudrate UART   <br>
+<strong>baudRate:</strong> Any commonly used standard baudrate</p>
+</li>
+<li><p><strong>UartRead()</strong> - Read  <br>
+<strong>Returns:</strong> A byte from UART</p>
+</li>
+<li><p><strong>UartWrite(data)</strong> - Write  <br>
+<strong>data:</strong> Data byte to send on UART</p>
+</li>
+<li><p><strong>UartCount()</strong> - Count  <br>
+<strong>Returns:</strong> How many bytes have been buffered and ready to be read</p>
+</li>
+</ul>
+<pre><code class="lang-basic">code sample
+</code></pre>
+<hr>
+<h2 id="touch">Touch</h2>
+<ul>
+<li><strong>TouchRead(pin)</strong> - Initializes the pin for touch   <br>
+<strong>pin:</strong> pin number</li>
+</ul>
+<pre><code class="lang-basic">@Loop
+a=TouchRead(0):b=TouchRead(1):c=TouchRead(2)
+if a&gt;0:Println(&quot;pin 0&quot;):end 
+if b&gt;0:Println(&quot;pin 1&quot;):end
+if c&gt;0:Println(&quot;pin 2&quot;):end 
+wait(100)
+goto Loop
+</code></pre>
+<hr>
+<h2 id="servo-motor">Servo Motor</h2>
+<ul>
+<li><strong>ServoSet(pin, degree)</strong> - Sets servo motor connected to pin to a specific position<br>
+<strong>pin:</strong> pin number  <br>
+<strong>degree:</strong>  0 to 180</li>
+</ul>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Many servo motors need 5V to work.</p>
+</div>
+<pre><code class="lang-basic">@Loop
+ServoSet(0,0)
+Wait(1000)
+ServoSet(0,180)
+Wait(1000)
+goto Loop
+</code></pre>
+<hr>
+<h2 id="distance-sensor">Distance Sensor</h2>
+<ul>
+<li><strong>ReadDistance(trigger, echo)</strong> - uses ultrasonic sonic sensor to read distance.<br>
+<strong>trigger:</strong> The pin number that is connected to trigger (pulse) signal<br>
+<strong>echo:</strong>  The pin number that is connected to echo signal<br>
+<strong>Returns:</strong>  Distance in centimeters</li>
+</ul>
+<div class="TIP">
+<h5>Tip</h5>
+<p>most sensors need 5V to work.</p>
+</div>
+<pre><code class="lang-basic">@Loop
+x = Distance(0,1) 
+if x&gt;0 
+    PrintLn(x)
+end
+Wait(100)
+goto Loop
+</code></pre>
+<hr>
+<h2 id="buttons">Buttons</h2>
+<ul>
+<li><p><strong>BtnEnable(pin, enable)</strong> - sets up a button to be used <br>
+<strong>pin:</strong> pin number, 'a', or 'b' <br>
+<strong>enable:</strong> 1 = enable, 0 = disabled  <br></p>
+</li>
+<li><p><strong>BtnDown(pin)</strong> Returns a value when button is pressed<br>
+<strong>pin:</strong> pin number, 'a', or 'b' <br>
+<strong>Returns:</strong> 1 if button was pressed and continues to return 1 until the button is released</p>
+</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p><strong>'a'</strong> is ASCII a or 97, <strong>'b'</strong> is ASCII b or 98</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Will always return zero if not enabled</p>
+</div>
+<pre><code class="lang-basic">BtnEnable('a',1)
+@Loop
+x=BtnDown('a')
+if x=1
+    Println(&quot;Button A&quot;)
+end
+goto Loop
+</code></pre>
+<hr>
+<h2 id="device-specific">Device Specific</h2>
+<p>These functions are added to support the built in display &amp; buzzer found on the Brainpad Pulse</p>
+<h2 id="sounds">Sounds</h2>
+<ul>
+<li><strong>Sound(frequency, duration, volume)</strong> <br>
+<strong>frequency:</strong> sound frequency in Hz <br>
+<strong>duration:</strong> in milliseconds. 0 is always on <br>
+<strong>volume:</strong> 0 to 100</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Sound() uses Freq() which is a non-blocking function. Calling Sound() could end the duration of the previous Sound() despite the set duration inside the argument. See Freq() section for more details.</p>
+</div>
+<pre><code class="lang-basic">Sound(256,1000,50) 
+</code></pre>
+<hr>
+<h2 id="lcd">LCD</h2>
+<ul>
+<li><p><strong>LcdShow()</strong> Sends the display buffer to the LCD.</p>
+</li>
+<li><p><strong>LcdClear(color)</strong>  Clears the entire screen to black or white<br>
+<strong>color:</strong> 0 = black, 1 = white</p>
+</li>
+</ul>
+<pre><code class="lang-basic">LcdClear(0)
+LcdShow()
+</code></pre>
+<h5 id="draw-line">Draw Line</h5>
+<ul>
+<li><strong>LcdLine(color, x1,y1,x2,y2)</strong> <br>
+<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>x1:</strong> Starting x point <br>
+<strong>y1:</strong> Starting y point <br>
+<strong>x1:</strong> Ending x point <br>
+<strong>y1:</strong> Ending y point</li>
+</ul>
+<pre><code class="lang-basic">LcdClear(0)
+LcdLine(1,0,0,128,64)
+LcdShow()
+</code></pre>
+<h5 id="set-pixel">Set Pixel</h5>
+<ul>
+<li><strong>LcdPixel(color, x, y)</strong> <br>
+<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>x:</strong> x pixel value<br>
+<strong>y:</strong> y pixel value</li>
+</ul>
+<pre><code class="lang-basic">LcdClear(0)
+LcdPixel(1,64,32)
+LcdShow()
+</code></pre>
+<h5 id="draw-circle">Draw Circle</h5>
+<ul>
+<li><strong>LcdCircle(color, x,y,radius)</strong> <br>
+<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>x:</strong> x position of circle's center <br>
+<strong>y:</strong> y position of circle's center <br>
+<strong>radius:</strong> radius of the circle</li>
+</ul>
+<pre><code class="lang-basic">LcdClear(0)
+LcdCircle(1,64,32,31)
+LcdShow()
+</code></pre>
+<h5 id="draw-rectangle">Draw Rectangle</h5>
+<ul>
+<li><strong>LcdRect(color, x1, y1, x2, y2)</strong> <br>
+<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>x1:</strong> Starting x point <br>
+<strong>y1:</strong> Starting y point <br>
+<strong>x1:</strong> Ending x point <br>
+<strong>y1:</strong> Ending y point</li>
+</ul>
+<pre><code class="lang-basic">LcdClear(0)
+LcdRect(1,10,10,118,54)
+LcdShow()
+</code></pre>
+<h5 id="draw-text">Draw Text</h5>
+<ul>
+<li><strong>LcdText(text, color, x, y)</strong> <br>
+<strong>text:</strong> Takes either a variable or &quot;string&quot;<br>
+<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>x:</strong> x position <br>
+<strong>y:</strong> y position</li>
+</ul>
+<pre><code class="lang-basic">LcdClear(0)
+LcdText(&quot;Hello World&quot;,1,10,10)
+LcdShow()
+</code></pre>
+<h5 id="draw-scaled-text">Draw Scaled Text</h5>
+<ul>
+<li><strong>LcdTextS(&quot;text&quot;, color, x, y, scaleWidth, scaleHeight)</strong> <br>
+<strong>text:</strong> String message <br>
+<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>x:</strong> x position <br>
+<strong>y:</strong> x position <br>
+<strong>scaleWidth:</strong> Width scale multiplier <br>
+<strong>scaleHeight:</strong> Width scale multiplier</li>
+</ul>
+<pre><code class="lang-basic">LcdClear(0)
+LcdText(&quot;Hello&quot;,1,0,0,2,2)
+LcdShow()
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Scale is multiplier for the pixel in width and height to make the font larger</p>
+</div>
+<h5 id="lcd-stream">LCD Stream</h5>
+<p>Stream is used to send chunks of data to the device.</p>
+<ul>
+<li><strong>LcdStream()</strong></li>
+</ul>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/due/library.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+              </div>
+
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <p><a class="back-to-top" href="#top">Back to top</a><p>
+              </p></nav>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

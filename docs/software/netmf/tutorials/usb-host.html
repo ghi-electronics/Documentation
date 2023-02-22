@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>USB Host </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="USB Host ">
-    <meta name="generator" content="docfx 2.48.1.0">
-    
+    <meta name="generator" content="docfx ">
+  
     <link rel="shortcut icon" href="../../../images/favicon.ico">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../../">
-    <meta property="docfx:newtab" content="true">
+  
+  <meta property="docfx:rel" content="../../../">
+  <meta property="docfx:newtab" content="true">
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
                 <img id="logo" class="svg" src="../../../images/logo.png" alt="">
               </a>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -56,17 +56,17 @@
         </div>
       </header>
       <div class="container body-content">
-        
+
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -80,7 +80,7 @@
 
 <hr>
 <p>There is usually a lot of confusion between USB host and USB client. USB host is the system that connects to multiple USB clients. For example, the PC is a USB host and it can connect to multiple USB clients like mice, keyboards, and mass storage devices. Implementing a USB client is rather simple but implementing a host is far more complicated.</p>
-<p>USB host is an exclusive feature from GHI Electronics. With this feature, you can connect almost any USB device to GHI&#39;s NETMF products. This feature opens new possibilities for embedded systems. Your product can now connect to a standard USB keyboard and can also access files on a USB thumb drive. USB is a hot pluggable system which means any device can be connected or disconnected at any time. Events are generated when devices are connected or disconnected. The program that you write should subscribe to these events and handle them accordingly. With USB hub support, devices can be connected directly to the USB host port or the user may connect multiple USB devices through a USB hub.</p>
+<p>USB host is an exclusive feature from GHI Electronics. With this feature, you can connect almost any USB device to GHI's NETMF products. This feature opens new possibilities for embedded systems. Your product can now connect to a standard USB keyboard and can also access files on a USB thumb drive. USB is a hot pluggable system which means any device can be connected or disconnected at any time. Events are generated when devices are connected or disconnected. The program that you write should subscribe to these events and handle them accordingly. With USB hub support, devices can be connected directly to the USB host port or the user may connect multiple USB devices through a USB hub.</p>
 <h2 id="getting-started">Getting Started</h2>
 <p>When working with USB host, you interact with the Controller.  You subscribe to the connected event for various devices and then start the controller. When a device connected, you receive an object representing that device as the event arguments. You can subscribe to the Disconnect event on that device to do any clean up you might need.</p>
 <p>The below code requires the GHI.Usb and GHI.Hardware assemblies and shows you briefly how to handle device connections and disconnections.</p>
@@ -117,7 +117,8 @@ public class Program
         Debug.Print(&quot;Keyboard disconnected.&quot;);
     }
 }
-</code></pre><h2 id="mice-keyboards-and-joysticks">Mice, keyboards, and joysticks</h2>
+</code></pre>
+<h2 id="mice-keyboards-and-joysticks">Mice, keyboards, and joysticks</h2>
 <p>Once you receive a connect event and the associated object for a mouse, keyboard, or joystick, you can subscribe to various events on those objects to receive data from the device. The below code simply prints out when a button or key is pressed.</p>
 <pre><code class="lang-cs">using GHI.Usb.Host;
 using Microsoft.SPOT;
@@ -202,7 +203,8 @@ public class Program
         Debug.Print(e.Direction.ToString());
     }
 }
-</code></pre><h2 id="serial">Serial</h2>
+</code></pre>
+<h2 id="serial">Serial</h2>
 <p>Serial (UART) communication is a very common interface. There are many companies that create chips that convert USB to serial. GHI Electronics currently supports chipsets from FTDI. Their FT232 is known to work, though others may as well. USB chipsets are made to be somewhat customized. A company can use an FTDI chip to make their product run on USB and they will change the strings in USB descriptors so that when you plug in their device to a PC you will see the company name and not FTDI. They can also change the USB VID/PID, vendor ID and product ID. Many of the interface products on the market use the FTDI chipset.</p>
 <p>A few other USB-Serial manufacturers, like Prolific, are included, but they are deprecated and not supported by us.</p>
 <p>The below example simply echoes any data received back out to the sender and prints it to the debug output.</p>
@@ -236,7 +238,8 @@ public class Program
         sender.Write(e.Data);
     }
 }
-</code></pre><h2 id="mass-storage">Mass Storage</h2>
+</code></pre>
+<p>##Mass Storage</p>
 <p>When you connect a mass storage device, it can be accessed through the regular NETMF filesystem functions with the device root &quot;USB&quot;. Once you mount the device, you need to wait for NETMF to fire the RemovableMedia.Insert event before you try accessing the filesystem.</p>
 <p>The below code simply opens or creates a file on the drive, writes &quot;Hello, World!&quot; to it, and then unmounts the device. It requires the Microsoft.SPOT.IO and System.IO assembly.</p>
 <pre><code class="lang-cs">using GHI.Usb.Host;
@@ -280,7 +283,8 @@ public class Program
         evt.Set();
     }
 }
-</code></pre><h2 id="warning">Warning</h2>
+</code></pre>
+<h2 id="warning">Warning</h2>
 <p>Under current versions of NETMF, the Flush method of FileStream will eventually write the buffers; unfortunately, there is a delay (sometimes up to a minute) from when Flush is called to when the data is actually flushed. See Files and Folders for more details.</p>
 <h2 id="webcams">Webcams</h2>
 <p>You can also connect a webcam and stream images from it. Webcams only support certain image formats and sizes so you need to query the formats supported and tell the camera to stream images using that format. We support cameras that support the YUV2 color format.</p>
@@ -297,7 +301,7 @@ public class Program
     public static void Main()
     {
         Controller.WebcamConnected += Controller_WebcamConnected;
-
+        
         Controller.Start();
 
         Thread.Sleep(Timeout.Infinite);
@@ -324,7 +328,8 @@ public class Program
         lcd.Flush();
     }
 }
-</code></pre><h2 id="unknown-devices">Unknown Devices</h2>
+</code></pre>
+<h2 id="unknown-devices">Unknown Devices</h2>
 <p>If your device is not recognized by our libraries, the UnknownDeviceConnected event will be triggered. This event will give you the USB parameters of the device that you can use to &quot;force&quot; the creation of a specific type. This method is not guaranteed to work with every unknown device, however. The below code illustrates how to do this with a usb to serial device.</p>
 <pre><code class="lang-cs">using GHI.Usb.Host;
 using Microsoft.SPOT;
@@ -360,9 +365,10 @@ public class Program
     }
 
 }
-</code></pre></article>
+</code></pre>
+</article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -385,18 +391,18 @@ public class Program
                 </div>
                 <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
               </div>
-          
+
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5></h5>
+              <h5>In This Article</h5>
               <div></div>
               <p><a class="back-to-top" href="#top">Back to top</a><p>
-              </nav>
+              </p></nav>
             </div>
           </div>
-          
+
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -404,13 +410,13 @@ public class Program
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
-            
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
