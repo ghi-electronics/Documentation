@@ -4,6 +4,8 @@
 
 These library functions are available on all Due-supported hardware, for user defined functions, see [language](language.md) page
 
+> [!TIP] 
+> Code samples are using upper and lower case to make things look clearer. Due is not case sensitive and Print("Due") is exactly the same as pRinT("Due")
 ---
 
 ## System Functions
@@ -34,7 +36,7 @@ These library functions are available on all Due-supported hardware, for user de
 
 These functions provide access to digital pins.
 
-##### Digital Write
+**Digital Write**
 - **DWrite(pin, state)**  - Sets a pins digital output <br>
 **pin:** pin number <br> **state:** 1 = high or 0 = low
 
@@ -176,8 +178,8 @@ IR decoder is fixed to pin 2
 **Return:** Tracks the past 16 key presses and returns them. -1 if none.
 
 
-|Button              |Return Value                                                            |
-|:----------------------|:----------------------------------------------------------------------|
+|Button              |Return Value|
+|:----------------|:----------|
 |power            |0               |
 |up               |1               |
 |lightbulb        |2               |
@@ -226,13 +228,45 @@ code sample
 ```
 
 - **SpiSteam(writeCount, readCount, cs)** - Streams data directly to the SPI device <br>
-**writeCount:** <br>
-**readCount:** <br>
+**writeCount:** The number of bytes to write<br>
+**readCount:** The number of bytes to read<br>
 **cs:** set to -1 if not needed
 
 ```basic
 code sample
 ```
+- **Spi4Bpp(count)** - Streams and converts data from 4BPP to 16BPP<br>
+**count:** The count of bytes to be written.
+
+This special function converts 4BPP incoming data to 16BPP on-the-fly. This is added to speed up the use of SPI color displays, namely ones using ST7735 found on the very common 1.8" SPI color displays.
+
+- **Palette(index, color)** - Sets the desired color for a palette.<br>
+**index** Index number of color<br>
+**color** 
+
+This function goes hand-in-hand with **Spi4Bpp()** function to set the colors that are to be used. 
+
+Default colors:
+
+|Index|Value|Color|
+|:-   |:-------|:----------|
+|0    |0x000000|Black      |
+|1    |0xFFFFFF|White      |
+|2    |0xFF0000|Red        |
+|3    |0x32CD32|Lime       |
+|4    |0x0000FF|Blue       |
+|5    |0xFFFF00|Yellow     |
+|6    |0x00FFFF|Cyan       |
+|7    |0xFF00FF|Magenta    |
+|8    |0xC0C0C0|Silver     |
+|9    |0x808080|Gray       |
+|10   |0x800000|Maroon     |
+|11   |0xBAB86C|Olive      |
+|12   |0x00FF00|Green      |
+|13   |0xA020F0|Purple     |
+|14   |0x008080|Teal       |
+|15   |0x000080|Navy       | 
+
 
 ---
 
@@ -240,9 +274,8 @@ code sample
 ## I2C
 
 - **I2cBytes(address, writeCount, readCount)** -  Reads and/or writes up to 4 bytes to/from I2C bus. Data is transfered to and from variables A, B, C, D<br>
-**address:** address of the I2C device <br>
-**writeCount:** <br>
-**readCount:** <br>
+**writeCount:** The number of bytes to write<br>
+**readCount:** The number of bytes to write
 
 ```basic
 code sample
@@ -264,13 +297,13 @@ code sample
 
 ## UART
 
-- **UartInit(baudRate)** - Sets the baudrate UART   <br>
-**baudRate:** Any commonly used standard baudrate 
+- **UartInit(baudRate)** - Sets the baud rate UART   <br>
+**baudRate:** Any commonly used standard baud rate 
 
-- **UartRead()** - Read  <br>
-**Returns:** A byte from UART
+- **UartRead()** - Read UART data  <br>
+**Returns:** A byte read from UART
 
-- **UartWrite(data)** - Write  <br>
+- **UartWrite(data)** - Write UART data <br>
 **data:** Data byte to send on UART
 
 - **UartCount()** - Count  <br>
@@ -372,7 +405,7 @@ goto Loop
 
 
 ## Device Specific
-These functions are added to support the built in display & buzzer found on the Brainpad Pulse
+These functions are added to support the built in display & buzzer found on the BrainPad Pulse
 
 ## Sounds
 
@@ -403,7 +436,7 @@ LcdClear(0)
 LcdShow()
 ```
 
-##### Draw Line
+**Draw Line**
 
 - **LcdLine(color, x1,y1,x2,y2)** <br>
 **color:** 0 = black, 1 = white <br>
@@ -494,7 +527,7 @@ LcdShow()
 
 ##### LCD Stream
 
-Stream is used to send chunks of data to the device. 
+Stream is used to send the entire lcd updatee. 
 
 - **LcdStream()** 
 

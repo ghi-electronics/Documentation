@@ -169,3 +169,11 @@ The above "function" can now be called from inside *Immediate* mode as an exampl
 >a=5
 >Count()
 ```
+
+## Streams
+
+Some functionality require speed when sending/retrieving data to/from a device. For example, when sending the entire LCD display.
+
+A stream command initiates the request, in this case *LcdStream()*. Folowed to the command, the device will respond with the **&** symbol. Now, the PC can send the entire data, exactly to the required size. 
+
+The required size of the data, to follow the stream command, is documented with each stream command.
