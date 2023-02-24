@@ -4,7 +4,7 @@
 
 *Immediate* mode, commands are executed immediately. In *Record* mode, commands are stored in flash and executed with the **run** command. 
 
-##### Immediate Mode
+**Immediate Mode**
 A user will know they are in this mode when their cursor prompt is the  
 **_>_** character. All statements are executed as soon as entered.
 
@@ -15,7 +15,7 @@ A user will know they are in this mode when their cursor prompt is the
 > [!NOTE]
 > Immediate Mode is the default mode when device is first connected.
 
-##### Record Mode
+**Record Mode**
 To enter into *Record* mode, the user enters the **$** character.
 The character prompt will change to the **$** sign until *Record* mode is exited using the **>** character. All statements entered are stored directly in flash but not executed until **run** is entered. 
 
@@ -111,14 +111,14 @@ not one
 
 ## Functions
 
-Functions in due are implements in a simple form. They do nto take arguemtns and do nto retun values. However, the built in library functions do take arguments nd return values, learn more about the [library](library.md) functions. 
+Functions in Due are implements in a simple form. They do not take arguments and do not return values. However, the built in library functions do take arguments and return values, learn more about the [library](library.md) functions. 
 
 User functions resides in nonvolatile memory using recording mode. They can then be "run" or called from immediate mode.
 
 > [!NOTE]
-> While these are called fnctions, they are actually just labels.
+> While these are called functions, they are actually just labels.
 
-A user function is created by using the **@** symbol in front of the name of the function you'd like to create. These names are limited to 6 characters. Once you've created a "function" any preceding commands entered go inside that function. Function are typically endedd with a return. 
+A user function is created by using the **@** symbol in front of the name of the function you'd like to create. These names are limited to 6 characters. Once you've created a "function" any preceding commands entered go inside that function. Function are typically end with a return. 
 
 ```basic
 $@Mine
@@ -131,7 +131,7 @@ The function can then be called by its name with **()**. Note how this can be do
 ```basic
 >Mine()
 ```
-A goto can also be used to call a function but in this case the function is treated as a label and a **return** shuld not be expected. 
+A goto can also be used to call a function but in this case the function is treated as a label and a **return** should not be expected. 
 
 ```basic
 $@Loop
@@ -141,11 +141,6 @@ $goto loop
 
 > [!TIP]
 > Due variables are global and any changes inside functions will affect variable values outside those functions.
-
-**Calling User "Function"**
-
-
-
 
 ---
 ## Extending Due
@@ -170,10 +165,6 @@ The above "function" can now be called from inside *Immediate* mode as an exampl
 >Count()
 ```
 
-## Streams
 
-Some functionality require speed when sending/retrieving data to/from a device. For example, when sending the entire LCD display.
 
-A stream command initiates the request, in this case *LcdStream()*. Folowed to the command, the device will respond with the **&** symbol. Now, the PC can send the entire data, exactly to the required size. 
 
-The required size of the data, to follow the stream command, is documented with each stream command.
