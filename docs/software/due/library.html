@@ -82,8 +82,12 @@
 <p>These library functions are available on all Due-supported hardware, for user defined functions, see <a href="language.html">language</a> page</p>
 <div class="TIP">
 <h5>Tip</h5>
+<p>Code samples are using upper and lower case to make things look clearer. Due is not case sensitive and Print(&quot;Due&quot;) is exactly the same as print(&quot;Due&quot;)</p>
 </div>
-<h2 id="code-samples-are-using-upper-and-lower-case-to-make-things-look-clearer-due-is-not-case-sensitive-and-printdue-is-exactly-the-same-as-printdue">Code samples are using upper and lower case to make things look clearer. Due is not case sensitive and Print(&quot;Due&quot;) is exactly the same as pRinT(&quot;Due&quot;)</h2>
+<h2 id="streams">Streams</h2>
+<p>Some functionality require speed when sending/retrieving data to/from a device. For example, when sending the entire LCD display.</p>
+<p>A stream command initiates the request, in this case <strong>LcdStream()</strong>. Once this command is received and accepted by the device, it will respond with the <strong>&amp;</strong> symbol. Now, the PC can send the entire data, exactly to the required byte count. This required count, to follow the stream command, is documented with each stream command individual.</p>
+<hr>
 <h2 id="system-functions">System Functions</h2>
 <ul>
 <li><p><strong>Echo(enable)</strong>  <br>
@@ -200,12 +204,9 @@ NeoShow(8)
 </code></pre>
 <ul>
 <li><strong>NeoStream(count)</strong> - Streams data directly to LEDs.Needs NeoShow() to see affect<br>
-<strong>count:</strong> The count of LEDs to &quot;stream&quot;</li>
+<strong>count:</strong> The count of LEDs to &quot;stream&quot;<br>
+<strong>Stream size:</strong> It is &quot;count&quot; multiplied by 3, due to the fact that each LED needs 3 bytes for colors, ordered in GRB format.</li>
 </ul>
-<div class="TIP">
-<h5>Tip</h5>
-<p>Data must be in GRB order and must be 3 x count bytes</p>
-</div>
 <hr>
 <h2 id="frequency">Frequency</h2>
 <p>Frequency is fixed to pin 0</p>
@@ -355,19 +356,21 @@ goto Loop
 <li><strong>SpiSteam(writeCount, readCount, cs)</strong> - Streams data directly to the SPI device <br>
 <strong>writeCount:</strong> The number of bytes to write<br>
 <strong>readCount:</strong> The number of bytes to read<br>
-<strong>cs:</strong> set to -1 if not needed</li>
+<strong>cs:</strong> set to -1 if not needed<br>
+<strong>Stream size:</strong> The stream starts with PC sending &quot;writeCount&quot; of bytes and then the PC must read the &quot;readCount&quot;. If either count is zero then that step can be skipped.</li>
 </ul>
 <pre><code class="lang-basic">code sample
 </code></pre>
 <ul>
 <li><strong>Spi4Bpp(count)</strong> - Streams and converts data from 4BPP to 16BPP<br>
-<strong>count:</strong> The count of bytes to be written.</li>
+<strong>count:</strong> The count of bytes to be written.<br>
+<strong>Stream size:</strong> The &quot;count&quot;.</li>
 </ul>
-<p>This special function converts 4BPP incoming data to 16BPP on-the-fly. This is added to speed up the use of SPI color displays, namely ones using ST7735 found on the very common 1.8&quot; SPI color displays.</p>
+<p>This special function converts 4BPP incoming data to 16BPP on-the-fly. This is added to speed up the use of SPI color displays, namely ones using ST7735 found on the very common 1.8&quot; SPI color displays. This allows for faster updates, since each byte sent is 2 pixels.</p>
 <ul>
-<li><strong>Palette(index, color)</strong> - Sets the desired color for a palette.<br>
-<strong>index</strong> Index number of color<br>
-<strong>color</strong></li>
+<li><strong>Palette(index, colorValue)</strong> - Sets the desired color for a palette.<br>
+<strong>index:</strong> Index number of color<br>
+<strong>colorValue:</strong> A standard HEX value of the RGB color.</li>
 </ul>
 <p>This function goes hand-in-hand with <strong>Spi4Bpp()</strong> function to set the colors that are to be used.</p>
 <p>Default colors:</p>
@@ -375,7 +378,7 @@ goto Loop
 <thead>
 <tr>
 <th style="text-align: left;">Index</th>
-<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Color Value</th>
 <th style="text-align: left;">Color</th>
 </tr>
 </thead>
@@ -475,7 +478,8 @@ goto Loop
 <li><strong>I2cStream(address, writeCount, readCount)</strong> -  <br>
 <strong>address:</strong> address of the I2C device <br>
 <strong>writeCount:</strong> <br>
-<strong>readCount:</strong> <br></li>
+<strong>readCount:</strong> <br>
+<strong>Stream size:</strong> The stream starts with PC sending &quot;writeCount&quot; of bytes and then the PC must read the &quot;readCount&quot;. If either count is zero then that step can be skipped.</li>
 </ul>
 <pre><code class="lang-basic">code sample
 </code></pre>
@@ -622,7 +626,7 @@ LcdShow()
 LcdLine(1,0,0,128,64)
 LcdShow()
 </code></pre>
-<h5 id="set-pixel">Set Pixel</h5>
+<p><strong>Set Pixel</strong></p>
 <ul>
 <li><strong>LcdPixel(color, x, y)</strong> <br>
 <strong>color:</strong> 0 = black, 1 = white <br>
@@ -633,7 +637,7 @@ LcdShow()
 LcdPixel(1,64,32)
 LcdShow()
 </code></pre>
-<h5 id="draw-circle">Draw Circle</h5>
+<p><strong>Draw Circle</strong></p>
 <ul>
 <li><strong>LcdCircle(color, x,y,radius)</strong> <br>
 <strong>color:</strong> 0 = black, 1 = white <br>
@@ -645,7 +649,7 @@ LcdShow()
 LcdCircle(1,64,32,31)
 LcdShow()
 </code></pre>
-<h5 id="draw-rectangle">Draw Rectangle</h5>
+<p><strong>Draw Rectangle</strong></p>
 <ul>
 <li><strong>LcdRect(color, x1, y1, x2, y2)</strong> <br>
 <strong>color:</strong> 0 = black, 1 = white <br>
@@ -658,22 +662,10 @@ LcdShow()
 LcdRect(1,10,10,118,54)
 LcdShow()
 </code></pre>
-<h5 id="draw-text">Draw Text</h5>
-<ul>
-<li><strong>LcdText(text, color, x, y)</strong> <br>
-<strong>text:</strong> Takes either a variable or &quot;string&quot;<br>
-<strong>color:</strong> 0 = black, 1 = white <br>
-<strong>x:</strong> x position <br>
-<strong>y:</strong> y position</li>
-</ul>
-<pre><code class="lang-basic">LcdClear(0)
-LcdText(&quot;Hello World&quot;,1,10,10)
-LcdShow()
-</code></pre>
-<h5 id="draw-scaled-text">Draw Scaled Text</h5>
+<p><strong>Draw Scaled Text</strong></p>
 <ul>
 <li><strong>LcdTextS(&quot;text&quot;, color, x, y, scaleWidth, scaleHeight)</strong> <br>
-<strong>text:</strong> String message <br>
+<strong>text:</strong> String message in double quotes. Using variables is not supported<br>
 <strong>color:</strong> 0 = black, 1 = white <br>
 <strong>x:</strong> x position <br>
 <strong>y:</strong> x position <br>
@@ -688,11 +680,28 @@ LcdShow()
 <h5>Tip</h5>
 <p>Scale is multiplier for the pixel in width and height to make the font larger</p>
 </div>
-<h5 id="lcd-stream">LCD Stream</h5>
-<p>Stream is used to send the entire lcd updatee.</p>
+<p><strong>Draw Text</strong></p>
 <ul>
-<li><strong>LcdStream()</strong></li>
+<li><strong>LcdText(&quot;text&quot;, color, x, y)</strong> <br>
+Works exactly the same as <strong>LcdText()</strong> minus scaling.</li>
 </ul>
+<pre><code class="lang-basic">LcdClear(0)
+LcdText(&quot;Hello World&quot;,1,10,10)
+LcdShow()
+</code></pre>
+<p><strong>LCD Stream</strong></p>
+<p>Stream is used to send the entire LCD update.</p>
+<ul>
+<li><strong>LcdStream()</strong><br>
+<strong>Stream Size:</strong> The size screen size divided by 8, 128x64/8=1K.
+The data is organized as 8bit columns going left to right and then wrapping around to the next row.</li>
+</ul>
+<p>Example code to set a pixel at 10x10</p>
+<pre><code class="lang-cs">int x=10;
+int y=10;
+
+buffer[(y &gt;&gt; 3) * 128 + x] |= (byte)(1 &lt;&lt; (y &amp; 7));
+</code></pre>
 </article>
           </div>
 

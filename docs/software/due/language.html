@@ -80,8 +80,8 @@
 
 <h2 id="immediate--record-modes">Immediate &amp; Record Modes</h2>
 <p><em>Immediate</em> mode, commands are executed immediately. In <em>Record</em> mode, commands are stored in flash and executed with the <strong>run</strong> command.</p>
-<h5 id="immediate-mode">Immediate Mode</h5>
-<p>A user will know they are in this mode when their cursor prompt is the<br>
+<p><strong>Immediate Mode</strong>
+A user will know they are in this mode when their cursor prompt is the<br>
 <strong><em>&gt;</em></strong> character. All statements are executed as soon as entered.</p>
 <pre><code class="lang-basic">&gt; print(&quot;Hello World&quot;)
 </code></pre>
@@ -89,8 +89,8 @@
 <h5>Note</h5>
 <p>Immediate Mode is the default mode when device is first connected.</p>
 </div>
-<h5 id="record-mode">Record Mode</h5>
-<p>To enter into <em>Record</em> mode, the user enters the <strong>$</strong> character.
+<p><strong>Record Mode</strong>
+To enter into <em>Record</em> mode, the user enters the <strong>$</strong> character.
 The character prompt will change to the <strong>$</strong> sign until <em>Record</em> mode is exited using the <strong>&gt;</strong> character. All statements entered are stored directly in flash but not executed until <strong>run</strong> is entered.</p>
 <table>
 <thead>
@@ -202,13 +202,13 @@ not one
 </code></pre>
 <hr>
 <h2 id="functions">Functions</h2>
-<p>Functions in due are implements in a simple form. They do nto take arguemtns and do nto retun values. However, the built in library functions do take arguments nd return values, learn more about the <a href="library.html">library</a> functions.</p>
+<p>Functions in Due are implements in a simple form. They do not take arguments and do not return values. However, the built in library functions do take arguments and return values, learn more about the <a href="library.html">library</a> functions.</p>
 <p>User functions resides in nonvolatile memory using recording mode. They can then be &quot;run&quot; or called from immediate mode.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>While these are called fnctions, they are actually just labels.</p>
+<p>While these are called functions, they are actually just labels.</p>
 </div>
-<p>A user function is created by using the <strong>@</strong> symbol in front of the name of the function you'd like to create. These names are limited to 6 characters. Once you've created a &quot;function&quot; any preceding commands entered go inside that function. Function are typically endedd with a return.</p>
+<p>A user function is created by using the <strong>@</strong> symbol in front of the name of the function you'd like to create. These names are limited to 6 characters. Once you've created a &quot;function&quot; any preceding commands entered go inside that function. Function are typically end with a return.</p>
 <pre><code class="lang-basic">$@Mine
 $add code here
 $return
@@ -216,7 +216,7 @@ $return
 <p>The function can then be called by its name with <strong>()</strong>. Note how this can be done externally from any system with access to Due interface, like Python.</p>
 <pre><code class="lang-basic">&gt;Mine()
 </code></pre>
-<p>A goto can also be used to call a function but in this case the function is treated as a label and a <strong>return</strong> shuld not be expected.</p>
+<p>A goto can also be used to call a function but in this case the function is treated as a label and a <strong>return</strong> should not be expected.</p>
 <pre><code class="lang-basic">$@Loop
 $add code here
 $goto loop 
@@ -225,7 +225,6 @@ $goto loop
 <h5>Tip</h5>
 <p>Due variables are global and any changes inside functions will affect variable values outside those functions.</p>
 </div>
-<p><strong>Calling User &quot;Function&quot;</strong></p>
 <hr>
 <h2 id="extending-due">Extending Due</h2>
 <p>User &quot;functions&quot; stored in flash, can be called externally. This allows a function to be called from ANY outside source or program.</p>
@@ -241,10 +240,6 @@ return
 <pre><code class="lang-basic">&gt;a=5
 &gt;Count()
 </code></pre>
-<h2 id="streams">Streams</h2>
-<p>Some functionality require speed when sending/retrieving data to/from a device. For example, when sending the entire LCD display.</p>
-<p>A stream command initiates the request, in this case <em>LcdStream()</em>. Folowed to the command, the device will respond with the <strong>&amp;</strong> symbol. Now, the PC can send the entire data, exactly to the required size.</p>
-<p>The required size of the data, to follow the stream command, is documented with each stream command.</p>
 </article>
           </div>
 
