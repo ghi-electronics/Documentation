@@ -241,6 +241,10 @@ return
 <pre><code class="lang-basic">&gt;a=5
 &gt;Count()
 </code></pre>
+<h2 id="streams">Streams</h2>
+<p>Some functionality require speed when sending/retrieving data to/from a device. For example, when sending the entire LCD display.</p>
+<p>A stream command initiates the request, in this case <em>LcdStream()</em>. Folowed to the command, the device will respond with the <strong>&amp;</strong> symbol. Now, the PC can send the entire data, exactly to the required size.</p>
+<p>The required size of the data, to follow the stream command, is documented with each stream command.</p>
 </article>
           </div>
 
