@@ -4,8 +4,15 @@
 
 These library functions are available on all Due-supported hardware, for user defined functions, see [language](language.md) page
 
-> [!TIP] 
-> Code samples are using upper and lower case to make things look clearer. Due is not case sensitive and Print("Due") is exactly the same as pRinT("Due")
+> [!TIP]
+> Code samples are using upper and lower case to make things look clearer. Due is not case sensitive and Print("Due") is exactly the same as print("Due")
+
+## Streams
+
+Some functionality require speed when sending/retrieving data to/from a device. For example, when sending the entire LCD display.
+
+A stream command initiates the request, in this case **LcdStream()**. Once this command is received and accepted by the device, it will respond with the **&** symbol. Now, the PC can send the entire data, exactly to the required byte count. This required count, to follow the stream command, is documented with each stream command individual. 
+
 ---
 
 ## System Functions
@@ -136,10 +143,8 @@ NeoShow(8)
 ```
 
 - **NeoStream(count)** - Streams data directly to LEDs.Needs NeoShow() to see affect<br>
- **count:** The count of LEDs to "stream"
-
-> [!TIP] 
-> Data must be in GRB order and must be 3 x count bytes
+ **count:** The count of LEDs to "stream"<br>
+ **Stream size:** It is "count" multiplied by 3, due to the fact that each LED needs 3 bytes for colors, ordered in GRB format.
  
 ---
 ## Frequency
@@ -230,25 +235,30 @@ code sample
 - **SpiSteam(writeCount, readCount, cs)** - Streams data directly to the SPI device <br>
 **writeCount:** The number of bytes to write<br>
 **readCount:** The number of bytes to read<br>
-**cs:** set to -1 if not needed
+**cs:** set to -1 if not needed<br>
+**Stream size:** The stream starts with PC sending "writeCount" of bytes and then the PC must read the "readCount". If either count is zero then that step can be skipped.
+
+
+
 
 ```basic
 code sample
 ```
 - **Spi4Bpp(count)** - Streams and converts data from 4BPP to 16BPP<br>
-**count:** The count of bytes to be written.
+**count:** The count of bytes to be written.<br>
+**Stream size:** The "count".
 
-This special function converts 4BPP incoming data to 16BPP on-the-fly. This is added to speed up the use of SPI color displays, namely ones using ST7735 found on the very common 1.8" SPI color displays.
+This special function converts 4BPP incoming data to 16BPP on-the-fly. This is added to speed up the use of SPI color displays, namely ones using ST7735 found on the very common 1.8" SPI color displays. This allows for faster updates, since each byte sent is 2 pixels.
 
-- **Palette(index, color)** - Sets the desired color for a palette.<br>
-**index** Index number of color<br>
-**color** 
+- **Palette(index, colorValue)** - Sets the desired color for a palette.<br>
+**index:** Index number of color<br>
+**colorValue:** A standard HEX value of the RGB color.
 
 This function goes hand-in-hand with **Spi4Bpp()** function to set the colors that are to be used. 
 
 Default colors:
 
-|Index|Value|Color|
+|Index|Color Value|Color|
 |:-   |:-------|:----------|
 |0    |0x000000|Black      |
 |1    |0xFFFFFF|White      |
@@ -285,6 +295,7 @@ code sample
 **address:** address of the I2C device <br>
 **writeCount:** <br>
 **readCount:** <br>
+**Stream size:** The stream starts with PC sending "writeCount" of bytes and then the PC must read the "readCount". If either count is zero then that step can be skipped.
 
 ```basic
 code sample
@@ -451,7 +462,7 @@ LcdLine(1,0,0,128,64)
 LcdShow()
 ```
 
-##### Set Pixel
+**Set Pixel**
 
 - **LcdPixel(color, x, y)** <br>
 **color:** 0 = black, 1 = white <br>
@@ -464,7 +475,7 @@ LcdPixel(1,64,32)
 LcdShow()
 ```
 
-##### Draw Circle
+**Draw Circle**
 
 - **LcdCircle(color, x,y,radius)** <br>
 **color:** 0 = black, 1 = white <br>
@@ -478,7 +489,7 @@ LcdCircle(1,64,32,31)
 LcdShow()
 ```
 
-##### Draw Rectangle
+**Draw Rectangle**
 
 - **LcdRect(color, x1, y1, x2, y2)** <br>
 **color:** 0 = black, 1 = white <br>
@@ -493,23 +504,11 @@ LcdRect(1,10,10,118,54)
 LcdShow()
 ```
 
-##### Draw Text
 
-- **LcdText(text, color, x, y)** <br>
-**text:** Takes either a variable or "string"<br>
-**color:** 0 = black, 1 = white <br>
-**x:** x position <br>
-**y:** y position
-
-```basic
-LcdClear(0)
-LcdText("Hello World",1,10,10)
-LcdShow()
-```
-##### Draw Scaled Text
+**Draw Scaled Text**
 
 - **LcdTextS("text", color, x, y, scaleWidth, scaleHeight)** <br>
-**text:** String message <br>
+**text:** String message in double quotes. Using variables is not supported<br>
 **color:** 0 = black, 1 = white <br>
 **x:** x position <br>
 **y:** x position <br>
@@ -525,11 +524,33 @@ LcdShow()
 > [!TIP]
 > Scale is multiplier for the pixel in width and height to make the font larger
 
-##### LCD Stream
+**Draw Text**
 
-Stream is used to send the entire lcd updatee. 
+- **LcdText("text", color, x, y)** <br>
+Works exactly the same as **LcdText()** minus scaling.
 
-- **LcdStream()** 
+```basic
+LcdClear(0)
+LcdText("Hello World",1,10,10)
+LcdShow()
+```
+
+**LCD Stream**
+
+Stream is used to send the entire LCD update. 
+
+- **LcdStream()**<br>
+ **Stream Size:** The size screen size divided by 8, 128x64/8=1K.
+The data is organized as 8bit columns going left to right and then wrapping around to the next row.
+
+Example code to set a pixel at 10x10
+
+```cs
+int x=10;
+int y=10;
+
+buffer[(y >> 3) * 128 + x] |= (byte)(1 << (y & 7));
+```
 
 
 
