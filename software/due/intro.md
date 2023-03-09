@@ -17,7 +17,7 @@ Due stands for Dynamic, Universal, and Extensible. A user-friendly scripting lan
 
 ## Universal
 
-Due doesn't care if you use Python or C#, because the Due commands are sent over serial port. It can also be scripted using a terminal editor with simple BASIC like commands included in the API.
+Due doesn't care if you use Python or C#, because the Due commands are sent over serial port. It can also be scripted using a terminal editor with simple BASIC like commands included in the API. Due is not case sensitive and ignores white-space.
 
 ## Extensibility
 
@@ -26,7 +26,7 @@ Call any Due recorded function from any external source using serial commands.
 
 ## On-line editor
 
-You can program any Due device using a simple terminal editor like TerraTerm. This is nimble for quick testing but can be cumbersome with large programs. An on-line editor will soon be released to make coding and debugging programs very easy. 
+You can program any Due device using a simple terminal editor like Tera Term. This is nimble for quick testing but can be cumbersome with large programs. An on-line editor will soon be released to make coding and debugging programs very easy. 
 
 ## Streams
 Send data in chunks directly to the device. This is useful when working with screens or other device which require batches of data. 

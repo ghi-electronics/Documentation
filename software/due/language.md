@@ -1,6 +1,56 @@
 # Due - Language
+## Built-in Demos
+
+These are demos that are built into the language. They are loaded to flash as soon as the function is called.  
+
+**Demo("Help")**
+
+Returns a list of the demos available on the device. For example:
+
+```basic
+>Demo("Help")
+DUE DEMOS
+---------
+led
+analog
+```
+
+**Demo("led")**
+
+ 
+
+```basic
+@Loop
+  DWrite(18,1) : Wait(250)
+  Dwrite(18,0) : Wait(250)
+Goto Loop
+```
+
+Type **Run** to launch the demo. This demo flashes the on-board LED.
+
+
+**Demo("analog")**
+
+```basic
+@Loop
+  For i=0 to 1000 Step 100
+    AWrite(18, i) : Wait(50)
+  Next
+  For i=1000 to 0 Step -100
+    AWrite(18, i) : wait(50)
+  Next
+Goto Loop
+```
+
+Type **Run** to launch the demo. This demo fades the on-board LED in & out.
+
+
+---
 
 ## Immediate & Record Modes
+
+
+
 
 *Immediate* mode, commands are executed immediately. In *Record* mode, commands are stored in flash and executed with the **run** command. 
 
@@ -123,7 +173,7 @@ A user function is created by using the **@** symbol in front of the name of the
 ```basic
 $@Mine
 $add code here
-$return
+$Return
 ```
 
 The function can then be called by its name with **()**. Note how this can be done externally from any system with access to Due interface, like Python.
@@ -136,7 +186,7 @@ A goto can also be used to call a function but in this case the function is trea
 ```basic
 $@Loop
 $add code here
-$goto loop 
+$Goto Loop 
 ```
 
 > [!TIP]
@@ -152,10 +202,10 @@ This will enter recording mode and then records a function
 ```basic
 $
 @Count
-for x=0 to a
-println(x)
-next
-return
+For x=0 to a
+PrintLn(x)
+Next
+Return
 ```
 
 The above "function" can now be called from inside *Immediate* mode as an example. Make sure to switch to immediate mode!

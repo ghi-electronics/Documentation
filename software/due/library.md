@@ -28,7 +28,12 @@ A stream command initiates the request, in this case **LcdStream()**. Once this 
 - **PrintLn(text)**  - Prints the value of the argument to the console then moves to the next line <br>
 **text:** String or variable
 
+
 - **GetTicks()** - read system current ticks in microseconds  <br>
+
+- **GetCh()** - reads character input, in ASCII format. Return **-1** when no character detected  <br>
+
+- **GetNum()** - reads number input, can be used with **IsNAN()** to determine if value is a number  <br>
 
 - **Wait(duration)** - holds program from running <br>
 **duration:** duration = milliseconds
@@ -115,12 +120,27 @@ next
 goto loop
 ```
 
+
+---
+## LED
+
+This function is used to take control of the on-board LED. **LED()** is non-blocking so it can be used as a status indicator for your programs while they run. 
+
+- **LED(high, low, count)**<br>
+  **high:** The duration in milliseconds the LED is on.<br>
+**low:** The duration in milliseconds the LED is off.<br>
+**count:** The number of times the LED will blink, 
+
+
+> [!NOTE] 
+> a number value of **-1** will blink the LED forever. A value of **0** will turn off the LED.
+
 ---
 ## Neopixel
 
 Neopixel is fixed to pin number 1 
 
-- **NeoClear()** - Clears all LEDs (in memory). Needs NeoShow() to see the affect
+- **NeoClear()** - Clears all LEDs (in memory). Needs NeoShow() to see the affect<br>
 
 - **NeoSet(index, red, green, blue)** - Sets a specific LED to a color. Needs NeoShow() to see affect<br>
 **index:** The LED index where 0 is first one and supporting up to 256 LEDs<br>
@@ -396,11 +416,15 @@ goto Loop
 **pin:** pin number, 'a', or 'b' <br>
 **Returns:** 1 if button was pressed and continues to return 1 until the button is released
 
+- **BtnUp(pin)**  <br>
+**pin:** pin number, 'a', or 'b' <br>
+**Returns:** 1 after release first time called. If called again returns 0<br>
+
 > [!NOTE] 
 > **'a'** is ASCII a or 97, **'b'** is ASCII b or 98
 
 > [!TIP] 
-> Will always return zero if not enabled
+> The timeout for **BtnDown()** or **BtnUp()** is two seconds. Calling after two seconds from last press or release returns 0. If the button is not enabled also returns 0. 
 
 ```basic
 BtnEnable('a',1)
@@ -508,7 +532,7 @@ LcdShow()
 **Draw Scaled Text**
 
 - **LcdTextS("text", color, x, y, scaleWidth, scaleHeight)** <br>
-**text:** String message in double quotes. Using variables is not supported<br>
+**text:** String message in double quotes. **Str()** is used to convert variables to strings <br>
 **color:** 0 = black, 1 = white <br>
 **x:** x position <br>
 **y:** x position <br>
@@ -518,6 +542,11 @@ LcdShow()
 ```basic
 LcdClear(0)
 LcdText("Hello",1,0,0,2,2)
+LcdShow()
+Wait(1000)
+x=100
+LcdClear(0)
+LcdText(Str(x),1,0,0,2,2)
 LcdShow()
 ```
 
@@ -533,6 +562,11 @@ Works exactly the same as **LcdText()** minus scaling.
 LcdClear(0)
 LcdText("Hello World",1,10,10)
 LcdShow()
+x=100
+LcdClear(0)
+LcdText(str(x),1,0,0)
+LcdShow()
+
 ```
 
 **LCD Stream**
