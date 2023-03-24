@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Due - Language </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Due - Language ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  <meta property="docfx:newtab" content="true">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="due---language">Due - Language</h1>
+
+<h2 id="immediate--record-modes">Immediate &amp; Record Modes</h2>
+<p><em>Immediate</em> mode, commands are executed immediately. In <em>Record</em> mode, commands are stored in flash and executed with the <strong>run</strong> command.</p>
+<p><strong>Immediate Mode</strong>
+A user will know they are in this mode when their cursor prompt is the<br>
+<strong><em>&gt;</em></strong> character. All statements are executed as soon as entered.</p>
+<pre><code class="lang-basic">&gt; print(&quot;Hello World&quot;)
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Immediate Mode is the default mode when device is first connected.</p>
+</div>
+<p><strong>Record Mode</strong>
+To enter into <em>Record</em> mode, the user enters the <strong>$</strong> character.
+The character prompt will change to the <strong>$</strong> sign until <em>Record</em> mode is exited using the <strong>&gt;</strong> character. All statements entered are stored directly in flash but not executed until <strong>run</strong> is entered.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Statement</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">$</td>
+<td style="text-align: left;">Sets the device in record mode</td>
+</tr>
+<tr>
+<td style="text-align: left;">&gt;</td>
+<td style="text-align: left;">Exits record mode and returns to direct mode</td>
+</tr>
+</tbody>
+</table>
+<p>The following statements control the program recorded in flash, but can be used in both <em>Immediate or Record</em> modes. When used in <em>Record</em> mode these special statements execute, but are not added to the program in flash.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Statement</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">run</td>
+<td style="text-align: left;">Executes the program stored in flash</td>
+</tr>
+<tr>
+<td style="text-align: left;">new</td>
+<td style="text-align: left;">Erases the program stored in flash</td>
+</tr>
+<tr>
+<td style="text-align: left;">list</td>
+<td style="text-align: left;">Returns all the code in your program</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-basic">&gt; $
+$ println (x)
+$ println (y)
+$ &gt;
+&gt; x=1:y=2
+&gt; run
+1
+2
+&gt;list
+println(x)
+println(y)
+&gt;new
+</code></pre>
+<hr>
+<h2 id="comments">Comments</h2>
+<p>The # character is used to identify a comment. Comments are ignored by the program, text added to help developers understand the code.</p>
+<pre><code class="lang-basic"># This is a comment
+x=10
+print (x) # This is also a comment 
+</code></pre>
+<hr>
+<h2 id="variables">Variables</h2>
+<p>Due can hold up to 26 variables one for letters a-z. The only data type used in Due is integers. All variables created are global in nature.</p>
+<hr>
+<h2 id="single-line-commands">Single Line Commands</h2>
+<p>Code can be concatenated together in a single line with each command joined by a <strong>:</strong> When coding in <strong>Immediate</strong> mode multi-line statements need to be coded as a single line command. When using <strong>Record mode</strong> multi-line statements can be used.</p>
+<pre><code class="lang-basic">x=10:print(x):x=15:print(x)
+</code></pre>
+<hr>
+<h2 id="looping--conditional-statements">Looping &amp; Conditional Statements</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Statement</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">for/to/step/next</td>
+<td style="text-align: left;">Incremental looping</td>
+</tr>
+<tr>
+<td style="text-align: left;">if/else/end</td>
+<td style="text-align: left;">Conditional execution of the code</td>
+</tr>
+</tbody>
+</table>
+<h3 id="for-loop-used-in-immediate-mode">For-Loop used in Immediate mode</h3>
+<pre><code class="lang-basic">for i=1 to 1000 step 10: println(i):next
+</code></pre>
+<h3 id="if-else-statement-used-in-record-mode">If-Else statement used in Record mode</h3>
+<pre><code class="lang-basic">$
+$new
+$if x=1
+$println(&quot;one&quot;)
+$else 
+$println(&quot;not one&quot;)
+$end
+$&gt;
+&gt;x = 1
+&gt;run
+one
+&gt;x = 2
+&gt;run
+not one
+</code></pre>
+<hr>
+<h2 id="functions">Functions</h2>
+<p>Functions in Due are implements in a simple form. They do not take arguments and do not return values. However, the built in library functions do take arguments and return values, learn more about the <a href="library.md">library</a> functions.</p>
+<p>User functions resides in nonvolatile memory using recording mode. They can then be &quot;run&quot; or called from immediate mode.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>While these are called functions, they are actually just labels.</p>
+</div>
+<p>A user function is created by using the <strong>@</strong> symbol in front of the name of the function you'd like to create. These names are limited to 6 characters. Once you've created a &quot;function&quot; any preceding commands entered go inside that function. Function are typically end with a return.</p>
+<pre><code class="lang-basic">$@Mine
+$add code here
+$return
+</code></pre>
+<p>The function can then be called by its name with <strong>()</strong>. Note how this can be done externally from any system with access to Due interface, like Python.</p>
+<pre><code class="lang-basic">&gt;Mine()
+</code></pre>
+<p>A goto can also be used to call a function but in this case the function is treated as a label and a <strong>return</strong> should not be expected.</p>
+<pre><code class="lang-basic">$@Loop
+$add code here
+$goto loop 
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Due variables are global and any changes inside functions will affect variable values outside those functions.</p>
+</div>
+<hr>
+<h2 id="extending-due">Extending Due</h2>
+<p>User &quot;functions&quot; stored in flash, can be called externally. This allows a function to be called from ANY outside source or program.</p>
+<p>This will enter recording mode and then records a function</p>
+<pre><code class="lang-basic">$
+@Count
+for x=0 to a
+println(x)
+next
+return
+</code></pre>
+<p>The above &quot;function&quot; can now be called from inside <em>Immediate</em> mode as an example. Make sure to switch to immediate mode!</p>
+<pre><code class="lang-basic">&gt;a=5
+&gt;Count()
+</code></pre>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/duelang-website/blob/dev/software/dynamic.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+              </div>
+
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <p><a class="back-to-top" href="#top">Back to top</a><p>
+              </p></nav>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Copyright © 2022 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

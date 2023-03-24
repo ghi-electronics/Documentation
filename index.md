@@ -1,20 +1,17 @@
-# GHI Electronics Documentation
+
+![Due](./images/due.png)
+
+## What is Due?
+Due stands for [Dynamic](./software/dynamic/dynamic.md), [Universal](./software/universal/universal.md), and [Extensible](./software/extensible/extensible.md). A user-friendly scripting language that allows for internal real-time processing. 
+
+The Due API is simple to use and easy to learn. Due is also great for beginning programmers to learn the 'BASICS' or real coding. 
+
+Due turns [hardware](./hardware/intro.md) into a computer peripheral, you can use to connect a PC and control real world devices & sensors.
 
 ---
 
-Here you will find GHI Electronics product documentation. For more information visit the [**main website**](http://www.ghielectronics.com). You can also visit our [**community forum**](https://forums.ghielectronics.com).
+![GHI Electronics](./images/ghi.png)
 
-## SITCore - the .NET C# Hardware
+## Created by GHI Electronics
 
-[![SITCore](hardware/sitcore/images/sitcore.png)](hardware/sitcore/intro.md)
- 
- SITCore family of .NET C# Chips and Modules for creating secure IoT devices. </br> [**Learn More...**](hardware/sitcore/intro.md) 
-
----
-
-## TinyCLR OS - the heart of SITCore
-
-[![TinyCLR OS Logo](software/tinyclr/images/tinyclr-logo.png)](software/tinyclr/intro.md)
- 
- The .NET C# operating system for embedded devices, powering the SITCore product family. Develop software in Microsoft Visual Studio, and debug over USB. </br> [**Learn More...**](software/tinyclr/intro.md) 
-
+[GHI Electronics](https://www.ghielectronics.com/) has been creating hardware and software solutions for over 13 years. The creation of Due was a natural evolution in a connected and embedded world. 

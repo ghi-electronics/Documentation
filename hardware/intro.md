@@ -1,25 +1,22 @@
 # Hardware
 ---
+Due firmware can be loaded onto any GHI product that uses the SITCore SC13048 processor using a simple
+[**on-line loader!**](https://loader.brainpad.com/)
 
-## SITCore
 
- [![SITCore SC20100S](sitcore/images/sitcore.png)](sitcore/intro.md) 
 
-Secure IoT SoCs, SoMs and Dev Boards that run C# with full debugging over USB. </br> [**Learn More...**](sitcore/intro.md) 
+## BrainPad
 
----
-## Legacy
+![BrainPads](images/brainpads.png) 
 
-[![Legacy Products](legacy/images/legacy-soms.png)](legacy/intro.md)
-
-Support for discontinued products. </br> [**Learn More...**](legacy/intro.md) 
+Due runs on the BrainPad Pulse or BrainPad Edge
 
 ---
-## Legal
+## FEZ
 
-[![Legal](sitcore/images/legal-hardware.png)](../hardware/legal.md)
+![FEZ](images/fez.png) 
 
-License, Disclaimer, Security. </br> [**More...**](../hardware/legal.md)  
+Due runs on the FEZ Flea or FEZ Pico
 
 ---
-You can also visit our main website at [**main website**](http://www.ghielectronics.com) and our  [**community forum**](https://forums.ghielectronics.com/).
+You can also visit our main website at [**main website**](http://www.duelang.com) and our  [**Due community forum**](https://https://forums.ghielectronics.com/c/due/31/).

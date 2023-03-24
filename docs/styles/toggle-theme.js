@@ -2,7 +2,7 @@ const sw = document.getElementById("switch-style"), b = document.body;
 if (sw && b)
 {
     if (window.localStorage && !localStorage.getItem("theme"))
-        localStorage.setItem("theme", "dark-theme");
+        localStorage.setItem("theme", "light-theme");
 
     sw.checked = window.localStorage && localStorage.getItem("theme") === "dark-theme" || !window.localStorage;
     b.classList.toggle("dark-theme", sw.checked);
