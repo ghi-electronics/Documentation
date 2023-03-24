@@ -450,20 +450,20 @@
 </ol>
 <p>Which components get executed on startup is controlled by manipulating the LDR pin. It is pulled high on startup during normal program execution. When low, the device waits in the GHI Electronics Bootloader. Otherwise, the managed application is executed. The APP pin is used to stop the managed application from running.</p>
 <p>Additionally, the communications interface between the host PC and the SITCore is selected on startup through the MOD pin, which is pulled high on startup. The USB interface is selected when MOD is high and UART1 is selected when MOD is low.</p>
-<p>The above discussed functions of the LDR, APP, and MOD pins are only available during startup. After startup, the pins return to the default GPIO state and are available as a GPIO (or peripheral pin) in your application. Check out the <a href="../../software/tinyclr/special-pins.html">Special Pins</a> page for more information.</p>
+<p>The above discussed functions of the LDR, APP, and MOD pins are only available during startup. After startup, the pins return to the default GPIO state and are available as a GPIO (or peripheral pin) in your application. Check out the <a href="../../software/tinyclr/special-pins.md">Special Pins</a> page for more information.</p>
 <hr>
 <h2 id="tinyclr-os">TinyCLR OS</h2>
-<p>TinyCLR OS provides a way to program the SITCore in C# from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page for instructions.</p>
+<p>TinyCLR OS provides a way to program the SITCore in C# from the Microsoft Visual Studio integrated development environment.  To get started you must first install the firmware on the SITCore (instructions below) and then go to the TinyCLR <a href="../../software/tinyclr/getting-started.md">Getting Started</a> page for instructions.</p>
 <h3 id="loading-the-firmware">Loading the Firmware</h3>
 <ol>
 <li>Activate the bootloader, hold the LDR signal low while resetting the board.</li>
-<li>Open <a href="../../software/tinyclr/tinyclr-config.html">TinyCLR Config</a> tool.</li>
+<li>Open <a href="../../software/tinyclr/tinyclr-config.md">TinyCLR Config</a> tool.</li>
 <li>Select the correct COM port and 'Connect' to the device. If you are not seeing it then the device is not in the loader mode.</li>
-<li>Download the <a href="../../software/tinyclr/downloads.html">firmware</a>. Select the downloaded firmware in TinyCLR Config and click 'Update Firmware'.</li>
+<li>Download the <a href="../../software/tinyclr/downloads.md">firmware</a>. Select the downloaded firmware in TinyCLR Config and click 'Update Firmware'.</li>
 </ol>
-<p>You can also update the firmware manually. Download the <a href="../../software/tinyclr/downloads.html">firmware</a> and learn how to use the <a href="../../software/tinyclr/bootloader.html">GHI Electronics Bootloader</a> manually</p>
+<p>You can also update the firmware manually. Download the <a href="../../software/tinyclr/downloads.md">firmware</a> and learn how to use the <a href="../../software/tinyclr/bootloader.md">GHI Electronics Bootloader</a> manually</p>
 <h3 id="start-coding">Start Coding</h3>
-<p>Now that you have installed the bootloader and firmware on the SITCore, you can setup your host computer and start programming.  Go to the TinyCLR <a href="../../software/tinyclr/getting-started.html">Getting Started</a> page for instructions.</p>
+<p>Now that you have installed the bootloader and firmware on the SITCore, you can setup your host computer and start programming.  Go to the TinyCLR <a href="../../software/tinyclr/getting-started.md">Getting Started</a> page for instructions.</p>
 <hr>
 <h2 id="design-considerations">Design Considerations</h2>
 <h3 id="footprints">Footprints</h3>
@@ -486,7 +486,7 @@
 <li>MOD (required to select a the debug interface)</li>
 <li>Desired debug interface(s) (see below)</li>
 </ul>
-<p>For information on these and other important pins, please refer to the <a href="../../software/tinyclr/special-pins.html">Special Pins</a> page.</p>
+<p>For information on these and other important pins, please refer to the <a href="../../software/tinyclr/special-pins.md">Special Pins</a> page.</p>
 <h3 id="debug-interface">Debug Interface</h3>
 <p>All SITCore products provide two debug and deployment interfaces: USB and serial. Whether USB or serial debugging is selected is determined by the state of the MOD pin during startup and reset. If the MOD pin is held high during startup, the USB debug interface will be selected. If the MOD pin is held low during startup, the serial debug interface will be selected.</p>
 <p>When in serial mode, all SITCore products use UART1 except SC20260B chipset/boards use UART5.</p>
@@ -596,7 +596,7 @@
 </table>
 <p>When laying out your board, it is best to keep the crystal as close as possible to the SoC. The oscillator circuit should also be surrounded by a grounded guard ring or ground plane on the same layer to reduce noise.</p>
 <h3 id="rtc-power">RTC Power</h3>
-<p>The VBAT pin is optionally used to power up the RTC when the system main power is turned off. Also, SITCore chipsets and modules include a built in charging circuit internally, that can be enabled to charge an external supercap. See the <a href="../../software/tinyclr/tutorials/real-time-clock.html">RTC tutorial</a> for further details.</p>
+<p>The VBAT pin is optionally used to power up the RTC when the system main power is turned off. Also, SITCore chipsets and modules include a built in charging circuit internally, that can be enabled to charge an external supercap. See the <a href="../../software/tinyclr/tutorials/real-time-clock.md">RTC tutorial</a> for further details.</p>
 <h3 id="quadspi-external-flash">QuadSPI External Flash</h3>
 <p>SITCore supports 16 MByte external QuadSPI flash chips. The options are in the table below.</p>
 <table>
@@ -634,7 +634,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/hardware/sitcore/soc.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/duelang-website/blob/dev/hardware/sitcore/soc.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
