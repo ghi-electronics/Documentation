@@ -17,7 +17,7 @@
   "index.html": {
     "href": "index.html",
     "title": "What is Due?",
-    "keywords": "What is Due? Due stands for Dynamic , Universal , and Extensible . A user-friendly scripting language that allows for internal real-time processing. The Due API is simple to use and easy to learn. Due is also great for beginning programmers to learn the 'BASICS' or real coding. Due turns hardware into a computer peripheral, you can use to connect a PC and control real world devices & sensors. Why we made it? GHI Electronics has been creating hardware and software solutions for over 13 years. The creation of Due was a natural evolution in a connected and embedded world."
+    "keywords": "What is Due? Due stands for Dynamic , Universal , and Extensible . A user-friendly scripting language that allows for internal real-time processing. The Due API is simple to use and easy to learn. Due is also great for beginning programmers to learn the 'BASICS' or real coding. Due turns hardware into a computer peripheral, you can use to connect a PC and control real world devices & sensors. Why we made it? GHI Electronics has been creating hardware and software solutions for over 13 years. The creation of Due was a natural evolution for easy access to a connected embedded world."
   },
   "README.html": {
     "href": "README.html",
@@ -73,6 +73,11 @@
     "href": "software/universal/buttons.html",
     "title": "Buttons",
     "keywords": "Buttons BtnEnable(pin, enable) - sets up a button to be used pin: pin number, 'a', or 'b' enable: 1 = enable, 0 = disabled BtnDown(pin) Returns a value when button is pressed pin: pin number, 'a', or 'b' Returns: 1 if button was pressed and continues to return 1 until the button is released Note 'a' is ASCII a or 97, 'b' is ASCII b or 98 Tip Will always return zero if not enabled BtnEnable('a',1) @Loop x=BtnDown('a') if x=1 Println(\"Button A\") end goto Loop"
+  },
+  "software/universal/demos.html": {
+    "href": "software/universal/demos.html",
+    "title": "Demos",
+    "keywords": "Demos These are demos that are built-in the Due software. Demo(\"Help\") Returns a list of the demos available on the device. For example: >Demo(\"Help\") DUE DEMOS --------- led analog Demo(\"led\") @Loop DWrite(18,1) : Wait(250) Dwrite(18,0) : Wait(250) Goto Loop Type Run to launch the demo. This demo flashes the on-board LED. Demo(\"analog\") @Loop For i=0 to 1000 Step 100 AWrite(18, i) : Wait(50) Next For i=1000 to 0 Step -100 AWrite(18, i) : wait(50) Next Goto Loop Type Run to launch the demo. This demo fades the on-board LED in & out."
   },
   "software/universal/digital.html": {
     "href": "software/universal/digital.html",

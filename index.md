@@ -14,4 +14,4 @@ Due turns [hardware](./hardware/intro.md) into a computer peripheral, you can us
 
 ## Why we made it?
 
-[GHI Electronics](https://www.ghielectronics.com/) has been creating hardware and software solutions for over 13 years. The creation of Due was a natural evolution in a connected and embedded world. 
+[GHI Electronics](https://www.ghielectronics.com/) has been creating hardware and software solutions for over 13 years. The creation of Due was a natural evolution for easy access to a connected embedded world. 

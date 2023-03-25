@@ -7,6 +7,7 @@
 # [Universal](universal/universal.md)
 ## [Analog](universal/analog.md)
 ## [Buttons](universal/buttons.md)
+## [Demos](universal/demos.md)
 ## [Digital](universal/digital.md)
 ## [Distance](universal/distance.md)
 ## [Frequency](universal/frequency.md)
