@@ -250,7 +250,7 @@
       "output": {
         ".html": {
           "relative_path": "software/extensible/dotnet.html",
-          "hash": "i/IZebo81tSLBH4X0sK/XdqZ1rU0UR+qGq4ys6N8ieY="
+          "hash": "vGYCKF2dG/Shjo0JVPY99F/mGB4r4nNZLG0pdEuJJZc="
         }
       },
       "is_incremental": false,
@@ -274,7 +274,18 @@
       "output": {
         ".html": {
           "relative_path": "software/extensible/python.html",
-          "hash": "UlbdtEE544SxJjnh6IRydJnK812QG42UATRCOXaHAuo="
+          "hash": "gTTkHLwZzvoOcctRy8Z5NLpW/1I1uYbNRKvrJ3dpcBk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/images/cSharp.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/images/cSharp.png"
         }
       },
       "is_incremental": false,
@@ -286,6 +297,17 @@
       "output": {
         "resource": {
           "relative_path": "software/images/due.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/images/python.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/images/python.png"
         }
       },
       "is_incremental": false,
@@ -345,7 +367,7 @@
       "output": {
         ".html": {
           "relative_path": "software/universal/buttons.html",
-          "hash": "7gs+92Sdfz/fNepJ9rOf8QWPchua+Sj3NeXSig4Whho="
+          "hash": "AFfxeC5QlVwBk8oSe/BeaNPeMhUD0hBRh97FmqUtcS4="
         }
       },
       "is_incremental": false,
@@ -525,7 +547,7 @@
       "output": {
         ".html": {
           "relative_path": "software/universal/systemfunctions.html",
-          "hash": "qm5UouJsHCnyP5hBfcXJdCpXHlNHacxwLNVbg9hqt1s="
+          "hash": "CZKxqUQ+PRr7zTVTl48e4zmBDB1qjGm8H22hdGPyxyw="
         }
       },
       "is_incremental": false,
@@ -561,7 +583,7 @@
       "output": {
         ".html": {
           "relative_path": "software/universal/universal.html",
-          "hash": "Hki++Amg0vHv1HdQO5Av27Skfb90CCJMDEDdgifaEa0="
+          "hash": "TGyt58s7GaOp119utTI6mQO5eiLod7Gss8Gk9HUvQXk="
         }
       },
       "is_incremental": false,
@@ -593,7 +615,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 33,
-          "skipped_file_count": 32
+          "skipped_file_count": 30
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

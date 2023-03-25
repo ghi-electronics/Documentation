@@ -10,7 +10,6 @@
 **Returns:** 1 after release first time called. If called again returns 0<br>
 
 
-
  - **BtnDown(pin)** Returns a value when button is pressed<br>
 **pin:** pin number, 'a', or 'b' <br>
 **Returns:** 1 if button was pressed and continues to return 1 until the button is released
