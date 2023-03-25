@@ -111,7 +111,7 @@ not one
 
 ## Functions
 
-Functions in Due are implements in a simple form. They do not take arguments and do not return values. However, the built in library functions do take arguments and return values, learn more about the [System functions](/software/universal/systemfunction.md) functions. 
+Functions in Due are implements in a simple form. They do not take arguments and do not return values. However, the built in library functions do take arguments and return values, learn more about the [System functions](../universal/systemfunctions.md). 
 
 User functions resides in nonvolatile memory using recording mode. They can then be "run" or called from immediate mode.
 
