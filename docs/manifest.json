@@ -202,7 +202,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "8PY6MYWAf80cna6gDlsR7W4EuuWQtn8H/JGYsC8vngA="
+          "hash": "aWoV4dZslnFDVk+JWrBFHOQhfn6JbeOLcEYWyZOLdr4="
         }
       },
       "is_incremental": false,
@@ -221,9 +221,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "software/dynamic/dynamic.md",
       "output": {
@@ -324,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "software/toc.html",
-          "hash": "+oRZRDJEmxyNmaD2ctMmwOdLC+Zg+9d/7vc5TasuVQk="
+          "hash": "3tdIGV4eXOZxGi0UbO4ReU9owEnknOpvOhOC6WzDvig="
         }
       },
       "is_incremental": false,
@@ -349,6 +346,18 @@
         ".html": {
           "relative_path": "software/universal/buttons.html",
           "hash": "yOhfYeS5zGzNtpL+VV1Xv4yncsiaKc0YJzlEJQj9zNA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/universal/demos.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/universal/demos.html",
+          "hash": "Uaba1fZ7LwnT0vj8FZq3sJO4lh6NZs5oI8FJt5dwaOY="
         }
       },
       "is_incremental": false,
@@ -571,8 +580,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 31,
-          "skipped_file_count": 30
+          "total_file_count": 32,
+          "skipped_file_count": 31
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
