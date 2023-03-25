@@ -41,8 +41,8 @@
   },
   "software/extensible/dotnet.html": {
     "href": "software/extensible/dotnet.html",
-    "title": ".NET C#",
-    "keywords": ".NET C#"
+    "title": "",
+    "keywords": "The .NET C# Due library allows full .NET programs to use small embedded device. This allows complex .NET programs to do all the heavy lifting and send only the necessary components to control the Due api."
   },
   "software/extensible/extensible.html": {
     "href": "software/extensible/extensible.html",
@@ -51,8 +51,8 @@
   },
   "software/extensible/python.html": {
     "href": "software/extensible/python.html",
-    "title": "Python",
-    "keywords": "Python"
+    "title": "",
+    "keywords": "The Python Due library allows for the use of full Python to control a micro device. Users aren't restricted to only use micro Python anymore."
   },
   "software/intro.html": {
     "href": "software/intro.html",
@@ -147,7 +147,7 @@
   "software/universal/systemfunctions.html": {
     "href": "software/universal/systemfunctions.html",
     "title": "System Functions",
-    "keywords": "System Functions Echo(enable) enable: 0 = Enable echo , 1 = Disable echo Version - Returns the current firmware version of Due Print(text) - Prints the value of the argument to the console on the same line text: String or variable PrintLn(text) - Prints the value of the argument to the console then moves to the next line text: String or variable GetTicks() - read system current ticks in microseconds Wait(duration) - holds program from running duration: duration = milliseconds Reset(loader) - Resets the board loader: 0 = system reset, 1 = reset and stay in loader mode"
+    "keywords": "System Functions Echo(enable) enable: 0 = Enable echo , 1 = Disable echo Version - Returns the current firmware version of Due Print(text) - Prints the value of the argument to the console on the same line text: String or variable PrintLn(text) - Prints the value of the argument to the console then moves to the next line text: String or variable GetTicks() - read system current ticks in microseconds GetCh() - reads character input, in ASCII format. Return -1 when no character detected GetNum() - reads number input, can be used with IsNAN() to determine if value is a number Wait(duration) - holds program from running duration: duration = milliseconds Reset(loader) - Resets the board loader: 0 = system reset, 1 = reset and stay in loader mode"
   },
   "software/universal/touch.html": {
     "href": "software/universal/touch.html",
@@ -161,7 +161,7 @@
   },
   "software/universal/universal.html": {
     "href": "software/universal/universal.html",
-    "title": "Due - Universal",
-    "keywords": "Due - Universal The universal functions on Due are available on all Due-supported hardware , for user defined functions, see Dynamic section Tip Code samples found here use upper and lower case to make things look clearer. Due is not case sensitive and Print(\"Due\") is exactly the same as print(\"Due\")"
+    "title": "Due - Universal API",
+    "keywords": "Due - Universal API The universal functions of Due are available on all Due-supported hardware , for user defined functions, see the Dynamic section Tip Due is not case sensitive. Code samples found here use upper and lower case to make things look clearer. Print(\"Due\") is exactly the same as print(\"Due\")"
   }
 }
