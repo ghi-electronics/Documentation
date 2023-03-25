@@ -13,6 +13,10 @@
 
 - **GetTicks()** - read system current ticks in microseconds  <br>
 
+- **GetCh()** - reads character input, in ASCII format. Return **-1** when no character detected  <br>
+
+- **GetNum()** - reads number input, can be used with **IsNAN()** to determine if value is a number  <br>
+
 - **Wait(duration)** - holds program from running <br>
 **duration:** duration = milliseconds
 
