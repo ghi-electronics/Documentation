@@ -72,7 +72,8 @@ LcdShow()
 **Draw Scaled Text**
 
 - **LcdTextS("text", color, x, y, scaleWidth, scaleHeight)** <br>
-**text:** String message in double quotes. Using variables is not supported<br>
+**text:** String message in double quotes. <br>
+**Str():** is used to convert variables to strings <br>
 **color:** 0 = black, 1 = white <br>
 **x:** x position <br>
 **y:** x position <br>
@@ -82,6 +83,11 @@ LcdShow()
 ```basic
 LcdClear(0)
 LcdText("Hello",1,0,0,2,2)
+LcdShow()
+Wait(1000)
+x=100
+LcdClear(0)
+LcdText(Str(x),1,0,0,2,2)
 LcdShow()
 ```
 
@@ -96,6 +102,10 @@ Works exactly the same as **LcdText()** minus scaling.
 ```basic
 LcdClear(0)
 LcdText("Hello World",1,10,10)
+LcdShow()
+x=100
+LcdClear(0)
+LcdText(str(x),1,0,0)
 LcdShow()
 ```
 
