@@ -1,2 +1,2 @@
-# Python
----
+
+![Python](../images/python.png)
