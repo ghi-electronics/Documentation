@@ -19,7 +19,7 @@
 > **'a'** is ASCII a or 97, **'b'** is ASCII b or 98
 
 > [!TIP] 
-> Will always return zero if not enabled
+> The timeout for **BtnDown()** or **BtnUp()** is two seconds. Calling after two seconds from last press or release returns 0. If the button is not enabled also returns 0
 
 ```basic
 BtnEnable('a',1)
