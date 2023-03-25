@@ -83,22 +83,27 @@
 <strong>pin:</strong> pin number, &#39;a&#39;, or &#39;b&#39; <br>
 <strong>enable:</strong> 1 = enable, 0 = disabled  <br></p>
 </li>
-<li><p><strong>BtnDown(pin)</strong> Returns a value when button is pressed<br>
+<li><p><strong>BtnUp(pin)</strong>  <br>
 <strong>pin:</strong> pin number, &#39;a&#39;, or &#39;b&#39; <br>
-<strong>Returns:</strong> 1 if button was pressed and continues to return 1 until the button is released</p>
+<strong>Returns:</strong> 1 after release first time called. If called again returns 0<br></p>
+<ul>
+<li><strong>BtnDown(pin)</strong> Returns a value when button is pressed<br>
+<strong>pin:</strong> pin number, &#39;a&#39;, or &#39;b&#39; <br>
+<strong>Returns:</strong> 1 if button was pressed and continues to return 1 until the button is released</li>
+</ul>
 </li>
 </ul>
 <div class="NOTE"><h5>Note</h5><p><strong>&#39;a&#39;</strong> is ASCII a or 97, <strong>&#39;b&#39;</strong> is ASCII b or 98</p>
 </div>
-<div class="TIP"><h5>Tip</h5><p>Will always return zero if not enabled</p>
+<div class="TIP"><h5>Tip</h5><p>The timeout for <strong>BtnDown()</strong> or <strong>BtnUp()</strong> is two seconds. Calling after two seconds from last press or release returns 0. If the button is not enabled also returns 0</p>
 </div>
 <pre><code class="lang-basic">BtnEnable(&#39;a&#39;,1)
 @Loop
 x=BtnDown(&#39;a&#39;)
 if x=1
-    Println(&quot;Button A&quot;)
+    PrintLn(&quot;Button A&quot;)
 end
-goto Loop
+Goto Loop
 </code></pre><hr>
 </article>
           </div>

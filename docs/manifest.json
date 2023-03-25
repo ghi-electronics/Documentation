@@ -345,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "software/universal/buttons.html",
-          "hash": "yOhfYeS5zGzNtpL+VV1Xv4yncsiaKc0YJzlEJQj9zNA="
+          "hash": "7gs+92Sdfz/fNepJ9rOf8QWPchua+Sj3NeXSig4Whho="
         }
       },
       "is_incremental": false,
@@ -429,7 +429,19 @@
       "output": {
         ".html": {
           "relative_path": "software/universal/lcd.html",
-          "hash": "1BxWbu36UUKfddu3dToqO7HoymY8DfNs+ejJMmyk7N8="
+          "hash": "iLkIeWOOtkfAQB0+e41zG0368Gdv1ibWni3AHDeAM38="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/universal/led.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/universal/led.html",
+          "hash": "rzAyF8wmjgrKvMlgB1wjM3zcuyv5/gS3XiLwSGebIyw="
         }
       },
       "is_incremental": false,
@@ -580,8 +592,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 32,
-          "skipped_file_count": 31
+          "total_file_count": 33,
+          "skipped_file_count": 32
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
