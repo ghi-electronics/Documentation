@@ -98,15 +98,16 @@ $goto loop
 ```
 ### End & Return
 End terminates the program.
-```
+
+```basic
 Print("Hello")
 End
-Print("This will nto get prionted")
+Print("This will not get printed")
 ```
 
-Return send the execution back from a called subroutine, see blow.
+Return send the execution back from a called subroutine, see below.
 
-```
+```basic
 add code
 ```
 
@@ -114,7 +115,7 @@ add code
 
 Developers can use subroutines to implement "soft" like functions in their code. These subroutines similar to functions but do not take variables or return values. 
 
-> [!Tip] The built-in API offers true functions and therefore do take arguments and return values, learn more about the [System functions](../universal/systemfunctions.md). 
+> [!Tip] The built-in API offers true functions and therefore do take arguments and return values, learn more about the [System functions](../corlib/systemfunctions.md). 
 
 User subroutines are always added in recoding mode and resides in nonvolatile memory. They can then be "run" or called from immediate mode.
 
@@ -147,3 +148,4 @@ This is an example of a for loop in a single line
 
 ```basic 
 for i=1 to 1000 step 10:PrintLn(i):next
+```
