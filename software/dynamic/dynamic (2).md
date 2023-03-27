@@ -1,4 +1,4 @@
-# Due - Dynamic Language
+# DUE - Dynamic Language
 
 ## Immediate & Record Modes
 
@@ -60,7 +60,7 @@ print (x) # This is also a comment
 ---
 
 ## Variables
-Due can hold up to 26 variables one for letters a-z. The only data type used in Due is integers. All variables created are global in nature. 
+DUE can hold up to 26 variables one for letters a-z. The only data type used in DUE is integers. All variables created are global in nature. 
 
 ---
 
@@ -111,7 +111,7 @@ not one
 
 ## Functions
 
-Functions in Due are implements in a simple form. They do not take arguments and do not return values. However, the built in library functions do take arguments and return values, learn more about the [System functions](../universal/systemfunctions.md). 
+Functions in DUE are implements in a simple form. They do not take arguments and do not return values. However, the built in library functions do take arguments and return values, learn more about the [System functions](../universal/systemfunctions.md). 
 
 User functions resides in nonvolatile memory using recording mode. They can then be "run" or called from immediate mode.
 
@@ -126,7 +126,7 @@ $add code here
 $return
 ```
 
-The function can then be called by its name with **()**. Note how this can be done externally from any system with access to Due interface, like Python.
+The function can then be called by its name with **()**. Note how this can be done externally from any system with access to DUE interface, like Python.
 
 ```basic
 >Mine()
@@ -140,10 +140,10 @@ $goto loop
 ```
 
 > [!TIP]
-> Due variables are global and any changes inside functions will affect variable values outside those functions.
+> DUE variables are global and any changes inside functions will affect variable values outside those functions.
 
 ---
-## Extending Due
+## Extending DUE
 
 User "functions" stored in flash, can be called externally. This allows a function to be called from ANY outside source or program. 
 

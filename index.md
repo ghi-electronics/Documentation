@@ -1,17 +1,33 @@
+<p align="center">
+ <img src="./images/DUE.png">
+</p>
 
-![Due](./images/due.png)
 
-## What is Due?
-Due stands for [Dynamic](./software/dynamic/dynamic.md), [Universal](./software/universal/universal.md), and [Extensible](./software/extensible/extensible.md). A user-friendly scripting language that allows for internal real-time processing. 
+<!---
+![DUE](./images/due.png)
+-->
 
-The Due API is simple to use and easy to learn. Due is also great for beginning programmers to learn the 'BASICS' or real coding. 
 
-Due turns [hardware](./hardware/intro.md) into a computer peripheral, you can use to connect a PC and control real world devices & sensors.
+## What is DUE?
+DUE is a Dynamic, Universal, and Extensible platform that gives devices access to the physical world. These devices can be desktops, laptops, phones, and even a Raspberry pi. Developers have the option to use any modern operating system and use the language of their choice.
+
 
 ---
 
+<p align="center">
+ <img src="./images/ghi.png">
+</p>
+
+<!---
 ![GHI Electronics](./images/ghi.png)
+-->
 
-## Why we made it?
 
-[GHI Electronics](https://www.ghielectronics.com/) has been creating hardware and software solutions for over 13 years. The creation of Due was a natural evolution for easy access to a connected embedded world. 
+## DUE is passed due!
+
+GHI Electronics has been bridging the hardware-to-software gap since 2003. With all the modern platforms/devices/system/languages, GHI Electronics is yet again bringing you an new innovation to make physical computing accessible to everyone. Not just hardware developers.
+
+[GHI Electronics](https://www.ghielectronics.com/) is where hardware meets software!
+
+
+[![GHI](https://img.youtube.com/vi/ojJmKfdOpAI/maxresdefault.jpg)](https://youtu.be/ojJmKfdOpAI)

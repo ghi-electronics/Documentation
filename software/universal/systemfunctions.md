@@ -3,7 +3,7 @@
 - **Echo(enable)**  <br>
 **enable:** 0 = Enable echo , 1 = Disable echo
 
-- **Version**  - Returns the current firmware version of Due <br>
+- **Version**  - Returns the current firmware version of DUE <br>
 
 - **Print(text)**  - Prints the value of the argument to the console on the same line <br>
 **text:** String or variable

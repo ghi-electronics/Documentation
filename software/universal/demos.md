@@ -1,6 +1,6 @@
 ## Demos
 
-These are demos that are built-in the Due software.
+These are demos that are built-in the DUE software.
 
 **Demo("Help")**
 
