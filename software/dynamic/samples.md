@@ -1,3 +1,0 @@
-# Due Samples
----
-Coming soon...

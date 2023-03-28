@@ -1,7 +1,6 @@
-# Hardware
+# DUE Hardware
 ---
-Due firmware can be loaded onto any GHI product that uses the SITCore SC13048 processor using a simple
-[**on-line loader!**](https://loader.brainpad.com/)
+The DUE platform is supported in several GHI Electronics' devices, including the educational BrainPad devices.
 
 
 
@@ -9,14 +8,18 @@ Due firmware can be loaded onto any GHI product that uses the SITCore SC13048 pr
 
 ![BrainPads](images/brainpads.png) 
 
-Due runs on the BrainPad Pulse or BrainPad Edge
+Educators now have the power to use their beloved language-of-choice with BrainPad devices, thanks to the power of the DUE platform.
+
+
+
+[**Learn more...**](brainpad.md)
 
 ---
-## FEZ
+
+## SITCore / FEZ
 
 ![FEZ](images/fez.png) 
 
-Due runs on the FEZ Flea or FEZ Pico
+The power of DUE is available on a Fast-and-Easy (FEZ) developer-friendly boards.
 
----
-You can also visit our main website at [**main website**](http://www.duelang.com) and our  [**Due community forum**](https://https://forums.ghielectronics.com/c/due/31/).
+[**Learn more...**](fez.md)

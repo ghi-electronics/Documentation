@@ -1,22 +1,20 @@
-# Due Scripting Language
+# DUE Platform
+
 ---
 
-![Due](images/due.png) 
+A DUE-enabled device can give a computer, tablet or phone access to the physical world. Not only that, the DUE platform includes DUE Scripts for extending the device's feature or even run independently from any additional hardware.
+
+## Physical-World Extension
+
+Though a standard USB connection, a DUE-enabled device can be connected to modern devices, such as phones, laptops, tablets, desktops and even smaller devices such as raspberry pi. The device will simply load, with no need to load any USB drivers. This is true on Windows, Mac, Linux, Android and even Chromebook.
+
+Once effortlessly connected, developers can use the coding environment of choice to access a long list of available inputs and outputs. This includes, but not limited to, analog, digital, PWM, I2C, and SPi.
+
+Several coding languages are officially supported , with provided libraries and sample code; however, any other language can theoretically be supported.
+
+## DUE Scripts
 
 
-## Dynamic
- There are 2 modes to code or command a Due device, *Immediate* or *Record* modes. In *Immediate* mode, commands are executed immediately. In *Record* mode, commands are stored in flash and executed with the **run** command. Learn more about modes on the [Dynamic](./dynamic/dynamic.md) page.
 
 
-## Universal
 
-Due doesn't care if you use Python or C#, because the Due commands are sent over serial port. It can also be scripted using a terminal editor with simple BASIC like commands included in the API.
-
-## Extensibility
-
-Due devices when used with other languages extend the language.
-Call any Due recorded function from any external source using serial commands. 
-
-## On-line editor
-
-You can program any Due device using a simple terminal editor like Tera Term. This is nimble for quick testing but can be cumbersome with large programs. An on-line editor will soon be released to make coding programs very easy. 

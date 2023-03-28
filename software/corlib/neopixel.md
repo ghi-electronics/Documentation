@@ -26,6 +26,6 @@ NeoShow(8)
 
 - **NeoStream(count)** - Streams data directly to LEDs.Needs NeoShow() to see affect<br>
  **count:** The count of LEDs to "stream"<br>
- **Stream size:** It is "count" multiplied by 3, due to the fact that each LED needs 3 bytes for colors, ordered in GRB format.
+ **Stream size:** It is "count" multiplied by 3, DUE to the fact that each LED needs 3 bytes for colors, ordered in GRB format.
  
 ---

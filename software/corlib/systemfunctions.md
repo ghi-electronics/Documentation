@@ -3,7 +3,7 @@
 - **Echo(enable)**  <br>
 **enable:** 0 = Enable echo , 1 = Disable echo
 
-- **Version**  - Returns the current firmware version of Due <br>
+- **Version**  - Returns the current firmware version of DUE <br>
 
 - **Print(text)**  - Prints the value of the argument to the console on the same line <br>
 **text:** String or variable
@@ -12,6 +12,8 @@
 **text:** String or variable
 
 - **GetTicks()** - read system current ticks in microseconds  <br>
+
+- **GetSeconds()** - read system current ticks in seconds  <br>
 
 - **GetCh()** - reads character input, in ASCII format. Return **-1** when no character detected  <br>
 
