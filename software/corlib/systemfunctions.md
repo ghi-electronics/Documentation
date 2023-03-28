@@ -13,7 +13,9 @@
 
 - **GetTicks()** - read system current ticks in microseconds  <br>
 
+<!---
 - **GetSeconds()** - read system current ticks in seconds  <br>
+-->
 
 - **GetCh()** - reads character input, in ASCII format. Return **-1** when no character detected  <br>
 

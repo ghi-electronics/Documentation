@@ -115,7 +115,7 @@ add code
 
 Developers can use subroutines to implement "soft" like functions in their code. These subroutines similar to functions but do not take variables or return values. 
 
-> [!Tip] The built-in API offers true functions and therefore do take arguments and return values, learn more about the [System functions](../corlib/systemfunctions.md). 
+> [!Tip] The built-in API offers true functions and therefore do take arguments and return values, learn more about the [System functions](/corlib/systemfunctions.md). 
 
 User subroutines are always added in recoding mode and resides in nonvolatile memory. They can then be "run" or called from immediate mode.
 

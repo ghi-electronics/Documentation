@@ -1,4 +1,4 @@
-# DUE Platform
+# DUE Link
 
 ---
 
