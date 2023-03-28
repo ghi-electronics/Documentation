@@ -1,5 +1,7 @@
 # Legal
+
 ---
+
 ## License
 
 This product with its accompanying firmware is licensed royalty-free for commercial and noncommercial use. Using the provided firmware on any non-official product requires additional licensing. The provided documentation/schematics/libraries/sources are not to be used in any manner outside of implementing and using this GHI Electronics product in your design.

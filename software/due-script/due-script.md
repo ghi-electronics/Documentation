@@ -1,12 +1,15 @@
 # DUE Script
 
-DUE Scripts run internally on any DUE-enabled hardware. This allows the users to run simple quick command, called immediate mode. Additionally, users can extend the DUE language with additional functionality that can be accessed externally or can be executed onto the device. This is called recording mode.
+---
+
+DUE Scripts run internally on any DUE-enabled [hardware](../../hardware/intro.md). This allows users to run simple quick command, called immediate mode. Additionally, users can extend the DUE language with additional functionality that can be accessed externally or can be executed onto the device. This is called recording mode.
 
 ## Operating Modes
 
 *Immediate* mode, commands are executed immediately. In *Record* mode, commands are stored in flash and executed with the **run** command. 
 
 **Immediate Mode**
+
 A user will know they are in this mode when their cursor prompt is the  
 **_>_** character. All statements are executed as soon as entered.
 
@@ -49,8 +52,9 @@ PrintLn(x)
 PrintLn(y)
 >new
 ```
-## The DUE Console
-The DUE Platform includes an on-line console to help users in accessing and testing out the available DUE features, with no software to install. The console internally handles the necessary modes and the prompt (as in **$** and **>** symbols) are hidden from the user. 
+
+> [!NOTE]
+> The [DUE Console](../console.md) hides the prompts and automatically switches to the appropriate mode.
 
 ---
 ## Script Features
@@ -69,11 +73,40 @@ print (x) # This is also a comment
 
 
 ### Variables
-DUE can hold up to 26 variables one for letters a-z. The only data type used in DUE is float. All variables created are global in nature. 
+DUE Script has a fixed set of 26 variables, one for each letter, assigned to a to z. The only data type used in DUE is float. All variables created are global in nature. To use a variable, simply use `x=5.5` 
 
 ### Arrays
+Similarly to variables, arrays are fixed to 26 arrays. They are assigned to letters a to z. DUE Script differentiates between variable `a` and array `a[]` when square brackets are used. Arrays are size zero by default and can be sized, or resized using 'dim'.
+
+This is an example that uses both, variables and arrays.
+
+```basic
+dim a[10]
+for i=0 to 9:a[i]=i*2:next
+for i=0 to 9:println(a[i]):next
+```
+
+The output will look like:
+
+```
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+```
+
+> [!TIP]
+> Use `dim a[0]` to free up the memory reserved fro array `a[]`.
+
 
 ### For-Loop
+
 ```basic 
 for i=1 to 1000 step 10
 PrintLn(i)
@@ -88,7 +121,14 @@ PrintLn("one")
 else 
 PrintLn("not one")
 ```
+### Labels
+
+Labels is needed to redirect the program. They are used by `goto` and when calling a subroutine.
+
+A Label is created by using the `@` symbol in front of the desired label. Labels are limited to 6 characters. 
+
 ### Goto
+
 A goto is useful for repeating tasks indefinitely. 
 
 ```basic
@@ -96,7 +136,9 @@ $@Loop
 $add code here that runs forever
 $goto loop 
 ```
+
 ### End & Return
+
 End terminates the program.
 
 ```basic
@@ -105,21 +147,16 @@ End
 Print("This will not get printed")
 ```
 
-Return send the execution back from a called subroutine, see below.
-
-```basic
-add code
-```
+Return send the execution back from a called subroutine, see Subroutines below.
 
 ### Subroutine
 
 Developers can use subroutines to implement "soft" like functions in their code. These subroutines similar to functions but do not take variables or return values. 
 
-> [!Tip] The built-in API offers true functions and therefore do take arguments and return values, learn more about the [System functions](/corlib/systemfunctions.md). 
+> [!Tip] 
+> The built-in API offers true functions and therefore do take arguments and return values.
 
-User subroutines are always added in recoding mode and resides in nonvolatile memory. They can then be "run" or called from immediate mode.
-
-A user subroutine is created by using the **@** symbol in front of the name of the function you'd like to create. These names are limited to 6 characters. Once you've created a "function" any preceding commands entered go inside that function. Function are typically end with a return. 
+User subroutines are always added in recoding mode and resides in nonvolatile memory. A user subroutine starts by a label and ends with a return. 
 
 ```basic
 $@Mine
@@ -127,22 +164,23 @@ $add code here
 $return
 ```
 
-The subroutine can then be called by its name with **()**. Note how this can be done externally from any system with access to the DUE interface, like Python.
+The subroutine can then be called by its name followed by `()`.
 
 ```basic
 Mine()
 ```
 
+ Note how a subroutine can be done externally from Immediate Mode. This allows for extending DUE Scripts with new commands that can then later be called from immediate mode and in turn be called from a high level language, like Python.
 
 > [!TIP]
 > DUE variables are global and any changes inside subroutines will affect variable values outside those subroutines.
 
-Recorded DUE Scripts are executed immediately on power up (the run command is issued internally). If the user doesn't want any of the code to run, they can start the program with the **End** statement.
+Recorded DUE Scripts are executed immediately on power up (the run command is issued internally). If the user doesn't want any of the code to run, they can start the program with the `End` statement.
 
 ---
 
 ## Combining Commands
-Multiple commands can be combined on a single line. This is especially useful when using immediate mode where a single line is required. To use multiple command, a **:** symbol is used.
+Multiple commands can be combined on a single line. This is especially useful when using immediate mode where a single line is required. To use multiple command, a `:` symbol is used.
 
 This is an example of a for loop in a single line
 

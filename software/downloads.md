@@ -4,27 +4,30 @@
 
 ![Downloads](../images/downloads.png)
 
-# Firmware
 
+## Firmware
 
-## SC007 (BrainPad Edge)
+### SC13 (FEZ Flea, FEZ Pico, BrainPad Pulse)
+
+Date | Revision | Firmware
+--- | --- | ---
+Mar 1, 2023 | 1.0 | [DUE-SC13 R1](#)
+
+### SC007 (BrainPad Edge)
 Date |  Revision | Firmware
 --- | --- | ---
-Mar 1, 2023 | 1.0 | [DUE Script SC007 R1]()
+Mar 1, 2023 | 1.0 | [DUE Script SC007 R1](#)
 
-## SC13 (BrainPad Pulse)
-Date | Revision | Firmware
---- | --- | ---
-Mar 1, 2023 | 1.0 | [DUE-SC13 R1]()
+---
 
-# Library
+## Library
 
-## .NET
+### .NET NuGet
 Date | Revision | Package
 --- | --- | ---
-Mar 1, 2023 | 1.0 | [DUE-NET Nuget R1]()
+Mar 1, 2023 | 1.0 | [DUE-NET Nuget R1](#)
 
-## Python 
-Date | Revision | Firmware
+### Python 
+Date | Revision | Package
 --- | --- | ---
-Mar 1, 2023 | 1.0 | [DUE-Python R1]()
+Mar 1, 2023 | 1.0 | [DUE-Python R1](#)
