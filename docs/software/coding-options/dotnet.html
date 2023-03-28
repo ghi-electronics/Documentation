@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>.NET </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content=".NET ">
+    
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="net">.NET</h1>
+
+<hr>
+<p><img src="../images/cSharp.png" alt=".NET C#"></p>
+<p>The .NET DUE library allows full .NET programs to access physical sensors and actuators. This allows complex .NET programs to do all the heavy lifting and send only the necessary components to control devices.</p>
+<p>The provided library is implemented in C# but the user can use any .NET system, such as Visual Basic.</p>
+<h2 id="setup">Setup</h2>
+<p>This page assumes the user is already familiar with .NET C# and there is a development machine that is already setup to build and run .NET programs. No changes are needed there but we are using Microsoft Visual Studio Code as a personal preference.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If this is the first time you use your device, start by visiting the <a href="../../hardware/intro.html">Hardware</a> page and load your device with the appropriate firmware. The <a href="../console.html">Console</a> is also a great place to start.</p>
+</div>
+<p>Start a new project with a simple line of code to test out the project is running</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>C# Top level statements feature is being utilized.</p>
+</div>
+<pre><code class="lang-csharp">Console.WriteLine(&quot;Hello, World!&quot;);
+
+</code></pre>
+<p>Download and install the latest library from NuGet.org. Alternatively, get it from the <a href="../downloads.html">Downloads</a> page.</p>
+<h2 id="blinky">Blinky!</h2>
+<p>Our first program will blink the on-board LED 20 times, where it comes on for 200ms and then it is off for 800ms.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Change the serial port number to match your port and th system you are using.</p>
+</div>
+<pre><code class="lang-csharp">using GHIElectronics.Due;
+Console.WriteLine(&quot;Hello DUE!&quot;);
+var dev = new DueController(&quot;COM6&quot;);
+dev.Led.Set(200, 800, 20);
+Console.WriteLine(&quot;Bye DUE!&quot;);
+</code></pre>
+<h2 id="net-api">.NET API</h2>
+<p>The provided API mirrors DUE Script <a href="../due-script/corelib/corelib.html">Core library</a>. Referencing those APIs is a good place to learn about the available functionality.</p>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/coding-options/dotnet.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Copyright © 2023 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

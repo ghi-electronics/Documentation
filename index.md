@@ -21,7 +21,7 @@ DUE is a Dynamic, Universal, and Extensible platform that gives devices access t
 
 ![GHI Electronics](images/ghi.png)
 
-## DUE is passed due!
+## Continuous Innovation
 
 
 GHI Electronics has been bridging the hardware-to-software gap since 2003 with modern platforms,devices,systems, and coding languages. GHI Electronics is yet again bringing you an new innovation to make physical computing accessible to everyone. Not just the hardware developer.

@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>LCD </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="LCD ">
+    
+      <link rel="shortcut icon" href="../../../images/favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="lcd">LCD</h2>
+
+<p>These functions are device specific and added to support products with built in displays like the one found on the BrainPad Pulse.</p>
+<ul>
+<li><p><strong>LcdShow()</strong> Sends the display buffer to the LCD.</p>
+</li>
+<li><p><strong>LcdClear(color)</strong>  Clears the entire screen to black or white<br>
+<strong>color:</strong> 0 = black, 1 = white</p>
+</li>
+</ul>
+<pre><code class="lang-basic">LcdClear(0)
+LcdShow()
+</code></pre>
+<p><strong>Draw Line</strong></p>
+<ul>
+<li><strong>LcdLine(color, x1,y1,x2,y2)</strong> <br>
+<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>x1:</strong> Starting x point <br>
+<strong>y1:</strong> Starting y point <br>
+<strong>x1:</strong> Ending x point <br>
+<strong>y1:</strong> Ending y point</li>
+</ul>
+<pre><code class="lang-basic">LcdClear(0)
+LcdLine(1,0,0,128,64)
+LcdShow()
+</code></pre>
+<p><strong>Set Pixel</strong></p>
+<ul>
+<li><strong>LcdPixel(color, x, y)</strong> <br>
+<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>x:</strong> x pixel value<br>
+<strong>y:</strong> y pixel value</li>
+</ul>
+<pre><code class="lang-basic">LcdClear(0)
+LcdPixel(1,64,32)
+LcdShow()
+</code></pre>
+<p><strong>Draw Circle</strong></p>
+<ul>
+<li><strong>LcdCircle(color, x,y,radius)</strong> <br>
+<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>x:</strong> x position of circle's center <br>
+<strong>y:</strong> y position of circle's center <br>
+<strong>radius:</strong> radius of the circle</li>
+</ul>
+<pre><code class="lang-basic">LcdClear(0)
+LcdCircle(1,64,32,31)
+LcdShow()
+</code></pre>
+<p><strong>Draw Rectangle</strong></p>
+<ul>
+<li><strong>LcdRect(color, x1, y1, x2, y2)</strong> <br>
+<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>x1:</strong> Starting x point <br>
+<strong>y1:</strong> Starting y point <br>
+<strong>x1:</strong> Ending x point <br>
+<strong>y1:</strong> Ending y point</li>
+</ul>
+<pre><code class="lang-basic">LcdClear(0)
+LcdRect(1,10,10,118,54)
+LcdShow()
+</code></pre>
+<p><strong>Draw Scaled Text</strong></p>
+<ul>
+<li><strong>LcdTextS(&quot;text&quot;, color, x, y, scaleWidth, scaleHeight)</strong> <br>
+<strong>text:</strong> String message in double quotes. <br>
+<strong>Str():</strong> is used to convert variables to strings <br>
+<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>x:</strong> x position <br>
+<strong>y:</strong> x position <br>
+<strong>scaleWidth:</strong> Width scale multiplier <br>
+<strong>scaleHeight:</strong> Width scale multiplier</li>
+</ul>
+<pre><code class="lang-basic">LcdClear(0)
+LcdText(&quot;Hello&quot;,1,0,0,2,2)
+LcdShow()
+Wait(1000)
+x=100
+LcdClear(0)
+LcdText(Str(x),1,0,0,2,2)
+LcdShow()
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Scale is multiplier for the pixel in width and height to make the font larger</p>
+</div>
+<p><strong>Draw Text</strong></p>
+<ul>
+<li><strong>LcdText(&quot;text&quot;, color, x, y)</strong> <br>
+Works exactly the same as <strong>LcdText()</strong> minus scaling.</li>
+</ul>
+<pre><code class="lang-basic">LcdClear(0)
+LcdText(&quot;Hello World&quot;,1,10,10)
+LcdShow()
+x=100
+LcdClear(0)
+LcdText(str(x),1,0,0)
+LcdShow()
+</code></pre>
+<p><strong>LCD Stream</strong></p>
+<p>Stream is used to send the entire LCD update.</p>
+<ul>
+<li><strong>LcdStream()</strong><br>
+<strong>Stream Size:</strong> The size screen size divided by 8, 128x64/8=1K.
+The data is organized as 8bit columns going left to right and then wrapping around to the next row.</li>
+</ul>
+<p>Example code to set a pixel at 10x10</p>
+<pre><code class="lang-cs">int x=10;
+int y=10;
+
+buffer[(y &gt;&gt; 3) * 128 + x] |= (byte)(1 &lt;&lt; (y &amp; 7));
+</code></pre>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/due-script/corelib/lcd.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Copyright © 2023 GHI Electronics, LLC<br>Generated by DocFX</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

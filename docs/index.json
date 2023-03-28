@@ -2,7 +2,7 @@
   "hardware/brainpad.html": {
     "href": "hardware/brainpad.html",
     "title": "BrainPad",
-    "keywords": "BrainPad BrainPad Edge BrainPad Pulse"
+    "keywords": "BrainPad Educators now have the power to use their beloved language-of-choice with BrainPad devices, thanks to the power of the DUE platform. Both BrainPad Pulse and BrainPad Edge are fully supported. However, BrainPad Pulse include additional natively-supported, which are the display and the buzzer. tip: The heart to the BrainPad Pulse is STICore SC113 chipset. And for BrainPad Edge is SITCore SC007. Getting Ready The first step is to load the appropriate firmware onto the device. But first, we need to put the board in \"loader mode\". On Pulse, hold the A button down while resetting the board. Loading the firmware is done on the BrainPad loader page loader.brainpad.com BrainPad Edge BrainPad Pulse"
   },
   "hardware/fez.html": {
     "href": "hardware/fez.html",
@@ -11,157 +11,177 @@
   },
   "hardware/intro.html": {
     "href": "hardware/intro.html",
-    "title": "Hardware",
-    "keywords": "Hardware Due firmware can be loaded onto any GHI product that uses the SITCore SC13048 processor using a simple on-line loader! BrainPad Due runs on the BrainPad Pulse or BrainPad Edge FEZ Due runs on the FEZ Flea or FEZ Pico You can also visit our main website at main website and our Due community forum ."
+    "title": "DUE Hardware",
+    "keywords": "DUE Hardware The DUE platform is supported in several GHI Electronics' devices, including the educational BrainPad devices. BrainPad Educators now have the power to use their beloved language-of-choice with BrainPad devices, thanks to the power of the DUE platform. Learn more... SITCore / FEZ The power of DUE is available on a Fast-and-Easy (FEZ) developer-friendly boards. Learn more..."
   },
   "index.html": {
     "href": "index.html",
-    "title": "What is Due?",
-    "keywords": "What is Due? Due stands for Dynamic , Universal , and Extensible . A user-friendly scripting language that allows for internal real-time processing. The Due API is simple to use and easy to learn. Due is also great for beginning programmers to learn the 'BASICS' or real coding. Due turns hardware into a computer peripheral, you can use to connect a PC and control real world devices & sensors. Why we made it? GHI Electronics has been creating hardware and software solutions for over 13 years. The creation of Due was a natural evolution for easy access to a connected embedded world."
+    "title": "DUE Link",
+    "keywords": "DUE Link What is DUE Link? DUE is a Dynamic, Universal, and Extensible platform that gives devices access to the physical world. These devices can be desktops, laptops, phones, or even a Raspberry PI. Developers have the option to use any modern operating system and use the programming language of their choice. Software Hardware Learn about all the great software features and how DUE can change \"physical-computing\" forever! A range of hardware options are available off-the-shelf Continuous Innovation GHI Electronics has been bridging the hardware-to-software gap since 2003 with modern platforms,devices,systems, and coding languages. GHI Electronics is yet again bringing you an new innovation to make physical computing accessible to everyone. Not just the hardware developer. GHI Electronics is where hardware meets software!"
   },
   "README.html": {
     "href": "README.html",
     "title": "Documentation",
-    "keywords": "Documentation This is the repository for all of our docs. To generate the docs locally: Clone/Fork the repo Open the command prompt in the documents' root folder (\"Run as Administrator\" may be necessary) Execute docfx --serve After executing the above command, a temporary webpage will appear to allow you to view the files in your browser fully rendered in HTML, for example http://localhost:8080 . To install DocFX, please review and download from the following site: https://dotnet.github.io/docfx/ . From there, you can go to the Getting Started page for instructions on how to install and you can go to Download Latest to download the most up to date DocFX files. Please note, you will not need to use the docfx init command as the initial JSON file is already present in our repository. WK<html>TOpdf is an optional part of the build process. You will find the needed files at the following address: https://wkhtmltopdf.org/downloads.html . Once downloaded, execute the command to install. Once installed, add the path to the installed binary to the environment variable PATH, for example \"C:\\Program Files\\wkhtmltopdf\\bin\"."
+    "keywords": "Documentation This is the repository for all of our docs. To generate the docs locally: Clone/Fork the repo Open the command prompt in the documents' root folder (\"Run as Administrator\" may be necessary) Execute docfx --serve After executing the above command, a temporary webpage will appear to allow you to view the files in your browser fully rendered in HTML, for example http://localhost:8080. To install DocFX, please review and download from the following site: https://dotnet.github.io/docfx/. From there, you can go to the Getting Started page for instructions on how to install and you can go to Download Latest to download the most up to date DocFX files. Please note, you will not need to use the docfx init command as the initial JSON file is already present in our repository. WK<html>TOpdf is an optional part of the build process. You will find the needed files at the following address: https://wkhtmltopdf.org/downloads.html. Once downloaded, execute the command to install. Once installed, add the path to the installed binary to the environment variable PATH, for example \"C:\\Program Files\\wkhtmltopdf\\bin\"."
+  },
+  "software/coding-options/coding-options.html": {
+    "href": "software/coding-options/coding-options.html",
+    "title": "Coding Options",
+    "keywords": "Coding Options The DUE Link Platform ships with multiple supported languages. Users interested in supporting other languages can convert one of the open-source libraries (such as Python) to their language of choice. Developers have the choice to use any development environment and IDE of choice. Additionally, any modern operating system or language can be used. Some languages are supported out-of-the-box and others can be added. Note This section talks about supported languages running on a host (computer, table, phone...etc.). DUE Platform also includes DUE Script allowing a DUE-enabled hardware to run independently. Open Source Libraries for the supported languages are provided open-source. We invite you to learn more about the internal workings of DUE Link and also invite you to support additional systems and languages. Due Libraries Repo. The Transport The host connects to a due device using a standard USB connection. All the necessary USB descriptors are built in a standard manner that no drivers are necessary. Once a device is plugged in, the host (computer, phone, Windows, Android, Mac...etc.) will detect and enable a new serial port. The library will then use this serial port to communicate with the DUE-enabled device. On Windows, the device manager can be used to see a list of available serial ports. (image) Troubleshooting The DUE console is the perfect place to connect and verify functionality. The first thing to do when facing any troubles is making sure the device is loaded with the latest firmware. The instructions are found on the device's Hardware page. Next, verify that you have the latest library. Visit the Downloads page to download the latest library."
+  },
+  "software/coding-options/dotnet.html": {
+    "href": "software/coding-options/dotnet.html",
+    "title": ".NET",
+    "keywords": ".NET The .NET DUE library allows full .NET programs to access physical sensors and actuators. This allows complex .NET programs to do all the heavy lifting and send only the necessary components to control devices. The provided library is implemented in C# but the user can use any .NET system, such as Visual Basic. Setup This page assumes the user is already familiar with .NET C# and there is a development machine that is already setup to build and run .NET programs. No changes are needed there but we are using Microsoft Visual Studio Code as a personal preference. Tip If this is the first time you use your device, start by visiting the Hardware page and load your device with the appropriate firmware. The Console is also a great place to start. Start a new project with a simple line of code to test out the project is running Tip C# Top level statements feature is being utilized. Console.WriteLine(\"Hello, World!\"); Download and install the latest library from NuGet.org. Alternatively, get it from the Downloads page. Blinky! Our first program will blink the on-board LED 20 times, where it comes on for 200ms and then it is off for 800ms. Note Change the serial port number to match your port and th system you are using. using GHIElectronics.Due; Console.WriteLine(\"Hello DUE!\"); var dev = new DueController(\"COM6\"); dev.Led.Set(200, 800, 20); Console.WriteLine(\"Bye DUE!\"); .NET API The provided API mirrors DUE Script Core library. Referencing those APIs is a good place to learn about the available functionality."
+  },
+  "software/coding-options/excel.html": {
+    "href": "software/coding-options/excel.html",
+    "title": "Excel",
+    "keywords": "Excel DUE Link allows supports many systems, and Microsoft Excel is one the supported options! Yes, you can access devices right from spreadsheets! Combine that with VB macros and you have unlimited options. Setup The access to the device is done though (Excel Data Streamer plug-in](https://microsoft.github.io/DataStreamerDevPortal/). Enabling the streamer is simple as it is already built in: Go to File > Options In the Excel Options dialog click Add-ins At the bottom of the dialog in the Manage: drop-down select COM Add-ins and click Go Check the box for Microsoft Data Streamer for Excel You should now see the Data Streamer tab in the Excel ribbon. Connect the correct COM port and you will be presented with 4 new tabs (Data In, Data Out, Settings, and Manifest). Blinky! Our first program will blink the on-board LED 20 times, where it comes on for 200ms and then it is off for 800ms. Go to Settings and change the Data Channels to 1 Go to the Data Out tab and enter the following text right under CH1 column Led(200, 800, 20) The LED should be blinking now. The support for Excel is still in progress. Check back this page for more excitement!"
+  },
+  "software/coding-options/python.html": {
+    "href": "software/coding-options/python.html",
+    "title": "Python",
+    "keywords": "Python The Python DUE library allows for the use of full standard Python to access physical-computing. Setup This page assumes the user is already familiar with Python and there is a development machine that is already setup to build and run Python programs. No changes are needed there but we are using Microsoft Visual Studio Code as a personal preference. Tip If this is the first time you use your device, start by visiting the Hardware page and load your device with the appropriate firmware. The Console is also a great place to start. Start a new project with a simple line of code to test out the project is running print(\"Hello DUE!\") Go to the Downloads page and download the latest Python library. Install the library on your system using pip install Due-0.0.1-py3-none-any.whl If you do not have the pyserial already installed, then also run pip install pyserial. Blinky! Our first program will blink the on-board LED 20 times, where it comes on for 200ms and then it is off for 800ms. Note Change the serial port number to match your port and th system you are using. from Due.DueController import DueController print(\"Hello DUE!\") dev = DueController(\"COM27\") # Flash the LED 20 times (on for 200ms and off for 800ms) dev.Led.Set(200,800,20) print(\"Bye DUE!\") Python API The provided API mirrors DUE Script Core library. Referencing those APIs is a good place to learn about the available functionality."
+  },
+  "software/console.html": {
+    "href": "software/console.html",
+    "title": "DUE Console",
+    "keywords": "DUE Console The DUE Console provides many functionalities. It is a great start to verify the device is functioning properly. It is also a great place to learn about and use DUE Scripts. https://console.duelink.com/"
   },
   "software/downloads.html": {
     "href": "software/downloads.html",
-    "title": "Due Downloads",
-    "keywords": "Due Downloads Firmware SC007 (BrainPad Edge) Date Revision Firmware Mar 1, 2023 1.0 Due Script SC007 R1 SC13 (BrainPad Pulse) Date Revision Firmware Mar 1, 2023 1.0 Due-SC13 R1 Library .NET Date Revision Package Mar 1, 2023 1.0 Due-NET Nuget R1 Python Date Revision Firmware Mar 1, 2023 1.0 Due-Python R1"
+    "title": "DUE Downloads",
+    "keywords": "DUE Downloads Firmware SC13 (FEZ Flea, FEZ Pico, BrainPad Pulse) Date Revision Firmware Mar 1, 2023 1.0 DUE-SC13 R1 SC007 (BrainPad Edge) Date Revision Firmware Mar 1, 2023 1.0 DUE Script SC007 R1 Library .NET NuGet Date Revision Package Mar 1, 2023 1.0 DUE-NET Nuget R1 Python Date Revision Package Mar 1, 2023 1.0 DUE-Python R1"
   },
-  "software/dynamic/dynamic.html": {
-    "href": "software/dynamic/dynamic.html",
-    "title": "Due - Dynamic Language",
-    "keywords": "Due - Dynamic Language Immediate & Record Modes Immediate mode, commands are executed immediately. In Record mode, commands are stored in flash and executed with the run command. Immediate Mode A user will know they are in this mode when their cursor prompt is the > character. All statements are executed as soon as entered. > print(\"Hello World\") Note Immediate Mode is the default mode when device is first connected. Record Mode To enter into Record mode, the user enters the $ character. The character prompt will change to the $ sign until Record mode is exited using the > character. All statements entered are stored directly in flash but not executed until run is entered. Statement Description $ Sets the device in record mode > Exits record mode and returns to direct mode The following statements control the program recorded in flash, but can be used in both Immediate or Record modes. When used in Record mode these special statements execute, but are not added to the program in flash. Statement Description run Executes the program stored in flash new Erases the program stored in flash list Returns all the code in your program > $ $ println (x) $ println (y) $ > > x=1:y=2 > run 1 2 >list println(x) println(y) >new Comments The # character is used to identify a comment. Comments are ignored by the program, text added to help developers understand the code. # This is a comment x=10 print (x) # This is also a comment Variables Due can hold up to 26 variables one for letters a-z. The only data type used in Due is integers. All variables created are global in nature. Single Line Commands Code can be concatenated together in a single line with each command joined by a : When coding in Immediate mode multi-line statements need to be coded as a single line command. When using Record mode multi-line statements can be used. x=10:print(x):x=15:print(x) Looping & Conditional Statements Statement Description for/to/step/next Incremental looping if/else/end Conditional execution of the code For-Loop used in Immediate mode for i=1 to 1000 step 10: println(i):next If-Else statement used in Record mode $ $new $if x=1 $println(\"one\") $else $println(\"not one\") $end $> >x = 1 >run one >x = 2 >run not one Functions Functions in Due are implements in a simple form. They do not take arguments and do not return values. However, the built in library functions do take arguments and return values, learn more about the System functions . User functions resides in nonvolatile memory using recording mode. They can then be \"run\" or called from immediate mode. Note While these are called functions, they are actually just labels. A user function is created by using the @ symbol in front of the name of the function you'd like to create. These names are limited to 6 characters. Once you've created a \"function\" any preceding commands entered go inside that function. Function are typically end with a return. $@Mine $add code here $return The function can then be called by its name with () . Note how this can be done externally from any system with access to Due interface, like Python. >Mine() A goto can also be used to call a function but in this case the function is treated as a label and a return should not be expected. $@Loop $add code here $goto loop Tip Due variables are global and any changes inside functions will affect variable values outside those functions. Extending Due User \"functions\" stored in flash, can be called externally. This allows a function to be called from ANY outside source or program. This will enter recording mode and then records a function $ @Count for x=0 to a println(x) next return The above \"function\" can now be called from inside Immediate mode as an example. Make sure to switch to immediate mode! >a=5 >Count()"
+  "software/due-script/corelib/analog.html": {
+    "href": "software/due-script/corelib/analog.html",
+    "title": "Analog",
+    "keywords": "Analog These functions provide access to analog pins. Analog Write AWrite(pin, dutyCycle) - Writes to pin using PWM pin: pin number dutyCycle: 0 to 1000 Note Frequency is fixed to 50hz. @loop for i=0 to 1000 step 100 AWrite(0,i) Wait(100) next for i=1000 to 0 step -100 AWrite(0,i) Wait(100) next goto loop Analog Read ARead(pin) - Read an analog output pin: pin number Returns: The analog value of the pin @loop for i=0 to 100 x=ARead(0) PrintLn(x) Wait(100) next goto loop"
   },
-  "software/dynamic/samples.html": {
-    "href": "software/dynamic/samples.html",
-    "title": "Due Samples",
-    "keywords": "Due Samples Coming soon..."
+  "software/due-script/corelib/button.html": {
+    "href": "software/due-script/corelib/button.html",
+    "title": "Buttons",
+    "keywords": "Buttons BtnEnable(pin, enable) - sets up a button to be used pin: pin number, 'a', or 'b' enable: 1 = enable, 0 = disabled BtnUp(pin) pin: pin number, 'a', or 'b' Returns: 1 after release first time called. If called again returns 0 BtnDown(pin) Returns a value when button is pressed pin: pin number, 'a', or 'b' Returns: 1 if button was pressed and continues to return 1 until the button is released Note 'a' is ASCII a or 97, 'b' is ASCII b or 98 Tip The timeout for BtnDown() or BtnUp() is two seconds. Calling after two seconds from last press or release returns 0. If the button is not enabled also returns 0 BtnEnable('a',1) @Loop x=BtnDown('a') if x=1 PrintLn(\"Button A\") end Goto Loop"
   },
-  "software/extensible/dotnet.html": {
-    "href": "software/extensible/dotnet.html",
-    "title": "",
-    "keywords": "The .NET C# Due library allows full .NET programs to use small embedded device. This allows complex .NET programs to do all the heavy lifting and send only the necessary components to control the Due api."
+  "software/due-script/corelib/corelib.html": {
+    "href": "software/due-script/corelib/corelib.html",
+    "title": "Core Library",
+    "keywords": "Core Library The core library gives DUE Scripts the necessary API to access hardware. It has other software related libraries as well. These API functions are available from within DUE Scripts and runs host-less. When using a host, a library for that particular library is provided to reflect the DUE Core library. For example, when using Python, the provided Python library includes dev.Led.Set(200,800,20) which mirrors the LED API. API Use Analog Read or Write analog pins Button Read a button. Similar to Digital read but handles debounce Demo Built-in demos Digital Read or write digital pins Distance Read ultrasonic distance sensor Frequency Generate frequency on a specific pin. This uses hardware PWM internally I2C Access the I2C bus for transferring data Infrared Read and decode IR remote control signal LCD Draw on LCD (device specific) NeoPixel Control smart color LEDs Servo Control servo motors Sound Generate sounds on the device's speaker (device specific) SPI Access the SPI data bus Touch Allows for capacitive touch sensing UART Transfer data on the UART serial port"
   },
-  "software/extensible/extensible.html": {
-    "href": "software/extensible/extensible.html",
-    "title": "Due - Extensibility",
-    "keywords": "Due - Extensibility The Due API can be controlled on its own or from within many different languages and software platforms."
+  "software/due-script/corelib/demo.html": {
+    "href": "software/due-script/corelib/demo.html",
+    "title": "Demos",
+    "keywords": "Demos These are demos that are built-in the DUE software. Demo(\"Help\") Returns a list of the demos available on the device. For example: >Demo(\"Help\") DUE DEMOS --------- led analog Demo(\"led\") @Loop DWrite(18,1) : Wait(250) Dwrite(18,0) : Wait(250) Goto Loop Type Run to launch the demo. This demo flashes the on-board LED. Demo(\"analog\") @Loop For i=0 to 1000 Step 100 AWrite(18, i) : Wait(50) Next For i=1000 to 0 Step -100 AWrite(18, i) : wait(50) Next Goto Loop Type Run to launch the demo. This demo fades the on-board LED in & out."
   },
-  "software/extensible/python.html": {
-    "href": "software/extensible/python.html",
-    "title": "",
-    "keywords": "The Python Due library allows for the use of full Python to control a micro device. Users aren't restricted to only use micro Python anymore."
+  "software/due-script/corelib/digital.html": {
+    "href": "software/due-script/corelib/digital.html",
+    "title": "Digital",
+    "keywords": "Digital These functions provide access to digital pins. Digital Write DWrite(pin, state) - Sets a pins digital output pin: pin number state: 1 = high or 0 = low for x = 1 to 10 DWrite(0,1) Wait(200) DWrite(0,0) Wait(200) next Digital Read DRead(pin, pull) - Read a digital pin output pin: 0-9 pull: Sets the internal pull resistors to -> 0=none, 1=up, 2=down Returns: 1 = high or 0 = low x = DRead(2,1) if x = 0 Print(\"low\") else Print(\"high\") end"
+  },
+  "software/due-script/corelib/distance.html": {
+    "href": "software/due-script/corelib/distance.html",
+    "title": "Distance Sensor",
+    "keywords": "Distance Sensor ReadDistance(trigger, echo) - uses ultrasonic sonic sensor to read distance. trigger: The pin number that is connected to trigger (pulse) signal echo: The pin number that is connected to echo signal Returns: Distance in centimeters Tip most sensors need 5V to work. @Loop x = Distance(0,1) if x>0 PrintLn(x) end Wait(100) goto Loop"
+  },
+  "software/due-script/corelib/frequency.html": {
+    "href": "software/due-script/corelib/frequency.html",
+    "title": "Frequency",
+    "keywords": "Frequency Frequency is fixed to pin 0 Freq(frequency, duration, dutyCycle) - provides an accurate hardware generated PWM signal frequency: frequency duration: 0 to forever dutyCycle: 0 to 1000 Note Freq() is a non-blocking function, calling Freq() a second time before the duration of the first call is over will end the function despite the duration of first calls argument. @Loop for x=1 to 1000 Freq(x,500,500) Wait(200) next for x=1000 to 1 step -1 Freq(x,500,500) Wait(200) next goto Loop"
+  },
+  "software/due-script/corelib/i2c.html": {
+    "href": "software/due-script/corelib/i2c.html",
+    "title": "I2C",
+    "keywords": "I2C I2cBytes(address, writeCount, readCount) - Reads and/or writes up to 4 bytes to/from I2C bus. Data is transfered to and from variables A, B, C, D writeCount: The number of bytes to write readCount: The number of bytes to write code sample I2cStream(address, writeCount, readCount) - address: address of the I2C device writeCount: readCount: Stream size: The stream starts with PC sending \"writeCount\" of bytes and then the PC must read the \"readCount\". If either count is zero then that step can be skipped. code sample Note On SC13 devices only: The I2C pins are different on BrainPad Pulse vs FEZ boards. PB15 is used to determine how I2C should work. Pay attention to the state of PB15 on power up, Pulse has it pulled up through 10k resistor."
+  },
+  "software/due-script/corelib/infrared.html": {
+    "href": "software/due-script/corelib/infrared.html",
+    "title": "Infrared",
+    "keywords": "Infrared IR decoder is fixed to pin 2 IrEnable(enable) - enables pin for IR signal capture enable: 1 = enable, 0 = disable IrRead() - reads the value from the IR enabled pin Return: Tracks the past 16 key presses and returns them. -1 if none. Button Return Value power 0 up 1 lightbulb 2 left arrow 4 sound 5 right arrow 6 backward 8 down 9 forward 2 + 12 0 13 - 14 1 16 2 17 3 18 4 19 5 20 6 21 7 22 8 23 9 24 IrEnable(1) @Loop x=IrRead() if x >=0: Println(x):end Wait(1000) goto Loop"
+  },
+  "software/due-script/corelib/lcd.html": {
+    "href": "software/due-script/corelib/lcd.html",
+    "title": "LCD",
+    "keywords": "LCD These functions are device specific and added to support products with built in displays like the one found on the BrainPad Pulse. LcdShow() Sends the display buffer to the LCD. LcdClear(color) Clears the entire screen to black or white color: 0 = black, 1 = white LcdClear(0) LcdShow() Draw Line LcdLine(color, x1,y1,x2,y2) color: 0 = black, 1 = white x1: Starting x point y1: Starting y point x1: Ending x point y1: Ending y point LcdClear(0) LcdLine(1,0,0,128,64) LcdShow() Set Pixel LcdPixel(color, x, y) color: 0 = black, 1 = white x: x pixel value y: y pixel value LcdClear(0) LcdPixel(1,64,32) LcdShow() Draw Circle LcdCircle(color, x,y,radius) color: 0 = black, 1 = white x: x position of circle's center y: y position of circle's center radius: radius of the circle LcdClear(0) LcdCircle(1,64,32,31) LcdShow() Draw Rectangle LcdRect(color, x1, y1, x2, y2) color: 0 = black, 1 = white x1: Starting x point y1: Starting y point x1: Ending x point y1: Ending y point LcdClear(0) LcdRect(1,10,10,118,54) LcdShow() Draw Scaled Text LcdTextS(\"text\", color, x, y, scaleWidth, scaleHeight) text: String message in double quotes. Str(): is used to convert variables to strings color: 0 = black, 1 = white x: x position y: x position scaleWidth: Width scale multiplier scaleHeight: Width scale multiplier LcdClear(0) LcdText(\"Hello\",1,0,0,2,2) LcdShow() Wait(1000) x=100 LcdClear(0) LcdText(Str(x),1,0,0,2,2) LcdShow() Tip Scale is multiplier for the pixel in width and height to make the font larger Draw Text LcdText(\"text\", color, x, y) Works exactly the same as LcdText() minus scaling. LcdClear(0) LcdText(\"Hello World\",1,10,10) LcdShow() x=100 LcdClear(0) LcdText(str(x),1,0,0) LcdShow() LCD Stream Stream is used to send the entire LCD update. LcdStream() Stream Size: The size screen size divided by 8, 128x64/8=1K. The data is organized as 8bit columns going left to right and then wrapping around to the next row. Example code to set a pixel at 10x10 int x=10; int y=10; buffer[(y >> 3) * 128 + x] |= (byte)(1 << (y & 7));"
+  },
+  "software/due-script/corelib/led.html": {
+    "href": "software/due-script/corelib/led.html",
+    "title": "LED",
+    "keywords": "LED This function is used to take control of the on-board LED. LED() is non-blocking so it can be used as a status indicator for your programs while they run. LED(high, low, count) high: The duration in milliseconds the LED is on. low: The duration in milliseconds the LED is off. count: The number of times the LED will blink, Note a number value of -1 will blink the LED forever. A value of 0 will turn off the LED."
+  },
+  "software/due-script/corelib/neopixel.html": {
+    "href": "software/due-script/corelib/neopixel.html",
+    "title": "Neopixel",
+    "keywords": "Neopixel Neopixel is fixed to pin number 1 NeoClear() - Clears all LEDs (in memory). Needs NeoShow() to see the affect NeoSet(index, red, green, blue) - Sets a specific LED to a color. Needs NeoShow() to see affect index: The LED index where 0 is first one and supporting up to 256 LEDs red, green, blue: Color levels, 0 to 255 NeoShow(count) - count: The count of LEDs to update and show This example assumes we have 8 LEDs and will set 8 LEDs to red, increasing the color intensity from 0 to 80. Then it waits one second before it sets the first LED to bright purple! NeoClear() for x = 0 to 8 NeoSet(x,x*10,0,0) next NeoShow(8) Wait(1000) NeoSet(0,200,0,200) NeoShow(8) NeoStream(count) - Streams data directly to LEDs.Needs NeoShow() to see affect count: The count of LEDs to \"stream\" Stream size: It is \"count\" multiplied by 3, DUE to the fact that each LED needs 3 bytes for colors, ordered in GRB format."
+  },
+  "software/due-script/corelib/pwm.html": {
+    "href": "software/due-script/corelib/pwm.html",
+    "title": "PWM",
+    "keywords": "PWM"
+  },
+  "software/due-script/corelib/servo.html": {
+    "href": "software/due-script/corelib/servo.html",
+    "title": "Servo Motor",
+    "keywords": "Servo Motor ServoSet(pin, degree) - Sets servo motor connected to pin to a specific position pin: pin number degree: 0 to 180 Tip Many servo motors need 5V to work. @Loop ServoSet(0,0) Wait(1000) ServoSet(0,180) Wait(1000) goto Loop"
+  },
+  "software/due-script/corelib/sound.html": {
+    "href": "software/due-script/corelib/sound.html",
+    "title": "Sounds",
+    "keywords": "Sounds This function is device specific and added to support products with built in buzzers like the one found on the BrainPad Pulse. Sound(frequency, duration, volume) frequency: sound frequency in Hz duration: in milliseconds. 0 is always on volume: 0 to 100 Note Sound() uses Freq() which is a non-blocking function. Calling Sound() could end the duration of the previous Sound() despite the set duration inside the argument. See Freq() section for more details. Sound(256,1000,50)"
+  },
+  "software/due-script/corelib/spi.html": {
+    "href": "software/due-script/corelib/spi.html",
+    "title": "SPI",
+    "keywords": "SPI SpiByte(byte) - sends a byte byte: - value 0 to 255 Return: Read byte value code sample SpiSteam(writeCount, readCount, cs) - Streams data directly to the SPI device writeCount: The number of bytes to write readCount: The number of bytes to read cs: set to -1 if not needed Stream size: The stream starts with PC sending \"writeCount\" of bytes and then the PC must read the \"readCount\". If either count is zero then that step can be skipped. code sample Spi4Bpp(count) - Streams and converts data from 4BPP to 16BPP count: The count of bytes to be written. Stream size: The \"count\". This special function converts 4BPP incoming data to 16BPP on-the-fly. This is added to speed up the use of SPI color displays, namely ones using ST7735 found on the very common 1.8\" SPI color displays. This allows for faster updates, since each byte sent is 2 pixels. Palette(index, colorValue) - Sets the desired color for a palette. index: Index number of color colorValue: A standard HEX value of the RGB color. This function goes hand-in-hand with Spi4Bpp() function to set the colors that are to be used. Default colors: Index Color Value Color 0 0x000000 Black 1 0xFFFFFF White 2 0xFF0000 Red 3 0x32CD32 Lime 4 0x0000FF Blue 5 0xFFFF00 Yellow 6 0x00FFFF Cyan 7 0xFF00FF Magenta 8 0xC0C0C0 Silver 9 0x808080 Gray 10 0x800000 Maroon 11 0xBAB86C Olive 12 0x00FF00 Green 13 0xA020F0 Purple 14 0x008080 Teal 15 0x000080 Navy"
+  },
+  "software/due-script/corelib/systemfunctions.html": {
+    "href": "software/due-script/corelib/systemfunctions.html",
+    "title": "System Functions",
+    "keywords": "System Functions Echo(enable) enable: 0 = Enable echo , 1 = Disable echo Version - Returns the current firmware version of DUE Print(text) - Prints the value of the argument to the console on the same line text: String or variable PrintLn(text) - Prints the value of the argument to the console then moves to the next line text: String or variable GetTicks() - read system current ticks in microseconds GetCh() - reads character input, in ASCII format. Return -1 when no character detected GetNum() - reads number input, can be used with IsNAN() to determine if value is a number Wait(duration) - holds program from running duration: duration = milliseconds Reset(loader) - Resets the board loader: 0 = system reset, 1 = reset and stay in loader mode"
+  },
+  "software/due-script/corelib/touch.html": {
+    "href": "software/due-script/corelib/touch.html",
+    "title": "Touch",
+    "keywords": "Touch TouchRead(pin) - Initializes the pin for touch pin: pin number @Loop a=TouchRead(0):b=TouchRead(1):c=TouchRead(2) if a>0:Println(\"pin 0\"):end if b>0:Println(\"pin 1\"):end if c>0:Println(\"pin 2\"):end wait(100) goto Loop"
+  },
+  "software/due-script/corelib/uart.html": {
+    "href": "software/due-script/corelib/uart.html",
+    "title": "UART",
+    "keywords": "UART UartInit(baudRate) - Sets the baud rate UART baudRate: Any commonly used standard baud rate UartRead() - Read UART data Returns: A byte read from UART UartWrite(data) - Write UART data data: Data byte to send on UART UartCount() - Count Returns: How many bytes have been buffered and ready to be read code sample"
+  },
+  "software/due-script/due-script.html": {
+    "href": "software/due-script/due-script.html",
+    "title": "DUE Script",
+    "keywords": "DUE Script DUE Scripts run internally on any DUE-enabled hardware. This allows users to run simple quick command, called immediate mode. Additionally, users can extend the DUE language with additional functionality that can be accessed externally or can be executed onto the device. This is called recording mode. Operating Modes Immediate mode, commands are executed immediately. In Record mode, commands are stored in flash and executed with the run command. Immediate Mode A user will know they are in this mode when their cursor prompt is the > character. All statements are executed as soon as entered. > print(\"Hello World\") Note Immediate Mode is the default mode when device is first connected. Record Mode To enter into Record mode, the user enters the $ character. The character prompt will change to the $ sign until Record mode is exited using the > character. All statements entered are stored directly in flash but not executed until run is entered. Statement Description $ Sets the device in record mode > Exits record mode and returns to direct mode The following statements control the program recorded in flash, but can be used in both Immediate or Record modes. When used in Record mode these special statements execute, but are not added to the program in flash. Statement Description run Executes the program stored in flash new Erases the program stored in flash list Returns all the code in your program > $ $ PrintLn (x) $ PrintLn (y) $ > > x=1:y=2 > run 1 2 >list PrintLn(x) PrintLn(y) >new Note The DUE Console hides the prompts and automatically switches to the appropriate mode. Script Features DUE Scripts are not case sensitive. Its syntax is very simple and inspired by BASIC coding language. The power of DUE Scripts comes from its simplicity rather than from feature set. This is a perfect language to teach someone coding. Users that require serious coding should be using DUE Platform combined with one of the many available coding languages. Still, DUE Scripts can be used to extend those languages, as detailed below. Comments The # character is used to identify a comment. Comments are ignored by the program, text added to help developers understand the code. # This is a comment x=10 print (x) # This is also a comment Variables DUE Script has a fixed set of 26 variables, one for each letter, assigned to a to z. The only data type used in DUE is float. All variables created are global in nature. To use a variable, simply use x=5.5 Arrays Similarly to variables, arrays are fixed to 26 arrays. They are assigned to letters a to z. DUE Script differentiates between variable a and array a[] when square brackets are used. Arrays are size zero by default and can be sized, or resized using 'dim'. This is an example that uses both, variables and arrays. dim a[10] for i=0 to 9:a[i]=i*2:next for i=0 to 9:println(a[i]):next The output will look like: 0 2 4 6 8 10 12 14 16 18 Tip Use dim a[0] to free up the memory reserved fro array a[]. For-Loop for i=1 to 1000 step 10 PrintLn(i) next If-Statement if x=1 PrintLn(\"one\") else PrintLn(\"not one\") Labels Labels is needed to redirect the program. They are used by goto and when calling a subroutine. A Label is created by using the @ symbol in front of the desired label. Labels are limited to 6 characters. Goto A goto is useful for repeating tasks indefinitely. $@Loop $add code here that runs forever $goto loop End & Return End terminates the program. Print(\"Hello\") End Print(\"This will not get printed\") Return send the execution back from a called subroutine, see Subroutines below. Subroutine Developers can use subroutines to implement \"soft\" like functions in their code. These subroutines similar to functions but do not take variables or return values. Tip The built-in API offers true functions and therefore do take arguments and return values. User subroutines are always added in recoding mode and resides in nonvolatile memory. A user subroutine starts by a label and ends with a return. $@Mine $add code here $return The subroutine can then be called by its name followed by (). Mine() Note how a subroutine can be done externally from Immediate Mode. This allows for extending DUE Scripts with new commands that can then later be called from immediate mode and in turn be called from a high level language, like Python. Tip DUE variables are global and any changes inside subroutines will affect variable values outside those subroutines. Recorded DUE Scripts are executed immediately on power up (the run command is issued internally). If the user doesn't want any of the code to run, they can start the program with the End statement. Combining Commands Multiple commands can be combined on a single line. This is especially useful when using immediate mode where a single line is required. To use multiple command, a : symbol is used. This is an example of a for loop in a single line for i=1 to 1000 step 10:PrintLn(i):next"
+  },
+  "software/due-script/samples/fallingduck.html": {
+    "href": "software/due-script/samples/fallingduck.html",
+    "title": "Falling Duck",
+    "keywords": "Falling Duck Coming Soon"
+  },
+  "software/due-script/samples/samples.html": {
+    "href": "software/due-script/samples/samples.html",
+    "title": "Samples",
+    "keywords": "Samples Here you'll find complete programs that take advantage of the DUE platform and/or use DUE script."
+  },
+  "software/due-script/samples/spacepulse.html": {
+    "href": "software/due-script/samples/spacepulse.html",
+    "title": "Space Pulse",
+    "keywords": "Space Pulse Coming Soon"
+  },
+  "software/due-script/streams.html": {
+    "href": "software/due-script/streams.html",
+    "title": "Streams",
+    "keywords": "Streams DUE Link APIs are built to be ASCII human-friendly. This works great from the DUE Console for example. However, there are instances where speed is required. For example, when updating a display. Also, there are instances where raw binary data is desired instead of ASCII. For example, when sending data over a data bus. This is where streams come in handy. A stream command initiates the request, for example LcdStream(). Once this command is received and accepted by the device, the & symbol will be returned. Now, the host can send the entire data, exactly to the required byte count. This required count and format, to follow the stream command, is documented with each stream command individual. Streams are not used when coding DUE directly, like when using the DUE Console. And the provided libraries, like for Python, uses streams internally. This page is only provided as a further reference."
   },
   "software/intro.html": {
     "href": "software/intro.html",
-    "title": "Due Scripting Language",
-    "keywords": "Due Scripting Language Dynamic There are 2 modes to code or command a Due device, Immediate or Record modes. In Immediate mode, commands are executed immediately. In Record mode, commands are stored in flash and executed with the run command. Learn more about modes on the Dynamic page. Universal Due doesn't care if you use Python or C#, because the Due commands are sent over serial port. It can also be scripted using a terminal editor with simple BASIC like commands included in the API. Extensibility Due devices when used with other languages extend the language. Call any Due recorded function from any external source using serial commands. On-line editor You can program any Due device using a simple terminal editor like Tera Term. This is nimble for quick testing but can be cumbersome with large programs. An on-line editor will soon be released to make coding programs very easy."
+    "title": "DUE Link",
+    "keywords": "DUE Link A DUE Link enabled device can give a computer, tablet or phone access to the physical world. Not only that, the DUE Link platform includes DUE Scripts for extending the device's feature or even run independently from any additional hardware. Physical-World Extension Though a standard USB connection, a DUE-enabled device can be connected to modern devices, such as phones, laptops, tablets, desktops and even smaller devices such as raspberry pi. The device will simply load, with no need to load any USB drivers. This is true on Windows, Mac, Linux, Android and even Chrome OS. Once effortlessly connected, developers can use the coding environment of choice to access a long list of available inputs and outputs. This includes, but not limited to, analog, digital, PWM, I2C, and SPi. Several coding languages are officially supported , with provided libraries and sample code; however, any other language can theoretically be supported. See all of the Coding Options. DUE Scripts The DUE Link platform includes DUE Scripts allowing for further expandability. Additionally, these scripts allows the system to run independently from any host. Learn more about DUE Script."
   },
   "software/legal.html": {
     "href": "software/legal.html",
     "title": "Legal",
     "keywords": "Legal License This product with its accompanying firmware is licensed royalty-free for commercial and noncommercial use. Using the provided firmware on any non-official product requires additional licensing. The provided documentation/schematics/libraries/sources are not to be used in any manner outside of implementing and using this GHI Electronics product in your design. Disclaimer IN NO EVENT SHALL GHI ELECTRONICS, LLC BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS PRODUCT, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. GHI ELECTRONICS LINE OF PRODUCTS ARE NOT DESIGNED FOR LIFE SUPPORT APPLICATIONS. SPECIFICATIONS, PRICE AND AVAILABILITY ARE SUBJECT TO CHANGE WITHOUT ANY NOTICE. Security WE DO OUR BEST TO PROVIDE SECURE PRODUCTS THAT PROTECT YOUR INTELLECTUAL PROPERTY (CODE) AND ARE DIFFICULT TO EXPLOIT. HOWEVER, NO PRODUCT IS COMPLETELY SECURE. THERE ARE DISHONEST AND POSSIBLY ILLEGAL METHODS THAT CAN BE USED TO CIRCUMVENT OUR CODE PROTECTION AND SECURITY FEATURES. GHI ELECTRONICS, LLC SHALL IN NO EVENT BE HELD LIABLE IN ANY WAY FOR THE EXPLOITATION OF SECURITY VULNERABILITIES OR ANY USE OR MISUSE OF OUR PRODUCTS RESULTING IN THE LOSS OR THEFT OF CODE OR OTHER INTELLECTUAL PROPERTY. Product Longevity GHI ELECTRONICS, LLC IS PRIMARILY INVOLVED IN PROVIDING ELECTRONIC COMPONENTS, MODULES, AND ACCOMPANYING SOFTWARE THAT ARE USED BY OUR CUSTOMERS TO CREATE NEW AND INNOVATIVE PRODUCTS. IN SUPPORT OF OUR CUSTOMERS, WE DO OUR BEST TO DESIGN AND MANUFACTURE PRODUCTS WITH THE LONGEST LIFE CYCLE POSSIBLE. HOWEVER, OUR PRODUCT AVAILABILITY IS DEPENDENT UPON THE AVAILABILITY OF THE ELECTRONIC COMPONENTS FROM WHICH OUR PRODUCTS ARE BUILT. GHI ELECTRONICS, LLC WILL IN NO WAY BE HELD LIABLE FOR LOSSES OF ANY KIND, INCURRED BY OUR CUSTOMERS OR OTHERS, WHETHER MONETARY OR OTHERWISE, AS A RESULT OF GHI ELECTRONICS' PRODUCT SHORTAGES, DELAYS IN AVAILABILITY, OR DISCONTINUATION."
-  },
-  "software/universal/analog.html": {
-    "href": "software/universal/analog.html",
-    "title": "Analog",
-    "keywords": "Analog These functions provide access to analog pins. Analog Write AWrite(pin, dutyCycle) - Writes to pin using PWM pin: pin number dutyCycle: 0 to 1000 Note Frequency is fixed to 50hz. @loop for i=0 to 1000 step 100 AWrite(0,i) Wait(100) next for i=1000 to 0 step -100 AWrite(0,i) Wait(100) next goto loop Analog Read ARead(pin) - Read an analog output pin: pin number Returns: The analog value of the pin @loop for i=0 to 100 x=ARead(0) PrintLn(x) Wait(100) next goto loop"
-  },
-  "software/universal/buttons.html": {
-    "href": "software/universal/buttons.html",
-    "title": "Buttons",
-    "keywords": "Buttons BtnEnable(pin, enable) - sets up a button to be used pin: pin number, 'a', or 'b' enable: 1 = enable, 0 = disabled BtnUp(pin) pin: pin number, 'a', or 'b' Returns: 1 after release first time called. If called again returns 0 BtnDown(pin) Returns a value when button is pressed pin: pin number, 'a', or 'b' Returns: 1 if button was pressed and continues to return 1 until the button is released Note 'a' is ASCII a or 97, 'b' is ASCII b or 98 Tip The timeout for BtnDown() or BtnUp() is two seconds. Calling after two seconds from last press or release returns 0. If the button is not enabled also returns 0 BtnEnable('a',1) @Loop x=BtnDown('a') if x=1 PrintLn(\"Button A\") end Goto Loop"
-  },
-  "software/universal/demos.html": {
-    "href": "software/universal/demos.html",
-    "title": "Demos",
-    "keywords": "Demos These are demos that are built-in the Due software. Demo(\"Help\") Returns a list of the demos available on the device. For example: >Demo(\"Help\") DUE DEMOS --------- led analog Demo(\"led\") @Loop DWrite(18,1) : Wait(250) Dwrite(18,0) : Wait(250) Goto Loop Type Run to launch the demo. This demo flashes the on-board LED. Demo(\"analog\") @Loop For i=0 to 1000 Step 100 AWrite(18, i) : Wait(50) Next For i=1000 to 0 Step -100 AWrite(18, i) : wait(50) Next Goto Loop Type Run to launch the demo. This demo fades the on-board LED in & out."
-  },
-  "software/universal/digital.html": {
-    "href": "software/universal/digital.html",
-    "title": "Digital",
-    "keywords": "Digital These functions provide access to digital pins. Digital Write DWrite(pin, state) - Sets a pins digital output pin: pin number state: 1 = high or 0 = low for x = 1 to 10 DWrite(0,1) Wait(200) DWrite(0,0) Wait(200) next Digital Read DRead(pin, pull) - Read a digital pin output pin: 0-9 pull: Sets the internal pull resistors to -> 0=none, 1=up, 2=down Returns: 1 = high or 0 = low x = DRead(2,1) if x = 0 Print(\"low\") else Print(\"high\") end"
-  },
-  "software/universal/distance.html": {
-    "href": "software/universal/distance.html",
-    "title": "Distance Sensor",
-    "keywords": "Distance Sensor ReadDistance(trigger, echo) - uses ultrasonic sonic sensor to read distance. trigger: The pin number that is connected to trigger (pulse) signal echo: The pin number that is connected to echo signal Returns: Distance in centimeters Tip most sensors need 5V to work. @Loop x = Distance(0,1) if x>0 PrintLn(x) end Wait(100) goto Loop"
-  },
-  "software/universal/frequency.html": {
-    "href": "software/universal/frequency.html",
-    "title": "Frequency",
-    "keywords": "Frequency Frequency is fixed to pin 0 Freq(frequency, duration, dutyCycle) - provides an accurate hardware generated PWM signal frequency: frequency duration: 0 to forever dutyCycle: 0 to 1000 Note Freq() is a non-blocking function, calling Freq() a second time before the duration of the first call is over will end the function despite the duration of first calls argument. @Loop for x=1 to 1000 Freq(x,500,500) Wait(200) next for x=1000 to 1 step -1 Freq(x,500,500) Wait(200) next goto Loop"
-  },
-  "software/universal/i2c.html": {
-    "href": "software/universal/i2c.html",
-    "title": "I2C",
-    "keywords": "I2C I2cBytes(address, writeCount, readCount) - Reads and/or writes up to 4 bytes to/from I2C bus. Data is transfered to and from variables A, B, C, D writeCount: The number of bytes to write readCount: The number of bytes to write code sample I2cStream(address, writeCount, readCount) - address: address of the I2C device writeCount: readCount: Stream size: The stream starts with PC sending \"writeCount\" of bytes and then the PC must read the \"readCount\". If either count is zero then that step can be skipped. code sample Note On SC13 devices only: The I2C pins are different on BrainPad Pulse vs FEZ boards. PB15 is used to determine how I2C should work. Pay attention to the state of PB15 on power up, Pulse has it pulled up through 10k resistor."
-  },
-  "software/universal/infrared.html": {
-    "href": "software/universal/infrared.html",
-    "title": "Infrared",
-    "keywords": "Infrared IR decoder is fixed to pin 2 IrEnable(enable) - enables pin for IR signal capture enable: 1 = enable, 0 = disable IrRead() - reads the value from the IR enabled pin Return: Tracks the past 16 key presses and returns them. -1 if none. Button Return Value power 0 up 1 lightbulb 2 left arrow 4 sound 5 right arrow 6 backward 8 down 9 forward 2 + 12 0 13 - 14 1 16 2 17 3 18 4 19 5 20 6 21 7 22 8 23 9 24 IrEnable(1) @Loop x=IrRead() if x >=0: Println(x):end Wait(1000) goto Loop"
-  },
-  "software/universal/lcd.html": {
-    "href": "software/universal/lcd.html",
-    "title": "LCD",
-    "keywords": "LCD These functions are device specific and added to support products with built in displays like the one found on the BrainPad Pulse. LcdShow() Sends the display buffer to the LCD. LcdClear(color) Clears the entire screen to black or white color: 0 = black, 1 = white LcdClear(0) LcdShow() Draw Line LcdLine(color, x1,y1,x2,y2) color: 0 = black, 1 = white x1: Starting x point y1: Starting y point x1: Ending x point y1: Ending y point LcdClear(0) LcdLine(1,0,0,128,64) LcdShow() Set Pixel LcdPixel(color, x, y) color: 0 = black, 1 = white x: x pixel value y: y pixel value LcdClear(0) LcdPixel(1,64,32) LcdShow() Draw Circle LcdCircle(color, x,y,radius) color: 0 = black, 1 = white x: x position of circle's center y: y position of circle's center radius: radius of the circle LcdClear(0) LcdCircle(1,64,32,31) LcdShow() Draw Rectangle LcdRect(color, x1, y1, x2, y2) color: 0 = black, 1 = white x1: Starting x point y1: Starting y point x1: Ending x point y1: Ending y point LcdClear(0) LcdRect(1,10,10,118,54) LcdShow() Draw Scaled Text LcdTextS(\"text\", color, x, y, scaleWidth, scaleHeight) text: String message in double quotes. Str(): is used to convert variables to strings color: 0 = black, 1 = white x: x position y: x position scaleWidth: Width scale multiplier scaleHeight: Width scale multiplier LcdClear(0) LcdText(\"Hello\",1,0,0,2,2) LcdShow() Wait(1000) x=100 LcdClear(0) LcdText(Str(x),1,0,0,2,2) LcdShow() Tip Scale is multiplier for the pixel in width and height to make the font larger Draw Text LcdText(\"text\", color, x, y) Works exactly the same as LcdText() minus scaling. LcdClear(0) LcdText(\"Hello World\",1,10,10) LcdShow() x=100 LcdClear(0) LcdText(str(x),1,0,0) LcdShow() LCD Stream Stream is used to send the entire LCD update. LcdStream() Stream Size: The size screen size divided by 8, 128x64/8=1K. The data is organized as 8bit columns going left to right and then wrapping around to the next row. Example code to set a pixel at 10x10 int x=10; int y=10; buffer[(y >> 3) * 128 + x] |= (byte)(1 << (y & 7));"
-  },
-  "software/universal/led.html": {
-    "href": "software/universal/led.html",
-    "title": "LED",
-    "keywords": "LED This function is used to take control of the on-board LED. LED() is non-blocking so it can be used as a status indicator for your programs while they run. LED(high, low, count) high: The duration in milliseconds the LED is on. low: The duration in milliseconds the LED is off. count: The number of times the LED will blink, Note a number value of -1 will blink the LED forever. A value of 0 will turn off the LED."
-  },
-  "software/universal/neopixel.html": {
-    "href": "software/universal/neopixel.html",
-    "title": "Neopixel",
-    "keywords": "Neopixel Neopixel is fixed to pin number 1 NeoClear() - Clears all LEDs (in memory). Needs NeoShow() to see the affect NeoSet(index, red, green, blue) - Sets a specific LED to a color. Needs NeoShow() to see affect index: The LED index where 0 is first one and supporting up to 256 LEDs red, green, blue: Color levels, 0 to 255 NeoShow(count) - count: The count of LEDs to update and show This example assumes we have 8 LEDs and will set 8 LEDs to red, increasing the color intensity from 0 to 80. Then it waits one second before it sets the first LED to bright purple! NeoClear() for x = 0 to 8 NeoSet(x,x*10,0,0) next NeoShow(8) Wait(1000) NeoSet(0,200,0,200) NeoShow(8) NeoStream(count) - Streams data directly to LEDs.Needs NeoShow() to see affect count: The count of LEDs to \"stream\" Stream size: It is \"count\" multiplied by 3, due to the fact that each LED needs 3 bytes for colors, ordered in GRB format."
-  },
-  "software/universal/pwm.html": {
-    "href": "software/universal/pwm.html",
-    "title": "PWM",
-    "keywords": "PWM"
-  },
-  "software/universal/servo.html": {
-    "href": "software/universal/servo.html",
-    "title": "Servo Motor",
-    "keywords": "Servo Motor ServoSet(pin, degree) - Sets servo motor connected to pin to a specific position pin: pin number degree: 0 to 180 Tip Many servo motors need 5V to work. @Loop ServoSet(0,0) Wait(1000) ServoSet(0,180) Wait(1000) goto Loop"
-  },
-  "software/universal/sound.html": {
-    "href": "software/universal/sound.html",
-    "title": "Sounds",
-    "keywords": "Sounds This function is device specific and added to support products with built in buzzers like the one found on the BrainPad Pulse. Sound(frequency, duration, volume) frequency: sound frequency in Hz duration: in milliseconds. 0 is always on volume: 0 to 100 Note Sound() uses Freq() which is a non-blocking function. Calling Sound() could end the duration of the previous Sound() despite the set duration inside the argument. See Freq() section for more details. Sound(256,1000,50)"
-  },
-  "software/universal/spi.html": {
-    "href": "software/universal/spi.html",
-    "title": "SPI",
-    "keywords": "SPI SpiByte(byte) - sends a byte byte: - value 0 to 255 Return: Read byte value code sample SpiSteam(writeCount, readCount, cs) - Streams data directly to the SPI device writeCount: The number of bytes to write readCount: The number of bytes to read cs: set to -1 if not needed Stream size: The stream starts with PC sending \"writeCount\" of bytes and then the PC must read the \"readCount\". If either count is zero then that step can be skipped. code sample Spi4Bpp(count) - Streams and converts data from 4BPP to 16BPP count: The count of bytes to be written. Stream size: The \"count\". This special function converts 4BPP incoming data to 16BPP on-the-fly. This is added to speed up the use of SPI color displays, namely ones using ST7735 found on the very common 1.8\" SPI color displays. This allows for faster updates, since each byte sent is 2 pixels. Palette(index, colorValue) - Sets the desired color for a palette. index: Index number of color colorValue: A standard HEX value of the RGB color. This function goes hand-in-hand with Spi4Bpp() function to set the colors that are to be used. Default colors: Index Color Value Color 0 0x000000 Black 1 0xFFFFFF White 2 0xFF0000 Red 3 0x32CD32 Lime 4 0x0000FF Blue 5 0xFFFF00 Yellow 6 0x00FFFF Cyan 7 0xFF00FF Magenta 8 0xC0C0C0 Silver 9 0x808080 Gray 10 0x800000 Maroon 11 0xBAB86C Olive 12 0x00FF00 Green 13 0xA020F0 Purple 14 0x008080 Teal 15 0x000080 Navy"
-  },
-  "software/universal/streams.html": {
-    "href": "software/universal/streams.html",
-    "title": "Streams",
-    "keywords": "Streams Some functionality require speed when sending/retrieving data to/from a device. For example, when sending the entire LCD display. A stream command initiates the request, in this case LcdStream() . Once this command is received and accepted by the device, it will respond with the & symbol. Now, the PC can send the entire data, exactly to the required byte count. This required count, to follow the stream command, is documented with each stream command individual."
-  },
-  "software/universal/systemfunctions.html": {
-    "href": "software/universal/systemfunctions.html",
-    "title": "System Functions",
-    "keywords": "System Functions Echo(enable) enable: 0 = Enable echo , 1 = Disable echo Version - Returns the current firmware version of Due Print(text) - Prints the value of the argument to the console on the same line text: String or variable PrintLn(text) - Prints the value of the argument to the console then moves to the next line text: String or variable GetTicks() - read system current ticks in microseconds GetCh() - reads character input, in ASCII format. Return -1 when no character detected GetNum() - reads number input, can be used with IsNAN() to determine if value is a number Wait(duration) - holds program from running duration: duration = milliseconds Reset(loader) - Resets the board loader: 0 = system reset, 1 = reset and stay in loader mode"
-  },
-  "software/universal/touch.html": {
-    "href": "software/universal/touch.html",
-    "title": "Touch",
-    "keywords": "Touch TouchRead(pin) - Initializes the pin for touch pin: pin number @Loop a=TouchRead(0):b=TouchRead(1):c=TouchRead(2) if a>0:Println(\"pin 0\"):end if b>0:Println(\"pin 1\"):end if c>0:Println(\"pin 2\"):end wait(100) goto Loop"
-  },
-  "software/universal/uart.html": {
-    "href": "software/universal/uart.html",
-    "title": "UART",
-    "keywords": "UART UartInit(baudRate) - Sets the baud rate UART baudRate: Any commonly used standard baud rate UartRead() - Read UART data Returns: A byte read from UART UartWrite(data) - Write UART data data: Data byte to send on UART UartCount() - Count Returns: How many bytes have been buffered and ready to be read code sample"
-  },
-  "software/universal/universal.html": {
-    "href": "software/universal/universal.html",
-    "title": "Due - Universal API",
-    "keywords": "Due - Universal API The universal functions of Due are available on all Due-supported hardware , for user defined functions, see the Dynamic section Tip Due is not case sensitive. Code samples found here use upper and lower case to make things look clearer. Print(\"Due\") is exactly the same as print(\"Due\")"
   }
 }

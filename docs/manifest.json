@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/GHI/source/repos/duelang-website",
+  "source_base_path": "C:/Repos/duelink-website",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,8 +9,7 @@
         "resource": {
           "relative_path": "index.json"
         }
-      },
-      "is_incremental": false
+      }
     },
     {
       "type": "Conceptual",
@@ -18,10 +17,9 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "G4TsSs6POefHUMsL1t4xT621W1bNmRJIkNTOkwLwV3w="
+          "hash": "ANO1YBLyGWCLktS2a4VVnaEdru205xbhQvBAG4Z4gII="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -30,10 +28,9 @@
       "output": {
         ".html": {
           "relative_path": "hardware/brainpad.html",
-          "hash": "tfZf1n7U9nb7FvWhgNqumbtc6WIwdqKBDCWjBCeg0fM="
+          "hash": "Ghb4oUV4Y9+JXb1WIekYo966VMrhPAAs3tdSYMk8LU8="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -42,10 +39,9 @@
       "output": {
         ".html": {
           "relative_path": "hardware/fez.html",
-          "hash": "JZdSfRio1XhFfFYweMcZO44AWeYQ1lYbqCyG0Syen0A="
+          "hash": "TSR3BOQABlO8OBD9M58GN6cywtrwUtIREaWJ1pMlrT0="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -56,7 +52,16 @@
           "relative_path": "hardware/images/brainpad-edge.png"
         }
       },
-      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/images/brainpad-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/images/brainpad-logo.png"
+        }
+      },
       "version": ""
     },
     {
@@ -67,7 +72,6 @@
           "relative_path": "hardware/images/brainpad-pulse.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -78,7 +82,6 @@
           "relative_path": "hardware/images/brainpads.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -89,7 +92,6 @@
           "relative_path": "hardware/images/fez-flea.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -100,7 +102,6 @@
           "relative_path": "hardware/images/fez-pico.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -111,22 +112,17 @@
           "relative_path": "hardware/images/fez.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
       "type": "Conceptual",
       "source_relative_path": "hardware/intro.md",
       "output": {
         ".html": {
           "relative_path": "hardware/intro.html",
-          "hash": "wE07xW/zNGfcgjhcsshOLY/jL16WVWobsUDaV6oY6N4="
+          "hash": "oFXQsCgoPiFTGDXWSWjAf3EGQ9Ino5OXJJd7AzRyMDs="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -135,10 +131,9 @@
       "output": {
         ".html": {
           "relative_path": "hardware/toc.html",
-          "hash": "tseax5i8DZuUQpizL43gZLmhtt0fJJZ68rIkFrAYai8="
+          "hash": "NWLwBzz6VJhJ8ZjEWLDj1PkXv460zv4V/OVoWv8r3Oc="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -149,7 +144,6 @@
           "relative_path": "images/downloads.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -160,7 +154,6 @@
           "relative_path": "images/due.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -171,7 +164,6 @@
           "relative_path": "images/favicon.ico"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -182,7 +174,6 @@
           "relative_path": "images/ghi.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -193,7 +184,6 @@
           "relative_path": "images/logo.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -202,10 +192,64 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "aWoV4dZslnFDVk+JWrBFHOQhfn6JbeOLcEYWyZOLdr4="
+          "hash": "SJr+L3TSoq//hqq8qBv7RZnR8x5xBiOERO1BfZdlwgQ="
         }
       },
-      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/coding-options/coding-options.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/coding-options/coding-options.html",
+          "hash": "1y8yfWU7c1mfwHUl4+YF77mOTjzyCZc+sHZepQGpi6A="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/coding-options/dotnet.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/coding-options/dotnet.html",
+          "hash": "j9MzPSGLnO2HQ1V7sJbEfmK8xdi9vNKEQVKPVlI1t/Q="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/coding-options/excel.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/coding-options/excel.html",
+          "hash": "p+txceXjo5FazvyfHEnjqJfz+czkXjHdE3OzEZ4Eu/8="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/coding-options/python.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/coding-options/python.html",
+          "hash": "v9eV83Pyygvggcb+bUeD0zwLWirmQ5w5qvWpU8bCZno="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/console.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/console.html",
+          "hash": "4Riyd3QR1TiXHOVl/a3eL1LuQs1CXy+0pXgNEhgbG70="
+        }
+      },
       "version": ""
     },
     {
@@ -214,70 +258,273 @@
       "output": {
         ".html": {
           "relative_path": "software/downloads.html",
-          "hash": "PY8qgTN70CtakirRVp+DyRS+qMo5lPdn83k+C3GhwE8="
+          "hash": "bFD/pmrREri0QUls5f9AK/r1HmS/1QQ8VRvuOaNfPyg="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/dynamic/dynamic.md",
+      "source_relative_path": "software/due-script/corelib/analog.md",
       "output": {
         ".html": {
-          "relative_path": "software/dynamic/dynamic.html",
-          "hash": "AQbl92XWUUE/kUkMuAiOha8TkCZVUr6fVrs0rhnTDTw="
+          "relative_path": "software/due-script/corelib/analog.html",
+          "hash": "JYJY7aFpHWoEUzxAh6rK1N6jTKI4wzwpTjE0wOkhmcY="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/dynamic/samples.md",
+      "source_relative_path": "software/due-script/corelib/button.md",
       "output": {
         ".html": {
-          "relative_path": "software/dynamic/samples.html",
-          "hash": "1MiHUP4X2jO4SO4O9+uKzf2G66U5Ll7Q/cOX7dH2qEc="
+          "relative_path": "software/due-script/corelib/button.html",
+          "hash": "E56IzgbAqzdCJSVttOsVC6licxJ2j6d+acMhVrcrDGQ="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/extensible/dotnet.md",
+      "source_relative_path": "software/due-script/corelib/corelib.md",
       "output": {
         ".html": {
-          "relative_path": "software/extensible/dotnet.html",
-          "hash": "vGYCKF2dG/Shjo0JVPY99F/mGB4r4nNZLG0pdEuJJZc="
+          "relative_path": "software/due-script/corelib/corelib.html",
+          "hash": "ZTbyH/2nhbzNpFnpJ8nuf6npA//32VRIJgz8Pp5YfNw="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/extensible/extensible.md",
+      "source_relative_path": "software/due-script/corelib/demo.md",
       "output": {
         ".html": {
-          "relative_path": "software/extensible/extensible.html",
-          "hash": "q29PbTiO5qjP2sPpXshWk+6KfahrAkdUnh4O7TGzUZs="
+          "relative_path": "software/due-script/corelib/demo.html",
+          "hash": "UNgsD2leD9gCHbIV8JOWFlJjkT2qI54PBTJefYDyiIw="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/extensible/python.md",
+      "source_relative_path": "software/due-script/corelib/digital.md",
       "output": {
         ".html": {
-          "relative_path": "software/extensible/python.html",
-          "hash": "gTTkHLwZzvoOcctRy8Z5NLpW/1I1uYbNRKvrJ3dpcBk="
+          "relative_path": "software/due-script/corelib/digital.html",
+          "hash": "+fBesVhQLu60LY9/WUU3+HNpWYN6wcIOwFMEjdGSZYg="
         }
       },
-      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/corelib/distance.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/corelib/distance.html",
+          "hash": "qoy7GJw6K4MPeV5Vh3tX9y2EG0moOmN3CNVSZzhfazI="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/corelib/frequency.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/corelib/frequency.html",
+          "hash": "/IwiZSstOL87mGh8xHo1IK63ax3+jPlC2LKcHtUAUEM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/corelib/i2c.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/corelib/i2c.html",
+          "hash": "8VR2O86QXF9UxDQKkqr0E9rx33QfSqcGmMsAZRdT/5o="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/corelib/infrared.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/corelib/infrared.html",
+          "hash": "DixFzi4q4qLW0HOzV6khc7qh+NAjxXQqdf+m13+tu3c="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/corelib/lcd.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/corelib/lcd.html",
+          "hash": "pB7+QDsBX/y8gPvQD38fpGASR25gX28AlA4GR/sZC/A="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/corelib/led.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/corelib/led.html",
+          "hash": "BJ+FSTgmaCpgzWPbYoW+akH8WbymR2pF9zJwYANsF6U="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/corelib/neopixel.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/corelib/neopixel.html",
+          "hash": "Q3ys38NFWtk+wTI9GsQk2Skz2ZG7QUJA5g4GMSVlOas="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/corelib/pwm.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/corelib/pwm.html",
+          "hash": "6tzgOJYRV82nM/J4mr7yTPzShreAeePZWVDA6JYLgP0="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/corelib/servo.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/corelib/servo.html",
+          "hash": "lXlRIwJMSEzv0Hf66I3j3ifU0YXuujTqma4OrtoqXi0="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/corelib/sound.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/corelib/sound.html",
+          "hash": "L+SRU6RTHJ1wZ1zlw05iSQrK5LHji0U+jiObTaDMWWY="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/corelib/spi.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/corelib/spi.html",
+          "hash": "cFGvmgWfGew4TMK5MXcl30BMLbWlh5xFrdsrauZm/Ps="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/corelib/systemfunctions.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/corelib/systemfunctions.html",
+          "hash": "7iETJb0M/dUpgA7Mup9z34O+l589Ai6PkGYcSTNxcKQ="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/corelib/touch.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/corelib/touch.html",
+          "hash": "2RSHB+54tbLPvvmD4Ttr3rjsU95gERupPW4g7gwpMdM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/corelib/uart.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/corelib/uart.html",
+          "hash": "CHm2S8pxqDMSEzxNVjg/Yc1n5muLTS6yvFMwPphV14E="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/due-script.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/due-script.html",
+          "hash": "gaX9CAKdKheE5FtQAHL7e2NoF4F4EO9fJBUn06ewHkw="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/samples/fallingduck.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/samples/fallingduck.html",
+          "hash": "RKKPv5psEfVSGTnXjtZX19GydWuokVxtebuZ8LmSg2o="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/samples/samples.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/samples/samples.html",
+          "hash": "EvCfmEY5/sAZd3rvGc+N5i5ThguaQZk2a8IuttLhI/I="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/samples/spacepulse.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/samples/spacepulse.html",
+          "hash": "Ku2JS7bozWh2Gxy2NoVn5fEfY/pedD4Kg9TcJqQEFy4="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/streams.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/streams.html",
+          "hash": "YoSO+oVht/qFO+kBEvkIiYH4I5C4PLK+/PxThFGc5K8="
+        }
+      },
       "version": ""
     },
     {
@@ -288,7 +535,6 @@
           "relative_path": "software/images/cSharp.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -299,7 +545,16 @@
           "relative_path": "software/images/due.png"
         }
       },
-      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/images/excel-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/images/excel-logo.png"
+        }
+      },
       "version": ""
     },
     {
@@ -310,7 +565,6 @@
           "relative_path": "software/images/python.png"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -319,10 +573,9 @@
       "output": {
         ".html": {
           "relative_path": "software/intro.html",
-          "hash": "q+mgtrv3XYAbMnewftC/CD+JZe2JzdUi8lZclNtxK2Y="
+          "hash": "MaNUE8JZ2Ok1q3zAC1baZPqsw/bhxmGxrysPt8VnWPs="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -331,10 +584,9 @@
       "output": {
         ".html": {
           "relative_path": "software/legal.html",
-          "hash": "LvbanuuN1durVu3qR1wu+XIGxrq+6gcQNdjxXxzKNb0="
+          "hash": "y73SK9FMd9qTk9vEifdcWMtBiHv6gX+ZVKWgnbooxgQ="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -343,250 +595,9 @@
       "output": {
         ".html": {
           "relative_path": "software/toc.html",
-          "hash": "3tdIGV4eXOZxGi0UbO4ReU9owEnknOpvOhOC6WzDvig="
+          "hash": "ZwdWm4OUvCY4JOcQ0dM5Xs+UyEaoeC9alXJItcLqtco="
         }
       },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/analog.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/analog.html",
-          "hash": "s00Rvos47Oi4g59lna+yeOBMJ+lR/eBZNKOr1Nci2n0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/buttons.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/buttons.html",
-          "hash": "AFfxeC5QlVwBk8oSe/BeaNPeMhUD0hBRh97FmqUtcS4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/demos.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/demos.html",
-          "hash": "Uaba1fZ7LwnT0vj8FZq3sJO4lh6NZs5oI8FJt5dwaOY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/digital.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/digital.html",
-          "hash": "KRkc/bacAtVT38iw2n0ZQENqZ3zjSWqDEiWhwHdaWOk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/distance.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/distance.html",
-          "hash": "Orjz7hOcRRkHz/zj6m9a0sHzZXp619JpxNDb/y4R97Y="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/frequency.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/frequency.html",
-          "hash": "Jluc9+kBmCv3CIymUczAVKBdsrvDo/Xwn8c8bIJHf50="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/i2c.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/i2c.html",
-          "hash": "qC+VoC5eHljnNqgg0aIpMklvHfiIaVX7ogkMKszz6sk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/infrared.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/infrared.html",
-          "hash": "06E/VHCTm+oskJDuGlq6kQqYP7LvEO6YgFtfPIsfb7E="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/lcd.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/lcd.html",
-          "hash": "iLkIeWOOtkfAQB0+e41zG0368Gdv1ibWni3AHDeAM38="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/led.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/led.html",
-          "hash": "rzAyF8wmjgrKvMlgB1wjM3zcuyv5/gS3XiLwSGebIyw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/neopixel.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/neopixel.html",
-          "hash": "gC9tiEFWsExCSFCnfJ0Cpv/434QNYGB0+W2feKlHTqk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/pwm.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/pwm.html",
-          "hash": "pfNixeaU8yt8fGM9Ot8zpXp7B/q4/LBFBYtUIoFgq6I="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/servo.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/servo.html",
-          "hash": "jnelbW398Nto+m2AGZ6BcKp31OEWTXeFcxZmEjOiaeE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/sound.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/sound.html",
-          "hash": "awfyARnDyIbGh/Pp7XH27Gs5TCxLuCDwBW9Y0M5z7tQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/spi.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/spi.html",
-          "hash": "cBbXpQZgHQwgMZDBFuoScM7CpjZjUifkHjw6MyIkWZk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/streams.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/streams.html",
-          "hash": "JuZQGauOZZEBsHda5aj0ySfWDh4BaIQuPT88kFfIlLw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/systemfunctions.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/systemfunctions.html",
-          "hash": "CZKxqUQ+PRr7zTVTl48e4zmBDB1qjGm8H22hdGPyxyw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/touch.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/touch.html",
-          "hash": "mLW+ILsuJRvuguizTzQzsYjvhO5+QCN90q5wJrBsvoA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/uart.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/uart.html",
-          "hash": "bo4vvI4E1aAkaChfanNkxV89ndheR6WUpGBbA900Xf4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/universal/universal.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/universal/universal.html",
-          "hash": "TGyt58s7GaOp119utTI6mQO5eiLod7Gss8Gk9HUvQXk="
-        }
-      },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -595,53 +606,10 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "PN0tx74H4XvENXQoWgujkfTTdlYSpGy3uHsVWL2wJBE="
+          "hash": "So2C81muafQzBmPgGonMmmI0F+cm1OQNTAdaFvD5QiY="
         }
       },
-      "is_incremental": false,
       "version": ""
-    }
-  ],
-  "incremental_info": [
-    {
-      "status": {
-        "can_incremental": true,
-        "incrementalPhase": "build",
-        "total_file_count": 0,
-        "skipped_file_count": 0
-      },
-      "processors": {
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 33,
-          "skipped_file_count": 30
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        }
-      }
-    },
-    {
-      "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
-        "incrementalPhase": "postProcessing",
-        "total_file_count": 0,
-        "skipped_file_count": 0
-      },
-      "processors": {}
     }
   ],
   "version_info": {},
