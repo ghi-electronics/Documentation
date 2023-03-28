@@ -5,7 +5,7 @@
 
 <div style="text-align: center;">
 
-![DUE](/images/DUE.png)
+![DUE](images/DUE.png)
 
 
 ## What is DUE Link?
@@ -19,7 +19,7 @@ DUE is a Dynamic, Universal, and Extensible platform that gives devices access t
 
 ---
 
-![GHI Electronics](/images/ghi.png)
+![GHI Electronics](images/ghi.png)
 
 ## DUE is passed due!
 
@@ -30,6 +30,6 @@ GHI Electronics has been bridging the hardware-to-software gap since 2003 with m
 
 [GHI Electronics](https://www.ghielectronics.com/) is where hardware meets software!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ojJmKfdOpAI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+> [!Video https://www.youtube.com/embed/ojJmKfdOpAI]
 
 </div>
