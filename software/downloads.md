@@ -4,7 +4,6 @@
 
 ![Downloads](../images/downloads.png)
 
-
 # Firmware
 
 

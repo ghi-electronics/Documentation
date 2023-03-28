@@ -2,9 +2,9 @@
 # [DUE Platform](intro.md)
 
 # [Coding Options](coding-options.md)
-## [Python](python.md)
-## [.NET](dotnet.md)
-## [Excel](excel.md)
+## [Python](codeoptions/python.md)
+## [.NET](codeoptions/dotnet.md)
+## [Excel](codeoptions/excel.md)
 
 # [DUE Script](due-script.md)
 
@@ -29,8 +29,8 @@
 ### [UART](corlib/uart.md)
 
 ## [Samples](samples.md)
-### [Falling Duck](samples.md)
-### [Space Pulse](samples.md)
+### [Falling Duck](./samples/fallingduck.md)
+### [Space Pulse](./samples/spacepulse.md)
 
 # [Downloads](downloads.md)
 
