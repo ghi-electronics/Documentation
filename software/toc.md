@@ -28,6 +28,7 @@
 ### [UART](due-script/corelib/uart.md)
 
 ## [Samples](due-script/samples/samples.md)
+### [Rotary NeoPixel](due-script/samples/rotary-neopixel.md)
 ### [Falling Duck](due-script/samples/fallingduck.md)
 ### [Space Pulse](due-script/samples/spacepulse.md)
 
