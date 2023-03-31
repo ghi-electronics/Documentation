@@ -21,7 +21,7 @@
 ### [LCD](due-script/corelib/lcd.md)
 ### [NeoPixel](due-script/corelib/neopixel.md)
 ### [Servo](due-script/corelib/servo.md)
-### [Sound](due-script/corelib/servo.md)
+### [Sound](due-script/corelib/sound.md)
 ### [SPI](due-script/corelib/spi.md)
 ### [System Functions](due-script/corelib/systemfunctions.md)
 ### [Touch](due-script/corelib/touch.md)
