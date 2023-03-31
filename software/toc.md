@@ -28,7 +28,10 @@
 ### [UART](due-script/corelib/uart.md)
 
 ## [Samples](due-script/samples/samples.md)
-### [Rotary NeoPixel](due-script/samples/rotary-neopixel.md)
+### [NeoPixe Matrix](due-script/samples/neopixel-matrix.md)
+### [NeoPixel Rotary ](due-script/samples/rotary-neopixel.md)
+### [Analog Clock](due-script/samples/pulse-analogclock.md)
+### [Bouncing Ball](due-script/samples/pulse-bouncingball.md)
 ### [Falling Duck](due-script/samples/fallingduck.md)
 ### [Space Pulse](due-script/samples/spacepulse.md)
 
@@ -36,4 +39,3 @@
 # [Console](console.md)
 
 # [Legal](legal.md)
-

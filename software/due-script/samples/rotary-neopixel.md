@@ -1,18 +1,18 @@
 # Rotary NeoPixel
 
 ---
-This sample uses a Grove rotary module to control NeoPixel Ring
+
+This sample uses a Grove rotary module to control NeoPixel Ring. This sample use [Analog](../corelib/analog.md) & [Neopixel](../corelib/neopixel.md).
 
 ![Rotary Module](images/rotary-neopixel.gif)
 
-Hardware:
+**Hardware:**
  - FEZ Flea
 - Grove XIAO Shield
 - Grove Rotary Angle Sensor
 - NeoPixel Ring
 
-> [!NOTE] 
-> The Rotary module can be attached to any analog pins. The NeoPixel can only be attached to a certain pin. See specific hardware page for details.
+**Software:**
 
 ```basic
 @loop
