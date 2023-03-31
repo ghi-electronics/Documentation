@@ -159,6 +159,31 @@
     "title": "Falling Duck",
     "keywords": "Falling Duck Coming Soon"
   },
+  "software/due-script/samples/neopixel-matrix-colorful-sinewave.html": {
+    "href": "software/due-script/samples/neopixel-matrix-colorful-sinewave.html",
+    "title": "NeoPixel 16x16 Matrix colorful sine wave",
+    "keywords": "NeoPixel 16x16 Matrix colorful sine wave This sample shows a colorful sine wave scrolling along the matrix Hardware: Any device supporting DUE-Script NeoPixel 16x16 Matrix with zig-zag matrix configuration # NeoPixel - Colorful Moving sine wave h=16:w=16 i=0 z=3.1415926/6 @loop NeoClear() for x=0 to 15 d = x+i y = 8+sin(d*z)*6 pxl() NeoSet(p,128,0,0) y = 8+sin((d+1)*z)*6 pxl() NeoSet(p,0,128,0) y = 8+sin((d+2)*z)*6 pxl() NeoSet(p,0,0,128) next NeoShow(256) i=i+1 goto loop # Formula for index into 16x16 NeoPixel Matrix # p=pxl(x,y) @pxl p = x*w+(x&1)*(w-1)+(1-2*(x&1))*y return"
+  },
+  "software/due-script/samples/neopixel-matrix-rainbow.html": {
+    "href": "software/due-script/samples/neopixel-matrix-rainbow.html",
+    "title": "NeoPixel 16x16 Matrix Rainbow",
+    "keywords": "NeoPixel 16x16 Matrix Rainbow This sample shows a colorful rainbow Hardware: Any device supporting DUE-Script NeoPixel 16x16 Matrix with zig-zag matrix configuration # NeoPixel - Rainbow h=16:w=16 z=3.1415926/15 NeoClear() for x=0 to 15 for i=4 to 8 y = i+sin(x*z)*6 pxl() if i%5=0:NeoSet(p,0,0,128):end if i%5=1:NeoSet(p,0,128,0):end if i%5=2:NeoSet(p,0,128,128):end if i%5=3:NeoSet(p,128,0,0):end if i%5=4:NeoSet(p,128,0,128):end next next neoshow(256) exit # Formula for index into 16x16 NeoPixel Matrix # p=pxl(x,y) @pxl p = x*w+(x&1)*(w-1)+(1-2*(x&1))*y return"
+  },
+  "software/due-script/samples/neopixel-matrix-sinewave.html": {
+    "href": "software/due-script/samples/neopixel-matrix-sinewave.html",
+    "title": "NeoPixel 16x16 Matrix sine wave",
+    "keywords": "NeoPixel 16x16 Matrix sine wave This sample shows a sine wave scrolling along the matrix Hardware: Any device supporting DUE-Script NeoPixel 16x16 Matrix with zig-zag matrix configuration # NeoPixel - Moving sine wave h=16:w=16 z=3.1415926/6 i=0 @loop NeoClear() for x=0 to 15 y = 8+sin((x+i)*z)*6 pxl() NeoSet(p,0,128,0) next NeoShow(256) i=i+1 goto loop # Formula for index into 16x16 NeoPixel Matrix # p=pxl(x,y) @pxl p = x*w+(x&1)*(w-1)+(1-2*(x&1))*y return"
+  },
+  "software/due-script/samples/pulse-analogclock.html": {
+    "href": "software/due-script/samples/pulse-analogclock.html",
+    "title": "Pulse Analog Clock",
+    "keywords": "Pulse Analog Clock This advanced sample turns your Brainpad Pulse into an analog clock Hardware: Brainpad Pulse This example demonstrates advanced features of the DUE-Script language. Using arrays to store X,Y coordinates Using variable as both arrays and numbers (very advanced feature to save variables) # Pulse - LCD Clock # Arrays to store the X and Y coordinates of each hand of the clock # Index 0 - X # Index 1 - Y dim h[2] dim m[2] dim s[2] # Numeric variables storing the current value for each of the hands h=5 m=0 s=0 p=3.1415926 @loop LCDClear(0) face() time() LCDShow() Wait(1000) goto loop # Draw the clock face @face # Draw the small dot on the clock face for i=0 to 59 m[0]=25*cos(i*p/30):m[1]=25*sin(i*p/30) LCDPixel(1,64+m[0],32+m[1]) next # Draw the large dots for every hour for i=0 to 11 m[0]=25*cos(i*p/6):m[1]=25*sin(i*p/6) LCDCircle(1,64+m[0],32+m[1],2) next return # Calculate and draw the new hand positions @time h[0]=16*cos(h*p/6):h[1]=16*sin(h*p/6) m[0]=20*cos(m*p/30):m[1]=20*sin(m*p/30) s[0]=25*cos(s*p/30):s[1]=25*sin(s*p/30) if s=60:s=0:m=m+1:end if m=60:m=0:h=h+1:end if h=12:h=0:end s=s+1 LCDLine(1,64,32,64+h[0],32+h[1]) LCDLine(1,64,32,64+m[0],32+m[1]) LCDLine(1,64,32,64+s[0],32+s[1]) return"
+  },
+  "software/due-script/samples/pulse-bouncingball.html": {
+    "href": "software/due-script/samples/pulse-bouncingball.html",
+    "title": "Pulse Bouncing Ball",
+    "keywords": "Pulse Bouncing Ball This sample bounces a ball of the 4 edges of the screen Hardware: Brainpad Pulse # Pulse - LCD Bouncing ball x=64 # Ball X location y=32 # Ball Y location r=5 # Ball radius a=3 # Ball X Speed b=2 # Ball Y Speed @loop LCDClear(0) # Clear the screen LCDCircle(1,x,y,r) # Draw the ball LCDShow() # Update the screen x=x+a:y=y+b # Move the ball # Check if the ball hit one of the edges # if it did then reverse the direction and make a sound if x<r || x>=(128-r):a=-a:sound(100,16,100):end if y<r || y>=(64-r):b=-b:sound(100,16,100):end goto loop"
+  },
   "software/due-script/samples/rotary-neopixel.html": {
     "href": "software/due-script/samples/rotary-neopixel.html",
     "title": "Rotary NeoPixel",
