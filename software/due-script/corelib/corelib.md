@@ -15,6 +15,7 @@ The core library gives DUE Scripts the necessary API to access hardware. It has 
 | [I2C](i2c.md) | Access the I2C bus for transferring data |
 | [Infrared](infrared.md) | Read and decode IR remote control signal |
 | [LCD](lcd.md) | Draw on LCD (device specific) |
+| [LED](led.md) | Control the onboard LED |
 | [NeoPixel](neopixel.md) | Control smart color LEDs |
 | [Servo](servo.md) | Control servo motors |
 | [Sound](sound.md) | Generate sounds on the device's speaker (device specific) |

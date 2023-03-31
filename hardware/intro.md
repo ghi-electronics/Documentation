@@ -2,7 +2,8 @@
 ---
 The DUE platform is supported in several GHI Electronics' devices, including the educational BrainPad devices.
 
-
+> !
+> All Due supporting hardware has an onboard LED that is located at pin 100. `dwrite(100,1)`
 
 ## BrainPad
 

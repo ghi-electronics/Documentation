@@ -12,12 +12,12 @@
   "hardware/intro.html": {
     "href": "hardware/intro.html",
     "title": "DUE Hardware",
-    "keywords": "DUE Hardware The DUE platform is supported in several GHI Electronics' devices, including the educational BrainPad devices. BrainPad Educators now have the power to use their beloved language-of-choice with BrainPad devices, thanks to the power of the DUE platform. Learn more... SITCore / FEZ The power of DUE is available on a Fast-and-Easy (FEZ) developer-friendly boards. Learn more..."
+    "keywords": "DUE Hardware The DUE platform is supported in several GHI Electronics' devices, including the educational BrainPad devices. ! All Due supporting hardware has an onboard LED that is located at pin 100. dwrite(100,1) BrainPad Educators now have the power to use their beloved language-of-choice with BrainPad devices, thanks to the power of the DUE platform. Learn more... SITCore / FEZ The power of DUE is available on a Fast-and-Easy (FEZ) developer-friendly boards. Learn more..."
   },
   "index.html": {
     "href": "index.html",
     "title": "DUE Link",
-    "keywords": "DUE Link What is DUE Link? DUE is a Dynamic, Universal, and Extensible platform that gives devices access to the physical world. These devices can be desktops, laptops, phones, or even a Raspberry PI. Developers have the option to use any modern operating system and use the programming language of their choice. Software Hardware Learn about all the great software features and how DUE can change \"physical-computing\" forever! A range of hardware options are available off-the-shelf Continuous Innovation GHI Electronics has been bridging the hardware-to-software gap since 2003 with modern platforms,devices,systems, and coding languages. GHI Electronics is yet again bringing you an new innovation to make physical computing accessible to everyone. Not just the hardware developer. GHI Electronics is where hardware meets software!"
+    "keywords": "DUE Link What is DUE Link? DUE is a Dynamic, Universal, and Extensible platform that gives devices access to the physical world. These devices can be desktops, laptops, phones, or even a Raspberry PI. Developers have the option to use any modern operating system and use the programming language of their choice. Software Learn about all the great software features and how DUE can change \"physical-computing\" forever! Hardware A range of hardware options are available off-the-shelf Continuous Innovation GHI Electronics has been bridging the hardware-to-software gap since 2003 with modern platforms,devices,systems, and coding languages. GHI Electronics is yet again bringing you an new innovation to make physical computing accessible to everyone. Not just the hardware developer. GHI Electronics is where hardware meets software!"
   },
   "README.html": {
     "href": "README.html",
@@ -67,7 +67,7 @@
   "software/due-script/corelib/corelib.html": {
     "href": "software/due-script/corelib/corelib.html",
     "title": "Core Library",
-    "keywords": "Core Library The core library gives DUE Scripts the necessary API to access hardware. It has other software related libraries as well. These API functions are available from within DUE Scripts and runs host-less. When using a host, a library for that particular library is provided to reflect the DUE Core library. For example, when using Python, the provided Python library includes dev.Led.Set(200,800,20) which mirrors the LED API. API Use Analog Read or Write analog pins Button Read a button. Similar to Digital read but handles debounce Demo Built-in demos Digital Read or write digital pins Distance Read ultrasonic distance sensor Frequency Generate frequency on a specific pin. This uses hardware PWM internally I2C Access the I2C bus for transferring data Infrared Read and decode IR remote control signal LCD Draw on LCD (device specific) NeoPixel Control smart color LEDs Servo Control servo motors Sound Generate sounds on the device's speaker (device specific) SPI Access the SPI data bus Touch Allows for capacitive touch sensing UART Transfer data on the UART serial port"
+    "keywords": "Core Library The core library gives DUE Scripts the necessary API to access hardware. It has other software related libraries as well. These API functions are available from within DUE Scripts and runs host-less. When using a host, a library for that particular library is provided to reflect the DUE Core library. For example, when using Python, the provided Python library includes dev.Led.Set(200,800,20) which mirrors the LED API. API Use Analog Read or Write analog pins Button Read a button. Similar to Digital read but handles debounce Demo Built-in demos Digital Read or write digital pins Distance Read ultrasonic distance sensor Frequency Generate frequency on a specific pin. This uses hardware PWM internally I2C Access the I2C bus for transferring data Infrared Read and decode IR remote control signal LCD Draw on LCD (device specific) LED Control the onboard LED NeoPixel Control smart color LEDs Servo Control servo motors Sound Generate sounds on the device's speaker (device specific) SPI Access the SPI data bus Touch Allows for capacitive touch sensing UART Transfer data on the UART serial port"
   },
   "software/due-script/corelib/demo.html": {
     "href": "software/due-script/corelib/demo.html",
@@ -174,6 +174,11 @@
     "title": "NeoPixel 16x16 Matrix sine wave",
     "keywords": "NeoPixel 16x16 Matrix sine wave This sample shows a sine wave scrolling along the matrix Hardware: Any device supporting DUE-Script NeoPixel 16x16 Matrix with zig-zag matrix configuration # NeoPixel - Moving sine wave h=16:w=16 z=3.1415926/6 i=0 @loop NeoClear() for x=0 to 15 y = 8+sin((x+i)*z)*6 pxl() NeoSet(p,0,128,0) next NeoShow(256) i=i+1 goto loop # Formula for index into 16x16 NeoPixel Matrix # p=pxl(x,y) @pxl p = x*w+(x&1)*(w-1)+(1-2*(x&1))*y return"
   },
+  "software/due-script/samples/neopixel-matrix.html": {
+    "href": "software/due-script/samples/neopixel-matrix.html",
+    "title": "NeoPixel 16x16 Matrix",
+    "keywords": "NeoPixel 16x16 Matrix These sample uses NeoPixel. Hardware Set-up: Any device supporting DUE-Script NeoPixel 16x16 Matrix with zig-zag matrix configuration Sine wave This sample shows a sine wave scrolling along the matrix # NeoPixel - Moving sine wave h=16:w=16 z=3.1415926/6 i=0 @loop NeoClear() for x=0 to 15 y = 8+sin((x+i)*z)*6 pxl() NeoSet(p,0,128,0) next NeoShow(256) i=i+1 goto loop # Formula for index into 16x16 NeoPixel Matrix # p=pxl(x,y) @pxl p = x*w+(x&1)*(w-1)+(1-2*(x&1))*y return Colorful sine wave This sample shows a colorful sine wave scrolling along the matrix # NeoPixel - Colorful Moving sine wave h=16:w=16 i=0 z=3.1415926/6 @loop NeoClear() for x=0 to 15 d = x+i y = 8+sin(d*z)*6 pxl() NeoSet(p,128,0,0) y = 8+sin((d+1)*z)*6 pxl() NeoSet(p,0,128,0) y = 8+sin((d+2)*z)*6 pxl() NeoSet(p,0,0,128) next NeoShow(256) i=i+1 goto loop # Formula for index into 16x16 NeoPixel Matrix # p=pxl(x,y) @pxl p = x*w+(x&1)*(w-1)+(1-2*(x&1))*y return Rainbow This sample shows a colorful rainbow # NeoPixel - Rainbow h=16:w=16 z=3.1415926/15 NeoClear() for x=0 to 15 for i=4 to 8 y = i+sin(x*z)*6 pxl() if i%5=0:NeoSet(p,0,0,128):end if i%5=1:NeoSet(p,0,128,0):end if i%5=2:NeoSet(p,0,128,128):end if i%5=3:NeoSet(p,128,0,0):end if i%5=4:NeoSet(p,128,0,128):end next next neoshow(256) exit # Formula for index into 16x16 NeoPixel Matrix # p=pxl(x,y) @pxl p = x*w+(x&1)*(w-1)+(1-2*(x&1))*y return"
+  },
   "software/due-script/samples/pulse-analogclock.html": {
     "href": "software/due-script/samples/pulse-analogclock.html",
     "title": "Pulse Analog Clock",
@@ -187,7 +192,7 @@
   "software/due-script/samples/rotary-neopixel.html": {
     "href": "software/due-script/samples/rotary-neopixel.html",
     "title": "Rotary NeoPixel",
-    "keywords": "Rotary NeoPixel This sample uses a Grove rotary module to control NeoPixel Ring Hardware: FEZ Flea Grove XIAO Shield Grove Rotary Angle Sensor NeoPixel Ring Note The Rotary module can be attached to any analog pins. The NeoPixel can only be attached to a certain pin. See specific hardware page for details. @loop NeoClear() NeoShow(24) a=ARead(6) NeoSet(a/4,255,0,0) NeoShow(24) Wait(50) goto loop"
+    "keywords": "Rotary NeoPixel This sample uses a Grove rotary module to control NeoPixel Ring. This sample use Analog & Neopixel. Hardware: FEZ Flea Grove XIAO Shield Grove Rotary Angle Sensor NeoPixel Ring Software: @loop NeoClear() NeoShow(24) a=ARead(6) NeoSet(a/4,255,0,0) NeoShow(24) Wait(50) goto loop"
   },
   "software/due-script/samples/samples.html": {
     "href": "software/due-script/samples/samples.html",

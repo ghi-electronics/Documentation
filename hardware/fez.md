@@ -12,4 +12,4 @@
 
 ![Fez Flea](images/fez-pico.png) 
 
-![Pico Pinout](images/pico-due-pinout.png) 
+![Pico Pinout](images/pico-due-pinout.png)

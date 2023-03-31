@@ -19,6 +19,7 @@
 ### [I2C](due-script/corelib/i2c.md)
 ### [Infrared](due-script/corelib/infrared.md)
 ### [LCD](due-script/corelib/lcd.md)
+### [LED](due-script/corelib/led.md)
 ### [NeoPixel](due-script/corelib/neopixel.md)
 ### [Servo](due-script/corelib/servo.md)
 ### [Sound](due-script/corelib/sound.md)
