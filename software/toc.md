@@ -11,6 +11,7 @@
 ## [Streams](due-script/streams.md)
 ## [Core Library](due-script/corelib/corelib.md)
 ### [Analog](due-script/corelib/analog.md)
+### [Beep](due-script/corelib/beep.md)
 ### [Button](due-script/corelib/button.md)
 ### [Demo](due-script/corelib/demo.md)
 ### [Digital](due-script/corelib/digital.md)
@@ -29,11 +30,11 @@
 ### [UART](due-script/corelib/uart.md)
 
 ## [Samples](due-script/samples/samples.md)
-### [NeoPixe Matrix](due-script/samples/neopixel-matrix.md)
+### [NeoPixel Matrix](due-script/samples/neopixel-matrix.md)
+### [NeoPixel FlappyBird](due-script/samples/flappy-bird.md)
 ### [NeoPixel Rotary ](due-script/samples/rotary-neopixel.md)
 ### [Analog Clock](due-script/samples/pulse-analogclock.md)
 ### [Bouncing Ball](due-script/samples/pulse-bouncingball.md)
-### [Falling Duck](due-script/samples/fallingduck.md)
 ### [Space Pulse](due-script/samples/spacepulse.md)
 
 # [Downloads](downloads.md)

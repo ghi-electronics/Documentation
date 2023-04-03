@@ -13,10 +13,11 @@
 
 DUE is a Dynamic, Universal, and Extensible platform that gives devices access to the physical world. These devices can be desktops, laptops, phones, or even a Raspberry PI. Developers have the option to use any modern operating system and use the programming language of their choice.
 
-| [Software](software/intro.md)        | 
+|**DUE Link**  | 
 | :---: |
+|[**Software**](software/intro.md)    | 
 | Learn about all the great software features and how DUE can change "physical-computing" forever!     |
-|[Hardware](hardware/intro.md) | 
+|[**Hardware**](hardware/intro.md) 
 | A range of hardware options are available  off-the-shelf |
 
 ---

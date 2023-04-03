@@ -2,14 +2,31 @@
 
 ---
 
-These sample uses [NeoPixel](../corelib/neopixel.md).
+These sample uses [NeoPixel](../corelib/neopixel.md). NeoPixel is an addressable LED that actually contains 3 LEDs, RED, GREEN, and BLUE. These three LEDs combine to make just about any color. NeoPixel come in many different configurations, from 1 single NeoPixel to panels containing many. DUE allows for up to 256 NeoPixel. This is perfect for a 16x16 setup. 
 
 ![NeoPixel Matrix](images/neopixel-16x16.png)
 
-**Hardware Set-up:**
+**Hardware:**
 - Any device supporting DUE-Script
 - NeoPixel 16x16 Matrix with zig-zag matrix configuration
 
+**Set-up:**
+
+- Connecting the panel is easy, we just need to connect three wires POWER, GND, and DATA to control all the LEDs. On the back of most NEOPixel panels are 3 sets of cables connected to the panel. 
+
+![NeoPixel Wiring](images/neopixel-back.jpg)
+
+**OUT:** connector is used to connect panels together. 
+
+**POWER:** is used to connect 5V external power source to the panel. This is often necessary when using many LEDs. 
+
+**IN:** connector is where we connect our hardware to the NeoPixel. We connect PIN 1 DUE enabled hardware to the wire labeled DIN, in this case the wire is the green wire. 
+
+**Add a picture frame:**
+
+We took 2 5x7" picture frames and connected the longer ends together to make a picture frame to hold our NeoPixel. We even used the back of the picture frames as a built-in stand. 
+
+![NeoPixel Frame](images/neopixel-frame.jpg)
 
 ---
 

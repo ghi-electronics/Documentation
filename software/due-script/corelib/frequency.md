@@ -2,7 +2,7 @@
 
 Frequency is fixed to pin 0
 - **Freq(frequency, duration, dutyCycle)** - provides an accurate hardware generated PWM signal <br>
-**frequency:** frequency <br>
+**frequency:** frequency in KHz <br>
 **duration:** 0 to forever <br>
 **dutyCycle:** 0 to 1000
 

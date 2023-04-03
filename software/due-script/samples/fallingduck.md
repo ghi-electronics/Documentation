@@ -1,5 +1,0 @@
-# Falling Duck
-
----
-
-Coming Soon

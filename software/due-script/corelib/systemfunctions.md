@@ -27,4 +27,17 @@
 - **Reset(loader)** - Resets the board <br>
 **loader:** 0 = system reset,  1 = reset and stay in loader mode
 
+- **Rnd(max)** - Generates random number
+**max:** maximum value of random number
+**Returns:** returns random number between 0 and value of argument **max**
+
+- **Sin(number)** - Returns the sine value of the argument
+
+- **Cos(number)** - Returns the cosine of the argument
+
+- **Tan(number)** - Returns the tangent of the argument
+
+- **Sqrt(number)** - Returns the square root of the argument
+
+- **Trunc(number)** - Returns the trunicated value of the argument
 ---
