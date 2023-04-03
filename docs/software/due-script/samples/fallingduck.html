@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Falling Duck </title>
+      <title>NeoPixel Flappy Birds </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Falling Duck ">
+      <meta name="title" content="NeoPixel Flappy Birds ">
     
       <link rel="shortcut icon" href="../../../images/favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
@@ -76,10 +76,93 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="falling-duck">Falling Duck</h1>
+<h1 id="neopixel-flappy-birds">NeoPixel Flappy Birds</h1>
 
 <hr>
-<p>Coming Soon</p>
+<p>This sample creates a simple flappy bird type game using a <a href="../corelib/neopixel.html">NeoPixel matrix</a>. The object is for the player to move to avoid the obstacles.</p>
+<p>Hardware:</p>
+<ul>
+<li>Any device supporting DUE-Script, in this case we're using the BrainPad Pulse and its built-in buttons.</li>
+<li>NeoPixel 16x16 Matrix with zig-zag matrix configuration</li>
+</ul>
+<pre><code class="lang-basic">w=16      # Width of the matrix 
+u=4       # Player X position
+v=8       # Player Y position
+t=0       # Player tail Y offset
+b=15      # Wall X position
+h=4       # Wall height
+g=6       # Wall gap
+BtnEnable('a', 1)
+# Game loop
+@loop
+  NeoClear()
+  plyr()
+  wall()
+  coll()
+  NeoShow(256)
+goto loop
+# Handle the player
+@plyr
+  if BtnDown('a')
+    if v&gt;0:v=v-1:end
+    t=1
+  else
+    if v&lt;15:v=v+0.5:end
+    t=-1
+  end
+  x=u
+  y=trunc(v)
+  pxl()
+  NeoSet(p, 64,0,64)
+  x=x-1
+  y=y+t
+  pxl()
+  NeoSet(p, 64,0,64)
+return
+# Update wall
+@wall
+  b=b-0.25
+  if b&lt;=0
+    b=15
+    g=4+rnd(2)
+    h=2+rnd(6)
+  end
+  for i=0 to 1
+    x=trunc(b)+i
+    for y=0 to h
+      pxl()
+      NeoSet(p, 0,64,0)
+    next
+    for y=h+g to 15
+      pxl()
+      NeoSet(p, 0,64,0)
+    next
+  next
+return
+# Check collision
+@coll
+  i=trunc(b)
+  if i != u &amp;&amp; i != u-1 :return:end
+  if v&lt;=h:goto die:end
+  if v&gt;=h+g:goto die:end
+return
+# Player died
+@die
+  for i=0 to 20
+    x=(u-2)+rnd(4)
+    y=(v-2)+rnd(4)
+    pxl()
+    NeoSet(p, rnd(64),0,0)
+    NeoShow(256)
+  next
+  b=15
+return
+# Formula for index into 16x16 NeoPixel Matrix
+# p=pxl(x,y)
+@pxl
+  p = x*w+(x&amp;1)*(w-1)+(1-2*(x&amp;1))*y
+return
+</code></pre>
 </article>
           </div>
 

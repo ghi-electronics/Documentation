@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>NeoPixel 16x16 Matrix </title>
+      <title>Beep </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="NeoPixel 16x16 Matrix ">
+      <meta name="title" content="Beep ">
     
       <link rel="shortcut icon" href="../../../images/favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
@@ -76,111 +76,26 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="neopixel-16x16-matrix">NeoPixel 16x16 Matrix</h1>
+<h2 id="beep">Beep</h2>
 
-<hr>
-<p>These sample uses <a href="../corelib/neopixel.html">NeoPixel</a>. NeoPixel is an addressable LED that actually contains 3 LEDs, RED, GREEN, and BLUE. These three LEDs combine to make just about any color. NeoPixel come in many different configurations, from 1 single NeoPixel to panels containing many. DUE allows for up to 256 NeoPixel. This is perfect for a 16x16 setup.</p>
-<p><img src="images/neopixel-16x16.png" alt="NeoPixel Matrix"></p>
-<p><strong>Hardware:</strong></p>
+<p>Beep uses any pin to generate a tone.</p>
 <ul>
-<li>Any device supporting DUE-Script</li>
-<li>NeoPixel 16x16 Matrix with zig-zag matrix configuration</li>
+<li><strong>Beep(pin, frequency, duration)</strong> - creates a tone for a specified duration on any pin <br>
+<strong>pin:</strong> pin number <br>
+<strong>frequency:</strong> The frequecy in Hz, max value is 10KHz <br>
+<strong>duration:</strong> The duration of the beep in milliseconds, max value is 1000ms <br></li>
 </ul>
-<p><strong>Set-up:</strong></p>
-<ul>
-<li>Connecting the panel is easy, we just need to connect three wires POWER, GND, and DATA to control all the LEDs. On the back of most NEOPixel panels are 3 sets of cables connected to the panel.</li>
-</ul>
-<p><img src="images/neopixel-back.jpg" alt="NeoPixel Wiring"></p>
-<p><strong>OUT:</strong> connector is used to connect panels together.</p>
-<p><strong>POWER:</strong> is used to connect 5V external power source to the panel. This is often necessary when using many LEDs.</p>
-<p><strong>IN:</strong> connector is where we connect our hardware to the NeoPixel. We connect PIN 1 DUE enabled hardware to the wire labeled DIN, in this case the wire is the green wire.</p>
-<p><strong>Add a picture frame:</strong></p>
-<p>We took 2 5x7&quot; picture frames and connected the longer ends together to make a picture frame to hold our NeoPixel. We even used the back of the picture frames as a built-in stand.</p>
-<p><img src="images/neopixel-frame.jpg" alt="NeoPixel Frame"></p>
-<hr>
-<h2 id="sine-wave">Sine wave</h2>
-<p>This sample shows a sine wave scrolling along the matrix</p>
-<pre><code class="lang-basic"># NeoPixel - Moving sine wave
-h=16:w=16
-z=3.1415926/6
-i=0
-@loop
-  NeoClear()
-  for x=0 to 15
-    y = 8+sin((x+i)*z)*6
-    pxl()
-    NeoSet(p,0,128,0)
-  next
-  NeoShow(256)
-  i=i+1
-goto loop
-
-# Formula for index into 16x16 NeoPixel Matrix
-# p=pxl(x,y)
-@pxl
-  p = x*w+(x&amp;1)*(w-1)+(1-2*(x&amp;1))*y
-  return
+<div class="TIP">
+<h5>Tip</h5>
+<p><a href="sound.html">Sound</a> can be used on device specific hardware like the BrainPad Pulse. You can access any DUE enabled device that has an on-board buzzer by using pin 100 in the arguement.</p>
+</div>
+<pre><code class="lang-basic">Beep(0,256,1000)
 </code></pre>
 <hr>
-<h2 id="colorful-sine-wave">Colorful sine wave</h2>
-<p>This sample shows a colorful sine wave scrolling along the matrix</p>
-<pre><code class="lang-basic"># NeoPixel - Colorful Moving sine wave
-h=16:w=16
-i=0
-z=3.1415926/6
-@loop
-  NeoClear()
-  for x=0 to 15
-    d = x+i
-    y = 8+sin(d*z)*6
-    pxl()
-    NeoSet(p,128,0,0)
-
-    y = 8+sin((d+1)*z)*6
-    pxl()
-    NeoSet(p,0,128,0)
-
-    y = 8+sin((d+2)*z)*6
-    pxl()
-    NeoSet(p,0,0,128)
-  next
-  NeoShow(256)
-  i=i+1
-goto loop
-
-# Formula for index into 16x16 NeoPixel Matrix
-# p=pxl(x,y)
-@pxl
-  p = x*w+(x&amp;1)*(w-1)+(1-2*(x&amp;1))*y
-  return
-</code></pre>
-<hr>
-<h2 id="rainbow">Rainbow</h2>
-<p>This sample shows a colorful rainbow</p>
-<pre><code class="lang-basic"># NeoPixel - Rainbow
-h=16:w=16
-z=3.1415926/15
-NeoClear()
-for x=0 to 15 
-  for i=4 to 8
-    y = i+sin(x*z)*6
-    pxl()
-    if i%5=0:NeoSet(p,0,0,128):end
-    if i%5=1:NeoSet(p,0,128,0):end
-    if i%5=2:NeoSet(p,0,128,128):end
-    if i%5=3:NeoSet(p,128,0,0):end
-    if i%5=4:NeoSet(p,128,0,128):end
-  next
-next
-neoshow(256)
-exit
-
-# Formula for index into 16x16 NeoPixel Matrix
-# p=pxl(x,y)
-@pxl
-  p = x*w+(x&amp;1)*(w-1)+(1-2*(x&amp;1))*y
-  return
-</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This feature is blocking, so while running the rest of your code will stop until completed.</p>
+</div>
 </article>
           </div>
 
@@ -189,7 +104,7 @@ exit
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/due-script/samples/neopixel-matrix.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/due-script/corelib/beep.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
