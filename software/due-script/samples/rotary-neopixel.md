@@ -1,4 +1,4 @@
-# Rotary NeoPixel
+# NeoPixel Rotary
  ---
 
 ![Rotary Module](images/rotary-neopixel.gif)

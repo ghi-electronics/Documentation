@@ -4,9 +4,17 @@
 **byte:** - value 0 to 255 <br>
 **Return:**  Read byte value
 
+- **SpiCfg(mode,frequency)** <br>
+**mode:** - 0 to 3 <br>
+**frequency:** - 200 to 20000 (200KHz to 20MHz)
+
 ```basic
-code sample
+# Send 0x55 and read the returned byte into x
+x = SpiByte(0x55)
 ```
+
+> [!NOTE] 
+> Streams are not coded directly using DUE Script, see [Streams](../streams.md)
 
 - **SpiSteam(writeCount, readCount, cs)** - Streams data directly to the SPI device <br>
 **writeCount:** The number of bytes to write<br>
@@ -14,9 +22,6 @@ code sample
 **cs:** set to -1 if not needed<br>
 **Stream size:** The stream starts with PC sending "writeCount" of bytes and then the PC must read the "readCount". If either count is zero then that step can be skipped.
 
-```basic
-code sample
-```
 - **Spi4Bpp(count)** - Streams and converts data from 4BPP to 16BPP<br>
 **count:** The count of bytes to be written.<br>
 **Stream size:** The "count".

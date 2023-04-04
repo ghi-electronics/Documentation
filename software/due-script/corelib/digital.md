@@ -8,12 +8,18 @@ These functions provide access to digital pins.
 
 ```basic
 for x = 1 to 10
-    DWrite(0,1)
+    DWrite(100,1)
     Wait(200)
-    DWrite(0,0)
+    DWrite(100,0)
     Wait(200)
 next
 ```
+
+
+> [!NOTE]
+> All DUE enabled hardware's on-board
+LED is found on pin 100.
+
 
 ##### Digital Read
 

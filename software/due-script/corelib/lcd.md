@@ -109,6 +109,9 @@ LcdText(str(x),1,0,0)
 LcdShow()
 ```
 
+> [!NOTE] 
+> Streams are not coded directly using DUE Script, see [Streams](../streams.md)
+
 **LCD Stream**
 
 Stream is used to send the entire LCD update. 
@@ -118,6 +121,8 @@ Stream is used to send the entire LCD update.
 The data is organized as 8bit columns going left to right and then wrapping around to the next row.
 
 Example code to set a pixel at 10x10
+
+
 
 ```cs
 int x=10;

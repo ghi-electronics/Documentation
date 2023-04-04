@@ -37,6 +37,8 @@ The following statements control the program recorded in flash, but can be used 
 |new                    |Erases the program stored in flash                                    |
 |list                   |Returns all the code in your program                                     |
 
+> [!TIP]
+> A running program can be terminated by hitting the ESC key, DEL Key, or Backspace Key. 
 
 ```basic 
 > $
@@ -55,6 +57,7 @@ PrintLn(y)
 
 > [!NOTE]
 > The [DUE Console](../console.md) hides the prompts and automatically switches to the appropriate mode.
+
 
 ---
 ## Script Features

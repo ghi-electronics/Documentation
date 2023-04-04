@@ -6,4 +6,6 @@ DUE Link APIs are built to be ASCII human-friendly. This works great from the [D
 
 A stream command initiates the request, for example `LcdStream()`. Once this command is received and accepted by the device, the `&` symbol will be returned. Now, the host can send the entire data, exactly to the required byte count. This required count and format, to follow the stream command, is documented with each stream command individual. 
 
-Streams are not used when coding DUE directly, like when using the DUE Console. And the provided libraries, like for Python, uses streams internally. This page is only provided as a further reference.
+## Streams in DUE Script
+
+Streams are not used when coding DUE Script directly. They are part of the provided libraries used in hosted mode.

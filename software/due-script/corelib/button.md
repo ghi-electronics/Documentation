@@ -1,5 +1,7 @@
 ## Buttons
 
+Buttons as a function are only available using pin 0,1,2,A,or B. Alternatively, any GPIO can be used to read the state of a pin, just be sure to enable pull-up when using that method.  
+
 - **BtnEnable(pin, enable)** - sets up a button to be used <br>
 **pin:** pin number, 'a', or 'b' <br>
 **enable:** 1 = enable, 0 = disabled  <br>
@@ -30,3 +32,5 @@ end
 Goto Loop
 ```
 ---
+
+

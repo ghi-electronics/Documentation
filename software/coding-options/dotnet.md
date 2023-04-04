@@ -31,12 +31,13 @@ Download and install the latest library from NuGet.org. Alternatively, get it fr
 Our first program will blink the on-board LED 20 times, where it comes on for 200ms and then it is off for 800ms.
 
 > [!NOTE]
-> Change the serial port number to match your port and th system you are using.
+> We can access which COM port our DUE enable device is connected to by calling the GetConnectionPort()
 
 ```csharp
 using GHIElectronics.Due;
 Console.WriteLine("Hello DUE!");
-var dev = new DueController("COM6");
+var availablePort = DueController.GetConnectionPort();
+var dev = new DueController(availablePort);
 dev.Led.Set(200, 800, 20);
 Console.WriteLine("Bye DUE!");
 ```
