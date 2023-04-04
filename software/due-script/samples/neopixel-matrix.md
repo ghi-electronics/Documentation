@@ -2,7 +2,7 @@
 
 ---
 
-These sample uses [NeoPixel](../corelib/neopixel.md). NeoPixel is an addressable LED that actually contains 3 LEDs, RED, GREEN, and BLUE. These three LEDs combine to make just about any color. NeoPixel come in many different configurations, from 1 single NeoPixel to panels containing many. DUE allows for up to 256 NeoPixel. This is perfect for a 16x16 setup. 
+These samples uses [NeoPixel](../corelib/neopixel.md). NeoPixel is an addressable LED that actually contains 3 LEDs, RED, GREEN, and BLUE. These three LEDs combine to make just about any color. NeoPixel come in many different configurations, from 1 single NeoPixel to panels containing many. DUE allows for up to 256 NeoPixel. This is perfect for a 16x16 setup. 
 
 ![NeoPixel Matrix](images/neopixel-16x16.png)
 
@@ -31,6 +31,8 @@ We took 2 5x7" picture frames and connected the longer ends together to make a p
 ---
 
 ## Sine wave
+
+![Sine wave](images/sine-wave.gif)
 
 This sample shows a sine wave scrolling along the matrix
 
@@ -61,6 +63,8 @@ goto loop
 ---
 
 ## Colorful sine wave
+
+![Color sine wave](images/color-sine-wave.gif)
 
 This sample shows a colorful sine wave scrolling along the matrix
 
@@ -100,8 +104,9 @@ goto loop
 
 ## Rainbow
 
-This sample shows a colorful rainbow
+![Rainbow](images/rainbow.jpg)
 
+This sample shows a colorful rainbow
 
 
 ```basic

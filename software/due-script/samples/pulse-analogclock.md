@@ -1,11 +1,12 @@
 # Pulse Analog Clock
 
-This advanced sample turns your Brainpad Pulse into an analog clock
+![Pulse Analog Clock](images/analog-clock.gif)
 
-<img src="https://www.brainpad.com/wp-content/uploads/2021/06/BrainPadPulse-4-1.png" width="20%" height="20%" />
+This advanced sample turns your Brainpad Pulse into an analog clock
 
 Hardware:
 - Brainpad Pulse
+- BrainPower (Optional)
 
 This example demonstrates advanced features of the DUE-Script language. 
 - Using arrays to store X,Y coordinates

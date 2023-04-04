@@ -8,5 +8,8 @@ This function is used to take control of the on-board LED. **LED()** is non-bloc
 **count:** The number of times the LED will blink, 
 
 
-> [!NOTE] 
+> [!TIP] 
 > a number value of **-1** will blink the LED forever. A value of **0** will turn off the LED.
+
+> [!NOTE]
+> All DUE enabled hardware's on-board LED can also be accessed using the   [DWrite()](../corelib/digital.md)  function using pin 100.

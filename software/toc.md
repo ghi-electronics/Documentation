@@ -31,11 +31,12 @@
 
 ## [Samples](due-script/samples/samples.md)
 ### [NeoPixel Matrix](due-script/samples/neopixel-matrix.md)
-### [NeoPixel FlappyBird](due-script/samples/flappy-bird.md)
+### [NeoPixel FallingBird](due-script/samples/falling-bird.md)
 ### [NeoPixel Rotary ](due-script/samples/rotary-neopixel.md)
-### [Analog Clock](due-script/samples/pulse-analogclock.md)
-### [Bouncing Ball](due-script/samples/pulse-bouncingball.md)
-### [Space Pulse](due-script/samples/spacepulse.md)
+### [Pulse Falling Bird](due-script/samples/pulse-falling-bird.md)
+### [Pulse Analog Clock](due-script/samples/pulse-analogclock.md)
+### [Pulse Bounce Ball](due-script/samples/pulse-bouncingball.md)
+### [Pulse Space](due-script/samples/spacepulse.md)
 
 # [Downloads](downloads.md)
 # [Console](console.md)

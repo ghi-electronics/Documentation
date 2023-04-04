@@ -1,8 +1,9 @@
 # Pulse Bouncing Ball
 
+![Pulse Bouncing Ball](images/pulse-bounce.gif)
+
 This sample bounces a ball of the 4 edges of the screen
 
-<img src="https://www.brainpad.com/wp-content/uploads/2021/06/BrainPadPulse-4-1.png" width="20%" height="20%" />
 
 Hardware:
 - Brainpad Pulse

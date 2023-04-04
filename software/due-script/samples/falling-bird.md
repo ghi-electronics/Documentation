@@ -1,8 +1,10 @@
-# NeoPixel Flappy Birds
+# NeoPixel Falling Bird
 
 ---
 
-This sample creates a simple flappy bird type game using a [NeoPixel matrix](neopixel-matrix.md). The object is for the player to move to avoid random obstacles. 
+![NeoPixel Falling Bird](images/falling-bird.gif)
+
+This sample creates a simple falling bird type game using a [NeoPixel matrix](neopixel-matrix.md). The object is for the player to move to avoid random obstacles. 
 
 **Hardware:**
 - Any device supporting DUE-Script. In this case we're using the BrainPad Pulse with its built-in **A** button.
