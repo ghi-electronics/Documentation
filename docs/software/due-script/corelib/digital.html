@@ -85,12 +85,17 @@
 <strong>pin:</strong> pin number <br> <strong>state:</strong> 1 = high or 0 = low</li>
 </ul>
 <pre><code class="lang-basic">for x = 1 to 10
-    DWrite(0,1)
+    DWrite(100,1)
     Wait(200)
-    DWrite(0,0)
+    DWrite(100,0)
     Wait(200)
 next
 </code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>All DUE enabled hardware's on-board
+LED is found on pin 100.</p>
+</div>
 <h5 id="digital-read">Digital Read</h5>
 <ul>
 <li><strong>DRead(pin, pull)</strong> - Read a digital pin output <br>

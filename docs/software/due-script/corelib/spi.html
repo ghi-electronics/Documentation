@@ -79,25 +79,33 @@
 <h2 id="spi">SPI</h2>
 
 <ul>
-<li><strong>SpiByte(byte)</strong> - sends a byte <br>
+<li><p><strong>SpiByte(byte)</strong> - sends a byte <br>
 <strong>byte:</strong> - value 0 to 255 <br>
-<strong>Return:</strong>  Read byte value</li>
+<strong>Return:</strong>  Read byte value</p>
+</li>
+<li><p><strong>SpiCfg(mode,frequency)</strong> <br>
+<strong>mode:</strong> - 0 to 3 <br>
+<strong>frequency:</strong> - 200 to 20000 (200KHz to 20MHz)</p>
+</li>
 </ul>
-<pre><code class="lang-basic">code sample
+<pre><code class="lang-basic"># Send 0x55 and read the returned byte into x
+x = SpiByte(0x55)
 </code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Streams are not coded directly using DUE Script, see <a href="../streams.html">Streams</a></p>
+</div>
 <ul>
-<li><strong>SpiSteam(writeCount, readCount, cs)</strong> - Streams data directly to the SPI device <br>
+<li><p><strong>SpiSteam(writeCount, readCount, cs)</strong> - Streams data directly to the SPI device <br>
 <strong>writeCount:</strong> The number of bytes to write<br>
 <strong>readCount:</strong> The number of bytes to read<br>
 <strong>cs:</strong> set to -1 if not needed<br>
-<strong>Stream size:</strong> The stream starts with PC sending &quot;writeCount&quot; of bytes and then the PC must read the &quot;readCount&quot;. If either count is zero then that step can be skipped.</li>
-</ul>
-<pre><code class="lang-basic">code sample
-</code></pre>
-<ul>
-<li><strong>Spi4Bpp(count)</strong> - Streams and converts data from 4BPP to 16BPP<br>
+<strong>Stream size:</strong> The stream starts with PC sending &quot;writeCount&quot; of bytes and then the PC must read the &quot;readCount&quot;. If either count is zero then that step can be skipped.</p>
+</li>
+<li><p><strong>Spi4Bpp(count)</strong> - Streams and converts data from 4BPP to 16BPP<br>
 <strong>count:</strong> The count of bytes to be written.<br>
-<strong>Stream size:</strong> The &quot;count&quot;.</li>
+<strong>Stream size:</strong> The &quot;count&quot;.</p>
+</li>
 </ul>
 <p>This special function converts 4BPP incoming data to 16BPP on-the-fly. This is added to speed up the use of SPI color displays, namely ones using ST7735 found on the very common 1.8&quot; SPI color displays. This allows for faster updates, since each byte sent is 2 pixels.</p>
 <ul>
