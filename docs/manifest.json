@@ -300,7 +300,7 @@
       "output": {
         ".html": {
           "relative_path": "software/due-script/corelib/beep.html",
-          "hash": "/j6tTfypTLgiBqjM6Iv8mURKWpWiY+kWub2MJ11QaUk="
+          "hash": "/qj0rx0qdGsbffsdeVhSjQDP7e/2vif4VMoJW2XRgH8="
         }
       },
       "version": ""
@@ -366,7 +366,7 @@
       "output": {
         ".html": {
           "relative_path": "software/due-script/corelib/frequency.html",
-          "hash": "PFGdAInr0Z7rzZifOX/5Gtg9oAuthSJlOMXxI+7qOwA="
+          "hash": "8AhuJB0iFl9yux9KMCSXTovWHRm29vbHobZ6ejtdXkY="
         }
       },
       "version": ""
@@ -410,7 +410,7 @@
       "output": {
         ".html": {
           "relative_path": "software/due-script/corelib/led.html",
-          "hash": "Gm4gvgDvl8GGCDYIL+u8Y3uLiwZCZdrDM7XwN+CCBlU="
+          "hash": "MWMotvNvojJa+ZyqBO9lUnegB3uEU2DpmIeDUdHtBAo="
         }
       },
       "version": ""
@@ -476,7 +476,7 @@
       "output": {
         ".html": {
           "relative_path": "software/due-script/corelib/systemfunctions.html",
-          "hash": "p6/G1vEkpSCJ/3oagshN1uptVJhOginvKhR1xPkxb9w="
+          "hash": "2WNvHhqsMxCLDLs7B1lFf/KSnktfSOEhuxgLwrYmb6o="
         }
       },
       "version": ""
@@ -516,11 +516,41 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "software/due-script/samples/flappy-bird.md",
+      "source_relative_path": "software/due-script/samples/falling-bird.md",
       "output": {
         ".html": {
-          "relative_path": "software/due-script/samples/flappy-bird.html",
-          "hash": "SxJVxG8rw8hByVMTFujrQR9Tw4yrV4n9qCEOmwrbED4="
+          "relative_path": "software/due-script/samples/falling-bird.html",
+          "hash": "FXqLetzLKaJTUXH397rv4qQSoS4Zqg/eLR2RxBvnYiU="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/due-script/samples/images/analog-clock.gif",
+      "output": {
+        "resource": {
+          "relative_path": "software/due-script/samples/images/analog-clock.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/due-script/samples/images/color-sine-wave.gif",
+      "output": {
+        "resource": {
+          "relative_path": "software/due-script/samples/images/color-sine-wave.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/due-script/samples/images/falling-bird.gif",
+      "output": {
+        "resource": {
+          "relative_path": "software/due-script/samples/images/falling-bird.gif"
         }
       },
       "version": ""
@@ -557,6 +587,36 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "software/due-script/samples/images/pulse-bounce.gif",
+      "output": {
+        "resource": {
+          "relative_path": "software/due-script/samples/images/pulse-bounce.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/due-script/samples/images/pulse-falling-bird.gif",
+      "output": {
+        "resource": {
+          "relative_path": "software/due-script/samples/images/pulse-falling-bird.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/due-script/samples/images/rainbow.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "software/due-script/samples/images/rainbow.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "software/due-script/samples/images/rotary-neopixel.gif",
       "output": {
         "resource": {
@@ -566,34 +626,11 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/samples/neopixel-matrix-colorful-sinewave.md",
+      "type": "Resource",
+      "source_relative_path": "software/due-script/samples/images/sine-wave.gif",
       "output": {
-        ".html": {
-          "relative_path": "software/due-script/samples/neopixel-matrix-colorful-sinewave.html",
-          "hash": "UZq1xmuAN2PJzvQz6Oz1tcw6OXVgoDgsFQZDmdFqTnU="
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/samples/neopixel-matrix-rainbow.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/samples/neopixel-matrix-rainbow.html",
-          "hash": "4MM7YEXuHzDiokPE2J6njhmGVvwoEgpt5NhdPFcE7Cw="
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "software/due-script/samples/neopixel-matrix-sinewave.md",
-      "output": {
-        ".html": {
-          "relative_path": "software/due-script/samples/neopixel-matrix-sinewave.html",
-          "hash": "lM9O2RiZqqnOX1yh56JgFGikMbXtrjj65tDOnpj07Y4="
+        "resource": {
+          "relative_path": "software/due-script/samples/images/sine-wave.gif"
         }
       },
       "version": ""
@@ -604,7 +641,7 @@
       "output": {
         ".html": {
           "relative_path": "software/due-script/samples/neopixel-matrix.html",
-          "hash": "vy040YVyWWAvcQY/TO1Z02g0XZAR+XQWsDSeBIhW5Gg="
+          "hash": "bifw8wRqjfpEJ/MTlXqLTK3NrMqhd9SDA38zXb3a4Dk="
         }
       },
       "version": ""
@@ -615,7 +652,7 @@
       "output": {
         ".html": {
           "relative_path": "software/due-script/samples/pulse-analogclock.html",
-          "hash": "wLmFxTfSZNd2sxXFVRJfI45JqfoYjaljGbZpDXCrYfs="
+          "hash": "Y1SO7Id1Q7yDsdl01+5S68/csROt/cQvTSCksJM75gg="
         }
       },
       "version": ""
@@ -626,7 +663,18 @@
       "output": {
         ".html": {
           "relative_path": "software/due-script/samples/pulse-bouncingball.html",
-          "hash": "iB+LxC7Z1m+zilOBHh3MqT8Gjc79M9664Q1fhREcz9o="
+          "hash": "XrDy4s4Sh0jhcvWBes1JKTJOtOlKLHZdvZpzsj9H91g="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-script/samples/pulse-falling-bird.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-script/samples/pulse-falling-bird.html",
+          "hash": "RIoQ+SPfRjx61jsS6idG33QgfaW2X9DtMTMMBddc1iw="
         }
       },
       "version": ""
@@ -637,7 +685,7 @@
       "output": {
         ".html": {
           "relative_path": "software/due-script/samples/rotary-neopixel.html",
-          "hash": "c8VwIjy97SVtpk6pkSMFdOEtjQwuUCmPn+GLD95+nIo="
+          "hash": "o/qAp13OFQJUYyInOrvvt0K+ojGBDne9knUedWIk43Q="
         }
       },
       "version": ""
@@ -743,7 +791,7 @@
       "output": {
         ".html": {
           "relative_path": "software/toc.html",
-          "hash": "IfI+AT4iTmoaWdd6xb1h5zRBQcA6V8CrSmfZWjqsGOs="
+          "hash": "JXA9Ew0F3ypujETUnMSBnJ6Aw2MTFknBLwmD0cIqonI="
         }
       },
       "version": ""

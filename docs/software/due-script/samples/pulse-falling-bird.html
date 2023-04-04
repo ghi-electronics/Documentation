@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>NeoPixel Flappy Birds </title>
+      <title>Pulse Flappy Birds </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="NeoPixel Flappy Birds ">
+      <meta name="title" content="Pulse Flappy Birds ">
     
       <link rel="shortcut icon" href="../../../images/favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
@@ -76,32 +76,28 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="neopixel-flappy-birds">NeoPixel Flappy Birds</h1>
+<h1 id="pulse-flappy-birds">Pulse Flappy Birds</h1>
 
-<hr>
-<p><img src="images/flappy-bird.gif" alt="Sine wave"></p>
-<p>This sample creates a simple flappy bird type game using a <a href="neopixel-matrix.html">NeoPixel matrix</a>. The object is for the player to move to avoid random obstacles.</p>
-<p><strong>Hardware:</strong></p>
+<p><img src="images/pulse-falling-bird.gif" alt="Pulse Falling Bird"></p>
+<p>This sample creates a falling bird game just like the NeoPixel version <a href="falling-bird.html">NeoPixel version</a>  of the game. The object is for the player to move to avoid random obstacles.
+Hardware:</p>
 <ul>
-<li>Any device supporting DUE-Script. In this case we're using the BrainPad Pulse with its built-in <strong>A</strong> button.</li>
-<li>NeoPixel 16x16 Matrix with zig-zag matrix configuration</li>
+<li>Brainpad Pulse</li>
 </ul>
-<pre><code class="lang-basic">w=16      # Width of the matrix 
-u=4       # Player X position
+<pre><code class="lang-basic">u=4       # Player X position
 v=8       # Player Y position
 t=0       # Player tail Y offset
-b=15      # Wall X position
+b=31      # Wall X position
 h=4       # Wall height
 g=6       # Wall gap
 BtnEnable('a', 1)
 # Game loop
 @loop
-  NeoClear()
+  LcdClear(0)
   plyr()
   wall()
   coll()
-  NeoShow(256)
-  wait(50)
+  LcdShow()
 goto loop
 # Handle the player
 @plyr
@@ -115,36 +111,30 @@ goto loop
   x=u
   y=trunc(v)
   pxl()
-  NeoSet(p, 64,0,64)
   x=x-1
   y=y+t
   pxl()
-  NeoSet(p, 64,0,64)
 return
 # Update wall
 @wall
-  b=b-0.25
+  b=b-0.5
   if b&lt;=0
-    b=15
+    b=31
     g=4+rnd(2)
     h=2+rnd(6)
   end
-  for i=0 to 1
-    x=trunc(b)+i
-    for y=0 to h
-      pxl()
-      NeoSet(p, 0,64,0)
-    next
-    for y=h+g to 15
-      pxl()
-      NeoSet(p, 0,64,0)
-    next
+  x=trunc(b)
+  for y=0 to h
+    pxl()      
+  next
+  for y=h+g to 15
+    pxl()
   next
 return
 # Check collision
 @coll
   i=trunc(b)
-  if i != u &amp;&amp; i != u-1 :return:end
+  if i != u:return:end
   if v&lt;=h:goto die:end
   if v&gt;=h+g:goto die:end
 return
@@ -154,15 +144,26 @@ return
     x=(u-2)+rnd(4)
     y=(v-2)+rnd(4)
     pxl()
-    NeoSet(p, rnd(64),0,0)
-    NeoShow(256)
+    LcdShow()
   next
-  b=15
+  b=31
 return
-# Formula for index into 16x16 NeoPixel Matrix
+# Plot large pixel
 # p=pxl(x,y)
 @pxl
-  p = x*w+(x&amp;1)*(w-1)+(1-2*(x&amp;1))*y
+  #for i=0 to 2: for j=0 to 3:LcdPixel(1, x*4+j, y*3+i):next:next
+  LcdPixel(1, x*4, y*3)
+  LcdPixel(1, x*4+1, y*3)
+  LcdPixel(1, x*4+2, y*3)
+  LcdPixel(1, x*4+3, y*3)
+  LcdPixel(1, x*4, y*3+1)
+  LcdPixel(1, x*4+1, y*3+1)
+  LcdPixel(1, x*4+2, y*3+1)
+  LcdPixel(1, x*4+3, y*3+1)
+  LcdPixel(1, x*4, y*3+2)
+  LcdPixel(1, x*4+1, y*3+2)
+  LcdPixel(1, x*4+2, y*3+2)
+  LcdPixel(1, x*4+3, y*3+2)
 return
 </code></pre>
 </article>
@@ -173,7 +174,7 @@ return
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/due-script/samples/flappy-bird.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/due-script/samples/pulse-falling-bird.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
