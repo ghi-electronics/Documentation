@@ -1,9 +1,11 @@
-# NeoPixel Rotary
+# Grove Modules 
  ---
+
+ ## Rotary Module
 
 ![Rotary Module](images/rotary-neopixel.gif)
 
-This sample uses a Grove rotary module to control NeoPixel Ring. This sample uses [Analog](../corelib/analog.md) & [Neopixel](../corelib/neopixel.md).
+This sample uses a Grove rotary module to control a NeoPixel Ring. This sample uses [Analog](../corelib/analog.md) & [Neopixel](../corelib/neopixel.md).
 
 
 **Hardware:**
