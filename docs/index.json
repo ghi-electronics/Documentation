@@ -186,8 +186,8 @@
   },
   "software/due-script/samples/rotary-neopixel.html": {
     "href": "software/due-script/samples/rotary-neopixel.html",
-    "title": "NeoPixel Rotary",
-    "keywords": "NeoPixel Rotary This sample uses a Grove rotary module to control NeoPixel Ring. This sample uses Analog & Neopixel. Hardware: FEZ Flea Grove XIAO Shield Grove Rotary Angle Sensor NeoPixel Ring Software: @loop NeoClear() NeoShow(24) a=ARead(6) NeoSet(a/4,255,0,0) NeoShow(24) Wait(50) goto loop"
+    "title": "Grove Modules",
+    "keywords": "Grove Modules Rotary Module This sample uses a Grove rotary module to control a NeoPixel Ring. This sample uses Analog & Neopixel. Hardware: FEZ Flea Grove XIAO Shield Grove Rotary Angle Sensor NeoPixel Ring Software: @loop NeoClear() NeoShow(24) a=ARead(6) NeoSet(a/4,255,0,0) NeoShow(24) Wait(50) goto loop"
   },
   "software/due-script/samples/samples.html": {
     "href": "software/due-script/samples/samples.html",
@@ -202,7 +202,7 @@
   "software/intro.html": {
     "href": "software/intro.html",
     "title": "DUE Link",
-    "keywords": "DUE Link A DUE Link enabled device can give a computer, tablet or phone access to the physical world. Not only that, the DUE Link platform includes DUE Scripts for extending the device's feature or even run independently from any additional hardware. Physical-World Extension Though a standard USB connection, a DUE-enabled device can be connected to modern devices, such as phones, laptops, tablets, desktops and even smaller devices such as raspberry pi. The device will simply load, with no need to load any USB drivers. This is true on Windows, Mac, Linux, Android and even Chrome OS. Once effortlessly connected, developers can use the coding environment of choice to access a long list of available inputs and outputs. This includes, but not limited to, analog, digital, PWM, I2C, and SPi. Several coding languages are officially supported , with provided libraries and sample code; however, any other language can theoretically be supported. See all of the Coding Options. DUE Scripts The DUE Link platform includes DUE Scripts allowing for further expandability. Additionally, these scripts allows the system to run independently from any host. Learn more about DUE Script."
+    "keywords": "DUE Link A DUE Link enabled device can give a computer, tablet or phone access to the physical world. Not only that, the DUE Link platform includes DUE Scripts for extending the device's feature or even run independently from any additional hardware. Host Mode Though a standard USB connection, a DUE-enabled device can be connected to modern devices, such as phones, laptops, tablets, desktops and even smaller devices such as raspberry pi. The device will simply load, with no need to load any USB drivers. This is true on Windows, Mac, Linux, Android and even Chrome OS. Once effortlessly connected, developers can use the coding environment of choice to access a long list of available inputs and outputs. This includes, but not limited to, Analog, Digital, PWM, I2C, and SPI. Several coding languages are officially supported , with provided libraries and sample code; however, any other language can theoretically be supported using our open-source DUE libraries. See all of the Coding Options. DUE Scripts The DUE Link platform includes DUE Scripts allowing for further expandability. Additionally, these scripts allows the system to run independently from any host. Learn more about DUE Script."
   },
   "software/legal.html": {
     "href": "software/legal.html",
