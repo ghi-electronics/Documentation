@@ -82,7 +82,34 @@
 <li><p><strong>Echo(enable)</strong>  <br>
 <strong>enable:</strong> 0 = Enable echo , 1 = Disable echo</p>
 </li>
-<li><p><strong>Version</strong>  - Returns the current firmware version of DUE <br></p>
+<li><p><strong>Version</strong>  - Returns the current firmware version of DUE <br>
+The last character returned in Version is board <br></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Board</th>
+<th style="text-align: left;">Character</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Pulse</td>
+<td style="text-align: left;">P</td>
+</tr>
+<tr>
+<td style="text-align: left;">Edge</td>
+<td style="text-align: left;">E</td>
+</tr>
+<tr>
+<td style="text-align: left;">Flea</td>
+<td style="text-align: left;">F</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pico</td>
+<td style="text-align: left;">P</td>
+</tr>
+</tbody>
+</table>
 </li>
 <li><p><strong>Print(text)</strong>  - Prints the value of the argument to the console on the same line <br>
 <strong>text:</strong> String or variable</p>
