@@ -4,7 +4,14 @@
 **enable:** 0 = Enable echo , 1 = Disable echo
 
 - **Version**  - Returns the current firmware version of DUE <br>
+The last character returned in Version is board <br> 
 
+  | Board       | Character |
+  | :---        |:---       |
+  |    Pulse    |     P     |
+  |    Edge     |     E     |
+  |    Flea     |     F     |
+  |    Pico     |     P     |
 - **Print(text)**  - Prints the value of the argument to the console on the same line <br>
 **text:** String or variable
 
