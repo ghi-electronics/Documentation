@@ -11,7 +11,8 @@ The last character returned in Version is board <br>
   |    Pulse    |     P     |
   |    Edge     |     E     |
   |    Flea     |     F     |
-  |    Pico     |     P     |
+  |    Pico     |     I     |
+
 - **Print(text)**  - Prints the value of the argument to the console on the same line <br>
 **text:** String or variable
 
