@@ -75,18 +75,6 @@ return
 # Plot large pixel
 # p=pxl(x,y)
 @pxl
-  #for i=0 to 2: for j=0 to 3:LcdPixel(1, x*4+j, y*3+i):next:next
-  LcdPixel(1, x*4, y*3)
-  LcdPixel(1, x*4+1, y*3)
-  LcdPixel(1, x*4+2, y*3)
-  LcdPixel(1, x*4+3, y*3)
-  LcdPixel(1, x*4, y*3+1)
-  LcdPixel(1, x*4+1, y*3+1)
-  LcdPixel(1, x*4+2, y*3+1)
-  LcdPixel(1, x*4+3, y*3+1)
-  LcdPixel(1, x*4, y*3+2)
-  LcdPixel(1, x*4+1, y*3+2)
-  LcdPixel(1, x*4+2, y*3+2)
-  LcdPixel(1, x*4+3, y*3+2)
+  for k=0 to 2:for j=0 to 3:LcdPixel(1, x*4+j, y*3+k):next:next
 return
 ```
