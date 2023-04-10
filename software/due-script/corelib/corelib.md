@@ -7,6 +7,7 @@ The core library gives DUE Scripts the necessary API to access hardware. It has 
 | API       | Use          |
 | :--- |:---|
 | [Analog](analog.md) | Read or Write analog pins |
+| [Beep](beep.md) | Beep using any pin |
 | [Button](button.md) | Read a button. Similar to Digital read but handles debounce |
 | [Demo](demo.md) | Built-in demos |
 | [Digital](digital.md) | Read or write digital pins |
@@ -20,6 +21,7 @@ The core library gives DUE Scripts the necessary API to access hardware. It has 
 | [Servo](servo.md) | Control servo motors |
 | [Sound](sound.md) | Generate sounds on the device's speaker (device specific) |
 | [SPI](spi.md) | Access the SPI data bus |
+| [System Functions](systemfunctions.md) | Built-in functions |
 | [Touch](touch.md) | Allows for capacitive touch sensing |
 | [UART](uart.md) | Transfer data on the UART serial port |
 
