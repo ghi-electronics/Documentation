@@ -11,7 +11,7 @@ Developers have the choice to use any development environment and IDE of choice.
 
 ## Open Source
 
-Libraries for the supported languages are provided open-source. We invite you to learn more about the internal workings of DUE Link and also invite you to support additional systems and languages. [Due Libraries Repo](https://github.com/ghi-electronics/due-libraries).
+Libraries for the supported languages are provided open-source. We invite you to learn more about the internal workings of DUE Link and also invite you to support additional systems and languages. [DUE Libraries Repo](https://github.com/ghi-electronics/due-libraries).
 
 ## The Transport
 
@@ -19,7 +19,7 @@ The host connects to a due device using a standard USB connection. All the neces
 
 On Windows, the device manager can be used to see a list of available serial ports.
 
-(image)
+![Device Manager](../images/device-manager.jpg)
 
 ## Troubleshooting
 

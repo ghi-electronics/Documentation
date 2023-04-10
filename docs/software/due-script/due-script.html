@@ -81,10 +81,10 @@
 <hr>
 <p>DUE Scripts run internally on any DUE-enabled <a href="../../hardware/intro.html">hardware</a>. This allows users to run simple quick command, called immediate mode. Additionally, users can extend the DUE language with additional functionality that can be accessed externally or can be executed onto the device. This is called recording mode.</p>
 <h2 id="operating-modes">Operating Modes</h2>
-<p><em>Immediate</em> mode, commands are executed immediately. In <em>Record</em> mode, commands are stored in flash and executed with the <strong>run</strong> command.</p>
+<p><em>Immediate mode</em>, commands are executed immediately. In <em>Record mode</em>, commands are stored in flash and executed with the <code>run</code> command.</p>
 <p><strong>Immediate Mode</strong></p>
 <p>A user will know they are in this mode when their cursor prompt is the<br>
-<strong><em>&gt;</em></strong> character. All statements are executed as soon as entered.</p>
+<code>&gt;</code> character. All statements are executed as soon as entered.</p>
 <pre><code class="lang-basic">&gt; print(&quot;Hello World&quot;)
 </code></pre>
 <div class="NOTE">
@@ -92,8 +92,8 @@
 <p>Immediate Mode is the default mode when device is first connected.</p>
 </div>
 <p><strong>Record Mode</strong>
-To enter into <em>Record</em> mode, the user enters the <strong>$</strong> character.
-The character prompt will change to the <strong>$</strong> sign until <em>Record</em> mode is exited using the <strong>&gt;</strong> character. All statements entered are stored directly in flash but not executed until <strong>run</strong> is entered.</p>
+To enter into <em>Record mode</em>, the user enters the <code>$</code> character.
+The character prompt will change to the <code>$</code> sign until <em>Record mode</em> is exited using the <code>&gt;</code> character. All statements entered are stored directly in flash but not executed until <code>run</code> is entered.</p>
 <table>
 <thead>
 <tr>
@@ -112,7 +112,7 @@ The character prompt will change to the <strong>$</strong> sign until <em>Record
 </tr>
 </tbody>
 </table>
-<p>The following statements control the program recorded in flash, but can be used in both <em>Immediate or Record</em> modes. When used in <em>Record</em> mode these special statements execute, but are not added to the program in flash.</p>
+<p>The following statements control the program recorded in flash, but can be used in both <em>Immediate or Record modes</em>. When used in <em>Record mode</em> these special statements execute, but are not added to the program in flash.</p>
 <table>
 <thead>
 <tr>
@@ -122,15 +122,15 @@ The character prompt will change to the <strong>$</strong> sign until <em>Record
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">run</td>
+<td style="text-align: left;">Run</td>
 <td style="text-align: left;">Executes the program stored in flash</td>
 </tr>
 <tr>
-<td style="text-align: left;">new</td>
+<td style="text-align: left;">New</td>
 <td style="text-align: left;">Erases the program stored in flash</td>
 </tr>
 <tr>
-<td style="text-align: left;">list</td>
+<td style="text-align: left;">List</td>
 <td style="text-align: left;">Returns all the code in your program</td>
 </tr>
 </tbody>
@@ -144,10 +144,10 @@ $ PrintLn (x)
 $ PrintLn (y)
 $ &gt;
 &gt; x=1:y=2
-&gt; run
+&gt; Run
 1
 2
-&gt;list
+&gt;List
 PrintLn(x)
 PrintLn(y)
 &gt;new
@@ -158,22 +158,22 @@ PrintLn(y)
 </div>
 <hr>
 <h2 id="script-features">Script Features</h2>
-<p>DUE Scripts are not case sensitive. Its syntax is very simple and inspired by BASIC coding language. The power of DUE Scripts comes from its simplicity rather than from feature set. This is a perfect language to teach someone coding.</p>
-<p>Users that require serious coding should be using DUE Platform combined with one of the many available coding languages. Still, DUE Scripts can be used to extend those languages, as detailed below.</p>
+<p>DUE Scripts are not case sensitive. Its syntax is very simple and inspired by BASIC coding language. The power of DUE Scripts comes from its simplicity rather than from its feature set. This is a perfect language to teach someone coding.</p>
+<p>Users that require serious coding should be using the DUE Platform combined with one of the many available coding languages. Still, DUE Scripts can be used to extend those languages, as detailed below.</p>
 <h3 id="comments">Comments</h3>
-<p>The # character is used to identify a comment. Comments are ignored by the program, text added to help developers understand the code.</p>
+<p>The <code>#</code> character is used to identify a comment. Comments are ignored by the program, text added to help developers understand the code.</p>
 <pre><code class="lang-basic"># This is a comment
 x=10
-print (x) # This is also a comment 
+Print(x) # This is also a comment 
 </code></pre>
 <h3 id="variables">Variables</h3>
-<p>DUE Script has a fixed set of 26 variables, one for each letter, assigned to a to z. The only data type used in DUE is float. All variables created are global in nature. To use a variable, simply use <code>x=5.5</code></p>
+<p>DUE Script has a fixed set of 26 variables, one for each letter, assigned to <code>a</code> to <code>z</code>. The only data type used in DUE is float. All variables created are global in nature. To use a variable, simply use <code>x=5.5</code></p>
 <h3 id="arrays">Arrays</h3>
-<p>Similarly to variables, arrays are fixed to 26 arrays. They are assigned to letters a to z. DUE Script differentiates between variable <code>a</code> and array <code>a[]</code> when square brackets are used. Arrays are size zero by default and can be sized, or resized using 'dim'.</p>
-<p>This is an example that uses both, variables and arrays.</p>
-<pre><code class="lang-basic">dim a[10]
-for i=0 to 9:a[i]=i*2:next
-for i=0 to 9:println(a[i]):next
+<p>Similarly to variables, arrays are fixed to 26 arrays. They are assigned to letters <code>a</code> to <code>z</code>. DUE Script differentiates between variable <code>a</code> and array <code>a[]</code> when square brackets are used. Arrays are size zero by default and can be sized, or resized using <code>Dim</code>.</p>
+<p>This is an example that uses both, variables and arrays:</p>
+<pre><code class="lang-basic">Dim a[10]
+For i=0 to 9:a[i]=i*2:Next
+For i=0 to 9:PrintLn(a[i]):Next
 </code></pre>
 <p>The output will look like:</p>
 <pre><code>0
@@ -189,27 +189,27 @@ for i=0 to 9:println(a[i]):next
 </code></pre>
 <div class="TIP">
 <h5>Tip</h5>
-<p>Use <code>dim a[0]</code> to free up the memory reserved fro array <code>a[]</code>.</p>
+<p>Use <code>Dim a[0]</code> to free up the memory reserved for array <code>a[]</code>.</p>
 </div>
 <h3 id="for-loop">For-Loop</h3>
-<pre><code class="lang-basic">for i=1 to 1000 step 10
+<pre><code class="lang-basic">For i=1 to 1000 Step 10
 PrintLn(i)
-next
+Next
 </code></pre>
 <h3 id="if-statement">If-Statement</h3>
-<pre><code class="lang-basic">if x=1
+<pre><code class="lang-basic">If x=1
 PrintLn(&quot;one&quot;)
-else 
+Else 
 PrintLn(&quot;not one&quot;)
 </code></pre>
 <h3 id="labels">Labels</h3>
-<p>Labels is needed to redirect the program. They are used by <code>goto</code> and when calling a subroutine.</p>
+<p>Labels are needed to redirect the program. They are used by <code>Goto</code> and when calling a subroutine.</p>
 <p>A Label is created by using the <code>@</code> symbol in front of the desired label. Labels are limited to 6 characters.</p>
 <h3 id="goto">Goto</h3>
-<p>A goto is useful for repeating tasks indefinitely.</p>
+<p>A <code>Goto</code> is useful for repeating tasks indefinitely.</p>
 <pre><code class="lang-basic">$@Loop
-$add code here that runs forever
-$goto loop 
+$ add code here that runs forever
+$Goto Loop 
 </code></pre>
 <h3 id="end--return">End &amp; Return</h3>
 <p>End terminates the program.</p>
@@ -217,22 +217,22 @@ $goto loop
 End
 Print(&quot;This will not get printed&quot;)
 </code></pre>
-<p>Return send the execution back from a called subroutine, see Subroutines below.</p>
+<p><code>Return</code> send the execution back from a called subroutine, see Subroutines below.</p>
 <h3 id="subroutine">Subroutine</h3>
-<p>Developers can use subroutines to implement &quot;soft&quot; like functions in their code. These subroutines similar to functions but do not take variables or return values.</p>
+<p>Developers can use subroutines to implement &quot;soft&quot; like functions in their code. These subroutines are similar to functions but do not take variables or return values.</p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>The built-in API offers true functions and therefore do take arguments and return values.</p>
 </div>
-<p>User subroutines are always added in recoding mode and resides in nonvolatile memory. A user subroutine starts by a label and ends with a return.</p>
+<p>User subroutines are always added in recoding mode and resides in nonvolatile memory. A user subroutine starts with a label and ends with a <code>Return</code>.</p>
 <pre><code class="lang-basic">$@Mine
-$add code here
-$return
+$ add code here
+$Return
 </code></pre>
 <p>The subroutine can then be called by its name followed by <code>()</code>.</p>
 <pre><code class="lang-basic">Mine()
 </code></pre>
-<p>Note how a subroutine can be done externally from Immediate Mode. This allows for extending DUE Scripts with new commands that can then later be called from immediate mode and in turn be called from a high level language, like Python.</p>
+<p>Note how a subroutine can be called externally from <em>Immediate Mode</em>. This allows for extending DUE Scripts with new commands that can then later be called from <em>Immediate Mode</em> and in turn be called from a high level language, like Python, when connected to a Host.</p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>DUE variables are global and any changes inside subroutines will affect variable values outside those subroutines.</p>
@@ -242,7 +242,7 @@ $return
 <h2 id="combining-commands">Combining Commands</h2>
 <p>Multiple commands can be combined on a single line. This is especially useful when using immediate mode where a single line is required. To use multiple command, a <code>:</code> symbol is used.</p>
 <p>This is an example of a for loop in a single line</p>
-<pre><code class="lang-basic">for i=1 to 1000 step 10:PrintLn(i):next
+<pre><code class="lang-basic">For i=1 to 1000 Step 10:PrintLn(i):Next
 </code></pre>
 </article>
           </div>

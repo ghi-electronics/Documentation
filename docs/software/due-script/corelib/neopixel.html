@@ -80,9 +80,9 @@
 
 <p>Neopixel is fixed to pin number 1</p>
 <ul>
-<li><p><strong>NeoClear()</strong> - Clears all LEDs (in memory). Needs NeoShow() to see the affect</p>
+<li><p><strong>NeoClear()</strong> - Clears all LEDs (in memory). Needs <code>NeoShow()</code> to see the affect</p>
 </li>
-<li><p><strong>NeoSet(index, red, green, blue)</strong> - Sets a specific LED to a color. Needs NeoShow() to see affect<br>
+<li><p><strong>NeoSet(index, red, green, blue)</strong> - Sets a specific LED to a color. Needs <code>NeoShow()</code> to see affect<br>
 <strong>index:</strong> The LED index where 0 is first one and supporting up to 256 LEDs<br>
 <strong>red, green, blue:</strong> Color levels, 0 to 255 <br></p>
 </li>
@@ -92,17 +92,17 @@
 </ul>
 <p>This example assumes we have 8 LEDs and will set 8 LEDs to red, increasing the color intensity from 0 to 80.  Then it waits one second before it sets the first LED to bright purple!</p>
 <pre><code class="lang-basic">NeoClear()
-for x = 0 to 8
+For x = 0 to 8
     NeoSet(x,x*10,0,0)
-next
+Next
 NeoShow(8)
 Wait(1000)
 NeoSet(0,200,0,200)
 NeoShow(8)
 </code></pre>
 <ul>
-<li><strong>NeoStream(count)</strong> - Streams data directly to LEDs.Needs NeoShow() to see affect<br>
-<strong>count:</strong> The count of LEDs to &quot;stream&quot;<br>
+<li><strong>NeoStream(count)</strong> - Streams data directly to LEDs.Needs <code>NeoShow()</code> to see affect<br>
+<strong>count:</strong> The count of LEDs to stream<br>
 <strong>Stream size:</strong> It is &quot;count&quot; multiplied by 3, DUE to the fact that each LED needs 3 bytes for colors, ordered in GRB format.</li>
 </ul>
 <hr>

@@ -30,10 +30,10 @@ LED is found on pin 100.
 
 ```basic
 x = DRead(2,1)
-if x = 0
+If x = 0
     Print("low")
-else
+Else
     Print("high")
-end
+End
 ```
 ---

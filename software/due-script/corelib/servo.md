@@ -13,6 +13,6 @@ ServoSet(0,0)
 Wait(1000)
 ServoSet(0,180)
 Wait(1000)
-goto Loop
+Goto Loop
 ```
 ---

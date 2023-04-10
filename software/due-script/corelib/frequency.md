@@ -11,14 +11,14 @@ Frequency is fixed to pin 0
 
 ```basic
 @Loop
-for x=1 to 1000
+For x=1 to 1000
     Freq(x,500,500)
     Wait(200)
-next
-for x=1000 to 1 step -1
+Next
+For x=1000 to 1 step -1
     Freq(x,500,500)
     Wait(200)
-next
-goto Loop
+Next
+Goto Loop
 ```
 ---

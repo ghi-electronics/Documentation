@@ -12,16 +12,16 @@ These functions provide access to analog pins.
 > Frequency is fixed to 50hz.
 
 ```basic
-@loop
-for i=0 to 1000 step 100
+@Loop
+For i=0 to 1000 Step 100
     AWrite(0,i)
     Wait(100)
 next
-for i=1000 to 0 step -100
+For i=1000 to 0 Step -100
     AWrite(0,i) 
     Wait(100)
-next
-goto loop
+Next
+Goto Loop
 
 ```
 
@@ -32,13 +32,13 @@ goto loop
 **Returns:** The analog value of the pin
 
 ```basic
-@loop
-for i=0 to 100
+@Loop
+For i=0 to 100
     x=ARead(0)
     PrintLn(x)  
     Wait(100)
-next
-goto loop
+Next
+Goto Loop
 ```
 
 ---

@@ -23,10 +23,6 @@ The last character returned in Version is board <br>
 
 - **TickMs()** - read system ticks in milliseconds  <br>
 
-<!---
-- **GetSeconds()** - read system current ticks in seconds  <br>
--->
-
 - **GetCh()** - reads character input, in ASCII format. Return **-1** when no character detected  <br>
 
 - **GetNum()** - reads number input, can be used with **IsNAN()** to determine if value is a number  <br>

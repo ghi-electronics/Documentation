@@ -26,9 +26,9 @@ Buttons as a function are only available using pin 0,1,2,A,or B. Alternatively, 
 BtnEnable('a',1)
 @Loop
 x=BtnDown('a')
-if x=1
+If x=1
     PrintLn("Button A")
-end
+End
 Goto Loop
 ```
 ---

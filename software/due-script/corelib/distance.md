@@ -13,11 +13,11 @@ This function is used when using a distance sensors.
 ```basic
 @Loop
 x = Distance(0,1) 
-if x>0 
+If x>0 
     PrintLn(x)
-end
+End
 Wait(100)
-goto Loop
+Goto Loop
 ```
 ---
 

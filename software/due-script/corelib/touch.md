@@ -6,10 +6,10 @@
 ```basic
 @Loop
 a=TouchRead(0):b=TouchRead(1):c=TouchRead(2)
-if a>0:Println("pin 0"):end 
-if b>0:Println("pin 1"):end
-if c>0:Println("pin 2"):end 
-wait(100)
-goto Loop
+If a>0:PrintLn("pin 0"):End 
+If b>0:PrintLn("pin 1"):End
+If c>0:PrintLn("pin 2"):End 
+Wait(100)
+Goto Loop
 ```
 ---
