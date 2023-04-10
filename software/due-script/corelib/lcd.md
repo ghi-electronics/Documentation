@@ -82,12 +82,12 @@ LcdShow()
 
 ```basic
 LcdClear(0)
-LcdText("Hello",1,0,0,2,2)
+LcdTextS("Hello",1,0,0,2,2)
 LcdShow()
 Wait(1000)
 x=100
 LcdClear(0)
-LcdText(Str(x),1,0,0,2,2)
+LcdTextS(Str(x),1,0,0,2,2)
 LcdShow()
 ```
 
