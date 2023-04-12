@@ -116,12 +116,14 @@ Next
 ```
 
 ### If-Statement
+If statements must end with the `End` command. This will only end the If statement and not your program. 
 
 ```basic 
 If x=1
 PrintLn("one")
 Else 
 PrintLn("not one")
+End
 ```
 ### Labels
 
