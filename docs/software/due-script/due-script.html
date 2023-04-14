@@ -197,10 +197,12 @@ PrintLn(i)
 Next
 </code></pre>
 <h3 id="if-statement">If-Statement</h3>
+<p>If statements must end with the <code>End</code> command. This will only end the If statement and not your program.</p>
 <pre><code class="lang-basic">If x=1
 PrintLn(&quot;one&quot;)
 Else 
 PrintLn(&quot;not one&quot;)
+End
 </code></pre>
 <h3 id="labels">Labels</h3>
 <p>Labels are needed to redirect the program. They are used by <code>Goto</code> and when calling a subroutine.</p>
@@ -212,7 +214,7 @@ $ add code here that runs forever
 $Goto Loop 
 </code></pre>
 <h3 id="end--return">End &amp; Return</h3>
-<p>End terminates the program.</p>
+<p>End terminates the program except when used to close an <code>if</code> statement.</p>
 <pre><code class="lang-basic">Print(&quot;Hello&quot;)
 End
 Print(&quot;This will not get printed&quot;)

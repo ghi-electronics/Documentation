@@ -90,15 +90,15 @@
 <p>Freq() is a non-blocking function, calling Freq() a second time before the duration of the first call is over will end the function despite the duration of first calls argument.</p>
 </div>
 <pre><code class="lang-basic">@Loop
-for x=1 to 1000
+For x=1 to 1000
     Freq(x,500,500)
     Wait(200)
-next
-for x=1000 to 1 step -1
+Next
+For x=1000 to 1 step -1
     Freq(x,500,500)
     Wait(200)
-next
-goto Loop
+Next
+Goto Loop
 </code></pre>
 <hr>
 </article>

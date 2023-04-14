@@ -89,16 +89,16 @@
 <h5>Note</h5>
 <p>Frequency is fixed to 50hz.</p>
 </div>
-<pre><code class="lang-basic">@loop
-for i=0 to 1000 step 100
+<pre><code class="lang-basic">@Loop
+For i=0 to 1000 Step 100
     AWrite(0,i)
     Wait(100)
 next
-for i=1000 to 0 step -100
+For i=1000 to 0 Step -100
     AWrite(0,i) 
     Wait(100)
-next
-goto loop
+Next
+Goto Loop
 
 </code></pre>
 <h5 id="analog-read">Analog Read</h5>
@@ -107,13 +107,13 @@ goto loop
 <strong>pin:</strong> pin number <br>
 <strong>Returns:</strong> The analog value of the pin</li>
 </ul>
-<pre><code class="lang-basic">@loop
-for i=0 to 100
+<pre><code class="lang-basic">@Loop
+For i=0 to 100
     x=ARead(0)
     PrintLn(x)  
     Wait(100)
-next
-goto loop
+Next
+Goto Loop
 </code></pre>
 <hr>
 </article>

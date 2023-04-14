@@ -143,7 +143,7 @@ $Goto Loop
 
 ### End & Return
 
-End terminates the program. Except when used to close an `if` statement. 
+End terminates the program except when used to close an `if` statement. 
 
 ```basic
 Print("Hello")
