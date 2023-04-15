@@ -1,69 +1,50 @@
-# Pulse Analog Clock
+# BrainGamer - Sketch
 
-![Pulse Analog Clock](images/analog-clock.gif)
+![BrainGamer Sketch](images/analog-clock.gif)
 
-This advanced sample turns your Brainpad Pulse into an analog clock
+Pair your Pulse with the Brain Gamer to create a piece of art
 
 Hardware:
 - Brainpad Pulse
-- BrainPower (Optional)
+- BrainGamer
 
-This example demonstrates advanced features of the DUE-Script language. 
-- Using arrays to store X,Y coordinates
-- Using variable as both arrays and numbers (very advanced feature to save variables)
+This example demonstrates the use of both digital and analog inputs. 
 
 ```basic
-# Pulse - LCD Clock
-
-# Arrays to store the X and Y coordinates of each hand of the clock
-# Index 0 - X
-# Index 1 - Y
-dim h[2]
-dim m[2]
-dim s[2]
-
-# Numeric variables storing the current value for each of the hands
-h=5
-m=0
-s=0
-
-p=3.1415926
+# BrainGamer - Sketch
+init()
 
 @loop
-  LCDClear(0)
-  face()
-  time()
+  # Gamer Btn-X - Clear the image
+  if dread(13, 1)=0 
+    init()
+  end
+
+  # Draw the pixel
+  LCDPixel(1,x,y)
   LCDShow()
-  Wait(1000)
+
+  # Read the joystick
+  u=aread(4) # Joystick-X
+  v=aread(3) # Joystick-Y
+  
+  # Move the based on the joystick position
+  if u<45:x=x+1:end
+  if u>55:x=x-1:end
+  if v<45:y=y-1:end
+  if v>55:y=y+1:end
+
+  # Wrap around the screen edges
+  if x>127:x=0:end
+  if x<0:x=127:end
+  if y>63:y=0:end
+  if y<0:y=63:end
 goto loop
-  
-# Draw the clock face
-@face
-  # Draw the small dot on the clock face
-  for i=0 to 59
-    m[0]=25*cos(i*p/30):m[1]=25*sin(i*p/30)
-    LCDPixel(1,64+m[0],32+m[1])
-  next
 
-  # Draw the large dots for every hour
-  for i=0 to 11
-    m[0]=25*cos(i*p/6):m[1]=25*sin(i*p/6)
-    LCDCircle(1,64+m[0],32+m[1],2)
-  next
-  return
-
-# Calculate and draw the new hand positions
-@time
-  h[0]=16*cos(h*p/6):h[1]=16*sin(h*p/6)
-  m[0]=20*cos(m*p/30):m[1]=20*sin(m*p/30)
-  s[0]=25*cos(s*p/30):s[1]=25*sin(s*p/30)
-  if s=60:s=0:m=m+1:end
-  if m=60:m=0:h=h+1:end
-  if h=12:h=0:end
-  s=s+1
-  
-  LCDLine(1,64,32,64+h[0],32+h[1])
-  LCDLine(1,64,32,64+m[0],32+m[1])
-  LCDLine(1,64,32,64+s[0],32+s[1])
-  return
+# Initialize the scetcher
+@init
+  x=64
+  y=32
+  LCDClear(0)
+return
 ```
