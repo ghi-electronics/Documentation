@@ -31,7 +31,7 @@
 
 ## [Samples](due-script/samples/samples.md)
 ### [NeoPixel Matrix](due-script/samples/neopixel-matrix.md)
-### [Neo Pixel Rotary](due-script/samples/rotary-neopixel.md)
+### [NeoPixel Rotary](due-script/samples/rotary-neopixel.md)
 ### [Falling Bird](due-script/samples/falling-bird.md)
 ### [Pulse Analog Clock](due-script/samples/pulse-analogclock.md)
 ### [Pulse Bounce Ball](due-script/samples/pulse-bouncingball.md)
