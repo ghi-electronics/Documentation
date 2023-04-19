@@ -28,7 +28,7 @@ init()
   u=aread(4) # Joystick-X
   v=aread(3) # Joystick-Y
   
-  # Move the based on the joystick position
+  # Move the pen based on the joystick position
   if u<45:x=x+1:end
   if u>55:x=x-1:end
   if v<45:y=y-1:end

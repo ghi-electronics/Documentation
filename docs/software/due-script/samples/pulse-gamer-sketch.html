@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Samples </title>
+      <title>BrainGamer - Sketch </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Samples ">
+      <meta name="title" content="BrainGamer - Sketch ">
     
       <link rel="shortcut icon" href="../../../images/favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
@@ -76,44 +76,53 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="samples">Samples</h1>
+<h1 id="braingamer---sketch">BrainGamer - Sketch</h1>
 
-<hr>
-<p>Here you'll find complete programs that take advantage of the DUE platform.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Sample</th>
-<th style="text-align: left;">Use</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><a href="neopixel-matrix.html">NeoPixel Matrix</a></td>
-<td style="text-align: left;">Several examples utilizing a 16x16 LED matrix</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="rotary-neopixel.html">NeoPixel Rotary</a></td>
-<td style="text-align: left;">Sample using Grove Rotary Module &amp; NeoPixel Ring</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="falling-bird.html">Falling Bird Game</a></td>
-<td style="text-align: left;">Falling Bird Game 16x16 LED matrix &amp; BrainPad Pulse</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="pulse-analogclock.html">Pulse Analog Clock</a></td>
-<td style="text-align: left;">Analog Clock using the BrainPad Pulse</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="pulse-bouncingball.html">Pulse Bouncing Ball</a></td>
-<td style="text-align: left;">Example that bouces ball on BrainPad Pulse screen</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="pulse-gamer-sketch.html">BrainGamer Sketch</a></td>
-<td style="text-align: left;">Create your own art with BrainGamer and BrainPad Pulse</td>
-</tr>
-</tbody>
-</table>
+<p><img src="images/braingamer-sketch.gif" alt="BrainGamer Sketch"></p>
+<p>Pair your Pulse with the Brain Gamer to create a piece of art</p>
+<p>Hardware:</p>
+<ul>
+<li>Brainpad Pulse</li>
+<li>BrainGamer</li>
+</ul>
+<p>This example demonstrates the use of both digital and analog inputs.</p>
+<pre><code class="lang-basic"># BrainGamer - Sketch
+init()
+
+@loop
+  # Gamer Btn-X - Clear the image
+  if dread(13, 1)=0 
+    init()
+  end
+
+  # Draw the pixel
+  LCDPixel(1,x,y)
+  LCDShow()
+
+  # Read the joystick
+  u=aread(4) # Joystick-X
+  v=aread(3) # Joystick-Y
+  
+  # Move the pen based on the joystick position
+  if u&lt;45:x=x+1:end
+  if u&gt;55:x=x-1:end
+  if v&lt;45:y=y-1:end
+  if v&gt;55:y=y+1:end
+
+  # Wrap around the screen edges
+  if x&gt;127:x=0:end
+  if x&lt;0:x=127:end
+  if y&gt;63:y=0:end
+  if y&lt;0:y=63:end
+goto loop
+
+# Initialize the scetcher
+@init
+  x=64
+  y=32
+  LCDClear(0)
+return
+</code></pre>
 </article>
           </div>
 
@@ -122,7 +131,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/due-script/samples/samples.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/due-script/samples/pulse-gamer-sketch.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
