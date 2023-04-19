@@ -1,6 +1,6 @@
 # BrainGamer - Sketch
 
-![BrainGamer Sketch](images/analog-clock.gif)
+![BrainGamer Sketch](images/braingamer-sketch.gif)
 
 Pair your Pulse with the Brain Gamer to create a piece of art
 
