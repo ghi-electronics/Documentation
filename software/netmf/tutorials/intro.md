@@ -34,6 +34,6 @@
 * [XTEA](xtea.md)
 
 ## What is .NET Micro Framework?
-If you are new to NETMF you might want to take a look at our free e-book [.NET Micro Framework for Beginners](http://files.ghielectronics.com/downloads/Documents/Guides/NETMF%20for%20Beginners.pdf)
+If you are new to NETMF you might want to take a look at our free e-book [.NET Micro Framework for Beginners](https://ghistorage.blob.core.windows.net/downloads/Documents/Guides/NETMF%20for%20Beginners.pdf)
 
 ---

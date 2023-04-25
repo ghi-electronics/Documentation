@@ -15,7 +15,7 @@ Download and then install the following programs in order. Make sure the install
 You can verify the correct installation by running make --version and arm-none-eabi-gcc --version from a command prompt.
 
 ## Getting Started
-Download and extract the samples found [here](http://files.ghielectronics.com/downloads/NETMF/RLP%20Examples.zip).
+Download and extract the samples found [here](https://ghistorage.blob.core.windows.net/downloads/NETMF/RLP%20Examples.zip).
 
 The RLP.h file found in the Native directory is a header that defines our extensions and helpers that make it easier to write your native code. You will also see a folder for each supported platform. Within each platform, there are four files.
 
