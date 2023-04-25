@@ -51,5 +51,5 @@ Most commands require confirmation. Send Y or y followed by a new-line to procee
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v1.0.0 x64](http://files.ghielectronics.com/downloads/Bootloaders/Drivers/GHI%20Electronics%20Bootloader%20Driver%20x64%20v1.0.0.msi) | 2018-12-27 | Production | 74D66FC4236126A83CCCFE28D556F339
-[v1.0.0 x86](http://files.ghielectronics.com/downloads/Bootloaders/Drivers/GHI%20Electronics%20Bootloader%20Driver%20x86%20v1.0.0.msi) | 2018-12-27 | Production | 8BDE68132452E22B14597C0972ABA8FD
+[v1.0.0 x64](https://ghistorage.blob.core.windows.net/downloads/Bootloaders/Drivers/GHI%20Electronics%20Bootloader%20Driver%20x64%20v1.0.0.msi) | 2018-12-27 | Production | 74D66FC4236126A83CCCFE28D556F339
+[v1.0.0 x86](https://ghistorage.blob.core.windows.net/downloads/Bootloaders/Drivers/GHI%20Electronics%20Bootloader%20Driver%20x86%20v1.0.0.msi) | 2018-12-27 | Production | 8BDE68132452E22B14597C0972ABA8FD

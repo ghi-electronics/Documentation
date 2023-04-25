@@ -96,39 +96,39 @@ Most products already ship with bootloader already installed. But in case the lo
 ### FEZCLR (used on FEZ and BrainPad Classic)
 File | Date | MD5
 --- | --- | ---
-[v2.0.4](http://files.ghielectronics.com/downloads/Bootloaders/FEZCLR%20Bootloader%20v2.0.4.dfu) | 2017-08-31 | 33F7FCAE266D07209C079CEA38AAB583
-[v2.0.3](http://files.ghielectronics.com/downloads/Bootloaders/FEZCLR%20Bootloader%20v2.0.3.dfu) | 2017-07-07 | 056919694D6A5F06546F9B721AE141CE
+[v2.0.4](https://ghistorage.blob.core.windows.net/downloads/Bootloaders/FEZCLR%20Bootloader%20v2.0.4.dfu) | 2017-08-31 | 33F7FCAE266D07209C079CEA38AAB583
+[v2.0.3](https://ghistorage.blob.core.windows.net/downloads/Bootloaders/FEZCLR%20Bootloader%20v2.0.3.dfu) | 2017-07-07 | 056919694D6A5F06546F9B721AE141CE
 
 ### UC2550
 File | Date | MD5
 --- | --- | ---
-[v2.0.4](http://files.ghielectronics.com/downloads/Bootloaders/UC2550%20Bootloader%20v2.0.4.dfu) | 2018-04-05 | 692FA78A161BAA2AEF17E9F85A6AF141
+[v2.0.4](https://ghistorage.blob.core.windows.net/downloads/Bootloaders/UC2550%20Bootloader%20v2.0.4.dfu) | 2018-04-05 | 692FA78A161BAA2AEF17E9F85A6AF141
 
 ### UC5550
 File | Date | MD5
 --- | --- | ---
-[v2.0.5](http://files.ghielectronics.com/downloads/Bootloaders/UC5550%20Bootloader%20v2.0.5.dfu) | 2018-09-28 | 9F4DB868E5501773CC52048D8085B8D6
-[v2.0.4](http://files.ghielectronics.com/downloads/Bootloaders/UC5550%20Bootloader%20v2.0.4.dfu) | 2018-04-05 | 594744A52EC07CEFE6212669D33A5FE1
+[v2.0.5](https://ghistorage.blob.core.windows.net/downloads/Bootloaders/UC5550%20Bootloader%20v2.0.5.dfu) | 2018-09-28 | 9F4DB868E5501773CC52048D8085B8D6
+[v2.0.4](https://ghistorage.blob.core.windows.net/downloads/Bootloaders/UC5550%20Bootloader%20v2.0.4.dfu) | 2018-04-05 | 594744A52EC07CEFE6212669D33A5FE1
 
 ### G120 and G120E
 File | Date | MD5
 --- | --- | ---
-[v2.0.4](http://files.ghielectronics.com/downloads/Bootloaders/G120%20Bootloader%20v2.0.4.ghi) | 2017-08-31 | 7052D6FFB1890987DDCC4043895788D3
-[v2.0.2](http://files.ghielectronics.com/downloads/Bootloaders/G120%20Bootloader%20v2.0.2.ghi) | 2017-03-07 | 00ECD55A24607336863B1D61B91C3D86
+[v2.0.4](https://ghistorage.blob.core.windows.net/downloads/Bootloaders/G120%20Bootloader%20v2.0.4.ghi) | 2017-08-31 | 7052D6FFB1890987DDCC4043895788D3
+[v2.0.2](https://ghistorage.blob.core.windows.net/downloads/Bootloaders/G120%20Bootloader%20v2.0.2.ghi) | 2017-03-07 | 00ECD55A24607336863B1D61B91C3D86
 
 ### G400S and G400D
 File | Date | MD5
 --- | --- | ---
-[v2.0.4](http://files.ghielectronics.com/downloads/Bootloaders/G400%20Bootloader%20v2.0.4.bin) | 2017-09-13 | BD46D86D41DCD42C4FC50D27AF02E5EE
-[v2.0.2](http://files.ghielectronics.com/downloads/Bootloaders/G400%20Bootloader%20v2.0.2.bin) | 2017-04-06 | 81D45A8F078AA8E633C824C7BB3279DC
-[v2.0.1](http://files.ghielectronics.com/downloads/Bootloaders/G400%20Bootloader%20v2.0.1.bin) | 2016-06-27 | 42CD50E4105939611ABF360475EBF4E5
-[v1.0](http://files.ghielectronics.com/downloads/Bootloaders/G400_Bootloader_v1.0.zip) |2015-08-24 | 842FF841610A5354F28D376B6BFFCBA7
+[v2.0.4](https://ghistorage.blob.core.windows.net/downloads/Bootloaders/G400%20Bootloader%20v2.0.4.bin) | 2017-09-13 | BD46D86D41DCD42C4FC50D27AF02E5EE
+[v2.0.2](https://ghistorage.blob.core.windows.net/downloads/Bootloaders/G400%20Bootloader%20v2.0.2.bin) | 2017-04-06 | 81D45A8F078AA8E633C824C7BB3279DC
+[v2.0.1](https://ghistorage.blob.core.windows.net/downloads/Bootloaders/G400%20Bootloader%20v2.0.1.bin) | 2016-06-27 | 42CD50E4105939611ABF360475EBF4E5
+[v1.0](https://ghistorage.blob.core.windows.net/downloads/Bootloaders/G400_Bootloader_v1.0.zip) |2015-08-24 | 842FF841610A5354F28D376B6BFFCBA7
 
 ### USBizi
 File | Date | MD5
 --- | --- | ---
-[v1.0.7 144](http://files.ghielectronics.com/downloads/Bootloaders/USBizi%20144%20Bootloader%20v1.0.7.hex) | 2015-05-05 | 853557479D8797EAB650B98E3D333DCF
-[v1.0.7 100](http://files.ghielectronics.com/downloads/Bootloaders/USBizi%20100%20Bootloader%20v1.0.7.hex) | 2015-05-05 | 34D17AA5CA4E13D5447C80AB8094D064
+[v1.0.7 144](https://ghistorage.blob.core.windows.net/downloads/Bootloaders/USBizi%20144%20Bootloader%20v1.0.7.hex) | 2015-05-05 | 853557479D8797EAB650B98E3D333DCF
+[v1.0.7 100](https://ghistorage.blob.core.windows.net/downloads/Bootloaders/USBizi%20100%20Bootloader%20v1.0.7.hex) | 2015-05-05 | 34D17AA5CA4E13D5447C80AB8094D064
 
 
 ## USB Drivers
@@ -137,7 +137,7 @@ Only needed for Windows 7 and 8 since they do not automatically load drivers for
 
 File | Date | MD5
 --- | --- | ---
-[v1.0.0 x64](http://files.ghielectronics.com/downloads/Bootloaders/Drivers/GHI%20Electronics%20Bootloader%20Driver%20x64%20v1.0.0.msi) | 2018-12-27 | 74D66FC4236126A83CCCFE28D556F339
-[v1.0.0 x86](http://files.ghielectronics.com/downloads/Bootloaders/Drivers/GHI%20Electronics%20Bootloader%20Driver%20x86%20v1.0.0.msi) | 2018-12-27 | 8BDE68132452E22B14597C0972ABA8FD
-[v0.6.0 x64](http://files.ghielectronics.com/downloads/Bootloaders/Drivers/GHI%20Electronics%20Bootloader%20Driver%20x64%20v0.6.0.msi) | 2017-08-31 | AEDD7C00854BBF99AC3FDAB4976E1F33
-[v0.6.0 x86](http://files.ghielectronics.com/downloads/Bootloaders/Drivers/GHI%20Electronics%20Bootloader%20Driver%20x86%20v0.6.0.msi) | 2017-08-31 | A0F487D32B882199F0A69E6CAA8DE4CB
+[v1.0.0 x64](https://ghistorage.blob.core.windows.net/downloads/Bootloaders/Drivers/GHI%20Electronics%20Bootloader%20Driver%20x64%20v1.0.0.msi) | 2018-12-27 | 74D66FC4236126A83CCCFE28D556F339
+[v1.0.0 x86](https://ghistorage.blob.core.windows.net/downloads/Bootloaders/Drivers/GHI%20Electronics%20Bootloader%20Driver%20x86%20v1.0.0.msi) | 2018-12-27 | 8BDE68132452E22B14597C0972ABA8FD
+[v0.6.0 x64](https://ghistorage.blob.core.windows.net/downloads/Bootloaders/Drivers/GHI%20Electronics%20Bootloader%20Driver%20x64%20v0.6.0.msi) | 2017-08-31 | AEDD7C00854BBF99AC3FDAB4976E1F33
+[v0.6.0 x86](https://ghistorage.blob.core.windows.net/downloads/Bootloaders/Drivers/GHI%20Electronics%20Bootloader%20Driver%20x86%20v0.6.0.msi) | 2017-08-31 | A0F487D32B882199F0A69E6CAA8DE4CB
