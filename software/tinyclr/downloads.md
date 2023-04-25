@@ -22,7 +22,7 @@ The Firmware is the TinyCLR OS that lives on your hardware. The firmware version
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v2.2.0.5100 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.2.0.5100.ghi) | 2022-09-20 | Production | 9B69EF733A361D1D4D1484D40E5854B0
+[v2.2.0.5100 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.2.0.5100.ghi) | 2022-09-20 | Production | 9B69EF733A361D1D4D1484D40E5854B0
 [v2.2.0.5000 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.2.0.5000.ghi) | 2022-09-15 | Production | 825F30A6A562005138DC7285A56A2D67
 [v2.2.0.4000 (RTW)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.2.0.4000.ghi) | 2022-04-18 | Production | B4AF89D007656B846FBD18B3FD400947
 [v2.2.0.3000 (RC1)](http://files.ghielectronics.com/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.2.0.3000.ghi) | 2022-03-09 | RC1 | AF083BB8FB2B66646933D417B2339033
