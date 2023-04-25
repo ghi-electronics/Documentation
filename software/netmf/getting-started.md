@@ -9,7 +9,7 @@ Download and install [Microsoft's Visual Studio 2013 Community Edition](http://g
 
 ### Install Microsoft .NET Micro Framework
 * Uninstall any currently installed NETMF SDKs.
-* Download [Microsoft .NET Micro Framework 4.3 (QFE2)](http://files.ghielectronics.com/downloads/NETMF/SDKs/MS%20NETMF%20QFE2.zip) and unzip the file.
+* Download [Microsoft .NET Micro Framework 4.3 (QFE2)](https://ghistorage.blob.core.windows.net/downloads/NETMF/SDKs/MS%20NETMF%20QFE2.zip) and unzip the file.
 * Open the file's folder and install **MicroFrameworkSDK.MSI** and **netmfvs2013.vsix**.
 
 ### Install Microsoft .NET Gadgeteer Core (for Gadgeteer users only)
@@ -23,7 +23,7 @@ Download and install GHI Electronics NETMF SDK 2016 R1 from our [NETMF Downloads
 Older GHI Electronics NETMF SDKs are also available on the [NETMF Downloads](downloads.md) page. For the latest 2016 R1 SDK, we've also made a zip archive of the sub-installers available so that you can install just the pieces you need in a quicker fashion.
 
 ### Get Started with *.NET Micro Framework for Beginners*
-To help you get started we have a free e-book in .pdf format: [*.NET Micro Framework for Beginners*](http://files.ghielectronics.com/downloads/Documents/Guides/NETMF%20for%20Beginners.pdf)
+To help you get started we have a free e-book in .pdf format: [*.NET Micro Framework for Beginners*](https://ghistorage.blob.core.windows.net/downloads/Documents/Guides/NETMF%20for%20Beginners.pdf)
 
 ## The Emulator
 

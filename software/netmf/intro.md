@@ -8,7 +8,7 @@
 > NETMF had a great run, but now it's time for something better. TinyCLR OS continues where NETMF left off, but with added features and increased security. [**Learn more about TinyCLR OS**](../tinyclr/intro.md).
 
 ## General Resources
-* [.NET Micro Framework for Beginners](http://files.ghielectronics.com/downloads/Documents/Guides/NETMF%20for%20Beginners.pdf) (ebook PDF)
+* [.NET Micro Framework for Beginners](https://ghistorage.blob.core.windows.net/downloads/Documents/Guides/NETMF%20for%20Beginners.pdf) (ebook PDF)
 * Gadgeteer mainboards and module driver [Source code](https://github.com/ghi-electronics/NETMF-Gadgeteer)
 * Our .NET Micro Framework [Discussion Forum](https://forums.ghielectronics.com/c/netmf-gadgeteer)
 
