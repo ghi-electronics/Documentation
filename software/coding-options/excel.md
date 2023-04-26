@@ -8,7 +8,7 @@ DUE Link allows supports many systems, and Microsoft Excel is one the supported 
 
 ## Setup
 
-The access to the device is done though (Excel Data Streamer plug-in](https://microsoft.github.io/DataStreamerDevPortal/).
+The access to the device is done though [Excel Data Streamer plug-in](https://microsoft.github.io/DataStreamerDevPortal/).
 
 Enabling the streamer is simple as it is already built in:
 
