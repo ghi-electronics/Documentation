@@ -10,11 +10,14 @@ Hardware:
 
 This example demonstrates the use of both digital and analog inputs. 
 
-> [!Note] 
->  Joystick-X = Pin 4,
-Joystick-Y = Pin 3,
-Btn-X = Pin 13,
-Vibrate = Pin 8
+|        | Pin#          |
+| :--- |:---|
+| Rocker X | 4 |
+| Rocker Y | 5 |
+| Up | 14 |
+| Down| 15 |
+| Left | 13 |
+| Right | 16 |
 
 ```basic
 # BrainGamer - Sketch
