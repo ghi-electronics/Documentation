@@ -40,13 +40,13 @@ The PicoMate is a single-pcb with multiple Grove compatible sensors that are rem
 
 ---
 
-## Grove Shield for Pico
+## Grove Module Shields
 
-This Grove shield is great for connect the many Grove modules on the market to DUE. There are many drivers located in the Due samples repo to get you started.
+These Grove shields are a great way to connect the many Grove modules on the market to DUE. There are many drivers located in the DUE samples driver repo to get you started.
 
 [Drivers Repo](https://github.com/ghi-electronics/due-samples/tree/main/Drivers)
 
-![Grove Shield](images/grove-shield.png) 
+![Grove Shield](images/grove-shields.png) 
 
 
 
@@ -54,10 +54,21 @@ This Grove shield is great for connect the many Grove modules on the market to D
 
 ## Qwiic/STEMMA QT Connector
 
-The built in JST connector on the Pico opens up the door for even more expansion, using Qwiic or STEMMA QT sensors.
+The built in JST connector on the FEZ Pico opens up the door for even more expansion options, using Qwiic or STEMMA QT sensors.
 
-[Drivers Repo](https://github.com/ghi-electronics/due-samples/tree/main/Drivers)
+[LED Bar Demo](https://github.com/ghi-electronics/due-samples/tree/main/Drivers/LedBar)
 
 ![Qwiic/STEMMA Pico](images/qwiic-connector.gif) 
 
+---
 
+## Mikroe Click Shield for Pico
+
+Mikroe Electronica has 1000's of Click sensors available, this shield provides an interface to those modules. Our demo in Due Samples repo uses the LEDRing Click module. 
+
+> [!Warning] 
+>  Click shield for Pi Pico has a major flaw. MISO and MOSI pins are swapped on board rev 1.00.
+
+[LEDRing Click Module](https://github.com/ghi-electronics/due-samples/tree/main/Drivers/LedRingClick)
+
+![Qwiic/STEMMA Pico](images/click-shield.gif) 

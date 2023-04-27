@@ -10,6 +10,12 @@ Hardware:
 
 This example demonstrates the use of both digital and analog inputs. 
 
+> [!Note] 
+>  Joystick-X = Pin 4,
+Joystick-Y = Pin 3,
+Btn-X = Pin 13,
+Vibrate = Pin 8
+
 ```basic
 # BrainGamer - Sketch
 init()

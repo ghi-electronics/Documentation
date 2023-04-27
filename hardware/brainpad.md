@@ -55,3 +55,12 @@ NeoPixel Matrix panels pair well with the DUE platform, because NeoPixel support
 ![NeoPixel Falling Bird](images/falling-bird.gif) 
 
 ---
+## BrainGamer Sketch
+Creating art is easy when you pair the BrainPad Pulse with the BrainGamer
+
+[BrainGamer Sketch Demo](../software/due-script/samples/pulse-gamer-sketch.md)
+
+![BrainGamer Sketch](../software/due-script/samples/images/braingamer-sketch.gif)
+
+
+
