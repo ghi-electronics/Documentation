@@ -39,7 +39,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/fez.html",
-          "hash": "FzfyvFnDEwTShkF8bJYFfYEVejBFtpXYn4uoJU3PF3g="
+          "hash": "ufV9ELSaGL5BBSlnocAHEQMFxod/RUj1DwibKfT5hRw="
         }
       },
       "version": ""
@@ -146,6 +146,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "hardware/images/grove-shield.png",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/images/grove-shield.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "hardware/images/loader.png",
       "output": {
         "resource": {
@@ -160,6 +170,26 @@
       "output": {
         "resource": {
           "relative_path": "hardware/images/pico-due-pinout.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/images/pico-mate.gif",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/images/pico-mate.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/images/qwiic-connector.gif",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/images/qwiic-connector.gif"
         }
       },
       "version": ""
