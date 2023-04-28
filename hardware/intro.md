@@ -3,7 +3,7 @@
 The DUE platform is supported on several GHI Electronics' devices, including the educational BrainPad devices. If you're already a Maker then the FEZ options are a great place to jump in and start. If you're new to hardware then BrainPad is great option to get you started.
 
 > [!NOTE]
-> All DUE supported hardware has an onboard LED that is located at pin 100. `dwrite(100,1)`
+> All DUE supported hardware has an on-board LED. It can be called using 'L', 'l', or pin 108 `dwrite(108,1)`
 
 ## BrainPad
 
