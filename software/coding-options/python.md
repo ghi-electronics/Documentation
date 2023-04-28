@@ -131,5 +131,5 @@ dev.Script.Run();
 This is an example to execute a single line(immediate mode). This does not modify the application stored in flash. 
 
 ```py
-dev.Script.Execute("LED(200,200,10)
+dev.Script.Execute("LED(200,200,10)")
 ```
