@@ -1,8 +1,6 @@
 # BrainPad
-
 ---
 ![BrainPad Logo](images/brainpad-logo.png) 
-
 
 Educators now have the power to use their beloved language-of-choice with BrainPad devices, thanks to the power of the DUE platform.
 
@@ -26,10 +24,10 @@ The first step is to load the appropriate firmware onto the device. Follow the s
 ---
 
 # Hardware Demos
-The edge connector on the supported BrainPad hardware combined with the ease of the DUE platform, open up many possiblities to try the existing accessories available on the market. Here are just a few:
+The edge connector on the supported BrainPad hardware combined with the ease of the DUE platform, open up many possibilities to try the existing accessories available on the market. Here are just a few:
 
 ## Smart House
-This example demostrates the extensibility of the DUE platform. Using the DUE library from within full .NET. See the code samples repo for all the available sensors. We added a BrainClip IR remote control to our demo. 
+This example demonstrates the extensibility of the DUE platform. Using the DUE library from within full .NET. See the code samples repo for all the available sensors. We added a BrainClip IR remote control to our demo. 
 
 [Smart House Sample Repo](https://github.com/ghi-electronics/due-samples/tree/main/BrainPad/SmartHome)
 
@@ -38,7 +36,7 @@ This example demostrates the extensibility of the DUE platform. Using the DUE li
 ---
 
 ## A.I. Mask Detector
-Harnessing the power of A.I. on a tiny microcontroller is a challenge, but easy work for the DUE platform. In this example full Python is used with the DUE platform connecting the pieces together. 
+Harnessing the power of A.I. on a tiny micro-controller is a challenge, but easy work for the DUE platform. In this example full Python is used with the DUE platform connecting the pieces together. 
 
 [A.I. Mask Detector Sample Repo](https://github.com/ghi-electronics/due-samples/tree/main/AI-MaskDetect/python)
 

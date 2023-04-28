@@ -26,6 +26,13 @@ The FEZ Pico also includes a STEMMA connector that can connect to many existing 
 ![Pico Pinout](images/pico-due-pinout.png)
 
 ---
+## Getting Ready
+The first step is to load the appropriate firmware onto the device. Follow the steps found at the BrainPad [loader page.](https://loader.brainpad.com) and select the appropriate DUE firmware. 
+
+![BrainPad Loader Page](images/loader.png) 
+
+---
+
 # Hardware Demos
 
 The supported hardware's form factor opens the opportunity to use some of the many available accesories on the market. Here are just a few examples. 
