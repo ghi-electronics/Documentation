@@ -21,9 +21,7 @@ Start a new project with a simple line of code to test out the project is runnin
 
 ```csharp
 Console.WriteLine("Hello, World!");
-
 ```
-
 Download and install the latest library from NuGet.org. Alternatively, get it from the [Downloads](../downloads.md) page.
 
 ## Blinky!
@@ -121,18 +119,18 @@ These methods allow developers to control DUE Scripts right from within .NET
 This example will load a simple program line by line and then run it.
 
 ```csharp
-Script.New()
-Script.Load("for x = 1 to 10")
-Script.Load("DWrite('L',1)")
-Script.Load("Wait(200)")
-Script.Load("DWrite('L',0)")
-Script.Load("Wait(200)")
-Script.Load("next")
-Script.Run();
+dev.Script.New()
+dev.Script.Load("for x = 1 to 10")
+dev.Script.Load("DWrite('L',1)")
+dev.Script.Load("Wait(200)")
+dev.Script.Load("DWrite('L',0)")
+dev.Script.Load("Wait(200)")
+dev.Script.Load("next")
+dev.cript.Run();
 ```
 
 This is an example to execute a single line(immediate mode). This does not modify the application stored in flash. 
 
 ```csharp
-Script.Execute("LED(200,200,10)
+dev.Script.Execute("LED(200,200,10)
 ```

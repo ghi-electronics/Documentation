@@ -118,18 +118,18 @@ These methods allow developers to control DUE Scripts right from within Python
 This example will load a simple program line by line and then run it.
 
 ```py
-Script.New()
-Script.Load("for x = 1 to 10")
-Script.Load("DWrite('L',1)")
-Script.Load("Wait(200)")
-Script.Load("DWrite('L',0)")
-Script.Load("Wait(200)")
-Script.Load("next")
-Script.Run();
+dev.Script.New()
+dev.Script.Load("for x = 1 to 10")
+dev.Script.Load("DWrite('L',1)")
+dev.Script.Load("Wait(200)")
+dev.Script.Load("DWrite('L',0)")
+dev.Script.Load("Wait(200)")
+dev.Script.Load("next")
+dev.Script.Run();
 ```
 
 This is an example to execute a single line(immediate mode). This does not modify the application stored in flash. 
 
 ```py
-Script.Execute("LED(200,200,10)
+dev.Script.Execute("LED(200,200,10)
 ```
