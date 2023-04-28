@@ -425,17 +425,17 @@ print(&quot;Bye DUE!&quot;)
 </tbody>
 </table>
 <p>This example will load a simple program line by line and then run it.</p>
-<pre><code class="lang-py">Script.New()
-Script.Load(&quot;for x = 1 to 10&quot;)
-Script.Load(&quot;DWrite('L',1)&quot;)
-Script.Load(&quot;Wait(200)&quot;)
-Script.Load(&quot;DWrite('L',0)&quot;)
-Script.Load(&quot;Wait(200)&quot;)
-Script.Load(&quot;next&quot;)
-Script.Run();
+<pre><code class="lang-py">dev.Script.New()
+dev.Script.Load(&quot;for x = 1 to 10&quot;)
+dev.Script.Load(&quot;DWrite('L',1)&quot;)
+dev.Script.Load(&quot;Wait(200)&quot;)
+dev.Script.Load(&quot;DWrite('L',0)&quot;)
+dev.Script.Load(&quot;Wait(200)&quot;)
+dev.Script.Load(&quot;next&quot;)
+dev.Script.Run();
 </code></pre>
 <p>This is an example to execute a single line(immediate mode). This does not modify the application stored in flash.</p>
-<pre><code class="lang-py">Script.Execute(&quot;LED(200,200,10)
+<pre><code class="lang-py">dev.Script.Execute(&quot;LED(200,200,10)&quot;)
 </code></pre>
 </article>
           </div>

@@ -126,7 +126,7 @@ dev.Script.Load("Wait(200)");
 dev.Script.Load("DWrite('L',0)");
 dev.Script.Load("Wait(200)");
 dev.Script.Load("next");
-dev.cript.Run();
+dev.Script.Run();
 ```
 
 This is an example to execute a single line(immediate mode). This does not modify the application stored in flash. 
