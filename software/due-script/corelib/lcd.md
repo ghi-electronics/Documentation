@@ -109,12 +109,12 @@ LcdText(str(x),1,0,0)
 LcdShow()
 ```
 
-> [!NOTE] 
-> Streams are not coded directly using DUE Script, see [Streams](../streams.md)
-
 **LCD Stream**
 
 Stream is used to send the entire LCD update. 
+
+> [!NOTE] 
+> Streams are not coded directly using DUE Script, see [Streams](../streams.md)
 
 - **LcdStream()**<br>
  **Stream Size:** The size screen size divided by 8, 128x64/8=1K.
@@ -122,15 +122,14 @@ The data is organized as 8bit columns going left to right and then wrapping arou
 
 Example code to set a pixel at 10x10
 
-
-
 ```cs
 int x=10;
 int y=10;
 
 buffer[(y >> 3) * 128 + x] |= (byte)(1 << (y & 7));
 ```
-
+> [!NOTE]
+> LCD Stream automatically calls `LcdShow()` internally.
 
 
 

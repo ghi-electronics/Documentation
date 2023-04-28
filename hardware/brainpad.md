@@ -13,7 +13,7 @@ tip: The heart to the BrainPad Pulse is SITCore SC13 chipset. And for BrainPad E
 ## BrainPad Pulse
 ![BrainPad Pulse](images/brainpad-pulse.png) 
 
-## BrainPad ???? Stay Tuned!
+## BrainPad Edge
 ![BrainPad Edge](images/brainpad-edge.png) 
 
 ---

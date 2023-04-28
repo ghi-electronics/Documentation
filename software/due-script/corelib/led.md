@@ -9,15 +9,11 @@ This function is used to take control of the on-board LED. **LED()** is non-bloc
 
 
 > [!TIP] 
-> a number value of **-1** will blink the LED forever. A value of **0** will turn off the LED.
+> Setting count to **-1** will blink the LED forever, and **0** will turn off the LED.
 
 ```basic
 LED(1000,1000,10)
 ```
 
 > [!NOTE]
-> All DUE enabled hardware's on-board LED can also be accessed using the   [DWrite()](../corelib/digital.md)  function using pin 100.
-
-```basic
-DWrite(100,1)
-```
+> All DUE enabled hardware's on-board LED can also be accessed directly using the [DWrite()](../corelib/digital.md) function using pin 'L' or 'l', which are ASCII 108. `DWrite('L',1)`

@@ -8,7 +8,7 @@ Neopixel is fixed to pin number 1
 **index:** The LED index where 0 is first one and supporting up to 256 LEDs<br>
 **red, green, blue:** Color levels, 0 to 255 <br>
 
-- **NeoShow(count)** -<br>
+- **NeoShow(count)** - All NEO code is held internally until show<br>
  **count:** The count of LEDs to update and show
 
 This example assumes we have 8 LEDs and will set 8 LEDs to red, increasing the color intensity from 0 to 80.  Then it waits one second before it sets the first LED to bright purple!
@@ -24,7 +24,7 @@ NeoSet(0,200,0,200)
 NeoShow(8)
 ```
 
-- **NeoStream(count)** - Streams data directly to LEDs.Needs `NeoShow()` to see affect<br>
+- **NeoStream(count)** - Streams data directly to LEDs. Automatically calls `NeoShow()` internally<br>
  **count:** The count of LEDs to stream<br>
  **Stream size:** It is "count" multiplied by 3, DUE to the fact that each LED needs 3 bytes for colors, ordered in GRB format.
  

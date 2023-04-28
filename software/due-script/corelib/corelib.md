@@ -4,7 +4,7 @@
 
 The core library gives DUE Scripts the necessary API to access hardware. It has other software related libraries as well. These API functions are available from within DUE Scripts and runs host-less. When using a host, a library for that particular library is provided to reflect the DUE Core library. For example, when using Python, the provided Python library includes `dev.Led.Set(200,800,20)` which mirrors the [LED](led.md) API.
 
-| API       | Use          |
+| API       | Description          |
 | :--- |:---|
 | [Analog](analog.md) | Read or Write analog pins |
 | [Beep](beep.md) | Beep using any pin |
@@ -16,7 +16,7 @@ The core library gives DUE Scripts the necessary API to access hardware. It has 
 | [I2C](i2c.md) | Access the I2C bus for transferring data |
 | [Infrared](infrared.md) | Read and decode IR remote control signal |
 | [LCD](lcd.md) | Draw on LCD (device specific) |
-| [LED](led.md) | Control the onboard LED |
+| [LED](led.md) | Control the on-board LED |
 | [NeoPixel](neopixel.md) | Control smart color LEDs |
 | [Servo](servo.md) | Control servo motors |
 | [Sound](sound.md) | Generate sounds on the device's speaker (device specific) |

@@ -25,7 +25,7 @@
 ### [Servo](due-script/corelib/servo.md)
 ### [Sound](due-script/corelib/sound.md)
 ### [SPI](due-script/corelib/spi.md)
-### [System Functions](due-script/corelib/systemfunctions.md)
+### [System](due-script/corelib/systemfunctions.md)
 ### [Touch](due-script/corelib/touch.md)
 ### [UART](due-script/corelib/uart.md)
 

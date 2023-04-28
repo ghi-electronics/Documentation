@@ -12,9 +12,4 @@
 - **UartCount()** - Count  <br>
 **Returns:** How many bytes have been buffered and ready to be read
 
-
-```basic
-code sample
-```
-
 ---

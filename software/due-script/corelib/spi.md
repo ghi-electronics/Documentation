@@ -16,7 +16,7 @@ x = SpiByte(0x55)
 > [!NOTE] 
 > Streams are not coded directly using DUE Script, see [Streams](../streams.md)
 
-- **SpiSteam(writeCount, readCount, cs)** - Streams data directly to the SPI device <br>
+- **SpiStream(writeCount, readCount, cs)** - Streams data directly to the SPI device <br>
 **writeCount:** The number of bytes to write<br>
 **readCount:** The number of bytes to read<br>
 **cs:** set to -1 if not needed<br>
