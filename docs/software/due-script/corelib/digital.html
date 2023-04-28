@@ -79,15 +79,37 @@
 <h2 id="digital">Digital</h2>
 
 <p>These functions provide access to digital pins.</p>
+<p><strong>Digital Read</strong></p>
+<ul>
+<li><strong>DRead(pin, pull)</strong> - Read a digital pin output <br>
+<strong>pin:</strong> pin number <br>
+<strong>pull:</strong> Sets the internal pull resistors to -&gt; 0=none, 1=up, 2=down <br>
+<strong>Returns:</strong> 1 = high or  0 = low</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Pin numbers can also be <strong>'a'</strong> or <strong>'b'</strong> when reading the on-board buttons. Using 'a', 'A', or 97 yields the same results.</p>
+</div>
+<pre><code class="lang-basic">x = DRead(2,1)
+If x = 0
+    Print(&quot;low&quot;)
+Else
+    Print(&quot;high&quot;)
+End
+</code></pre>
 <p><strong>Digital Write</strong></p>
 <ul>
 <li><strong>DWrite(pin, state)</strong>  - Sets a pins digital output <br>
 <strong>pin:</strong> pin number <br> <strong>state:</strong> 1 = high or 0 = low</li>
 </ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Pin numbers can also be <strong>'l'</strong> when writing the on-board LED. Using 'l', 'L', or 108 yields the same results.</p>
+</div>
 <pre><code class="lang-basic">for x = 1 to 10
-    DWrite(100,1)
+    DWrite('L',1)
     Wait(200)
-    DWrite(100,0)
+    DWrite('L',0)
     Wait(200)
 next
 </code></pre>
@@ -96,20 +118,6 @@ next
 <p>All DUE enabled hardware's on-board
 LED is found on pin 100.</p>
 </div>
-<h5 id="digital-read">Digital Read</h5>
-<ul>
-<li><strong>DRead(pin, pull)</strong> - Read a digital pin output <br>
-<strong>pin:</strong> 0-9 <br>
-<strong>pull:</strong> Sets the internal pull resistors to -&gt; 0=none, 1=up, 2=down <br>
-<strong>Returns:</strong> 1 = high or  0 = low</li>
-</ul>
-<pre><code class="lang-basic">x = DRead(2,1)
-If x = 0
-    Print(&quot;low&quot;)
-Else
-    Print(&quot;high&quot;)
-End
-</code></pre>
 <hr>
 </article>
           </div>

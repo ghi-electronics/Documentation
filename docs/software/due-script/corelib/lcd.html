@@ -175,12 +175,12 @@ LcdClear(0)
 LcdText(str(x),1,0,0)
 LcdShow()
 </code></pre>
+<p><strong>LCD Stream</strong></p>
+<p>Stream is used to send the entire LCD update.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Streams are not coded directly using DUE Script, see <a href="../streams.html">Streams</a></p>
 </div>
-<p><strong>LCD Stream</strong></p>
-<p>Stream is used to send the entire LCD update.</p>
 <ul>
 <li><strong>LcdStream()</strong><br>
 <strong>Stream Size:</strong> The size screen size divided by 8, 128x64/8=1K.
@@ -192,6 +192,10 @@ int y=10;
 
 buffer[(y &gt;&gt; 3) * 128 + x] |= (byte)(1 &lt;&lt; (y &amp; 7));
 </code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>LCD Stream automatically calls <code>LcdShow()</code> internally.</p>
+</div>
 </article>
           </div>
 

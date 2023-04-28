@@ -87,16 +87,14 @@
 </ul>
 <div class="TIP">
 <h5>Tip</h5>
-<p>a number value of <strong>-1</strong> will blink the LED forever. A value of <strong>0</strong> will turn off the LED.</p>
+<p>Setting count to <strong>-1</strong> will blink the LED forever, and <strong>0</strong> will turn off the LED.</p>
 </div>
 <pre><code class="lang-basic">LED(1000,1000,10)
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
-<p>All DUE enabled hardware's on-board LED can also be accessed using the   <a href="digital.html">DWrite()</a>  function using pin 100.</p>
+<p>All DUE enabled hardware's on-board LED can also be accessed directly using the <a href="digital.html">DWrite()</a> function using pin 'L' or 'l', which are ASCII 108. <code>DWrite('L',1)</code></p>
 </div>
-<pre><code class="lang-basic">DWrite(100,1)
-</code></pre>
 </article>
           </div>
 

@@ -79,8 +79,39 @@
 <h2 id="system-functions">System Functions</h2>
 
 <ul>
+<li><p><strong>Cos(number)</strong> - Returns the cosine of the argument</p>
+</li>
 <li><p><strong>Echo(enable)</strong>  <br>
 <strong>enable:</strong> 0 = Enable echo , 1 = Disable echo</p>
+</li>
+<li><p><strong>GetCh()</strong> - reads character input, in ASCII format. Return <strong>-1</strong> when no character detected  <br></p>
+</li>
+<li><p><strong>GetNum()</strong> - reads number input, can be used with <strong>IsNAN()</strong> to determine if value is a number  <br></p>
+</li>
+<li><p><strong>Print(text)</strong>  - Prints the value of the argument to the console on the same line <br>
+<strong>text:</strong> String or variable</p>
+</li>
+<li><p><strong>PrintLn(text)</strong>  - Prints the value of the argument to the console then moves to the next line <br>
+<strong>text:</strong> String or variable</p>
+</li>
+<li><p><strong>Reset(loader)</strong> - Resets the board <br>
+<strong>loader:</strong> 0 = system reset,  1 = reset and stay in loader mode</p>
+</li>
+<li><p><strong>Rnd(max)</strong> - Generates random number
+<strong>max:</strong> maximum value of random number
+<strong>Returns:</strong> returns random number between 0 and value of argument <strong>max</strong></p>
+</li>
+<li><p><strong>Sin(number)</strong> - Returns the sine value of the argument</p>
+</li>
+<li><p><strong>Sqrt(number)</strong> - Returns the square root of the argument</p>
+</li>
+<li><p><strong>Tan(number)</strong> - Returns the tangent of the argument</p>
+</li>
+<li><p><strong>TickMs()</strong> - read system ticks in milliseconds  <br></p>
+</li>
+<li><p><strong>TickUs()</strong> - read system ticks microseconds  <br></p>
+</li>
+<li><p><strong>Trunc(number)</strong> - Returns the truncated value of the argument</p>
 </li>
 <li><p><strong>Version</strong>  - Returns the current firmware version of DUE <br>
 The last character returned in Version is board <br></p>
@@ -111,39 +142,8 @@ The last character returned in Version is board <br></p>
 </tbody>
 </table>
 </li>
-<li><p><strong>Print(text)</strong>  - Prints the value of the argument to the console on the same line <br>
-<strong>text:</strong> String or variable</p>
-</li>
-<li><p><strong>PrintLn(text)</strong>  - Prints the value of the argument to the console then moves to the next line <br>
-<strong>text:</strong> String or variable</p>
-</li>
-<li><p><strong>TickUs()</strong> - read system ticks microseconds  <br></p>
-</li>
-<li><p><strong>TickMs()</strong> - read system ticks in milliseconds  <br></p>
-</li>
-<li><p><strong>GetCh()</strong> - reads character input, in ASCII format. Return <strong>-1</strong> when no character detected  <br></p>
-</li>
-<li><p><strong>GetNum()</strong> - reads number input, can be used with <strong>IsNAN()</strong> to determine if value is a number  <br></p>
-</li>
 <li><p><strong>Wait(duration)</strong> - holds program from running <br>
 <strong>duration:</strong> duration = milliseconds</p>
-</li>
-<li><p><strong>Reset(loader)</strong> - Resets the board <br>
-<strong>loader:</strong> 0 = system reset,  1 = reset and stay in loader mode</p>
-</li>
-<li><p><strong>Rnd(max)</strong> - Generates random number
-<strong>max:</strong> maximum value of random number
-<strong>Returns:</strong> returns random number between 0 and value of argument <strong>max</strong></p>
-</li>
-<li><p><strong>Sin(number)</strong> - Returns the sine value of the argument</p>
-</li>
-<li><p><strong>Cos(number)</strong> - Returns the cosine of the argument</p>
-</li>
-<li><p><strong>Tan(number)</strong> - Returns the tangent of the argument</p>
-</li>
-<li><p><strong>Sqrt(number)</strong> - Returns the square root of the argument</p>
-</li>
-<li><p><strong>Trunc(number)</strong> - Returns the trunicated value of the argument</p>
 </li>
 </ul>
 <hr>

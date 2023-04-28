@@ -78,7 +78,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h2 id="buttons">Buttons</h2>
 
-<p>Buttons as a function are only available using pin 0,1,2,A,or B. Alternatively, any GPIO can be used to read the state of a pin, just be sure to enable pull-up when using that method.</p>
+<p>Buttons as a function are only available using pin 0,1,2,A,or B. Alternatively, <code>DRead()</code> can be used with any pin.</p>
 <ul>
 <li><p><strong>BtnEnable(pin, enable)</strong> - sets up a button to be used <br>
 <strong>pin:</strong> pin number, 'a', or 'b' <br>
@@ -95,11 +95,11 @@
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p><strong>'a'</strong> is ASCII a or 97, <strong>'b'</strong> is ASCII b or 98</p>
+<p><strong>'a'</strong> is ASCII a or 97, <strong>'b'</strong> is ASCII b or 98. Using 'a', 'A', or 97 yields the same results.</p>
 </div>
 <div class="TIP">
 <h5>Tip</h5>
-<p>The timeout for <strong>BtnDown()</strong> or <strong>BtnUp()</strong> is two seconds. Calling after two seconds from last press or release returns 0. If the button is not enabled also returns 0</p>
+<p>The timeout for <strong>BtnDown()</strong> or <strong>BtnUp()</strong> is fixed to two seconds. Calling after two seconds from last press or release returns 0. If the button is not enabled also returns 0</p>
 </div>
 <pre><code class="lang-basic">BtnEnable('a',1)
 @Loop
