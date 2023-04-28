@@ -1,8 +1,7 @@
 # DUE Script
-
 ---
 
-DUE Scripts run internally on any DUE-enabled [hardware](../../hardware/intro.md). This allows users to run simple quick command, called immediate mode. Additionally, users can extend the DUE language with additional functionality that can be accessed externally or can be executed onto the device. This is called recording mode.
+DUE Scripts run internally on any DUE-enabled [hardware](../../hardware/intro.md). This allows users to run simple quick commands, called *Immediate mode*. Additionally, users can extend the DUE language with additional functionality that can be accessed externally or can be executed onto the device. This is called *Recording mode*.
 
 ## Operating Modes
 
