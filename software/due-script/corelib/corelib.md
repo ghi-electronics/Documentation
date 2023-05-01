@@ -9,7 +9,6 @@ The core library gives DUE Scripts the necessary API to access hardware. It has 
 | [Analog](analog.md) | Read or Write analog pins |
 | [Beep](beep.md) | Beep using any pin |
 | [Button](button.md) | Read a button. Similar to Digital read but handles debounce |
-| [Demo](demo.md) | Built-in demos |
 | [Digital](digital.md) | Read or write digital pins |
 | [Distance](distance.md) | Read ultrasonic distance sensor |
 | [Frequency](frequency.md) | Generate frequency on a specific pin. This uses hardware PWM internally|

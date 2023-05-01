@@ -13,7 +13,6 @@
 ### [Analog](due-script/corelib/analog.md)
 ### [Beep](due-script/corelib/beep.md)
 ### [Button](due-script/corelib/button.md)
-### [Demo](due-script/corelib/demo.md)
 ### [Digital](due-script/corelib/digital.md)
 ### [Distance](due-script/corelib/distance.md)
 ### [Frequency](due-script/corelib/frequency.md)
@@ -30,6 +29,7 @@
 ### [UART](due-script/corelib/uart.md)
 
 ## [Samples](due-script/samples/samples.md)
+### [Basic Examples](due-script/samples/basic.md)
 ### [NeoPixel Matrix](due-script/samples/neopixel-matrix.md)
 ### [NeoPixel Rotary](due-script/samples/rotary-neopixel.md)
 ### [Falling Bird](due-script/samples/falling-bird.md)
