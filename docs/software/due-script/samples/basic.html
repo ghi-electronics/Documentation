@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Core Library </title>
+      <title>Basic Samples </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Core Library ">
+      <meta name="title" content="Basic Samples ">
     
       <link rel="shortcut icon" href="../../../images/favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
@@ -76,88 +76,69 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="core-library">Core Library</h1>
+<h2 id="basic-samples">Basic Samples</h2>
 
-<hr>
-<p>The core library gives DUE Scripts the necessary API to access hardware. It has other software related libraries as well. These API functions are available from within DUE Scripts and runs host-less. When using a host, a library for that particular library is provided to reflect the DUE Core library. For example, when using Python, the provided Python library includes <code>dev.Led.Set(200,800,20)</code> which mirrors the <a href="led.html">LED</a> API.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">API</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><a href="analog.html">Analog</a></td>
-<td style="text-align: left;">Read or Write analog pins</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="beep.html">Beep</a></td>
-<td style="text-align: left;">Beep using any pin</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="button.html">Button</a></td>
-<td style="text-align: left;">Read a button. Similar to Digital read but handles debounce</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="digital.html">Digital</a></td>
-<td style="text-align: left;">Read or write digital pins</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="distance.html">Distance</a></td>
-<td style="text-align: left;">Read ultrasonic distance sensor</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="frequency.html">Frequency</a></td>
-<td style="text-align: left;">Generate frequency on a specific pin. This uses hardware PWM internally</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="i2c.html">I2C</a></td>
-<td style="text-align: left;">Access the I2C bus for transferring data</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="infrared.html">Infrared</a></td>
-<td style="text-align: left;">Read and decode IR remote control signal</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="lcd.html">LCD</a></td>
-<td style="text-align: left;">Draw on LCD (device specific)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="led.html">LED</a></td>
-<td style="text-align: left;">Control the on-board LED</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="neopixel.html">NeoPixel</a></td>
-<td style="text-align: left;">Control smart color LEDs</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="servo.html">Servo</a></td>
-<td style="text-align: left;">Control servo motors</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="sound.html">Sound</a></td>
-<td style="text-align: left;">Generate sounds on the device's speaker (device specific)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="spi.html">SPI</a></td>
-<td style="text-align: left;">Access the SPI data bus</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="systemfunctions.html">System Functions</a></td>
-<td style="text-align: left;">Built-in functions</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="touch.html">Touch</a></td>
-<td style="text-align: left;">Allows for capacitive touch sensing</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="uart.html">UART</a></td>
-<td style="text-align: left;">Transfer data on the UART serial port</td>
-</tr>
-</tbody>
-</table>
+<p>These samples don't require you to wire anything and utilize the on-board components, when available, of the supported hardware.</p>
+<p>Example: LED, Buttons, Buzzer, and Screen.</p>
+<p><strong>Blink On-board LED</strong></p>
+<pre><code class="lang-basic">@Loop
+  DWrite(108,1) : Wait(250)
+  DWrite(108,0) : Wait(250)
+Goto Loop
+</code></pre>
+<p><strong>Analog Blink On-board LED</strong></p>
+<pre><code class="lang-basic">@Loop
+  For i=0 to 1000 Step 100
+    AWrite(108, i) : Wait(50)
+  Next
+  For i=1000 to 0 Step -100
+    AWrite(108, i) : wait(50)
+  Next
+Goto Loop
+</code></pre>
+<p><strong>On-board Buttons</strong></p>
+<pre><code class="lang-basic">BtnEnable('a',1)
+BtnEnable('b',1)
+@Loop
+x=BtnDown('a')
+y=BtnDown('b')
+If x=1
+    PrintLn(&quot;Button A&quot;)
+    wait(500)
+End
+If y=1
+    PrintLn(&quot;Button B&quot;)
+    wait(500)
+End
+Goto Loop
+</code></pre>
+<p><strong>On-board Buzzer</strong></p>
+<pre><code class="lang-basic"># G
+Sound(392, 1000, 100)
+Wait(500)
+# A
+Sound(440, 1000, 100)
+Wait(500)
+# F
+Sound(349, 500, 100)
+Wait(500)
+# F octave lower
+Sound(175, 500, 100)
+Wait(500)
+# C
+Sound(262, 2000, 100)
+</code></pre>
+<p><strong>On-board Display Small Text</strong></p>
+<pre><code class="lang-basic">LcdClear(0)
+LcdText(&quot;Hello World&quot;,1,10,10)
+LcdShow()
+</code></pre>
+<p><strong>On-board Display Large Text</strong></p>
+<pre><code class="lang-basic">LcdClear(0)
+LcdTextS(&quot;Hello&quot;,1,0,0,2,2)
+LcdTextS(&quot;World&quot;,1,15,15,2,2)
+LcdShow()
+</code></pre>
 </article>
           </div>
 
@@ -166,7 +147,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/due-script/corelib/corelib.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/due-script/samples/basic.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
