@@ -6,7 +6,7 @@
 
 The .NET DUE library allows full .NET programs to access physical sensors and actuators. This allows complex .NET programs to do all the heavy lifting and send only the necessary components to control devices.
 
-The provided library is implemented in C# but the user can use any .NET system, such as Visual Basic.
+The provided library is implemented in C# but the user can use any .NET system, such as **Visual Basic**.
 
 ## Setup
 This page assumes the user is already familiar with .NET C# and there is a development machine that is already setup to build and run .NET programs. No changes are needed there but we are using Microsoft Visual Studio Code as a personal preference.

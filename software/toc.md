@@ -1,10 +1,14 @@
 
 # [DUE Platform](intro.md)
-
+# [Getting Started](getting-started.md)
 # [Coding Options](coding-options/coding-options.md)
 ## [Python](coding-options/python.md)
+## [JavaScript](coding-options/javascript.md)
 ## [.NET](coding-options/dotnet.md)
+## [C++](coding-options/cpp.md)
+## [Swift](coding-options/swift.md)
 ## [Excel](coding-options/excel.md)
+## [Other](coding-options/other.md)
 
 # [DUE Script](due-script/due-script.md)
 
