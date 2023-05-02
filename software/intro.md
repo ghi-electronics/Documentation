@@ -1,15 +1,15 @@
 # DUE Link
 
 ---
-
-A DUE Link enabled device can give a computer, tablet or phone access to the physical world. Not only that, the DUE Link platform includes DUE Scripts for extending the device's feature or even run independently from any additional hardware.
-
 <div style="text-align: center;">
-
 
 ![Host Mode](./images/due-host.jpg)
 
 </div>
+
+A DUE Link enabled device can give a computer, tablet or phone access to the physical world. Not only that, the DUE Link platform includes DUE Scripts for extending the device's feature or even run independently from any additional hardware.
+
+
 
 ## Host Mode
 

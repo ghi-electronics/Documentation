@@ -2,6 +2,8 @@
 
 ---
 
+![Coding Options](../images/coding-options.png)
+
 The DUE Link Platform ships with multiple supported languages. Users interested in supporting other languages can convert one of the open-source libraries (such as Python) to their language of choice.
 
 Developers have the choice to use any development environment and IDE of choice. Additionally, any modern operating system or language can be used. Some languages are supported out-of-the-box and others can be added.

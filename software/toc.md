@@ -42,6 +42,6 @@
 ### [BrainGamer Sketch](due-script/samples/pulse-gamer-sketch.md)
 
 # [Downloads](downloads.md)
-# [Console](console.md)
+# [DUE Console](console.md)
 
 # [Legal](legal.md)

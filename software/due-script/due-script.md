@@ -110,11 +110,20 @@ The output will look like:
 
 ### For-Loop
 
+
 ```basic 
+# Counting Up
 For i=1 to 1000 Step 10
 PrintLn(i)
 Next
+
+# Counting Down
+For i=1000 to 1 Step -10
+PrintLn(i)
+Next
 ```
+
+
 
 ### If-Statement
 If statements must end with the `End` command. This will only end the If statement and not your program. 

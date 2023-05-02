@@ -6,20 +6,32 @@ The DUE Console provides many functionalities. It is a great start to verify the
 
 [https://console.duelink.com/](https://console.duelink.com/)
 
-![Fez Flea](./images/due-console.png) 
+![DUE Console](./images/due-console.png) 
+
+---
+
+## Immediate window
+
+The DUE Output window is where DUE hardware will talk back to the console. The `clear` button clears the Output window. 
+
+![DUE immediate window](./images/due-immediate.png) 
+
+---
 
 ---
 ## Output window
 
 The DUE Output window is where DUE hardware will talk back to the console. The `clear` button clears the Output window. 
 
-![Fez Flea](./images/due-output.png) 
+![DUE console output](./images/due-output.png) 
+
+---
 
 ## Connect
 
 Select the connect button to connect to the DUE hardware.
 
-![Fez Flea](./images/due-connect.png) 
+![Connect Button](./images/due-connect.png) 
 
 ---
 
@@ -27,7 +39,7 @@ Select the connect button to connect to the DUE hardware.
 
 Sends the script to the DUE hardware's flash. 
 
-![Fez Flea](./images/due-record.png) 
+![Record Button](./images/due-record.png) 
 
 ---
 
@@ -35,7 +47,7 @@ Sends the script to the DUE hardware's flash.
 
 Runs the code that is stored in flash. 
 
-![Fez Flea](./images/due-play.png) 
+![Play Button](./images/due-play.png) 
 
 ---
 
@@ -43,7 +55,7 @@ Runs the code that is stored in flash.
 
 Stops the program running on the DUE hardware.
 
-![Fez Flea](./images/due-stop.png) 
+![Stop Button](./images/due-stop.png) 
 
 ---
 
@@ -51,7 +63,7 @@ Stops the program running on the DUE hardware.
 
 List's the program current stored in flash on the console's output window.
 
-![Fez Flea](./images/due-list.png) 
+![List Button](./images/due-list.png) 
 
 ---
 
@@ -59,7 +71,7 @@ List's the program current stored in flash on the console's output window.
 
 Saves the code in the console.s window to a text file. 
 
-![Fez Flea](./images/due-save.png) 
+![Download Button](./images/due-save.png) 
 
 ---
 
@@ -67,6 +79,6 @@ Saves the code in the console.s window to a text file.
 
 Changes the consoles theme to Light or Dark. 
 
-![Fez Flea](./images/due-theme.png) 
+![Theme Button](./images/due-theme.png) 
 
 ---
