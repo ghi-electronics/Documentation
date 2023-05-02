@@ -10,12 +10,9 @@ The DUE Console provides many functionalities. It is a great start to verify the
 
 ---
 
-## Immediate window
+## Immediate Window
 
-
->>>>>>>>>>>>>>>>>>>>>>>>>>
-
-The DUE Output window is where DUE hardware will talk back to the console. The `clear` button clears the Output window. 
+The immediate text box sends and runs the code immediately on the DUE hardware as soon as the `send` arrow is pressed. 
 
 ![DUE immediate window](./images/due-immediate.png) 
 
