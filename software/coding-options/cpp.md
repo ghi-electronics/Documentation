@@ -8,4 +8,5 @@ C++ is a high-level, general-purpose programming language that has been around f
 
 An example can be found on the DUE samples repo:
 
-https://github.com/ghi-electronics/due-samples/tree/main/Demo/CPP
+[**GitHub Samples Repo**](https://github.com/ghi-electronics/due-samples/tree/main/Demo/CPP)
+

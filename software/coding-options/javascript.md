@@ -9,7 +9,7 @@ JavaScript is one of the core technologies used by the World Wide Web. 98% of al
 DUE integrates beautifully with JS, allowing web developers access to hardware devices. 
 
 This website example shows a good example JavaScript DUE extensibility.
-[**demo.duelink.com**](https://demo.duelink.com/)
+[demo.duelink.com](https://demo.duelink.com/)
 
 More examples can be found on the DUE samples repo:
 
