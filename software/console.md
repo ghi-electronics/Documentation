@@ -2,9 +2,9 @@
 
 ---
 
-The DUE Console provides many functionalities. It is a great start to verify the device is functioning properly. It is also a great place to learn about and use [DUE Scripts](due-script/due-script.md).
+The DUE Console provides many functionalities. It is a great start to verify the device is functioning properly. It is also a great place to learn about and use [DUE Scripts](due-script/due-script.md) and take advantage of the versatile [DUE core libraries](due-script/corelib/corelib.md)
 
-[https://console.duelink.com/](https://console.duelink.com/)
+[**console.duelink.com**](https://console.duelink.com/)
 
 ![DUE Console](./images/due-console.png) 
 
@@ -12,9 +12,14 @@ The DUE Console provides many functionalities. It is a great start to verify the
 
 ## Immediate window
 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 The DUE Output window is where DUE hardware will talk back to the console. The `clear` button clears the Output window. 
 
 ![DUE immediate window](./images/due-immediate.png) 
+
+Try `DWrite('L',1)` to run the LED on and then `DWrite('L',0)` to turn it off.
 
 ---
 
