@@ -6,8 +6,6 @@ Educators now have the power to use their beloved language-of-choice with BrainP
 
 Both BrainPad Pulse and BrainPad Edge are fully supported. However, BrainPad Pulse include additional natively-supported, which are the display and the buzzer.
 
-tip: The heart to the BrainPad Pulse is SITCore SC13 chipset. And for BrainPad Edge is SITCore SC007.
-
 ## BrainPad Pulse
 ![BrainPad Pulse](images/brainpad-pulse.png) 
 
@@ -18,6 +16,9 @@ tip: The heart to the BrainPad Pulse is SITCore SC13 chipset. And for BrainPad E
 
 ## Getting Ready
 The first step is to load the appropriate firmware onto the device. Follow the steps found at the BrainPad [loader page.](https://loader.brainpad.com) and select the appropriate DUE firmware. 
+
+> [!TIP]
+> The heart to the BrainPad Pulse is SITCore SC13 chipset. And for BrainPad Edge is SITCore SC007.
 
 ![BrainPad Loader Page](images/loader.png) 
 

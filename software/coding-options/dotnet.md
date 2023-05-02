@@ -12,7 +12,7 @@ The provided library is implemented in C# but the user can use any .NET system, 
 This page assumes the user is already familiar with .NET C# and there is a development machine that is already setup to build and run .NET programs. No changes are needed there but we are using Microsoft Visual Studio Code as a personal preference.
 
 > [!TIP]
-> If this is the first time you use your device, start by visiting the [Hardware](../../hardware/intro.md) page and load your device with the appropriate firmware. The [Console](../console.md) is also a great place to start.
+> If this is the first time you use your device, start by visiting the [**Hardware**](../../hardware/intro.md) page and load your device with the appropriate firmware. The [**Console**](../console.md) is also a great place to start.
 
 Start a new project with a simple line of code to test out the project is running
 

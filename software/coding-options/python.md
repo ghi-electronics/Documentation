@@ -18,7 +18,7 @@ Start a new project with a simple line of code to test out the project is runnin
 print("Hello DUE!")
 ```
 
-Go to the [Downloads](../downloads.md) page and download the latest Python library. Install the library on your system using `pip install DUE-0.0.1-py3-none-any.whl`
+Go to the [**Downloads**](../downloads.md) page and download the latest Python library. Install the library on your system using `pip install DUE-0.0.1-py3-none-any.whl`
 
 If you do not have the pyserial already installed, then also run `pip install pyserial`.
 
@@ -39,7 +39,7 @@ print("Bye DUE!")
 
 ## Python API
 
-The provided API mirrors DUE Script's [Core library](../due-script/corelib/corelib.md). Referencing those APIs is a good place to learn about the available functionality and available arguments.
+The provided API mirrors DUE Script's [**Core library**](../due-script/corelib/corelib.md). Referencing those APIs is a good place to learn about the available functionality and available arguments.
 
 
 | Python API                   | DUE Script API											|Description
@@ -127,7 +127,7 @@ dev.Script.Load("next")
 dev.Script.Run();
 ```
 
-This is an example to execute a single line(immediate mode). This does not modify the application stored in flash. 
+This is an example to execute a single line in *immediate mode*. This does not modify the application stored in flash. 
 
 ```py
 dev.Script.Execute("LED(200,200,10)")

@@ -8,7 +8,7 @@
 DUE is a Dynamic, Universal, and Extensible platform that links devices to the physical world. These devices can be desktops, laptops, phones, or even a Raspberry PI. Developers have the option to use any modern operating system and use the programming language of their choice.
 
 
-[![Getting Started](images/btn-getting-started.png)](~/software/getting-started.md)
+[![Getting Started](images/getting-started.png)](~/software/getting-started.md)
 
 ---
 

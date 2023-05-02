@@ -4,16 +4,23 @@
 
 ![Coding Options](../images/coding-options.png)
 
-The DUE Link Platform ships with multiple supported languages. Users interested in supporting other languages can convert one of the open-source libraries (such as Python) to their language of choice.
+The DUE Link Platform ships with multiple supported languages. Users interested in supporting other languages can convert one of the [open-source libraries](https://github.com/ghi-electronics/due-libraries) (such as Python) to their language of choice. The [Due samples](https://github.com/ghi-electronics/due-samples) repo show how the libraries can be used. 
 
-Developers have the choice to use any development environment and IDE of choice. Additionally, any modern operating system or language can be used. Some languages are supported out-of-the-box and others can be added.
+Developers have the choice to use any development environment and IDE of choice. Including the simple to use [DUE Console](../../software/console.md). Additionally, any modern operating system or language can be used. Some languages are supported out-of-the-box and others can be added.
+
+Language | Software Support
+---|---
+[Python](python.md) | Full Library
+[.NET](dotnet.md) | Full Library
+Swift | Demo Sample
+
 
 > [!NOTE]
-> This section talks about supported languages running on a host (computer, table, phone...etc.). DUE Platform also includes [DUE Script](../due-script/due-script.md) allowing a DUE-enabled hardware to run independently.
+> This section talks about supported languages running on a host (computer, table, phone...etc.). DUE Platform also includes [**DUE Script**](../due-script/due-script.md) allowing a DUE-enabled hardware to run independently.
 
 ## Open Source
 
-Libraries for the supported languages are provided open-source. We invite you to learn more about the internal workings of DUE Link and also invite you to support additional systems and languages. [DUE Libraries Repo](https://github.com/ghi-electronics/due-libraries).
+Libraries for the supported languages are provided open-source. We invite you to learn more about the internal workings of DUE Link and also invite you to support additional systems and languages. [DUE Libraries](https://github.com/ghi-electronics/due-libraries) repo.
 
 ## The Transport
 

@@ -29,6 +29,9 @@ The FEZ Pico also includes a STEMMA connector that can connect to many existing 
 ## Getting Ready
 The first step is to load the appropriate firmware onto the device. Follow the steps found at the BrainPad [loader page.](https://loader.brainpad.com) and select the appropriate DUE firmware. 
 
+> [!TIP]
+> The heart of both FEZ boards SITCore SC13 chipset.
+
 ![BrainPad Loader Page](images/loader.png) 
 
 ---
