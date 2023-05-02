@@ -17,7 +17,7 @@
   "index.html": {
     "href": "index.html",
     "title": "What is DUE?",
-    "keywords": "What is DUE? DUE is a Dynamic, Universal, and Extensible platform that links devices to the physical world. These devices can be desktops, laptops, phones, or even a Raspberry PI. Developers have the option to use any modern operating system and use the programming language of their choice. DUE Link Software Learn about all the great software features and how DUE can change \"physical-computing\" forever! Hardware A range of hardware options are available off-the-shelf Continuous Innovation GHI Electronics has been bridging the hardware-to-software gap since 2003 with modern platforms,devices,systems, and coding languages. GHI Electronics is yet again bringing you an new innovation to make physical computing accessible to everyone. Not just the hardware developer. GHI Electronics is where hardware meets software!"
+    "keywords": "What is DUE? DUE is a Dynamic, Universal, and Extensible platform that links devices to the physical world. These devices can be desktops, laptops, phones, or even a Raspberry PI. Developers have the option to use any modern operating system and use the programming language of their choice. Continuous Innovation GHI Electronics has been bridging the hardware-to-software gap since 2003 with modern platforms,devices,systems, and coding languages. GHI Electronics is yet again bringing you an new innovation to make physical computing accessible to everyone. Not just the hardware developer."
   },
   "README.html": {
     "href": "README.html",
@@ -32,7 +32,7 @@
   "software/coding-options/cpp.html": {
     "href": "software/coding-options/cpp.html",
     "title": "C++",
-    "keywords": "C++ C++ is a high-level, general-purpose programming language that has been around for many years. Setup"
+    "keywords": "C++ C++ is a high-level, general-purpose programming language that has been around for many years. An example can be found on the DUE samples repo: https://github.com/ghi-electronics/due-samples/tree/main/Demo/CPP"
   },
   "software/coding-options/dotnet.html": {
     "href": "software/coding-options/dotnet.html",
@@ -47,7 +47,7 @@
   "software/coding-options/javascript.html": {
     "href": "software/coding-options/javascript.html",
     "title": "JavaScript",
-    "keywords": "JavaScript JavaScript is one of the core technologies used by the World Wide Web. 98% of all websites use JavaScript. DUE integrates beautifully with JS, allowing web developers access to hardware devices. Setup"
+    "keywords": "JavaScript JavaScript is one of the core technologies used by the World Wide Web. 98% of all websites use JavaScript. DUE integrates beautifully with JS, allowing web developers access to hardware devices. This website example shows a good example JavaScript DUE extensibility. https://demo.duelink.com/ More examples can be found on the DUE samples repo: https://github.com/ghi-electronics/due-samples/tree/main/Demo/Javascript"
   },
   "software/coding-options/other.html": {
     "href": "software/coding-options/other.html",
@@ -62,12 +62,12 @@
   "software/coding-options/swift.html": {
     "href": "software/coding-options/swift.html",
     "title": "Swift",
-    "keywords": "Swift Swift is a powerful and intuitive Apple programming language for iOS, iPadOS, macOS, tvOS, and watchOS. Setup"
+    "keywords": "Swift Swift can be used to give you physical access on MacOS devices. More examples can be found on the DUE samples repo: https://github.com/ghi-electronics/due-samples/tree/main/Demo/MacOS"
   },
   "software/console.html": {
     "href": "software/console.html",
     "title": "DUE Console",
-    "keywords": "DUE Console The DUE Console provides many functionalities. It is a great start to verify the device is functioning properly. It is also a great place to learn about and use DUE Scripts. https://console.duelink.com/ Immediate window The DUE Output window is where DUE hardware will talk back to the console. The clear button clears the Output window. Output window The DUE Output window is where DUE hardware will talk back to the console. The clear button clears the Output window. Connect Select the connect button to connect to the DUE hardware. Record Sends the script to the DUE hardware's flash. Play Runs the code that is stored in flash. Stop Stops the program running on the DUE hardware. List List's the program current stored in flash on the console's output window. Download Saves the code in the console.s window to a text file. Theme Changes the consoles theme to Light or Dark."
+    "keywords": "DUE Console The DUE Console provides many functionalities. It is a great start to verify the device is functioning properly. It is also a great place to learn about and use DUE Scripts and take advantage of the versatile DUE core libraries console.duelink.com Immediate window The DUE Output window is where DUE hardware will talk back to the console. The clear button clears the Output window. Try DWrite('L',1) to run the LED on and then DWrite('L',0) to turn it off. Output window The DUE Output window is where DUE hardware will talk back to the console. The clear button clears the Output window. Connect Select the connect button to connect to the DUE hardware. Record Sends the script to the DUE hardware's flash. Play Runs the code that is stored in flash. Stop Stops the program running on the DUE hardware. List List's the program current stored in flash on the console's output window. Download Saves the code in the console.s window to a text file. Theme Changes the consoles theme to Light or Dark."
   },
   "software/downloads.html": {
     "href": "software/downloads.html",
@@ -222,7 +222,7 @@
   "software/getting-started.html": {
     "href": "software/getting-started.html",
     "title": "Getting Started",
-    "keywords": "Getting Started Hardware The first step is to pick from one of the many available DUE Hardware options. Follow the instructions to get the hardware ready. Software Once the firmware is loaded onto your device you are ready to start coding DUE Script. The DUE Console web IDE is a great place to start and familiarize yourself with the DUE API If you're a developer or educator that is already coding you can use one of the many Coding Options available."
+    "keywords": "Getting Started Hardware Selection The first step is to pick from one of the many available DUE Hardware options. Which includes the Maker friendly FEZ(Fast & Easy) and STEM educational BrainPad. Follow the instructions to load the latest firmware get the hardware ready. Start Coding We recommend starting out with the web-based DUE Console as it requires nothing to install. Connect your device and you are ready to start coding. Try to enter DWrite('L',1) in the immediate text box turn the LED on. Next, you may want to start experimenting with one of your favorite Coding Options. Some of the coding options include full open source libraries for easier use. However, all coding options include demos to get you started. Check out the many provided open source samples. The JavaScript sample demo is alive and can be tested now at demo.duelink.com."
   },
   "software/intro.html": {
     "href": "software/intro.html",

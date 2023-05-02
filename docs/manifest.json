@@ -238,6 +238,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/btn-getting-started.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/btn-getting-started.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/downloads.png",
       "output": {
         "resource": {
@@ -248,20 +258,20 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/due.png",
+      "source_relative_path": "images/due-link.png",
       "output": {
         "resource": {
-          "relative_path": "images/due.png"
+          "relative_path": "images/due-link.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/duelink.jpg",
+      "source_relative_path": "images/due.png",
       "output": {
         "resource": {
-          "relative_path": "images/duelink.jpg"
+          "relative_path": "images/due.png"
         }
       },
       "version": ""
@@ -297,12 +307,22 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "images/mfg-floor.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/mfg-floor.png"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "qV6rupBoMBES/nCwA/GlFb3Ma8tvm1/aggSzEygpFF4="
+          "hash": "k3qtPt3KRcaZvb62RtHWKpip6Ff2TEwJS8AbpN5Oa8M="
         }
       },
       "version": ""
@@ -324,7 +344,7 @@
       "output": {
         ".html": {
           "relative_path": "software/coding-options/cpp.html",
-          "hash": "Bz/AKJ0jMBKY6zpfWqbB7PZMcwLL0xxO8NhwX0R57UE="
+          "hash": "6hEw5GmiptTxKQx1Nf42n3366rAbnZ/PCFVG9X/EN78="
         }
       },
       "version": ""
@@ -357,7 +377,7 @@
       "output": {
         ".html": {
           "relative_path": "software/coding-options/javascript.html",
-          "hash": "eWzWBenLet0aF4gtxIJGSVC68ERMkEIoLZOuEPTy/lc="
+          "hash": "Jv5Y5ojAdpT/8ptApM2k1FM6AFRyL3SJWn5FqMOUC+s="
         }
       },
       "version": ""
@@ -368,7 +388,7 @@
       "output": {
         ".html": {
           "relative_path": "software/coding-options/other.html",
-          "hash": "nShF763cvfrTJgTNMvIW9KTUp8hd0E7spYcr/a8rajw="
+          "hash": "UGNEMZxLP+EyQhPr76qxDW3vuV43tswrO5q01hipUQo="
         }
       },
       "version": ""
@@ -390,7 +410,7 @@
       "output": {
         ".html": {
           "relative_path": "software/coding-options/swift.html",
-          "hash": "X5n9Wy8tH1pBfYABT0AyudVBvjL2+yFRIfGTFIzqQaQ="
+          "hash": "6fFcA795CDF1I+4E09kvG6iZx5ai4VOQn9OxeKH2r7M="
         }
       },
       "version": ""
@@ -401,7 +421,7 @@
       "output": {
         ".html": {
           "relative_path": "software/console.html",
-          "hash": "hJl8xuHXQ76NFig0YuFDysPF5/o8ZbfL9zSGIa9Jf+A="
+          "hash": "KA6cb3WjqhEKI+KR3WEJCaHukrOdhMcsnUPKfjH9gDM="
         }
       },
       "version": ""
@@ -862,7 +882,7 @@
       "output": {
         ".html": {
           "relative_path": "software/getting-started.html",
-          "hash": "ytQFm6pjAnTqMTCiuEvQld7Z4NmnsYUOqCf8jhnJ0wU="
+          "hash": "RBO9HowHshR2WymaUHqmLalp4THkOfhLjn1fq/HbRwk="
         }
       },
       "version": ""
@@ -1053,6 +1073,16 @@
       "output": {
         "resource": {
           "relative_path": "software/images/javascript.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/images/other-languages.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/images/other-languages.png"
         }
       },
       "version": ""
