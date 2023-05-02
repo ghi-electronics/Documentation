@@ -80,14 +80,36 @@
 
 <hr>
 <p><img src="../images/coding-options.png" alt="Coding Options"></p>
-<p>The DUE Link Platform ships with multiple supported languages. Users interested in supporting other languages can convert one of the open-source libraries (such as Python) to their language of choice.</p>
-<p>Developers have the choice to use any development environment and IDE of choice. Additionally, any modern operating system or language can be used. Some languages are supported out-of-the-box and others can be added.</p>
+<p>The DUE Link Platform ships with multiple supported languages. Users interested in supporting other languages can convert one of the <a href="https://github.com/ghi-electronics/due-libraries">open-source libraries</a> (such as Python) to their language of choice. The <a href="https://github.com/ghi-electronics/due-samples">Due samples</a> repo show how the libraries can be used.</p>
+<p>Developers have the choice to use any development environment and IDE of choice. Including the simple to use <a href="../console.html">DUE Console</a>. Additionally, any modern operating system or language can be used. Some languages are supported out-of-the-box and others can be added.</p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Software Support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="python.html">Python</a></td>
+<td>Full Library</td>
+</tr>
+<tr>
+<td><a href="dotnet.html">.NET</a></td>
+<td>Full Library</td>
+</tr>
+<tr>
+<td>Swift</td>
+<td>Demo Sample</td>
+</tr>
+</tbody>
+</table>
 <div class="NOTE">
 <h5>Note</h5>
-<p>This section talks about supported languages running on a host (computer, table, phone...etc.). DUE Platform also includes <a href="../due-script/due-script.html">DUE Script</a> allowing a DUE-enabled hardware to run independently.</p>
+<p>This section talks about supported languages running on a host (computer, table, phone...etc.). DUE Platform also includes <a href="../due-script/due-script.html"><strong>DUE Script</strong></a> allowing a DUE-enabled hardware to run independently.</p>
 </div>
 <h2 id="open-source">Open Source</h2>
-<p>Libraries for the supported languages are provided open-source. We invite you to learn more about the internal workings of DUE Link and also invite you to support additional systems and languages. <a href="https://github.com/ghi-electronics/due-libraries">DUE Libraries Repo</a>.</p>
+<p>Libraries for the supported languages are provided open-source. We invite you to learn more about the internal workings of DUE Link and also invite you to support additional systems and languages. <a href="https://github.com/ghi-electronics/due-libraries">DUE Libraries</a> repo.</p>
 <h2 id="the-transport">The Transport</h2>
 <p>The host connects to a due device using a standard USB connection. All the necessary USB descriptors are built in a standard manner that no drivers are necessary. Once a device is plugged in, the host (computer, phone, Windows, Android, Mac...etc.) will detect and enable a new serial port. The library will then use this serial port to communicate with the DUE-enabled device.</p>
 <p>On Windows, the device manager can be used to see a list of available serial ports.</p>

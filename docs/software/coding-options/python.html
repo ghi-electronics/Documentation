@@ -90,7 +90,7 @@
 <p>Start a new project with a simple line of code to test out the project is running</p>
 <pre><code class="lang-py">print(&quot;Hello DUE!&quot;)
 </code></pre>
-<p>Go to the <a href="../downloads.html">Downloads</a> page and download the latest Python library. Install the library on your system using <code>pip install DUE-0.0.1-py3-none-any.whl</code></p>
+<p>Go to the <a href="../downloads.html"><strong>Downloads</strong></a> page and download the latest Python library. Install the library on your system using <code>pip install DUE-0.0.1-py3-none-any.whl</code></p>
 <p>If you do not have the pyserial already installed, then also run <code>pip install pyserial</code>.</p>
 <h2 id="blinky">Blinky!</h2>
 <p>Our first program will blink the on-board LED 20 times, where it comes on for 200ms and then it is off for 800ms.</p>
@@ -106,7 +106,7 @@ dev.Led.Set(200,800,20)
 print(&quot;Bye DUE!&quot;)
 </code></pre>
 <h2 id="python-api">Python API</h2>
-<p>The provided API mirrors DUE Script's <a href="../due-script/corelib/corelib.html">Core library</a>. Referencing those APIs is a good place to learn about the available functionality and available arguments.</p>
+<p>The provided API mirrors DUE Script's <a href="../due-script/corelib/corelib.html"><strong>Core library</strong></a>. Referencing those APIs is a good place to learn about the available functionality and available arguments.</p>
 <table>
 <thead>
 <tr>
@@ -434,7 +434,7 @@ dev.Script.Load(&quot;Wait(200)&quot;)
 dev.Script.Load(&quot;next&quot;)
 dev.Script.Run();
 </code></pre>
-<p>This is an example to execute a single line(immediate mode). This does not modify the application stored in flash.</p>
+<p>This is an example to execute a single line in <em>immediate mode</em>. This does not modify the application stored in flash.</p>
 <pre><code class="lang-py">dev.Script.Execute(&quot;LED(200,200,10)&quot;)
 </code></pre>
 </article>
