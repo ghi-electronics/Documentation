@@ -193,7 +193,13 @@ For i=0 to 9:PrintLn(a[i]):Next
 <p>Use <code>Dim a[0]</code> to free up the memory reserved for array <code>a[]</code>.</p>
 </div>
 <h3 id="for-loop">For-Loop</h3>
-<pre><code class="lang-basic">For i=1 to 1000 Step 10
+<pre><code class="lang-basic"># Counting Up
+For i=1 to 1000 Step 10
+PrintLn(i)
+Next
+
+# Counting Down
+For i=1000 to 1 Step -10
 PrintLn(i)
 Next
 </code></pre>
