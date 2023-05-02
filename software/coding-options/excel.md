@@ -1,6 +1,7 @@
 # Excel
 
 ---
+
 ![Excel](../images/excel-logo.png)
 
 DUE Link allows supports many systems, and Microsoft Excel is one the supported options! Yes, you can access devices right from spreadsheets! Combine that with VB macros and you have unlimited options.

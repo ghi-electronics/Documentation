@@ -7,7 +7,7 @@ DUE Scripts run internally on any DUE-enabled [hardware](../../hardware/intro.md
 
 *Immediate mode*, commands are executed immediately. In *Record mode*, commands are stored in flash and executed with the `run` command. 
 
-Thesze mordes are automatically sdwiched handeledd byt console blab bla bla 
+When using the [DUE Console](../../software/console.md) these modes are automatically handled when you press the `REC` button and the code is recorded to the flash.The `Play` button runs the code on the device. The `Stop` button stops the program running on the device.  If you want to send your DUE script and execute the code immediately use the *Code to execute immediately* text window and hit `arrow` button
 
 **Immediate Mode**
 

@@ -1,5 +1,7 @@
 # C++
 
 ---
-<!--![JavaSript](../images/javascript-logo.png)-->
+![C++ Logo](../images/cplusplus.png)
 
+
+## Setup

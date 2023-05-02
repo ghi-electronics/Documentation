@@ -1,5 +1,9 @@
 # Swift
 
 ---
-<!--![JavaSript](../images/javascript-logo.png)-->
 
+![Swift Logo](../images/swift.png)
+
+
+
+## Setup
