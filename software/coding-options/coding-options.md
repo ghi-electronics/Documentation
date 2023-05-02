@@ -12,7 +12,10 @@ Language | Software Support
 ---|---
 [Python](python.md) | Full Library
 [.NET](dotnet.md) | Full Library
-Swift | Demo Sample
+[JavaScript](javascript.md)| Demo Sample
+[Swift](swift.md)| Demo Sample
+[C++](cpp.md)| Demo Sample
+[Excel](excel.md)| Demo Sample
 
 
 > [!NOTE]
