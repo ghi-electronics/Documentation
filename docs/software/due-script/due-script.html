@@ -82,11 +82,14 @@
 <p>DUE Scripts run internally on any DUE-enabled <a href="../../hardware/intro.html">hardware</a>. This allows users to run simple quick commands, called <em>Immediate mode</em>. Additionally, users can extend the DUE language with additional functionality that can be accessed externally or can be executed onto the device. This is called <em>Recording mode</em>.</p>
 <h2 id="operating-modes">Operating Modes</h2>
 <p><em>Immediate mode</em>, commands are executed immediately. In <em>Record mode</em>, commands are stored in flash and executed with the <code>run</code> command.</p>
-<p>When using the <a href="../console.html">DUE Console</a> these modes are automatically handled when you press the <code>REC</code> button and the code is recorded to the flash.The <code>Play</code> button runs the code on the device. The <code>Stop</code> button stops the program running on the device.  If you want to send your DUE script and execute the code immediately use the <em>Code to execute immediately</em> text window and hit <code>arrow</code> button</p>
+<p>When using the <a href="../console.html">DUE Console</a> these modes are automatically handled when you press the <code>REC</code> button and the code is recorded to the flash.The <code>Play</code> button runs the code on the device. The <code>Stop</code> button stops the program running on the device.</p>
+<p><img src="../images/console-buttons.png" alt="console buttons"></p>
+<p>If you want to send your DUE script and execute the code immediately use the <em>Code to execute immediately</em> text window and hit <code>arrow</code> button</p>
+<p><img src="../images/immediate-window.png" alt="console buttons"></p>
 <p><strong>Immediate Mode</strong></p>
-<p>A user will know they are in this mode when their cursor prompt is the<br>
+<p>When using a terminal editor a user will know they are in this mode when their cursor prompt is the<br>
 <code>&gt;</code> character. All statements are executed as soon as entered.</p>
-<pre><code class="lang-basic">&gt; print(&quot;Hello World&quot;)
+<pre><code class="lang-basic">&gt; Print(&quot;Hello World&quot;)
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
@@ -202,6 +205,27 @@ Next
 For i=1000 to 1 Step -10
 PrintLn(i)
 Next
+
+# Range with only stop value
+For i in range(5)
+Print(i,&quot;,&quot;)
+next
+
+# Range with start and stop value
+For i in range(1,5)
+Print(i,&quot;,&quot;)
+next
+
+# Range with start, stop, and step value
+For i in range(1,5,2)
+Print(i,&quot;,&quot;)
+next
+
+# Range with start, stop, and negative step value
+For i in range(10,1,-2)
+Print(i,&quot;,&quot;)
+next
+
 </code></pre>
 <h3 id="if-statement">If-Statement</h3>
 <p>If statements must end with the <code>End</code> command. This will only end the If statement and not your program.</p>
