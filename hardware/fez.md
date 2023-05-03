@@ -38,7 +38,7 @@ The first step is to load the appropriate firmware onto the device. Follow the s
 
 # Hardware Demos
 
-The supported hardware's form factor opens the opportunity to use some of the many available accesories on the market. Here are just a few examples. 
+The supported hardware's form factor opens the opportunity to use some of the many available accessories on the market. Here are just a few examples. 
 
 ## PicoMate
 
@@ -74,7 +74,7 @@ The built in JST connector on the FEZ Pico opens up the door for even more expan
 
 ## Mikroe Click Shield for Pico
 
-Mikroe Electronica has 1000's of Click sensors available, this shield provides an interface to those modules. Our demo in Due Samples repo uses the LEDRing Click module. 
+Mikroe Electronica has 1000's of Click sensors available, this shield provides an interface to those modules. Our demo in DUE Samples repo uses the LEDRing Click module. 
 
 > [!Warning] 
 >  Click shield for Pi Pico has a major flaw. MISO and MOSI pins are swapped on board rev 1.00.

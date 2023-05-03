@@ -104,7 +104,7 @@ The provided API mirrors DUE Script's [Core library](../due-script/corelib/corel
 > For convenience, the Pin Enum includes, ButtonA, ButtonB and Led. For example: `dev.Digital.Write(dev.Pin.Led, True)`
 
 
-## Due Script Control
+## DUE Script Control
 
 These methods allow developers to control DUE Scripts right from within .NET
 

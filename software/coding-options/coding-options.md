@@ -4,7 +4,7 @@
 
 ![Coding Options](../images/coding-options.png)
 
-The DUE Link Platform ships with multiple supported languages. Users interested in supporting other languages can convert one of the [open-source libraries](https://github.com/ghi-electronics/due-libraries) (such as Python) to their language of choice. The [Due samples](https://github.com/ghi-electronics/due-samples) repo show how the libraries can be used. 
+The DUE Link Platform ships with multiple supported languages. Users interested in supporting other languages can convert one of the [open-source libraries](https://github.com/ghi-electronics/due-libraries) (such as Python) to their language of choice. The [DUE samples](https://github.com/ghi-electronics/due-samples) repo show how the libraries can be used. 
 
 Developers have the choice to use any development environment and IDE of choice. Including the simple to use [DUE Console](../../software/console.md). Additionally, any modern operating system or language can be used. Some languages are supported out-of-the-box and others can be added.
 
