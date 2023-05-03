@@ -7,15 +7,21 @@ DUE Scripts run internally on any DUE-enabled [hardware](../../hardware/intro.md
 
 *Immediate mode*, commands are executed immediately. In *Record mode*, commands are stored in flash and executed with the `run` command. 
 
-When using the [DUE Console](../../software/console.md) these modes are automatically handled when you press the `REC` button and the code is recorded to the flash.The `Play` button runs the code on the device. The `Stop` button stops the program running on the device.  If you want to send your DUE script and execute the code immediately use the *Code to execute immediately* text window and hit `arrow` button
+When using the [DUE Console](../../software/console.md) these modes are automatically handled when you press the `REC` button and the code is recorded to the flash.The `Play` button runs the code on the device. The `Stop` button stops the program running on the device.  
+
+![console buttons](../images/console-buttons.png)
+
+If you want to send your DUE script and execute the code immediately use the *Code to execute immediately* text window and hit `arrow` button
+
+![console buttons](../images/immediate-window.png)
 
 **Immediate Mode**
 
-A user will know they are in this mode when their cursor prompt is the  
+When using a terminal editor a user will know they are in this mode when their cursor prompt is the  
 `>` character. All statements are executed as soon as entered.
 
 ```basic 
-> print("Hello World")
+> Print("Hello World")
 ```
 
 > [!NOTE]
@@ -121,6 +127,27 @@ Next
 For i=1000 to 1 Step -10
 PrintLn(i)
 Next
+
+# Range with only stop value
+For i in range(5)
+Print(i,",")
+next
+
+# Range with start and stop value
+For i in range(1,5)
+Print(i,",")
+next
+
+# Range with start, stop, and step value
+For i in range(1,5,2)
+Print(i,",")
+next
+
+# Range with start, stop, and negative step value
+For i in range(10,1,-2)
+Print(i,",")
+next
+
 ```
 
 

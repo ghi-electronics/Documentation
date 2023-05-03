@@ -14,7 +14,7 @@ The DUE Console provides many functionalities. It is a great start to verify the
 
 The immediate text box sends and runs the code immediately on the DUE hardware as soon as the `send` arrow is pressed. 
 
-![DUE immediate window](./images/due-immediate.png) 
+![DUE immediate window](./images/immediate-window.png) 
 
 Try `DWrite('L',1)` to run the LED on and then `DWrite('L',0)` to turn it off.
 
@@ -23,9 +23,9 @@ Try `DWrite('L',1)` to run the LED on and then `DWrite('L',0)` to turn it off.
 ---
 ## Output window
 
-The DUE Output window is where DUE hardware will talk back to the console. The `clear` button clears the Output window. 
+The DUE Output window is where DUE hardware will talk back to the console. The `button` clears the Output window. 
 
-![DUE console output](./images/due-output.png) 
+![DUE console output](./images/console-output.png) 
 
 ---
 
