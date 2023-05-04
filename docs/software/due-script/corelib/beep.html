@@ -82,19 +82,19 @@
 <ul>
 <li><strong>Beep(pin, frequency, duration)</strong> - creates a tone for a specified duration on any pin <br>
 <strong>pin:</strong> pin number <br>
-<strong>frequency:</strong> The frequecy in Hz, max value is 10KHz <br>
+<strong>frequency:</strong> The frequency in Hz, max value is 10KHz <br>
 <strong>duration:</strong> The duration of the beep in milliseconds, max value is 1000ms <br></li>
 </ul>
 <div class="TIP">
 <h5>Tip</h5>
-<p><a href="sound.html">Sound</a> function can be used on device specific hardware like the BrainPad Pulse. You can also access any DUE enabled device that has an on-board buzzer by using pin 100 Beep() function arguement.</p>
+<p>This function does not support the on-board buzzer on BrainPad pulse, use <a href="sound.html">Sound</a> function instead.</p>
 </div>
 <pre><code class="lang-basic">Beep(0,256,1000)
 </code></pre>
 <hr>
 <div class="NOTE">
 <h5>Note</h5>
-<p>This feature is blocking,so the rest of your code will stop until beep is completed.</p>
+<p>This feature is blocking, so the rest of your code will stop until <code>Beep()</code> is completed.</p>
 </div>
 </article>
           </div>

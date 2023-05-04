@@ -79,25 +79,21 @@
 <h1 id="due-script">DUE Script</h1>
 
 <hr>
-<p>DUE Scripts run internally on any DUE-enabled <a href="../../hardware/intro.html">hardware</a>. This allows users to run simple quick commands, called <em>Immediate mode</em>. Additionally, users can extend the DUE language with additional functionality that can be accessed externally or can be executed onto the device. This is called <em>Recording mode</em>.</p>
+<p>DUE Scripts run internally on any DUE-enabled <a href="../../hardware/intro.html">hardware</a>. This allows the device to run standalone. The on-line <a href="../console.html">DUE Console</a> lets developers start experimenting with the physical world in minutes...no installation is necessary!</p>
 <h2 id="operating-modes">Operating Modes</h2>
-<p><em>Immediate mode</em>, commands are executed immediately. In <em>Record mode</em>, commands are stored in flash and executed with the <code>run</code> command.</p>
-<p>When using the <a href="../console.html">DUE Console</a> these modes are automatically handled when you press the <code>REC</code> button and the code is recorded to the flash.The <code>Play</code> button runs the code on the device. The <code>Stop</code> button stops the program running on the device.</p>
-<p><img src="../images/console-buttons.png" alt="console buttons"></p>
-<p>If you want to send your DUE script and execute the code immediately use the <em>Code to execute immediately</em> text window and hit <code>arrow</code> button</p>
-<p><img src="../images/immediate-window.png" alt="console buttons"></p>
+<p>DUE Scripts has two modes where <em>Immediate mode</em> commands are executed immediately. Immediate mode commands are a single line of code. The second mode is <em>Record mode</em> where commands are stored in flash and then can be executed. The <a href="../console.html">DUE Console</a> handles these modes automatically. The following details are only needed when not using DUE Console, like when using a terminal software like TeraTerm.</p>
 <p><strong>Immediate Mode</strong></p>
-<p>When using a terminal editor a user will know they are in this mode when their cursor prompt is the<br>
-<code>&gt;</code> character. All statements are executed as soon as entered.</p>
+<p>The <code>&gt;</code> command is used to switch the system to immediate mode. This in turn will change the prompt to <code>&gt;</code> as well. All statements are executed as soon as entered.</p>
 <pre><code class="lang-basic">&gt; Print(&quot;Hello World&quot;)
 </code></pre>
+<p><img src="../images/teraterm.png" alt="TeraTerm"></p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Immediate Mode is the default mode when device is first connected.</p>
 </div>
 <p><strong>Record Mode</strong>
-To enter into <em>Record mode</em>, the user enters the <code>$</code> character.
-The character prompt will change to the <code>$</code> sign until <em>Record mode</em> is exited using the <code>&gt;</code> character. All statements entered are stored directly in flash but not executed until <code>run</code> is entered.</p>
+The <em>Record mode</em>, is entered using the <code>$</code> command. This will also modify the prompt to <code>$</code>. All statements entered are stored internally and not executed. The <code>run</code> command can be used to execute the program. The device will also automatically <code>run</code> a program on power up.</p>
+<p><img src="../images/teraterm-record.png" alt="TeraTerm"></p>
 <table>
 <thead>
 <tr>
@@ -164,6 +160,30 @@ PrintLn(y)
 <h2 id="script-features">Script Features</h2>
 <p>DUE Scripts are not case sensitive. Its syntax is very simple and inspired by BASIC coding language. The power of DUE Scripts comes from its simplicity rather than from its feature set. This is a perfect language to teach someone coding.</p>
 <p>Users that require serious coding should be using the DUE Platform combined with one of the many available coding languages. Still, DUE Scripts can be used to extend those languages, as detailed below.</p>
+<h3 id="print">Print</h3>
+<p><code>Print()</code> is a function that returns the value of its arguments. These arguments can be variables, strings, or equations. <code>Print()</code> is also unique because it can handle multiple arguments.</p>
+<pre><code class="lang-basic">x=100
+Print(x)
+Print(&quot;Hello World&quot;)
+Print(x+x)
+Print(x,&quot;Hello World&quot;, x+x)
+</code></pre>
+<p>Result:</p>
+<pre><code>100Hello World200100Hello World 200
+</code></pre>
+<p><code>PrintLn()</code> adds a line break to each print statement.</p>
+<pre><code class="lang-basic">x=100
+PrintLn(x)
+PrintLn(&quot;Hello World&quot;)
+PrintLn(x+x)
+PrintLn(x,&quot;Hello World&quot;, x+x)
+</code></pre>
+<p>Result:</p>
+<pre><code>100
+Hello World
+200
+100Hello World200
+</code></pre>
 <h3 id="comments">Comments</h3>
 <p>The <code>#</code> character is used to identify a comment. Comments are ignored by the program, text added to help developers understand the code.</p>
 <pre><code class="lang-basic"># This is a comment
@@ -239,10 +259,10 @@ End
 <p>Labels are needed to redirect the program. They are used by <code>Goto</code> and when calling a subroutine.</p>
 <p>A Label is created by using the <code>@</code> symbol in front of the desired label. Labels are limited to 6 characters.</p>
 <h3 id="goto">Goto</h3>
-<p>A <code>Goto</code> is useful for repeating tasks indefinitely.</p>
-<pre><code class="lang-basic">$@Loop
-$ add code here that runs forever
-$Goto Loop 
+<p><code>Goto</code> is useful for repeating tasks indefinitely by sending to a specific <em>Label</em> name.</p>
+<pre><code class="lang-basic">@Loop
+# add code here that runs forever
+Goto Loop 
 </code></pre>
 <h3 id="end--return">End &amp; Return</h3>
 <p>End terminates the program except when used to close an <code>if</code> statement.</p>
@@ -252,15 +272,15 @@ Print(&quot;This will not get printed&quot;)
 </code></pre>
 <p><code>Return</code> send the execution back from a called subroutine, see Subroutines below.</p>
 <h3 id="subroutine">Subroutine</h3>
-<p>Developers can use subroutines to implement &quot;soft&quot; like functions in their code. These subroutines are similar to functions but do not take variables or return values.</p>
+<p>Developers can use Labels to create their own subroutines to implement &quot;soft&quot; like functions in their code. These subroutines are similar to functions but do not take variables or return values.</p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>The built-in API offers true functions and therefore do take arguments and return values.</p>
 </div>
 <p>User subroutines are always added in recoding mode and resides in nonvolatile memory. A user subroutine starts with a label and ends with a <code>Return</code>.</p>
-<pre><code class="lang-basic">$@Mine
-$ add code here
-$Return
+<pre><code class="lang-basic">@Mine
+# add code here
+Return
 </code></pre>
 <p>The subroutine can then be called by its name followed by <code>()</code>.</p>
 <pre><code class="lang-basic">Mine()
@@ -270,13 +290,21 @@ $Return
 <h5>Tip</h5>
 <p>DUE variables are global and any changes inside subroutines will affect variable values outside those subroutines.</p>
 </div>
-<p>Recorded DUE Scripts are executed immediately on power up (the run command is issued internally). If the user doesn't want any of the code to run, they can start the program with the <code>End</code> statement.</p>
 <hr>
 <h2 id="combining-commands">Combining Commands</h2>
-<p>Multiple commands can be combined on a single line. This is especially useful when using immediate mode where a single line is required. To use multiple command, a <code>:</code> symbol is used.</p>
+<p>Multiple commands can be combined on a single line. This is especially useful when using <em>Immediate mode</em> where a single line is required. To use multiple command, a <code>:</code> symbol is used.</p>
 <p>This is an example of a for loop in a single line</p>
 <pre><code class="lang-basic">For i=1 to 1000 Step 10:PrintLn(i):Next
 </code></pre>
+<h2 id="good-practices">Good Practices</h2>
+<p>Recorded DUE Scripts are executed immediately on power up (the run command is issued internally). If the user doesn't want any of the code to run, they can start the program with an <code>End</code> statement. And then the 'End' can be flowed by a label, for example '@Go'.</p>
+<p>This code can be saved to the device using Record Mode:</p>
+<pre><code class="lang-basic">End
+@Go
+Print(&quot;Only when Go!&quot;)
+</code></pre>
+<p>The program will not execute on power up due to the <code>End</code> command. But now calling <code>Go()</code> in immediate mode will produce &quot;Only when Go!&quot;.</p>
+<p>Another good practice is to use the on-board LED as an activity LED to show that the device is running. Simply start your program by adding <code>Led(200,200,-1)</code>.</p>
 </article>
           </div>
 

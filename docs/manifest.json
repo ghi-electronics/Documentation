@@ -248,6 +248,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/btn-due-console.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/btn-due-console.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/btn-getting-started.png",
       "output": {
         "resource": {
@@ -282,6 +292,16 @@
       "output": {
         "resource": {
           "relative_path": "images/downloads.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/due-console.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/due-console.png"
         }
       },
       "version": ""
@@ -362,7 +382,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "Dnpo6Sfcx3hJdaVHzzb9+mSPpga2onK1m7vr5UqHcjg="
+          "hash": "CeV95N1K3LPW9K3GgqFaoRLqj1kl97xe9sZZ9xx4T80="
         }
       },
       "version": ""
@@ -373,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "software/coding-options/coding-options.html",
-          "hash": "enwaPYymy6DI6o7pKOWkFTRnHwB333iWqJ9oPeMIEIc="
+          "hash": "UVPm2KcAxqyB5AftQL/G7Y6+oUXakQV0io6qJZnXxDg="
         }
       },
       "version": ""
@@ -461,7 +481,7 @@
       "output": {
         ".html": {
           "relative_path": "software/console.html",
-          "hash": "DK55LMlnhRB8tTUF9ebSQLoidJ4ULhXvhMwwOseoShQ="
+          "hash": "wnxDqcgLpkDkrFd8tO2jGHOhn47FCFqIdjpLY43xxcQ="
         }
       },
       "version": ""
@@ -494,7 +514,7 @@
       "output": {
         ".html": {
           "relative_path": "software/due-script/corelib/beep.html",
-          "hash": "/qj0rx0qdGsbffsdeVhSjQDP7e/2vif4VMoJW2XRgH8="
+          "hash": "DpxpUkajs/LTjziCUoGXxjEd3S4H3H4g7Yfz4eTN2Gw="
         }
       },
       "version": ""
@@ -505,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "software/due-script/corelib/button.html",
-          "hash": "psHzhAtb64ZD4bFm1xLfBmNOFVt9dTwrH/rkB8a1gYg="
+          "hash": "MvR4jXl4KVDf0iyz8Qlu1UFJ12sQhjJRF4MD9bardz0="
         }
       },
       "version": ""
@@ -516,7 +536,7 @@
       "output": {
         ".html": {
           "relative_path": "software/due-script/corelib/corelib.html",
-          "hash": "2ILDEhWWZ6oXzHL6gC3RUb8HjU09yFb9219vXtBa6lI="
+          "hash": "/EDY+fIfSTh7GxcZT2uReULVf62oie7uIHwDwOdhNwQ="
         }
       },
       "version": ""
@@ -527,7 +547,7 @@
       "output": {
         ".html": {
           "relative_path": "software/due-script/corelib/digital.html",
-          "hash": "sMpr0G952l5DH1ywtwWrXpd2UAe+I7yBJlSQyEUZbeA="
+          "hash": "q4ZKZ5nK6SlG+cm9gfZMFWnVn1FQ5QMW6/29kfMOBWg="
         }
       },
       "version": ""
@@ -571,7 +591,7 @@
       "output": {
         ".html": {
           "relative_path": "software/due-script/corelib/infrared.html",
-          "hash": "luirgCmprbWsfugR6tpyPR4GlpCUpvoRiUKHYTwXWpg="
+          "hash": "Q/szDwrUiRuxLInA+7klAORw4qcP0R+bfDs7vmhxhVc="
         }
       },
       "version": ""
@@ -681,7 +701,7 @@
       "output": {
         ".html": {
           "relative_path": "software/due-script/due-script.html",
-          "hash": "oXUHumLertVGjOM9hQth7SMoZOfugqiRHdAFS3/A9EY="
+          "hash": "ux2ABnRfRHCACAZTVyVdt2Mx3BbyGv6RqS+wAF/FWJk="
         }
       },
       "version": ""
@@ -911,7 +931,7 @@
       "output": {
         ".html": {
           "relative_path": "software/due-script/streams.html",
-          "hash": "YIm4mh48w/osUOCIXi6iLrC9q0rx2ZGRE9rr/wZ65nA="
+          "hash": "TyoQJFJY2uXLk8leG/TU4zvXaB8kndt5MV0EtU7hyfU="
         }
       },
       "version": ""
@@ -922,7 +942,7 @@
       "output": {
         ".html": {
           "relative_path": "software/getting-started.html",
-          "hash": "fb+C/c7DTZernXlCieuuzUwpYOfBgyTGQcynVNRfy98="
+          "hash": "8TTVru5UO9BepIBqRz0Ha9JG0hNwJZHtj7v/Jp8oEKY="
         }
       },
       "version": ""
@@ -1178,12 +1198,32 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "software/images/teraterm-record.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/images/teraterm-record.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/images/teraterm.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/images/teraterm.png"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "software/intro.md",
       "output": {
         ".html": {
           "relative_path": "software/intro.html",
-          "hash": "uBQoQ6BmAhy+orF7TNxw91vPI34NsoPuaaKLaXb3/ck="
+          "hash": "fqQ7mv73TseOA+cfmGMzQT/FST+Jf4Nhl3jophfCgII="
         }
       },
       "version": ""
