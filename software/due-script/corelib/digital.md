@@ -10,7 +10,7 @@ These functions provide access to digital pins.
 **Returns:** 1 = high or  0 = low 
 
 > [!NOTE]
-> Pin numbers can also be **'a'** or **'b'** when reading the on-board buttons. Using 'a', 'A', or 97 yields the same results.
+> Pin numbers can also be **'a'** or **'b'** when reading the on-board buttons. Using **'a'**, **'A'**, or **97** yields the same results.
 
 ```basic
 x = DRead(2,1)
@@ -26,7 +26,7 @@ End
 **pin:** pin number <br> **state:** 1 = high or 0 = low
 
 > [!NOTE]
-> Pin numbers can also be **'l'** when writing the on-board LED. Using 'l', 'L', or 108 yields the same results.
+> Pin numbers can also be **'l'** when writing the on-board LED. Using **'l'**, **'L'**, or **108** yields the same results.
 
 ```basic
 for x = 1 to 10
@@ -36,11 +36,4 @@ for x = 1 to 10
     Wait(200)
 next
 ```
-
-
-> [!NOTE]
-> All DUE enabled hardware's on-board
-LED is found on pin 100.
-
-
 ---

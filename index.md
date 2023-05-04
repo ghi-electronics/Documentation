@@ -3,7 +3,9 @@
 
 ![DUE](images/due-link.png)
 
-## What is DUE?
+## You're DUE for some physical computing!
+
+Accessing hardware was never easier, thanks to DUE. Developer can now read sensors and control motors right from their favorite programming languages.
 
 DUE is a Dynamic, Universal, and Extensible platform that links devices to the physical world. These devices can be desktops, laptops, phones, or even a Raspberry PI. Developers have the option to use any modern operating system and use the programming language of their choice.
 
@@ -11,20 +13,29 @@ DUE is a Dynamic, Universal, and Extensible platform that links devices to the p
 [![Getting Started](images/btn-getting-started.png)](~/software/getting-started.md)
 
 ---
-<!--## Coding Options-->
+## Code in the language you choose!
 
-![Coding Logos](images/coding-options.png)
+![Coding Languages](images/coding-options.png)
 
-The DUE Link Platform ships with multiple supported languages. Users interested in supporting other languages can convert one of the open-source libraries (such as Python) to their language of choice.
+Developers have the choice to use any development environment and IDE they choose.  Additionally, any modern operating system or language can be used. Some languages are supported out-of-the-box and others can be added easily.
 
 [![Coding Options](images/btn-coding-options.png)](~/software/coding-options/coding-options.md)
 
 ---
-<!--## Hardware options-->
+## Start Immediately using the DUE Console
+
+![DUE Console](images/due-console.png)
+
+[DUE Scripts](~/software/due-script/due-script.md) run internally on any DUE-enabled hardware. This allows the device to run standalone. The on-line DUE Console lets developers start experimenting with the physical world in minutes...no installation is necessary!
+
+[![DUE Console](images/btn-due-console.png)](~/software/console.md)
+
+---
+## Hardware options
 
 ![Hardware Options](images/hardware-options.png)
 
-The DUE Link Platform ships with multiple supported languages. Users interested in supporting other languages can convert one of the open-source libraries (such as Python) to their language of choice.
+The power of DUE is available on Fast-and-Easy (FEZ) maker-friendly boards FEZ Flea and FEZ Pico. Educators now have the power to use their beloved language-of-choice with BrainPad devices.
 
 [![Hardware](images/btn-hardware-options.png)](~/hardware/intro.md)
 

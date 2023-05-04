@@ -12,7 +12,7 @@ The DUE Console provides many functionalities. It is a great start to verify the
 
 ## Immediate Window
 
-The immediate text box sends and runs the code immediately on the DUE hardware as soon as the `send` arrow is pressed. 
+The immediate text box sends and runs the code immediately on the DUE hardware as soon as the `Enter` key or `arrow` button is pressed. 
 
 ![DUE immediate window](./images/immediate-window.png) 
 
@@ -39,7 +39,7 @@ Select the connect button to connect to the DUE hardware.
 
 ## Record
 
-Sends the script to the DUE hardware's flash. 
+Sends the script in the editor window to the DUE hardware's flash. 
 
 ![Record Button](./images/due-record.png) 
 
@@ -63,7 +63,7 @@ Stops the program running on the DUE hardware.
 
 ## List
 
-List's the program current stored in flash on the console's output window.
+The List button loads the program currently stored in flash into the editor window. 
 
 ![List Button](./images/due-list.png) 
 
@@ -71,7 +71,7 @@ List's the program current stored in flash on the console's output window.
 
 ## Download
 
-Saves the code in the console.s window to a text file. 
+Saves the code in the consoles editor window to a text file. 
 
 ![Download Button](./images/due-save.png) 
 

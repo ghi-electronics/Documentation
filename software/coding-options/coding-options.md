@@ -35,7 +35,7 @@ On Windows, the device manager can be used to see a list of available serial por
 
 ## Troubleshooting
 
-The DUE console is the perfect place to connect and verify functionality.
+The [DUE console](../console.md) is the perfect place to connect and verify functionality.
 
 The first thing to do when facing any troubles is making sure the device is loaded with the latest firmware. The instructions are found on the device's [Hardware](../../hardware/intro.md) page.
 

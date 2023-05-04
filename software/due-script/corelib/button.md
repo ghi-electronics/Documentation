@@ -27,6 +27,7 @@ x=BtnDown('a')
 If x=1
     PrintLn("Button A")
 End
+Wait(200)
 Goto Loop
 ```
 ---

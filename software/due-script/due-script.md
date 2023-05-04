@@ -1,35 +1,30 @@
 # DUE Script
 ---
 
-DUE Scripts run internally on any DUE-enabled [hardware](../../hardware/intro.md). This allows users to run simple quick commands, called *Immediate mode*. Additionally, users can extend the DUE language with additional functionality that can be accessed externally or can be executed onto the device. This is called *Recording mode*.
+DUE Scripts run internally on any DUE-enabled [hardware](../../hardware/intro.md). This allows the device to run standalone. The on-line [DUE Console](../../software/console.md) lets developers start experimenting with the physical world in minutes...no installation is necessary!
 
 ## Operating Modes
 
-*Immediate mode*, commands are executed immediately. In *Record mode*, commands are stored in flash and executed with the `run` command. 
-
-When using the [DUE Console](../../software/console.md) these modes are automatically handled when you press the `REC` button and the code is recorded to the flash.The `Play` button runs the code on the device. The `Stop` button stops the program running on the device.  
-
-![console buttons](../images/console-buttons.png)
-
-If you want to send your DUE script and execute the code immediately use the *Code to execute immediately* text window and hit `arrow` button
-
-![console buttons](../images/immediate-window.png)
+DUE Scripts has two modes where *Immediate mode* commands are executed immediately. Immediate mode commands are a single line of code. The second mode is *Record mode* where commands are stored in flash and then can be executed. The [DUE Console](../../software/console.md) handles these modes automatically. The following details are only needed when not using DUE Console, like when using a terminal software like TeraTerm.
 
 **Immediate Mode**
 
-When using a terminal editor a user will know they are in this mode when their cursor prompt is the  
-`>` character. All statements are executed as soon as entered.
+The `>` command is used to switch the system to immediate mode. This in turn will change the prompt to `>` as well. All statements are executed as soon as entered.
 
 ```basic 
 > Print("Hello World")
 ```
 
+![TeraTerm](../images/teraterm.png)
+
+
 > [!NOTE]
 > Immediate Mode is the default mode when device is first connected.
 
 **Record Mode**
-To enter into *Record mode*, the user enters the `$` character.
-The character prompt will change to the `$` sign until *Record mode* is exited using the `>` character. All statements entered are stored directly in flash but not executed until `run` is entered. 
+The *Record mode*, is entered using the `$` command. This will also modify the prompt to `$`. All statements entered are stored internally and not executed. The `run` command can be used to execute the program. The device will also automatically `run` a program on power up. 
+
+![TeraTerm](../images/teraterm-record.png)
 
 |Statement              |Description                                                            |
 |:----------------------|:----------------------------------------------------------------------|
@@ -71,6 +66,38 @@ PrintLn(y)
 DUE Scripts are not case sensitive. Its syntax is very simple and inspired by BASIC coding language. The power of DUE Scripts comes from its simplicity rather than from its feature set. This is a perfect language to teach someone coding.
 
 Users that require serious coding should be using the DUE Platform combined with one of the many available coding languages. Still, DUE Scripts can be used to extend those languages, as detailed below.
+
+### Print 
+`Print()` is a function that returns the value of its arguments. These arguments can be variables, strings, or equations. `Print()` is also unique because it can handle multiple arguments. 
+
+```basic
+x=100
+Print(x)
+Print("Hello World")
+Print(x+x)
+Print(x,"Hello World", x+x)
+```
+Result:
+```
+100Hello World200100Hello World 200
+```
+
+`PrintLn()` adds a line break to each print statement. 
+
+```basic
+x=100
+PrintLn(x)
+PrintLn("Hello World")
+PrintLn(x+x)
+PrintLn(x,"Hello World", x+x)
+```
+Result:
+```
+100
+Hello World
+200
+100Hello World200
+```
 
 ### Comments
 The `#` character is used to identify a comment. Comments are ignored by the program, text added to help developers understand the code.
@@ -150,8 +177,6 @@ next
 
 ```
 
-
-
 ### If-Statement
 If statements must end with the `End` command. This will only end the If statement and not your program. 
 
@@ -162,6 +187,7 @@ Else
 PrintLn("not one")
 End
 ```
+
 ### Labels
 
 Labels are needed to redirect the program. They are used by `Goto` and when calling a subroutine.
@@ -170,12 +196,12 @@ A Label is created by using the `@` symbol in front of the desired label. Labels
 
 ### Goto
 
-A `Goto` is useful for repeating tasks indefinitely. 
+`Goto` is useful for repeating tasks indefinitely by sending to a specific *Label* name. 
 
 ```basic
-$@Loop
-$ add code here that runs forever
-$Goto Loop 
+@Loop
+# add code here that runs forever
+Goto Loop 
 ```
 
 ### End & Return
@@ -192,7 +218,7 @@ Print("This will not get printed")
 
 ### Subroutine
 
-Developers can use subroutines to implement "soft" like functions in their code. These subroutines are similar to functions but do not take variables or return values. 
+Developers can use Labels to create their own subroutines to implement "soft" like functions in their code. These subroutines are similar to functions but do not take variables or return values. 
 
 > [!Tip] 
 > The built-in API offers true functions and therefore do take arguments and return values.
@@ -200,9 +226,9 @@ Developers can use subroutines to implement "soft" like functions in their code.
 User subroutines are always added in recoding mode and resides in nonvolatile memory. A user subroutine starts with a label and ends with a `Return`. 
 
 ```basic
-$@Mine
-$ add code here
-$Return
+@Mine
+# add code here
+Return
 ```
 
 The subroutine can then be called by its name followed by `()`.
@@ -216,15 +242,28 @@ Mine()
 > [!TIP]
 > DUE variables are global and any changes inside subroutines will affect variable values outside those subroutines.
 
-Recorded DUE Scripts are executed immediately on power up (the run command is issued internally). If the user doesn't want any of the code to run, they can start the program with the `End` statement.
-
 ---
 
 ## Combining Commands
-Multiple commands can be combined on a single line. This is especially useful when using immediate mode where a single line is required. To use multiple command, a `:` symbol is used.
+Multiple commands can be combined on a single line. This is especially useful when using *Immediate mode* where a single line is required. To use multiple command, a `:` symbol is used.
 
 This is an example of a for loop in a single line
 
 ```basic 
 For i=1 to 1000 Step 10:PrintLn(i):Next
 ```
+## Good Practices
+
+Recorded DUE Scripts are executed immediately on power up (the run command is issued internally). If the user doesn't want any of the code to run, they can start the program with an `End` statement. And then the 'End' can be flowed by a label, for example '@Go'.
+
+This code can be saved to the device using Record Mode:
+
+```basic
+End
+@Go
+Print("Only when Go!")
+```
+
+The program will not execute on power up due to the `End` command. But now calling `Go()` in immediate mode will produce "Only when Go!".
+
+Another good practice is to use the on-board LED as an activity LED to show that the device is running. Simply start your program by adding `Led(200,200,-1)`.

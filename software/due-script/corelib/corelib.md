@@ -2,7 +2,7 @@
 
 ---
 
-The core library gives DUE Scripts the necessary API to access hardware. It has other software related libraries as well. These API functions are available from within DUE Scripts and runs host-less. When using a host, a library for that particular library is provided to reflect the DUE Core library. For example, when using Python, the provided Python library includes `dev.Led.Set(200,800,20)` which mirrors the [LED](led.md) API.
+The core library gives DUE Scripts the necessary API to access hardware. It has other software related libraries as well. These API functions are available from within DUE Scripts and runs host-less. When using a host, a library for that particular language is provided to reflect the DUE Core library. For example, when using Python, the provided Python library includes `dev.Led.Set(200,800,20)` which mirrors the [LED](led.md) API.
 
 | API       | Description          |
 | :--- |:---|

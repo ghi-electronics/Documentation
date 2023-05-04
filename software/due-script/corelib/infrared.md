@@ -37,7 +37,7 @@ IR decoder is fixed to pin 2
 IrEnable(1)
 @Loop
 x=IrRead()
-if x >=0: Println(x):end
+if x >=0: PrintLn(x):end
 Wait(1000)
 goto Loop
 ```
