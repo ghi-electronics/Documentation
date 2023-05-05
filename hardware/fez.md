@@ -2,8 +2,7 @@
 ---
 These FEZ products can be used with the DUE platform.
 
-
-## FEZ Flea
+**FEZ Flea**
 
 The FEZ Flea form factor is the same as the Seeed Studio Xiao. This opens up the option for many existing accessories. 
 
@@ -13,9 +12,7 @@ The FEZ Flea can also be soldered to a PCB just like a SoM.
 
 ![Flea Pinout](images/flea-due-pinout.png) 
 
----
-
-## FEZ Pico
+**FEZ Pico**
 
 The FEZ Pico form factor is the same as the Raspberry Pi Pico. This opens up the option for many existing accessories.
 
@@ -25,7 +22,16 @@ The FEZ Pico also includes a STEMMA connector that can connect to many existing 
 
 ![Pico Pinout](images/pico-due-pinout.png)
 
+Visit the [GHI Electronics](https://www.ghielectronics.com/sitcore/sbc/) to learn about the product and see purchasing options.
+
+<div style="text-align: center;">
+
+[![Purchasing Options](images/btn-buy.png)](https://www.ghielectronics.com/sitcore/sbc/)
+
+</div>
+
 ---
+
 ## Getting Ready
 The first step is to load the appropriate firmware onto the device. Follow the steps found at the BrainPad [loader page.](https://loader.brainpad.com) and select the appropriate DUE firmware. 
 

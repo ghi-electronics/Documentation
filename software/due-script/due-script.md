@@ -204,13 +204,13 @@ A Label is created by using the `@` symbol in front of the desired label. Labels
 Goto Loop 
 ```
 
-### End & Return
+### Exit & Return
 
-End terminates the program except when used to close an `if` statement. 
+`Exit` terminates the program.
 
 ```basic
 Print("Hello")
-End
+Exit
 Print("This will not get printed")
 ```
 
@@ -254,12 +254,12 @@ For i=1 to 1000 Step 10:PrintLn(i):Next
 ```
 ## Good Practices
 
-Recorded DUE Scripts are executed immediately on power up (the run command is issued internally). If the user doesn't want any of the code to run, they can start the program with an `End` statement. And then the 'End' can be flowed by a label, for example '@Go'.
+Recorded DUE Scripts are executed immediately on power up (the run command is issued internally). If the user doesn't want any of the code to run, they can start the program with an `Exit` statement. And then the 'Exit' can be flowed by a label, for example '@Go'.
 
 This code can be saved to the device using Record Mode:
 
 ```basic
-End
+Exit
 @Go
 Print("Only when Go!")
 ```

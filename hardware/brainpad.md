@@ -6,11 +6,21 @@ Educators now have the power to use their beloved language-of-choice with BrainP
 
 Both BrainPad Pulse and BrainPad Edge are fully supported. However, BrainPad Pulse include additional natively-supported, which are the display and the buzzer.
 
-## BrainPad Pulse
+**BrainPad Pulse**
 ![BrainPad Pulse](images/brainpad-pulse.png) 
 
-## BrainPad Edge
+**BrainPad Edge**
 ![BrainPad Edge](images/brainpad-edge.png) 
+
+![BrainPad Pinout](images/pinout.jpg) 
+
+Visit the [BrainPad website](https://www.brainpad.com) to learn about the product and see purchasing options.
+
+<div style="text-align: center;">
+
+[![Purchasing Options](images/btn-buy.png)](https://www.brainpad.com)
+
+</div>
 
 ---
 
