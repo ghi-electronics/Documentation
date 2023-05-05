@@ -50,7 +50,6 @@ The provided API mirrors DUE Script's [Core library](../due-script/corelib/corel
 | Button.Enable()              |[BtnEnable()](../due-script/corelib/button.md)			| Sets up a button to be used
 | Button.IsPressed()           |[BtnDown()](../due-script/corelib/button.md)			| Detects if button is pressed 
 | Button.IsReleased()          |[BtnDown()](../due-script/corelib/button.md)			| Detects if button is released 
-| Button.Buttons               |NA														| Enum button A & B
 | DeviceConfig.IsEdge()        |[Version()](../due-script/corelib/systemfunctions.md)	| Checks for specific hardware
 | DeviceConfig.IsFlea()        |[Version()](../due-script/corelib/systemfunctions.md)	| Checks for specific hardware
 | DeviceConfig.IsPico()        |[Version()](../due-script/corelib/systemfunctions.md)	| Checks for specific hardware
