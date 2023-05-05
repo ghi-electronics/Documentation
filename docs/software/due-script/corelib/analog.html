@@ -91,11 +91,11 @@
 </div>
 <pre><code class="lang-basic">@Loop
 For i=0 to 1000 Step 100
-    AWrite(0,i)
+    AWrite(&quot;L&quot;,i)
     Wait(100)
 next
 For i=1000 to 0 Step -100
-    AWrite(0,i) 
+    AWrite(&quot;L&quot;,i) 
     Wait(100)
 Next
 Goto Loop
@@ -107,6 +107,7 @@ Goto Loop
 <strong>pin:</strong> pin number <br>
 <strong>Returns:</strong> The analog value of the pin</li>
 </ul>
+<p>Not all pins support <code>ARead()</code>. The hardware docs will show what pins support analog, typically labeled ADC. Pins that do not support <code>ARead()</code> will return 0.</p>
 <pre><code class="lang-basic">@Loop
 For i=0 to 100
     x=ARead(0)

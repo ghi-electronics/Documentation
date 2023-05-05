@@ -264,10 +264,10 @@ End
 # add code here that runs forever
 Goto Loop 
 </code></pre>
-<h3 id="end--return">End &amp; Return</h3>
-<p>End terminates the program except when used to close an <code>if</code> statement.</p>
+<h3 id="exit--return">Exit &amp; Return</h3>
+<p><code>Exit</code> terminates the program.</p>
 <pre><code class="lang-basic">Print(&quot;Hello&quot;)
-End
+Exit
 Print(&quot;This will not get printed&quot;)
 </code></pre>
 <p><code>Return</code> send the execution back from a called subroutine, see Subroutines below.</p>
@@ -297,9 +297,9 @@ Return
 <pre><code class="lang-basic">For i=1 to 1000 Step 10:PrintLn(i):Next
 </code></pre>
 <h2 id="good-practices">Good Practices</h2>
-<p>Recorded DUE Scripts are executed immediately on power up (the run command is issued internally). If the user doesn't want any of the code to run, they can start the program with an <code>End</code> statement. And then the 'End' can be flowed by a label, for example '@Go'.</p>
+<p>Recorded DUE Scripts are executed immediately on power up (the run command is issued internally). If the user doesn't want any of the code to run, they can start the program with an <code>Exit</code> statement. And then the 'Exit' can be flowed by a label, for example '@Go'.</p>
 <p>This code can be saved to the device using Record Mode:</p>
-<pre><code class="lang-basic">End
+<pre><code class="lang-basic">Exit
 @Go
 Print(&quot;Only when Go!&quot;)
 </code></pre>
