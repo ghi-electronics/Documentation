@@ -18,9 +18,10 @@ Start a new project with a simple line of code to test out the project is runnin
 print("Hello DUE!")
 ```
 
-Go to the [**Downloads**](../downloads.md) page and download the latest Python library. Install the library on your system using `pip install DUE-0.0.1-py3-none-any.whl`
+We now need to install the DUE Python library `pip install DUELink`. The DUELink package will also install all required dependencies. The library is also available on the [downloads](../downloads.md) page if needed.
 
-If you do not have the pyserial already installed, then also run `pip install pyserial`.
+> [!Tip]
+> The DUE python library requires pyserial, which requires an admin access to install.
 
 ## Blinky!
 Our first program will blink the on-board LED 20 times, where it comes on for 200ms and then it is off for 800ms.
@@ -31,7 +32,8 @@ Our first program will blink the on-board LED 20 times, where it comes on for 20
 ```py
 from DUE.DUEController import DUEController
 print("Hello DUE!")
-dev = DUEController("COM27")
+availablePort = DUEController.GetConnectionPort()
+dev = DUEController(availablePort)
 # Flash the LED 20 times (on for 200ms and off for 800ms)
 dev.Led.Set(200,800,20)
 print("Bye DUE!")

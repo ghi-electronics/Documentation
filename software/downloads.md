@@ -46,7 +46,7 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
-[v1.0.0](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUE-1.0.0.0-py3-none-any.whl) | 2023-05-05 | RC
+[v1.0.0](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.0.0-py3-none-any.whl) | 2023-05-05 | RC
 
 
 ## Release Notes
