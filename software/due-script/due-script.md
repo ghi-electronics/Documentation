@@ -264,6 +264,6 @@ Exit
 Print("Only when Go!")
 ```
 
-The program will not execute on power up due to the `End` command. But now calling `Go()` in immediate mode will produce "Only when Go!".
+The program will not execute on power up due to the `Exit` command. But now calling `Go()` in immediate mode will produce "Only when Go!".
 
 Another good practice is to use the on-board LED as an activity LED to show that the device is running. Simply start your program by adding `Led(200,200,-1)`.
