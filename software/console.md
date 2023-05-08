@@ -101,6 +101,14 @@ Select from pre-built DUE Script Demos that load into the edit window.
 
 ---
 
+## Firmware
+
+Select and load the appropriate firmware to your device.
+
+![Theme Button](./images/due-demos.png) 
+
+---
+
 
 ## Theme
 

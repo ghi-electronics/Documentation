@@ -25,12 +25,12 @@ Visit the [BrainPad website](https://www.brainpad.com) to learn about the produc
 ---
 
 ## Getting Ready
-The first step is to load the appropriate firmware onto the device. Follow the steps found at the BrainPad [loader page.](https://loader.brainpad.com) and select the appropriate DUE firmware. 
+The first step is to load the appropriate firmware onto the device. Follow the steps found on the [DUE Console](https://console.duelink.com/) website under `Firmware` and select the appropriate DUE firmware. 
 
 > [!TIP]
 > The heart to the BrainPad Pulse is SITCore SC13 chipset. And for BrainPad Edge is SITCore SC007.
 
-![BrainPad Loader Page](images/loader.png) 
+![DUE Console Loader Page](images/loader.png) 
 
 ---
 

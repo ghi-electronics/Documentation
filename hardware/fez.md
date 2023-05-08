@@ -33,12 +33,12 @@ Visit the [GHI Electronics](https://www.ghielectronics.com/sitcore/sbc/) to lear
 ---
 
 ## Getting Ready
-The first step is to load the appropriate firmware onto the device. Follow the steps found at the BrainPad [loader page.](https://loader.brainpad.com) and select the appropriate DUE firmware. 
+The first step is to load the appropriate firmware onto the device. Follow the steps found on the [DUE Console](https://console.duelink.com/) website under `Firmware` and select the appropriate DUE firmware. 
 
 > [!TIP]
-> The heart of both FEZ boards SITCore SC13 chipset.
+> The heart to the BrainPad Pulse is SITCore SC13 chipset. And for BrainPad Edge is SITCore SC007.
 
-![BrainPad Loader Page](images/loader.png) 
+![DUE Console Loader Page](images/loader.png) 
 
 ---
 
