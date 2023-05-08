@@ -23,7 +23,7 @@ Try `DWrite('L',1)` to run the LED on and then `DWrite('L',0)` to turn it off.
 ---
 ## Output window
 
-The DUE Output window is where DUE hardware will talk back to the console. The `button` clears the Output window. 
+The DUE Output window is where DUE hardware will talk back to the console. The `eraser` button clears the Output window. 
 
 ![DUE console output](./images/console-output.png) 
 
@@ -76,6 +76,31 @@ Saves the code in the consoles editor window to a text file.
 ![Download Button](./images/due-save.png) 
 
 ---
+
+## Load
+
+Loads a saved program into the editor. 
+
+![Download Button](./images/due-load.png) 
+
+---
+
+## Docs
+
+Links to the DUE Script Documentation.
+
+![Theme Button](./images/due-docs.png) 
+
+---
+
+## Demos
+
+Select from pre-built DUE Script Demos that load into the edit window.
+
+![Theme Button](./images/due-demos.png) 
+
+---
+
 
 ## Theme
 
