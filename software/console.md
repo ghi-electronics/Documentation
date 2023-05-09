@@ -21,7 +21,7 @@ Try `DWrite('L',1)` to run the LED on and then `DWrite('L',0)` to turn it off.
 ---
 
 ---
-## Output window
+## Output Window
 
 The DUE Output window is where DUE hardware will talk back to the console. The `eraser` button clears the Output window. 
 
@@ -105,7 +105,7 @@ Select from pre-built DUE Script Demos that load into the edit window.
 
 Select and load the appropriate firmware to your device.
 
-![Theme Button](./images/due-demos.png) 
+![Theme Button](./images/due-firmware.png) 
 
 ---
 

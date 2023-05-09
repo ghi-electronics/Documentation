@@ -1,5 +1,33 @@
 ## LCD
-These functions are device specific and added to support products with built in displays like the one found on the BrainPad Pulse.
+These functions allow for simple graphics on the very common I2C displays that use the SSD1306 controller and have 128x64 pixels. This display is found on the BrainPad Pulse by default, and can be added to the I2C channel on all of the other boards. These displays are available in multiple sizes but most common is 0.96".
+
+![SSD1306](images/ssd1306.png)
+
+> [!Tip]
+> We have tested 2.42" displays that use SSD1309 and seemed to work perfectly.
+
+![SSD1309](images/ssd1309.png)
+
+> [!Caution]
+> Displays with knock-off controller SSH1106 that is supposed to be compatible with SSD1306 did not work as expected.
+
+- **LcdConfig(address)** Pipes the graphics to a connected display. <br>
+By default, all graphics is directed to the display found on BrainPad Pulse. However, making a call to `LcdConfig()` directs the system to send all graphics to an external display, at the provided `address`. Setting the address to `0` resets the configuration to the default BrainPad Pulse LCD<br>
+**address:** I2C address, 0 = default(BrainPad Pulse)
+
+> [!Tip]
+> This function is not needed to use the display found on BrainPad Pulse.
+
+This example will pipe (direct) graphics to an external 2.42" display with address 0x??, wired to ?product name???. Tip: A resistor on the back of the display needs to be moved to change its bus from SPI to I2C.
+
+image
+
+```basic
+LcdConfig(0x12)
+LcdClear(0)
+LcdText("Hello World",1,10,10)
+LcdShow()
+```
 
 - **LcdShow()** Sends the display buffer to the LCD. 
 
