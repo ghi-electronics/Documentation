@@ -12,7 +12,7 @@ Both BrainPad Pulse and BrainPad Edge are fully supported. However, BrainPad Pul
 **BrainPad Edge**
 ![BrainPad Edge](images/brainpad-edge.png) 
 
-![BrainPad Pinout](images/pinout.jpg) 
+![BrainPad Pinout](images/edge-pulse-due-pinout.png) 
 
 Visit the [BrainPad website](https://www.brainpad.com) to learn about the product and see purchasing options.
 
