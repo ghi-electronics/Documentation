@@ -78,7 +78,33 @@
             <article class="content wrap" id="_content" data-uid="">
 <h2 id="lcd">LCD</h2>
 
-<p>These functions are device specific and added to support products with built in displays like the one found on the BrainPad Pulse.</p>
+<p>These functions allow for simple graphics on the very common I2C displays that use the SSD1306 controller and have 128x64 pixels. This display is found on the BrainPad Pulse by default, and can be added to the I2C channel on all of the other boards. These displays are available in multiple sizes but most common is 0.96&quot;.</p>
+<p><img src="images/ssd1306.png" alt="SSD1306"></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>We have tested 2.42&quot; displays that use SSD1309 and seemed to work perfectly.</p>
+</div>
+<p><img src="images/ssd1309.png" alt="SSD1309"></p>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>Displays with knock-off controller SSH1106 that is supposed to be compatible with SSD1306 did not work as expected.</p>
+</div>
+<ul>
+<li><strong>LcdConfig(address)</strong> Pipes the graphics to a connected display. <br>
+By default, all graphics is directed to the display found on BrainPad Pulse. However, making a call to <code>LcdConfig()</code> directs the system to send all graphics to an external display, at the provided <code>address</code>. Setting the address to <code>0</code> resets the configuration to the default BrainPad Pulse LCD<br>
+<strong>address:</strong> I2C address, 0 = default(BrainPad Pulse)</li>
+</ul>
+<div class="TIP">
+<h5>Tip</h5>
+<p>This function is not needed to use the display found on BrainPad Pulse.</p>
+</div>
+<p>This example will pipe (direct) graphics to an external 2.42&quot; display with address 0x??, wired to ?product name???. Tip: A resistor on the back of the display needs to be moved to change its bus from SPI to I2C.</p>
+<p>image</p>
+<pre><code class="lang-basic">LcdConfig(0x12)
+LcdClear(0)
+LcdText(&quot;Hello World&quot;,1,10,10)
+LcdShow()
+</code></pre>
 <ul>
 <li><p><strong>LcdShow()</strong> Sends the display buffer to the LCD.</p>
 </li>
