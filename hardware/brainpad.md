@@ -1,4 +1,4 @@
-# BrainPad
+﻿# BrainPad
 ---
 ![BrainPad Logo](images/brainpad-logo.png) 
 
@@ -13,6 +13,18 @@ Both BrainPad Pulse and BrainPad Edge are fully supported. However, BrainPad Pul
 ![BrainPad Edge](images/brainpad-edge.png) 
 
 ![BrainPad Pinout](images/edge-pulse-due-pinout.png) 
+
+**On-board Components**
+
+
+|       | Pulse | Edge
+---     | ---   | ---
+LED|   ✓   |    ✓
+Button A|   ✓   |    ✓
+Button B|   ✓   |    
+LCD     |   ✓   | 
+Sound   |   ✓   |    
+
 
 Visit the [BrainPad website](https://www.brainpad.com) to learn about the product and see purchasing options.
 
