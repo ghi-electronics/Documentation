@@ -1,11 +1,13 @@
 # DUE Script
 ---
 
-DUE Scripts run internally on any DUE-enabled [hardware](../../hardware/intro.md). This allows the device to run standalone. The on-line [DUE Console](../../software/console.md) lets developers start experimenting with the physical world in minutes...no installation is necessary!
+The DUE Link platform includes a scripting language called DUE Script it runs internally on any [DUE-enabled hardware](../../hardware/intro.md). This allows the device to run standalone independent from any host. This very easy-to-learn scripting language is inspired by BASIC and Python, giving the user the simplicity and flexibility they need.
+
+The on-line [DUE Console](../../software/console.md) lets developers start experimenting with DUE Script and the physical world in minutes...no installation is necessary!
 
 ## Operating Modes
 
-DUE Scripts has two modes where *Immediate mode* commands are executed immediately. Immediate mode commands are a single line of code. The second mode is *Record mode* where commands are stored in flash and then can be executed. The [DUE Console](../../software/console.md) handles these modes automatically. The following details are only needed when not using DUE Console, like when using a terminal software like TeraTerm.
+DUE Script has two modes *Immediate mode* and *Record mode*. *Immediate mode* commands are executed immediately. *Immediate mode* commands are a single line of code. *Record mode* commands are stored in flash and then can be executed. The [DUE Console](../../software/console.md) handles these modes automatically. The following details are only needed when not using DUE Console, like when using a terminal software like TeraTerm.
 
 **Immediate Mode**
 

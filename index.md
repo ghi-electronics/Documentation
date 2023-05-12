@@ -26,7 +26,9 @@ Developers have the choice to use any development environment and IDE they choos
 
 ![DUE Console](images/due-console.png)
 
-[DUE Scripts](~/software/due-script/due-script.md) run internally on any DUE-enabled hardware. This allows the device to run standalone. The on-line DUE Console lets developers start experimenting with the physical world in minutes...no installation is necessary!
+The DUE Link platform includes a scripting language called [DUE Script](~/software/due-script/due-script.md) it run internally on any [DUE-enabled hardware](~/hardware/intro.md). This allows the device to run standalone independent from any host. This very easy-to-learn scripting language is inspired by BASIC and Python, giving the user the simplicity and flexibility they need.
+
+The on-line DUE Console lets developers start experimenting with DUE Script and the physical world in minutes...no installation is necessary!
 
 [![DUE Console](images/btn-due-console.png)](~/software/console.md)
 
