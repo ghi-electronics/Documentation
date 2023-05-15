@@ -193,6 +193,98 @@ Print(x) # This is also a comment
 </code></pre>
 <h3 id="variables">Variables</h3>
 <p>DUE Script has a fixed set of 26 variables, one for each letter, assigned to <code>a</code> to <code>z</code>. The only data type used in DUE is float. All variables created are global in nature. To use a variable, simply use <code>x=5.5</code></p>
+<h3 id="operands">Operands</h3>
+<p>DUE Script supports the following operators.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Mathematical</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>Add</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Subtract</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Multiply</td>
+</tr>
+<tr>
+<td>/</td>
+<td>Divide</td>
+</tr>
+<tr>
+<td>%</td>
+<td>Modulus, the remainder</td>
+</tr>
+<tr>
+<td><strong>Comparators</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>Greater Than</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>Less Than</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>Greater Than or Equal To</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>Less Than or Equal To</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Equal</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>Not Equal</td>
+</tr>
+<tr>
+<td><strong>Logical</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>&amp;&amp;</td>
+<td>And</td>
+</tr>
+<tr>
+<td>||</td>
+<td>Or</td>
+</tr>
+<tr>
+<td><strong>Bitwise</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>Bitwise And</td>
+</tr>
+<tr>
+<td>|</td>
+<td>Bitwise Or</td>
+</tr>
+<tr>
+<td>&lt;&lt;</td>
+<td>Bitwise Shift Right</td>
+</tr>
+<tr>
+<td>&gt;&gt;</td>
+<td>Bitwise Shift Left</td>
+</tr>
+</tbody>
+</table>
 <h3 id="arrays">Arrays</h3>
 <p>Similarly to variables, arrays are fixed to 26 arrays. They are assigned to letters <code>a</code> to <code>z</code>. DUE Script differentiates between variable <code>a</code> and array <code>a[]</code> when square brackets are used. Arrays are size zero by default and can be sized, or resized using <code>Dim</code>.</p>
 <p>This is an example that uses both, variables and arrays:</p>
@@ -217,22 +309,38 @@ For i=0 to 9:PrintLn(a[i]):Next
 <p>Use <code>Dim a[0]</code> to free up the memory reserved for array <code>a[]</code>.</p>
 </div>
 <h3 id="for-loop">For-Loop</h3>
+<p>The For-Loop has two different syntax styles. <strong>BASIC</strong> and <strong>Python</strong> style.</p>
+<p><strong>BASIC Style</strong></p>
+<p>The BASIC style For-Loop includes the last number in the range.</p>
 <pre><code class="lang-basic"># Counting Up
-For i=1 to 1000 Step 10
+For i=1 to 5
+Print(i,&quot;,&quot;)
+Next
+</code></pre>
+<p>Output:</p>
+<p><code>0,1,2,3,4,5,</code></p>
+<p>Incremental For-Loops</p>
+<pre><code class="lang-basic"># Counting Up in increments of 10
+For i=1000 to 1 Step 10
 PrintLn(i)
 Next
 
-# Counting Down
+# Counting Down in increments of 10
 For i=1000 to 1 Step -10
 PrintLn(i)
 Next
-
-# Range with only stop value
+</code></pre>
+<p><strong>Python Style</strong></p>
+<p>DUE Script also allows For Loops written similar to Python. The last number of the range is not included in output.</p>
+<pre><code class="lang-basic"># Range with only stop value
 For i in range(5)
 Print(i,&quot;,&quot;)
 next
-
-# Range with start and stop value
+</code></pre>
+<p>Output:</p>
+<p><code>0,1,2,3,4,</code></p>
+<p>Incremental For-Loops</p>
+<pre><code class="lang-basic"># Range with start and stop value
 For i in range(1,5)
 Print(i,&quot;,&quot;)
 next
@@ -246,14 +354,24 @@ next
 For i in range(10,1,-2)
 Print(i,&quot;,&quot;)
 next
-
 </code></pre>
 <h3 id="if-statement">If-Statement</h3>
-<p>If statements must end with the <code>End</code> command. This will only end the If statement and not your program.</p>
+<p>If-Statements must end with the <code>End</code> command. This will only end the If-Statement and not your program.</p>
 <pre><code class="lang-basic">If x=1
 PrintLn(&quot;one&quot;)
 Else 
 PrintLn(&quot;not one&quot;)
+End
+</code></pre>
+<p>If-Statements can also be nested within each other. Each If-Statement requires an <code>End</code> command to terminate its own process.</p>
+<pre><code class="lang-basic">If x=1
+  PrintLn(&quot;one&quot;)
+Else
+  If x =2
+    PrintLn(&quot;two&quot;)
+  Else
+  PrintLn(&quot;not one&quot;)
+  End
 End
 </code></pre>
 <h3 id="labels">Labels</h3>

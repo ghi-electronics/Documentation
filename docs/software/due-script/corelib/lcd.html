@@ -90,8 +90,9 @@
 <p>Displays with knock-off controller SSH1106 that is supposed to be compatible with SSD1306 did not work as expected.</p>
 </div>
 <ul>
-<li><strong>LcdConfig(address)</strong> Pipes the graphics to a connected display. <br>
+<li><strong>LcdConfig(output,address)</strong> Pipes the graphics to a connected display. <br>
 By default, all graphics is directed to the display found on BrainPad Pulse. However, making a call to <code>LcdConfig()</code> directs the system to send all graphics to an external display, at the provided <code>address</code>. Setting the address to <code>0</code> resets the configuration to the default BrainPad Pulse LCD<br>
+<strong>output:</strong> Output to display , 0 = none, 1 = console, 2 = LCD &amp; console <br>
 <strong>address:</strong> I2C address, 0 = default(BrainPad Pulse)</li>
 </ul>
 <div class="TIP">
@@ -154,6 +155,19 @@ LcdShow()
 <p><strong>Draw Rectangle</strong></p>
 <ul>
 <li><strong>LcdRect(color, x, y, width, height)</strong> <br>
+<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>x:</strong> Starting x point <br>
+<strong>y:</strong> Starting y point <br>
+<strong>width:</strong> Rectangle width <br>
+<strong>height:</strong> Rectangle height</li>
+</ul>
+<pre><code class="lang-basic">LcdClear(0)
+LcdRect(1,10,10,118,54)
+LcdShow()
+</code></pre>
+<p><strong>Filled Rectangle</strong></p>
+<ul>
+<li><strong>LcdFillRect(color, x, y, width, height)</strong> <br>
 <strong>color:</strong> 0 = black, 1 = white <br>
 <strong>x:</strong> Starting x point <br>
 <strong>y:</strong> Starting y point <br>
