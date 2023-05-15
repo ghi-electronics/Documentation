@@ -255,7 +255,7 @@ Else
   If x =2
     PrintLn("two")
   Else
-  PrintLn("not one")
+  PrintLn("not one or two")
   End
 End
 ```
