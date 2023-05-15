@@ -113,6 +113,33 @@ Print(x) # This is also a comment
 ### Variables
 DUE Script has a fixed set of 26 variables, one for each letter, assigned to `a` to `z`. The only data type used in DUE is float. All variables created are global in nature. To use a variable, simply use `x=5.5` 
 
+### Operands
+DUE Script supports the following operators. 
+
+**Mathematical** | 
+---         | ---                       |   
+\+          | Add                       |   
+\-          | Subtract                  | 
+\*          | Multiply                  | 
+\/          | Divide                    |
+%           | Modulus, the remainder    | 
+**Comparators** | 
+\>          | Greater Than              
+\<          | Less Than                  
+\>=         | Greater Than or Equal To   
+\<=         | Less Than or Equal To      
+\=          | Equal                      
+!=          | Not Equal                  
+**Logical** | 
+\&&         | And 
+\|\|        | Or
+**Bitwise** |                         
+\&          | Bitwise And               
+\|          | Bitwise Or                 
+\<<         | Shift Right       
+\>>         | Shift Left        
+
+
 ### Arrays
 Similarly to variables, arrays are fixed to 26 arrays. They are assigned to letters `a` to `z`. DUE Script differentiates between variable `a` and array `a[]` when square brackets are used. Arrays are size zero by default and can be sized, or resized using `Dim`.
 
@@ -144,24 +171,54 @@ The output will look like:
 
 
 ### For-Loop
+The For-Loop has two different syntax styles. **BASIC** and **Python** style. 
 
+**BASIC Style**
+
+The BASIC style For-Loop includes the last number in the range. 
 
 ```basic 
 # Counting Up
-For i=1 to 1000 Step 10
+For i=1 to 5
+Print(i,",")
+Next
+```
+
+Output:
+
+`0,1,2,3,4,5,`
+
+Incremental For-Loops
+
+```basic
+# Counting Up in increments of 10
+For i=1000 to 1 Step 10
 PrintLn(i)
 Next
 
-# Counting Down
+# Counting Down in increments of 10
 For i=1000 to 1 Step -10
 PrintLn(i)
 Next
+```
 
+**Python Style**
+
+DUE Script also allows For Loops written similar to Python. The last number of the range is not included in output.  
+
+```basic
 # Range with only stop value
 For i in range(5)
 Print(i,",")
 next
+```
+Output:
 
+`0,1,2,3,4,`
+
+Incremental For-Loops
+
+```basic
 # Range with start and stop value
 For i in range(1,5)
 Print(i,",")
@@ -176,11 +233,10 @@ next
 For i in range(10,1,-2)
 Print(i,",")
 next
-
 ```
 
 ### If-Statement
-If statements must end with the `End` command. This will only end the If statement and not your program. 
+If-Statements must end with the `End` command. This will only end the If-Statement and not your program. 
 
 ```basic 
 If x=1
@@ -189,6 +245,21 @@ Else
 PrintLn("not one")
 End
 ```
+
+If-Statements can also be nested within each other. Each If-Statement requires an `End` command to terminate its own process. 
+
+```basic
+If x=1
+  PrintLn("one")
+Else
+  If x =2
+    PrintLn("two")
+  Else
+  PrintLn("not one")
+  End
+End
+```
+
 
 ### Labels
 

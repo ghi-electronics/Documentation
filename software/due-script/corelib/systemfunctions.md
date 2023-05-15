@@ -18,20 +18,22 @@
 **loader:** 0 = system reset,  1 = reset and stay in loader mode
 
 - **Rnd(max)** - Generates random number
-**max:** maximum value of random number
+**max:** maximum value of random number <br>
 **Returns:** returns random number between 0 and value of argument **max**
 
 - **Sin(number)** - Returns the sine value of the argument
 
 - **Sqrt(number)** - Returns the square root of the argument
 
-- **Tan(number)** - Returns the tangent of the argument
+- **Str(number)** - Returns a string from a variable, this is used for functions that require a string.
+
+- **Tan(number)** - Returns the tangent of the argument <br>
 
 - **TickMs()** - read system ticks in milliseconds  <br>
 
 - **TickUs()** - read system ticks microseconds  <br>
 
-- **Trunc(number)** - Returns the truncated value of the argument
+- **Trunc(number)** - Returns the truncated value of the argument <br>
 
 - **Version**  - Returns the current firmware version of DUE <br>
 The last character returned in Version is board <br> 

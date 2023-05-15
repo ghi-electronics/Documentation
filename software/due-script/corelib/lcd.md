@@ -11,8 +11,9 @@ These functions allow for simple graphics on the very common I2C displays that u
 > [!Caution]
 > Displays with knock-off controller SSH1106 that is supposed to be compatible with SSD1306 did not work as expected.
 
-- **LcdConfig(address)** Pipes the graphics to a connected display. <br>
+- **LcdConfig(output,address)** Pipes the graphics to a connected display. <br>
 By default, all graphics is directed to the display found on BrainPad Pulse. However, making a call to `LcdConfig()` directs the system to send all graphics to an external display, at the provided `address`. Setting the address to `0` resets the configuration to the default BrainPad Pulse LCD<br>
+**output:** Output to display , 0 = none, 1 = console, 2 = LCD & console <br>
 **address:** I2C address, 0 = default(BrainPad Pulse)
 
 > [!Tip]
@@ -96,6 +97,20 @@ LcdRect(1,10,10,118,54)
 LcdShow()
 ```
 
+**Filled Rectangle**
+
+- **LcdFillRect(color, x, y, width, height)** <br>
+**color:** 0 = black, 1 = white <br>
+**x:** Starting x point <br>
+**y:** Starting y point <br>
+**width:** Rectangle width <br>
+**height:** Rectangle height 
+
+```basic
+LcdClear(0)
+LcdRect(1,10,10,118,54)
+LcdShow()
+```
 
 **Draw Scaled Text**
 
