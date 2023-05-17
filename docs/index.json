@@ -107,7 +107,7 @@
   "software/due-script/corelib/frequency.html": {
     "href": "software/due-script/corelib/frequency.html",
     "title": "Frequency",
-    "keywords": "Frequency Frequency is fixed to pin 0 Freq(frequency, duration, dutyCycle) - provides an accurate hardware generated PWM signal frequency: frequency in KHz duration: 0 to forever dutyCycle: 0 to 1000 Note Freq() is a non-blocking function, calling Freq() a second time before the duration of the first call is over will end the function despite the duration of first calls argument. @Loop For x=1 to 1000 Freq(x,500,500) Wait(200) Next For x=1000 to 1 step -1 Freq(x,500,500) Wait(200) Next Goto Loop"
+    "keywords": "Frequency Frequency is fixed to only one pin, see specific hardware's page pin-out for details. Freq(frequency, duration, dutyCycle) - provides an accurate hardware generated PWM signal frequency: frequency in KHz duration: 0 to forever dutyCycle: 0 to 1000 Note Freq() is a non-blocking function, calling Freq() a second time before the duration of the first call is over will end the function despite the duration of first calls argument. @Loop For x=1 to 1000 Freq(x,500,500) Wait(200) Next For x=1000 to 1 step -1 Freq(x,500,500) Wait(200) Next Goto Loop"
   },
   "software/due-script/corelib/i2c.html": {
     "href": "software/due-script/corelib/i2c.html",
@@ -131,8 +131,8 @@
   },
   "software/due-script/corelib/neopixel.html": {
     "href": "software/due-script/corelib/neopixel.html",
-    "title": "Neopixel",
-    "keywords": "Neopixel NeoClear() - Clears all LEDs (in memory). Needs NeoShow() to see the affect NeoSet(index, red, green, blue) - Sets a specific LED to a color. Needs NeoShow() to see affect index: The LED index where 0 is first one and supporting up to 256 LEDs red, green, blue: Color levels, 0 to 255 NeoShow(pin, count) - All NeoPixel code is held internally until show is called pin: Pin connected to NeoPixel count: The count of LEDs to update and show This example assumes we have 8 LEDs and will set 8 LEDs to red, increasing the color intensity from 0 to 80. Then it waits one second before it sets the first LED to bright purple! NeoClear() For x = 0 to 8 NeoSet(x,x*10,0,0) Next NeoShow(8) Wait(1000) NeoSet(0,200,0,200) NeoShow(8) NeoStream(pin,count) - Streams data directly to LEDs. Automatically calls NeoShow() internally pin: Pin connected to NeoPixel count: The count of LEDs to stream Stream size: It is \"count\" multiplied by 3, DUE to the fact that each LED needs 3 bytes for colors, ordered in GRB format."
+    "title": "NeoPixel",
+    "keywords": "NeoPixel NeoClear() - Clears all LEDs (in memory). Needs NeoShow() to see the affect NeoSet(index, red, green, blue) - Sets a specific LED to a color. Needs NeoShow() to see affect index: The LED index where 0 is first one and supporting up to 256 LEDs red, green, blue: Color levels, 0 to 255 NeoShow(pin, count) - All NeoPixel code is held internally until show is called pin: Pin connected to NeoPixel count: The count of LEDs to update and show This example assumes we have 8 LEDs and will set 8 LEDs to red, increasing the color intensity from 0 to 80. Then it waits one second before it sets the first LED to bright purple! NeoClear() For x = 0 to 8 NeoSet(x,x*10,0,0) Next NeoShow(8) Wait(1000) NeoSet(0,200,0,200) NeoShow(8) NeoStream(pin,count) - Streams data directly to LEDs. Automatically calls NeoShow() internally pin: Pin connected to NeoPixel count: The count of LEDs to stream Stream size: It is \"count\" multiplied by 3, DUE to the fact that each LED needs 3 bytes for colors, ordered in GRB format."
   },
   "software/due-script/corelib/servo.html": {
     "href": "software/due-script/corelib/servo.html",
