@@ -78,7 +78,6 @@
             <article class="content wrap" id="_content" data-uid="">
 <h2 id="neopixel">Neopixel</h2>
 
-<p>Neopixel is fixed to pin number 1</p>
 <ul>
 <li><p><strong>NeoClear()</strong> - Clears all LEDs (in memory). Needs <code>NeoShow()</code> to see the affect</p>
 </li>
@@ -86,7 +85,8 @@
 <strong>index:</strong> The LED index where 0 is first one and supporting up to 256 LEDs<br>
 <strong>red, green, blue:</strong> Color levels, 0 to 255 <br></p>
 </li>
-<li><p><strong>NeoShow(count)</strong> - All NEO code is held internally until show<br>
+<li><p><strong>NeoShow(pin, count)</strong> - All NeoPixel code is held internally until show is called<br>
+<strong>pin:</strong> Pin connected to NeoPixel<br>
 <strong>count:</strong> The count of LEDs to update and show</p>
 </li>
 </ul>
@@ -101,7 +101,8 @@ NeoSet(0,200,0,200)
 NeoShow(8)
 </code></pre>
 <ul>
-<li><strong>NeoStream(count)</strong> - Streams data directly to LEDs. Automatically calls <code>NeoShow()</code> internally<br>
+<li><strong>NeoStream(pin,count)</strong> - Streams data directly to LEDs. Automatically calls <code>NeoShow()</code> internally<br>
+<strong>pin:</strong> Pin connected to NeoPixel<br>
 <strong>count:</strong> The count of LEDs to stream<br>
 <strong>Stream size:</strong> It is &quot;count&quot; multiplied by 3, DUE to the fact that each LED needs 3 bytes for colors, ordered in GRB format.</li>
 </ul>
