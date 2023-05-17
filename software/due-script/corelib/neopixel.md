@@ -6,8 +6,8 @@
 **index:** The LED index where 0 is first one and supporting up to 256 LEDs<br>
 **red, green, blue:** Color levels, 0 to 255 <br>
 
-- **NeoShow(pin, count)** - All NEO code is held internally until show<br>
- **pin:** Pin connected to Neopixel<br>
+- **NeoShow(pin, count)** - All NeoPixel code is held internally until show is called<br>
+ **pin:** Pin connected to NeoPixel<br>
  **count:** The count of LEDs to update and show
 
 This example assumes we have 8 LEDs and will set 8 LEDs to red, increasing the color intensity from 0 to 80.  Then it waits one second before it sets the first LED to bright purple!
