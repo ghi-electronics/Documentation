@@ -81,7 +81,8 @@
 <p>This feature allows sensing of a finger or human touch to a pin. This requires an external 100pf capacitor between the pin and GND. The caps are already found on BrainPad boards pads 0, 1, and 2.</p>
 <ul>
 <li><strong>TouchRead(pin)</strong> - Initializes the pin for touch   <br>
-<strong>pin:</strong> pin number</li>
+<strong>pin:</strong> pin number<br>
+<strong>Returns:</strong> 0 = not touch or 1 = touched</li>
 </ul>
 <pre><code class="lang-basic">@Loop
 a=TouchRead(0):b=TouchRead(1):c=TouchRead(2)
