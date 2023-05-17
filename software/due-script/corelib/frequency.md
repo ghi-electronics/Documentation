@@ -1,6 +1,7 @@
 ## Frequency
 
-Frequency is fixed to pin 0
+Frequency is fixed to only one pin, see specific hardware's page for details. 
+
 - **Freq(frequency, duration, dutyCycle)** - provides an accurate hardware generated PWM signal <br>
 **frequency:** frequency in KHz <br>
 **duration:** 0 to forever <br>

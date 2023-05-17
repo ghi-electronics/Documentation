@@ -62,7 +62,6 @@ PrintLn(y)
 > [!NOTE]
 > The [DUE Console](../console.md) hides the prompts and automatically switches to the appropriate mode.
 
-
 ---
 ## Script Features
 DUE Scripts are not case sensitive. Its syntax is very simple and inspired by BASIC coding language. The power of DUE Scripts comes from its simplicity rather than from its feature set. This is a perfect language to teach someone coding.
@@ -139,7 +138,6 @@ DUE Script supports the following operators.
 \<<         | Shift Right       
 \>>         | Shift Left        
 
-
 ### Arrays
 Similarly to variables, arrays are fixed to 26 arrays. They are assigned to letters `a` to `z`. DUE Script differentiates between variable `a` and array `a[]` when square brackets are used. Arrays are size zero by default and can be sized, or resized using `Dim`.
 
@@ -169,7 +167,6 @@ The output will look like:
 > [!TIP]
 > Use `Dim a[0]` to free up the memory reserved for array `a[]`.
 
-
 ### For-Loop
 The For-Loop has two different syntax styles. **BASIC** and **Python** style. 
 
@@ -187,8 +184,6 @@ Next
 Output:
 
 `0,1,2,3,4,5,`
-
-
 
 ```basic
 # Counting Up in increments of 10
