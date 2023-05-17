@@ -4,7 +4,7 @@ This feature allows sensing of a finger or human touch to a pin. This requires a
 
 - **TouchRead(pin)** - Initializes the pin for touch   <br>
 **pin:** pin number<br>
-**Returns:** 0 = No Touch or 1 = Touched
+**Returns:** 0 = not touch or 1 = touched
 
 ```basic
 @Loop
