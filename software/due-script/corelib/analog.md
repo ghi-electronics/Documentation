@@ -13,16 +13,15 @@ These functions provide access to analog pins.
 
 ```basic
 @Loop
-For i=0 to 1000 Step 100
-    AWrite("L",i)
+For i=0 to 100 Step 10
+    AWrite('L',i)
     Wait(100)
 next
-For i=1000 to 0 Step -100
-    AWrite("L",i) 
+For i=100 to 0 Step -10
+    AWrite('L',i) 
     Wait(100)
 Next
 Goto Loop
-
 ```
 
 ##### Analog Read
