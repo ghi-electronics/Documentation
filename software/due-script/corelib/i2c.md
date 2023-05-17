@@ -1,6 +1,8 @@
 ## I2C
 
-- **I2cBytes(address, writeCount, readCount)** -  Reads and/or writes up to 4 bytes to/from I2C bus. Data is transfered from variables A, B, C, D. The return values (if any) are also stored in the same variables.<br>
+- **I2cBytes(address,arrayWrite, writeCount, arrayRead, readCount)**  Reads and/or writes up to 4 bytes to/from I2C bus. Data is transfered from variables A, B, C, D. The return values (if any) are also stored in the same variables. <br>
+**address:** I2C slave address<br>
+**arrayWrite:** Array to send<br>
 **writeCount:** The number of bytes to write<br>
 **readCount:** The number of bytes to write
 
@@ -20,7 +22,15 @@ a = 0x55
 I2cBytes(0x3D, 1, 2)
 Print(a)
 Print(b)
+
+# Write 1 byte, read 6 bytes
+dim a[1]
+a[0] = 1
+dim b[6]
+i2cbytes(0x1c, a, 1, b, 6) 
+
 ```
+
 
 > [!NOTE] 
 > Streams are not coded directly using DUE Script, see [Streams](../streams.md)

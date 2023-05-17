@@ -188,7 +188,7 @@ Output:
 
 `0,1,2,3,4,5,`
 
-Incremental For-Loops
+
 
 ```basic
 # Counting Up in increments of 10
@@ -216,7 +216,6 @@ Output:
 
 `0,1,2,3,4,`
 
-Incremental For-Loops
 
 ```basic
 # Range with start and stop value
