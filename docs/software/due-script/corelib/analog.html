@@ -83,29 +83,28 @@
 <ul>
 <li><strong>AWrite(pin, dutyCycle)</strong>  - Writes to pin using PWM <br>
 <strong>pin:</strong> pin number<br>
-<strong>dutyCycle:</strong> 0 to 1000</li>
+<strong>dutyCycle:</strong> 0 to 100</li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Frequency is fixed to 50hz.</p>
 </div>
 <pre><code class="lang-basic">@Loop
-For i=0 to 1000 Step 100
-    AWrite(&quot;L&quot;,i)
+For i=0 to 100 Step 10
+    AWrite('L',i)
     Wait(100)
 next
-For i=1000 to 0 Step -100
-    AWrite(&quot;L&quot;,i) 
+For i=100 to 0 Step -10
+    AWrite('L',i) 
     Wait(100)
 Next
 Goto Loop
-
 </code></pre>
 <h5 id="analog-read">Analog Read</h5>
 <ul>
 <li><strong>ARead(pin)</strong>  - Read an analog output <br>
 <strong>pin:</strong> pin number <br>
-<strong>Returns:</strong> The analog value of the pin</li>
+<strong>Returns:</strong> The analog value (0-100) of the pin</li>
 </ul>
 <p>Not all pins support <code>ARead()</code>. The hardware docs will show what pins support analog, typically labeled ADC. Pins that do not support <code>ARead()</code> will return 0.</p>
 <pre><code class="lang-basic">@Loop
