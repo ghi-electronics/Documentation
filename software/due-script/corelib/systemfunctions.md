@@ -27,11 +27,15 @@
 
 - **Str(number)** - Returns a string from a variable, this is used for functions that require a string.
 
+- **Fmt(....)** - Takes multiple comma separated arguments that can be either variables or strings.
+<br>
+  **Returns:** A combined string
+
 - **Tan(number)** - Returns the tangent of the argument <br>
 
-- **TickMs()** - read system ticks in milliseconds  <br>
+- **TickMs()** - Read system ticks in milliseconds  <br>
 
-- **TickUs()** - read system ticks microseconds  <br>
+- **TickUs()** - Read system ticks microseconds  <br>
 
 - **Trunc(number)** - Returns the truncated value of the argument <br>
 
@@ -45,8 +49,8 @@ The last character returned in Version is board <br>
   |    Flea     |     F     |
   |    Pico     |     I     |
 
-- **Wait(duration)** - holds program from running <br>
-**duration:** duration = milliseconds
+- **Wait(duration)** - Holds program from running <br>
+**duration:** Duration in milliseconds
 
 
 

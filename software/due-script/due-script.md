@@ -257,7 +257,7 @@ End
 
 ### Labels
 
-Labels are needed to redirect the program. They are used by `Goto` and when calling a subroutine.
+Labels are needed to redirect the program. They are used by `Goto` when calling a subroutine.
 
 A Label is created by using the `@` symbol in front of the desired label. Labels are limited to 6 characters. 
 
