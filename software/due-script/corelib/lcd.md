@@ -99,7 +99,7 @@ LcdShow()
 
 **Filled Rectangle**
 
-- **LcdFillRect(color, x, y, width, height)** <br>
+- **LcdFill(color, x, y, width, height)** <br>
 **color:** 0 = black, 1 = white <br>
 **x:** Starting x point <br>
 **y:** Starting y point <br>
@@ -108,7 +108,7 @@ LcdShow()
 
 ```basic
 LcdClear(0)
-LcdRect(1,10,10,118,54)
+LcdFill(1,10,10,118,54)
 LcdShow()
 ```
 
