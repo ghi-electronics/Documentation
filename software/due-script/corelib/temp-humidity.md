@@ -12,7 +12,7 @@ Works with the DHT line of low-cost temperature & humidity sensors.
 **type:** DHT11 = 11, DHT12 = 12, DHT22 = 22, DHT21 = 21 <br>
 **Returns:** Humidity level 0 to 100.
 
-This example reads temperature and humidity, and converts celsuis to Fahrenheit and displays 
+This example reads temperature and humidity, and converts Celsius to Fahrenheit and displays 
 
 ```basic
 @Loop
