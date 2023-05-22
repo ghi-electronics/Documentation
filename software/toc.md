@@ -29,6 +29,7 @@
 ### [Sound](due-script/corelib/sound.md)
 ### [SPI](due-script/corelib/spi.md)
 ### [System](due-script/corelib/systemfunctions.md)
+### [Temp-Humidity](due-script/corelib/temp-humidity.md)
 ### [Touch](due-script/corelib/touch.md)
 ### [UART](due-script/corelib/uart.md)
 
