@@ -102,7 +102,7 @@
   "software/due-script/corelib/distance.html": {
     "href": "software/due-script/corelib/distance.html",
     "title": "Distance Sensor",
-    "keywords": "Distance Sensor This function is used when using a distance sensors. ReadDistance(trigger, echo) - uses ultrasonic sonic sensor to read distance. trigger: The pin number that is connected to trigger (pulse) signal echo: The pin number that is connected to echo signal Returns: Distance in centimeters Tip most sensors need 5V to work. @Loop x = Distance(0,1) If x>0 PrintLn(x) End Wait(100) Goto Loop"
+    "keywords": "Distance Sensor This function is used when using a distance sensors. Distance(trigger, echo) - uses ultrasonic sonic sensor to read distance. trigger: The pin number that is connected to trigger (pulse) signal echo: The pin number that is connected to echo signal Returns: Distance in centimeters Tip most sensors need 5V to work. @Loop x = Distance(0,1) If x>0 PrintLn(x) End Wait(100) Goto Loop"
   },
   "software/due-script/corelib/frequency.html": {
     "href": "software/due-script/corelib/frequency.html",

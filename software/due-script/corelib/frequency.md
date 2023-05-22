@@ -5,7 +5,7 @@ Frequency is fixed to only one pin, see specific hardware's page pin-out for det
 - **Freq(frequency, duration, dutyCycle)** - provides an accurate hardware generated PWM signal <br>
 **frequency:** frequency in KHz <br>
 **duration:** 0 to forever <br>
-**dutyCycle:** 0 to 1000
+**dutyCycle:** 0 to 100
 
 > [!NOTE] 
 > Freq() is a non-blocking function, calling Freq() a second time before the duration of the first call is over will end the function despite the duration of first calls argument.
