@@ -16,13 +16,13 @@ This example reads temperature and humidity, and converts celsuis to Fahrenheit 
 
 ```basic
 @Loop
-t = Temp(0,11)
+c = Temp(0,11)
 h = Humidity(0,11)
 
 #Convert Celsius to Fahrenheit
-f = (t*1.8)+32
+f = (c*1.8)+32
 
-PrintLn("Current Temperature Celsius = ", t)
+PrintLn("Current Temperature Celsius = ", c)
 PrintLn("Current Temperature Fahrenheit = ", f)
 PrintLn("Current Humidity is = ", h)
 
