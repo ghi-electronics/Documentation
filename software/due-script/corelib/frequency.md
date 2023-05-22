@@ -13,11 +13,11 @@ Frequency is fixed to only one pin, see specific hardware's page pin-out for det
 ```basic
 @Loop
 For x=1 to 1000
-    Freq(x,500,500)
+    Freq(x,500,50)
     Wait(200)
 Next
 For x=1000 to 1 step -1
-    Freq(x,500,500)
+    Freq(x,500,50)
     Wait(200)
 Next
 Goto Loop
