@@ -26,7 +26,6 @@ PrintLn("Current Temperature Celsius = ", t)
 PrintLn("Current Temperature Fahrenheit = ", f)
 PrintLn("Current Humidity is = ", h)
 
-
 Wait(200)
 Goto Loop
 ```
