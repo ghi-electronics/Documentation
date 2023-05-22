@@ -82,17 +82,17 @@
 <p>Example: LED, Buttons, Buzzer, and Screen.</p>
 <p><strong>Blink On-board LED</strong></p>
 <pre><code class="lang-basic">@Loop
-  DWrite(108,1) : Wait(250)
-  DWrite(108,0) : Wait(250)
+  DWrite('L',1) : Wait(250)
+  DWrite('L',0) : Wait(250)
 Goto Loop
 </code></pre>
 <p><strong>Analog Blink On-board LED</strong></p>
 <pre><code class="lang-basic">@Loop
-  For i=0 to 1000 Step 100
-    AWrite(108, i) : Wait(50)
+  For i=0 to 100 Step 10
+    AWrite('L', i) : Wait(50)
   Next
-  For i=1000 to 0 Step -100
-    AWrite(108, i) : wait(50)
+  For i=100 to 0 Step -10
+    AWrite('L', i) : wait(50)
   Next
 Goto Loop
 </code></pre>
@@ -100,16 +100,16 @@ Goto Loop
 <pre><code class="lang-basic">BtnEnable('a',1)
 BtnEnable('b',1)
 @Loop
-x=BtnDown('a')
-y=BtnDown('b')
-If x=1
-    PrintLn(&quot;Button A&quot;)
-    wait(500)
-End
-If y=1
-    PrintLn(&quot;Button B&quot;)
-    wait(500)
-End
+  x=BtnDown('a')
+  y=BtnDown('b')
+  If x=1
+     PrintLn(&quot;Button A&quot;)
+     Wait(500)
+  End
+  If y=1
+     PrintLn(&quot;Button B&quot;)
+     Wait(500)
+  End
 Goto Loop
 </code></pre>
 <p><strong>On-board Buzzer</strong></p>

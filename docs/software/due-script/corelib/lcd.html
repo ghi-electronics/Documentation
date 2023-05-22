@@ -99,9 +99,8 @@ By default, all graphics is directed to the display found on BrainPad Pulse. How
 <h5>Tip</h5>
 <p>This function is not needed to use the display found on BrainPad Pulse.</p>
 </div>
-<p>This example will pipe (direct) graphics to an external 2.42&quot; display with address 0x??, wired to ?product name???. Tip: A resistor on the back of the display needs to be moved to change its bus from SPI to I2C.</p>
-<p>image</p>
-<pre><code class="lang-basic">LcdConfig(0x12)
+<p>This example will pipe (direct) graphics to an external 2.42&quot; display with address 0x3C, wired to the 2.42&quot; SSD1309 display showing in the image above. Tip: A resistor on the back of the display needs to be moved to change its bus from SPI to I2C.</p>
+<pre><code class="lang-basic">LcdConfig(0, 0x3C)
 LcdClear(0)
 LcdText(&quot;Hello World&quot;,1,10,10)
 LcdShow()
