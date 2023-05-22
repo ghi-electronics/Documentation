@@ -13,3 +13,4 @@ The DUE Console includes many samples that work without any additional hardware.
 | [Pulse Analog Clock](pulse-analogclock.md) | Analog Clock using the BrainPad Pulse |
 | [Pulse Bouncing Ball](pulse-bouncingball.md) | Example that bounces ball on BrainPad Pulse screen |
 | [BrainGamer Sketch](pulse-gamer-sketch.md) | Create your own art with BrainGamer and BrainPad Pulse |
+| [BrainGamer Pong](pulse-gamer-pong.md) | Create your own classic Pong with BrainGamer and BrainPad Pulse |

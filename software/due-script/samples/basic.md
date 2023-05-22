@@ -8,8 +8,8 @@ Example: LED, Buttons, Buzzer, and Screen.
 
 ```basic
 @Loop
-  DWrite(108,1) : Wait(250)
-  DWrite(108,0) : Wait(250)
+  DWrite('L',1) : Wait(250)
+  DWrite('L',0) : Wait(250)
 Goto Loop
 ```
 
@@ -18,10 +18,10 @@ Goto Loop
 ```basic
 @Loop
   For i=0 to 100 Step 10
-    AWrite(108, i) : Wait(50)
+    AWrite('L', i) : Wait(50)
   Next
   For i=100 to 0 Step -10
-    AWrite(108, i) : wait(50)
+    AWrite('L', i) : wait(50)
   Next
 Goto Loop
 ```

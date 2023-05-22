@@ -41,6 +41,7 @@
 ### [Pulse Analog Clock](due-script/samples/pulse-analogclock.md)
 ### [Pulse Bounce Ball](due-script/samples/pulse-bouncingball.md)
 ### [BrainGamer Sketch](due-script/samples/pulse-gamer-sketch.md)
+### [BrainGamer Pong](due-script/samples/pulse-gamer-pong.md)
 
 # [Downloads](downloads.md)
 # [DUE Console](console.md)

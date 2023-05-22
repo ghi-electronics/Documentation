@@ -1,8 +1,8 @@
-# BrainGamer - Sketch
+# BrainGamer - Pong
 
 ![BrainGamer Sketch](images/braingamer-sketch.gif)
 
-Pair your Pulse with the Brain Gamer to create a piece of art
+Pair your Pulse with the Brain Gamer to create one of the first video games ever made. 
 
 Hardware:
 - Brainpad Pulse
@@ -13,7 +13,7 @@ This example demonstrates the use of both digital and analog inputs.
 |        | Pin#          |
 | :--- |:---|
 | Rocker X | 4 |
-| Rocker Y | 5 |
+| Rocker Y | 3 |
 | Up | 14 |
 | Down| 15 |
 | Left | 13 |
