@@ -17,10 +17,10 @@ Goto Loop
 
 ```basic
 @Loop
-  For i=0 to 1000 Step 100
+  For i=0 to 100 Step 10
     AWrite(108, i) : Wait(50)
   Next
-  For i=1000 to 0 Step -100
+  For i=100 to 0 Step -10
     AWrite(108, i) : wait(50)
   Next
 Goto Loop
@@ -32,16 +32,16 @@ Goto Loop
 BtnEnable('a',1)
 BtnEnable('b',1)
 @Loop
-x=BtnDown('a')
-y=BtnDown('b')
-If x=1
-    PrintLn("Button A")
-    wait(500)
-End
-If y=1
-    PrintLn("Button B")
-    wait(500)
-End
+  x=BtnDown('a')
+  y=BtnDown('b')
+  If x=1
+     PrintLn("Button A")
+     Wait(500)
+  End
+  If y=1
+     PrintLn("Button B")
+     Wait(500)
+  End
 Goto Loop
 ```
 
