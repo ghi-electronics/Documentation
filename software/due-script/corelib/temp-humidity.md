@@ -22,9 +22,10 @@ h = Humidity(0,11)
 #Convert Celsius to Fahrenheit
 f = (t*1.8)+32
 
-PrintLn("Current Celsius Temperature = ", t)
+PrintLn("Current Temperature Celsius = ", t)
+PrintLn("Current Temperature Fahrenheit = ", f)
 PrintLn("Current Humidity is = ", h)
-PrintLn("Current Fahrenheit Temperature = ", f)
+
 
 Wait(200)
 Goto Loop
