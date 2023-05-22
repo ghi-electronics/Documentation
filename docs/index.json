@@ -107,7 +107,7 @@
   "software/due-script/corelib/frequency.html": {
     "href": "software/due-script/corelib/frequency.html",
     "title": "Frequency",
-    "keywords": "Frequency Frequency is fixed to only one pin, see specific hardware's page pin-out for details. Freq(frequency, duration, dutyCycle) - provides an accurate hardware generated PWM signal frequency: frequency in KHz duration: 0 to forever dutyCycle: 0 to 100 Note Freq() is a non-blocking function, calling Freq() a second time before the duration of the first call is over will end the function despite the duration of first calls argument. @Loop For x=1 to 1000 Freq(x,500,500) Wait(200) Next For x=1000 to 1 step -1 Freq(x,500,500) Wait(200) Next Goto Loop"
+    "keywords": "Frequency Frequency is fixed to only one pin, see specific hardware's page pin-out for details. Freq(frequency, duration, dutyCycle) - provides an accurate hardware generated PWM signal frequency: frequency in KHz duration: 0 to forever dutyCycle: 0 to 100 Note Freq() is a non-blocking function, calling Freq() a second time before the duration of the first call is over will end the function despite the duration of first calls argument. @Loop For x=1 to 1000 Freq(x,500,50) Wait(200) Next For x=1000 to 1 step -1 Freq(x,500,50) Wait(200) Next Goto Loop"
   },
   "software/due-script/corelib/i2c.html": {
     "href": "software/due-script/corelib/i2c.html",
@@ -153,6 +153,11 @@
     "href": "software/due-script/corelib/systemfunctions.html",
     "title": "System Functions",
     "keywords": "System Functions Cos(number) - Returns the cosine of the argument Echo(enable) enable: 0 = Enable echo , 1 = Disable echo GetCh() - reads character input, in ASCII format. Return -1 when no character detected GetNum() - reads number input, can be used with IsNAN() to determine if value is a number Print(text) - Prints the value of the argument to the console on the same line text: String or variable PrintLn(text) - Prints the value of the argument to the console then moves to the next line text: String or variable Reset(loader) - Resets the board loader: 0 = system reset, 1 = reset and stay in loader mode Rnd(max) - Generates random number max: maximum value of random number Returns: returns random number between 0 and value of argument max Sin(number) - Returns the sine value of the argument Sqrt(number) - Returns the square root of the argument Str(number) - Returns a string from a variable, this is used for functions that require a string. Fmt(....) - Takes multiple comma separated arguments that can be either variables or strings. Returns: A combined string Tan(number) - Returns the tangent of the argument TickMs() - Read system ticks in milliseconds TickUs() - Read system ticks microseconds Trunc(number) - Returns the truncated value of the argument Version - Returns the current firmware version of DUE The last character returned in Version is board Board Character Pulse P Edge E Flea F Pico I Wait(duration) - Holds program from running duration: Duration in milliseconds"
+  },
+  "software/due-script/corelib/temp-humidity.html": {
+    "href": "software/due-script/corelib/temp-humidity.html",
+    "title": "Temperature and Humidity",
+    "keywords": "Temperature and Humidity Works with the DHT line of low-cost temperature & humidity sensors. Temp(pin, type) - Reads sensor temperature data on connected pin pin: pin number type: DHT11 = 11, DHT12 = 12, DHT22 = 22, DHT21 = 21 Returns: Temperature in Celsius. Humidity(pin, type) - Reads sensor humidity data on connected pin pin: pin number type: DHT11 = 11, DHT12 = 12, DHT22 = 22, DHT21 = 21 Returns: Humidity level 0 to 100. This example reads temperature and humidity, and converts celsuis to Fahrenheit and displays @Loop c = Temp(0,11) h = Humidity(0,11) #Convert Celsius to Fahrenheit f = (c*1.8)+32 PrintLn(\"Current Temperature Celsius = \", c) PrintLn(\"Current Temperature Fahrenheit = \", f) PrintLn(\"Current Humidity is = \", h) Wait(200) Goto Loop"
   },
   "software/due-script/corelib/touch.html": {
     "href": "software/due-script/corelib/touch.html",

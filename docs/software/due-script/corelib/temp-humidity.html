@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Frequency </title>
+      <title>Temperature and Humidity </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Frequency ">
+      <meta name="title" content="Temperature and Humidity ">
     
       <link rel="shortcut icon" href="../../../images/favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
@@ -76,28 +76,34 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h2 id="frequency">Frequency</h2>
+<h2 id="temperature-and-humidity">Temperature and Humidity</h2>
 
-<p>Frequency is fixed to only one pin, see specific hardware's page pin-out for details.</p>
+<p>Works with the DHT line of low-cost temperature &amp; humidity sensors.</p>
 <ul>
-<li><strong>Freq(frequency, duration, dutyCycle)</strong> - provides an accurate hardware generated PWM signal <br>
-<strong>frequency:</strong> frequency in KHz <br>
-<strong>duration:</strong> 0 to forever <br>
-<strong>dutyCycle:</strong> 0 to 100</li>
+<li><p><strong>Temp(pin, type)</strong> - Reads sensor temperature data on connected pin <br>
+<strong>pin:</strong> pin number <br>
+<strong>type:</strong> DHT11 = 11, DHT12 = 12, DHT22 = 22, DHT21 = 21 <br>
+<strong>Returns:</strong> Temperature in Celsius.</p>
+</li>
+<li><p><strong>Humidity(pin, type)</strong> - Reads sensor humidity data on connected pin <br>
+<strong>pin:</strong> pin number <br>
+<strong>type:</strong> DHT11 = 11, DHT12 = 12, DHT22 = 22, DHT21 = 21 <br>
+<strong>Returns:</strong> Humidity level 0 to 100.</p>
+</li>
 </ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Freq() is a non-blocking function, calling Freq() a second time before the duration of the first call is over will end the function despite the duration of first calls argument.</p>
-</div>
+<p>This example reads temperature and humidity, and converts celsuis to Fahrenheit and displays</p>
 <pre><code class="lang-basic">@Loop
-For x=1 to 1000
-    Freq(x,500,50)
-    Wait(200)
-Next
-For x=1000 to 1 step -1
-    Freq(x,500,50)
-    Wait(200)
-Next
+c = Temp(0,11)
+h = Humidity(0,11)
+
+#Convert Celsius to Fahrenheit
+f = (c*1.8)+32
+
+PrintLn(&quot;Current Temperature Celsius = &quot;, c)
+PrintLn(&quot;Current Temperature Fahrenheit = &quot;, f)
+PrintLn(&quot;Current Humidity is = &quot;, h)
+
+Wait(200)
 Goto Loop
 </code></pre>
 <hr>
@@ -109,7 +115,7 @@ Goto Loop
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/due-script/corelib/frequency.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/duelink-website/blob/dev/software/due-script/corelib/temp-humidity.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
