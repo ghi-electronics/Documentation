@@ -97,7 +97,7 @@ LcdRect(1,10,10,118,54)
 LcdShow()
 ```
 
-**Filled Rectangle**
+**Draw Filled Rectangle**
 
 - **LcdFill(color, x, y, width, height)** <br>
 **color:** 0 = black, 1 = white <br>
