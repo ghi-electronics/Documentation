@@ -19,11 +19,11 @@ This example reads temperature and humidity, and converts celsuis to Fahrenheit 
 t = Temp(0,11)
 h = Humidity(0,11)
 
-PrintLn("Current Celsius Temperature = ", t)
-PrintLn("Current Humidity is = ", h)
-
 #Convert Celsius to Fahrenheit
 f = (t*1.8)+32
+
+PrintLn("Current Celsius Temperature = ", t)
+PrintLn("Current Humidity is = ", h)
 PrintLn("Current Fahrenheit Temperature = ", f)
 
 Wait(200)
