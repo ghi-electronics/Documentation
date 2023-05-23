@@ -30,10 +30,10 @@ Our first program will blink the on-board LED 20 times, where it comes on for 20
 > Change the serial COM port number to match your port on the system you are using.
 
 ```py
-from DUE.DUEController import DUEController
+from DUELink.DUELinkController import DUELinkController
 print("Hello DUE!")
-availablePort = DUEController.GetConnectionPort()
-dev = DUEController(availablePort)
+availablePort = DUELinkController.GetConnectionPort()
+dev = DUELinkController(availablePort)
 # Flash the LED 20 times (on for 200ms and off for 800ms)
 dev.Led.Set(200,800,20)
 print("Bye DUE!")

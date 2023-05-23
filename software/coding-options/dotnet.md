@@ -22,7 +22,7 @@ Start a new project with a simple line of code to test out the project is runnin
 ```csharp
 Console.WriteLine("Hello, World!");
 ```
-Download and install the latest `GHIElectronics.DUE` library from NuGet.org. Alternatively, get it from the [Downloads](../downloads.md) page.
+Download and install the latest `GHIElectronics.DUELink` library from NuGet.org. Alternatively, get it from the [Downloads](../downloads.md) page.
 
 ## Blinky!
 Our first program will blink the on-board LED 20 times, where it comes on for 200ms and then it is off for 800ms.
@@ -31,10 +31,10 @@ Our first program will blink the on-board LED 20 times, where it comes on for 20
 > We can access which COM port our DUE enable device is connected to by calling the GetConnectionPort()
 
 ```csharp
-using GHIElectronics.Due;
+using GHIElectronics.DUELink;
 Console.WriteLine("Hello DUE!");
-var availablePort = DueController.GetConnectionPort();
-var dev = new DueController(availablePort);
+var availablePort = DUELinkController.GetConnectionPort();
+var dev = new DUELinkController(availablePort);
 dev.Led.Set(200, 800, 20);
 Console.WriteLine("Bye DUE!");
 ```

@@ -44,7 +44,7 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
-[v1.0.1](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUE.1.0.1.nupkg) | 2023-05-19 | RC
+[v1.0.1](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.0.1.nupkg) | 2023-05-19 | RC
 
 ### Python Library
 
