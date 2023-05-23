@@ -95,17 +95,17 @@
 </div>
 <pre><code class="lang-csharp">Console.WriteLine(&quot;Hello, World!&quot;);
 </code></pre>
-<p>Download and install the latest <code>GHIElectronics.DUE</code> library from NuGet.org. Alternatively, get it from the <a href="../downloads.html">Downloads</a> page.</p>
+<p>Download and install the latest <code>GHIElectronics.DUELink</code> library from NuGet.org. Alternatively, get it from the <a href="../downloads.html">Downloads</a> page.</p>
 <h2 id="blinky">Blinky!</h2>
 <p>Our first program will blink the on-board LED 20 times, where it comes on for 200ms and then it is off for 800ms.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>We can access which COM port our DUE enable device is connected to by calling the GetConnectionPort()</p>
 </div>
-<pre><code class="lang-csharp">using GHIElectronics.Due;
+<pre><code class="lang-csharp">using GHIElectronics.DUELink;
 Console.WriteLine(&quot;Hello DUE!&quot;);
-var availablePort = DueController.GetConnectionPort();
-var dev = new DueController(availablePort);
+var availablePort = DUELinkController.GetConnectionPort();
+var dev = new DUELinkController(availablePort);
 dev.Led.Set(200, 800, 20);
 Console.WriteLine(&quot;Bye DUE!&quot;);
 </code></pre>

@@ -101,10 +101,10 @@
 <h5>Note</h5>
 <p>Change the serial COM port number to match your port on the system you are using.</p>
 </div>
-<pre><code class="lang-py">from DUE.DUEController import DUEController
+<pre><code class="lang-py">from DUELink.DUELinkController import DUELinkController
 print(&quot;Hello DUE!&quot;)
-availablePort = DUEController.GetConnectionPort()
-dev = DUEController(availablePort)
+availablePort = DUELinkController.GetConnectionPort()
+dev = DUELinkController(availablePort)
 # Flash the LED 20 times (on for 200ms and off for 800ms)
 dev.Led.Set(200,800,20)
 print(&quot;Bye DUE!&quot;)
