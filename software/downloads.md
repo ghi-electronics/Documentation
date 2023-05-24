@@ -24,6 +24,7 @@ Preview | Preview of the next release, not quite ready for production use.
 
 File | Date | Status
 --- | --- | ---
+[v1.0.2](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v102.ghi) | 2023-05-24 | RC
 [v1.0.1](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v101.ghi) | 2023-05-19 | RC
 
 
@@ -31,7 +32,10 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
+[v1.0.2](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc007_v102.ghi) | 2023-05-24 | RC
 [v1.0.1](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc007_v101.ghi) | 2023-05-19 | RC
+
+
 
 ---
 
@@ -44,7 +48,10 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
+[v1.0.2](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.0.2.nupkg) | 2023-05-24 | RC
 [v1.0.1](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.0.1.nupkg) | 2023-05-19 | RC
+
+
 
 ### Python Library
 
@@ -53,10 +60,22 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
+[v1.0.2](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.0.2-py3-none-any.whl) | 2023-05-24 | RC
 [v1.0.1](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.0.1-py3-none-any.whl) | 2023-05-19 | RC
 
-
 ## Release Notes
+
+### v1.0.2: 2023-05-24
+
+* Add support for single wire distance sensors
+* Support NeoPixel on any pin
+* Array initialization, with multi line support
+* Added LcdImage(), use an array to sprites 
+* Add support for Temp and Humidity sensors: DHT11 and DHT22
+* Remove Sound and open Frequency to support accept pins
+* Support Beep in Pulse buzzer
+* Duty cycle range on Frequency is now 0 to 100
+* Various improvements and changes
 
 ### v1.0.1: 2023-05-19
 

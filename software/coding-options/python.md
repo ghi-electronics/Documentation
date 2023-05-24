@@ -60,12 +60,17 @@ The provided API mirrors DUE Script's [**Core library**](../due-script/corelib/c
 | Digital.Read()               |[DRead()](../due-script/corelib/digital.md)				| Reads digital pin
 | Digital.Write()              |[DWrite()](../due-script/corelib/digital.md)			| Writes to digital pin
 | Display.Clear()              |[LcdClear()](../due-script/corelib/lcd.md)				| Clears the display black or white
-| Display.DrawCircle()         |[LcdDrawCirle()](../due-script/corelib/lcd.md)			| Draws a circle on the display
+| Display.DrawCircle()         |[LcdCirle()](../due-script/corelib/lcd.md)			    | Draws a circle on the display
+| Display.DrawRectangle()         |[LcdRect()](../due-script/corelib/lcd.md)			| Draws a rectangle on the display
+| Display.DrawFillRect()         |[LcdFill()](../due-script/corelib/lcd.md)			    | Draws a filled rectangle on the display
 | Display.DrawBuffer()         |[LcdStream()](../due-script/corelib/lcd.md)				| Updates the entire display, using stream, with automatic `Show()`
-| Display.DrawLine()           |[LcdDrawLine()](../due-script/corelib/lcd.md)			| Draws a line on the display
-| Display.DrawText()           |[LcdDrawText()](../due-script/corelib/lcd.md)			| Draws a text on the display
-| Display.DrawTextScale()      |[LcdDrawTextS()](../due-script/corelib/lcd.md)			| Draws scaled text on the display
-| Display.SetPixel()           |[LcdSetPixel()](../due-script/corelib/lcd.md)			| Draws pixel on the display
+
+| Display.DrawBufferBytes
+()         |[LcdStream()](../due-script/corelib/lcd.md)				| Updates the entire display, using stream, with automatic `Show()`
+| Display.DrawLine()           |[LcdLine()](../due-script/corelib/lcd.md)			    | Draws a line on the display
+| Display.DrawText()           |[LcdText()](../due-script/corelib/lcd.md)			    | Draws a text on the display
+| Display.DrawTextScale()      |[LcdTextS()](../due-script/corelib/lcd.md)			    | Draws scaled text on the display
+| Display.SetPixel()           |[LcdPixel()](../due-script/corelib/lcd.md)			    | Draws pixel on the display
 | Display.Show()               |[LcdShow()](../due-script/corelib/lcd.md)				| Sends the display buffer
 | Distance()                   |[ReadDistance()](../due-script/corelib/distance.md)		| Used to read distance sensors
 | Frequency()                  |[Freq()](../due-script/corelib/frequency.md)			| Hardware generated PWM signal
