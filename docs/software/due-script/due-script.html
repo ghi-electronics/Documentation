@@ -79,7 +79,7 @@
 <h1 id="due-script">DUE Script</h1>
 
 <hr>
-<p>The DUE Link platform includes a scripting language called DUE Script it runs internally on any <a href="../../hardware/intro.html">DUE-enabled hardware</a>. This allows the device to run standalone independent from any host. This very easy-to-learn scripting language is inspired by BASIC and Python, giving the user the simplicity and flexibility they need.</p>
+<p>The DUE Link platform includes a scripting language called DUE Script it runs internally on any <a href="../../hardware/intro.html">DUE-enabled hardware</a>. This allows the device to run standalone, independent from any host. This very easy-to-learn scripting language is inspired by BASIC and Python, giving the user the simplicity and flexibility they need.</p>
 <p>The on-line <a href="../console.html">DUE Console</a> lets developers start experimenting with DUE Script and the physical world in minutes...no installation is necessary!</p>
 <h2 id="operating-modes">Operating Modes</h2>
 <p>DUE Script has two modes <em>Immediate mode</em> and <em>Record mode</em>. <em>Immediate mode</em> commands are executed immediately. <em>Immediate mode</em> commands are a single line of code. <em>Record mode</em> commands are stored in flash and then can be executed. The <a href="../console.html">DUE Console</a> handles these modes automatically. The following details are only needed when not using DUE Console, like when using a terminal software like TeraTerm.</p>
@@ -308,6 +308,38 @@ For i=0 to 9:PrintLn(a[i]):Next
 <h5>Tip</h5>
 <p>Use <code>Dim a[0]</code> to free up the memory reserved for array <code>a[]</code>.</p>
 </div>
+<p>Arrays can be initialized in two different ways.</p>
+<p>Declare an array and initialize it with values at the same time.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p><code>Range(Len(array))</code> returns the length of the array.</p>
+</div>
+<pre><code class="lang-basic">Dim x[6] = [1,2,
+            3,4,
+            5,6]
+For i in Range(Len(x))
+  PrintLn(x[i])
+Next
+</code></pre>
+<p>The second way is to create the array first, then populate it later.</p>
+<pre><code class="lang-basic">Dim x[6]
+
+x = [7,8,
+     9,10,
+     11,12]
+For i in Range(Len(x))
+  PrintLn(x[i])
+next
+</code></pre>
+<p>There are some specific things we must know about initializing arrays</p>
+<p><strong>NOTE:</strong></p>
+<ol>
+<li>Multiline initializers must have a comma ending the line if the following line will have more data for the initializer (see the examples above)</li>
+<li>Multiline initializers can only be used in &quot;record&quot; mode. In immediate mode, the initializer must be on a single line.</li>
+<li>Initializers are always run, so if the initializer is inside a loop every time the dim or assignment initializer is encountered it will reinitialize the data in the array</li>
+<li>You can have fewer values in the initializer than what the array holds, but you cannot have more. You will get an error indicating that a <code>]</code> was expected if there are too many elements in the initializer</li>
+<li>Since we do not want to do too many dynamic allocations, the size of the array must be specified when using dim even when initializing the array</li>
+</ol>
 <h3 id="for-loop">For-Loop</h3>
 <p>The For-Loop has two different syntax styles. <strong>BASIC</strong> and <strong>Python</strong> style.</p>
 <p><strong>BASIC Style</strong></p>
