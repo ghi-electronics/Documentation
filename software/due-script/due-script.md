@@ -1,7 +1,7 @@
 # DUE Script
 ---
 
-The DUE Link platform includes a scripting language called DUE Script it runs internally on any [DUE-enabled hardware](../../hardware/intro.md). This allows the device to run standalone independent from any host. This very easy-to-learn scripting language is inspired by BASIC and Python, giving the user the simplicity and flexibility they need.
+The DUE Link platform includes a scripting language called DUE Script it runs internally on any [DUE-enabled hardware](../../hardware/intro.md). This allows the device to run standalone, independent from any host. This very easy-to-learn scripting language is inspired by BASIC and Python, giving the user the simplicity and flexibility they need.
 
 The on-line [DUE Console](../../software/console.md) lets developers start experimenting with DUE Script and the physical world in minutes...no installation is necessary!
 
@@ -166,6 +166,43 @@ The output will look like:
 
 > [!TIP]
 > Use `Dim a[0]` to free up the memory reserved for array `a[]`.
+
+Arrays can be initialized in two different ways.
+
+Declare an array and initialize it with values at the same time.  
+
+> [!NOTE]
+> `Range(Len(array))` returns the length of the array.
+
+```basic
+Dim x[6] = [1,2,
+            3,4,
+            5,6]
+For i in Range(Len(x))
+  PrintLn(x[i])
+Next
+```
+The second way is to create the array first, then populate it later. 
+
+```basic
+Dim x[6]
+
+x = [7,8,
+     9,10,
+     11,12]
+For i in Range(Len(x))
+  PrintLn(x[i])
+Next
+```
+
+There are some specific things we must know about initializing arrays
+
+**NOTE:**
+1. Multi-line initializers must have a comma ending the line if the following line will have more data for the initializer (see the examples above)
+2. Multi-line initializers can only be used in "record" mode. In immediate mode, the initializer must be on a single line.
+3. Initializers are always run, so if the initializer is inside a loop every time the dim or assignment initializer is encountered it will reinitialize the data in the array
+4. You can have fewer values in the initializer than what the array holds, but you cannot have more. You will get an error indicating that a `]` was expected if there are too many elements in the initializer
+5. Since we do not want to do too many dynamic allocations, the size of the array must be specified when using dim even when initializing the array 
 
 ### For-Loop
 The For-Loop has two different syntax styles. **BASIC** and **Python** style. 
