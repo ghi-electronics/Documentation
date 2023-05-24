@@ -329,13 +329,13 @@ x = [7,8,
      11,12]
 For i in Range(Len(x))
   PrintLn(x[i])
-next
+Next
 </code></pre>
 <p>There are some specific things we must know about initializing arrays</p>
 <p><strong>NOTE:</strong></p>
 <ol>
-<li>Multiline initializers must have a comma ending the line if the following line will have more data for the initializer (see the examples above)</li>
-<li>Multiline initializers can only be used in &quot;record&quot; mode. In immediate mode, the initializer must be on a single line.</li>
+<li>Multi-line initializers must have a comma ending the line if the following line will have more data for the initializer (see the examples above)</li>
+<li>Multi-line initializers can only be used in &quot;record&quot; mode. In immediate mode, the initializer must be on a single line.</li>
 <li>Initializers are always run, so if the initializer is inside a loop every time the dim or assignment initializer is encountered it will reinitialize the data in the array</li>
 <li>You can have fewer values in the initializer than what the array holds, but you cannot have more. You will get an error indicating that a <code>]</code> was expected if there are too many elements in the initializer</li>
 <li>Since we do not want to do too many dynamic allocations, the size of the array must be specified when using dim even when initializing the array</li>
