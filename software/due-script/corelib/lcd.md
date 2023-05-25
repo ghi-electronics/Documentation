@@ -110,7 +110,29 @@ LcdFill(1,10,10,118,54)
 LcdShow()
 ```
 
+**Draw Text**
+
+- **LcdText("text", color, x, y)** <br>
+**text:** String message in double quotes. <br>
+**Str():** is used to convert variables to strings <br>
+**color:** 0 = black, 1 = white <br>
+**x:** x position <br>
+**y:** x position <br>
+
+
+```basic
+LcdClear(0)
+LcdText("Hello World",1,10,10)
+LcdShow()
+x=100
+LcdClear(0)
+LcdText(str(x),1,0,0)
+LcdShow
+```
+
 **Draw Scaled Text**
+
+Works exactly the same as **LcdText()** but adds scaling.
 
 - **LcdTextS("text", color, x, y, scaleWidth, scaleHeight)** <br>
 **text:** String message in double quotes. <br>
@@ -119,7 +141,7 @@ LcdShow()
 **x:** x position <br>
 **y:** x position <br>
 **scaleWidth:** Width scale multiplier <br>
-**scaleHeight:** Width scale multiplier 
+**scaleHeight:** Height scale multiplier 
 
 ```basic
 LcdClear(0)
@@ -134,21 +156,75 @@ LcdShow()
 
 > [!TIP]
 > Scale is multiplier for the pixel in width and height to make the font larger
+()
 
-**Draw Text**
+**Draw Image**
 
-- **LcdText("text", color, x, y)** <br>
-Works exactly the same as **LcdText()** minus scaling.
+- **LcdImg(array,x, y, transform)**<br>
+**array:** Image array (see below). <br>
+**x:** x position on screen. <br>
+**y:** y position on screen. <br>
+**transform:** transform modifier. <br>
+
+There are cases where images need to be added to the screen. Of course, we are taking about basic simple images, more like a tiny sprite in a game. 
+
+The image is an array of pixels. This arrays must start with 2 elements that contain the image's width and height. We will place the array on multi line to help us visualize what the image might look like, but placing everything on a single line has the same effect
+
+Image Array formatting:
 
 ```basic
+Dim a[2+(8*8)] = [8,8,
+0, 0, 0, 1, 1, 0, 0, 0,
+0, 0, 1, 1, 1, 1, 0, 0,
+0, 1, 1, 1, 1, 1, 1, 0,
+1, 1, 0, 1, 1, 0, 1, 1,
+1, 1, 1, 1, 1, 1, 1, 1,
+0, 0, 1, 0, 0, 1, 0, 0,
+0, 1, 0, 1, 1, 0, 1, 0,
+1, 0, 1, 0, 0, 1, 0, 1]
+```
+
+The following example displays the image array on the screen. 
+
+```basic
+Dim a[2+(8*8)] = [8,8,
+0, 0, 0, 1, 1, 0, 0, 0,
+0, 0, 1, 1, 1, 1, 0, 0,
+0, 1, 1, 1, 1, 1, 1, 0,
+1, 1, 0, 1, 1, 0, 1, 1,
+1, 1, 1, 1, 1, 1, 1, 1,
+0, 0, 1, 0, 0, 1, 0, 0,
+0, 1, 0, 1, 1, 0, 1, 0,
+1, 0, 1, 0, 0, 1, 0, 1]
 LcdClear(0)
-LcdText("Hello World",1,10,10)
-LcdShow()
-x=100
-LcdClear(0)
-LcdText(str(x),1,0,0)
+LcdImgS(a,60,30,2,2,0)
 LcdShow()
 ```
+
+Transformation modifiers:
+
+
+| Value  | Transformation										
+| :---   |:---													
+| 0      |No transform	
+| 1      |Flip image horizontally
+| 2      |Flip image vertically
+| 3      |Rotate image 90 degrees
+| 4      |Rotate image 180 degrees
+| 5      |Rotate the image 270 degrees(same as -90 degrees)	
+
+
+**Draw Scaled Image**
+
+Works the same as LcdImg but adds scaling. 
+
+- **LcdImgS(array,x, y, transform,scaleWidth,scaleHeight)**<br>
+**array:** Image array (see below). <br>
+**x:** x position on screen. <br>
+**y:** y position on screen. <br>
+**transform:** transform modifier. (see above)<br>
+**scaleWidth:** Width scale multiplier <br>
+**scaleHeight:** Height scale multiplier 
 
 **LCD Stream**
 

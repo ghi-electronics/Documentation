@@ -2,9 +2,9 @@
 
 This function is used when using a distance sensors. 
 
-- **Distance(trigger, echo)** - uses ultrasonic sonic sensor to read distance.<br>
+- **ReadDistance(trigger, echo)** - uses ultrasonic sonic sensor to read distance.<br>
 **trigger:** The pin number that is connected to trigger (pulse) signal<br>
-**echo:**  The pin number that is connected to echo signal<br>
+**echo:**  The pin number that is connected to echo signal, use `-1` for single pin <br>
 **Returns:**  Distance in centimeters
 
 > [!TIP]
@@ -12,7 +12,7 @@ This function is used when using a distance sensors.
 
 ```basic
 @Loop
-x = Distance(0,1) 
+x = ReadDistance(0,1) 
 If x>0 
     PrintLn(x)
 End
