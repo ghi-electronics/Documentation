@@ -80,9 +80,9 @@
 
 <p>This function is used when using a distance sensors.</p>
 <ul>
-<li><strong>Distance(trigger, echo)</strong> - uses ultrasonic sonic sensor to read distance.<br>
+<li><strong>ReadDistance(trigger, echo)</strong> - uses ultrasonic sonic sensor to read distance.<br>
 <strong>trigger:</strong> The pin number that is connected to trigger (pulse) signal<br>
-<strong>echo:</strong>  The pin number that is connected to echo signal<br>
+<strong>echo:</strong>  The pin number that is connected to echo signal, use <code>-1</code> for single pin <br>
 <strong>Returns:</strong>  Distance in centimeters</li>
 </ul>
 <div class="TIP">
@@ -90,7 +90,7 @@
 <p>most sensors need 5V to work.</p>
 </div>
 <pre><code class="lang-basic">@Loop
-x = Distance(0,1) 
+x = ReadDistance(0,1) 
 If x&gt;0 
     PrintLn(x)
 End

@@ -177,7 +177,25 @@ LcdShow()
 LcdFill(1,10,10,118,54)
 LcdShow()
 </code></pre>
+<p><strong>Draw Text</strong></p>
+<ul>
+<li><strong>LcdText(&quot;text&quot;, color, x, y)</strong> <br>
+<strong>text:</strong> String message in double quotes. <br>
+<strong>Str():</strong> is used to convert variables to strings <br>
+<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>x:</strong> x position <br>
+<strong>y:</strong> x position <br></li>
+</ul>
+<pre><code class="lang-basic">LcdClear(0)
+LcdText(&quot;Hello World&quot;,1,10,10)
+LcdShow()
+x=100
+LcdClear(0)
+LcdText(str(x),1,0,0)
+LcdShow
+</code></pre>
 <p><strong>Draw Scaled Text</strong></p>
+<p>Works exactly the same as <strong>LcdText()</strong> but adds scaling.</p>
 <ul>
 <li><strong>LcdTextS(&quot;text&quot;, color, x, y, scaleWidth, scaleHeight)</strong> <br>
 <strong>text:</strong> String message in double quotes. <br>
@@ -186,7 +204,7 @@ LcdShow()
 <strong>x:</strong> x position <br>
 <strong>y:</strong> x position <br>
 <strong>scaleWidth:</strong> Width scale multiplier <br>
-<strong>scaleHeight:</strong> Width scale multiplier</li>
+<strong>scaleHeight:</strong> Height scale multiplier</li>
 </ul>
 <pre><code class="lang-basic">LcdClear(0)
 LcdTextS(&quot;Hello&quot;,1,0,0,2,2)
@@ -199,21 +217,90 @@ LcdShow()
 </code></pre>
 <div class="TIP">
 <h5>Tip</h5>
-<p>Scale is multiplier for the pixel in width and height to make the font larger</p>
+<p>Scale is multiplier for the pixel in width and height to make the font larger
+()</p>
 </div>
-<p><strong>Draw Text</strong></p>
+<p><strong>Draw Image</strong></p>
 <ul>
-<li><strong>LcdText(&quot;text&quot;, color, x, y)</strong> <br>
-Works exactly the same as <strong>LcdText()</strong> minus scaling.</li>
+<li><strong>LcdImg(array,x, y, transform)</strong><br>
+<strong>array:</strong> Image array (see below). <br>
+<strong>x:</strong> x position on screen. <br>
+<strong>y:</strong> y position on screen. <br>
+<strong>transform:</strong> transform modifier. <br></li>
 </ul>
-<pre><code class="lang-basic">LcdClear(0)
-LcdText(&quot;Hello World&quot;,1,10,10)
-LcdShow()
-x=100
+<p>There are cases where images need to be added to the screen. Of course, we are taking about basic simple images, more like a tiny sprite in a game.</p>
+<p>The image is an array of pixels. This arrays must start with 2 elements that contain the image's width and height. We will place the array on multi line to help us visualize what the image might look like, but placing everything on a single line has the same effect</p>
+<p>Image Array formatting:</p>
+<pre><code class="lang-basic">Dim a[2+(8*8)] = [8,8,
+0, 0, 0, 1, 1, 0, 0, 0,
+0, 0, 1, 1, 1, 1, 0, 0,
+0, 1, 1, 1, 1, 1, 1, 0,
+1, 1, 0, 1, 1, 0, 1, 1,
+1, 1, 1, 1, 1, 1, 1, 1,
+0, 0, 1, 0, 0, 1, 0, 0,
+0, 1, 0, 1, 1, 0, 1, 0,
+1, 0, 1, 0, 0, 1, 0, 1]
+</code></pre>
+<p>The following example displays the image array on the screen.</p>
+<pre><code class="lang-basic">Dim a[2+(8*8)] = [8,8,
+0, 0, 0, 1, 1, 0, 0, 0,
+0, 0, 1, 1, 1, 1, 0, 0,
+0, 1, 1, 1, 1, 1, 1, 0,
+1, 1, 0, 1, 1, 0, 1, 1,
+1, 1, 1, 1, 1, 1, 1, 1,
+0, 0, 1, 0, 0, 1, 0, 0,
+0, 1, 0, 1, 1, 0, 1, 0,
+1, 0, 1, 0, 0, 1, 0, 1]
 LcdClear(0)
-LcdText(str(x),1,0,0)
+LcdImgS(a,60,30,2,2,0)
 LcdShow()
 </code></pre>
+<p>Transformation modifiers:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Transformation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">No transform</td>
+</tr>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Flip image horizontally</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Flip image vertically</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Rotate image 90 degrees</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Rotate image 180 degrees</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Rotate the image 270 degrees(same as -90 degrees)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Draw Scaled Image</strong></p>
+<p>Works the same as LcdImg but adds scaling.</p>
+<ul>
+<li><strong>LcdImgS(array,x, y, transform,scaleWidth,scaleHeight)</strong><br>
+<strong>array:</strong> Image array (see below). <br>
+<strong>x:</strong> x position on screen. <br>
+<strong>y:</strong> y position on screen. <br>
+<strong>transform:</strong> transform modifier. (see above)<br>
+<strong>scaleWidth:</strong> Width scale multiplier <br>
+<strong>scaleHeight:</strong> Height scale multiplier</li>
+</ul>
 <p><strong>LCD Stream</strong></p>
 <p>Stream is used to send the entire LCD update.</p>
 <div class="NOTE">
