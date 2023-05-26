@@ -106,33 +106,39 @@ The provided API mirrors DUE Script's [**Core library**](../due-script/corelib/c
 > [!NOTE]
 > For convenience, the Pin Enum includes, ButtonA, ButtonB and Led. For example: `dev.Digital.Write(dev.Pin.Led, True)`
 
+
 ## DUE Script Control
 
-These methods allow developers to control DUE Scripts right from within Python
+These methods allow developers to control DUE Scripts right from within .NET
 
 | Method                       | Description                                        |
 | :---                         |:---                                                |
 | Script.Execute()	   	       | Executes the single line of code immediately       |
 | Script.IsRunning()	   	   | Checks if DUE Script is running                    |
-| Script.Load()	   	           | Sends the code to flash                            |
+| Script.Load()	   	           | Loads the line into internal buffer                |
 | Script.New()	   	           | Clears the program stored in flash                 |
-| Script.Read()	   	           | Read the program stored in flash                 |
+| Script.Read()	   	           | Read the program stored in flash and return as string |
+| Script.Record()	   	       | Sends the internal buffer to the device, overwriting any previous programs |
+| Script.Run()	   	           | Runs the program stored in flash                   |
 
-This example will load a simple program line by line and then run it.
+This example will load a simple program line by line and then record it.
 
-```py
-dev.Script.New()
-dev.Script.Load("for x = 1 to 10")
-dev.Script.Load("DWrite('L',1)")
-dev.Script.Load("Wait(200)")
-dev.Script.Load("DWrite('L',0)")
-dev.Script.Load("Wait(200)")
-dev.Script.Load("next")
-dev.Script.Run();
+```python
+dev.Script.Load("c = 10")
+dev.Script.Load("@Blink");
+dev.Script.Load("Led(100,100,c)")
+dev.Script.Record()
 ```
 
-This is an example to execute a single line in *immediate mode*. This does not modify the application stored in flash. 
+This is an example to execute a single line(immediate mode). This does not modify the application stored in flash. 
 
-```py
+```python
 dev.Script.Execute("LED(200,200,10)")
 ```
+
+You can also access a previously recorder program using goto (to label) or by calling a function that has a return. This example calls the recorded program above.
+
+```python
+dev.Script.Execute("c=5:goto Blink")
+```
+
