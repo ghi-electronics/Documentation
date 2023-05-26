@@ -115,7 +115,7 @@ Console.WriteLine(&quot;Bye DUE!&quot;);
 <thead>
 <tr>
 <th style="text-align: left;">.NET API</th>
-<th style="text-align: left;">DUE Script API</th>
+<th style="text-align: left;">DUE Script Equivalent</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -136,9 +136,9 @@ Console.WriteLine(&quot;Bye DUE!&quot;);
 <td>Sets up a button to be used</td>
 </tr>
 <tr>
-<td style="text-align: left;">Button.IsPressed()</td>
+<td style="text-align: left;">Button.WasPressed()</td>
 <td style="text-align: left;"><a href="../due-script/corelib/button.html">BtnDown()</a></td>
-<td>Detects if button is pressed</td>
+<td>Detects if button was pressed</td>
 </tr>
 <tr>
 <td style="text-align: left;">Button.IsReleased()</td>
@@ -191,19 +191,9 @@ Console.WriteLine(&quot;Bye DUE!&quot;);
 <td>Clears the display black or white</td>
 </tr>
 <tr>
-<td style="text-align: left;">Display.DrawCircle()</td>
-<td style="text-align: left;"><a href="../due-script/corelib/lcd.html">LcdCirle()</a></td>
-<td>Draws a circle on the display</td>
-</tr>
-<tr>
-<td style="text-align: left;">Display.DrawRectangle()</td>
-<td style="text-align: left;"><a href="../due-script/corelib/lcd.html">LcdRect()</a></td>
-<td>Draws a rectangle on the display</td>
-</tr>
-<tr>
-<td style="text-align: left;">Display.DrawFillRect()</td>
-<td style="text-align: left;"><a href="../due-script/corelib/lcd.html">LcdRect()</a></td>
-<td>Draws a filled rectangle on the display</td>
+<td style="text-align: left;">Display.Configuration()</td>
+<td style="text-align: left;"><a href="../due-script/corelib/lcd.html">LcdConfig()</a></td>
+<td>Set display configuration</td>
 </tr>
 <tr>
 <td style="text-align: left;">Display.DrawBuffer()</td>
@@ -216,9 +206,39 @@ Console.WriteLine(&quot;Bye DUE!&quot;);
 <td>Updates the entire display, takes bytes, using stream, with automatic Show()</td>
 </tr>
 <tr>
+<td style="text-align: left;">Display.DrawCircle()</td>
+<td style="text-align: left;"><a href="../due-script/corelib/lcd.html">LcdCircle()</a></td>
+<td>Draws a circle on the display</td>
+</tr>
+<tr>
+<td style="text-align: left;">Display.DrawFillRect()</td>
+<td style="text-align: left;"><a href="../due-script/corelib/lcd.html">LcdFill()</a></td>
+<td>Draws a filled rectangle on the display</td>
+</tr>
+<tr>
+<td style="text-align: left;">Display.DrawImage()</td>
+<td style="text-align: left;"><a href="../due-script/corelib/lcd.html">LcdImg()</a></td>
+<td>Draws an image using an array</td>
+</tr>
+<tr>
+<td style="text-align: left;">Display.DrawImageBytes()</td>
+<td style="text-align: left;"><a href="../due-script/corelib/lcd.html">LcdImg()</a></td>
+<td>Draws an image using bytes</td>
+</tr>
+<tr>
+<td style="text-align: left;">Display.DrawImageScale()</td>
+<td style="text-align: left;"><a href="../due-script/corelib/lcd.html">LcdImg()</a></td>
+<td>Works same as DrawImage() adds scaling</td>
+</tr>
+<tr>
 <td style="text-align: left;">Display.DrawLine()</td>
 <td style="text-align: left;"><a href="../due-script/corelib/lcd.html">LcdLine()</a></td>
 <td>Draws a line on the display</td>
+</tr>
+<tr>
+<td style="text-align: left;">Display.DrawRectangle()</td>
+<td style="text-align: left;"><a href="../due-script/corelib/lcd.html">LcdRect()</a></td>
+<td>Draws a rectangle on the display</td>
 </tr>
 <tr>
 <td style="text-align: left;">Display.DrawText()</td>
@@ -241,8 +261,8 @@ Console.WriteLine(&quot;Bye DUE!&quot;);
 <td>Sends the display buffer</td>
 </tr>
 <tr>
-<td style="text-align: left;">Distance()</td>
-<td style="text-align: left;"><a href="../due-script/corelib/distance.html">ReadDistance()</a></td>
+<td style="text-align: left;">Distance.Read()</td>
+<td style="text-align: left;"><a href="../due-script/corelib/distance.html">Distance()</a></td>
 <td>Used to read distance sensors</td>
 </tr>
 <tr>
