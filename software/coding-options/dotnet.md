@@ -60,13 +60,10 @@ The provided API mirrors DUE Script's [Core library](../due-script/corelib/corel
 | Digital.Write()              |[DWrite()](../due-script/corelib/digital.md)			| Writes to digital pin
 | Display.Clear()              |[LcdClear()](../due-script/corelib/lcd.md)				| Clears the display black or white
 | Display.DrawCircle()         |[LcdCirle()](../due-script/corelib/lcd.md)			| Draws a circle on the display
-
 | Display.DrawRectangle()      |[LcdRect()](../due-script/corelib/lcd.md)		    | Draws a rectangle on the display
 | Display.DrawFillRect()       |[LcdRect()](../due-script/corelib/lcd.md)		    | Draws a filled rectangle on the display
-
-| Display.DrawBuffer()         |[LcdStream()](../due-script/corelib/lcd.md)				| Updates the entire display, takes an array, using stream, with automatic `Show()`
-
-| Display.DrawBufferBytes()    |[LcdStream()](../due-script/corelib/lcd.md)				| Updates the entire display, takes bytes, using stream, with automatic `Show()`
+| Display.DrawBuffer()         |[LcdStream()](../due-script/corelib/lcd.md)				| Updates the entire display, takes an array, using stream, with automatic Show()
+| Display.DrawBufferBytes()    |[LcdStream()](../due-script/corelib/lcd.md)				| Updates the entire display, takes bytes, using stream, with automatic Show()
 | Display.DrawLine()           |[LcdLine()](../due-script/corelib/lcd.md)			| Draws a line on the display
 | Display.DrawText()           |[LcdText()](../due-script/corelib/lcd.md)			| Draws a text on the display
 | Display.DrawTextScale()      |[LcdTextS()](../due-script/corelib/lcd.md)			| Draws scaled text on the display
