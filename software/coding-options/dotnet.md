@@ -43,7 +43,7 @@ Console.WriteLine("Bye DUE!");
 
 The provided API mirrors DUE Script's [Core library](../due-script/corelib/corelib.md). Referencing those APIs is a good place to learn about the available functionality and available arguments.
 
-| .NET API                   | DUE Script API											|Description
+| .NET API                   | DUE Script Equivalent										|Description
 | :---                         |:---													|
 | Analog.Read()                |[ARead()](../due-script/corelib/analog.md)				| Reads analog pin
 | Analog.Write()               |[AWrite()](../due-script/corelib/analog.md)				| Reads analog pin
