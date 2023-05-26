@@ -407,7 +407,7 @@ print(&quot;Bye DUE!&quot;)
 <p>For convenience, the Pin Enum includes, ButtonA, ButtonB and Led. For example: <code>dev.Digital.Write(dev.Pin.Led, True)</code></p>
 </div>
 <h2 id="due-script-control">DUE Script Control</h2>
-<p>These methods allow developers to control DUE Scripts right from within Python</p>
+<p>These methods allow developers to control DUE Scripts right from within .NET</p>
 <table>
 <thead>
 <tr>
@@ -426,7 +426,7 @@ print(&quot;Bye DUE!&quot;)
 </tr>
 <tr>
 <td style="text-align: left;">Script.Load()</td>
-<td style="text-align: left;">Sends the code to flash</td>
+<td style="text-align: left;">Loads the line into internal buffer</td>
 </tr>
 <tr>
 <td style="text-align: left;">Script.New()</td>
@@ -434,22 +434,29 @@ print(&quot;Bye DUE!&quot;)
 </tr>
 <tr>
 <td style="text-align: left;">Script.Read()</td>
-<td style="text-align: left;">Read the program stored in flash</td>
+<td style="text-align: left;">Read the program stored in flash and return as string</td>
+</tr>
+<tr>
+<td style="text-align: left;">Script.Record()</td>
+<td style="text-align: left;">Sends the internal buffer to the device, overwriting any previous programs</td>
+</tr>
+<tr>
+<td style="text-align: left;">Script.Run()</td>
+<td style="text-align: left;">Runs the program stored in flash</td>
 </tr>
 </tbody>
 </table>
-<p>This example will load a simple program line by line and then run it.</p>
-<pre><code class="lang-py">dev.Script.New()
-dev.Script.Load(&quot;for x = 1 to 10&quot;)
-dev.Script.Load(&quot;DWrite('L',1)&quot;)
-dev.Script.Load(&quot;Wait(200)&quot;)
-dev.Script.Load(&quot;DWrite('L',0)&quot;)
-dev.Script.Load(&quot;Wait(200)&quot;)
-dev.Script.Load(&quot;next&quot;)
-dev.Script.Run();
+<p>This example will load a simple program line by line and then record it.</p>
+<pre><code class="lang-python">dev.Script.Load(&quot;c = 10&quot;)
+dev.Script.Load(&quot;@Blink&quot;);
+dev.Script.Load(&quot;Led(100,100,c)&quot;)
+dev.Script.Record()
 </code></pre>
-<p>This is an example to execute a single line in <em>immediate mode</em>. This does not modify the application stored in flash.</p>
-<pre><code class="lang-py">dev.Script.Execute(&quot;LED(200,200,10)&quot;)
+<p>This is an example to execute a single line(immediate mode). This does not modify the application stored in flash.</p>
+<pre><code class="lang-python">dev.Script.Execute(&quot;LED(200,200,10)&quot;)
+</code></pre>
+<p>You can also access a previously recorder program using goto (to label) or by calling a function that has a return. This example calls the recorded program above.</p>
+<pre><code class="lang-python">dev.Script.Execute(&quot;c=5:goto Blink&quot;)
 </code></pre>
 </article>
           </div>
