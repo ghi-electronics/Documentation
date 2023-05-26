@@ -48,7 +48,7 @@ The provided API mirrors DUE Script's [Core library](../due-script/corelib/corel
 | Analog.Read()                |[ARead()](../due-script/corelib/analog.md)				| Reads analog pin
 | Analog.Write()               |[AWrite()](../due-script/corelib/analog.md)				| Reads analog pin
 | Button.Enable()              |[BtnEnable()](../due-script/corelib/button.md)			| Sets up a button to be used
-| Button.IsPressed()           |[BtnDown()](../due-script/corelib/button.md)			| Detects if button is pressed 
+| Button.WasPressed()          |[BtnDown()](../due-script/corelib/button.md)			| Detects if button was pressed 
 | Button.IsReleased()          |[BtnDown()](../due-script/corelib/button.md)			| Detects if button is released 
 | DeviceConfig.IsEdge()        |[Version()](../due-script/corelib/systemfunctions.md)	| Checks for specific hardware
 | DeviceConfig.IsFlea()        |[Version()](../due-script/corelib/systemfunctions.md)	| Checks for specific hardware
@@ -59,17 +59,21 @@ The provided API mirrors DUE Script's [Core library](../due-script/corelib/corel
 | Digital.Read()               |[DRead()](../due-script/corelib/digital.md)				| Reads digital pin
 | Digital.Write()              |[DWrite()](../due-script/corelib/digital.md)			| Writes to digital pin
 | Display.Clear()              |[LcdClear()](../due-script/corelib/lcd.md)				| Clears the display black or white
-| Display.DrawCircle()         |[LcdCirle()](../due-script/corelib/lcd.md)			| Draws a circle on the display
-| Display.DrawRectangle()      |[LcdRect()](../due-script/corelib/lcd.md)		    | Draws a rectangle on the display
-| Display.DrawFillRect()       |[LcdRect()](../due-script/corelib/lcd.md)		    | Draws a filled rectangle on the display
+| Display.Configuration()      |[LcdConfig()](../due-script/corelib/lcd.md)				| Set display configuration 
 | Display.DrawBuffer()         |[LcdStream()](../due-script/corelib/lcd.md)				| Updates the entire display, takes an array, using stream, with automatic Show()
 | Display.DrawBufferBytes()    |[LcdStream()](../due-script/corelib/lcd.md)				| Updates the entire display, takes bytes, using stream, with automatic Show()
-| Display.DrawLine()           |[LcdLine()](../due-script/corelib/lcd.md)			| Draws a line on the display
-| Display.DrawText()           |[LcdText()](../due-script/corelib/lcd.md)			| Draws a text on the display
-| Display.DrawTextScale()      |[LcdTextS()](../due-script/corelib/lcd.md)			| Draws scaled text on the display
-| Display.SetPixel()           |[LcdPixel()](../due-script/corelib/lcd.md)			| Draws pixel on the display
+| Display.DrawCircle()         |[LcdCircle()](../due-script/corelib/lcd.md)				| Draws a circle on the display
+| Display.DrawFillRect()       |[LcdFill()](../due-script/corelib/lcd.md)				| Draws a filled rectangle on the display
+| Display.DrawImage()          |[LcdImg()](../due-script/corelib/lcd.md)				| Draws an image using an array
+| Display.DrawImageBytes()     |[LcdImg()](../due-script/corelib/lcd.md)				| Draws an image using bytes
+| Display.DrawImageScale()     |[LcdImg()](../due-script/corelib/lcd.md)				| Works same as DrawImage() adds scaling
+| Display.DrawLine()           |[LcdLine()](../due-script/corelib/lcd.md)				| Draws a line on the display
+| Display.DrawRectangle()      |[LcdRect()](../due-script/corelib/lcd.md)			    | Draws a rectangle on the display
+| Display.DrawText()           |[LcdText()](../due-script/corelib/lcd.md)				| Draws a text on the display
+| Display.DrawTextScale()      |[LcdTextS()](../due-script/corelib/lcd.md)				| Draws scaled text on the display
+| Display.SetPixel()           |[LcdPixel()](../due-script/corelib/lcd.md)				| Draws pixel on the display
 | Display.Show()               |[LcdShow()](../due-script/corelib/lcd.md)				| Sends the display buffer
-| Distance()                   |[ReadDistance()](../due-script/corelib/distance.md)		| Used to read distance sensors
+| Distance.Read()              |[Distance()](../due-script/corelib/distance.md)			| Used to read distance sensors
 | Frequency()                  |[Freq()](../due-script/corelib/frequency.md)			| Hardware generated PWM signal
 | I2c.Write()				   |[I2cStream()](../due-script/corelib/i2c.md)				| I2C write, using stream
 | I2c.Read()				   |[I2cStream()](../due-script/corelib/i2c.md)				| I2C read, using stream
