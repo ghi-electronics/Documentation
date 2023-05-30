@@ -40,6 +40,9 @@ Our first program will blink the on-board LED 20 times, where it comes on for 20
 this.comPort = new SerialInterface();
 comPort.Connect();
 
+<script src="duelink.js"></script>
+// ...
+
 if (!this.dev)
    this.dev = new DUELinkController(this.comPort);
 
