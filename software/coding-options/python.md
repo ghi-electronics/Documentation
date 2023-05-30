@@ -89,8 +89,6 @@ The provided API mirrors DUE Script's [**Core library**](../due-script/corelib/c
 | Neo.SetMultiple()            |[NeoStream()](../due-script/corelib/neopixel.md)		| Updates all LEDs, using streams, with automatic `Show()`
 | Led.Set()	   	         	   |[LED()](../due-script/corelib/led.md)					| Controls the on-board LED
 | ServoMoto.Set()	   	       |[ServoSet()](../due-script/corelib/servo.md)			| Sets servo motor connected to a pin
-| Sound.Play()	   	           |[Sound()](../due-script/corelib/sound.md)				| Sets buzzer sound on supported hardware
-| Sound.Stop()	   	           |[Sound()](../due-script/corelib/sound.md)				| Stops buzzer sound on supported hardware
 | Spi.Configuration()	   	   |[SpiCfg()](../due-script/corelib/spi.md)				| Configures SPI bus
 | Spi.Palette()	   	           |[Palette()](../due-script/corelib/spi.md)				| Sets the desired color for a palette
 | Spi.Read()	   	           |[SpiByte()](../due-script/corelib/spi.md)				| Reads SPI byte

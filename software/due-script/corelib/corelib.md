@@ -18,7 +18,6 @@ The core library gives DUE Scripts the necessary API to access hardware. It has 
 | [LED](led.md) | Control the on-board LED |
 | [NeoPixel](neopixel.md) | Control smart color LEDs |
 | [Servo](servo.md) | Control servo motors |
-| [Sound](sound.md) | Generate sounds on the device's speaker (device specific) |
 | [SPI](spi.md) | Access the SPI data bus |
 | [System Functions](systemfunctions.md) | Built-in functions |
 | [Touch](touch.md) | Allows for capacitive touch sensing |
