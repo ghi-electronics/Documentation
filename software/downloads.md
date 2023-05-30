@@ -24,6 +24,7 @@ Preview | Preview of the next release, not quite ready for production use.
 
 File | Date | Status
 --- | --- | ---
+[v1.0.3](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v103.ghi) | 2023-05-30 | RC
 [v1.0.2](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v102.ghi) | 2023-05-24 | RC
 [v1.0.1](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v101.ghi) | 2023-05-19 | RC
 
@@ -32,9 +33,9 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
+[v1.0.3](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc007_v103.ghi) | 2023-05-30 | RC
 [v1.0.2](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc007_v102.ghi) | 2023-05-24 | RC
 [v1.0.1](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc007_v101.ghi) | 2023-05-19 | RC
-
 
 
 ---
@@ -48,6 +49,7 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
+[v1.0.3](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.0.3.nupkg) | 2023-05-30 | RC
 [v1.0.2](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.0.2.nupkg) | 2023-05-24 | RC
 [v1.0.1](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.0.1.nupkg) | 2023-05-19 | RC
 
@@ -60,10 +62,17 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
+[v1.0.3](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.0.3-py3-none-any.whl) | 2023-05-30 | RC
 [v1.0.2](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.0.2-py3-none-any.whl) | 2023-05-24 | RC
 [v1.0.1](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.0.1-py3-none-any.whl) | 2023-05-19 | RC
 
 ## Release Notes
+
+### v1.0.3: 2023-05-30
+
+* Firmware: Fixed issues with labels
+* Library: Add DrawImage and DrawImageScale
+* Library: Various improvements and changes
 
 ### v1.0.2: 2023-05-24
 
