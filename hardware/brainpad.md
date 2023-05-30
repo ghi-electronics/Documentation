@@ -83,5 +83,12 @@ Creating art is easy when you pair the BrainPad Pulse with the BrainGamer
 
 ![BrainGamer Sketch](../software/due-script/samples/images/braingamer-sketch.gif)
 
+---
+
+## Prototyping
+
+![FEZ Flea SoM](images/flea-som.jpg) 
+
+The FEZ Single board computers (SBC) are excellent for building projects. They utilize the same ecosystem as the BrainPad but provides a smaller form factor. See the [FEZ Page.](fez.md)
 
 
