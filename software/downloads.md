@@ -54,7 +54,6 @@ File | Date | Status
 [v1.0.1](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.0.1.nupkg) | 2023-05-19 | RC
 
 
-
 ### Python Library
 
 > [!Tip]
@@ -65,6 +64,14 @@ File | Date | Status
 [v1.0.3](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.0.3-py3-none-any.whl) | 2023-05-30 | RC
 [v1.0.2](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.0.2-py3-none-any.whl) | 2023-05-24 | RC
 [v1.0.1](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.0.1-py3-none-any.whl) | 2023-05-19 | RC
+
+
+### JavaScript Library
+
+
+File | Date | Status
+--- | --- | ---
+[v1.0.3](https://github.com/ghi-electronics/due-libraries/tree/main/javascript) | 2023-05-30 | RC
 
 ## Release Notes
 

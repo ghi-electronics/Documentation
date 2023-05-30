@@ -114,7 +114,7 @@ The provided API mirrors DUE Script's [**Core library**](../due-script/corelib/c
 
 ## DUE Script Control
 
-These methods allow developers to control DUE Scripts right from within .NET
+These methods allow developers to control DUE Scripts right from within Python
 
 | Method                       | Description                                        |
 | :---                         |:---                                                |
