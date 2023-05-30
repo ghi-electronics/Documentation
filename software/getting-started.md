@@ -34,3 +34,4 @@ The lessons also include other [Coding Options](../software/coding-options/codin
 
 Some of the coding options include full [open-source libraries](https://github.com/ghi-electronics/due-libraries) for easier use. However, all coding options include demos to get you started. Check out the many provided [open-source samples](https://github.com/ghi-electronics/due-samples).
 
+Users with experience and a working setup can start with [DUE Scripts](due-script/due-script.md) utilizing its [Core library](due-script/corelib/corelib.md).

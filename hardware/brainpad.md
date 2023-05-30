@@ -26,7 +26,7 @@ LCD     |   ✓   |
 Sound   |   ✓   |    
 
 
-Visit the [BrainPad website](https://www.brainpad.com) to learn about the product and see purchasing options.
+Visit the BrainPad website to learn about the product and see purchasing options.
 
 <div style="text-align: center;">
 
@@ -36,13 +36,18 @@ Visit the [BrainPad website](https://www.brainpad.com) to learn about the produc
 
 ---
 
-## Getting Ready
-The first step is to load the appropriate firmware onto the device. Follow the steps found on the [DUE Console](https://console.duelink.com/) website under `Firmware` and select the appropriate DUE firmware. 
+## Getting Started
 
-> [!TIP]
-> The heart to the BrainPad Pulse is SITCore SC13 chipset. And for BrainPad Edge is SITCore SC007.
+The DUE getting started page shows the steps needed to start using the DUE Link ecosystem and coding options.
 
-![DUE Console Loader Page](images/loader.png) 
+
+<div style="text-align: center;">
+
+[![Getting Started](images/btn-getting-started.png)](../software/getting-started.md)
+
+</div>
+
+
 
 ---
 
