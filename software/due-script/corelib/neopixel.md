@@ -10,17 +10,18 @@
  **pin:** Pin connected to NeoPixel<br>
  **count:** The count of LEDs to update and show
 
-This example assumes we have 8 LEDs and will set 8 LEDs to red, increasing the color intensity from 0 to 80.  Then it waits one second before it sets the first LED to bright purple!
+This example assumes we have 8 LEDs and will set 8 LEDs to red one at a time.  Then it waits one second before it sets the first LED to a bluish hue!
 
 ```basic
 NeoClear()
 For x = 0 to 8
-    NeoSet(x,x*10,0,0)
+    NeoSet(x,10,0,0)
+    NeoShow(0,8)
+    Wait(100)
 Next
-NeoShow(8)
 Wait(1000)
-NeoSet(0,200,0,200)
-NeoShow(8)
+NeoSet(0,0,10,20)
+NeoShow(0,8)
 ```
 
 - **NeoStream(pin,count)** - Streams data directly to LEDs. Automatically calls `NeoShow()` internally<br>
