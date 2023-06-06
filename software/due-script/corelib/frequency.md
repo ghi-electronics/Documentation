@@ -2,7 +2,8 @@
 
 Frequency is fixed to only one pin, see specific hardware's page pin-out for details. 
 
-- **Freq(frequency, duration, dutyCycle)** - provides an accurate hardware generated PWM signal <br>
+- **Freq(pin, frequency, duration, dutyCycle)** - provides an accurate hardware generated PWM signal <br>
+**pin:** hardware specific pin number or 'p' for on-board piezo buzzer <br>
 **frequency:** frequency in KHz <br>
 **duration:** 0 to forever <br>
 **dutyCycle:** 0 to 100
@@ -13,11 +14,11 @@ Frequency is fixed to only one pin, see specific hardware's page pin-out for det
 ```basic
 @Loop
 For x=1 to 1000
-    Freq(x,500,50)
+    Freq('p',x,500,50)
     Wait(200)
 Next
 For x=1000 to 1 step -1
-    Freq(x,500,50)
+    Freq('p',x,500,50)
     Wait(200)
 Next
 Goto Loop
