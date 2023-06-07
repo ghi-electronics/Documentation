@@ -4,7 +4,7 @@
 **address:** I2C slave address<br>
 **arrayWrite:** Array to send<br>
 **writeCount:** The number of bytes to write<br>
-**arrayWrite:** Array to read<br>
+**arrayRead:** Array to read<br>
 **readCount:** The number of bytes to read
 
 ```basic

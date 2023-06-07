@@ -17,7 +17,7 @@
 - **Reset(loader)** - Resets the board <br>
 **loader:** 0 = system reset,  1 = reset and stay in loader mode
 
-- **Rnd(max)** - Generates random number
+- **Rnd(max)** - Generates random number <br>
 **max:** maximum value of random number <br>
 **Returns:** returns random number between 0 and value of argument **max**
 

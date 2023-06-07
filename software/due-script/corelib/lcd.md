@@ -44,8 +44,8 @@ LcdShow()
 **color:** 0 = black, 1 = white <br>
 **x1:** Starting x point <br>
 **y1:** Starting y point <br>
-**x1:** Ending x point <br>
-**y1:** Ending y point 
+**x2:** Ending x point <br>
+**y2:** Ending y point 
 
 ```basic
 LcdClear(0)
