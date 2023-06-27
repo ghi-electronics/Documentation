@@ -1,13 +1,14 @@
 # DUE Link
 
 ---
-<div style="text-align: center;">
-
-![Host Mode](./images/due-host.jpg)
-
-</div>
 
 A DUE Link enabled device can give a computer, tablet or phone access to the physical world. Not only that, the DUE platform includes [DUE Script](due-script/due-script.md) for extending the device's features or even run independently from any additional hardware.
+
+<div style="text-align: center;">
+
+![Host Mode](./images/due-link-ecosystem.png)
+
+</div>
 
 ## Host Mode
 
