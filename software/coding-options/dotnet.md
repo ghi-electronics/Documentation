@@ -74,7 +74,7 @@ The provided API mirrors DUE Script's [Core library](../due-script/corelib/corel
 | Display.SetPixel()           |[LcdPixel()](../due-script/corelib/lcd.md)				| Draws pixel on the display
 | Display.Show()               |[LcdShow()](../due-script/corelib/lcd.md)				| Sends the display buffer
 | Distance.Read()              |[Distance()](../due-script/corelib/distance.md)			| Used to read distance sensors
-| Frequency()                  |[Freq()](../due-script/corelib/frequency.md)			| Hardware generated PWM signal
+| Frequency.Write()                  |[Freq()](../due-script/corelib/frequency.md)			| Hardware generated PWM signal
 | I2c.Write()				   |[I2cStream()](../due-script/corelib/i2c.md)				| I2C write, using stream
 | I2c.Read()				   |[I2cStream()](../due-script/corelib/i2c.md)				| I2C read, using stream
 | I2c.WriteRead()			   |[I2cStream()](../due-script/corelib/i2c.md)				| I2C write/read, using stream
