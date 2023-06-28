@@ -20,6 +20,7 @@ The core library gives DUE Scripts the necessary API to access hardware. It has 
 | [Servo](servo.md) | Control servo motors |
 | [SPI](spi.md) | Access the SPI data bus |
 | [System Functions](systemfunctions.md) | Built-in functions |
+| [Temp-Humidity](temp-humidity.md) | Works with DHT sensors |
 | [Touch](touch.md) | Allows for capacitive touch sensing |
 | [UART](uart.md) | Transfer data on the UART serial port |
 
