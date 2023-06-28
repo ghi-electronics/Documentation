@@ -78,7 +78,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h2 id="frequency">Frequency</h2>
 
-<p>Frequency is fixed to only one pin, see specific hardware's page pin-out for details.</p>
+<p>This hardware-backed feature generates frequencies/signals on a pin. Since this is hardware-backed, it only works on specific pin(s) and it is very accurate. It requires no system resources to run and therefore, the function is non-blocking. This signal can be used as PWM for power level control (similar to analog out). It can also be used to control servos, generate tones...etc.</p>
+<p>See the specific hardware's page pin-out for details on supported pin(s).</p>
 <ul>
 <li><strong>Freq(pin, frequency, duration, dutyCycle)</strong> - provides an accurate hardware generated PWM signal <br>
 <strong>pin:</strong> hardware specific pin number or 'p' for on-board piezo buzzer <br>
@@ -86,20 +87,22 @@
 <strong>duration:</strong> 0 to forever <br>
 <strong>dutyCycle:</strong> 0 to 100</li>
 </ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Freq() is a non-blocking function, calling Freq() a second time before the duration of the first call is over will end the function despite the duration of first calls argument.</p>
-</div>
 <pre><code class="lang-basic">@Loop
 For x=1 to 1000
-    Freq('p',x,500,50)
+    Freq('p',x,200,50)
     Wait(200)
 Next
 For x=1000 to 1 step -1
-    Freq('p',x,500,50)
+    Freq('p',x,200,50)
     Wait(200)
 Next
 Goto Loop
+</code></pre>
+<p>Since <strong>Freq()</strong> is a non-blocking function, it will return immediately even if duration is set to a future time. Making a second call to <strong>Freq()</strong> will terminate any existing active frequency, despite the duration of previous calls argument.</p>
+<p>In this example, 1Khz will be generated for only 2 seconds and not 5 seconds.</p>
+<pre><code class="lang-basic">Freq('p',1000,5000,50)
+Wait(2000)
+Freq('p',0,0,0)
 </code></pre>
 <hr>
 </article>
