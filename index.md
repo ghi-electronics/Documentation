@@ -3,9 +3,9 @@
 
 ![DUE](images/due-link.png)
 
-## You're DUE for some physical computing!
+## You're DUE for something NEW!
 
-Accessing hardware was never easier, thanks to DUE. Developer can now read sensors and control motors right from their favorite programming languages.
+Physical computing was never easier, thanks to DUE. Developer can now read sensors and control motors right from their favorite programming languages.
 
 DUE is a Dynamic, Universal, and Extensible platform that links devices to the physical world. These devices can be desktops, laptops, phones, or even a Raspberry PI. Developers have the option to use any modern operating system and use the programming language of their choice.
 
