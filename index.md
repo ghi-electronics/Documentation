@@ -1,7 +1,7 @@
 
 <div style="text-align: center;">
 
-![DUE](images/due-link.png)
+![DUE](images/duelink.png)
 
 ## You're DUE for something NEW!
 
