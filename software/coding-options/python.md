@@ -88,7 +88,7 @@ The provided API mirrors DUE Script's [**Core library**](../due-script/corelib/c
 | Neo.Show()	   	           |[NeoShow()](../due-script/corelib/neopixel.md)			| Transfers the internal pattern to LEDs
 | Neo.SetMultiple()            |[NeoStream()](../due-script/corelib/neopixel.md)		| Updates all LEDs, using streams, with automatic `Show()`
 | Led.Set()	   	         	   |[LED()](../due-script/corelib/led.md)					| Controls the on-board LED
-| ServoMoto.Set()	   	       |[ServoSet()](../due-script/corelib/servo.md)			| Sets servo motor connected to a pin
+| Servo.Set()	   	           |[ServoSet()](../due-script/corelib/servo.md)			| Sets servo motor connected to a pin
 | Spi.Configuration()	   	   |[SpiCfg()](../due-script/corelib/spi.md)				| Configures SPI bus
 | Spi.Palette()	   	           |[Palette()](../due-script/corelib/spi.md)				| Sets the desired color for a palette
 | Spi.Read()	   	           |[SpiByte()](../due-script/corelib/spi.md)				| Reads SPI byte
@@ -98,7 +98,10 @@ The provided API mirrors DUE Script's [**Core library**](../due-script/corelib/c
 | System.Beep()	   	           |[Beep()](../due-script/corelib/beep.md)					| Uses any pin to generate a tone
 | System.GetTickMicroseconds() |[TickUs()](../due-script/corelib/systemfunctions.md)	| Returns system time in microseconds
 | System.GetTickMilliseconds() |[TickMs()](../due-script/corelib/systemfunctions.md)	| Returns system time in milliseconds
+| System.Print()	           |[Reset()](../due-script/corelib/systemfunctions.md)		| Print to the console same line
+| System.PrintLn()	           |[Reset()](../due-script/corelib/systemfunctions.md)		| Print to the console then moves to next line
 | System.Reset()	           |[Reset()](../due-script/corelib/systemfunctions.md)		| Resets the board
+| System.Wait()	               |[Reset()](../due-script/corelib/systemfunctions.md)		| Pause the system in milliseconds
 | Touch.Read()	               |[TouchRead()](../due-script/corelib/touch.md)           | Initialize a pin for touch
 | Uart.BytesToRead()	       |[UartCount()](../due-script/corelib/uart.md)			| How many bytes buffered and ready to read
 | Uart.Enable()	               |[UartInit()](../due-script/corelib/uart.md)				| Initialize UART
