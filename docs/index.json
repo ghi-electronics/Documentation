@@ -117,7 +117,7 @@
   "software/due-script/corelib/infrared.html": {
     "href": "software/due-script/corelib/infrared.html",
     "title": "Infrared",
-    "keywords": "Infrared IR decoder is fixed to pin 2 IrEnable(enable) - enables pin for IR signal capture enable: 1 = enable, 0 = disable IrRead() - reads the value from the IR enabled pin Return: Tracks the past 16 key presses and returns them. -1 if none. Button Return Value power 0 up 1 lightbulb 2 left arrow 4 sound 5 right arrow 6 backward 8 down 9 forward 2 + 12 0 13 - 14 1 16 2 17 3 18 4 19 5 20 6 21 7 22 8 23 9 24 IrEnable(1) @Loop x=IrRead() if x >=0: PrintLn(x):end Wait(1000) goto Loop"
+    "keywords": "Infrared IR decoder is fixed to pin 2 IrEnable(enable) - enables pin for IR signal capture enable: 1 = enable, 0 = disable IrRead() - reads the value from the IR enabled pin Return: Tracks the past 16 key presses and returns them. -1 if none. IrEnable(1) @Loop x=IrRead() if x >=0: PrintLn(x):end Wait(1000) goto Loop"
   },
   "software/due-script/corelib/lcd.html": {
     "href": "software/due-script/corelib/lcd.html",
