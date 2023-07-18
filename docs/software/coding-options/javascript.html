@@ -86,37 +86,29 @@
 <a href="https://demo.duelink.com/"><strong>demo.duelink.com</strong></a></p>
 <p>The JavaScript DUE library allows for the use of full standard JavaScript to access physical-computing.</p>
 <h2 id="setup">Setup</h2>
-<p>This page assumes the user is already familiar with JavaScript and there is a development machine that is already setup to build and run JavaScript programs. No changes are needed there but we are using Microsoft Visual Studio Code as a personal preference.</p>
+<p>This page assumes the user is already familiar with JavaScript and there is a development machine that is already setup to build and run JavaScript programs. We'll be running our program on a local machine using NodeJS. No changes are needed there but we are using Microsoft Visual Studio Code as a personal preference.</p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>If this is the first time you use your device, start by visiting the <a href="../../hardware/intro.html">Hardware</a> page and load your device with the appropriate firmware. The <a href="../console.html">Console</a> is also a great place to start.</p>
 </div>
-<p>Start a new project with a simple line of code to test out the project is running</p>
-<pre><code class="lang-js">print(&quot;Hello DUE!&quot;);
+<pre><code class="lang-js">console.log(&quot;Hello World&quot;);
 </code></pre>
-<p>We now need to copy the <a href="https://github.com/ghi-electronics/due-libraries"><strong>DUE JavaScript library</strong></a>, check duelink.js, it contains driver for DUE.</p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>The DUE Javascript library requires serial port access.</p>
-</div>
+<p>We are now ready to bring in the <a href="https://github.com/ghi-electronics/due-libraries"><strong>DUE JavaScript library</strong></a>, <strong>npm install DUELink</strong>. The library is not NPM hosted yet and can be downloaded from here <a href="https://github.com/ghi-electronics/due-libraries/tree/main/javascript">https://github.com/ghi-electronics/due-libraries/tree/main/javascript</a> save the <strong>duelink.js, util.js and serialusb.js</strong>, add to your program's local folder. The library also needs SerialPort <a href="https://serialport.io/">https://serialport.io/</a> download and install <strong>npm install serialport</strong>.</p>
+<p>We can now instantiate and get the DUELink controller ready. We will be using SerialUSB() here. If using a web browser, WebSerial() will be used instead.</p>
 <h2 id="blinky">Blinky!</h2>
 <p>Our first program will blink the on-board LED 20 times, where it comes on for 200ms and then it is off for 800ms.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Init device and choose com port with the method in the code sample below</p>
 </div>
-<pre><code class="lang-js">this.comPort = new SerialInterface();
-comPort.Connect();
+<pre><code class="lang-js">import {SerialUSB} from './serialusb.js';
+import * as due from './duelink.js';
 
-&lt;script src=&quot;duelink.js&quot;&gt;&lt;/script&gt;
-// ...
-
-if (!this.dev)
-   this.dev = new DUELinkController(this.comPort);
+let BrainPad = new due.DUELinkController(new SerialUSB());
+await BrainPad.Connect();
 
 // Flash the LED 20 times (on for 200ms and off for 800ms)
-    dev.Led.Set(200,800,20);
-    console.log(&quot;Bye DUE!&quot;);
+await BrainPad.Led.Set(200,800,10);
 </code></pre>
 <h2 id="javascript-api">JavaScript API</h2>
 <p>The provided API mirrors DUE Script's <a href="../due-script/corelib/corelib.html"><strong>Core library</strong></a>. Referencing those APIs is a good place to learn about the available functionality and available arguments.</p>
