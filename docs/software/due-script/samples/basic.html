@@ -10,7 +10,7 @@
       <meta name="title" content="Basic Samples ">
     
       <link rel="shortcut icon" href="../../../images/favicon.ico">
-      <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../../../styles/docfx.css">
       <link rel="stylesheet" href="../../../styles/main.css">
       <meta property="docfx:navrel" content="../../../toc.html">
@@ -114,19 +114,15 @@ Goto Loop
 </code></pre>
 <p><strong>On-board Buzzer</strong></p>
 <pre><code class="lang-basic"># G
-Sound(392, 1000, 100)
-Wait(500)
+Beep('p', 392, 500)
 # A
-Sound(440, 1000, 100)
-Wait(500)
+Beep('p', 440, 500)
 # F
-Sound(349, 500, 100)
-Wait(500)
+Beep('p', 349, 250)
 # F octave lower
-Sound(175, 500, 100)
-Wait(500)
+Beep('p', 175, 250)
 # C
-Sound(262, 2000, 100)
+Beep('p', 262, 1000)
 </code></pre>
 <p><strong>On-board Display Small Text</strong></p>
 <pre><code class="lang-basic">LcdClear(0)
@@ -174,7 +170,7 @@ LcdShow()
       </footer>
     </div>
 
-    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>
