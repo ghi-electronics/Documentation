@@ -90,10 +90,11 @@ Creating art is easy when you pair the BrainPad Pulse with the BrainGamer
 
 ---
 
-## Prototyping
+## Beginner to Expert
 
-![FEZ Flea SoM](images/flea-som.jpg) 
+We recommend beginners start out with the BrainPad, it is made for beginners and scales up to advanced learning. The [FEZ boards](fez.md) can then be used to start designing prototypes and proof of concepts. Low-volume products can be manufactured with ease, thanks to the small form factor and SMT solderability of the [FEZ boards](fez.md). 
 
-The FEZ Single board computers (SBC) are excellent for building projects. They utilize the same ecosystem as the BrainPad but provides a smaller form factor. See the [FEZ Page.](fez.md)
+![FEZ Flea SoM](images/beginner-expert.jpg) 
+
 
 

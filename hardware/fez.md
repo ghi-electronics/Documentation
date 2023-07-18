@@ -36,7 +36,7 @@ Visit the [GHI Electronics](https://www.ghielectronics.com/sitcore/sbc/) to lear
 
 We recommend beginners start out with the [BrainPad](brainpad.md), it is made for beginners and scales up to advanced learning. The FEZ boards can then be used to start designing prototypes and proof of concepts. Low-volume products can be manufactured with ease, thanks to the small form factor and SMT solderability of the FEZ boards. 
 
-![FEZ Flea SoM](images/flea-som.jpg) 
+![FEZ Flea SoM](images/beginner-expert.jpg)
 
 > [!TIP]
 > The heart to the FEZ boards is [SITCore SC13](https://www.ghielectronics.com/sitcore/) chipset.

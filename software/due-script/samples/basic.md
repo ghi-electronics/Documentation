@@ -49,19 +49,15 @@ Goto Loop
 
 ```basic
 # G
-Sound(392, 1000, 100)
-Wait(500)
+Beep('p', 392, 500)
 # A
-Sound(440, 1000, 100)
-Wait(500)
+Beep('p', 440, 500)
 # F
-Sound(349, 500, 100)
-Wait(500)
+Beep('p', 349, 250)
 # F octave lower
-Sound(175, 500, 100)
-Wait(500)
+Beep('p', 175, 250)
 # C
-Sound(262, 2000, 100)
+Beep('p', 262, 1000)
 ```
 
 **On-board Display Small Text**

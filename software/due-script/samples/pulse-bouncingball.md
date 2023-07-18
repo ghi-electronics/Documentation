@@ -25,7 +25,7 @@ b=2  # Ball Y Speed
    
    # Check if the ball hit one of the edges
    #  if it did then reverse the direction and make a sound
-   if x<r || x>=(128-r):a=-a:sound(100,16,100):end
-   if y<r || y>=(64-r):b=-b:sound(100,16,100):end
+   if x<r || x>=(128-r):a=-a:beep('p',100,16):end
+   if y<r || y>=(64-r):b=-b:beep('p',100,16):end
 goto loop
 ```
