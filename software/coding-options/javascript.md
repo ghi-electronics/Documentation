@@ -14,21 +14,19 @@ This website example shows a good example JavaScript DUE extensibility.
 The JavaScript DUE library allows for the use of full standard JavaScript to access physical-computing.
 
 ## Setup
-This page assumes the user is already familiar with JavaScript and there is a development machine that is already setup to build and run JavaScript programs. No changes are needed there but we are using Microsoft Visual Studio Code as a personal preference.
+This page assumes the user is already familiar with JavaScript and there is a development machine that is already setup to build and run JavaScript programs. We'll be running our program on a local machine using NodeJS. No changes are needed there but we are using Microsoft Visual Studio Code as a personal preference. 
 
 > [!TIP]
 > If this is the first time you use your device, start by visiting the [Hardware](../../hardware/intro.md) page and load your device with the appropriate firmware. The [Console](../console.md) is also a great place to start.
 
-Start a new project with a simple line of code to test out the project is running
-
 ```js
-print("Hello DUE!");
+console.log("Hello World");
 ```
 
-We now need to copy the [**DUE JavaScript library**](https://github.com/ghi-electronics/due-libraries), check duelink.js, it contains driver for DUE. 
+We are now ready to bring in the [**DUE JavaScript library**](https://github.com/ghi-electronics/due-libraries), **npm install DUELink**. The library is not NPM hosted yet and can be downloaded from here https://github.com/ghi-electronics/due-libraries/tree/main/javascript save the **duelink.js, util.js and serialusb.js**, add to your program's local folder. The library also needs SerialPort https://serialport.io/ download and install **npm install serialport**.
 
-> [!Tip]
-> The DUE Javascript library requires serial port access.
+We can now instantiate and get the DUELink controller ready. We will be using SerialUSB() here. If using a web browser, WebSerial() will be used instead.
+
 
 ## Blinky!
 Our first program will blink the on-board LED 20 times, where it comes on for 200ms and then it is off for 800ms.
@@ -37,18 +35,14 @@ Our first program will blink the on-board LED 20 times, where it comes on for 20
 > Init device and choose com port with the method in the code sample below
 
 ```js
-this.comPort = new SerialInterface();
-comPort.Connect();
+import {SerialUSB} from './serialusb.js';
+import * as due from './duelink.js';
 
-<script src="duelink.js"></script>
-// ...
-
-if (!this.dev)
-   this.dev = new DUELinkController(this.comPort);
+let BrainPad = new due.DUELinkController(new SerialUSB());
+await BrainPad.Connect();
 
 // Flash the LED 20 times (on for 200ms and off for 800ms)
-    dev.Led.Set(200,800,20);
-    console.log("Bye DUE!");
+await BrainPad.Led.Set(200,800,10);
 ```
 
 ## JavaScript API
