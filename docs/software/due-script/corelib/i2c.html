@@ -92,17 +92,13 @@ a[0] = 1
 dim b[6]
 i2cbytes(0x1c, a, 1, b, 6) 
 </code></pre>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Streams are not coded directly using DUE Script, see <a href="../streams.html">Streams</a></p>
-</div>
 <ul>
 <li><strong>I2cStream(address, writeCount, readCount)</strong> -  <br>
 <strong>address:</strong> address of the I2C device <br>
 <strong>writeCount:</strong> <br>
-<strong>readCount:</strong> <br>
-<strong>Stream size:</strong> The stream starts with PC sending &quot;writeCount&quot; of bytes and then the PC must read the &quot;readCount&quot;. If either count is zero then that step can be skipped.</li>
+<strong>readCount:</strong></li>
 </ul>
+<p>The command is followed by the data <a href="../streams.html">stream</a>. The stream starts with the host sending &quot;writeCount&quot; of bytes and then the host must read the &quot;readCount&quot;. If either count is zero then that step can be skipped.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>On SC13 devices only: The I2C pins are different on BrainPad Pulse vs FEZ boards. PB15 is used to determine how I2C should work. Pay attention to the state of PB15 on power up, Pulse has it pulled up through 10k resistor.</p>
