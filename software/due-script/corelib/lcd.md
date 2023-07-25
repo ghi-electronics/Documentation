@@ -233,9 +233,41 @@ Stream is used to send the entire LCD update.
 > [!NOTE] 
 > Streams are not coded directly using DUE Script, see [Streams](../streams.md)
 
-- **LcdStream()**<br>
- **Stream Size:** The size screen size divided by 8, 128x64/8=1K.
-The data is organized as 8bit columns going left to right and then wrapping around to the next row.
+- **LcdStream(colorDepth)**<br>
+**ColorDepth:** This lets the stream know what is the format of the incoming data stream. B&W displays only support 1. Color displays support 4 (palette), 8, and 16 bits.
+
+The command is followed by the data [stream](../streams.md). The stream size is determined by the used screen size and the color depth. For example, Pulse uses a 128x64 display with 1bpp. This results in 128x64/8 = 1KBytes.
+
+> [!TIP] 
+> On 1bpp display, the data is organized as 8bit columns going left to right and then wrapping around to the next row.
+
+- **Palette(index, colorValue)** - Sets the desired color for a palette.<br>
+**index:** Index number of color<br>
+**colorValue:** A standard HEX value of the RGB color. 
+
+The palette is used when 4bpp color depth is used with streams. The palette table is used as a lookup table to set the color for each one of the 16 possibilities. The default colors are below; however, the user can change it to whatever they desire. For example, they can be set to 16 shades of green to show a forest scene that needs different shades of green. 
+
+Default colors:
+
+|Index|Color Value|Color|
+|:-   |:-------|:----------|
+|0    |0x000000|Black      |
+|1    |0xFFFFFF|White      |
+|2    |0xFF0000|Red        |
+|3    |0x32CD32|Lime       |
+|4    |0x0000FF|Blue       |
+|5    |0xFFFF00|Yellow     |
+|6    |0x00FFFF|Cyan       |
+|7    |0xFF00FF|Magenta    |
+|8    |0xC0C0C0|Silver     |
+|9    |0x808080|Gray       |
+|10   |0x800000|Maroon     |
+|11   |0xBAB86C|Olive      |
+|12   |0x00FF00|Green      |
+|13   |0xA020F0|Purple     |
+|14   |0x008080|Teal       |
+|15   |0x000080|Navy       | 
+
 
 Example code to set a pixel at 10x10
 

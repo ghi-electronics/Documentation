@@ -15,14 +15,12 @@ dim b[6]
 i2cbytes(0x1c, a, 1, b, 6) 
 ```
 
-> [!NOTE] 
-> Streams are not coded directly using DUE Script, see [Streams](../streams.md)
-
 - **I2cStream(address, writeCount, readCount)** -  <br>
 **address:** address of the I2C device <br>
 **writeCount:** <br>
-**readCount:** <br>
-**Stream size:** The stream starts with PC sending "writeCount" of bytes and then the PC must read the "readCount". If either count is zero then that step can be skipped.
+**readCount:**
+
+The command is followed by the data [stream](../streams.md). The stream starts with the host sending "writeCount" of bytes and then the host must read the "readCount". If either count is zero then that step can be skipped.
 
 
 > [!NOTE] 
