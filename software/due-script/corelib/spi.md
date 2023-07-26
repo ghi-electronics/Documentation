@@ -21,6 +21,6 @@ x = SpiByte(0x55)
 **readCount:** The number of bytes to read<br>
 **cs:** Chip select pin. Set to -1 if not needed
 
-The command is followed by the data [stream](../streams.md). The stream starts with host sending "writeCount" of bytes and then the host must read the "readCount". If either count is zero then that step can be skipped.
+The command is followed by the data [stream](../streams.md). The stream starts with host sending "writeCount" of bytes and then the host must read the "readCount". If either count is zero then that step can be skipped. This is a full-duplex transaction, meaning a byte is written while a byte is read. If write count is less than read count, the device will send zeros internally to keep reading the requested read count.
 
 ---
