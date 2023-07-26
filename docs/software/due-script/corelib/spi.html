@@ -101,7 +101,7 @@ x = SpiByte(0x55)
 <strong>readCount:</strong> The number of bytes to read<br>
 <strong>cs:</strong> Chip select pin. Set to -1 if not needed</li>
 </ul>
-<p>The command is followed by the data <a href="../streams.html">stream</a>. The stream starts with host sending &quot;writeCount&quot; of bytes and then the host must read the &quot;readCount&quot;. If either count is zero then that step can be skipped.</p>
+<p>The command is followed by the data <a href="../streams.html">stream</a>. The stream starts with host sending &quot;writeCount&quot; of bytes and then the host must read the &quot;readCount&quot;. If either count is zero then that step can be skipped. This is a full-duplex transaction, meaning a byte is written while a byte is read. If write count is less than read count, the device will send zeros internally to keep reading the requested read count.</p>
 <hr>
 </article>
           </div>
