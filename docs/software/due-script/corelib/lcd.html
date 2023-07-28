@@ -76,9 +76,11 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h2 id="lcd">LCD</h2>
+<h1 id="lcd">LCD</h1>
 
-<p>These functions allow for simple graphics on the very common I2C displays that use the SSD1306 controller and have 128x64 pixels. This display is found on the BrainPad Pulse by default, and can be added to the I2C channel on all of the other boards. These displays are available in multiple sizes but most common is 0.96&quot;.</p>
+<p>These functions allow for graphics on multiple display types, including B&amp;W and color display.</p>
+<h2 id="bw-displays">B&amp;W Displays</h2>
+<p>LCD Graphics supports SSD1306 128x64 B&amp;W I2C, which work on all BrainPad boards. This display is found on the BrainPad Pulse by default, and can be added to the I2C channel on all of the other boards. These displays are available in multiple sizes but most common is 0.96&quot;. The <code>LcdConfig()</code> function (documented below) can be used to configure the system to work with an externally connected display.</p>
 <p><img src="images/ssd1306.png" alt="SSD1306"></p>
 <div class="TIP">
 <h5>Tip</h5>
@@ -89,12 +91,97 @@
 <h5>Caution</h5>
 <p>Displays with knock-off controller SSH1106 that is supposed to be compatible with SSD1306 did not work as expected.</p>
 </div>
+<h2 id="color-displays">Color Displays</h2>
+<p><img src="images/color-displays.png" alt="ColorDisplays"></p>
+<p>Graphics is supported on a few color SPI displays: ILI9342, ILI9341, and ST7735. These color displays only work on BrainPad boards with SC13 micro, such as BrainPad Pulse. The <code>LcdConfig()</code> function (documented below) can be used to configure the system to work with an externally connected display.</p>
+<h2 id="display-configuration">Display Configuration</h2>
 <ul>
-<li><strong>LcdConfig(output,address)</strong> Pipes the graphics to a connected display. <br>
-By default, all graphics is directed to the display found on BrainPad Pulse. However, making a call to <code>LcdConfig()</code> directs the system to send all graphics to an external display, at the provided <code>address</code>. Setting the address to <code>0</code> resets the configuration to the default BrainPad Pulse LCD<br>
-<strong>output:</strong> Output to display , 0 = none, 1 = console, 2 = LCD &amp; console <br>
-<strong>address:</strong> I2C address, 0 = default(BrainPad Pulse)</li>
+<li><strong>LcdConfig(output, config)</strong> Pipes the graphics to a connected display. <br>
+<strong>output:</strong> <code>Print()</code> function output: 0 = serial console (default), 1 = LCD, 2 = LCD &amp; serial console. <br>
+<strong>config:</strong> external LCD configuration, 0 = default on-board display.</li>
 </ul>
+<p>For I2C displays, <strong>config</strong> is the I2C device's address of the connected SSD1306 display.</p>
+<p>For SPI displays, <strong>config</strong> is a 32bit argument set as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Bits</th>
+<th>Function</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[0..7]</td>
+<td>Display Type</td>
+<td>0x08: ILI9342, 0x81: ILI9341, 0x82: ST7735</td>
+</tr>
+<tr>
+<td>[8..13]</td>
+<td>Chip Select Pin</td>
+<td>Any valid pin</td>
+</tr>
+<tr>
+<td>[14..19]</td>
+<td>Data Control pin</td>
+<td>Any valid pin</td>
+</tr>
+<tr>
+<td>[20]</td>
+<td>Orientation</td>
+<td>0: Landscape, 1: Portrait</td>
+</tr>
+<tr>
+<td>[21]</td>
+<td>Mirror</td>
+<td>0: None, 1: Mirror</td>
+</tr>
+<tr>
+<td>[22]</td>
+<td>Flip</td>
+<td>0: None, 1: Flip</td>
+</tr>
+<tr>
+<td>[23]</td>
+<td>RGB</td>
+<td>0: None, 1: BGR</td>
+</tr>
+<tr>
+<td>[24]</td>
+<td>Swap Byte Endianness</td>
+<td>0: None, 1: Swap</td>
+</tr>
+<tr>
+<td>[25..31]</td>
+<td>Reserved</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The shift operator comes in very handy to set the bits. To use pin 3 for chip select we can use <code>(3&lt;&lt;8)</code> since 8 is the bit position of the chip select value.</p>
+<p>This example will set the system to use the color display adapter from Waveshare, which uses ST7735 1.8&quot; display. The display's chip select is on pin 16 ands data control is on pin 12. There is also a backlight on pin 1 and reset on pin 8.</p>
+<!--
+<p align="center">
+<img src = "http://duelink.com/software/due-script/corelib/images/st7735.png"
+</p>-->
+<p><img src="images/st7735.png" alt="ST7735"></p>
+<pre><code class="lang-basic">DWrite(1,1)#turn on the back-light
+DWrite(8,1)# release reset 
+
+LcdConfig(0, (0x82&lt;&lt;0)|(16&lt;&lt;8)|(12&lt;&lt;14)|(1&lt;&lt;22))
+LcdClear(0)
+LcdTextS(&quot;DUE has Color&quot;,0x00FF00,0,0,2,3)
+
+for c in range(2,200)
+    LcdLine(c,c,40,c,60)
+    LcdLine(c&lt;&lt;8,200-c,60,200-c,80)
+    LcdLine(c&lt;&lt;16,c,80,c,100)
+ next
+
+LCDShow() 
+</code></pre>
+<p>By default, all graphics are directed to the display found on a BrainPad. However, making a call to <code>LcdConfig()</code> directs the system to send all graphics to an external display.</p>
+<p>Setting the address to <code>0</code> resets the configuration to the default BrainPad Pulse LCD<br></p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>This function is not needed to use the display found on BrainPad Pulse.</p>
@@ -105,20 +192,25 @@ LcdClear(0)
 LcdText(&quot;Hello World&quot;,1,10,10)
 LcdShow()
 </code></pre>
+<hr>
+<h2 id="graphical-memory">Graphical Memory</h2>
+<p>All LCD functions process the graphics commands in an internal memory. It starts with LcdClear(), which clears up the entire graphics memory to a specific color. When the user is ready, the graphical memory is transferred to the display using LcdShow().</p>
 <ul>
 <li><p><strong>LcdShow()</strong> Sends the display buffer to the LCD.</p>
 </li>
 <li><p><strong>LcdClear(color)</strong>  Clears the entire screen to black or white<br>
-<strong>color:</strong> 0 = black, 1 = white</p>
+<strong>color:</strong> Color value</p>
 </li>
 </ul>
 <pre><code class="lang-basic">LcdClear(0)
 LcdShow()
 </code></pre>
-<p><strong>Draw Line</strong></p>
+<h2 id="color-value">Color Value</h2>
+<p>The system supports Color and B&amp;W displays. To keep uniformity, 0 is always black and 1 is always white. Any other value is considered a standard RGB color formatted 0xRRGGBB. For example, GHI Electronics blue is 0x0977aa.</p>
+<h2 id="draw-line">Draw Line</h2>
 <ul>
 <li><strong>LcdLine(color, x1,y1,x2,y2)</strong> <br>
-<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>color:</strong> Color value <br>
 <strong>x1:</strong> Starting x point <br>
 <strong>y1:</strong> Starting y point <br>
 <strong>x2:</strong> Ending x point <br>
@@ -128,10 +220,10 @@ LcdShow()
 LcdLine(1,0,0,128,64)
 LcdShow()
 </code></pre>
-<p><strong>Set Pixel</strong></p>
+<h2 id="set-pixel">Set Pixel</h2>
 <ul>
 <li><strong>LcdPixel(color, x, y)</strong> <br>
-<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>color:</strong> Color value <br>
 <strong>x:</strong> x pixel value<br>
 <strong>y:</strong> y pixel value</li>
 </ul>
@@ -139,10 +231,10 @@ LcdShow()
 LcdPixel(1,64,32)
 LcdShow()
 </code></pre>
-<p><strong>Draw Circle</strong></p>
+<h2 id="draw-circle">Draw Circle</h2>
 <ul>
 <li><strong>LcdCircle(color, x,y,radius)</strong> <br>
-<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>color:</strong> Color value <br>
 <strong>x:</strong> x position of circle's center <br>
 <strong>y:</strong> y position of circle's center <br>
 <strong>radius:</strong> radius of the circle</li>
@@ -151,10 +243,10 @@ LcdShow()
 LcdCircle(1,64,32,31)
 LcdShow()
 </code></pre>
-<p><strong>Draw Rectangle</strong></p>
+<h2 id="draw-rectangle">Draw Rectangle</h2>
 <ul>
 <li><strong>LcdRect(color, x, y, width, height)</strong> <br>
-<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>color:</strong> Color value <br>
 <strong>x:</strong> Starting x point <br>
 <strong>y:</strong> Starting y point <br>
 <strong>width:</strong> Rectangle width <br>
@@ -164,10 +256,10 @@ LcdShow()
 LcdRect(1,10,10,118,54)
 LcdShow()
 </code></pre>
-<p><strong>Draw Filled Rectangle</strong></p>
+<h2 id="draw-filled-rectangle">Draw Filled Rectangle</h2>
 <ul>
 <li><strong>LcdFill(color, x, y, width, height)</strong> <br>
-<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>color:</strong> Color value <br>
 <strong>x:</strong> Starting x point <br>
 <strong>y:</strong> Starting y point <br>
 <strong>width:</strong> Rectangle width <br>
@@ -177,12 +269,12 @@ LcdShow()
 LcdFill(1,10,10,118,54)
 LcdShow()
 </code></pre>
-<p><strong>Draw Text</strong></p>
+<h2 id="draw-text">Draw Text</h2>
 <ul>
 <li><strong>LcdText(&quot;text&quot;, color, x, y)</strong> <br>
 <strong>text:</strong> String message in double quotes. <br>
 <strong>Str():</strong> is used to convert variables to strings <br>
-<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>color:</strong> Color value <br>
 <strong>x:</strong> x position <br>
 <strong>y:</strong> x position <br></li>
 </ul>
@@ -191,16 +283,16 @@ LcdText(&quot;Hello World&quot;,1,10,10)
 LcdShow()
 x=100
 LcdClear(0)
-LcdText(str(x),1,0,0)
+LcdText(Str(x),1,0,0)
 LcdShow
 </code></pre>
-<p><strong>Draw Scaled Text</strong></p>
+<h2 id="draw-scaled-text">Draw Scaled Text</h2>
 <p>Works exactly the same as <strong>LcdText()</strong> but adds scaling.</p>
 <ul>
 <li><strong>LcdTextS(&quot;text&quot;, color, x, y, scaleWidth, scaleHeight)</strong> <br>
 <strong>text:</strong> String message in double quotes. <br>
 <strong>Str():</strong> is used to convert variables to strings <br>
-<strong>color:</strong> 0 = black, 1 = white <br>
+<strong>color:</strong> Color value <br>
 <strong>x:</strong> x position <br>
 <strong>y:</strong> x position <br>
 <strong>scaleWidth:</strong> Width scale multiplier <br>
@@ -220,7 +312,7 @@ LcdShow()
 <p>Scale is multiplier for the pixel in width and height to make the font larger
 ()</p>
 </div>
-<p><strong>Draw Image</strong></p>
+<h2 id="draw-image">Draw Image</h2>
 <ul>
 <li><strong>LcdImg(array,x, y, transform)</strong><br>
 <strong>array:</strong> Image array (see below). <br>
@@ -290,7 +382,7 @@ LcdShow()
 </tr>
 </tbody>
 </table>
-<p><strong>Draw Scaled Image</strong></p>
+<h2 id="draw-scaled-image">Draw Scaled Image</h2>
 <p>Works the same as LcdImg but adds scaling.</p>
 <ul>
 <li><strong>LcdImgS(array,x, y, transform,scaleWidth,scaleHeight)</strong><br>
@@ -301,7 +393,7 @@ LcdShow()
 <strong>scaleWidth:</strong> Width scale multiplier <br>
 <strong>scaleHeight:</strong> Height scale multiplier</li>
 </ul>
-<p><strong>LCD Stream</strong></p>
+<h2 id="lcd-stream">LCD Stream</h2>
 <p>Stream is used to send the entire LCD update.</p>
 <div class="NOTE">
 <h5>Note</h5>
@@ -316,6 +408,7 @@ LcdShow()
 <h5>Tip</h5>
 <p>On 1bpp display, the data is organized as 8bit columns going left to right and then wrapping around to the next row.</p>
 </div>
+<h2 id="palette">Palette</h2>
 <ul>
 <li><strong>Palette(index, colorValue)</strong> - Sets the desired color for a palette.<br>
 <strong>index:</strong> Index number of color<br>
