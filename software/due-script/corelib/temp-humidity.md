@@ -1,4 +1,4 @@
-## Temperature and Humidity 
+# Temperature and Humidity 
 
 Works with the DHT line of low-cost temperature & humidity sensors. 
 

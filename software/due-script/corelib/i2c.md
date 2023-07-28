@@ -1,4 +1,4 @@
-## I2C
+# I2C
 
 - **I2cBytes(address, arrayWrite, writeCount, arrayRead, readCount)**  Reads and/or writes up to 4 bytes to/from I2C bus. Data is transfered from variables A, B, C, D. The return values (if any) are also stored in the same variables. <br>
 **address:** I2C slave address<br>
@@ -21,7 +21,6 @@ i2cbytes(0x1c, a, 1, b, 6)
 **readCount:**
 
 The command is followed by the data [stream](../streams.md). The stream starts with the host sending "writeCount" of bytes and then the host must read the "readCount". If either count is zero then that step can be skipped.
-
 
 > [!NOTE] 
 > On SC13 devices only: The I2C pins are different on BrainPad Pulse vs FEZ boards. PB15 is used to determine how I2C should work. Pay attention to the state of PB15 on power up, Pulse has it pulled up through 10k resistor.

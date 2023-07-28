@@ -1,4 +1,4 @@
-## Infrared
+# Infrared
 
 IR decoder is fixed to pin 2
 

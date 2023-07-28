@@ -1,4 +1,4 @@
-## NeoPixel
+# NeoPixel
 
 - **NeoClear()** - Clears all LEDs (in memory). Needs `NeoShow()` to see the affect
 

@@ -1,4 +1,4 @@
-## SPI
+# SPI
 
 - **SpiByte(byte)** - sends a byte <br>
 **byte:** - value 0 to 255 <br>

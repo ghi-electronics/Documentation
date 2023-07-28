@@ -1,5 +1,9 @@
-## LCD
-These functions allow for simple graphics on the very common I2C displays that use the SSD1306 controller and have 128x64 pixels. This display is found on the BrainPad Pulse by default, and can be added to the I2C channel on all of the other boards. These displays are available in multiple sizes but most common is 0.96".
+# LCD
+These functions allow for graphics on multiple display types, including B&W and color display.
+
+## B&W Displays
+
+LCD Graphics supports SSD1306 128x64 B&W I2C, which work on all BrainPad boards. This display is found on the BrainPad Pulse by default, and can be added to the I2C channel on all of the other boards. These displays are available in multiple sizes but most common is 0.96". The `LcdConfig()` function (documented below) can be used to configure the system to work with an externally connected display.
 
 ![SSD1306](images/ssd1306.png)
 
@@ -11,10 +15,65 @@ These functions allow for simple graphics on the very common I2C displays that u
 > [!Caution]
 > Displays with knock-off controller SSH1106 that is supposed to be compatible with SSD1306 did not work as expected.
 
-- **LcdConfig(output,address)** Pipes the graphics to a connected display. <br>
-By default, all graphics is directed to the display found on BrainPad Pulse. However, making a call to `LcdConfig()` directs the system to send all graphics to an external display, at the provided `address`. Setting the address to `0` resets the configuration to the default BrainPad Pulse LCD<br>
-**output:** Output to display , 0 = none, 1 = console, 2 = LCD & console <br>
-**address:** I2C address, 0 = default(BrainPad Pulse)
+## Color Displays
+
+![ColorDisplays](images/color-displays.png)
+
+Graphics is supported on a few color SPI displays: ILI9342, ILI9341, and ST7735. These color displays only work on BrainPad boards with SC13 micro, such as BrainPad Pulse. The `LcdConfig()` function (documented below) can be used to configure the system to work with an externally connected display.
+
+
+## Display Configuration
+
+- **LcdConfig(output, config)** Pipes the graphics to a connected display. <br>
+**output:** `Print()` function output: 0 = serial console (default), 1 = LCD, 2 = LCD & serial console. <br>
+**config:** external LCD configuration, 0 = default on-board display.
+
+For I2C displays, **config** is the I2C device's address of the connected SSD1306 display.
+
+For SPI displays, **config** is a 32bit argument set as follows:
+
+| Bits | Function | Value |
+| - | - | - |
+| [0..7] | Display Type | 0x08: ILI9342, 0x81: ILI9341, 0x82: ST7735 |
+| [8..13] | Chip Select Pin | Any valid pin |
+| [14..19] | Data Control pin | Any valid pin |
+| [20] | Orientation | 0: Landscape, 1: Portrait |
+| [21] | Mirror | 0: None, 1: Mirror |
+| [22] | Flip | 0: None, 1: Flip |
+| [23] | RGB | 0: None, 1: BGR |
+| [24] | Swap Byte Endianness | 0: None, 1: Swap |
+| [25..31] | Reserved |  |
+
+The shift operator comes in very handy to set the bits. To use pin 3 for chip select we can use `(3<<8)` since 8 is the bit position of the chip select value.
+
+This example will set the system to use the color display adapter from Waveshare, which uses ST7735 1.8" display. The display's chip select is on pin 16 ands data control is on pin 12. There is also a backlight on pin 1 and reset on pin 8.
+<!--
+<p align="center">
+<img src = "http://duelink.com/software/due-script/corelib/images/st7735.png"
+</p>-->
+
+![ST7735](images/st7735.png)
+
+```basic
+DWrite(1,1)#turn on the back-light
+DWrite(8,1)# release reset 
+
+LcdConfig(0, (0x82<<0)|(16<<8)|(12<<14)|(1<<22))
+LcdClear(0)
+LcdTextS("DUE has Color",0x00FF00,0,0,2,3)
+
+for c in range(2,200)
+    LcdLine(c,c,40,c,60)
+    LcdLine(c<<8,200-c,60,200-c,80)
+    LcdLine(c<<16,c,80,c,100)
+ next
+
+LCDShow() 
+```
+
+By default, all graphics are directed to the display found on a BrainPad. However, making a call to `LcdConfig()` directs the system to send all graphics to an external display.
+
+Setting the address to `0` resets the configuration to the default BrainPad Pulse LCD<br>
 
 > [!Tip]
 > This function is not needed to use the display found on BrainPad Pulse.
@@ -28,20 +87,30 @@ LcdText("Hello World",1,10,10)
 LcdShow()
 ```
 
+---
+
+## Graphical Memory
+
+All LCD functions process the graphics commands in an internal memory. It starts with LcdClear(), which clears up the entire graphics memory to a specific color. When the user is ready, the graphical memory is transferred to the display using LcdShow().
+
 - **LcdShow()** Sends the display buffer to the LCD. 
 
 - **LcdClear(color)**  Clears the entire screen to black or white<br>
-**color:** 0 = black, 1 = white
+**color:** Color value
 
 ```basic
 LcdClear(0)
 LcdShow()
 ```
 
-**Draw Line**
+## Color Value
+
+The system supports Color and B&W displays. To keep uniformity, 0 is always black and 1 is always white. Any other value is considered a standard RGB color formatted 0xRRGGBB. For example, GHI Electronics blue is 0x0977aa.
+
+## Draw Line
 
 - **LcdLine(color, x1,y1,x2,y2)** <br>
-**color:** 0 = black, 1 = white <br>
+**color:** Color value <br>
 **x1:** Starting x point <br>
 **y1:** Starting y point <br>
 **x2:** Ending x point <br>
@@ -53,10 +122,10 @@ LcdLine(1,0,0,128,64)
 LcdShow()
 ```
 
-**Set Pixel**
+## Set Pixel
 
 - **LcdPixel(color, x, y)** <br>
-**color:** 0 = black, 1 = white <br>
+**color:** Color value <br>
 **x:** x pixel value<br>
 **y:** y pixel value
 
@@ -66,10 +135,10 @@ LcdPixel(1,64,32)
 LcdShow()
 ```
 
-**Draw Circle**
+## Draw Circle
 
 - **LcdCircle(color, x,y,radius)** <br>
-**color:** 0 = black, 1 = white <br>
+**color:** Color value <br>
 **x:** x position of circle's center <br>
 **y:** y position of circle's center <br>
 **radius:** radius of the circle
@@ -80,10 +149,10 @@ LcdCircle(1,64,32,31)
 LcdShow()
 ```
 
-**Draw Rectangle**
+## Draw Rectangle
 
 - **LcdRect(color, x, y, width, height)** <br>
-**color:** 0 = black, 1 = white <br>
+**color:** Color value <br>
 **x:** Starting x point <br>
 **y:** Starting y point <br>
 **width:** Rectangle width <br>
@@ -95,10 +164,10 @@ LcdRect(1,10,10,118,54)
 LcdShow()
 ```
 
-**Draw Filled Rectangle**
+## Draw Filled Rectangle
 
 - **LcdFill(color, x, y, width, height)** <br>
-**color:** 0 = black, 1 = white <br>
+**color:** Color value <br>
 **x:** Starting x point <br>
 **y:** Starting y point <br>
 **width:** Rectangle width <br>
@@ -110,12 +179,12 @@ LcdFill(1,10,10,118,54)
 LcdShow()
 ```
 
-**Draw Text**
+## Draw Text
 
 - **LcdText("text", color, x, y)** <br>
 **text:** String message in double quotes. <br>
 **Str():** is used to convert variables to strings <br>
-**color:** 0 = black, 1 = white <br>
+**color:** Color value <br>
 **x:** x position <br>
 **y:** x position <br>
 
@@ -126,18 +195,18 @@ LcdText("Hello World",1,10,10)
 LcdShow()
 x=100
 LcdClear(0)
-LcdText(str(x),1,0,0)
+LcdText(Str(x),1,0,0)
 LcdShow
 ```
 
-**Draw Scaled Text**
+## Draw Scaled Text
 
 Works exactly the same as **LcdText()** but adds scaling.
 
 - **LcdTextS("text", color, x, y, scaleWidth, scaleHeight)** <br>
 **text:** String message in double quotes. <br>
 **Str():** is used to convert variables to strings <br>
-**color:** 0 = black, 1 = white <br>
+**color:** Color value <br>
 **x:** x position <br>
 **y:** x position <br>
 **scaleWidth:** Width scale multiplier <br>
@@ -158,7 +227,7 @@ LcdShow()
 > Scale is multiplier for the pixel in width and height to make the font larger
 ()
 
-**Draw Image**
+## Draw Image
 
 - **LcdImg(array,x, y, transform)**<br>
 **array:** Image array (see below). <br>
@@ -214,7 +283,7 @@ Transformation modifiers:
 | 5      |Rotate the image 270 degrees(same as -90 degrees)	
 
 
-**Draw Scaled Image**
+## Draw Scaled Image
 
 Works the same as LcdImg but adds scaling. 
 
@@ -226,7 +295,7 @@ Works the same as LcdImg but adds scaling.
 **scaleWidth:** Width scale multiplier <br>
 **scaleHeight:** Height scale multiplier 
 
-**LCD Stream**
+## LCD Stream
 
 Stream is used to send the entire LCD update. 
 
@@ -240,6 +309,8 @@ The command is followed by the data [stream](../streams.md). The stream size is 
 
 > [!TIP] 
 > On 1bpp display, the data is organized as 8bit columns going left to right and then wrapping around to the next row.
+
+## Palette
 
 - **Palette(index, colorValue)** - Sets the desired color for a palette.<br>
 **index:** Index number of color<br>

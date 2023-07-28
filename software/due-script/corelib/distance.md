@@ -1,4 +1,4 @@
-## Distance Sensor
+# Distance Sensor
 
 This function is used when using a distance sensors. 
 

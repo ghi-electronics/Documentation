@@ -1,6 +1,6 @@
-## Beep
+# Beep
 
-Beep uses any pin to generate a tone.  
+`Beep()` uses any pin to generate a tone.  
 
 - **Beep(pin, frequency, duration)** - creates a tone for a specified duration on any pin <br>
 **pin:** pin number, 'p' used with on-board piezo buzzer <br>

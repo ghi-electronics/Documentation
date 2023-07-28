@@ -1,4 +1,4 @@
-## Servo Motor
+# Servo Motor
 
 - **ServoSet(pin, degree)** - Sets servo motor connected to pin to a specific position<br>
 **pin:** pin number  <br>

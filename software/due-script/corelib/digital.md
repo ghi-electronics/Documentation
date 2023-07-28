@@ -1,8 +1,8 @@
-## Digital
+# Digital
 
 These functions provide access to digital pins.
 
-**Digital Read**
+## Digital Read
 
 - **DRead(pin, pull)** - Read a digital pin output <br>
 **pin:** pin number <br> 
@@ -21,7 +21,7 @@ Else
 End
 ```
 
-**Digital Write**
+## Digital Write
 - **DWrite(pin, state)**  - Sets a pins digital output <br>
 **pin:** pin number <br> **state:** 1 = high or 0 = low
 

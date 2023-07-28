@@ -1,4 +1,4 @@
-## Buttons
+# Buttons
 
 Buttons as a function are only available using pin 0,1,2,A,or B. Alternatively, `DRead()` can be used with any pin.
 

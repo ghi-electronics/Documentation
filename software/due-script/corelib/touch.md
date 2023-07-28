@@ -1,4 +1,4 @@
-## Touch
+# Touch
 
 This feature allows sensing of a finger or human touch to a pin. This requires an external 100pf capacitor between the pin and GND. The caps are already found on BrainPad boards pads 0, 1, and 2.
 

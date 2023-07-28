@@ -1,4 +1,4 @@
-## UART
+# UART
 
 - **UartInit(baudRate)** - Sets the baud rate UART   <br>
 **baudRate:** Any commonly used standard baud rate 

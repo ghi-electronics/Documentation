@@ -1,8 +1,8 @@
-## Analog
+# Analog
 
 These functions provide access to analog pins. 
 
-##### Analog Write
+## Analog Write
 
 - **AWrite(pin, dutyCycle)**  - Writes to pin using PWM <br>
 **pin:** pin number<br>
@@ -24,7 +24,7 @@ Next
 Goto Loop
 ```
 
-##### Analog Read
+## Analog Read
 
 - **ARead(pin)**  - Read an analog output <br>
 **pin:** pin number <br>

@@ -1,4 +1,4 @@
-## System Functions
+# System Functions
 - **Cos(number)** - Returns the cosine of the argument        
         
 - **Echo(enable)**  <br>
