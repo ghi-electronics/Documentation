@@ -48,8 +48,8 @@ The provided API mirrors DUE Script's [Core library](../due-script/corelib/corel
 | Analog.Read()                |[ARead()](../due-script/corelib/analog.md)				| Reads analog pin
 | Analog.Write()               |[AWrite()](../due-script/corelib/analog.md)				| Reads analog pin
 | Button.Enable()              |[BtnEnable()](../due-script/corelib/button.md)			| Sets up a button to be used
-| Button.WasPressed()          |[BtnDown()](../due-script/corelib/button.md)			| Detects if button was pressed 
-| Button.IsReleased()          |[BtnDown()](../due-script/corelib/button.md)			| Detects if button is released 
+| Button.JustPressed()         |[BtnDown()](../due-script/corelib/button.md)			| Detects if button was pressed 
+| Button.JustReleased()        |[BtnDown()](../due-script/corelib/button.md)			| Detects if button is released 
 | DeviceConfig.IsEdge()        |[Version()](../due-script/corelib/systemfunctions.md)	| Checks for specific hardware
 | DeviceConfig.IsFlea()        |[Version()](../due-script/corelib/systemfunctions.md)	| Checks for specific hardware
 | DeviceConfig.IsPico()        |[Version()](../due-script/corelib/systemfunctions.md)	| Checks for specific hardware
