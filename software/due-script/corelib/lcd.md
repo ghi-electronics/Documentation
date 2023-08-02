@@ -19,7 +19,8 @@ LCD Graphics supports SSD1306 128x64 B&W I2C, which work on all BrainPad boards.
 
 ![ColorDisplays](images/color-displays.png)
 
-Graphics is supported on a few color SPI displays: ILI9342, ILI9341, and ST7735. These color displays only work on BrainPad boards with SC13 micro, such as BrainPad Pulse. The `LcdConfig()` function (documented below) can be used to configure the system to work with an externally connected display.
+Support for color displays includes ILI9342, ILI9341, and ST7735. These color displays only work on boards with SC13 chipset.
+ The `LcdConfig()` function (documented below) can be used to configure the system to work with an externally connected display.
 
 
 ## Display Configuration
@@ -38,8 +39,8 @@ For SPI displays, **config** is a 32bit argument set as follows:
 | [8..13] | Chip Select Pin | Any valid pin |
 | [14..19] | Data Control pin | Any valid pin |
 | [20] | Orientation | 0: Landscape, 1: Portrait |
-| [21] | Mirror | 0: None, 1: Mirror |
-| [22] | Flip | 0: None, 1: Flip |
+| [21] | Flip Horizontal | 0: None, 1: Flip |
+| [22] | Flip Vertical | 0: None, 1: Flip |
 | [23] | RGB | 0: None, 1: BGR |
 | [24] | Swap Byte Endianness | 0: None, 1: Swap |
 | [25..31] | Reserved |  |
