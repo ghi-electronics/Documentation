@@ -93,7 +93,8 @@
 </div>
 <h2 id="color-displays">Color Displays</h2>
 <p><img src="images/color-displays.png" alt="ColorDisplays"></p>
-<p>Graphics is supported on a few color SPI displays: ILI9342, ILI9341, and ST7735. These color displays only work on BrainPad boards with SC13 micro, such as BrainPad Pulse. The <code>LcdConfig()</code> function (documented below) can be used to configure the system to work with an externally connected display.</p>
+<p>Support for color displays includes ILI9342, ILI9341, and ST7735. These color displays only work on boards with SC13 chipset.
+The <code>LcdConfig()</code> function (documented below) can be used to configure the system to work with an externally connected display.</p>
 <h2 id="display-configuration">Display Configuration</h2>
 <ul>
 <li><strong>LcdConfig(output, config)</strong> Pipes the graphics to a connected display. <br>
@@ -133,12 +134,12 @@
 </tr>
 <tr>
 <td>[21]</td>
-<td>Mirror</td>
-<td>0: None, 1: Mirror</td>
+<td>Flip Horizontal</td>
+<td>0: None, 1: Flip</td>
 </tr>
 <tr>
 <td>[22]</td>
-<td>Flip</td>
+<td>Flip Vertical</td>
 <td>0: None, 1: Flip</td>
 </tr>
 <tr>
