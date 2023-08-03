@@ -97,8 +97,7 @@
 The <code>LcdConfig()</code> function (documented below) can be used to configure the system to work with an externally connected display.</p>
 <h2 id="display-configuration">Display Configuration</h2>
 <ul>
-<li><strong>LcdConfig(output, config)</strong> Pipes the graphics to a connected display. <br>
-<strong>output:</strong> <code>Print()</code> function output: 0 = serial console (default), 1 = LCD, 2 = LCD &amp; serial console. <br>
+<li><strong>LcdConfig(config)</strong> Pipes the graphics to a connected display. <br>
 <strong>config:</strong> external LCD configuration, 0 = default on-board display.</li>
 </ul>
 <p>For I2C displays, <strong>config</strong> is the I2C device's address of the connected SSD1306 display.</p>
@@ -169,7 +168,7 @@ The <code>LcdConfig()</code> function (documented below) can be used to configur
 <pre><code class="lang-basic">DWrite(1,1)#turn on the back-light
 DWrite(8,1)# release reset 
 
-LcdConfig(0, (0x82&lt;&lt;0)|(16&lt;&lt;8)|(12&lt;&lt;14)|(1&lt;&lt;22))
+LcdConfig ((0x82&lt;&lt;0)|(16&lt;&lt;8)|(12&lt;&lt;14)|(1&lt;&lt;22))
 LcdClear(0)
 LcdTextS(&quot;DUE has Color&quot;,0x00FF00,0,0,2,3)
 
@@ -188,7 +187,7 @@ LCDShow()
 <p>This function is not needed to use the display found on BrainPad Pulse.</p>
 </div>
 <p>This example will pipe (direct) graphics to an external 2.42&quot; display with address 0x3C, wired to the 2.42&quot; SSD1309 display showing in the image above. Tip: A resistor on the back of the display needs to be moved to change its bus from SPI to I2C.</p>
-<pre><code class="lang-basic">LcdConfig(0, 0x3C)
+<pre><code class="lang-basic">LcdConfig(0x3C)
 LcdClear(0)
 LcdText(&quot;Hello World&quot;,1,10,10)
 LcdShow()
@@ -315,7 +314,7 @@ LcdShow()
 </div>
 <h2 id="draw-image">Draw Image</h2>
 <ul>
-<li><strong>LcdImg(array,x, y, transform)</strong><br>
+<li><strong>LcdImg(array, x, y, transform)</strong><br>
 <strong>array:</strong> Image array (see below). <br>
 <strong>x:</strong> x position on screen. <br>
 <strong>y:</strong> y position on screen. <br>
@@ -345,7 +344,7 @@ LcdShow()
 0, 1, 0, 1, 1, 0, 1, 0,
 1, 0, 1, 0, 0, 1, 0, 1]
 LcdClear(0)
-LcdImgS(a,60,30,2,2,0)
+LcdImg(a,60,30,0)
 LcdShow()
 </code></pre>
 <p>Transformation modifiers:</p>
@@ -384,15 +383,15 @@ LcdShow()
 </tbody>
 </table>
 <h2 id="draw-scaled-image">Draw Scaled Image</h2>
-<p>Works the same as LcdImg but adds scaling.</p>
+<p>Works the same as <code>LcdImg()</code> but adds scaling.</p>
 <ul>
-<li><strong>LcdImgS(array,x, y, transform,scaleWidth,scaleHeight)</strong><br>
+<li><strong>LcdImgS(array, x, y, scaleWidth, scaleHeight, transform)</strong><br>
 <strong>array:</strong> Image array (see below). <br>
 <strong>x:</strong> x position on screen. <br>
 <strong>y:</strong> y position on screen. <br>
-<strong>transform:</strong> transform modifier. (see above)<br>
 <strong>scaleWidth:</strong> Width scale multiplier <br>
-<strong>scaleHeight:</strong> Height scale multiplier</li>
+<strong>scaleHeight:</strong> Height scale multiplier <br>
+<strong>transform:</strong> transform modifier. (see above)</li>
 </ul>
 <h2 id="lcd-stream">LCD Stream</h2>
 <p>Stream is used to send the entire LCD update.</p>
