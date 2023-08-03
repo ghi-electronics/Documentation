@@ -86,9 +86,7 @@ The provided API mirrors DUE Script's [**Core library**](../due-script/corelib/c
 | I2c.Write()				   |[I2cStream()](../due-script/corelib/i2c.md)				| I2C write, using stream
 | I2c.Read()				   |[I2cStream()](../due-script/corelib/i2c.md)				| I2C read, using stream
 | I2c.WriteRead()			   |[I2cStream()](../due-script/corelib/i2c.md)				| I2C write/read, using stream
-| Infrared.Enable()			   |[IrEnable()](../due-script/corelib/infrared.md)			| Enables pin for IR signal capture
-| Infrared.Read()			   |[IrRead()](../due-script/corelib/infrared.md)			| Reads value from IR enabled pin
-| Led.Set()	   	         	   |[LED()](../due-script/corelib/led.md)					| Controls the on-board LED
+| Infrared.Enable()			   |[IrEnable()](../due-script/c led.md)					| Controls the on-board LED
 | Neo.Clear()	   	           |[NeoClear()](../due-script/corelib/neopixel.md)			| Clears all LED's in memory
 | Neo.SetColor()	           |[NeoSet()](../due-script/corelib/neopixel.md)			| Set's a specific LED to a color
 | Neo.Show()	   	           |[NeoShow()](../due-script/corelib/neopixel.md)			| Transfers the internal pattern to LEDs
@@ -104,7 +102,10 @@ The provided API mirrors DUE Script's [**Core library**](../due-script/corelib/c
 | System.Beep()	   	           |[Beep()](../due-script/corelib/beep.md)					| Uses any pin to generate a tone
 | System.GetTickMicroseconds() |[TickUs()](../due-script/corelib/systemfunctions.md)	| Returns system time in microseconds
 | System.GetTickMilliseconds() |[TickMs()](../due-script/corelib/systemfunctions.md)	| Returns system time in milliseconds
+| System.Print()	           |[Print()](../due-script/corelib/systemfunctions.md)		| Print to LCD display and Debug Output on the same line
+| System.PrintLn()	           |[PrintLn()](../due-script/corelib/systemfunctions.md)	| Print to LCD display then moves to next line
 | System.Reset()	           |[Reset()](../due-script/corelib/systemfunctions.md)		| Resets the board
+| System.Wait()	               |[Wait()](../due-script/corelib/systemfunctions.md)		| Pause the system in milliseconds
 | Touch.Read()	               |[TouchRead()](../due-script/corelib/touch.md)           | Initialize a pin for touch
 | Uart.BytesToRead()	       |[UartCount()](../due-script/corelib/uart.md)			| How many bytes buffered and ready to read
 | Uart.Enable()	               |[UartInit()](../due-script/corelib/uart.md)				| Initialize UART

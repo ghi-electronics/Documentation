@@ -25,8 +25,7 @@ Support for color displays includes ILI9342, ILI9341, and ST7735. These color di
 
 ## Display Configuration
 
-- **LcdConfig(output, config)** Pipes the graphics to a connected display. <br>
-**output:** `Print()` function output: 0 = serial console (default), 1 = LCD, 2 = LCD & serial console. <br>
+- **LcdConfig(config)** Pipes the graphics to a connected display. <br>
 **config:** external LCD configuration, 0 = default on-board display.
 
 For I2C displays, **config** is the I2C device's address of the connected SSD1306 display.
@@ -59,7 +58,7 @@ This example will set the system to use the color display adapter from Waveshare
 DWrite(1,1)#turn on the back-light
 DWrite(8,1)# release reset 
 
-LcdConfig(0, (0x82<<0)|(16<<8)|(12<<14)|(1<<22))
+LcdConfig ((0x82<<0)|(16<<8)|(12<<14)|(1<<22))
 LcdClear(0)
 LcdTextS("DUE has Color",0x00FF00,0,0,2,3)
 
@@ -82,7 +81,7 @@ Setting the address to `0` resets the configuration to the default BrainPad Puls
 This example will pipe (direct) graphics to an external 2.42" display with address 0x3C, wired to the 2.42" SSD1309 display showing in the image above. Tip: A resistor on the back of the display needs to be moved to change its bus from SPI to I2C.
 
 ```basic
-LcdConfig(0, 0x3C)
+LcdConfig(0x3C)
 LcdClear(0)
 LcdText("Hello World",1,10,10)
 LcdShow()
@@ -189,7 +188,6 @@ LcdShow()
 **x:** x position <br>
 **y:** x position <br>
 
-
 ```basic
 LcdClear(0)
 LcdText("Hello World",1,10,10)
@@ -230,7 +228,7 @@ LcdShow()
 
 ## Draw Image
 
-- **LcdImg(array,x, y, transform)**<br>
+- **LcdImg(array, x, y, transform)**<br>
 **array:** Image array (see below). <br>
 **x:** x position on screen. <br>
 **y:** y position on screen. <br>
@@ -267,7 +265,7 @@ Dim a[2+(8*8)] = [8,8,
 0, 1, 0, 1, 1, 0, 1, 0,
 1, 0, 1, 0, 0, 1, 0, 1]
 LcdClear(0)
-LcdImgS(a,60,30,2,2,0)
+LcdImg(a,60,30,0)
 LcdShow()
 ```
 
@@ -286,15 +284,15 @@ Transformation modifiers:
 
 ## Draw Scaled Image
 
-Works the same as LcdImg but adds scaling. 
+Works the same as `LcdImg()` but adds scaling. 
 
-- **LcdImgS(array,x, y, transform,scaleWidth,scaleHeight)**<br>
+- **LcdImgS(array, x, y, scaleWidth, scaleHeight, transform)**<br>
 **array:** Image array (see below). <br>
 **x:** x position on screen. <br>
 **y:** y position on screen. <br>
-**transform:** transform modifier. (see above)<br>
 **scaleWidth:** Width scale multiplier <br>
-**scaleHeight:** Height scale multiplier 
+**scaleHeight:** Height scale multiplier <br>
+**transform:** transform modifier. (see above)
 
 ## LCD Stream
 

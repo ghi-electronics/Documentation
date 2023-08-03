@@ -14,7 +14,7 @@ DUE Script has two modes *Immediate mode* and *Record mode*. *Immediate mode* co
 The `>` command is used to switch the system to immediate mode. This in turn will change the prompt to `>` as well. All statements are executed as soon as entered.
 
 ```basic 
-> Print("Hello World")
+> Log("Hello World")
 ```
 
 ![TeraTerm](../images/teraterm.png)
@@ -46,16 +46,16 @@ The following statements control the program recorded in flash, but can be used 
 
 ```basic 
 > $
-$ PrintLn (x)
-$ PrintLn (y)
+$ LogLn(x)
+$ LogLn(y)
 $ >
 > x=1:y=2
 > Run
 1
 2
 >List
-PrintLn(x)
-PrintLn(y)
+LogLn(x)
+LogLn(y)
 >new
 ```
 
@@ -68,22 +68,23 @@ DUE Scripts are not case sensitive. Its syntax is very simple and inspired by BA
 
 Users that require serious coding should be using the DUE Platform combined with one of the many available coding languages. Still, DUE Scripts can be used to extend those languages, as detailed below.
 
-### Print 
-`Print()` is a function that returns the value of its arguments. These arguments can be variables, strings, or equations. `Print()` is also unique because it can handle multiple arguments. 
+### Log & Print
+
+`Log()` is a function that sends its argument to the console or terminal window. These arguments can be variables, strings, or equations. `Log()` can handle multiple arguments.  
+
+`LogLn()` adds a line break to each log statement.
 
 ```basic
 x=100
-Print(x)
-Print("Hello World")
-Print(x+x)
-Print(x,"Hello World", x+x)
-```
-Result:
-```
-100Hello World200100Hello World 200
+Log(x)
+Log("Hello World")
+Log(x+x)
+Log(x,"Hello World", x+x)
 ```
 
-`PrintLn()` adds a line break to each print statement. 
+![Log](../images/log-output.png)
+
+`Print()` and `PrintLn()` are identical to `Log()` and `LogLn()` except the output goes to the screen instead of console output.
 
 ```basic
 x=100
@@ -92,13 +93,8 @@ PrintLn("Hello World")
 PrintLn(x+x)
 PrintLn(x,"Hello World", x+x)
 ```
-Result:
-```
-100
-Hello World
-200
-100Hello World200
-```
+
+![Log](../images/println-example.png)
 
 ### Comments
 The `#` character is used to identify a comment. Comments are ignored by the program, text added to help developers understand the code.
@@ -371,3 +367,6 @@ Print("Only when Go!")
 The program will not execute on power up due to the `Exit` command. But now calling `Go()` in immediate mode will produce "Only when Go!".
 
 Another good practice is to use the on-board LED as an activity LED to show that the device is running. Simply start your program by adding `Led(200,200,-1)`.
+
+
+

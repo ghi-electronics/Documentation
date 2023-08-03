@@ -98,8 +98,8 @@ The provided API mirrors DUE Script's [**Core library**](../due-script/corelib/c
 | System.Beep()	   	           |[Beep()](../due-script/corelib/beep.md)					| Uses any pin to generate a tone
 | System.GetTickMicroseconds() |[TickUs()](../due-script/corelib/systemfunctions.md)	| Returns system time in microseconds
 | System.GetTickMilliseconds() |[TickMs()](../due-script/corelib/systemfunctions.md)	| Returns system time in milliseconds
-| System.Print()	           |[Print()](../due-script/corelib/systemfunctions.md)		| Print to the console same line
-| System.PrintLn()	           |[PrintLn()](../due-script/corelib/systemfunctions.md)		| Print to the console then moves to next line
+| System.Print()	           |[Print()](../due-script/corelib/systemfunctions.md)		| Print to LCD display and Debug Output on the same line
+| System.PrintLn()	           |[PrintLn()](../due-script/corelib/systemfunctions.md)	| Print to LCD display and Debug Output then moves to next line
 | System.Reset()	           |[Reset()](../due-script/corelib/systemfunctions.md)		| Resets the board
 | System.Wait()	               |[Wait()](../due-script/corelib/systemfunctions.md)		| Pause the system in milliseconds
 | Touch.Read()	               |[TouchRead()](../due-script/corelib/touch.md)           | Initialize a pin for touch

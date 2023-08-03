@@ -74,7 +74,7 @@ The provided API mirrors DUE Script's [Core library](../due-script/corelib/corel
 | Display.SetPixel()           |[LcdPixel()](../due-script/corelib/lcd.md)				| Draws pixel on the display
 | Display.Show()               |[LcdShow()](../due-script/corelib/lcd.md)				| Sends the display buffer
 | Distance.Read()              |[Distance()](../due-script/corelib/distance.md)			| Used to read distance sensors
-| Frequency.Write()                  |[Freq()](../due-script/corelib/frequency.md)			| Hardware generated PWM signal
+| Frequency.Write()            |[Freq()](../due-script/corelib/frequency.md)			| Hardware generated PWM signal
 | I2c.Write()				   |[I2cStream()](../due-script/corelib/i2c.md)				| I2C write, using stream
 | I2c.Read()				   |[I2cStream()](../due-script/corelib/i2c.md)				| I2C read, using stream
 | I2c.WriteRead()			   |[I2cStream()](../due-script/corelib/i2c.md)				| I2C write/read, using stream
@@ -96,8 +96,8 @@ The provided API mirrors DUE Script's [Core library](../due-script/corelib/corel
 | System.Beep()	   	           |[Beep()](../due-script/corelib/beep.md)					| Uses any pin to generate a tone
 | System.GetTickMicroseconds() |[TickUs()](../due-script/corelib/systemfunctions.md)	| Returns system time in microseconds
 | System.GetTickMilliseconds() |[TickMs()](../due-script/corelib/systemfunctions.md)	| Returns system time in milliseconds
-| System.Print()	           |[Print()](../due-script/corelib/systemfunctions.md)		| Print to the console same line
-| System.PrintLn()	           |[PrintLn()](../due-script/corelib/systemfunctions.md)		| Print to the console then moves to next line
+| System.Print()	           |[Print()](../due-script/corelib/systemfunctions.md)		| Print to LCD display and Debug Output on the same line
+| System.PrintLn()	           |[PrintLn()](../due-script/corelib/systemfunctions.md)	| Print to LCD display and Debug Output then moves to next line
 | System.Reset()	           |[Reset()](../due-script/corelib/systemfunctions.md)		| Resets the board
 | System.Wait()	               |[Wait()](../due-script/corelib/systemfunctions.md)		| Pause the system in milliseconds
 | Touch.Read()	               |[TouchRead()](../due-script/corelib/touch.md)           | Initialize a pin for touch
