@@ -10,7 +10,7 @@
       <meta name="title" content="DUE Downloads ">
     
       <link rel="shortcut icon" href="../images/favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.vendor.css">
       <link rel="stylesheet" href="../styles/docfx.css">
       <link rel="stylesheet" href="../styles/main.css">
       <meta property="docfx:navrel" content="../toc.html">
@@ -118,6 +118,11 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v110.ghi">v1.1.0</a></td>
+<td>2023-08-08</td>
+<td>RC</td>
+</tr>
+<tr>
 <td><a href="https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v103.ghi">v1.0.3</a></td>
 <td>2023-05-30</td>
 <td>RC</td>
@@ -144,6 +149,11 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc007_v110.ghi">v1.1.0</a></td>
+<td>2023-08-08</td>
+<td>RC</td>
+</tr>
 <tr>
 <td><a href="https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc007_v103.ghi">v1.0.3</a></td>
 <td>2023-05-30</td>
@@ -178,6 +188,11 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.1.0.nupkg">v1.1.0</a></td>
+<td>2023-08-08</td>
+<td>RC</td>
+</tr>
+<tr>
 <td><a href="https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.0.3.nupkg">v1.0.3</a></td>
 <td>2023-05-30</td>
 <td>RC</td>
@@ -209,6 +224,11 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.1.0-py3-none-any.whl">v1.1.0</a></td>
+<td>2023-08-08</td>
+<td>RC</td>
+</tr>
+<tr>
 <td><a href="https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.0.3-py3-none-any.whl">v1.0.3</a></td>
 <td>2023-05-30</td>
 <td>RC</td>
@@ -236,6 +256,11 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="https://github.com/ghi-electronics/due-libraries/tree/main/javascript">v1.1.0</a></td>
+<td>2023-08-08</td>
+<td>RC</td>
+</tr>
+<tr>
 <td><a href="https://github.com/ghi-electronics/due-libraries/tree/main/javascript">v1.0.3</a></td>
 <td>2023-05-30</td>
 <td>RC</td>
@@ -243,6 +268,28 @@
 </tbody>
 </table>
 <h2 id="release-notes">Release Notes</h2>
+<h3 id="v110-2023-08-08">v1.1.0: 2023-08-08</h3>
+<ul>
+<li>Firmware:
+<ul>
+<li>Added support for ST7735, ILI9341, ILI9342 SPI displays (on BrainPad Pulse)</li>
+<li>Added support for 1bpp, 4bpp, 8bpp, 16bpp color depth to LcdStream</li>
+<li>Fixed DH11 sensor</li>
+<li>Add 5x5 font</li>
+<li>Add onewire protocal</li>
+<li>Add 'log' command which outputs to console. Print now outputs to screen only</li>
+<li>Rework LCDConfig take four arguments</li>
+<li>Several internal bugs and improvements</li>
+</ul>
+</li>
+<li>Library:
+<ul>
+<li>Fixed Beep 'P' doesn't work.</li>
+<li>Added TransferBlockDelay, TransferBlockSizeMax property (DUELinkController class)</li>
+<li>Update API to match the firmware changs</li>
+</ul>
+</li>
+</ul>
 <h3 id="v103-2023-05-30">v1.0.3: 2023-05-30</h3>
 <ul>
 <li>Firmware: Fixed issues with labels</li>
@@ -304,7 +351,7 @@
       </footer>
     </div>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>
