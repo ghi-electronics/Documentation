@@ -15,14 +15,15 @@ The first step is to pick from one of the many available [DUE Hardware](../hardw
 **Start Coding**
 
 
-If you're just starting out with DUE Link the BrainPad hardware and its included lessons are great place to start.
+If you're just starting out with DUE Link the BrainPad hardware and its included lessons are a great place to start.
 
 
 <div style="text-align: center;">
 
-[![DUE Console](images/brainpad-lessons.png)](https://www.brainpad.com/lessons/)
+[![DUE Console](images/btn-getting-started.png)](../hardware/brainpad.md)
 
 </div>
+
 
 The lessons includes DUE Script lessons that take advantage of the web-based [DUE Console](./../software/console.md) it requires nothing to install. Connect your device and you are ready to start coding.
 

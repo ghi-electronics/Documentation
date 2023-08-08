@@ -25,28 +25,44 @@ Support for color displays includes ILI9342, ILI9341, and ST7735. These color di
 
 ## Display Configuration
 
-- **LcdConfig(config)** Pipes the graphics to a connected display. <br>
-**config:** external LCD configuration, 0 = default on-board display.
+- **LcdConfig(address, config, cs, dc)** Configures a connected display. <br>
+**address:** external LCD configuration, 0 = default, on-board display.
+**config:** external LCD configuration, 0 = default, on-board display.
+**cs:** Chip select pin.
+**dc:** Data control pin.
 
-For I2C displays, **config** is the I2C device's address of the connected SSD1306 display.
+> [!Tip]
+> This function is not needed to use the on-board display.
 
-For SPI displays, **config** is a 32bit argument set as follows:
 
-| Bits | Function | Value |
+For I2C displays, **address** is the 7-bit I2C device's address of the connected SSD1306 display. All other arguments are ignored.
+
+For SPI displays, **address** is the SPI display's type 0x08: ILI9342, 0x81: ILI9341, 0x82: ST7735
+
+**config:** these values can be added together to make up the desired configuration:
+
+| value (bits) | Function | Value |
 | - | - | - |
-| [0..7] | Display Type | 0x08: ILI9342, 0x81: ILI9341, 0x82: ST7735 |
-| [8..13] | Chip Select Pin | Any valid pin |
-| [14..19] | Data Control pin | Any valid pin |
-| [20] | Orientation | 0: Landscape, 1: Portrait |
-| [21] | Flip Horizontal | 0: None, 1: Flip |
-| [22] | Flip Vertical | 0: None, 1: Flip |
-| [23] | RGB | 0: None, 1: BGR |
-| [24] | Swap Byte Endianness | 0: None, 1: Swap |
-| [25..31] | Reserved |  |
+| 1 (bit0) | Orientation | 0: Landscape, 1: Portrait |
+| 2 (bit1) | Flip Horizontal | 0: None, 1: Flip |
+| 4 (bit2) | Flip Vertical | 0: None, 1: Flip |
+| 8 (bit3) | RGB | 0: None, 1: BGR |
+| 16 (bit4) | Swap Byte Endianness | 0: None, 1: Swap |
+| 32 (bit5) | Reserved |  |
+| 64 (bit6) | Reserved |  |
+| 128 (bit7) | Reserved |  |
+| bits[8..11] | Window x | Special config |
+| bits[12..15] | Window y | Special config |
 
-The shift operator comes in very handy to set the bits. To use pin 3 for chip select we can use `(3<<8)` since 8 is the bit position of the chip select value.
+**config:**
 
-This example will set the system to use the color display adapter from Waveshare, which uses ST7735 1.8" display. The display's chip select is on pin 16 ands data control is on pin 12. There is also a backlight on pin 1 and reset on pin 8.
+**config:**
+
+
+This example will set the system to use the color display adapter from Waveshare, which uses ST7735 1.8" display. The display's chip select is on pin 16 and data control is on pin 12. There is also a backlight on pin 1 and reset on pin 8.
+
+The display used on Waveshare adapter requires this value added, 0x2100. (This sets the window properly)
+
 <!--
 <p align="center">
 <img src = "http://duelink.com/software/due-script/corelib/images/st7735.png"
@@ -58,7 +74,7 @@ This example will set the system to use the color display adapter from Waveshare
 DWrite(1,1)#turn on the back-light
 DWrite(8,1)# release reset 
 
-LcdConfig ((0x82<<0)|(16<<8)|(12<<14)|(1<<22))
+LcdConfig (0x82, 0x2100, 16, 12)
 LcdClear(0)
 LcdTextS("DUE has Color",0x00FF00,0,0,2,3)
 
@@ -71,17 +87,14 @@ for c in range(2,200)
 LCDShow() 
 ```
 
-By default, all graphics are directed to the display found on a BrainPad. However, making a call to `LcdConfig()` directs the system to send all graphics to an external display.
+To set the display to portrait mode, change the config line to `LcdConfig (0x82, 1+0x2100, 16, 12)`.
+image
 
-Setting the address to `0` resets the configuration to the default BrainPad Pulse LCD<br>
 
-> [!Tip]
-> This function is not needed to use the display found on BrainPad Pulse.
-
-This example will pipe (direct) graphics to an external 2.42" display with address 0x3C, wired to the 2.42" SSD1309 display showing in the image above. Tip: A resistor on the back of the display needs to be moved to change its bus from SPI to I2C.
+This example will direct graphics to an external 2.42" display with address 0x3C, wired to the 2.42" SSD1309 display showing in the image above. Tip: A resistor on the back of the display needs to be moved to change its bus from SPI to I2C.
 
 ```basic
-LcdConfig(0x3C)
+LcdConfig(0x3C, 0, 0, 0)
 LcdClear(0)
 LcdText("Hello World",1,10,10)
 LcdShow()
