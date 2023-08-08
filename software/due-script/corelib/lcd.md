@@ -26,18 +26,20 @@ Support for color displays includes ILI9342, ILI9341, and ST7735. These color di
 ## Display Configuration
 
 - **LcdConfig(address, config, cs, dc)** Configures a connected display. <br>
-**address:** Display's address or type. 0 = on-board display.<br>
-**config:** external LCD configuration.<br>
-**cs:** Chip select pin. <br>
-**dc:** Data control pin. <br>
+**address:** external LCD configuration, 0 = default, on-board display.
+**config:** external LCD configuration, 0 = default, on-board display.
+**cs:** Chip select pin.
+**dc:** Data control pin.
 
 > [!Tip]
 > This function is not needed to use the on-board display.
 
 
-**address:** For I2C displays: This is the 7-bit I2C device's address of the connected SSD1306 display. All other arguments are ignored. For SPI displays: This is the SPI display's type 0x08: ILI9342, 0x81: ILI9341, 0x82: ST7735.
+For I2C displays, **address** is the 7-bit I2C device's address of the connected SSD1306 display. All other arguments are ignored.
 
-**config:** these values can be added together to make up the desired configuration.
+For SPI displays, **address** is the SPI display's type 0x08: ILI9342, 0x81: ILI9341, 0x82: ST7735
+
+**config:** these values can be added together to make up the desired configuration:
 
 | value (bits) | Function | Value |
 | - | - | - |
@@ -52,14 +54,14 @@ Support for color displays includes ILI9342, ILI9341, and ST7735. These color di
 | bits[8..11] | Window x | Special config |
 | bits[12..15] | Window y | Special config |
 
-**cs:** The pin connected to the display's Chip select signal.
+**config:**
 
-**dc:** The pin connected to the display's Data Control signal.
+**config:**
 
 
-This example will set the system to use the color display adapter from Waveshare, which uses ST7735 1.8" display. The display's chip select is on pin 16 and data control is on pin 12. There is also a backlight on pin 1 and reset on pin 8 that need to be controlled manually.
+This example will set the system to use the color display adapter from Waveshare, which uses ST7735 1.8" display. The display's chip select is on pin 16 and data control is on pin 12. There is also a backlight on pin 1 and reset on pin 8.
 
-The display on adapter needs to be flipped horizontally (config value 2) and also requires this value added, 0x2100. This sets the drawing window.
+The display used on Waveshare adapter requires this value added, 0x2100. (This sets the window properly)
 
 <!--
 <p align="center">
@@ -72,7 +74,7 @@ The display on adapter needs to be flipped horizontally (config value 2) and als
 DWrite(1,1)#turn on the back-light
 DWrite(8,1)# release reset 
 
-LcdConfig (0x82,2+0x2100,16,12)
+LcdConfig (0x82, 0x2100, 16, 12)
 LcdClear(0)
 LcdTextS("DUE has Color",0x00FF00,0,0,2,3)
 
@@ -80,19 +82,19 @@ for c in range(2,200)
     LcdLine(c,c,40,c,60)
     LcdLine(c<<8,200-c,60,200-c,80)
     LcdLine(c<<16,c,80,c,100)
-next
+ next
 
 LCDShow() 
 ```
 
-To set the display to portrait mode, change the config line to `LcdConfig (0x82, 1+0x2100, 16, 12)`. Flip is not needed in this case.
+To set the display to portrait mode, change the config line to `LcdConfig (0x82, 1+0x2100, 16, 12)`.
+image
 
-![ST7735](images/st7735-portrait.png)
 
-This example below will direct graphics to an external 2.42" display with address 0x3C, wired to the 2.42" SSD1309 display showing in the image above. Tip: A resistor on the back of the display needs to be moved to change its bus from SPI to I2C.
+This example will direct graphics to an external 2.42" display with address 0x3C, wired to the 2.42" SSD1309 display showing in the image above. Tip: A resistor on the back of the display needs to be moved to change its bus from SPI to I2C.
 
 ```basic
-LcdConfig(0x3C,0,0,0)
+LcdConfig(0x3C, 0, 0, 0)
 LcdClear(0)
 LcdText("Hello World",1,10,10)
 LcdShow()
