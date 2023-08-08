@@ -24,6 +24,7 @@ Preview | Preview of the next release, not quite ready for production use.
 
 File | Date | Status
 --- | --- | ---
+[v1.1.0](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v110.ghi) | 2023-08-08 | RC
 [v1.0.3](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v103.ghi) | 2023-05-30 | RC
 [v1.0.2](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v102.ghi) | 2023-05-24 | RC
 [v1.0.1](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v101.ghi) | 2023-05-19 | RC
@@ -33,6 +34,7 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
+[v1.1.0](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc007_v110.ghi) | 2023-08-08 | RC
 [v1.0.3](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc007_v103.ghi) | 2023-05-30 | RC
 [v1.0.2](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc007_v102.ghi) | 2023-05-24 | RC
 [v1.0.1](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc007_v101.ghi) | 2023-05-19 | RC
@@ -49,6 +51,7 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
+[v1.1.0](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.1.0.nupkg) | 2023-08-08 | RC
 [v1.0.3](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.0.3.nupkg) | 2023-05-30 | RC
 [v1.0.2](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.0.2.nupkg) | 2023-05-24 | RC
 [v1.0.1](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.0.1.nupkg) | 2023-05-19 | RC
@@ -61,6 +64,7 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
+[v1.1.0](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.1.0-py3-none-any.whl) | 2023-08-08 | RC
 [v1.0.3](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.0.3-py3-none-any.whl) | 2023-05-30 | RC
 [v1.0.2](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.0.2-py3-none-any.whl) | 2023-05-24 | RC
 [v1.0.1](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.0.1-py3-none-any.whl) | 2023-05-19 | RC
@@ -71,9 +75,25 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
+[v1.1.0](https://github.com/ghi-electronics/due-libraries/tree/main/javascript) | 2023-08-08 | RC
 [v1.0.3](https://github.com/ghi-electronics/due-libraries/tree/main/javascript) | 2023-05-30 | RC
 
 ## Release Notes
+
+### v1.1.0: 2023-08-08
+* Firmware:
+	- Added support for ST7735, ILI9341, ILI9342 SPI displays (on BrainPad Pulse)
+	- Added support for 1bpp, 4bpp, 8bpp, 16bpp color depth to LcdStream
+	- Fixed DH11 sensor
+	- Add 5x5 font
+	- Add onewire protocal
+	- Add 'log' command which outputs to console. Print now outputs to screen only
+	- Rework LCDConfig take four arguments
+	- Several internal bugs and improvements
+* Library:
+	- Fixed Beep 'P' doesn't work.
+	- Added TransferBlockDelay, TransferBlockSizeMax property (DUELinkController class)
+	- Update API to match the firmware changs
 
 ### v1.0.3: 2023-05-30
 

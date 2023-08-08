@@ -37,7 +37,7 @@ Support for color displays includes ILI9342, ILI9341, and ST7735. These color di
 
 For I2C displays, **address** is the 7-bit I2C device's address of the connected SSD1306 display. All other arguments are ignored.
 
-For SPI displays, **address** is the SPI display's type 0x08: ILI9342, 0x81: ILI9341, 0x82: ST7735
+For SPI displays, **address** is the SPI display's type 0x80: ILI9342, 0x81: ILI9341, 0x82: ST7735
 
 **config:** these values can be added together to make up the desired configuration:
 
