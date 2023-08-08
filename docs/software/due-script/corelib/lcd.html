@@ -10,7 +10,7 @@
       <meta name="title" content="LCD ">
     
       <link rel="shortcut icon" href="../../../images/favicon.ico">
-      <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../../../styles/docfx.css">
       <link rel="stylesheet" href="../../../styles/main.css">
       <meta property="docfx:navrel" content="../../../toc.html">
@@ -98,18 +98,17 @@ The <code>LcdConfig()</code> function (documented below) can be used to configur
 <h2 id="display-configuration">Display Configuration</h2>
 <ul>
 <li><strong>LcdConfig(address, config, cs, dc)</strong> Configures a connected display. <br>
-<strong>address:</strong> external LCD configuration, 0 = default, on-board display.
-<strong>config:</strong> external LCD configuration, 0 = default, on-board display.
-<strong>cs:</strong> Chip select pin.
-<strong>dc:</strong> Data control pin.</li>
+<strong>address:</strong> Display's address or type. 0 = on-board display.<br>
+<strong>config:</strong> external LCD configuration.<br>
+<strong>cs:</strong> Chip select pin. <br>
+<strong>dc:</strong> Data control pin. <br></li>
 </ul>
 <div class="TIP">
 <h5>Tip</h5>
 <p>This function is not needed to use the on-board display.</p>
 </div>
-<p>For I2C displays, <strong>address</strong> is the 7-bit I2C device's address of the connected SSD1306 display. All other arguments are ignored.</p>
-<p>For SPI displays, <strong>address</strong> is the SPI display's type 0x80: ILI9342, 0x81: ILI9341, 0x82: ST7735</p>
-<p><strong>config:</strong> these values can be added together to make up the desired configuration:</p>
+<p><strong>address:</strong> For I2C displays: This is the 7-bit I2C device's address of the connected SSD1306 display. All other arguments are ignored. For SPI displays: This is the SPI display's type 0x08: ILI9342, 0x81: ILI9341, 0x82: ST7735.</p>
+<p><strong>config:</strong> these values can be added together to make up the desired configuration.</p>
 <table>
 <thead>
 <tr>
@@ -171,10 +170,10 @@ The <code>LcdConfig()</code> function (documented below) can be used to configur
 </tr>
 </tbody>
 </table>
-<p><strong>config:</strong></p>
-<p><strong>config:</strong></p>
-<p>This example will set the system to use the color display adapter from Waveshare, which uses ST7735 1.8&quot; display. The display's chip select is on pin 16 and data control is on pin 12. There is also a backlight on pin 1 and reset on pin 8.</p>
-<p>The display used on Waveshare adapter requires this value added, 0x2100. (This sets the window properly)</p>
+<p><strong>cs:</strong> The pin connected to the display's Chip select signal.</p>
+<p><strong>dc:</strong> The pin connected to the display's Data Control signal.</p>
+<p>This example will set the system to use the color display adapter from Waveshare, which uses ST7735 1.8&quot; display. The display's chip select is on pin 16 and data control is on pin 12. There is also a backlight on pin 1 and reset on pin 8 that need to be controlled manually.</p>
+<p>The display on adapter needs to be flipped horizontally (config value 2) and also requires this value added, 0x2100. This sets the drawing window.</p>
 <!--
 <p align="center">
 <img src = "http://duelink.com/software/due-script/corelib/images/st7735.png"
@@ -183,7 +182,7 @@ The <code>LcdConfig()</code> function (documented below) can be used to configur
 <pre><code class="lang-basic">DWrite(1,1)#turn on the back-light
 DWrite(8,1)# release reset 
 
-LcdConfig (0x82, 0x2100, 16, 12)
+LcdConfig (0x82,2+0x2100,16,12)
 LcdClear(0)
 LcdTextS(&quot;DUE has Color&quot;,0x00FF00,0,0,2,3)
 
@@ -191,14 +190,14 @@ for c in range(2,200)
     LcdLine(c,c,40,c,60)
     LcdLine(c&lt;&lt;8,200-c,60,200-c,80)
     LcdLine(c&lt;&lt;16,c,80,c,100)
- next
+next
 
 LCDShow() 
 </code></pre>
-<p>To set the display to portrait mode, change the config line to <code>LcdConfig (0x82, 1+0x2100, 16, 12)</code>.
-image</p>
-<p>This example will direct graphics to an external 2.42&quot; display with address 0x3C, wired to the 2.42&quot; SSD1309 display showing in the image above. Tip: A resistor on the back of the display needs to be moved to change its bus from SPI to I2C.</p>
-<pre><code class="lang-basic">LcdConfig(0x3C, 0, 0, 0)
+<p>To set the display to portrait mode, change the config line to <code>LcdConfig (0x82, 1+0x2100, 16, 12)</code>. Flip is not needed in this case.</p>
+<p><img src="images/st7735-portrait.png" alt="ST7735"></p>
+<p>This example below will direct graphics to an external 2.42&quot; display with address 0x3C, wired to the 2.42&quot; SSD1309 display showing in the image above. Tip: A resistor on the back of the display needs to be moved to change its bus from SPI to I2C.</p>
+<pre><code class="lang-basic">LcdConfig(0x3C,0,0,0)
 LcdClear(0)
 LcdText(&quot;Hello World&quot;,1,10,10)
 LcdShow()
@@ -563,7 +562,7 @@ buffer[(y &gt;&gt; 3) * 128 + x] |= (byte)(1 &lt;&lt; (y &amp; 7));
       </footer>
     </div>
 
-    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>
