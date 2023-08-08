@@ -38,16 +38,14 @@ Visit the BrainPad website to learn about the product and see purchasing options
 
 ## Getting Started
 
-The DUE getting started page shows the steps needed to start using the DUE Link ecosystem and coding options.
+The BrainPad lessons page is a great place to get started, it shows the steps needed to start using the DUE Link ecosystem and coding options.
 
 
 <div style="text-align: center;">
 
-[![Getting Started](images/btn-getting-started.png)](../software/getting-started.md)
+[![DUE Console](images/brainpad-lessons.png)](https://www.brainpad.com/lessons/)
 
 </div>
-
-
 
 ---
 
