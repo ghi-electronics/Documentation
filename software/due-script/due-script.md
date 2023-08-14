@@ -84,7 +84,7 @@ Log(x,"Hello World", x+x)
 
 ![Log](../images/log-output.png)
 
-`Print()` and `PrintLn()` are identical to `Log()` and `LogLn()` except the output goes to the screen instead of console output.
+`Print()` and `PrintLn()` are identical to `Log()` and `LogLn()` except the output goes to the screen instead of console log window.
 
 ```basic
 x=100
