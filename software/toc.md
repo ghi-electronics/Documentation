@@ -1,18 +1,9 @@
 
 # [DUE Platform](intro.md)
 # [Getting Started](getting-started.md)
-# [Coding Options](coding-options/coding-options.md)
-## [Python](coding-options/python.md)
-## [JavaScript](coding-options/javascript.md)
-## [.NET](coding-options/dotnet.md)
-## [C++](coding-options/cpp.md)
-## [Swift](coding-options/swift.md)
-## [Excel](coding-options/excel.md)
-## [Other](coding-options/other.md)
 
 # [DUE Script](due-script/due-script.md)
-
-## [Streams](due-script/streams.md)
+## [DUE Console](console.md)
 ## [Core Library](due-script/corelib/corelib.md)
 ### [Analog](due-script/corelib/analog.md)
 ### [Beep](due-script/corelib/beep.md)
@@ -41,8 +32,19 @@
 ### [Pulse Bounce Ball](due-script/samples/pulse-bouncingball.md)
 ### [BrainGamer Sketch](due-script/samples/pulse-gamer-sketch.md)
 ### [BrainGamer Pong](due-script/samples/pulse-gamer-pong.md)
+## [Streams](due-script/streams.md)
+
+
+# [Coding Options](coding-options/coding-options.md)
+## [Python](coding-options/python.md)
+## [JavaScript](coding-options/javascript.md)
+## [.NET](coding-options/dotnet.md)
+## [C++](coding-options/cpp.md)
+## [Swift](coding-options/swift.md)
+## [Excel](coding-options/excel.md)
+## [Other](coding-options/other.md)
+
 
 # [Downloads](downloads.md)
-# [DUE Console](console.md)
 
 # [Legal](legal.md)

@@ -4,7 +4,7 @@
 
 Educators now have the power to use their beloved language-of-choice with BrainPad devices, thanks to the power of the DUE platform.
 
-Both BrainPad Pulse and BrainPad Edge are fully supported. However, BrainPad Pulse include additional natively-supported, which are the display and the buzzer.
+All BrainPad microcomputers are fully supported. However, BrainPad Pulse include additional natively-supported components, which are the display and the buzzer.
 
 **BrainPad Pulse**
 ![BrainPad Pulse](images/brainpad-pulse.png) 
@@ -12,16 +12,19 @@ Both BrainPad Pulse and BrainPad Edge are fully supported. However, BrainPad Pul
 **BrainPad Edge**
 ![BrainPad Edge](images/brainpad-edge.png) 
 
+**BrainPad Tick**
+![BrainPad Edge](images/brainpad-tick.png) 
+
 ![BrainPad Pinout](images/edge-pulse-due-pinout.png) 
 
 **On-board Components**
 
 
-|       | Pulse | Edge
----     | ---   | ---
-LED|   ✓   |    ✓
-Button A|   ✓   |    ✓
-Button B|   ✓   |    
+|       | Pulse | Edge	| Tick
+---     | ---   | ---	| ---
+LED		|   ✓   |   ✓	| 5x5
+Button A|   ✓   |   ✓	| ✓
+Button B|   ✓   |   ✓	| ✓
 LCD     |   ✓   | 
 Sound   |   ✓   |    
 
@@ -36,9 +39,25 @@ Visit the BrainPad website to learn about the product and see purchasing options
 
 ---
 
-## Getting Started
+## Beginner to Expert
 
-The BrainPad lessons page is a great place to get started, it shows the steps needed to start using the DUE Link ecosystem and coding options.
+We recommend beginners start out with the BrainPad, it is made for beginners and scales up to advanced learning. The [FEZ boards](fez.md) can then be used to start designing prototypes and proof of concepts. Low-volume products can be manufactured with ease, thanks to the small form factor and SMT solderability of the FEZ boards. 
+
+![FEZ Flea SoM](images/beginner-expert.jpg)
+
+> [!TIP]
+> The heart to the FEZ boards is [SITCore SC13](https://www.ghielectronics.com/sitcore/) chipset.
+
+---
+
+# Loading the Firmware
+The first step to load the DUE firmware on your hardware is to navigate to the [console.duelink.com](https://https://console.duelink.com/) and click on the **Firmware** tab and follow the instructions
+
+![DUE Firmware](images/due-firmware.png) 
+
+---
+# Getting Started
+The BrainPad website is a great place to get started, it shows the steps needed to start using the DUE Link ecosystem and coding options.
 
 
 <div style="text-align: center;">

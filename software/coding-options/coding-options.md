@@ -10,6 +10,7 @@ Developers have the choice to use any development environment and IDE of choice.
 
 Language | Software Support
 ---|---
+[DUE Script](../due-script/due-script.md) | Built-in
 [Python](python.md) | Full Library
 [.NET](dotnet.md) | Full Library
 [JavaScript](javascript.md)| Demo Sample
@@ -24,6 +25,8 @@ Language | Software Support
 ## Open Source
 
 Libraries for the supported languages are provided open-source. We invite you to learn more about the internal workings of DUE Link and also invite you to support additional systems and languages. [DUE Libraries](https://github.com/ghi-electronics/due-libraries) repo.
+
+All coding options include demos to get you started. Check out the many provided [open-source samples](https://github.com/ghi-electronics/due-samples).
 
 ## The Transport
 

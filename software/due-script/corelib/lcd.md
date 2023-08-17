@@ -208,6 +208,17 @@ LcdText(Str(x),1,0,0)
 LcdShow
 ```
 
+## Draw Tiny Text
+
+Displays tiny 5px text.
+
+- **LcdTextT("text", color, x, y)** <br>
+**text:** String message in double quotes. <br>
+**Str():** is used to convert variables to strings <br>
+**color:** Color value <br>
+**x:** x position <br>
+**y:** x position <br>
+
 ## Draw Scaled Text
 
 Works exactly the same as **LcdText()** but adds scaling.
