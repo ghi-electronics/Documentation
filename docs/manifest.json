@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/brainpad.html",
-          "hash": "YBVPxoaVZ4YPZ5TiRFgJO610yMMJKGOmxHNf7caxwPA="
+          "hash": "mpE/otE4lyZjeleuEIt0F9OKkZG9Y4x090b9OdlyoGY="
         }
       },
       "version": ""
@@ -39,7 +39,7 @@
       "output": {
         ".html": {
           "relative_path": "hardware/fez.html",
-          "hash": "rlVJzXDsdIDcsqGbnG7+HXNRcuYjxJUGGS+SFqZZaeg="
+          "hash": "mhr0dJkvv6Uet7IEMxtNuNDKYVHtXRsSENlI391gV3A="
         }
       },
       "version": ""
@@ -106,6 +106,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "hardware/images/brainpad-tick.png",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/images/brainpad-tick.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "hardware/images/brainpads.png",
       "output": {
         "resource": {
@@ -140,6 +150,16 @@
       "output": {
         "resource": {
           "relative_path": "hardware/images/click-shield.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "hardware/images/due-firmware.png",
+      "output": {
+        "resource": {
+          "relative_path": "hardware/images/due-firmware.png"
         }
       },
       "version": ""
@@ -220,16 +240,6 @@
       "output": {
         "resource": {
           "relative_path": "hardware/images/grove-shields.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "hardware/images/loader.png",
-      "output": {
-        "resource": {
-          "relative_path": "hardware/images/loader.png"
         }
       },
       "version": ""
@@ -453,7 +463,7 @@
       "output": {
         ".html": {
           "relative_path": "software/coding-options/coding-options.html",
-          "hash": "UVPm2KcAxqyB5AftQL/G7Y6+oUXakQV0io6qJZnXxDg="
+          "hash": "/kukFij2y2oJE+27Rl1ocymT9TmYfuBAdsInUbJS2zo="
         }
       },
       "version": ""
@@ -712,7 +722,7 @@
       "output": {
         ".html": {
           "relative_path": "software/due-script/corelib/lcd.html",
-          "hash": "wBck98DWOtNQmBr53BUha2Y0cCYe2ko5crUtP1AXPFQ="
+          "hash": "s2ECqcDMdCuxKp/nzT8LoLyu9T+GnEuonZlxykZZjFo="
         }
       },
       "version": ""
@@ -811,7 +821,7 @@
       "output": {
         ".html": {
           "relative_path": "software/due-script/due-script.html",
-          "hash": "ZagVO+7wNJg6n6F91I02qe90UimOUGCX0T4M68s+xXo="
+          "hash": "xmYSEwZWIsf9+TjjKrEHKe/2KIvT4Jmv2YIXmUmCrIc="
         }
       },
       "version": ""
@@ -1073,17 +1083,27 @@
       "output": {
         ".html": {
           "relative_path": "software/getting-started.html",
-          "hash": "/90XAVTG1Te4QjtHkdVoyciQDZnSTJHZ0TwFu0/+1Cw="
+          "hash": "JRTGKYvC/YyVzCKHIK9K9RryOKzco/R1BxXHIhmd04s="
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "software/images/btn-getting-started.png",
+      "source_relative_path": "software/images/btn-brainpad.png",
       "output": {
         "resource": {
-          "relative_path": "software/images/btn-getting-started.png"
+          "relative_path": "software/images/btn-brainpad.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/images/btn-coding-options.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/images/btn-coding-options.png"
         }
       },
       "version": ""
@@ -1120,10 +1140,70 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "software/images/console-about.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/images/console-about.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/images/console-blinkdemo.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/images/console-blinkdemo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "software/images/console-buttons.png",
       "output": {
         "resource": {
           "relative_path": "software/images/console-buttons.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/images/console-connect.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/images/console-connect.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/images/console-log-window.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/images/console-log-window.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/images/console-log.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "software/images/console-log.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "software/images/console-log.png",
+      "output": {
+        "resource": {
+          "relative_path": "software/images/console-log.png"
         }
       },
       "version": ""
@@ -1486,7 +1566,7 @@
       "output": {
         ".html": {
           "relative_path": "software/toc.html",
-          "hash": "JGtllbPpkkQVJMiHUd7U5rP+gaECs6t/34hV+vvYBNQ="
+          "hash": "9BJAOLkjDCrphO9MeHAYUAUnO95PyNDMq1AMsR/7Itw="
         }
       },
       "version": ""

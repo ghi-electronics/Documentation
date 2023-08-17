@@ -82,19 +82,47 @@
 <div style="text-align: center;">
 <p><img src="images/getting-started.png" alt="Host Mode"></p>
 </div>
-<p><strong>Hardware Selection</strong></p>
-<p>The first step is to pick from one of the many available <a href="../hardware/intro.html">DUE Hardware</a> options. Which includes the Maker friendly FEZ(Fast &amp; Easy) Flea, FEZ Pico, and STEM educational BrainPad. Follow the instructions to load the latest firmware to get the hardware ready.</p>
-<p><strong>Start Coding</strong></p>
-<p>If you're just starting out with DUE Link the BrainPad hardware and its included lessons are a great place to start.</p>
+<h2 id="hardware-selection">Hardware Selection</h2>
+<p>The first step is to pick from one of the many available <a href="../hardware/intro.html">DUE Hardware</a> options. Which includes the Maker friendly FEZ (Fast &amp; Easy) boards and the STEM educational BrainPad boards.</p>
+<p>If you're just starting out with DUE Link, the BrainPad hardware and its included lessons are recommended.</p>
+<p>Follow the hardware instructions to load the latest DUE Link firmware onto your device.</p>
+<h2 id="start-coding">Start Coding</h2>
+<p>If using BrainPad, visit its website for full lessons on DUE Link and other hosted languages, like Python and JavaScript.</p>
 <div style="text-align: center;">
-<p><a href="../hardware/brainpad.html"><img src="images/btn-getting-started.png" alt="DUE Console"></a></p>
+<p><a href="../hardware/brainpad.html"><img src="images/btn-brainpad.png" alt="BrainPad Hardware"></a></p>
 </div>
-<p>The lessons includes DUE Script lessons that take advantage of the web-based <a href="console.html">DUE Console</a> it requires nothing to install. Connect your device and you are ready to start coding.</p>
+<hr>
+<h2 id="blink-led">Blink LED</h2>
+<p>Assuming you already have hardware and the board is loaded with the latest firmware, We will start by blinking an LED using DUE Script.</p>
+<p>Open the <a href="https://console.duelink.com/">DUE Console</a></p>
 <p><img src="images/due-console.png" alt="DUE Console"></p>
-<p>The lessons also include other <a href="coding-options/coding-options.html">Coding Options</a>.</p>
-<p><img src="images/coding-options.png" alt="Coding Options"></p>
-<p>Some of the coding options include full <a href="https://github.com/ghi-electronics/due-libraries">open-source libraries</a> for easier use. However, all coding options include demos to get you started. Check out the many provided <a href="https://github.com/ghi-electronics/due-samples">open-source samples</a>.</p>
-<p>Users with experience and a working setup can start with <a href="due-script/due-script.html">DUE Scripts</a> utilizing its <a href="due-script/corelib/corelib.html">Core library</a>.</p>
+<p>Reset your hardware, or simply unplug it from the PC and then plug it back in. Now, we can connect to the DUE console. To connect click on the Plug button.</p>
+<p><img src="images/due-connect.png" alt="Connect"></p>
+<p>A window will now show the available connections. If you have more than one, select the one that has DUE in it and click <strong>Connect</strong>.</p>
+<p><img src="images/console-connect.png" alt="DUE Console"></p>
+<p>Note how the “About” panel shows some important info, and may remind you that you do not have the latest firmware.</p>
+<p><img src="images/console-about.png" alt="DUE Console About"></p>
+<p>For our blinky program, we do not need to write any code! Just click on Demos ➤ Blink LED.</p>
+<p><img src="images/console-blinkdemo.png" alt="DUE Console Demos"></p>
+<p>We can now Record (red button)</p>
+<p><img src="images/due-record.png" alt="DUE Record Button"></p>
+<p>and then Play (Green Button). The LED will now start blinking on your board.</p>
+<p><img src="images/due-play.png" alt="DUE Play Button"></p>
+<p>What you just did was write a program in “Recording Mode”. This program lives on the board (gets recorded) and will always be executed on the device on power up, or after reset. Go ahead and Click Stop (Blue button).</p>
+<p><img src="images/due-stop.png" alt="DUE Stop Button"></p>
+<p>Go to the immediate window, where it says “Code to Run Immediately…” and enter:</p>
+<pre><code>Log(“Hello DUE”)
+</code></pre>
+<p><img src="images/console-log.png" alt="DUE Console Log"></p>
+<p>And then click the execute button (Right Arrow). This will now show Hello DUE in the Output panel. This line of code was not recorded onto the device and only got executed. More on recorded vs immediate modes in future lessons.</p>
+<p><img src="images/console-log-window.png" alt="DUE Console Log"></p>
+<hr>
+<h2 id="coding-options">Coding Options</h2>
+<p><img src="images/coding-options.png" alt="Coding Options">
+The DUE Link ecosystem includes many coding options, starting with DUE Link we have just used.</p>
+<div style="text-align: center;">
+<p><a href="coding-options/coding-options.html"><img src="/images/btn-coding-options.png" alt="Coding Options"></a></p>
+</div>
 </article>
           </div>
 
