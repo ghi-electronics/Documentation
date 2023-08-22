@@ -13,7 +13,7 @@ Language | Software Support
 [DUE Script](../due-script/due-script.md) | Built-in
 [Python](python.md) | Full Library
 [.NET](dotnet.md) | Full Library
-[JavaScript](javascript.md)| Demo Sample
+[JavaScript](javascript.md)| Full Library
 [Swift](swift.md)| Demo Sample
 [C++](cpp.md)| Demo Sample
 [Excel](excel.md)| Demo Sample
