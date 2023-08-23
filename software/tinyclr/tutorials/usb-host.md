@@ -80,11 +80,11 @@ class Program {
 
                     default:
                         // This example is mount keyboard as RawDevice
-						var rawDevice = new RawDevice(e.Id, e.InterfaceIndex, e.Type);
+                        var rawDevice = new RawDevice(e.Id, e.InterfaceIndex, e.Type);
                         var devDesc = rawDevice.GetDeviceDescriptor();
                         var cfgDesc = rawDevice.GetConfigurationDescriptor(0);
 						
-						rawDevice.SendSetupPacket(0, 9, 1, 0); 
+                        rawDevice.SendSetupPacket(0, 9, 1, 0); 
 						
                         var endpointData = new byte[7];
 
