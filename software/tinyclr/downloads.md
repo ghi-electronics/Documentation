@@ -22,6 +22,7 @@ The Firmware is the TinyCLR OS that lives on your hardware. The firmware version
 
 File | Date | Status | MD5
 --- | --- | --- | ---
+[v2.2.0.6000 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.2.0.6000.ghi) | 2023-08-25 | Production | ???
 [v2.2.0.5100 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.2.0.5100.ghi) | 2022-09-20 | Production | 9B69EF733A361D1D4D1484D40E5854B0
 [v2.2.0.5000 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.2.0.5000.ghi) | 2022-09-15 | Production | 825F30A6A562005138DC7285A56A2D67
 [v2.2.0.4000 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.2.0.4000.ghi) | 2022-04-18 | Production | B4AF89D007656B846FBD18B3FD400947
@@ -42,6 +43,7 @@ File | Date | Status | MD5
 
 File | Date | Status | MD5
 --- | --- | --- | ---
+[v2.2.0.6000 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.2.0.6000.ghi) | 2023-08-25 | Production | ???
 [v2.2.0.5100 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.2.0.5100.ghi) | 2022-09-20 | Production | 4A8FDABC9D47CDD768D238BFBD6FD6A9
 [v2.2.0.5000 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.2.0.5000.ghi) | 2022-09-15 | Production | D943F0D26ADCA7A8F18D0FCCAA4696B2
 [v2.2.0.4000 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.2.0.4000.ghi) | 2022-04-18 | Production | C56FE59386EB8168E46CC49806DC7CB0
@@ -62,6 +64,7 @@ TinyCLR Config is a tool used to update and configure your TinyCLR device.
 
 File | Date | Status | MD5
 --- | --- | --- | ---
+[v2.2.0.6000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Config/TinyCLR-Config-Setup-v2.2.0.6000.msi) | 2023-08-25 | Production | ???
 [v2.2.0.5000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Config/TinyCLR-Config-Setup-v2.2.0.5000.msi) | 2022-09-15 | Production | 50430F4EE449D0CACF48E0C1D89AE7BD
 [v2.2.0.4000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Config/TinyCLR-Config-Setup-v2.2.0.4000.msi) | 2022-04-18 | Production | 0C4286A9BA44BC893DF953F8B7B2921D
 [v2.2.0.3000-RC1](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Config/TinyCLR-Config-Setup-v2.2.0.3000-rc1.msi) | 2022-03-09  | RC1 | 00D367FEEF1E11C97534D07DD2C4EA9B
@@ -83,6 +86,7 @@ The extension is what gets loaded on Visual Studio to allow it to communicate wi
 
 File | Date | Status | MD5
 --- | --- | --- | ---
+[v2.2.0.6000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.2.0.6000.vsix) | 2023-08-25 | Update | ???
 [v2.2.0.5000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.2.0.5000.vsix) | 2022-09-15 | Update | CF0BBD7750F44A716A59C2DB366912AB
 [v2.2.0.4200-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.2.0.4200.vsix) | 2022-05-18 | Update | 234252AB352796EFC154FFE8048C7F03
 [v2.2.0.4100-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.2.0.4100.vsix) | 2022-04-20 | Update | 437F2F1BAA03D803F173AF19645C5BED
@@ -116,6 +120,7 @@ The libraries are provided here in case you're having trouble with the online so
 
 File | Date | Status | MD5
 --- | --- | --- | ---
+[v2.2.0.6000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.2.0.6000.zip) | 2023-08-25 | Update | ???
 [v2.2.0.5000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.2.0.5000.zip) | 2022-09-15 | Update | 71C5C9FEFD0803C21481D4471A03649F
 [v2.2.0.4200-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.2.0.4200.zip) | 2022-05-18 | Update | AE949C6A35E58F3CB9E7BB8A0716C3C5
 [v2.2.0.4000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.2.0.4000.zip) | 2022-04-18 | Production | 4A9D2A2BA2F17C3D7C00AC43903B4E13

@@ -4,6 +4,96 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.2.0.6000 - RTW
+
+### Released 2023-08-25
+
+### Visual Studio Project System
+
+#### Changes
+
+- VS2022: Display assembly name if exceed byte code.
+- VS2019: None.
+
+#### Known Issues
+
+- None.
+
+### Libraries
+
+#### Changes
+
+- Changed from net4.5 to 4.8
+- TFS: Implement Dispose()
+- Fixed SoftwareI2C throws exception in constructor.
+- Fixed DigitalSignal leaks memory when create new object
+- Fixed incorrect build string in StringBuilder.ToString(int startIndex, int length)
+- Improve Networking.Http
+- Cryptography: Added SignData and VerifyData method
+
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+
+##### SC20xxx:
+
+- USBHost: Fixed crashed on some thhumbdrives if they are inserted at boot.
+- USBHost: RawDevice mode, fixed crashed on some HID that not supported.
+- USBClient: Fixed can't switch between WinUsb and Masstogare mode
+- Add handshaking for UART8 on SC20100 (PD15: RTS, PD14: CTS)
+- LWIP: Exclude the transmission of the “Host Name” field from the “DHCP REQUEST” packet
+- TLS: When Verification mode is none, ignore verifiy.
+- Fixed double to string overload.
+- SignalDigital: Fixed can't use Capture mode if Generate mode was used.
+- Fixed can't set RTC alarm more than 7 days
+
+##### SC13xxx
+
+- Fixed double to string overload.
+- SignalDigital: Fixed can't use Capture mode if Generate mode was used.
+- Fixed can't set RTC alarm more than 7 days
+ 
+#### Known Issues
+
+- None.
+
+### Drivers
+
+#### Changes
+
+- Changed from net4.5 to 4.8
+
+#### Known Issues
+
+- None.
+
+### TinyCLR Config
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+
 ## 2.2.0.5100 - RTW
 
 ### Released 2022-09-20
