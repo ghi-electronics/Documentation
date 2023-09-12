@@ -6,7 +6,7 @@
 
 ## 2.2.0.6000 - RTW
 
-### Released 2023-08-25
+### Released 2023-09-12
 
 ### Visual Studio Project System
 
