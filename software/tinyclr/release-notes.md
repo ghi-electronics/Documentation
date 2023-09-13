@@ -352,12 +352,12 @@
 - Fixed ADC: close channel effect to other channel if same controller.
 - MSC: Fixed QSPI 
 - MSC: Added event when select eject from PC.
-- Fixed PWM: Change dutycyle change polarity.
+- Fixed PWM: Change duty-cycle change polarity.
 
 ##### SC13xxx
 
 - Fix ADC: close channel effect to other channel if same controller.
-- Fix PWM: Change dutycyle change polarity.
+- Fix PWM: Change duty-cycle change polarity.
  
 #### Known Issues
 
