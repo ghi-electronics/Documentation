@@ -82,3 +82,21 @@ If no key size is provided as an argument to `RSACryptoServiceProvider()`, a def
 
 The boolean argument for `RSA.ExportParameters()` determines whether this method returns the private key (true) or public key (false). The public key is used to encrypt messages, while the private key is needed to decrypt messages.
 
+The code sample below demonstrates how to sign & verify data.
+
+```cs
+var dataToSign = Encoding.UTF8.GetBytes("Data to sign. This is for test");
+byte[] signData;
+RSAParameters signKey;
+
+using (RSACryptoServiceProvider SignRSA = new RSACryptoServiceProvider()){
+    signKey = SignRSA.ExportParameters(true);
+    SignRSA.ImportParameters(signKey);
+    signData = SignRSA.SignData(dataToSign, true);
+}
+
+using (RSACryptoServiceProvider VerifyRSA = new RSACryptoServiceProvider()){
+    VerifyRSA.ImportParameters(signKey);
+    Debug.WriteLine("Signed: " + VerifyRSA.VerifyData(dataToSign, signData, true));
+}
+```
