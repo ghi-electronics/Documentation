@@ -6,7 +6,7 @@
 
 ## 2.2.0.6000 - RTW
 
-### Released 2023-09-12
+### Released 2023-09-14
 
 ### Visual Studio Project System
 
@@ -42,12 +42,12 @@
 
 ##### SC20xxx:
 
-- USBHost: Fixed crashed on some thumb drives if they are inserted at boot.
+- USBHost: Fixed crashed on some thhumbdrives if they are inserted at boot.
 - USBHost: RawDevice mode, fixed crashed on some HID that not supported.
-- USBClient: Fixed can't switch between WinUsb and MassStorage mode
+- USBClient: Fixed can't switch between WinUsb and Masstogare mode
 - Add handshaking for UART8 on SC20100 (PD15: RTS, PD14: CTS)
 - LWIP: Exclude the transmission of the “Host Name” field from the “DHCP REQUEST” packet
-- TLS: When Verification mode is none, ignore verify.
+- TLS: When Verification mode is none, ignore verifiy.
 - Fixed double to string overload.
 - SignalDigital: Fixed can't use Capture mode if Generate mode was used.
 - Fixed can't set RTC alarm more than 7 days
@@ -66,7 +66,7 @@
 
 #### Changes
 
-- Changed from .NET 4.5 to 4.8
+- Changed from net4.5 to 4.8
 
 #### Known Issues
 
@@ -325,7 +325,7 @@
 
 #### Changes
 
-- VS2022: Added generate TCA and RAW application.
+- VS2022: Added generate Tca and raw application.
 - VS2022: Fixed deploying external flash with large image white color (0xFF) failed sometime.
 - VS2019: None.
 
@@ -352,12 +352,12 @@
 - Fixed ADC: close channel effect to other channel if same controller.
 - MSC: Fixed QSPI 
 - MSC: Added event when select eject from PC.
-- Fixed PWM: Change duty-cycle change polarity.
+- Fixed PWM: Change dutycyle change polarity.
 
 ##### SC13xxx
 
 - Fix ADC: close channel effect to other channel if same controller.
-- Fix PWM: Change duty-cycle change polarity.
+- Fix PWM: Change dutycyle change polarity.
  
 #### Known Issues
 
@@ -429,16 +429,16 @@
 - Reduce CPU workload. 
 - Reduce CPU temperature when system idle.
 - Reduces power consumption when system idle.
-- Native File system now work with MSC QSPI
+- Native Filesystem now work with MSC QSPI
 - Increase QSPI MSC 16MB.
 - Ethernet Built-in: Reduce timeout from 4 seconds to 2 second if no cable connected.
-- Fixed system crashed when deploy TCA file on external flash.
+- Fixed system crashed when deploy tca file on external flash.
 
 ##### SC13xxx
 
 - Fixed Thread.Sleep(1) or Thread.Sleep(2) still use 100% CPU
 - Fixed CPU 100% after data received event.
-- Fixed system crashed when deploy TCA file on external flash.
+- Fixed system crashed when deploy tca file on external flash.
  
 #### Known Issues
 
@@ -458,7 +458,7 @@
 
 #### Changes
 
-- Fixed can't re-connect the device after deploying TCA file.
+- Fixed can't re-connect the device after deploying tca file.
 
 #### Known Issues
 
@@ -522,7 +522,7 @@
 - Fixed UART threshold.
 - Fixed UART couldn't activate a second time if handshaking was enabled first time.
 - Fixed couldn't mount on some USB thumb drives.
-- Fixed GPIO Interrupt.
+- Fixed Gpio Interrupt.
 - Fixed Ethernet direct mode.
 - Fixed DrawLine n pixels thickness is wrong if n=2 or higher.
 - Fixed GetBitmap() return not enough data.
@@ -534,7 +534,7 @@
 - Fixed PWM glitch.
 - Fixed UART threshold.
 - Fixed UART couldn't activate a second time if handshaking was enabled first time.
-- Fixed GPIO Interrupt.
+- Fixed Gpio Interrupt.
 - Fixed CAN full event not raised.
 - UART, CAN data received, error events interval down from 100ms to 10ms 
  
@@ -601,7 +601,7 @@
 - UI: Fixed No vertical alignment for TextBox text https://github.com/ghi-electronics/TinyCLR-Libraries/issues/1082
 - UI: Fixed There is no password field option for the textbox https://github.com/ghi-electronics/TinyCLR-Libraries/issues/1066
 - UI: Fixed Onscreen keyboard miss-aligned with 4.3 https://github.com/ghi-electronics/TinyCLR-Libraries/issues/1087
-- JSON: Throw not supported exception if ArrayList found.
+- Json: Throw not supported exception if ArrayList found.
 
 #### Known Issues
 
@@ -1016,7 +1016,7 @@
 - Fixed insert multi row failed SQLite.
 - Enabled Threadsafe SQLite.
 - Increase network socket from 20 to 32.
-- Fixed IFU crashed when use memory stream and large external TCA.
+- Fixed IFU crashed when use memory stream and large external tca.
 
 
 #### Known Issues
@@ -1027,7 +1027,7 @@
 
 #### Changes
 
-- Improved SPI, SPI pins set to GPIO::High (they were very high that causes issue on MP3 click module).
+- Improved SPI, SPI pins set to GPIO::High (they were very high that causes bad on MP3 click module).
 - Fixed Shutdown still draw high power consumption after enable external ram.
 - Add native NeoPixel driver.
 
@@ -1050,7 +1050,7 @@
 
 #### Changes
 
-- Rewrote Neopixel WS2812 natively, supporting 16/24 bit.
+- Rewrote neopixel WS2812 natively, supporting 16/24 bit.
 - Added managed file system (SD SPI).
 - Improve OV9655 camera driver.
 
@@ -1062,7 +1062,7 @@
 
 #### Changes
 
-- Add support GLB format (MicroPython firmware).
+- Add support glb format (micropython firmware).
 
 #### Known Issues
 
@@ -1506,7 +1506,7 @@
 #### Changes
 
 - Increment version number 2.1.0-preview2.
-- WinC15xx: Added Set/Remove Multicast address.
+- WinC15xx: Added Set/Remove multicast address.
 
 #### Known Issues
 
@@ -1538,7 +1538,7 @@
 - Increment version number 2.1.0-preview1.
 - Added Unique ID.
 - Fixed Socket.Poll(-1) cause system slow.
-- Fixed Multicast.
+- Fixed multicast.
 - Correct SPI6 clock source.
 - Prevent active USB client in USB debug mode.
 - Fixed WiFi doesn't fire event when disconnected from a hotspot.
@@ -2163,7 +2163,7 @@ This preview release includes many bug fixes, a few new and updated features, an
 - Graphics.Clear() no longer takes an argument.
 - Added NeoPixel WS2812 driver.
 - Added SSD1351 display driver.
-- Changed MJPEG driver to return raw JPEG data instead of internally flushing data to display.
+- Changed MJPEG driver to return raw jpeg data instead of internally flushing data to display.
 - Fixed dependency for OV9655 driver and sped up screen refresh rate.
 - Reworked the SSD1306 and ST7735 display drivers so they no longer inherit from DisplayController.
 
