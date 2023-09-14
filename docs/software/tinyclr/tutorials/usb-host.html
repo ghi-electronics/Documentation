@@ -157,9 +157,13 @@ class Program {
                         break;
 
                     default:
+                        // This example is mount keyboard as RawDevice
                         var rawDevice = new RawDevice(e.Id, e.InterfaceIndex, e.Type);
                         var devDesc = rawDevice.GetDeviceDescriptor();
                         var cfgDesc = rawDevice.GetConfigurationDescriptor(0);
+						
+                        rawDevice.SendSetupPacket(0, 9, 1, 0); 
+						
                         var endpointData = new byte[7];
 
                         endpointData[0] = 7;        //Length in bytes of this descriptor.
@@ -237,7 +241,7 @@ class Program {
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/RemoveDUE/software/tinyclr/tutorials/usb-host.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/usb-host.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -280,7 +284,7 @@ class Program {
       </footer>
     </div>
 
-    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>

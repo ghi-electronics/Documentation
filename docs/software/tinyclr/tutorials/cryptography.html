@@ -147,6 +147,22 @@ Debug.WriteLine(&quot;Decrypted: &quot; + Encoding.UTF8.GetString(decryptedData)
 </code></pre>
 <p>If no key size is provided as an argument to <code>RSACryptoServiceProvider()</code>, a default key size of 1024 bits will be used.</p>
 <p>The boolean argument for <code>RSA.ExportParameters()</code> determines whether this method returns the private key (true) or public key (false). The public key is used to encrypt messages, while the private key is needed to decrypt messages.</p>
+<p>The code sample below demonstrates how to sign &amp; verify data.</p>
+<pre><code class="lang-cs">var dataToSign = Encoding.UTF8.GetBytes(&quot;Data to sign. This is for test&quot;);
+byte[] signData;
+RSAParameters signKey;
+
+using (RSACryptoServiceProvider SignRSA = new RSACryptoServiceProvider()){
+    signKey = SignRSA.ExportParameters(true);
+    SignRSA.ImportParameters(signKey);
+    signData = SignRSA.SignData(dataToSign, true);
+}
+
+using (RSACryptoServiceProvider VerifyRSA = new RSACryptoServiceProvider()){
+    VerifyRSA.ImportParameters(signKey);
+    Debug.WriteLine(&quot;Signed: &quot; + VerifyRSA.VerifyData(dataToSign, signData, true));
+}
+</code></pre>
 </article>
           </div>
 
@@ -155,7 +171,7 @@ Debug.WriteLine(&quot;Decrypted: &quot; + Encoding.UTF8.GetString(decryptedData)
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ghi-electronics/Documentation/blob/RemoveDUE/software/tinyclr/tutorials/cryptography.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ghi-electronics/Documentation/blob/dev/software/tinyclr/tutorials/cryptography.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -198,7 +214,7 @@ Debug.WriteLine(&quot;Decrypted: &quot; + Encoding.UTF8.GetString(decryptedData)
       </footer>
     </div>
 
-    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>
