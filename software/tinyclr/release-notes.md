@@ -4,6 +4,95 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.2.0.6000 - RTW
+
+### Released 2023-09-14
+
+### Visual Studio Project System
+
+#### Changes
+
+- VS2022: Display assembly name if exceed byte code.
+- VS2019: None.
+
+#### Known Issues
+
+- None.
+
+### Libraries
+
+#### Changes
+
+- TFS: Implement Dispose()
+- Fixed SoftwareI2C throws exception in constructor.
+- Fixed DigitalSignal leaks memory when create new object
+- Fixed incorrect build string in StringBuilder.ToString(int startIndex, int length)
+- Improve Networking.Http
+- Cryptography: Added SignData and VerifyData method
+
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+
+##### SC20xxx:
+
+- USBHost: Fixed crashed on some thumb rives if they are inserted at boot.
+- USBHost: RawDevice mode, fixed crashed on some HID that not supported.
+- USBClient: Fixed can't switch between WinUsb and Mass-storage mode
+- Add handshaking for UART8 on SC20100 (PD15: RTS, PD14: CTS)
+- LWIP: Exclude the transmission of the “Host Name” field from the “DHCP REQUEST” packet
+- TLS: When Verification mode is none, ignore verify.
+- Fixed double to string overload.
+- SignalDigital: Fixed can't use Capture mode if Generate mode was used.
+- Fixed can't set RTC alarm more than 7 days
+
+##### SC13xxx
+
+- Fixed double to string overload.
+- SignalDigital: Fixed can't use Capture mode if Generate mode was used.
+- Fixed can't set RTC alarm more than 7 days
+ 
+#### Known Issues
+
+- None.
+
+### Drivers
+
+#### Changes
+
+- Changed from .NET 4.5 to 4.8
+
+#### Known Issues
+
+- None.
+
+### TinyCLR Config
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+
 ## 2.2.0.5100 - RTW
 
 ### Released 2022-09-20
@@ -235,7 +324,7 @@
 
 #### Changes
 
-- VS2022: Added generate Tca and raw application.
+- VS2022: Added generate TCA and raw application.
 - VS2022: Fixed deploying external flash with large image white color (0xFF) failed sometime.
 - VS2019: None.
 
@@ -262,12 +351,12 @@
 - Fixed ADC: close channel effect to other channel if same controller.
 - MSC: Fixed QSPI 
 - MSC: Added event when select eject from PC.
-- Fixed PWM: Change dutycyle change polarity.
+- Fixed PWM: Changes to dutycycle does not affect polarity.
 
 ##### SC13xxx
 
 - Fix ADC: close channel effect to other channel if same controller.
-- Fix PWM: Change dutycyle change polarity.
+- Fix PWM: Changes to dutycycle does not affect polarity.
  
 #### Known Issues
 
@@ -342,13 +431,13 @@
 - Native Filesystem now work with MSC QSPI
 - Increase QSPI MSC 16MB.
 - Ethernet Built-in: Reduce timeout from 4 seconds to 2 second if no cable connected.
-- Fixed system crashed when deploy tca file on external flash.
+- Fixed system crashed when deploy TCA file on external flash.
 
 ##### SC13xxx
 
 - Fixed Thread.Sleep(1) or Thread.Sleep(2) still use 100% CPU
 - Fixed CPU 100% after data received event.
-- Fixed system crashed when deploy tca file on external flash.
+- Fixed system crashed when deploy TCA file on external flash.
  
 #### Known Issues
 
@@ -368,7 +457,7 @@
 
 #### Changes
 
-- Fixed can't re-connect the device after deploying tca file.
+- Fixed can't re-connect the device after deploying TCA file.
 
 #### Known Issues
 
@@ -511,7 +600,7 @@
 - UI: Fixed No vertical alignment for TextBox text https://github.com/ghi-electronics/TinyCLR-Libraries/issues/1082
 - UI: Fixed There is no password field option for the textbox https://github.com/ghi-electronics/TinyCLR-Libraries/issues/1066
 - UI: Fixed Onscreen keyboard miss-aligned with 4.3 https://github.com/ghi-electronics/TinyCLR-Libraries/issues/1087
-- Json: Throw not supported exception if ArrayList found.
+- JSON: Throw not supported exception if ArrayList found.
 
 #### Known Issues
 
@@ -829,7 +918,7 @@
 
 #### Changes
 
-- Fixed USBClient WinUSB, Cdc failed when sending multiple of 64 bytes.
+- Fixed USBClient WinUSB, CDC failed when sending multiple of 64 bytes.
 - Fixed UART crashed when enable handshaking on SC13xxx
 - Fixed enabling SoftwarePWM cause Timer 16 stop working on SC13xxx
 
@@ -926,7 +1015,7 @@
 - Fixed insert multi row failed SQLite.
 - Enabled Threadsafe SQLite.
 - Increase network socket from 20 to 32.
-- Fixed IFU crashed when use memory stream and large external tca.
+- Fixed IFU crashed when use memory stream and large external TCA.
 
 
 #### Known Issues
@@ -960,7 +1049,7 @@
 
 #### Changes
 
-- Rewrote neopixel WS2812 natively, supporting 16/24 bit.
+- Rewrote Neopixel WS2812 natively, supporting 16/24 bit.
 - Added managed file system (SD SPI).
 - Improve OV9655 camera driver.
 
@@ -972,7 +1061,7 @@
 
 #### Changes
 
-- Add support glb format (micropython firmware).
+- Add support GLB format (MicroPython firmware).
 
 #### Known Issues
 
@@ -1448,7 +1537,7 @@
 - Increment version number 2.1.0-preview1.
 - Added Unique ID.
 - Fixed Socket.Poll(-1) cause system slow.
-- Fixed multicast.
+- Fixed Multicast.
 - Correct SPI6 clock source.
 - Prevent active USB client in USB debug mode.
 - Fixed WiFi doesn't fire event when disconnected from a hotspot.
