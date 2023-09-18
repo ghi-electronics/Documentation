@@ -43,6 +43,13 @@ We recommend beginners start out with the [BrainPad](brainpad.md), it is made fo
 
 ---
 
+## Loading the Firmware
+The first step to load the DUE firmware on your hardware is to navigate to the [console.duelink.com](https://https://console.duelink.com/) and click on the **Firmware** tab and follow the instructions.
+
+![DUE Firmware](images/due-firmware.png) 
+
+---
+
 ## Getting Started
 
 The DUE getting started page shows steps needed start using the DUE Link ecosystem of coding options.
@@ -55,11 +62,11 @@ The DUE getting started page shows steps needed start using the DUE Link ecosyst
 
 ---
 
-# Hardware Demos
+## Hardware Demos
 
 The supported hardware's form factor opens the opportunity to use some of the many available accessories on the market. Here are just a few examples. 
 
-## PicoMate
+### PicoMate
 
 The PicoMate is a single-pcb with multiple Grove compatible sensors that are removable or work in place. Samples in the repo demonstrate extending DUE with Python or .NET. 
 
@@ -69,7 +76,7 @@ The PicoMate is a single-pcb with multiple Grove compatible sensors that are rem
 
 ---
 
-## Grove Module Shields
+### Grove Module Shields
 
 These Grove shields are a great way to connect the many Grove modules on the market to DUE. There are many drivers located in the DUE samples driver repo to get you started.
 
@@ -81,7 +88,7 @@ These Grove shields are a great way to connect the many Grove modules on the mar
 
 ---
 
-## Qwiic/STEMMA QT Connector
+### Qwiic/STEMMA QT Connector
 
 The built in JST connector on the FEZ Pico opens up the door for even more expansion options, using Qwiic or STEMMA QT sensors.
 
@@ -91,7 +98,7 @@ The built in JST connector on the FEZ Pico opens up the door for even more expan
 
 ---
 
-## Mikroe Click Shield for Pico
+### Mikroe Click Shield for Pico
 
 Mikroe Electronica has 1000's of Click sensors available, this shield provides an interface to those modules. Our demo in DUE Samples repo uses the LEDRing Click module. 
 
