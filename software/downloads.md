@@ -24,6 +24,7 @@ Preview | Preview of the next release, not quite ready for production use.
 
 File | Date | Status
 --- | --- | ---
+[v1.1.3](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v113.ghi) | 2023-09-21 | RC
 [v1.1.2](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v112.ghi) | 2023-09-18 | RC
 [v1.1.0](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v110.ghi) | 2023-08-08 | RC
 [v1.0.3](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v103.ghi) | 2023-05-30 | RC
@@ -35,6 +36,7 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
+[v1.1.3](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc007_v113.ghi) | 2023-09-21 | RC
 [v1.1.2](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc007_v112.ghi) | 2023-09-18 | RC
 [v1.1.0](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc007_v110.ghi) | 2023-08-08 | RC
 [v1.0.3](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc007_v103.ghi) | 2023-05-30 | RC
