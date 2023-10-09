@@ -24,6 +24,7 @@ Preview | Preview of the next release, not quite ready for production use.
 
 File | Date | Status
 --- | --- | ---
+[v1.1.4](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v114.ghi) | 2023-10-09 | RC
 [v1.1.3](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v113.ghi) | 2023-09-21 | RC
 [v1.1.2](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v112.ghi) | 2023-09-18 | RC
 [v1.1.0](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc13_v110.ghi) | 2023-08-08 | RC
@@ -36,6 +37,7 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
+[v1.1.4](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc007_v114.ghi) | 2023-10-09 | RC
 [v1.1.3](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc007_v113.ghi) | 2023-09-21 | RC
 [v1.1.2](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc007_v112.ghi) | 2023-09-18 | RC
 [v1.1.0](https://ghistorage.blob.core.windows.net/downloads/Due/Firmware/due_sc007_v110.ghi) | 2023-08-08 | RC
@@ -55,6 +57,7 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
+[v1.1.1](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.1.1.nupkg) | 2023-09-26 | RC
 [v1.1.0](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.1.0.nupkg) | 2023-08-08 | RC
 [v1.0.3](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.0.3.nupkg) | 2023-05-30 | RC
 [v1.0.2](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/dotnet/GHIElectronics.DUELink.1.0.2.nupkg) | 2023-05-24 | RC
@@ -68,6 +71,7 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
+[v1.1.1](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.1.1-py3-none-any.whl) | 2023-09-26 | RC
 [v1.1.0](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.1.0-py3-none-any.whl) | 2023-08-08 | RC
 [v1.0.3](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.0.3-py3-none-any.whl) | 2023-05-30 | RC
 [v1.0.2](https://ghistorage.blob.core.windows.net/downloads/Due/Libraries/python/DUELink-1.0.2-py3-none-any.whl) | 2023-05-24 | RC
@@ -79,10 +83,26 @@ File | Date | Status
 
 File | Date | Status
 --- | --- | ---
+[v1.1.1](https://github.com/ghi-electronics/due-libraries/tree/main/javascript) | 2023-09-26 | RC
 [v1.1.0](https://github.com/ghi-electronics/due-libraries/tree/main/javascript) | 2023-08-08 | RC
 [v1.0.3](https://github.com/ghi-electronics/due-libraries/tree/main/javascript) | 2023-05-30 | RC
 
 ## Release Notes
+
+### v1.1.4: 2023-10-09
+* Firmware:
+    - Improved SoftwarePwm
+    - Add 20ms debouce for button
+	
+### v1.1.3: 2023-09-26
+* Firmware:
+    - Increased heap to 40K for SC13 and 6K for SC007
+    - Fixed touch read x,y on SC007 need return -1
+	- Fixed Touchread display doesn't work in Program mode
+		
+### v1.1.1: 2023-09-26
+* Library:
+    - Fix reading Temperture and huminity return bool value
 
 ### v1.1.0: 2023-08-08
 * Firmware:
