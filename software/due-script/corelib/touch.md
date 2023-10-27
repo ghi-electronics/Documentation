@@ -4,10 +4,6 @@ This feature allows sensing of a finger or human touch to a pin. This requires a
 
 When using a touch screen like found on the BrainPad Rave use 'x' or 'y' to return the x & y positions where the screen is being touched. 
 
-> [!TIP]
-> Don't forget when using x or y to place inside SINGLE quotes.
-
-
 - **TouchRead(pin)** - Initializes the pin for touch, or reads the x y position on a touch screen   <br>
 **pin:** pin number, 'x', or 'y' <br>
 **pin Returns:** 0 = pin not touch, 1 = pin touched <br>
