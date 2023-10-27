@@ -10,7 +10,7 @@
       <meta name="title" content="Touch ">
     
       <link rel="shortcut icon" href="../../../images/favicon.ico">
-      <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../../../styles/docfx.css">
       <link rel="stylesheet" href="../../../styles/main.css">
       <meta property="docfx:navrel" content="../../../toc.html">
@@ -79,16 +79,30 @@
 <h1 id="touch">Touch</h1>
 
 <p>This feature allows sensing of a finger or human touch to a pin. This requires an external 100pf capacitor between the pin and GND. The caps are already found on BrainPad boards pads 0, 1, and 2.</p>
+<p>When using a touch screen like found on the BrainPad Rave use 'x' or 'y' to return the x &amp; y positions where the screen is being touched.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Don't forget when using x or y to place inside SINGLE quotes.</p>
+</div>
 <ul>
-<li><strong>TouchRead(pin)</strong> - Initializes the pin for touch   <br>
-<strong>pin:</strong> pin number<br>
-<strong>Returns:</strong> 0 = not touch or 1 = touched</li>
+<li><strong>TouchRead(pin)</strong> - Initializes the pin for touch, or reads the x y position on a touch screen   <br>
+<strong>pin:</strong> pin number, 'x', or 'y' <br>
+<strong>pin Returns:</strong> 0 = pin not touch, 1 = pin touched <br>
+<strong>x or y Returns:</strong> x position , or y position, -1 = screen not touched</li>
 </ul>
 <pre><code class="lang-basic">@Loop
+# Pin touch
 a=TouchRead(0):b=TouchRead(1):c=TouchRead(2)
 If a&gt;0:PrintLn(&quot;pin 0&quot;):End 
 If b&gt;0:PrintLn(&quot;pin 1&quot;):End
 If c&gt;0:PrintLn(&quot;pin 2&quot;):End 
+
+# Prints x &amp; y coordinates from touch screen to the Due Console Log window
+x = TouchRead('x')
+y = TouchRead('y')
+LogLn(x)
+LogLn(y)
+
 Wait(100)
 Goto Loop
 </code></pre>
@@ -128,7 +142,7 @@ Goto Loop
       </footer>
     </div>
 
-    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>
