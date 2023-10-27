@@ -6,8 +6,8 @@ When using a touch screen like found on the BrainPad Rave use 'x' or 'y' to retu
 
 - **TouchRead(pin)** - Initializes the pin for touch, or reads the x y position on a touch screen   <br>
 **pin:** pin number, 'x', or 'y' <br>
-**pin Returns:** 0 = pin not touch, 1 = pin touched <br>
-**x or y Returns:** x position , or y position, -1 = screen not touched
+**pin Returns:** 0 = pin not touched, 1 = pin touched <br>
+**x or y Returns:**  -1 = screen not touched, x position , y position
 
 ```basic
 @Loop
