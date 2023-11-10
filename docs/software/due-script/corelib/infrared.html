@@ -78,20 +78,21 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="infrared">Infrared</h1>
 
-<p>IR decoder is fixed to pin 2</p>
+<p>IR decoder is fixed to pin 2 and 8</p>
 <ul>
-<li><p><strong>IrEnable(enable)</strong> - enables pin for IR signal capture <br>
+<li><p><strong>IrEnable(pin,enable)</strong> - enables pin for IR signal capture <br>
+<strong>pin:</strong> 2 or 8 <br>
 <strong>enable:</strong> 1 = enable, 0 = disable <br></p>
 </li>
 <li><p><strong>IrRead()</strong> - reads the value from the IR enabled pin <br>
 <strong>Return:</strong> Tracks the past 16 key presses and returns them. -1 if none.</p>
 </li>
 </ul>
-<pre><code class="lang-basic">IrEnable(1)
+<pre><code class="lang-basic">IrEnable(2,1)
 @Loop
-x=IrRead()
-if x &gt;=0: PrintLn(x):end
-Wait(1000)
+  x=IrRead()
+  if x &gt;=0: PrintLn(x):end
+  Wait(1000)
 goto Loop
 </code></pre>
 <hr>
