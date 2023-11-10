@@ -1,11 +1,11 @@
 # NeoPixel Rotary
  ---
 
- ## Rotary Module
+ ## Grove Rotary Module
 
 ![Rotary Module](images/rotary-neopixel.gif)
 
-This sample uses a Grove rotary module and a Grove shield to control a NeoPixel Ring. This sample uses [Analog](../corelib/analog.md) & [Neopixel](../corelib/neopixel.md).
+This sample uses a Grove rotary module and with the FEZ Flea attached to a Grove XIAO shield to control a NeoPixel Ring. This sample uses [Analog](../corelib/analog.md) & [Neopixel](../corelib/neopixel.md).
 
 
 **Hardware:**
@@ -22,7 +22,7 @@ This sample uses a Grove rotary module and a Grove shield to control a NeoPixel 
 	NeoShow(24)
 	a=ARead(6)
 	NeoSet(a/4,255,0,0)
-	NeoShow(2,24)
+	NeoShow(0,24)
 	Wait(50)
 goto loop
 ```
