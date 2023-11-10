@@ -25,22 +25,22 @@ g=6       # Wall gap
 BtnEnable('a', 1)
 # Game loop
 @loop
-  NeoClear()
-  plyr()
-  wall()
-  coll()
-  NeoShow(256)
-  wait(50)
+   NeoClear()
+   plyr()
+   wall()
+   coll()
+   NeoShow(0,256)
+   wait(50)
 goto loop
 # Handle the player
 @plyr
-  if BtnDown('a')
-    if v>0:v=v-1:end
-    t=1
-  else
-    if v<15:v=v+0.5:end
-    t=-1
-  end
+   if BtnDown('a')
+     if v>0:v=v-1:end
+     t=1
+   else
+   if v<15:v=v+0.5:end
+       t=-1
+   end
   x=u
   y=trunc(v)
   pxl()
@@ -84,7 +84,7 @@ return
     y=(v-2)+rnd(4)
     pxl()
     NeoSet(p, rnd(64),0,0)
-    NeoShow(256)
+    NeoShow(0,256)
   next
   b=15
 return

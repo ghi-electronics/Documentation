@@ -43,21 +43,21 @@ h=16:w=16
 z=3.1415926/6
 i=0
 @loop
-  NeoClear()
-  for x=0 to 15
-    y = 8+sin((x+i)*z)*6
-    pxl()
-    NeoSet(p,0,128,0)
-  next
-  NeoShow(256)
-  i=i+1
+    NeoClear()
+    for x=0 to 15
+        y = 8+sin((x+i)*z)*6
+        pxl()
+        NeoSet(p,0,128,0)
+    next
+    NeoShow(0,256)
+    i=i+1
 goto loop
 
 # Formula for index into 16x16 NeoPixel Matrix
 # p=pxl(x,y)
 @pxl
-  p = x*w+(x&1)*(w-1)+(1-2*(x&1))*y
-  return
+    p = x*w+(x&1)*(w-1)+(1-2*(x&1))*y
+return
 ```
 
 ---
@@ -74,30 +74,30 @@ h=16:w=16
 i=0
 z=3.1415926/6
 @loop
-  NeoClear()
-  for x=0 to 15
-    d = x+i
-    y = 8+sin(d*z)*6
-    pxl()
-    NeoSet(p,128,0,0)
+   NeoClear()
+     for x=0 to 15
+         d = x+i
+         y = 8+sin(d*z)*6
+         pxl()
+         NeoSet(p,128,0,0)
 
-    y = 8+sin((d+1)*z)*6
-    pxl()
-    NeoSet(p,0,128,0)
+         y = 8+sin((d+1)*z)*6
+         pxl()
+         NeoSet(p,0,128,0)
 
-    y = 8+sin((d+2)*z)*6
-    pxl()
-    NeoSet(p,0,0,128)
-  next
-  NeoShow(256)
-  i=i+1
+         y = 8+sin((d+2)*z)*6
+         pxl()
+         NeoSet(p,0,0,128)
+      next
+   NeoShow(0,256)
+   i=i+1
 goto loop
 
 # Formula for index into 16x16 NeoPixel Matrix
 # p=pxl(x,y)
 @pxl
-  p = x*w+(x&1)*(w-1)+(1-2*(x&1))*y
-  return
+    p = x*w+(x&1)*(w-1)+(1-2*(x&1))*y
+return
 ```
 
 ---
@@ -107,7 +107,6 @@ goto loop
 ![Rainbow](images/rainbow.jpg)
 
 This sample shows a colorful rainbow
-
 
 ```basic
 # NeoPixel - Rainbow
@@ -125,12 +124,12 @@ for x=0 to 15
     if i%5=4:NeoSet(p,128,0,128):end
   next
 next
-neoshow(256)
+NeoShow(0,256)
 exit
 
 # Formula for index into 16x16 NeoPixel Matrix
 # p=pxl(x,y)
 @pxl
-  p = x*w+(x&1)*(w-1)+(1-2*(x&1))*y
-  return
+    p = x*w+(x&1)*(w-1)+(1-2*(x&1))*y
+return
 ```
