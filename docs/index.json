@@ -1,4 +1,9 @@
 {
+  "README.html": {
+    "href": "README.html",
+    "title": "Documentation",
+    "keywords": "Documentation This is the repository for all of our docs. To generate the docs locally: Clone/Fork the repo Open the command prompt in the documents' root folder (\"Run as Administrator\" may be necessary) Execute docfx --serve After executing the above command, a temporary webpage will appear to allow you to view the files in your browser fully rendered in HTML, for example http://localhost:8080. To install DocFX, please review and download from the following site: https://dotnet.github.io/docfx/. From there, you can go to the Getting Started page for instructions on how to install and you can go to Download Latest to download the most up to date DocFX files. Please note, you will not need to use the docfx init command as the initial JSON file is already present in our repository. WK<html>TOpdf is an optional part of the build process. You will find the needed files at the following address: https://wkhtmltopdf.org/downloads.html. Once downloaded, execute the command to install. Once installed, add the path to the installed binary to the environment variable PATH, for example \"C:\\Program Files\\wkhtmltopdf\\bin\"."
+  },
   "hardware/automotive.html": {
     "href": "hardware/automotive.html",
     "title": "CANxtra",
@@ -313,11 +318,6 @@
     "href": "index.html",
     "title": "GHI Electronics Documentation",
     "keywords": "GHI Electronics Documentation Here you will find GHI Electronics product documentation. For more information visit the main website. You can also visit our community forum. SITCore - the .NET C# Hardware SITCore family of .NET C# Chips and Modules for creating secure IoT devices. Learn More... TinyCLR OS - the heart of SITCore The .NET C# operating system for embedded devices, powering the SITCore product family. Develop software in Microsoft Visual Studio, and debug over USB. Learn More..."
-  },
-  "README.html": {
-    "href": "README.html",
-    "title": "Documentation",
-    "keywords": "Documentation This is the repository for all of our docs. To generate the docs locally: Clone/Fork the repo Open the command prompt in the documents' root folder (\"Run as Administrator\" may be necessary) Execute docfx --serve After executing the above command, a temporary webpage will appear to allow you to view the files in your browser fully rendered in HTML, for example http://localhost:8080. To install DocFX, please review and download from the following site: https://dotnet.github.io/docfx/. From there, you can go to the Getting Started page for instructions on how to install and you can go to Download Latest to download the most up to date DocFX files. Please note, you will not need to use the docfx init command as the initial JSON file is already present in our repository. WK<html>TOpdf is an optional part of the build process. You will find the needed files at the following address: https://wkhtmltopdf.org/downloads.html. Once downloaded, execute the command to install. Once installed, add the path to the installed binary to the environment variable PATH, for example \"C:\\Program Files\\wkhtmltopdf\\bin\"."
   },
   "software/due/downloads.html": {
     "href": "software/due/downloads.html",
