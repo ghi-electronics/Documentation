@@ -4,6 +4,81 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.2.0.6200 - RTW
+
+### Released 2023-12-11
+
+### Visual Studio Project System
+
+#### Changes
+
+- VS2022: None.
+
+#### Known Issues
+
+- None.
+
+### Libraries
+
+#### Changes
+
+- None
+
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+
+##### SC20xxx:
+
+- Fixed RTC
+- Fixed GPIO interrupt: The first falling edge after a reset is ignored
+
+##### SC13xxx
+
+- Fixed RTC
+- Fixed GPIO interrupt: The first falling edge after a reset is ignored
+ 
+#### Known Issues
+
+- None.
+
+### Drivers
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+### TinyCLR Config
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until board is reset.
+    
+### TinyCLR Font Converter
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+
 ## 2.2.0.6100 - RTW
 
 ### Released 2023-10-13
