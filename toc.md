@@ -1,4 +1,5 @@
 # [Hardware](hardware/intro.md)
+# [Endpoint](endpoint/intro.md)
 # [TinyCLR](software/tinyclr/intro.md)
 # [MicroPython](software/micropython/intro.md)
 # [NETMF](software/netmf/intro.md)
