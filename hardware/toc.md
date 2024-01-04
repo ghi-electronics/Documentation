@@ -1,5 +1,10 @@
 # [Hardware](intro.md)
 
+# [Endpoint](../endpoint/intro.md)
+## [Getting Started](../endpoint/getting-started.md)
+## [Devices](../endpoint/devices/intro.md)
+## [Configuration](../endpoint/devices/configuration.md)
+
 # [SITCore](sitcore/intro.md)
 ## [Getting Started](sitcore/getting-started.md)
 ## [System on Chip](sitcore/soc.md)

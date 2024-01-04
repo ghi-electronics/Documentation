@@ -3,26 +3,15 @@
     {
       "src": [
         {
-          "src": "../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core",
+          "src": "../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries",
           "files": [
-            "/GHIElectronics.Endpoint.Core.csproj"
+            "/GHIElectronics.Endpoint.Libraries.sln"
+
           ]
         }
       ],
-      "dest": "api"
-    },
-    {
-
-      "src": [
-        {
-          "src": "../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Adc",
-          "files": [
-            "/GHIElectronics.Endpoint.Devices.Adc.csproj"
-          ]
-
-        }
-      ],
-      "dest": "api"
+      "dest": "endpoint/api",
+      "filter": "filterConfig.yml"
     }
   ],
 

@@ -22,9 +22,9 @@ Endpoint hardware to fit all needs. </br> [**Learn more...**](devices/intro.md)
 ---
 ## Configuration
 
-[![Endpoint Config](images/config.png)](configuration.md)
+[![Endpoint Config](images/config.png)](devices/configuration.md)
 
-Endpoint Config tool easily connects and configures devices </br> [**Learn more...**](configuration.md)
+Endpoint Config tool easily connects and configures devices </br> [**Learn more...**](devices/configuration.md)
 
 
 ---

@@ -1,7 +1,5 @@
 # Endpoint Libraries
 ---
-[![Endpoint](images/endpoint-banner.png)](getting-started.md)
-
 Endpoint uses the standard .NET libraries for hardware natively when available. For some things an existing .NET library doesn't exist so we created these to fill in those  missing gaps. 
 
 
