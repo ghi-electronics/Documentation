@@ -1,10 +1,12 @@
 # Endpoint Introduction
 ---
-![Endpoint](images/endpoint-banner.png)
+![Endpoint](images/endpoint-logo.png)
 
-Endpoint is .NET for circuits! These compute modules load and run full .NET applications right from Microsoft Visual Studio or VS Code.
+Endpoint is .NET for circuits! Load and run full .NET applications on embedded hardware.
 
-The hardware includes SPI, I2C, PWM, ADC, natively. An internal second core provide digital signal processions for accurately capturing and generating digital signals.
+All you need to get started is Visual Studio or VS Code, an [Endpoint device](devices/intro.md), and a USB cable.
+
+---
 
 ## Getting Started
 

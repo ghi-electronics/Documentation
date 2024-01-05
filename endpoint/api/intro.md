@@ -1,33 +1,50 @@
-# Endpoint Libraries
+# Libraries
 ---
-Endpoint uses the standard .NET libraries for hardware natively when available. For some things an existing .NET library doesn't exist so we created these to fill in those  missing gaps. 
+## Microsoft standard .NET libraries
 
+Endpoint uses the standard .NET libraries when available. A good example of this is the .NET GPIO library.
 
-## ADC
+```cs
+using System.Device.Gpio;
+using System.Device.Gpio.Drivers;
+using static GHIElectronics.Endpoint.Core.EPM815;
 
+var port = EPM815.Gpio.Pin.PD14 /16;
+var pin = EPM815.Gpio.Pin.PD14 % 16;
 
+var gpioDriver = new LibGpiodDriver((int)port);
+var gpioController = new GpioController(PinNumberingScheme.Logical, gpioDriver);
+
+gpioController.OpenPin(pin);
+gpioController.SetPinMode(pin, PinMode.Output);
+
+while (true) {
+    gpioController.Write(pin, PinValue.High);
+    Thread.Sleep(100);
+    gpioController.Write(pin, PinValue.Low);
+    Thread.Sleep(100);
+}
+```
 ---
-## CAN
 
+## Endpoint Libraries
+When a library doesn't existing inside the .NET API relating to embedded hardware we create one to fill in the missing gaps. A good example of this is the Endpoint ADC library. 
 
----
-## Filesystem
+```cs
+using GHIElectronics.Endpoint.Core;
+using GHIElectronics.Endpoint.Devices.Adc;
 
+var adcController = new AdcController(EPM815.Adc.Pin.ANA1); 
 
+while (true){
+    var v = adcController.Read();
+    var v1 = (v * 3.3 / 65535);
+    Console.WriteLine(v1.ToString());
+    Thread.Sleep(1000);
+}
+```
+[**Complete Endpoint API**](http://localhost:8080/endpoint/api/GHIElectronics.Endpoint.html)
 
----
-## Network
-
-
-
----
-
-## Display
-
-
-
----
-## Power
 
 ---
 
