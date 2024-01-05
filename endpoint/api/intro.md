@@ -43,7 +43,18 @@ while (true){
     Thread.Sleep(1000);
 }
 ```
+
+
+<!--- Use this link when testing locally-->
+
 [**Complete Endpoint API**](http://localhost:8080/endpoint/api/GHIElectronics.Endpoint.html)
+
+
+<!--- Use this link when building and deploying-->
+
+<!---
+[**Complete Endpoint API**](http://https://docs.ghielectronics.com/endpoint/api/GHIElectronics.Endpoint.html)
+-->
 
 
 ---
