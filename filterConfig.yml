@@ -4,6 +4,9 @@ apiRules:
 - exclude:
     hasAttribute:
       uid: GHIElectronics.Endpoint.Core.
-
+      ctorArguments:
+        - System.AttributeTargets.Class
+      ctorNamedArguments:
+        Inherited: "true"
 
 

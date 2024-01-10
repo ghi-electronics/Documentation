@@ -32,7 +32,7 @@ File | Date | Status | MD5
 
 ## Endpoint Libraries
 
-Endpoint Libraries designed to fill in the gaps the .NET API is missing for hardware. It is preferred to access these libraries through NuGet.org by using Visual Studio's default package source.
+Endpoint Libraries are designed to fill in any gaps the .NET API is missing for hardware. It is preferred to access these libraries through NuGet.org by using the IDE's default package source.
 
 > [!Note]
 > Make sure to check the `Include prerelease` box in Visual Studio's NuGet package manager if you're not using the production release.
@@ -43,9 +43,9 @@ File | Date | Status | MD5
 --- | --- | --- | ---
 [v2.2.0.6000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Config/TinyCLR-Config-Setup-v2.2.0.6000.msi) | 2023-09-14 | Production | F3B62D4163D14FE543CE7CE617609E17
 
-## Visual Studio Project System
+## .visx extension files
 
-The extension is what gets loaded on Visual Studio to allow it to communicate with a TinyCLR OS device. It also includes project templates.
+The extension is what gets loaded on Visual Studio/VS Code to allow it to communicate with an Endpoint device. It also includes project templates.
 
 ### Visual Studio 2022
 
