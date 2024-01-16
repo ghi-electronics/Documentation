@@ -11,6 +11,7 @@
         }
       ],
       "dest": "endpoint/api",
+      "disableDefaultFilter": false,
       "filter": "filterConfig.yml"
     }
   ],
@@ -24,7 +25,7 @@
     ],
     "resource": [
       {
-        "files": [ "**/*.png", "**/*.gif", "**/*.jpg", "**/*.ico", "**/*.pdf" ],
+        "files": [ "**/*.png", "**/*.gif", "**/*.jpg", "**/*.ico", "**/*.pdf","**/*.img" ],
         "exclude": [ "obj/**", "docs/**" ]
       }
     ],

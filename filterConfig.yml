@@ -2,11 +2,6 @@
 
 apiRules:
 - exclude:
-    hasAttribute:
-      uid: GHIElectronics.Endpoint.Core.
-      ctorArguments:
-        - System.AttributeTargets.Class
-      ctorNamedArguments:
-        Inherited: "true"
-
+    uidRegex: ^GHIElectronics\.Endpoint\.Core\.Events
+    type: Class
 
