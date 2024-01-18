@@ -51,7 +51,7 @@ We recommend beginners start out with the BrainPad, it is made for beginners and
 ---
 
 # Loading the Firmware
-The first step to load the DUE firmware on your hardware is to navigate to the [console.duelink.com](https://https://console.duelink.com/) and click on the **Firmware** tab and follow the instructions
+The first step to load the DUE firmware on your hardware is to navigate to the [console.duelink.com](https://console.duelink.com/) and click on the **Firmware** tab and follow the instructions
 
 ![DUE Firmware](images/due-firmware.png) 
 
