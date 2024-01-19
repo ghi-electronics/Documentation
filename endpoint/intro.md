@@ -4,7 +4,7 @@
 
 Endpoint is FULL .NET 8 for circuits! Load and run applications on embedded hardware.
 
-All you need to get started is Visual Studio or VS Code, an [Endpoint device](devices/intro.md), and a USB cable.
+All you need to get started is Visual Studio or VS Code, an [Endpoint device](hardware/intro.md), and a USB cable.
 
 ---
 
@@ -17,16 +17,16 @@ Get started quickly with Endpoint using .NET 8 </br> [**Learn More...**](getting
 ---
 ## Devices
 
-[![Endpoint Hardware](images/endpoint-devices.png)](devices/intro.md)
+[![Endpoint Hardware](images/endpoint-devices.png)](hardware/intro.md)
 
-Endpoint hardware to fit all needs. </br> [**Learn more...**](devices/intro.md)   
+Endpoint hardware to fit all needs. </br> [**Learn more...**](hardware/intro.md)   
 
 ---
 ## Configuration
 
-[![Endpoint Config](images/config.png)](devices/configuration.md)
+[![Endpoint Config](images/config.png)](configuration.md)
 
-Endpoint Config tool easily connects and configures devices </br> [**Learn more...**](devices/configuration.md)
+Endpoint Config tool easily connects and configures devices </br> [**Learn more...**](configuration.md)
 
 
 ---

@@ -2,6 +2,10 @@
 
 ---
 
+Endpoint allows for remote deploy and debug of .NET C# (and VB)applications using either Microsoft Visual Studio or Microsoft VS Code.
+
+---
+
  ## Endpoint for Visual Studio
  With Endpoint you can deploy and debug using Visual Studio. Even the free community version. 
 
@@ -9,9 +13,11 @@
  If you don't already have the latest version of Visual Studio, download it here:
  https://visualstudio.microsoft.com/downloads/
 
- #### Visual Studio Extension file 
+ #### Visual Studio Extension (.visx)
 
- [**Download**](downloads.md) and install the latest Endpoint Visual Studio Extension (.vsix) file
+ Download and install the newest Endpoint Visual Studio Project System by going to Extensions > Manage Extensions. In the Manage Extensions dialog box select Online in the left panel. Type 'endpoint' into the Search text box in the upper right of the window to search for and install the Endpoint Project System. You'll need to restart Visual Studio to let the extension installer complete the installation.
+
+Alternately you can download the Visual Studio Project System from our  [**Download**](downloads.md) and install the latest Endpoint Visual Studio Extension (.vsix) file page and open or double click on the file to install the extension.
 
  #### Endpoint Debugger
 
@@ -43,6 +49,9 @@
 
  Endpoint also works using the VS Code IDE. 
  
+> [!Note]
+ > VS Code support is not public yet. Use Visual Studio instead.
+
  #### Install VS Code
  
  If you don't already have the latest version, download it here:

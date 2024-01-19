@@ -7,7 +7,7 @@ Here you will find GHI Electronics product documentation. For more information v
 ---
 ## Endpoint - .NET 8 on Hardware
 
-[![Endpoint](endpoint/images/endpoint-banner.png)](hardware/sitcore/intro.md)
+[![Endpoint](endpoint/images/endpoint-banner.png)](endpoint/intro.md)
 
 Endpoint is FULL .NET 8 for circuits! Load and run applications on embedded hardware.
 </br> [**Learn More...**](endpoint/intro.md) 

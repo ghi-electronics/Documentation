@@ -5,7 +5,7 @@
 
 The Endpoint Config tool is used to update & configure Endpoint Hardware. It will also give us information about our device. 
 
-[**Download**](../downloads.md)
+[**Download**](downloads.md)
  and install the latest version to begin. 
 
   ![Configuration tool](images/endpoint-config.png)
