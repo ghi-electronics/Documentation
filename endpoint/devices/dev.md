@@ -1,6 +1,13 @@
 # Endpoint Dev Boards
 
 ---
+# COMING SOON!
+
+![Development Options](images/endpoint-dev-board.png)
+
+The Endpoint development board makes it possible to start programming applications within minutes without designing or building new hardware. The DEV board is not only suitable for prototypes, but for short production runs as well.
+
+
 
 ---
 

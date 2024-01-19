@@ -2,7 +2,7 @@
 ---
 ![Endpoint](images/endpoint-logo.png)
 
-Endpoint is .NET for circuits! Load and run full .NET applications on embedded hardware.
+Endpoint is FULL .NET 8 for circuits! Load and run applications on embedded hardware.
 
 All you need to get started is Visual Studio or VS Code, an [Endpoint device](devices/intro.md), and a USB cable.
 

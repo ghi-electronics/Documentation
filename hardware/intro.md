@@ -3,9 +3,9 @@
 
 ## Endpoint
 
- [![Endpoint](../endpoint/images/endpoint-banner.png)](sitcore/intro.md) 
+ [![Endpoint](../endpoint/images/endpoint-banner.png)](../endpoint/intro.md) 
 
-Full .NET 8 ready hardware. Load, run, and debug from VS or VSCode  </br> [**Learn More...**](../endpoint/intro.md) 
+Full .NET 8 ready hardware. Load, run, and debug from VS or VSCode. </br> [**Learn More...**](../endpoint/intro.md) 
 
 ---
 ## SITCore

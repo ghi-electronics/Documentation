@@ -2,18 +2,13 @@
 ---
 ![Endpoint and .NET](images/limitations.png)
 
-**There are none!** <BR> But seriously, while full .NET 8 is supported there are some limitations specific to hardware. 
+## There are none!
 
-## .NET limitations:
-Support for only .NET on arm32.<BR>
-User application is not protected.<BR>
-DCMI Camera limited to I2C6.<BR>
+Endpoint runs the FULL Microsoft .NET 8 ARM32 unmodified. Expect the full experience similar to running .NET on a PC, considering available memory & processing power. 
 
-## Still under development:
-CDC is not supported <BR>
-Camera: OV5640 support <BR>
-WiFi: Only TL-WN725 support <BR>
-Hibernation is not supported <BR>
+.NET, VB, C#, and NuGet packages are all fully supported.
+
+
 
 
 

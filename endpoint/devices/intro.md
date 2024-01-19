@@ -1,6 +1,6 @@
 # Endpoint
 ---
-The Endpoint line of products provides an easy way to use full .NET 8 on a embedded device using Visual Studio or VS Code.
+The Endpoint line of products provides an easy way to use FULL .NET 8 on a embedded device using Visual Studio or VS Code.
 
 ---
 ## Single Board Computer
@@ -11,15 +11,15 @@ The Endpoint Domino provides the lowest barrier of entry to the world of Endpoin
 ---
 
 ## System on Modules
-[![SITCore SoMs](images/endpoint-soms.png)](som.md)
+[![Endpoint SoMs](images/endpoint-soms.png)](som.md)
 
 Available as surface mount modules and a 200 pin SO-DIMM module. </br> [**Learn More...**](som.md) 
 
 ---
 ## Development Boards
-[![SITCore Dev Board](images/endpoint-dev-board.png)](dev.md) 
+[![Endpoint Dev Board](images/endpoint-dev-board.png)](dev.md) 
 
-Get started quickly with an Endpoint development board -- you'll be programming FULL .NET on hardware in minutes! </br> [**Learn More...**](dev.md) 
+Get started quickly with an Endpoint development board -- you'll be programming FULL .NET 8 on hardware in minutes! </br> [**Learn More...**](dev.md) 
 
 ---
 

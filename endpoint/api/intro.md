@@ -30,6 +30,17 @@ while (true) {
 ## Endpoint Libraries
 When a library doesn't existing inside the .NET API relating to embedded hardware we create one to fill in the missing gaps. A good example of this is the Endpoint ADC library. 
 
+<!--- Use this link when testing locally-->
+
+[**Complete Endpoint API**](http://localhost:8080/endpoint/api/GHIElectronics.Endpoint.html)
+
+
+<!--- Use this link when building and deploying-->
+
+<!---
+[**Complete Endpoint API**](http://https://docs.ghielectronics.com/endpoint/api/GHIElectronics.Endpoint.html)
+-->
+
 ```cs
 using GHIElectronics.Endpoint.Core;
 using GHIElectronics.Endpoint.Devices.Adc;
@@ -43,20 +54,6 @@ while (true){
     Thread.Sleep(1000);
 }
 ```
-
-
-<!--- Use this link when testing locally-->
-
-[**Complete Endpoint API**](http://localhost:8080/endpoint/api/GHIElectronics.Endpoint.html)
-
-
-<!--- Use this link when building and deploying-->
-
-<!---
-[**Complete Endpoint API**](http://https://docs.ghielectronics.com/endpoint/api/GHIElectronics.Endpoint.html)
--->
-
-
 ---
 
 You can also visit our main website at [**main website**](http://www.ghielectronics.com) and our  [**community forum**](https://forums.ghielectronics.com/).
