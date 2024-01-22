@@ -8,7 +8,7 @@
 
 The Endpoint Domino provides an easy prototyping and evaluating board option, that is low-cost and user friendly. 
 
-### Features:
+#### Features:
 * Display connector
 * 2x Mikro Bus headers
 * USB Host
@@ -18,11 +18,15 @@ The Endpoint Domino provides an easy prototyping and evaluating board option, th
 * microSD card slot
 * USB-C connector 
 
+---
+
+## Pinout
+
 [![Endpoint Domino](images/endpoint-domino-pinout.png)](pdfs/endpoint-domino-pinout.pdf)
 
 ---
 
-## Display
+## Displays
 
 ![4.3 Display](images/domino-display.png)
 
@@ -61,13 +65,17 @@ ER-TFT070A2-4 | 7" 800x480 | [Link...](https://www.buydisplay.com/7-tft-lcd-touc
 
 See the `DisplayController` example in `Libraries->Endpoint API` for details on how to configure the system for the desired display.
 
-## Camera
+---
+
+## Cameras
 
 The Endpoint OS supports cameras through USB and parallel. For added convenience, the top side of the 40 pin header is pinout compatible with the off-the-shelf OV5640 camera board.
 
-![4.3 Display](images/domino-camera.png)
+![OV5640 Camera](images/domino-camera.png)
 
-## MikroBus
+---
 
-Endpoint Domino offer
+## mikroBus
+
+Endpoint Domino has 2 mikroBus headers compatible with over 1000 click modules. 
 

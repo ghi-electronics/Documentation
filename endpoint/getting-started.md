@@ -2,11 +2,41 @@
 
 ---
 
-Endpoint allows for remote deploy and debug of .NET C# (and VB)applications using either Microsoft Visual Studio or Microsoft VS Code.
+An Endpoint device 
+
+Endpoint allows for remote deploy and debug of .NET C# (and VB) applications using either Microsoft Visual Studio or Microsoft VS Code.
 
 ---
 
- ## Endpoint for Visual Studio
+ ## Endpoint Device Setup
+
+ The first step is to boot the Endpoint OS, which can be hosted on a microSD card or loaded inside the hardware's eMMC flash (when available). 
+
+ #### Creating the OS image
+
+ Use your preferred disk imaging software to create a disk image on a blank microSD card, `Win32 Disk Imager` for example.
+
+ Find the latest Endpoint disk image [**here**](downloads.md) and burn it to the blank microSD card. 
+
+ ![Disk Imager](images/create-sd-image.png)
+
+ #### Boot from SD
+
+ Once the image file is burned to the microSD card the OS is ready to boot. Insert the card into the microSD card slot of your hardware and connect the device to the PC.
+
+ If the device has an eMMC, use the `SD Boot` button to force the device to boot from the SD card.
+
+Once the `USER LED` lights the board has successfully booted the Endpoint OS from the microSD. This should happen on less than 5 seconds.
+
+#### Flashing the eMMC
+Devices with eMMC will automatically boot from eMMC. The system will fail to boot if the if the image is invalid. SD can always be used to boot the system. Once the system is up, `Endpoint Config` tool can be used to update the eMMC, as detailed in the [Configuration](configuration.md) page.
+
+ ---
+## Development Machine Setup
+
+ Now, that the device is ready, the development machine can be prepared for remote debug and deploy to the Endpoint device (using USB). This can be done using either Visual Studio or VS Code.
+
+ ### Endpoint for Visual Studio
  With Endpoint you can deploy and debug using Visual Studio. Even the free community version. 
 
  #### Install Visual Studio
@@ -29,7 +59,7 @@ Alternately you can download the Visual Studio Project System from our  [**Downl
 
  ![Navigate to Debug Options](images/debug-options.png)
 
- From there navigate to the Endpoint Debugger option and make sure the box is check for root@192.168.82.2. If unchecked the application will only run on the PC. 
+ From there navigate to the `Endpoint Debugger` option and make sure the box is check for `root@192.168.82.2`. If unchecked the application will only run on the PC. 
 
   ![Debug Host](images/debug-host.png)
 
@@ -45,7 +75,7 @@ Alternately you can download the Visual Studio Project System from our  [**Downl
 
  ---
 
- ## Endpoint for VS Code
+ ### Endpoint for VS Code
 
  Endpoint also works using the VS Code IDE. 
  
@@ -75,28 +105,3 @@ Alternately you can download the Visual Studio Project System from our  [**Downl
  **Endpoint:Create Net IoT project** 
 
   ![Search Endpoint](images/search-endpoint.png)
-
- ---
-
- ## Endpoint OS
-
- The Endpoint OS can be hosted on an microSD card or inside hardware's eMMC when available. 
-
- #### Creating the OS image
-
- Use your preferred disk imaging software to create a disk image on a blank microSD card. We recommend something like Win32 Disk Imager.
-
- Find the latest Endpoint disk image [**here**](downloads.md) and burn it to the blank microSD card. 
-
- ![Disk Imager](images/create-sd-image.png)
-
- #### Boot from SD
-
- Once the image file is burned to the microSD card the OS is ready to boot. Insert the card into the microSD card slot of your hardware and connect the device to the PC. 
-
- > [!Note] 
- > When using Endpoint Domino SD boot mode is the default boot mode. If you're using the Development board there is a button to put the device in SD boot mode. 
-
-Once the USER LED lights the board has successfully loaded the Endpoint OS from the microSD.
-
- ---
