@@ -7,7 +7,7 @@ Endpoint uses the standard [.NET 8 API](https://learn.microsoft.com/en-gb/dotnet
 ```cs
 using System.Device.Gpio;
 using System.Device.Gpio.Drivers;
-using static GHIElectronics.Endpoint.Core;
+using GHIElectronics.Endpoint.Core;
 
 var port = EPM815.Gpio.Pin.PC0 /16;
 var pin = EPM815.Gpio.Pin.PC0 % 16;

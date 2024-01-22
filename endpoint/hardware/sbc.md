@@ -24,7 +24,7 @@ The Endpoint Domino provides an easy prototyping and evaluating board option, th
 
 ## Display
 
-![4.3 Display](images/display.png)
+![4.3 Display](images/domino-display.png)
 
 The display FPC connector on EP-Domino uses a common pinout available on many displays. Some of these displays include capacitive touch screens, which are supported as well.
 
