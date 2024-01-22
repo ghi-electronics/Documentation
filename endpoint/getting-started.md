@@ -2,9 +2,7 @@
 
 ---
 
-An Endpoint device 
-
-Endpoint allows for remote deploy and debug of .NET C# (and VB) applications using either Microsoft Visual Studio or Microsoft VS Code.
+An Endpoint development environment consists of a device running Endpoint OS and a development machine with the required software and extension. 
 
 ---
 
@@ -34,7 +32,7 @@ Devices with eMMC will automatically boot from eMMC. The system will fail to boo
  ---
 ## Development Machine Setup
 
- Now, that the device is ready, the development machine can be prepared for remote debug and deploy to the Endpoint device (using USB). This can be done using either Visual Studio or VS Code.
+ Now, that the device is running the Endpoint OS, the development machine can be prepared for remote debug and deploy to the Endpoint device (using USB). This can be done using either Visual Studio or VS Code.
 
  ### Endpoint for Visual Studio
  With Endpoint you can deploy and debug using Visual Studio. Even the free community version. 

@@ -75,7 +75,7 @@ The Endpoint OS supports cameras through USB and parallel. For added convenience
 
 ---
 
-## mikroBus
+## mikroBUS
 
-Endpoint Domino has 2 mikroBus headers compatible with over 1000 click modules. 
+Endpoint Domino has 2 [mikroBUS](https://www.mikroe.com/mikrobus) headers compatible with over 1000 click modules. 
 
