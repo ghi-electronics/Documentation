@@ -2,15 +2,15 @@
 ---
 ## Microsoft standard .NET libraries
 
-Endpoint uses the standard .NET libraries when available. A good example of this is the .NET GPIO library.
+Endpoint uses the standard [.NET 8 API](https://learn.microsoft.com/en-gb/dotnet/api/?view=net-8.0) including the [.NET IoT API](https://learn.microsoft.com/en-gb/dotnet/api/?view=iot-dotnet-latest). A good example of this is the .NET GPIO library API.
 
 ```cs
 using System.Device.Gpio;
 using System.Device.Gpio.Drivers;
-using static GHIElectronics.Endpoint.Core.EPM815;
+using static GHIElectronics.Endpoint.Core;
 
-var port = EPM815.Gpio.Pin.PD14 /16;
-var pin = EPM815.Gpio.Pin.PD14 % 16;
+var port = EPM815.Gpio.Pin.PC0 /16;
+var pin = EPM815.Gpio.Pin.PC0 % 16;
 
 var gpioDriver = new LibGpiodDriver((int)port);
 var gpioController = new GpioController(PinNumberingScheme.Logical, gpioDriver);
@@ -28,9 +28,9 @@ while (true) {
 ---
 
 ## Endpoint Libraries
-When a library doesn't existing inside the .NET API relating to embedded hardware we create one to fill in the missing gaps. A good example of this is the Endpoint ADC library. 
+Additional [**Endpoint APIs**](/endpoint/api/GHIElectronics.Endpoint.html) are implemented to cover missing hardware related features not found in the official .NET libraries.
 
-[**Complete Endpoint API**](/endpoint/api/GHIElectronics.Endpoint.html)
+A good example of this is the Endpoint ADC library. 
 
 ```cs
 using GHIElectronics.Endpoint.Core;
@@ -45,6 +45,3 @@ while (true){
     Thread.Sleep(1000);
 }
 ```
----
-
-You can also visit our main website at [**main website**](http://www.ghielectronics.com) and our  [**community forum**](https://forums.ghielectronics.com/).
