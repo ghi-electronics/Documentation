@@ -10,11 +10,11 @@ The Endpoint Domino provides an easy prototyping and evaluating board option, th
 
 #### Features:
 * Display connector
-* 2x Mikro Bus headers
+* 2x mikroBUS headers
 * USB Host
 * User LED
 * Buzzer
-* 40 pin expansion header
+* 40-pin expansion header
 * microSD card slot
 * USB-C connector 
 
