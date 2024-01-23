@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # Watchdog
 ---
 A watchdog timer is used to reset the system if the system fails or locks up. 

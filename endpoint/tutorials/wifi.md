@@ -1,4 +1,5 @@
-﻿# WiFi
+﻿[IN PROGRESS](error.md) 
+# WiFi
 ---
 SITCore line of products includes native support for the Microchip [ATWINC1500](https://www.microchip.com/wwwproducts/en/ATwinc1500) series of WiFi modules. These modules are available pre-certified from FCC, CE, and other regulatory agencies. For added security, WiFi module communication is handled through SPI, not through AT commands.
 

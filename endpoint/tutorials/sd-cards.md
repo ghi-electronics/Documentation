@@ -10,4 +10,4 @@ var sd = StorageController.FromName(SC20100.StorageController.SdCard);
 var drive = FileSystem.Mount(sd.Hdc);
 ```
 
-Additionally, SPI SD drivers are also supported through the `ManagedFileSystem` software utility [drivers](../drivers/software-utility.md).
+Additionally, SPI SD drivers are also supported through the `ManagedFileSystem` software utility [Endpoint Config](../configuration.md) 

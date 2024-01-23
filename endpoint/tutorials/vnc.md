@@ -1,4 +1,5 @@
-﻿# VNC (Virtual Network Computing)
+﻿[IN PROGRESS](error.md) 
+# VNC (Virtual Network Computing)
 ---
 Users can use a VNC viewer to remotely view and control SITCore hardware from a PC, Phone or Tablet. Tested and compatible with the following VNC viewers:
 

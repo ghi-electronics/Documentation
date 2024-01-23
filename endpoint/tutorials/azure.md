@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # Microsoft Azure
 ---
 This example shows how to communicate with Azure IoT Hub using MQTT. User will need to set up a Network Interface connection on the device such as [WiFi](wifi.md) to Connect to Azure.

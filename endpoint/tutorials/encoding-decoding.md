@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # Encoding & Decoding
 ---
 TinyCLR OS provides many internal fast methods to handle many encoding and decoding tasks.

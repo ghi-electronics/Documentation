@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # Displays
 ---
 Graphical Displays can be grouped into two distinct interface categories, built-in parallel TFT displays and virtual displays, typically serial (SPI/I2C) displays. 

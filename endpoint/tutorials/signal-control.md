@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # Signal Control
 ---
 ![HC-SR04 ultrasonic sensor](images/signal-control.jpg)

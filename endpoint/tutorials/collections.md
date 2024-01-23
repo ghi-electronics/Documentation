@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # Collections
 ---
 Similar data can often be handled more efficiently when stored and manipulated as a collection. You can use the System.Array class or the classes in the System.Collections namespace to add, remove, and modify either individual elements or a range of elements in a collection.

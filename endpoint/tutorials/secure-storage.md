@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # Secure Storage
 ---
 There are two secure storage areas you may find useful: the configuration storage area and the one-time programmable storage area.

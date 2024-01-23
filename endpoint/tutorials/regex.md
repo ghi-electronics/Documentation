@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # Regular Expression
 ---
 The RegEx class can be used to quickly parse large amounts of text to find specific character patterns; to extract, edit, replace, or delete text substrings; and to add the extracted strings to a collection to generate a report.

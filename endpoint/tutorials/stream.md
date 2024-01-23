@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # Stream Class
 ---
 Provides a generic view of a sequence of bytes. This is an abstract class.

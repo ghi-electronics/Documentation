@@ -4,7 +4,7 @@
 ## Introduction
 Displays may optionally include a touch sensitive screen to detect user touch input. Touch Screens can be resistive or capacitive.
 
-![UD435](../images/ucm-touch-display.jpg)
+
 
 ---
 

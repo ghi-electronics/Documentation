@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # Serialization
 ---
 Serialization is the process of converting the state of an object into a form that can be persisted or transported. The complement of serialization is deserialization, which converts a stream into an object. Together, these processes allow objects to be stored and transferred.

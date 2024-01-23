@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # HTTP/HTTPS
 ---
 Hyper Text Transport Protocol (HTTP) builds on top of the [Core Networking Protocols](networking-core.md) to provide a standard way to work with web servers.

@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # Camera Interface
 ---
 

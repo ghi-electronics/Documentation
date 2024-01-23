@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # SQLite Database
 ---
 According to the SQLite homepage, "SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine. SQLite is the most widely deployed SQL database engine in the world." SQLite lets you set up a database that resides entirely in a single file on a persistent storage device.

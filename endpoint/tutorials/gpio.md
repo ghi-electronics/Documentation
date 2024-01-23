@@ -1,4 +1,5 @@
-﻿# General Purpose Input Output (GPIO)
+﻿[IN PROGRESS](error.md) 
+# General Purpose Input Output (GPIO)
 ---
 Microcontrollers include pins that can be controlled through software. They can be logical inputs or outputs, hence the name "general purpose input/output".
 

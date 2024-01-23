@@ -21,8 +21,7 @@ Besides the basic methods above, there are some additional useful methods found 
 
 ## BasicGraphics
 
-`BasicGraphics` driver is a simpler alternative that runs on all devices, including small devices without native display support. Learn more about `BasicGraphics` [here.](../drivers/software-utility.md)
-
+`BasicGraphics` driver is a simpler alternative that runs on all devices, including small devices without native display support. Learn more about `BasicGraphics` [Endpoint Config](../configuration.md) 
 
 ## Native Displays
 

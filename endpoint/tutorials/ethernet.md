@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # Ethernet
 ---
 Ethernet is supported through the internal MAC, by adding an external PHY (100BASE), and also by using an ENC28J60 over [SPI](spi.md) bus (10BASE). Some available modules include the necessary PHY, so the user will only need to add an Ethernet connector with magnets.

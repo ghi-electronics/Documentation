@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # Image Decoders
 ---
 TinyCLR OS provides methods for converting JPG, BMP, and GIF files into bitmaps that can be used in your application. The image can be added to your project as a [resource](resources.md), or the image can be loaded from a byte array, like from and SD card.

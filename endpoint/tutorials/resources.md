@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # Resources
 ---
 Resource files can be used to store strings, images, audio files, and other binary or text files that will be used by your application.

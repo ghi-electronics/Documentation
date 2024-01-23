@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # Google Cloud
 ---
 This example shows how to communicate with Google Cloud Platform using MQTT. You'll also need to set up a Network Interface connection on the device such as [WiFi](wifi.md) to Connect to Google Cloud in your program.

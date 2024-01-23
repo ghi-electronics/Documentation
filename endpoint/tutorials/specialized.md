@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # Specialized
 ---
 Some of the specialized low-level features in this section are used to directly access hardware control or change the normal behavior of the SITCore processor.

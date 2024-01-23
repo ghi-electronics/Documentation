@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # Real Time Clock
 ---
 The Real Time Clock (RTC) is a circuit that runs off a small battery or a super capacitor connected to VBAT. It needs its own crystal and keeps running even when the main system and its clocks are powered off.

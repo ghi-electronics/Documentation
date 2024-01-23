@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # USB Host
 
 The USB Host API supports USB keyboards, mice, joysticks, raw devices, and USB MSC (Mass Storage Class), which allows file access on USB memory devices. The following code sample shows how to detect devices as they are connected to your SITCore device's USB host port.
