@@ -21,7 +21,7 @@ The Endpoint OS image can be downloaded and run from a microSD card or flashed t
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v0.0.2.6 (Preview)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.2.0.6200.ghi) | 2024-01-22 | Preview | 54E2FE0A0D609D1FD21A9BE88298D678
+[v0.0.2.7 (Preview)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/sdcard.img) | 2024-01-24 | Preview | ????
 
 
 
@@ -31,7 +31,7 @@ Endpoint Config is a tool used to update and configure your Endpoint device.
 
 File | Date | Status | MD5
 --- | --- | --- | ---
-[v0.0.2.6 (Preview)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.2.0.6200.ghi) | 2024-01-22 | Preview | 6E0DD1A8FFEB41D3A5951A963A03196C
+[v0.0.2.7 (Preview)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Config/Endpoint_Config_Setup_v0.0.2.7.msi) | 2024-01-24 | Preview | ????
 
 ## Endpoint Libraries
 
@@ -40,11 +40,8 @@ Endpoint Libraries are designed to fill in any gaps the .NET API is missing for 
 > [!Note]
 > Make sure to check the `Include prerelease` box in Visual Studio's NuGet package manager if you're not using the production release.
 
-The libraries are provided here in case you're having trouble with the online source or need an older library that's not hosted on NuGet.
+The libraries are available on (Github)[https://github.com/ghi-electronics/Endpoint-Libraries].
 
-File | Date | Status | MD5
---- | --- | --- | ---
-[v0.0.2.6 (Preview)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Config/TinyCLR-Config-Setup-v2.2.0.6000.msi) | 2024-01-22 | Preview | F3B62D4163D14FE543CE7CE617609E17
 
 ## Visual Studio & VS Code extension files
 
@@ -52,14 +49,11 @@ The extension is what gets loaded on Visual Studio/VS Code to allow it to commun
 
 #### Visual Studio 2022
 
-File | Date | Status | MD5
---- | --- | --- | ---
-[v0.0.2.6 (Preview)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.2.0.6000.vsix) | 2024-01-22 | Preview | 6199684EEE3CD9F07D6861657D12F5CF
+The Endpoint Debugger for Visual Studio can be installed from within in Visual Studio. It can also be downloaded at the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ghielectronics.Endpoint-VS-Debugger)
 
 #### VS Code
 
-File | Date | Status | MD5
---- | --- | --- | ---
-[v0.0.2.6 (Preview)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.1.0.vsix) | 2024-01-22 | Preview | CF90D2E902DB2B4DC5A3643A8E9E2778
+The Endpoint Debugger for VS Code can be installed from within in VS Code. It can also be downloaded at the [VS Code Marketplace](https://marketplace.visualstudio.com/vscode)
+
 
 

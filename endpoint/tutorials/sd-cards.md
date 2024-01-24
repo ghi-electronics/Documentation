@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # SD/MMC Cards
 ---
 SD and MMC cards are fully supported through the [File System](file-system.md) libraries.

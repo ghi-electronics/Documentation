@@ -77,8 +77,6 @@ Alternately you can download the Visual Studio Project System from our  [**Downl
 
  Endpoint also works using the VS Code IDE. 
  
-> [!Note]
- > VS Code support is not public yet. Use Visual Studio instead.
 
  #### Install VS Code
  

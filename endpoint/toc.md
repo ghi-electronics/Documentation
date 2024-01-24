@@ -4,6 +4,18 @@
 # [Configuration](configuration.md)
 # [Tutorials](tutorials/intro.md)
 
+## Pin Level Control
+### [GPIO](tutorials/gpio.md)
+### [PWM](tutorials/pwm.md)
+### [Analog In](tutorials/analog-in.md)
+### [Signal Control](tutorials/signal-control.md)
+
+## Data Buses
+### [SPI](tutorials/spi.md)
+### [I2C](tutorials/i2c.md)
+### [UART](tutorials/uart.md)
+### [USB](tutorials/usb.md)
+### [CAN](tutorials/can.md)
 
 ## Multimedia
 ### [Displays](tutorials/displays.md)
@@ -44,18 +56,7 @@
 ### [Resources](tutorials/resources.md)
 ### [Specialized](tutorials/specialized.md)
 
-## Pin Level Control
-### [GPIO](tutorials/gpio.md)
-### [PWM](tutorials/pwm.md)
-### [Analog In](tutorials/analog-in.md)
-### [Signal Control](tutorials/signal-control.md)
 
-## Data Buses
-### [SPI](tutorials/spi.md)
-### [I2C](tutorials/i2c.md)
-### [UART](tutorials/uart.md)
-### [USB](tutorials/usb.md)
-### [CAN](tutorials/can.md)
 
 # [Libraries](api/intro.md)
 # [Downloads](downloads.md)

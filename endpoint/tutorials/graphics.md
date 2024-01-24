@@ -1,128 +1,88 @@
 # Graphics
 
 ---
-The `GHIElectronics.TinyCLR.Drawing` NuGet package includes the backbone for all graphics needs. It has support for shapes, fonts and bitmaps.
+The `GHIElectronics.Endpoint.Devices.Display` NuGet package includes the backbone for all graphics needs. It uses [SkiaSharp](https://learn.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/) Graphics library their API can be found [here](https://learn.microsoft.com/en-us/dotnet/api/skiasharp?view=skiasharp-2.88)
 
-Shape examples are `Graphics.FillEllipse`, `Graphics.DrawLine` and `Graphics.DrawRectangle`. These methods need `Pen` and `Brush` that are also part of `Graphics`.
-
-Besides the basic methods above, there are some additional useful methods found inside the Graphics library. 
-
-| Method                      | Description                                                |
-|-----------------------------|------------------------------------------------------------|
-| `TileImage`             | Used to tile the image over a any area on the screen.|
-| `DrawTextInRect`        | Confines text to a specific rectangle area of the screen. Parameters can be set to justify or word wrap the text inside the rectangle's area.|
-| `SetClippingRectangle`  | Creates a rectangle area on the screen where only the area within that rectangle is drawn.|
-| `MakeTransparent`      | Used to select a color within an image that appears transparent. Alpha needs to be set to 0 (0x00)|
-| `Scale9Image`           | Used to scale the size of an image. You can also stretch specific areas within the image itself, opacity can also be controlled.|
-| `MeasureString`        | Used to measure a string size in pixels, when using a specific font.|
-| `RotateImage`        | Used to rotate an image based on arguments passed.|
 
 ---
 
-## BasicGraphics
-
-`BasicGraphics` driver is a simpler alternative that runs on all devices, including small devices without native display support. Learn more about `BasicGraphics` [Endpoint Config](../configuration.md) 
-
 ## Native Displays
 
-Native display support in TinyCLR OS is handled automatically using the microcontroller's DMA to transfer data in parallel to the display without slowing down your application.
+Native display support in Endpoint is handled automatically using the microcontroller's DMA to transfer data in parallel to the display without slowing down your application.
 
-The following example runs on the SCM20260D Dev Board with either the 4.3" or 7" display. You will need to add a font and a small JPG image as [resources](resources.md) to run the code as is.
+The Endpoint Domino used in this example expects each pixel to have 16 bits (two bytes per pixel) of color information in RGB565 format.
 
+The following example is written for the Endpoint Domino with the 4.3" display connected to the on-board FPC.
 
 > [!Tip]
-> Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Drawing, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins.
+> Needed NuGets: GHIElectronics.Endpoint.Core, GHIElectronics.Endpoint.Display
 
 ```cs
-using System.Drawing;
-using System.Threading;
-using GHIElectronics.TinyCLR.Devices.Display;
-using GHIElectronics.TinyCLR.Devices.Gpio;
-using GHIElectronics.TinyCLR.Pins;
+using System.Device.Gpio;
+using System.Device.Gpio.Drivers;
+using SkiaSharp;
+using GHIElectronics.Endpoint.Core;
+using GHIElectronics.Endpoint.Devices.Display;
 
-GpioPin backlight = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA15);
-backlight.SetDriveMode(GpioPinDriveMode.Output);
-backlight.Write(GpioPinValue.High);
+var backlightPort = EPM815.Gpio.Pin.PD14 / 16;
+var backlightPin = EPM815.Gpio.Pin.PD14 % 16;
 
-var displayController = DisplayController.GetDefault();
+var gpioDriver = new LibGpiodDriver((int)backlightPort);
+var gpioController = new GpioController(PinNumberingScheme.Logical, gpioDriver);
+gpioController.OpenPin(backlightPin);
+gpioController.SetPinMode(backlightPin, PinMode.Output);
+gpioController.Write(backlightPin, PinValue.High);
 
-// Enter the proper display configurations
-displayController.SetConfiguration(new ParallelDisplayControllerSettings {
+var screenWidth = 480;
+var screenHeight = 272;
+
+SKBitmap bitmap = new SKBitmap(screenWidth, screenHeight, SKImageInfo.PlatformColorType, SKAlphaType.Premul);
+bitmap.Erase(SKColors.Transparent);
+
+var configuration = new FBDisplay.ParallelConfiguration(){
+    Clock = 10000,
     Width = 480,
+    Hsync_start = 480 + 2,
+    Hsync_end = 480 + 2 + 41,
+    Htotal = 480 + 2 + 41 + 2,
     Height = 272,
-    DataFormat = DisplayDataFormat.Rgb565,
-    Orientation = DisplayOrientation.Degrees0, //Rotate display.
-    PixelClockRate = 10000000,
-    PixelPolarity = false,
-    DataEnablePolarity = false,
-    DataEnableIsFixed = false,
-    HorizontalFrontPorch = 2,
-    HorizontalBackPorch = 2,
-    HorizontalSyncPulseWidth = 41,
-    HorizontalSyncPolarity = false,
-    VerticalFrontPorch = 2,
-    VerticalBackPorch = 2,
-    VerticalSyncPulseWidth = 10,
-    VerticalSyncPolarity = false,
-});
+    Vsync_start = 272 + 2,
+    Vsync_end = 272 + 2 + 10,
+    Vtotal = 272 + 2 + 10 + 2,
 
-displayController.Enable(); //This line turns on the display I/O and starts
-                            //  refreshing the display. Native displays are
-                            //  continually refreshed automatically after this
-                            //  command is executed.
+};
+var fbDisplay = new FBDisplay(configuration);
+var displayController = new DisplayController(fbDisplay);
 
-var screen = Graphics.FromHdc(displayController.Hdc);
-
-var image = Resources.GetBitmap(Resources.BitmapResources.smallJpegBackground);
-var font = Resources.GetFont(Resources.FontResources.small);
-
-screen.Clear();
-
-screen.FillEllipse(new SolidBrush(System.Drawing.Color.FromArgb
-    (255, 255, 0, 0)), 0, 0, 240, 136);
-
-screen.FillEllipse(new SolidBrush(System.Drawing.Color.FromArgb
-    (255, 0, 0, 255)), 240, 0, 240, 136);
-
-screen.FillEllipse(new SolidBrush(System.Drawing.Color.FromArgb
-    (128, 0, 255, 0)), 120, 0, 240, 136);
-
-screen.DrawImage(image, 216, 122);
-
-screen.DrawRectangle(new Pen(Color.Yellow), 10, 150, 140, 100);
-screen.DrawEllipse(new Pen(Color.Purple), 170, 150, 140, 100);
-screen.FillRectangle(new SolidBrush(Color.Teal), 330, 150, 140, 100);
-
-screen.DrawLine(new Pen(Color.White), 10, 271, 470, 271);
-screen.SetPixel(240, 200, Color.White);
-
-screen.DrawString("Hello world!", font, new SolidBrush(Color.Blue), 210, 255);
-
-screen.Flush();
+while (true){
+    //Initialize Screen
+    using (var screen = new SKCanvas(bitmap)){
+        //Create Black Screen 
+        screen.DrawColor(SKColors.Black);
+        screen.Clear(SKColors.Black); //same thing but also erases anything else on the canvas first
+        
+        // Draw text
+        using (SKPaint text = new SKPaint()){
+            text.Color = SKColors.Yellow;
+            text.IsAntialias = true;
+            text.StrokeWidth = 1;
+            text.Style = SKPaintStyle.Stroke;
+            screen.DrawText("Hello World", 20, 20, text);
+        }
+    
+        // Flush to screen
+        var data = bitmap.Copy(SKColorType.Rgb565).Bytes;
+        displayController.Flush(data);
+        Thread.Sleep(1);
+        
+    }
+}
 ```
 
-Same example but with 7 inch display, replace the display configuration code with the following code:
+Endpoint Domino connected to 4.3" display after running the sample code:
 
-```cs
-displayController.SetConfiguration(new ParallelDisplayControllerSettings {
-    Width = 800,
-    Height = 480,
-    DataFormat = DisplayDataFormat.Rgb565,
-    Orientation = DisplayOrientation.Degrees0, //Rotate display.
-    PixelClockRate = 24000000,
-    PixelPolarity = false,
-    DataEnablePolarity = false,
-    DataEnableIsFixed = false,
-    HorizontalFrontPorch = 16,
-    HorizontalBackPorch = 46,
-    HorizontalSyncPulseWidth = 1,
-    HorizontalSyncPolarity = false,
-    VerticalFrontPorch = 7,
-    VerticalBackPorch = 23,
-    VerticalSyncPulseWidth = 1,
-    VerticalSyncPolarity = false,
-});
-```
+![Low Level Display Sample](images/low-level-display-sample.jpg)
+
 
 ---
 
