@@ -78,8 +78,6 @@ private static void NetworkController_NetworkAddressChanged
 }
 ```
 
-> [!Tip]
-> Static IP addressing does not work with [PPP](ppp.md).
 
 ### Static IP
 

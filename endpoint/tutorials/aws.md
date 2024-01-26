@@ -3,7 +3,7 @@
 ---
 This example shows how to communicate with AWS using MQTT. You'll also need to set up a Network Interface connection on the device such as [WiFi](wifi.md) to Connect to AWS in your program.
 
-First download the required AWS Root Certificate and add to resources. The [TLS Client](tls-client.md) shows how to download the root certificate.
+First download the required AWS Root Certificate and add to resources. The TLS Client shows how to download the root certificate.
 
 There is also a Client certificate that needs to be downloaded from the AWS account, detailed below.
 

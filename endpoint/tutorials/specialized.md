@@ -10,7 +10,7 @@ Some of the specialized low-level features in this section are used to directly 
 
 ## Register Access
 
-The Marshal class allows us to directly access and modify some of the internal processor's registers. More on this can be found in the [Marshal class](marshal.md) section.
+The Marshal class allows us to directly access and modify some of the internal processor's registers. More on this can be found in the Marshal class section.
 
 ---
 

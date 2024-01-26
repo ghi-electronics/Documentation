@@ -3,7 +3,7 @@
 ---
 This example shows how to communicate with Azure IoT Hub using MQTT. User will need to set up a Network Interface connection on the device such as [WiFi](wifi.md) to Connect to Azure.
 
-First download the required Azure Root Certificate and add to resources. The [TLS Client](tls-client.md) shows how to download the root certificate.
+First download the required Azure Root Certificate and add to resources. The TLS Client shows how to download the root certificate.
 
 
 > [!TIP]

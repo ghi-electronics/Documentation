@@ -1,4 +1,3 @@
-[IN PROGRESS](error.md) 
 # I2C
 ---
 I2C (pronounced eye-squared-sea, or eye-two-sea) was originally developed by Phillips as a protocol for synchronous serial communication between integrated circuits. It has a master and one or more slaves sharing the same data bus. Instead of selecting the slaves by using a dedicated chip select signal like SPI, I2C uses an addressing mechanism to communicate with the selected device. This addressing method saves one I/O pin per slave.
@@ -7,78 +6,27 @@ Before data is transferred, the master transmits the 7-bit address of the slave 
 
 The two wires for I2C communication are called the SDA and SCL lines. SDA stands for Serial Data, and SCL is Serial Clock.
 
-> [!Note]
-> I2C bus speed can be either 100,000 bits/second (standard mode) or 400,000 bits/second (fast mode).
-
-## I2C Master
-
-This is a partial demo showing the use of I2C in master mode.
+Endpoint uses the standard .NET API for I2C (System.Device.I2c) but first we need to **Initialize** the pin for I2C. 
 
 ```cs
-var settings = new I2cConnectionSettings(0x1C, 100_000); //The slave's address and the bus speed.
-var controller = I2cController.FromName(SC20100.I2cBus.I2c1);
-var device = controller.GetDevice(settings);
-
-device.Write(new byte[] { 1, 2 }); //Write something
-device.WriteRead(...); //This is good for reading register
+EPM815.I2c.Intialize(EPM815.I2c.I2c6)
 ```
 
-## I2C Slave
-
-This is a partial demo showing the use of I2C in slave mode.
+This method also allows the user to set clock speed, which 400KHz by default. 
 
 ```cs
-var i2cControllers = I2cController.FromName(SC20260.I2cBus.I2c1);
-         
-i2cControllers.ReadBufferSize = 1024; // Default 256
-i2cControllers.WriteBufferSize = 1024; // Default 256 
-
-i2cControllers.ClearReadBuffer(); // Clear 
-i2cControllers.ClearWriteBuffer(); // Clear
-
-var i2cSetting = new I2cConnectionSettings(0x48, I2cMode.Slave); // Enable slave mode
-
-i2cSetting.EnableClockStretching = true;
-
-var i2cDevice = i2cControllers.GetDevice(i2cSetting);
-	  
-i2cDevice.ErrorReceived += (sender, args) => Debug.WriteLine("Error received " + args.Error);
-
-i2cDevice.FrameReceived += (sender, args) => {
-	switch (args.Event) {
-		case I2cTransaction.MasterWrite:
-			Debug.WriteLine("Mastester is writing");
-			break;
-
-		case I2cTransaction.MasterRead:
-			Debug.WriteLine("Mastester is reading");
-			// Send data
-			sender.Write(data);
-			break;
-
-		case I2cTransaction.MasterStop:
-			Debug.WriteLine("Done a frame!");
-			break;
-	}
-};
-
+EPM815.I2c.Intialize(EPM815.I2c.I2c6,100_000)
 ```
 
-## Software I2C
-Users have the option to drive (bit bang) I2C bus in software over any of the available GPIOs.
+This is a partial demo showing the use of I2C.
 
 ```cs
-var sda = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PB9);
-var scl = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PB8);
+EPM815.I2c.Intialize(EPM815.I2c.I2c6)
+var i2cConnectionSetting = new I2cConnectionSettings(EPM815.I2c.I2c6, 0x1C);
+var i2cDev = I2cDevice.Create(i2cConnectionSetting);
 
-var controllers = I2cController.FromName(SC20260.I2cBus.Software, sda, scl);
+WriteToRegister(0x2A, 1);
+
+i2cDev.Write(new byte[] { 1, 2 }); //Write something
+i2cDev.WriteRead(...); //This is good for reading register
 ```
-
-The internal pull-ups on the GPIO pins used by software I2C can be enabled. This is sufficient in most cases but adding 2.2K external is better.
-
-```cs
-var controllers = I2cController.FromName(SC20260.I2cBus.Software, sda, scl, true);
-```
-
-> [!Tip]
-> Software generated buses are slower and use more resources, but can be used on any pins.

@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # File System
 ---
 The file system library is a subset of the full .NET file system support. Most examples should work with only minor changes. The internal drivers fully support FAT16 or FAT32 file systems, with no limitations beyond the FAT file system itself!
@@ -12,7 +13,7 @@ The file system library is a subset of the full .NET file system support. Most e
 This allows file access on USB devices with MSC class, such as USB memory sticks. See the [USB](usb.md) page.
 
 ### SD Card
-SD and MMC cards are fully supported as detailed on the [SD tutorial](sd-cards.md) page. Additionally, SPI SD drivers are also supported through the `ManagedFileSystem` software utility [Endpoint Config](../configuration.md) 
+SD and MMC cards are fully supported. Additionally, SPI SD drivers are also supported through the `ManagedFileSystem` software utility [Endpoint Config](../configuration.md) 
 
 The example below requires the `GHIElectronics.TinyCLR.IO` and `GHIElectronics.TinyCLR.Devices.Storage` libraries and a device with an SD card.
 
@@ -103,7 +104,7 @@ using (var fsRead = tfs.Open("settings.dat", FileMode.Open)) {
     }
 }
 ```
-Below is a basic driver implementation utilizing QSPI external flash. It automatically sets the size appropriately depending on whether the deployment is extended or not, as explained on the [External Flash](external-memory.md) page. It however gives you the option to fix the size to 2MB, as the remaining 8MB can optionally be used by [InField Update](in-field-update.md).
+Below is a basic driver implementation utilizing QSPI external flash. It automatically sets the size appropriately depending on whether the deployment is extended or not. It however gives you the option to fix the size to 2MB, as the remaining 8MB can optionally be used by [InField Update](in-field-update.md).
 
 ```cs
 public sealed class QspiMemory : IStorageControllerProvider

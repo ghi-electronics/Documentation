@@ -1,3 +1,4 @@
+[IN PROGRESS](error.md) 
 # Graphics
 
 ---
@@ -5,6 +6,11 @@ The `GHIElectronics.Endpoint.Devices.Display` NuGet package includes the backbon
 
 
 ---
+Once a display has been [configured](../tutorials/displays.md) it is ready to start adding graphics. 
+
+The example below shows how to add basic text on the screen. 
+
+
 
 ## Native Displays
 
@@ -200,7 +206,7 @@ Fonts are fully supported. They are covered [here](font-support.md).
 
 ## Color Space
 
-Internally, TinyCLR uses 5:6:5 RGB 16BPP color space. There are helper methods to convert to other color spaces. See [Encoding & Decoding](encoding-decoding.md) for more details.
+Internally, TinyCLR uses 5:6:5 RGB 16BPP color space. There are helper methods to convert to other color spaces.
 
 ---
 ## 2D Matrix copy
@@ -226,4 +232,4 @@ Array.Copy2D(screen.GetBitmap(), imageNew, x, y, width, height, screenWidth, gro
 
 ## VNC
 
-VNC (Virtual Network Computing) is a simple remote desktop that with available terminals supported by major operating systems. It is covered [here](vnc.md).
+VNC (Virtual Network Computing) is a simple remote desktop that with available terminals supported by major operating systems.

@@ -24,7 +24,7 @@ The system is now ready for flash and reset `updater.FlashAndReset()`. It is cri
 
 ## Memory Requirements
 
-Firmware update needs to have a temp buffer that is the size of the firmware itself. For applications, the temporary buffer needs to be the size of the internal deployment, plus the external deployment if implemented, by "extending deployment". Systems with large external RAM will usually select RAM update. For systems without external RAM, an external QSPI flash becomes necessary. When external flash is used for buffering, IFU will overwrite the entire flash, minus the first 2MB and the area reserved for extending the application deployment area, as explained under `External Flash` on the [External Memory](external-memory.md) page. A [Tiny File System](file-system.md) usage of the first 2MB of external flash will survive IFU even when `useExternalFlash` is enabled.
+Firmware update needs to have a temp buffer that is the size of the firmware itself. For applications, the temporary buffer needs to be the size of the internal deployment, plus the external deployment if implemented, by "extending deployment". Systems with large external RAM will usually select RAM update. For systems without external RAM, an external QSPI flash becomes necessary. When external flash is used for buffering, IFU will overwrite the entire flash, minus the first 2MB and the area reserved for extending the application deployment area, as explained under `External Flash` on the External Memory page. A [Tiny File System](file-system.md) usage of the first 2MB of external flash will survive IFU even when `useExternalFlash` is enabled.
 
 ## Activity Pin
 
