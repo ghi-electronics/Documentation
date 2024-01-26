@@ -83,4 +83,4 @@ Endpoint Domino has 2 [mikroBUS](https://www.mikroe.com/mikrobus) headers compat
 
 ## Wi-Fi
 
-Endpoint Domino Wi-Fi using a the tp-link Wireless N Nano USB adapter. [mikroBUS](https://www.mikroe.com/mikrobus) headers compatible with over 1000 click modules. 
+Endpoint Domino Wi-Fi using a the tp-link Wireless N Nano USB adapter. 

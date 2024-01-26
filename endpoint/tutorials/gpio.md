@@ -3,7 +3,7 @@
 Microcontrollers include pins that can be controlled through software. They can be logical inputs or outputs, hence the name "general purpose input/output".
 
 > [!Tip]
-> GPIO is found in the System.Device.Gpio and System.Device.Gpio.Drivers or the standard .NET API. These libraries are automatically imported when installing  NuGet package GHIElectronics.Endpoint.Core 
+> GPIO is found in the System.Device.Gpio and System.Device.Gpio.Drivers of the standard .NET API. These libraries are automatically imported when installing NuGet package GHIElectronics.Endpoint.Core 
 
 ## Digital Outputs
 A digital output pin can be set to either high or low.  High means that there is approx. 3.3V on the output pin. When the pin is set to low, it's voltage will be very close to zero.
@@ -49,16 +49,22 @@ Unconnected input pins are called "floating." A resistor can be added to pull th
 The code sample below uses an internal pull-up resistor to set the button high. When the button is pressed the `GpioPinValue` goes low. 
 
 ```cs
-var gpio = GpioController.GetDefault();
-var button = gpio.OpenPin(SC20260.GpioPin.PD7);
-button.SetDriveMode(GpioPinDriveMode.InputPullUp);
+using System.Device.Gpio;
+using System.Device.Gpio.Drivers;
+using GHIElectronics.Endpoint.Core;
 
-while (true) {
-    if (button.Read() == GpioPinValue.Low) {
+var port = EPM815.Gpio.Pin.PF3 / 16;
+var pin = EPM815.Gpio.Pin.PF3 % 16;
+
+var gpioDriver = new LibGpiodDriver((int)port);
+var button = new GpioController(PinNumberingScheme.Logical, gpioDriver);
+button.OpenPin(pin, PinMode.InputPullUp);
+
+while (true){
+    if (button.Read(pin) == PinValue.Low){
         //Button is pressed.
-    } 
-
-    Thread.Sleep(10);   //Always give the system time to think!
+    }
+    Thread.Sleep(10);  
 }
 ```
 ---
