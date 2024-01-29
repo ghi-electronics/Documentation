@@ -1,4 +1,3 @@
-[IN PROGRESS](error.md) 
 # Displays
 ---
 Graphical Displays can be grouped into two distinct interface categories, built-in parallel TFT displays and virtual displays, typically serial (SPI/I2C) displays. 
@@ -22,20 +21,18 @@ using SkiaSharp;
 using GHIElectronics.Endpoint.Core;
 using GHIElectronics.Endpoint.Devices.Display;
 
+//Initialize Display
 var backlightPort = EPM815.Gpio.Pin.PD14 / 16;
 var backlightPin = EPM815.Gpio.Pin.PD14 % 16;
 
 var backlightDriver = new LibGpiodDriver((int)backlightPort);
-var backlightController = new GpioController(PinNumberingScheme.Logical, gpioDriver);
+var backlightController = new GpioController(PinNumberingScheme.Logical, backlightDriver);
 backlightController.OpenPin(backlightPin);
 backlightController.SetPinMode(backlightPin, PinMode.Output);
 backlightController.Write(backlightPin, PinValue.High);
 
 var screenWidth = 480;
 var screenHeight = 272;
-
-SKBitmap bitmap = new SKBitmap(screenWidth, screenHeight, SKImageInfo.PlatformColorType, SKAlphaType.Premul);
-bitmap.Erase(SKColors.Transparent);
 
 var configuration = new FBDisplay.ParallelConfiguration(){
     Clock = 10000,
@@ -52,6 +49,13 @@ var configuration = new FBDisplay.ParallelConfiguration(){
 var fbDisplay = new FBDisplay(configuration);
 var displayController = new DisplayController(fbDisplay);
 
+
+//SkiaSharp Initialization and content
+
+SKBitmap bitmap = new SKBitmap(screenWidth, screenHeight, SKImageInfo.PlatformColorType, SKAlphaType.Premul);
+bitmap.Erase(SKColors.Transparent);
+
+
 while (true){
     // Initialize the screen
     using (var screen = new SKCanvas(bitmap)){
@@ -67,17 +71,5 @@ while (true){
     }
 }
 ```
----
-
-## Virtual Displays
-The internal graphics services can be mapped to work with virtual display displays, such as SPI displays. See the [Graphics](graphics.md) tutorial for more information and sample code.
-
----
-
-## Character Displays
-![Character Display](images/character-display.jpg)
-
-These displays are capable of only showing characters. They are available in different sizes, but two lines of 16 characters is most common. These displays types use the standard .NET [Iot.Device.CharacterLcd](https://learn.microsoft.com/en-gb/dotnet/api/iot.device.characterlcd?view=iot-dotnet-latest) library
-
 ---
 

@@ -1,0 +1,5918 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class EPM815.Gpio.Pin
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class EPM815.Gpio.Pin
+ ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Endpoint-Libraries/new/main/apiSpec/new?filename=GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin.md&amp;value=---%0Auid%3A%20GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin">
+
+
+
+  <h1 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin" class="text-break">
+    Class EPM815.Gpio.Pin
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="GHIElectronics.html">GHIElectronics</a>.<a class="xref" href="GHIElectronics.Endpoint.html">Endpoint</a>.<a class="xref" href="GHIElectronics.Endpoint.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>GHIElectronics.Endpoint.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class EPM815.Gpio.Pin</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">EPM815.Gpio.Pin</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_NONE" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.NONE">
+  NONE
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L445"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int NONE = -1</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PA0" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PA0">
+  PA0
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin definitions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PA0 = 0</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PA1" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PA1">
+  PA1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PA1 = 1</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PA10" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PA10">
+  PA10
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PA10 = 10</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PA11" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PA11">
+  PA11
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PA11 = 11</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PA12" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PA12">
+  PA12
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PA12 = 12</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PA13" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PA13">
+  PA13
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PA13 = 13</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PA14" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PA14">
+  PA14
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PA14 = 14</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PA15" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PA15">
+  PA15
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PA15 = 15</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PA2" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PA2">
+  PA2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PA2 = 2</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PA3" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PA3">
+  PA3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PA3 = 3</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PA4" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PA4">
+  PA4
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PA4 = 4</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PA5" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PA5">
+  PA5
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PA5 = 5</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PA6" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PA6">
+  PA6
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PA6 = 6</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PA7" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PA7">
+  PA7
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PA7 = 7</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PA8" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PA8">
+  PA8
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PA8 = 8</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PA9" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PA9">
+  PA9
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PA9 = 9</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PB0" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PB0">
+  PB0
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PB0 = 16</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PB1" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PB1">
+  PB1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PB1 = 17</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PB10" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PB10">
+  PB10
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PB10 = 26</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PB11" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PB11">
+  PB11
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PB11 = 27</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PB12" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PB12">
+  PB12
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PB12 = 28</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PB13" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PB13">
+  PB13
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PB13 = 29</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PB14" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PB14">
+  PB14
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PB14 = 30</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PB15" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PB15">
+  PB15
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PB15 = 31</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PB2" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PB2">
+  PB2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PB2 = 18</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PB3" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PB3">
+  PB3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PB3 = 19</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PB4" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PB4">
+  PB4
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PB4 = 20</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PB5" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PB5">
+  PB5
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PB5 = 21</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PB6" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PB6">
+  PB6
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PB6 = 22</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PB7" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PB7">
+  PB7
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PB7 = 23</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PB8" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PB8">
+  PB8
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PB8 = 24</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PB9" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PB9">
+  PB9
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PB9 = 25</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PC0" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PC0">
+  PC0
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PC0 = 32</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PC1" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PC1">
+  PC1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PC1 = 33</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PC10" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PC10">
+  PC10
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PC10 = 42</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PC11" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PC11">
+  PC11
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PC11 = 43</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PC12" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PC12">
+  PC12
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PC12 = 44</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PC13" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PC13">
+  PC13
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PC13 = 45</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PC14" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PC14">
+  PC14
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PC14 = 46</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PC15" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PC15">
+  PC15
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PC15 = 47</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PC2" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PC2">
+  PC2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PC2 = 34</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PC3" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PC3">
+  PC3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PC3 = 35</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PC4" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PC4">
+  PC4
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PC4 = 36</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PC5" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PC5">
+  PC5
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PC5 = 37</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PC6" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PC6">
+  PC6
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PC6 = 38</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PC7" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PC7">
+  PC7
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PC7 = 39</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PC8" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PC8">
+  PC8
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PC8 = 40</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PC9" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PC9">
+  PC9
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PC9 = 41</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PD0" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PD0">
+  PD0
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PD0 = 48</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PD1" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PD1">
+  PD1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PD1 = 49</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PD10" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PD10">
+  PD10
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PD10 = 58</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PD11" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PD11">
+  PD11
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PD11 = 59</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PD12" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PD12">
+  PD12
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PD12 = 60</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PD13" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PD13">
+  PD13
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PD13 = 61</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PD14" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PD14">
+  PD14
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L201"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PD14 = 62</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PD15" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PD15">
+  PD15
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PD15 = 63</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PD2" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PD2">
+  PD2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PD2 = 50</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PD3" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PD3">
+  PD3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PD3 = 51</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PD4" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PD4">
+  PD4
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PD4 = 52</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PD5" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PD5">
+  PD5
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PD5 = 53</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PD6" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PD6">
+  PD6
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PD6 = 54</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PD7" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PD7">
+  PD7
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PD7 = 55</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PD8" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PD8">
+  PD8
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PD8 = 56</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PD9" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PD9">
+  PD9
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PD9 = 57</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PE0" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PE0">
+  PE0
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PE0 = 64</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PE1" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PE1">
+  PE1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PE1 = 65</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PE10" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PE10">
+  PE10
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PE10 = 74</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PE11" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PE11">
+  PE11
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PE11 = 75</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PE12" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PE12">
+  PE12
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PE12 = 76</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PE13" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PE13">
+  PE13
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PE13 = 77</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PE14" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PE14">
+  PE14
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PE14 = 78</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PE15" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PE15">
+  PE15
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PE15 = 79</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PE2" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PE2">
+  PE2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PE2 = 66</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PE3" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PE3">
+  PE3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PE3 = 67</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PE4" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PE4">
+  PE4
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PE4 = 68</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PE5" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PE5">
+  PE5
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PE5 = 69</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PE6" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PE6">
+  PE6
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PE6 = 70</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PE7" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PE7">
+  PE7
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PE7 = 71</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PE8" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PE8">
+  PE8
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PE8 = 72</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PE9" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PE9">
+  PE9
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PE9 = 73</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PF0" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PF0">
+  PF0
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PF0 = 80</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PF1" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PF1">
+  PF1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PF1 = 81</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PF10" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PF10">
+  PF10
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PF10 = 90</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PF11" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PF11">
+  PF11
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PF11 = 91</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PF12" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PF12">
+  PF12
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PF12 = 92</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PF13" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PF13">
+  PF13
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PF13 = 93</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PF14" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PF14">
+  PF14
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PF14 = 94</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PF15" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PF15">
+  PF15
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L267"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PF15 = 95</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PF2" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PF2">
+  PF2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PF2 = 82</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PF3" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PF3">
+  PF3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PF3 = 83</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PF4" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PF4">
+  PF4
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L245"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PF4 = 84</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PF5" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PF5">
+  PF5
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PF5 = 85</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PF6" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PF6">
+  PF6
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PF6 = 86</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PF7" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PF7">
+  PF7
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PF7 = 87</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PF8" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PF8">
+  PF8
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PF8 = 88</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PF9" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PF9">
+  PF9
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PF9 = 89</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PG0" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PG0">
+  PG0
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PG0 = 96</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PG1" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PG1">
+  PG1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PG1 = 97</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PG10" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PG10">
+  PG10
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L289"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PG10 = 106</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PG11" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PG11">
+  PG11
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PG11 = 107</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PG12" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PG12">
+  PG12
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PG12 = 108</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PG13" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PG13">
+  PG13
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L295"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PG13 = 109</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PG14" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PG14">
+  PG14
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L297"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PG14 = 110</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PG15" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PG15">
+  PG15
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PG15 = 111</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PG2" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PG2">
+  PG2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PG2 = 98</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PG3" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PG3">
+  PG3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PG3 = 99</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PG4" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PG4">
+  PG4
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PG4 = 100</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PG5" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PG5">
+  PG5
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PG5 = 101</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PG6" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PG6">
+  PG6
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PG6 = 102</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PG7" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PG7">
+  PG7
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L283"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PG7 = 103</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PG8" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PG8">
+  PG8
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L285"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PG8 = 104</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PG9" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PG9">
+  PG9
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L287"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PG9 = 105</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PH0" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PH0">
+  PH0
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L301"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PH0 = 112</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PH1" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PH1">
+  PH1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L303"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PH1 = 113</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PH10" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PH10">
+  PH10
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L321"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PH10 = 122</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PH11" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PH11">
+  PH11
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PH11 = 123</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PH12" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PH12">
+  PH12
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PH12 = 124</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PH13" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PH13">
+  PH13
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L327"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PH13 = 125</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PH14" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PH14">
+  PH14
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L329"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PH14 = 126</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PH15" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PH15">
+  PH15
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L331"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PH15 = 127</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PH2" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PH2">
+  PH2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L305"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PH2 = 114</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PH3" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PH3">
+  PH3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L307"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PH3 = 115</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PH4" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PH4">
+  PH4
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L309"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PH4 = 116</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PH5" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PH5">
+  PH5
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PH5 = 117</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PH6" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PH6">
+  PH6
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L313"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PH6 = 118</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PH7" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PH7">
+  PH7
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L315"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PH7 = 119</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PH8" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PH8">
+  PH8
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L317"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PH8 = 120</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PH9" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PH9">
+  PH9
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PH9 = 121</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PI0" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PI0">
+  PI0
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L333"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PI0 = 128</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PI1" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PI1">
+  PI1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L335"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PI1 = 129</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PI10" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PI10">
+  PI10
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L353"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PI10 = 138</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PI11" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PI11">
+  PI11
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L355"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PI11 = 139</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PI12" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PI12">
+  PI12
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L357"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PI12 = 140</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PI13" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PI13">
+  PI13
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L359"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PI13 = 141</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PI14" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PI14">
+  PI14
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L361"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PI14 = 142</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PI15" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PI15">
+  PI15
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L363"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PI15 = 143</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PI2" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PI2">
+  PI2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L337"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PI2 = 130</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PI3" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PI3">
+  PI3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L339"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PI3 = 131</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PI4" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PI4">
+  PI4
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L341"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PI4 = 132</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PI5" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PI5">
+  PI5
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L343"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PI5 = 133</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PI6" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PI6">
+  PI6
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L345"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PI6 = 134</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PI7" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PI7">
+  PI7
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L347"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PI7 = 135</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PI8" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PI8">
+  PI8
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L349"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PI8 = 136</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PI9" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PI9">
+  PI9
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L351"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PI9 = 137</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PJ0" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PJ0">
+  PJ0
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L365"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PJ0 = 144</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PJ1" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PJ1">
+  PJ1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L367"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PJ1 = 145</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PJ10" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PJ10">
+  PJ10
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L385"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PJ10 = 154</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PJ11" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PJ11">
+  PJ11
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L387"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PJ11 = 155</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PJ12" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PJ12">
+  PJ12
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L389"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PJ12 = 156</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PJ13" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PJ13">
+  PJ13
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L391"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PJ13 = 157</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PJ14" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PJ14">
+  PJ14
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L393"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PJ14 = 158</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PJ15" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PJ15">
+  PJ15
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L395"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PJ15 = 159</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PJ2" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PJ2">
+  PJ2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L369"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PJ2 = 146</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PJ3" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PJ3">
+  PJ3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L371"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PJ3 = 147</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PJ4" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PJ4">
+  PJ4
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L373"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PJ4 = 148</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PJ5" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PJ5">
+  PJ5
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L375"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PJ5 = 149</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PJ6" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PJ6">
+  PJ6
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L377"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PJ6 = 150</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PJ7" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PJ7">
+  PJ7
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L379"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PJ7 = 151</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PJ8" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PJ8">
+  PJ8
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L381"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PJ8 = 152</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PJ9" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PJ9">
+  PJ9
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L383"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PJ9 = 153</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PK0" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PK0">
+  PK0
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L397"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PK0 = 160</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PK1" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PK1">
+  PK1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L399"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PK1 = 161</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PK10" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PK10">
+  PK10
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L417"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PK10 = 170</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PK11" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PK11">
+  PK11
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L419"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PK11 = 171</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PK12" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PK12">
+  PK12
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L421"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PK12 = 172</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PK13" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PK13">
+  PK13
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L423"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PK13 = 173</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PK14" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PK14">
+  PK14
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L425"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PK14 = 174</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PK15" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PK15">
+  PK15
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L427"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PK15 = 175</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PK2" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PK2">
+  PK2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L401"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PK2 = 162</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PK3" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PK3">
+  PK3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L403"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PK3 = 163</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PK4" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PK4">
+  PK4
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L405"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PK4 = 164</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PK5" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PK5">
+  PK5
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L407"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PK5 = 165</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PK6" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PK6">
+  PK6
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L409"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PK6 = 166</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PK7" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PK7">
+  PK7
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L411"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PK7 = 167</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PK8" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PK8">
+  PK8
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L413"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PK8 = 168</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PK9" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PK9">
+  PK9
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L415"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PK9 = 169</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PZ0" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PZ0">
+  PZ0
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L429"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PZ0 = 144</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PZ1" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PZ1">
+  PZ1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L431"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PZ1 = 145</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PZ2" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PZ2">
+  PZ2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L433"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PZ2 = 146</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PZ3" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PZ3">
+  PZ3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L435"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PZ3 = 147</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PZ4" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PZ4">
+  PZ4
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L437"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PZ4 = 148</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PZ5" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PZ5">
+  PZ5
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L439"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PZ5 = 149</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PZ6" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PZ6">
+  PZ6
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L441"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PZ6 = 150</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_Core_EPM815_Gpio_Pin_PZ7" data-uid="GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.PZ7">
+  PZ7
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L443"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GPIO pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PZ7 = 151</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs/#L73" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

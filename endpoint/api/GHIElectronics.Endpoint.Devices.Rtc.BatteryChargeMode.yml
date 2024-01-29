@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
+  commentId: T:GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
+  id: BatteryChargeMode
+  parent: GHIElectronics.Endpoint.Devices.Rtc
+  children:
+  - GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode.Fast
+  - GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode.None
+  - GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode.Slow
+  langs:
+  - csharp
+  - vb
+  name: BatteryChargeMode
+  nameWithType: BatteryChargeMode
+  fullName: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: BatteryChargeMode
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Rtc
+  namespace: GHIElectronics.Endpoint.Devices.Rtc
+  syntax:
+    content: public enum BatteryChargeMode
+    content.vb: Public Enum BatteryChargeMode
+- uid: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode.None
+  commentId: F:GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode.None
+  id: None
+  parent: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: BatteryChargeMode.None
+  fullName: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode.None
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: None
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
+    startLine: 11
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Rtc
+  namespace: GHIElectronics.Endpoint.Devices.Rtc
+  syntax:
+    content: None = 0
+    return:
+      type: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
+- uid: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode.Fast
+  commentId: F:GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode.Fast
+  id: Fast
+  parent: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
+  langs:
+  - csharp
+  - vb
+  name: Fast
+  nameWithType: BatteryChargeMode.Fast
+  fullName: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode.Fast
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Fast
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
+    startLine: 12
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Rtc
+  namespace: GHIElectronics.Endpoint.Devices.Rtc
+  syntax:
+    content: Fast = 1
+    return:
+      type: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
+- uid: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode.Slow
+  commentId: F:GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode.Slow
+  id: Slow
+  parent: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
+  langs:
+  - csharp
+  - vb
+  name: Slow
+  nameWithType: BatteryChargeMode.Slow
+  fullName: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode.Slow
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Slow
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
+    startLine: 13
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Rtc
+  namespace: GHIElectronics.Endpoint.Devices.Rtc
+  syntax:
+    content: Slow = 2
+    return:
+      type: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
+references:
+- uid: GHIElectronics.Endpoint.Devices.Rtc
+  commentId: N:GHIElectronics.Endpoint.Devices.Rtc
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Rtc
+  nameWithType: GHIElectronics.Endpoint.Devices.Rtc
+  fullName: GHIElectronics.Endpoint.Devices.Rtc
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Rtc
+    name: Rtc
+    href: GHIElectronics.Endpoint.Devices.Rtc.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Rtc
+    name: Rtc
+    href: GHIElectronics.Endpoint.Devices.Rtc.html
+- uid: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
+  commentId: T:GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
+  parent: GHIElectronics.Endpoint.Devices.Rtc
+  href: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode.html
+  name: BatteryChargeMode
+  nameWithType: BatteryChargeMode
+  fullName: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode

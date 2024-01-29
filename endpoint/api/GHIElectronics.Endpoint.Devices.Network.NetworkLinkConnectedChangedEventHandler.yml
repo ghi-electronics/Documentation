@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventHandler
+  commentId: T:GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventHandler
+  id: NetworkLinkConnectedChangedEventHandler
+  parent: GHIElectronics.Endpoint.Devices.Network
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: NetworkLinkConnectedChangedEventHandler
+  nameWithType: NetworkLinkConnectedChangedEventHandler
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventHandler
+  type: Delegate
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: NetworkLinkConnectedChangedEventHandler
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Network
+  namespace: GHIElectronics.Endpoint.Devices.Network
+  syntax:
+    content: public delegate void NetworkLinkConnectedChangedEventHandler(NetworkController sender, NetworkLinkConnectedChangedEventArgs e)
+    parameters:
+    - id: sender
+      type: GHIElectronics.Endpoint.Devices.Network.NetworkController
+    - id: e
+      type: GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventArgs
+    content.vb: Public Delegate Sub NetworkLinkConnectedChangedEventHandler(sender As NetworkController, e As NetworkLinkConnectedChangedEventArgs)
+references:
+- uid: GHIElectronics.Endpoint.Devices.Network
+  commentId: N:GHIElectronics.Endpoint.Devices.Network
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Network
+  nameWithType: GHIElectronics.Endpoint.Devices.Network
+  fullName: GHIElectronics.Endpoint.Devices.Network
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Network
+    name: Network
+    href: GHIElectronics.Endpoint.Devices.Network.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Network
+    name: Network
+    href: GHIElectronics.Endpoint.Devices.Network.html
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkController
+  commentId: T:GHIElectronics.Endpoint.Devices.Network.NetworkController
+  parent: GHIElectronics.Endpoint.Devices.Network
+  href: GHIElectronics.Endpoint.Devices.Network.NetworkController.html
+  name: NetworkController
+  nameWithType: NetworkController
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkController
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventArgs
+  commentId: T:GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventArgs
+  parent: GHIElectronics.Endpoint.Devices.Network
+  href: GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventArgs.html
+  name: NetworkLinkConnectedChangedEventArgs
+  nameWithType: NetworkLinkConnectedChangedEventArgs
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventArgs

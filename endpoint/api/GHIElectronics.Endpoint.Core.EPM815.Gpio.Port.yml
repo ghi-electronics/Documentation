@@ -1,0 +1,360 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  id: EPM815.Gpio.Port
+  parent: GHIElectronics.Endpoint.Core
+  children:
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.A
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.B
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.C
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.D
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.E
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.F
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.G
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.H
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.I
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.Z
+  langs:
+  - csharp
+  - vb
+  name: EPM815.Gpio.Port
+  nameWithType: EPM815.Gpio.Port
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Port
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 33
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: 'public enum EPM815.Gpio.Port : uint'
+    content.vb: Public Enum EPM815.Gpio.Port As UInteger
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.A
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.A
+  id: A
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  langs:
+  - csharp
+  - vb
+  name: A
+  nameWithType: EPM815.Gpio.Port.A
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.A
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: A
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 34
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: A = 0
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.B
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.B
+  id: B
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  langs:
+  - csharp
+  - vb
+  name: B
+  nameWithType: EPM815.Gpio.Port.B
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.B
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: B
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 35
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: B = 1
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.C
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.C
+  id: C
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  langs:
+  - csharp
+  - vb
+  name: C
+  nameWithType: EPM815.Gpio.Port.C
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.C
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: C
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 36
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: C = 2
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.D
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.D
+  id: D
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  langs:
+  - csharp
+  - vb
+  name: D
+  nameWithType: EPM815.Gpio.Port.D
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.D
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: D
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 37
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: D = 3
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.E
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.E
+  id: E
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  langs:
+  - csharp
+  - vb
+  name: E
+  nameWithType: EPM815.Gpio.Port.E
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.E
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: E
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 38
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: E = 4
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.F
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.F
+  id: F
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  langs:
+  - csharp
+  - vb
+  name: F
+  nameWithType: EPM815.Gpio.Port.F
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.F
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: F
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 39
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: F = 5
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.G
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.G
+  id: G
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  langs:
+  - csharp
+  - vb
+  name: G
+  nameWithType: EPM815.Gpio.Port.G
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.G
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: G
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 40
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: G = 6
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.H
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.H
+  id: H
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  langs:
+  - csharp
+  - vb
+  name: H
+  nameWithType: EPM815.Gpio.Port.H
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.H
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: H
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 41
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: H = 7
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.I
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.I
+  id: I
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  langs:
+  - csharp
+  - vb
+  name: I
+  nameWithType: EPM815.Gpio.Port.I
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.I
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: I
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 42
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: I = 8
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.Z
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.Z
+  id: Z
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  langs:
+  - csharp
+  - vb
+  name: Z
+  nameWithType: EPM815.Gpio.Port.Z
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.Z
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Z
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 43
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: Z = 9
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+references:
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.Port
+  nameWithType: EPM815.Gpio.Port
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+    name: Port
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+    name: Port
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.html

@@ -1,0 +1,128 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis
+  id: MouseAxis
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  children:
+  - GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis.X
+  - GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis.Y
+  langs:
+  - csharp
+  - vb
+  name: MouseAxis
+  nameWithType: MouseAxis
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/MouseAxis.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: MouseAxis
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/MouseAxis.cs
+    startLine: 8
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.UsbHost
+  namespace: GHIElectronics.Endpoint.Devices.UsbHost
+  syntax:
+    content: public enum MouseAxis
+    content.vb: Public Enum MouseAxis
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis.X
+  commentId: F:GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis.X
+  id: X
+  parent: GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis
+  langs:
+  - csharp
+  - vb
+  name: X
+  nameWithType: MouseAxis.X
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis.X
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/MouseAxis.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: X
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/MouseAxis.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.UsbHost
+  namespace: GHIElectronics.Endpoint.Devices.UsbHost
+  syntax:
+    content: X = 0
+    return:
+      type: GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis.Y
+  commentId: F:GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis.Y
+  id: Y
+  parent: GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis
+  langs:
+  - csharp
+  - vb
+  name: Y
+  nameWithType: MouseAxis.Y
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis.Y
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/MouseAxis.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Y
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/MouseAxis.cs
+    startLine: 11
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.UsbHost
+  namespace: GHIElectronics.Endpoint.Devices.UsbHost
+  syntax:
+    content: Y = 1
+    return:
+      type: GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis
+references:
+- uid: GHIElectronics.Endpoint.Devices.UsbHost
+  commentId: N:GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.UsbHost
+  nameWithType: GHIElectronics.Endpoint.Devices.UsbHost
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost
+    name: UsbHost
+    href: GHIElectronics.Endpoint.Devices.UsbHost.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost
+    name: UsbHost
+    href: GHIElectronics.Endpoint.Devices.UsbHost.html
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis.html
+  name: MouseAxis
+  nameWithType: MouseAxis
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis

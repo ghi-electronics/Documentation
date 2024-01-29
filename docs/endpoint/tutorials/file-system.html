@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>File System </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="File System ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/file-system.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p><a href="error.md">IN PROGRESS</a></p>
+<h1 id="file-system">File System</h1>
+<hr>
+<p>The file system library is a subset of the full .NET file system support. Most examples should work with only minor changes. The internal drivers fully support FAT16 or FAT32 file systems, with no limitations beyond the FAT file system itself!</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The USB drive must have an MBR record, not a GPT table.
+FAT16 and FAT32 file systems are supported.</p>
+</div>
+<h2 id="fat-file-system">Fat File System</h2>
+<h3 id="usb-mass-storage">USB Mass Storage</h3>
+<p>This allows file access on USB devices with MSC class, such as USB memory sticks. See the <a href="usb.html">USB</a> page.</p>
+<h3 id="sd-card">SD Card</h3>
+<p>SD and MMC cards are fully supported. Additionally, SPI SD drivers are also supported through the <code>ManagedFileSystem</code> software utility <a href="../configuration.html">Endpoint Config</a></p>
+<p>The example below requires the <code>GHIElectronics.TinyCLR.IO</code> and <code>GHIElectronics.TinyCLR.Devices.Storage</code> libraries and a device with an SD card.</p>
+<pre><code class="lang-cs">var sd = StorageController.FromName(SC20100.StorageController.SdCard);
+var drive = FileSystem.Mount(sd.Hdc);
+
+//Show a list of files in the root directory
+var directory = new DirectoryInfo(drive.Name);
+var files = directory.GetFiles();
+
+foreach (var f in files) {
+    System.Diagnostics.Debug.WriteLine(f.Name);
+}
+
+//Create a text file and save it to the SD card.
+var file = new FileStream($@&quot;{drive.Name}Test.txt&quot;, FileMode.OpenOrCreate);
+var bytes = Encoding.UTF8.GetBytes(DateTime.UtcNow.ToString() +
+    Environment.NewLine);
+
+file.Write(bytes, 0, bytes.Length);
+
+file.Flush();
+
+FileSystem.Flush(sd.Hdc);
+
+</code></pre>
+<h3 id="low-level-access">Low-level Access</h3>
+<p>You can access the raw underlying data of the storage provider by using the <code>Provider</code> property of the controller. Be careful when using this interface, however, as it bypasses any file system present and writes directly to the device. This is useful for implementing your own or otherwise unsupported file systems.</p>
+<pre><code class="lang-cs">var controller = StorageController.FromName
+        (SC20100.StorageController.SdCard);
+
+controller.Provider.Open(); // open
+controller.Provider.Read(address, buffer, 0, buffer.Length, TimeSpan.FromSeconds(5));
+controller.Provider.Close(); // close
+
+</code></pre>
+<hr>
+<h2 id="tiny-file-system-tfs">Tiny File System (TFS)</h2>
+<p>Tiny File System(TFS) can be used to access any memory storage as a file system. All that is needed is a basic driver to Read, Write, and Erase these storages.</p>
+<p>Below is an example that uses the external flash through TFS.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This example requires the <code>GHIElectronics.TinyCLR.IO.TinyFileSystem</code></p>
+</div>
+<pre><code class="lang-cs">const int CLUSTER_SIZE = 1024;
+
+var tfs = new TinyFileSystem(new QspiMemory(), CLUSTER_SIZE);
+            
+if (!tfs.CheckIfFormatted()) {
+    //Do Format if necessary 
+    tfs.Format();
+}
+else {
+    // Mount tiny file system
+    tfs.Mount();
+}
+
+//Open to write
+using (var fsWrite = tfs.Create(&quot;settings.dat&quot;)) {
+    using (var wr = new StreamWriter(fsWrite)) {
+        wr.WriteLine(&quot;This is TFS test&quot;);
+        wr.Flush();
+        fsWrite.Flush();
+    }
+}
+
+//Open to read
+using (var fsRead = tfs.Open(&quot;settings.dat&quot;, FileMode.Open)) {
+    using (var rdr = new StreamReader(fsRead)) {
+        System.String line;
+        
+        while ((line = rdr.ReadLine()) != null) {
+                Debug.WriteLine(line);
+        }
+    }
+}
+</code></pre>
+<p>Below is a basic driver implementation utilizing QSPI external flash. It automatically sets the size appropriately depending on whether the deployment is extended or not. It however gives you the option to fix the size to 2MB, as the remaining 8MB can optionally be used by <a href="in-field-update.html">InField Update</a>.</p>
+<pre><code class="lang-cs">public sealed class QspiMemory : IStorageControllerProvider
+{
+    public StorageDescriptor Descriptor =&gt; this.descriptor;
+    const int SectorSize = 4 * 1024;
+
+    private StorageDescriptor descriptor = new StorageDescriptor()
+    {
+        CanReadDirect = false,
+        CanWriteDirect = false,
+        CanExecuteDirect = false,
+        EraseBeforeWrite = true,
+        Removable = true,
+        RegionsContiguous = true,
+        RegionsEqualSized = true,
+        RegionAddresses = new long[] { 0 },
+        RegionSizes = new int[] { SectorSize },
+        RegionCount = (2 * 1024 * 1024) / (SectorSize)
+    };
+
+    private IStorageControllerProvider qspiDrive;
+
+    public QspiMemory() : this(2 * 1024 * 1024)
+    {
+
+    }
+
+    public QspiMemory(uint size)
+    {
+        var maxSize = Flash.IsEnabledExtendDeployment ? (10 * 1024 * 1024) : (16 * 1024 * 1024);
+
+        if (size &gt; maxSize)
+            throw new ArgumentOutOfRangeException(&quot;size too large.&quot;);
+
+        if (size &lt;= SectorSize)
+            throw new ArgumentOutOfRangeException(&quot;size too small.&quot;);
+
+        if (size != descriptor.RegionCount * SectorSize)
+        {
+            descriptor.RegionCount = (int)(size / SectorSize);
+        }
+
+        qspiDrive = StorageController.FromName(SC20260.StorageController.QuadSpi).Provider;
+
+        this.Open();
+    }
+
+    public void Open()
+    {
+        qspiDrive.Open();
+    }
+
+    public void Close()
+    {
+        qspiDrive.Close();
+    }
+
+    public void Dispose()
+    {
+        qspiDrive.Dispose();
+    }
+
+    public int Erase(long address, int count, TimeSpan timeout)
+    {
+        return qspiDrive.Erase(address, count, timeout);
+    }
+
+    public bool IsErased(long address, int count)
+    {
+        return qspiDrive.IsErased(address, count);
+    }
+
+    public int Read(long address, int count, byte[] buffer, int offset, TimeSpan timeout)
+    {
+        return qspiDrive.Read(address, count, buffer, offset, timeout);
+    }
+
+    public int Write(long address, int count, byte[] buffer, int offset, TimeSpan timeout)
+    {
+        return qspiDrive.Write(address, count, buffer, offset, timeout);
+    }
+
+    public void EraseAll(TimeSpan timeout)
+    {
+        for (var sector = 0; sector &lt; this.Descriptor.RegionCount; sector++)
+        {
+            qspiDrive.Erase(sector * this.Descriptor.RegionSizes[0], this.Descriptor.RegionSizes[0], timeout);
+        }
+    }
+}
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/file-system.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

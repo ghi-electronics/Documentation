@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>USB Client </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="USB Client ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/usb-client.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p><a href="error.md">IN PROGRESS</a></p>
+<h1 id="usb-client">USB Client</h1>
+<hr>
+<p>By default, USB client support is used for deploying and debugging applications. However, deploying and debugging can be switched to a serial mode using MOD pin, freeing the USB Client port to serve other purposes.</p>
+<p>The USB port can also be freed by completely disabling the USB debug interface, which is a feature of <a href="ip-protection.html">ip protection</a>.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Feature found in the GHIElectronics.TinyCLR.Devices.UsbClient NuGet and namespace</p>
+</div>
+<h3 id="usb-mouse">USB Mouse</h3>
+<p>In this mode, the hardware acts as a USB mouse. The driver supports absolute and relative modes. In relative mode, the <code>MoveCursor</code> method will move the cursor from current location, where ever it might be. Meaning, <code>MoveCursor(10,0)</code> followed by <code>MoveCursor(-10,0)</code> will move the cursor and immediately move it back where it started.</p>
+<p>In absolute mode, <code>MoveCursor</code> sets the cursor from (0,0), which is in the top left corner of the screen.</p>
+<pre><code class="lang-cs">var usbclientController = UsbClientController.GetDefault();
+var absolutePosition = true;
+var mouse = new Mouse(usbclientController, absolutePosition);
+
+mouse.DeviceStateChanged += UsbClientDeviceStateChanged;
+mouse.Enable();
+
+//...
+
+void UsbClientDeviceStateChanged(RawDevice sender, DeviceState state) {
+var i = 0.0;
+    if (state == DeviceState.Configured) {
+        new Thread(() =&gt; {
+            while (true) {
+                ((Mouse)sender).MoveCursor(
+                    Mouse.MaxRange /4 + (int)(Math.Cos(i) * Mouse.MaxRange / 10),
+                    Mouse.MaxRange /4 + (int)(Math.Sin(i) * Mouse.MaxRange / 10));
+                i+=0.03;
+                Thread.Sleep(50);
+            }
+        }).Start();
+    }
+}
+</code></pre>
+<h3 id="usb-keyboard">USB Keyboard</h3>
+<p>A USB Keyboard is simulated in this mode. The keys used can be <code>Press</code>, <code>Release</code> or <code>Stroke</code> (which is same as a <code>Press</code> followed by <code>Release</code>).</p>
+<pre><code class="lang-cs">var usbClientSetting = new UsbClientSetting() {
+    ManufactureName = &quot;Manufacture_Name&quot;,
+    ProductName = &quot;Product_Name&quot;,
+    SerialNumber = &quot;serialnumber&quot;,
+};
+var usbclientController = UsbClientController.GetDefault();
+var kb = new Keyboard(usbclientController, usbClientSetting);
+var key = new Key[] { Key.G, Key.H, Key.I, Key.Space, Key.E, Key.L, Key.E, Key.C, Key.T, Key.R, Key.O, Key.N, Key.I, Key.C, Key.S };
+kb.Enable();
+
+while (kb.DeviceState != DeviceState.Configured)
+    Thread.Sleep(100);// wait or use events
+
+kb.Press(Key.LeftShift);// hold shift down
+for (var i = 0; i &lt; key.Length; i++) {
+    kb.Stroke(key[i]);
+    Thread.Sleep(500);// type it twice a second
+}
+kb.Release(Key.LeftShift);// release shift
+</code></pre>
+<h3 id="usb-joystick">USB Joystick</h3>
+<p>Devices running TinyCLR OS can simulate a Joystick.</p>
+<pre><code class="lang-cs">var usbclientController = UsbClientController.GetDefault();
+
+var usbClientSetting = new UsbClientSetting() {
+    ManufactureName = &quot;Manufacture_Name&quot;,
+    ProductName = &quot;Product_Name&quot;,
+    SerialNumber = &quot;serialnumber&quot;,
+};
+
+var joystick = new Joystick(usbclientController, usbClientSetting);
+joystick.DeviceStateChanged += UsbClientDeviceStateChanged;
+joystick.Enable();
+
+Thread.Sleep(Timeout.Infinite);
+
+//...
+
+void UsbClientDeviceStateChanged(RawDevice sender, DeviceState state) {
+    if (state == DeviceState.Configured) {
+        new Thread(() =&gt; {
+            Joystick joystick = (Joystick)sender;
+            while (true) {
+                joystick.PressButton(0);
+                Thread.Sleep(500);
+                joystick.ReleaseButton(0);
+                Thread.Sleep(1000);
+            }
+        }).Start();
+    }
+}
+</code></pre>
+<h3 id="usb-mass-storage">USB Mass Storage</h3>
+<p>Devices running TinyCLR OS can act as a Mass Storage Device, giving a connected PC access to files. For example, a datalogger can save parameters to an internal SD card but, when USB cable is connected, the datalogger can stop logging data and give the USB bus access to the SD card. This allows a PC to then read the files as if it is reading any USB storage device.</p>
+<h4 id="sd-card">SD card</h4>
+<pre><code class="lang-cs">var sd = StorageController.FromName(SC20100.StorageController.SdCard);
+
+var usbclientController = UsbClientController.GetDefault();
+
+var usbclient_masstorage = new MassStorage(usbclientController);
+
+var ready = false;
+usbclient_masstorage.DeviceStateChanged += (a, b) =&gt; {
+	Debug.WriteLine(&quot;state : &quot; + b.ToString());
+
+	if (b == DeviceState.Configured)
+	ready = true;
+};
+
+usbclient_masstorage.AttachLogicalUnit(sd.Hdc);            
+
+usbclient_masstorage.Enable();
+
+while (!ready) ;
+
+// Wait few seconds for PC set up new drive
+</code></pre>
+<h4 id="qspi">QSPI</h4>
+<div class="NOTE">
+<h5>Note</h5>
+<p>When external flash is used for external deployment or any other purposes (Tiny FileSystem), do not enable QSPI for USB Mass Storage.
+USB Mass Storage uses entire 16MB of QSPI. Once formatted, all data will be lost!</p>
+</div>
+<pre><code class="lang-cs">var qspi = StorageController.FromName(SC20100.StorageController.QuadSpi);
+
+var usbclientController = UsbClientController.GetDefault();
+
+var usbclient_masstorage = new MassStorage(usbclientController);
+
+var ready = false;
+usbclient_masstorage.DeviceStateChanged += (a, b) =&gt; {
+	Debug.WriteLine(&quot;state : &quot; + b.ToString());
+
+	if (b == DeviceState.Configured)
+	ready = true;
+};
+
+usbclient_masstorage.AttachLogicalUnit(qspi.Hdc);            
+
+usbclient_masstorage.Enable();
+
+while (!ready);
+
+// Wait few seconds for PC set up new drive
+</code></pre>
+<h4 id="usb-thumb-drive">USB thumb drive</h4>
+<pre><code class="lang-cs">var usbHostController = UsbHostController.GetDefault();
+
+StorageController strogareController = null;
+
+var usbHostReady = false;
+
+usbHostController.OnConnectionChangedEvent += (a, b) =&gt; {
+	switch (b.DeviceStatus) {
+		case DeviceConnectionStatus.Connected:
+			switch (b.Type) {
+				case BaseDevice.DeviceType.MassStorage:
+					strogareController = StorageController.FromName(SC20260.StorageController.UsbHostMassStorage);
+					usbHostReady = true;
+					break;
+			}
+			break;
+	}
+};
+
+usbHostController.Enable();
+
+while (!usbHostReady);
+
+var usbclientController = UsbClientController.GetDefault();
+
+var usbclient_masstorage = new MassStorage(usbclientController);
+
+var ready = false;
+
+usbclient_masstorage.DeviceStateChanged += (a, b) =&gt; {
+	Debug.WriteLine(&quot;state : &quot; + b.ToString());
+
+	if (b == DeviceState.Configured)
+		ready = true;
+};
+
+usbclient_masstorage.AttachLogicalUnit(strogareController.Hdc);            
+
+usbclient_masstorage.Enable();
+
+while (!ready);
+
+// Wait few seconds for PC set up new drive
+</code></pre>
+<h3 id="pc-data-transfer">PC Data Transfer</h3>
+<p>This feature is used to transfer data between the hardware and a PC. See <a href="usb-pc-comm.html">PC Data Comm</a> for details.</p>
+<h3 id="usb-raw">USB Raw</h3>
+<p>For advanced users, virtually any type of USB device can be created using USB Raw. The USB mouse driver inside <a href="https://github.com/ghi-electronics/TinyCLR-Libraries">GHIElectronics.TinyCLR.Devices.UsbClient</a> is a good example of how this can be achieved.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/usb-client.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

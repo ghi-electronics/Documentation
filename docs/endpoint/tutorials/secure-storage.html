@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Secure Storage </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Secure Storage ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/secure-storage.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p><a href="error.md">IN PROGRESS</a></p>
+<h1 id="secure-storage">Secure Storage</h1>
+<hr>
+<p>There are two secure storage areas you may find useful: the configuration storage area and the one-time programmable storage area.</p>
+<h2 id="configuration-storage">Configuration Storage</h2>
+<p>On SC20260 (and SC20100), there is 128 KByte secure storage area is organized as 4096 blocks of 32 bytes each.</p>
+<p>On SC13048 there is 8KB secure storage, organized as 256 blocks of 32 bytes each.</p>
+<p>Configuration storage can be erased and modified. Performing an <code>erase all</code> in TinyCLR Config will wipe out this area. As this area is comprised of a single sector of flash memory, only the whole storage area can be erased. Partial erases are not possible.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.SecureStorage</p>
+</div>
+<pre><code class="lang-cs">const uint STORAGE_SIZE = 32 * 1024;
+var configStorage = new SecureStorageController(SecureStorage.Configuration);
+var data = new byte[STORAGE_SIZE];
+
+Debug.WriteLine(&quot;Configuration storage total size: &quot; +
+    configStorage.TotalSize.ToString() + &quot; bytes.&quot;);
+
+Debug.WriteLine(&quot;Configuration storage block size: &quot; +
+    configStorage.BlockSize.ToString() + &quot; bytes.&quot;);
+
+Debug.WriteLine(&quot;Checking if blank. . .&quot;);
+var isBlank = true;
+
+for (uint block = 0; block &lt; configStorage.TotalSize / configStorage.BlockSize; block++) {
+    if (!configStorage.IsBlank(block)) isBlank = false;
+}
+
+if (isBlank) {
+    Debug.WriteLine(&quot;Configuration storage area is blank.&quot;);
+}
+else {
+    Debug.WriteLine(&quot;Erasing entire configuration storage area...&quot;);
+    configStorage.Erase();
+}
+
+Debug.WriteLine(&quot;Filling buffer...&quot;);
+
+for (var i = 0; i &lt; data.Length; i++) {
+    data[i] = (byte)(i % 255);
+}
+
+Debug.WriteLine(&quot;Writing buffer...&quot;);
+var dataBlock = new byte[configStorage.BlockSize];
+
+for (uint block = 0; block &lt; data.Length / configStorage.BlockSize; block++) {
+    Array.Copy(data, (int)(block * configStorage.BlockSize), dataBlock, 0,
+        (int)(configStorage.BlockSize));
+
+    configStorage.Write(block, dataBlock);
+}
+
+Debug.WriteLine(&quot;Comparing buffer...&quot;);
+
+for (uint block = 0; block &lt; data.Length / configStorage.BlockSize; block++) {
+    for (var byteIndex = 0; byteIndex &lt; configStorage.BlockSize; byteIndex++) {
+        configStorage.Read(block, dataBlock);
+
+        if (data[block * configStorage.BlockSize + byteIndex] != dataBlock[byteIndex]) {
+            Debug.WriteLine(&quot;Configuration storage data is corrupted!&quot;);
+            Thread.Sleep(Timeout.Infinite);
+        }
+    }
+}
+
+Debug.WriteLine(&quot;Configuration storage is good to go!!!&quot;);
+</code></pre>
+<hr>
+<h2 id="one-time-programmable-area">One Time Programmable Area</h2>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If all 32 bytes of any OTP flash block contain 0xFF, the block is considered unused. If you write only 0xFF to the contents of a block, the block will be regarded as unused and you will be able to rewrite the block.</p>
+</div>
+<p>The one time programmable (OTP) secure flash region is organized into 2048 blocks on SC20260 (or SC20100), and 64 blocks on SC13048 of 32 bytes each. Once you write to a block, that block can be read but never changed.</p>
+<p>There is no way to modify written data. Erasing the entire device <code>Erase All</code> in TinyCLR Config will not erase or modify this area.</p>
+<p>The API for OTP storage is the same as for the configuration storage area, except that instantiation takes a different argument and the <code>Erase</code> method is disabled.</p>
+<p>OTP secure storage is instantiated as follows:</p>
+<pre><code class="lang-cs">var otpStorage = new SecureStorageController(SecureStorage.Otp);
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>SC13048 allows write one time on each block, even data all is 0xFF.</p>
+</div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/secure-storage.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

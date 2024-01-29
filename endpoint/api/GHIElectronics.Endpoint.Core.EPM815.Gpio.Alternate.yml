@@ -1,0 +1,549 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  id: EPM815.Gpio.Alternate
+  parent: GHIElectronics.Endpoint.Core
+  children:
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF0
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF1
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF10
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF11
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF12
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF13
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF14
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF15
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF2
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF3
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF4
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF5
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF6
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF7
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF8
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF9
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.NONE
+  langs:
+  - csharp
+  - vb
+  name: EPM815.Gpio.Alternate
+  nameWithType: EPM815.Gpio.Alternate
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Alternate
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 13
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public enum EPM815.Gpio.Alternate
+    content.vb: Public Enum EPM815.Gpio.Alternate
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF0
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF0
+  id: AF0
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  langs:
+  - csharp
+  - vb
+  name: AF0
+  nameWithType: EPM815.Gpio.Alternate.AF0
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF0
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AF0
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 14
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: AF0 = 0
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF1
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF1
+  id: AF1
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  langs:
+  - csharp
+  - vb
+  name: AF1
+  nameWithType: EPM815.Gpio.Alternate.AF1
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF1
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AF1
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 15
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: AF1 = 1
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF2
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF2
+  id: AF2
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  langs:
+  - csharp
+  - vb
+  name: AF2
+  nameWithType: EPM815.Gpio.Alternate.AF2
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF2
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AF2
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 16
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: AF2 = 2
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF3
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF3
+  id: AF3
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  langs:
+  - csharp
+  - vb
+  name: AF3
+  nameWithType: EPM815.Gpio.Alternate.AF3
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF3
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AF3
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 17
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: AF3 = 3
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF4
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF4
+  id: AF4
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  langs:
+  - csharp
+  - vb
+  name: AF4
+  nameWithType: EPM815.Gpio.Alternate.AF4
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF4
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AF4
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 18
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: AF4 = 4
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF5
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF5
+  id: AF5
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  langs:
+  - csharp
+  - vb
+  name: AF5
+  nameWithType: EPM815.Gpio.Alternate.AF5
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF5
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AF5
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 19
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: AF5 = 5
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF6
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF6
+  id: AF6
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  langs:
+  - csharp
+  - vb
+  name: AF6
+  nameWithType: EPM815.Gpio.Alternate.AF6
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF6
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AF6
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 20
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: AF6 = 6
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF7
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF7
+  id: AF7
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  langs:
+  - csharp
+  - vb
+  name: AF7
+  nameWithType: EPM815.Gpio.Alternate.AF7
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF7
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AF7
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 21
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: AF7 = 7
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF8
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF8
+  id: AF8
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  langs:
+  - csharp
+  - vb
+  name: AF8
+  nameWithType: EPM815.Gpio.Alternate.AF8
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF8
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AF8
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 22
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: AF8 = 8
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF9
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF9
+  id: AF9
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  langs:
+  - csharp
+  - vb
+  name: AF9
+  nameWithType: EPM815.Gpio.Alternate.AF9
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF9
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AF9
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 23
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: AF9 = 9
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF10
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF10
+  id: AF10
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  langs:
+  - csharp
+  - vb
+  name: AF10
+  nameWithType: EPM815.Gpio.Alternate.AF10
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF10
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AF10
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 24
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: AF10 = 10
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF11
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF11
+  id: AF11
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  langs:
+  - csharp
+  - vb
+  name: AF11
+  nameWithType: EPM815.Gpio.Alternate.AF11
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF11
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AF11
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 25
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: AF11 = 11
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF12
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF12
+  id: AF12
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  langs:
+  - csharp
+  - vb
+  name: AF12
+  nameWithType: EPM815.Gpio.Alternate.AF12
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF12
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AF12
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 26
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: AF12 = 12
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF13
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF13
+  id: AF13
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  langs:
+  - csharp
+  - vb
+  name: AF13
+  nameWithType: EPM815.Gpio.Alternate.AF13
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF13
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AF13
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 27
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: AF13 = 13
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF14
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF14
+  id: AF14
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  langs:
+  - csharp
+  - vb
+  name: AF14
+  nameWithType: EPM815.Gpio.Alternate.AF14
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF14
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AF14
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 28
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: AF14 = 14
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF15
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF15
+  id: AF15
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  langs:
+  - csharp
+  - vb
+  name: AF15
+  nameWithType: EPM815.Gpio.Alternate.AF15
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.AF15
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AF15
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 29
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: AF15 = 15
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.NONE
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.NONE
+  id: NONE
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  langs:
+  - csharp
+  - vb
+  name: NONE
+  nameWithType: EPM815.Gpio.Alternate.NONE
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.NONE
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: NONE
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 30
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: NONE = -1
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+references:
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.Alternate
+  nameWithType: EPM815.Gpio.Alternate
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+    name: Alternate
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+    name: Alternate
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.html

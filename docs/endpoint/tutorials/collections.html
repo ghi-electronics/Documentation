@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Collections </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Collections ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/collections.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p><a href="error.md">IN PROGRESS</a></p>
+<h1 id="collections">Collections</h1>
+<hr>
+<p>Similar data can often be handled more efficiently when stored and manipulated as a collection. You can use the System.Array class or the classes in the System.Collections namespace to add, remove, and modify either individual elements or a range of elements in a collection.</p>
+<p>For more info go to <a href="https://docs.microsoft.com/en-us/dotnet/standard/collections/index">https://docs.microsoft.com/en-us/dotnet/standard/collections/index</a>.</p>
+<p>TinyCLR OS collections support ArrayLists, Hash tables, Stacks, and Queues.</p>
+<h2 id="arraylists">ArrayLists</h2>
+<p>ArrayLists have a significant advantage over arrays in that ArrayLists are automatically resized as needed, whereas arrays are limited to a fixed number of elements. The following code sample creates an ArrayList, adds a couple of records, and then iterates through the ArrayList items and displays each record.</p>
+<pre><code class="lang-cs">class Program {
+    private struct rmaRecord {
+        public System.DateTime date;
+        public string modelNumber;
+        public string fault;
+    }
+
+    private static void Main() {
+        var rmaList = new System.Collections.ArrayList();
+        var record = new rmaRecord();
+
+        record.date = new System.DateTime(2020, 2, 21);
+        record.modelNumber = &quot;XY23&quot;;
+        record.fault = &quot;No power&quot;;
+
+        rmaList.Add(record);
+
+        record.date = new System.DateTime(2020, 2, 20);
+        record.modelNumber = &quot;XY42&quot;;
+        record.fault = &quot;Blown fuse&quot;;
+
+        rmaList.Add(record);
+
+        PrintValues(rmaList);
+    }
+
+    private static void PrintValues(System.Collections.ArrayList list) {
+        System.Diagnostics.Debug.WriteLine(&quot;Count: &quot; + list.Count);
+        System.Diagnostics.Debug.WriteLine(&quot;Capacity: &quot; + list.Capacity);
+        System.Diagnostics.Debug.WriteLine(&quot; &quot;);
+        System.Diagnostics.Debug.WriteLine(&quot;Values:&quot;);
+
+        foreach (rmaRecord record in list) {
+            System.Diagnostics.Debug.WriteLine(&quot;    Date: &quot; + record.date.Year +
+                &quot;/&quot; + record.date.Month + &quot;/&quot; + record.date.Day);
+
+            System.Diagnostics.Debug.WriteLine(&quot;    Model#: &quot; + record.modelNumber);
+            System.Diagnostics.Debug.WriteLine(&quot;    Fault: &quot; + record.fault);
+            System.Diagnostics.Debug.WriteLine(&quot;----------&quot;);
+        }
+    }
+}
+</code></pre>
+<p>The above code outputs the following:</p>
+<pre><code>Count: 2
+Capacity: 4
+ 
+Values:
+    Date: 2020/2/21
+    Model#: XY23
+    Fault: No power
+----------
+    Date: 2020/2/20
+    Model#: XY42
+    Fault: Blown fuse
+----------
+</code></pre>
+<p>In the above sample, <code>rmaList.Clear()</code> will remove all elements from <code>rmaList</code>, <code>rmaList.RemoveAt(1)</code> will remove only the second element in the list, and <code>rmaList.Remove(record)</code> will remove the first element that is equal to <code>record</code>.</p>
+<hr>
+<h2 id="hash-tables">Hash tables</h2>
+<p>Hash tables are used to store information in a way that associates each data element, or value, with a key that can be used to look up that value. Hash tables make it easy to quickly retrieve information that would otherwise be difficult to organize in an efficient manner.</p>
+<p>For example, imagine trying to look up a phone number from a given name. You could make a two dimension array of names and phone numbers and then iterate through the array looking for the correct name, but this would be slow with a large array. Hash tables solve this problem by using a hash function to convert a key, in this case a name, into an array index that points directly to the data element you are looking for. This allows you to quickly retrieve the data directly instead of searching for it.</p>
+<p>The following code sample creates a hash table, adds elements to the hash table, and then reads back the value for each key.</p>
+<pre><code class="lang-cs">//Create a hash table.
+System.Collections.Hashtable processorPin = new System.Collections.Hashtable();
+
+//Add some elements to the hash table. There can be no duplicate keys, but duplicate
+//    values are allowed.
+
+//                Key   Value
+processorPin.Add(&quot;LDR&quot;, &quot;PE3&quot;);
+processorPin.Add(&quot;APP&quot;, &quot;PB7&quot;);
+processorPin.Add(&quot;MOD&quot;, &quot;PD7&quot;);
+processorPin.Add(&quot;WKUP&quot;, &quot;PA0&quot;);
+processorPin.Add(&quot;BTN1&quot;, &quot;PE3&quot;);
+processorPin.Add(&quot;BTN2&quot;, &quot;PB7&quot;);
+processorPin.Add(&quot;BTN3&quot;, &quot;PD7&quot;);
+
+//If a key does not exist, setting the default Item property
+//for that key adds a new key/value pair.
+
+processorPin[&quot;BTN4&quot;] = &quot;PD9&quot;;
+
+//When you use foreach to enumerate hash table elements, the elements are retrieved
+//    as DictionaryEntry objects.
+
+foreach (System.Collections.DictionaryEntry de in processorPin) {
+    System.Diagnostics.Debug.WriteLine(&quot;Key = &quot; + de.Key + &quot;    Value = &quot; + de.Value);
+}
+
+</code></pre>
+<p>The above code outputs the following:</p>
+<pre><code>Key = MOD     Value = PD7
+Key = LDR     Value = PE3
+Key = BTN1    Value = PE3
+Key = BTN2    Value = PB7
+Key = BTN3    Value = PD7
+Key = BTN4    Value = PD9
+Key = WKUP    Value = PA0
+Key = APP     Value = PB7 
+</code></pre>
+<hr>
+<h2 id="stacks">Stacks</h2>
+<p>Stacks are first in, last out (or last in, first out) collections of objects. The <code>Push</code> method is used to add items to a stack, and the <code>Pop</code> method is used to remove items from a stack. There is also a <code>Peek</code> method that returns the item at the top of the stack without removing it from the stack.</p>
+<pre><code class="lang-cs">var sitCoreDevices = new System.Collections.Stack();
+sitCoreDevices.Push(&quot;SC20100S&quot;);
+sitCoreDevices.Push(&quot;SC20260B&quot;);
+sitCoreDevices.Push(&quot;SCM20260D&quot;);
+sitCoreDevices.Push(&quot;SCM20260E&quot;);
+sitCoreDevices.Push(&quot;SCM20260N&quot;);
+        
+PrintValues(sitCoreDevices);
+
+System.Diagnostics.Debug.WriteLine(&quot;Popped: &quot; + sitCoreDevices.Pop().ToString());
+System.Diagnostics.Debug.WriteLine(&quot; &quot;);
+
+PrintValues(sitCoreDevices);
+
+void PrintValues(System.Collections.Stack myQueue) {
+    System.Diagnostics.Debug.WriteLine(&quot;Count: &quot; + myQueue.Count);
+    System.Diagnostics.Debug.WriteLine(&quot;Items in queue:&quot;);
+
+    foreach (System.Object obj in myQueue)
+        System.Diagnostics.Debug.WriteLine(&quot;    &quot; + obj);
+
+    System.Diagnostics.Debug.WriteLine(&quot; &quot;);
+}
+</code></pre>
+<p>The above code outputs the following:</p>
+<pre><code>The thread '&lt;No Name&gt;' (0x2) has exited with code 0 (0x0).
+Count: 5
+Items in queue:
+    SCM20260N
+    SCM20260E
+    SCM20260D
+    SC20260B
+    SC20100S
+ 
+Popped: SCM20260N
+ 
+Count: 4
+Items in queue:
+    SCM20260E
+    SCM20260D
+    SC20260B
+    SC20100S
+</code></pre>
+<hr>
+<h2 id="queues">Queues</h2>
+<p>Queues are first in, first out collections of objects. To add items to a queue, the <code>enqueue</code> method is used. To remove items, the <code>dequeue</code> method is used.</p>
+<pre><code class="lang-cs">var sitCoreDevices = new System.Collections.Queue();
+sitCoreDevices.Enqueue(&quot;SC20100S&quot;);
+sitCoreDevices.Enqueue(&quot;SC20260B&quot;);
+sitCoreDevices.Enqueue(&quot;SCM20260D&quot;);
+sitCoreDevices.Enqueue(&quot;SCM20260E&quot;);
+sitCoreDevices.Enqueue(&quot;SCM20260N&quot;);
+        
+PrintValues(sitCoreDevices);
+
+System.Diagnostics.Debug.WriteLine(&quot;Dequeued: &quot; +
+    sitCoreDevices.Dequeue().ToString());
+
+System.Diagnostics.Debug.WriteLine(&quot; &quot;);
+
+PrintValues(sitCoreDevices);
+
+void PrintValues(System.Collections.Queue myQueue) {
+    System.Diagnostics.Debug.WriteLine(&quot;Count: &quot; + myQueue.Count);
+    System.Diagnostics.Debug.WriteLine(&quot;Items in queue:&quot;);
+
+    foreach (System.Object obj in myQueue)
+        System.Diagnostics.Debug.WriteLine(&quot;    &quot; + obj);
+
+    System.Diagnostics.Debug.WriteLine(&quot; &quot;);
+}
+</code></pre>
+<p>The above code outputs the following:</p>
+<pre><code>Count: 5
+Items in queue:
+    SC20100S
+    SC20260B
+    SCM20260D
+    SCM20260N
+    SCM20260E
+ 
+Dequeued: SC20100S
+ 
+Count: 4
+Items in queue:
+    SC20260B
+    SCM20260D
+    SCM20260N
+    SCM20260E
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/collections.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

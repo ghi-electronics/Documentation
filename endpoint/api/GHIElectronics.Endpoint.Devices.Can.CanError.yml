@@ -1,0 +1,317 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Can.CanError
+  commentId: T:GHIElectronics.Endpoint.Devices.Can.CanError
+  id: CanError
+  parent: GHIElectronics.Endpoint.Devices.Can
+  children:
+  - GHIElectronics.Endpoint.Devices.Can.CanError.ErrorAck
+  - GHIElectronics.Endpoint.Devices.Can.CanError.ErrorBusError
+  - GHIElectronics.Endpoint.Devices.Can.CanError.ErrorBusOff
+  - GHIElectronics.Endpoint.Devices.Can.CanError.ErrorCrtl
+  - GHIElectronics.Endpoint.Devices.Can.CanError.ErrorLostArbitration
+  - GHIElectronics.Endpoint.Devices.Can.CanError.ErrorProtocol
+  - GHIElectronics.Endpoint.Devices.Can.CanError.ErrorRestarted
+  - GHIElectronics.Endpoint.Devices.Can.CanError.ErrorTransceiver
+  - GHIElectronics.Endpoint.Devices.Can.CanError.ErrorTxTimeout
+  langs:
+  - csharp
+  - vb
+  name: CanError
+  nameWithType: CanError
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanError
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: CanError
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 12
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: 'public enum CanError : uint'
+    content.vb: Public Enum CanError As UInteger
+- uid: GHIElectronics.Endpoint.Devices.Can.CanError.ErrorTxTimeout
+  commentId: F:GHIElectronics.Endpoint.Devices.Can.CanError.ErrorTxTimeout
+  id: ErrorTxTimeout
+  parent: GHIElectronics.Endpoint.Devices.Can.CanError
+  langs:
+  - csharp
+  - vb
+  name: ErrorTxTimeout
+  nameWithType: CanError.ErrorTxTimeout
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanError.ErrorTxTimeout
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ErrorTxTimeout
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 14
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: ErrorTxTimeout = 1
+    return:
+      type: GHIElectronics.Endpoint.Devices.Can.CanError
+- uid: GHIElectronics.Endpoint.Devices.Can.CanError.ErrorLostArbitration
+  commentId: F:GHIElectronics.Endpoint.Devices.Can.CanError.ErrorLostArbitration
+  id: ErrorLostArbitration
+  parent: GHIElectronics.Endpoint.Devices.Can.CanError
+  langs:
+  - csharp
+  - vb
+  name: ErrorLostArbitration
+  nameWithType: CanError.ErrorLostArbitration
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanError.ErrorLostArbitration
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ErrorLostArbitration
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 15
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: ErrorLostArbitration = 2
+    return:
+      type: GHIElectronics.Endpoint.Devices.Can.CanError
+- uid: GHIElectronics.Endpoint.Devices.Can.CanError.ErrorCrtl
+  commentId: F:GHIElectronics.Endpoint.Devices.Can.CanError.ErrorCrtl
+  id: ErrorCrtl
+  parent: GHIElectronics.Endpoint.Devices.Can.CanError
+  langs:
+  - csharp
+  - vb
+  name: ErrorCrtl
+  nameWithType: CanError.ErrorCrtl
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanError.ErrorCrtl
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ErrorCrtl
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 16
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: ErrorCrtl = 4
+    return:
+      type: GHIElectronics.Endpoint.Devices.Can.CanError
+- uid: GHIElectronics.Endpoint.Devices.Can.CanError.ErrorProtocol
+  commentId: F:GHIElectronics.Endpoint.Devices.Can.CanError.ErrorProtocol
+  id: ErrorProtocol
+  parent: GHIElectronics.Endpoint.Devices.Can.CanError
+  langs:
+  - csharp
+  - vb
+  name: ErrorProtocol
+  nameWithType: CanError.ErrorProtocol
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanError.ErrorProtocol
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ErrorProtocol
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 17
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: ErrorProtocol = 8
+    return:
+      type: GHIElectronics.Endpoint.Devices.Can.CanError
+- uid: GHIElectronics.Endpoint.Devices.Can.CanError.ErrorTransceiver
+  commentId: F:GHIElectronics.Endpoint.Devices.Can.CanError.ErrorTransceiver
+  id: ErrorTransceiver
+  parent: GHIElectronics.Endpoint.Devices.Can.CanError
+  langs:
+  - csharp
+  - vb
+  name: ErrorTransceiver
+  nameWithType: CanError.ErrorTransceiver
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanError.ErrorTransceiver
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ErrorTransceiver
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 18
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: ErrorTransceiver = 16
+    return:
+      type: GHIElectronics.Endpoint.Devices.Can.CanError
+- uid: GHIElectronics.Endpoint.Devices.Can.CanError.ErrorAck
+  commentId: F:GHIElectronics.Endpoint.Devices.Can.CanError.ErrorAck
+  id: ErrorAck
+  parent: GHIElectronics.Endpoint.Devices.Can.CanError
+  langs:
+  - csharp
+  - vb
+  name: ErrorAck
+  nameWithType: CanError.ErrorAck
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanError.ErrorAck
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ErrorAck
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 19
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: ErrorAck = 32
+    return:
+      type: GHIElectronics.Endpoint.Devices.Can.CanError
+- uid: GHIElectronics.Endpoint.Devices.Can.CanError.ErrorBusOff
+  commentId: F:GHIElectronics.Endpoint.Devices.Can.CanError.ErrorBusOff
+  id: ErrorBusOff
+  parent: GHIElectronics.Endpoint.Devices.Can.CanError
+  langs:
+  - csharp
+  - vb
+  name: ErrorBusOff
+  nameWithType: CanError.ErrorBusOff
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanError.ErrorBusOff
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ErrorBusOff
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 20
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: ErrorBusOff = 64
+    return:
+      type: GHIElectronics.Endpoint.Devices.Can.CanError
+- uid: GHIElectronics.Endpoint.Devices.Can.CanError.ErrorBusError
+  commentId: F:GHIElectronics.Endpoint.Devices.Can.CanError.ErrorBusError
+  id: ErrorBusError
+  parent: GHIElectronics.Endpoint.Devices.Can.CanError
+  langs:
+  - csharp
+  - vb
+  name: ErrorBusError
+  nameWithType: CanError.ErrorBusError
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanError.ErrorBusError
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ErrorBusError
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 21
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: ErrorBusError = 128
+    return:
+      type: GHIElectronics.Endpoint.Devices.Can.CanError
+- uid: GHIElectronics.Endpoint.Devices.Can.CanError.ErrorRestarted
+  commentId: F:GHIElectronics.Endpoint.Devices.Can.CanError.ErrorRestarted
+  id: ErrorRestarted
+  parent: GHIElectronics.Endpoint.Devices.Can.CanError
+  langs:
+  - csharp
+  - vb
+  name: ErrorRestarted
+  nameWithType: CanError.ErrorRestarted
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanError.ErrorRestarted
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ErrorRestarted
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 22
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: ErrorRestarted = 256
+    return:
+      type: GHIElectronics.Endpoint.Devices.Can.CanError
+references:
+- uid: GHIElectronics.Endpoint.Devices.Can
+  commentId: N:GHIElectronics.Endpoint.Devices.Can
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Can
+  nameWithType: GHIElectronics.Endpoint.Devices.Can
+  fullName: GHIElectronics.Endpoint.Devices.Can
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Can
+    name: Can
+    href: GHIElectronics.Endpoint.Devices.Can.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Can
+    name: Can
+    href: GHIElectronics.Endpoint.Devices.Can.html
+- uid: GHIElectronics.Endpoint.Devices.Can.CanError
+  commentId: T:GHIElectronics.Endpoint.Devices.Can.CanError
+  parent: GHIElectronics.Endpoint.Devices.Can
+  href: GHIElectronics.Endpoint.Devices.Can.CanError.html
+  name: CanError
+  nameWithType: CanError
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanError

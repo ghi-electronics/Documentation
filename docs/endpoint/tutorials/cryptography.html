@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Cryptography </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Cryptography ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/cryptography.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p><a href="error.md">IN PROGRESS</a></p>
+<h1 id="cryptography">Cryptography</h1>
+<hr>
+<p>TinyCLR OS supports multiple algorithms.</p>
+<h2 id="xtea">XTEA</h2>
+<p>XTEA encryption is a symmetrical encryption method that always uses a 128 bit key. Keys of any other size will throw an exception. XTEA encryption also requires the data to you are encrypting to be a multiple of eight bytes in length.</p>
+<p>XTEA encryption is not only dependent upon the supplied key, but also the &quot;number of rounds&quot; or iterations the encryption algorithm uses to encode and decode information. TinyCLR OS always uses 32 rounds. So, for example, if you are using a PC to decode data that was encoded using TinyCLR OS, make sure that both the correct key and number of rounds (32) are used on the PC side.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Core and GHIElectronics.TinyCLR.Cryptography</p>
+</div>
+<p>The following sample code encrypts and decrypts a string of text.</p>
+<pre><code class="lang-cs">//Argument below is the 128 bit key. XTEA always uses a 128 bit key.
+var crypto = new Xtea(new uint[] { 0x01234567, 0x89ABCDEF, 0xFEDCBA98, 0x76543210 });
+
+byte[] dataToEncrypt = Encoding.UTF8.GetBytes(&quot;Data to encrypt.&quot;);
+byte[] encryptedData;
+byte[] decryptedData;
+
+//Encrypt data. Data must be a multiple of 8 bytes.
+encryptedData = crypto.Encrypt(dataToEncrypt, 0, (uint)dataToEncrypt.Length);
+
+//Decrypt data.
+decryptedData = crypto.Decrypt(encryptedData, 0, (uint)encryptedData.Length);
+
+Debug.WriteLine(&quot;Decrypted: &quot; + Encoding.UTF8.GetString(decryptedData));
+</code></pre>
+<p>The above code outputs the following:</p>
+<pre><code class="lang-text">Decrypted: Data to encrypt.
+</code></pre>
+<hr>
+<h2 id="rsa">RSA</h2>
+<p>RSA public key cryptography has become the most popular asymmetric cryptography scheme on the Internet. While public key cryptography systems solve the problem of secure key sharing that exists in symmetric cryptography, they are much more computationally intensive. As a result, cryptography systems such as RSA are often used only to securely transfer the key for a symmetric cryptography method such as XTEA. Once the key has been sent, the computationally less intensive symmetric cryptography system is then used to encode and decode the bulk of the data.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p><code>RSACryptoServiceProvider()</code> implements the IDisposable interface</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Core and GHIElectronics.TinyCLR.Cryptography</p>
+</div>
+<p>The following sample code encrypts and decrypts a string of text.</p>
+<pre><code class="lang-cs">byte[] dataToEncrypt = Encoding.UTF8.GetBytes(&quot;Data to Encrypt&quot;);
+byte[] encryptedData;
+byte[] decryptedData;
+
+using (RSACryptoServiceProvider RSA = new RSACryptoServiceProvider(2048)) {
+
+    //Encrypt data.
+    using (RSACryptoServiceProvider encryptRSA = new RSACryptoServiceProvider()) {
+
+        encryptRSA.ImportParameters(RSA.ExportParameters(false));
+        encryptedData = encryptRSA.Encrypt(dataToEncrypt);
+    }
+
+    //Decrypt data.
+    using (RSACryptoServiceProvider decryptRSA = new RSACryptoServiceProvider()) {
+
+        decryptRSA.ImportParameters(RSA.ExportParameters(true));
+        decryptedData = decryptRSA.Decrypt(encryptedData);
+    }
+}
+
+Debug.WriteLine(&quot;Decrypted: &quot; + Encoding.UTF8.GetString(decryptedData));
+
+</code></pre>
+<p>The above code outputs the following:</p>
+<pre><code class="lang-text">Decrypted: Data to Encrypt
+</code></pre>
+<p>If no key size is provided as an argument to <code>RSACryptoServiceProvider()</code>, a default key size of 1024 bits will be used.</p>
+<p>The boolean argument for <code>RSA.ExportParameters()</code> determines whether this method returns the private key (true) or public key (false). The public key is used to encrypt messages, while the private key is needed to decrypt messages.</p>
+<p>The code sample below demonstrates how to sign &amp; verify data.</p>
+<pre><code class="lang-cs">var dataToSign = Encoding.UTF8.GetBytes(&quot;Data to sign. This is for test&quot;);
+byte[] signData;
+RSAParameters signKey;
+
+using (RSACryptoServiceProvider SignRSA = new RSACryptoServiceProvider()){
+    signKey = SignRSA.ExportParameters(true);
+    SignRSA.ImportParameters(signKey);
+    signData = SignRSA.SignData(dataToSign, true);
+}
+
+using (RSACryptoServiceProvider VerifyRSA = new RSACryptoServiceProvider()){
+    VerifyRSA.ImportParameters(signKey);
+    Debug.WriteLine(&quot;Signed: &quot; + VerifyRSA.VerifyData(dataToSign, signData, true));
+}
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/cryptography.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

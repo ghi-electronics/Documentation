@@ -1,0 +1,565 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice
+  id: BaseDevice
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  children:
+  - GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.#ctor(System.Int32,System.String,GHIElectronics.Endpoint.Devices.Usb.DeviceType)
+  - GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.CurrentId
+  - GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.DeviceId
+  - GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.DeviceName
+  - GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.Type
+  langs:
+  - csharp
+  - vb
+  name: BaseDevice
+  nameWithType: BaseDevice
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/BaseDevice.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: BaseDevice
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/BaseDevice.cs
+    startLine: 214
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.UsbHost
+  namespace: GHIElectronics.Endpoint.Devices.UsbHost
+  summary: Represents a USB device connected.
+  example: []
+  syntax:
+    content: public class BaseDevice
+    content.vb: Public Class BaseDevice
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.DeviceName
+  commentId: P:GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.DeviceName
+  id: DeviceName
+  parent: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice
+  langs:
+  - csharp
+  - vb
+  name: DeviceName
+  nameWithType: BaseDevice.DeviceName
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.DeviceName
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/BaseDevice.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DeviceName
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/BaseDevice.cs
+    startLine: 215
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.UsbHost
+  namespace: GHIElectronics.Endpoint.Devices.UsbHost
+  syntax:
+    content: public string DeviceName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property DeviceName As String
+  overload: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.DeviceName*
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.Type
+  commentId: P:GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.Type
+  id: Type
+  parent: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: BaseDevice.Type
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.Type
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/BaseDevice.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Type
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/BaseDevice.cs
+    startLine: 216
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.UsbHost
+  namespace: GHIElectronics.Endpoint.Devices.UsbHost
+  syntax:
+    content: public DeviceType Type { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+    content.vb: Public ReadOnly Property Type As DeviceType
+  overload: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.Type*
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.DeviceId
+  commentId: P:GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.DeviceId
+  id: DeviceId
+  parent: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice
+  langs:
+  - csharp
+  - vb
+  name: DeviceId
+  nameWithType: BaseDevice.DeviceId
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.DeviceId
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/BaseDevice.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DeviceId
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/BaseDevice.cs
+    startLine: 217
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.UsbHost
+  namespace: GHIElectronics.Endpoint.Devices.UsbHost
+  syntax:
+    content: public int DeviceId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property DeviceId As Integer
+  overload: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.DeviceId*
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.CurrentId
+  commentId: F:GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.CurrentId
+  id: CurrentId
+  parent: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice
+  langs:
+  - csharp
+  - vb
+  name: CurrentId
+  nameWithType: BaseDevice.CurrentId
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.CurrentId
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/BaseDevice.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: CurrentId
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/BaseDevice.cs
+    startLine: 219
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.UsbHost
+  namespace: GHIElectronics.Endpoint.Devices.UsbHost
+  syntax:
+    content: public static int CurrentId
+    return:
+      type: System.Int32
+    content.vb: Public Shared CurrentId As Integer
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.#ctor(System.Int32,System.String,GHIElectronics.Endpoint.Devices.Usb.DeviceType)
+  commentId: M:GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.#ctor(System.Int32,System.String,GHIElectronics.Endpoint.Devices.Usb.DeviceType)
+  id: '#ctor(System.Int32,System.String,GHIElectronics.Endpoint.Devices.Usb.DeviceType)'
+  parent: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice
+  langs:
+  - csharp
+  - vb
+  name: BaseDevice(int, string, DeviceType)
+  nameWithType: BaseDevice.BaseDevice(int, string, DeviceType)
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.BaseDevice(int, string, GHIElectronics.Endpoint.Devices.Usb.DeviceType)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/BaseDevice.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/BaseDevice.cs
+    startLine: 221
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.UsbHost
+  namespace: GHIElectronics.Endpoint.Devices.UsbHost
+  syntax:
+    content: public BaseDevice(int id, string name, DeviceType type)
+    parameters:
+    - id: id
+      type: System.Int32
+    - id: name
+      type: System.String
+    - id: type
+      type: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+    content.vb: Public Sub New(id As Integer, name As String, type As DeviceType)
+  overload: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.#ctor*
+  nameWithType.vb: BaseDevice.New(Integer, String, DeviceType)
+  fullName.vb: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.New(Integer, String, GHIElectronics.Endpoint.Devices.Usb.DeviceType)
+  name.vb: New(Integer, String, DeviceType)
+references:
+- uid: GHIElectronics.Endpoint.Devices.UsbHost
+  commentId: N:GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.UsbHost
+  nameWithType: GHIElectronics.Endpoint.Devices.UsbHost
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost
+    name: UsbHost
+    href: GHIElectronics.Endpoint.Devices.UsbHost.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost
+    name: UsbHost
+    href: GHIElectronics.Endpoint.Devices.UsbHost.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.DeviceName*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.DeviceName
+  href: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.html#GHIElectronics_Endpoint_Devices_UsbHost_BaseDevice_DeviceName
+  name: DeviceName
+  nameWithType: BaseDevice.DeviceName
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.DeviceName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.Type*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.Type
+  href: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.html#GHIElectronics_Endpoint_Devices_UsbHost_BaseDevice_Type
+  name: Type
+  nameWithType: BaseDevice.Type
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.Type
+- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+  commentId: T:GHIElectronics.Endpoint.Devices.Usb.DeviceType
+  parent: GHIElectronics.Endpoint.Devices.Usb
+  href: GHIElectronics.Endpoint.Devices.Usb.DeviceType.html
+  name: DeviceType
+  nameWithType: DeviceType
+  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+- uid: GHIElectronics.Endpoint.Devices.Usb
+  commentId: N:GHIElectronics.Endpoint.Devices.Usb
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Usb
+  nameWithType: GHIElectronics.Endpoint.Devices.Usb
+  fullName: GHIElectronics.Endpoint.Devices.Usb
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Usb
+    name: Usb
+    href: GHIElectronics.Endpoint.Devices.Usb.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Usb
+    name: Usb
+    href: GHIElectronics.Endpoint.Devices.Usb.html
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.DeviceId*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.DeviceId
+  href: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.html#GHIElectronics_Endpoint_Devices_UsbHost_BaseDevice_DeviceId
+  name: DeviceId
+  nameWithType: BaseDevice.DeviceId
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.DeviceId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.#ctor
+  href: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.html#GHIElectronics_Endpoint_Devices_UsbHost_BaseDevice__ctor_System_Int32_System_String_GHIElectronics_Endpoint_Devices_Usb_DeviceType_
+  name: BaseDevice
+  nameWithType: BaseDevice.BaseDevice
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.BaseDevice
+  nameWithType.vb: BaseDevice.New
+  fullName.vb: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.New
+  name.vb: New

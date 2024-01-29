@@ -1,0 +1,544 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Core.EPM815.I2c
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.I2c
+  id: EPM815.I2c
+  parent: GHIElectronics.Endpoint.Core
+  children:
+  - GHIElectronics.Endpoint.Core.EPM815.I2c.I2c1
+  - GHIElectronics.Endpoint.Core.EPM815.I2c.I2c4
+  - GHIElectronics.Endpoint.Core.EPM815.I2c.I2c5
+  - GHIElectronics.Endpoint.Core.EPM815.I2c.I2c6
+  - GHIElectronics.Endpoint.Core.EPM815.I2c.Initialize(System.Int32)
+  - GHIElectronics.Endpoint.Core.EPM815.I2c.Initialize(System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Core.EPM815.I2c.UnInitialize(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: EPM815.I2c
+  nameWithType: EPM815.I2c
+  fullName: GHIElectronics.Endpoint.Core.EPM815.I2c
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/I2c.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: I2c
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/I2c.cs
+    startLine: 11
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static class EPM815.I2c
+    content.vb: Public Module EPM815.I2c
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.Core.EPM815.I2c.I2c1
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.I2c.I2c1
+  id: I2c1
+  parent: GHIElectronics.Endpoint.Core.EPM815.I2c
+  langs:
+  - csharp
+  - vb
+  name: I2c1
+  nameWithType: EPM815.I2c.I2c1
+  fullName: GHIElectronics.Endpoint.Core.EPM815.I2c.I2c1
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/I2c.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: I2c1
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/I2c.cs
+    startLine: 13
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  summary: I2c controller.
+  example: []
+  syntax:
+    content: public const int I2c1 = 0
+    return:
+      type: System.Int32
+    content.vb: Public Const I2c1 As Integer = 0
+- uid: GHIElectronics.Endpoint.Core.EPM815.I2c.I2c4
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.I2c.I2c4
+  id: I2c4
+  parent: GHIElectronics.Endpoint.Core.EPM815.I2c
+  langs:
+  - csharp
+  - vb
+  name: I2c4
+  nameWithType: EPM815.I2c.I2c4
+  fullName: GHIElectronics.Endpoint.Core.EPM815.I2c.I2c4
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/I2c.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: I2c4
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/I2c.cs
+    startLine: 16
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public const int I2c4 = 2
+    return:
+      type: System.Int32
+    content.vb: Public Const I2c4 As Integer = 2
+- uid: GHIElectronics.Endpoint.Core.EPM815.I2c.I2c5
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.I2c.I2c5
+  id: I2c5
+  parent: GHIElectronics.Endpoint.Core.EPM815.I2c
+  langs:
+  - csharp
+  - vb
+  name: I2c5
+  nameWithType: EPM815.I2c.I2c5
+  fullName: GHIElectronics.Endpoint.Core.EPM815.I2c.I2c5
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/I2c.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: I2c5
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/I2c.cs
+    startLine: 17
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public const int I2c5 = 1
+    return:
+      type: System.Int32
+    content.vb: Public Const I2c5 As Integer = 1
+- uid: GHIElectronics.Endpoint.Core.EPM815.I2c.I2c6
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.I2c.I2c6
+  id: I2c6
+  parent: GHIElectronics.Endpoint.Core.EPM815.I2c
+  langs:
+  - csharp
+  - vb
+  name: I2c6
+  nameWithType: EPM815.I2c.I2c6
+  fullName: GHIElectronics.Endpoint.Core.EPM815.I2c.I2c6
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/I2c.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: I2c6
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/I2c.cs
+    startLine: 18
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public const int I2c6 = 3
+    return:
+      type: System.Int32
+    content.vb: Public Const I2c6 As Integer = 3
+- uid: GHIElectronics.Endpoint.Core.EPM815.I2c.Initialize(System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Core.EPM815.I2c.Initialize(System.Int32)
+  id: Initialize(System.Int32)
+  parent: GHIElectronics.Endpoint.Core.EPM815.I2c
+  langs:
+  - csharp
+  - vb
+  name: Initialize(int)
+  nameWithType: EPM815.I2c.Initialize(int)
+  fullName: GHIElectronics.Endpoint.Core.EPM815.I2c.Initialize(int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/I2c.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Initialize
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/I2c.cs
+    startLine: 39
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static void Initialize(int port)
+    parameters:
+    - id: port
+      type: System.Int32
+    content.vb: Public Shared Sub Initialize(port As Integer)
+  overload: GHIElectronics.Endpoint.Core.EPM815.I2c.Initialize*
+  nameWithType.vb: EPM815.I2c.Initialize(Integer)
+  fullName.vb: GHIElectronics.Endpoint.Core.EPM815.I2c.Initialize(Integer)
+  name.vb: Initialize(Integer)
+- uid: GHIElectronics.Endpoint.Core.EPM815.I2c.Initialize(System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Core.EPM815.I2c.Initialize(System.Int32,System.Int32)
+  id: Initialize(System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Core.EPM815.I2c
+  langs:
+  - csharp
+  - vb
+  name: Initialize(int, int)
+  nameWithType: EPM815.I2c.Initialize(int, int)
+  fullName: GHIElectronics.Endpoint.Core.EPM815.I2c.Initialize(int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/I2c.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Initialize
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/I2c.cs
+    startLine: 40
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static void Initialize(int port, int frequency_hz)
+    parameters:
+    - id: port
+      type: System.Int32
+    - id: frequency_hz
+      type: System.Int32
+    content.vb: Public Shared Sub Initialize(port As Integer, frequency_hz As Integer)
+  overload: GHIElectronics.Endpoint.Core.EPM815.I2c.Initialize*
+  nameWithType.vb: EPM815.I2c.Initialize(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Core.EPM815.I2c.Initialize(Integer, Integer)
+  name.vb: Initialize(Integer, Integer)
+- uid: GHIElectronics.Endpoint.Core.EPM815.I2c.UnInitialize(System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Core.EPM815.I2c.UnInitialize(System.Int32)
+  id: UnInitialize(System.Int32)
+  parent: GHIElectronics.Endpoint.Core.EPM815.I2c
+  langs:
+  - csharp
+  - vb
+  name: UnInitialize(int)
+  nameWithType: EPM815.I2c.UnInitialize(int)
+  fullName: GHIElectronics.Endpoint.Core.EPM815.I2c.UnInitialize(int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/I2c.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: UnInitialize
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/I2c.cs
+    startLine: 179
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static void UnInitialize(int port)
+    parameters:
+    - id: port
+      type: System.Int32
+    content.vb: Public Shared Sub UnInitialize(port As Integer)
+  overload: GHIElectronics.Endpoint.Core.EPM815.I2c.UnInitialize*
+  nameWithType.vb: EPM815.I2c.UnInitialize(Integer)
+  fullName.vb: GHIElectronics.Endpoint.Core.EPM815.I2c.UnInitialize(Integer)
+  name.vb: UnInitialize(Integer)
+references:
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GHIElectronics.Endpoint.Core.EPM815.I2c.Initialize*
+  commentId: Overload:GHIElectronics.Endpoint.Core.EPM815.I2c.Initialize
+  href: GHIElectronics.Endpoint.Core.EPM815.I2c.html#GHIElectronics_Endpoint_Core_EPM815_I2c_Initialize_System_Int32_
+  name: Initialize
+  nameWithType: EPM815.I2c.Initialize
+  fullName: GHIElectronics.Endpoint.Core.EPM815.I2c.Initialize
+- uid: GHIElectronics.Endpoint.Core.EPM815.I2c.UnInitialize*
+  commentId: Overload:GHIElectronics.Endpoint.Core.EPM815.I2c.UnInitialize
+  href: GHIElectronics.Endpoint.Core.EPM815.I2c.html#GHIElectronics_Endpoint_Core_EPM815_I2c_UnInitialize_System_Int32_
+  name: UnInitialize
+  nameWithType: EPM815.I2c.UnInitialize
+  fullName: GHIElectronics.Endpoint.Core.EPM815.I2c.UnInitialize

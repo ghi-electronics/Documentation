@@ -1,0 +1,778 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay
+  commentId: T:GHIElectronics.Endpoint.Devices.Display.FBDisplay
+  id: FBDisplay
+  parent: GHIElectronics.Endpoint.Devices.Display
+  children:
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.#ctor(GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration)
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Dispose
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(System.Byte[],System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Height
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Width
+  langs:
+  - csharp
+  - vb
+  name: FBDisplay
+  nameWithType: FBDisplay
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: FBDisplay
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: 'public class FBDisplay : IDisplayProvider, IDisposable'
+    content.vb: Public Class FBDisplay Implements IDisplayProvider, IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Width
+  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Width
+  id: Width
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: FBDisplay.Width
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Width
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Width
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 32
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: public int Width { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Width As Integer
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Width*
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Height
+  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Height
+  id: Height
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: FBDisplay.Height
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Height
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Height
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 33
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: public int Height { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Height As Integer
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Height*
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.#ctor(GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration)
+  commentId: M:GHIElectronics.Endpoint.Devices.Display.FBDisplay.#ctor(GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration)
+  id: '#ctor(GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration)'
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay
+  langs:
+  - csharp
+  - vb
+  name: FBDisplay(DisplayConfiguration)
+  nameWithType: FBDisplay.FBDisplay(DisplayConfiguration)
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.FBDisplay(GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 36
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: public FBDisplay(DisplayConfiguration configuration)
+    parameters:
+    - id: configuration
+      type: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
+    content.vb: Public Sub New(configuration As DisplayConfiguration)
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.#ctor*
+  nameWithType.vb: FBDisplay.New(DisplayConfiguration)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Display.FBDisplay.New(GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration)
+  name.vb: New(DisplayConfiguration)
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+  id: Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay
+  langs:
+  - csharp
+  - vb
+  name: Flush(byte[], int, int, int, int)
+  nameWithType: FBDisplay.Flush(byte[], int, int, int, int)
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(byte[], int, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Flush
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 49
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  example: []
+  syntax:
+    content: public void Flush(byte[] data, int offset, int length, int width, int height)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    - id: offset
+      type: System.Int32
+    - id: length
+      type: System.Int32
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub Flush(data As Byte(), offset As Integer, length As Integer, width As Integer, height As Integer)
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush*
+  implements:
+  - GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+  nameWithType.vb: FBDisplay.Flush(Byte(), Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(Byte(), Integer, Integer, Integer, Integer)
+  name.vb: Flush(Byte(), Integer, Integer, Integer, Integer)
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(System.Byte[],System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(System.Byte[],System.Int32,System.Int32)
+  id: Flush(System.Byte[],System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay
+  langs:
+  - csharp
+  - vb
+  name: Flush(byte[], int, int)
+  nameWithType: FBDisplay.Flush(byte[], int, int)
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(byte[], int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Flush
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 78
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  example: []
+  syntax:
+    content: public void Flush(byte[] data, int offset, int length)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    - id: offset
+      type: System.Int32
+    - id: length
+      type: System.Int32
+    content.vb: Public Sub Flush(data As Byte(), offset As Integer, length As Integer)
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush*
+  implements:
+  - GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32)
+  nameWithType.vb: FBDisplay.Flush(Byte(), Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(Byte(), Integer, Integer)
+  name.vb: Flush(Byte(), Integer, Integer)
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Dispose
+  commentId: M:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Dispose
+  id: Dispose
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: FBDisplay.Dispose()
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Dispose()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Dispose
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 190
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: GHIElectronics.Endpoint.Devices.Display
+  commentId: N:GHIElectronics.Endpoint.Devices.Display
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Display
+  nameWithType: GHIElectronics.Endpoint.Devices.Display
+  fullName: GHIElectronics.Endpoint.Devices.Display
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Display
+    name: Display
+    href: GHIElectronics.Endpoint.Devices.Display.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Display
+    name: Display
+    href: GHIElectronics.Endpoint.Devices.Display.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
+  commentId: T:GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
+  parent: GHIElectronics.Endpoint.Devices.Display
+  href: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.html
+  name: IDisplayProvider
+  nameWithType: IDisplayProvider
+  fullName: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Width*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Width
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Width
+  name: Width
+  nameWithType: FBDisplay.Width
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Width
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Height*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Height
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Height
+  name: Height
+  nameWithType: FBDisplay.Height
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Height
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.#ctor
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay__ctor_GHIElectronics_Endpoint_Devices_Display_DisplayConfiguration_
+  name: FBDisplay
+  nameWithType: FBDisplay.FBDisplay
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.FBDisplay
+  nameWithType.vb: FBDisplay.New
+  fullName.vb: GHIElectronics.Endpoint.Devices.Display.FBDisplay.New
+  name.vb: New
+- uid: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
+  commentId: T:GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
+  parent: GHIElectronics.Endpoint.Devices.Display
+  href: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration.html
+  name: DisplayConfiguration
+  nameWithType: DisplayConfiguration
+  fullName: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Flush_System_Byte___System_Int32_System_Int32_System_Int32_System_Int32_
+  name: Flush
+  nameWithType: FBDisplay.Flush
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush
+- uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
+  isExternal: true
+  href: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.html#GHIElectronics_Endpoint_Devices_Display_IDisplayProvider_Flush_System_Byte___System_Int32_System_Int32_System_Int32_System_Int32_
+  name: Flush(byte[], int, int, int, int)
+  nameWithType: IDisplayProvider.Flush(byte[], int, int, int, int)
+  fullName: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(byte[], int, int, int, int)
+  nameWithType.vb: IDisplayProvider.Flush(Byte(), Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(Byte(), Integer, Integer, Integer, Integer)
+  name.vb: Flush(Byte(), Integer, Integer, Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+    name: Flush
+    href: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.html#GHIElectronics_Endpoint_Devices_Display_IDisplayProvider_Flush_System_Byte___System_Int32_System_Int32_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+    name: Flush
+    href: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.html#GHIElectronics_Endpoint_Devices_Display_IDisplayProvider_Flush_System_Byte___System_Int32_System_Int32_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
+  isExternal: true
+  href: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.html#GHIElectronics_Endpoint_Devices_Display_IDisplayProvider_Flush_System_Byte___System_Int32_System_Int32_
+  name: Flush(byte[], int, int)
+  nameWithType: IDisplayProvider.Flush(byte[], int, int)
+  fullName: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(byte[], int, int)
+  nameWithType.vb: IDisplayProvider.Flush(Byte(), Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(Byte(), Integer, Integer)
+  name.vb: Flush(Byte(), Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32)
+    name: Flush
+    href: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.html#GHIElectronics_Endpoint_Devices_Display_IDisplayProvider_Flush_System_Byte___System_Int32_System_Int32_
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32)
+    name: Flush
+    href: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.html#GHIElectronics_Endpoint_Devices_Display_IDisplayProvider_Flush_System_Byte___System_Int32_System_Int32_
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Dispose*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Dispose
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Dispose
+  name: Dispose
+  nameWithType: FBDisplay.Dispose
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

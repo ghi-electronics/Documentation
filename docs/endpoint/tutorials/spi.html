@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>SPI </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="SPI ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/spi.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p><a href="error.md">IN PROGRESS</a></p>
+<h1 id="spi">SPI</h1>
+<hr>
+<p>SPI uses three or four wires for transferring data. A SPI bus consists of a single master and one or more slaves. The master will send the clock signal to the slaves over the SCK (Serial Clock) pin. It will also send data over MOSI (Master Out Slave In) pin, while reading incoming data on the MISO (Master In Slave Out) pin. The SCK line is used to determine how fast the data is moved. If you know electronics, this is simply a shift register.</p>
+<p>The master selects which slave it will swap the data with using the SSEL (Slave SELect) pin, sometimes called CS (Chip Select).</p>
+<p>In its simplest terms, the master will swap data between itself and the slave. You cannot write data without reading data at the same time. However, often you want to write data and don't care about the incoming data. To do this you can use the Write method. Keep in mind that the Write method is discarding whatever data the slave is sending back.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Note that a board running TinyCLR OS is always the SPI master, not the slave.</p>
+</div>
+<p>In TinyCLR OS, SPI transfers are dynamically sent in batches that are internally optimized to allow for maximum speed back-to-back transfers. This is helpful when sending large buffers, such as when refreshing displays.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Some SPI devices (slaves) can have more than one select pin, like the VS1053 MP3 decoder chip that uses one select pin for data and the other for commands. Both share the three data transfer pins (SCK, MOSI, MISO).</p>
+</div>
+<pre><code class="lang-cs">var cs = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PE4);
+
+var settings = new SpiConnectionSettings() {
+    ChipSelectType = SpiChipSelectType.Gpio,
+    ChipSelectLine = cs,
+    Mode = SpiMode.Mode1,
+    ClockFrequency = 4_000_000,
+};
+
+var controller = SpiController.FromName(SC20100.SpiBus.Spi4);
+var device = controller.GetDevice(settings);
+
+device.Write(new byte[] { 1, 2 }); //Write something.
+device.TransferSequential(...);    //This is good for reading registers.
+device.TransferFullDuplex(...);    //This is the only one that truly represents how SPI works.
+</code></pre>
+<hr>
+<h2 id="spi-clock-speed">SPI Clock Speed</h2>
+<p>SITCore SPI controllers support different clock ranges.</p>
+<table>
+<thead>
+<tr>
+<th>SPI Controllers</th>
+<th>1, 2 &amp; 3</th>
+<th>4 &amp; 5</th>
+<th>6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Minimum Speed</td>
+<td>188 kHz</td>
+<td>469 kHz</td>
+<td>250K</td>
+</tr>
+<tr>
+<td>Maximum Speed</td>
+<td>24 MHz</td>
+<td>60 MHz</td>
+<td>32MHz</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Supported clock speeds are derived/divisible from the Maximum clock frequency. If the requested clock is not divisible, the next lower frequency will be used. This is to keep the clock speed as high as possible, but still at or below the requested speed. For example, on 60Mhz clock, the available options are 60Mhz, 30Mhz, 20Mhz, 15Mhz...etc. If the desired frequency is set to 29Mhz then 20Mhz will be used.</p>
+</div>
+<p>The <code>MinClockFrequency</code> and <code>MaxClockFrequency</code> fields can be used at runtime.</p>
+<pre><code class="lang-cs">var controller = SpiController.FromName(SC20100.SpiBus.Spi3);
+Debug.WriteLine(controller.MinClockFrequency.ToString());
+Debug.WriteLine(controller.MaxClockFrequency.ToString());
+</code></pre>
+<hr>
+<h2 id="bit-ordering">Bit Ordering</h2>
+<p>TinyCLR supports switching between sending the most significant bit first (MSb) or least significant bit first (LSb).</p>
+<pre><code class="lang-cs">var spiSettings = new SpiConnectionSettings() {               
+    DataFrameFormat = SpiDataFrame.MsbFirst // MSb
+};
+
+var spiSettings = new SpiConnectionSettings() {
+    DataFrameFormat = SpiDataFrame.LsbFirst // LSb
+};
+</code></pre>
+<hr>
+<h2 id="software-spi">Software SPI</h2>
+<p>Users have the option to drive (bit bang) SPI bus in software over any of the available GPIOs.</p>
+<pre><code class="lang-cs">var provider = new GHIElectronics.TinyCLR.Devices.
+    Spi.Provider.SpiControllerSoftwareProvider(mosi, miso, clk);
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Software generated buses are slower and use more resources, but can be used on any pins.</p>
+</div>
+<h2 id="spi-display-helper">SPI Display Helper</h2>
+<p>When partially updating a section of the SPI display, SPI includes a <code>Write</code> method to extract and send the needed data. Partial updates are faster than updating the full screen due to sending fewer bytes over SPI bus.</p>
+<pre><code class="lang-cs">var x = 10; 
+var y = 20;
+var width = 100;
+var height = 100;
+var originalWidth = 160;
+
+spi.Write(graphicsBuffer, x, y, width, height, originalWidth, 1, 1);
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Software SPI doesn't support this method.</p>
+</div>
+<h2 id="pixel-multiplier">Pixel Multiplier</h2>
+<p>This feature allows pixels to be multiplied across the screen, allowing larger displays to be used with lesser memory. For example, a 320x240 display can be used with 160x120 graphics buffer if both multipliers, the column and the row, are set to 2. The system will be able to drive the display with only 25% of the needed memory, trading off the resolution.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The column and row multipliers are independent from each other. A 320x240 display can be driven with a 320x120 graphics when column multiplier is set to 1 and the row multiplier is set to 2.</p>
+</div>
+<pre><code class="lang-cs">spi.Write(buffer, x, y, width, height, originalWidth, columnMultiplier, rowMultiplier);
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Software SPI doesn't support this feature.</p>
+</div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/spi.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

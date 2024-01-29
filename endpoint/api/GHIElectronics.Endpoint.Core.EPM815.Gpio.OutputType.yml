@@ -1,0 +1,144 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+  id: EPM815.Gpio.OutputType
+  parent: GHIElectronics.Endpoint.Core
+  children:
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType.OpenDrain
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType.PushPull
+  langs:
+  - csharp
+  - vb
+  name: EPM815.Gpio.OutputType
+  nameWithType: EPM815.Gpio.OutputType
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OutputType
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 54
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public enum EPM815.Gpio.OutputType
+    content.vb: Public Enum EPM815.Gpio.OutputType
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType.PushPull
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType.PushPull
+  id: PushPull
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+  langs:
+  - csharp
+  - vb
+  name: PushPull
+  nameWithType: EPM815.Gpio.OutputType.PushPull
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType.PushPull
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PushPull
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 55
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: PushPull = 0
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType.OpenDrain
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType.OpenDrain
+  id: OpenDrain
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+  langs:
+  - csharp
+  - vb
+  name: OpenDrain
+  nameWithType: EPM815.Gpio.OutputType.OpenDrain
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType.OpenDrain
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OpenDrain
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 56
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: OpenDrain = 1
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+references:
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.OutputType
+  nameWithType: EPM815.Gpio.OutputType
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+    name: OutputType
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+    name: OutputType
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType.html

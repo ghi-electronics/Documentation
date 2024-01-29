@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>CAN </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="CAN ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/can.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p><a href="error.md">IN PROGRESS</a></p>
+<h1 id="can">CAN</h1>
+<hr>
+<p>Controller Area Network (CAN) bus is a serial communication protocol with built-in error checking and retransmission. It is generally a two wire bus, but other transceivers with one wire or LSFT (Low Speed Fault Tolerant) are used.</p>
+<p>The common high-speed two-wire CAN requires termination resistors at the end of the wires, typically 120 ohm.</p>
+<p><img src="images/can-bus.png" alt="CAN linear bus"></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Some CAN devices, including our own development boards, have built in termination resistors.</p>
+</div>
+<p>CAN bit timing is a complex topic that requires considerable knowledge of the CAN protocol. All nodes on a CAN network must use the same baud rate. Sample bit timing settings are provided further down on this page to help you get started.</p>
+<p><code>SetNominalBitTiming()</code> and <code>SetDataBitTiming()</code> define the CAN bus timing using the arguments listed below. Note that <code>SetDataBitTiming()</code> is only used for CAN-FD to specify the faster data rate. <code>SetNominalBitTiming()</code> is used both for standard CAN and to define the slower data bit rate for CAN-FD.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The <code>propagationPhase1</code> argument combines the propagation and phase1 CAN timing parameters.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Baud</th>
+<th>Propagation+Phase1</th>
+<th>Phase2</th>
+<th>Baudrate Prescaler</th>
+<th>Synchronization Jump Width</th>
+<th>Use Multi Bit Sampling</th>
+<th>Sample Point</th>
+<th>Max Osc. Tolerance</th>
+<th>Max Cable Length</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>33.333K</td>
+<td>13</td>
+<td>2</td>
+<td>90</td>
+<td>1</td>
+<td>False</td>
+<td>87.5%</td>
+<td>0.31%</td>
+<td>2200M</td>
+</tr>
+<tr>
+<td>83.333K</td>
+<td>13</td>
+<td>2</td>
+<td>36</td>
+<td>1</td>
+<td>False</td>
+<td>87.5%</td>
+<td>0.31%</td>
+<td>850M</td>
+</tr>
+<tr>
+<td>125K</td>
+<td>13</td>
+<td>2</td>
+<td>24</td>
+<td>1</td>
+<td>False</td>
+<td>87.5%</td>
+<td>0.31%</td>
+<td>550M</td>
+</tr>
+<tr>
+<td>250K</td>
+<td>13</td>
+<td>2</td>
+<td>12</td>
+<td>1</td>
+<td>False</td>
+<td>87.5%</td>
+<td>0.31%</td>
+<td>250M</td>
+</tr>
+<tr>
+<td>500K</td>
+<td>13</td>
+<td>2</td>
+<td>6</td>
+<td>1</td>
+<td>False</td>
+<td>87.5%</td>
+<td>0.31%</td>
+<td>100M</td>
+</tr>
+<tr>
+<td>1M</td>
+<td>13</td>
+<td>2</td>
+<td>3</td>
+<td>1</td>
+<td>False</td>
+<td>87.5%</td>
+<td>0.31%</td>
+<td>40M</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<h5>Note</h5>
+</div>
+<p>The table above is calculated base on 40MHz clock source.</p>
+<p>There are many online CAN calculators that can be used to help you with CAN timing, for <a href="http://www.bittiming.can-wiki.info/">example</a>.</p>
+<p><img src="images/can-bit-segments.png" alt="CAN bit segments"></p>
+<p>The CAN calculator needs the microcontroller's CAN clock speed. For the SITCore series SC20xxx, this is 48 MHz. For the SC13xxx the speed is 40MHz. These can easily be found with <code>SourceClock</code> property.</p>
+<h2 id="filtering">Filtering</h2>
+<p>Filters can be set to automatically accept or ignore messages based on their arbitration ID.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>On SC20xxx, each CAN channel supports up to 64 standard IDs and 32 Extended IDs. SC13xxx supports up to 14 filters.</p>
+</div>
+<h3 id="range-filter">Range Filter</h3>
+<p><code>AddRangeFilter()</code> allows you to set a range of arbitration IDs that will be accepted as valid messages. Messages with arbitration IDs outside of this range will be ignored. You can add more than one range filter. In the sample code below, the range filters will accept messages with arbitration IDs ranging from <code>0x12</code> to <code>0x20</code> and also between <code>0x500</code> and <code>0x1000</code> inclusive.</p>
+<div class="NOTE">
+<h5>Note</h5>
+</div>
+<p>Only SC20xxx supports Range Filter, SC13xxx doesn't.</p>
+<h3 id="mask-filter">Mask Filter</h3>
+<p><code>AddMaskFilter()</code> can be used to specify an individual arbitration ID or a range of arbitration IDs that will be accepted regardless of the group filter settings. If the arbitration ID of the message is bitwise anded with the given mask argument, and the result is equal to the compare argument you provide, the message will be accepted.</p>
+<p>In the sample code below, CAN messages with arbitration IDs of <code>0x11</code>, <code>0x13</code>, and <code>0x5678</code> will be accepted in addition to the arbitration IDs specified by the group filters.</p>
+<hr>
+<h2 id="sample-code">Sample Code</h2>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices and GHIElectronics.TinyCLR.Pins</p>
+</div>
+<pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Can;
+using GHIElectronics.TinyCLR.Devices.Gpio;
+using GHIElectronics.TinyCLR.Pins;
+using System;
+using System.Diagnostics;
+using System.Threading;
+
+var LdrButton = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE3);
+LdrButton.SetDriveMode(GpioPinDriveMode.InputPullUp);
+
+var can = CanController.FromName(SC20100.CanBus.Can1);
+
+var propagationPhase1 = 13;
+var phase2 = 2;
+var baudratePrescaler = 3;
+var synchronizationJumpWidth = 1;
+var useMultiBitSampling = false;
+
+can.SetNominalBitTiming(new CanBitTiming(propagationPhase1, phase2, baudratePrescaler,
+    synchronizationJumpWidth, useMultiBitSampling));        
+
+var message = new CanMessage() {
+    Data = new byte[] { 0x48, 0x65, 0x6C, 0x6C, 0x6F, 0x2E, 0x20, 0x20 },
+    ArbitrationId = 0x11,
+    Length = 6,
+    RemoteTransmissionRequest = false,
+    ExtendedId = false,
+    FdCan = false,
+    BitRateSwitch = false
+};
+
+//The following filter will accept arbitration IDs from 0x12 to 0x20 inclusive.
+can.Filter.AddRangeFilter(Filter.IdType.Standard, 0x12, 0x20);
+
+//The following filter will accept arbitration IDs from 0x500 to 0x1000 inclusive.
+can.Filter.AddRangeFilter(Filter.IdType.Standard, 0x500, 0x1000);
+
+//The following filter will accept arbitration IDs of 0x11 and 0x13.
+can.Filter.AddMaskFilter(Filter.IdType.Standard, 0x11, 0xFD);
+
+//The following filter will accept arbitration IDs of 5678 only.
+can.Filter.AddMaskFilter(Filter.IdType.Standard, 0x5678, 0xFFFF);
+
+can.MessageReceived += Can_MessageReceived;
+can.ErrorReceived += Can_ErrorReceived;
+        
+can.Enable();
+
+while (true) {
+    if (LdrButton.Read() == GpioPinValue.Low)
+        can.WriteMessage(message);
+
+    Thread.Sleep(100);
+}
+
+
+void Can_MessageReceived(CanController sender,
+    MessageReceivedEventArgs e) {
+
+    sender.ReadMessage(out var message);
+
+    Debug.WriteLine(&quot;Arbitration ID: 0x&quot; + message.ArbitrationId.ToString(&quot;X8&quot;));
+    Debug.WriteLine(&quot;Is extended ID: &quot; + message.ExtendedId.ToString());
+    Debug.WriteLine(&quot;Is remote transmission request: &quot;
+        + message.RemoteTransmissionRequest.ToString());
+
+    Debug.WriteLine(&quot;Time stamp: &quot; + message.Timestamp.ToString());
+
+    var data = &quot;&quot;;
+    for (var i = 0; i &lt; message.Length; i++) data += Convert.ToChar(message.Data[i]);
+
+    Debug.WriteLine(&quot;Data: &quot; + data);
+}
+
+void Can_ErrorReceived(CanController sender, ErrorReceivedEventArgs e)
+    =&gt; Debug.WriteLine(&quot;Error &quot; + e.ToString());
+
+</code></pre>
+<hr>
+<h2 id="can-fd">CAN-FD</h2>
+<p>CAN-FD allows for faster data transmission and larger data packet size to increase throughput. At the same time, CAN-FD is compatible with traditional CAN -- CAN-FD and standard CAN nodes can even coexist on the same CAN bus!</p>
+<p>CAN-FD can be used by setting the <code>FdCan</code> property of your CAN message to <code>true</code>. This setting will allow you to send up to 64 bytes of data per CAN message.</p>
+<p>To send the data at higher speed you will also need to set two bit timings, one for the normal, slower speed (<code>SetNominalBitTiming()</code>), and one for the faster speed (<code>SetDataBitTiming()</code>). You will also have to set the <code>BitRateSwitch</code> property of the CAN message to <code>true.</code></p>
+<p>The following code shows the changes needed to make the above code sample use CAN-FD with speeds of 250 kilobaud and 1 megabaud.</p>
+<div class="NOTE">
+<h5>Note</h5>
+</div>
+<p>Only SC20xxx supports CAN-FD, SC13xxx doesn't support this feature.</p>
+<pre><code class="lang-cs">var propagationPhase1 = 13; //250 kilobaud settings
+var phase2 = 2;
+var baudratePrescaler = 12;
+var synchronizationJumpWidth = 1;
+var useMultiBitSampling = false;
+
+//Set the lower CAN speed to 250 kilobaud.
+can.SetNominalBitTiming(new CanBitTiming(propagationPhase1, phase2, baudratePrescaler,
+    synchronizationJumpWidth, useMultiBitSampling));
+
+baudratePrescaler = 3;  //Change bit timing to 1 megabaud.
+        
+//Set faster CAN speed to 1 megabaud.
+can.SetDataBitTiming(new CanBitTiming(propagationPhase1, phase2, baudratePrescaler,
+    synchronizationJumpWidth, useMultiBitSampling));
+
+can.Enable();
+
+var message = new CanMessage() {
+    Data = new byte[] { 0x48, 0x65, 0x6C, 0x6C, 0x6F, 0x2E, 0x20, 0x20 },
+    ArbitrationId = 0x11,
+    Length = 6,
+    RemoteTransmissionRequest = false,
+    ExtendedId = false,
+    FdCan = true,
+    BitRateSwitch = true
+};
+
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/can.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

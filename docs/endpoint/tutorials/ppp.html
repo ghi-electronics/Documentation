@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>PPP </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="PPP ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/ppp.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p><a href="error.md">IN PROGRESS</a></p>
+<h1 id="ppp">PPP</h1>
+<hr>
+<p>Point to Point Protocol (PPP) started in the days of dial up Internet and is still used today in cellular modems. While using PPP can be optional for small IoT systems, having a secure connection requires PPP. A <a href="networking-core.html">MAC address</a> is not needed for PPP.</p>
+<p>This example uses the LTE IoT 2 click module on the SCM20260D Dev Boards to establish a connection and read a web page. We've also successfully tested the SIMCOM SIM900 and NimbeLink's Skywire cellular embedded modems.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Devices.Uart, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Networking, and GHIElectronics.TinyCLR.Pins.</p>
+</div>
+<pre><code class="lang-cs">class Program {
+    static bool linkReady = false;
+
+    static void Main() {
+        var reset = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PI8);
+
+        reset.SetDriveMode(GpioPinDriveMode.Output);
+
+        reset.Write(GpioPinValue.High);
+        Thread.Sleep(200);
+
+        reset.Write(GpioPinValue.Low);
+        Thread.Sleep(7000); //Wait for modem to initialize.
+
+        InitSimCard();
+        TestPPP();
+    }
+
+    static void InitSimCard() {
+        var serial = UartController.FromName
+            (SC20260.UartPort.Uart8);
+
+        serial.SetActiveSettings(115200, 8,
+            UartParity.None,
+            UartStopBitCount.One,
+            UartHandshake.None);
+
+        serial.Enable();
+
+        while (!SendAT(serial, &quot;AT&quot;)) { }
+
+        SendAT(serial, &quot;AT+CGDCONT=1,\&quot;IP\&quot;,\&quot;h2g2\&quot;&quot;);                      //Google Fi.
+        SendAT(serial, &quot;AT+CGDCONT=2,\&quot;IP\&quot;,\&quot;telargo.t-mobile.com\&quot;&quot;);      //T-Mobile.
+        SendAT(serial, &quot;AT+CGDCONT=3,\&quot;IP\&quot;,\&quot;fast.t-mobile.com\&quot;&quot;);         //T-Mobile.
+        SendAT(serial, &quot;AT+CGDCONT=4,\&quot;IPV4V6\&quot;,\&quot;NIMBLINK.GW12.VZWENTP\&quot;&quot;); //NimbeLink.
+
+        SendAT(serial, &quot;ATDT*99***1#&quot;); //Modem dial string. The '1' in this string points
+                                        //  to the Google Fi PDP context previously defined
+                                        //  by the SendAT() method.
+
+        Debug.WriteLine(&quot;OK to start PPP....&quot;);
+    }
+
+    static void TestPPP() {
+        var networkController = NetworkController.
+            FromName(SC20260.NetworkController.Ppp);
+
+        PppNetworkInterfaceSettings networkInterfaceSetting = new PppNetworkInterfaceSettings() {
+                AuthenticationType = PppAuthenticationType.Pap,
+
+                Username = &quot;&quot;,
+                Password = &quot;&quot;,
+            };
+
+        UartNetworkCommunicationInterfaceSettings networkCommunicationInterfaceSettings = new UartNetworkCommunicationInterfaceSettings() {
+                ApiName = SC20260.UartPort.Uart8,
+                BaudRate = 115200,
+                DataBits = 8,
+                Parity = UartParity.None,
+                StopBits = UartStopBitCount.One,
+                Handshaking = UartHandshake.None,
+            };
+
+        networkController.SetInterfaceSettings(networkInterfaceSetting);
+        networkController.SetCommunicationInterfaceSettings
+            (networkCommunicationInterfaceSettings);
+
+        networkController.SetAsDefaultController();
+
+        networkController.NetworkAddressChanged += NetworkController_NetworkAddressChanged;
+        networkController.NetworkLinkConnectedChanged +=
+            NetworkController_NetworkLinkConnectedChanged;
+
+        networkController.Enable();
+
+        while (linkReady == false) { }
+        //Network is now ready to use.
+    }
+
+    private static void NetworkController_NetworkLinkConnectedChanged
+        (NetworkController sender, NetworkLinkConnectedChangedEventArgs e) {
+        //Raise event connect/disconnect
+    }
+
+    private static void NetworkController_NetworkAddressChanged
+        (NetworkController sender,NetworkAddressChangedEventArgs e) {
+
+        var ipProperties = sender.GetIPProperties();
+        var address = ipProperties.Address.GetAddressBytes();
+
+        Debug.WriteLine(&quot;IP Address: &quot; + address[0] + &quot;.&quot; + address[1]
+            + &quot;.&quot; + address[2] + &quot;.&quot; + address[3]);
+
+        linkReady = address[0] != 0;
+    }
+
+    static bool SendAT(UartController port,
+        string command) {
+
+        command += &quot;\r&quot;;
+
+        var sendBuffer = Encoding.UTF8.GetBytes(command);
+        var readBuffer = new byte[256];
+        var read = 0;
+        var count = 10;
+
+        port.Write(sendBuffer, 0, sendBuffer.Length);
+
+        while (count-- &gt; 0) {
+            Thread.Sleep(100);
+
+            read += port.Read(readBuffer, read, readBuffer.Length - read);
+
+            var response = new string
+                (Encoding.UTF8.GetChars(readBuffer, 0, read));
+
+            if (response.IndexOf(&quot;OK&quot;) != -1 || response.IndexOf(&quot;CONNECT&quot;) != -1) {
+                Debug.WriteLine(&quot; &quot; + response);
+                return true;
+            }
+        }
+        return false;
+    }
+}
+</code></pre>
+<hr>
+<h2 id="switching-to-command-mode">Switching to Command Mode</h2>
+<p>When a PPP connection is set up successfully, you can switch the modem from data mode to command mode with the <code>+++</code> escape sequence. To prevent the <code>+++</code> escape sequence from being misinterpreted as data, the following guidelines should be followed:</p>
+<ol>
+<li>Do not send any other characters within one second (before or after) of sending <code>+++</code>.</li>
+<li>Send <code>+++</code> quickly, sending all three characters within one second.</li>
+</ol>
+<p>When the <code>+++</code> sequence is received, the modem will switch from data mode to command mode and reply with an &quot;OK&quot; response.</p>
+<hr>
+<h2 id="switching-to-data-mode">Switching to Data Mode</h2>
+<p>When the modem is in command mode, sending the <code>ATO</code> command will switch the modem to Data Mode. Wait for the &quot;CONNECT 150000000&quot; response after sending the <code>ATO</code> command to make sure the modem is in data mode. All data sent will now be treated as PPP frames.</p>
+<p>The following example switches from Data mode to Command Mode, sends a few AT commands, then switches back to Data mode. TinyCLR OS provides two functions, Suspend() and Resume() that are needed for this example. This code uses SC20260.UartPort.Uart8 for PPP configuration.</p>
+<pre><code class="lang-cs">//PPP is connected
+//....
+
+networkController.Suspend(); { //Suspend PPP, release UART Port from TinyCLR OS.
+
+    //Open UART.
+    var serial = GHIElectronics.TinyCLR.Devices.Uart.UartController.FromName
+        (SC20260.UartPort.Uart8);
+
+    serial.SetActiveSettings(
+        115200,
+        8,
+        GHIElectronics.TinyCLR.Devices.Uart.UartParity.None,
+        GHIElectronics.TinyCLR.Devices.Uart.UartStopBitCount.One,
+        GHIElectronics.TinyCLR.Devices.Uart.UartHandshake.None);
+
+    serial.Enable();
+
+    Thread.Sleep(1000);
+
+    SendAT(serial, &quot;+++&quot;); //Send &quot;+++&quot; to enter command mode.
+
+    Thread.Sleep(1000);
+
+    //Send any AT command here. 
+    //For example, AT+CSQ to check signal strength.
+    SendAT(serial, &quot;AT+CSQ&quot;);
+
+    SendAT(serial, &quot;ATO&quot;); //Enable &quot;PPP&quot; modem, wait for &quot;CONNECT 150000000&quot; response.
+
+    serial.Dispose();
+
+    serial = null; //Release UART, resume PPP interface.
+}
+
+networkController.Resume();
+
+// Continue network
+...
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>When sending &quot;+++&quot;, do not send &quot;\r&quot; or &quot;\n&quot; at the end. While most AT commands need end of line characters, +++ does not.</p>
+</div>
+<hr>
+<h2 id="security-clarification">Security Clarification</h2>
+<p>Most users of embedded systems that connect to mobile networks assume they are secure, but often they are not. Typically, a serial connection with AT commands is used to communicate with the modem. While the data over the air is secure, all data transmitted over the serial connection is raw unencrypted data that can be easily scoped. This is not the case with TinyCLR OS.</p>
+<p>With TinyCLR OS, serial data between the device and the modem is encrypted. All data handling is done internally inside the core processor, which is extremely difficult to hack into.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/ppp.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

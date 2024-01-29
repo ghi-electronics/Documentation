@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler
+  commentId: T:GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler
+  id: NativeRpmsgHelper.DataReceivedEventHandler
+  parent: GHIElectronics.Endpoint.Core
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: NativeRpmsgHelper.DataReceivedEventHandler
+  nameWithType: NativeRpmsgHelper.DataReceivedEventHandler
+  fullName: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler
+  type: Delegate
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DataReceivedEventHandler
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+    startLine: 21
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public delegate void NativeRpmsgHelper.DataReceivedEventHandler(uint[] data)
+    parameters:
+    - id: data
+      type: System.UInt32[]
+    content.vb: Public Delegate Sub NativeRpmsgHelper.DataReceivedEventHandler(data As UInteger())
+references:
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+- uid: System.UInt32[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint[]
+  nameWithType: uint[]
+  fullName: uint[]
+  nameWithType.vb: UInteger()
+  fullName.vb: UInteger()
+  name.vb: UInteger()
+  spec.csharp:
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: (
+  - name: )

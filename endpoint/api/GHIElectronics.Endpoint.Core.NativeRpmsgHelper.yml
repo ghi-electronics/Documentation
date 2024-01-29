@@ -1,0 +1,685 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+  commentId: T:GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+  id: NativeRpmsgHelper
+  parent: GHIElectronics.Endpoint.Core
+  children:
+  - GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Acquire
+  - GHIElectronics.Endpoint.Core.NativeRpmsgHelper.BlockDelay
+  - GHIElectronics.Endpoint.Core.NativeRpmsgHelper.BlockSize
+  - GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceived
+  - GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Release
+  - GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Send(System.UInt32[],System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Core.NativeRpmsgHelper.TaskReceive
+  - GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Test
+  langs:
+  - csharp
+  - vb
+  name: NativeRpmsgHelper
+  nameWithType: NativeRpmsgHelper
+  fullName: GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: NativeRpmsgHelper
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static class NativeRpmsgHelper
+    content.vb: Public Module NativeRpmsgHelper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.BlockDelay
+  commentId: F:GHIElectronics.Endpoint.Core.NativeRpmsgHelper.BlockDelay
+  id: BlockDelay
+  parent: GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+  langs:
+  - csharp
+  - vb
+  name: BlockDelay
+  nameWithType: NativeRpmsgHelper.BlockDelay
+  fullName: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.BlockDelay
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: BlockDelay
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+    startLine: 16
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static int BlockDelay
+    return:
+      type: System.Int32
+    content.vb: Public Shared BlockDelay As Integer
+- uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.BlockSize
+  commentId: P:GHIElectronics.Endpoint.Core.NativeRpmsgHelper.BlockSize
+  id: BlockSize
+  parent: GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+  langs:
+  - csharp
+  - vb
+  name: BlockSize
+  nameWithType: NativeRpmsgHelper.BlockSize
+  fullName: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.BlockSize
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: BlockSize
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+    startLine: 19
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static int BlockSize { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property BlockSize As Integer
+  overload: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.BlockSize*
+- uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceived
+  commentId: E:GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceived
+  id: DataReceived
+  parent: GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+  langs:
+  - csharp
+  - vb
+  name: DataReceived
+  nameWithType: NativeRpmsgHelper.DataReceived
+  fullName: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceived
+  type: Event
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DataReceived
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+    startLine: 24
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static event NativeRpmsgHelper.DataReceivedEventHandler DataReceived
+    return:
+      type: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler
+    content.vb: Public Shared Event DataReceived As NativeRpmsgHelper.DataReceivedEventHandler
+- uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Send(System.UInt32[],System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Send(System.UInt32[],System.Int32,System.Int32)
+  id: Send(System.UInt32[],System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+  langs:
+  - csharp
+  - vb
+  name: Send(uint[], int, int)
+  nameWithType: NativeRpmsgHelper.Send(uint[], int, int)
+  fullName: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Send(uint[], int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Send
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+    startLine: 51
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static int Send(uint[] data, int offset, int count)
+    parameters:
+    - id: data
+      type: System.UInt32[]
+    - id: offset
+      type: System.Int32
+    - id: count
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function Send(data As UInteger(), offset As Integer, count As Integer) As Integer
+  overload: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Send*
+  nameWithType.vb: NativeRpmsgHelper.Send(UInteger(), Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Send(UInteger(), Integer, Integer)
+  name.vb: Send(UInteger(), Integer, Integer)
+- uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.TaskReceive
+  commentId: M:GHIElectronics.Endpoint.Core.NativeRpmsgHelper.TaskReceive
+  id: TaskReceive
+  parent: GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+  langs:
+  - csharp
+  - vb
+  name: TaskReceive()
+  nameWithType: NativeRpmsgHelper.TaskReceive()
+  fullName: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.TaskReceive()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: TaskReceive
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+    startLine: 91
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static Task TaskReceive()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Shared Function TaskReceive() As Task
+  overload: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.TaskReceive*
+- uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Acquire
+  commentId: M:GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Acquire
+  id: Acquire
+  parent: GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+  langs:
+  - csharp
+  - vb
+  name: Acquire()
+  nameWithType: NativeRpmsgHelper.Acquire()
+  fullName: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Acquire()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Acquire
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+    startLine: 165
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static int Acquire()
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function Acquire() As Integer
+  overload: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Acquire*
+- uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Release
+  commentId: M:GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Release
+  id: Release
+  parent: GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+  langs:
+  - csharp
+  - vb
+  name: Release()
+  nameWithType: NativeRpmsgHelper.Release()
+  fullName: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Release()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Release
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+    startLine: 169
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static int Release()
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function Release() As Integer
+  overload: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Release*
+- uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Test
+  commentId: M:GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Test
+  id: Test
+  parent: GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+  langs:
+  - csharp
+  - vb
+  name: Test()
+  nameWithType: NativeRpmsgHelper.Test()
+  fullName: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Test()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Test
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/NativeRpmsgHelper.cs
+    startLine: 173
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static int Test()
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function Test() As Integer
+  overload: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Test*
+references:
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.BlockSize*
+  commentId: Overload:GHIElectronics.Endpoint.Core.NativeRpmsgHelper.BlockSize
+  href: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.html#GHIElectronics_Endpoint_Core_NativeRpmsgHelper_BlockSize
+  name: BlockSize
+  nameWithType: NativeRpmsgHelper.BlockSize
+  fullName: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.BlockSize
+- uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler
+  commentId: T:GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.html
+  name: NativeRpmsgHelper.DataReceivedEventHandler
+  nameWithType: NativeRpmsgHelper.DataReceivedEventHandler
+  fullName: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+    name: NativeRpmsgHelper
+    href: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler
+    name: DataReceivedEventHandler
+    href: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+    name: NativeRpmsgHelper
+    href: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler
+    name: DataReceivedEventHandler
+    href: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler.html
+- uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Send*
+  commentId: Overload:GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Send
+  href: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.html#GHIElectronics_Endpoint_Core_NativeRpmsgHelper_Send_System_UInt32___System_Int32_System_Int32_
+  name: Send
+  nameWithType: NativeRpmsgHelper.Send
+  fullName: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Send
+- uid: System.UInt32[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint[]
+  nameWithType: uint[]
+  fullName: uint[]
+  nameWithType.vb: UInteger()
+  fullName.vb: UInteger()
+  name.vb: UInteger()
+  spec.csharp:
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.TaskReceive*
+  commentId: Overload:GHIElectronics.Endpoint.Core.NativeRpmsgHelper.TaskReceive
+  href: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.html#GHIElectronics_Endpoint_Core_NativeRpmsgHelper_TaskReceive
+  name: TaskReceive
+  nameWithType: NativeRpmsgHelper.TaskReceive
+  fullName: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.TaskReceive
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Acquire*
+  commentId: Overload:GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Acquire
+  href: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.html#GHIElectronics_Endpoint_Core_NativeRpmsgHelper_Acquire
+  name: Acquire
+  nameWithType: NativeRpmsgHelper.Acquire
+  fullName: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Acquire
+- uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Release*
+  commentId: Overload:GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Release
+  href: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.html#GHIElectronics_Endpoint_Core_NativeRpmsgHelper_Release
+  name: Release
+  nameWithType: NativeRpmsgHelper.Release
+  fullName: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Release
+- uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Test*
+  commentId: Overload:GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Test
+  href: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.html#GHIElectronics_Endpoint_Core_NativeRpmsgHelper_Test
+  name: Test
+  nameWithType: NativeRpmsgHelper.Test
+  fullName: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.Test

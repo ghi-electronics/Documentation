@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Dcmi
+  commentId: N:GHIElectronics.Endpoint.Devices.Dcmi
+  id: GHIElectronics.Endpoint.Devices.Dcmi
+  children:
+  - GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  - GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived
+  langs:
+  - csharp
+  - vb
+  name: GHIElectronics.Endpoint.Devices.Dcmi
+  nameWithType: GHIElectronics.Endpoint.Devices.Dcmi
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi
+  type: Namespace
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Dcmi
+references:
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  commentId: T:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  parent: GHIElectronics.Endpoint.Devices.Dcmi
+  href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html
+  name: DcmiController
+  nameWithType: DcmiController
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived
+  commentId: T:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived
+  parent: GHIElectronics.Endpoint.Devices.Dcmi
+  href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html
+  name: DcmiController.FrameReceived
+  nameWithType: DcmiController.FrameReceived
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+    name: DcmiController
+    href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived
+    name: FrameReceived
+    href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+    name: DcmiController
+    href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived
+    name: FrameReceived
+    href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived.html
+- uid: GHIElectronics.Endpoint.Devices.Dcmi
+  commentId: N:GHIElectronics.Endpoint.Devices.Dcmi
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Dcmi
+  nameWithType: GHIElectronics.Endpoint.Devices.Dcmi
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Dcmi
+    name: Dcmi
+    href: GHIElectronics.Endpoint.Devices.Dcmi.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Dcmi
+    name: Dcmi
+    href: GHIElectronics.Endpoint.Devices.Dcmi.html

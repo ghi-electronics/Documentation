@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>In-Field Update </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="In-Field Update ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/in-field-update.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p><a href="error.md">IN PROGRESS</a></p>
+<h1 id="in-field-update">In-Field Update</h1>
+<hr>
+<p>TinyCLR OS allows for secure, encrypted, In-Field Update (IFU). Simply, the IFU feature buffers the new 'to-be-updated' application (and/or firmware) into RAM or FLASH. Once the entire application (or firmware) is buffered, the IFU will do a full security check before it updates the system. Having enough flash or RAM (typically external) is needed to buffer up the application and the firmware.</p>
+<p>The IFU service is started with <code>var updater = new InFieldUpdate(QuadSpiController)</code> when using external flash, or simply with <code>var updater = new InFieldUpdate()</code> when using RAM. It is important to note that the firmware application is buffered temporarily externally in its encrypted format, keeping security intact. All decrypted data is handled internally inside the chip, away from intruders!</p>
+<p>The IFU system supports data coming from any source. An update, for example, can come from a file, network, or even CAN bus!</p>
+<p>Loading an application requires a key, which is loaded using <code>updater.LoadApplicationKey(appKey)</code> and then the application can then be loaded in chunks using <code>updater.LoadApplicationChunk(data, 0, count)</code>. And similarly, the firmware can be loaded through <code>updater.LoadFirmwareChunk(data, 0, count)</code>. Internally, IFU keeps track of chunk count and size. The passed argument is for the user's provided data and not the internal chunk/data counters. In case of an error, the user can reset the internal chunk counters <code>updater.ResetChunks()</code>, which resets both application and firmware counters.</p>
+<p>Once the entire firmware or application chunks are loaded, they can be verified and a version number is returned back, or an exception is raised if the loaded firmware/application did not pass authentication.</p>
+<pre><code class="lang-cs">var firmwareVersion = updater.VerifyFirmware();
+var applicationVersion = updater.VerifyApplication();
+</code></pre>
+<p>The system is now ready for flash and reset <code>updater.FlashAndReset()</code>. It is critical that the system is not reset or power is lost during reset. Depending on the application size, this can take a few seconds. A power loss will result in a nonfunctional device that needs to be manually update.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>When update uses external flash (QSPI) as temporary buffer, the block size must be 1K, 2K, 4K, 8K...etc. We recommend using 1K as the firmware and tca files are always multiple of 1K.</p>
+</div>
+<h2 id="memory-requirements">Memory Requirements</h2>
+<p>Firmware update needs to have a temp buffer that is the size of the firmware itself. For applications, the temporary buffer needs to be the size of the internal deployment, plus the external deployment if implemented, by &quot;extending deployment&quot;. Systems with large external RAM will usually select RAM update. For systems without external RAM, an external QSPI flash becomes necessary. When external flash is used for buffering, IFU will overwrite the entire flash, minus the first 2MB and the area reserved for extending the application deployment area, as explained under <code>External Flash</code> on the External Memory page. A <a href="file-system.html">Tiny File System</a> usage of the first 2MB of external flash will survive IFU even when <code>useExternalFlash</code> is enabled.</p>
+<h2 id="activity-pin">Activity Pin</h2>
+<p>As update can take a while, an activity pin can be enabled to help in determining when the update is finished. Using an LED as an indicator is an excellent example.</p>
+<pre><code class="lang-cs">var indicatorLed = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PB0);
+updater.ActivityPin = indicatorLed;
+</code></pre>
+<h2 id="example-code">Example Code</h2>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The application and the firmware are buffered in external memories in encrypted fashion and has no security implication, keeping IFU done securely.</p>
+</div>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Power interruption during <code>FlashAndReset</code> will cause the update to fail, requiring a manual update.</p>
+</div>
+<p>The example below show how to use IFU, firmware and application data are loaded from SDCard.</p>
+<pre><code class="lang-cs">var qspiController = StorageController.FromName(SC20260.StorageController.QuadSpi);
+var indicatorPin = GpioController.GetDefault().OpenPin(SC13048.GpioPin.PB5);
+
+var appKey = new byte[] { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }; // your key, assumming they are all zero as example.
+
+var updater = new InFieldUpdate(qspiController)
+{
+	ActivityPin = indicatorPin
+};
+
+var dataChunk = new byte[1 * 1024]; // must be multiple of 1K
+
+var filestreamApp = new FileStream(@&quot;A:\your_app.tca&quot;, FileMode.Open);
+var filestreamFw = new FileStream(@&quot;A:\ghi_firmware.ghi&quot;, FileMode.Open);
+
+// Buffer application
+var idxApp = 0;
+
+while (idxApp &lt; filestreamApp.Length)
+{
+	var count = filestreamApp.Read(dataChunk, 0, dataChunk.Length);
+	idxApp += updater.LoadApplicationChunk(dataChunk, 0, count);
+}
+
+// Buffer firmware
+var idxFirmware = 0;
+while (idxFirmware &lt; filestreamFw.Length)
+{	
+	var count = filestreamFw.Read(dataChunk, 0, dataChunk.Length);
+
+	idxFirmware += updater.LoadFirmwareChunk(dataChunk, 0, count);	
+}
+
+//Load key
+updater.LoadApplicationKey(appKey);
+
+Debug.WriteLine(&quot;Verifying application.... &quot;);
+Debug.WriteLine(&quot;Application version: &quot; + updater.VerifyApplication());
+
+Debug.WriteLine(&quot;Verify firmware.... &quot;);
+Debug.WriteLine(&quot;Firmware version: &quot; + updater.VerifyFirmware());
+
+// Flashing
+
+updater.FlashAndReset();
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Once <code>FlashAndReset</code> is called the system is locked till done and reset automatically.</p>
+</div>
+<hr>
+<h2 id="applicationupdate">ApplicationUpdate</h2>
+<p>When no external memories are present (Flash nor RAM) and standard IFU is not an options, the application (not firmware) can still be updated from a file located on SD card or USB memory.</p>
+<pre><code class="lang-cs">// Open a file stream to an application file on an SD card or USB memory
+// ...
+var updater = new ApplicationUpdate(filestream, appKey)
+var applicationVersion = updater.Verify();
+updater.ActivityPin = indicatorPin; // optional
+updater.FlashAndReset();
+</code></pre>
+<hr>
+<h2 id="ifu-20-to-21">IFU 2.0 to 2.1</h2>
+<p>Starting release 2.1, IFU is reworked to support complete firmware and application update using external flash (when available) or external RAM (when available). Unfortunately, using IFU to update from 2.0 to 2.1 is only possible if the deployment region was not extended to use external flash.</p>
+<p>A work around to update 2.0 to 2.1 is by updating 2.0 to a new 2.1 temporary application that does not use external flash. Once this temp application is loaded then the final application with external flash can be deployed.</p>
+<hr>
+<h2 id="firmware-and-application-matching">Firmware and Application Matching</h2>
+<p>It is important that the loaded firmware is the same version expected by the application. It is usually best to update both when possible.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/in-field-update.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

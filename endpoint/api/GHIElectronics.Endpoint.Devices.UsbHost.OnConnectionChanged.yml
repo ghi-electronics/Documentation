@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.OnConnectionChanged
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.OnConnectionChanged
+  id: OnConnectionChanged
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: OnConnectionChanged
+  nameWithType: OnConnectionChanged
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.OnConnectionChanged
+  type: Delegate
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/UsbHostController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OnConnectionChanged
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/UsbHostController.cs
+    startLine: 15
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.UsbHost
+  namespace: GHIElectronics.Endpoint.Devices.UsbHost
+  syntax:
+    content: public delegate void OnConnectionChanged(UsbHostController sender, DeviceConnectionEventArgs e)
+    parameters:
+    - id: sender
+      type: GHIElectronics.Endpoint.Devices.UsbHost.UsbHostController
+    - id: e
+      type: GHIElectronics.Endpoint.Devices.UsbHost.DeviceConnectionEventArgs
+    content.vb: Public Delegate Sub OnConnectionChanged(sender As UsbHostController, e As DeviceConnectionEventArgs)
+references:
+- uid: GHIElectronics.Endpoint.Devices.UsbHost
+  commentId: N:GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.UsbHost
+  nameWithType: GHIElectronics.Endpoint.Devices.UsbHost
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost
+    name: UsbHost
+    href: GHIElectronics.Endpoint.Devices.UsbHost.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost
+    name: UsbHost
+    href: GHIElectronics.Endpoint.Devices.UsbHost.html
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.UsbHostController
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.UsbHostController
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.UsbHostController.html
+  name: UsbHostController
+  nameWithType: UsbHostController
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.UsbHostController
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.DeviceConnectionEventArgs
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.DeviceConnectionEventArgs
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.DeviceConnectionEventArgs.html
+  name: DeviceConnectionEventArgs
+  nameWithType: DeviceConnectionEventArgs
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.DeviceConnectionEventArgs

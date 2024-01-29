@@ -1,0 +1,137 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.PulseCaptureEventHandler
+  commentId: T:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.PulseCaptureEventHandler
+  id: DigitalSignalController.PulseCaptureEventHandler
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: DigitalSignalController.PulseCaptureEventHandler
+  nameWithType: DigitalSignalController.PulseCaptureEventHandler
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.PulseCaptureEventHandler
+  type: Delegate
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PulseCaptureEventHandler
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+    startLine: 38
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.DigitalSignal
+  namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
+  syntax:
+    content: public delegate void DigitalSignalController.PulseCaptureEventHandler(DigitalSignalController sender, double[] buffer, uint count, uint initialState, bool aborted)
+    parameters:
+    - id: sender
+      type: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
+    - id: buffer
+      type: System.Double[]
+    - id: count
+      type: System.UInt32
+    - id: initialState
+      type: System.UInt32
+    - id: aborted
+      type: System.Boolean
+    content.vb: Public Delegate Sub DigitalSignalController.PulseCaptureEventHandler(sender As DigitalSignalController, buffer As Double(), count As UInteger, initialState As UInteger, aborted As Boolean)
+references:
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal
+  commentId: N:GHIElectronics.Endpoint.Devices.DigitalSignal
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.DigitalSignal
+  nameWithType: GHIElectronics.Endpoint.Devices.DigitalSignal
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal
+    name: DigitalSignal
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal
+    name: DigitalSignal
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.html
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
+  commentId: T:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal
+  href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html
+  name: DigitalSignalController
+  nameWithType: DigitalSignalController
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
+- uid: System.Double[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double[]
+  nameWithType: double[]
+  fullName: double[]
+  nameWithType.vb: Double()
+  fullName.vb: Double()
+  name.vb: Double()
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: (
+  - name: )
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

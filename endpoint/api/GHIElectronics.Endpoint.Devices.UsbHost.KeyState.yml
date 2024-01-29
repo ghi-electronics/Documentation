@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.KeyState
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.KeyState
+  id: KeyState
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  children:
+  - GHIElectronics.Endpoint.Devices.UsbHost.KeyState.Down
+  - GHIElectronics.Endpoint.Devices.UsbHost.KeyState.Hold
+  - GHIElectronics.Endpoint.Devices.UsbHost.KeyState.Up
+  langs:
+  - csharp
+  - vb
+  name: KeyState
+  nameWithType: KeyState
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.KeyState
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/KeyState.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: KeyState
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/KeyState.cs
+    startLine: 8
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.UsbHost
+  namespace: GHIElectronics.Endpoint.Devices.UsbHost
+  syntax:
+    content: public enum KeyState
+    content.vb: Public Enum KeyState
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.KeyState.Up
+  commentId: F:GHIElectronics.Endpoint.Devices.UsbHost.KeyState.Up
+  id: Up
+  parent: GHIElectronics.Endpoint.Devices.UsbHost.KeyState
+  langs:
+  - csharp
+  - vb
+  name: Up
+  nameWithType: KeyState.Up
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.KeyState.Up
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/KeyState.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Up
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/KeyState.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.UsbHost
+  namespace: GHIElectronics.Endpoint.Devices.UsbHost
+  syntax:
+    content: Up = 0
+    return:
+      type: GHIElectronics.Endpoint.Devices.UsbHost.KeyState
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.KeyState.Down
+  commentId: F:GHIElectronics.Endpoint.Devices.UsbHost.KeyState.Down
+  id: Down
+  parent: GHIElectronics.Endpoint.Devices.UsbHost.KeyState
+  langs:
+  - csharp
+  - vb
+  name: Down
+  nameWithType: KeyState.Down
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.KeyState.Down
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/KeyState.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Down
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/KeyState.cs
+    startLine: 11
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.UsbHost
+  namespace: GHIElectronics.Endpoint.Devices.UsbHost
+  syntax:
+    content: Down = 1
+    return:
+      type: GHIElectronics.Endpoint.Devices.UsbHost.KeyState
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.KeyState.Hold
+  commentId: F:GHIElectronics.Endpoint.Devices.UsbHost.KeyState.Hold
+  id: Hold
+  parent: GHIElectronics.Endpoint.Devices.UsbHost.KeyState
+  langs:
+  - csharp
+  - vb
+  name: Hold
+  nameWithType: KeyState.Hold
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.KeyState.Hold
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/KeyState.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Hold
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/KeyState.cs
+    startLine: 12
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.UsbHost
+  namespace: GHIElectronics.Endpoint.Devices.UsbHost
+  syntax:
+    content: Hold = 2
+    return:
+      type: GHIElectronics.Endpoint.Devices.UsbHost.KeyState
+references:
+- uid: GHIElectronics.Endpoint.Devices.UsbHost
+  commentId: N:GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.UsbHost
+  nameWithType: GHIElectronics.Endpoint.Devices.UsbHost
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost
+    name: UsbHost
+    href: GHIElectronics.Endpoint.Devices.UsbHost.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost
+    name: UsbHost
+    href: GHIElectronics.Endpoint.Devices.UsbHost.html
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.KeyState
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.KeyState
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.KeyState.html
+  name: KeyState
+  nameWithType: KeyState
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.KeyState

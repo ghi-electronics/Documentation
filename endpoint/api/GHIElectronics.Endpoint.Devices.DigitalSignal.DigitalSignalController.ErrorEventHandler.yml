@@ -1,0 +1,127 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ErrorEventHandler
+  commentId: T:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ErrorEventHandler
+  id: DigitalSignalController.ErrorEventHandler
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: DigitalSignalController.ErrorEventHandler
+  nameWithType: DigitalSignalController.ErrorEventHandler
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ErrorEventHandler
+  type: Delegate
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ErrorEventHandler
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+    startLine: 40
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.DigitalSignal
+  namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
+  syntax:
+    content: public delegate void DigitalSignalController.ErrorEventHandler(DigitalSignalController sender, DigitalSignalController.Mode mode, DigitalSignalController.Error error)
+    parameters:
+    - id: sender
+      type: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
+    - id: mode
+      type: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+    - id: error
+      type: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Error
+    content.vb: Public Delegate Sub DigitalSignalController.ErrorEventHandler(sender As DigitalSignalController, mode As DigitalSignalController.Mode, [error] As DigitalSignalController.Error)
+references:
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal
+  commentId: N:GHIElectronics.Endpoint.Devices.DigitalSignal
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.DigitalSignal
+  nameWithType: GHIElectronics.Endpoint.Devices.DigitalSignal
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal
+    name: DigitalSignal
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal
+    name: DigitalSignal
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.html
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
+  commentId: T:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal
+  href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html
+  name: DigitalSignalController
+  nameWithType: DigitalSignalController
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+  commentId: T:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal
+  href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html
+  name: DigitalSignalController.Mode
+  nameWithType: DigitalSignalController.Mode
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
+    name: DigitalSignalController
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+    name: Mode
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
+    name: DigitalSignalController
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+    name: Mode
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode.html
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Error
+  commentId: T:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Error
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal
+  href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html
+  name: DigitalSignalController.Error
+  nameWithType: DigitalSignalController.Error
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Error
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
+    name: DigitalSignalController
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Error
+    name: Error
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Error.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
+    name: DigitalSignalController
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Error
+    name: Error
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Error.html

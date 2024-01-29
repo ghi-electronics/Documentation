@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Amazon Web Services </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Amazon Web Services ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/aws.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p><a href="error.md">IN PROGRESS</a></p>
+<h1 id="amazon-web-services">Amazon Web Services</h1>
+<hr>
+<p>This example shows how to communicate with AWS using MQTT. You'll also need to set up a Network Interface connection on the device such as <a href="wifi.html">WiFi</a> to Connect to AWS in your program.</p>
+<p>First download the required AWS Root Certificate and add to resources. The TLS Client shows how to download the root certificate.</p>
+<p>There is also a Client certificate that needs to be downloaded from the AWS account, detailed below.</p>
+<pre><code>var iotEndPoint = &quot;Need your Rest API Endpoint&quot;;
+var iotPort = 8883;
+var deviceId = &quot;Need your Device ID&quot;;
+
+var topicShadowUpdate = string.Format(&quot;$aws/things/{0}/shadow/update&quot;, deviceId);
+var topicShadowGet = string.Format(&quot;$aws/things/{0}/shadow/get&quot;, deviceId);
+
+var message = &quot;{\&quot;state\&quot;:{\&quot;desired\&quot;:{\&quot;My message\&quot;:\&quot;Hello World&quot;}}}&quot;;
+
+var caCertSource = UTF8Encoding.UTF8.GetBytes(&quot;Need AWS root CA certificate&quot;);
+var clientCertSource = UTF8Encoding.UTF8.GetBytes(&quot;Need your AWS client CA certificate&quot;);
+var privateKeyData = UTF8Encoding.UTF8.GetBytes(&quot;Need your AWS private key&quot;);
+
+X509Certificate CaCert = new X509Certificate(caCertSource);
+X509Certificate ClientCert = new X509Certificate(clientCertSource);
+
+ClientCert.PrivateKey = privateKeyData;    
+
+var clientSetting = new MqttClientSetting {
+    BrokerName = iotEndPoint,
+    BrokerPort = iotPort,
+    CaCertificate = CaCert,
+    ClientCertificate = ClientCert,
+    SslProtocol = System.Security.Authentication.SslProtocols.Tls12
+};
+
+var iotClient = new Mqtt(clientSetting);
+
+iotClient.PublishReceivedChanged += (p1, p2, p3, p4, p5, p6) =&gt; {
+Debug.WriteLine(&quot;Received message: &quot; + Encoding.UTF8.GetString(p3));
+};
+
+iotClient.SubscribedChanged += (a, b) =&gt; { Debug.WriteLine(&quot;Subscribed&quot;); };
+
+Debug.WriteLine(&quot;Connecting....&quot;)
+
+var connectSetting = new MqttConnectionSetting {
+    ClientId = deviceId,
+    UserName = null,
+    Password = null
+};
+
+var connectCode = iotClient.Connect(connectSetting);
+
+ushort packetId = 1;
+
+iotClient.Subscribe(new string[] { topicShadowGet }, new QoSLevel[]
+    { QoSLevel.LeastOnce }, packetId++);
+            
+iotClient.Publish(topicShadowUpdate, Encoding.UTF8.GetBytes(message),
+    QoSLevel.MostOnce, false, packetId++);
+
+</code></pre>
+<p>We need a few things to complete the code sample that we'll get from AWS. We need an iotEndPoint, a deviceId, an AWS root certificate, a client certificate and a private key. First, you'll need to create an AWS account.</p>
+<p>Once you've created your account, we need to find the service to set up our device. On the AWS Management  Console, search for the service 'IoT Core' and select it.</p>
+<p><img src="images/aws-select-iot.jpg" alt="AWS Management Console"></p>
+<p>Before we add our device, we need to create a Policy that the device will use. From the side menu under the 'Secure' tab click 'Polices' click on the button to create a new policy. Name your policy and then click on advanced mode. Paste the code found below in the code window. Then click the 'Create' button. We'll attach the policy to the device later.</p>
+<p><img src="images/aws-create-policy.jpg" alt="AWS Create Policy"></p>
+<p>Paste this code in the above window.</p>
+<pre><code class="lang-cs">{
+  &quot;Version&quot;: &quot;2012-10-17&quot;,
+  &quot;Statement&quot;: [
+    {
+      &quot;Effect&quot;: &quot;Allow&quot;,
+      &quot;Action&quot;: [
+        &quot;iot:Publish&quot;,
+        &quot;iot:Subscribe&quot;,
+        &quot;iot:Connect&quot;,
+        &quot;iot:Receive&quot;
+      ],
+      &quot;Resource&quot;: [
+        &quot;*&quot;
+      ]
+    }
+  ]
+}
+</code></pre>
+<p>Now we need to create our IoT device within AWS.
+Click on the 'Manage' Dropdown and select 'Things', then click on 'Register a thing'</p>
+<p><img src="images/aws-manage-things.jpg" alt="AWS Manage Things"></p>
+<p>Next, we click on 'Create a single thing'</p>
+<p><img src="images/aws-create-single.jpg" alt="AWS Create Single Thing"></p>
+<p>Now we'll create a Name for our IoT device and add it to the 'Things' registry. This will be the deviceId we will use in the code sample. There are other options available that can be added, but in this tutorial, we only need to create a 'Name' and click 'NEXT'</p>
+<p><img src="images/aws-name-device.jpg" alt="AWS Create DeviceID"></p>
+<p>The next page is where we'll create the CA Certificates, we need to add to our projects resources. In this case we can use the 'One-Click certificate creation'. Click on 'Create certificate'</p>
+<p><img src="images/aws-create-certificates.jpg" alt="AWS Create Certificates"></p>
+<p>Next we need to download the CA Certificates we need. We need 'A certificates for this thing' and 'the private key', we don't need to download the public key for this project. You'll also need an AWS root certificate, you can follow the link to download RSA 2048 bit key: Amazon Root CA 1. Next we need to click on the 'Activate' button to activate the certificates we created, then click 'Attach a policy'</p>
+<p><img src="images/aws-download-cert.jpg" alt="AWS Download Certs"></p>
+<p>Check the box for the 'Policy' we created earlier, and then click the 'Register Thing' button.</p>
+<p><img src="images/aws-add-policy.jpg" alt="AWS Add Policy"></p>
+<p>Add the 3 Certificates we downloaded to Resources in our project and SAVE your project.</p>
+<p><img src="images/aws-cert.jpg" alt="AWS Certs Resources"></p>
+<p>Inside the 'Things' registry list click on the device you just created.</p>
+<p><img src="images/aws-select-device.jpg" alt="AWS Select Device"></p>
+<p>Once you're on your devices dashboard, click on the 'Interact' tab. This will give you the iotEndPoint we'll need for our code. Copy the code...</p>
+<p><img src="images/aws-copy-endpoint.jpg" alt="AWS Copy Endpoint"></p>
+<p>...and paste it into the code as shown below. Also add the name of your device to the variable deviceId.</p>
+<pre><code class="lang-cs">var iotEndPoint = &quot;a13gxtasnslh-ats.iot.us-west-2.amazonaws.com&quot;;
+var iotPort = 8883;
+var deviceId = &quot;MyDevice&quot;;
+</code></pre>
+<p>Finally, we need to link the CA Certificates we placed in our project resources to our code as shown in the example below.</p>
+<pre><code class="lang-cs">var caCertSorce = Resources.GetBytes(Resources.BinaryResources.AmazonRootCA1);
+var clientCertSource = Resources.GetBytes(Resources.BinaryResources._3a59c69926_certificate_pem);
+var privateKeyData = Resources.GetBytes(Resources.BinaryResources._3a59c69926_private_pem);
+</code></pre>
+<p>You can now deploy your program in Visual Studio, to connect your device to AWS. Clicking on the 'Activity' Tab on our device dashboard will show the active connection.</p>
+<p><img src="images/aws-device-activity.jpg" alt="AWS Device Activity"></p>
+<p>We view the messages being sent from our IoT device to AWS by clicking on the 'Shadows' Tab, then click 'Classic Shadows'. The message in the window is sent from our device...</p>
+<p><img src="images/aws-message-recieved.jpg" alt="AWS Device Activity"></p>
+<p>We can edit the message being sent from the device in Visual Studio by changing the message in this line of our code.</p>
+<pre><code class="lang-cs">var Message = &quot;{\&quot;state\&quot;:{\&quot;desired\&quot;:{\&quot;My message\&quot;:\&quot;Hello World\&quot;}}}&quot;;
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/aws.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

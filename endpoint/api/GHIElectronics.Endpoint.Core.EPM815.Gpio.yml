@@ -1,0 +1,889 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio
+  id: EPM815.Gpio
+  parent: GHIElectronics.Endpoint.Core
+  children:
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.GetPin(System.Int32)
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.GetPort(System.Int32)
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.IsPinReserved(System.Int32)
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.PinRelease(System.Int32)
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.PinReserve(System.Int32)
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.SetAlternate(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate)
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.SetModer(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder)
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.SetOutputType(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType)
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.SetPull(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull)
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.SetSpeed(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed)
+  langs:
+  - csharp
+  - vb
+  name: EPM815.Gpio
+  nameWithType: EPM815.Gpio
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Gpio
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static class EPM815.Gpio
+    content.vb: Public Module EPM815.Gpio
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetModer(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder)
+  commentId: M:GHIElectronics.Endpoint.Core.EPM815.Gpio.SetModer(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder)
+  id: SetModer(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder)
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio
+  langs:
+  - csharp
+  - vb
+  name: SetModer(int, Moder)
+  nameWithType: EPM815.Gpio.SetModer(int, EPM815.Gpio.Moder)
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetModer(int, GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SetModer
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 465
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static void SetModer(int pin_id, EPM815.Gpio.Moder moder)
+    parameters:
+    - id: pin_id
+      type: System.Int32
+    - id: moder
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+    content.vb: Public Shared Sub SetModer(pin_id As Integer, moder As EPM815.Gpio.Moder)
+  overload: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetModer*
+  nameWithType.vb: EPM815.Gpio.SetModer(Integer, EPM815.Gpio.Moder)
+  fullName.vb: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetModer(Integer, GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder)
+  name.vb: SetModer(Integer, Moder)
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetAlternate(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate)
+  commentId: M:GHIElectronics.Endpoint.Core.EPM815.Gpio.SetAlternate(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate)
+  id: SetAlternate(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate)
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio
+  langs:
+  - csharp
+  - vb
+  name: SetAlternate(int, Alternate)
+  nameWithType: EPM815.Gpio.SetAlternate(int, EPM815.Gpio.Alternate)
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetAlternate(int, GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SetAlternate
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 495
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static void SetAlternate(int pin_id, EPM815.Gpio.Alternate alt)
+    parameters:
+    - id: pin_id
+      type: System.Int32
+    - id: alt
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+    content.vb: Public Shared Sub SetAlternate(pin_id As Integer, alt As EPM815.Gpio.Alternate)
+  overload: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetAlternate*
+  nameWithType.vb: EPM815.Gpio.SetAlternate(Integer, EPM815.Gpio.Alternate)
+  fullName.vb: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetAlternate(Integer, GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate)
+  name.vb: SetAlternate(Integer, Alternate)
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetOutputType(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType)
+  commentId: M:GHIElectronics.Endpoint.Core.EPM815.Gpio.SetOutputType(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType)
+  id: SetOutputType(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType)
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio
+  langs:
+  - csharp
+  - vb
+  name: SetOutputType(int, OutputType)
+  nameWithType: EPM815.Gpio.SetOutputType(int, EPM815.Gpio.OutputType)
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetOutputType(int, GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SetOutputType
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 530
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static void SetOutputType(int pin_id, EPM815.Gpio.OutputType type)
+    parameters:
+    - id: pin_id
+      type: System.Int32
+    - id: type
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+    content.vb: Public Shared Sub SetOutputType(pin_id As Integer, type As EPM815.Gpio.OutputType)
+  overload: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetOutputType*
+  nameWithType.vb: EPM815.Gpio.SetOutputType(Integer, EPM815.Gpio.OutputType)
+  fullName.vb: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetOutputType(Integer, GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType)
+  name.vb: SetOutputType(Integer, OutputType)
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetPull(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull)
+  commentId: M:GHIElectronics.Endpoint.Core.EPM815.Gpio.SetPull(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull)
+  id: SetPull(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull)
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio
+  langs:
+  - csharp
+  - vb
+  name: SetPull(int, Pull)
+  nameWithType: EPM815.Gpio.SetPull(int, EPM815.Gpio.Pull)
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetPull(int, GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SetPull
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 561
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static void SetPull(int pin_id, EPM815.Gpio.Pull pull)
+    parameters:
+    - id: pin_id
+      type: System.Int32
+    - id: pull
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull
+    content.vb: Public Shared Sub SetPull(pin_id As Integer, pull As EPM815.Gpio.Pull)
+  overload: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetPull*
+  nameWithType.vb: EPM815.Gpio.SetPull(Integer, EPM815.Gpio.Pull)
+  fullName.vb: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetPull(Integer, GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull)
+  name.vb: SetPull(Integer, Pull)
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetSpeed(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed)
+  commentId: M:GHIElectronics.Endpoint.Core.EPM815.Gpio.SetSpeed(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed)
+  id: SetSpeed(System.Int32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed)
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio
+  langs:
+  - csharp
+  - vb
+  name: SetSpeed(int, Speed)
+  nameWithType: EPM815.Gpio.SetSpeed(int, EPM815.Gpio.Speed)
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetSpeed(int, GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SetSpeed
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 591
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static void SetSpeed(int pin_id, EPM815.Gpio.Speed speed)
+    parameters:
+    - id: pin_id
+      type: System.Int32
+    - id: speed
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+    content.vb: Public Shared Sub SetSpeed(pin_id As Integer, speed As EPM815.Gpio.Speed)
+  overload: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetSpeed*
+  nameWithType.vb: EPM815.Gpio.SetSpeed(Integer, EPM815.Gpio.Speed)
+  fullName.vb: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetSpeed(Integer, GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed)
+  name.vb: SetSpeed(Integer, Speed)
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.PinReserve(System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Core.EPM815.Gpio.PinReserve(System.Int32)
+  id: PinReserve(System.Int32)
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio
+  langs:
+  - csharp
+  - vb
+  name: PinReserve(int)
+  nameWithType: EPM815.Gpio.PinReserve(int)
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.PinReserve(int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PinReserve
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 622
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static void PinReserve(int pin)
+    parameters:
+    - id: pin
+      type: System.Int32
+    content.vb: Public Shared Sub PinReserve(pin As Integer)
+  overload: GHIElectronics.Endpoint.Core.EPM815.Gpio.PinReserve*
+  nameWithType.vb: EPM815.Gpio.PinReserve(Integer)
+  fullName.vb: GHIElectronics.Endpoint.Core.EPM815.Gpio.PinReserve(Integer)
+  name.vb: PinReserve(Integer)
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.PinRelease(System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Core.EPM815.Gpio.PinRelease(System.Int32)
+  id: PinRelease(System.Int32)
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio
+  langs:
+  - csharp
+  - vb
+  name: PinRelease(int)
+  nameWithType: EPM815.Gpio.PinRelease(int)
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.PinRelease(int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PinRelease
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 638
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static void PinRelease(int pin)
+    parameters:
+    - id: pin
+      type: System.Int32
+    content.vb: Public Shared Sub PinRelease(pin As Integer)
+  overload: GHIElectronics.Endpoint.Core.EPM815.Gpio.PinRelease*
+  nameWithType.vb: EPM815.Gpio.PinRelease(Integer)
+  fullName.vb: GHIElectronics.Endpoint.Core.EPM815.Gpio.PinRelease(Integer)
+  name.vb: PinRelease(Integer)
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.IsPinReserved(System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Core.EPM815.Gpio.IsPinReserved(System.Int32)
+  id: IsPinReserved(System.Int32)
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio
+  langs:
+  - csharp
+  - vb
+  name: IsPinReserved(int)
+  nameWithType: EPM815.Gpio.IsPinReserved(int)
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.IsPinReserved(int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: IsPinReserved
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 651
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static bool IsPinReserved(int pin)
+    parameters:
+    - id: pin
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsPinReserved(pin As Integer) As Boolean
+  overload: GHIElectronics.Endpoint.Core.EPM815.Gpio.IsPinReserved*
+  nameWithType.vb: EPM815.Gpio.IsPinReserved(Integer)
+  fullName.vb: GHIElectronics.Endpoint.Core.EPM815.Gpio.IsPinReserved(Integer)
+  name.vb: IsPinReserved(Integer)
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.GetPort(System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Core.EPM815.Gpio.GetPort(System.Int32)
+  id: GetPort(System.Int32)
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio
+  langs:
+  - csharp
+  - vb
+  name: GetPort(int)
+  nameWithType: EPM815.Gpio.GetPort(int)
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.GetPort(int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: GetPort
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 661
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static int GetPort(int pin)
+    parameters:
+    - id: pin
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function GetPort(pin As Integer) As Integer
+  overload: GHIElectronics.Endpoint.Core.EPM815.Gpio.GetPort*
+  nameWithType.vb: EPM815.Gpio.GetPort(Integer)
+  fullName.vb: GHIElectronics.Endpoint.Core.EPM815.Gpio.GetPort(Integer)
+  name.vb: GetPort(Integer)
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.GetPin(System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Core.EPM815.Gpio.GetPin(System.Int32)
+  id: GetPin(System.Int32)
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio
+  langs:
+  - csharp
+  - vb
+  name: GetPin(int)
+  nameWithType: EPM815.Gpio.GetPin(int)
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.GetPin(int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: GetPin
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 662
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static int GetPin(int pin)
+    parameters:
+    - id: pin
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function GetPin(pin As Integer) As Integer
+  overload: GHIElectronics.Endpoint.Core.EPM815.Gpio.GetPin*
+  nameWithType.vb: EPM815.Gpio.GetPin(Integer)
+  fullName.vb: GHIElectronics.Endpoint.Core.EPM815.Gpio.GetPin(Integer)
+  name.vb: GetPin(Integer)
+references:
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetModer*
+  commentId: Overload:GHIElectronics.Endpoint.Core.EPM815.Gpio.SetModer
+  href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html#GHIElectronics_Endpoint_Core_EPM815_Gpio_SetModer_System_Int32_GHIElectronics_Endpoint_Core_EPM815_Gpio_Moder_
+  name: SetModer
+  nameWithType: EPM815.Gpio.SetModer
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetModer
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.Moder
+  nameWithType: EPM815.Gpio.Moder
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+    name: Moder
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+    name: Moder
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetAlternate*
+  commentId: Overload:GHIElectronics.Endpoint.Core.EPM815.Gpio.SetAlternate
+  href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html#GHIElectronics_Endpoint_Core_EPM815_Gpio_SetAlternate_System_Int32_GHIElectronics_Endpoint_Core_EPM815_Gpio_Alternate_
+  name: SetAlternate
+  nameWithType: EPM815.Gpio.SetAlternate
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetAlternate
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.Alternate
+  nameWithType: EPM815.Gpio.Alternate
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+    name: Alternate
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+    name: Alternate
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetOutputType*
+  commentId: Overload:GHIElectronics.Endpoint.Core.EPM815.Gpio.SetOutputType
+  href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html#GHIElectronics_Endpoint_Core_EPM815_Gpio_SetOutputType_System_Int32_GHIElectronics_Endpoint_Core_EPM815_Gpio_OutputType_
+  name: SetOutputType
+  nameWithType: EPM815.Gpio.SetOutputType
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetOutputType
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.OutputType
+  nameWithType: EPM815.Gpio.OutputType
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+    name: OutputType
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+    name: OutputType
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetPull*
+  commentId: Overload:GHIElectronics.Endpoint.Core.EPM815.Gpio.SetPull
+  href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html#GHIElectronics_Endpoint_Core_EPM815_Gpio_SetPull_System_Int32_GHIElectronics_Endpoint_Core_EPM815_Gpio_Pull_
+  name: SetPull
+  nameWithType: EPM815.Gpio.SetPull
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetPull
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.Pull
+  nameWithType: EPM815.Gpio.Pull
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull
+    name: Pull
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull
+    name: Pull
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetSpeed*
+  commentId: Overload:GHIElectronics.Endpoint.Core.EPM815.Gpio.SetSpeed
+  href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html#GHIElectronics_Endpoint_Core_EPM815_Gpio_SetSpeed_System_Int32_GHIElectronics_Endpoint_Core_EPM815_Gpio_Speed_
+  name: SetSpeed
+  nameWithType: EPM815.Gpio.SetSpeed
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.SetSpeed
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.Speed
+  nameWithType: EPM815.Gpio.Speed
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+    name: Speed
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+    name: Speed
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.PinReserve*
+  commentId: Overload:GHIElectronics.Endpoint.Core.EPM815.Gpio.PinReserve
+  href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html#GHIElectronics_Endpoint_Core_EPM815_Gpio_PinReserve_System_Int32_
+  name: PinReserve
+  nameWithType: EPM815.Gpio.PinReserve
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.PinReserve
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.PinRelease*
+  commentId: Overload:GHIElectronics.Endpoint.Core.EPM815.Gpio.PinRelease
+  href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html#GHIElectronics_Endpoint_Core_EPM815_Gpio_PinRelease_System_Int32_
+  name: PinRelease
+  nameWithType: EPM815.Gpio.PinRelease
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.PinRelease
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.IsPinReserved*
+  commentId: Overload:GHIElectronics.Endpoint.Core.EPM815.Gpio.IsPinReserved
+  href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html#GHIElectronics_Endpoint_Core_EPM815_Gpio_IsPinReserved_System_Int32_
+  name: IsPinReserved
+  nameWithType: EPM815.Gpio.IsPinReserved
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.IsPinReserved
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.GetPort*
+  commentId: Overload:GHIElectronics.Endpoint.Core.EPM815.Gpio.GetPort
+  href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html#GHIElectronics_Endpoint_Core_EPM815_Gpio_GetPort_System_Int32_
+  name: GetPort
+  nameWithType: EPM815.Gpio.GetPort
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.GetPort
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.GetPin*
+  commentId: Overload:GHIElectronics.Endpoint.Core.EPM815.Gpio.GetPin
+  href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html#GHIElectronics_Endpoint_Core_EPM815_Gpio_GetPin_System_Int32_
+  name: GetPin
+  nameWithType: EPM815.Gpio.GetPin
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.GetPin

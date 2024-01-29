@@ -1,0 +1,225 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+  id: EPM815.Gpio.Moder
+  parent: GHIElectronics.Endpoint.Core
+  children:
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Alternate
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Analog
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Gpio
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Input
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.NONE
+  langs:
+  - csharp
+  - vb
+  name: EPM815.Gpio.Moder
+  nameWithType: EPM815.Gpio.Moder
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Moder
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 46
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public enum EPM815.Gpio.Moder
+    content.vb: Public Enum EPM815.Gpio.Moder
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Input
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Input
+  id: Input
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+  langs:
+  - csharp
+  - vb
+  name: Input
+  nameWithType: EPM815.Gpio.Moder.Input
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Input
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Input
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 47
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: Input = 0
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Gpio
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Gpio
+  id: Gpio
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+  langs:
+  - csharp
+  - vb
+  name: Gpio
+  nameWithType: EPM815.Gpio.Moder.Gpio
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Gpio
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Gpio
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 48
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: Gpio = 1
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Alternate
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Alternate
+  id: Alternate
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+  langs:
+  - csharp
+  - vb
+  name: Alternate
+  nameWithType: EPM815.Gpio.Moder.Alternate
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Alternate
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Alternate
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 49
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: Alternate = 2
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Analog
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Analog
+  id: Analog
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+  langs:
+  - csharp
+  - vb
+  name: Analog
+  nameWithType: EPM815.Gpio.Moder.Analog
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Analog
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Analog
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 50
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: Analog = 3
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.NONE
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.NONE
+  id: NONE
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+  langs:
+  - csharp
+  - vb
+  name: NONE
+  nameWithType: EPM815.Gpio.Moder.NONE
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.NONE
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: NONE
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 51
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: NONE = -1
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+references:
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.Moder
+  nameWithType: EPM815.Gpio.Moder
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+    name: Moder
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+    name: Moder
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.html

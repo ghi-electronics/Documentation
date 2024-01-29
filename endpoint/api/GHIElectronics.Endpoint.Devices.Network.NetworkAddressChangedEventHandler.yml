@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventHandler
+  commentId: T:GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventHandler
+  id: NetworkAddressChangedEventHandler
+  parent: GHIElectronics.Endpoint.Devices.Network
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: NetworkAddressChangedEventHandler
+  nameWithType: NetworkAddressChangedEventHandler
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventHandler
+  type: Delegate
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: NetworkAddressChangedEventHandler
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+    startLine: 13
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Network
+  namespace: GHIElectronics.Endpoint.Devices.Network
+  syntax:
+    content: public delegate void NetworkAddressChangedEventHandler(NetworkController sender, NetworkAddressChangedEventArgs e)
+    parameters:
+    - id: sender
+      type: GHIElectronics.Endpoint.Devices.Network.NetworkController
+    - id: e
+      type: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs
+    content.vb: Public Delegate Sub NetworkAddressChangedEventHandler(sender As NetworkController, e As NetworkAddressChangedEventArgs)
+references:
+- uid: GHIElectronics.Endpoint.Devices.Network
+  commentId: N:GHIElectronics.Endpoint.Devices.Network
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Network
+  nameWithType: GHIElectronics.Endpoint.Devices.Network
+  fullName: GHIElectronics.Endpoint.Devices.Network
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Network
+    name: Network
+    href: GHIElectronics.Endpoint.Devices.Network.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Network
+    name: Network
+    href: GHIElectronics.Endpoint.Devices.Network.html
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkController
+  commentId: T:GHIElectronics.Endpoint.Devices.Network.NetworkController
+  parent: GHIElectronics.Endpoint.Devices.Network
+  href: GHIElectronics.Endpoint.Devices.Network.NetworkController.html
+  name: NetworkController
+  nameWithType: NetworkController
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkController
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs
+  commentId: T:GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs
+  parent: GHIElectronics.Endpoint.Devices.Network
+  href: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs.html
+  name: NetworkAddressChangedEventArgs
+  nameWithType: NetworkAddressChangedEventArgs
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs

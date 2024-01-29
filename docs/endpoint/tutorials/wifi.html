@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>WiFi </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="WiFi ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/wifi.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p><a href="error.md">IN PROGRESS</a></p>
+<h1 id="wifi">WiFi</h1>
+<hr>
+<p>SITCore line of products includes native support for the Microchip <a href="https://www.microchip.com/wwwproducts/en/ATwinc1500">ATWINC1500</a> series of WiFi modules. These modules are available pre-certified from FCC, CE, and other regulatory agencies. For added security, WiFi module communication is handled through SPI, not through AT commands.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>To take security to the next level, all network cryptography and security are done internally inside SITCore and not inside the WiFi module, meaning the data going over SPI is all encrypted and secure.</p>
+</div>
+<h1 id="supported-modules">Supported Modules</h1>
+<p>ATWINC1500 &amp; 1510 both work identically with SITCore, except the 1510 has more memory that SITCore doesn't need. The part number with the correct firmware that has been tested with TinyCLR is ATWINC1500-MR210PB. A module with a different firmware version can still be used, but a firmware update becomes necessary. Using the exact version eliminates the need for this step.</p>
+<h1 id="sample-code">Sample Code</h1>
+<p>The sample code is meant for the FEZ Portal with it's built in WiFi module. If you want to use a bare ATWINC1500 module instead, you'll need to connect interrupt, reset, and chip select lines in addition to the SPI lines (MOSI, MISO, SCK).
+The user can overide the WiFi built-in MAC address, but not recommended.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>If using WiFi 7 click module, there is an enable pin which needs to be pulled high.</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.Network, GHIElectronics.TinyCLR.Devices.Spi, GHIElectronics.TinyCLR.Devices.Uart, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Networking, and GHIElectronics.TinyCLR.Pins.</p>
+</div>
+<pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Gpio;
+using GHIElectronics.TinyCLR.Devices.Network;
+using GHIElectronics.TinyCLR.Devices.Spi;
+using GHIElectronics.TinyCLR.Pins;
+using System;
+using System.Diagnostics;
+using System.Net;
+using System.Threading;
+
+var enablePinNumber = SC20260.GpioPin.PA8;
+var chipSelectPinNumber = SC20260.GpioPin.PA6;
+var irqPinNumber = SC20260.GpioPin.PF10;
+var resetPinNumber = SC20260.GpioPin.PC3;
+var spiControllerName = SC20260.SpiBus.Spi3;
+var gpioControllerName = SC20260.GpioPin.Id;
+			
+var enablePin = GpioController.GetDefault().OpenPin(enablePinNumber);
+enablePin.SetDriveMode(GpioPinDriveMode.Output);
+enablePin.Write(GpioPinValue.High);
+
+SpiNetworkCommunicationInterfaceSettings netInterfaceSettings =
+    new SpiNetworkCommunicationInterfaceSettings();
+
+var chipselect = GpioController.GetDefault().OpenPin(chipSelectPinNumber);
+
+var settings = new SpiConnectionSettings() {
+    ChipSelectLine = chipselect,
+    ClockFrequency = 4000000,
+    Mode = SpiMode.Mode0,
+    ChipSelectType = SpiChipSelectType.Gpio,
+    ChipSelectHoldTime = TimeSpan.FromTicks(10),
+    ChipSelectSetupTime = TimeSpan.FromTicks(10)
+};
+
+// netInterfaceSettings
+netInterfaceSettings.SpiApiName = spiControllerName;
+netInterfaceSettings.SpiSettings = settings;
+	
+netInterfaceSettings.GpioApiName = gpioControllerName;    
+
+netInterfaceSettings.InterruptPin = GpioController.GetDefault().OpenPin(irqPinNumber);
+netInterfaceSettings.InterruptEdge = GpioPinEdge.FallingEdge;
+netInterfaceSettings.InterruptDriveMode = GpioPinDriveMode.InputPullUp;
+	
+netInterfaceSettings.ResetPin = GpioController.GetDefault().OpenPin(resetPinNumber);
+netInterfaceSettings.ResetActiveState = GpioPinValue.Low;
+
+// Wifi setting
+var wifiSettings = new WiFiNetworkInterfaceSettings() {
+    Ssid = &quot;Your SSID&quot;,
+    Password = &quot;Your Password&quot;,
+};
+    
+wifiSettings.DhcpEnable = true;
+wifiSettings.DynamicDnsEnable = true;
+
+var networkController = NetworkController.FromName(SC20260.NetworkController.ATWinc15x0);
+	
+networkController.SetInterfaceSettings(wifiSettings);
+networkController.SetCommunicationInterfaceSettings(netInterfaceSettings);
+networkController.SetAsDefaultController();
+
+networkController.NetworkAddressChanged += NetworkController_NetworkAddressChanged;
+
+networkController.NetworkLinkConnectedChanged +=
+    NetworkController_NetworkLinkConnectedChanged;
+
+networkController.Enable();
+
+// Network is ready to use
+Thread.Sleep(Timeout.Infinite);
+
+
+void NetworkController_NetworkLinkConnectedChanged
+    (NetworkController sender, NetworkLinkConnectedChangedEventArgs e) {
+    // Raise event connect/disconnect
+}
+
+void NetworkController_NetworkAddressChanged
+    (NetworkController sender, NetworkAddressChangedEventArgs e) {
+    var ipProperties = sender.GetIPProperties();
+    var address = ipProperties.Address.GetAddressBytes();
+    Debug.WriteLine(&quot;IP: &quot; + address[0] + &quot;.&quot; + address[1] + &quot;.&quot; + address[2] +
+        &quot;.&quot; + address[3]);
+}
+</code></pre>
+<hr>
+<h2 id="winc1500-utilities">WINC1500 Utilities</h2>
+<p>The Winc15x0Interface class provides to access some of the native functions of the WINC1500 WiFi module. Such as getting the WiFi module's MAC address, getting RSSI (Relative Signal Strength Indicator), scanning for access points, checking the firmware version, and over-the-air (OTA) firmware update.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Drivers.Microchip.Winc15x0
+SetCommunicationInterfaceSettings function needs to be called before using this driver.</p>
+</div>
+<pre><code class="lang-cs">//Initialize the WiFi interface first before using any of the below functions... SetCommunicationInterfaceSettings
+// ...
+
+//Scan for WiFi access points:
+string[] ssidList = Winc15x0Interface.Scan();
+
+//Get Relative Signal Strength Indicator for the connected access point:
+int signalStrength = Winc15x0Interface.GetRssi();
+
+//Get the WiFi module's MAC address:
+byte[] macAddress = Winc15x0Interface.GetMacAddress(); 
+
+//Get the version of the installed WiFi firmware:
+string fwVersion = Winc15x0Interface.GetFirmwareVersion();
+
+//Print a list of WiFi firmware versions that have been tested with TinyCLR OS.
+//   Note: Untested WiFi firmware versions may also work.
+for (int i = 0; i &lt; Winc15x0Interface.FirmwareSupports.Length; i++) {
+    System.Diagnostics.Debug.WriteLine(&quot;Supported firmware version #&quot; +
+        (i + 1).ToString() + &quot;: &quot; + Winc15x0Interface.FirmwareSupports[i].ToString());
+}
+
+//Download and install firmware from an OTA download (web) server:
+//   Must upload firmware file to root folder in server
+//   (e.g.  http://192.168.0.100/m2m_ota_3a0.bin).
+
+bool otaUpdate = Winc15x0Interface.FirmwareUpdate(&quot;http://192.168.0.100/m2m_ota_3a0.bin&quot;, TimeSpan.FromMilliseconds(5000));
+</code></pre>
+<hr>
+<h2 id="multicast-ip">Multicast IP</h2>
+<p>Multicast works as expected on all other network interfaces; however, in order to achieve this on WiFi, we need to convert a Multicast IP to a multicast MAC Address. Any online tool like <a href="http://dqnetworks.ie/toolsinfo.d/multicastaddressing.html">this</a> can be used.</p>
+<p>This capture shows Multicast IP address 239.255.255.254 for example.</p>
+<p><img src="images/mac-address.jpg" alt="ConverterTool"></p>
+<p>This Multicast MAC address is then used as below.</p>
+<pre><code class="lang-cs">Winc15x0Interface.AddMulticastMacAddress(new byte[] {​​​​​​​​ 0x01, 0x00, 0x5e, 0x7f, 0xff, 0xfe }​​​​​​​​);
+</code></pre>
+<p>If more than one Multicast MAC address is needed, just call AddMulticastMacAddress multiple time.</p>
+<p>There is also an API allows remove multicast mac address from the list as well.</p>
+<pre><code class="lang-cs">Winc15x0Interface.RemoveMulticastMacAddress(new byte[] {​​​​​​​​ 0x01, 0x00, 0x5e, 0x7f, 0xff, 0xfe }​​​​​​​​);
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.TinyCLR.Drivers.Microchip.Winc15x0</p>
+</div>
+<hr>
+<h2 id="accesspoint">AccessPoint</h2>
+<p>SITCore devices can be set up as a WiFi <code>AccessPoint</code>. This creates a 1-to-1 connection between SITCore and other hardware devices through WiFi without the need to connect to a switch. An example might be, connecting a phone directly to the SITCore hardware. This may be necessary in some situations where access to a network isn't possible and a user needs to connect to the device directly.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>AccessPoint only supports connecting to one device at a time.</p>
+</div>
+<p>Setting up a device as an access point works just like the default <code>Station</code> mode except the <code>Ssid</code> and now the one the device is broadcasting.</p>
+<pre><code class="lang-cs">var networkInterfaceSetting = new WiFiNetworkInterfaceSettings() {
+    Ssid = &quot;Your SSID&quot;,
+    Password = &quot;Your Password&quot;,
+    Mode = WiFiMode.AccessPoint,
+};
+
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Only WEP password security is supported. Do not set the <code>Password</code> for an open network.</p>
+</div>
+<p><code>AccessPoint</code> can provide an IP address to the connected device when <code>networkInterfaceSetting.DhcpEnabled = true;</code> through a simple internal DHCP server. If desired, an event is triggered on completion.</p>
+<pre><code class="lang-cs">WiFiNetworkInterfaceSettings wifiSettings = new WiFiNetworkInterfaceSettings() {
+    Ssid = &quot;Your SSID&quot;,
+    Password = &quot;Your Password&quot;,
+};
+//...
+WiFiNetworkInterfaceSettings wifiSettings.AccessPointClientConnectionChanged += (a, b, c) =&gt; {
+    Debug.WriteLine(&quot;Provided IP = &quot; + b.ToString());
+    Debug.WriteLine(&quot;Connected device's MAC Address = &quot; + c);
+};
+</code></pre>
+<p>The usual connection event is fired just like in <code>Station</code> mode, except in this case it is fired when an external device is connected <code>NetworkController.NetworkLinkConnectedChanged</code>.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/wifi.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

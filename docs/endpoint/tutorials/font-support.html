@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Font Support </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Font Support ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/font-support.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p><a href="error.md">IN PROGRESS</a></p>
+<h1 id="font-support">Font Support</h1>
+<hr>
+<p>Fonts can be included in your TinyCLR application by adding them as a <a href="resources.html">resource</a>. Any TrueType font can be used after being converted to the .tcfnt format with the FontConverter tool. The Font Converter tool (found under <a href="../downloads.html">downloads</a> is a command line utility which does just that. Make sure to use this tool for any fonts you need, using old fonts from NETMF will not work.</p>
+<pre><code class="lang-cs">var screen = Graphics.FromHdc(displayController.Hdc);
+var font = Resource.GetFont(Resource.FontResources.NinaB);
+var greenPen = new Pen(Color.Green);
+screen.DrawString(&quot;Hello World!&quot;, font, greenPen.Brush, 10, 100);
+screen.Flush();
+</code></pre>
+<h2 id="font-conversion">Font Conversion</h2>
+<p>To convert a font you must first make a .fntdef file which is a text file describing the font to convert as well as a number of other parameters. This file contains one option on each line. A minimal .fntdef file may look like this to have the standard ASCII characters.</p>
+<pre><code class="lang-cs">SelectFont &quot;FN:Arial,WE:400,HE:12,IT:0&quot;
+ImportRange 32 126
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>This <a href="http://informatix.miloush.net/microframework/Utilities/TinyFontTool.aspx"><strong>third-party tool</strong></a> can be handy for generating compatible fonts.</p>
+</div>
+<hr>
+<h2 id="font-definition">Font Definition</h2>
+<p>The .fntdef file options are as follows:</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The order of statements in the .fntdef file matters. For example, properties such as AntiAlias must be specified before the InputRange property.</p>
+</div>
+<ul>
+<li><p>AddFontToProcess <em>path</em></p>
+<p><em>Path</em> is the path to the TrueType font you want to convert. If the path contains spaces, you must enclose it in quotes and escape any backslashes.</p>
+<p>Example: <code>AddFontToProcess C:\Windows\Fonts\Arial.ttf</code></p>
+</li>
+<li><p>SelectFont <em>&quot;selection string&quot;</em></p>
+<p><em>&quot;Selection string&quot;</em> is a quoted string containing comma delimited fields indicating the characteristics of the font to convert. ConvertFont searches the TrueType fonts installed on your computer, as well as any fonts in the AddFontToProcess argument, for a font matching the characteristics in the <em>selection string</em> argument. The first match is converted.</p>
+<p>Using spaces around the commas or colons in <em>selection string</em> will result in errors. Field types are as follows:</p>
+<ul>
+<li>HE: Height in logical units. Use zero for default height, a positive number for cell height and a negative number for character height.</li>
+<li>WI: Width. Average width of characters in logical units. Set to zero for closest match based on aspect ratio.</li>
+<li>ES: Escapement angle in tenths of a degree. Negative numbers rotate clockwise, positive numbers rotate counterclockwise.</li>
+<li>WE: Weight of font in range of 0 to 1000. 400 is normal, 700 is bold. Set to zero for default weight.</li>
+<li>IT: Italic if set to 1 (IT:1).</li>
+<li>FN: Face name. Name of the typeface.</li>
+<li>FullName: Full name. The unique name of the font. For example: &quot;Monotype:Arial Regular (Microsoft).&quot;</li>
+</ul>
+<p>For example, <code>SelectFont &quot;HE:12,WE:400,FN:Arial&quot;</code> will look for a regular-weight font of height 12 with a face name of &quot;Arial.&quot;</p>
+</li>
+<li><p>AdjustAscent <em>adjustment</em></p>
+<p><em>Adjustment</em> is integer number of EM units to adjust ascent. Can be positive or negative. Can only be used once per .fntdef file. If it is used more than once, only the last occurrence will be used.</p>
+</li>
+<li><p>AdjustDescent <em>adjustment</em></p>
+<p><em>Adjustment</em> is integer number of EM units to adjust descent. Can be positive or negative. Can only be used once per .fntdef file. If it is used more than once, only the last occurrence will be used.</p>
+</li>
+<li><p>AdjustExternalLeading <em>adjustment</em></p>
+<p><em>Adjustment</em> is integer number of EM units to adjust the external leading. Can be positive or negative. Can only be used once per .fntdef file. If it is used more than once, only the last occurrence will be used.</p>
+</li>
+<li><p>AdjustInternalLeading <em>adjustment</em></p>
+<p><em>Adjustment</em> is integer number of EM units to adjust the internal leading. Can be positive or negative. Can only be used once per .fntdef file. If it is used more than once, only the last occurrence will be used.</p>
+</li>
+<li><p>AdjustLeftMargin <em>adjustment</em></p>
+<p><em>Adjustment</em> is integer number of device units to add to the left margin. Can be positive or negative. Applies to the characters specified by the ImportRange statement that most closely follows this option.</p>
+</li>
+<li><p>AdjustRightMargin <em>adjustment</em></p>
+<p><em>Adjustment</em> is integer number of EM units to add to the right margin. Can be positive or negative. Applies to the characters specified by the ImportRange statement that most closely follows this statement.</p>
+</li>
+<li><p>AntiAlias <em>level</em></p>
+<p><em>Level</em> can be 1, 2, 4, or 8. Font bitmaps will contain 2, 5, 17, or 65 levels of gray respectively. Must come after the SelectFont statement specifying the font to which this statement applies. May be applied to a range of characters defined by the ImportRange option.</p>
+</li>
+<li><p>ImportRange <em>start end</em></p>
+<p><em>Start</em> and <em>end</em> are Unicode character codes indicating the beginning and end of the range of characters to convert (inclusive). Can be applied multiple times to convert a non-contiguous range of characters. Must come after the SelectFont statement specifying the font to which this statement applies. Both arguments are required. To specify a single character, make start and end the same number.</p>
+</li>
+<li><p>ImportRangeAndMap <em>start end offset</em></p>
+<p>Specifies range of characters to convert starting with Unicode character <em>start</em> + <em>offset</em> and ending with character <em>end</em> + <em>offset</em>, inclusive. Can be applied multiple times to convert a non-contiguous range of characters. Must come after the SelectFont statement specifying the font to which this statement applies.</p>
+</li>
+<li><p>NoDefaultCharacter</p>
+<p>Specifies that no default character will be substituted for characters not converted. Must come after the SelectFont statement specifying the font to which this statement applies.</p>
+</li>
+<li><p>OffsetX <em>adjustment</em></p>
+<p><em>Adjustment</em> is an integer describing the number of EM units to shift character position left or right. Positive numbers shift to the left, and negative numbers shift to the right. Applies to characters specified by any ImportRange, ImportRangeAndMap, or SetAsDefaultCharacter statements that follow it in the .fntdef file. Subsequent OffsetX statements supersede all previous OffxetX statements in the same .fntdef file.</p>
+</li>
+<li><p>OffsetY <em>adjustment</em></p>
+<p><em>Adjustment</em> is an integer describing the number of EM units to shift character position up or down. Positive numbers shift down, and negative numbers shift up. Applies to characters specified by any ImportRange, ImportRangeAndMap, or SetAsDefaultCharacter statements that follow it in the .fntdef file. Subsequent OffsetX statements supersede all previous OffxetX statements in the same .fntdef file.</p>
+</li>
+<li><p>SetAsDefaultcharacter <em>charcode</em></p>
+<p><em>&quot;Charcode</em> is the Unicode character code for the default character to substitute for characters that weren't converted.</p>
+</li>
+<li><p>SetDefaultcharacter</p>
+<p>Indicates that the default character of the currently selected TrueType font will be substituted for characters that weren't converted.</p>
+</li>
+<li><p>Verbosity <em>level</em></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Not currently supported, set to 0.</p>
+</div>
+<p><em>Level</em> can be 0, 1, or 2. Level 0 displays no details, level 1 displays font properties, and level 2 displays font and character properties and a diagram of each character.</p>
+</li>
+<li><p># Comments</p>
+<p>You can add comments to your .fntdef file by starting the comment line with the &quot;#&quot; character.</p>
+</li>
+</ul>
+<p>Syntax for running FontConverter is GHIElectronics.TinyCLR.FontConverter.exe <em>input-font</em> <em>output-font</em>. For example <code>GHIElectronics.TinyCLR.FontConverter.exe Arial.fntdef Arial.tcfnt</code>.</p>
+<hr>
+<h2 id="resources">Resources</h2>
+<p>Fonts can be added to your application as a resource. <a href="resources.html">Click here</a> for more information.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/font-support.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

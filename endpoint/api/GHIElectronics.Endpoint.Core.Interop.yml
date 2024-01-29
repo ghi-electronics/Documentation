@@ -1,0 +1,850 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Core.Interop
+  commentId: T:GHIElectronics.Endpoint.Core.Interop
+  id: Interop
+  parent: GHIElectronics.Endpoint.Core
+  children:
+  - GHIElectronics.Endpoint.Core.Interop.Close(System.Int32)
+  - GHIElectronics.Endpoint.Core.Interop.Ioctl(System.Int32,System.UInt32,System.IntPtr)
+  - GHIElectronics.Endpoint.Core.Interop.Ioctl(System.Int32,System.UInt32,System.UInt64)
+  - GHIElectronics.Endpoint.Core.Interop.Mmap(System.IntPtr,System.Int32,GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections,GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Core.Interop.Munmap(System.IntPtr,System.Int32)
+  - GHIElectronics.Endpoint.Core.Interop.Open(System.String,GHIElectronics.Endpoint.Core.Interop.FileOpenFlags)
+  - GHIElectronics.Endpoint.Core.Interop.Read(System.Int32,System.IntPtr,System.Int32)
+  - GHIElectronics.Endpoint.Core.Interop.Seek(System.Int32,System.Int32,GHIElectronics.Endpoint.Core.Interop.SeekFlags)
+  - GHIElectronics.Endpoint.Core.Interop.Write(System.Int32,System.IntPtr,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: Interop
+  nameWithType: Interop
+  fullName: GHIElectronics.Endpoint.Core.Interop
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Interop
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 8
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public class Interop
+    content.vb: Public Class Interop
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.Core.Interop.Open(System.String,GHIElectronics.Endpoint.Core.Interop.FileOpenFlags)
+  commentId: M:GHIElectronics.Endpoint.Core.Interop.Open(System.String,GHIElectronics.Endpoint.Core.Interop.FileOpenFlags)
+  id: Open(System.String,GHIElectronics.Endpoint.Core.Interop.FileOpenFlags)
+  parent: GHIElectronics.Endpoint.Core.Interop
+  langs:
+  - csharp
+  - vb
+  name: Open(string, FileOpenFlags)
+  nameWithType: Interop.Open(string, Interop.FileOpenFlags)
+  fullName: GHIElectronics.Endpoint.Core.Interop.Open(string, GHIElectronics.Endpoint.Core.Interop.FileOpenFlags)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Open
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 38
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static int Open(string pathname, Interop.FileOpenFlags flags)
+    parameters:
+    - id: pathname
+      type: System.String
+    - id: flags
+      type: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function Open(pathname As String, flags As Interop.FileOpenFlags) As Integer
+  overload: GHIElectronics.Endpoint.Core.Interop.Open*
+  nameWithType.vb: Interop.Open(String, Interop.FileOpenFlags)
+  fullName.vb: GHIElectronics.Endpoint.Core.Interop.Open(String, GHIElectronics.Endpoint.Core.Interop.FileOpenFlags)
+  name.vb: Open(String, FileOpenFlags)
+- uid: GHIElectronics.Endpoint.Core.Interop.Read(System.Int32,System.IntPtr,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Core.Interop.Read(System.Int32,System.IntPtr,System.Int32)
+  id: Read(System.Int32,System.IntPtr,System.Int32)
+  parent: GHIElectronics.Endpoint.Core.Interop
+  langs:
+  - csharp
+  - vb
+  name: Read(int, nint, int)
+  nameWithType: Interop.Read(int, nint, int)
+  fullName: GHIElectronics.Endpoint.Core.Interop.Read(int, nint, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Read
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 39
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static int Read(int fd, nint buf, int count)
+    parameters:
+    - id: fd
+      type: System.Int32
+    - id: buf
+      type: System.IntPtr
+    - id: count
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function Read(fd As Integer, buf As IntPtr, count As Integer) As Integer
+  overload: GHIElectronics.Endpoint.Core.Interop.Read*
+  nameWithType.vb: Interop.Read(Integer, IntPtr, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Core.Interop.Read(Integer, System.IntPtr, Integer)
+  name.vb: Read(Integer, IntPtr, Integer)
+- uid: GHIElectronics.Endpoint.Core.Interop.Write(System.Int32,System.IntPtr,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Core.Interop.Write(System.Int32,System.IntPtr,System.Int32)
+  id: Write(System.Int32,System.IntPtr,System.Int32)
+  parent: GHIElectronics.Endpoint.Core.Interop
+  langs:
+  - csharp
+  - vb
+  name: Write(int, nint, int)
+  nameWithType: Interop.Write(int, nint, int)
+  fullName: GHIElectronics.Endpoint.Core.Interop.Write(int, nint, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Write
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 40
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static int Write(int fd, nint buf, int count)
+    parameters:
+    - id: fd
+      type: System.Int32
+    - id: buf
+      type: System.IntPtr
+    - id: count
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function Write(fd As Integer, buf As IntPtr, count As Integer) As Integer
+  overload: GHIElectronics.Endpoint.Core.Interop.Write*
+  nameWithType.vb: Interop.Write(Integer, IntPtr, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Core.Interop.Write(Integer, System.IntPtr, Integer)
+  name.vb: Write(Integer, IntPtr, Integer)
+- uid: GHIElectronics.Endpoint.Core.Interop.Seek(System.Int32,System.Int32,GHIElectronics.Endpoint.Core.Interop.SeekFlags)
+  commentId: M:GHIElectronics.Endpoint.Core.Interop.Seek(System.Int32,System.Int32,GHIElectronics.Endpoint.Core.Interop.SeekFlags)
+  id: Seek(System.Int32,System.Int32,GHIElectronics.Endpoint.Core.Interop.SeekFlags)
+  parent: GHIElectronics.Endpoint.Core.Interop
+  langs:
+  - csharp
+  - vb
+  name: Seek(int, int, SeekFlags)
+  nameWithType: Interop.Seek(int, int, Interop.SeekFlags)
+  fullName: GHIElectronics.Endpoint.Core.Interop.Seek(int, int, GHIElectronics.Endpoint.Core.Interop.SeekFlags)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Seek
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 41
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static int Seek(int fd, int offset, Interop.SeekFlags whence)
+    parameters:
+    - id: fd
+      type: System.Int32
+    - id: offset
+      type: System.Int32
+    - id: whence
+      type: GHIElectronics.Endpoint.Core.Interop.SeekFlags
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function Seek(fd As Integer, offset As Integer, whence As Interop.SeekFlags) As Integer
+  overload: GHIElectronics.Endpoint.Core.Interop.Seek*
+  nameWithType.vb: Interop.Seek(Integer, Integer, Interop.SeekFlags)
+  fullName.vb: GHIElectronics.Endpoint.Core.Interop.Seek(Integer, Integer, GHIElectronics.Endpoint.Core.Interop.SeekFlags)
+  name.vb: Seek(Integer, Integer, SeekFlags)
+- uid: GHIElectronics.Endpoint.Core.Interop.Close(System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Core.Interop.Close(System.Int32)
+  id: Close(System.Int32)
+  parent: GHIElectronics.Endpoint.Core.Interop
+  langs:
+  - csharp
+  - vb
+  name: Close(int)
+  nameWithType: Interop.Close(int)
+  fullName: GHIElectronics.Endpoint.Core.Interop.Close(int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Close
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 42
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static int Close(int fd)
+    parameters:
+    - id: fd
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function Close(fd As Integer) As Integer
+  overload: GHIElectronics.Endpoint.Core.Interop.Close*
+  nameWithType.vb: Interop.Close(Integer)
+  fullName.vb: GHIElectronics.Endpoint.Core.Interop.Close(Integer)
+  name.vb: Close(Integer)
+- uid: GHIElectronics.Endpoint.Core.Interop.Ioctl(System.Int32,System.UInt32,System.IntPtr)
+  commentId: M:GHIElectronics.Endpoint.Core.Interop.Ioctl(System.Int32,System.UInt32,System.IntPtr)
+  id: Ioctl(System.Int32,System.UInt32,System.IntPtr)
+  parent: GHIElectronics.Endpoint.Core.Interop
+  langs:
+  - csharp
+  - vb
+  name: Ioctl(int, uint, nint)
+  nameWithType: Interop.Ioctl(int, uint, nint)
+  fullName: GHIElectronics.Endpoint.Core.Interop.Ioctl(int, uint, nint)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Ioctl
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 43
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static int Ioctl(int fd, uint request, nint argp)
+    parameters:
+    - id: fd
+      type: System.Int32
+    - id: request
+      type: System.UInt32
+    - id: argp
+      type: System.IntPtr
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function Ioctl(fd As Integer, request As UInteger, argp As IntPtr) As Integer
+  overload: GHIElectronics.Endpoint.Core.Interop.Ioctl*
+  nameWithType.vb: Interop.Ioctl(Integer, UInteger, IntPtr)
+  fullName.vb: GHIElectronics.Endpoint.Core.Interop.Ioctl(Integer, UInteger, System.IntPtr)
+  name.vb: Ioctl(Integer, UInteger, IntPtr)
+- uid: GHIElectronics.Endpoint.Core.Interop.Ioctl(System.Int32,System.UInt32,System.UInt64)
+  commentId: M:GHIElectronics.Endpoint.Core.Interop.Ioctl(System.Int32,System.UInt32,System.UInt64)
+  id: Ioctl(System.Int32,System.UInt32,System.UInt64)
+  parent: GHIElectronics.Endpoint.Core.Interop
+  langs:
+  - csharp
+  - vb
+  name: Ioctl(int, uint, ulong)
+  nameWithType: Interop.Ioctl(int, uint, ulong)
+  fullName: GHIElectronics.Endpoint.Core.Interop.Ioctl(int, uint, ulong)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Ioctl
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 44
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static int Ioctl(int fd, uint request, ulong argp)
+    parameters:
+    - id: fd
+      type: System.Int32
+    - id: request
+      type: System.UInt32
+    - id: argp
+      type: System.UInt64
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function Ioctl(fd As Integer, request As UInteger, argp As ULong) As Integer
+  overload: GHIElectronics.Endpoint.Core.Interop.Ioctl*
+  nameWithType.vb: Interop.Ioctl(Integer, UInteger, ULong)
+  fullName.vb: GHIElectronics.Endpoint.Core.Interop.Ioctl(Integer, UInteger, ULong)
+  name.vb: Ioctl(Integer, UInteger, ULong)
+- uid: GHIElectronics.Endpoint.Core.Interop.Mmap(System.IntPtr,System.Int32,GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections,GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Core.Interop.Mmap(System.IntPtr,System.Int32,GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections,GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags,System.Int32,System.Int32)
+  id: Mmap(System.IntPtr,System.Int32,GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections,GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Core.Interop
+  langs:
+  - csharp
+  - vb
+  name: Mmap(nint, int, MemoryMappedProtections, MemoryMappedFlags, int, int)
+  nameWithType: Interop.Mmap(nint, int, Interop.MemoryMappedProtections, Interop.MemoryMappedFlags, int, int)
+  fullName: GHIElectronics.Endpoint.Core.Interop.Mmap(nint, int, GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections, GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags, int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Mmap
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 45
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static nint Mmap(nint addr, int length, Interop.MemoryMappedProtections prot, Interop.MemoryMappedFlags flags, int fd, int offset)
+    parameters:
+    - id: addr
+      type: System.IntPtr
+    - id: length
+      type: System.Int32
+    - id: prot
+      type: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+    - id: flags
+      type: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+    - id: fd
+      type: System.Int32
+    - id: offset
+      type: System.Int32
+    return:
+      type: System.IntPtr
+    content.vb: Public Shared Function Mmap(addr As IntPtr, length As Integer, prot As Interop.MemoryMappedProtections, flags As Interop.MemoryMappedFlags, fd As Integer, offset As Integer) As IntPtr
+  overload: GHIElectronics.Endpoint.Core.Interop.Mmap*
+  nameWithType.vb: Interop.Mmap(IntPtr, Integer, Interop.MemoryMappedProtections, Interop.MemoryMappedFlags, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Core.Interop.Mmap(System.IntPtr, Integer, GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections, GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags, Integer, Integer)
+  name.vb: Mmap(IntPtr, Integer, MemoryMappedProtections, MemoryMappedFlags, Integer, Integer)
+- uid: GHIElectronics.Endpoint.Core.Interop.Munmap(System.IntPtr,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Core.Interop.Munmap(System.IntPtr,System.Int32)
+  id: Munmap(System.IntPtr,System.Int32)
+  parent: GHIElectronics.Endpoint.Core.Interop
+  langs:
+  - csharp
+  - vb
+  name: Munmap(nint, int)
+  nameWithType: Interop.Munmap(nint, int)
+  fullName: GHIElectronics.Endpoint.Core.Interop.Munmap(nint, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Munmap
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 46
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static int Munmap(nint addr, int length)
+    parameters:
+    - id: addr
+      type: System.IntPtr
+    - id: length
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function Munmap(addr As IntPtr, length As Integer) As Integer
+  overload: GHIElectronics.Endpoint.Core.Interop.Munmap*
+  nameWithType.vb: Interop.Munmap(IntPtr, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Core.Interop.Munmap(System.IntPtr, Integer)
+  name.vb: Munmap(IntPtr, Integer)
+references:
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.Core.Interop.Open*
+  commentId: Overload:GHIElectronics.Endpoint.Core.Interop.Open
+  href: GHIElectronics.Endpoint.Core.Interop.html#GHIElectronics_Endpoint_Core_Interop_Open_System_String_GHIElectronics_Endpoint_Core_Interop_FileOpenFlags_
+  name: Open
+  nameWithType: Interop.Open
+  fullName: GHIElectronics.Endpoint.Core.Interop.Open
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+  commentId: T:GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.Interop.html
+  name: Interop.FileOpenFlags
+  nameWithType: Interop.FileOpenFlags
+  fullName: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+    name: FileOpenFlags
+    href: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+    name: FileOpenFlags
+    href: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.html
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GHIElectronics.Endpoint.Core.Interop.Read*
+  commentId: Overload:GHIElectronics.Endpoint.Core.Interop.Read
+  href: GHIElectronics.Endpoint.Core.Interop.html#GHIElectronics_Endpoint_Core_Interop_Read_System_Int32_System_IntPtr_System_Int32_
+  name: Read
+  nameWithType: Interop.Read
+  fullName: GHIElectronics.Endpoint.Core.Interop.Read
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: nint
+  nameWithType: nint
+  fullName: nint
+  nameWithType.vb: IntPtr
+  fullName.vb: System.IntPtr
+  name.vb: IntPtr
+- uid: GHIElectronics.Endpoint.Core.Interop.Write*
+  commentId: Overload:GHIElectronics.Endpoint.Core.Interop.Write
+  href: GHIElectronics.Endpoint.Core.Interop.html#GHIElectronics_Endpoint_Core_Interop_Write_System_Int32_System_IntPtr_System_Int32_
+  name: Write
+  nameWithType: Interop.Write
+  fullName: GHIElectronics.Endpoint.Core.Interop.Write
+- uid: GHIElectronics.Endpoint.Core.Interop.Seek*
+  commentId: Overload:GHIElectronics.Endpoint.Core.Interop.Seek
+  href: GHIElectronics.Endpoint.Core.Interop.html#GHIElectronics_Endpoint_Core_Interop_Seek_System_Int32_System_Int32_GHIElectronics_Endpoint_Core_Interop_SeekFlags_
+  name: Seek
+  nameWithType: Interop.Seek
+  fullName: GHIElectronics.Endpoint.Core.Interop.Seek
+- uid: GHIElectronics.Endpoint.Core.Interop.SeekFlags
+  commentId: T:GHIElectronics.Endpoint.Core.Interop.SeekFlags
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.Interop.html
+  name: Interop.SeekFlags
+  nameWithType: Interop.SeekFlags
+  fullName: GHIElectronics.Endpoint.Core.Interop.SeekFlags
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.SeekFlags
+    name: SeekFlags
+    href: GHIElectronics.Endpoint.Core.Interop.SeekFlags.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.SeekFlags
+    name: SeekFlags
+    href: GHIElectronics.Endpoint.Core.Interop.SeekFlags.html
+- uid: GHIElectronics.Endpoint.Core.Interop.Close*
+  commentId: Overload:GHIElectronics.Endpoint.Core.Interop.Close
+  href: GHIElectronics.Endpoint.Core.Interop.html#GHIElectronics_Endpoint_Core_Interop_Close_System_Int32_
+  name: Close
+  nameWithType: Interop.Close
+  fullName: GHIElectronics.Endpoint.Core.Interop.Close
+- uid: GHIElectronics.Endpoint.Core.Interop.Ioctl*
+  commentId: Overload:GHIElectronics.Endpoint.Core.Interop.Ioctl
+  href: GHIElectronics.Endpoint.Core.Interop.html#GHIElectronics_Endpoint_Core_Interop_Ioctl_System_Int32_System_UInt32_System_IntPtr_
+  name: Ioctl
+  nameWithType: Interop.Ioctl
+  fullName: GHIElectronics.Endpoint.Core.Interop.Ioctl
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: GHIElectronics.Endpoint.Core.Interop.Mmap*
+  commentId: Overload:GHIElectronics.Endpoint.Core.Interop.Mmap
+  href: GHIElectronics.Endpoint.Core.Interop.html#GHIElectronics_Endpoint_Core_Interop_Mmap_System_IntPtr_System_Int32_GHIElectronics_Endpoint_Core_Interop_MemoryMappedProtections_GHIElectronics_Endpoint_Core_Interop_MemoryMappedFlags_System_Int32_System_Int32_
+  name: Mmap
+  nameWithType: Interop.Mmap
+  fullName: GHIElectronics.Endpoint.Core.Interop.Mmap
+- uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+  commentId: T:GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.Interop.html
+  name: Interop.MemoryMappedProtections
+  nameWithType: Interop.MemoryMappedProtections
+  fullName: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+    name: MemoryMappedProtections
+    href: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+    name: MemoryMappedProtections
+    href: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.html
+- uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+  commentId: T:GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.Interop.html
+  name: Interop.MemoryMappedFlags
+  nameWithType: Interop.MemoryMappedFlags
+  fullName: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+    name: MemoryMappedFlags
+    href: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+    name: MemoryMappedFlags
+    href: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags.html
+- uid: GHIElectronics.Endpoint.Core.Interop.Munmap*
+  commentId: Overload:GHIElectronics.Endpoint.Core.Interop.Munmap
+  href: GHIElectronics.Endpoint.Core.Interop.html#GHIElectronics_Endpoint_Core_Interop_Munmap_System_IntPtr_System_Int32_
+  name: Munmap
+  nameWithType: Interop.Munmap
+  fullName: GHIElectronics.Endpoint.Core.Interop.Munmap

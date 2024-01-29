@@ -1,0 +1,198 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+  id: EPM815.Gpio.Speed
+  parent: GHIElectronics.Endpoint.Core
+  children:
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.High
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.Low
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.Medium
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.VeryHigh
+  langs:
+  - csharp
+  - vb
+  name: EPM815.Gpio.Speed
+  nameWithType: EPM815.Gpio.Speed
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Speed
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 65
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public enum EPM815.Gpio.Speed
+    content.vb: Public Enum EPM815.Gpio.Speed
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.Low
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.Low
+  id: Low
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+  langs:
+  - csharp
+  - vb
+  name: Low
+  nameWithType: EPM815.Gpio.Speed.Low
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.Low
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Low
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 66
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: Low = 0
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.Medium
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.Medium
+  id: Medium
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+  langs:
+  - csharp
+  - vb
+  name: Medium
+  nameWithType: EPM815.Gpio.Speed.Medium
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.Medium
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Medium
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 67
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: Medium = 1
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.High
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.High
+  id: High
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+  langs:
+  - csharp
+  - vb
+  name: High
+  nameWithType: EPM815.Gpio.Speed.High
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.High
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: High
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 68
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: High = 2
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.VeryHigh
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.VeryHigh
+  id: VeryHigh
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+  langs:
+  - csharp
+  - vb
+  name: VeryHigh
+  nameWithType: EPM815.Gpio.Speed.VeryHigh
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.VeryHigh
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: VeryHigh
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 69
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: VeryHigh = 3
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+references:
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.Speed
+  nameWithType: EPM815.Gpio.Speed
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+    name: Speed
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+    name: Speed
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.html

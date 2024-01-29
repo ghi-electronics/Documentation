@@ -1,0 +1,128 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType
+  commentId: T:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType
+  id: NetworkInterfaceType
+  parent: GHIElectronics.Endpoint.Devices.Network
+  children:
+  - GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.Ethernet
+  - GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.WiFi
+  langs:
+  - csharp
+  - vb
+  name: NetworkInterfaceType
+  nameWithType: NetworkInterfaceType
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: NetworkInterfaceType
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+    startLine: 44
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Network
+  namespace: GHIElectronics.Endpoint.Devices.Network
+  syntax:
+    content: public enum NetworkInterfaceType
+    content.vb: Public Enum NetworkInterfaceType
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.Ethernet
+  commentId: F:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.Ethernet
+  id: Ethernet
+  parent: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType
+  langs:
+  - csharp
+  - vb
+  name: Ethernet
+  nameWithType: NetworkInterfaceType.Ethernet
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.Ethernet
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Ethernet
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+    startLine: 45
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Network
+  namespace: GHIElectronics.Endpoint.Devices.Network
+  syntax:
+    content: Ethernet = 0
+    return:
+      type: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.WiFi
+  commentId: F:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.WiFi
+  id: WiFi
+  parent: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType
+  langs:
+  - csharp
+  - vb
+  name: WiFi
+  nameWithType: NetworkInterfaceType.WiFi
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.WiFi
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: WiFi
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+    startLine: 46
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Network
+  namespace: GHIElectronics.Endpoint.Devices.Network
+  syntax:
+    content: WiFi = 1
+    return:
+      type: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType
+references:
+- uid: GHIElectronics.Endpoint.Devices.Network
+  commentId: N:GHIElectronics.Endpoint.Devices.Network
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Network
+  nameWithType: GHIElectronics.Endpoint.Devices.Network
+  fullName: GHIElectronics.Endpoint.Devices.Network
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Network
+    name: Network
+    href: GHIElectronics.Endpoint.Devices.Network.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Network
+    name: Network
+    href: GHIElectronics.Endpoint.Devices.Network.html
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType
+  commentId: T:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType
+  parent: GHIElectronics.Endpoint.Devices.Network
+  href: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.html
+  name: NetworkInterfaceType
+  nameWithType: NetworkInterfaceType
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType

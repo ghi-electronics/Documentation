@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Camera.Format
+  commentId: T:GHIElectronics.Endpoint.Devices.Camera.Format
+  id: Format
+  parent: GHIElectronics.Endpoint.Devices.Camera
+  children:
+  - GHIElectronics.Endpoint.Devices.Camera.Format.Jpeg
+  - GHIElectronics.Endpoint.Devices.Camera.Format.Rgb565
+  - GHIElectronics.Endpoint.Devices.Camera.Format.Rgb888
+  langs:
+  - csharp
+  - vb
+  name: Format
+  nameWithType: Format
+  fullName: GHIElectronics.Endpoint.Devices.Camera.Format
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Camera/Camera.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Format
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Camera/Camera.cs
+    startLine: 7
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Camera
+  namespace: GHIElectronics.Endpoint.Devices.Camera
+  syntax:
+    content: public enum Format
+    content.vb: Public Enum Format
+- uid: GHIElectronics.Endpoint.Devices.Camera.Format.Rgb565
+  commentId: F:GHIElectronics.Endpoint.Devices.Camera.Format.Rgb565
+  id: Rgb565
+  parent: GHIElectronics.Endpoint.Devices.Camera.Format
+  langs:
+  - csharp
+  - vb
+  name: Rgb565
+  nameWithType: Format.Rgb565
+  fullName: GHIElectronics.Endpoint.Devices.Camera.Format.Rgb565
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Camera/Camera.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Rgb565
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Camera/Camera.cs
+    startLine: 8
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Camera
+  namespace: GHIElectronics.Endpoint.Devices.Camera
+  syntax:
+    content: Rgb565 = 0
+    return:
+      type: GHIElectronics.Endpoint.Devices.Camera.Format
+- uid: GHIElectronics.Endpoint.Devices.Camera.Format.Rgb888
+  commentId: F:GHIElectronics.Endpoint.Devices.Camera.Format.Rgb888
+  id: Rgb888
+  parent: GHIElectronics.Endpoint.Devices.Camera.Format
+  langs:
+  - csharp
+  - vb
+  name: Rgb888
+  nameWithType: Format.Rgb888
+  fullName: GHIElectronics.Endpoint.Devices.Camera.Format.Rgb888
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Camera/Camera.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Rgb888
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Camera/Camera.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Camera
+  namespace: GHIElectronics.Endpoint.Devices.Camera
+  syntax:
+    content: Rgb888 = 1
+    return:
+      type: GHIElectronics.Endpoint.Devices.Camera.Format
+- uid: GHIElectronics.Endpoint.Devices.Camera.Format.Jpeg
+  commentId: F:GHIElectronics.Endpoint.Devices.Camera.Format.Jpeg
+  id: Jpeg
+  parent: GHIElectronics.Endpoint.Devices.Camera.Format
+  langs:
+  - csharp
+  - vb
+  name: Jpeg
+  nameWithType: Format.Jpeg
+  fullName: GHIElectronics.Endpoint.Devices.Camera.Format.Jpeg
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Camera/Camera.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Jpeg
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Camera/Camera.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Camera
+  namespace: GHIElectronics.Endpoint.Devices.Camera
+  syntax:
+    content: Jpeg = 2
+    return:
+      type: GHIElectronics.Endpoint.Devices.Camera.Format
+references:
+- uid: GHIElectronics.Endpoint.Devices.Camera
+  commentId: N:GHIElectronics.Endpoint.Devices.Camera
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Camera
+  nameWithType: GHIElectronics.Endpoint.Devices.Camera
+  fullName: GHIElectronics.Endpoint.Devices.Camera
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Camera
+    name: Camera
+    href: GHIElectronics.Endpoint.Devices.Camera.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Camera
+    name: Camera
+    href: GHIElectronics.Endpoint.Devices.Camera.html
+- uid: GHIElectronics.Endpoint.Devices.Camera.Format
+  commentId: T:GHIElectronics.Endpoint.Devices.Camera.Format
+  parent: GHIElectronics.Endpoint.Devices.Camera
+  href: GHIElectronics.Endpoint.Devices.Camera.Format.html
+  name: Format
+  nameWithType: Format
+  fullName: GHIElectronics.Endpoint.Devices.Camera.Format
