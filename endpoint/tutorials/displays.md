@@ -49,27 +49,22 @@ var configuration = new FBDisplay.ParallelConfiguration(){
 var fbDisplay = new FBDisplay(configuration);
 var displayController = new DisplayController(fbDisplay);
 
-
 //SkiaSharp Initialization and content
-
 SKBitmap bitmap = new SKBitmap(screenWidth, screenHeight, SKImageInfo.PlatformColorType, SKAlphaType.Premul);
 bitmap.Erase(SKColors.Transparent);
 
 
-while (true){
-    // Initialize the screen
-    using (var screen = new SKCanvas(bitmap)){
+// Initialize the canvas
+using (var screen = new SKCanvas(bitmap)){
 
-     ///////////////////////////////////////////
-    // Place SkiaSharp Graphics content here //
-   ///////////////////////////////////////////
+  ///////////////////////////////////////////
+ // Place SkiaSharp Graphics content here //
+///////////////////////////////////////////
 
-    // Flush to screen
+// Flush to screen
         var data = bitmap.Copy(SKColorType.Rgb565).Bytes;
         displayController.Flush(data);
         Thread.Sleep(1);
-    }
-}
 ```
 ---
 

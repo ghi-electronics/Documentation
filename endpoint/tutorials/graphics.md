@@ -40,24 +40,6 @@ while (true){
 
 ---
 
-## Drawing Images
-
-
-The example below displays an image on the screen using [resources](resources.md). 
-
-> [!Tip]
-> Images need to be saved as .bin files in the Resoures.resx window.
-
-```cs
-// Draw image from resource
-var img = logo;
-var info = new SKImageInfo(300, 200); 
-var sk_img = SKBitmap.Decode(img, info);
-screen.DrawBitmap(sk_img, 0, 0);
-```
-
----
-
 ## Drawing Text
 
 The example below displays text on the screen using SkiaSharp built in ```SKFont```
@@ -103,5 +85,23 @@ using (SKTypeface tf = SKTypeface.FromStream(stream))
     SKTextBlob textBlob = SKTextBlob.Create("Hello Endpoint", font);
     screen.DrawText(textBlob, 160, 155, text);
 }
+```
+---
+
+## Drawing Images
+
+
+The example below displays an image on the screen using [resources](resources.md). 
+
+> [!Tip]
+> Images need to be saved as .bin files in the Resoures.resx window.
+
+```cs
+// Draw image from resource
+var img = logo;
+var info = new SKImageInfo(300, 200); 
+var sk_img = SKBitmap.Decode(img, info);
+screen.DrawBitmap(sk_img, 0, 0);
+```
 
 ---

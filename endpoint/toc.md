@@ -21,8 +21,6 @@
 ### [Displays](tutorials/displays.md)
 ### [Graphics](tutorials/graphics.md)
 ### [Touch Screen](tutorials/touch-screen.md)
-### [Image Decoders](tutorials/image-decoders.md)
-### [Font Support](tutorials/font-support.md)
 ### [Camera](tutorials/camera.md)
 ### [MJPEG Video](tutorials/mjpeg-video.md)
 
