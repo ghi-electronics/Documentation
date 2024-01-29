@@ -72,8 +72,7 @@ byte[] fontfile = Resources.ArialBlack;
 Stream stream = new MemoryStream(fontfile);
 
 using (SKPaint text = new SKPaint())
-using (SKTypeface tf = SKTypeface.FromStream(stream))
-{
+using (SKTypeface tf = SKTypeface.FromStream(stream)){
     text.Color = SKColors.Red;
     text.IsAntialias = true;
     text.StrokeWidth = 2;
@@ -89,7 +88,6 @@ using (SKTypeface tf = SKTypeface.FromStream(stream))
 ---
 
 ## Drawing Images
-
 
 The example below displays an image on the screen using [resources](resources.md). 
 
