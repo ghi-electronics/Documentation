@@ -16,20 +16,17 @@ The follow code initialize the SkiaSharp canvas this where the SkiaSharp element
 SKBitmap bitmap = new SKBitmap(screenWidth, screenHeight, SKImageInfo.PlatformColorType, SKAlphaType.Premul);
 bitmap.Erase(SKColors.Transparent);
 
-while (true){
-    // Initialize the SkiaSharp Canvas
-    using (var screen = new SKCanvas(bitmap)){
+// Initialize the SkiaSharp Canvas
+using (var screen = new SKCanvas(bitmap)){
 
-        ///////////////////////////////////////////
-        // Place SkiaSharp Graphics content here //
-        ///////////////////////////////////////////
+    ///////////////////////////////////////////
+    // Place SkiaSharp Graphics content here //
+    ///////////////////////////////////////////
 
-     // Flush to screen
-        var data = bitmap.Copy(SKColorType.Rgb565).Bytes;
-        displayController.Flush(data);
-        Thread.Sleep(1);
-    }
-}
+// Flush to screen
+var data = bitmap.Copy(SKColorType.Rgb565).Bytes;
+displayController.Flush(data);
+Thread.Sleep(1);
 ```
 
 
