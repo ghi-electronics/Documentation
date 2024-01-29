@@ -18,7 +18,7 @@ This method also allows the user to set clock speed, which 400KHz by default.
 EPM815.I2c.Intialize(EPM815.I2c.I2c6,100_000)
 ```
 
-This is a partial demo showing the use of I2C.
+I2C is a standard .NET IoT feature. This is a partial demo showing the use of I2C.
 
 ```cs
 EPM815.I2c.Intialize(EPM815.I2c.I2c6)
