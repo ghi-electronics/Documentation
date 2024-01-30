@@ -96,6 +96,7 @@
 <h5>Tip</h5>
 <p>Some CAN devices, including our own development boards, have built in termination resistors.</p>
 </div>
+<p>Endpoint supports CAN through <code>GHIElectronics.Endpoint.Devices.Can</code> NuGet package.</p>
 <p>CAN bit timing is a complex topic that requires considerable knowledge of the CAN protocol. All nodes on a CAN network must use the same baud rate. Sample bit timing settings are provided further down on this page to help you get started.</p>
 <p><code>SetNominalBitTiming()</code> and <code>SetDataBitTiming()</code> define the CAN bus timing using the arguments listed below. Note that <code>SetDataBitTiming()</code> is only used for CAN-FD to specify the faster data rate. <code>SetNominalBitTiming()</code> is used both for standard CAN and to define the slower data bit rate for CAN-FD.</p>
 <div class="TIP">
@@ -209,86 +210,63 @@
 <p>In the sample code below, CAN messages with arbitration IDs of <code>0x11</code>, <code>0x13</code>, and <code>0x5678</code> will be accepted in addition to the arbitration IDs specified by the group filters.</p>
 <hr>
 <h2 id="sample-code">Sample Code</h2>
-<div class="TIP">
-<h5>Tip</h5>
-<p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices and GHIElectronics.TinyCLR.Pins</p>
-</div>
-<pre><code class="lang-cs">using GHIElectronics.TinyCLR.Devices.Can;
-using GHIElectronics.TinyCLR.Devices.Gpio;
-using GHIElectronics.TinyCLR.Pins;
-using System;
-using System.Diagnostics;
-using System.Threading;
+<pre><code class="lang-cs">
 
-var LdrButton = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE3);
-LdrButton.SetDriveMode(GpioPinDriveMode.InputPullUp);
+var canController = new CanController(EPM815.Can.Can2, 250_000, 500_000);
 
-var can = CanController.FromName(SC20100.CanBus.Can1);
+int messageCount = 0;
+canController.MessageReceived += (a) =&gt;
+{
+    messageCount++;
+    Console.WriteLine(&quot;Receiving message: &quot; + messageCount);
+};
 
-var propagationPhase1 = 13;
-var phase2 = 2;
-var baudratePrescaler = 3;
-var synchronizationJumpWidth = 1;
-var useMultiBitSampling = false;
+canController.ErrorReceived += (a, b) =&gt;
+{
+    uint error = (uint)b.Error;
+    if ((error &amp; (uint)CanError.ErrorBusOff) == (uint)CanError.ErrorBusOff)
+    {
+        Console.WriteLine(&quot;Error bus off&quot;);
+    }
+    else
+    {
+        Console.WriteLine(&quot;Receiving error: 0x&quot; + error.ToString(&quot;x8&quot;));
+    }
+};
 
-can.SetNominalBitTiming(new CanBitTiming(propagationPhase1, phase2, baudratePrescaler,
-    synchronizationJumpWidth, useMultiBitSampling));        
+// Set optional filters
+canController.Disable();
+canController.EnableFilter(new uint[] { 0x123 }, new uint[] { 0x000007FF }, true);
+canController.EnableError(0x1FF);
+canController.Enable();
 
-var message = new CanMessage() {
+
+// Read messages
+if (canController.MessagesToRead &gt; 0)
+{
+    var msgRead = canController.Read();
+
+    if (msgRead != null)
+    {
+        Console.WriteLine(&quot;ID: &quot; + msgRead.ArbitrationId.ToString(&quot;x8&quot;));
+        Console.WriteLine(&quot;Ext: &quot; + msgRead.ExtendedFrameFormat);
+        Console.WriteLine(&quot;Remote: &quot; + msgRead.RemoteTransmissionRequest);
+    }
+}
+
+// Write message
+var msgWrite = new CanMessage()
+{
     Data = new byte[] { 0x48, 0x65, 0x6C, 0x6C, 0x6F, 0x2E, 0x20, 0x20 },
     ArbitrationId = 0x11,
     Length = 6,
     RemoteTransmissionRequest = false,
-    ExtendedId = false,
+    ExtendedFrameFormat = false,
     FdCan = false,
     BitRateSwitch = false
 };
+canController.Write(msgWrite);
 
-//The following filter will accept arbitration IDs from 0x12 to 0x20 inclusive.
-can.Filter.AddRangeFilter(Filter.IdType.Standard, 0x12, 0x20);
-
-//The following filter will accept arbitration IDs from 0x500 to 0x1000 inclusive.
-can.Filter.AddRangeFilter(Filter.IdType.Standard, 0x500, 0x1000);
-
-//The following filter will accept arbitration IDs of 0x11 and 0x13.
-can.Filter.AddMaskFilter(Filter.IdType.Standard, 0x11, 0xFD);
-
-//The following filter will accept arbitration IDs of 5678 only.
-can.Filter.AddMaskFilter(Filter.IdType.Standard, 0x5678, 0xFFFF);
-
-can.MessageReceived += Can_MessageReceived;
-can.ErrorReceived += Can_ErrorReceived;
-        
-can.Enable();
-
-while (true) {
-    if (LdrButton.Read() == GpioPinValue.Low)
-        can.WriteMessage(message);
-
-    Thread.Sleep(100);
-}
-
-
-void Can_MessageReceived(CanController sender,
-    MessageReceivedEventArgs e) {
-
-    sender.ReadMessage(out var message);
-
-    Debug.WriteLine(&quot;Arbitration ID: 0x&quot; + message.ArbitrationId.ToString(&quot;X8&quot;));
-    Debug.WriteLine(&quot;Is extended ID: &quot; + message.ExtendedId.ToString());
-    Debug.WriteLine(&quot;Is remote transmission request: &quot;
-        + message.RemoteTransmissionRequest.ToString());
-
-    Debug.WriteLine(&quot;Time stamp: &quot; + message.Timestamp.ToString());
-
-    var data = &quot;&quot;;
-    for (var i = 0; i &lt; message.Length; i++) data += Convert.ToChar(message.Data[i]);
-
-    Debug.WriteLine(&quot;Data: &quot; + data);
-}
-
-void Can_ErrorReceived(CanController sender, ErrorReceivedEventArgs e)
-    =&gt; Debug.WriteLine(&quot;Error &quot; + e.ToString());
 
 </code></pre>
 <hr>
@@ -297,10 +275,6 @@ void Can_ErrorReceived(CanController sender, ErrorReceivedEventArgs e)
 <p>CAN-FD can be used by setting the <code>FdCan</code> property of your CAN message to <code>true</code>. This setting will allow you to send up to 64 bytes of data per CAN message.</p>
 <p>To send the data at higher speed you will also need to set two bit timings, one for the normal, slower speed (<code>SetNominalBitTiming()</code>), and one for the faster speed (<code>SetDataBitTiming()</code>). You will also have to set the <code>BitRateSwitch</code> property of the CAN message to <code>true.</code></p>
 <p>The following code shows the changes needed to make the above code sample use CAN-FD with speeds of 250 kilobaud and 1 megabaud.</p>
-<div class="NOTE">
-<h5>Note</h5>
-</div>
-<p>Only SC20xxx supports CAN-FD, SC13xxx doesn't support this feature.</p>
 <pre><code class="lang-cs">var propagationPhase1 = 13; //250 kilobaud settings
 var phase2 = 2;
 var baudratePrescaler = 12;

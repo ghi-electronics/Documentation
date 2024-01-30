@@ -25,10 +25,9 @@
 ### [MJPEG Video](tutorials/mjpeg-video.md)
 
 ## Networking
-### [Networking Core](tutorials/networking-core.md)
+### [Networking Core](tutorials/networking.md)
 ### [WiFi](tutorials/wifi.md)
 ### [Ethernet](tutorials/ethernet.md)
-### [MQTT](tutorials/mqtt.md)
 
 ## Cloud Support
 ### [Azure](tutorials/azure.md)

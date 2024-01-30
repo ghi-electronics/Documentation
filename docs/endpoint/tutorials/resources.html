@@ -85,11 +85,10 @@
         </div>
 
         <article data-uid="">
-
-<p><a href="error.md">IN PROGRESS</a></p>
 <h1 id="resources">Resources</h1>
+
 <hr>
-<p>Resource files can be used to store strings, images, audio files, and other binary or text files that will be used by your application.</p>
+<p>Resource files can be used to store strings, images, audio files, and other binary or text files that will be used by your application. Endpoint support resources the same of how they work on a PC.</p>
 <p>Right-click on your project and <code>Add-&gt; New Item...</code> Select <code>TinyCLR</code> and click on <code>Resources File</code>. Name the file <code>Resources</code> to match the code samples in Docs.</p>
 <p><img src="images/add-resources.jpg" alt="Resources"></p>
 <p>You can now drag resources right into the file.</p>
@@ -99,11 +98,6 @@
 <h5>Tip</h5>
 <p>If you are copying example code that uses resource files, some changes may be needed to match the resources' names in your project.</p>
 </div>
-<h2 id="partial-loading">Partial loading</h2>
-<p>Large resources can be partially loaded in RAM as needed.</p>
-<pre><code class="lang-cs">var resourceId = (short)Resources.BinaryResources.YourResourceId;
-var data = (byte[])(Resources.ResourceManager.GetObject(resourceId, offset, readSize));
-</code></pre>
 
 </article>
 

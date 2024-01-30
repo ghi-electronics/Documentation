@@ -65,6 +65,7 @@ using (FileStream fs = File.Create(path))
 ```
 
 ### HID
+
 Human Interface Devices, such as a Keyboards and Mice, are automatically mounted by the system.
 
 ```cs
@@ -88,7 +89,7 @@ hid.OnDisconnected += () =>
 
 ### Camera
 
-The USB Camera library provides a stream of images.
+The USB Camera library provides a stream of images. Note that only cameras with UVC (USB Video Class) standard are supported.
 
 ```cs
 usbhostController.OnConnectionChangedEvent += (a, b) =>

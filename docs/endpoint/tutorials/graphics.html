@@ -85,39 +85,110 @@
         </div>
 
         <article data-uid="">
-
-<p><a href="error.md">IN PROGRESS</a></p>
 <h1 id="graphics">Graphics</h1>
+
 <hr>
-<p>The <code>GHIElectronics.Endpoint.Devices.Display</code> NuGet package includes the backbone for all graphics needs. It uses <a href="https://learn.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/">SkiaSharp</a> Graphics library their API can be found <a href="https://learn.microsoft.com/en-us/dotnet/api/skiasharp?view=skiasharp-2.88">here</a></p>
+<p>The <code>GHIElectronics.Endpoint.Devices.Display</code> NuGet package includes the backbone for all graphics needs. It uses the <a href="https://learn.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/">SkiaSharp</a> Graphics library, their API can be found <a href="https://learn.microsoft.com/en-us/dotnet/api/skiasharp?view=skiasharp-2.88">here.</a></p>
+<p>Once a <a href="displays.html">display</a> has been initialized and configured it is ready to start adding graphics using SkiaSharp. SkiaSharp elements are added to the <code>SKCanvas</code> then flushed to the screen.</p>
+<h2 id="skiasharp-canvas">SkiaSharp Canvas</h2>
+<p>The follow code initialize the SkiaSharp canvas, inside Canvas is where the SkiaSharp content is placed.</p>
+<pre><code class="lang-cs">SKBitmap bitmap = new SKBitmap(screenWidth, screenHeight, SKImageInfo.PlatformColorType, SKAlphaType.Premul);
+bitmap.Erase(SKColors.Transparent);
+
+// Initialize the SkiaSharp Canvas
+using (var screen = new SKCanvas(bitmap)){
+
+    ///////////////////////////////////////////
+    // Place SkiaSharp Graphics content here //
+    ///////////////////////////////////////////
+
+// Flush to screen
+var data = bitmap.Copy(SKColorType.Rgb565).Bytes;
+displayController.Flush(data);
+Thread.Sleep(1);
+}
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>SkiaSharp elements are displayed in hierarchical order with each item being stacked on top of the previous item.</p>
+</div>
 <hr>
-<p>Once a display has been <a href="displays.html">initialized and configured</a> it is ready to start adding graphics using SkiaSharp.</p>
+<h2 id="drawing-text">Drawing Text</h2>
+<p>The example below displays text on the screen using SkiaSharp built in <code>SKFont</code></p>
+<p>There a several different attributes that can be set using the <a href="https://learn.microsoft.com/en-us/dotnet/api/skiasharp">SkiaSharp API</a>.</p>
+<pre><code class="lang-cs">// Draw text
+using (SKPaint text = new SKPaint()){
+    text.Color = SKColors.Blue; //Uses built-in color value
+    //text.Color = SKColor.Parse(&quot;#FF0977aa&quot;); //Uses Hex value string for Color
+    text.IsAntialias = true;
+    text.StrokeWidth = 2;
+    text.Style = SKPaintStyle.Fill;
+    text.TextSize = 12;
+    SKFont sKFont = new SKFont();
+    sKFont.Size = 22;
+    SKTextBlob textBlob = SKTextBlob.Create(&quot;Hello Endpoint&quot;, sKFont);
+    screen.DrawText(textBlob, 50, 120, text);
+}
+</code></pre>
+<hr>
+<h2 id="using-truetype-fonts">Using TrueType Fonts</h2>
+<p>Any TrueType font can be used, it just needs to be added as a <a href="resources.html">resource</a>. To add a font change the extension from <strong>.tft</strong> to <strong>.bin</strong>. This will save the font in <strong>resources</strong> as a byte, the format SkiaSharp needs to display.</p>
+<pre><code class="lang-cs">byte[] fontfile = Resources.ArialBlack;
+Stream stream = new MemoryStream(fontfile);
+
+using (SKPaint text = new SKPaint())
+using (SKTypeface tf = SKTypeface.FromStream(stream)){
+    text.Color = SKColors.Red;
+    text.IsAntialias = true;
+    text.StrokeWidth = 2;
+    text.Style = SKPaintStyle.Fill;
+
+    SKFont font = new SKFont();
+    font.Size = 90;
+    font.Typeface = tf;
+    SKTextBlob textBlob = SKTextBlob.Create(&quot;Hello Endpoint&quot;, font);
+    screen.DrawText(textBlob, 160, 155, text);
+}
+</code></pre>
+<hr>
+<h2 id="drawing-draw-lines">Drawing Draw Lines</h2>
+<p>When drawing lines many variables are available from color, thickness, stoke, end cap effects, to shading.</p>
+<pre><code class="lang-cs">float[] intervals = [10, 20, 10, 20, 5, 40,];//sets the dash intervals
+using (SKPaint line = new SKPaint()){
+    line.Color = SKColors.Red;
+    line.IsAntialias = true;
+    line.StrokeWidth = 20;
+    line.Style = SKPaintStyle.Stroke;
+
+    //Rounds the ends of the line
+    line.StrokeCap = SKStrokeCap.Round;
+
+    //Creates dashes in line based on intervals array
+    line.PathEffect = SKPathEffect.CreateDash(intervals, 25);
+
+    // Create linear gradient from upper-left to lower-right
+    line.Shader = SKShader.CreateLinearGradient(
+        new SKPoint(0, 0),
+        new SKPoint(screenWidth, screenHeight),
+        new SKColor[] { SKColors.Red, SKColors.Blue },
+        new float[] { 0, 1 },
+        SKShaderTileMode.Repeat);
+        screen.DrawLine(0, 0, 400, 200, line);
+}
+</code></pre>
 <h2 id="drawing-images">Drawing Images</h2>
 <p>The example below displays an image on the screen using <a href="resources.html">resources</a>.</p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>Images need to be saved as .bin files in the Resoures.resx window.</p>
 </div>
-<pre><code class="lang-cs">SKBitmap bitmap = new SKBitmap(screenWidth, screenHeight, SKImageInfo.PlatformColorType, SKAlphaType.Premul);
-bitmap.Erase(SKColors.Transparent);
-
-while (true){
-    // Initialize the SkiaSharp Canvas
-    using (var screen = new SKCanvas(bitmap)){
-
-        // Draw image from resource
-        var img = logo;
-        var info = new SKImageInfo(300, 200); 
-        var sk_img = SKBitmap.Decode(img, info);
-        screen.DrawBitmap(sk_img, 0, 0);
-
-        // Flush to screen
-        var data = bitmap.Copy(SKColorType.Rgb565).Bytes;
-        displayController.Flush(data);
-        Thread.Sleep(1);
-    }
-}
+<pre><code class="lang-cs">// Draw image from resource
+var img = logo;
+var info = new SKImageInfo(300, 200); 
+var sk_img = SKBitmap.Decode(img, info);
+screen.DrawBitmap(sk_img, 0, 0);
 </code></pre>
+<hr>
 
 </article>
 

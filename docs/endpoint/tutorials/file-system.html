@@ -85,185 +85,27 @@
         </div>
 
         <article data-uid="">
-
-<p><a href="error.md">IN PROGRESS</a></p>
 <h1 id="file-system">File System</h1>
+
 <hr>
-<p>The file system library is a subset of the full .NET file system support. Most examples should work with only minor changes. The internal drivers fully support FAT16 or FAT32 file systems, with no limitations beyond the FAT file system itself!</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>The USB drive must have an MBR record, not a GPT table.
-FAT16 and FAT32 file systems are supported.</p>
-</div>
-<h2 id="fat-file-system">Fat File System</h2>
-<h3 id="usb-mass-storage">USB Mass Storage</h3>
+<p>.NET includes everything needed to access files and directories. Developers will only need to mount the device. Endpoint support USB mass storage, SD cards and on-board eMMC (if available).</p>
+<h2 id="boot-media">Boot Media</h2>
+<p>Endpoint can boot from eMMC or SD cards. This media device is automatically mounted and used as the destination for deployed applications.</p>
+<p>There are multiple partitions found on boot devices. The recommended partition is <code>\.epdata\</code>. This partition is used to hold the deployed application. Note that <code>Erase Application</code> option in Endpoint Config tool will format this partition.</p>
+<h2 id="usb-mass-storage">USB Mass Storage</h2>
 <p>This allows file access on USB devices with MSC class, such as USB memory sticks. See the <a href="usb.html">USB</a> page.</p>
-<h3 id="sd-card">SD Card</h3>
-<p>SD and MMC cards are fully supported. Additionally, SPI SD drivers are also supported through the <code>ManagedFileSystem</code> software utility <a href="../configuration.html">Endpoint Config</a></p>
-<p>The example below requires the <code>GHIElectronics.TinyCLR.IO</code> and <code>GHIElectronics.TinyCLR.Devices.Storage</code> libraries and a device with an SD card.</p>
-<pre><code class="lang-cs">var sd = StorageController.FromName(SC20100.StorageController.SdCard);
-var drive = FileSystem.Mount(sd.Hdc);
+<h2 id="sd-card">SD Card</h2>
+<p>The Endpoint system supports 2 SD interfaces. Note that if a device boots from SD then that boot SD is treated differently, as explained above.</p>
+<pre><code class="lang-cs">using GHIElectronics.Endpoint.Devices.Mmc;
+//...
 
-//Show a list of files in the root directory
-var directory = new DirectoryInfo(drive.Name);
-var files = directory.GetFiles();
+var sdcard = new SdmmcController(SdmmcType.SdCard2);
+sdcard.OnConnectionChangedEvent += Sdcard_OnConnectionChangedEvent;
+sdcard.Enable();
 
-foreach (var f in files) {
-    System.Diagnostics.Debug.WriteLine(f.Name);
-}
-
-//Create a text file and save it to the SD card.
-var file = new FileStream($@&quot;{drive.Name}Test.txt&quot;, FileMode.OpenOrCreate);
-var bytes = Encoding.UTF8.GetBytes(DateTime.UtcNow.ToString() +
-    Environment.NewLine);
-
-file.Write(bytes, 0, bytes.Length);
-
-file.Flush();
-
-FileSystem.Flush(sd.Hdc);
-
-</code></pre>
-<h3 id="low-level-access">Low-level Access</h3>
-<p>You can access the raw underlying data of the storage provider by using the <code>Provider</code> property of the controller. Be careful when using this interface, however, as it bypasses any file system present and writes directly to the device. This is useful for implementing your own or otherwise unsupported file systems.</p>
-<pre><code class="lang-cs">var controller = StorageController.FromName
-        (SC20100.StorageController.SdCard);
-
-controller.Provider.Open(); // open
-controller.Provider.Read(address, buffer, 0, buffer.Length, TimeSpan.FromSeconds(5));
-controller.Provider.Close(); // close
-
-</code></pre>
-<hr>
-<h2 id="tiny-file-system-tfs">Tiny File System (TFS)</h2>
-<p>Tiny File System(TFS) can be used to access any memory storage as a file system. All that is needed is a basic driver to Read, Write, and Erase these storages.</p>
-<p>Below is an example that uses the external flash through TFS.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>This example requires the <code>GHIElectronics.TinyCLR.IO.TinyFileSystem</code></p>
-</div>
-<pre><code class="lang-cs">const int CLUSTER_SIZE = 1024;
-
-var tfs = new TinyFileSystem(new QspiMemory(), CLUSTER_SIZE);
-            
-if (!tfs.CheckIfFormatted()) {
-    //Do Format if necessary 
-    tfs.Format();
-}
-else {
-    // Mount tiny file system
-    tfs.Mount();
-}
-
-//Open to write
-using (var fsWrite = tfs.Create(&quot;settings.dat&quot;)) {
-    using (var wr = new StreamWriter(fsWrite)) {
-        wr.WriteLine(&quot;This is TFS test&quot;);
-        wr.Flush();
-        fsWrite.Flush();
-    }
-}
-
-//Open to read
-using (var fsRead = tfs.Open(&quot;settings.dat&quot;, FileMode.Open)) {
-    using (var rdr = new StreamReader(fsRead)) {
-        System.String line;
-        
-        while ((line = rdr.ReadLine()) != null) {
-                Debug.WriteLine(line);
-        }
-    }
-}
-</code></pre>
-<p>Below is a basic driver implementation utilizing QSPI external flash. It automatically sets the size appropriately depending on whether the deployment is extended or not. It however gives you the option to fix the size to 2MB, as the remaining 8MB can optionally be used by <a href="in-field-update.html">InField Update</a>.</p>
-<pre><code class="lang-cs">public sealed class QspiMemory : IStorageControllerProvider
+void Sdcard_OnConnectionChangedEvent(SdmmcController sender, DeviceConnectionEventArgs e)
 {
-    public StorageDescriptor Descriptor =&gt; this.descriptor;
-    const int SectorSize = 4 * 1024;
-
-    private StorageDescriptor descriptor = new StorageDescriptor()
-    {
-        CanReadDirect = false,
-        CanWriteDirect = false,
-        CanExecuteDirect = false,
-        EraseBeforeWrite = true,
-        Removable = true,
-        RegionsContiguous = true,
-        RegionsEqualSized = true,
-        RegionAddresses = new long[] { 0 },
-        RegionSizes = new int[] { SectorSize },
-        RegionCount = (2 * 1024 * 1024) / (SectorSize)
-    };
-
-    private IStorageControllerProvider qspiDrive;
-
-    public QspiMemory() : this(2 * 1024 * 1024)
-    {
-
-    }
-
-    public QspiMemory(uint size)
-    {
-        var maxSize = Flash.IsEnabledExtendDeployment ? (10 * 1024 * 1024) : (16 * 1024 * 1024);
-
-        if (size &gt; maxSize)
-            throw new ArgumentOutOfRangeException(&quot;size too large.&quot;);
-
-        if (size &lt;= SectorSize)
-            throw new ArgumentOutOfRangeException(&quot;size too small.&quot;);
-
-        if (size != descriptor.RegionCount * SectorSize)
-        {
-            descriptor.RegionCount = (int)(size / SectorSize);
-        }
-
-        qspiDrive = StorageController.FromName(SC20260.StorageController.QuadSpi).Provider;
-
-        this.Open();
-    }
-
-    public void Open()
-    {
-        qspiDrive.Open();
-    }
-
-    public void Close()
-    {
-        qspiDrive.Close();
-    }
-
-    public void Dispose()
-    {
-        qspiDrive.Dispose();
-    }
-
-    public int Erase(long address, int count, TimeSpan timeout)
-    {
-        return qspiDrive.Erase(address, count, timeout);
-    }
-
-    public bool IsErased(long address, int count)
-    {
-        return qspiDrive.IsErased(address, count);
-    }
-
-    public int Read(long address, int count, byte[] buffer, int offset, TimeSpan timeout)
-    {
-        return qspiDrive.Read(address, count, buffer, offset, timeout);
-    }
-
-    public int Write(long address, int count, byte[] buffer, int offset, TimeSpan timeout)
-    {
-        return qspiDrive.Write(address, count, buffer, offset, timeout);
-    }
-
-    public void EraseAll(TimeSpan timeout)
-    {
-        for (var sector = 0; sector &lt; this.Descriptor.RegionCount; sector++)
-        {
-            qspiDrive.Erase(sector * this.Descriptor.RegionSizes[0], this.Descriptor.RegionSizes[0], timeout);
-        }
-    }
+    Console.WriteLine(&quot;Detect SDCard connection changed on&quot; + e.DeviceName + &quot;, status: &quot; + e.DeviceStatus + &quot;, id = &quot; + e.DeviceId);
 }
 </code></pre>
 

@@ -85,9 +85,8 @@
         </div>
 
         <article data-uid="">
-
-<p><a href="error.md">IN PROGRESS</a></p>
 <h1 id="analog-in">Analog In</h1>
+
 <hr>
 <p>Unlike digital input pins, which can only read high or low, analog pins can read a range of voltage levels.  Microcontrollers based on 3.3V can typically read voltages anywhere between zero and 3.3V. Analog inputs connect internally to an Analog to Digital Converter (ADC) that converts the analog voltage level on the pin to a digital value.</p>
 <div class="TIP">
@@ -95,188 +94,16 @@
 <p>Note that the analog channel number is not the pin number. You need to determine the channel number of a specific pin using your system's documentation.</p>
 </div>
 <p>The resolution of the ADC determines its accuracy. An 8bit ADC has 256 steps to work with, 3.3V/256=0.013V. This means an increase of 0.013V will increase the ADC value by one. In other words, a voltage change of less than 0.013V has no effect.</p>
-<pre><code class="lang-cs">var adc = AdcController.FromName(SC20100.Adc.Controller1.Id);
-var analog = adc.OpenChannel(SC20100.Adc.Controller1.PA0);
-
+<p>The example below uses a rotary module on the <code>ANA1</code> pin</p>
+<pre><code class="lang-cs">var adcController = new AdcController(EPM815.Adc.Pin.ANA1);
+int loop = 10;
 while (true) {
-    double d = analog.ReadRatio();
-    Debug.WriteLine(&quot;An-&gt; &quot; + d.ToString(&quot;N2&quot;));
-    Thread.Sleep(100);
-}
-</code></pre>
-<h2 id="support-sampling-timing">Support Sampling timing</h2>
-<p>Changing sampling time can be configured as follows:</p>
-<pre><code class="lang-cs">adcChannel.SamplingTime = TimeSpan.FromTicks(10); // Set to 1us (a tick is 100ns)
-</code></pre>
-<p>SITCore allows these sampling times. If the SamplingTime is between two values above, the higher values will be used.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>SITCore ADC resolution by device</p>
-<p>SC20xxx = 16 bit</p>
-<p>SC13xxx = 12 bit</p>
-</div>
-<table>
-<thead>
-<tr>
-<th>Ticks</th>
-<th>SC20xxx (Full/Half Speed)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>23ns</td>
-</tr>
-<tr>
-<td>1</td>
-<td>132ns</td>
-</tr>
-<tr>
-<td>2</td>
-<td>257ns</td>
-</tr>
-<tr>
-<td>5</td>
-<td>507ns</td>
-</tr>
-<tr>
-<td>10</td>
-<td>1007ns</td>
-</tr>
-<tr>
-<td>60</td>
-<td>6054ns</td>
-</tr>
-<tr>
-<td>126</td>
-<td>12664ns</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Ticks</th>
-<th>SC13xxx (Full Speed)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>81ns</td>
-</tr>
-<tr>
-<td>1</td>
-<td>156ns</td>
-</tr>
-<tr>
-<td>3</td>
-<td>306ns</td>
-</tr>
-<tr>
-<td>5</td>
-<td>593ns</td>
-</tr>
-<tr>
-<td>11</td>
-<td>1156ns</td>
-</tr>
-<tr>
-<td>30</td>
-<td>3094ns</td>
-</tr>
-<tr>
-<td>80</td>
-<td>8006ns</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Ticks</th>
-<th>SC13xxx (Half Speed)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>162ns</td>
-</tr>
-<tr>
-<td>3</td>
-<td>312ns</td>
-</tr>
-<tr>
-<td>6</td>
-<td>612ns</td>
-</tr>
-<tr>
-<td>11</td>
-<td>1187ns</td>
-</tr>
-<tr>
-<td>23</td>
-<td>2312ns</td>
-</tr>
-<tr>
-<td>60</td>
-<td>6187ns</td>
-</tr>
-<tr>
-<td>160</td>
-<td>16012ns</td>
-</tr>
-</tbody>
-</table>
-<div class="TIP">
-<h5>Tip</h5>
-<p>Default is 1 tick.</p>
-</div>
-<h2 id="temperature-sensor">Temperature sensor</h2>
-<p>SITCore support reading temperature sensor.</p>
-<pre><code class="lang-cs">
-var sc20xxx = DeviceInformation.DeviceName.IndexOf(&quot;SC20&quot;) &gt;= 0 ? true : false;
-
-var ts_reg1 = sc20xxx ? (IntPtr)0x1FF1E820 : (IntPtr)0x1FFF75A8;
-var ts_reg2 = sc20xxx ? (IntPtr)0x1FF1E840 : (IntPtr)0x1FFF75CA;
-var enable_reg = sc20xxx ? (IntPtr)((0x40000000U + 0x18020000 + 0x6300 + 8)) : (IntPtr)(0x40000000U + 0x08000000U + 0x08040300U + 8);
-
-var controller = sc20xxx ? AdcController.FromName(SC20100.Adc.Controller3.Id) : AdcController.FromName(SC13048.Adc.Controller1.Id);
-var channel = sc20xxx ? controller.OpenChannel(SC20100.Adc.Controller3.InternalTemperatureSensor) : controller.OpenChannel(SC13048.Adc.Controller1.InternalTemperatureSensor);            
-var enable_val = Marshal.ReadInt32(enable_reg);
-
-enable_val |= (1 &lt;&lt; 23);
-
-Marshal.WriteInt32(enable_reg, enable_val);
-
-while (true)
-{
-    var v = channel.ReadValue() * 1.0;
-
-     
-    var ts1 = Marshal.ReadInt32(ts_reg1);
-    var ts2 = Marshal.ReadInt32(ts_reg2);
-
-    if (!sc20xxx)
-    {
-        ts1 &amp;= 0xFFFF;
-        ts2 &amp;= 0xFFFF;
-        v *= 1.1;
-    }
-
-    var t1 = (110 - 30) * 1.0;
-    var t2 = (ts2 - ts1) * 1.0;
-    var t3 = (v - ts1) * 1.0;
-
-    var temperature = t1 / t2 * t3 + 30;
-
-    Debug.WriteLine(&quot;T = &quot; + temperature + &quot; Celsius&quot;);                
-
+    var v = adcController.Read();
+    var v1 = (v * 3.3 / 65535);
+    Console.WriteLine(v1.ToString());
     Thread.Sleep(1000);
+    loop--;
 }
-
-
 </code></pre>
 
 </article>
