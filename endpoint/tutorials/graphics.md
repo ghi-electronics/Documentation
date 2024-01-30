@@ -1,16 +1,13 @@
-[IN PROGRESS](error.md) 
 # Graphics
 
 ---
-The `GHIElectronics.Endpoint.Devices.Display` NuGet package includes the backbone for all graphics needs. It uses [SkiaSharp](https://learn.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/) Graphics library their API can be found [here](https://learn.microsoft.com/en-us/dotnet/api/skiasharp?view=skiasharp-2.88)
+The `GHIElectronics.Endpoint.Devices.Display` NuGet package includes the backbone for all graphics needs. It uses the [SkiaSharp](https://learn.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/) Graphics library, their API can be found [here.](https://learn.microsoft.com/en-us/dotnet/api/skiasharp?view=skiasharp-2.88)
 
-
----
-Once a display has been [initialized and configured](../tutorials/displays.md) it is ready to start adding graphics using SkiaSharp. Add the elements inside the ```SKCanvas```
+Once a [display](../tutorials/displays.md) has been initialized and configured it is ready to start adding graphics using SkiaSharp. SkiaSharp elements are added to the ```SKCanvas``` then flushed to the screen.
 
 ## SkiaSharp Canvas
 
-The follow code initialize the SkiaSharp canvas this where the SkiaSharp element are placed.
+The follow code initialize the SkiaSharp canvas, inside Canvas is where the SkiaSharp content is placed.
 
 ```cs
 SKBitmap bitmap = new SKBitmap(screenWidth, screenHeight, SKImageInfo.PlatformColorType, SKAlphaType.Premul);
@@ -27,13 +24,12 @@ using (var screen = new SKCanvas(bitmap)){
 var data = bitmap.Copy(SKColorType.Rgb565).Bytes;
 displayController.Flush(data);
 Thread.Sleep(1);
+}
 ```
 
 
-
-
 > [!Note]
-> SkiaSharp elements are displayed in hierarchical order with the each item being stacked on top of the previous item. 
+> SkiaSharp elements are displayed in hierarchical order with each item being stacked on top of the previous item. 
 
 ---
 
@@ -47,7 +43,7 @@ There a several different attributes that can be set using the [SkiaSharp API](h
 // Draw text
 using (SKPaint text = new SKPaint()){
     text.Color = SKColors.Blue; //Uses built-in color value
-    //text.Color = SKColor.Parse("#FF0977aa"); //Uses Hex value for Color
+    //text.Color = SKColor.Parse("#FF0977aa"); //Uses Hex value string for Color
     text.IsAntialias = true;
     text.StrokeWidth = 2;
     text.Style = SKPaintStyle.Fill;
@@ -83,7 +79,33 @@ using (SKTypeface tf = SKTypeface.FromStream(stream)){
 }
 ```
 ---
+## Drawing Draw Lines
+When drawing lines many variables are available from color, thickness, stoke, end cap effects, to shading.
 
+```cs
+float[] intervals = [10, 20, 10, 20, 5, 40,];//sets the dash intervals
+using (SKPaint line = new SKPaint()){
+    line.Color = SKColors.Red;
+    line.IsAntialias = true;
+    line.StrokeWidth = 20;
+    line.Style = SKPaintStyle.Stroke;
+
+    //Rounds the ends of the line
+    line.StrokeCap = SKStrokeCap.Round;
+
+    //Creates dashes in line based on intervals array
+    line.PathEffect = SKPathEffect.CreateDash(intervals, 25);
+
+    // Create linear gradient from upper-left to lower-right
+    line.Shader = SKShader.CreateLinearGradient(
+        new SKPoint(0, 0),
+        new SKPoint(screenWidth, screenHeight),
+        new SKColor[] { SKColors.Red, SKColors.Blue },
+        new float[] { 0, 1 },
+        SKShaderTileMode.Repeat);
+        screen.DrawLine(0, 0, 400, 200, line);
+}
+```
 ## Drawing Images
 
 The example below displays an image on the screen using [resources](resources.md). 
@@ -98,5 +120,4 @@ var info = new SKImageInfo(300, 200);
 var sk_img = SKBitmap.Decode(img, info);
 screen.DrawBitmap(sk_img, 0, 0);
 ```
-
 ---

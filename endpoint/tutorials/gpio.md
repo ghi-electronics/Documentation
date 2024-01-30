@@ -21,7 +21,6 @@ using GHIElectronics.Endpoint.Core;
 
 var port = EPM815.Gpio.Pin.PC0 / 16;
 var pin = EPM815.Gpio.Pin.PC0 % 16;
-
 var gpioDriver = new LibGpiodDriver((int)port);
 var gpioController = new GpioController(PinNumberingScheme.
     Logical, gpioDriver);
@@ -53,16 +52,16 @@ using System.Device.Gpio;
 using System.Device.Gpio.Drivers;
 using GHIElectronics.Endpoint.Core;
 
-var port = EPM815.Gpio.Pin.PF3 / 16;
-var pin = EPM815.Gpio.Pin.PF3 % 16;
+var buttonPort = EPM815.Gpio.Pin.PF3 / 16;
+var buttonPin = EPM815.Gpio.Pin.PF3 % 16;
+var buttonDriver = new LibGpiodDriver((int)buttonPort);
+var button = new GpioController(PinNumberingScheme.Logical, buttonDriver);
 
-var gpioDriver = new LibGpiodDriver((int)port);
-var button = new GpioController(PinNumberingScheme.Logical, gpioDriver);
-button.OpenPin(pin, PinMode.InputPullUp);
+button.OpenPin(buttonPin, PinMode.InputPullUp);
 
 while (true){
     if (button.Read(pin) == PinValue.Low){
-        //Button is pressed.
+        Console.Writeline("Button is pressed")
     }
     Thread.Sleep(10);  
 }
@@ -80,14 +79,12 @@ using System.Device.Gpio;
 using System.Device.Gpio.Drivers;
 using GHIElectronics.Endpoint.Core;
 
-var port = EPM815.Gpio.Pin.PF3 / 16;
-var pin = EPM815.Gpio.Pin.PF3 % 16;
+var buttonPort = EPM815.Gpio.Pin.PF3 / 16;
+var buttonPin = EPM815.Gpio.Pin.PF3 % 16;
+var buttonDriver = new LibGpiodDriver((int)buttonPort);
+var button = new GpioController(PinNumberingScheme.Logical, buttonDriver);
 
-var gpioDriver = new LibGpiodDriver((int)port);
-var button = new GpioController(PinNumberingScheme.Logical, gpioDriver);
-
-button.OpenPin(pin, PinMode.InputPullUp);
-
+button.OpenPin(buttonPin, PinMode.InputPullUp);
 button.RegisterCallbackForPinValueChangedEvent(
     pin,
     PinEventTypes.Falling | PinEventTypes.Rising,
@@ -98,7 +95,6 @@ await Task.Delay(Timeout.Infinite);
 
 static void OnPinEvent(object sender, PinValueChangedEventArgs args){
     Console.WriteLine("Button Pressed");
-
 }
 ```
 

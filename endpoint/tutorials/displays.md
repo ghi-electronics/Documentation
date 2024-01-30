@@ -24,13 +24,11 @@ using GHIElectronics.Endpoint.Devices.Display;
 //Initialize Display
 var backlightPort = EPM815.Gpio.Pin.PD14 / 16;
 var backlightPin = EPM815.Gpio.Pin.PD14 % 16;
-
 var backlightDriver = new LibGpiodDriver((int)backlightPort);
 var backlightController = new GpioController(PinNumberingScheme.Logical, backlightDriver);
 backlightController.OpenPin(backlightPin);
 backlightController.SetPinMode(backlightPin, PinMode.Output);
 backlightController.Write(backlightPin, PinValue.High);
-
 var screenWidth = 480;
 var screenHeight = 272;
 
@@ -44,27 +42,35 @@ var configuration = new FBDisplay.ParallelConfiguration(){
     Vsync_start = 272 + 2,
     Vsync_end = 272 + 2 + 10,
     Vtotal = 272 + 2 + 10 + 2,
-
 };
 var fbDisplay = new FBDisplay(configuration);
 var displayController = new DisplayController(fbDisplay);
 
-//SkiaSharp Initialization and content
+//SkiaSharp Initialization
 SKBitmap bitmap = new SKBitmap(screenWidth, screenHeight, SKImageInfo.PlatformColorType, SKAlphaType.Premul);
 bitmap.Erase(SKColors.Transparent);
 
-
-// Initialize the canvas
+// Setup the Canvas
 using (var screen = new SKCanvas(bitmap)){
 
-  ///////////////////////////////////////////
- // Place SkiaSharp Graphics content here //
-///////////////////////////////////////////
+      ///////////////////////////////////////////
+     // Place SkiaSharp Graphics content here //
+    ///////////////////////////////////////////
 
-// Flush to screen
-        var data = bitmap.Copy(SKColorType.Rgb565).Bytes;
-        displayController.Flush(data);
-        Thread.Sleep(1);
+    // Flush to screen
+    var data = bitmap.Copy(SKColorType.Rgb565).Bytes;
+    displayController.Flush(data);
+    Thread.Sleep(1);
+}
 ```
 ---
 
+## Virtual Displays
+The internal graphics services can be mapped to work with virtual display displays, such as SPI displays. See the [Graphics](graphics.md) tutorial for more information and sample code.
+
+---
+
+## Character Displays
+![Character Display](images/character-display.jpg)
+
+These displays are capable of only showing characters. They are available in different sizes, but two lines of 16 characters is most common. These displays types use the standard .NET [Iot.Device.CharacterLcd](https://learn.microsoft.com/en-gb/dotnet/api/iot.device.characterlcd?view=iot-dotnet-latest) library
