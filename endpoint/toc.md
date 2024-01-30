@@ -24,16 +24,11 @@
 ### [Camera](tutorials/camera.md)
 ### [MJPEG Video](tutorials/mjpeg-video.md)
 
-## Networking
-### [Networking Core](tutorials/networking.md)
-### [WiFi](tutorials/wifi.md)
-### [Ethernet](tutorials/ethernet.md)
 
 ## Cloud Support
 ### [Azure](tutorials/azure.md)
 ### [AWS](tutorials/aws.md)
 
-### [In-Field Update](tutorials/in-field-update.md)
 
 ## Security
 ### [Data Security](tutorials/tls.md)
@@ -42,10 +37,11 @@
 
 ## Additional Features
 ### [File System](tutorials/file-system.md)
+### [Networking](tutorials/networking.md)
+### [In-Field Update](tutorials/in-field-update.md)
 ### [Power Management](tutorials/power-management.md)
 ### [Watchdog Timer](tutorials/watchdog-timer.md)
 ### [Real Time Clock](tutorials/real-time-clock.md)
-### [Resources](tutorials/resources.md)
 
 # [Libraries](api/intro.md)
 # [Downloads](downloads.md)
