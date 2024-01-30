@@ -1,81 +1,62 @@
-[IN PROGRESS](error.md) 
 # Camera Interface
 ---
 
-TinyCLR OS supports digital camera interface, sometimes referred to as DCMI or DCI, on devices using the SITCore SC20260 SoC. Typically, cameras need to be configured using [I2C bus](i2c.md). Check the Omnivision/Ov9655 driver under https://github.com/ghi-electronics/TinyCLR-Drivers for an example of how to configure your camera, or refer to the camera's manual to determine the needed configuration.
+Endpoint supports digital cameras through USB or the parallel interface (DCMI). 
 
-The following function captures camera images:  
-```cs
-public void Capture(byte[] data, int timeoutMillisecond) =>
-    this.cameraController.Capture(data, timeoutMillisecond);
-```
+## USB Cameras
 
-This example configures the camera and sends the images to the 4.3 inch display attached to the SCM20260D Dev Board.
+The use of USB Cameras is straightforward and similar to using other USB devices. The [USB](usb.md) tutorials covers the details.
 
-> [!Tip]
-> Needed NuGets: GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Drivers.Omnivision.Ov9655, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins, GHIElectronics.TinyCLR.Devices.Display, GHIElectronics.TinyCLR.Drawing
->
-> Needed Namespaces: GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Devices.I2c, GHIElectronics.TinyCLR.Drivers.Omnivision.Ov9655, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins, System.Diagnostics, GHIElectronics.TinyCLR.Devices.Display, System.Drawing
+## DCMI Camera
+
+Typically, DCMI cameras need two interfaces, the DCMI itself for transferring the images and an I2C bus for configuring the camera internal controller.
+
+Endpoint includes experimental support for OV5640 cameras. Only I2C6 can be used with this camera.
 
 ```cs
-GpioPin backlight = GpioController.GetDefault().OpenPin(SC20260.GpioPin.PA15);
-backlight.SetDriveMode(GpioPinDriveMode.Output);
-backlight.Write(GpioPinValue.High);
+var setting = new CameraConfiguration()
+{
+    Width = 640,
+    Height = 480,
+    ImageFormat = Format.Rgb565, //Format.Jpeg
+    FrameRate = 15,
 
-var displayController = Display.DisplayController.GetDefault();
-
-var controllerSetting = 
-    new ParallelDisplayControllerSettings {
-    Width = 480,
-    Height = 272,
-    DataFormat = DisplayDataFormat.Rgb565,
-    Orientation = DisplayOrientation.Degrees0, //Rotate display.
-    PixelClockRate = 10000000,
-    PixelPolarity = false,
-    DataEnablePolarity = false,
-    DataEnableIsFixed = false,
-    HorizontalFrontPorch = 2,
-    HorizontalBackPorch = 2,
-    HorizontalSyncPulseWidth = 41,
-    HorizontalSyncPolarity = false,
-    VerticalFrontPorch = 2,
-    VerticalBackPorch = 2,
-    VerticalSyncPulseWidth = 10,
-    VerticalSyncPolarity = false,
 };
 
-displayController.SetConfiguration(controllerSetting);
-displayController.Enable();
+var webcam = new OV5640Controller(EPM815.I2c.I2c6, EPM815.Gpio.Pin.PG0, EPM815.Gpio.Pin.PZ3); // i2c, pin reset, power down
+var resolutions = webcam.GetResolution();
+webcam.Setting = setting;
+var cnt = 0;
+while (true)
+{
+    if (webcam != null)
+    {
+        var data = webcam.Capture();
+        if (data != null)
+        {
+            if (setting.ImageFormat == Format.Rgb565)
+            {
+                // Show on screen
+                //displayController.Flush(data, 0, data.Length, webcam.Width, webcam.Height);
+            }
+            else if (setting.ImageFormat == Format.Jpeg)
+            {
+                // Save to file
+                using (var stream = File.Open($"/.epdata/{webcam.Width}x{webcam.Height}_{cnt}.jpeg", FileMode.Create))
+                {
+                    using (var writer = new BinaryWriter(stream, Encoding.UTF8, false))
+                    {
+                        writer.Write(data);
 
-var screen = Graphics.FromHdc(displayController.Hdc);
-var controller = I2cController.FromName(SC20260.I2cBus.I2c1);
+                    }
+                }
 
-// Camera
-var ov9655 = new Ov9655Controller(controller);
-ov9655.FrameReceived += Ov9655_FrameReceived;
-var id = ov9655.ReadId();
+            }
+        }
 
-Debug.WriteLine("id = " + id);
-
-ov9655.SetResolution(Ov9655Controller.Resolution.Vga);
-
-byte temp = 0;
-
-while (true) {
-    try {
-        ov9655.Capture();		
     }
-    catch (System.Exception) { 
-    }
-	
-	Thread.Sleep(10);
-}
 
-private static void Ov9655_FrameReceived(byte[] data, int size) {
-	// 480 is screen width
-	// 272 is screen height
-	// 640 is original image width with VGA = 640
-	displayController.DrawBuffer(0, 0, 0, 0, 480, 272, 640, data, 0);
+    Thread.Sleep(10);
 }
 ```
 

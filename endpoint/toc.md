@@ -33,13 +33,8 @@
 ## Cloud Support
 ### [Azure](tutorials/azure.md)
 ### [AWS](tutorials/aws.md)
-### [Google Cloud](tutorials/google-cloud.md)
-### [IFTTT](tutorials/ifttt.md)
-### [Adafruit IO](tutorials/adafruit-io.md)
-
 
 ### [In-Field Update](tutorials/in-field-update.md)
-
 
 ## Security
 ### [Data Security](tutorials/tls.md)
@@ -53,8 +48,6 @@
 ### [Real Time Clock](tutorials/real-time-clock.md)
 ### [Resources](tutorials/resources.md)
 ### [Specialized](tutorials/specialized.md)
-
-
 
 # [Libraries](api/intro.md)
 # [Downloads](downloads.md)
