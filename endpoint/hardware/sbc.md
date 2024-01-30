@@ -9,7 +9,8 @@
 The Endpoint Domino provides an easy prototyping and evaluating board option, that is low-cost and user friendly. 
 
 #### Features:
-* Display connector
+* 32bit ARM 650Mhz, 4GB DDR3
+* Display FPC connector
 * 2x mikroBUS headers
 * USB Host
 * User LED
@@ -77,10 +78,14 @@ The Endpoint OS supports cameras through USB and parallel. For added convenience
 
 ## mikroBUS
 
-Endpoint Domino has 2 [mikroBUS](https://www.mikroe.com/mikrobus) headers compatible with over 1000 click modules. 
+Endpoint Domino has 2x [mikroBUS](https://www.mikroe.com/mikrobus) headers compatible with over 1000 click modules. 
+
+![mikroBUS](images/domino-mikrobus.png)
 
 ---
 
 ## Wi-Fi
 
-Endpoint Domino Wi-Fi using a the tp-link Wireless N Nano USB adapter. 
+Endpoint Domino Wi-Fi using a the TP-link Wireless N Nano USB adapter. 
+
+![Wifi](images/domino-wifi.png)
