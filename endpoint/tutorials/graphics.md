@@ -58,7 +58,7 @@ using (SKPaint text = new SKPaint()){
 
 ## Using TrueType Fonts
 
-Any TrueType font can be used, it just needs to be added as a [resource](resources.md). To add a font change the extension from **.tft** to **.bin**. This will save the font in **resources** as a byte, the format SkiaSharp needs to display. 
+Any TrueType font can be used, it just needs to be added as a resource. To add a font change the extension from **.tft** to **.bin**. This will save the font in **resources** as a byte array, the format SkiaSharp needs to display. 
 
 ```cs
 byte[] fontfile = Resources.ArialBlack;
@@ -108,10 +108,10 @@ using (SKPaint line = new SKPaint()){
 ```
 ## Drawing Images
 
-The example below displays an image on the screen using [resources](resources.md). 
+The example below displays an image on the screen using resources. 
 
 > [!Tip]
-> Images need to be saved as .bin files in the Resoures.resx window.
+> Images need to be converted and saved as .bin files to generate a byte array
 
 ```cs
 // Draw image from resource
