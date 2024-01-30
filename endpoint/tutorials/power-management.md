@@ -6,7 +6,7 @@ There are multiple ways to put a system in different power modes to save on powe
 
 Endpoint currently only support complete shutdown.
 
-Both [RTC](rtc.md) and one of the wakeup pins can be used to wakeup the system from shutdown.
+Both [Real Time Clock](real-time-clock.md) and one of the wakeup pins can be used to wakeup the system from shutdown.
 
 ```cs
 using GHIElectronics.Endpoint.Native;
