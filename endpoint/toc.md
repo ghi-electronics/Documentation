@@ -47,7 +47,6 @@
 ### [Watchdog Timer](tutorials/watchdog-timer.md)
 ### [Real Time Clock](tutorials/real-time-clock.md)
 ### [Resources](tutorials/resources.md)
-### [Specialized](tutorials/specialized.md)
 
 # [Libraries](api/intro.md)
 # [Downloads](downloads.md)
