@@ -14,7 +14,7 @@ An Endpoint development environment consists of a device running Endpoint OS and
 
  Use your preferred disk imaging software to create a disk image on a blank microSD card, `Win32 Disk Imager` for example.
 
- Find the latest Endpoint disk image [**here**](downloads.md) and burn it to the blank microSD card. 
+ Find the latest Endpoint disk image [**here**](downloads.md) and burn it to the blank microSD card (4GB minimum). 
 
  ![Disk Imager](images/create-sd-image.png)
 
@@ -24,15 +24,15 @@ An Endpoint development environment consists of a device running Endpoint OS and
 
  If the device has an eMMC, use the `SD Boot` button to force the device to boot from the SD card.
 
-Once the `USER LED` lights the board has successfully booted the Endpoint OS from the microSD. This should happen on less than 5 seconds.
+Once the `USER LED` lights the board has successfully booted the Endpoint OS from the microSD. This should happen in less than 5 seconds.
 
 #### Flashing the eMMC
-Devices with eMMC will automatically boot from eMMC. The system will fail to boot if the if the image is invalid. SD can always be used to boot the system. Once the system is up, `Endpoint Config` tool can be used to update the eMMC, as detailed in the [Configuration](configuration.md) page.
+Devices with eMMC will automatically boot from eMMC. The system will fail to boot if the OS image is invalid. SD cards can always be used to boot the system. Once the system is up, the `Endpoint Config` tool can be used to update the eMMC, as detailed in the [Configuration](configuration.md) page.
 
  ---
 ## Development Machine Setup
 
- Now, that the device is running the Endpoint OS, the development machine can be prepared for remote debug and deploy to the Endpoint device (using USB). This can be done using either Visual Studio or VS Code.
+ Now, that the device is running the Endpoint OS, the development machine can be prepared for remote debug and deploy to the Endpoint device (using USB-C). This can be done using either Visual Studio or VS Code.
 
  ### Endpoint for Visual Studio
  With Endpoint you can deploy and debug using Visual Studio. Even the free community version. 
@@ -43,9 +43,9 @@ Devices with eMMC will automatically boot from eMMC. The system will fail to boo
 
  #### Visual Studio Extension (.visx)
 
- Download and install the newest Endpoint Visual Studio Project System by going to Extensions > Manage Extensions. In the Manage Extensions dialog box select Online in the left panel. Type 'endpoint' into the Search text box in the upper right of the window to search for and install the Endpoint Project System. You'll need to restart Visual Studio to let the extension installer complete the installation.
+ Download and install the newest Endpoint Visual Studio Project System by going to ```Extensions > Manage Extensions```. In the Manage Extensions dialog box select ```Online``` in the left panel. Type ```GHI Endpoint``` in the Search text box in the upper right of the window to search for and install the Endpoint Project System. You'll need to restart Visual Studio to let the extension installer complete the installation.
 
-Alternately you can download the Visual Studio Project System from our  [**Download**](downloads.md) and install the latest Endpoint Visual Studio Extension (.vsix) file page and open or double click on the file to install the extension.
+Alternately you can download the Visual Studio Project System from our  [**Downloads**](downloads.md) page and install the latest Endpoint Visual Studio Extension (.vsix). Open or double click on the file to install the extension.
 
  #### Endpoint Debugger
 
@@ -57,7 +57,7 @@ Alternately you can download the Visual Studio Project System from our  [**Downl
 
  ![Navigate to Debug Options](images/debug-options.png)
 
- From there navigate to the `Endpoint Debugger` option and make sure the box is check for `root@192.168.82.2`. If unchecked the application will only run on the PC. 
+ From there navigate to the `Endpoint Debugger` option and make sure the box is checked for `root@192.168.82.2`. If a password was created using the Endpoint [Config](configuration.md) Tool also enter it here. If unchecked the application will only run on the PC. 
 
   ![Debug Host](images/debug-host.png)
 
