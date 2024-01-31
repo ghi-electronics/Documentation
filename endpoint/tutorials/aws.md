@@ -2,159 +2,127 @@
 # Amazon Web Services
 ---
 This example shows how to communicate with AWS using MQTT. You'll also need to set up a Network Interface connection on the device such as [WiFi](wifi.md) to Connect to AWS in your program.
+And make sure date, time on the device are set correctly.
 
-First download the required AWS Root Certificate and add to resources. The TLS Client shows how to download the root certificate.
-
-There is also a Client certificate that needs to be downloaded from the AWS account, detailed below.
+> [!Tip]
+> Needed NuGets: GHIElectronics.Endpoint.Core, GHIElectronics.Endpoint.Devices.Network, M2MqttDotnetCore
 
 ```
-var iotEndPoint = "Need your Rest API Endpoint";
-var iotPort = 8883;
-var deviceId = "Need your Device ID";
+string iotEndpoint = "your iot endpoint"; 
+Console.WriteLine("AWS IoT Dotnet message publisher starting..");
 
-var topicShadowUpdate = string.Format("$aws/things/{0}/shadow/update", deviceId);
-var topicShadowGet = string.Format("$aws/things/{0}/shadow/get", deviceId);
+int brokerPort = 8883;
+string topic = "$aws/things/EPDominoThing2024/shadow/update/documents";
+string message = "Test message";
 
-var message = "{\"state\":{\"desired\":{\"My message\":\"Hello World"}}}";
+var caCertData = Resources.AmazonRootCA1; // load from resource
+var caClientCertData = Resources.device_certificate; // this is pfx format load from resource
 
-var caCertSource = UTF8Encoding.UTF8.GetBytes("Need AWS root CA certificate");
-var clientCertSource = UTF8Encoding.UTF8.GetBytes("Need your AWS client CA certificate");
-var privateKeyData = UTF8Encoding.UTF8.GetBytes("Need your AWS private key");
+var caCert = new X509Certificate(caCertData);
+var clientCert = new X509Certificate2(caClientCertData);
 
-X509Certificate CaCert = new X509Certificate(caCertSource);
-X509Certificate ClientCert = new X509Certificate(clientCertSource);
 
-ClientCert.PrivateKey = privateKeyData;    
+var client = new MqttClient(iotEndpoint, brokerPort, true, caCert, clientCert, MqttSslProtocols.TLSv1_2);
 
-var clientSetting = new MqttClientSetting {
-    BrokerName = iotEndPoint,
-    BrokerPort = iotPort,
-    CaCertificate = CaCert,
-    ClientCertificate = ClientCert,
-    SslProtocol = System.Security.Authentication.SslProtocols.Tls12
+string clientId = Guid.NewGuid().ToString();
+client.Connect(clientId);
+Console.WriteLine($"Connected to AWS IoT with client id: {clientId}.");
+
+client.Subscribe(new string[] { topic }, new byte[] { 0 });
+client.MqttMsgPublishReceived += (a, b) =>
+{
+    Console.WriteLine(Encoding.UTF8.GetString(b.Message));
 };
 
-var iotClient = new Mqtt(clientSetting);
-
-iotClient.PublishReceivedChanged += (p1, p2, p3, p4, p5, p6) => {
-Debug.WriteLine("Received message: " + Encoding.UTF8.GetString(p3));
-};
-
-iotClient.SubscribedChanged += (a, b) => { Debug.WriteLine("Subscribed"); };
-
-Debug.WriteLine("Connecting....")
-
-var connectSetting = new MqttConnectionSetting {
-    ClientId = deviceId,
-    UserName = null,
-    Password = null
-};
-
-var connectCode = iotClient.Connect(connectSetting);
-
-ushort packetId = 1;
-
-iotClient.Subscribe(new string[] { topicShadowGet }, new QoSLevel[]
-    { QoSLevel.LeastOnce }, packetId++);
-            
-iotClient.Publish(topicShadowUpdate, Encoding.UTF8.GetBytes(message),
-    QoSLevel.MostOnce, false, packetId++);
+int i = 0;
+while (true)
+{
+    client.Publish(topic, Encoding.UTF8.GetBytes($"{message} {i}"));
+    Console.WriteLine($"Published: {message} {i}");
+    i++;
+    Thread.Sleep(5000);
+}
 
 ```
 We need a few things to complete the code sample that we'll get from AWS. We need an iotEndPoint, a deviceId, an AWS root certificate, a client certificate and a private key. First, you'll need to create an AWS account. 
 
 Once you've created your account, we need to find the service to set up our device. On the AWS Management  Console, search for the service 'IoT Core' and select it. 
 
-![AWS Management Console](images/aws-select-iot.jpg)
+## Create Thing
 
-Before we add our device, we need to create a Policy that the device will use. From the side menu under the 'Secure' tab click 'Polices' click on the button to create a new policy. Name your policy and then click on advanced mode. Paste the code found below in the code window. Then click the 'Create' button. We'll attach the policy to the device later. 
+![AWS Management Console](images/aws-step1.jpg)
 
-![AWS Create Policy](images/aws-create-policy.jpg)
+![AWS Management Console](images/aws-create-thing.jpg)
 
-Paste this code in the above window.
+Select default and click next
 
-```cs
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "iot:Publish",
-        "iot:Subscribe",
-        "iot:Connect",
-        "iot:Receive"
-      ],
-      "Resource": [
-        "*"
-      ]
-    }
-  ]
-}
+![AWS Management Console](images/aws-step2.jpg)
+
+We created Thing name EPDomino24, thing type is optional.
+
+![AWS Management Console](images/aws-step22.jpg)
+
+Select auto generate certificate and click next
+
+![AWS Management Console](images/aws-step23.jpg)
+
+Download certificates
+
+![AWS Management Console](images/aws-step24.jpg)
+
+After created thing name "EPDominoThing24", the screen is below:
+
+![AWS Management Console](images/aws-step3.jpg)
+
+## Certificates
+
+- Device certificate: This file usually ends with ".pem.crt". When you download this it will save as .txt file extension in windows. Save it in your certificates directory as 'certificates\certificate.cert.pem' and make sure that it is of file type '.pem', not 'txt' or '.crt'
+
+- Device public key: This file usually ends with ".pem" and is of file type ".key". Save this file as 'certificates\certificate.public.key'.
+
+- Device private key: This file usually ends with ".pem" and is of file type ".key". Save this file as 'certificates\certificate.private.key'. Make sure that this file is referred with suffix ".key" in the code while making MQTT connection to AWS IoT.
+
+- Root certificate: Download from https://www.amazontrust.com/repository/AmazonRootCA1.pem. Save this file to 'certificates\AmazonRootCA1.crt'
+
+### Converting Device Certificate from .pem to .pfx 
+
+In order to establish an MQTT connection with the AWS IoT platform, the root CA certificate, the private key of the thing, and the certificate of the thing/device are needed. The .NET cryptographic APIs can understand root CA (.crt), device private key (.key) out-of-the-box. It expects the device certificate to be in the .pfx format, not the .pem format. Hence we need to convert the device certificate from .pem to .pfx.
+
+We'll leverage the openssl for converting .pem to .pfx. Navigate to the folder where all the security artifacts are present and launch bash for Windows 10.
+
+The syntax for converting .pem to .pfx is below:
+
+```
+openssl pkcs12 -export -in iotdevicecertificateinpemformat -inkey iotdevivceprivatekey -out devicecertificateinpfxformat -certfile rootcertificatefile
 ```
 
-Now we need to create our IoT device within AWS.
-Click on the 'Manage' Dropdown and select 'Things', then click on 'Register a thing'
+## Create Policies
 
-![AWS Manage Things](images/aws-manage-things.jpg)
+![AWS Management Console](images/aws-policy-1.jpg)
 
-Next, we click on 'Create a single thing'
+Name new policy EPDomino24PolicyAll and use \* means all action and resource
 
-![AWS Create Single Thing](images/aws-create-single.jpg)
+![AWS Management Console](images/aws-policy-2.jpg)
 
-Now we'll create a Name for our IoT device and add it to the 'Things' registry. This will be the deviceId we will use in the code sample. There are other options available that can be added, but in this tutorial, we only need to create a 'Name' and click 'NEXT'
+## Attach Policies
 
-![AWS Create DeviceID](images/aws-name-device.jpg)
+Back to Certificates, select Attach policies
 
-The next page is where we'll create the CA Certificates, we need to add to our projects resources. In this case we can use the 'One-Click certificate creation'. Click on 'Create certificate'
+![AWS Management Console](images/aws-policy-3.jpg)
 
-![AWS Create Certificates](images/aws-create-certificates.jpg)
+The screen is below:
 
-Next we need to download the CA Certificates we need. We need 'A certificates for this thing' and 'the private key', we don't need to download the public key for this project. You'll also need an AWS root certificate, you can follow the link to download RSA 2048 bit key: Amazon Root CA 1. Next we need to click on the 'Activate' button to activate the certificates we created, then click 'Attach a policy'
+![AWS Management Console](images/aws-policy-4.jpg)
 
-![AWS Download Certs](images/aws-download-cert.jpg)
+## Test Publisher
 
-Check the box for the 'Policy' we created earlier, and then click the 'Register Thing' button.
+![AWS Management Console](images/aws-activity-1.jpg)
 
-![AWS Add Policy](images/aws-add-policy.jpg)
+All message from/to the device can be seen here:
 
+![AWS Management Console](images/aws-final-1.jpg)
 
-Add the 3 Certificates we downloaded to Resources in our project and SAVE your project.
+> [!Tip] 
+The ```"string iotEndpoint = "your iot endpoint";```  variable can be found here:
 
-![AWS Certs Resources](images/aws-cert.jpg)
-
-Inside the 'Things' registry list click on the device you just created.
-
-![AWS Select Device](images/aws-select-device.jpg)
-
-Once you're on your devices dashboard, click on the 'Interact' tab. This will give you the iotEndPoint we'll need for our code. Copy the code...
-
-![AWS Copy Endpoint](images/aws-copy-endpoint.jpg)
-
-...and paste it into the code as shown below. Also add the name of your device to the variable deviceId.
-
-```cs
-var iotEndPoint = "a13gxtasnslh-ats.iot.us-west-2.amazonaws.com";
-var iotPort = 8883;
-var deviceId = "MyDevice";
-```
-Finally, we need to link the CA Certificates we placed in our project resources to our code as shown in the example below.
-
-```cs
-var caCertSorce = Resources.GetBytes(Resources.BinaryResources.AmazonRootCA1);
-var clientCertSource = Resources.GetBytes(Resources.BinaryResources._3a59c69926_certificate_pem);
-var privateKeyData = Resources.GetBytes(Resources.BinaryResources._3a59c69926_private_pem);
-```
-You can now deploy your program in Visual Studio, to connect your device to AWS. Clicking on the 'Activity' Tab on our device dashboard will show the active connection. 
-
-![AWS Device Activity](images/aws-device-activity.jpg)
-
-We view the messages being sent from our IoT device to AWS by clicking on the 'Shadows' Tab, then click 'Classic Shadows'. The message in the window is sent from our device...
-
-![AWS Device Activity](images/aws-message-recieved.jpg)
-
-We can edit the message being sent from the device in Visual Studio by changing the message in this line of our code.
-
-```cs
-var Message = "{\"state\":{\"desired\":{\"My message\":\"Hello World\"}}}";
-```
+![AWS Management Console](images/aws-iotendpoit.jpg)
