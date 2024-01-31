@@ -30,11 +30,6 @@
 ### [AWS](tutorials/aws.md)
 
 
-## Security
-### [Data Security](tutorials/tls.md)
-### [Device Security](tutorials/tls.md)
-
-
 ## Additional Features
 ### [File System](tutorials/file-system.md)
 ### [Networking](tutorials/networking.md)
