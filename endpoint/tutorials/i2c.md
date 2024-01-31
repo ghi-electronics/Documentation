@@ -9,19 +9,19 @@ The two wires for I2C communication are called the SDA and SCL lines. SDA stands
 Endpoint uses the standard .NET API for I2C (System.Device.I2c) but first we need to **Initialize** the pin for I2C. 
 
 ```cs
-EPM815.I2c.Intialize(EPM815.I2c.I2c6)
+EPM815.I2c.Intialize(EPM815.I2c.I2c6);
 ```
 
 This method also allows the user to set clock speed, which 400KHz by default. 
 
 ```cs
-EPM815.I2c.Intialize(EPM815.I2c.I2c6,100_000)
+EPM815.I2c.Intialize(EPM815.I2c.I2c6,100_000);
 ```
 
 I2C is a standard .NET IoT feature. This is a partial demo showing the use of I2C.
 
 ```cs
-EPM815.I2c.Intialize(EPM815.I2c.I2c6)
+EPM815.I2c.Intialize(EPM815.I2c.I2c6);
 var i2cConnectionSetting = new I2cConnectionSettings(EPM815.I2c.I2c6, 0x1C);
 var i2cDev = I2cDevice.Create(i2cConnectionSetting);
 

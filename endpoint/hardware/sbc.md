@@ -86,6 +86,6 @@ Endpoint Domino has 2x [mikroBUS](https://www.mikroe.com/mikrobus) headers compa
 
 ## Wi-Fi
 
-Endpoint Domino Wi-Fi using a the TP-link Wireless N Nano USB adapter. 
+Endpoint Domino Wi-Fi using a TP-link Wireless N Nano USB adapter. 
 
 ![Wifi](images/domino-wifi.png)

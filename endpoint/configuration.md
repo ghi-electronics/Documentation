@@ -3,6 +3,9 @@
 
 ## Endpoint Config Tool 
 
+> [!Tip] 
+> An Endpoint device must be fully booted in order for the configuration tool to work.
+
 The Endpoint Config tool is used to update & configure Endpoint Hardware. It will also give information about the device. 
 
 [**Download**](downloads.md)
@@ -12,13 +15,13 @@ The Endpoint Config tool is used to update & configure Endpoint Hardware. It wil
 
 #### Connecting to the Device
 
-Connect the Endpoint device to the PC using a USB cable. Once the booting sequence is complete,the USER LED will be fully lit. Press **Connect** on the Config tool app. The tool will display device information once connected
+Connect the Endpoint device to the PC using a USB cable. Once the booting sequence is complete, the USER LED will be fully lit. Press **Connect** on the Config tool app. The tool will display device information once connected
 
  ![Device Information](images/device-info.png)
 
  #### Setting up a Device Password
 
- Creating a device password is optional. To create a password for the device, select Security -> Change Password. 
+ Creating a device password is optional. To create a password for the device, select **Security -> Change Password**. 
 
   ![Create Password](images/menu-password.png)
 
@@ -32,10 +35,11 @@ Connect the Endpoint device to the PC using a USB cable. Once the booting sequen
    After creating or changing a password, the device will disconnect. To reconnect we will need to add the password we created. 
    
    Once the correct password is entered, Endpoint Config on the users machine will save the password in the box. Meaning you don't have to enter it every time you use the tool. If you move the device to another computer you'll need to enter the password to connect. 
+
   ![Connecting with Password](images/connecting-password.png)
 
   > [!Note] 
-  > There is no way to retrieve a forgotten password, the device must be completely erased and an new image created. 
+  > There is no way to retrieve a forgotten password, the device must be completely erased and a new image created. 
 
  We also need to set up the programming IDE with our new password. 
 
