@@ -25,7 +25,36 @@ This table will help in planning the usage of timers
 
 Pin |Timer | Channel
 -- | -- | --
-PA01 | TIM1 | CH3
-PA01 | TIM1 | CH3
-PA01 | TIM1 | CH3
-PA01 | TIM1 | CH3
+PA8 | TIM1 | CH1
+PE11 | TIM1 | CH2
+PA10 | TIM1 | CH3
+PA11 | TIM1 | CH4
+PA15 | TIM2 | CH1
+PB3 | TIM2 | CH2
+PA3 | TIM2 | CH4
+PC6 | TIM3 | CH1
+PB5 | TIM3 | CH2
+PB0 | TIM3 | CH3
+PD12 | TIM4 | CH1
+PB7 | TIM4 | CH2
+PD14 | TIM4 | CH3
+PD15 | TIM4 | CH4
+PA0 | TIM5 | CH1
+PH11 | TIM5 | CH2
+PH12 | TIM5 | CH3
+PI0 | TIM5 | CH4
+PI5 | TIM8 | CH1
+PI6 | TIM8 | CH2
+PI7 | TIM8 | CH3
+PI2 | TIM8 | CH4
+PH6 | TIM12 | CH1
+PH9 | TIM12 | CH2
+PA6 | TIM13 | CH1
+PF9 | TIM14 | CH1
+PE5 | TIM15 | CH1
+PE6 | TIM15 | CH2
+PB8 | TIM16 | CH1
+PB9 | TIM17 | CH1
+
+
+
