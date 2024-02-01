@@ -19,18 +19,18 @@ Preview | Preview of the next release, not quite ready for production use.
 
 The Endpoint OS image can be downloaded and run from a microSD card or flashed to eMMC if the Endpoint hardware supports it. 
 
-File | Date | Status 
+File | Date | Status | MD5
 --- | --- | --- |
-[v0.0.1.0.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/sdcard.img) | 2024-01-24 | Preview 
+[v0.0.1.0.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/endpoint_image_5.13.0Feb12024.img) | 2024-02-02 | Preview | 1539CB1D959376BF2588EE416E62C625
 
 
 ### Endpoint Config 
 
 Endpoint Config is a tool used to update and configure your Endpoint device.
 
-File | Date | Status 
+File | Date | Status | MD5
 --- | --- | --- | 
-[v0.1.0.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Config/Endpoint_Config_Setup_v0.1.0.0.msi) | 2024-01-24 | Preview 
+[v0.1.0.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Config/Endpoint_Config_Setup_v0.1.0.0.msi) | 2024-02-02 | Preview | 8440E6358F46199B656F5F61CBF9B62B
 
 ## Endpoint Libraries
 
@@ -39,7 +39,10 @@ Endpoint Libraries are designed to fill in any gaps the .NET API is missing for 
 > [!Note]
 > Make sure to check the `Include prerelease` box in Visual Studio's NuGet package manager if you're not using the production release.
 
-The libraries are available on [Github](https://github.com/ghi-electronics/Endpoint-Libraries).
+File | Date | Status | MD5
+--- | --- | --- | 
+[v0.1.0.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Libraries/endpoint_libraries_v0.1.0.0.zip) | 2024-02-02 | Preview | 708833FEFCE57C51F9CE01DA47EF0541
+
 
 
 ## Visual Studio & VS Code extension files
