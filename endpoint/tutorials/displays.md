@@ -12,7 +12,7 @@ These displays connect to special dedicated pins on the processor. Internally, t
 A display must be configured inside the .NET project. To do this create a .NET project with configuration code based on the type of display being used. In the example below an [ERTFT043 display and Endpoint Domino](../hardware/sbc.md) are used.
 
 > [!Tip]
-> Needed NuGets: GHIElectronics.Endpoint.Core, GHIElectronics.Endpoint.Display
+> Needed NuGets: GHIElectronics.Endpoint.Core, GHIElectronics.Endpoint.Devices.Display
 
 ```cs
 using System.Device.Gpio;
