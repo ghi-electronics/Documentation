@@ -52,7 +52,7 @@ The Endpoint Debugger for Visual Studio can be installed from within in Visual S
 
 #### VS Code
 
-The Endpoint Debugger for VS Code can be installed from within in VS Code. It can also be downloaded at the [VS Code Marketplace](https://marketplace.visualstudio.com/vscode)
+The Endpoint Debugger for VS Code can be installed from within in VS Code. It can also be downloaded at the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ghielectronics.endpointvscnet)
 
 
 
