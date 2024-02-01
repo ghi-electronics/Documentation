@@ -1,8 +1,6 @@
-[IN PROGRESS](error.md) 
 # Amazon Web Services
 ---
-This example shows how to communicate with AWS using MQTT. You'll also need to set up a Network Interface connection on the device such as [WiFi](wifi.md) to Connect to AWS in your program.
-And make sure date, time on the device are set correctly.
+This example shows how to communicate with AWS using MQTT. This demo assumes the device has established a [Networking(networking.md) interface and the date and time on the device are set correctly.
 
 > [!Tip]
 > Needed NuGets: GHIElectronics.Endpoint.Core, GHIElectronics.Endpoint.Devices.Network, M2MqttDotnetCore

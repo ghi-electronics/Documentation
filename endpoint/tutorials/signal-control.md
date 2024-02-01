@@ -1,4 +1,3 @@
-[IN PROGRESS](error.md) 
 # Signal Control
 ---
 ![HC-SR04 ultrasonic sensor](images/signal-control.jpg)
@@ -7,7 +6,7 @@
 
 The DigitalSignal is used to handle digital signals! Unlike the other features on this page, DigitalSignal is accurate because it is hardware-backed and runs in a non-blocking manner.
 
-Being hardware backed, this feature only runs on two specific pins: `EPM815.Gpio.Pin.PH10' and 'EPM815.Gpio.Pin.PA5'
+Being hardware backed, this feature only runs on two specific pins: `EPM815.Gpio.Pin.PH10` (Timer5) and `EPM815.Gpio.Pin.PA5` (Timer2)
 
 > [!TIP]
 > Timers are also used with other features, such as PWM. Once a `Timer` is reserved for DigitalSignal, it is no longer available for other features.
@@ -31,21 +30,15 @@ There is a limitation to the `data` being used: The `data` array length is limit
 ```cs
 Generate(uint[] data, uint offset, int count, uint multiplier, Edge edge)
 ```
-Allowable multiplier values range are different:
-
-On SC20xxx, allowable multiplier values range from 5 to 318,000 (318us). 
+Allowed multiplier values range from 5 to 318,000 (318us). 
 
 The signal generator start with a signal at `edge` level. It then toggles the signal every x time. The time is fetched from the array given, one by one. Note that by sending an even count of pulses, the signal will terminate with a `!edge` level as shown below.
 
 ![Signal Example](images/write2.jpg)
 
-Starting a second write will cause the signal to first go low, which may not be desired, as it causes an extra pulse on the next `Generate`. This pulse has a variable with. Making sure that the data `Length` is always an odd number will assure that the signal will terminate at a low-level.
+Starting a second write will cause the signal to first go low, which may not be desired, as it causes an extra pulse on the next `Generate`. This pulse has a variable width. Making sure that the data `Length` is always an odd number will assure that the signal will terminate at a low-level.
 
 ![Signal Example](images/write3.jpg) 
-
-
-> [!TIP] 
-> Software-generated `SignalGenerator` below gives more flexibility but runs in system blocking mode. While `SignalGenerator` is all Hardware-driven making it very accurate, non-blocking and it does not use processor time.
 
 Calling `Generate` will return immediately (non-blocking) allowing the system to do other tasks while the signal is being generated in the background. When the signal is generated completely, an event is fired. To aid in signal handling, the event provides the final resting level of the signal.
 
