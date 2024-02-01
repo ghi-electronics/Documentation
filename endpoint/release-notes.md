@@ -2,14 +2,14 @@
 
 ## 0.1.0 - Beta
 
-### Released 2024-2-1
+### Released 2024-2-2
 
 
 ---
 
 ### Endpoint OS
 
-### Released 2024-2-1
+### Released 2024-2-2
 
 ### 0.1.0 - Beta
 
@@ -23,7 +23,7 @@
 
 ### 0.1.0 - Beta
 
-### Released 2024-2-1
+### Released 2024-2-2
 
 #### Known Issues
 
@@ -35,7 +35,7 @@
 
 ### 0.1.0 - Beta
 
-### Released 2024-2-1
+### Released 2024-2-2
 
 #### Known Issues
 
@@ -47,7 +47,7 @@
 
 ### 0.1.0 - Beta
 
-### Released 2024-2-1
+### Released 2024-2-2
 
 
 #### Known Issues
@@ -60,7 +60,7 @@
 
 ### 0.1.0 - Beta
 
-### Released 2024-2-1
+### Released 2024-2-2
 
 #### Changes
 
@@ -76,7 +76,7 @@
 
 ### 0.1.0 - Beta
 
-### Released 2024-2-1
+### Released 2024-2-2
 
 #### Changes
 
