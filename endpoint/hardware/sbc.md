@@ -9,7 +9,7 @@
 The Endpoint Domino provides an easy prototyping and evaluating board option, that is low-cost and user friendly. 
 
 #### Features:
-* 32bit ARM 650Mhz, 4GB DDR3
+* 32bit ARM 650Mhz, 512MB DDR3
 * Display FPC connector
 * 2x mikroBUS headers
 * USB Host
@@ -55,7 +55,7 @@ Pin | Function
 39 | Cap Touch SCL
 40 | Cap Touch SDA
 
-Here is a list of displays with capacitive touch we have tested from www.buydisplay.com
+Here is a list of tested displays from www.buydisplay.com
 
 Display | Type | Link
 --|--|--
@@ -64,13 +64,15 @@ ER-TFT043A3-3 | 4.3" 480x272 | [Link...](https://www.buydisplay.com/sunlight-rea
 ER-TFT043A1-7 | 4.3" 800x480 | [Link...](https://www.buydisplay.com/4-3-800x480-ips-tft-lcd-module-all-viewing-optl-touchscreen-display)
 ER-TFT070A2-4 | 7" 800x480 | [Link...](https://www.buydisplay.com/7-tft-lcd-touch-screen-display-module-800x480-for-mp4-gps-tablet-pc)
 
-See the `DisplayController` example in `Libraries->Endpoint API` for details on how to configure the system for the desired display.
+See the [Displays](../tutorials/displays.md) tutorial for coding examples.
 
 ---
 
 ## Cameras
 
 The Endpoint OS supports cameras through USB and parallel. For added convenience, the top side of the 40 pin header is pinout compatible with the off-the-shelf OV5640 camera board.
+
+See the [Camera](../tutorials/camera.md) tutorial for coding examples.
 
 ![OV5640 Camera](images/domino-camera.png)
 
@@ -86,6 +88,7 @@ Endpoint Domino has 2x [mikroBUS](https://www.mikroe.com/mikrobus) headers compa
 
 ## Wi-Fi
 
-Endpoint Domino Wi-Fi using a TP-link Wireless N Nano USB adapter. 
+A Wi-Fi dongle can be connected to the USB port to give the board a networking interface. See the [Networking](../tutorials/networking.md) tutorial for more details and coding examples.
+
 
 ![Wifi](images/domino-wifi.png)

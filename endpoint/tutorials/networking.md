@@ -1,14 +1,14 @@
-# Networking Core
+# Networking
 
 ---
 
-Between .NET and the underlaying OS, Endpoint provides full networking support. From simple socket handling to full cloud support.
+Thanks to .NET, Endpoint provides full networking support. It includes everything from a simple socket handling to full cloud support.
 
 ## Configuration
 
-The network needs to be configured properly before it can be used. For WiFi, SSID and password need to be set for example.
+The network needs to be configured properly before it can be used. For example, Wi-Fi needs SSID and password.
 
-WiFi is currently only supported through USB WiFi dongles containing the RTL8188 chipset.
+Wi-Fi is supported through USB Wi-Fi dongles containing the RTL8188 chipset.
 
 
 ```cs
@@ -48,4 +48,4 @@ network.Enable();
 
 ## MQTT
 
-MQTT, and other common protocols, are supported through one of the many available NuGet packages. `DotNetty.Codecs.Mqtt` is the one used by Azure SDK for example.
+MQTT, and other common protocols, are supported through one of the many available NuGet packages. `DotNetty.Codecs.Mqtt` is the one of the common ones for example.
