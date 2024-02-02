@@ -36,36 +36,49 @@ Devices with eMMC will automatically boot from eMMC. The system will fail to boo
  ---
 ## Development Machine Setup
 
- Now, that the device is running the Endpoint OS, the development machine can be prepared for remote debug and deploy to the Endpoint device (using USB-C). This can be done using either Visual Studio or VS Code.
+Now, that the device is running the Endpoint OS, the development machine can be prepared for remote debug and deploy to the Endpoint device (using USB-C). This can be done using either Visual Studio or VS Code.
 
- ### Endpoint for Visual Studio
- With Endpoint you can deploy and debug using Visual Studio. Even the free community version. 
+### Endpoint for Visual Studio
+With Endpoint you can deploy and debug using Visual Studio. Even the free community version. 
 
- #### Install Visual Studio
- If you don't already have the latest version of Visual Studio, download it here:
+If you don't already have the latest version of Visual Studio, download it here:
  https://visualstudio.microsoft.com/downloads/
 
- #### Visual Studio Extension (.visx)
+Download and install the newest Endpoint Visual Studio Project System by going to ```Extensions > Manage Extensions```. In the Manage Extensions dialog box select ```Online``` in the left panel. Type ```GHI Endpoint``` in the Search text box in the upper right of the window to search for and install the Endpoint Project System. You'll need to restart Visual Studio to let the extension installer complete the installation. Alternately you can download the Visual Studio Project System from our  [**Downloads**](downloads.md) page and install the latest Endpoint Visual Studio Extension (.vsix). Open or double click on the file to install the extension.
 
- Download and install the newest Endpoint Visual Studio Project System by going to ```Extensions > Manage Extensions```. In the Manage Extensions dialog box select ```Online``` in the left panel. Type ```GHI Endpoint``` in the Search text box in the upper right of the window to search for and install the Endpoint Project System. You'll need to restart Visual Studio to let the extension installer complete the installation.
+After installing the .vsix file, create a new .NET 8 application. By default the .NET application will run on the PC. We need to switch to run the program on the Endpoint device. 
 
-Alternately you can download the Visual Studio Project System from our  [**Downloads**](downloads.md) page and install the latest Endpoint Visual Studio Extension (.vsix). Open or double click on the file to install the extension.
+At the top of the Visual Studio menu navigate to `Debug -> Options`
 
- #### Endpoint Debugger
+![Navigate to Debug Options](images/debug-options.png)
 
- After installing the .vsix file, create a new .NET 8 application. By default the .NET application will run on the PC. We need to switch to run the program on the Endpoint device. 
+From there navigate to the `Endpoint Debugger` option and make sure the box is checked for `root@192.168.82.2`. If a password was created using the Endpoint [Config](configuration.md) Tool also enter it here. If unchecked the application will only run on the PC. 
 
- At the top of the Visual Studio menu navigate to:
+![Debug Host](images/debug-host.png)
 
- **Debug -> Options**
+ 
+ ### Endpoint for VS Code
 
- ![Navigate to Debug Options](images/debug-options.png)
+Endpoint also works using the VS Code IDE. If you don't already have the latest version, download it here:
+https://code.visualstudio.com/
 
- From there navigate to the `Endpoint Debugger` option and make sure the box is checked for `root@192.168.82.2`. If a password was created using the Endpoint [Config](configuration.md) Tool also enter it here. If unchecked the application will only run on the PC. 
+Visit the extension section from within VS Code and search for and install `Endpoint VSC Debugger`. Alternatively, [Download](downloads.md) and install the latest Endpoint VS Code Extension (.vsix) file manually.
 
-  ![Debug Host](images/debug-host.png)
+![VS Code Extension](images/vscode-extension.png)
 
- #### NuGet Libraries
+ Navigate to `View -> Command Palette`
+
+ ![Select .NET](images/select-dotnet.png)
+
+ Search for **Endpoint** and select `Endpoint:Create Net IoT project`
+
+ ![Search Endpoint](images/search-endpoint.png)
+
+ Give the project a name and location.
+
+  ---
+
+  ## NuGet Libraries
 
  Endpoint uses the standard .NET libraries when available. When a library doesn't existing inside the .NET API relating to embedded hardware we use an Endpoint library to fill in the missing gaps. 
  
@@ -75,33 +88,4 @@ Alternately you can download the Visual Studio Project System from our  [**Downl
 
  Learn more about the Endpoint API [**here**](api/intro.md). 
 
- ---
-
- ### Endpoint for VS Code
-
- Endpoint also works using the VS Code IDE. 
  
-
- #### Install VS Code
- 
- If you don't already have the latest version, download it here:
-
- https://code.visualstudio.com/
-
- #### VS Code Extension file 
-
- [**Download**](downloads.md) and install the latest Endpoint VS Code Extension (.vsix) file
-
- ![VS Code Extension](images/vscode-extension.png)
-
- Navigate to:
- 
- **View -> Command Palette**
-
- ![Select .NET](images/select-dotnet.png)
-
- Search **Endpoint** and select:
- 
- **Endpoint:Create Net IoT project** 
-
-  ![Search Endpoint](images/search-endpoint.png)
