@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Configuration </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Configuration ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/configuration.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="configuration">Configuration</h1>
+
+<hr>
+<h2 id="endpoint-config-tool">Endpoint Config Tool</h2>
+<div class="TIP">
+<h5>Tip</h5>
+<p>An Endpoint device must be fully booted in order for the configuration tool to work.</p>
+</div>
+<p>The Endpoint Config tool is used to update &amp; configure Endpoint Hardware. It will also give information about the device.</p>
+<p><a href="downloads.html"><strong>Download</strong></a>
+and install the latest version to begin.</p>
+<p><img src="images/endpoint-config.png" alt="Configuration tool"></p>
+<h4 id="connecting-to-the-device">Connecting to the Device</h4>
+<p>Connect the Endpoint device to the PC using a USB cable. Once the booting sequence is complete, the USER LED will be fully lit. Press <strong>Connect</strong> on the Config tool app. The tool will display device information once connected</p>
+<p><img src="images/device-info.png" alt="Device Information"></p>
+<h4 id="setting-up-a-device-password">Setting up a Device Password</h4>
+<p>Creating a device password is optional. To create a password for the device, select <strong>Security -&gt; Change Password</strong>.</p>
+<p><img src="images/menu-password.png" alt="Create Password"></p>
+<p>After selecting a window will appear to enter our a new password and verify it's correct.</p>
+<p><img src="images/password-update.png" alt="Create Password"></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>We can remove an existing password from a device by leaving the fields blank and clicking OK</p>
+</div>
+<p>After creating or changing a password, the device will disconnect. To reconnect we will need to add the password we created.</p>
+<p>Once the correct password is entered, Endpoint Config on the users machine will save the password in the box. Meaning you don't have to enter it every time you use the tool. If you move the device to another computer you'll need to enter the password to connect.</p>
+<p><img src="images/connecting-password.png" alt="Connecting with Password"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>There is no way to retrieve a forgotten password, the device must be completely erased and a new image created.</p>
+</div>
+<p>We also need to set up the programming IDE with our new password.</p>
+<p>Create or open an existing .NET project and navigate to</p>
+<p><strong>Debug -&gt; Options</strong></p>
+<p><img src="images/debug-options.png" alt="Navigate to Debug Options"></p>
+<p>Select Endpoint Debugger and highlight the SSH connection and click <strong>Edit</strong></p>
+<p>Add the newly created password and click <strong>OK</strong>.</p>
+<p><img src="images/vs-password.png" alt="Navigate to Debug Options"></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/configuration.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

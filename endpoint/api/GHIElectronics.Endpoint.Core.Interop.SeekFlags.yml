@@ -1,0 +1,109 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Core.Interop.SeekFlags
+  commentId: T:GHIElectronics.Endpoint.Core.Interop.SeekFlags
+  id: Interop.SeekFlags
+  parent: GHIElectronics.Endpoint.Core
+  children:
+  - GHIElectronics.Endpoint.Core.Interop.SeekFlags.SEEK_SET
+  langs:
+  - csharp
+  - vb
+  name: Interop.SeekFlags
+  nameWithType: Interop.SeekFlags
+  fullName: GHIElectronics.Endpoint.Core.Interop.SeekFlags
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SeekFlags
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 17
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public enum Interop.SeekFlags
+    content.vb: Public Enum Interop.SeekFlags
+- uid: GHIElectronics.Endpoint.Core.Interop.SeekFlags.SEEK_SET
+  commentId: F:GHIElectronics.Endpoint.Core.Interop.SeekFlags.SEEK_SET
+  id: SEEK_SET
+  parent: GHIElectronics.Endpoint.Core.Interop.SeekFlags
+  langs:
+  - csharp
+  - vb
+  name: SEEK_SET
+  nameWithType: Interop.SeekFlags.SEEK_SET
+  fullName: GHIElectronics.Endpoint.Core.Interop.SeekFlags.SEEK_SET
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SEEK_SET
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 19
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: SEEK_SET = 0
+    return:
+      type: GHIElectronics.Endpoint.Core.Interop.SeekFlags
+references:
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+- uid: GHIElectronics.Endpoint.Core.Interop.SeekFlags
+  commentId: T:GHIElectronics.Endpoint.Core.Interop.SeekFlags
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.Interop.html
+  name: Interop.SeekFlags
+  nameWithType: Interop.SeekFlags
+  fullName: GHIElectronics.Endpoint.Core.Interop.SeekFlags
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.SeekFlags
+    name: SeekFlags
+    href: GHIElectronics.Endpoint.Core.Interop.SeekFlags.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.SeekFlags
+    name: SeekFlags
+    href: GHIElectronics.Endpoint.Core.Interop.SeekFlags.html

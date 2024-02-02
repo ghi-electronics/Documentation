@@ -1,0 +1,93 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseData
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseData
+  id: InputReader.RaiseData
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: InputReader.RaiseData
+  nameWithType: InputReader.RaiseData
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseData
+  type: Delegate
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/InputReader.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: RaiseData
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/InputReader.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.UsbHost
+  namespace: GHIElectronics.Endpoint.Devices.UsbHost
+  syntax:
+    content: public delegate void InputReader.RaiseData(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    content.vb: Public Delegate Sub InputReader.RaiseData(data As Byte())
+references:
+- uid: GHIElectronics.Endpoint.Devices.UsbHost
+  commentId: N:GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.UsbHost
+  nameWithType: GHIElectronics.Endpoint.Devices.UsbHost
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost
+    name: UsbHost
+    href: GHIElectronics.Endpoint.Devices.UsbHost.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost
+    name: UsbHost
+    href: GHIElectronics.Endpoint.Devices.UsbHost.html
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )

@@ -1,0 +1,117 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Network
+  commentId: N:GHIElectronics.Endpoint.Devices.Network
+  id: GHIElectronics.Endpoint.Devices.Network
+  children:
+  - GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs
+  - GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventHandler
+  - GHIElectronics.Endpoint.Devices.Network.NetworkController
+  - GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings
+  - GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType
+  - GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventArgs
+  - GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventHandler
+  - GHIElectronics.Endpoint.Devices.Network.WiFiNetworkInterfaceSettings
+  langs:
+  - csharp
+  - vb
+  name: GHIElectronics.Endpoint.Devices.Network
+  nameWithType: GHIElectronics.Endpoint.Devices.Network
+  fullName: GHIElectronics.Endpoint.Devices.Network
+  type: Namespace
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Network
+references:
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventHandler
+  commentId: T:GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventHandler
+  parent: GHIElectronics.Endpoint.Devices.Network
+  href: GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventHandler.html
+  name: NetworkLinkConnectedChangedEventHandler
+  nameWithType: NetworkLinkConnectedChangedEventHandler
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventHandler
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventHandler
+  commentId: T:GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventHandler
+  parent: GHIElectronics.Endpoint.Devices.Network
+  href: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventHandler.html
+  name: NetworkAddressChangedEventHandler
+  nameWithType: NetworkAddressChangedEventHandler
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventHandler
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventArgs
+  commentId: T:GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventArgs
+  parent: GHIElectronics.Endpoint.Devices.Network
+  href: GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventArgs.html
+  name: NetworkLinkConnectedChangedEventArgs
+  nameWithType: NetworkLinkConnectedChangedEventArgs
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventArgs
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs
+  commentId: T:GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs
+  parent: GHIElectronics.Endpoint.Devices.Network
+  href: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs.html
+  name: NetworkAddressChangedEventArgs
+  nameWithType: NetworkAddressChangedEventArgs
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType
+  commentId: T:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType
+  parent: GHIElectronics.Endpoint.Devices.Network
+  href: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.html
+  name: NetworkInterfaceType
+  nameWithType: NetworkInterfaceType
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings
+  commentId: T:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings
+  parent: GHIElectronics.Endpoint.Devices.Network
+  href: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.html
+  name: NetworkInterfaceSettings
+  nameWithType: NetworkInterfaceSettings
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings
+- uid: GHIElectronics.Endpoint.Devices.Network.WiFiNetworkInterfaceSettings
+  commentId: T:GHIElectronics.Endpoint.Devices.Network.WiFiNetworkInterfaceSettings
+  href: GHIElectronics.Endpoint.Devices.Network.WiFiNetworkInterfaceSettings.html
+  name: WiFiNetworkInterfaceSettings
+  nameWithType: WiFiNetworkInterfaceSettings
+  fullName: GHIElectronics.Endpoint.Devices.Network.WiFiNetworkInterfaceSettings
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkController
+  commentId: T:GHIElectronics.Endpoint.Devices.Network.NetworkController
+  parent: GHIElectronics.Endpoint.Devices.Network
+  href: GHIElectronics.Endpoint.Devices.Network.NetworkController.html
+  name: NetworkController
+  nameWithType: NetworkController
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkController
+- uid: GHIElectronics.Endpoint.Devices.Network
+  commentId: N:GHIElectronics.Endpoint.Devices.Network
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Network
+  nameWithType: GHIElectronics.Endpoint.Devices.Network
+  fullName: GHIElectronics.Endpoint.Devices.Network
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Network
+    name: Network
+    href: GHIElectronics.Endpoint.Devices.Network.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Network
+    name: Network
+    href: GHIElectronics.Endpoint.Devices.Network.html

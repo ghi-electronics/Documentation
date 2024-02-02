@@ -1,0 +1,69 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Rtc
+  commentId: N:GHIElectronics.Endpoint.Devices.Rtc
+  id: GHIElectronics.Endpoint.Devices.Rtc
+  children:
+  - GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
+  - GHIElectronics.Endpoint.Devices.Rtc.RtcController
+  langs:
+  - csharp
+  - vb
+  name: GHIElectronics.Endpoint.Devices.Rtc
+  nameWithType: GHIElectronics.Endpoint.Devices.Rtc
+  fullName: GHIElectronics.Endpoint.Devices.Rtc
+  type: Namespace
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Rtc
+references:
+- uid: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
+  commentId: T:GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
+  parent: GHIElectronics.Endpoint.Devices.Rtc
+  href: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode.html
+  name: BatteryChargeMode
+  nameWithType: BatteryChargeMode
+  fullName: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
+- uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController
+  commentId: T:GHIElectronics.Endpoint.Devices.Rtc.RtcController
+  href: GHIElectronics.Endpoint.Devices.Rtc.RtcController.html
+  name: RtcController
+  nameWithType: RtcController
+  fullName: GHIElectronics.Endpoint.Devices.Rtc.RtcController
+- uid: GHIElectronics.Endpoint.Devices.Rtc
+  commentId: N:GHIElectronics.Endpoint.Devices.Rtc
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Rtc
+  nameWithType: GHIElectronics.Endpoint.Devices.Rtc
+  fullName: GHIElectronics.Endpoint.Devices.Rtc
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Rtc
+    name: Rtc
+    href: GHIElectronics.Endpoint.Devices.Rtc.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Rtc
+    name: Rtc
+    href: GHIElectronics.Endpoint.Devices.Rtc.html

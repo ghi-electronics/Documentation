@@ -1,0 +1,307 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.UsbHost
+  commentId: N:GHIElectronics.Endpoint.Devices.UsbHost
+  id: GHIElectronics.Endpoint.Devices.UsbHost
+  children:
+  - GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice
+  - GHIElectronics.Endpoint.Devices.UsbHost.DeviceConnectionEventArgs
+  - GHIElectronics.Endpoint.Devices.UsbHost.DeviceConnectionStatus
+  - GHIElectronics.Endpoint.Devices.UsbHost.EventCode
+  - GHIElectronics.Endpoint.Devices.UsbHost.EventType
+  - GHIElectronics.Endpoint.Devices.UsbHost.HidInput
+  - GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseDisconnected
+  - GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseKeyPress
+  - GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseMouseMove
+  - GHIElectronics.Endpoint.Devices.UsbHost.InputReader
+  - GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseData
+  - GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseDisconnected
+  - GHIElectronics.Endpoint.Devices.UsbHost.KeyPressEvent
+  - GHIElectronics.Endpoint.Devices.UsbHost.KeyState
+  - GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis
+  - GHIElectronics.Endpoint.Devices.UsbHost.MouseMoveEvent
+  - GHIElectronics.Endpoint.Devices.UsbHost.OnConnectionChanged
+  - GHIElectronics.Endpoint.Devices.UsbHost.UsbHostController
+  - GHIElectronics.Endpoint.Devices.UsbHost.Webcam
+  - GHIElectronics.Endpoint.Devices.UsbHost.Webcam.FrameReceived
+  langs:
+  - csharp
+  - vb
+  name: GHIElectronics.Endpoint.Devices.UsbHost
+  nameWithType: GHIElectronics.Endpoint.Devices.UsbHost
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost
+  type: Namespace
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.UsbHost
+references:
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice
+  href: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice.html
+  name: BaseDevice
+  nameWithType: BaseDevice
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.EventCode
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.EventCode
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.EventCode.html
+  name: EventCode
+  nameWithType: EventCode
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.EventCode
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.EventType
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.EventType
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.EventType.html
+  name: EventType
+  nameWithType: EventType
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.EventType
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.HidInput
+  href: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.html
+  name: HidInput
+  nameWithType: HidInput
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.HidInput
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseKeyPress
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseKeyPress
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.html
+  name: HidInput.RaiseKeyPress
+  nameWithType: HidInput.RaiseKeyPress
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseKeyPress
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput
+    name: HidInput
+    href: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseKeyPress
+    name: RaiseKeyPress
+    href: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseKeyPress.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput
+    name: HidInput
+    href: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseKeyPress
+    name: RaiseKeyPress
+    href: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseKeyPress.html
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseMouseMove
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseMouseMove
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.html
+  name: HidInput.RaiseMouseMove
+  nameWithType: HidInput.RaiseMouseMove
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseMouseMove
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput
+    name: HidInput
+    href: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseMouseMove
+    name: RaiseMouseMove
+    href: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseMouseMove.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput
+    name: HidInput
+    href: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseMouseMove
+    name: RaiseMouseMove
+    href: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseMouseMove.html
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseDisconnected
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseDisconnected
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.html
+  name: HidInput.RaiseDisconnected
+  nameWithType: HidInput.RaiseDisconnected
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseDisconnected
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput
+    name: HidInput
+    href: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseDisconnected
+    name: RaiseDisconnected
+    href: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseDisconnected.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput
+    name: HidInput
+    href: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseDisconnected
+    name: RaiseDisconnected
+    href: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseDisconnected.html
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.InputReader
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.InputReader
+  href: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.html
+  name: InputReader
+  nameWithType: InputReader
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.InputReader
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseData
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseData
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.html
+  name: InputReader.RaiseData
+  nameWithType: InputReader.RaiseData
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseData
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.InputReader
+    name: InputReader
+    href: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseData
+    name: RaiseData
+    href: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseData.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.InputReader
+    name: InputReader
+    href: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseData
+    name: RaiseData
+    href: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseData.html
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseDisconnected
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseDisconnected
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.html
+  name: InputReader.RaiseDisconnected
+  nameWithType: InputReader.RaiseDisconnected
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseDisconnected
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.InputReader
+    name: InputReader
+    href: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseDisconnected
+    name: RaiseDisconnected
+    href: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseDisconnected.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.InputReader
+    name: InputReader
+    href: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseDisconnected
+    name: RaiseDisconnected
+    href: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseDisconnected.html
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.KeyPressEvent
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.KeyPressEvent
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.KeyPressEvent.html
+  name: KeyPressEvent
+  nameWithType: KeyPressEvent
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.KeyPressEvent
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.KeyState
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.KeyState
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.KeyState.html
+  name: KeyState
+  nameWithType: KeyState
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.KeyState
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis.html
+  name: MouseAxis
+  nameWithType: MouseAxis
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.MouseMoveEvent
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.MouseMoveEvent
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.MouseMoveEvent.html
+  name: MouseMoveEvent
+  nameWithType: MouseMoveEvent
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.MouseMoveEvent
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.DeviceConnectionStatus
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.DeviceConnectionStatus
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.DeviceConnectionStatus.html
+  name: DeviceConnectionStatus
+  nameWithType: DeviceConnectionStatus
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.DeviceConnectionStatus
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.OnConnectionChanged
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.OnConnectionChanged
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.OnConnectionChanged.html
+  name: OnConnectionChanged
+  nameWithType: OnConnectionChanged
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.OnConnectionChanged
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.DeviceConnectionEventArgs
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.DeviceConnectionEventArgs
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.DeviceConnectionEventArgs.html
+  name: DeviceConnectionEventArgs
+  nameWithType: DeviceConnectionEventArgs
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.DeviceConnectionEventArgs
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.UsbHostController
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.UsbHostController
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.UsbHostController.html
+  name: UsbHostController
+  nameWithType: UsbHostController
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.UsbHostController
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.Webcam
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.Webcam
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.Webcam.html
+  name: Webcam
+  nameWithType: Webcam
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.Webcam
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.Webcam.FrameReceived
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.Webcam.FrameReceived
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.Webcam.html
+  name: Webcam.FrameReceived
+  nameWithType: Webcam.FrameReceived
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.Webcam.FrameReceived
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.Webcam
+    name: Webcam
+    href: GHIElectronics.Endpoint.Devices.UsbHost.Webcam.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.Webcam.FrameReceived
+    name: FrameReceived
+    href: GHIElectronics.Endpoint.Devices.UsbHost.Webcam.FrameReceived.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.Webcam
+    name: Webcam
+    href: GHIElectronics.Endpoint.Devices.UsbHost.Webcam.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.Webcam.FrameReceived
+    name: FrameReceived
+    href: GHIElectronics.Endpoint.Devices.UsbHost.Webcam.FrameReceived.html
+- uid: GHIElectronics.Endpoint.Devices.UsbHost
+  commentId: N:GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.UsbHost
+  nameWithType: GHIElectronics.Endpoint.Devices.UsbHost
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost
+    name: UsbHost
+    href: GHIElectronics.Endpoint.Devices.UsbHost.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost
+    name: UsbHost
+    href: GHIElectronics.Endpoint.Devices.UsbHost.html

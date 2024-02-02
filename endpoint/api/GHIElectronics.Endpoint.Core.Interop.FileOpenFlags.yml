@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+  commentId: T:GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+  id: Interop.FileOpenFlags
+  parent: GHIElectronics.Endpoint.Core
+  children:
+  - GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.O_NONBLOCK
+  - GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.O_RDONLY
+  - GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.O_RDWR
+  - GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.O_SYNC
+  langs:
+  - csharp
+  - vb
+  name: Interop.FileOpenFlags
+  nameWithType: Interop.FileOpenFlags
+  fullName: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: FileOpenFlags
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public enum Interop.FileOpenFlags
+    content.vb: Public Enum Interop.FileOpenFlags
+- uid: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.O_RDONLY
+  commentId: F:GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.O_RDONLY
+  id: O_RDONLY
+  parent: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+  langs:
+  - csharp
+  - vb
+  name: O_RDONLY
+  nameWithType: Interop.FileOpenFlags.O_RDONLY
+  fullName: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.O_RDONLY
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: O_RDONLY
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 11
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: O_RDONLY = 0
+    return:
+      type: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+- uid: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.O_RDWR
+  commentId: F:GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.O_RDWR
+  id: O_RDWR
+  parent: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+  langs:
+  - csharp
+  - vb
+  name: O_RDWR
+  nameWithType: Interop.FileOpenFlags.O_RDWR
+  fullName: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.O_RDWR
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: O_RDWR
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 12
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: O_RDWR = 2
+    return:
+      type: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+- uid: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.O_NONBLOCK
+  commentId: F:GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.O_NONBLOCK
+  id: O_NONBLOCK
+  parent: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+  langs:
+  - csharp
+  - vb
+  name: O_NONBLOCK
+  nameWithType: Interop.FileOpenFlags.O_NONBLOCK
+  fullName: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.O_NONBLOCK
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: O_NONBLOCK
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 13
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: O_NONBLOCK = 2048
+    return:
+      type: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+- uid: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.O_SYNC
+  commentId: F:GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.O_SYNC
+  id: O_SYNC
+  parent: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+  langs:
+  - csharp
+  - vb
+  name: O_SYNC
+  nameWithType: Interop.FileOpenFlags.O_SYNC
+  fullName: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.O_SYNC
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: O_SYNC
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 14
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: O_SYNC = 1052672
+    return:
+      type: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+references:
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+- uid: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+  commentId: T:GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.Interop.html
+  name: Interop.FileOpenFlags
+  nameWithType: Interop.FileOpenFlags
+  fullName: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+    name: FileOpenFlags
+    href: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+    name: FileOpenFlags
+    href: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.html

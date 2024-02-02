@@ -1,0 +1,716 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  id: GHIElectronics.Endpoint.Core
+  children:
+  - GHIElectronics.Endpoint.Core.EPM815
+  - GHIElectronics.Endpoint.Core.EPM815.Adc
+  - GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  - GHIElectronics.Endpoint.Core.EPM815.Can
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+  - GHIElectronics.Endpoint.Core.EPM815.I2c
+  - GHIElectronics.Endpoint.Core.EPM815.Pwm
+  - GHIElectronics.Endpoint.Core.EPM815.Pwm.Pin
+  - GHIElectronics.Endpoint.Core.EPM815.Sdmmc
+  - GHIElectronics.Endpoint.Core.EPM815.SerialPort
+  - GHIElectronics.Endpoint.Core.EPM815.Spi
+  - GHIElectronics.Endpoint.Core.Interop
+  - GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+  - GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+  - GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+  - GHIElectronics.Endpoint.Core.Interop.SeekFlags
+  - GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+  - GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler
+  - GHIElectronics.Endpoint.Core.NativeUtils
+  - GHIElectronics.Endpoint.Core.Processor
+  - GHIElectronics.Endpoint.Core.Register
+  - GHIElectronics.Endpoint.Core.Script
+  langs:
+  - csharp
+  - vb
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  type: Namespace
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+references:
+- uid: GHIElectronics.Endpoint.Core.EPM815
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815
+  nameWithType: EPM815
+  fullName: GHIElectronics.Endpoint.Core.EPM815
+- uid: GHIElectronics.Endpoint.Core.EPM815.Adc
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Adc
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Adc
+  nameWithType: EPM815.Adc
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Adc
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Adc
+    name: Adc
+    href: GHIElectronics.Endpoint.Core.EPM815.Adc.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Adc
+    name: Adc
+    href: GHIElectronics.Endpoint.Core.EPM815.Adc.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Adc.Pin
+  nameWithType: EPM815.Adc.Pin
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Adc
+    name: Adc
+    href: GHIElectronics.Endpoint.Core.EPM815.Adc.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+    name: Pin
+    href: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Adc
+    name: Adc
+    href: GHIElectronics.Endpoint.Core.EPM815.Adc.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+    name: Pin
+    href: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Can
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Can
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Can
+  nameWithType: EPM815.Can
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Can
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Can
+    name: Can
+    href: GHIElectronics.Endpoint.Core.EPM815.Can.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Can
+    name: Can
+    href: GHIElectronics.Endpoint.Core.EPM815.Can.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio
+  nameWithType: EPM815.Gpio
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.Alternate
+  nameWithType: EPM815.Gpio.Alternate
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+    name: Alternate
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+    name: Alternate
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.Port
+  nameWithType: EPM815.Gpio.Port
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+    name: Port
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+    name: Port
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.Moder
+  nameWithType: EPM815.Gpio.Moder
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+    name: Moder
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+    name: Moder
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.OutputType
+  nameWithType: EPM815.Gpio.OutputType
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+    name: OutputType
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+    name: OutputType
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.Pull
+  nameWithType: EPM815.Gpio.Pull
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull
+    name: Pull
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull
+    name: Pull
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.Speed
+  nameWithType: EPM815.Gpio.Speed
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+    name: Speed
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+    name: Speed
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.Edge
+  nameWithType: EPM815.Gpio.Edge
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+    name: Edge
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+    name: Edge
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.Pin
+  nameWithType: EPM815.Gpio.Pin
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin
+    name: Pin
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin
+    name: Pin
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.I2c
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.I2c
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.I2c
+  nameWithType: EPM815.I2c
+  fullName: GHIElectronics.Endpoint.Core.EPM815.I2c
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.I2c
+    name: I2c
+    href: GHIElectronics.Endpoint.Core.EPM815.I2c.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.I2c
+    name: I2c
+    href: GHIElectronics.Endpoint.Core.EPM815.I2c.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Pwm
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Pwm
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Pwm
+  nameWithType: EPM815.Pwm
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Pwm
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Pwm
+    name: Pwm
+    href: GHIElectronics.Endpoint.Core.EPM815.Pwm.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Pwm
+    name: Pwm
+    href: GHIElectronics.Endpoint.Core.EPM815.Pwm.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Pwm.Pin
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Pwm.Pin
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Pwm.Pin
+  nameWithType: EPM815.Pwm.Pin
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Pwm.Pin
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Pwm
+    name: Pwm
+    href: GHIElectronics.Endpoint.Core.EPM815.Pwm.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Pwm.Pin
+    name: Pin
+    href: GHIElectronics.Endpoint.Core.EPM815.Pwm.Pin.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Pwm
+    name: Pwm
+    href: GHIElectronics.Endpoint.Core.EPM815.Pwm.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Pwm.Pin
+    name: Pin
+    href: GHIElectronics.Endpoint.Core.EPM815.Pwm.Pin.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Sdmmc
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Sdmmc
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Sdmmc
+  nameWithType: EPM815.Sdmmc
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Sdmmc
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Sdmmc
+    name: Sdmmc
+    href: GHIElectronics.Endpoint.Core.EPM815.Sdmmc.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Sdmmc
+    name: Sdmmc
+    href: GHIElectronics.Endpoint.Core.EPM815.Sdmmc.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.SerialPort
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.SerialPort
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.SerialPort
+  nameWithType: EPM815.SerialPort
+  fullName: GHIElectronics.Endpoint.Core.EPM815.SerialPort
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.SerialPort
+    name: SerialPort
+    href: GHIElectronics.Endpoint.Core.EPM815.SerialPort.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.SerialPort
+    name: SerialPort
+    href: GHIElectronics.Endpoint.Core.EPM815.SerialPort.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Spi
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Spi
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Spi
+  nameWithType: EPM815.Spi
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Spi
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Spi
+    name: Spi
+    href: GHIElectronics.Endpoint.Core.EPM815.Spi.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Spi
+    name: Spi
+    href: GHIElectronics.Endpoint.Core.EPM815.Spi.html
+- uid: GHIElectronics.Endpoint.Core.Interop
+  commentId: T:GHIElectronics.Endpoint.Core.Interop
+  href: GHIElectronics.Endpoint.Core.Interop.html
+  name: Interop
+  nameWithType: Interop
+  fullName: GHIElectronics.Endpoint.Core.Interop
+- uid: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+  commentId: T:GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.Interop.html
+  name: Interop.FileOpenFlags
+  nameWithType: Interop.FileOpenFlags
+  fullName: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+    name: FileOpenFlags
+    href: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+    name: FileOpenFlags
+    href: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags.html
+- uid: GHIElectronics.Endpoint.Core.Interop.SeekFlags
+  commentId: T:GHIElectronics.Endpoint.Core.Interop.SeekFlags
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.Interop.html
+  name: Interop.SeekFlags
+  nameWithType: Interop.SeekFlags
+  fullName: GHIElectronics.Endpoint.Core.Interop.SeekFlags
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.SeekFlags
+    name: SeekFlags
+    href: GHIElectronics.Endpoint.Core.Interop.SeekFlags.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.SeekFlags
+    name: SeekFlags
+    href: GHIElectronics.Endpoint.Core.Interop.SeekFlags.html
+- uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+  commentId: T:GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.Interop.html
+  name: Interop.MemoryMappedProtections
+  nameWithType: Interop.MemoryMappedProtections
+  fullName: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+    name: MemoryMappedProtections
+    href: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+    name: MemoryMappedProtections
+    href: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.html
+- uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+  commentId: T:GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.Interop.html
+  name: Interop.MemoryMappedFlags
+  nameWithType: Interop.MemoryMappedFlags
+  fullName: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+    name: MemoryMappedFlags
+    href: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+    name: MemoryMappedFlags
+    href: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags.html
+- uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+  commentId: T:GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+  href: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.html
+  name: NativeRpmsgHelper
+  nameWithType: NativeRpmsgHelper
+  fullName: GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+- uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler
+  commentId: T:GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.html
+  name: NativeRpmsgHelper.DataReceivedEventHandler
+  nameWithType: NativeRpmsgHelper.DataReceivedEventHandler
+  fullName: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+    name: NativeRpmsgHelper
+    href: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler
+    name: DataReceivedEventHandler
+    href: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+    name: NativeRpmsgHelper
+    href: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler
+    name: DataReceivedEventHandler
+    href: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler.html
+- uid: GHIElectronics.Endpoint.Core.Processor
+  commentId: T:GHIElectronics.Endpoint.Core.Processor
+  href: GHIElectronics.Endpoint.Core.Processor.html
+  name: Processor
+  nameWithType: Processor
+  fullName: GHIElectronics.Endpoint.Core.Processor
+- uid: GHIElectronics.Endpoint.Core.Register
+  commentId: T:GHIElectronics.Endpoint.Core.Register
+  href: GHIElectronics.Endpoint.Core.Register.html
+  name: Register
+  nameWithType: Register
+  fullName: GHIElectronics.Endpoint.Core.Register
+- uid: GHIElectronics.Endpoint.Core.Script
+  commentId: T:GHIElectronics.Endpoint.Core.Script
+  href: GHIElectronics.Endpoint.Core.Script.html
+  name: Script
+  nameWithType: Script
+  fullName: GHIElectronics.Endpoint.Core.Script
+- uid: GHIElectronics.Endpoint.Core.NativeUtils
+  commentId: T:GHIElectronics.Endpoint.Core.NativeUtils
+  href: GHIElectronics.Endpoint.Core.NativeUtils.html
+  name: NativeUtils
+  nameWithType: NativeUtils
+  fullName: GHIElectronics.Endpoint.Core.NativeUtils
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html

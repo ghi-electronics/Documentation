@@ -1,0 +1,271 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Native.Power.WakeupPin
+  commentId: T:GHIElectronics.Endpoint.Native.Power.WakeupPin
+  id: Power.WakeupPin
+  parent: GHIElectronics.Endpoint.Native
+  children:
+  - GHIElectronics.Endpoint.Native.Power.WakeupPin.None
+  - GHIElectronics.Endpoint.Native.Power.WakeupPin.PA0
+  - GHIElectronics.Endpoint.Native.Power.WakeupPin.PA2
+  - GHIElectronics.Endpoint.Native.Power.WakeupPin.PC1
+  - GHIElectronics.Endpoint.Native.Power.WakeupPin.PC13
+  - GHIElectronics.Endpoint.Native.Power.WakeupPin.PI11
+  - GHIElectronics.Endpoint.Native.Power.WakeupPin.PI8
+  langs:
+  - csharp
+  - vb
+  name: Power.WakeupPin
+  nameWithType: Power.WakeupPin
+  fullName: GHIElectronics.Endpoint.Native.Power.WakeupPin
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: WakeupPin
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+    startLine: 8
+  assemblies:
+  - GHIElectronics.Endpoint.Native
+  namespace: GHIElectronics.Endpoint.Native
+  syntax:
+    content: 'public enum Power.WakeupPin : uint'
+    content.vb: Public Enum Power.WakeupPin As UInteger
+- uid: GHIElectronics.Endpoint.Native.Power.WakeupPin.PA0
+  commentId: F:GHIElectronics.Endpoint.Native.Power.WakeupPin.PA0
+  id: PA0
+  parent: GHIElectronics.Endpoint.Native.Power.WakeupPin
+  langs:
+  - csharp
+  - vb
+  name: PA0
+  nameWithType: Power.WakeupPin.PA0
+  fullName: GHIElectronics.Endpoint.Native.Power.WakeupPin.PA0
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PA0
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.Native
+  namespace: GHIElectronics.Endpoint.Native
+  syntax:
+    content: PA0 = 0
+    return:
+      type: GHIElectronics.Endpoint.Native.Power.WakeupPin
+- uid: GHIElectronics.Endpoint.Native.Power.WakeupPin.PA2
+  commentId: F:GHIElectronics.Endpoint.Native.Power.WakeupPin.PA2
+  id: PA2
+  parent: GHIElectronics.Endpoint.Native.Power.WakeupPin
+  langs:
+  - csharp
+  - vb
+  name: PA2
+  nameWithType: Power.WakeupPin.PA2
+  fullName: GHIElectronics.Endpoint.Native.Power.WakeupPin.PA2
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PA2
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.Native
+  namespace: GHIElectronics.Endpoint.Native
+  syntax:
+    content: PA2 = 1
+    return:
+      type: GHIElectronics.Endpoint.Native.Power.WakeupPin
+- uid: GHIElectronics.Endpoint.Native.Power.WakeupPin.PC13
+  commentId: F:GHIElectronics.Endpoint.Native.Power.WakeupPin.PC13
+  id: PC13
+  parent: GHIElectronics.Endpoint.Native.Power.WakeupPin
+  langs:
+  - csharp
+  - vb
+  name: PC13
+  nameWithType: Power.WakeupPin.PC13
+  fullName: GHIElectronics.Endpoint.Native.Power.WakeupPin.PC13
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PC13
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+    startLine: 11
+  assemblies:
+  - GHIElectronics.Endpoint.Native
+  namespace: GHIElectronics.Endpoint.Native
+  syntax:
+    content: PC13 = 2
+    return:
+      type: GHIElectronics.Endpoint.Native.Power.WakeupPin
+- uid: GHIElectronics.Endpoint.Native.Power.WakeupPin.PI8
+  commentId: F:GHIElectronics.Endpoint.Native.Power.WakeupPin.PI8
+  id: PI8
+  parent: GHIElectronics.Endpoint.Native.Power.WakeupPin
+  langs:
+  - csharp
+  - vb
+  name: PI8
+  nameWithType: Power.WakeupPin.PI8
+  fullName: GHIElectronics.Endpoint.Native.Power.WakeupPin.PI8
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PI8
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+    startLine: 12
+  assemblies:
+  - GHIElectronics.Endpoint.Native
+  namespace: GHIElectronics.Endpoint.Native
+  syntax:
+    content: PI8 = 3
+    return:
+      type: GHIElectronics.Endpoint.Native.Power.WakeupPin
+- uid: GHIElectronics.Endpoint.Native.Power.WakeupPin.PI11
+  commentId: F:GHIElectronics.Endpoint.Native.Power.WakeupPin.PI11
+  id: PI11
+  parent: GHIElectronics.Endpoint.Native.Power.WakeupPin
+  langs:
+  - csharp
+  - vb
+  name: PI11
+  nameWithType: Power.WakeupPin.PI11
+  fullName: GHIElectronics.Endpoint.Native.Power.WakeupPin.PI11
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PI11
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+    startLine: 13
+  assemblies:
+  - GHIElectronics.Endpoint.Native
+  namespace: GHIElectronics.Endpoint.Native
+  syntax:
+    content: PI11 = 4
+    return:
+      type: GHIElectronics.Endpoint.Native.Power.WakeupPin
+- uid: GHIElectronics.Endpoint.Native.Power.WakeupPin.PC1
+  commentId: F:GHIElectronics.Endpoint.Native.Power.WakeupPin.PC1
+  id: PC1
+  parent: GHIElectronics.Endpoint.Native.Power.WakeupPin
+  langs:
+  - csharp
+  - vb
+  name: PC1
+  nameWithType: Power.WakeupPin.PC1
+  fullName: GHIElectronics.Endpoint.Native.Power.WakeupPin.PC1
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PC1
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+    startLine: 14
+  assemblies:
+  - GHIElectronics.Endpoint.Native
+  namespace: GHIElectronics.Endpoint.Native
+  syntax:
+    content: PC1 = 5
+    return:
+      type: GHIElectronics.Endpoint.Native.Power.WakeupPin
+- uid: GHIElectronics.Endpoint.Native.Power.WakeupPin.None
+  commentId: F:GHIElectronics.Endpoint.Native.Power.WakeupPin.None
+  id: None
+  parent: GHIElectronics.Endpoint.Native.Power.WakeupPin
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: Power.WakeupPin.None
+  fullName: GHIElectronics.Endpoint.Native.Power.WakeupPin.None
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: None
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+    startLine: 15
+  assemblies:
+  - GHIElectronics.Endpoint.Native
+  namespace: GHIElectronics.Endpoint.Native
+  syntax:
+    content: None = 255
+    return:
+      type: GHIElectronics.Endpoint.Native.Power.WakeupPin
+references:
+- uid: GHIElectronics.Endpoint.Native
+  commentId: N:GHIElectronics.Endpoint.Native
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Native
+  nameWithType: GHIElectronics.Endpoint.Native
+  fullName: GHIElectronics.Endpoint.Native
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Native
+    name: Native
+    href: GHIElectronics.Endpoint.Native.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Native
+    name: Native
+    href: GHIElectronics.Endpoint.Native.html
+- uid: GHIElectronics.Endpoint.Native.Power.WakeupPin
+  commentId: T:GHIElectronics.Endpoint.Native.Power.WakeupPin
+  parent: GHIElectronics.Endpoint.Native
+  href: GHIElectronics.Endpoint.Native.Power.html
+  name: Power.WakeupPin
+  nameWithType: Power.WakeupPin
+  fullName: GHIElectronics.Endpoint.Native.Power.WakeupPin
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Native.Power
+    name: Power
+    href: GHIElectronics.Endpoint.Native.Power.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Native.Power.WakeupPin
+    name: WakeupPin
+    href: GHIElectronics.Endpoint.Native.Power.WakeupPin.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Native.Power
+    name: Power
+    href: GHIElectronics.Endpoint.Native.Power.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Native.Power.WakeupPin
+    name: WakeupPin
+    href: GHIElectronics.Endpoint.Native.Power.WakeupPin.html

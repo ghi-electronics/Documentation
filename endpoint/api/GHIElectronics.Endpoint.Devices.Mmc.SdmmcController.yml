@@ -1,0 +1,550 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController
+  commentId: T:GHIElectronics.Endpoint.Devices.Mmc.SdmmcController
+  id: SdmmcController
+  parent: GHIElectronics.Endpoint.Devices.Mmc
+  children:
+  - GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.#ctor(GHIElectronics.Endpoint.Devices.Mmc.SdmmcType)
+  - GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Disable
+  - GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Dispose
+  - GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Enable
+  - GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.OnConnectionChangedEvent
+  langs:
+  - csharp
+  - vb
+  name: SdmmcController
+  nameWithType: SdmmcController
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SdmmcController
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+    startLine: 84
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Sdmmc
+  namespace: GHIElectronics.Endpoint.Devices.Mmc
+  example:
+  - >-
+    Connecting to an SD Card
+
+    <pre><code class="lang-csharp">using GHIElectronics.Endpoint.Devices.Mmc;
+
+
+    var sdcard = new SdmmcController(SdmmcType.SdCard2);
+
+    sdcard.OnConnectionChangedEvent += Sdcard_OnConnectionChangedEvent;
+
+    sdcard.Enable();
+
+
+    private static void Sdcard_OnConnectionChangedEvent(SdmmcController sender, DeviceConnectionEventArgs e){
+        Console.WriteLine("Detect SDCard connection changed on" + e.DeviceName + ", status: " + e.DeviceStatus + ", id = " + e.DeviceId);
+    }</code></pre>
+  syntax:
+    content: 'public class SdmmcController : IDisposable'
+    content.vb: Public Class SdmmcController Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.#ctor(GHIElectronics.Endpoint.Devices.Mmc.SdmmcType)
+  commentId: M:GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.#ctor(GHIElectronics.Endpoint.Devices.Mmc.SdmmcType)
+  id: '#ctor(GHIElectronics.Endpoint.Devices.Mmc.SdmmcType)'
+  parent: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController
+  langs:
+  - csharp
+  - vb
+  name: SdmmcController(SdmmcType)
+  nameWithType: SdmmcController.SdmmcController(SdmmcType)
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.SdmmcController(GHIElectronics.Endpoint.Devices.Mmc.SdmmcType)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+    startLine: 96
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Sdmmc
+  namespace: GHIElectronics.Endpoint.Devices.Mmc
+  syntax:
+    content: public SdmmcController(SdmmcType type)
+    parameters:
+    - id: type
+      type: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+    content.vb: Public Sub New(type As SdmmcType)
+  overload: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.#ctor*
+  nameWithType.vb: SdmmcController.New(SdmmcType)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.New(GHIElectronics.Endpoint.Devices.Mmc.SdmmcType)
+  name.vb: New(SdmmcType)
+- uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Enable
+  commentId: M:GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Enable
+  id: Enable
+  parent: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController
+  langs:
+  - csharp
+  - vb
+  name: Enable()
+  nameWithType: SdmmcController.Enable()
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Enable()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Enable
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+    startLine: 103
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Sdmmc
+  namespace: GHIElectronics.Endpoint.Devices.Mmc
+  syntax:
+    content: public void Enable()
+    content.vb: Public Sub Enable()
+  overload: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Enable*
+- uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Disable
+  commentId: M:GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Disable
+  id: Disable
+  parent: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController
+  langs:
+  - csharp
+  - vb
+  name: Disable()
+  nameWithType: SdmmcController.Disable()
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Disable()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Disable
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+    startLine: 110
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Sdmmc
+  namespace: GHIElectronics.Endpoint.Devices.Mmc
+  syntax:
+    content: public void Disable()
+    content.vb: Public Sub Disable()
+  overload: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Disable*
+- uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.OnConnectionChangedEvent
+  commentId: E:GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.OnConnectionChangedEvent
+  id: OnConnectionChangedEvent
+  parent: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController
+  langs:
+  - csharp
+  - vb
+  name: OnConnectionChangedEvent
+  nameWithType: SdmmcController.OnConnectionChangedEvent
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.OnConnectionChangedEvent
+  type: Event
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OnConnectionChangedEvent
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+    startLine: 175
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Sdmmc
+  namespace: GHIElectronics.Endpoint.Devices.Mmc
+  syntax:
+    content: public event OnConnectionChanged OnConnectionChangedEvent
+    return:
+      type: GHIElectronics.Endpoint.Devices.Mmc.OnConnectionChanged
+    content.vb: Public Event OnConnectionChangedEvent As OnConnectionChanged
+- uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Dispose
+  commentId: M:GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Dispose
+  id: Dispose
+  parent: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: SdmmcController.Dispose()
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Dispose()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Dispose
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+    startLine: 296
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Sdmmc
+  namespace: GHIElectronics.Endpoint.Devices.Mmc
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: GHIElectronics.Endpoint.Devices.Mmc
+  commentId: N:GHIElectronics.Endpoint.Devices.Mmc
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Mmc
+  nameWithType: GHIElectronics.Endpoint.Devices.Mmc
+  fullName: GHIElectronics.Endpoint.Devices.Mmc
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Mmc
+    name: Mmc
+    href: GHIElectronics.Endpoint.Devices.Mmc.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Mmc
+    name: Mmc
+    href: GHIElectronics.Endpoint.Devices.Mmc.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.#ctor
+  href: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.html#GHIElectronics_Endpoint_Devices_Mmc_SdmmcController__ctor_GHIElectronics_Endpoint_Devices_Mmc_SdmmcType_
+  name: SdmmcController
+  nameWithType: SdmmcController.SdmmcController
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.SdmmcController
+  nameWithType.vb: SdmmcController.New
+  fullName.vb: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.New
+  name.vb: New
+- uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+  commentId: T:GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+  parent: GHIElectronics.Endpoint.Devices.Mmc
+  href: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType.html
+  name: SdmmcType
+  nameWithType: SdmmcType
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+- uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Enable*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Enable
+  href: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.html#GHIElectronics_Endpoint_Devices_Mmc_SdmmcController_Enable
+  name: Enable
+  nameWithType: SdmmcController.Enable
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Enable
+- uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Disable*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Disable
+  href: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.html#GHIElectronics_Endpoint_Devices_Mmc_SdmmcController_Disable
+  name: Disable
+  nameWithType: SdmmcController.Disable
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Disable
+- uid: GHIElectronics.Endpoint.Devices.Mmc.OnConnectionChanged
+  commentId: T:GHIElectronics.Endpoint.Devices.Mmc.OnConnectionChanged
+  parent: GHIElectronics.Endpoint.Devices.Mmc
+  href: GHIElectronics.Endpoint.Devices.Mmc.OnConnectionChanged.html
+  name: OnConnectionChanged
+  nameWithType: OnConnectionChanged
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.OnConnectionChanged
+- uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Dispose*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Dispose
+  href: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.html#GHIElectronics_Endpoint_Devices_Mmc_SdmmcController_Dispose
+  name: Dispose
+  nameWithType: SdmmcController.Dispose
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

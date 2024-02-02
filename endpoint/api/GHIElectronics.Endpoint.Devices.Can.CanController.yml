@@ -1,0 +1,981 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController
+  commentId: T:GHIElectronics.Endpoint.Devices.Can.CanController
+  id: CanController
+  parent: GHIElectronics.Endpoint.Devices.Can
+  children:
+  - GHIElectronics.Endpoint.Devices.Can.CanController.#ctor(System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Devices.Can.CanController.Disable
+  - GHIElectronics.Endpoint.Devices.Can.CanController.Dispose
+  - GHIElectronics.Endpoint.Devices.Can.CanController.Enable
+  - GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent(System.UInt32)
+  - GHIElectronics.Endpoint.Devices.Can.CanController.EnableFilter(System.UInt32[],System.UInt32[],System.Boolean)
+  - GHIElectronics.Endpoint.Devices.Can.CanController.ErrorReceived
+  - GHIElectronics.Endpoint.Devices.Can.CanController.IsEnabled
+  - GHIElectronics.Endpoint.Devices.Can.CanController.MessageReceived
+  - GHIElectronics.Endpoint.Devices.Can.CanController.MessagesToRead
+  - GHIElectronics.Endpoint.Devices.Can.CanController.Read
+  - GHIElectronics.Endpoint.Devices.Can.CanController.ReadBufferSize
+  - GHIElectronics.Endpoint.Devices.Can.CanController.Reset
+  - GHIElectronics.Endpoint.Devices.Can.CanController.Write(GHIElectronics.Endpoint.Devices.Can.CanMessage)
+  langs:
+  - csharp
+  - vb
+  name: CanController
+  nameWithType: CanController
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: CanController
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 89
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  example:
+  - >-
+    <pre><code class="lang-csharp">using GHIElectronics.Endpoint.Core;
+
+    using GHIElectronics.Endpoint.Devices.Can;
+
+
+    var canController = new CanController(EPM815.Can.Can2, 250_000, 500_000);
+
+
+    int messageCount = 0;
+
+    canController.MessageReceived += (a) =&gt;{
+        messageCount++;
+        Console.WriteLine("Receiving message: " + messageCount);
+    };
+
+
+    canController.ErrorReceived += (a, b) =&gt;{
+        uint error = (uint)b.Error;
+        if ((error &amp; (uint)CanError.ErrorBusOff) == (uint)CanError.ErrorBusOff){
+            Console.WriteLine("Error bus off");
+        }
+        else{
+            Console.WriteLine("Receiving error: 0x" + error.ToString("x8"));
+        }  
+    };
+
+    canController.Disable();
+
+    canController.EnableFilter(new uint[] { 0x123 }, new uint[] { 0x000007FF}, true);
+
+    canController.EnableError(0x1FF);
+
+    canController.Enable();
+
+    while (true){
+        if (canController.MessagesToRead &gt; 0){
+            var msgRead = canController.Read();
+
+                if (msgRead != null){
+                    Console.WriteLine("ID: " + msgRead.ArbitrationId.ToString("x8"));
+                    Console.WriteLine("Ext: " + msgRead.ExtendedFrameFormat);
+                    Console.WriteLine("Remote: " + msgRead.RemoteTransmissionRequest);
+
+                    var msgWrite = msgRead;             
+                    var data = new byte[msgRead.Data.Length];
+
+                    for (int i = 0; i &lt; data.Length; i++){
+                        data[i] = (byte)(msgRead.Data[i] + 1);
+                    }
+
+                    msgWrite.Data = data;
+                    msgWrite.ArbitrationId = msgRead.ArbitrationId + 1;         
+                    canController.Write(msgWrite);
+                }
+         }
+        Thread.Sleep(2);
+    }</code></pre>
+  syntax:
+    content: 'public class CanController : IDisposable'
+    content.vb: Public Class CanController Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.ReadBufferSize
+  commentId: P:GHIElectronics.Endpoint.Devices.Can.CanController.ReadBufferSize
+  id: ReadBufferSize
+  parent: GHIElectronics.Endpoint.Devices.Can.CanController
+  langs:
+  - csharp
+  - vb
+  name: ReadBufferSize
+  nameWithType: CanController.ReadBufferSize
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.ReadBufferSize
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ReadBufferSize
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 97
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: public int ReadBufferSize { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ReadBufferSize As Integer
+  overload: GHIElectronics.Endpoint.Devices.Can.CanController.ReadBufferSize*
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.MessagesToRead
+  commentId: P:GHIElectronics.Endpoint.Devices.Can.CanController.MessagesToRead
+  id: MessagesToRead
+  parent: GHIElectronics.Endpoint.Devices.Can.CanController
+  langs:
+  - csharp
+  - vb
+  name: MessagesToRead
+  nameWithType: CanController.MessagesToRead
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.MessagesToRead
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: MessagesToRead
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 101
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: public int MessagesToRead { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MessagesToRead As Integer
+  overload: GHIElectronics.Endpoint.Devices.Can.CanController.MessagesToRead*
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.IsEnabled
+  commentId: P:GHIElectronics.Endpoint.Devices.Can.CanController.IsEnabled
+  id: IsEnabled
+  parent: GHIElectronics.Endpoint.Devices.Can.CanController
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled
+  nameWithType: CanController.IsEnabled
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.IsEnabled
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: IsEnabled
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 103
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: public bool IsEnabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsEnabled As Boolean
+  overload: GHIElectronics.Endpoint.Devices.Can.CanController.IsEnabled*
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.#ctor(System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Devices.Can.CanController.#ctor(System.Int32,System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32,System.Int32)'
+  parent: GHIElectronics.Endpoint.Devices.Can.CanController
+  langs:
+  - csharp
+  - vb
+  name: CanController(int, int, int)
+  nameWithType: CanController.CanController(int, int, int)
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.CanController(int, int, int)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 112
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: public CanController(int controllerId, int nominalBitrate, int dataBitrate = 0)
+    parameters:
+    - id: controllerId
+      type: System.Int32
+    - id: nominalBitrate
+      type: System.Int32
+    - id: dataBitrate
+      type: System.Int32
+    content.vb: Public Sub New(controllerId As Integer, nominalBitrate As Integer, dataBitrate As Integer = 0)
+  overload: GHIElectronics.Endpoint.Devices.Can.CanController.#ctor*
+  nameWithType.vb: CanController.New(Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Can.CanController.New(Integer, Integer, Integer)
+  name.vb: New(Integer, Integer, Integer)
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.Enable
+  commentId: M:GHIElectronics.Endpoint.Devices.Can.CanController.Enable
+  id: Enable
+  parent: GHIElectronics.Endpoint.Devices.Can.CanController
+  langs:
+  - csharp
+  - vb
+  name: Enable()
+  nameWithType: CanController.Enable()
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.Enable()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Enable
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 157
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: public void Enable()
+    content.vb: Public Sub Enable()
+  overload: GHIElectronics.Endpoint.Devices.Can.CanController.Enable*
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.Disable
+  commentId: M:GHIElectronics.Endpoint.Devices.Can.CanController.Disable
+  id: Disable
+  parent: GHIElectronics.Endpoint.Devices.Can.CanController
+  langs:
+  - csharp
+  - vb
+  name: Disable()
+  nameWithType: CanController.Disable()
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.Disable()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Disable
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 183
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: public void Disable()
+    content.vb: Public Sub Disable()
+  overload: GHIElectronics.Endpoint.Devices.Can.CanController.Disable*
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.EnableFilter(System.UInt32[],System.UInt32[],System.Boolean)
+  commentId: M:GHIElectronics.Endpoint.Devices.Can.CanController.EnableFilter(System.UInt32[],System.UInt32[],System.Boolean)
+  id: EnableFilter(System.UInt32[],System.UInt32[],System.Boolean)
+  parent: GHIElectronics.Endpoint.Devices.Can.CanController
+  langs:
+  - csharp
+  - vb
+  name: EnableFilter(uint[], uint[], bool)
+  nameWithType: CanController.EnableFilter(uint[], uint[], bool)
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.EnableFilter(uint[], uint[], bool)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: EnableFilter
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 193
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: public void EnableFilter(uint[] id, uint[] mask, bool invert = false)
+    parameters:
+    - id: id
+      type: System.UInt32[]
+    - id: mask
+      type: System.UInt32[]
+    - id: invert
+      type: System.Boolean
+    content.vb: Public Sub EnableFilter(id As UInteger(), mask As UInteger(), invert As Boolean = False)
+  overload: GHIElectronics.Endpoint.Devices.Can.CanController.EnableFilter*
+  nameWithType.vb: CanController.EnableFilter(UInteger(), UInteger(), Boolean)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Can.CanController.EnableFilter(UInteger(), UInteger(), Boolean)
+  name.vb: EnableFilter(UInteger(), UInteger(), Boolean)
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent(System.UInt32)
+  commentId: M:GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent(System.UInt32)
+  id: EnableErrorEvent(System.UInt32)
+  parent: GHIElectronics.Endpoint.Devices.Can.CanController
+  langs:
+  - csharp
+  - vb
+  name: EnableErrorEvent(uint)
+  nameWithType: CanController.EnableErrorEvent(uint)
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent(uint)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: EnableErrorEvent
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 202
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: public void EnableErrorEvent(uint error)
+    parameters:
+    - id: error
+      type: System.UInt32
+    content.vb: Public Sub EnableErrorEvent([error] As UInteger)
+  overload: GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent*
+  nameWithType.vb: CanController.EnableErrorEvent(UInteger)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent(UInteger)
+  name.vb: EnableErrorEvent(UInteger)
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.Reset
+  commentId: M:GHIElectronics.Endpoint.Devices.Can.CanController.Reset
+  id: Reset
+  parent: GHIElectronics.Endpoint.Devices.Can.CanController
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: CanController.Reset()
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.Reset()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Reset
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 207
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset()
+  overload: GHIElectronics.Endpoint.Devices.Can.CanController.Reset*
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.Write(GHIElectronics.Endpoint.Devices.Can.CanMessage)
+  commentId: M:GHIElectronics.Endpoint.Devices.Can.CanController.Write(GHIElectronics.Endpoint.Devices.Can.CanMessage)
+  id: Write(GHIElectronics.Endpoint.Devices.Can.CanMessage)
+  parent: GHIElectronics.Endpoint.Devices.Can.CanController
+  langs:
+  - csharp
+  - vb
+  name: Write(CanMessage)
+  nameWithType: CanController.Write(CanMessage)
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.Write(GHIElectronics.Endpoint.Devices.Can.CanMessage)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Write
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 264
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: public void Write(CanMessage message)
+    parameters:
+    - id: message
+      type: GHIElectronics.Endpoint.Devices.Can.CanMessage
+    content.vb: Public Sub Write(message As CanMessage)
+  overload: GHIElectronics.Endpoint.Devices.Can.CanController.Write*
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.Read
+  commentId: M:GHIElectronics.Endpoint.Devices.Can.CanController.Read
+  id: Read
+  parent: GHIElectronics.Endpoint.Devices.Can.CanController
+  langs:
+  - csharp
+  - vb
+  name: Read()
+  nameWithType: CanController.Read()
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.Read()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Read
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 293
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: public CanMessage Read()
+    return:
+      type: GHIElectronics.Endpoint.Devices.Can.CanMessage
+    content.vb: Public Function Read() As CanMessage
+  overload: GHIElectronics.Endpoint.Devices.Can.CanController.Read*
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.MessageReceived
+  commentId: E:GHIElectronics.Endpoint.Devices.Can.CanController.MessageReceived
+  id: MessageReceived
+  parent: GHIElectronics.Endpoint.Devices.Can.CanController
+  langs:
+  - csharp
+  - vb
+  name: MessageReceived
+  nameWithType: CanController.MessageReceived
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.MessageReceived
+  type: Event
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: MessageReceived
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 317
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: public event MessageReceivedEventHandler MessageReceived
+    return:
+      type: GHIElectronics.Endpoint.Devices.Can.MessageReceivedEventHandler
+    content.vb: Public Event MessageReceived As MessageReceivedEventHandler
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.ErrorReceived
+  commentId: E:GHIElectronics.Endpoint.Devices.Can.CanController.ErrorReceived
+  id: ErrorReceived
+  parent: GHIElectronics.Endpoint.Devices.Can.CanController
+  langs:
+  - csharp
+  - vb
+  name: ErrorReceived
+  nameWithType: CanController.ErrorReceived
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.ErrorReceived
+  type: Event
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ErrorReceived
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 332
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: public event ErrorReceivedEventHandler ErrorReceived
+    return:
+      type: GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventHandler
+    content.vb: Public Event ErrorReceived As ErrorReceivedEventHandler
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.Dispose
+  commentId: M:GHIElectronics.Endpoint.Devices.Can.CanController.Dispose
+  id: Dispose
+  parent: GHIElectronics.Endpoint.Devices.Can.CanController
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: CanController.Dispose()
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.Dispose()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Dispose
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 426
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: GHIElectronics.Endpoint.Devices.Can.CanController.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: GHIElectronics.Endpoint.Devices.Can
+  commentId: N:GHIElectronics.Endpoint.Devices.Can
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Can
+  nameWithType: GHIElectronics.Endpoint.Devices.Can
+  fullName: GHIElectronics.Endpoint.Devices.Can
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Can
+    name: Can
+    href: GHIElectronics.Endpoint.Devices.Can.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Can
+    name: Can
+    href: GHIElectronics.Endpoint.Devices.Can.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.ReadBufferSize*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Can.CanController.ReadBufferSize
+  href: GHIElectronics.Endpoint.Devices.Can.CanController.html#GHIElectronics_Endpoint_Devices_Can_CanController_ReadBufferSize
+  name: ReadBufferSize
+  nameWithType: CanController.ReadBufferSize
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.ReadBufferSize
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.MessagesToRead*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Can.CanController.MessagesToRead
+  href: GHIElectronics.Endpoint.Devices.Can.CanController.html#GHIElectronics_Endpoint_Devices_Can_CanController_MessagesToRead
+  name: MessagesToRead
+  nameWithType: CanController.MessagesToRead
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.MessagesToRead
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.IsEnabled*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Can.CanController.IsEnabled
+  href: GHIElectronics.Endpoint.Devices.Can.CanController.html#GHIElectronics_Endpoint_Devices_Can_CanController_IsEnabled
+  name: IsEnabled
+  nameWithType: CanController.IsEnabled
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.IsEnabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Can.CanController.#ctor
+  href: GHIElectronics.Endpoint.Devices.Can.CanController.html#GHIElectronics_Endpoint_Devices_Can_CanController__ctor_System_Int32_System_Int32_System_Int32_
+  name: CanController
+  nameWithType: CanController.CanController
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.CanController
+  nameWithType.vb: CanController.New
+  fullName.vb: GHIElectronics.Endpoint.Devices.Can.CanController.New
+  name.vb: New
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.Enable*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Can.CanController.Enable
+  href: GHIElectronics.Endpoint.Devices.Can.CanController.html#GHIElectronics_Endpoint_Devices_Can_CanController_Enable
+  name: Enable
+  nameWithType: CanController.Enable
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.Enable
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.Disable*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Can.CanController.Disable
+  href: GHIElectronics.Endpoint.Devices.Can.CanController.html#GHIElectronics_Endpoint_Devices_Can_CanController_Disable
+  name: Disable
+  nameWithType: CanController.Disable
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.Disable
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.EnableFilter*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Can.CanController.EnableFilter
+  href: GHIElectronics.Endpoint.Devices.Can.CanController.html#GHIElectronics_Endpoint_Devices_Can_CanController_EnableFilter_System_UInt32___System_UInt32___System_Boolean_
+  name: EnableFilter
+  nameWithType: CanController.EnableFilter
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.EnableFilter
+- uid: System.UInt32[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint[]
+  nameWithType: uint[]
+  fullName: uint[]
+  nameWithType.vb: UInteger()
+  fullName.vb: UInteger()
+  name.vb: UInteger()
+  spec.csharp:
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent
+  href: GHIElectronics.Endpoint.Devices.Can.CanController.html#GHIElectronics_Endpoint_Devices_Can_CanController_EnableErrorEvent_System_UInt32_
+  name: EnableErrorEvent
+  nameWithType: CanController.EnableErrorEvent
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.Reset*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Can.CanController.Reset
+  href: GHIElectronics.Endpoint.Devices.Can.CanController.html#GHIElectronics_Endpoint_Devices_Can_CanController_Reset
+  name: Reset
+  nameWithType: CanController.Reset
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.Reset
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.Write*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Can.CanController.Write
+  href: GHIElectronics.Endpoint.Devices.Can.CanController.html#GHIElectronics_Endpoint_Devices_Can_CanController_Write_GHIElectronics_Endpoint_Devices_Can_CanMessage_
+  name: Write
+  nameWithType: CanController.Write
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.Write
+- uid: GHIElectronics.Endpoint.Devices.Can.CanMessage
+  commentId: T:GHIElectronics.Endpoint.Devices.Can.CanMessage
+  parent: GHIElectronics.Endpoint.Devices.Can
+  href: GHIElectronics.Endpoint.Devices.Can.CanMessage.html
+  name: CanMessage
+  nameWithType: CanMessage
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanMessage
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.Read*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Can.CanController.Read
+  href: GHIElectronics.Endpoint.Devices.Can.CanController.html#GHIElectronics_Endpoint_Devices_Can_CanController_Read
+  name: Read
+  nameWithType: CanController.Read
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.Read
+- uid: GHIElectronics.Endpoint.Devices.Can.MessageReceivedEventHandler
+  commentId: T:GHIElectronics.Endpoint.Devices.Can.MessageReceivedEventHandler
+  parent: GHIElectronics.Endpoint.Devices.Can
+  href: GHIElectronics.Endpoint.Devices.Can.MessageReceivedEventHandler.html
+  name: MessageReceivedEventHandler
+  nameWithType: MessageReceivedEventHandler
+  fullName: GHIElectronics.Endpoint.Devices.Can.MessageReceivedEventHandler
+- uid: GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventHandler
+  commentId: T:GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventHandler
+  parent: GHIElectronics.Endpoint.Devices.Can
+  href: GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventHandler.html
+  name: ErrorReceivedEventHandler
+  nameWithType: ErrorReceivedEventHandler
+  fullName: GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventHandler
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.Dispose*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Can.CanController.Dispose
+  href: GHIElectronics.Endpoint.Devices.Can.CanController.html#GHIElectronics_Endpoint_Devices_Can_CanController_Dispose
+  name: Dispose
+  nameWithType: CanController.Dispose
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

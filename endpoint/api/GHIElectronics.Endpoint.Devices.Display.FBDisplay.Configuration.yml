@@ -1,0 +1,902 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  commentId: T:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  id: FBDisplay.Configuration
+  parent: GHIElectronics.Endpoint.Devices.Display
+  children:
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bpc
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bus_flags
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bus_format
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Clock
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Connector_type
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Dpi_height
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Dpi_width
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Hsync_end
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Hsync_start
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Htotal
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Num_modes
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.ToString
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vsync_end
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vsync_start
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vtotal
+  langs:
+  - csharp
+  - vb
+  name: FBDisplay.Configuration
+  nameWithType: FBDisplay.Configuration
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Configuration
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 213
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: 'public class FBDisplay.Configuration : DisplayConfiguration'
+    content.vb: Public Class FBDisplay.Configuration Inherits DisplayConfiguration
+  inheritance:
+  - System.Object
+  - GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
+  inheritedMembers:
+  - GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration.Width
+  - GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration.Height
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Clock
+  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Clock
+  id: Clock
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  langs:
+  - csharp
+  - vb
+  name: Clock
+  nameWithType: FBDisplay.Configuration.Clock
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Clock
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Clock
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 214
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: public int Clock { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Clock As Integer
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Clock*
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Hsync_start
+  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Hsync_start
+  id: Hsync_start
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  langs:
+  - csharp
+  - vb
+  name: Hsync_start
+  nameWithType: FBDisplay.Configuration.Hsync_start
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Hsync_start
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Hsync_start
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 215
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: public int Hsync_start { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Hsync_start As Integer
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Hsync_start*
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Hsync_end
+  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Hsync_end
+  id: Hsync_end
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  langs:
+  - csharp
+  - vb
+  name: Hsync_end
+  nameWithType: FBDisplay.Configuration.Hsync_end
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Hsync_end
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Hsync_end
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 216
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: public int Hsync_end { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Hsync_end As Integer
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Hsync_end*
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Htotal
+  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Htotal
+  id: Htotal
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  langs:
+  - csharp
+  - vb
+  name: Htotal
+  nameWithType: FBDisplay.Configuration.Htotal
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Htotal
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Htotal
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 217
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: public int Htotal { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Htotal As Integer
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Htotal*
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vsync_start
+  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vsync_start
+  id: Vsync_start
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  langs:
+  - csharp
+  - vb
+  name: Vsync_start
+  nameWithType: FBDisplay.Configuration.Vsync_start
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vsync_start
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Vsync_start
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 218
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: public int Vsync_start { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Vsync_start As Integer
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vsync_start*
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vsync_end
+  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vsync_end
+  id: Vsync_end
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  langs:
+  - csharp
+  - vb
+  name: Vsync_end
+  nameWithType: FBDisplay.Configuration.Vsync_end
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vsync_end
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Vsync_end
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 219
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: public int Vsync_end { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Vsync_end As Integer
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vsync_end*
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vtotal
+  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vtotal
+  id: Vtotal
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  langs:
+  - csharp
+  - vb
+  name: Vtotal
+  nameWithType: FBDisplay.Configuration.Vtotal
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vtotal
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Vtotal
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 220
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: public int Vtotal { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Vtotal As Integer
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vtotal*
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Num_modes
+  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Num_modes
+  id: Num_modes
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  langs:
+  - csharp
+  - vb
+  name: Num_modes
+  nameWithType: FBDisplay.Configuration.Num_modes
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Num_modes
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Num_modes
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 221
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: public int Num_modes { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Num_modes As Integer
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Num_modes*
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Dpi_width
+  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Dpi_width
+  id: Dpi_width
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  langs:
+  - csharp
+  - vb
+  name: Dpi_width
+  nameWithType: FBDisplay.Configuration.Dpi_width
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Dpi_width
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Dpi_width
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 222
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: public int Dpi_width { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Dpi_width As Integer
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Dpi_width*
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Dpi_height
+  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Dpi_height
+  id: Dpi_height
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  langs:
+  - csharp
+  - vb
+  name: Dpi_height
+  nameWithType: FBDisplay.Configuration.Dpi_height
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Dpi_height
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Dpi_height
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 223
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: public int Dpi_height { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Dpi_height As Integer
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Dpi_height*
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bus_flags
+  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bus_flags
+  id: Bus_flags
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  langs:
+  - csharp
+  - vb
+  name: Bus_flags
+  nameWithType: FBDisplay.Configuration.Bus_flags
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bus_flags
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Bus_flags
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 224
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: public int Bus_flags { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Bus_flags As Integer
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bus_flags*
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bus_format
+  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bus_format
+  id: Bus_format
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  langs:
+  - csharp
+  - vb
+  name: Bus_format
+  nameWithType: FBDisplay.Configuration.Bus_format
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bus_format
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Bus_format
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 225
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: public int Bus_format { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Bus_format As Integer
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bus_format*
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Connector_type
+  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Connector_type
+  id: Connector_type
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  langs:
+  - csharp
+  - vb
+  name: Connector_type
+  nameWithType: FBDisplay.Configuration.Connector_type
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Connector_type
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Connector_type
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 226
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: public int Connector_type { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Connector_type As Integer
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Connector_type*
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bpc
+  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bpc
+  id: Bpc
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  langs:
+  - csharp
+  - vb
+  name: Bpc
+  nameWithType: FBDisplay.Configuration.Bpc
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bpc
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Bpc
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 227
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: public int Bpc { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Bpc As Integer
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bpc*
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.ToString
+  commentId: M:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.ToString
+  id: ToString
+  parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: FBDisplay.Configuration.ToString()
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.ToString()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ToString
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
+    startLine: 229
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  summary: Returns a string that represents the current object.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.ToString*
+references:
+- uid: GHIElectronics.Endpoint.Devices.Display
+  commentId: N:GHIElectronics.Endpoint.Devices.Display
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Display
+  nameWithType: GHIElectronics.Endpoint.Devices.Display
+  fullName: GHIElectronics.Endpoint.Devices.Display
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Display
+    name: Display
+    href: GHIElectronics.Endpoint.Devices.Display.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Display
+    name: Display
+    href: GHIElectronics.Endpoint.Devices.Display.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
+  commentId: T:GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
+  parent: GHIElectronics.Endpoint.Devices.Display
+  href: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration.html
+  name: DisplayConfiguration
+  nameWithType: DisplayConfiguration
+  fullName: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
+- uid: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration.Width
+  commentId: P:GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration.Width
+  parent: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
+  href: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration.html#GHIElectronics_Endpoint_Devices_Display_DisplayConfiguration_Width
+  name: Width
+  nameWithType: DisplayConfiguration.Width
+  fullName: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration.Width
+- uid: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration.Height
+  commentId: P:GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration.Height
+  parent: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
+  href: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration.html#GHIElectronics_Endpoint_Devices_Display_DisplayConfiguration_Height
+  name: Height
+  nameWithType: DisplayConfiguration.Height
+  fullName: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration.Height
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Clock*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Clock
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Configuration_Clock
+  name: Clock
+  nameWithType: FBDisplay.Configuration.Clock
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Clock
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Hsync_start*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Hsync_start
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Configuration_Hsync_start
+  name: Hsync_start
+  nameWithType: FBDisplay.Configuration.Hsync_start
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Hsync_start
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Hsync_end*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Hsync_end
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Configuration_Hsync_end
+  name: Hsync_end
+  nameWithType: FBDisplay.Configuration.Hsync_end
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Hsync_end
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Htotal*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Htotal
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Configuration_Htotal
+  name: Htotal
+  nameWithType: FBDisplay.Configuration.Htotal
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Htotal
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vsync_start*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vsync_start
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Configuration_Vsync_start
+  name: Vsync_start
+  nameWithType: FBDisplay.Configuration.Vsync_start
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vsync_start
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vsync_end*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vsync_end
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Configuration_Vsync_end
+  name: Vsync_end
+  nameWithType: FBDisplay.Configuration.Vsync_end
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vsync_end
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vtotal*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vtotal
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Configuration_Vtotal
+  name: Vtotal
+  nameWithType: FBDisplay.Configuration.Vtotal
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Vtotal
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Num_modes*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Num_modes
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Configuration_Num_modes
+  name: Num_modes
+  nameWithType: FBDisplay.Configuration.Num_modes
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Num_modes
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Dpi_width*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Dpi_width
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Configuration_Dpi_width
+  name: Dpi_width
+  nameWithType: FBDisplay.Configuration.Dpi_width
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Dpi_width
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Dpi_height*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Dpi_height
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Configuration_Dpi_height
+  name: Dpi_height
+  nameWithType: FBDisplay.Configuration.Dpi_height
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Dpi_height
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bus_flags*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bus_flags
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Configuration_Bus_flags
+  name: Bus_flags
+  nameWithType: FBDisplay.Configuration.Bus_flags
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bus_flags
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bus_format*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bus_format
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Configuration_Bus_format
+  name: Bus_format
+  nameWithType: FBDisplay.Configuration.Bus_format
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bus_format
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Connector_type*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Connector_type
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Configuration_Connector_type
+  name: Connector_type
+  nameWithType: FBDisplay.Configuration.Connector_type
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Connector_type
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bpc*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bpc
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Configuration_Bpc
+  name: Bpc
+  nameWithType: FBDisplay.Configuration.Bpc
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.Bpc
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.ToString*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.ToString
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Configuration_ToString
+  name: ToString
+  nameWithType: FBDisplay.Configuration.ToString
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

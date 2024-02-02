@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Getting Started </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Getting Started ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/getting-started.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="getting-started">Getting Started</h1>
+
+<hr>
+<p>An Endpoint development environment consists of a device running Endpoint OS and a development machine with the required software and extension.</p>
+<hr>
+<h2 id="endpoint-device-setup">Endpoint Device Setup</h2>
+<p>The first step is to boot the Endpoint OS, which can be hosted on a microSD card or loaded inside the hardware's eMMC flash (when available).</p>
+<h4 id="creating-the-os-image">Creating the OS image</h4>
+<p>Use your preferred disk imaging software to create a disk image on a blank microSD card, <code>Win32 Disk Imager</code> or <code>balenaEtcher</code> for example.</p>
+<p>Find the latest Endpoint disk image <a href="downloads.html"><strong>here</strong></a> and burn it to the blank microSD card (4GB minimum).</p>
+<p><img src="images/create-sd-image.png" alt="Disk Imager"></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Windows hides the microSD card once the media is loaded with the Endpoint OS image. <code>Win32 Disk Imager</code> will no longer see it. You need to use <code>Disk Management</code> tool to repartition/format the media, or use other tools like <code>balenaEtcher</code>.</p>
+</div>
+<h4 id="boot-from-sd">Boot from SD</h4>
+<p>Once the image file is burned to the microSD card the OS is ready to boot. Insert the card into the microSD card slot of your hardware and connect the device to the PC.</p>
+<p>If the device has an eMMC, use the <code>SD Boot</code> button to force the device to boot from the SD card.</p>
+<p>Once the <code>USER LED</code> lights the board has successfully booted the Endpoint OS from the microSD. This should happen in less than 5 seconds.</p>
+<h4 id="flashing-the-emmc">Flashing the eMMC</h4>
+<p>Devices with eMMC will automatically boot from eMMC. The system will fail to boot if the OS image is invalid. SD cards can always be used to boot the system. Once the system is up, the <code>Endpoint Config</code> tool can be used to update the eMMC, as detailed in the <a href="configuration.html">Configuration</a> page.</p>
+<hr>
+<h2 id="development-machine-setup">Development Machine Setup</h2>
+<p>Now, that the device is running the Endpoint OS, the development machine can be prepared for remote debug and deploy to the Endpoint device (using USB-C). This can be done using either Visual Studio or VS Code.</p>
+<h3 id="endpoint-for-visual-studio">Endpoint for Visual Studio</h3>
+<p>With Endpoint you can deploy and debug using Visual Studio. Even the free community version.</p>
+<p>If you don't already have the latest version of Visual Studio, download it here:
+<a href="https://visualstudio.microsoft.com/downloads/">https://visualstudio.microsoft.com/downloads/</a></p>
+<p>Download and install the newest Endpoint Visual Studio Project System by going to <code>Extensions &gt; Manage Extensions</code>. In the Manage Extensions dialog box select <code>Online</code> in the left panel. Type <code>GHI Endpoint</code> in the Search text box in the upper right of the window to search for and install the Endpoint Project System. You'll need to restart Visual Studio to let the extension installer complete the installation. Alternately you can download the Visual Studio Project System from our  <a href="downloads.html"><strong>Downloads</strong></a> page and install the latest Endpoint Visual Studio Extension (.vsix). Open or double click on the file to install the extension.</p>
+<p>After installing the .vsix file, create a new .NET 8 application. By default the .NET application will run on the PC. We need to switch to run the program on the Endpoint device.</p>
+<p>At the top of the Visual Studio menu navigate to <code>Debug -&gt; Options</code></p>
+<p><img src="images/debug-options.png" alt="Navigate to Debug Options"></p>
+<p>From there navigate to the <code>Endpoint Debugger</code> option and make sure the box is checked for <code>root@192.168.82.2</code>. If a password was created using the Endpoint <a href="configuration.html">Config</a> Tool also enter it here. If unchecked the application will only run on the PC.</p>
+<p><img src="images/debug-host.png" alt="Debug Host"></p>
+<h3 id="endpoint-for-vs-code">Endpoint for VS Code</h3>
+<p>Endpoint also works using the VS Code IDE. If you don't already have the latest version, download it here:
+<a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
+<p>Visit the extension section from within VS Code and search for and install <code>Endpoint VSC Debugger</code>. Alternatively, <a href="downloads.html">Download</a> and install the latest Endpoint VS Code Extension (.vsix) file manually.</p>
+<p><img src="images/vscode-extension.png" alt="VS Code Extension"></p>
+<p>Navigate to <code>View -&gt; Command Palette</code></p>
+<p><img src="images/select-dotnet.png" alt="Select .NET"></p>
+<p>Search for <strong>Endpoint</strong> and select <code>Endpoint:Create Net IoT project</code></p>
+<p><img src="images/search-endpoint.png" alt="Search Endpoint"></p>
+<p>Give the project a name and location.</p>
+<hr>
+<h2 id="nuget-libraries">NuGet Libraries</h2>
+<p>Endpoint uses the standard .NET libraries when available. When a library doesn't existing inside the .NET API relating to embedded hardware we use an Endpoint library to fill in the missing gaps.</p>
+<p>It is preferred to access NuGet libraries through NuGet.org by using Visual Studio's default package source.</p>
+<p>The Endpoint libraries are provided <a href="downloads.html"><strong>here</strong></a> in case you're having trouble with the online source or need an older or pre-release library that's not hosted on NuGet.</p>
+<p>Learn more about the Endpoint API <a href="api/intro.md"><strong>here</strong></a>.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/getting-started.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,624 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings
+  commentId: T:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings
+  id: NetworkInterfaceSettings
+  parent: GHIElectronics.Endpoint.Devices.Network
+  children:
+  - GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.Address
+  - GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.DhcpEnable
+  - GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.DnsAddresses
+  - GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.GatewayAddress
+  - GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.MacAddress
+  - GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.SubnetMask
+  langs:
+  - csharp
+  - vb
+  name: NetworkInterfaceSettings
+  nameWithType: NetworkInterfaceSettings
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: NetworkInterfaceSettings
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+    startLine: 50
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Network
+  namespace: GHIElectronics.Endpoint.Devices.Network
+  syntax:
+    content: public class NetworkInterfaceSettings
+    content.vb: Public Class NetworkInterfaceSettings
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - GHIElectronics.Endpoint.Devices.Network.WiFiNetworkInterfaceSettings
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.Address
+  commentId: P:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.Address
+  id: Address
+  parent: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: NetworkInterfaceSettings.Address
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.Address
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Address
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+    startLine: 51
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Network
+  namespace: GHIElectronics.Endpoint.Devices.Network
+  syntax:
+    content: public IPAddress Address { get; set; }
+    parameters: []
+    return:
+      type: System.Net.IPAddress
+    content.vb: Public Property Address As IPAddress
+  overload: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.Address*
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.SubnetMask
+  commentId: P:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.SubnetMask
+  id: SubnetMask
+  parent: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings
+  langs:
+  - csharp
+  - vb
+  name: SubnetMask
+  nameWithType: NetworkInterfaceSettings.SubnetMask
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.SubnetMask
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SubnetMask
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+    startLine: 52
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Network
+  namespace: GHIElectronics.Endpoint.Devices.Network
+  syntax:
+    content: public IPAddress SubnetMask { get; set; }
+    parameters: []
+    return:
+      type: System.Net.IPAddress
+    content.vb: Public Property SubnetMask As IPAddress
+  overload: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.SubnetMask*
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.GatewayAddress
+  commentId: P:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.GatewayAddress
+  id: GatewayAddress
+  parent: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings
+  langs:
+  - csharp
+  - vb
+  name: GatewayAddress
+  nameWithType: NetworkInterfaceSettings.GatewayAddress
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.GatewayAddress
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: GatewayAddress
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+    startLine: 53
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Network
+  namespace: GHIElectronics.Endpoint.Devices.Network
+  syntax:
+    content: public IPAddress GatewayAddress { get; set; }
+    parameters: []
+    return:
+      type: System.Net.IPAddress
+    content.vb: Public Property GatewayAddress As IPAddress
+  overload: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.GatewayAddress*
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.DnsAddresses
+  commentId: P:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.DnsAddresses
+  id: DnsAddresses
+  parent: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings
+  langs:
+  - csharp
+  - vb
+  name: DnsAddresses
+  nameWithType: NetworkInterfaceSettings.DnsAddresses
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.DnsAddresses
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DnsAddresses
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+    startLine: 54
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Network
+  namespace: GHIElectronics.Endpoint.Devices.Network
+  syntax:
+    content: public IPAddress[] DnsAddresses { get; set; }
+    parameters: []
+    return:
+      type: System.Net.IPAddress[]
+    content.vb: Public Property DnsAddresses As IPAddress()
+  overload: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.DnsAddresses*
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.MacAddress
+  commentId: P:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.MacAddress
+  id: MacAddress
+  parent: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings
+  langs:
+  - csharp
+  - vb
+  name: MacAddress
+  nameWithType: NetworkInterfaceSettings.MacAddress
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.MacAddress
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: MacAddress
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+    startLine: 55
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Network
+  namespace: GHIElectronics.Endpoint.Devices.Network
+  syntax:
+    content: public byte[] MacAddress { get; set; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public Property MacAddress As Byte()
+  overload: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.MacAddress*
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.DhcpEnable
+  commentId: P:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.DhcpEnable
+  id: DhcpEnable
+  parent: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings
+  langs:
+  - csharp
+  - vb
+  name: DhcpEnable
+  nameWithType: NetworkInterfaceSettings.DhcpEnable
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.DhcpEnable
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DhcpEnable
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+    startLine: 56
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Network
+  namespace: GHIElectronics.Endpoint.Devices.Network
+  syntax:
+    content: public bool DhcpEnable { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DhcpEnable As Boolean
+  overload: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.DhcpEnable*
+references:
+- uid: GHIElectronics.Endpoint.Devices.Network
+  commentId: N:GHIElectronics.Endpoint.Devices.Network
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Network
+  nameWithType: GHIElectronics.Endpoint.Devices.Network
+  fullName: GHIElectronics.Endpoint.Devices.Network
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Network
+    name: Network
+    href: GHIElectronics.Endpoint.Devices.Network.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Network
+    name: Network
+    href: GHIElectronics.Endpoint.Devices.Network.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.Address*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.Address
+  href: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.html#GHIElectronics_Endpoint_Devices_Network_NetworkInterfaceSettings_Address
+  name: Address
+  nameWithType: NetworkInterfaceSettings.Address
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.Address
+- uid: System.Net.IPAddress
+  commentId: T:System.Net.IPAddress
+  parent: System.Net
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.ipaddress
+  name: IPAddress
+  nameWithType: IPAddress
+  fullName: System.Net.IPAddress
+- uid: System.Net
+  commentId: N:System.Net
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Net
+  nameWithType: System.Net
+  fullName: System.Net
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.SubnetMask*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.SubnetMask
+  href: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.html#GHIElectronics_Endpoint_Devices_Network_NetworkInterfaceSettings_SubnetMask
+  name: SubnetMask
+  nameWithType: NetworkInterfaceSettings.SubnetMask
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.SubnetMask
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.GatewayAddress*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.GatewayAddress
+  href: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.html#GHIElectronics_Endpoint_Devices_Network_NetworkInterfaceSettings_GatewayAddress
+  name: GatewayAddress
+  nameWithType: NetworkInterfaceSettings.GatewayAddress
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.GatewayAddress
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.DnsAddresses*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.DnsAddresses
+  href: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.html#GHIElectronics_Endpoint_Devices_Network_NetworkInterfaceSettings_DnsAddresses
+  name: DnsAddresses
+  nameWithType: NetworkInterfaceSettings.DnsAddresses
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.DnsAddresses
+- uid: System.Net.IPAddress[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.ipaddress
+  name: IPAddress[]
+  nameWithType: IPAddress[]
+  fullName: System.Net.IPAddress[]
+  nameWithType.vb: IPAddress()
+  fullName.vb: System.Net.IPAddress()
+  name.vb: IPAddress()
+  spec.csharp:
+  - uid: System.Net.IPAddress
+    name: IPAddress
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.ipaddress
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Net.IPAddress
+    name: IPAddress
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.ipaddress
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.MacAddress*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.MacAddress
+  href: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.html#GHIElectronics_Endpoint_Devices_Network_NetworkInterfaceSettings_MacAddress
+  name: MacAddress
+  nameWithType: NetworkInterfaceSettings.MacAddress
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.MacAddress
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.DhcpEnable*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.DhcpEnable
+  href: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.html#GHIElectronics_Endpoint_Devices_Network_NetworkInterfaceSettings_DhcpEnable
+  name: DhcpEnable
+  nameWithType: NetworkInterfaceSettings.DhcpEnable
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings.DhcpEnable
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

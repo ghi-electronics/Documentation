@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>USB </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="USB ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/usb.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="usb">USB</h1>
+
+<hr>
+<p><img src="images/usb-logo.jpg" alt="USB Logo"></p>
+<p>Both, USB Host and USB Device (Client) are utilized in any Endpoint device.</p>
+<h2 id="usb-device">USB Device</h2>
+<p>An Endpoint device presents its USB Device as a virtual network interface. This interface is used to configure, program, and debug applications remotely. No user effort is needed to use this interface</p>
+<h2 id="usb-host">USB Host</h2>
+<p>There are multiple way to benefit from USB Host to cover different needs.</p>
+<pre><code class="lang-cs">using GHIElectronics.Endpoint.Devices.UsbHost;
+//...
+var usbhost = new UsbHostController();
+
+usbhost.OnConnectionChangedEvent += Usbhost_OnConnectionChangedEvent;
+usbhostController.Enable();
+void Usbhost_OnConnectionChangedEvent(UsbHostController sender, DeviceConnectionEventArgs e)
+{
+   Console.WriteLine(&quot;Detect changed Id: &quot; + e.DeviceId + &quot;, name: &quot; + e.DeviceName + &quot;, status:&quot; + e.DeviceStatus);
+
+}
+</code></pre>
+<h3 id="mass-storage">Mass Storage</h3>
+<p>This allows users to access files on USB memory devices. Once a <code>MassStorage</code> device is inserted and detected, it can then be mounted, returning the device path needed to access files.</p>
+<pre><code class="lang-cs">var usbhost = new UsbHostController();
+string usbmountedPath = string.Empty;
+usbhost.OnConnectionChangedEvent += Usbhost_OnConnectionChangedEvent;
+usbhostController.Enable();
+void Usbhost_OnConnectionChangedEvent(UsbHostController sender, DeviceConnectionEventArgs e)
+{
+   Console.WriteLine(&quot;Detect changed Id: &quot; + e.DeviceId + &quot;, name: &quot; + e.DeviceName + &quot;, status:&quot; + e.DeviceStatus);
+
+   if (e.Type == GHIElectronics.Endpoint.Devices.Usb.DeviceType.MassStorage &amp;&amp; e.DeviceStatus == DeviceConnectionStatus.Connected)
+   {
+       usbmountedPath = GHIElectronics.Endpoint.FileSystem.Mount(e.DeviceName);
+
+       Console.WriteLine(&quot;Mounted, path &quot; + usbmountedPath);
+   }
+   else if (e.Type == GHIElectronics.Endpoint.Devices.Usb.DeviceType.MassStorage)
+   {
+       GHIElectronics.Endpoint.FileSystem.Unmount(usbmountedPath);
+
+       Console.WriteLine(&quot;Unmounted&quot;);
+   }
+}
+</code></pre>
+<p>Files can now be accessed normally.</p>
+<pre><code class="lang-cs">string path = usbmountedPath + &quot;/DataFile.txt&quot;;
+using (FileStream fs = File.Create(path))
+{
+//...
+}
+</code></pre>
+<h3 id="hid">HID</h3>
+<p>Human Interface Devices, such as a Keyboards and Mice, are automatically mounted by the system.</p>
+<pre><code class="lang-cs">using var hid = new HidInput();
+
+hid.OnButtonPress += (e) =&gt; {
+    Console.WriteLine($&quot;Code:{e.Code} State:{e.State}&quot;);
+
+};
+
+hid.OnMouseMove += (e) =&gt;
+{
+    Console.WriteLine($&quot;Axis:{e.Axis} Amount:{e.Amount}&quot;);
+};
+
+hid.OnDisconnected += () =&gt;
+{
+    Console.WriteLine(&quot;Device HID disconnected!&quot;);
+};
+</code></pre>
+<h3 id="camera">Camera</h3>
+<p>The USB Camera library provides a stream of images. Note that only cameras with UVC (USB Video Class) standard are supported.</p>
+<pre><code class="lang-cs">usbhostController.OnConnectionChangedEvent += (a, b) =&gt;
+{
+    var arg = b;
+
+    if (arg.DeviceStatus == DeviceConnectionStatus.Connected)
+    {
+        Console.WriteLine(&quot;id: &quot; + arg.DeviceId);
+        Console.WriteLine(&quot;name: &quot; + arg.DeviceName);
+        Console.WriteLine(&quot;type: &quot; + arg.Type);
+
+        if (arg.Type == GHIElectronics.Endpoint.Devices.Usb.DeviceType.Webcam &amp;&amp; arg.DeviceName.IndexOf(&quot;video0&quot;) &gt; 0)
+        {
+            webcam = new Webcam(arg.DeviceName);
+
+            var setting = new CameraConfiguration()
+            {
+                Width = 480,
+                Height = 272,
+                ImageFormat = Format.Rgb565,
+            };
+
+            webcam.Setting = setting;
+
+            webcam.VideoStreamStart();
+            webcam.FrameReceivedEvent += (a, b) =&gt;
+            {
+                displayController.Flush(b, 0, b.Length, webcam.Width, webcam.Height);
+            };
+        }
+    }
+    else
+    {
+        if (webcam != null)
+        {
+            if (webcam.IsVideoStreaming)
+            {
+                webcam.VideoStreamStop();
+            }
+            webcam.Dispose();
+            webcam = null;
+        }
+    }
+};
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/usb.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

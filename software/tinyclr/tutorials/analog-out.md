@@ -8,7 +8,7 @@ The voltage of a DAC usually swings from very close to zero volts up to nearly t
 The param accepted by the api is from 0.0 to 1.0. This is ratio from 0V to the microcontroller's voltage source, 3.3V on SITCore.
 
 > [!Note]
-SC20xxx and SC13xxx support 12 bit resolution.
+> SC20xxx and SC13xxx support 12 bit resolution.
 
 ```cs
 var dac = DacController.GetDefault();

@@ -1,0 +1,979 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  commentId: T:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  id: DcmiController
+  parent: GHIElectronics.Endpoint.Devices.Dcmi
+  children:
+  - GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.#ctor(System.String)
+  - GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Capture
+  - GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Close
+  - GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Dispose
+  - GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Dispose(System.Boolean)
+  - GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceivedEvent
+  - GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.GetResolution
+  - GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Height
+  - GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.IsVideoStreaming
+  - GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Open
+  - GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Setting
+  - GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.VideoStreamStart
+  - GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.VideoStreamStop
+  - GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Width
+  langs:
+  - csharp
+  - vb
+  name: DcmiController
+  nameWithType: DcmiController
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DcmiController
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Dcmi
+  namespace: GHIElectronics.Endpoint.Devices.Dcmi
+  syntax:
+    content: 'public abstract class DcmiController : IDisposable'
+    content.vb: Public MustInherit Class DcmiController Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Setting
+  commentId: P:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Setting
+  id: Setting
+  parent: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  langs:
+  - csharp
+  - vb
+  name: Setting
+  nameWithType: DcmiController.Setting
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Setting
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Setting
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+    startLine: 15
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Dcmi
+  namespace: GHIElectronics.Endpoint.Devices.Dcmi
+  syntax:
+    content: public CameraConfiguration Setting { get; set; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Devices.Camera.CameraConfiguration
+    content.vb: Public Property Setting As CameraConfiguration
+  overload: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Setting*
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Width
+  commentId: P:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Width
+  id: Width
+  parent: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: DcmiController.Width
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Width
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Width
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+    startLine: 31
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Dcmi
+  namespace: GHIElectronics.Endpoint.Devices.Dcmi
+  syntax:
+    content: public int Width { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Width As Integer
+  overload: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Width*
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Height
+  commentId: P:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Height
+  id: Height
+  parent: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: DcmiController.Height
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Height
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Height
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+    startLine: 32
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Dcmi
+  namespace: GHIElectronics.Endpoint.Devices.Dcmi
+  syntax:
+    content: public int Height { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Height As Integer
+  overload: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Height*
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.IsVideoStreaming
+  commentId: P:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.IsVideoStreaming
+  id: IsVideoStreaming
+  parent: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  langs:
+  - csharp
+  - vb
+  name: IsVideoStreaming
+  nameWithType: DcmiController.IsVideoStreaming
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.IsVideoStreaming
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: IsVideoStreaming
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+    startLine: 38
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Dcmi
+  namespace: GHIElectronics.Endpoint.Devices.Dcmi
+  syntax:
+    content: public bool IsVideoStreaming { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsVideoStreaming As Boolean
+  overload: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.IsVideoStreaming*
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.#ctor(System.String)
+  commentId: M:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  langs:
+  - csharp
+  - vb
+  name: DcmiController(string)
+  nameWithType: DcmiController.DcmiController(string)
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.DcmiController(string)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+    startLine: 53
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Dcmi
+  namespace: GHIElectronics.Endpoint.Devices.Dcmi
+  syntax:
+    content: public DcmiController(string devicePath = "/dev/video0")
+    parameters:
+    - id: devicePath
+      type: System.String
+    content.vb: Public Sub New(devicePath As String = "/dev/video0")
+  overload: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.#ctor*
+  nameWithType.vb: DcmiController.New(String)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.New(String)
+  name.vb: New(String)
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Dispose
+  commentId: M:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Dispose
+  id: Dispose
+  parent: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: DcmiController.Dispose()
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Dispose()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Dispose
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+    startLine: 249
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Dcmi
+  namespace: GHIElectronics.Endpoint.Devices.Dcmi
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Dispose(System.Boolean)
+  commentId: M:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  langs:
+  - csharp
+  - vb
+  name: Dispose(bool)
+  nameWithType: DcmiController.Dispose(bool)
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Dispose(bool)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Dispose
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+    startLine: 253
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Dcmi
+  namespace: GHIElectronics.Endpoint.Devices.Dcmi
+  syntax:
+    content: protected void Dispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+    content.vb: Protected Sub Dispose(disposing As Boolean)
+  overload: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Dispose*
+  nameWithType.vb: DcmiController.Dispose(Boolean)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceivedEvent
+  commentId: E:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceivedEvent
+  id: FrameReceivedEvent
+  parent: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  langs:
+  - csharp
+  - vb
+  name: FrameReceivedEvent
+  nameWithType: DcmiController.FrameReceivedEvent
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceivedEvent
+  type: Event
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: FrameReceivedEvent
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+    startLine: 266
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Dcmi
+  namespace: GHIElectronics.Endpoint.Devices.Dcmi
+  syntax:
+    content: public event DcmiController.FrameReceived FrameReceivedEvent
+    return:
+      type: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived
+    content.vb: Public Event FrameReceivedEvent As DcmiController.FrameReceived
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.GetResolution
+  commentId: M:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.GetResolution
+  id: GetResolution
+  parent: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  langs:
+  - csharp
+  - vb
+  name: GetResolution()
+  nameWithType: DcmiController.GetResolution()
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.GetResolution()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: GetResolution
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+    startLine: 275
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Dcmi
+  namespace: GHIElectronics.Endpoint.Devices.Dcmi
+  syntax:
+    content: public string[] GetResolution()
+    return:
+      type: System.String[]
+    content.vb: Public Function GetResolution() As String()
+  overload: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.GetResolution*
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Open
+  commentId: M:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Open
+  id: Open
+  parent: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  langs:
+  - csharp
+  - vb
+  name: Open()
+  nameWithType: DcmiController.Open()
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Open()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Open
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+    startLine: 277
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Dcmi
+  namespace: GHIElectronics.Endpoint.Devices.Dcmi
+  syntax:
+    content: protected void Open()
+    content.vb: Protected Sub Open()
+  overload: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Open*
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Close
+  commentId: M:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Close
+  id: Close
+  parent: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  langs:
+  - csharp
+  - vb
+  name: Close()
+  nameWithType: DcmiController.Close()
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Close()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Close
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+    startLine: 309
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Dcmi
+  namespace: GHIElectronics.Endpoint.Devices.Dcmi
+  syntax:
+    content: protected void Close()
+    content.vb: Protected Sub Close()
+  overload: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Close*
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Capture
+  commentId: M:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Capture
+  id: Capture
+  parent: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  langs:
+  - csharp
+  - vb
+  name: Capture()
+  nameWithType: DcmiController.Capture()
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Capture()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Capture
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+    startLine: 330
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Dcmi
+  namespace: GHIElectronics.Endpoint.Devices.Dcmi
+  syntax:
+    content: public byte[] Capture()
+    return:
+      type: System.Byte[]
+    content.vb: Public Function Capture() As Byte()
+  overload: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Capture*
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.VideoStreamStart
+  commentId: M:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.VideoStreamStart
+  id: VideoStreamStart
+  parent: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  langs:
+  - csharp
+  - vb
+  name: VideoStreamStart()
+  nameWithType: DcmiController.VideoStreamStart()
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.VideoStreamStart()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: VideoStreamStart
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+    startLine: 365
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Dcmi
+  namespace: GHIElectronics.Endpoint.Devices.Dcmi
+  syntax:
+    content: public void VideoStreamStart()
+    content.vb: Public Sub VideoStreamStart()
+  overload: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.VideoStreamStart*
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.VideoStreamStop
+  commentId: M:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.VideoStreamStop
+  id: VideoStreamStop
+  parent: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  langs:
+  - csharp
+  - vb
+  name: VideoStreamStop()
+  nameWithType: DcmiController.VideoStreamStop()
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.VideoStreamStop()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: VideoStreamStop
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+    startLine: 419
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Dcmi
+  namespace: GHIElectronics.Endpoint.Devices.Dcmi
+  syntax:
+    content: public void VideoStreamStop()
+    content.vb: Public Sub VideoStreamStop()
+  overload: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.VideoStreamStop*
+references:
+- uid: GHIElectronics.Endpoint.Devices.Dcmi
+  commentId: N:GHIElectronics.Endpoint.Devices.Dcmi
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Dcmi
+  nameWithType: GHIElectronics.Endpoint.Devices.Dcmi
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Dcmi
+    name: Dcmi
+    href: GHIElectronics.Endpoint.Devices.Dcmi.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Dcmi
+    name: Dcmi
+    href: GHIElectronics.Endpoint.Devices.Dcmi.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Setting*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Setting
+  href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html#GHIElectronics_Endpoint_Devices_Dcmi_DcmiController_Setting
+  name: Setting
+  nameWithType: DcmiController.Setting
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Setting
+- uid: GHIElectronics.Endpoint.Devices.Camera.CameraConfiguration
+  commentId: T:GHIElectronics.Endpoint.Devices.Camera.CameraConfiguration
+  parent: GHIElectronics.Endpoint.Devices.Camera
+  href: GHIElectronics.Endpoint.Devices.Camera.CameraConfiguration.html
+  name: CameraConfiguration
+  nameWithType: CameraConfiguration
+  fullName: GHIElectronics.Endpoint.Devices.Camera.CameraConfiguration
+- uid: GHIElectronics.Endpoint.Devices.Camera
+  commentId: N:GHIElectronics.Endpoint.Devices.Camera
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Camera
+  nameWithType: GHIElectronics.Endpoint.Devices.Camera
+  fullName: GHIElectronics.Endpoint.Devices.Camera
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Camera
+    name: Camera
+    href: GHIElectronics.Endpoint.Devices.Camera.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Camera
+    name: Camera
+    href: GHIElectronics.Endpoint.Devices.Camera.html
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Width*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Width
+  href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html#GHIElectronics_Endpoint_Devices_Dcmi_DcmiController_Width
+  name: Width
+  nameWithType: DcmiController.Width
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Width
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Height*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Height
+  href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html#GHIElectronics_Endpoint_Devices_Dcmi_DcmiController_Height
+  name: Height
+  nameWithType: DcmiController.Height
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Height
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.IsVideoStreaming*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.IsVideoStreaming
+  href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html#GHIElectronics_Endpoint_Devices_Dcmi_DcmiController_IsVideoStreaming
+  name: IsVideoStreaming
+  nameWithType: DcmiController.IsVideoStreaming
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.IsVideoStreaming
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.#ctor
+  href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html#GHIElectronics_Endpoint_Devices_Dcmi_DcmiController__ctor_System_String_
+  name: DcmiController
+  nameWithType: DcmiController.DcmiController
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.DcmiController
+  nameWithType.vb: DcmiController.New
+  fullName.vb: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Dispose*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Dispose
+  href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html#GHIElectronics_Endpoint_Devices_Dcmi_DcmiController_Dispose
+  name: Dispose
+  nameWithType: DcmiController.Dispose
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived
+  commentId: T:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived
+  parent: GHIElectronics.Endpoint.Devices.Dcmi
+  href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html
+  name: DcmiController.FrameReceived
+  nameWithType: DcmiController.FrameReceived
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+    name: DcmiController
+    href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived
+    name: FrameReceived
+    href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+    name: DcmiController
+    href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived
+    name: FrameReceived
+    href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived.html
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.GetResolution*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.GetResolution
+  href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html#GHIElectronics_Endpoint_Devices_Dcmi_DcmiController_GetResolution
+  name: GetResolution
+  nameWithType: DcmiController.GetResolution
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.GetResolution
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Open*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Open
+  href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html#GHIElectronics_Endpoint_Devices_Dcmi_DcmiController_Open
+  name: Open
+  nameWithType: DcmiController.Open
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Open
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Close*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Close
+  href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html#GHIElectronics_Endpoint_Devices_Dcmi_DcmiController_Close
+  name: Close
+  nameWithType: DcmiController.Close
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Close
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Capture*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Capture
+  href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html#GHIElectronics_Endpoint_Devices_Dcmi_DcmiController_Capture
+  name: Capture
+  nameWithType: DcmiController.Capture
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.Capture
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.VideoStreamStart*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.VideoStreamStart
+  href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html#GHIElectronics_Endpoint_Devices_Dcmi_DcmiController_VideoStreamStart
+  name: VideoStreamStart
+  nameWithType: DcmiController.VideoStreamStart
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.VideoStreamStart
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.VideoStreamStop*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.VideoStreamStop
+  href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html#GHIElectronics_Endpoint_Devices_Dcmi_DcmiController_VideoStreamStop
+  name: VideoStreamStop
+  nameWithType: DcmiController.VideoStreamStop
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.VideoStreamStop

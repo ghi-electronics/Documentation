@@ -1,0 +1,77 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Update
+  commentId: N:GHIElectronics.Endpoint.Update
+  id: GHIElectronics.Endpoint.Update
+  children:
+  - GHIElectronics.Endpoint.Update.UpdateController
+  - GHIElectronics.Endpoint.Update.UpdateController.Mode
+  langs:
+  - csharp
+  - vb
+  name: GHIElectronics.Endpoint.Update
+  nameWithType: GHIElectronics.Endpoint.Update
+  fullName: GHIElectronics.Endpoint.Update
+  type: Namespace
+  assemblies:
+  - GHIElectronics.Endpoint.Update
+references:
+- uid: GHIElectronics.Endpoint.Update.UpdateController
+  commentId: T:GHIElectronics.Endpoint.Update.UpdateController
+  href: GHIElectronics.Endpoint.Update.UpdateController.html
+  name: UpdateController
+  nameWithType: UpdateController
+  fullName: GHIElectronics.Endpoint.Update.UpdateController
+- uid: GHIElectronics.Endpoint.Update.UpdateController.Mode
+  commentId: T:GHIElectronics.Endpoint.Update.UpdateController.Mode
+  parent: GHIElectronics.Endpoint.Update
+  href: GHIElectronics.Endpoint.Update.UpdateController.html
+  name: UpdateController.Mode
+  nameWithType: UpdateController.Mode
+  fullName: GHIElectronics.Endpoint.Update.UpdateController.Mode
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Update.UpdateController
+    name: UpdateController
+    href: GHIElectronics.Endpoint.Update.UpdateController.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Update.UpdateController.Mode
+    name: Mode
+    href: GHIElectronics.Endpoint.Update.UpdateController.Mode.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Update.UpdateController
+    name: UpdateController
+    href: GHIElectronics.Endpoint.Update.UpdateController.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Update.UpdateController.Mode
+    name: Mode
+    href: GHIElectronics.Endpoint.Update.UpdateController.Mode.html
+- uid: GHIElectronics.Endpoint.Update
+  commentId: N:GHIElectronics.Endpoint.Update
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Update
+  nameWithType: GHIElectronics.Endpoint.Update
+  fullName: GHIElectronics.Endpoint.Update
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Update
+    name: Update
+    href: GHIElectronics.Endpoint.Update.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Update
+    name: Update
+    href: GHIElectronics.Endpoint.Update.html

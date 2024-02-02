@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Touch Screen </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Touch Screen ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/touch-screen.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="touch-screen">Touch Screen</h1>
+
+<hr>
+<h2 id="introduction">Introduction</h2>
+<p>Displays may optionally include a touch sensitive screen to detect user touch input. Endpoint supports capacitive touch.</p>
+<hr>
+<h2 id="capacitive-touch">Capacitive Touch</h2>
+<p>Capacitive touch screens are used on most modern devices, including phones. They are very accurate and capable of detecting multiple simultaneous touches.</p>
+<p>A special capacitive controller chip must be used to read the touch panel. This chip is usually mounted right on the flat cable going to the touch panel. These chips are usually I2C or SPI, with I2C being more common.</p>
+<p>The capacitive displays used in our development options use a touch controller from FocalTech.</p>
+<p>We provide the <code>GHIElectronics.Endpoint.Drivers.FocalTech.FT5xx6</code> NuGet package to interact with capacitive touch screens. The constructor simply needs to know which I2C bus and reset pin are being used. The event fires giving the exact position using display pixels as units -- there is no need for scaling or calibration. The driver source code is found on the <a href="https://github.com/ghi-electronics/endpoint-drivers">Endpoint Drivers repo</a>.</p>
+<p>This simple example will draw the touch x and y coordinates on the screen.</p>
+<pre><code class="lang-cs">using System.Device.Gpio;
+using System.Device.Gpio.Drivers;
+using SkiaSharp;
+using GHIElectronics.Endpoint.Core;
+using GHIElectronics.Endpoint.Devices.Display;
+using GHIElectronics.Endpoint.Drivers.FocalTech.FT5xx6;
+
+//Initialize Screen
+var screenWidth = 480;
+var screenHeight = 272;
+var backlightPort = EPM815.Gpio.Pin.PD14 / 16;
+var backlightPin = EPM815.Gpio.Pin.PD14 % 16;
+
+var backlightDriver = new LibGpiodDriver((int)backlightPort);
+var backlightController = new GpioController(PinNumberingScheme.Logical, backlightDriver);
+backlightController.OpenPin(backlightPin);
+backlightController.SetPinMode(backlightPin, PinMode.Output);
+backlightController.Write(backlightPin, PinValue.High);
+
+var configuration = new FBDisplay.ParallelConfiguration(){
+    Clock = 10000,
+    Width = 480,
+    Hsync_start = 480 + 2,
+    Hsync_end = 480 + 2 + 41,
+    Htotal = 480 + 2 + 41 + 2,
+    Height = 272,
+    Vsync_start = 272 + 2,
+    Vsync_end = 272 + 2 + 10,
+    Vtotal = 272 + 2 + 10 + 2,
+};
+var fbDisplay = new FBDisplay(configuration);
+var displayController = new DisplayController(fbDisplay);
+
+//Initialize Touch
+var touchX = 0;
+var touchY = 0;
+var TouchResetPin = EPM815.Gpio.Pin.PF2 % 16;
+var TouchResetPort = EPM815.Gpio.Pin.PF2 / 16;
+var TouchController = new GpioController(PinNumberingScheme.Logical, new LibGpiodDriver(TouchResetPort));
+TouchController.OpenPin(TouchResetPin);
+TouchController.Write(TouchResetPin, PinValue.Low);
+Thread.Sleep(100);
+TouchController.Write(TouchResetPin, PinValue.High);
+EPM815.I2c.Initialize(EPM815.I2c.I2c5);
+var touch = new FT5xx6Controller(EPM815.I2c.I2c5, EPM815.Gpio.Pin.PB11);
+touch.TouchUp += Touch_TouchUp;
+
+//Initialize Graphics
+SKBitmap bitmap = new SKBitmap(screenWidth, screenHeight, SKImageInfo.PlatformColorType, SKAlphaType.Premul);
+bitmap.Erase(SKColors.Transparent);
+
+while (true){
+    using (var screen = new SKCanvas(bitmap)){
+
+        //Create Black Screen 
+        screen.DrawColor(SKColors.Black);
+        screen.Clear(SKColors.Black);
+        // Draw X
+        using (SKPaint text = new SKPaint()){
+            text.Color = SKColors.White;
+            text.IsAntialias = true;
+            text.StrokeWidth = 2;
+            text.Style = SKPaintStyle.Fill;
+            SKFont sKFont = new SKFont();
+            sKFont.Size = 60;
+
+            SKTextBlob textBlob = SKTextBlob.Create(&quot;Touch X =&quot; + touchX.ToString(), sKFont);
+            screen.DrawText(textBlob, 60, 125, text);
+        }
+        // Draw Y
+        using (SKPaint text = new SKPaint()){
+            text.Color = SKColors.White;
+            text.IsAntialias = true;
+            text.StrokeWidth = 2;
+            text.Style = SKPaintStyle.Fill;
+            SKFont sKFont = new SKFont();
+            sKFont.Size = 60;
+
+            SKTextBlob textBlob = SKTextBlob.Create(&quot;Touch Y =&quot; + touchY.ToString(), sKFont);
+            screen.DrawText(textBlob, 60, 175, text);
+        }
+        // Flush to screen
+        var data = bitmap.Copy(SKColorType.Rgb565).Bytes;
+        displayController.Flush(data);
+        Thread.Sleep(1);
+    }
+}
+void Touch_TouchUp(FT5xx6Controller sender, FT5xx6Controller.TouchEventArgs e){
+    touchX = e.X;
+    touchY = e.Y;
+    return;
+}
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/touch-screen.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

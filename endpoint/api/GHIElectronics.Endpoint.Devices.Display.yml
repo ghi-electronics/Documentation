@@ -1,0 +1,107 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Display
+  commentId: N:GHIElectronics.Endpoint.Devices.Display
+  id: GHIElectronics.Endpoint.Devices.Display
+  children:
+  - GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
+  - GHIElectronics.Endpoint.Devices.Display.DisplayController
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  - GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
+  langs:
+  - csharp
+  - vb
+  name: GHIElectronics.Endpoint.Devices.Display
+  nameWithType: GHIElectronics.Endpoint.Devices.Display
+  fullName: GHIElectronics.Endpoint.Devices.Display
+  type: Namespace
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+references:
+- uid: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
+  commentId: T:GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
+  parent: GHIElectronics.Endpoint.Devices.Display
+  href: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration.html
+  name: DisplayConfiguration
+  nameWithType: DisplayConfiguration
+  fullName: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
+- uid: GHIElectronics.Endpoint.Devices.Display.DisplayController
+  commentId: T:GHIElectronics.Endpoint.Devices.Display.DisplayController
+  href: GHIElectronics.Endpoint.Devices.Display.DisplayController.html
+  name: DisplayController
+  nameWithType: DisplayController
+  fullName: GHIElectronics.Endpoint.Devices.Display.DisplayController
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay
+  commentId: T:GHIElectronics.Endpoint.Devices.Display.FBDisplay
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.html
+  name: FBDisplay
+  nameWithType: FBDisplay
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  commentId: T:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.html
+  name: FBDisplay.Configuration
+  nameWithType: FBDisplay.Configuration
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay
+    name: FBDisplay
+    href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+    name: Configuration
+    href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay
+    name: FBDisplay
+    href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+    name: Configuration
+    href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration.html
+- uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
+  commentId: T:GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
+  parent: GHIElectronics.Endpoint.Devices.Display
+  href: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.html
+  name: IDisplayProvider
+  nameWithType: IDisplayProvider
+  fullName: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
+- uid: GHIElectronics.Endpoint.Devices.Display
+  commentId: N:GHIElectronics.Endpoint.Devices.Display
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Display
+  nameWithType: GHIElectronics.Endpoint.Devices.Display
+  fullName: GHIElectronics.Endpoint.Devices.Display
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Display
+    name: Display
+    href: GHIElectronics.Endpoint.Devices.Display.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Display
+    name: Display
+    href: GHIElectronics.Endpoint.Devices.Display.html

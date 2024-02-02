@@ -1,0 +1,536 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Adc.AdcController
+  commentId: T:GHIElectronics.Endpoint.Devices.Adc.AdcController
+  id: AdcController
+  parent: GHIElectronics.Endpoint.Devices.Adc
+  children:
+  - GHIElectronics.Endpoint.Devices.Adc.AdcController.#ctor(System.Int32)
+  - GHIElectronics.Endpoint.Devices.Adc.AdcController.Dispose
+  - GHIElectronics.Endpoint.Devices.Adc.AdcController.Read
+  - GHIElectronics.Endpoint.Devices.Adc.AdcController.ResolutionInBits
+  langs:
+  - csharp
+  - vb
+  name: AdcController
+  nameWithType: AdcController
+  fullName: GHIElectronics.Endpoint.Devices.Adc.AdcController
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Adc/AdcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AdcController
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Adc/AdcController.cs
+    startLine: 22
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Adc
+  namespace: GHIElectronics.Endpoint.Devices.Adc
+  example:
+  - >-
+    ADC is used to read Analog values from a specific pin
+
+    <pre><code class="lang-csharp">using GHIElectronics.Endpoint.Core;
+
+    using GHIElectronics.Endpoint.Devices.Adc;
+
+
+    var adcController = new AdcController(EPM815.Adc.Pin.ANA1); 
+
+
+    while (true){
+        var v = adcController.Read();
+        var v1 = (v * 3.3 / 65535);
+        Console.WriteLine(v1.ToString());
+        Thread.Sleep(1000);
+    }</code></pre>
+  syntax:
+    content: 'public class AdcController : IDisposable'
+    content.vb: Public Class AdcController Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.Devices.Adc.AdcController.ResolutionInBits
+  commentId: P:GHIElectronics.Endpoint.Devices.Adc.AdcController.ResolutionInBits
+  id: ResolutionInBits
+  parent: GHIElectronics.Endpoint.Devices.Adc.AdcController
+  langs:
+  - csharp
+  - vb
+  name: ResolutionInBits
+  nameWithType: AdcController.ResolutionInBits
+  fullName: GHIElectronics.Endpoint.Devices.Adc.AdcController.ResolutionInBits
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Adc/AdcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ResolutionInBits
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Adc/AdcController.cs
+    startLine: 29
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Adc
+  namespace: GHIElectronics.Endpoint.Devices.Adc
+  syntax:
+    content: public int ResolutionInBits { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ResolutionInBits As Integer
+  overload: GHIElectronics.Endpoint.Devices.Adc.AdcController.ResolutionInBits*
+- uid: GHIElectronics.Endpoint.Devices.Adc.AdcController.#ctor(System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Devices.Adc.AdcController.#ctor(System.Int32)
+  id: '#ctor(System.Int32)'
+  parent: GHIElectronics.Endpoint.Devices.Adc.AdcController
+  langs:
+  - csharp
+  - vb
+  name: AdcController(int)
+  nameWithType: AdcController.AdcController(int)
+  fullName: GHIElectronics.Endpoint.Devices.Adc.AdcController.AdcController(int)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Adc/AdcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Adc/AdcController.cs
+    startLine: 52
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Adc
+  namespace: GHIElectronics.Endpoint.Devices.Adc
+  syntax:
+    content: public AdcController(int adcPin)
+    parameters:
+    - id: adcPin
+      type: System.Int32
+    content.vb: Public Sub New(adcPin As Integer)
+  overload: GHIElectronics.Endpoint.Devices.Adc.AdcController.#ctor*
+  nameWithType.vb: AdcController.New(Integer)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Adc.AdcController.New(Integer)
+  name.vb: New(Integer)
+- uid: GHIElectronics.Endpoint.Devices.Adc.AdcController.Read
+  commentId: M:GHIElectronics.Endpoint.Devices.Adc.AdcController.Read
+  id: Read
+  parent: GHIElectronics.Endpoint.Devices.Adc.AdcController
+  langs:
+  - csharp
+  - vb
+  name: Read()
+  nameWithType: AdcController.Read()
+  fullName: GHIElectronics.Endpoint.Devices.Adc.AdcController.Read()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Adc/AdcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Read
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Adc/AdcController.cs
+    startLine: 78
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Adc
+  namespace: GHIElectronics.Endpoint.Devices.Adc
+  syntax:
+    content: public uint Read()
+    return:
+      type: System.UInt32
+    content.vb: Public Function Read() As UInteger
+  overload: GHIElectronics.Endpoint.Devices.Adc.AdcController.Read*
+- uid: GHIElectronics.Endpoint.Devices.Adc.AdcController.Dispose
+  commentId: M:GHIElectronics.Endpoint.Devices.Adc.AdcController.Dispose
+  id: Dispose
+  parent: GHIElectronics.Endpoint.Devices.Adc.AdcController
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: AdcController.Dispose()
+  fullName: GHIElectronics.Endpoint.Devices.Adc.AdcController.Dispose()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Adc/AdcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Dispose
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Adc/AdcController.cs
+    startLine: 146
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Adc
+  namespace: GHIElectronics.Endpoint.Devices.Adc
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: GHIElectronics.Endpoint.Devices.Adc.AdcController.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: GHIElectronics.Endpoint.Devices.Adc
+  commentId: N:GHIElectronics.Endpoint.Devices.Adc
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Adc
+  nameWithType: GHIElectronics.Endpoint.Devices.Adc
+  fullName: GHIElectronics.Endpoint.Devices.Adc
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Adc
+    name: Adc
+    href: GHIElectronics.Endpoint.Devices.Adc.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Adc
+    name: Adc
+    href: GHIElectronics.Endpoint.Devices.Adc.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.Devices.Adc.AdcController.ResolutionInBits*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Adc.AdcController.ResolutionInBits
+  href: GHIElectronics.Endpoint.Devices.Adc.AdcController.html#GHIElectronics_Endpoint_Devices_Adc_AdcController_ResolutionInBits
+  name: ResolutionInBits
+  nameWithType: AdcController.ResolutionInBits
+  fullName: GHIElectronics.Endpoint.Devices.Adc.AdcController.ResolutionInBits
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GHIElectronics.Endpoint.Devices.Adc.AdcController.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Adc.AdcController.#ctor
+  href: GHIElectronics.Endpoint.Devices.Adc.AdcController.html#GHIElectronics_Endpoint_Devices_Adc_AdcController__ctor_System_Int32_
+  name: AdcController
+  nameWithType: AdcController.AdcController
+  fullName: GHIElectronics.Endpoint.Devices.Adc.AdcController.AdcController
+  nameWithType.vb: AdcController.New
+  fullName.vb: GHIElectronics.Endpoint.Devices.Adc.AdcController.New
+  name.vb: New
+- uid: GHIElectronics.Endpoint.Devices.Adc.AdcController.Read*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Adc.AdcController.Read
+  href: GHIElectronics.Endpoint.Devices.Adc.AdcController.html#GHIElectronics_Endpoint_Devices_Adc_AdcController_Read
+  name: Read
+  nameWithType: AdcController.Read
+  fullName: GHIElectronics.Endpoint.Devices.Adc.AdcController.Read
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: GHIElectronics.Endpoint.Devices.Adc.AdcController.Dispose*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Adc.AdcController.Dispose
+  href: GHIElectronics.Endpoint.Devices.Adc.AdcController.html#GHIElectronics_Endpoint_Devices_Adc_AdcController_Dispose
+  name: Dispose
+  nameWithType: AdcController.Dispose
+  fullName: GHIElectronics.Endpoint.Devices.Adc.AdcController.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

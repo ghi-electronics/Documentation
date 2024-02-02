@@ -1,0 +1,101 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Mmc
+  commentId: N:GHIElectronics.Endpoint.Devices.Mmc
+  id: GHIElectronics.Endpoint.Devices.Mmc
+  children:
+  - GHIElectronics.Endpoint.Devices.Mmc.DeviceConnectionEventArgs
+  - GHIElectronics.Endpoint.Devices.Mmc.DeviceConnectionStatus
+  - GHIElectronics.Endpoint.Devices.Mmc.OnConnectionChanged
+  - GHIElectronics.Endpoint.Devices.Mmc.Sdmmc
+  - GHIElectronics.Endpoint.Devices.Mmc.SdmmcController
+  - GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+  langs:
+  - csharp
+  - vb
+  name: GHIElectronics.Endpoint.Devices.Mmc
+  nameWithType: GHIElectronics.Endpoint.Devices.Mmc
+  fullName: GHIElectronics.Endpoint.Devices.Mmc
+  type: Namespace
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Sdmmc
+references:
+- uid: GHIElectronics.Endpoint.Devices.Mmc.Sdmmc
+  commentId: T:GHIElectronics.Endpoint.Devices.Mmc.Sdmmc
+  href: GHIElectronics.Endpoint.Devices.Mmc.Sdmmc.html
+  name: Sdmmc
+  nameWithType: Sdmmc
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.Sdmmc
+- uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+  commentId: T:GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+  parent: GHIElectronics.Endpoint.Devices.Mmc
+  href: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType.html
+  name: SdmmcType
+  nameWithType: SdmmcType
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+- uid: GHIElectronics.Endpoint.Devices.Mmc.DeviceConnectionStatus
+  commentId: T:GHIElectronics.Endpoint.Devices.Mmc.DeviceConnectionStatus
+  parent: GHIElectronics.Endpoint.Devices.Mmc
+  href: GHIElectronics.Endpoint.Devices.Mmc.DeviceConnectionStatus.html
+  name: DeviceConnectionStatus
+  nameWithType: DeviceConnectionStatus
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.DeviceConnectionStatus
+- uid: GHIElectronics.Endpoint.Devices.Mmc.OnConnectionChanged
+  commentId: T:GHIElectronics.Endpoint.Devices.Mmc.OnConnectionChanged
+  parent: GHIElectronics.Endpoint.Devices.Mmc
+  href: GHIElectronics.Endpoint.Devices.Mmc.OnConnectionChanged.html
+  name: OnConnectionChanged
+  nameWithType: OnConnectionChanged
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.OnConnectionChanged
+- uid: GHIElectronics.Endpoint.Devices.Mmc.DeviceConnectionEventArgs
+  commentId: T:GHIElectronics.Endpoint.Devices.Mmc.DeviceConnectionEventArgs
+  parent: GHIElectronics.Endpoint.Devices.Mmc
+  href: GHIElectronics.Endpoint.Devices.Mmc.DeviceConnectionEventArgs.html
+  name: DeviceConnectionEventArgs
+  nameWithType: DeviceConnectionEventArgs
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.DeviceConnectionEventArgs
+- uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController
+  commentId: T:GHIElectronics.Endpoint.Devices.Mmc.SdmmcController
+  parent: GHIElectronics.Endpoint.Devices.Mmc
+  href: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.html
+  name: SdmmcController
+  nameWithType: SdmmcController
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController
+- uid: GHIElectronics.Endpoint.Devices.Mmc
+  commentId: N:GHIElectronics.Endpoint.Devices.Mmc
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Mmc
+  nameWithType: GHIElectronics.Endpoint.Devices.Mmc
+  fullName: GHIElectronics.Endpoint.Devices.Mmc
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Mmc
+    name: Mmc
+    href: GHIElectronics.Endpoint.Devices.Mmc.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Mmc
+    name: Mmc
+    href: GHIElectronics.Endpoint.Devices.Mmc.html
