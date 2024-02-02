@@ -23,6 +23,19 @@ File | Date | Status | MD5
 --- | --- | --- |
 [v0.0.1.0.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/endpoint_image_5.13.0Feb12024.img) | 2024-02-02 | Preview | 1539CB1D959376BF2588EE416E62C625
 
+Endpoint OS image is large and that take time to update. For quick update/re-install firmware or dotnet, user can select update firmware or dotnet from Endpoint Config tool, and using the files below:
+
+#### Firmware
+
+File | Date | Status | MD5
+--- | --- | --- |
+[v0.0.1.0.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/rootfs.ghi) | 2024-02-02 | Preview | C4AA6D761FA8AA7A24B1406A9A9A5523
+
+#### Dotnet
+
+File | Date | Status | MD5
+--- | --- | --- |
+[v0.0.1.0.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/dotnet.ghi) | 2024-02-02 | Preview | E163B3E8EAF8A162D7871776684C1332
 
 ### Endpoint Config 
 
