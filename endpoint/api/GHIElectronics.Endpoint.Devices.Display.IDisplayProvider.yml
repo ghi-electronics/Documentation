@@ -1,0 +1,257 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
+  commentId: T:GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
+  id: IDisplayProvider
+  parent: GHIElectronics.Endpoint.Devices.Display
+  children:
+  - GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[])
+  - GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: IDisplayProvider
+  nameWithType: IDisplayProvider
+  fullName: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
+  type: Interface
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: IDisplayProvider
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
+    startLine: 8
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: 'public interface IDisplayProvider : IDisposable'
+    content.vb: Public Interface IDisplayProvider Inherits IDisposable
+  inheritedMembers:
+  - System.IDisposable.Dispose
+- uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[])
+  commentId: M:GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[])
+  id: Flush(System.Byte[])
+  parent: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
+  langs:
+  - csharp
+  - vb
+  name: Flush(byte[])
+  nameWithType: IDisplayProvider.Flush(byte[])
+  fullName: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(byte[])
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Flush
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: void Flush(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    content.vb: Sub Flush(data As Byte())
+  overload: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush*
+  nameWithType.vb: IDisplayProvider.Flush(Byte())
+  fullName.vb: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(Byte())
+  name.vb: Flush(Byte())
+- uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32)
+  id: Flush(System.Byte[],System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
+  langs:
+  - csharp
+  - vb
+  name: Flush(byte[], int, int)
+  nameWithType: IDisplayProvider.Flush(byte[], int, int)
+  fullName: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(byte[], int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Flush
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: void Flush(byte[] data, int offset, int length)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    - id: offset
+      type: System.Int32
+    - id: length
+      type: System.Int32
+    content.vb: Sub Flush(data As Byte(), offset As Integer, length As Integer)
+  overload: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush*
+  nameWithType.vb: IDisplayProvider.Flush(Byte(), Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(Byte(), Integer, Integer)
+  name.vb: Flush(Byte(), Integer, Integer)
+- uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+  id: Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
+  langs:
+  - csharp
+  - vb
+  name: Flush(byte[], int, int, int, int)
+  nameWithType: IDisplayProvider.Flush(byte[], int, int, int, int)
+  fullName: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(byte[], int, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Flush
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
+    startLine: 12
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: void Flush(byte[] data, int offset, int length, int width, int height)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    - id: offset
+      type: System.Int32
+    - id: length
+      type: System.Int32
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Sub Flush(data As Byte(), offset As Integer, length As Integer, width As Integer, height As Integer)
+  overload: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush*
+  nameWithType.vb: IDisplayProvider.Flush(Byte(), Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(Byte(), Integer, Integer, Integer, Integer)
+  name.vb: Flush(Byte(), Integer, Integer, Integer, Integer)
+references:
+- uid: GHIElectronics.Endpoint.Devices.Display
+  commentId: N:GHIElectronics.Endpoint.Devices.Display
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Display
+  nameWithType: GHIElectronics.Endpoint.Devices.Display
+  fullName: GHIElectronics.Endpoint.Devices.Display
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Display
+    name: Display
+    href: GHIElectronics.Endpoint.Devices.Display.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Display
+    name: Display
+    href: GHIElectronics.Endpoint.Devices.Display.html
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush
+  href: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.html#GHIElectronics_Endpoint_Devices_Display_IDisplayProvider_Flush_System_Byte___
+  name: Flush
+  nameWithType: IDisplayProvider.Flush
+  fullName: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

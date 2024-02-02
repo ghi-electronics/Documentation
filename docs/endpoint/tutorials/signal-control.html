@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Signal Control </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Signal Control ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/signal-control.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="signal-control">Signal Control</h1>
+
+<hr>
+<p><img src="images/signal-control.jpg" alt="HC-SR04 ultrasonic sensor"></p>
+<h2 id="digitalsignal">DigitalSignal</h2>
+<p>The DigitalSignal is used to handle digital signals! Unlike the other features on this page, DigitalSignal is accurate because it is hardware-backed and runs in a non-blocking manner.</p>
+<p>Being hardware backed, this feature only runs on two specific pins: <code>EPM815.Gpio.Pin.PH10</code> (Timer5) and <code>EPM815.Gpio.Pin.PA5</code> (Timer2)</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Timers are also used with other features, such as PWM. Once a <code>Timer</code> is reserved for DigitalSignal, it is no longer available for other features.</p>
+</div>
+<p>There are two uses for DigitalSignal, reading a signal (capture) and sending a signal (generate). The capture feature also support capturing a stream of durations (signal analyzer) or a pulse counter.</p>
+<h3 id="generate">Generate</h3>
+<p>Using the <code>Generate</code> function allows the user to create a very accurate signal generator.</p>
+<pre><code class="lang-cs">Generate(uint[] data, uint offset, int count)
+</code></pre>
+<p><code>data</code> is the length of each pulse in ticks</p>
+<p>There is a limitation to the <code>data</code> being used: The <code>data</code> array length is limited to 64K elements. Also, adding individual elements together in the array can also not exceed 0xFFFFFFFF in total.</p>
+<p><img src="images/write1.jpg" alt="Default Timing"></p>
+<pre><code class="lang-cs">Generate(uint[] data, uint offset, int count, uint multiplier, Edge edge)
+</code></pre>
+<p>Allowed multiplier values range from 5 to 318,000 (318us).</p>
+<p>The signal generator start with a signal at <code>edge</code> level. It then toggles the signal every x time. The time is fetched from the array given, one by one. Note that by sending an even count of pulses, the signal will terminate with a <code>!edge</code> level as shown below.</p>
+<p><img src="images/write2.jpg" alt="Signal Example"></p>
+<p>Starting a second write will cause the signal to first go low, which may not be desired, as it causes an extra pulse on the next <code>Generate</code>. This pulse has a variable width. Making sure that the data <code>Length</code> is always an odd number will assure that the signal will terminate at a low-level.</p>
+<p><img src="images/write3.jpg" alt="Signal Example"></p>
+<p>Calling <code>Generate</code> will return immediately (non-blocking) allowing the system to do other tasks while the signal is being generated in the background. When the signal is generated completely, an event is fired. To aid in signal handling, the event provides the final resting level of the signal.</p>
+<pre><code class="lang-cs">OnGenerateFinished =&gt; OnGenerateFinished;
+
+dsig.OnGenerateFinished += (a, b, c) =&gt; {
+    if (b == GpioPinValue.High)
+        Console.WriteLine(&quot;Write done, end state high&quot;);
+    else
+        Console.WriteLine(&quot;Write done, end state low&quot;);
+   };
+</code></pre>
+<h3 id="capture">Capture</h3>
+<p>The Capture feature returns an array of timestamps of individual durations. The returned values are in nanoseconds.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Digital Signal is limited to the timer max value, which comes to be about 17.89 seconds. The <code>waitForEdge</code> helps by only starting the timer when there is an active pulse.</p>
+</div>
+<pre><code class="lang-cs">var digitalSignal = new DigitalSignalController(EPM815.Gpio.Pin.PA5);
+
+bool waitForEdge = false;// Start capturing as soon as Capture is called
+
+// Subscribe event when done capturing
+digitalSignal.CaptureFinished += DigitalSignal_OnCaptureFinished;
+
+// Subscribe error
+digitalSignal.ErrorReceived += (a,b) =&gt; { 
+	Console.WriteLine(&quot;Error detected: &quot; + error.ToString());
+};
+                      
+// start capture 100 samples, timeout is 15seconds
+digitalSignal.Capture(100, EPM815.Gpio.Edge.Rising | EPM815.Gpio.Edge.Falling, waitForEdge, TimeSpan.FromSeconds(15));
+
+// Wait for finish capture
+// do other work
+Thread.Sleep(Timeout.Infinite); 
+
+// The event
+private static void Digital_OnCaptureFinished(DigitalSignal sender, double[] buffer, uint count, uint initialState, bool aborted) {
+    if (count == 0) {
+        Console.WriteLine(&quot;no data was captured!&quot;);
+        return;
+    }
+    for (int i = 0; i &lt; count; i++) {
+        Console.WriteLine(&quot;Sample [&quot; + i +&quot;]: &quot;+ buffer[i]+&quot; ns&quot;);
+    }
+}
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The first captured pulse will likely have an inaccurate (shorter) value due to system prep-time.</p>
+</div>
+<h3 id="readpulse">ReadPulse</h3>
+<p>ReadPulse can be used to measure frequency and other analyses that require measuring time duration for specific pulse count.</p>
+<pre><code class="lang-cs">var digitalSignal = new DigitalSignalController(EPM815.Gpio.Pin.PH10);
+
+bool waitForEdge = true;// wait for first pulse before starting the measurement
+
+// Subscribe event when done reading
+digitalSignal.OnReadPulseFinished += DigitalSignal_ReadPulseFinished;   
+
+// Subscribe error
+digitalSignal.ErrorReceived += (a,b) =&gt; { 
+	Console.WriteLine(&quot;Error detected: &quot; + error.ToString());
+};        
+
+// Start reading 1000 pulses
+digitalSignal.ReadPulse(1000, EPM815.Gpio.Edge.Rising, waitForEdge);
+
+// do other work...
+Thread.Sleep(Timeout.Infinite);
+
+// the event
+void Digital_OnReadPulseFinished(DigitalSignal sender, TimeSpan duration, uint count, uint pinValue, bool aborted) {
+    var ticks = duration.Ticks;
+    var microsecond = ((double)duration.Ticks) / 10;
+    var millisecond = ((double)duration.Ticks) / 10000;
+    var freq = (count / microsecond) * 1000000;
+
+    Console.WriteLine(&quot;GpioPinValue = &quot; + ((pinValue == 1) ? &quot;High&quot; : &quot;Low&quot;));
+    Console.WriteLine(&quot;PulseCount = &quot; + count);
+    Console.WriteLine(&quot;Duration ticks = &quot; + ticks);
+    Console.WriteLine(&quot;Duration microsecond = &quot; + microsecond);
+    Console.WriteLine(&quot;Duration millisecond = &quot; + millisecond);
+    Console.WriteLine(&quot;freq = &quot; + freq / 1000.0 + &quot; KHz&quot;);
+}
+</code></pre>
+<hr>
+<h3 id="abort">Abort</h3>
+<p>An event is fired when any <code>DigitalSignal</code> operation is completed. In some cases, it may be desired to terminate the operation early, using <code>Abort</code>. When aborted, an event is still triggered, which will contain whatever data/pulses was collected from the trigger to the time <code>Abort</code> was called.</p>
+<pre><code class="lang-cs">var digitalSignal = new DigitalSignal(EPM815.Gpio.Pin.PH10);
+
+var waitForEdge = false;
+
+digitalSignal.OnReadPulseFinished += Digital_OnReadPulseFinished
+
+while (true) {
+    if (digitalSignal.CanReadPulse) {
+        digitalSignal.ReadPulse(1000, EPM815.Gpio.Edge.Rising, waitForEdge);                  
+        Thread.Sleep(1000);                    
+        digitalSignal.Abort();
+        Console.WriteLine(&quot;Aborted&quot;);
+    }
+}
+      
+void Digital_OnReadPulseFinished(DigitalSignal sender, TimeSpan duration, uint count, uint pinValue, bool aborted) {
+    if (count &gt; 0) {
+        var microsecond = ((double)duration.Ticks) / 10;
+        var freq = (count / microsecond) * 1000000;
+        Console.WriteLine(&quot;freq = &quot; + freq / 1000.0 + &quot; KHz&quot;);
+    }
+    else {
+        Console.WriteLine(&quot;No clock found.&quot;);
+    }
+}
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>In the sample code above you can use PWM to provide the pulse needed to verify the code. Keep in mind that both PWM and <code>DigitalSignal</code> share resources, so a different Timer controller must be used.</p>
+</div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/signal-control.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

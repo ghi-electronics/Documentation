@@ -1,0 +1,247 @@
+### YamlMime:TableOfContent
+items:
+- uid: GHIElectronics.Endpoint
+  name: GHIElectronics.Endpoint
+  items:
+  - uid: GHIElectronics.Endpoint.FileSystem
+    name: FileSystem
+- uid: GHIElectronics.Endpoint.Core
+  name: GHIElectronics.Endpoint.Core
+  items:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Adc
+    name: EPM815.Adc
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+    name: EPM815.Adc.Pin
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Can
+    name: EPM815.Can
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: EPM815.Gpio
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+    name: EPM815.Gpio.Alternate
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+    name: EPM815.Gpio.Edge
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
+    name: EPM815.Gpio.Moder
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
+    name: EPM815.Gpio.OutputType
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin
+    name: EPM815.Gpio.Pin
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Port
+    name: EPM815.Gpio.Port
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pull
+    name: EPM815.Gpio.Pull
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
+    name: EPM815.Gpio.Speed
+  - uid: GHIElectronics.Endpoint.Core.EPM815.I2c
+    name: EPM815.I2c
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Pwm
+    name: EPM815.Pwm
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Pwm.Pin
+    name: EPM815.Pwm.Pin
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Sdmmc
+    name: EPM815.Sdmmc
+  - uid: GHIElectronics.Endpoint.Core.EPM815.SerialPort
+    name: EPM815.SerialPort
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Spi
+    name: EPM815.Spi
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+  - uid: GHIElectronics.Endpoint.Core.Interop.FileOpenFlags
+    name: Interop.FileOpenFlags
+  - uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+    name: Interop.MemoryMappedFlags
+  - uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+    name: Interop.MemoryMappedProtections
+  - uid: GHIElectronics.Endpoint.Core.Interop.SeekFlags
+    name: Interop.SeekFlags
+  - uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper
+    name: NativeRpmsgHelper
+  - uid: GHIElectronics.Endpoint.Core.NativeRpmsgHelper.DataReceivedEventHandler
+    name: NativeRpmsgHelper.DataReceivedEventHandler
+  - uid: GHIElectronics.Endpoint.Core.NativeUtils
+    name: NativeUtils
+  - uid: GHIElectronics.Endpoint.Core.Processor
+    name: Processor
+  - uid: GHIElectronics.Endpoint.Core.Register
+    name: Register
+  - uid: GHIElectronics.Endpoint.Core.Script
+    name: Script
+- uid: GHIElectronics.Endpoint.Devices.Adc
+  name: GHIElectronics.Endpoint.Devices.Adc
+  items:
+  - uid: GHIElectronics.Endpoint.Devices.Adc.AdcController
+    name: AdcController
+- uid: GHIElectronics.Endpoint.Devices.Camera
+  name: GHIElectronics.Endpoint.Devices.Camera
+  items:
+  - uid: GHIElectronics.Endpoint.Devices.Camera.CameraConfiguration
+    name: CameraConfiguration
+  - uid: GHIElectronics.Endpoint.Devices.Camera.ConvertImage
+    name: ConvertImage
+  - uid: GHIElectronics.Endpoint.Devices.Camera.Format
+    name: Format
+- uid: GHIElectronics.Endpoint.Devices.Can
+  name: GHIElectronics.Endpoint.Devices.Can
+  items:
+  - uid: GHIElectronics.Endpoint.Devices.Can.CanController
+    name: CanController
+  - uid: GHIElectronics.Endpoint.Devices.Can.CanError
+    name: CanError
+  - uid: GHIElectronics.Endpoint.Devices.Can.CanMessage
+    name: CanMessage
+  - uid: GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventArgs
+    name: ErrorReceivedEventArgs
+  - uid: GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventHandler
+    name: ErrorReceivedEventHandler
+  - uid: GHIElectronics.Endpoint.Devices.Can.MessageReceivedEventHandler
+    name: MessageReceivedEventHandler
+- uid: GHIElectronics.Endpoint.Devices.Dcmi
+  name: GHIElectronics.Endpoint.Devices.Dcmi
+  items:
+  - uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+    name: DcmiController
+  - uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived
+    name: DcmiController.FrameReceived
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal
+  name: GHIElectronics.Endpoint.Devices.DigitalSignal
+  items:
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
+    name: DigitalSignalController
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Error
+    name: DigitalSignalController.Error
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ErrorEventHandler
+    name: DigitalSignalController.ErrorEventHandler
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+    name: DigitalSignalController.Mode
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.PulseCaptureEventHandler
+    name: DigitalSignalController.PulseCaptureEventHandler
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.PulseGenerateEventHandler
+    name: DigitalSignalController.PulseGenerateEventHandler
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.PulseReadEventHandler
+    name: DigitalSignalController.PulseReadEventHandler
+- uid: GHIElectronics.Endpoint.Devices.Display
+  name: GHIElectronics.Endpoint.Devices.Display
+  items:
+  - uid: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
+    name: DisplayConfiguration
+  - uid: GHIElectronics.Endpoint.Devices.Display.DisplayController
+    name: DisplayController
+  - uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay
+    name: FBDisplay
+  - uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Configuration
+    name: FBDisplay.Configuration
+  - uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
+    name: IDisplayProvider
+- uid: GHIElectronics.Endpoint.Devices.Mmc
+  name: GHIElectronics.Endpoint.Devices.Mmc
+  items:
+  - uid: GHIElectronics.Endpoint.Devices.Mmc.DeviceConnectionEventArgs
+    name: DeviceConnectionEventArgs
+  - uid: GHIElectronics.Endpoint.Devices.Mmc.DeviceConnectionStatus
+    name: DeviceConnectionStatus
+  - uid: GHIElectronics.Endpoint.Devices.Mmc.OnConnectionChanged
+    name: OnConnectionChanged
+  - uid: GHIElectronics.Endpoint.Devices.Mmc.Sdmmc
+    name: Sdmmc
+  - uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController
+    name: SdmmcController
+  - uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+    name: SdmmcType
+- uid: GHIElectronics.Endpoint.Devices.Network
+  name: GHIElectronics.Endpoint.Devices.Network
+  items:
+  - uid: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs
+    name: NetworkAddressChangedEventArgs
+  - uid: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventHandler
+    name: NetworkAddressChangedEventHandler
+  - uid: GHIElectronics.Endpoint.Devices.Network.NetworkController
+    name: NetworkController
+  - uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceSettings
+    name: NetworkInterfaceSettings
+  - uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType
+    name: NetworkInterfaceType
+  - uid: GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventArgs
+    name: NetworkLinkConnectedChangedEventArgs
+  - uid: GHIElectronics.Endpoint.Devices.Network.NetworkLinkConnectedChangedEventHandler
+    name: NetworkLinkConnectedChangedEventHandler
+  - uid: GHIElectronics.Endpoint.Devices.Network.WiFiNetworkInterfaceSettings
+    name: WiFiNetworkInterfaceSettings
+- uid: GHIElectronics.Endpoint.Devices.Rtc
+  name: GHIElectronics.Endpoint.Devices.Rtc
+  items:
+  - uid: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
+    name: BatteryChargeMode
+  - uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController
+    name: RtcController
+- uid: GHIElectronics.Endpoint.Devices.Usb
+  name: GHIElectronics.Endpoint.Devices.Usb
+  items:
+  - uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+    name: DeviceType
+- uid: GHIElectronics.Endpoint.Devices.UsbHost
+  name: GHIElectronics.Endpoint.Devices.UsbHost
+  items:
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.BaseDevice
+    name: BaseDevice
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.DeviceConnectionEventArgs
+    name: DeviceConnectionEventArgs
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.DeviceConnectionStatus
+    name: DeviceConnectionStatus
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.EventCode
+    name: EventCode
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.EventType
+    name: EventType
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput
+    name: HidInput
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseDisconnected
+    name: HidInput.RaiseDisconnected
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseKeyPress
+    name: HidInput.RaiseKeyPress
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseMouseMove
+    name: HidInput.RaiseMouseMove
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.InputReader
+    name: InputReader
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseData
+    name: InputReader.RaiseData
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.InputReader.RaiseDisconnected
+    name: InputReader.RaiseDisconnected
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.KeyPressEvent
+    name: KeyPressEvent
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.KeyState
+    name: KeyState
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.MouseAxis
+    name: MouseAxis
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.MouseMoveEvent
+    name: MouseMoveEvent
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.OnConnectionChanged
+    name: OnConnectionChanged
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.UsbHostController
+    name: UsbHostController
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.Webcam
+    name: Webcam
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost.Webcam.FrameReceived
+    name: Webcam.FrameReceived
+- uid: GHIElectronics.Endpoint.Devices.Watchdog
+  name: GHIElectronics.Endpoint.Devices.Watchdog
+  items:
+  - uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController
+    name: WatchdogController
+- uid: GHIElectronics.Endpoint.Native
+  name: GHIElectronics.Endpoint.Native
+  items:
+  - uid: GHIElectronics.Endpoint.Native.DeviceInformation
+    name: DeviceInformation
+  - uid: GHIElectronics.Endpoint.Native.Power
+    name: Power
+  - uid: GHIElectronics.Endpoint.Native.Power.WakeupPin
+    name: Power.WakeupPin
+- uid: GHIElectronics.Endpoint.Update
+  name: GHIElectronics.Endpoint.Update
+  items:
+  - uid: GHIElectronics.Endpoint.Update.UpdateController
+    name: UpdateController
+  - uid: GHIElectronics.Endpoint.Update.UpdateController.Mode
+    name: UpdateController.Mode
+memberLayout: SamePage

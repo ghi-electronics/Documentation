@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>General Purpose Input Output (GPIO) </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="General Purpose Input Output (GPIO) ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/gpio.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="general-purpose-input-output-gpio">General Purpose Input Output (GPIO)</h1>
+
+<hr>
+<p>Microcontrollers include pins that can be controlled through software. They can be logical inputs or outputs, hence the name &quot;general purpose input/output&quot;.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>GPIO is found in the System.Device.Gpio and System.Device.Gpio.Drivers of the standard .NET API. These libraries are automatically imported when installing NuGet package GHIElectronics.Endpoint.Core</p>
+</div>
+<h2 id="digital-outputs">Digital Outputs</h2>
+<p>A digital output pin can be set to either high or low.  High means that there is approx. 3.3V on the output pin. When the pin is set to low, it's voltage will be very close to zero.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Never connect two output pins together. If they are connected and one is high and the other is low, the entire processor can be damaged.</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Digital pins on microcontrollers are weak. They can only be used to control small LEDs or drive transistors. Those transistors can, in turn, control devices with high power needs like a motor.</p>
+</div>
+<pre><code class="lang-cs">using System.Device.Gpio;
+using System.Device.Gpio.Drivers;
+using GHIElectronics.Endpoint.Core;
+
+var port = EPM815.Gpio.Pin.PC0 / 16;
+var pin = EPM815.Gpio.Pin.PC0 % 16;
+var gpioDriver = new LibGpiodDriver((int)port);
+var gpioController = new GpioController(PinNumberingScheme.
+    Logical, gpioDriver);
+
+gpioController.OpenPin(pin);
+gpioController.SetPinMode(pin, PinMode.Output);
+
+while (true){
+    gpioController.Write(pin, PinValue.High);
+    Thread.Sleep(100);
+    gpioController.Write(pin, PinValue.Low);
+    Thread.Sleep(100);
+}
+</code></pre>
+<hr>
+<h2 id="digital-inputs">Digital Inputs</h2>
+<p>Digital inputs sense the state of a pin based on its voltage. Minimum voltage on most pins is 0 volts; a negative voltage may damage the pin or the processor. Most processors run on 3.3V, the highest voltage a pin should see is 3.3V. However, some processors that are powered by 3.3V are 5V tolerant -- they can withstand up to 5V on their inputs. SITCore is 5V tolerant.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>5V tolerant doesn't mean the processor can be powered by 5V, only that the input pins can tolerate 5V.</p>
+</div>
+<p>Unconnected input pins are called &quot;floating.&quot; A resistor can be added to pull the pin high or low. Modern processors include internal pull-up and pull-down resistors that are controlled by software.</p>
+<p>The code sample below uses an internal pull-up resistor to set the button high. When the button is pressed the <code>GpioPinValue</code> goes low.</p>
+<pre><code class="lang-cs">using System.Device.Gpio;
+using System.Device.Gpio.Drivers;
+using GHIElectronics.Endpoint.Core;
+
+var buttonPort = EPM815.Gpio.Pin.PF3 / 16;
+var buttonPin = EPM815.Gpio.Pin.PF3 % 16;
+var buttonDriver = new LibGpiodDriver((int)buttonPort);
+var button = new GpioController(PinNumberingScheme.Logical, buttonDriver);
+
+button.OpenPin(buttonPin, PinMode.InputPullUp);
+
+while (true){
+    if (button.Read(pin) == PinValue.Low){
+        Console.Writeline(&quot;Button is pressed&quot;)
+    }
+    Thread.Sleep(10);  
+}
+</code></pre>
+<hr>
+<h2 id="digital-input-events">Digital Input Events</h2>
+<p>Using events to check an input instead of polling the input (using a loop) is often preferred. The following code demonstrates a GPIO pin event (interrupt) using the F1 user button on Endpoint Domino</p>
+<p>You will see a reference to a <code>PinEventTypes.Falling</code> in the following code. A falling occurs when the state of a pin goes from high to low. A rising is just the opposite -- it occurs when a pin goes from low to high.</p>
+<pre><code class="lang-cs">using System.Device.Gpio;
+using System.Device.Gpio.Drivers;
+using GHIElectronics.Endpoint.Core;
+
+var buttonPort = EPM815.Gpio.Pin.PF3 / 16;
+var buttonPin = EPM815.Gpio.Pin.PF3 % 16;
+var buttonDriver = new LibGpiodDriver((int)buttonPort);
+var button = new GpioController(PinNumberingScheme.Logical, buttonDriver);
+
+button.OpenPin(buttonPin, PinMode.InputPullUp);
+button.RegisterCallbackForPinValueChangedEvent(
+    pin,
+    PinEventTypes.Falling | PinEventTypes.Rising,
+    OnPinEvent);
+
+//Do other tasks here
+await Task.Delay(Timeout.Infinite);
+
+static void OnPinEvent(object sender, PinValueChangedEventArgs args){
+    Console.WriteLine(&quot;Button Pressed&quot;);
+}
+</code></pre>
+<p>When a mechanical button is pressed it generates multiple edges that are caused by the contact physically bouncing. If debounce is an issue use the <a href="https://learn.microsoft.com/en-us/dotnet/api/iot.device.button.gpiobutton?view=iot-dotnet-latest">GpioButton Class</a>.</p>
+<h2 id="endpoint-interrupt-limitation">Endpoint Interrupt limitation</h2>
+<p>Digital input events rely on internal GPIO interrupts to work. On Endpoint, these interrupts are only available on 16 pins at any given time, the pin number must be unique, over all of the available ports. For example: PA1 and PB1 cannot both be used as interrupts at the same time. However, PA1 and PB2, or even PA1 and PA2, can be used simultaneously.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/gpio.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

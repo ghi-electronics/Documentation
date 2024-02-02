@@ -1,0 +1,481 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Core.Register
+  commentId: T:GHIElectronics.Endpoint.Core.Register
+  id: Register
+  parent: GHIElectronics.Endpoint.Core
+  children:
+  - GHIElectronics.Endpoint.Core.Register.ClearBits(System.UInt32,System.UInt32)
+  - GHIElectronics.Endpoint.Core.Register.Read(System.UInt32)
+  - GHIElectronics.Endpoint.Core.Register.SetBits(System.UInt32,System.UInt32)
+  - GHIElectronics.Endpoint.Core.Register.Write(System.UInt32,System.UInt32)
+  langs:
+  - csharp
+  - vb
+  name: Register
+  nameWithType: Register
+  fullName: GHIElectronics.Endpoint.Core.Register
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Register.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Register
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Register.cs
+    startLine: 7
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static class Register
+    content.vb: Public Module Register
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.Core.Register.Read(System.UInt32)
+  commentId: M:GHIElectronics.Endpoint.Core.Register.Read(System.UInt32)
+  id: Read(System.UInt32)
+  parent: GHIElectronics.Endpoint.Core.Register
+  langs:
+  - csharp
+  - vb
+  name: Read(uint)
+  nameWithType: Register.Read(uint)
+  fullName: GHIElectronics.Endpoint.Core.Register.Read(uint)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Register.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Read
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Register.cs
+    startLine: 57
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static uint Read(uint register)
+    parameters:
+    - id: register
+      type: System.UInt32
+    return:
+      type: System.UInt32
+    content.vb: Public Shared Function Read(register As UInteger) As UInteger
+  overload: GHIElectronics.Endpoint.Core.Register.Read*
+  nameWithType.vb: Register.Read(UInteger)
+  fullName.vb: GHIElectronics.Endpoint.Core.Register.Read(UInteger)
+  name.vb: Read(UInteger)
+- uid: GHIElectronics.Endpoint.Core.Register.Write(System.UInt32,System.UInt32)
+  commentId: M:GHIElectronics.Endpoint.Core.Register.Write(System.UInt32,System.UInt32)
+  id: Write(System.UInt32,System.UInt32)
+  parent: GHIElectronics.Endpoint.Core.Register
+  langs:
+  - csharp
+  - vb
+  name: Write(uint, uint)
+  nameWithType: Register.Write(uint, uint)
+  fullName: GHIElectronics.Endpoint.Core.Register.Write(uint, uint)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Register.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Write
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Register.cs
+    startLine: 58
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static void Write(uint register, uint value)
+    parameters:
+    - id: register
+      type: System.UInt32
+    - id: value
+      type: System.UInt32
+    content.vb: Public Shared Sub Write(register As UInteger, value As UInteger)
+  overload: GHIElectronics.Endpoint.Core.Register.Write*
+  nameWithType.vb: Register.Write(UInteger, UInteger)
+  fullName.vb: GHIElectronics.Endpoint.Core.Register.Write(UInteger, UInteger)
+  name.vb: Write(UInteger, UInteger)
+- uid: GHIElectronics.Endpoint.Core.Register.SetBits(System.UInt32,System.UInt32)
+  commentId: M:GHIElectronics.Endpoint.Core.Register.SetBits(System.UInt32,System.UInt32)
+  id: SetBits(System.UInt32,System.UInt32)
+  parent: GHIElectronics.Endpoint.Core.Register
+  langs:
+  - csharp
+  - vb
+  name: SetBits(uint, uint)
+  nameWithType: Register.SetBits(uint, uint)
+  fullName: GHIElectronics.Endpoint.Core.Register.SetBits(uint, uint)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Register.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SetBits
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Register.cs
+    startLine: 60
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static void SetBits(uint register, uint bits)
+    parameters:
+    - id: register
+      type: System.UInt32
+    - id: bits
+      type: System.UInt32
+    content.vb: Public Shared Sub SetBits(register As UInteger, bits As UInteger)
+  overload: GHIElectronics.Endpoint.Core.Register.SetBits*
+  nameWithType.vb: Register.SetBits(UInteger, UInteger)
+  fullName.vb: GHIElectronics.Endpoint.Core.Register.SetBits(UInteger, UInteger)
+  name.vb: SetBits(UInteger, UInteger)
+- uid: GHIElectronics.Endpoint.Core.Register.ClearBits(System.UInt32,System.UInt32)
+  commentId: M:GHIElectronics.Endpoint.Core.Register.ClearBits(System.UInt32,System.UInt32)
+  id: ClearBits(System.UInt32,System.UInt32)
+  parent: GHIElectronics.Endpoint.Core.Register
+  langs:
+  - csharp
+  - vb
+  name: ClearBits(uint, uint)
+  nameWithType: Register.ClearBits(uint, uint)
+  fullName: GHIElectronics.Endpoint.Core.Register.ClearBits(uint, uint)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Register.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ClearBits
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Register.cs
+    startLine: 67
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static void ClearBits(uint register, uint bits)
+    parameters:
+    - id: register
+      type: System.UInt32
+    - id: bits
+      type: System.UInt32
+    content.vb: Public Shared Sub ClearBits(register As UInteger, bits As UInteger)
+  overload: GHIElectronics.Endpoint.Core.Register.ClearBits*
+  nameWithType.vb: Register.ClearBits(UInteger, UInteger)
+  fullName.vb: GHIElectronics.Endpoint.Core.Register.ClearBits(UInteger, UInteger)
+  name.vb: ClearBits(UInteger, UInteger)
+references:
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.Core.Register.Read*
+  commentId: Overload:GHIElectronics.Endpoint.Core.Register.Read
+  href: GHIElectronics.Endpoint.Core.Register.html#GHIElectronics_Endpoint_Core_Register_Read_System_UInt32_
+  name: Read
+  nameWithType: Register.Read
+  fullName: GHIElectronics.Endpoint.Core.Register.Read
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: GHIElectronics.Endpoint.Core.Register.Write*
+  commentId: Overload:GHIElectronics.Endpoint.Core.Register.Write
+  href: GHIElectronics.Endpoint.Core.Register.html#GHIElectronics_Endpoint_Core_Register_Write_System_UInt32_System_UInt32_
+  name: Write
+  nameWithType: Register.Write
+  fullName: GHIElectronics.Endpoint.Core.Register.Write
+- uid: GHIElectronics.Endpoint.Core.Register.SetBits*
+  commentId: Overload:GHIElectronics.Endpoint.Core.Register.SetBits
+  href: GHIElectronics.Endpoint.Core.Register.html#GHIElectronics_Endpoint_Core_Register_SetBits_System_UInt32_System_UInt32_
+  name: SetBits
+  nameWithType: Register.SetBits
+  fullName: GHIElectronics.Endpoint.Core.Register.SetBits
+- uid: GHIElectronics.Endpoint.Core.Register.ClearBits*
+  commentId: Overload:GHIElectronics.Endpoint.Core.Register.ClearBits
+  href: GHIElectronics.Endpoint.Core.Register.html#GHIElectronics_Endpoint_Core_Register_ClearBits_System_UInt32_System_UInt32_
+  name: ClearBits
+  nameWithType: Register.ClearBits
+  fullName: GHIElectronics.Endpoint.Core.Register.ClearBits

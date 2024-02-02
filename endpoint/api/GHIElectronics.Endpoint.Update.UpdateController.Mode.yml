@@ -1,0 +1,136 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Update.UpdateController.Mode
+  commentId: T:GHIElectronics.Endpoint.Update.UpdateController.Mode
+  id: UpdateController.Mode
+  parent: GHIElectronics.Endpoint.Update
+  children:
+  - GHIElectronics.Endpoint.Update.UpdateController.Mode.Firmware
+  - GHIElectronics.Endpoint.Update.UpdateController.Mode.ProgrameMMC
+  langs:
+  - csharp
+  - vb
+  name: UpdateController.Mode
+  nameWithType: UpdateController.Mode
+  fullName: GHIElectronics.Endpoint.Update.UpdateController.Mode
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Update/UpdateController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Mode
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Update/UpdateController.cs
+    startLine: 8
+  assemblies:
+  - GHIElectronics.Endpoint.Update
+  namespace: GHIElectronics.Endpoint.Update
+  syntax:
+    content: 'public enum UpdateController.Mode : uint'
+    content.vb: Public Enum UpdateController.Mode As UInteger
+- uid: GHIElectronics.Endpoint.Update.UpdateController.Mode.ProgrameMMC
+  commentId: F:GHIElectronics.Endpoint.Update.UpdateController.Mode.ProgrameMMC
+  id: ProgrameMMC
+  parent: GHIElectronics.Endpoint.Update.UpdateController.Mode
+  langs:
+  - csharp
+  - vb
+  name: ProgrameMMC
+  nameWithType: UpdateController.Mode.ProgrameMMC
+  fullName: GHIElectronics.Endpoint.Update.UpdateController.Mode.ProgrameMMC
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Update/UpdateController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ProgrameMMC
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Update/UpdateController.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.Update
+  namespace: GHIElectronics.Endpoint.Update
+  syntax:
+    content: ProgrameMMC = 0
+    return:
+      type: GHIElectronics.Endpoint.Update.UpdateController.Mode
+- uid: GHIElectronics.Endpoint.Update.UpdateController.Mode.Firmware
+  commentId: F:GHIElectronics.Endpoint.Update.UpdateController.Mode.Firmware
+  id: Firmware
+  parent: GHIElectronics.Endpoint.Update.UpdateController.Mode
+  langs:
+  - csharp
+  - vb
+  name: Firmware
+  nameWithType: UpdateController.Mode.Firmware
+  fullName: GHIElectronics.Endpoint.Update.UpdateController.Mode.Firmware
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Update/UpdateController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Firmware
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Update/UpdateController.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.Update
+  namespace: GHIElectronics.Endpoint.Update
+  syntax:
+    content: Firmware = 1
+    return:
+      type: GHIElectronics.Endpoint.Update.UpdateController.Mode
+references:
+- uid: GHIElectronics.Endpoint.Update
+  commentId: N:GHIElectronics.Endpoint.Update
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Update
+  nameWithType: GHIElectronics.Endpoint.Update
+  fullName: GHIElectronics.Endpoint.Update
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Update
+    name: Update
+    href: GHIElectronics.Endpoint.Update.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Update
+    name: Update
+    href: GHIElectronics.Endpoint.Update.html
+- uid: GHIElectronics.Endpoint.Update.UpdateController.Mode
+  commentId: T:GHIElectronics.Endpoint.Update.UpdateController.Mode
+  parent: GHIElectronics.Endpoint.Update
+  href: GHIElectronics.Endpoint.Update.UpdateController.html
+  name: UpdateController.Mode
+  nameWithType: UpdateController.Mode
+  fullName: GHIElectronics.Endpoint.Update.UpdateController.Mode
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Update.UpdateController
+    name: UpdateController
+    href: GHIElectronics.Endpoint.Update.UpdateController.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Update.UpdateController.Mode
+    name: Mode
+    href: GHIElectronics.Endpoint.Update.UpdateController.Mode.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Update.UpdateController
+    name: UpdateController
+    href: GHIElectronics.Endpoint.Update.UpdateController.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Update.UpdateController.Mode
+    name: Mode
+    href: GHIElectronics.Endpoint.Update.UpdateController.Mode.html

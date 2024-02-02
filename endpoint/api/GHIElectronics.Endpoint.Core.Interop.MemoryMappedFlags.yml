@@ -1,0 +1,173 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+  commentId: T:GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+  id: Interop.MemoryMappedFlags
+  parent: GHIElectronics.Endpoint.Core
+  children:
+  - GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags.MAP_FIXED
+  - GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags.MAP_PRIVATE
+  - GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags.MAP_SHARED
+  langs:
+  - csharp
+  - vb
+  name: Interop.MemoryMappedFlags
+  nameWithType: Interop.MemoryMappedFlags
+  fullName: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: MemoryMappedFlags
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 31
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum Interop.MemoryMappedFlags
+    content.vb: >-
+      <Flags>
+
+      Public Enum Interop.MemoryMappedFlags
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags.MAP_SHARED
+  commentId: F:GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags.MAP_SHARED
+  id: MAP_SHARED
+  parent: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+  langs:
+  - csharp
+  - vb
+  name: MAP_SHARED
+  nameWithType: Interop.MemoryMappedFlags.MAP_SHARED
+  fullName: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags.MAP_SHARED
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: MAP_SHARED
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 34
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: MAP_SHARED = 1
+    return:
+      type: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+- uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags.MAP_PRIVATE
+  commentId: F:GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags.MAP_PRIVATE
+  id: MAP_PRIVATE
+  parent: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+  langs:
+  - csharp
+  - vb
+  name: MAP_PRIVATE
+  nameWithType: Interop.MemoryMappedFlags.MAP_PRIVATE
+  fullName: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags.MAP_PRIVATE
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: MAP_PRIVATE
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 35
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: MAP_PRIVATE = 2
+    return:
+      type: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+- uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags.MAP_FIXED
+  commentId: F:GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags.MAP_FIXED
+  id: MAP_FIXED
+  parent: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+  langs:
+  - csharp
+  - vb
+  name: MAP_FIXED
+  nameWithType: Interop.MemoryMappedFlags.MAP_FIXED
+  fullName: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags.MAP_FIXED
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: MAP_FIXED
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 36
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: MAP_FIXED = 16
+    return:
+      type: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+references:
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+- uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+  commentId: T:GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.Interop.html
+  name: Interop.MemoryMappedFlags
+  nameWithType: Interop.MemoryMappedFlags
+  fullName: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+    name: MemoryMappedFlags
+    href: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags
+    name: MemoryMappedFlags
+    href: GHIElectronics.Endpoint.Core.Interop.MemoryMappedFlags.html

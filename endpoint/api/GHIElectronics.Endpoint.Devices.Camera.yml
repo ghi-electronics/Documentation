@@ -1,0 +1,77 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Camera
+  commentId: N:GHIElectronics.Endpoint.Devices.Camera
+  id: GHIElectronics.Endpoint.Devices.Camera
+  children:
+  - GHIElectronics.Endpoint.Devices.Camera.CameraConfiguration
+  - GHIElectronics.Endpoint.Devices.Camera.ConvertImage
+  - GHIElectronics.Endpoint.Devices.Camera.Format
+  langs:
+  - csharp
+  - vb
+  name: GHIElectronics.Endpoint.Devices.Camera
+  nameWithType: GHIElectronics.Endpoint.Devices.Camera
+  fullName: GHIElectronics.Endpoint.Devices.Camera
+  type: Namespace
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Camera
+references:
+- uid: GHIElectronics.Endpoint.Devices.Camera.Format
+  commentId: T:GHIElectronics.Endpoint.Devices.Camera.Format
+  parent: GHIElectronics.Endpoint.Devices.Camera
+  href: GHIElectronics.Endpoint.Devices.Camera.Format.html
+  name: Format
+  nameWithType: Format
+  fullName: GHIElectronics.Endpoint.Devices.Camera.Format
+- uid: GHIElectronics.Endpoint.Devices.Camera.CameraConfiguration
+  commentId: T:GHIElectronics.Endpoint.Devices.Camera.CameraConfiguration
+  parent: GHIElectronics.Endpoint.Devices.Camera
+  href: GHIElectronics.Endpoint.Devices.Camera.CameraConfiguration.html
+  name: CameraConfiguration
+  nameWithType: CameraConfiguration
+  fullName: GHIElectronics.Endpoint.Devices.Camera.CameraConfiguration
+- uid: GHIElectronics.Endpoint.Devices.Camera.ConvertImage
+  commentId: T:GHIElectronics.Endpoint.Devices.Camera.ConvertImage
+  href: GHIElectronics.Endpoint.Devices.Camera.ConvertImage.html
+  name: ConvertImage
+  nameWithType: ConvertImage
+  fullName: GHIElectronics.Endpoint.Devices.Camera.ConvertImage
+- uid: GHIElectronics.Endpoint.Devices.Camera
+  commentId: N:GHIElectronics.Endpoint.Devices.Camera
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Camera
+  nameWithType: GHIElectronics.Endpoint.Devices.Camera
+  fullName: GHIElectronics.Endpoint.Devices.Camera
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Camera
+    name: Camera
+    href: GHIElectronics.Endpoint.Devices.Camera.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Camera
+    name: Camera
+    href: GHIElectronics.Endpoint.Devices.Camera.html

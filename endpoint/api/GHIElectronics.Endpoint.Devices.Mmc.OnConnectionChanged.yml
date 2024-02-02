@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Mmc.OnConnectionChanged
+  commentId: T:GHIElectronics.Endpoint.Devices.Mmc.OnConnectionChanged
+  id: OnConnectionChanged
+  parent: GHIElectronics.Endpoint.Devices.Mmc
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: OnConnectionChanged
+  nameWithType: OnConnectionChanged
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.OnConnectionChanged
+  type: Delegate
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OnConnectionChanged
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+    startLine: 51
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Sdmmc
+  namespace: GHIElectronics.Endpoint.Devices.Mmc
+  syntax:
+    content: public delegate void OnConnectionChanged(SdmmcController sender, DeviceConnectionEventArgs e)
+    parameters:
+    - id: sender
+      type: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController
+    - id: e
+      type: GHIElectronics.Endpoint.Devices.Mmc.DeviceConnectionEventArgs
+    content.vb: Public Delegate Sub OnConnectionChanged(sender As SdmmcController, e As DeviceConnectionEventArgs)
+references:
+- uid: GHIElectronics.Endpoint.Devices.Mmc
+  commentId: N:GHIElectronics.Endpoint.Devices.Mmc
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Mmc
+  nameWithType: GHIElectronics.Endpoint.Devices.Mmc
+  fullName: GHIElectronics.Endpoint.Devices.Mmc
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Mmc
+    name: Mmc
+    href: GHIElectronics.Endpoint.Devices.Mmc.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Mmc
+    name: Mmc
+    href: GHIElectronics.Endpoint.Devices.Mmc.html
+- uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController
+  commentId: T:GHIElectronics.Endpoint.Devices.Mmc.SdmmcController
+  parent: GHIElectronics.Endpoint.Devices.Mmc
+  href: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController.html
+  name: SdmmcController
+  nameWithType: SdmmcController
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.SdmmcController
+- uid: GHIElectronics.Endpoint.Devices.Mmc.DeviceConnectionEventArgs
+  commentId: T:GHIElectronics.Endpoint.Devices.Mmc.DeviceConnectionEventArgs
+  parent: GHIElectronics.Endpoint.Devices.Mmc
+  href: GHIElectronics.Endpoint.Devices.Mmc.DeviceConnectionEventArgs.html
+  name: DeviceConnectionEventArgs
+  nameWithType: DeviceConnectionEventArgs
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.DeviceConnectionEventArgs

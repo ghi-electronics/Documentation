@@ -1,0 +1,200 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+  commentId: T:GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+  id: Interop.MemoryMappedProtections
+  parent: GHIElectronics.Endpoint.Core
+  children:
+  - GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.PROT_EXEC
+  - GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.PROT_NONE
+  - GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.PROT_READ
+  - GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.PROT_WRITE
+  langs:
+  - csharp
+  - vb
+  name: Interop.MemoryMappedProtections
+  nameWithType: Interop.MemoryMappedProtections
+  fullName: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: MemoryMappedProtections
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 22
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum Interop.MemoryMappedProtections
+    content.vb: >-
+      <Flags>
+
+      Public Enum Interop.MemoryMappedProtections
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.PROT_NONE
+  commentId: F:GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.PROT_NONE
+  id: PROT_NONE
+  parent: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+  langs:
+  - csharp
+  - vb
+  name: PROT_NONE
+  nameWithType: Interop.MemoryMappedProtections.PROT_NONE
+  fullName: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.PROT_NONE
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PROT_NONE
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 25
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: PROT_NONE = 0
+    return:
+      type: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+- uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.PROT_READ
+  commentId: F:GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.PROT_READ
+  id: PROT_READ
+  parent: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+  langs:
+  - csharp
+  - vb
+  name: PROT_READ
+  nameWithType: Interop.MemoryMappedProtections.PROT_READ
+  fullName: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.PROT_READ
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PROT_READ
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 26
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: PROT_READ = 1
+    return:
+      type: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+- uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.PROT_WRITE
+  commentId: F:GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.PROT_WRITE
+  id: PROT_WRITE
+  parent: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+  langs:
+  - csharp
+  - vb
+  name: PROT_WRITE
+  nameWithType: Interop.MemoryMappedProtections.PROT_WRITE
+  fullName: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.PROT_WRITE
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PROT_WRITE
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 27
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: PROT_WRITE = 2
+    return:
+      type: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+- uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.PROT_EXEC
+  commentId: F:GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.PROT_EXEC
+  id: PROT_EXEC
+  parent: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+  langs:
+  - csharp
+  - vb
+  name: PROT_EXEC
+  nameWithType: Interop.MemoryMappedProtections.PROT_EXEC
+  fullName: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.PROT_EXEC
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PROT_EXEC
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Interop.cs
+    startLine: 28
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: PROT_EXEC = 4
+    return:
+      type: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+references:
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+- uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+  commentId: T:GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.Interop.html
+  name: Interop.MemoryMappedProtections
+  nameWithType: Interop.MemoryMappedProtections
+  fullName: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+    name: MemoryMappedProtections
+    href: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.Interop
+    name: Interop
+    href: GHIElectronics.Endpoint.Core.Interop.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections
+    name: MemoryMappedProtections
+    href: GHIElectronics.Endpoint.Core.Interop.MemoryMappedProtections.html

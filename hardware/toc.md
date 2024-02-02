@@ -1,5 +1,8 @@
 # [Hardware](intro.md)
 
+# [Endpoint](../endpoint/intro.md)
+
+
 # [SITCore](sitcore/intro.md)
 ## [Getting Started](sitcore/getting-started.md)
 ## [System on Chip](sitcore/soc.md)

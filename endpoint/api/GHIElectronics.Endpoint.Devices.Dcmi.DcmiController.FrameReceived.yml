@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived
+  commentId: T:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived
+  id: DcmiController.FrameReceived
+  parent: GHIElectronics.Endpoint.Devices.Dcmi
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: DcmiController.FrameReceived
+  nameWithType: DcmiController.FrameReceived
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.FrameReceived
+  type: Delegate
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: FrameReceived
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Dcmi/DcmiController.cs
+    startLine: 44
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Dcmi
+  namespace: GHIElectronics.Endpoint.Devices.Dcmi
+  syntax:
+    content: public delegate void DcmiController.FrameReceived(DcmiController sender, byte[] data)
+    parameters:
+    - id: sender
+      type: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+    - id: data
+      type: System.Byte[]
+    content.vb: Public Delegate Sub DcmiController.FrameReceived(sender As DcmiController, data As Byte())
+references:
+- uid: GHIElectronics.Endpoint.Devices.Dcmi
+  commentId: N:GHIElectronics.Endpoint.Devices.Dcmi
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Dcmi
+  nameWithType: GHIElectronics.Endpoint.Devices.Dcmi
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Dcmi
+    name: Dcmi
+    href: GHIElectronics.Endpoint.Devices.Dcmi.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Dcmi
+    name: Dcmi
+    href: GHIElectronics.Endpoint.Devices.Dcmi.html
+- uid: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  commentId: T:GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+  parent: GHIElectronics.Endpoint.Devices.Dcmi
+  href: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController.html
+  name: DcmiController
+  nameWithType: DcmiController
+  fullName: GHIElectronics.Endpoint.Devices.Dcmi.DcmiController
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )

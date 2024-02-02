@@ -1,0 +1,77 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseMouseMove
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseMouseMove
+  id: HidInput.RaiseMouseMove
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: HidInput.RaiseMouseMove
+  nameWithType: HidInput.RaiseMouseMove
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.HidInput.RaiseMouseMove
+  type: Delegate
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/HidInput.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: RaiseMouseMove
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/HidInput.cs
+    startLine: 14
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.UsbHost
+  namespace: GHIElectronics.Endpoint.Devices.UsbHost
+  syntax:
+    content: public delegate void HidInput.RaiseMouseMove(MouseMoveEvent e)
+    parameters:
+    - id: e
+      type: GHIElectronics.Endpoint.Devices.UsbHost.MouseMoveEvent
+    content.vb: Public Delegate Sub HidInput.RaiseMouseMove(e As MouseMoveEvent)
+references:
+- uid: GHIElectronics.Endpoint.Devices.UsbHost
+  commentId: N:GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.UsbHost
+  nameWithType: GHIElectronics.Endpoint.Devices.UsbHost
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost
+    name: UsbHost
+    href: GHIElectronics.Endpoint.Devices.UsbHost.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.UsbHost
+    name: UsbHost
+    href: GHIElectronics.Endpoint.Devices.UsbHost.html
+- uid: GHIElectronics.Endpoint.Devices.UsbHost.MouseMoveEvent
+  commentId: T:GHIElectronics.Endpoint.Devices.UsbHost.MouseMoveEvent
+  parent: GHIElectronics.Endpoint.Devices.UsbHost
+  href: GHIElectronics.Endpoint.Devices.UsbHost.MouseMoveEvent.html
+  name: MouseMoveEvent
+  nameWithType: MouseMoveEvent
+  fullName: GHIElectronics.Endpoint.Devices.UsbHost.MouseMoveEvent

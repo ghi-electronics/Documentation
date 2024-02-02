@@ -1,0 +1,144 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  id: EPM815.Gpio.Edge
+  parent: GHIElectronics.Endpoint.Core
+  children:
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.Falling
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.Rising
+  langs:
+  - csharp
+  - vb
+  name: EPM815.Gpio.Edge
+  nameWithType: EPM815.Gpio.Edge
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Edge
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 73
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public enum EPM815.Gpio.Edge
+    content.vb: Public Enum EPM815.Gpio.Edge
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.Rising
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.Rising
+  id: Rising
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  langs:
+  - csharp
+  - vb
+  name: Rising
+  nameWithType: EPM815.Gpio.Edge.Rising
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.Rising
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Rising
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 74
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: Rising = 1
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.Falling
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.Falling
+  id: Falling
+  parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  langs:
+  - csharp
+  - vb
+  name: Falling
+  nameWithType: EPM815.Gpio.Edge.Falling
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.Falling
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Falling
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
+    startLine: 75
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: Falling = 2
+    return:
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+references:
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.Edge
+  nameWithType: EPM815.Gpio.Edge
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+    name: Edge
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+    name: Edge
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.html

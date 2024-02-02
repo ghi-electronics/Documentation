@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Amazon Web Services </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Amazon Web Services ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/aws.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="amazon-web-services">Amazon Web Services</h1>
+
+<hr>
+<p>This example shows how to communicate with AWS using MQTT. This demo assumes the device has established a [Networking(networking.md) interface and the date and time on the device are set correctly.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGets: GHIElectronics.Endpoint.Core, GHIElectronics.Endpoint.Devices.Network, M2MqttDotnetCore</p>
+</div>
+<pre><code>string iotEndpoint = &quot;your iot endpoint&quot;; 
+Console.WriteLine(&quot;AWS IoT Dotnet message publisher starting..&quot;);
+
+int brokerPort = 8883;
+string topic = &quot;$aws/things/EPDominoThing2024/shadow/update/documents&quot;;
+string message = &quot;Test message&quot;;
+
+var caCertData = Resources.AmazonRootCA1; // load from resource
+var caClientCertData = Resources.device_certificate; // this is pfx format load from resource
+
+var caCert = new X509Certificate(caCertData);
+var clientCert = new X509Certificate2(caClientCertData);
+
+
+var client = new MqttClient(iotEndpoint, brokerPort, true, caCert, clientCert, MqttSslProtocols.TLSv1_2);
+
+string clientId = Guid.NewGuid().ToString();
+client.Connect(clientId);
+Console.WriteLine($&quot;Connected to AWS IoT with client id: {clientId}.&quot;);
+
+client.Subscribe(new string[] { topic }, new byte[] { 0 });
+client.MqttMsgPublishReceived += (a, b) =&gt;
+{
+    Console.WriteLine(Encoding.UTF8.GetString(b.Message));
+};
+
+int i = 0;
+while (true)
+{
+    client.Publish(topic, Encoding.UTF8.GetBytes($&quot;{message} {i}&quot;));
+    Console.WriteLine($&quot;Published: {message} {i}&quot;);
+    i++;
+    Thread.Sleep(5000);
+}
+
+</code></pre>
+<p>We need a few things to complete the code sample that we'll get from AWS. We need an iotEndPoint, a deviceId, an AWS root certificate, a client certificate and a private key. First, you'll need to create an AWS account.</p>
+<p>Once you've created your account, we need to find the service to set up our device. On the AWS Management  Console, search for the service 'IoT Core' and select it.</p>
+<h2 id="create-thing">Create Thing</h2>
+<p><img src="images/aws-step1.jpg" alt="AWS Management Console"></p>
+<p><img src="images/aws-create-thing.jpg" alt="AWS Management Console"></p>
+<p>Select default and click next</p>
+<p><img src="images/aws-step2.jpg" alt="AWS Management Console"></p>
+<p>We created Thing name EPDomino24, thing type is optional.</p>
+<p><img src="images/aws-step22.jpg" alt="AWS Management Console"></p>
+<p>Select auto generate certificate and click next</p>
+<p><img src="images/aws-step23.jpg" alt="AWS Management Console"></p>
+<p>Download certificates</p>
+<p><img src="images/aws-step24.jpg" alt="AWS Management Console"></p>
+<p>After created thing name &quot;EPDominoThing24&quot;, the screen is below:</p>
+<p><img src="images/aws-step3.jpg" alt="AWS Management Console"></p>
+<h2 id="certificates">Certificates</h2>
+<ul>
+<li><p>Device certificate: This file usually ends with &quot;.pem.crt&quot;. When you download this it will save as .txt file extension in windows. Save it in your certificates directory as 'certificates\certificate.cert.pem' and make sure that it is of file type '.pem', not 'txt' or '.crt'</p>
+</li>
+<li><p>Device public key: This file usually ends with &quot;.pem&quot; and is of file type &quot;.key&quot;. Save this file as 'certificates\certificate.public.key'.</p>
+</li>
+<li><p>Device private key: This file usually ends with &quot;.pem&quot; and is of file type &quot;.key&quot;. Save this file as 'certificates\certificate.private.key'. Make sure that this file is referred with suffix &quot;.key&quot; in the code while making MQTT connection to AWS IoT.</p>
+</li>
+<li><p>Root certificate: Download from <a href="https://www.amazontrust.com/repository/AmazonRootCA1.pem">https://www.amazontrust.com/repository/AmazonRootCA1.pem</a>. Save this file to 'certificates\AmazonRootCA1.crt'</p>
+</li>
+</ul>
+<h3 id="converting-device-certificate-from-pem-to-pfx">Converting Device Certificate from .pem to .pfx</h3>
+<p>In order to establish an MQTT connection with the AWS IoT platform, the root CA certificate, the private key of the thing, and the certificate of the thing/device are needed. The .NET cryptographic APIs can understand root CA (.crt), device private key (.key) out-of-the-box. It expects the device certificate to be in the .pfx format, not the .pem format. Hence we need to convert the device certificate from .pem to .pfx.</p>
+<p>We'll leverage the openssl for converting .pem to .pfx. Navigate to the folder where all the security artifacts are present and launch bash for Windows 10.</p>
+<p>The syntax for converting .pem to .pfx is below:</p>
+<pre><code>openssl pkcs12 -export -in iotdevicecertificateinpemformat -inkey iotdevivceprivatekey -out devicecertificateinpfxformat -certfile rootcertificatefile
+</code></pre>
+<h2 id="create-policies">Create Policies</h2>
+<p><img src="images/aws-policy-1.jpg" alt="AWS Management Console"></p>
+<p>Name new policy EPDomino24PolicyAll and use * means all action and resource</p>
+<p><img src="images/aws-policy-2.jpg" alt="AWS Management Console"></p>
+<h2 id="attach-policies">Attach Policies</h2>
+<p>Back to Certificates, select Attach policies</p>
+<p><img src="images/aws-policy-3.jpg" alt="AWS Management Console"></p>
+<p>The screen is below:</p>
+<p><img src="images/aws-policy-4.jpg" alt="AWS Management Console"></p>
+<h2 id="test-publisher">Test Publisher</h2>
+<p><img src="images/aws-activity-1.jpg" alt="AWS Management Console"></p>
+<p>All message from/to the device can be seen here:</p>
+<p><img src="images/aws-final-1.jpg" alt="AWS Management Console"></p>
+<div class="TIP">
+<h5>Tip</h5>
+</div>
+<p>The <code>&quot;string iotEndpoint = &quot;your iot endpoint&quot;;</code>  variable can be found here:</p>
+<p><img src="images/aws-iotendpoit.jpg" alt="AWS Management Console"></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/devEndpoint/endpoint/tutorials/aws.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

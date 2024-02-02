@@ -1,0 +1,711 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  id: EPM815.Adc.Pin
+  parent: GHIElectronics.Endpoint.Core
+  children:
+  - GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.ANA0
+  - GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.ANA1
+  - GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA0
+  - GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA3
+  - GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA4
+  - GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA5
+  - GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA6
+  - GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PB0
+  - GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PC0
+  - GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PC3
+  - GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PF11
+  - GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PF12
+  - GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PF13
+  - GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PF14
+  langs:
+  - csharp
+  - vb
+  name: EPM815.Adc.Pin
+  nameWithType: EPM815.Adc.Pin
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Pin
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+    startLine: 13
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public static class EPM815.Adc.Pin
+    content.vb: Public Module EPM815.Adc.Pin
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.ANA0
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.ANA0
+  id: ANA0
+  parent: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  langs:
+  - csharp
+  - vb
+  name: ANA0
+  nameWithType: EPM815.Adc.Pin.ANA0
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.ANA0
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ANA0
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+    startLine: 15
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  summary: Adc pin.
+  example: []
+  syntax:
+    content: public const int ANA0 = 65535
+    return:
+      type: System.Int32
+    content.vb: Public Const ANA0 As Integer = 65535
+- uid: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.ANA1
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.ANA1
+  id: ANA1
+  parent: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  langs:
+  - csharp
+  - vb
+  name: ANA1
+  nameWithType: EPM815.Adc.Pin.ANA1
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.ANA1
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ANA1
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+    startLine: 16
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public const int ANA1 = 131071
+    return:
+      type: System.Int32
+    content.vb: Public Const ANA1 As Integer = 131071
+- uid: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PF11
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PF11
+  id: PF11
+  parent: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  langs:
+  - csharp
+  - vb
+  name: PF11
+  nameWithType: EPM815.Adc.Pin.PF11
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PF11
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PF11
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+    startLine: 17
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public const int PF11 = 131163
+    return:
+      type: System.Int32
+    content.vb: Public Const PF11 As Integer = 131163
+- uid: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA6
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA6
+  id: PA6
+  parent: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  langs:
+  - csharp
+  - vb
+  name: PA6
+  nameWithType: EPM815.Adc.Pin.PA6
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA6
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PA6
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+    startLine: 18
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public const int PA6 = 196614
+    return:
+      type: System.Int32
+    content.vb: Public Const PA6 As Integer = 196614
+- uid: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PF12
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PF12
+  id: PF12
+  parent: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  langs:
+  - csharp
+  - vb
+  name: PF12
+  nameWithType: EPM815.Adc.Pin.PF12
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PF12
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PF12
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+    startLine: 21
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public const int PF12 = 393308
+    return:
+      type: System.Int32
+    content.vb: Public Const PF12 As Integer = 393308
+- uid: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PB0
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PB0
+  id: PB0
+  parent: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  langs:
+  - csharp
+  - vb
+  name: PB0
+  nameWithType: EPM815.Adc.Pin.PB0
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PB0
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PB0
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+    startLine: 24
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public const int PB0 = 589840
+    return:
+      type: System.Int32
+    content.vb: Public Const PB0 As Integer = 589840
+- uid: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PC0
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PC0
+  id: PC0
+  parent: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  langs:
+  - csharp
+  - vb
+  name: PC0
+  nameWithType: EPM815.Adc.Pin.PC0
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PC0
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PC0
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+    startLine: 25
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public const int PC0 = 655392
+    return:
+      type: System.Int32
+    content.vb: Public Const PC0 As Integer = 655392
+- uid: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PC3
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PC3
+  id: PC3
+  parent: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  langs:
+  - csharp
+  - vb
+  name: PC3
+  nameWithType: EPM815.Adc.Pin.PC3
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PC3
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PC3
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+    startLine: 28
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public const int PC3 = 852003
+    return:
+      type: System.Int32
+    content.vb: Public Const PC3 As Integer = 852003
+- uid: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA3
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA3
+  id: PA3
+  parent: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  langs:
+  - csharp
+  - vb
+  name: PA3
+  nameWithType: EPM815.Adc.Pin.PA3
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA3
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PA3
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+    startLine: 30
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public const int PA3 = 983043
+    return:
+      type: System.Int32
+    content.vb: Public Const PA3 As Integer = 983043
+- uid: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA0
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA0
+  id: PA0
+  parent: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  langs:
+  - csharp
+  - vb
+  name: PA0
+  nameWithType: EPM815.Adc.Pin.PA0
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA0
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PA0
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+    startLine: 31
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public const int PA0 = 1048576
+    return:
+      type: System.Int32
+    content.vb: Public Const PA0 As Integer = 1048576
+- uid: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA4
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA4
+  id: PA4
+  parent: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  langs:
+  - csharp
+  - vb
+  name: PA4
+  nameWithType: EPM815.Adc.Pin.PA4
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA4
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PA4
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+    startLine: 33
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public const int PA4 = 1179652
+    return:
+      type: System.Int32
+    content.vb: Public Const PA4 As Integer = 1179652
+- uid: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA5
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA5
+  id: PA5
+  parent: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  langs:
+  - csharp
+  - vb
+  name: PA5
+  nameWithType: EPM815.Adc.Pin.PA5
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PA5
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PA5
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+    startLine: 34
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public const int PA5 = 1245189
+    return:
+      type: System.Int32
+    content.vb: Public Const PA5 As Integer = 1245189
+- uid: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PF13
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PF13
+  id: PF13
+  parent: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  langs:
+  - csharp
+  - vb
+  name: PF13
+  nameWithType: EPM815.Adc.Pin.PF13
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PF13
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PF13
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+    startLine: 36
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public const int PF13 = 16908381
+    return:
+      type: System.Int32
+    content.vb: Public Const PF13 As Integer = 16908381
+- uid: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PF14
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PF14
+  id: PF14
+  parent: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
+  langs:
+  - csharp
+  - vb
+  name: PF14
+  nameWithType: EPM815.Adc.Pin.PF14
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Adc.Pin.PF14
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PF14
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Adc.cs
+    startLine: 37
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public const int PF14 = 17170526
+    return:
+      type: System.Int32
+    content.vb: Public Const PF14 As Integer = 17170526
+references:
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

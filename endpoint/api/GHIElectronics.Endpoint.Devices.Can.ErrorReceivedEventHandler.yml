@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventHandler
+  commentId: T:GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventHandler
+  id: ErrorReceivedEventHandler
+  parent: GHIElectronics.Endpoint.Devices.Can
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ErrorReceivedEventHandler
+  nameWithType: ErrorReceivedEventHandler
+  fullName: GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventHandler
+  type: Delegate
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ErrorReceivedEventHandler
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+  namespace: GHIElectronics.Endpoint.Devices.Can
+  syntax:
+    content: public delegate void ErrorReceivedEventHandler(CanController sender, ErrorReceivedEventArgs e)
+    parameters:
+    - id: sender
+      type: GHIElectronics.Endpoint.Devices.Can.CanController
+    - id: e
+      type: GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventArgs
+    content.vb: Public Delegate Sub ErrorReceivedEventHandler(sender As CanController, e As ErrorReceivedEventArgs)
+references:
+- uid: GHIElectronics.Endpoint.Devices.Can
+  commentId: N:GHIElectronics.Endpoint.Devices.Can
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Can
+  nameWithType: GHIElectronics.Endpoint.Devices.Can
+  fullName: GHIElectronics.Endpoint.Devices.Can
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Can
+    name: Can
+    href: GHIElectronics.Endpoint.Devices.Can.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Can
+    name: Can
+    href: GHIElectronics.Endpoint.Devices.Can.html
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController
+  commentId: T:GHIElectronics.Endpoint.Devices.Can.CanController
+  parent: GHIElectronics.Endpoint.Devices.Can
+  href: GHIElectronics.Endpoint.Devices.Can.CanController.html
+  name: CanController
+  nameWithType: CanController
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController
+- uid: GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventArgs
+  commentId: T:GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventArgs
+  parent: GHIElectronics.Endpoint.Devices.Can
+  href: GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventArgs.html
+  name: ErrorReceivedEventArgs
+  nameWithType: ErrorReceivedEventArgs
+  fullName: GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventArgs

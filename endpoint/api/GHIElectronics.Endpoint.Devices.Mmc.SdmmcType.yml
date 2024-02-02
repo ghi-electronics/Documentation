@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+  commentId: T:GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+  id: SdmmcType
+  parent: GHIElectronics.Endpoint.Devices.Mmc
+  children:
+  - GHIElectronics.Endpoint.Devices.Mmc.SdmmcType.Emmc
+  - GHIElectronics.Endpoint.Devices.Mmc.SdmmcType.SdCard1
+  - GHIElectronics.Endpoint.Devices.Mmc.SdmmcType.SdCard2
+  langs:
+  - csharp
+  - vb
+  name: SdmmcType
+  nameWithType: SdmmcType
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SdmmcType
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+    startLine: 40
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Sdmmc
+  namespace: GHIElectronics.Endpoint.Devices.Mmc
+  syntax:
+    content: 'public enum SdmmcType : uint'
+    content.vb: Public Enum SdmmcType As UInteger
+- uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType.SdCard1
+  commentId: F:GHIElectronics.Endpoint.Devices.Mmc.SdmmcType.SdCard1
+  id: SdCard1
+  parent: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+  langs:
+  - csharp
+  - vb
+  name: SdCard1
+  nameWithType: SdmmcType.SdCard1
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType.SdCard1
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SdCard1
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+    startLine: 41
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Sdmmc
+  namespace: GHIElectronics.Endpoint.Devices.Mmc
+  syntax:
+    content: SdCard1 = 1
+    return:
+      type: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+- uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType.SdCard2
+  commentId: F:GHIElectronics.Endpoint.Devices.Mmc.SdmmcType.SdCard2
+  id: SdCard2
+  parent: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+  langs:
+  - csharp
+  - vb
+  name: SdCard2
+  nameWithType: SdmmcType.SdCard2
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType.SdCard2
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SdCard2
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+    startLine: 42
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Sdmmc
+  namespace: GHIElectronics.Endpoint.Devices.Mmc
+  syntax:
+    content: SdCard2 = 0
+    return:
+      type: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+- uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType.Emmc
+  commentId: F:GHIElectronics.Endpoint.Devices.Mmc.SdmmcType.Emmc
+  id: Emmc
+  parent: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+  langs:
+  - csharp
+  - vb
+  name: Emmc
+  nameWithType: SdmmcType.Emmc
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType.Emmc
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Emmc
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Sdmmc/SdmmcController.cs
+    startLine: 43
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Sdmmc
+  namespace: GHIElectronics.Endpoint.Devices.Mmc
+  syntax:
+    content: Emmc = 2
+    return:
+      type: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+references:
+- uid: GHIElectronics.Endpoint.Devices.Mmc
+  commentId: N:GHIElectronics.Endpoint.Devices.Mmc
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Mmc
+  nameWithType: GHIElectronics.Endpoint.Devices.Mmc
+  fullName: GHIElectronics.Endpoint.Devices.Mmc
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Mmc
+    name: Mmc
+    href: GHIElectronics.Endpoint.Devices.Mmc.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Mmc
+    name: Mmc
+    href: GHIElectronics.Endpoint.Devices.Mmc.html
+- uid: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+  commentId: T:GHIElectronics.Endpoint.Devices.Mmc.SdmmcType
+  parent: GHIElectronics.Endpoint.Devices.Mmc
+  href: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType.html
+  name: SdmmcType
+  nameWithType: SdmmcType
+  fullName: GHIElectronics.Endpoint.Devices.Mmc.SdmmcType

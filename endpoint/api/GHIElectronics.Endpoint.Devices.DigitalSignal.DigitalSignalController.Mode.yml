@@ -1,0 +1,171 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+  commentId: T:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+  id: DigitalSignalController.Mode
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal
+  children:
+  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode.CapturePulse
+  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode.GeneratePulse
+  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode.ReadPulse
+  langs:
+  - csharp
+  - vb
+  name: DigitalSignalController.Mode
+  nameWithType: DigitalSignalController.Mode
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Mode
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+    startLine: 24
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.DigitalSignal
+  namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
+  syntax:
+    content: public enum DigitalSignalController.Mode
+    content.vb: Public Enum DigitalSignalController.Mode
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode.GeneratePulse
+  commentId: F:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode.GeneratePulse
+  id: GeneratePulse
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+  langs:
+  - csharp
+  - vb
+  name: GeneratePulse
+  nameWithType: DigitalSignalController.Mode.GeneratePulse
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode.GeneratePulse
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: GeneratePulse
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+    startLine: 25
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.DigitalSignal
+  namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
+  syntax:
+    content: GeneratePulse = 0
+    return:
+      type: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode.ReadPulse
+  commentId: F:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode.ReadPulse
+  id: ReadPulse
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+  langs:
+  - csharp
+  - vb
+  name: ReadPulse
+  nameWithType: DigitalSignalController.Mode.ReadPulse
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode.ReadPulse
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ReadPulse
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+    startLine: 26
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.DigitalSignal
+  namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
+  syntax:
+    content: ReadPulse = 1
+    return:
+      type: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode.CapturePulse
+  commentId: F:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode.CapturePulse
+  id: CapturePulse
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+  langs:
+  - csharp
+  - vb
+  name: CapturePulse
+  nameWithType: DigitalSignalController.Mode.CapturePulse
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode.CapturePulse
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: CapturePulse
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+    startLine: 27
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.DigitalSignal
+  namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
+  syntax:
+    content: CapturePulse = 2
+    return:
+      type: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+references:
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal
+  commentId: N:GHIElectronics.Endpoint.Devices.DigitalSignal
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.DigitalSignal
+  nameWithType: GHIElectronics.Endpoint.Devices.DigitalSignal
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal
+    name: DigitalSignal
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal
+    name: DigitalSignal
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.html
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+  commentId: T:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal
+  href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html
+  name: DigitalSignalController.Mode
+  nameWithType: DigitalSignalController.Mode
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
+    name: DigitalSignalController
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+    name: Mode
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
+    name: DigitalSignalController
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
+    name: Mode
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode.html

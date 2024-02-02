@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.Can
+  commentId: N:GHIElectronics.Endpoint.Devices.Can
+  id: GHIElectronics.Endpoint.Devices.Can
+  children:
+  - GHIElectronics.Endpoint.Devices.Can.CanController
+  - GHIElectronics.Endpoint.Devices.Can.CanError
+  - GHIElectronics.Endpoint.Devices.Can.CanMessage
+  - GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventArgs
+  - GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventHandler
+  - GHIElectronics.Endpoint.Devices.Can.MessageReceivedEventHandler
+  langs:
+  - csharp
+  - vb
+  name: GHIElectronics.Endpoint.Devices.Can
+  nameWithType: GHIElectronics.Endpoint.Devices.Can
+  fullName: GHIElectronics.Endpoint.Devices.Can
+  type: Namespace
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Can
+references:
+- uid: GHIElectronics.Endpoint.Devices.Can.MessageReceivedEventHandler
+  commentId: T:GHIElectronics.Endpoint.Devices.Can.MessageReceivedEventHandler
+  parent: GHIElectronics.Endpoint.Devices.Can
+  href: GHIElectronics.Endpoint.Devices.Can.MessageReceivedEventHandler.html
+  name: MessageReceivedEventHandler
+  nameWithType: MessageReceivedEventHandler
+  fullName: GHIElectronics.Endpoint.Devices.Can.MessageReceivedEventHandler
+- uid: GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventHandler
+  commentId: T:GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventHandler
+  parent: GHIElectronics.Endpoint.Devices.Can
+  href: GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventHandler.html
+  name: ErrorReceivedEventHandler
+  nameWithType: ErrorReceivedEventHandler
+  fullName: GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventHandler
+- uid: GHIElectronics.Endpoint.Devices.Can.CanError
+  commentId: T:GHIElectronics.Endpoint.Devices.Can.CanError
+  parent: GHIElectronics.Endpoint.Devices.Can
+  href: GHIElectronics.Endpoint.Devices.Can.CanError.html
+  name: CanError
+  nameWithType: CanError
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanError
+- uid: GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventArgs
+  commentId: T:GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventArgs
+  parent: GHIElectronics.Endpoint.Devices.Can
+  href: GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventArgs.html
+  name: ErrorReceivedEventArgs
+  nameWithType: ErrorReceivedEventArgs
+  fullName: GHIElectronics.Endpoint.Devices.Can.ErrorReceivedEventArgs
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController
+  commentId: T:GHIElectronics.Endpoint.Devices.Can.CanController
+  parent: GHIElectronics.Endpoint.Devices.Can
+  href: GHIElectronics.Endpoint.Devices.Can.CanController.html
+  name: CanController
+  nameWithType: CanController
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController
+- uid: GHIElectronics.Endpoint.Devices.Can.CanMessage
+  commentId: T:GHIElectronics.Endpoint.Devices.Can.CanMessage
+  parent: GHIElectronics.Endpoint.Devices.Can
+  href: GHIElectronics.Endpoint.Devices.Can.CanMessage.html
+  name: CanMessage
+  nameWithType: CanMessage
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanMessage
+- uid: GHIElectronics.Endpoint.Devices.Can
+  commentId: N:GHIElectronics.Endpoint.Devices.Can
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.Can
+  nameWithType: GHIElectronics.Endpoint.Devices.Can
+  fullName: GHIElectronics.Endpoint.Devices.Can
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Can
+    name: Can
+    href: GHIElectronics.Endpoint.Devices.Can.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.Can
+    name: Can
+    href: GHIElectronics.Endpoint.Devices.Can.html
