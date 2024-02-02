@@ -12,11 +12,15 @@ An Endpoint development environment consists of a device running Endpoint OS and
 
  #### Creating the OS image
 
- Use your preferred disk imaging software to create a disk image on a blank microSD card, `Win32 Disk Imager` for example.
+ Use your preferred disk imaging software to create a disk image on a blank microSD card, `Win32 Disk Imager` or `balenaEtcher` for example.
 
  Find the latest Endpoint disk image [**here**](downloads.md) and burn it to the blank microSD card (4GB minimum). 
 
  ![Disk Imager](images/create-sd-image.png)
+
+
+> [!Tip]
+> Windows hides the microSD card once the media is loaded with the Endpoint OS image. `Win32 Disk Imager` will no longer see it. You need to use `Disk Management` tool to repartition/format the media, or use other tools like `balenaEtcher`.
 
  #### Boot from SD
 
