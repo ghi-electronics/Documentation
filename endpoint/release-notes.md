@@ -1,89 +1,74 @@
 # Release Notes
 
-## 0.1.0 - Beta
+---
 
-### Released 2024-2-2
+## Endpoint OS
 
+**0.1.0 - Beta (2024-2-2)**
+
+- Changes
+    - Initial Release.
+- Known Issues
+    - None
 
 ---
 
-### Endpoint OS
+## Visual Studio Extension
 
-### Released 2024-2-2
+**0.1.0 - Beta (2024-2-2)**
 
-### 0.1.0 - Beta
-
-#### Changes
-
-- None.
-
----
-
-### Visual Studio Project System
-
-### 0.1.0 - Beta
-
-### Released 2024-2-2
-
-#### Known Issues
-
-- None.
+- Changes
+    - Initial Release
+- Known Issues
+    - None.
 
 ---
 
-### VS Code Project System
+### VS Code Extension
 
-### 0.1.0 - Beta
+**0.1.0 - Beta (2024-2-2)**
 
-### Released 2024-2-2
-
-#### Known Issues
-
-- None.
+- Changes
+    - Initial Release
+- Known Issues
+    - None.
 
 ---
 
 ### Libraries
+https://github.com/ghi-electronics/Endpoint-Libraries/issues
 
-### 0.1.0 - Beta
+**0.1.0 - Beta (2024-2-2)**
 
-### Released 2024-2-2
+- Changes
+    - Initial Release
+- Known Issues
+    - None.
 
 
-#### Known Issues
-
-- https://github.com/ghi-electronics/Endpoint-Libraries/issues
-
+- 
 
 
 ### Drivers
+https://github.com/ghi-electronics/endpoint-drivers/issues
 
-### 0.1.0 - Beta
+**0.1.0 - Beta (2024-2-2)**
 
-### Released 2024-2-2
+- Changes
+    - Initial Release
+- Known Issues
+    - None.
 
-#### Changes
 
-- None.
-
-#### Known Issues
-
-- https://github.com/ghi-electronics/endpoint-drivers/issues
 
 ---
 
 ### Endpoint Config
 
-### 0.1.0 - Beta
+**0.1.0 - Beta (2024-2-2)**
 
-### Released 2024-2-2
+- Changes
+    - Initial Release
+- Known Issues
+    - None.
 
-#### Changes
-
-- None.
-
-#### Known Issues
-
-- None.
-    
----
