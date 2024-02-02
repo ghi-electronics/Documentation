@@ -90,10 +90,20 @@
 <hr>
 <p>A watchdog timer is used to reset the system if the system fails or locks up. The system internally will reset the watchdog timer so it never reaches zero and doesn't reset the system.</p>
 <p>It's recommend to run Watchdog inside a thread in the application.</p>
+<p>Max timeout is 32 seconds.</p>
 <pre><code class="lang-cs">var watchdog = new WatchdogController();
-Console.WriteLine(&quot;Status before start: &quot; + watchdog.Started);
-bool start = watchdog.Start(10);
-Console.WriteLine(&quot;Status after start: &quot; + watchdog.Started);
+
+watchdog.Start(10); // 10 second
+var cnt = 0;
+while (true)
+{
+
+    Console.WriteLine(&quot;cnt: &quot; + cnt++);
+    Thread.Sleep(1000);
+
+    watchdog.Reset();   
+}
+
 </code></pre>
 
 </article>

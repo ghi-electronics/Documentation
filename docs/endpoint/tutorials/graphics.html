@@ -132,7 +132,7 @@ using (SKPaint text = new SKPaint()){
 </code></pre>
 <hr>
 <h2 id="using-truetype-fonts">Using TrueType Fonts</h2>
-<p>Any TrueType font can be used, it just needs to be added as a <a href="resources.html">resource</a>. To add a font change the extension from <strong>.tft</strong> to <strong>.bin</strong>. This will save the font in <strong>resources</strong> as a byte, the format SkiaSharp needs to display.</p>
+<p>Any TrueType font can be used, it just needs to be added as a resource. To add a font change the extension from <strong>.tft</strong> to <strong>.bin</strong>. This will save the font in <strong>resources</strong> as a byte array, the format SkiaSharp needs to display.</p>
 <pre><code class="lang-cs">byte[] fontfile = Resources.ArialBlack;
 Stream stream = new MemoryStream(fontfile);
 
@@ -177,10 +177,10 @@ using (SKPaint line = new SKPaint()){
 }
 </code></pre>
 <h2 id="drawing-images">Drawing Images</h2>
-<p>The example below displays an image on the screen using <a href="resources.html">resources</a>.</p>
+<p>The example below displays an image on the screen using resources.</p>
 <div class="TIP">
 <h5>Tip</h5>
-<p>Images need to be saved as .bin files in the Resoures.resx window.</p>
+<p>Images need to be converted and saved as .bin files to generate a byte array</p>
 </div>
 <pre><code class="lang-cs">// Draw image from resource
 var img = logo;

@@ -19,12 +19,12 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: PulseCaptureEventHandler
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 38
+    startLine: 39
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
   syntax:
-    content: public delegate void DigitalSignalController.PulseCaptureEventHandler(DigitalSignalController sender, double[] buffer, uint count, uint initialState, bool aborted)
+    content: public delegate void DigitalSignalController.PulseCaptureEventHandler(DigitalSignalController sender, double[] buffer, uint count, uint pinState, bool aborted)
     parameters:
     - id: sender
       type: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
@@ -32,11 +32,11 @@ items:
       type: System.Double[]
     - id: count
       type: System.UInt32
-    - id: initialState
+    - id: pinState
       type: System.UInt32
     - id: aborted
       type: System.Boolean
-    content.vb: Public Delegate Sub DigitalSignalController.PulseCaptureEventHandler(sender As DigitalSignalController, buffer As Double(), count As UInteger, initialState As UInteger, aborted As Boolean)
+    content.vb: Public Delegate Sub DigitalSignalController.PulseCaptureEventHandler(sender As DigitalSignalController, buffer As Double(), count As UInteger, pinState As UInteger, aborted As Boolean)
 references:
 - uid: GHIElectronics.Endpoint.Devices.DigitalSignal
   commentId: N:GHIElectronics.Endpoint.Devices.DigitalSignal

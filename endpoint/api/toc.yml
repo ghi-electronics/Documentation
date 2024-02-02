@@ -20,6 +20,8 @@ items:
     name: EPM815.Gpio
   - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
     name: EPM815.Gpio.Alternate
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+    name: EPM815.Gpio.Edge
   - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
     name: EPM815.Gpio.Moder
   - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
@@ -173,15 +175,11 @@ items:
     name: BatteryChargeMode
   - uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController
     name: RtcController
-  - uid: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin
-    name: WakeupPin
 - uid: GHIElectronics.Endpoint.Devices.Usb
   name: GHIElectronics.Endpoint.Devices.Usb
   items:
   - uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType
     name: DeviceType
-  - uid: GHIElectronics.Endpoint.Devices.Usb.UsbController
-    name: UsbController
 - uid: GHIElectronics.Endpoint.Devices.UsbHost
   name: GHIElectronics.Endpoint.Devices.UsbHost
   items:
@@ -237,6 +235,8 @@ items:
     name: DeviceInformation
   - uid: GHIElectronics.Endpoint.Native.Power
     name: Power
+  - uid: GHIElectronics.Endpoint.Native.Power.WakeupPin
+    name: Power.WakeupPin
 - uid: GHIElectronics.Endpoint.Update
   name: GHIElectronics.Endpoint.Update
   items:

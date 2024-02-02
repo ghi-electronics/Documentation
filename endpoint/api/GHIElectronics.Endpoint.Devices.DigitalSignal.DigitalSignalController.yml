@@ -10,13 +10,15 @@ items:
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.CanCapture
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.CanGeneratePulse
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.CanReadPulse
-  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,System.UInt32,System.Boolean)
-  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,System.UInt32,System.Boolean,System.TimeSpan)
+  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean)
+  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean,System.TimeSpan)
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.CaptureFinished
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ErrorReceived
-  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32,System.UInt32,System.UInt32)
+  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[])
+  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32)
+  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32,System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge)
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.GenerateFinished
-  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse(System.UInt32,System.UInt32,System.Boolean)
+  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean)
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulseFinished
   langs:
   - csharp
@@ -32,7 +34,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: DigitalSignalController
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -67,7 +69,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: ReadPulseFinished
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 47
+    startLine: 48
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -94,7 +96,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: GenerateFinished
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 55
+    startLine: 56
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -121,7 +123,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: CaptureFinished
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 63
+    startLine: 64
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -148,7 +150,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: ErrorReceived
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 71
+    startLine: 72
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -175,7 +177,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: CanGeneratePulse
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 79
+    startLine: 80
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -204,7 +206,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: CanReadPulse
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 80
+    startLine: 81
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -233,7 +235,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: CanCapture
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 82
+    startLine: 83
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -262,7 +264,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: .ctor
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 89
+    startLine: 90
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -276,16 +278,16 @@ items:
   nameWithType.vb: DigitalSignalController.New(Integer)
   fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.New(Integer)
   name.vb: New(Integer)
-- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32,System.UInt32,System.UInt32)
-  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32,System.UInt32,System.UInt32)
-  id: Generate(System.UInt32[],System.UInt32,System.Int32,System.UInt32,System.UInt32)
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[])
+  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[])
+  id: Generate(System.UInt32[])
   parent: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
   langs:
   - csharp
   - vb
-  name: Generate(uint[], uint, int, uint, uint)
-  nameWithType: DigitalSignalController.Generate(uint[], uint, int, uint, uint)
-  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(uint[], uint, int, uint, uint)
+  name: Generate(uint[])
+  nameWithType: DigitalSignalController.Generate(uint[])
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(uint[])
   type: Method
   source:
     remote:
@@ -294,12 +296,80 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Generate
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 260
+    startLine: 262
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
   syntax:
-    content: public void Generate(uint[] data, uint offset, int count, uint multiplier, uint edge)
+    content: public void Generate(uint[] data)
+    parameters:
+    - id: data
+      type: System.UInt32[]
+    content.vb: Public Sub Generate(data As UInteger())
+  overload: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate*
+  nameWithType.vb: DigitalSignalController.Generate(UInteger())
+  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(UInteger())
+  name.vb: Generate(UInteger())
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32)
+  id: Generate(System.UInt32[],System.UInt32,System.Int32)
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
+  langs:
+  - csharp
+  - vb
+  name: Generate(uint[], uint, int)
+  nameWithType: DigitalSignalController.Generate(uint[], uint, int)
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(uint[], uint, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Generate
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+    startLine: 265
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.DigitalSignal
+  namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
+  syntax:
+    content: public void Generate(uint[] data, uint offset, int count)
+    parameters:
+    - id: data
+      type: System.UInt32[]
+    - id: offset
+      type: System.UInt32
+    - id: count
+      type: System.Int32
+    content.vb: Public Sub Generate(data As UInteger(), offset As UInteger, count As Integer)
+  overload: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate*
+  nameWithType.vb: DigitalSignalController.Generate(UInteger(), UInteger, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(UInteger(), UInteger, Integer)
+  name.vb: Generate(UInteger(), UInteger, Integer)
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32,System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge)
+  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32,System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge)
+  id: Generate(System.UInt32[],System.UInt32,System.Int32,System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge)
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
+  langs:
+  - csharp
+  - vb
+  name: Generate(uint[], uint, int, uint, Edge)
+  nameWithType: DigitalSignalController.Generate(uint[], uint, int, uint, EPM815.Gpio.Edge)
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(uint[], uint, int, uint, GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Generate
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+    startLine: 268
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.DigitalSignal
+  namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
+  syntax:
+    content: public void Generate(uint[] data, uint offset, int count, uint multiplier, EPM815.Gpio.Edge edge)
     parameters:
     - id: data
       type: System.UInt32[]
@@ -310,22 +380,22 @@ items:
     - id: multiplier
       type: System.UInt32
     - id: edge
-      type: System.UInt32
-    content.vb: Public Sub Generate(data As UInteger(), offset As UInteger, count As Integer, multiplier As UInteger, edge As UInteger)
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+    content.vb: Public Sub Generate(data As UInteger(), offset As UInteger, count As Integer, multiplier As UInteger, edge As EPM815.Gpio.Edge)
   overload: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate*
-  nameWithType.vb: DigitalSignalController.Generate(UInteger(), UInteger, Integer, UInteger, UInteger)
-  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(UInteger(), UInteger, Integer, UInteger, UInteger)
-  name.vb: Generate(UInteger(), UInteger, Integer, UInteger, UInteger)
-- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse(System.UInt32,System.UInt32,System.Boolean)
-  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse(System.UInt32,System.UInt32,System.Boolean)
-  id: ReadPulse(System.UInt32,System.UInt32,System.Boolean)
+  nameWithType.vb: DigitalSignalController.Generate(UInteger(), UInteger, Integer, UInteger, EPM815.Gpio.Edge)
+  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(UInteger(), UInteger, Integer, UInteger, GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge)
+  name.vb: Generate(UInteger(), UInteger, Integer, UInteger, Edge)
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean)
+  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean)
+  id: ReadPulse(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean)
   parent: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
   langs:
   - csharp
   - vb
-  name: ReadPulse(uint, uint, bool)
-  nameWithType: DigitalSignalController.ReadPulse(uint, uint, bool)
-  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse(uint, uint, bool)
+  name: ReadPulse(uint, Edge, bool)
+  nameWithType: DigitalSignalController.ReadPulse(uint, EPM815.Gpio.Edge, bool)
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse(uint, GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge, bool)
   type: Method
   source:
     remote:
@@ -334,34 +404,34 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: ReadPulse
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 310
+    startLine: 318
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
   syntax:
-    content: public void ReadPulse(uint pulseNum, uint edge, bool waitForEdge)
+    content: public void ReadPulse(uint pulseNum, EPM815.Gpio.Edge edge, bool waitForEdge = false)
     parameters:
     - id: pulseNum
       type: System.UInt32
     - id: edge
-      type: System.UInt32
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
     - id: waitForEdge
       type: System.Boolean
-    content.vb: Public Sub ReadPulse(pulseNum As UInteger, edge As UInteger, waitForEdge As Boolean)
+    content.vb: Public Sub ReadPulse(pulseNum As UInteger, edge As EPM815.Gpio.Edge, waitForEdge As Boolean = False)
   overload: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse*
-  nameWithType.vb: DigitalSignalController.ReadPulse(UInteger, UInteger, Boolean)
-  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse(UInteger, UInteger, Boolean)
-  name.vb: ReadPulse(UInteger, UInteger, Boolean)
-- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,System.UInt32,System.Boolean)
-  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,System.UInt32,System.Boolean)
-  id: Capture(System.UInt32,System.UInt32,System.Boolean)
+  nameWithType.vb: DigitalSignalController.ReadPulse(UInteger, EPM815.Gpio.Edge, Boolean)
+  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse(UInteger, GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge, Boolean)
+  name.vb: ReadPulse(UInteger, Edge, Boolean)
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean)
+  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean)
+  id: Capture(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean)
   parent: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
   langs:
   - csharp
   - vb
-  name: Capture(uint, uint, bool)
-  nameWithType: DigitalSignalController.Capture(uint, uint, bool)
-  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(uint, uint, bool)
+  name: Capture(uint, Edge, bool)
+  nameWithType: DigitalSignalController.Capture(uint, EPM815.Gpio.Edge, bool)
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(uint, GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge, bool)
   type: Method
   source:
     remote:
@@ -370,34 +440,34 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Capture
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 340
+    startLine: 348
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
   syntax:
-    content: public void Capture(uint count, uint edge, bool waitForEdge)
+    content: public void Capture(uint count, EPM815.Gpio.Edge edge, bool waitForEdge = false)
     parameters:
     - id: count
       type: System.UInt32
     - id: edge
-      type: System.UInt32
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
     - id: waitForEdge
       type: System.Boolean
-    content.vb: Public Sub Capture(count As UInteger, edge As UInteger, waitForEdge As Boolean)
+    content.vb: Public Sub Capture(count As UInteger, edge As EPM815.Gpio.Edge, waitForEdge As Boolean = False)
   overload: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture*
-  nameWithType.vb: DigitalSignalController.Capture(UInteger, UInteger, Boolean)
-  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(UInteger, UInteger, Boolean)
-  name.vb: Capture(UInteger, UInteger, Boolean)
-- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,System.UInt32,System.Boolean,System.TimeSpan)
-  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,System.UInt32,System.Boolean,System.TimeSpan)
-  id: Capture(System.UInt32,System.UInt32,System.Boolean,System.TimeSpan)
+  nameWithType.vb: DigitalSignalController.Capture(UInteger, EPM815.Gpio.Edge, Boolean)
+  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(UInteger, GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge, Boolean)
+  name.vb: Capture(UInteger, Edge, Boolean)
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean,System.TimeSpan)
+  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean,System.TimeSpan)
+  id: Capture(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean,System.TimeSpan)
   parent: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
   langs:
   - csharp
   - vb
-  name: Capture(uint, uint, bool, TimeSpan)
-  nameWithType: DigitalSignalController.Capture(uint, uint, bool, TimeSpan)
-  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(uint, uint, bool, System.TimeSpan)
+  name: Capture(uint, Edge, bool, TimeSpan)
+  nameWithType: DigitalSignalController.Capture(uint, EPM815.Gpio.Edge, bool, TimeSpan)
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(uint, GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge, bool, System.TimeSpan)
   type: Method
   source:
     remote:
@@ -406,26 +476,26 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Capture
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 341
+    startLine: 349
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
   syntax:
-    content: public void Capture(uint count, uint edge, bool waitForEdge, TimeSpan timeout)
+    content: public void Capture(uint count, EPM815.Gpio.Edge edge, bool waitForEdge, TimeSpan timeout)
     parameters:
     - id: count
       type: System.UInt32
     - id: edge
-      type: System.UInt32
+      type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
     - id: waitForEdge
       type: System.Boolean
     - id: timeout
       type: System.TimeSpan
-    content.vb: Public Sub Capture(count As UInteger, edge As UInteger, waitForEdge As Boolean, timeout As TimeSpan)
+    content.vb: Public Sub Capture(count As UInteger, edge As EPM815.Gpio.Edge, waitForEdge As Boolean, timeout As TimeSpan)
   overload: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture*
-  nameWithType.vb: DigitalSignalController.Capture(UInteger, UInteger, Boolean, TimeSpan)
-  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(UInteger, UInteger, Boolean, System.TimeSpan)
-  name.vb: Capture(UInteger, UInteger, Boolean, TimeSpan)
+  nameWithType.vb: DigitalSignalController.Capture(UInteger, EPM815.Gpio.Edge, Boolean, TimeSpan)
+  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(UInteger, GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge, Boolean, System.TimeSpan)
+  name.vb: Capture(UInteger, Edge, Boolean, TimeSpan)
 - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Abort
   commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Abort
   id: Abort
@@ -444,7 +514,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Abort
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 379
+    startLine: 387
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -871,7 +941,7 @@ references:
   name.vb: Integer
 - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate*
   commentId: Overload:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate
-  href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_Generate_System_UInt32___System_UInt32_System_Int32_System_UInt32_System_UInt32_
+  href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_Generate_System_UInt32___
   name: Generate
   nameWithType: DigitalSignalController.Generate
   fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate
@@ -909,15 +979,76 @@ references:
   nameWithType.vb: UInteger
   fullName.vb: UInteger
   name.vb: UInteger
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.Edge
+  nameWithType: EPM815.Gpio.Edge
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+    name: Edge
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+    name: Edge
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.html
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
 - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse*
   commentId: Overload:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse
-  href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_ReadPulse_System_UInt32_System_UInt32_System_Boolean_
+  href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_ReadPulse_System_UInt32_GHIElectronics_Endpoint_Core_EPM815_Gpio_Edge_System_Boolean_
   name: ReadPulse
   nameWithType: DigitalSignalController.ReadPulse
   fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse
 - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture*
   commentId: Overload:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture
-  href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_Capture_System_UInt32_System_UInt32_System_Boolean_
+  href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_Capture_System_UInt32_GHIElectronics_Endpoint_Core_EPM815_Gpio_Edge_System_Boolean_
   name: Capture
   nameWithType: DigitalSignalController.Capture
   fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture

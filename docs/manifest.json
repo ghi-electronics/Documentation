@@ -1,5 +1,5 @@
 {
-  "source_base_path": "C:/Repos/docs",
+  "source_base_path": "F:/Endpoint/Documentation",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -56,6 +56,16 @@
       "output": {
         ".html": {
           "relative_path": "endpoint/api/GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "endpoint/api/GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "endpoint/api/GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.html"
         }
       },
       "version": ""
@@ -592,16 +602,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.yml",
-      "output": {
-        ".html": {
-          "relative_path": "endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.yml",
       "output": {
         ".html": {
@@ -812,16 +812,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.yml",
-      "output": {
-        ".html": {
-          "relative_path": "endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.yml",
       "output": {
         ".html": {
@@ -836,16 +826,6 @@
       "output": {
         ".html": {
           "relative_path": "endpoint/api/GHIElectronics.Endpoint.Devices.Usb.DeviceType.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "endpoint/api/GHIElectronics.Endpoint.Devices.Usb.UsbController.yml",
-      "output": {
-        ".html": {
-          "relative_path": "endpoint/api/GHIElectronics.Endpoint.Devices.Usb.UsbController.html"
         }
       },
       "version": ""
@@ -1112,6 +1092,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "endpoint/api/GHIElectronics.Endpoint.Native.Power.WakeupPin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "endpoint/api/GHIElectronics.Endpoint.Native.Power.WakeupPin.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "endpoint/api/GHIElectronics.Endpoint.Native.Power.yml",
       "output": {
         ".html": {
@@ -1166,16 +1156,6 @@
       "output": {
         ".html": {
           "relative_path": "endpoint/api/GHIElectronics.Endpoint.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "endpoint/api/intro.md",
-      "output": {
-        ".html": {
-          "relative_path": "endpoint/api/intro.html"
         }
       },
       "version": ""
@@ -1265,6 +1245,26 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "endpoint/hardware/images/domino-mikrobus.png",
+      "output": {
+        "resource": {
+          "relative_path": "endpoint/hardware/images/domino-mikrobus.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "endpoint/hardware/images/domino-wifi.png",
+      "output": {
+        "resource": {
+          "relative_path": "endpoint/hardware/images/domino-wifi.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "endpoint/hardware/images/endpoint-dev-board.png",
       "output": {
         "resource": {
@@ -1339,16 +1339,6 @@
       "output": {
         "resource": {
           "relative_path": "endpoint/hardware/images/epm815n-pinout.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "endpoint/hardware/intro (2).md",
-      "output": {
-        ".html": {
-          "relative_path": "endpoint/hardware/intro (2).html"
         }
       },
       "version": ""
@@ -1738,16 +1728,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "endpoint/tutorials/ethernet.md",
-      "output": {
-        ".html": {
-          "relative_path": "endpoint/tutorials/ethernet.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "endpoint/tutorials/file-system.md",
       "output": {
         ".html": {
@@ -1808,176 +1788,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/adaIO-add-cert.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/adaIO-add-cert.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/adaIO-add-gauge.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/adaIO-add-gauge.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/adaIO-add-newblock.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/adaIO-add-newblock.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/adaIO-block-settings.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/adaIO-block-settings.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/adaIO-complete-dashboard.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/adaIO-complete-dashboard.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/adaIO-create-block.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/adaIO-create-block.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/adaIO-create-dashboard.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/adaIO-create-dashboard.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/adaIO-create-gaugeblock.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/adaIO-create-gaugeblock.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/adaIO-generate-key.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/adaIO-generate-key.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/adaIO-message-vs.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/adaIO-message-vs.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/adaIO-name-dashboard.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/adaIO-name-dashboard.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/adaIO-name-feed.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/adaIO-name-feed.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/adaIO-name-gaugefeed.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/adaIO-name-gaugefeed.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/adaIO-next-step.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/adaIO-next-step.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/adaIO-select-dashboard.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/adaIO-select-dashboard.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/adaIO-select-key.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/adaIO-select-key.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/adaIO-select-toggle.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/adaIO-select-toggle.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "endpoint/tutorials/images/add-nuget-package.png",
       "output": {
         "resource": {
@@ -1988,140 +1798,140 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/add-resources.jpg",
+      "source_relative_path": "endpoint/tutorials/images/aws-activity-1.jpg",
       "output": {
         "resource": {
-          "relative_path": "endpoint/tutorials/images/add-resources.jpg"
+          "relative_path": "endpoint/tutorials/images/aws-activity-1.jpg"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/aws-add-policy.jpg",
+      "source_relative_path": "endpoint/tutorials/images/aws-create-thing.jpg",
       "output": {
         "resource": {
-          "relative_path": "endpoint/tutorials/images/aws-add-policy.jpg"
+          "relative_path": "endpoint/tutorials/images/aws-create-thing.jpg"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/aws-cert.jpg",
+      "source_relative_path": "endpoint/tutorials/images/aws-final-1.jpg",
       "output": {
         "resource": {
-          "relative_path": "endpoint/tutorials/images/aws-cert.jpg"
+          "relative_path": "endpoint/tutorials/images/aws-final-1.jpg"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/aws-copy-endpoint.jpg",
+      "source_relative_path": "endpoint/tutorials/images/aws-iotendpoit.jpg",
       "output": {
         "resource": {
-          "relative_path": "endpoint/tutorials/images/aws-copy-endpoint.jpg"
+          "relative_path": "endpoint/tutorials/images/aws-iotendpoit.jpg"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/aws-create-certificates.jpg",
+      "source_relative_path": "endpoint/tutorials/images/aws-policy-1.jpg",
       "output": {
         "resource": {
-          "relative_path": "endpoint/tutorials/images/aws-create-certificates.jpg"
+          "relative_path": "endpoint/tutorials/images/aws-policy-1.jpg"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/aws-create-policy.jpg",
+      "source_relative_path": "endpoint/tutorials/images/aws-policy-2.jpg",
       "output": {
         "resource": {
-          "relative_path": "endpoint/tutorials/images/aws-create-policy.jpg"
+          "relative_path": "endpoint/tutorials/images/aws-policy-2.jpg"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/aws-create-single.jpg",
+      "source_relative_path": "endpoint/tutorials/images/aws-policy-3.jpg",
       "output": {
         "resource": {
-          "relative_path": "endpoint/tutorials/images/aws-create-single.jpg"
+          "relative_path": "endpoint/tutorials/images/aws-policy-3.jpg"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/aws-device-activity.jpg",
+      "source_relative_path": "endpoint/tutorials/images/aws-policy-4.jpg",
       "output": {
         "resource": {
-          "relative_path": "endpoint/tutorials/images/aws-device-activity.jpg"
+          "relative_path": "endpoint/tutorials/images/aws-policy-4.jpg"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/aws-download-cert.jpg",
+      "source_relative_path": "endpoint/tutorials/images/aws-step1.jpg",
       "output": {
         "resource": {
-          "relative_path": "endpoint/tutorials/images/aws-download-cert.jpg"
+          "relative_path": "endpoint/tutorials/images/aws-step1.jpg"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/aws-manage-things.jpg",
+      "source_relative_path": "endpoint/tutorials/images/aws-step2.jpg",
       "output": {
         "resource": {
-          "relative_path": "endpoint/tutorials/images/aws-manage-things.jpg"
+          "relative_path": "endpoint/tutorials/images/aws-step2.jpg"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/aws-message-recieved.jpg",
+      "source_relative_path": "endpoint/tutorials/images/aws-step22.jpg",
       "output": {
         "resource": {
-          "relative_path": "endpoint/tutorials/images/aws-message-recieved.jpg"
+          "relative_path": "endpoint/tutorials/images/aws-step22.jpg"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/aws-name-device.jpg",
+      "source_relative_path": "endpoint/tutorials/images/aws-step23.jpg",
       "output": {
         "resource": {
-          "relative_path": "endpoint/tutorials/images/aws-name-device.jpg"
+          "relative_path": "endpoint/tutorials/images/aws-step23.jpg"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/aws-select-device.jpg",
+      "source_relative_path": "endpoint/tutorials/images/aws-step24.jpg",
       "output": {
         "resource": {
-          "relative_path": "endpoint/tutorials/images/aws-select-device.jpg"
+          "relative_path": "endpoint/tutorials/images/aws-step24.jpg"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/aws-select-iot.jpg",
+      "source_relative_path": "endpoint/tutorials/images/aws-step3.jpg",
       "output": {
         "resource": {
-          "relative_path": "endpoint/tutorials/images/aws-select-iot.jpg"
+          "relative_path": "endpoint/tutorials/images/aws-step3.jpg"
         }
       },
       "version": ""
@@ -2288,256 +2098,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-bind-device.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-bind-device.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-create-device.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-create-device.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-create-gateway.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-create-gateway.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-create-message.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-create-message.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-create-project.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-create-project.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-create-registry.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-create-registry.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-create-subscription.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-create-subscription.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-device-create.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-device-create.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-enable-cloud.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-enable-cloud.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-gateway-RSA.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-gateway-RSA.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-generate-keys.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-generate-keys.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-message-vs.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-message-vs.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-name-gateway.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-name-gateway.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-name-project.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-name-project.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-name-subscription.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-name-subscription.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-paste-key.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-paste-key.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-registry-id.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-registry-id.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-search-iotcore.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-search-iotcore.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-select-gateway.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-select-gateway.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-select-subscription.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-select-subscription.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-select-topic.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-select-topic.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-send-command.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-send-command.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-set-deviceID.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-set-deviceID.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-set-protocol.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-set-protocol.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/gcloud-view-messages.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/gcloud-view-messages.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "endpoint/tutorials/images/generate_jwt.png",
       "output": {
         "resource": {
@@ -2562,146 +2122,6 @@
       "output": {
         "resource": {
           "relative_path": "endpoint/tutorials/images/http-server.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/ifttt-add-ingredient.png",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/ifttt-add-ingredient.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/ifttt-choose-action-service.png",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/ifttt-choose-action-service.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/ifttt-choose-webhooks.png",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/ifttt-choose-webhooks.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/ifttt-click-webhooks-icon.png",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/ifttt-click-webhooks-icon.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/ifttt-complete-action.png",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/ifttt-complete-action.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/ifttt-continue.png",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/ifttt-continue.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/ifttt-create-trigger.png",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/ifttt-create-trigger.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/ifttt-create-your-own.png",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/ifttt-create-your-own.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/ifttt-if-this.png",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/ifttt-if-this.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/ifttt-receive-web-request.png",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/ifttt-receive-web-request.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/ifttt-send-me-an-email.png",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/ifttt-send-me-an-email.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/ifttt-start-connecting.png",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/ifttt-start-connecting.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/ifttt-then-that.png",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/ifttt-then-that.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/ifttt-webhooks-key.png",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/ifttt-webhooks-key.png"
         }
       },
       "version": ""
@@ -2752,16 +2172,6 @@
       "output": {
         "resource": {
           "relative_path": "endpoint/tutorials/images/package-source.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/resources.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/resources.jpg"
         }
       },
       "version": ""
@@ -2978,106 +2388,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/vnc-client.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/vnc-client.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/vnc-connection.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/vnc-connection.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/vnc-debug.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/vnc-debug.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/vnc-screen.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/vnc-screen.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/vs_output.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/vs_output.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/webusb-connect.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/webusb-connect.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/webusb-dev.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/webusb-dev.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/webusb-pin-select.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/webusb-pin-select.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/webusb-select.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/webusb-select.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "endpoint/tutorials/images/webusb-success.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "endpoint/tutorials/images/webusb-success.jpg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "endpoint/tutorials/images/write1.jpg",
       "output": {
         "resource": {
@@ -3138,10 +2448,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "endpoint/tutorials/networking-core.md",
+      "source_relative_path": "endpoint/tutorials/networking.md",
       "output": {
         ".html": {
-          "relative_path": "endpoint/tutorials/networking-core.html"
+          "relative_path": "endpoint/tutorials/networking.html"
         }
       },
       "version": ""
@@ -3178,16 +2488,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "endpoint/tutorials/resources.md",
-      "output": {
-        ".html": {
-          "relative_path": "endpoint/tutorials/resources.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "endpoint/tutorials/signal-control.md",
       "output": {
         ".html": {
@@ -3202,16 +2502,6 @@
       "output": {
         ".html": {
           "relative_path": "endpoint/tutorials/spi.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "endpoint/tutorials/tls.md",
-      "output": {
-        ".html": {
-          "relative_path": "endpoint/tutorials/tls.html"
         }
       },
       "version": ""
@@ -3252,16 +2542,6 @@
       "output": {
         ".html": {
           "relative_path": "endpoint/tutorials/watchdog-timer.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "endpoint/tutorials/wifi.md",
-      "output": {
-        ".html": {
-          "relative_path": "endpoint/tutorials/wifi.html"
         }
       },
       "version": ""

@@ -8,10 +8,10 @@ items:
   - GHIElectronics.Endpoint.Devices.Rtc.RtcController.#ctor
   - GHIElectronics.Endpoint.Devices.Rtc.RtcController.Dispose
   - GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableChargeMode(GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode)
-  - GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup(GHIElectronics.Endpoint.Devices.Rtc.WakeupPin,System.Device.Gpio.PinEventTypes)
-  - GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup(System.DateTime,GHIElectronics.Endpoint.Devices.Rtc.WakeupPin,System.Device.Gpio.PinEventTypes)
+  - GHIElectronics.Endpoint.Devices.Rtc.RtcController.GetSystemTime
   - GHIElectronics.Endpoint.Devices.Rtc.RtcController.Now
   - GHIElectronics.Endpoint.Devices.Rtc.RtcController.ReadTime
+  - GHIElectronics.Endpoint.Devices.Rtc.RtcController.SetSystemTime(System.DateTime)
   - GHIElectronics.Endpoint.Devices.Rtc.RtcController.SetTime(System.DateTime)
   langs:
   - csharp
@@ -27,7 +27,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: RtcController
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
-    startLine: 28
+    startLine: 18
   assemblies:
   - GHIElectronics.Endpoint.Devices.Rtc
   namespace: GHIElectronics.Endpoint.Devices.Rtc
@@ -69,7 +69,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: .ctor
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
-    startLine: 32
+    startLine: 22
   assemblies:
   - GHIElectronics.Endpoint.Devices.Rtc
   namespace: GHIElectronics.Endpoint.Devices.Rtc
@@ -98,7 +98,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: EnableChargeMode
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
-    startLine: 34
+    startLine: 24
   assemblies:
   - GHIElectronics.Endpoint.Devices.Rtc
   namespace: GHIElectronics.Endpoint.Devices.Rtc
@@ -109,73 +109,66 @@ items:
       type: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
     content.vb: Public Sub EnableChargeMode(chargeMode As BatteryChargeMode)
   overload: GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableChargeMode*
-- uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup(GHIElectronics.Endpoint.Devices.Rtc.WakeupPin,System.Device.Gpio.PinEventTypes)
-  commentId: M:GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup(GHIElectronics.Endpoint.Devices.Rtc.WakeupPin,System.Device.Gpio.PinEventTypes)
-  id: EnableWakeup(GHIElectronics.Endpoint.Devices.Rtc.WakeupPin,System.Device.Gpio.PinEventTypes)
+- uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController.GetSystemTime
+  commentId: M:GHIElectronics.Endpoint.Devices.Rtc.RtcController.GetSystemTime
+  id: GetSystemTime
   parent: GHIElectronics.Endpoint.Devices.Rtc.RtcController
   langs:
   - csharp
   - vb
-  name: EnableWakeup(WakeupPin, PinEventTypes)
-  nameWithType: RtcController.EnableWakeup(WakeupPin, PinEventTypes)
-  fullName: GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup(GHIElectronics.Endpoint.Devices.Rtc.WakeupPin, System.Device.Gpio.PinEventTypes)
+  name: GetSystemTime()
+  nameWithType: RtcController.GetSystemTime()
+  fullName: GHIElectronics.Endpoint.Devices.Rtc.RtcController.GetSystemTime()
   type: Method
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
       branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
-    id: EnableWakeup
+    id: GetSystemTime
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
-    startLine: 129
+    startLine: 49
   assemblies:
   - GHIElectronics.Endpoint.Devices.Rtc
   namespace: GHIElectronics.Endpoint.Devices.Rtc
   syntax:
-    content: public void EnableWakeup(WakeupPin wakeupPin, PinEventTypes edge)
-    parameters:
-    - id: wakeupPin
-      type: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin
-    - id: edge
-      type: System.Device.Gpio.PinEventTypes
-    content.vb: Public Sub EnableWakeup(wakeupPin As WakeupPin, edge As PinEventTypes)
-  overload: GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup*
-- uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup(System.DateTime,GHIElectronics.Endpoint.Devices.Rtc.WakeupPin,System.Device.Gpio.PinEventTypes)
-  commentId: M:GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup(System.DateTime,GHIElectronics.Endpoint.Devices.Rtc.WakeupPin,System.Device.Gpio.PinEventTypes)
-  id: EnableWakeup(System.DateTime,GHIElectronics.Endpoint.Devices.Rtc.WakeupPin,System.Device.Gpio.PinEventTypes)
-  parent: GHIElectronics.Endpoint.Devices.Rtc.RtcController
-  langs:
-  - csharp
-  - vb
-  name: EnableWakeup(DateTime, WakeupPin, PinEventTypes)
-  nameWithType: RtcController.EnableWakeup(DateTime, WakeupPin, PinEventTypes)
-  fullName: GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup(System.DateTime, GHIElectronics.Endpoint.Devices.Rtc.WakeupPin, System.Device.Gpio.PinEventTypes)
-  type: Method
-  source:
-    remote:
-      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
-      branch: main
-      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
-    id: EnableWakeup
-    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
-    startLine: 132
-  assemblies:
-  - GHIElectronics.Endpoint.Devices.Rtc
-  namespace: GHIElectronics.Endpoint.Devices.Rtc
-  syntax:
-    content: public void EnableWakeup(DateTime dtWakeup, WakeupPin wakeupPin = WakeupPin.None, PinEventTypes edge = PinEventTypes.Rising)
-    parameters:
-    - id: dtWakeup
+    content: public DateTime GetSystemTime()
+    return:
       type: System.DateTime
-    - id: wakeupPin
-      type: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin
-    - id: edge
-      type: System.Device.Gpio.PinEventTypes
-    content.vb: Public Sub EnableWakeup(dtWakeup As Date, wakeupPin As WakeupPin = WakeupPin.None, edge As PinEventTypes = PinEventTypes.Rising)
-  overload: GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup*
-  nameWithType.vb: RtcController.EnableWakeup(Date, WakeupPin, PinEventTypes)
-  fullName.vb: GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup(Date, GHIElectronics.Endpoint.Devices.Rtc.WakeupPin, System.Device.Gpio.PinEventTypes)
-  name.vb: EnableWakeup(Date, WakeupPin, PinEventTypes)
+    content.vb: Public Function GetSystemTime() As Date
+  overload: GHIElectronics.Endpoint.Devices.Rtc.RtcController.GetSystemTime*
+- uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController.SetSystemTime(System.DateTime)
+  commentId: M:GHIElectronics.Endpoint.Devices.Rtc.RtcController.SetSystemTime(System.DateTime)
+  id: SetSystemTime(System.DateTime)
+  parent: GHIElectronics.Endpoint.Devices.Rtc.RtcController
+  langs:
+  - csharp
+  - vb
+  name: SetSystemTime(DateTime)
+  nameWithType: RtcController.SetSystemTime(DateTime)
+  fullName: GHIElectronics.Endpoint.Devices.Rtc.RtcController.SetSystemTime(System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SetSystemTime
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
+    startLine: 99
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Rtc
+  namespace: GHIElectronics.Endpoint.Devices.Rtc
+  syntax:
+    content: public void SetSystemTime(DateTime value)
+    parameters:
+    - id: value
+      type: System.DateTime
+    content.vb: Public Sub SetSystemTime(value As Date)
+  overload: GHIElectronics.Endpoint.Devices.Rtc.RtcController.SetSystemTime*
+  nameWithType.vb: RtcController.SetSystemTime(Date)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Rtc.RtcController.SetSystemTime(Date)
+  name.vb: SetSystemTime(Date)
 - uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController.Now
   commentId: P:GHIElectronics.Endpoint.Devices.Rtc.RtcController.Now
   id: Now
@@ -194,7 +187,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Now
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
-    startLine: 195
+    startLine: 189
   assemblies:
   - GHIElectronics.Endpoint.Devices.Rtc
   namespace: GHIElectronics.Endpoint.Devices.Rtc
@@ -223,7 +216,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Dispose
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
-    startLine: 235
+    startLine: 229
   assemblies:
   - GHIElectronics.Endpoint.Devices.Rtc
   namespace: GHIElectronics.Endpoint.Devices.Rtc
@@ -249,7 +242,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: SetTime
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
-    startLine: 256
+    startLine: 250
   assemblies:
   - GHIElectronics.Endpoint.Devices.Rtc
   namespace: GHIElectronics.Endpoint.Devices.Rtc
@@ -285,7 +278,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: ReadTime
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Rtc/RtcController.cs
-    startLine: 277
+    startLine: 271
   assemblies:
   - GHIElectronics.Endpoint.Devices.Rtc
   namespace: GHIElectronics.Endpoint.Devices.Rtc
@@ -707,64 +700,12 @@ references:
   name: BatteryChargeMode
   nameWithType: BatteryChargeMode
   fullName: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
-- uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup*
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup
-  href: GHIElectronics.Endpoint.Devices.Rtc.RtcController.html#GHIElectronics_Endpoint_Devices_Rtc_RtcController_EnableWakeup_GHIElectronics_Endpoint_Devices_Rtc_WakeupPin_System_Device_Gpio_PinEventTypes_
-  name: EnableWakeup
-  nameWithType: RtcController.EnableWakeup
-  fullName: GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup
-- uid: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin
-  commentId: T:GHIElectronics.Endpoint.Devices.Rtc.WakeupPin
-  parent: GHIElectronics.Endpoint.Devices.Rtc
-  href: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.html
-  name: WakeupPin
-  nameWithType: WakeupPin
-  fullName: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin
-- uid: System.Device.Gpio.PinEventTypes
-  commentId: T:System.Device.Gpio.PinEventTypes
-  parent: System.Device.Gpio
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.device.gpio.pineventtypes
-  name: PinEventTypes
-  nameWithType: PinEventTypes
-  fullName: System.Device.Gpio.PinEventTypes
-- uid: System.Device.Gpio
-  commentId: N:System.Device.Gpio
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Device.Gpio
-  nameWithType: System.Device.Gpio
-  fullName: System.Device.Gpio
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Device
-    name: Device
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.device
-  - name: .
-  - uid: System.Device.Gpio
-    name: Gpio
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.device.gpio
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Device
-    name: Device
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.device
-  - name: .
-  - uid: System.Device.Gpio
-    name: Gpio
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.device.gpio
+- uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController.GetSystemTime*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Rtc.RtcController.GetSystemTime
+  href: GHIElectronics.Endpoint.Devices.Rtc.RtcController.html#GHIElectronics_Endpoint_Devices_Rtc_RtcController_GetSystemTime
+  name: GetSystemTime
+  nameWithType: RtcController.GetSystemTime
+  fullName: GHIElectronics.Endpoint.Devices.Rtc.RtcController.GetSystemTime
 - uid: System.DateTime
   commentId: T:System.DateTime
   parent: System
@@ -776,6 +717,12 @@ references:
   nameWithType.vb: Date
   fullName.vb: Date
   name.vb: Date
+- uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController.SetSystemTime*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Rtc.RtcController.SetSystemTime
+  href: GHIElectronics.Endpoint.Devices.Rtc.RtcController.html#GHIElectronics_Endpoint_Devices_Rtc_RtcController_SetSystemTime_System_DateTime_
+  name: SetSystemTime
+  nameWithType: RtcController.SetSystemTime
+  fullName: GHIElectronics.Endpoint.Devices.Rtc.RtcController.SetSystemTime
 - uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController.Now*
   commentId: Overload:GHIElectronics.Endpoint.Devices.Rtc.RtcController.Now
   href: GHIElectronics.Endpoint.Devices.Rtc.RtcController.html#GHIElectronics_Endpoint_Devices_Rtc_RtcController_Now

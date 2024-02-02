@@ -10,6 +10,7 @@ items:
   - GHIElectronics.Endpoint.Core.EPM815.Can
   - GHIElectronics.Endpoint.Core.EPM815.Gpio
   - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
   - GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
   - GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
   - GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin
@@ -331,6 +332,37 @@ references:
   - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed
     name: Speed
     href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Speed.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Gpio.Edge
+  nameWithType: EPM815.Gpio.Edge
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+    name: Edge
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
+    name: Gpio
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+    name: Edge
+    href: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.html
 - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin
   commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Pin
   href: GHIElectronics.Endpoint.Core.EPM815.html

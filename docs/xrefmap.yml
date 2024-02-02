@@ -247,6 +247,24 @@ references:
   commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.NONE
   fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate.NONE
   nameWithType: EPM815.Gpio.Alternate.NONE
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  name: EPM815.Gpio.Edge
+  href: endpoint/api/GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.html
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
+  nameWithType: EPM815.Gpio.Edge
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.Falling
+  name: Falling
+  href: endpoint/api/GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.html#GHIElectronics_Endpoint_Core_EPM815_Gpio_Edge_Falling
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.Falling
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.Falling
+  nameWithType: EPM815.Gpio.Edge.Falling
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.Rising
+  name: Rising
+  href: endpoint/api/GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.html#GHIElectronics_Endpoint_Core_EPM815_Gpio_Edge_Rising
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.Rising
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge.Rising
+  nameWithType: EPM815.Gpio.Edge.Rising
 - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.GetPin(System.Int32)
   name: GetPin(int)
   href: endpoint/api/GHIElectronics.Endpoint.Core.EPM815.Gpio.html#GHIElectronics_Endpoint_Core_EPM815_Gpio_GetPin_System_Int32_
@@ -2982,22 +3000,22 @@ references:
   isSpec: "True"
   fullName: GHIElectronics.Endpoint.Devices.Can.CanController.Enable
   nameWithType: CanController.Enable
-- uid: GHIElectronics.Endpoint.Devices.Can.CanController.EnableError(System.UInt32)
-  name: EnableError(uint)
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Can.CanController.html#GHIElectronics_Endpoint_Devices_Can_CanController_EnableError_System_UInt32_
-  commentId: M:GHIElectronics.Endpoint.Devices.Can.CanController.EnableError(System.UInt32)
-  name.vb: EnableError(UInteger)
-  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.EnableError(uint)
-  fullName.vb: GHIElectronics.Endpoint.Devices.Can.CanController.EnableError(UInteger)
-  nameWithType: CanController.EnableError(uint)
-  nameWithType.vb: CanController.EnableError(UInteger)
-- uid: GHIElectronics.Endpoint.Devices.Can.CanController.EnableError*
-  name: EnableError
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Can.CanController.html#GHIElectronics_Endpoint_Devices_Can_CanController_EnableError_
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Can.CanController.EnableError
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent(System.UInt32)
+  name: EnableErrorEvent(uint)
+  href: endpoint/api/GHIElectronics.Endpoint.Devices.Can.CanController.html#GHIElectronics_Endpoint_Devices_Can_CanController_EnableErrorEvent_System_UInt32_
+  commentId: M:GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent(System.UInt32)
+  name.vb: EnableErrorEvent(UInteger)
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent(uint)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent(UInteger)
+  nameWithType: CanController.EnableErrorEvent(uint)
+  nameWithType.vb: CanController.EnableErrorEvent(UInteger)
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent*
+  name: EnableErrorEvent
+  href: endpoint/api/GHIElectronics.Endpoint.Devices.Can.CanController.html#GHIElectronics_Endpoint_Devices_Can_CanController_EnableErrorEvent_
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent
   isSpec: "True"
-  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.EnableError
-  nameWithType: CanController.EnableError
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent
+  nameWithType: CanController.EnableErrorEvent
 - uid: GHIElectronics.Endpoint.Devices.Can.CanController.EnableFilter(System.UInt32[],System.UInt32[],System.Boolean)
   name: EnableFilter(uint[], uint[], bool)
   href: endpoint/api/GHIElectronics.Endpoint.Devices.Can.CanController.html#GHIElectronics_Endpoint_Devices_Can_CanController_EnableFilter_System_UInt32___System_UInt32___System_Boolean_
@@ -3669,24 +3687,24 @@ references:
   isSpec: "True"
   fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.CanReadPulse
   nameWithType: DigitalSignalController.CanReadPulse
-- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,System.UInt32,System.Boolean)
-  name: Capture(uint, uint, bool)
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_Capture_System_UInt32_System_UInt32_System_Boolean_
-  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,System.UInt32,System.Boolean)
-  name.vb: Capture(UInteger, UInteger, Boolean)
-  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(uint, uint, bool)
-  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(UInteger, UInteger, Boolean)
-  nameWithType: DigitalSignalController.Capture(uint, uint, bool)
-  nameWithType.vb: DigitalSignalController.Capture(UInteger, UInteger, Boolean)
-- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,System.UInt32,System.Boolean,System.TimeSpan)
-  name: Capture(uint, uint, bool, TimeSpan)
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_Capture_System_UInt32_System_UInt32_System_Boolean_System_TimeSpan_
-  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,System.UInt32,System.Boolean,System.TimeSpan)
-  name.vb: Capture(UInteger, UInteger, Boolean, TimeSpan)
-  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(uint, uint, bool, System.TimeSpan)
-  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(UInteger, UInteger, Boolean, System.TimeSpan)
-  nameWithType: DigitalSignalController.Capture(uint, uint, bool, TimeSpan)
-  nameWithType.vb: DigitalSignalController.Capture(UInteger, UInteger, Boolean, TimeSpan)
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean)
+  name: Capture(uint, Edge, bool)
+  href: endpoint/api/GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_Capture_System_UInt32_GHIElectronics_Endpoint_Core_EPM815_Gpio_Edge_System_Boolean_
+  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean)
+  name.vb: Capture(UInteger, Edge, Boolean)
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(uint, GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge, bool)
+  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(UInteger, GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge, Boolean)
+  nameWithType: DigitalSignalController.Capture(uint, EPM815.Gpio.Edge, bool)
+  nameWithType.vb: DigitalSignalController.Capture(UInteger, EPM815.Gpio.Edge, Boolean)
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean,System.TimeSpan)
+  name: Capture(uint, Edge, bool, TimeSpan)
+  href: endpoint/api/GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_Capture_System_UInt32_GHIElectronics_Endpoint_Core_EPM815_Gpio_Edge_System_Boolean_System_TimeSpan_
+  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean,System.TimeSpan)
+  name.vb: Capture(UInteger, Edge, Boolean, TimeSpan)
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(uint, GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge, bool, System.TimeSpan)
+  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(UInteger, GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge, Boolean, System.TimeSpan)
+  nameWithType: DigitalSignalController.Capture(uint, EPM815.Gpio.Edge, bool, TimeSpan)
+  nameWithType.vb: DigitalSignalController.Capture(UInteger, EPM815.Gpio.Edge, Boolean, TimeSpan)
 - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture*
   name: Capture
   href: endpoint/api/GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_Capture_
@@ -3736,15 +3754,33 @@ references:
   commentId: E:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ErrorReceived
   fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ErrorReceived
   nameWithType: DigitalSignalController.ErrorReceived
-- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32,System.UInt32,System.UInt32)
-  name: Generate(uint[], uint, int, uint, uint)
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_Generate_System_UInt32___System_UInt32_System_Int32_System_UInt32_System_UInt32_
-  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32,System.UInt32,System.UInt32)
-  name.vb: Generate(UInteger(), UInteger, Integer, UInteger, UInteger)
-  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(uint[], uint, int, uint, uint)
-  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(UInteger(), UInteger, Integer, UInteger, UInteger)
-  nameWithType: DigitalSignalController.Generate(uint[], uint, int, uint, uint)
-  nameWithType.vb: DigitalSignalController.Generate(UInteger(), UInteger, Integer, UInteger, UInteger)
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[])
+  name: Generate(uint[])
+  href: endpoint/api/GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_Generate_System_UInt32___
+  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[])
+  name.vb: Generate(UInteger())
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(uint[])
+  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(UInteger())
+  nameWithType: DigitalSignalController.Generate(uint[])
+  nameWithType.vb: DigitalSignalController.Generate(UInteger())
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32)
+  name: Generate(uint[], uint, int)
+  href: endpoint/api/GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_Generate_System_UInt32___System_UInt32_System_Int32_
+  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32)
+  name.vb: Generate(UInteger(), UInteger, Integer)
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(uint[], uint, int)
+  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(UInteger(), UInteger, Integer)
+  nameWithType: DigitalSignalController.Generate(uint[], uint, int)
+  nameWithType.vb: DigitalSignalController.Generate(UInteger(), UInteger, Integer)
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32,System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge)
+  name: Generate(uint[], uint, int, uint, Edge)
+  href: endpoint/api/GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_Generate_System_UInt32___System_UInt32_System_Int32_System_UInt32_GHIElectronics_Endpoint_Core_EPM815_Gpio_Edge_
+  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32,System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge)
+  name.vb: Generate(UInteger(), UInteger, Integer, UInteger, Edge)
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(uint[], uint, int, uint, GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge)
+  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(UInteger(), UInteger, Integer, UInteger, GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge)
+  nameWithType: DigitalSignalController.Generate(uint[], uint, int, uint, EPM815.Gpio.Edge)
+  nameWithType.vb: DigitalSignalController.Generate(UInteger(), UInteger, Integer, UInteger, EPM815.Gpio.Edge)
 - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate*
   name: Generate
   href: endpoint/api/GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_Generate_
@@ -3800,15 +3836,15 @@ references:
   commentId: T:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.PulseReadEventHandler
   fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.PulseReadEventHandler
   nameWithType: DigitalSignalController.PulseReadEventHandler
-- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse(System.UInt32,System.UInt32,System.Boolean)
-  name: ReadPulse(uint, uint, bool)
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_ReadPulse_System_UInt32_System_UInt32_System_Boolean_
-  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse(System.UInt32,System.UInt32,System.Boolean)
-  name.vb: ReadPulse(UInteger, UInteger, Boolean)
-  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse(uint, uint, bool)
-  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse(UInteger, UInteger, Boolean)
-  nameWithType: DigitalSignalController.ReadPulse(uint, uint, bool)
-  nameWithType.vb: DigitalSignalController.ReadPulse(UInteger, UInteger, Boolean)
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean)
+  name: ReadPulse(uint, Edge, bool)
+  href: endpoint/api/GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_ReadPulse_System_UInt32_GHIElectronics_Endpoint_Core_EPM815_Gpio_Edge_System_Boolean_
+  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean)
+  name.vb: ReadPulse(UInteger, Edge, Boolean)
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse(uint, GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge, bool)
+  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse(UInteger, GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge, Boolean)
+  nameWithType: DigitalSignalController.ReadPulse(uint, EPM815.Gpio.Edge, bool)
+  nameWithType.vb: DigitalSignalController.ReadPulse(UInteger, EPM815.Gpio.Edge, Boolean)
 - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse*
   name: ReadPulse
   href: endpoint/api/GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_ReadPulse_
@@ -4196,207 +4232,6 @@ references:
   isSpec: "True"
   fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Height
   nameWithType: FBDisplay.Height
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration
-  name: FBDisplay.ParallelConfiguration
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html
-  commentId: T:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration
-  nameWithType: FBDisplay.ParallelConfiguration
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Bpc
-  name: Bpc
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Bpc
-  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Bpc
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Bpc
-  nameWithType: FBDisplay.ParallelConfiguration.Bpc
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Bpc*
-  name: Bpc
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Bpc_
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Bpc
-  isSpec: "True"
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Bpc
-  nameWithType: FBDisplay.ParallelConfiguration.Bpc
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Bus_flags
-  name: Bus_flags
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Bus_flags
-  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Bus_flags
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Bus_flags
-  nameWithType: FBDisplay.ParallelConfiguration.Bus_flags
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Bus_flags*
-  name: Bus_flags
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Bus_flags_
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Bus_flags
-  isSpec: "True"
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Bus_flags
-  nameWithType: FBDisplay.ParallelConfiguration.Bus_flags
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Bus_format
-  name: Bus_format
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Bus_format
-  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Bus_format
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Bus_format
-  nameWithType: FBDisplay.ParallelConfiguration.Bus_format
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Bus_format*
-  name: Bus_format
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Bus_format_
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Bus_format
-  isSpec: "True"
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Bus_format
-  nameWithType: FBDisplay.ParallelConfiguration.Bus_format
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Clock
-  name: Clock
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Clock
-  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Clock
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Clock
-  nameWithType: FBDisplay.ParallelConfiguration.Clock
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Clock*
-  name: Clock
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Clock_
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Clock
-  isSpec: "True"
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Clock
-  nameWithType: FBDisplay.ParallelConfiguration.Clock
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Connector_type
-  name: Connector_type
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Connector_type
-  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Connector_type
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Connector_type
-  nameWithType: FBDisplay.ParallelConfiguration.Connector_type
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Connector_type*
-  name: Connector_type
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Connector_type_
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Connector_type
-  isSpec: "True"
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Connector_type
-  nameWithType: FBDisplay.ParallelConfiguration.Connector_type
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Dpi_height
-  name: Dpi_height
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Dpi_height
-  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Dpi_height
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Dpi_height
-  nameWithType: FBDisplay.ParallelConfiguration.Dpi_height
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Dpi_height*
-  name: Dpi_height
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Dpi_height_
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Dpi_height
-  isSpec: "True"
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Dpi_height
-  nameWithType: FBDisplay.ParallelConfiguration.Dpi_height
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Dpi_width
-  name: Dpi_width
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Dpi_width
-  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Dpi_width
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Dpi_width
-  nameWithType: FBDisplay.ParallelConfiguration.Dpi_width
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Dpi_width*
-  name: Dpi_width
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Dpi_width_
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Dpi_width
-  isSpec: "True"
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Dpi_width
-  nameWithType: FBDisplay.ParallelConfiguration.Dpi_width
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Hsync_end
-  name: Hsync_end
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Hsync_end
-  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Hsync_end
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Hsync_end
-  nameWithType: FBDisplay.ParallelConfiguration.Hsync_end
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Hsync_end*
-  name: Hsync_end
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Hsync_end_
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Hsync_end
-  isSpec: "True"
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Hsync_end
-  nameWithType: FBDisplay.ParallelConfiguration.Hsync_end
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Hsync_start
-  name: Hsync_start
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Hsync_start
-  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Hsync_start
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Hsync_start
-  nameWithType: FBDisplay.ParallelConfiguration.Hsync_start
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Hsync_start*
-  name: Hsync_start
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Hsync_start_
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Hsync_start
-  isSpec: "True"
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Hsync_start
-  nameWithType: FBDisplay.ParallelConfiguration.Hsync_start
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Htotal
-  name: Htotal
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Htotal
-  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Htotal
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Htotal
-  nameWithType: FBDisplay.ParallelConfiguration.Htotal
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Htotal*
-  name: Htotal
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Htotal_
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Htotal
-  isSpec: "True"
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Htotal
-  nameWithType: FBDisplay.ParallelConfiguration.Htotal
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Num_modes
-  name: Num_modes
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Num_modes
-  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Num_modes
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Num_modes
-  nameWithType: FBDisplay.ParallelConfiguration.Num_modes
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Num_modes*
-  name: Num_modes
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Num_modes_
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Num_modes
-  isSpec: "True"
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Num_modes
-  nameWithType: FBDisplay.ParallelConfiguration.Num_modes
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.ToString
-  name: ToString()
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_ToString
-  commentId: M:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.ToString
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.ToString()
-  nameWithType: FBDisplay.ParallelConfiguration.ToString()
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.ToString*
-  name: ToString
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_ToString_
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.ToString
-  isSpec: "True"
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.ToString
-  nameWithType: FBDisplay.ParallelConfiguration.ToString
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Vsync_end
-  name: Vsync_end
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Vsync_end
-  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Vsync_end
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Vsync_end
-  nameWithType: FBDisplay.ParallelConfiguration.Vsync_end
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Vsync_end*
-  name: Vsync_end
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Vsync_end_
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Vsync_end
-  isSpec: "True"
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Vsync_end
-  nameWithType: FBDisplay.ParallelConfiguration.Vsync_end
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Vsync_start
-  name: Vsync_start
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Vsync_start
-  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Vsync_start
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Vsync_start
-  nameWithType: FBDisplay.ParallelConfiguration.Vsync_start
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Vsync_start*
-  name: Vsync_start
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Vsync_start_
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Vsync_start
-  isSpec: "True"
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Vsync_start
-  nameWithType: FBDisplay.ParallelConfiguration.Vsync_start
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Vtotal
-  name: Vtotal
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Vtotal
-  commentId: P:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Vtotal
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Vtotal
-  nameWithType: FBDisplay.ParallelConfiguration.Vtotal
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Vtotal*
-  name: Vtotal
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_ParallelConfiguration_Vtotal_
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Vtotal
-  isSpec: "True"
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.ParallelConfiguration.Vtotal
-  nameWithType: FBDisplay.ParallelConfiguration.Vtotal
 - uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Width
   name: Width
   href: endpoint/api/GHIElectronics.Endpoint.Devices.Display.FBDisplay.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Width
@@ -5107,28 +4942,19 @@ references:
   isSpec: "True"
   fullName: GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableChargeMode
   nameWithType: RtcController.EnableChargeMode
-- uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup(GHIElectronics.Endpoint.Devices.Rtc.WakeupPin,System.Device.Gpio.PinEventTypes)
-  name: EnableWakeup(WakeupPin, PinEventTypes)
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.RtcController.html#GHIElectronics_Endpoint_Devices_Rtc_RtcController_EnableWakeup_GHIElectronics_Endpoint_Devices_Rtc_WakeupPin_System_Device_Gpio_PinEventTypes_
-  commentId: M:GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup(GHIElectronics.Endpoint.Devices.Rtc.WakeupPin,System.Device.Gpio.PinEventTypes)
-  fullName: GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup(GHIElectronics.Endpoint.Devices.Rtc.WakeupPin, System.Device.Gpio.PinEventTypes)
-  nameWithType: RtcController.EnableWakeup(WakeupPin, PinEventTypes)
-- uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup(System.DateTime,GHIElectronics.Endpoint.Devices.Rtc.WakeupPin,System.Device.Gpio.PinEventTypes)
-  name: EnableWakeup(DateTime, WakeupPin, PinEventTypes)
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.RtcController.html#GHIElectronics_Endpoint_Devices_Rtc_RtcController_EnableWakeup_System_DateTime_GHIElectronics_Endpoint_Devices_Rtc_WakeupPin_System_Device_Gpio_PinEventTypes_
-  commentId: M:GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup(System.DateTime,GHIElectronics.Endpoint.Devices.Rtc.WakeupPin,System.Device.Gpio.PinEventTypes)
-  name.vb: EnableWakeup(Date, WakeupPin, PinEventTypes)
-  fullName: GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup(System.DateTime, GHIElectronics.Endpoint.Devices.Rtc.WakeupPin, System.Device.Gpio.PinEventTypes)
-  fullName.vb: GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup(Date, GHIElectronics.Endpoint.Devices.Rtc.WakeupPin, System.Device.Gpio.PinEventTypes)
-  nameWithType: RtcController.EnableWakeup(DateTime, WakeupPin, PinEventTypes)
-  nameWithType.vb: RtcController.EnableWakeup(Date, WakeupPin, PinEventTypes)
-- uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup*
-  name: EnableWakeup
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.RtcController.html#GHIElectronics_Endpoint_Devices_Rtc_RtcController_EnableWakeup_
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup
+- uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController.GetSystemTime
+  name: GetSystemTime()
+  href: endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.RtcController.html#GHIElectronics_Endpoint_Devices_Rtc_RtcController_GetSystemTime
+  commentId: M:GHIElectronics.Endpoint.Devices.Rtc.RtcController.GetSystemTime
+  fullName: GHIElectronics.Endpoint.Devices.Rtc.RtcController.GetSystemTime()
+  nameWithType: RtcController.GetSystemTime()
+- uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController.GetSystemTime*
+  name: GetSystemTime
+  href: endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.RtcController.html#GHIElectronics_Endpoint_Devices_Rtc_RtcController_GetSystemTime_
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Rtc.RtcController.GetSystemTime
   isSpec: "True"
-  fullName: GHIElectronics.Endpoint.Devices.Rtc.RtcController.EnableWakeup
-  nameWithType: RtcController.EnableWakeup
+  fullName: GHIElectronics.Endpoint.Devices.Rtc.RtcController.GetSystemTime
+  nameWithType: RtcController.GetSystemTime
 - uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController.Now
   name: Now
   href: endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.RtcController.html#GHIElectronics_Endpoint_Devices_Rtc_RtcController_Now
@@ -5155,6 +4981,22 @@ references:
   isSpec: "True"
   fullName: GHIElectronics.Endpoint.Devices.Rtc.RtcController.ReadTime
   nameWithType: RtcController.ReadTime
+- uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController.SetSystemTime(System.DateTime)
+  name: SetSystemTime(DateTime)
+  href: endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.RtcController.html#GHIElectronics_Endpoint_Devices_Rtc_RtcController_SetSystemTime_System_DateTime_
+  commentId: M:GHIElectronics.Endpoint.Devices.Rtc.RtcController.SetSystemTime(System.DateTime)
+  name.vb: SetSystemTime(Date)
+  fullName: GHIElectronics.Endpoint.Devices.Rtc.RtcController.SetSystemTime(System.DateTime)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Rtc.RtcController.SetSystemTime(Date)
+  nameWithType: RtcController.SetSystemTime(DateTime)
+  nameWithType.vb: RtcController.SetSystemTime(Date)
+- uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController.SetSystemTime*
+  name: SetSystemTime
+  href: endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.RtcController.html#GHIElectronics_Endpoint_Devices_Rtc_RtcController_SetSystemTime_
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Rtc.RtcController.SetSystemTime
+  isSpec: "True"
+  fullName: GHIElectronics.Endpoint.Devices.Rtc.RtcController.SetSystemTime
+  nameWithType: RtcController.SetSystemTime
 - uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController.SetTime(System.DateTime)
   name: SetTime(DateTime)
   href: endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.RtcController.html#GHIElectronics_Endpoint_Devices_Rtc_RtcController_SetTime_System_DateTime_
@@ -5171,54 +5013,6 @@ references:
   isSpec: "True"
   fullName: GHIElectronics.Endpoint.Devices.Rtc.RtcController.SetTime
   nameWithType: RtcController.SetTime
-- uid: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin
-  name: WakeupPin
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.html
-  commentId: T:GHIElectronics.Endpoint.Devices.Rtc.WakeupPin
-  fullName: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin
-  nameWithType: WakeupPin
-- uid: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.None
-  name: None
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.html#GHIElectronics_Endpoint_Devices_Rtc_WakeupPin_None
-  commentId: F:GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.None
-  fullName: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.None
-  nameWithType: WakeupPin.None
-- uid: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.PA0
-  name: PA0
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.html#GHIElectronics_Endpoint_Devices_Rtc_WakeupPin_PA0
-  commentId: F:GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.PA0
-  fullName: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.PA0
-  nameWithType: WakeupPin.PA0
-- uid: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.PA2
-  name: PA2
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.html#GHIElectronics_Endpoint_Devices_Rtc_WakeupPin_PA2
-  commentId: F:GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.PA2
-  fullName: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.PA2
-  nameWithType: WakeupPin.PA2
-- uid: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.PC1
-  name: PC1
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.html#GHIElectronics_Endpoint_Devices_Rtc_WakeupPin_PC1
-  commentId: F:GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.PC1
-  fullName: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.PC1
-  nameWithType: WakeupPin.PC1
-- uid: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.PC13
-  name: PC13
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.html#GHIElectronics_Endpoint_Devices_Rtc_WakeupPin_PC13
-  commentId: F:GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.PC13
-  fullName: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.PC13
-  nameWithType: WakeupPin.PC13
-- uid: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.PI11
-  name: PI11
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.html#GHIElectronics_Endpoint_Devices_Rtc_WakeupPin_PI11
-  commentId: F:GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.PI11
-  fullName: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.PI11
-  nameWithType: WakeupPin.PI11
-- uid: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.PI8
-  name: PI8
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.html#GHIElectronics_Endpoint_Devices_Rtc_WakeupPin_PI8
-  commentId: F:GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.PI8
-  fullName: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.PI8
-  nameWithType: WakeupPin.PI8
 - uid: GHIElectronics.Endpoint.Devices.Usb
   name: GHIElectronics.Endpoint.Devices.Usb
   href: endpoint/api/GHIElectronics.Endpoint.Devices.Usb.html
@@ -5243,78 +5037,12 @@ references:
   commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.Hub
   fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Hub
   nameWithType: DeviceType.Hub
-- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Joystick
-  name: Joystick
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Usb.DeviceType.html#GHIElectronics_Endpoint_Devices_Usb_DeviceType_Joystick
-  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.Joystick
-  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Joystick
-  nameWithType: DeviceType.Joystick
-- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Keyboard
-  name: Keyboard
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Usb.DeviceType.html#GHIElectronics_Endpoint_Devices_Usb_DeviceType_Keyboard
-  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.Keyboard
-  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Keyboard
-  nameWithType: DeviceType.Keyboard
 - uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.MassStorage
   name: MassStorage
   href: endpoint/api/GHIElectronics.Endpoint.Devices.Usb.DeviceType.html#GHIElectronics_Endpoint_Devices_Usb_DeviceType_MassStorage
   commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.MassStorage
   fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.MassStorage
   nameWithType: DeviceType.MassStorage
-- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Mouse
-  name: Mouse
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Usb.DeviceType.html#GHIElectronics_Endpoint_Devices_Usb_DeviceType_Mouse
-  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.Mouse
-  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Mouse
-  nameWithType: DeviceType.Mouse
-- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Printer
-  name: Printer
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Usb.DeviceType.html#GHIElectronics_Endpoint_Devices_Usb_DeviceType_Printer
-  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.Printer
-  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Printer
-  nameWithType: DeviceType.Printer
-- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialCDC
-  name: SerialCDC
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Usb.DeviceType.html#GHIElectronics_Endpoint_Devices_Usb_DeviceType_SerialCDC
-  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialCDC
-  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialCDC
-  nameWithType: DeviceType.SerialCDC
-- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialFTDI
-  name: SerialFTDI
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Usb.DeviceType.html#GHIElectronics_Endpoint_Devices_Usb_DeviceType_SerialFTDI
-  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialFTDI
-  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialFTDI
-  nameWithType: DeviceType.SerialFTDI
-- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialProlific
-  name: SerialProlific
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Usb.DeviceType.html#GHIElectronics_Endpoint_Devices_Usb_DeviceType_SerialProlific
-  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialProlific
-  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialProlific
-  nameWithType: DeviceType.SerialProlific
-- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialProlific2
-  name: SerialProlific2
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Usb.DeviceType.html#GHIElectronics_Endpoint_Devices_Usb_DeviceType_SerialProlific2
-  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialProlific2
-  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialProlific2
-  nameWithType: DeviceType.SerialProlific2
-- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialSiLabs
-  name: SerialSiLabs
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Usb.DeviceType.html#GHIElectronics_Endpoint_Devices_Usb_DeviceType_SerialSiLabs
-  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialSiLabs
-  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialSiLabs
-  nameWithType: DeviceType.SerialSiLabs
-- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialSierraC885
-  name: SerialSierraC885
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Usb.DeviceType.html#GHIElectronics_Endpoint_Devices_Usb_DeviceType_SerialSierraC885
-  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialSierraC885
-  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialSierraC885
-  nameWithType: DeviceType.SerialSierraC885
-- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SierraInstaller
-  name: SierraInstaller
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Usb.DeviceType.html#GHIElectronics_Endpoint_Devices_Usb_DeviceType_SierraInstaller
-  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.SierraInstaller
-  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SierraInstaller
-  nameWithType: DeviceType.SierraInstaller
 - uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Unknown
   name: Unknown
   href: endpoint/api/GHIElectronics.Endpoint.Devices.Usb.DeviceType.html#GHIElectronics_Endpoint_Devices_Usb_DeviceType_Unknown
@@ -5327,12 +5055,6 @@ references:
   commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.Webcam
   fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Webcam
   nameWithType: DeviceType.Webcam
-- uid: GHIElectronics.Endpoint.Devices.Usb.UsbController
-  name: UsbController
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Usb.UsbController.html
-  commentId: T:GHIElectronics.Endpoint.Devices.Usb.UsbController
-  fullName: GHIElectronics.Endpoint.Devices.Usb.UsbController
-  nameWithType: UsbController
 - uid: GHIElectronics.Endpoint.Devices.UsbHost
   name: GHIElectronics.Endpoint.Devices.UsbHost
   href: endpoint/api/GHIElectronics.Endpoint.Devices.UsbHost.html
@@ -7636,6 +7358,25 @@ references:
   commentId: T:GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController
   fullName: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController
   nameWithType: WatchdogController
+- uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.#ctor
+  name: WatchdogController()
+  href: endpoint/api/GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.html#GHIElectronics_Endpoint_Devices_Watchdog_WatchdogController__ctor
+  commentId: M:GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.#ctor
+  name.vb: New()
+  fullName: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.WatchdogController()
+  fullName.vb: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.New()
+  nameWithType: WatchdogController.WatchdogController()
+  nameWithType.vb: WatchdogController.New()
+- uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.#ctor*
+  name: WatchdogController
+  href: endpoint/api/GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.html#GHIElectronics_Endpoint_Devices_Watchdog_WatchdogController__ctor_
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.WatchdogController
+  fullName.vb: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.New
+  nameWithType: WatchdogController.WatchdogController
+  nameWithType.vb: WatchdogController.New
 - uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.MaxTimeout
   name: MaxTimeout
   href: endpoint/api/GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.html#GHIElectronics_Endpoint_Devices_Watchdog_WatchdogController_MaxTimeout
@@ -7649,6 +7390,19 @@ references:
   isSpec: "True"
   fullName: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.MaxTimeout
   nameWithType: WatchdogController.MaxTimeout
+- uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Reset
+  name: Reset()
+  href: endpoint/api/GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.html#GHIElectronics_Endpoint_Devices_Watchdog_WatchdogController_Reset
+  commentId: M:GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Reset
+  fullName: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Reset()
+  nameWithType: WatchdogController.Reset()
+- uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Reset*
+  name: Reset
+  href: endpoint/api/GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.html#GHIElectronics_Endpoint_Devices_Watchdog_WatchdogController_Reset_
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Reset
+  isSpec: "True"
+  fullName: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Reset
+  nameWithType: WatchdogController.Reset
 - uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Start(System.UInt32)
   name: Start(uint)
   href: endpoint/api/GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.html#GHIElectronics_Endpoint_Devices_Watchdog_WatchdogController_Start_System_UInt32_
@@ -7665,32 +7419,6 @@ references:
   isSpec: "True"
   fullName: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Start
   nameWithType: WatchdogController.Start
-- uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Started
-  name: Started
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.html#GHIElectronics_Endpoint_Devices_Watchdog_WatchdogController_Started
-  commentId: P:GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Started
-  fullName: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Started
-  nameWithType: WatchdogController.Started
-- uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Started*
-  name: Started
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.html#GHIElectronics_Endpoint_Devices_Watchdog_WatchdogController_Started_
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Started
-  isSpec: "True"
-  fullName: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Started
-  nameWithType: WatchdogController.Started
-- uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Stop
-  name: Stop()
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.html#GHIElectronics_Endpoint_Devices_Watchdog_WatchdogController_Stop
-  commentId: M:GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Stop
-  fullName: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Stop()
-  nameWithType: WatchdogController.Stop()
-- uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Stop*
-  name: Stop
-  href: endpoint/api/GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.html#GHIElectronics_Endpoint_Devices_Watchdog_WatchdogController_Stop_
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Stop
-  isSpec: "True"
-  fullName: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Stop
-  nameWithType: WatchdogController.Stop
 - uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Timeout
   name: Timeout
   href: endpoint/api/GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.html#GHIElectronics_Endpoint_Devices_Watchdog_WatchdogController_Timeout
@@ -7841,6 +7569,28 @@ references:
   commentId: T:GHIElectronics.Endpoint.Native.Power
   fullName: GHIElectronics.Endpoint.Native.Power
   nameWithType: Power
+- uid: GHIElectronics.Endpoint.Native.Power.EnableWakeup(GHIElectronics.Endpoint.Native.Power.WakeupPin,System.Device.Gpio.PinEventTypes)
+  name: EnableWakeup(WakeupPin, PinEventTypes)
+  href: endpoint/api/GHIElectronics.Endpoint.Native.Power.html#GHIElectronics_Endpoint_Native_Power_EnableWakeup_GHIElectronics_Endpoint_Native_Power_WakeupPin_System_Device_Gpio_PinEventTypes_
+  commentId: M:GHIElectronics.Endpoint.Native.Power.EnableWakeup(GHIElectronics.Endpoint.Native.Power.WakeupPin,System.Device.Gpio.PinEventTypes)
+  fullName: GHIElectronics.Endpoint.Native.Power.EnableWakeup(GHIElectronics.Endpoint.Native.Power.WakeupPin, System.Device.Gpio.PinEventTypes)
+  nameWithType: Power.EnableWakeup(Power.WakeupPin, PinEventTypes)
+- uid: GHIElectronics.Endpoint.Native.Power.EnableWakeup(System.DateTime,GHIElectronics.Endpoint.Native.Power.WakeupPin,System.Device.Gpio.PinEventTypes)
+  name: EnableWakeup(DateTime, WakeupPin, PinEventTypes)
+  href: endpoint/api/GHIElectronics.Endpoint.Native.Power.html#GHIElectronics_Endpoint_Native_Power_EnableWakeup_System_DateTime_GHIElectronics_Endpoint_Native_Power_WakeupPin_System_Device_Gpio_PinEventTypes_
+  commentId: M:GHIElectronics.Endpoint.Native.Power.EnableWakeup(System.DateTime,GHIElectronics.Endpoint.Native.Power.WakeupPin,System.Device.Gpio.PinEventTypes)
+  name.vb: EnableWakeup(Date, WakeupPin, PinEventTypes)
+  fullName: GHIElectronics.Endpoint.Native.Power.EnableWakeup(System.DateTime, GHIElectronics.Endpoint.Native.Power.WakeupPin, System.Device.Gpio.PinEventTypes)
+  fullName.vb: GHIElectronics.Endpoint.Native.Power.EnableWakeup(Date, GHIElectronics.Endpoint.Native.Power.WakeupPin, System.Device.Gpio.PinEventTypes)
+  nameWithType: Power.EnableWakeup(DateTime, Power.WakeupPin, PinEventTypes)
+  nameWithType.vb: Power.EnableWakeup(Date, Power.WakeupPin, PinEventTypes)
+- uid: GHIElectronics.Endpoint.Native.Power.EnableWakeup*
+  name: EnableWakeup
+  href: endpoint/api/GHIElectronics.Endpoint.Native.Power.html#GHIElectronics_Endpoint_Native_Power_EnableWakeup_
+  commentId: Overload:GHIElectronics.Endpoint.Native.Power.EnableWakeup
+  isSpec: "True"
+  fullName: GHIElectronics.Endpoint.Native.Power.EnableWakeup
+  nameWithType: Power.EnableWakeup
 - uid: GHIElectronics.Endpoint.Native.Power.Reboot
   name: Reboot()
   href: endpoint/api/GHIElectronics.Endpoint.Native.Power.html#GHIElectronics_Endpoint_Native_Power_Reboot
@@ -7867,6 +7617,54 @@ references:
   isSpec: "True"
   fullName: GHIElectronics.Endpoint.Native.Power.Shutdown
   nameWithType: Power.Shutdown
+- uid: GHIElectronics.Endpoint.Native.Power.WakeupPin
+  name: Power.WakeupPin
+  href: endpoint/api/GHIElectronics.Endpoint.Native.Power.WakeupPin.html
+  commentId: T:GHIElectronics.Endpoint.Native.Power.WakeupPin
+  fullName: GHIElectronics.Endpoint.Native.Power.WakeupPin
+  nameWithType: Power.WakeupPin
+- uid: GHIElectronics.Endpoint.Native.Power.WakeupPin.None
+  name: None
+  href: endpoint/api/GHIElectronics.Endpoint.Native.Power.WakeupPin.html#GHIElectronics_Endpoint_Native_Power_WakeupPin_None
+  commentId: F:GHIElectronics.Endpoint.Native.Power.WakeupPin.None
+  fullName: GHIElectronics.Endpoint.Native.Power.WakeupPin.None
+  nameWithType: Power.WakeupPin.None
+- uid: GHIElectronics.Endpoint.Native.Power.WakeupPin.PA0
+  name: PA0
+  href: endpoint/api/GHIElectronics.Endpoint.Native.Power.WakeupPin.html#GHIElectronics_Endpoint_Native_Power_WakeupPin_PA0
+  commentId: F:GHIElectronics.Endpoint.Native.Power.WakeupPin.PA0
+  fullName: GHIElectronics.Endpoint.Native.Power.WakeupPin.PA0
+  nameWithType: Power.WakeupPin.PA0
+- uid: GHIElectronics.Endpoint.Native.Power.WakeupPin.PA2
+  name: PA2
+  href: endpoint/api/GHIElectronics.Endpoint.Native.Power.WakeupPin.html#GHIElectronics_Endpoint_Native_Power_WakeupPin_PA2
+  commentId: F:GHIElectronics.Endpoint.Native.Power.WakeupPin.PA2
+  fullName: GHIElectronics.Endpoint.Native.Power.WakeupPin.PA2
+  nameWithType: Power.WakeupPin.PA2
+- uid: GHIElectronics.Endpoint.Native.Power.WakeupPin.PC1
+  name: PC1
+  href: endpoint/api/GHIElectronics.Endpoint.Native.Power.WakeupPin.html#GHIElectronics_Endpoint_Native_Power_WakeupPin_PC1
+  commentId: F:GHIElectronics.Endpoint.Native.Power.WakeupPin.PC1
+  fullName: GHIElectronics.Endpoint.Native.Power.WakeupPin.PC1
+  nameWithType: Power.WakeupPin.PC1
+- uid: GHIElectronics.Endpoint.Native.Power.WakeupPin.PC13
+  name: PC13
+  href: endpoint/api/GHIElectronics.Endpoint.Native.Power.WakeupPin.html#GHIElectronics_Endpoint_Native_Power_WakeupPin_PC13
+  commentId: F:GHIElectronics.Endpoint.Native.Power.WakeupPin.PC13
+  fullName: GHIElectronics.Endpoint.Native.Power.WakeupPin.PC13
+  nameWithType: Power.WakeupPin.PC13
+- uid: GHIElectronics.Endpoint.Native.Power.WakeupPin.PI11
+  name: PI11
+  href: endpoint/api/GHIElectronics.Endpoint.Native.Power.WakeupPin.html#GHIElectronics_Endpoint_Native_Power_WakeupPin_PI11
+  commentId: F:GHIElectronics.Endpoint.Native.Power.WakeupPin.PI11
+  fullName: GHIElectronics.Endpoint.Native.Power.WakeupPin.PI11
+  nameWithType: Power.WakeupPin.PI11
+- uid: GHIElectronics.Endpoint.Native.Power.WakeupPin.PI8
+  name: PI8
+  href: endpoint/api/GHIElectronics.Endpoint.Native.Power.WakeupPin.html#GHIElectronics_Endpoint_Native_Power_WakeupPin_PI8
+  commentId: F:GHIElectronics.Endpoint.Native.Power.WakeupPin.PI8
+  fullName: GHIElectronics.Endpoint.Native.Power.WakeupPin.PI8
+  nameWithType: Power.WakeupPin.PI8
 - uid: GHIElectronics.Endpoint.Update
   name: GHIElectronics.Endpoint.Update
   href: endpoint/api/GHIElectronics.Endpoint.Update.html

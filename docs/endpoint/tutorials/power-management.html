@@ -85,118 +85,28 @@
         </div>
 
         <article data-uid="">
-
-<p><a href="error.md">IN PROGRESS</a></p>
 <h1 id="power-management">Power Management</h1>
-<hr>
-<p>TinyCLR OS supports multiple power-saving modes.</p>
-<h2 id="idle">Idle</h2>
-<p>The system enters this state whenever it is idle, such as when waiting on events and there are no running threads. This is automatic and they user is not required to take any action.</p>
-<h2 id="slow-clock-speed">Slow Clock Speed</h2>
-<p>The system can operate at half speed, saving about 40% power consumption. The system can switch speed (with a required soft reset) but it can optionally persist the slow clock.</p>
-<pre><code class="lang-cs">var PersistClock = false;
-if (Power.GetSystemClock() == SystemClock.High) {
-    Power.SetSystemClock(SystemClock.Low, PersistClock);
-    Power.Reset();
-}
-</code></pre>
-<p>Switch back to full speed (only if &quot;PersistClock&quot; was false):</p>
-<pre><code class="lang-cs">if (Power.GetSystemClock() == SystemClock.Low) {
-    Power.SetSystemClock(SystemClock.High, false);
-    Power.Reset();
-}
-</code></pre>
-<p>When not persisted, calling <code>Power.Reset()</code> will retain the set clock speed, but hardware reset (reset pin) or power cycle will revert to the default state.</p>
-<h2 id="sleep">Sleep</h2>
-<p>In this mode, most of the system features are disabled. A GPIO or RTC interrupt can be used to wake the system and resume operations.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Don't forget to configure the interrupt and interrupt handler for the pin that will be used to wake up from Sleep.</p>
-</div>
-<div class="TIP">
-<h5>Tip</h5>
-<p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Native, GHIElectronics.TinyCLR.Pins</p>
-</div>
-<pre><code class="lang-cs">var ldrButton = GpioController.GetDefault().OpenPin(SC20100.GpioPin.PE3);
-ldrButton.SetDriveMode(GpioPinDriveMode.InputPullUp);
-ldrButton.ValueChanged += ldrButton_ValueChanged;
 
-Debug.WriteLine(&quot;System is going to sleep...&quot;);
-Power.Sleep();
-Debug.WriteLine(&quot;This will print after system wakeup&quot;);
+<hr>
+<p>There are multiple ways to put a system in different power modes to save on power consumption.</p>
+<p>Endpoint currently only support complete shutdown.</p>
+<p>Both <a href="real-time-clock.html">Real Time Clock</a> and one of the wakeup pins can be used to wakeup the system from shutdown.</p>
+<pre><code class="lang-cs">using GHIElectronics.Endpoint.Native;
+using GHIElectronics.Endpoint.Devices.Rtc;
 
-// An event is needed to activate the interrupts internally
-private static void ldrButton_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs e) { }
+var rtc = new RtcController();
+var dt = DateTime.Now;
+rtc.Now = dt;
+Console.WriteLine(&quot;rtc = &quot; + rtc.Now);
+Console.WriteLine(&quot;system = &quot; + DateTime.Now);
+Power.EnableWakeup(DateTime.Now.AddSeconds(30), WakeupPin.PA0);
+Console.WriteLine(&quot;Wakeup = &quot; + DateTime.Now.AddSeconds(30).ToString());
+Power.Shutdown();
 </code></pre>
-<p>To sleep for a specific time, using RTC:</p>
-<pre><code class="lang-cs">Power.Sleep(DateTime.Now.AddSeconds(90)); //Will wake up after 90 seconds.
-</code></pre>
-<hr>
-<h2 id="shutdown">Shutdown</h2>
-<p>In this mode the system completely shuts down. It can only be awakened by reset, power cycle, RTC, or by toggling the WKUP pin, which will also reset the system. When <code>Shutdown</code> is used the system is turned completely off, internal pull-up resistors are also disabled. Adding pull-up or pull-down resistor on WKUP pin is required.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Waking from Shutdown mode always resets the system. Your application will start over, it will not resume where it left off.</p>
-</div>
 <div class="TIP">
 <h5>Tip</h5>
-<p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Devices.Gpio, GHIElectronics.TinyCLR.Native, and GHIElectronics.TinyCLR.Pins</p>
+<p>Shutdown is brings the system down completely. Any unsaved files will be lost.</p>
 </div>
-<p>The following code shuts down the system to only wake up using WKUP pin.</p>
-<pre><code class="lang-cs">Power.Shutdown(true, DateTime.MaxValue); 
-</code></pre>
-<p>By default, a rising edge on WKUP pin is needed to wake the system up. The system also allows for using a falling edge instead.</p>
-<pre><code class="lang-cs">Power.WakeupEdge = WakeupEdge.Falling;
-</code></pre>
-<p>To shutdown for a specific time:</p>
-<pre><code class="lang-cs">Power.Shutdown(false, DateTime.Now.AddSeconds(90); //Will wake up after 90 seconds.
-                                                   //WKUP pin has no effect.
-</code></pre>
-<p>To shutdown for a specific time or when the WKUP pin changes state (whichever comes first):</p>
-<pre><code class="lang-cs">Power.Shutdown(true, DateTime.Now.AddSeconds(90); //Will wake up after 90 seconds or
-                                                  //when WKUP is pressed.
-</code></pre>
-<hr>
-<h2 id="on-board-ethernet">On-board Ethernet</h2>
-<p>Some modules include an on-board Ethernet PHY. This can be disabled by setting a specific GPIO to <strong>low</strong>. Below are the pin numbers.</p>
-<table>
-<thead>
-<tr>
-<th>Module</th>
-<th>Pin</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>SCM20260E/D</td>
-<td>PG3</td>
-</tr>
-<tr>
-<td>SCM20100E</td>
-<td>PD8</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="software-reset">Software Reset</h2>
-<p>TinyCLR OS provides two reset modes within your application:</p>
-<h3 id="reset-application">Reset Application</h3>
-<p>This command allows to reset your application:</p>
-<pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.Power.Reset();
-</code></pre>
-<h3 id="reset-to-bootloader-mode">Reset to Bootloader mode</h3>
-<p>The command below will boot the device in GHI Bootloader mode:</p>
-<pre><code class="lang-cs">GHIElectronics.TinyCLR.Native.Power.Reset(false);
-</code></pre>
-<hr>
-<h3 id="reset-source">Reset Source</h3>
-<p>The cause of the previous reset can be found through <code>GetResetSource</code>. This is useful to determine if, for example, a watchdog or was the reason for the reset.</p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>Needed NuGets: GHIElectronics.TinyCLR.Core, GHIElectronics.TinyCLR.Native</p>
-</div>
-<pre><code class="lang-cs">var resetSource = Power.GetResetSource();
-</code></pre>
 
 </article>
 

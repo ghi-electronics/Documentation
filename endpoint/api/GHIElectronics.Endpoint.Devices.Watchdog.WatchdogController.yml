@@ -5,10 +5,10 @@ items:
   id: WatchdogController
   parent: GHIElectronics.Endpoint.Devices.Watchdog
   children:
+  - GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.#ctor
   - GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.MaxTimeout
+  - GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Reset
   - GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Start(System.UInt32)
-  - GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Started
-  - GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Stop
   - GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Timeout
   langs:
   - csharp
@@ -24,7 +24,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: WatchdogController
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Watchdog/WatchdogController.cs
-    startLine: 3
+    startLine: 5
   assemblies:
   - GHIElectronics.Endpoint.Devices.Watchdog
   namespace: GHIElectronics.Endpoint.Devices.Watchdog
@@ -41,6 +41,35 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.#ctor
+  commentId: M:GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.#ctor
+  id: '#ctor'
+  parent: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController
+  langs:
+  - csharp
+  - vb
+  name: WatchdogController()
+  nameWithType: WatchdogController.WatchdogController()
+  fullName: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.WatchdogController()
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Watchdog/WatchdogController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Watchdog/WatchdogController.cs
+    startLine: 11
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Watchdog
+  namespace: GHIElectronics.Endpoint.Devices.Watchdog
+  syntax:
+    content: public WatchdogController()
+    content.vb: Public Sub New()
+  overload: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.#ctor*
+  nameWithType.vb: WatchdogController.New()
+  fullName.vb: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.New()
+  name.vb: New()
 - uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.MaxTimeout
   commentId: P:GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.MaxTimeout
   id: MaxTimeout
@@ -59,7 +88,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: MaxTimeout
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Watchdog/WatchdogController.cs
-    startLine: 5
+    startLine: 27
   assemblies:
   - GHIElectronics.Endpoint.Devices.Watchdog
   namespace: GHIElectronics.Endpoint.Devices.Watchdog
@@ -88,7 +117,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Timeout
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Watchdog/WatchdogController.cs
-    startLine: 6
+    startLine: 28
   assemblies:
   - GHIElectronics.Endpoint.Devices.Watchdog
   namespace: GHIElectronics.Endpoint.Devices.Watchdog
@@ -117,79 +146,48 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Start
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Watchdog/WatchdogController.cs
-    startLine: 7
+    startLine: 29
   assemblies:
   - GHIElectronics.Endpoint.Devices.Watchdog
   namespace: GHIElectronics.Endpoint.Devices.Watchdog
   syntax:
-    content: public bool Start(uint timeout)
+    content: public bool Start(uint second)
     parameters:
-    - id: timeout
+    - id: second
       type: System.UInt32
     return:
       type: System.Boolean
-    content.vb: Public Function Start(timeout As UInteger) As Boolean
+    content.vb: Public Function Start(second As UInteger) As Boolean
   overload: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Start*
   nameWithType.vb: WatchdogController.Start(UInteger)
   fullName.vb: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Start(UInteger)
   name.vb: Start(UInteger)
-- uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Started
-  commentId: P:GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Started
-  id: Started
+- uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Reset
+  commentId: M:GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Reset
+  id: Reset
   parent: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController
   langs:
   - csharp
   - vb
-  name: Started
-  nameWithType: WatchdogController.Started
-  fullName: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Started
-  type: Property
-  source:
-    remote:
-      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Watchdog/WatchdogController.cs
-      branch: main
-      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
-    id: Started
-    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Watchdog/WatchdogController.cs
-    startLine: 25
-  assemblies:
-  - GHIElectronics.Endpoint.Devices.Watchdog
-  namespace: GHIElectronics.Endpoint.Devices.Watchdog
-  syntax:
-    content: public bool Started { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property Started As Boolean
-  overload: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Started*
-- uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Stop
-  commentId: M:GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Stop
-  id: Stop
-  parent: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController
-  langs:
-  - csharp
-  - vb
-  name: Stop()
-  nameWithType: WatchdogController.Stop()
-  fullName: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Stop()
+  name: Reset()
+  nameWithType: WatchdogController.Reset()
+  fullName: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Reset()
   type: Method
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Watchdog/WatchdogController.cs
       branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
-    id: Stop
+    id: Reset
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Watchdog/WatchdogController.cs
-    startLine: 43
+    startLine: 41
   assemblies:
   - GHIElectronics.Endpoint.Devices.Watchdog
   namespace: GHIElectronics.Endpoint.Devices.Watchdog
   syntax:
-    content: public bool Stop()
-    return:
-      type: System.Boolean
-    content.vb: Public Function [Stop]() As Boolean
-  overload: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Stop*
+    content: public void Reset()
+    content.vb: Public Sub Reset()
+  overload: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Reset*
 references:
 - uid: GHIElectronics.Endpoint.Devices.Watchdog
   commentId: N:GHIElectronics.Endpoint.Devices.Watchdog
@@ -466,6 +464,15 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.#ctor
+  href: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.html#GHIElectronics_Endpoint_Devices_Watchdog_WatchdogController__ctor
+  name: WatchdogController
+  nameWithType: WatchdogController.WatchdogController
+  fullName: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.WatchdogController
+  nameWithType.vb: WatchdogController.New
+  fullName.vb: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.New
+  name.vb: New
 - uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.MaxTimeout*
   commentId: Overload:GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.MaxTimeout
   href: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.html#GHIElectronics_Endpoint_Devices_Watchdog_WatchdogController_MaxTimeout
@@ -506,15 +513,9 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Started*
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Started
-  href: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.html#GHIElectronics_Endpoint_Devices_Watchdog_WatchdogController_Started
-  name: Started
-  nameWithType: WatchdogController.Started
-  fullName: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Started
-- uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Stop*
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Stop
-  href: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.html#GHIElectronics_Endpoint_Devices_Watchdog_WatchdogController_Stop
-  name: Stop
-  nameWithType: WatchdogController.Stop
-  fullName: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Stop
+- uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Reset*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Reset
+  href: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.html#GHIElectronics_Endpoint_Devices_Watchdog_WatchdogController_Reset
+  name: Reset
+  nameWithType: WatchdogController.Reset
+  fullName: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController.Reset

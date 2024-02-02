@@ -94,37 +94,37 @@
 <p>The first step is to boot the Endpoint OS, which can be hosted on a microSD card or loaded inside the hardware's eMMC flash (when available).</p>
 <h4 id="creating-the-os-image">Creating the OS image</h4>
 <p>Use your preferred disk imaging software to create a disk image on a blank microSD card, <code>Win32 Disk Imager</code> for example.</p>
-<p>Find the latest Endpoint disk image <a href="downloads.html"><strong>here</strong></a> and burn it to the blank microSD card.</p>
+<p>Find the latest Endpoint disk image <a href="downloads.html"><strong>here</strong></a> and burn it to the blank microSD card (4GB minimum).</p>
 <p><img src="images/create-sd-image.png" alt="Disk Imager"></p>
 <h4 id="boot-from-sd">Boot from SD</h4>
 <p>Once the image file is burned to the microSD card the OS is ready to boot. Insert the card into the microSD card slot of your hardware and connect the device to the PC.</p>
 <p>If the device has an eMMC, use the <code>SD Boot</code> button to force the device to boot from the SD card.</p>
-<p>Once the <code>USER LED</code> lights the board has successfully booted the Endpoint OS from the microSD. This should happen on less than 5 seconds.</p>
+<p>Once the <code>USER LED</code> lights the board has successfully booted the Endpoint OS from the microSD. This should happen in less than 5 seconds.</p>
 <h4 id="flashing-the-emmc">Flashing the eMMC</h4>
-<p>Devices with eMMC will automatically boot from eMMC. The system will fail to boot if the if the image is invalid. SD can always be used to boot the system. Once the system is up, <code>Endpoint Config</code> tool can be used to update the eMMC, as detailed in the <a href="configuration.html">Configuration</a> page.</p>
+<p>Devices with eMMC will automatically boot from eMMC. The system will fail to boot if the OS image is invalid. SD cards can always be used to boot the system. Once the system is up, the <code>Endpoint Config</code> tool can be used to update the eMMC, as detailed in the <a href="configuration.html">Configuration</a> page.</p>
 <hr>
 <h2 id="development-machine-setup">Development Machine Setup</h2>
-<p>Now, that the device is running the Endpoint OS, the development machine can be prepared for remote debug and deploy to the Endpoint device (using USB). This can be done using either Visual Studio or VS Code.</p>
+<p>Now, that the device is running the Endpoint OS, the development machine can be prepared for remote debug and deploy to the Endpoint device (using USB-C). This can be done using either Visual Studio or VS Code.</p>
 <h3 id="endpoint-for-visual-studio">Endpoint for Visual Studio</h3>
 <p>With Endpoint you can deploy and debug using Visual Studio. Even the free community version.</p>
 <h4 id="install-visual-studio">Install Visual Studio</h4>
 <p>If you don't already have the latest version of Visual Studio, download it here:
 <a href="https://visualstudio.microsoft.com/downloads/">https://visualstudio.microsoft.com/downloads/</a></p>
 <h4 id="visual-studio-extension-visx">Visual Studio Extension (.visx)</h4>
-<p>Download and install the newest Endpoint Visual Studio Project System by going to Extensions &gt; Manage Extensions. In the Manage Extensions dialog box select Online in the left panel. Type 'endpoint' into the Search text box in the upper right of the window to search for and install the Endpoint Project System. You'll need to restart Visual Studio to let the extension installer complete the installation.</p>
-<p>Alternately you can download the Visual Studio Project System from our  <a href="downloads.html"><strong>Download</strong></a> and install the latest Endpoint Visual Studio Extension (.vsix) file page and open or double click on the file to install the extension.</p>
+<p>Download and install the newest Endpoint Visual Studio Project System by going to <code>Extensions &gt; Manage Extensions</code>. In the Manage Extensions dialog box select <code>Online</code> in the left panel. Type <code>GHI Endpoint</code> in the Search text box in the upper right of the window to search for and install the Endpoint Project System. You'll need to restart Visual Studio to let the extension installer complete the installation.</p>
+<p>Alternately you can download the Visual Studio Project System from our  <a href="downloads.html"><strong>Downloads</strong></a> page and install the latest Endpoint Visual Studio Extension (.vsix). Open or double click on the file to install the extension.</p>
 <h4 id="endpoint-debugger">Endpoint Debugger</h4>
 <p>After installing the .vsix file, create a new .NET 8 application. By default the .NET application will run on the PC. We need to switch to run the program on the Endpoint device.</p>
 <p>At the top of the Visual Studio menu navigate to:</p>
 <p><strong>Debug -&gt; Options</strong></p>
 <p><img src="images/debug-options.png" alt="Navigate to Debug Options"></p>
-<p>From there navigate to the <code>Endpoint Debugger</code> option and make sure the box is check for <code>root@192.168.82.2</code>. If unchecked the application will only run on the PC.</p>
+<p>From there navigate to the <code>Endpoint Debugger</code> option and make sure the box is checked for <code>root@192.168.82.2</code>. If a password was created using the Endpoint <a href="configuration.html">Config</a> Tool also enter it here. If unchecked the application will only run on the PC.</p>
 <p><img src="images/debug-host.png" alt="Debug Host"></p>
 <h4 id="nuget-libraries">NuGet Libraries</h4>
 <p>Endpoint uses the standard .NET libraries when available. When a library doesn't existing inside the .NET API relating to embedded hardware we use an Endpoint library to fill in the missing gaps.</p>
 <p>It is preferred to access NuGet libraries through NuGet.org by using Visual Studio's default package source.</p>
 <p>The Endpoint libraries are provided <a href="downloads.html"><strong>here</strong></a> in case you're having trouble with the online source or need an older or pre-release library that's not hosted on NuGet.</p>
-<p>Learn more about the Endpoint API <a href="api/intro.html"><strong>here</strong></a>.</p>
+<p>Learn more about the Endpoint API <a href="api/intro.md"><strong>here</strong></a>.</p>
 <hr>
 <h3 id="endpoint-for-vs-code">Endpoint for VS Code</h3>
 <p>Endpoint also works using the VS Code IDE.</p>

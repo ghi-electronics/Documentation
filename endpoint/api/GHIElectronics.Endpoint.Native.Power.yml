@@ -5,6 +5,8 @@ items:
   id: Power
   parent: GHIElectronics.Endpoint.Native
   children:
+  - GHIElectronics.Endpoint.Native.Power.EnableWakeup(GHIElectronics.Endpoint.Native.Power.WakeupPin,System.Device.Gpio.PinEventTypes)
+  - GHIElectronics.Endpoint.Native.Power.EnableWakeup(System.DateTime,GHIElectronics.Endpoint.Native.Power.WakeupPin,System.Device.Gpio.PinEventTypes)
   - GHIElectronics.Endpoint.Native.Power.Reboot
   - GHIElectronics.Endpoint.Native.Power.Shutdown
   langs:
@@ -21,7 +23,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Power
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
-    startLine: 5
+    startLine: 6
   assemblies:
   - GHIElectronics.Endpoint.Native
   namespace: GHIElectronics.Endpoint.Native
@@ -56,7 +58,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Reboot
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
-    startLine: 6
+    startLine: 19
   assemblies:
   - GHIElectronics.Endpoint.Native
   namespace: GHIElectronics.Endpoint.Native
@@ -82,7 +84,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Shutdown
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
-    startLine: 11
+    startLine: 24
   assemblies:
   - GHIElectronics.Endpoint.Native
   namespace: GHIElectronics.Endpoint.Native
@@ -90,6 +92,73 @@ items:
     content: public static void Shutdown()
     content.vb: Public Shared Sub Shutdown()
   overload: GHIElectronics.Endpoint.Native.Power.Shutdown*
+- uid: GHIElectronics.Endpoint.Native.Power.EnableWakeup(GHIElectronics.Endpoint.Native.Power.WakeupPin,System.Device.Gpio.PinEventTypes)
+  commentId: M:GHIElectronics.Endpoint.Native.Power.EnableWakeup(GHIElectronics.Endpoint.Native.Power.WakeupPin,System.Device.Gpio.PinEventTypes)
+  id: EnableWakeup(GHIElectronics.Endpoint.Native.Power.WakeupPin,System.Device.Gpio.PinEventTypes)
+  parent: GHIElectronics.Endpoint.Native.Power
+  langs:
+  - csharp
+  - vb
+  name: EnableWakeup(WakeupPin, PinEventTypes)
+  nameWithType: Power.EnableWakeup(Power.WakeupPin, PinEventTypes)
+  fullName: GHIElectronics.Endpoint.Native.Power.EnableWakeup(GHIElectronics.Endpoint.Native.Power.WakeupPin, System.Device.Gpio.PinEventTypes)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: EnableWakeup
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+    startLine: 67
+  assemblies:
+  - GHIElectronics.Endpoint.Native
+  namespace: GHIElectronics.Endpoint.Native
+  syntax:
+    content: public static void EnableWakeup(Power.WakeupPin wakeupPin, PinEventTypes edge)
+    parameters:
+    - id: wakeupPin
+      type: GHIElectronics.Endpoint.Native.Power.WakeupPin
+    - id: edge
+      type: System.Device.Gpio.PinEventTypes
+    content.vb: Public Shared Sub EnableWakeup(wakeupPin As Power.WakeupPin, edge As PinEventTypes)
+  overload: GHIElectronics.Endpoint.Native.Power.EnableWakeup*
+- uid: GHIElectronics.Endpoint.Native.Power.EnableWakeup(System.DateTime,GHIElectronics.Endpoint.Native.Power.WakeupPin,System.Device.Gpio.PinEventTypes)
+  commentId: M:GHIElectronics.Endpoint.Native.Power.EnableWakeup(System.DateTime,GHIElectronics.Endpoint.Native.Power.WakeupPin,System.Device.Gpio.PinEventTypes)
+  id: EnableWakeup(System.DateTime,GHIElectronics.Endpoint.Native.Power.WakeupPin,System.Device.Gpio.PinEventTypes)
+  parent: GHIElectronics.Endpoint.Native.Power
+  langs:
+  - csharp
+  - vb
+  name: EnableWakeup(DateTime, WakeupPin, PinEventTypes)
+  nameWithType: Power.EnableWakeup(DateTime, Power.WakeupPin, PinEventTypes)
+  fullName: GHIElectronics.Endpoint.Native.Power.EnableWakeup(System.DateTime, GHIElectronics.Endpoint.Native.Power.WakeupPin, System.Device.Gpio.PinEventTypes)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: EnableWakeup
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Native/DeviceInformation.cs
+    startLine: 70
+  assemblies:
+  - GHIElectronics.Endpoint.Native
+  namespace: GHIElectronics.Endpoint.Native
+  syntax:
+    content: public static void EnableWakeup(DateTime dtWakeup, Power.WakeupPin wakeupPin = WakeupPin.None, PinEventTypes edge = PinEventTypes.Rising)
+    parameters:
+    - id: dtWakeup
+      type: System.DateTime
+    - id: wakeupPin
+      type: GHIElectronics.Endpoint.Native.Power.WakeupPin
+    - id: edge
+      type: System.Device.Gpio.PinEventTypes
+    content.vb: Public Shared Sub EnableWakeup(dtWakeup As Date, wakeupPin As Power.WakeupPin = WakeupPin.None, edge As PinEventTypes = PinEventTypes.Rising)
+  overload: GHIElectronics.Endpoint.Native.Power.EnableWakeup*
+  nameWithType.vb: Power.EnableWakeup(Date, Power.WakeupPin, PinEventTypes)
+  fullName.vb: GHIElectronics.Endpoint.Native.Power.EnableWakeup(Date, GHIElectronics.Endpoint.Native.Power.WakeupPin, System.Device.Gpio.PinEventTypes)
+  name.vb: EnableWakeup(Date, WakeupPin, PinEventTypes)
 references:
 - uid: GHIElectronics.Endpoint.Native
   commentId: N:GHIElectronics.Endpoint.Native
@@ -370,3 +439,88 @@ references:
   name: Shutdown
   nameWithType: Power.Shutdown
   fullName: GHIElectronics.Endpoint.Native.Power.Shutdown
+- uid: GHIElectronics.Endpoint.Native.Power.EnableWakeup*
+  commentId: Overload:GHIElectronics.Endpoint.Native.Power.EnableWakeup
+  href: GHIElectronics.Endpoint.Native.Power.html#GHIElectronics_Endpoint_Native_Power_EnableWakeup_GHIElectronics_Endpoint_Native_Power_WakeupPin_System_Device_Gpio_PinEventTypes_
+  name: EnableWakeup
+  nameWithType: Power.EnableWakeup
+  fullName: GHIElectronics.Endpoint.Native.Power.EnableWakeup
+- uid: GHIElectronics.Endpoint.Native.Power.WakeupPin
+  commentId: T:GHIElectronics.Endpoint.Native.Power.WakeupPin
+  parent: GHIElectronics.Endpoint.Native
+  href: GHIElectronics.Endpoint.Native.Power.html
+  name: Power.WakeupPin
+  nameWithType: Power.WakeupPin
+  fullName: GHIElectronics.Endpoint.Native.Power.WakeupPin
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Native.Power
+    name: Power
+    href: GHIElectronics.Endpoint.Native.Power.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Native.Power.WakeupPin
+    name: WakeupPin
+    href: GHIElectronics.Endpoint.Native.Power.WakeupPin.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Native.Power
+    name: Power
+    href: GHIElectronics.Endpoint.Native.Power.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Native.Power.WakeupPin
+    name: WakeupPin
+    href: GHIElectronics.Endpoint.Native.Power.WakeupPin.html
+- uid: System.Device.Gpio.PinEventTypes
+  commentId: T:System.Device.Gpio.PinEventTypes
+  parent: System.Device.Gpio
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.device.gpio.pineventtypes
+  name: PinEventTypes
+  nameWithType: PinEventTypes
+  fullName: System.Device.Gpio.PinEventTypes
+- uid: System.Device.Gpio
+  commentId: N:System.Device.Gpio
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Device.Gpio
+  nameWithType: System.Device.Gpio
+  fullName: System.Device.Gpio
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Device
+    name: Device
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.device
+  - name: .
+  - uid: System.Device.Gpio
+    name: Gpio
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.device.gpio
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Device
+    name: Device
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.device
+  - name: .
+  - uid: System.Device.Gpio
+    name: Gpio
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.device.gpio
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date

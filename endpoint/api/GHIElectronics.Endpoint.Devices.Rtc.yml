@@ -6,7 +6,6 @@ items:
   children:
   - GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
   - GHIElectronics.Endpoint.Devices.Rtc.RtcController
-  - GHIElectronics.Endpoint.Devices.Rtc.WakeupPin
   langs:
   - csharp
   - vb
@@ -24,13 +23,6 @@ references:
   name: BatteryChargeMode
   nameWithType: BatteryChargeMode
   fullName: GHIElectronics.Endpoint.Devices.Rtc.BatteryChargeMode
-- uid: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin
-  commentId: T:GHIElectronics.Endpoint.Devices.Rtc.WakeupPin
-  parent: GHIElectronics.Endpoint.Devices.Rtc
-  href: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.html
-  name: WakeupPin
-  nameWithType: WakeupPin
-  fullName: GHIElectronics.Endpoint.Devices.Rtc.WakeupPin
 - uid: GHIElectronics.Endpoint.Devices.Rtc.RtcController
   commentId: T:GHIElectronics.Endpoint.Devices.Rtc.RtcController
   href: GHIElectronics.Endpoint.Devices.Rtc.RtcController.html

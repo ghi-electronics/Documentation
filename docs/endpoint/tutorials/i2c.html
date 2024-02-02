@@ -92,13 +92,13 @@
 <p>Before data is transferred, the master transmits the 7-bit address of the slave device it wants to communicate with. It also sends one bit indicating whether it wants to send data to the slave or receive data from the slave. When a slave sees its address on the bus, it will acknowledge its presence. At this point, the master can send or receive data. The master will start data transfers with a &quot;start condition&quot; before sending an address or data. The master ends the data transfer with a &quot;stop condition.&quot;</p>
 <p>The two wires for I2C communication are called the SDA and SCL lines. SDA stands for Serial Data, and SCL is Serial Clock.</p>
 <p>Endpoint uses the standard .NET API for I2C (System.Device.I2c) but first we need to <strong>Initialize</strong> the pin for I2C.</p>
-<pre><code class="lang-cs">EPM815.I2c.Intialize(EPM815.I2c.I2c6)
+<pre><code class="lang-cs">EPM815.I2c.Intialize(EPM815.I2c.I2c6);
 </code></pre>
 <p>This method also allows the user to set clock speed, which 400KHz by default.</p>
-<pre><code class="lang-cs">EPM815.I2c.Intialize(EPM815.I2c.I2c6,100_000)
+<pre><code class="lang-cs">EPM815.I2c.Intialize(EPM815.I2c.I2c6,100_000);
 </code></pre>
 <p>I2C is a standard .NET IoT feature. This is a partial demo showing the use of I2C.</p>
-<pre><code class="lang-cs">EPM815.I2c.Intialize(EPM815.I2c.I2c6)
+<pre><code class="lang-cs">EPM815.I2c.Intialize(EPM815.I2c.I2c6);
 var i2cConnectionSetting = new I2cConnectionSettings(EPM815.I2c.I2c6, 0x1C);
 var i2cDev = I2cDevice.Create(i2cConnectionSetting);
 
