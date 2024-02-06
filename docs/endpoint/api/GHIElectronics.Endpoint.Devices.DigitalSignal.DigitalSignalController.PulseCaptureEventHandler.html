@@ -101,7 +101,7 @@ Delegate DigitalSignalController.PulseCaptureEventHandler  <a class="header-acti
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate void DigitalSignalController.PulseCaptureEventHandler(DigitalSignalController sender, double[] buffer, uint count, uint pinState, bool aborted)</code></pre>
+    <pre><code class="lang-csharp hljs">public delegate void DigitalSignalController.PulseCaptureEventHandler(DigitalSignalController sender, double[] buffer, uint count, uint initialState, bool aborted)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -112,7 +112,7 @@ Delegate DigitalSignalController.PulseCaptureEventHandler  <a class="header-acti
     <dd></dd>
     <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
     <dd></dd>
-    <dt><code>pinState</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dt><code>initialState</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
     <dd></dd>
     <dt><code>aborted</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>

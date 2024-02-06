@@ -9,7 +9,7 @@ items:
   - GHIElectronics.Endpoint.Devices.Can.CanController.Disable
   - GHIElectronics.Endpoint.Devices.Can.CanController.Dispose
   - GHIElectronics.Endpoint.Devices.Can.CanController.Enable
-  - GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent(System.UInt32)
+  - GHIElectronics.Endpoint.Devices.Can.CanController.EnableError(System.UInt32)
   - GHIElectronics.Endpoint.Devices.Can.CanController.EnableFilter(System.UInt32[],System.UInt32[],System.Boolean)
   - GHIElectronics.Endpoint.Devices.Can.CanController.ErrorReceived
   - GHIElectronics.Endpoint.Devices.Can.CanController.IsEnabled
@@ -322,38 +322,38 @@ items:
   nameWithType.vb: CanController.EnableFilter(UInteger(), UInteger(), Boolean)
   fullName.vb: GHIElectronics.Endpoint.Devices.Can.CanController.EnableFilter(UInteger(), UInteger(), Boolean)
   name.vb: EnableFilter(UInteger(), UInteger(), Boolean)
-- uid: GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent(System.UInt32)
-  commentId: M:GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent(System.UInt32)
-  id: EnableErrorEvent(System.UInt32)
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.EnableError(System.UInt32)
+  commentId: M:GHIElectronics.Endpoint.Devices.Can.CanController.EnableError(System.UInt32)
+  id: EnableError(System.UInt32)
   parent: GHIElectronics.Endpoint.Devices.Can.CanController
   langs:
   - csharp
   - vb
-  name: EnableErrorEvent(uint)
-  nameWithType: CanController.EnableErrorEvent(uint)
-  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent(uint)
+  name: EnableError(uint)
+  nameWithType: CanController.EnableError(uint)
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.EnableError(uint)
   type: Method
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
       branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
-    id: EnableErrorEvent
+    id: EnableError
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Can/CanController.cs
     startLine: 202
   assemblies:
   - GHIElectronics.Endpoint.Devices.Can
   namespace: GHIElectronics.Endpoint.Devices.Can
   syntax:
-    content: public void EnableErrorEvent(uint error)
+    content: public void EnableError(uint error)
     parameters:
     - id: error
       type: System.UInt32
-    content.vb: Public Sub EnableErrorEvent([error] As UInteger)
-  overload: GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent*
-  nameWithType.vb: CanController.EnableErrorEvent(UInteger)
-  fullName.vb: GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent(UInteger)
-  name.vb: EnableErrorEvent(UInteger)
+    content.vb: Public Sub EnableError([error] As UInteger)
+  overload: GHIElectronics.Endpoint.Devices.Can.CanController.EnableError*
+  nameWithType.vb: CanController.EnableError(UInteger)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Can.CanController.EnableError(UInteger)
+  name.vb: EnableError(UInteger)
 - uid: GHIElectronics.Endpoint.Devices.Can.CanController.Reset
   commentId: M:GHIElectronics.Endpoint.Devices.Can.CanController.Reset
   id: Reset
@@ -895,12 +895,12 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.uint32
   - name: (
   - name: )
-- uid: GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent*
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent
-  href: GHIElectronics.Endpoint.Devices.Can.CanController.html#GHIElectronics_Endpoint_Devices_Can_CanController_EnableErrorEvent_System_UInt32_
-  name: EnableErrorEvent
-  nameWithType: CanController.EnableErrorEvent
-  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.EnableErrorEvent
+- uid: GHIElectronics.Endpoint.Devices.Can.CanController.EnableError*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Can.CanController.EnableError
+  href: GHIElectronics.Endpoint.Devices.Can.CanController.html#GHIElectronics_Endpoint_Devices_Can_CanController_EnableError_System_UInt32_
+  name: EnableError
+  nameWithType: CanController.EnableError
+  fullName: GHIElectronics.Endpoint.Devices.Can.CanController.EnableError
 - uid: System.UInt32
   commentId: T:System.UInt32
   parent: System

@@ -7,7 +7,18 @@ items:
   children:
   - GHIElectronics.Endpoint.Devices.Usb.DeviceType.HID
   - GHIElectronics.Endpoint.Devices.Usb.DeviceType.Hub
+  - GHIElectronics.Endpoint.Devices.Usb.DeviceType.Joystick
+  - GHIElectronics.Endpoint.Devices.Usb.DeviceType.Keyboard
   - GHIElectronics.Endpoint.Devices.Usb.DeviceType.MassStorage
+  - GHIElectronics.Endpoint.Devices.Usb.DeviceType.Mouse
+  - GHIElectronics.Endpoint.Devices.Usb.DeviceType.Printer
+  - GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialCDC
+  - GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialFTDI
+  - GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialProlific
+  - GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialProlific2
+  - GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialSiLabs
+  - GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialSierraC885
+  - GHIElectronics.Endpoint.Devices.Usb.DeviceType.SierraInstaller
   - GHIElectronics.Endpoint.Devices.Usb.DeviceType.Unknown
   - GHIElectronics.Endpoint.Devices.Usb.DeviceType.Webcam
   langs:
@@ -115,6 +126,90 @@ items:
     content: HID = 2
     return:
       type: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Mouse
+  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.Mouse
+  id: Mouse
+  parent: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+  langs:
+  - csharp
+  - vb
+  name: Mouse
+  nameWithType: DeviceType.Mouse
+  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Mouse
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Mouse
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+    startLine: 15
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Usb
+  namespace: GHIElectronics.Endpoint.Devices.Usb
+  summary: Mouse.
+  example: []
+  syntax:
+    content: Mouse = 3
+    return:
+      type: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Keyboard
+  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.Keyboard
+  id: Keyboard
+  parent: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+  langs:
+  - csharp
+  - vb
+  name: Keyboard
+  nameWithType: DeviceType.Keyboard
+  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Keyboard
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Keyboard
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+    startLine: 18
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Usb
+  namespace: GHIElectronics.Endpoint.Devices.Usb
+  summary: Keyboard.
+  example: []
+  syntax:
+    content: Keyboard = 4
+    return:
+      type: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Joystick
+  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.Joystick
+  id: Joystick
+  parent: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+  langs:
+  - csharp
+  - vb
+  name: Joystick
+  nameWithType: DeviceType.Joystick
+  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Joystick
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Joystick
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+    startLine: 21
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Usb
+  namespace: GHIElectronics.Endpoint.Devices.Usb
+  summary: Joystick.
+  example: []
+  syntax:
+    content: Joystick = 5
+    return:
+      type: GHIElectronics.Endpoint.Devices.Usb.DeviceType
 - uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.MassStorage
   commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.MassStorage
   id: MassStorage
@@ -140,7 +235,7 @@ items:
   summary: Mass Storage. This includes USB storage devices such as USB Thumbs drives and USB hard disks.
   example: []
   syntax:
-    content: MassStorage = 3
+    content: MassStorage = 6
     return:
       type: GHIElectronics.Endpoint.Devices.Usb.DeviceType
 - uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Webcam
@@ -168,9 +263,299 @@ items:
   summary: Webcam.
   example: []
   syntax:
-    content: Webcam = 4
+    content: Webcam = 7
     return:
       type: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Printer
+  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.Printer
+  id: Printer
+  parent: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+  langs:
+  - csharp
+  - vb
+  name: Printer
+  nameWithType: DeviceType.Printer
+  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.Printer
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Printer
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+    startLine: 30
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Usb
+  namespace: GHIElectronics.Endpoint.Devices.Usb
+  summary: Printer.
+  example: []
+  syntax:
+    content: >-
+      [Obsolete]
+
+      Printer = 8
+    return:
+      type: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+    content.vb: >-
+      <Obsolete>
+
+      Printer = 8
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
+- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialFTDI
+  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialFTDI
+  id: SerialFTDI
+  parent: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+  langs:
+  - csharp
+  - vb
+  name: SerialFTDI
+  nameWithType: DeviceType.SerialFTDI
+  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialFTDI
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SerialFTDI
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+    startLine: 34
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Usb
+  namespace: GHIElectronics.Endpoint.Devices.Usb
+  summary: USB to Serial device.
+  example: []
+  syntax:
+    content: SerialFTDI = 9
+    return:
+      type: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialProlific
+  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialProlific
+  id: SerialProlific
+  parent: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+  langs:
+  - csharp
+  - vb
+  name: SerialProlific
+  nameWithType: DeviceType.SerialProlific
+  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialProlific
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SerialProlific
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+    startLine: 37
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Usb
+  namespace: GHIElectronics.Endpoint.Devices.Usb
+  summary: USB to Serial device.
+  example: []
+  syntax:
+    content: >-
+      [Obsolete]
+
+      SerialProlific = 10
+    return:
+      type: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+    content.vb: >-
+      <Obsolete>
+
+      SerialProlific = 10
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
+- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialProlific2
+  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialProlific2
+  id: SerialProlific2
+  parent: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+  langs:
+  - csharp
+  - vb
+  name: SerialProlific2
+  nameWithType: DeviceType.SerialProlific2
+  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialProlific2
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SerialProlific2
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+    startLine: 41
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Usb
+  namespace: GHIElectronics.Endpoint.Devices.Usb
+  summary: USB to Serial device.
+  example: []
+  syntax:
+    content: >-
+      [Obsolete]
+
+      SerialProlific2 = 11
+    return:
+      type: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+    content.vb: >-
+      <Obsolete>
+
+      SerialProlific2 = 11
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
+- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialSiLabs
+  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialSiLabs
+  id: SerialSiLabs
+  parent: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+  langs:
+  - csharp
+  - vb
+  name: SerialSiLabs
+  nameWithType: DeviceType.SerialSiLabs
+  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialSiLabs
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SerialSiLabs
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+    startLine: 45
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Usb
+  namespace: GHIElectronics.Endpoint.Devices.Usb
+  summary: USB to Serial device.
+  example: []
+  syntax:
+    content: >-
+      [Obsolete]
+
+      SerialSiLabs = 12
+    return:
+      type: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+    content.vb: >-
+      <Obsolete>
+
+      SerialSiLabs = 12
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
+- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialCDC
+  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialCDC
+  id: SerialCDC
+  parent: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+  langs:
+  - csharp
+  - vb
+  name: SerialCDC
+  nameWithType: DeviceType.SerialCDC
+  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialCDC
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SerialCDC
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+    startLine: 49
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Usb
+  namespace: GHIElectronics.Endpoint.Devices.Usb
+  summary: USB to Serial device.
+  example: []
+  syntax:
+    content: SerialCDC = 13
+    return:
+      type: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialSierraC885
+  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialSierraC885
+  id: SerialSierraC885
+  parent: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+  langs:
+  - csharp
+  - vb
+  name: SerialSierraC885
+  nameWithType: DeviceType.SerialSierraC885
+  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SerialSierraC885
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SerialSierraC885
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+    startLine: 52
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Usb
+  namespace: GHIElectronics.Endpoint.Devices.Usb
+  summary: USB to Serial device.
+  example: []
+  syntax:
+    content: >-
+      [Obsolete]
+
+      SerialSierraC885 = 14
+    return:
+      type: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+    content.vb: >-
+      <Obsolete>
+
+      SerialSierraC885 = 14
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
+- uid: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SierraInstaller
+  commentId: F:GHIElectronics.Endpoint.Devices.Usb.DeviceType.SierraInstaller
+  id: SierraInstaller
+  parent: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+  langs:
+  - csharp
+  - vb
+  name: SierraInstaller
+  nameWithType: DeviceType.SierraInstaller
+  fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType.SierraInstaller
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SierraInstaller
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Usb/UsbController.cs
+    startLine: 56
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Usb
+  namespace: GHIElectronics.Endpoint.Devices.Usb
+  summary: Sierra Installer.
+  example: []
+  syntax:
+    content: >-
+      [Obsolete]
+
+      SierraInstaller = 15
+    return:
+      type: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+    content.vb: >-
+      <Obsolete>
+
+      SierraInstaller = 15
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
 references:
 - uid: GHIElectronics.Endpoint.Devices.Usb
   commentId: N:GHIElectronics.Endpoint.Devices.Usb

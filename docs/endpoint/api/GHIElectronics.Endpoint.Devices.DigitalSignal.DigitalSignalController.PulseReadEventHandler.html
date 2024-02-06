@@ -101,7 +101,7 @@ Delegate DigitalSignalController.PulseReadEventHandler  <a class="header-action 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate void DigitalSignalController.PulseReadEventHandler(DigitalSignalController sender, TimeSpan duration, uint count, uint pinState, bool aborted)</code></pre>
+    <pre><code class="lang-csharp hljs">public delegate void DigitalSignalController.PulseReadEventHandler(DigitalSignalController sender, TimeSpan duration, uint count, uint initialState, bool aborted)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -112,7 +112,7 @@ Delegate DigitalSignalController.PulseReadEventHandler  <a class="header-action 
     <dd></dd>
     <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
     <dd></dd>
-    <dt><code>pinState</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dt><code>initialState</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
     <dd></dd>
     <dt><code>aborted</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>

@@ -1,5 +1,5 @@
 {
-  "source_base_path": "F:/Endpoint/Documentation",
+  "source_base_path": "D:/Repos/Documentation",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -812,6 +812,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.WakeupPin.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "endpoint/api/GHIElectronics.Endpoint.Devices.Rtc.yml",
       "output": {
         ".html": {
@@ -826,6 +836,16 @@
       "output": {
         ".html": {
           "relative_path": "endpoint/api/GHIElectronics.Endpoint.Devices.Usb.DeviceType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "endpoint/api/GHIElectronics.Endpoint.Devices.Usb.UsbController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "endpoint/api/GHIElectronics.Endpoint.Devices.Usb.UsbController.html"
         }
       },
       "version": ""

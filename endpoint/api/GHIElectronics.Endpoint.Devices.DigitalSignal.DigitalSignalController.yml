@@ -14,8 +14,6 @@ items:
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean,System.TimeSpan)
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.CaptureFinished
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ErrorReceived
-  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[])
-  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32)
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32,System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge)
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.GenerateFinished
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ReadPulse(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean)
@@ -278,74 +276,6 @@ items:
   nameWithType.vb: DigitalSignalController.New(Integer)
   fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.New(Integer)
   name.vb: New(Integer)
-- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[])
-  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[])
-  id: Generate(System.UInt32[])
-  parent: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
-  langs:
-  - csharp
-  - vb
-  name: Generate(uint[])
-  nameWithType: DigitalSignalController.Generate(uint[])
-  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(uint[])
-  type: Method
-  source:
-    remote:
-      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-      branch: main
-      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
-    id: Generate
-    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 262
-  assemblies:
-  - GHIElectronics.Endpoint.Devices.DigitalSignal
-  namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
-  syntax:
-    content: public void Generate(uint[] data)
-    parameters:
-    - id: data
-      type: System.UInt32[]
-    content.vb: Public Sub Generate(data As UInteger())
-  overload: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate*
-  nameWithType.vb: DigitalSignalController.Generate(UInteger())
-  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(UInteger())
-  name.vb: Generate(UInteger())
-- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32)
-  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32)
-  id: Generate(System.UInt32[],System.UInt32,System.Int32)
-  parent: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
-  langs:
-  - csharp
-  - vb
-  name: Generate(uint[], uint, int)
-  nameWithType: DigitalSignalController.Generate(uint[], uint, int)
-  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(uint[], uint, int)
-  type: Method
-  source:
-    remote:
-      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-      branch: main
-      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
-    id: Generate
-    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 265
-  assemblies:
-  - GHIElectronics.Endpoint.Devices.DigitalSignal
-  namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
-  syntax:
-    content: public void Generate(uint[] data, uint offset, int count)
-    parameters:
-    - id: data
-      type: System.UInt32[]
-    - id: offset
-      type: System.UInt32
-    - id: count
-      type: System.Int32
-    content.vb: Public Sub Generate(data As UInteger(), offset As UInteger, count As Integer)
-  overload: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate*
-  nameWithType.vb: DigitalSignalController.Generate(UInteger(), UInteger, Integer)
-  fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(UInteger(), UInteger, Integer)
-  name.vb: Generate(UInteger(), UInteger, Integer)
 - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32,System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge)
   commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32,System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge)
   id: Generate(System.UInt32[],System.UInt32,System.Int32,System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge)
@@ -364,7 +294,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Generate
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 268
+    startLine: 262
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -404,7 +334,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: ReadPulse
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 318
+    startLine: 312
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -440,7 +370,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Capture
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 348
+    startLine: 342
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -476,7 +406,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Capture
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 349
+    startLine: 343
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -514,7 +444,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Abort
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 387
+    startLine: 381
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -941,7 +871,7 @@ references:
   name.vb: Integer
 - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate*
   commentId: Overload:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate
-  href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_Generate_System_UInt32___
+  href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_Generate_System_UInt32___System_UInt32_System_Int32_System_UInt32_GHIElectronics_Endpoint_Core_EPM815_Gpio_Edge_
   name: Generate
   nameWithType: DigitalSignalController.Generate
   fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate

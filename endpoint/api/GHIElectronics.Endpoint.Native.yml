@@ -6,7 +6,6 @@ items:
   children:
   - GHIElectronics.Endpoint.Native.DeviceInformation
   - GHIElectronics.Endpoint.Native.Power
-  - GHIElectronics.Endpoint.Native.Power.WakeupPin
   langs:
   - csharp
   - vb
@@ -23,62 +22,9 @@ references:
   name: Power
   nameWithType: Power
   fullName: GHIElectronics.Endpoint.Native.Power
-- uid: GHIElectronics.Endpoint.Native.Power.WakeupPin
-  commentId: T:GHIElectronics.Endpoint.Native.Power.WakeupPin
-  parent: GHIElectronics.Endpoint.Native
-  href: GHIElectronics.Endpoint.Native.Power.html
-  name: Power.WakeupPin
-  nameWithType: Power.WakeupPin
-  fullName: GHIElectronics.Endpoint.Native.Power.WakeupPin
-  spec.csharp:
-  - uid: GHIElectronics.Endpoint.Native.Power
-    name: Power
-    href: GHIElectronics.Endpoint.Native.Power.html
-  - name: .
-  - uid: GHIElectronics.Endpoint.Native.Power.WakeupPin
-    name: WakeupPin
-    href: GHIElectronics.Endpoint.Native.Power.WakeupPin.html
-  spec.vb:
-  - uid: GHIElectronics.Endpoint.Native.Power
-    name: Power
-    href: GHIElectronics.Endpoint.Native.Power.html
-  - name: .
-  - uid: GHIElectronics.Endpoint.Native.Power.WakeupPin
-    name: WakeupPin
-    href: GHIElectronics.Endpoint.Native.Power.WakeupPin.html
 - uid: GHIElectronics.Endpoint.Native.DeviceInformation
   commentId: T:GHIElectronics.Endpoint.Native.DeviceInformation
   href: GHIElectronics.Endpoint.Native.DeviceInformation.html
   name: DeviceInformation
   nameWithType: DeviceInformation
   fullName: GHIElectronics.Endpoint.Native.DeviceInformation
-- uid: GHIElectronics.Endpoint.Native
-  commentId: N:GHIElectronics.Endpoint.Native
-  href: GHIElectronics.html
-  name: GHIElectronics.Endpoint.Native
-  nameWithType: GHIElectronics.Endpoint.Native
-  fullName: GHIElectronics.Endpoint.Native
-  spec.csharp:
-  - uid: GHIElectronics
-    name: GHIElectronics
-    href: GHIElectronics.html
-  - name: .
-  - uid: GHIElectronics.Endpoint
-    name: Endpoint
-    href: GHIElectronics.Endpoint.html
-  - name: .
-  - uid: GHIElectronics.Endpoint.Native
-    name: Native
-    href: GHIElectronics.Endpoint.Native.html
-  spec.vb:
-  - uid: GHIElectronics
-    name: GHIElectronics
-    href: GHIElectronics.html
-  - name: .
-  - uid: GHIElectronics.Endpoint
-    name: Endpoint
-    href: GHIElectronics.Endpoint.html
-  - name: .
-  - uid: GHIElectronics.Endpoint.Native
-    name: Native
-    href: GHIElectronics.Endpoint.Native.html

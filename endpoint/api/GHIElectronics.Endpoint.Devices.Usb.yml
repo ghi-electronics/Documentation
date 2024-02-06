@@ -5,6 +5,7 @@ items:
   id: GHIElectronics.Endpoint.Devices.Usb
   children:
   - GHIElectronics.Endpoint.Devices.Usb.DeviceType
+  - GHIElectronics.Endpoint.Devices.Usb.UsbController
   langs:
   - csharp
   - vb
@@ -22,6 +23,12 @@ references:
   name: DeviceType
   nameWithType: DeviceType
   fullName: GHIElectronics.Endpoint.Devices.Usb.DeviceType
+- uid: GHIElectronics.Endpoint.Devices.Usb.UsbController
+  commentId: T:GHIElectronics.Endpoint.Devices.Usb.UsbController
+  href: GHIElectronics.Endpoint.Devices.Usb.UsbController.html
+  name: UsbController
+  nameWithType: UsbController
+  fullName: GHIElectronics.Endpoint.Devices.Usb.UsbController
 - uid: GHIElectronics.Endpoint.Devices.Usb
   commentId: N:GHIElectronics.Endpoint.Devices.Usb
   href: GHIElectronics.html
