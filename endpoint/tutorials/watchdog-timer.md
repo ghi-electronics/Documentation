@@ -2,7 +2,7 @@
 
 ---
 
-A watchdog timer is used to reset the system if the system fails or locks up. The system internally will reset the watchdog timer so it never reaches zero and doesn't reset the system. 
+A watchdog timer is used to reset the system if the system fails or locks up.
 
 It's recommend to run Watchdog inside a thread in the application.  
 
