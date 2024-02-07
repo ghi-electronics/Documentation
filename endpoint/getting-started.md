@@ -46,7 +46,7 @@ If you don't already have the latest version of Visual Studio, download it here:
 
 Download and install the newest Endpoint Visual Studio Project System by going to ```Extensions > Manage Extensions```. In the Manage Extensions dialog box select ```Online``` in the left panel. Type ```GHI Endpoint``` in the Search text box in the upper right of the window to search for and install the Endpoint Project System. You'll need to restart Visual Studio to let the extension installer complete the installation. Alternately you can download the Visual Studio Project System from our  [**Downloads**](downloads.md) page and install the latest Endpoint Visual Studio Extension (.vsix). Open or double click on the file to install the extension.
 
-After installing the .vsix file, create a new .NET 8 application. By default the .NET application will run on the PC. We need to switch to run the program on the Endpoint device. 
+After installing the .vsix file, create a standard Console application. Make sure to select .NET 8 in the framework option. By default the .NET application will run on the PC. We need to switch to run the program on the Endpoint device. 
 
 At the top of the Visual Studio menu navigate to `Debug -> Options`
 
