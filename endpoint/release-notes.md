@@ -36,8 +36,14 @@
 ---
 
 ### Libraries
-https://github.com/ghi-electronics/Endpoint-Libraries/issues
 
+**0.1.0 - Beta (2024-12-2)**
+
+- Changes
+    - Expose Configuration to DisplayController 
+- Known Issues
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues
+	
 **0.1.0 - Beta (2024-2-2)**
 
 - Changes
@@ -45,19 +51,23 @@ https://github.com/ghi-electronics/Endpoint-Libraries/issues
 - Known Issues
     - None.
 
-
-- 
 
 
 ### Drivers
-https://github.com/ghi-electronics/endpoint-drivers/issues
 
+**0.1.0 - Beta (2024-12-2)**
+
+- Changes
+    - Add Avalonia Touch input driver
+- Known Issues
+    https://github.com/ghi-electronics/endpoint-drivers/issues
+	
 **0.1.0 - Beta (2024-2-2)**
 
 - Changes
     - Initial Release
 - Known Issues
-    - None.
+    https://github.com/ghi-electronics/endpoint-drivers/issues
 
 
 
