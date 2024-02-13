@@ -5,6 +5,7 @@ items:
   id: IDisplayProvider
   parent: GHIElectronics.Endpoint.Devices.Display
   children:
+  - GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Configuration
   - GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[])
   - GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32)
   - GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
@@ -31,6 +32,35 @@ items:
     content.vb: Public Interface IDisplayProvider Inherits IDisposable
   inheritedMembers:
   - System.IDisposable.Dispose
+- uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Configuration
+  commentId: P:GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Configuration
+  id: Configuration
+  parent: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
+  langs:
+  - csharp
+  - vb
+  name: Configuration
+  nameWithType: IDisplayProvider.Configuration
+  fullName: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Configuration
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Configuration
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Display
+  namespace: GHIElectronics.Endpoint.Devices.Display
+  syntax:
+    content: DisplayConfiguration Configuration { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
+    content.vb: ReadOnly Property Configuration As DisplayConfiguration
+  overload: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Configuration*
 - uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[])
   commentId: M:GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[])
   id: Flush(System.Byte[])
@@ -49,7 +79,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Flush
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - GHIElectronics.Endpoint.Devices.Display
   namespace: GHIElectronics.Endpoint.Devices.Display
@@ -81,7 +111,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Flush
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
-    startLine: 10
+    startLine: 12
   assemblies:
   - GHIElectronics.Endpoint.Devices.Display
   namespace: GHIElectronics.Endpoint.Devices.Display
@@ -117,7 +147,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Flush
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
-    startLine: 12
+    startLine: 14
   assemblies:
   - GHIElectronics.Endpoint.Devices.Display
   namespace: GHIElectronics.Endpoint.Devices.Display
@@ -215,6 +245,19 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Configuration*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Configuration
+  href: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.html#GHIElectronics_Endpoint_Devices_Display_IDisplayProvider_Configuration
+  name: Configuration
+  nameWithType: IDisplayProvider.Configuration
+  fullName: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Configuration
+- uid: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
+  commentId: T:GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
+  parent: GHIElectronics.Endpoint.Devices.Display
+  href: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration.html
+  name: DisplayConfiguration
+  nameWithType: DisplayConfiguration
+  fullName: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
 - uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush*
   commentId: Overload:GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush
   href: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.html#GHIElectronics_Endpoint_Devices_Display_IDisplayProvider_Flush_System_Byte___
