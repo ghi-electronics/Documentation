@@ -92,3 +92,9 @@ A Wi-Fi dongle can be connected to the USB port to give the board a networking i
 
 
 ![Wifi](images/domino-wifi.png)
+
+> [!TIP]
+> List of potential Wi-Fi dongles (reported by Users)
+
+- [Netis WF2120](https://www.amazon.com/dp/B008O2AL0K?psc=1&ref=ppx_yo2ov_dt_b_product_details)
+- [TP-Link TL-WN725N](https://www.amazon.com/gp/product/B008IFXQFU/ref=ox_sc_act_title_1?smid=ATVPDKIKX0DER&psc=1)
