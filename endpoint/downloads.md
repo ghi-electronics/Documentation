@@ -21,6 +21,7 @@ The Endpoint OS image can be downloaded and run from a microSD card or flashed t
 
 File | Date | Status | MD5
 --- | --- | --- |
+[v0.1.2.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/endpoint_image_B0120.2.20.24.img) | 2024-21-02 | Preview | 66006E43403A0842892B1D25EDB89C9E
 [v0.1.0.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/endpoint_image_B0100.2.2.24.img) | 2024-02-02 | Preview | C4B76662D4729712B346B76F4222A25E
 
 Endpoint OS image is large and that take time to update. For quick update/re-install firmware or dotnet, user can select update firmware or dotnet from Endpoint Config tool, and using the files below:
@@ -29,7 +30,7 @@ Endpoint OS image is large and that take time to update. For quick update/re-ins
 
 File | Date | Status | MD5
 --- | --- | --- |
-[v0.1.0.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/rootfs.ghi) | 2024-02-02 | Preview | BD6B40ABBF4FF95D01C5E38F399F204C
+[v0.1.2.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/rootfs.ghi) | 2024-21-02 | Preview | 583FF96D1648B429B7D0C8DE76E1B769
 
 #### Dotnet
 
@@ -43,6 +44,7 @@ Endpoint Config is a tool used to update and configure your Endpoint device.
 
 File | Date | Status | MD5
 --- | --- | --- | 
+[v0.1.2.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Config/Endpoint_Config_Setup_v0.1.2.msi) | 2024-21-02 | Preview | A372D2E3C5A5752D4CEBF819ED85086D
 [v0.1.0.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Config/Endpoint_Config_Setup_v0.1.0.0.msi) | 2024-02-02 | Preview | 8440E6358F46199B656F5F61CBF9B62B
 
 ## Endpoint Libraries
@@ -54,6 +56,7 @@ Endpoint Libraries are designed to fill in any gaps the .NET API is missing for 
 
 File | Date | Status | MD5
 --- | --- | --- | 
+[v0.1.2.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Libraries/endpoint_libraries_v0.1.2.0.zip) | 2024-21-02 | Preview | 5B2077ABB3AC31B024179FD2B0654F0D
 [v0.1.0.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Libraries/endpoint_libraries_v0.1.0.0.zip) | 2024-02-02 | Preview | 708833FEFCE57C51F9CE01DA47EF0541
 
 
