@@ -37,7 +37,7 @@
 ### [Power Management](tutorials/power-management.md)
 ### [Watchdog Timer](tutorials/watchdog-timer.md)
 ### [Real Time Clock](tutorials/real-time-clock.md)
-### [SQLite Database](tutorials/sqlite-database.md)
+### [SQLite Database](tutorials/databases.md)
 
 # [Libraries](api/intro.md)
 # [Downloads](downloads.md)
