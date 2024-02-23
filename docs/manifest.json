@@ -1495,10 +1495,30 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "endpoint/images/enable-bootscreen.png",
+      "output": {
+        "resource": {
+          "relative_path": "endpoint/images/enable-bootscreen.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "endpoint/images/endpoint-banner.png",
       "output": {
         "resource": {
           "relative_path": "endpoint/images/endpoint-banner.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "endpoint/images/endpoint-bootscreen.png",
+      "output": {
+        "resource": {
+          "relative_path": "endpoint/images/endpoint-bootscreen.png"
         }
       },
       "version": ""
@@ -1589,6 +1609,16 @@
       "output": {
         "resource": {
           "relative_path": "endpoint/images/password-update.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "endpoint/images/screen-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "endpoint/images/screen-settings.png"
         }
       },
       "version": ""
@@ -1722,6 +1752,16 @@
       "output": {
         ".html": {
           "relative_path": "endpoint/tutorials/can.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "endpoint/tutorials/databases.md",
+      "output": {
+        ".html": {
+          "relative_path": "endpoint/tutorials/databases.html"
         }
       },
       "version": ""
