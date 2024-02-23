@@ -63,7 +63,7 @@
 
 ### Drivers
 
-**0.1.0 - Beta (2024-12-2)**
+**0.1.2 - Beta (2024-12-2)**
 
 - Changes
     - Add Avalonia Touch input driver
@@ -83,7 +83,7 @@
 
 ### Endpoint Config
 
-**0.1.0 - Beta (2024-21-2)**
+**0.1.2 - Beta (2024-21-2)**
 
 - Changes
     - Add Enable Bootscreen setting
