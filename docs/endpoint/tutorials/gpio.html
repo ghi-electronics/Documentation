@@ -144,8 +144,8 @@ var button = new GpioController(PinNumberingScheme.Logical, buttonDriver);
 button.OpenPin(buttonPin, PinMode.InputPullUp);
 
 while (true){
-    if (button.Read(pin) == PinValue.Low){
-        Console.Writeline(&quot;Button is pressed&quot;)
+    if (button.Read(buttonPin) == PinValue.Low) {
+        Console.WriteLine(&quot;Button is pressed&quot;);
     }
     Thread.Sleep(10);  
 }
@@ -165,7 +165,7 @@ var button = new GpioController(PinNumberingScheme.Logical, buttonDriver);
 
 button.OpenPin(buttonPin, PinMode.InputPullUp);
 button.RegisterCallbackForPinValueChangedEvent(
-    pin,
+    buttonPin,
     PinEventTypes.Falling | PinEventTypes.Rising,
     OnPinEvent);
 

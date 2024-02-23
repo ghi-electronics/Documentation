@@ -19,6 +19,24 @@ Connect the Endpoint device to the PC using a USB cable. Once the booting sequen
 
  ![Device Information](images/device-info.png)
 
+
+ #### Adding a BootScreen
+
+ Bootscreens can be enabled or disabled under **Utilities**. 
+
+   ![Enable Bootscreen](images/enable-bootscreen.png)
+
+By default Endpoint compatible screens are already loaded, you can just select the size of the screen and the image you want to use. 
+
+ ![Enable Bootscreen](images/screen-settings.png)
+
+
+ Once enabled the custom loaded image will display on bootup. 
+
+  ![Enable Bootscreen](images/endpoint-bootscreen.png)
+
+Supported image formats are .jpeg, .png, or .bmp, in any size. Images are stretched to fit the screen's resolution. 
+
  #### Setting up a Device Password
 
  Creating a device password is optional. To create a password for the device, select **Security -> Change Password**. 

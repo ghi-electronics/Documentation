@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Databases </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Databases ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/dev/endpoint/tutorials/databases.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="databases">Databases</h1>
+
+<hr>
+<h2 id="sqlite-database">SQLite Database</h2>
+<p>According to the SQLite homepage, &quot;SQLite is a software library that implements a self-contained, server-less, zero-configuration, transactional SQL database engine. SQLite is the most widely deployed SQL database engine in the world.&quot; SQLite lets you set up a database that resides entirely in a single file on a persistent storage device.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGet: Microsoft.Data.Sqlite</p>
+</div>
+<p>The code below is a simple example that creates an SQLite database file.</p>
+<pre><code class="lang-cs">using Microsoft.Data.Sqlite;
+
+var id = 1;
+var dataFile = &quot;sqltest.db&quot;;
+
+//Create a new database file
+using (var connection = new SqliteConnection($&quot;Data Source={dataFile}&quot;)){
+
+    connection.Open();
+    var command = connection.CreateCommand();
+
+    //Create a new table
+    command.CommandText = &quot;CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY, name TEXT)&quot;;
+    command.ExecuteNonQuery();
+
+    //Insert a new row
+    command.CommandText = &quot;INSERT INTO user (name) VALUES ('World 1')&quot;;
+    command.ExecuteNonQuery();
+
+    //query the database
+    command.CommandText =    @&quot;SELECT name FROM user WHERE id = $id&quot;;
+    command.Parameters.AddWithValue(&quot;$id&quot;, id);
+
+    //print the result
+    using (var reader = command.ExecuteReader()){
+        while (reader.Read()){
+            var name = reader.GetString(0);
+            Console.WriteLine($&quot;Hello, {name}!&quot;);
+        }
+    }
+}
+
+//delete the data file when done
+FileInfo dbFile = new FileInfo(dataFile);
+try{
+    if (dbFile.Exists){
+        dbFile.Delete();
+    }
+}
+catch(Exception ex){
+    Console.WriteLine(&quot;Unable to delete the data file&quot;+ex.Message);
+}
+</code></pre>
+<h3 id="more-info">More Info</h3>
+<p>Further details on SQLite can be found at the official SQLite website <a href="http://www.sqlite.org/">http://www.sqlite.org/</a></p>
+<hr>
+<h2 id="litedb-database">LiteDB Database</h2>
+<p>Often applications need a way to store unstructured or semi-structured data. Using a NonSQL database could be a solution.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Needed NuGet: LiteDB</p>
+</div>
+<p>The code below is a simple example that creates an LiteDB database file. LiteDB offers several features that makes it useful for an embedded device.</p>
+<pre><code class="lang-cs">using LiteDB;
+
+var dataFile = &quot;SensorData.db&quot;;
+
+// Open database (or create if doesn't exist)
+using (var db = new LiteDatabase(dataFile)){
+
+    // Get a collection (or create, if doesn't exist)
+    var col = db.GetCollection&lt;Sensor&gt;(&quot;sensors&quot;);
+
+    // Create a new sensor instance
+    var sensor = new Sensor {
+        Name = &quot;MEMS12&quot;,
+        ConfigValues = new string[] { &quot;0x00&quot;, &quot;0xAA&quot; },
+        IsActive = true
+    };
+
+    // Insert new sensor document (Id will be auto-incremented)
+    col.Insert(sensor);
+
+    // Update a document inside a collection
+    sensor.Name = &quot;MEMS13&quot;;
+
+    col.Update(sensor);
+
+    // Index document using document Name property
+    col.EnsureIndex(x =&gt; x.Name);
+
+    // Use LINQ to query documents (filter, sort, transform)
+    var results = col.Query()
+        .Where(x =&gt; x.Name.StartsWith(&quot;M&quot;))
+        .OrderBy(x =&gt; x.Name)
+        .Select(x =&gt; new { x.Name, NameUpper = x.Name.ToUpper() })
+        .Limit(10)
+        .ToList();
+
+    foreach(var memsSensor in results){
+        Console.WriteLine(memsSensor.Name);
+    }
+    
+    // Create an index on the ConfigValues property
+    col.EnsureIndex(x =&gt; x.ConfigValues);
+
+    // Query by config value
+    var r = col.FindOne(x =&gt; x.ConfigValues.Contains(&quot;0xAA&quot;));
+
+    Console.WriteLine(r.Name);
+}
+
+//delete the data file when done
+FileInfo dbFile = new FileInfo(dataFile);
+try{
+    if (dbFile.Exists){
+        dbFile.Delete();
+    }
+}
+catch(Exception ex){
+    Console.WriteLine(&quot;Unable to delete the data file&quot;+ex.Message);
+}
+
+//Define Sensor class
+public class Sensor{
+    public int Id { get; set; }
+    public required string Name { get; set; }
+    public required string[] ConfigValues { get; set; }
+    public bool IsActive { get; set; }
+}
+</code></pre>
+<h3 id="more-info-1">More Info</h3>
+<p>Further details on SQLite can be found at the official SQLite website <a href="http://www.litedb.org/">http://www.litedb.org/</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/dev/endpoint/tutorials/databases.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

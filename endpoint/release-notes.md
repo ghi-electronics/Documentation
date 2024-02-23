@@ -4,34 +4,35 @@
 
 ## Endpoint OS
 
-**0.1.0 - Beta (2024-2-2)**
+**0.1.2 - Beta (2024-21-2)**
 
 - Changes
-    - Initial Release.
+    - Added OpenCV
+	- Support Bootscreen
 - Known Issues
-    - None
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues
 
 ---
 
 ## Visual Studio Extension
 
-**0.1.0 - Beta (2024-2-2)**
+**0.1.2 - Beta (2024-21-2)**
 
 - Changes
-    - Initial Release
+    - Improved deploying speed
 - Known Issues
-    - None.
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues
 
 ---
 
 ### VS Code Extension
 
-**0.1.0 - Beta (2024-2-2)**
+**0.1.2 - Beta (2024-21-2)**
 
 - Changes
-    - Initial Release
+    - Fixed Ctrl+Shift+B doesn't work on non-Windows system
 - Known Issues
-    - None.
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues
 
 ---
 
@@ -40,14 +41,14 @@
 **0.1.2 - Beta (2024-13-2)**
 
 - Changes
-    - Fixed can't initial multiple ports: https://github.com/ghi-electronics/Endpoint-Libraries/issues/48
+    - Fixed can't initialize multiple ports: https://github.com/ghi-electronics/Endpoint-Libraries/issues/48
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues
 	
 **0.1.1 - Beta (2024-12-2)**
 
 - Changes
-    - Expose Configuration to DisplayController 
+    - DisplayController: Add Configuration
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues
 	
@@ -62,7 +63,7 @@
 
 ### Drivers
 
-**0.1.0 - Beta (2024-12-2)**
+**0.1.2 - Beta (2024-12-2)**
 
 - Changes
     - Add Avalonia Touch input driver
@@ -82,10 +83,10 @@
 
 ### Endpoint Config
 
-**0.1.0 - Beta (2024-2-2)**
+**0.1.2 - Beta (2024-21-2)**
 
 - Changes
-    - Initial Release
+    - Add Enable Bootscreen setting
 - Known Issues
-    - None.
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues.
 

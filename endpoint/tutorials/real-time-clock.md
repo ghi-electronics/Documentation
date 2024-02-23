@@ -27,13 +27,12 @@ rtc.EnableChargeMode(BatteryChargeMode.Fast);
 
 ## System Clock
 
-You can get the current system time using `DateTime.Now`. The system clock starts running at power up, but until you set the clock, the time and date will be incorrect. 
-
-The following command is used to set the system time to match the RTC.
+You can get the current system time using `DateTime.Now`. 
+After boot, if valid rtc detected, system clock will be updated by rtc. 
+To set system time if rtc is not used, use `SetSystemTime`.
 
 ```cs
 var rtc = new RtcController();
-var rtc_time = rtc.Now;
-rtc.SetSystemTime(rtc_time);
+rtc.SetSystemTime(new DateTime(2024, 1, 30, 15, 00, 00));
 ```
 
