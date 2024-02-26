@@ -22,7 +22,8 @@
 
 #### Changes
 
-- Fixed Signal Digital raise event incorrectly when both signals are used.
+- Signal Digital: Fixed event raise incorrectly when both signals are used.
+- Signal Digital Capture: Fixed pulse-count is wrong if calling Abort when no pulse detected.
 - Remove WiFi AP mode.
 
 #### Known Issues
@@ -36,12 +37,13 @@
 ##### SC20xxx:
 
 - Change Signal Digital events.
-- Signal Digital: Fixed event raise wrong when both signals are used.
-- Signal Digital Capture: Fixed calling Abort then count is incorrect if no pulse detected.
+- Signal Digital: Fixed event raise incorrectly when both signals are used.
+- Signal Digital Capture: Fixed pulse-count is wrong if calling Abort when no pulse detected.
 
 ##### SC13xxx
 
 - Change Signal Digital events.
+- Signal Digital Capture: Fixed pulse-count is wrong if calling Abort when no pulse detected.
  
 #### Known Issues
 
