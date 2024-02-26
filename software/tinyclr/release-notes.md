@@ -36,13 +36,11 @@
 
 ##### SC20xxx:
 
-- Change Signal Digital events.
 - Signal Digital: Fixed event raise incorrectly when both signals are used.
 - Signal Digital Capture: Fixed pulse-count is wrong if calling Abort when no pulse detected.
 
 ##### SC13xxx
 
-- Change Signal Digital events.
 - Signal Digital Capture: Fixed pulse-count is wrong if calling Abort when no pulse detected.
  
 #### Known Issues
@@ -53,7 +51,7 @@
 
 #### Changes
 
-- Change Signal Digital events.
+- None.
 
 #### Known Issues
 
