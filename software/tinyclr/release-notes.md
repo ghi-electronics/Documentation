@@ -4,6 +4,72 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.2.0.7000 - RTW
+
+### Released 2024-26-02
+
+### Visual Studio Project System
+
+#### Changes
+
+- VS2022: None.
+
+#### Known Issues
+
+- None.
+
+### Libraries
+
+#### Changes
+
+- Signal Digital: Fixed event raise incorrectly when both signals are used.
+- Signal Digital Capture: Fixed pulse-count is wrong if calling Abort when no pulse detected.
+- Remove WiFi AP mode.
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+
+##### SC20xxx:
+
+- Change Signal Digital events.
+- Signal Digital: Fixed event raise incorrectly when both signals are used.
+- Signal Digital Capture: Fixed pulse-count is wrong if calling Abort when no pulse detected.
+
+##### SC13xxx
+
+- Change Signal Digital events.
+- Signal Digital Capture: Fixed pulse-count is wrong if calling Abort when no pulse detected.
+ 
+#### Known Issues
+
+- None.
+
+### Drivers
+
+#### Changes
+
+- Change Signal Digital events.
+
+#### Known Issues
+
+- None.
+
+### TinyCLR Config
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until board is reset.
+
 ## 2.2.0.6200 - RTW
 
 ### Released 2023-12-11
