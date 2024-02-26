@@ -245,36 +245,6 @@ bool otaUpdate = Winc15x0Interface.FirmwareUpdate(&quot;http://192.168.0.100/m2m
 <p>Needed NuGets: GHIElectronics.TinyCLR.Drivers.Microchip.Winc15x0</p>
 </div>
 <hr>
-<h2 id="accesspoint">AccessPoint</h2>
-<p>SITCore devices can be set up as a WiFi <code>AccessPoint</code>. This creates a 1-to-1 connection between SITCore and other hardware devices through WiFi without the need to connect to a switch. An example might be, connecting a phone directly to the SITCore hardware. This may be necessary in some situations where access to a network isn't possible and a user needs to connect to the device directly.</p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>AccessPoint only supports connecting to one device at a time.</p>
-</div>
-<p>Setting up a device as an access point works just like the default <code>Station</code> mode except the <code>Ssid</code> and now the one the device is broadcasting.</p>
-<pre><code class="lang-cs">var networkInterfaceSetting = new WiFiNetworkInterfaceSettings() {
-    Ssid = &quot;Your SSID&quot;,
-    Password = &quot;Your Password&quot;,
-    Mode = WiFiMode.AccessPoint,
-};
-
-</code></pre>
-<div class="TIP">
-<h5>Tip</h5>
-<p>Only WEP password security is supported. Do not set the <code>Password</code> for an open network.</p>
-</div>
-<p><code>AccessPoint</code> can provide an IP address to the connected device when <code>networkInterfaceSetting.DhcpEnabled = true;</code> through a simple internal DHCP server. If desired, an event is triggered on completion.</p>
-<pre><code class="lang-cs">WiFiNetworkInterfaceSettings wifiSettings = new WiFiNetworkInterfaceSettings() {
-    Ssid = &quot;Your SSID&quot;,
-    Password = &quot;Your Password&quot;,
-};
-//...
-WiFiNetworkInterfaceSettings wifiSettings.AccessPointClientConnectionChanged += (a, b, c) =&gt; {
-    Debug.WriteLine(&quot;Provided IP = &quot; + b.ToString());
-    Debug.WriteLine(&quot;Connected device's MAC Address = &quot; + c);
-};
-</code></pre>
-<p>The usual connection event is fired just like in <code>Station</code> mode, except in this case it is fired when an external device is connected <code>NetworkController.NetworkLinkConnectedChanged</code>.</p>
 
 </article>
 
