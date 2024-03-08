@@ -90,6 +90,7 @@
 <hr>
 <p>Thanks to .NET, Endpoint provides full networking support. It includes everything from a simple socket handling to full cloud support.</p>
 <h2 id="configuration">Configuration</h2>
+<h3 id="wi-fi">Wi-Fi</h3>
 <p>The network needs to be configured properly before it can be used. For example, Wi-Fi needs SSID and password.</p>
 <p>Wi-Fi is supported through USB Wi-Fi dongles containing the RTL8188 chipset.</p>
 <pre><code class="lang-cs">using GHIElectronics.Endpoint.Devices.Network;
@@ -111,6 +112,39 @@ network.NetworkLinkConnectedChanged += (a, b) =&gt;
     {
         Console.WriteLine(&quot;Connected&quot;);
 
+    }
+    else
+    {
+        Console.WriteLine(&quot;Disconnected&quot;);
+    }
+};
+
+network.NetworkAddressChanged += (a, b) =&gt;
+{
+    Console.WriteLine(string.Format(&quot;Address: {0}\n gateway: {1}\n DNS: {2}\n MAC: {3} &quot;, b.Address, b.Gateway, b.Dns[0], b.MACAddress));
+};
+
+network.Enable();
+</code></pre>
+<h3 id="usb-ethernet">USB Ethernet</h3>
+<pre><code>var networkType = NetworkInterfaceType.UsbEthernet;
+var networkSetting = new NetworkInterfaceSettings
+{
+    Address = new IPAddress(new byte[] { xx, xx, xx, xx }),
+    SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 }),
+    GatewayAddress = new IPAddress(new byte[] { xx, xx, xx, xx }),
+    DnsAddresses = new IPAddress[] { new IPAddress(new byte[] { 75, 75, 75, 75 }) },
+    DhcpEnable = false,
+};
+
+var network = new NetworkController(networkType, networkSetting);
+
+network.NetworkLinkConnectedChanged += (a, b) =&gt;
+{
+    if (b.Connected)
+    {
+        Console.WriteLine(&quot;Connected&quot;);
+       
     }
     else
     {
