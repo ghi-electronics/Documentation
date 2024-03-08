@@ -8,6 +8,7 @@ items:
   - GHIElectronics.Endpoint.Devices.Adc.AdcController.#ctor(System.Int32)
   - GHIElectronics.Endpoint.Devices.Adc.AdcController.Dispose
   - GHIElectronics.Endpoint.Devices.Adc.AdcController.Read
+  - GHIElectronics.Endpoint.Devices.Adc.AdcController.ReadRaw
   - GHIElectronics.Endpoint.Devices.Adc.AdcController.ResolutionInBits
   langs:
   - csharp
@@ -121,6 +122,34 @@ items:
   nameWithType.vb: AdcController.New(Integer)
   fullName.vb: GHIElectronics.Endpoint.Devices.Adc.AdcController.New(Integer)
   name.vb: New(Integer)
+- uid: GHIElectronics.Endpoint.Devices.Adc.AdcController.ReadRaw
+  commentId: M:GHIElectronics.Endpoint.Devices.Adc.AdcController.ReadRaw
+  id: ReadRaw
+  parent: GHIElectronics.Endpoint.Devices.Adc.AdcController
+  langs:
+  - csharp
+  - vb
+  name: ReadRaw()
+  nameWithType: AdcController.ReadRaw()
+  fullName: GHIElectronics.Endpoint.Devices.Adc.AdcController.ReadRaw()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Adc/AdcController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ReadRaw
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Adc/AdcController.cs
+    startLine: 82
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Adc
+  namespace: GHIElectronics.Endpoint.Devices.Adc
+  syntax:
+    content: public uint ReadRaw()
+    return:
+      type: System.UInt32
+    content.vb: Public Function ReadRaw() As UInteger
+  overload: GHIElectronics.Endpoint.Devices.Adc.AdcController.ReadRaw*
 - uid: GHIElectronics.Endpoint.Devices.Adc.AdcController.Read
   commentId: M:GHIElectronics.Endpoint.Devices.Adc.AdcController.Read
   id: Read
@@ -139,15 +168,15 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Read
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Adc/AdcController.cs
-    startLine: 78
+    startLine: 99
   assemblies:
   - GHIElectronics.Endpoint.Devices.Adc
   namespace: GHIElectronics.Endpoint.Devices.Adc
   syntax:
-    content: public uint Read()
+    content: public double Read()
     return:
-      type: System.UInt32
-    content.vb: Public Function Read() As UInteger
+      type: System.Double
+    content.vb: Public Function Read() As Double
   overload: GHIElectronics.Endpoint.Devices.Adc.AdcController.Read*
 - uid: GHIElectronics.Endpoint.Devices.Adc.AdcController.Dispose
   commentId: M:GHIElectronics.Endpoint.Devices.Adc.AdcController.Dispose
@@ -167,7 +196,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Dispose
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Adc/AdcController.cs
-    startLine: 146
+    startLine: 156
   assemblies:
   - GHIElectronics.Endpoint.Devices.Adc
   namespace: GHIElectronics.Endpoint.Devices.Adc
@@ -489,12 +518,12 @@ references:
   nameWithType.vb: AdcController.New
   fullName.vb: GHIElectronics.Endpoint.Devices.Adc.AdcController.New
   name.vb: New
-- uid: GHIElectronics.Endpoint.Devices.Adc.AdcController.Read*
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Adc.AdcController.Read
-  href: GHIElectronics.Endpoint.Devices.Adc.AdcController.html#GHIElectronics_Endpoint_Devices_Adc_AdcController_Read
-  name: Read
-  nameWithType: AdcController.Read
-  fullName: GHIElectronics.Endpoint.Devices.Adc.AdcController.Read
+- uid: GHIElectronics.Endpoint.Devices.Adc.AdcController.ReadRaw*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Adc.AdcController.ReadRaw
+  href: GHIElectronics.Endpoint.Devices.Adc.AdcController.html#GHIElectronics_Endpoint_Devices_Adc_AdcController_ReadRaw
+  name: ReadRaw
+  nameWithType: AdcController.ReadRaw
+  fullName: GHIElectronics.Endpoint.Devices.Adc.AdcController.ReadRaw
 - uid: System.UInt32
   commentId: T:System.UInt32
   parent: System
@@ -506,6 +535,23 @@ references:
   nameWithType.vb: UInteger
   fullName.vb: UInteger
   name.vb: UInteger
+- uid: GHIElectronics.Endpoint.Devices.Adc.AdcController.Read*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Adc.AdcController.Read
+  href: GHIElectronics.Endpoint.Devices.Adc.AdcController.html#GHIElectronics_Endpoint_Devices_Adc_AdcController_Read
+  name: Read
+  nameWithType: AdcController.Read
+  fullName: GHIElectronics.Endpoint.Devices.Adc.AdcController.Read
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
 - uid: GHIElectronics.Endpoint.Devices.Adc.AdcController.Dispose*
   commentId: Overload:GHIElectronics.Endpoint.Devices.Adc.AdcController.Dispose
   href: GHIElectronics.Endpoint.Devices.Adc.AdcController.html#GHIElectronics_Endpoint_Devices_Adc_AdcController_Dispose

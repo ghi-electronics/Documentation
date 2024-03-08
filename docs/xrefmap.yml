@@ -331,12 +331,6 @@ references:
   commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Analog
   fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Analog
   nameWithType: EPM815.Gpio.Moder.Analog
-- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Gpio
-  name: Gpio
-  href: endpoint/api/GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.html#GHIElectronics_Endpoint_Core_EPM815_Gpio_Moder_Gpio
-  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Gpio
-  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Gpio
-  nameWithType: EPM815.Gpio.Moder.Gpio
 - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Input
   name: Input
   href: endpoint/api/GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.html#GHIElectronics_Endpoint_Core_EPM815_Gpio_Moder_Input
@@ -349,6 +343,12 @@ references:
   commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.NONE
   fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.NONE
   nameWithType: EPM815.Gpio.Moder.NONE
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Output
+  name: Output
+  href: endpoint/api/GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.html#GHIElectronics_Endpoint_Core_EPM815_Gpio_Moder_Output
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Output
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Output
+  nameWithType: EPM815.Gpio.Moder.Output
 - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType
   name: EPM815.Gpio.OutputType
   href: endpoint/api/GHIElectronics.Endpoint.Core.EPM815.Gpio.OutputType.html
@@ -2106,12 +2106,6 @@ references:
   commentId: F:GHIElectronics.Endpoint.Core.EPM815.SerialPort.Uart5
   fullName: GHIElectronics.Endpoint.Core.EPM815.SerialPort.Uart5
   nameWithType: EPM815.SerialPort.Uart5
-- uid: GHIElectronics.Endpoint.Core.EPM815.SerialPort.Uart6
-  name: Uart6
-  href: endpoint/api/GHIElectronics.Endpoint.Core.EPM815.SerialPort.html#GHIElectronics_Endpoint_Core_EPM815_SerialPort_Uart6
-  commentId: F:GHIElectronics.Endpoint.Core.EPM815.SerialPort.Uart6
-  fullName: GHIElectronics.Endpoint.Core.EPM815.SerialPort.Uart6
-  nameWithType: EPM815.SerialPort.Uart6
 - uid: GHIElectronics.Endpoint.Core.EPM815.SerialPort.Uart7
   name: Uart7
   href: endpoint/api/GHIElectronics.Endpoint.Core.EPM815.SerialPort.html#GHIElectronics_Endpoint_Core_EPM815_SerialPort_Uart7
@@ -2146,15 +2140,15 @@ references:
   commentId: T:GHIElectronics.Endpoint.Core.EPM815.Spi
   fullName: GHIElectronics.Endpoint.Core.EPM815.Spi
   nameWithType: EPM815.Spi
-- uid: GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize(System.Int32)
-  name: Initialize(int)
-  href: endpoint/api/GHIElectronics.Endpoint.Core.EPM815.Spi.html#GHIElectronics_Endpoint_Core_EPM815_Spi_Initialize_System_Int32_
-  commentId: M:GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize(System.Int32)
-  name.vb: Initialize(Integer)
-  fullName: GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize(int)
-  fullName.vb: GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize(Integer)
-  nameWithType: EPM815.Spi.Initialize(int)
-  nameWithType.vb: EPM815.Spi.Initialize(Integer)
+- uid: GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize(System.Int32,System.Int32)
+  name: Initialize(int, int)
+  href: endpoint/api/GHIElectronics.Endpoint.Core.EPM815.Spi.html#GHIElectronics_Endpoint_Core_EPM815_Spi_Initialize_System_Int32_System_Int32_
+  commentId: M:GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize(System.Int32,System.Int32)
+  name.vb: Initialize(Integer, Integer)
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize(int, int)
+  fullName.vb: GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize(Integer, Integer)
+  nameWithType: EPM815.Spi.Initialize(int, int)
+  nameWithType.vb: EPM815.Spi.Initialize(Integer, Integer)
 - uid: GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize*
   name: Initialize
   href: endpoint/api/GHIElectronics.Endpoint.Core.EPM815.Spi.html#GHIElectronics_Endpoint_Core_EPM815_Spi_Initialize_
@@ -2807,6 +2801,19 @@ references:
   isSpec: "True"
   fullName: GHIElectronics.Endpoint.Devices.Adc.AdcController.Read
   nameWithType: AdcController.Read
+- uid: GHIElectronics.Endpoint.Devices.Adc.AdcController.ReadRaw
+  name: ReadRaw()
+  href: endpoint/api/GHIElectronics.Endpoint.Devices.Adc.AdcController.html#GHIElectronics_Endpoint_Devices_Adc_AdcController_ReadRaw
+  commentId: M:GHIElectronics.Endpoint.Devices.Adc.AdcController.ReadRaw
+  fullName: GHIElectronics.Endpoint.Devices.Adc.AdcController.ReadRaw()
+  nameWithType: AdcController.ReadRaw()
+- uid: GHIElectronics.Endpoint.Devices.Adc.AdcController.ReadRaw*
+  name: ReadRaw
+  href: endpoint/api/GHIElectronics.Endpoint.Devices.Adc.AdcController.html#GHIElectronics_Endpoint_Devices_Adc_AdcController_ReadRaw_
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Adc.AdcController.ReadRaw
+  isSpec: "True"
+  fullName: GHIElectronics.Endpoint.Devices.Adc.AdcController.ReadRaw
+  nameWithType: AdcController.ReadRaw
 - uid: GHIElectronics.Endpoint.Devices.Adc.AdcController.ResolutionInBits
   name: ResolutionInBits
   href: endpoint/api/GHIElectronics.Endpoint.Devices.Adc.AdcController.html#GHIElectronics_Endpoint_Devices_Adc_AdcController_ResolutionInBits
@@ -4811,6 +4818,12 @@ references:
   commentId: F:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.Ethernet
   fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.Ethernet
   nameWithType: NetworkInterfaceType.Ethernet
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.UsbEthernet
+  name: UsbEthernet
+  href: endpoint/api/GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.html#GHIElectronics_Endpoint_Devices_Network_NetworkInterfaceType_UsbEthernet
+  commentId: F:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.UsbEthernet
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.UsbEthernet
+  nameWithType: NetworkInterfaceType.UsbEthernet
 - uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.WiFi
   name: WiFi
   href: endpoint/api/GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.html#GHIElectronics_Endpoint_Devices_Network_NetworkInterfaceType_WiFi

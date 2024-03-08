@@ -55,14 +55,14 @@ Pin | Function
 39 | Cap Touch SCL
 40 | Cap Touch SDA
 
-Here is a list of tested displays from www.buydisplay.com
+Here is a list of tested displays from www.buydisplay.com. If **Touch** is needed make sure the display is the 40 pin single cable version that includes touch on pins 37-40. 
 
 Display | Type | Link
 --|--|--
 ER-TFT043-3 | 4.3" 480x272 | [Link...](https://www.buydisplay.com/tft-4-3-inch-lcd-module-touchscreen-display-for-mp4-gps-480x272)
 ER-TFT043A3-3 | 4.3" 480x272 | [Link...](https://www.buydisplay.com/sunlight-readable-4-3-inch-high-brightness-480x272-tft-lcd-display)
 ER-TFT043A1-7 | 4.3" 800x480 | [Link...](https://www.buydisplay.com/4-3-800x480-ips-tft-lcd-module-all-viewing-optl-touchscreen-display)
-ER-TFT070A2-4 | 7" 800x480 | [Link...](https://www.buydisplay.com/7-tft-lcd-touch-screen-display-module-800x480-for-mp4-gps-tablet-pc)
+ER-TFT070A2-4 | 7" 800x480 no Touch support | [Link...](https://www.buydisplay.com/7-tft-lcd-touch-screen-display-module-800x480-for-mp4-gps-tablet-pc)
 
 See the [Displays](../tutorials/displays.md) tutorial for coding examples.
 

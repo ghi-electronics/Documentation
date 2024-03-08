@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Beyond .NET </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Beyond .NET ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/dev/endpoint/beyond-dotnet.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="beyond-net">Beyond .NET</h1>
+
+<hr>
+<p>Endpoint's hardware and documentation's main focus is .NET, however the system is capable of supporting other languages as well.</p>
+<hr>
+<h1 id="python">Python</h1>
+<h2 id="getting-started">Getting Started</h2>
+<p>Install the latest version VS Code, <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
+<p>Visit the extension section from within VS Code and search for and install <code>Endpoint VSC Python Debugger</code>. Alternatively, <a href="downloads.html">Download</a> and install the latest Endpoint VSC Python Extension (.vsix) file manually.</p>
+<p>Navigate to <code>View -&gt; Command Palette</code></p>
+<p><img src="images/command-palette.png" alt="Command Palette"></p>
+<p>Search for <strong>Endpoint</strong> and select <code>Endpoint:Create Python project</code></p>
+<p><img src="images/select-python.png" alt="Search Endpoint"></p>
+<p>Give the project a name and location.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you change the default project name you must also change it in the <strong>settings.json</strong> file</p>
+</div>
+<h2 id="python-libraries">Python Libraries</h2>
+<p>Endpoint uses the standard Python libraries when available. When a library doesn't existing inside the Python API relating to embedded hardware we use an Endpoint library to fill in the missing gaps. Additional libraries are under development.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Peripheral</strong></td>
+<td><strong>Endpoint Python Library</strong></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>GPIO</strong></td>
+<td>GHIElectronics.Endpoint.Core.EPM815.Gpio</td>
+</tr>
+<tr>
+<td><strong>PWM</strong></td>
+<td>GHIElectronics.Endpoint.Core.EPM815.PWM</td>
+</tr>
+<tr>
+<td><strong>SPI</strong></td>
+<td>GHIElectronics.Endpoint.Core.EPM815.Spi</td>
+</tr>
+<tr>
+<td><strong>I2C</strong></td>
+<td>GHIElectronics.Endpoint.Core.EPM815.Adc</td>
+</tr>
+<tr>
+<td><strong>ADC</strong></td>
+<td>GHIElectronics.Endpoint.Core.EPM815.Adc</td>
+</tr>
+<tr>
+<td><strong>DISPLAY</strong></td>
+<td>GHIElectronics.Endpoint.Core.EPM815.Display</td>
+</tr>
+<tr>
+<td><strong>RTC</strong></td>
+<td>GHIElectronics.Endpoint.Core.EPM815.RTC</td>
+</tr>
+<tr>
+<td><strong>Register</strong></td>
+<td>GHIElectronics.Endpoint.Core.EPM815.Register</td>
+</tr>
+<tr>
+<td><strong>Serial Port</strong></td>
+<td>GHIElectronics.Endpoint.Core.EPM815.SerialPort</td>
+</tr>
+</tbody>
+</table>
+<p>The Python libraries are built into the release image, user don't need to do anything else, just use <strong>import</strong>.</p>
+<p>This uses remote debug, so there is no IntelliSense built in. Optionally users can install on the PC to use IntelliSense when importing the libraries.</p>
+<pre><code class="lang-cs">C:\pip install GHIElectronics.Endpoint.Core
+</code></pre>
+<p>After install, VSC code IntelliSense will show the libraries available.</p>
+<p><img src="images/python-intellisense.png" alt="Command Palette"></p>
+<hr>
+<h2 id="python-code-samples">Python Code Samples</h2>
+<p>Here is a couple code samples to get started.</p>
+<p>Additional code samples can be found in the <a href="https://github.com/ghi-electronics/endpoint-samples">Endpoint Samples Repo</a></p>
+<h3 id="python-gpio">Python GPIO</h3>
+<p>The code sample below blinks an on-board LED.</p>
+<pre><code class="lang-python">import gpiod
+import time
+import GHIElectronics.Endpoint.Core.EPM815.Gpio as Gpio
+ 
+pin = Gpio.Pin.PC0 
+chip=gpiod.Chip(str(int(pin / 16)))
+line = chip.get_line(pin % 16)
+line.request(consumer='test', type=gpiod.LINE_REQ_DIR_OUT)
+ 
+while True:
+    line.set_value(1)
+    time.sleep(0.5)
+    line.set_value(0)
+    time.sleep(0.5)
+</code></pre>
+<h3 id="python-pwm">Python PWM</h3>
+<p>The code sample demonstrates PWM using an on-board buzzer.</p>
+<pre><code class="lang-python">import time
+import GHIElectronics.Endpoint.Core.EPM815.G as Pwm
+
+pwm = Pwm.PwmController(Pwm.Pin.PF9)
+
+pwm.Frequency = 1000
+pwm.DutyCycle = 0.5
+pwm.Start()
+time.sleep(3)
+pwm.Stop()
+</code></pre>
+<hr>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Documentation/blob/dev/endpoint/beyond-dotnet.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
