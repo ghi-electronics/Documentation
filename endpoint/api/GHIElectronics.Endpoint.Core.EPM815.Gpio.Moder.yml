@@ -7,9 +7,9 @@ items:
   children:
   - GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Alternate
   - GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Analog
-  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Gpio
   - GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Input
   - GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.NONE
+  - GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Output
   langs:
   - csharp
   - vb
@@ -57,30 +57,30 @@ items:
     content: Input = 0
     return:
       type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
-- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Gpio
-  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Gpio
-  id: Gpio
+- uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Output
+  commentId: F:GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Output
+  id: Output
   parent: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
   langs:
   - csharp
   - vb
-  name: Gpio
-  nameWithType: EPM815.Gpio.Moder.Gpio
-  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Gpio
+  name: Output
+  nameWithType: EPM815.Gpio.Moder.Output
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Output
   type: Field
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
       branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
-    id: Gpio
+    id: Output
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Gpio.cs
     startLine: 49
   assemblies:
   - GHIElectronics.Endpoint.Core
   namespace: GHIElectronics.Endpoint.Core
   syntax:
-    content: Gpio = 1
+    content: Output = 1
     return:
       type: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder
 - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Moder.Alternate

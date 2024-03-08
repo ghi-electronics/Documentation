@@ -6,6 +6,7 @@ items:
   parent: GHIElectronics.Endpoint.Devices.Network
   children:
   - GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.Ethernet
+  - GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.UsbEthernet
   - GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.WiFi
   langs:
   - csharp
@@ -78,6 +79,32 @@ items:
   namespace: GHIElectronics.Endpoint.Devices.Network
   syntax:
     content: WiFi = 1
+    return:
+      type: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.UsbEthernet
+  commentId: F:GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.UsbEthernet
+  id: UsbEthernet
+  parent: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType
+  langs:
+  - csharp
+  - vb
+  name: UsbEthernet
+  nameWithType: NetworkInterfaceType.UsbEthernet
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType.UsbEthernet
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: UsbEthernet
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Network/NetworkController.cs
+    startLine: 47
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.Network
+  namespace: GHIElectronics.Endpoint.Devices.Network
+  syntax:
+    content: UsbEthernet = 2
     return:
       type: GHIElectronics.Endpoint.Devices.Network.NetworkInterfaceType
 references:

@@ -5,7 +5,7 @@ items:
   id: EPM815.Spi
   parent: GHIElectronics.Endpoint.Core
   children:
-  - GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize(System.Int32)
+  - GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize(System.Int32,System.Int32)
   - GHIElectronics.Endpoint.Core.EPM815.Spi.Spi1
   - GHIElectronics.Endpoint.Core.EPM815.Spi.Spi4
   - GHIElectronics.Endpoint.Core.EPM815.Spi.Spi5
@@ -124,16 +124,16 @@ items:
     return:
       type: System.Int32
     content.vb: Public Const Spi5 As Integer = 2
-- uid: GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize(System.Int32)
-  commentId: M:GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize(System.Int32)
-  id: Initialize(System.Int32)
+- uid: GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize(System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize(System.Int32,System.Int32)
+  id: Initialize(System.Int32,System.Int32)
   parent: GHIElectronics.Endpoint.Core.EPM815.Spi
   langs:
   - csharp
   - vb
-  name: Initialize(int)
-  nameWithType: EPM815.Spi.Initialize(int)
-  fullName: GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize(int)
+  name: Initialize(int, int)
+  nameWithType: EPM815.Spi.Initialize(int, int)
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize(int, int)
   type: Method
   source:
     remote:
@@ -147,15 +147,17 @@ items:
   - GHIElectronics.Endpoint.Core
   namespace: GHIElectronics.Endpoint.Core
   syntax:
-    content: public static void Initialize(int port)
+    content: public static void Initialize(int port, int bufferSize = 4096)
     parameters:
     - id: port
       type: System.Int32
-    content.vb: Public Shared Sub Initialize(port As Integer)
+    - id: bufferSize
+      type: System.Int32
+    content.vb: Public Shared Sub Initialize(port As Integer, bufferSize As Integer = 4096)
   overload: GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize*
-  nameWithType.vb: EPM815.Spi.Initialize(Integer)
-  fullName.vb: GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize(Integer)
-  name.vb: Initialize(Integer)
+  nameWithType.vb: EPM815.Spi.Initialize(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize(Integer, Integer)
+  name.vb: Initialize(Integer, Integer)
 - uid: GHIElectronics.Endpoint.Core.EPM815.Spi.UnInitialize(System.Int32)
   commentId: M:GHIElectronics.Endpoint.Core.EPM815.Spi.UnInitialize(System.Int32)
   id: UnInitialize(System.Int32)
@@ -174,7 +176,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: UnInitialize
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Spi.cs
-    startLine: 105
+    startLine: 109
   assemblies:
   - GHIElectronics.Endpoint.Core
   namespace: GHIElectronics.Endpoint.Core
@@ -469,7 +471,7 @@ references:
   name.vb: Integer
 - uid: GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize*
   commentId: Overload:GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize
-  href: GHIElectronics.Endpoint.Core.EPM815.Spi.html#GHIElectronics_Endpoint_Core_EPM815_Spi_Initialize_System_Int32_
+  href: GHIElectronics.Endpoint.Core.EPM815.Spi.html#GHIElectronics_Endpoint_Core_EPM815_Spi_Initialize_System_Int32_System_Int32_
   name: Initialize
   nameWithType: EPM815.Spi.Initialize
   fullName: GHIElectronics.Endpoint.Core.EPM815.Spi.Initialize

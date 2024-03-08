@@ -34,7 +34,7 @@ items:
 
     using System.Device.Gpio.Drivers;
 
-    using GHIElectronics.Endpoint.Pins;
+    using GHIElectronics.Endpoint.Core;
 
     using GHIElectronics.Endpoint.Devices.Display;
 
@@ -66,7 +66,7 @@ items:
     bitmap.Erase(SKColors.Transparent);
 
 
-    var configuration = new FBDisplay.ParallelConfiguration(){
+    var configuration = new FBDisplay.Configuration(){
         Clock = 10000,
         Width = 480,
         Hsync_start = 480 + 2,

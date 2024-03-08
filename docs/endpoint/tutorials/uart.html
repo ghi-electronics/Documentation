@@ -88,7 +88,32 @@
 <h1 id="uart">UART</h1>
 
 <hr>
-<p>UART is supported through the standard <code>SerialPort</code> class in <code>System.IO.Ports</code></p>
+<p>UART is supported through the standard <code>SerialPort</code> class in <code>System.IO.Ports</code> but first we need to <strong>Initialize</strong> the serial port.</p>
+<pre><code class="lang-cs">EPM815.SerialPort.Initialize(EPM815.SerialPort.Uart3);
+</code></pre>
+<p>After initializing the port, create a buffer to read the data into and configure a new <strong>SerialPort</strong> and <strong>Open</strong> it.</p>
+<pre><code class="lang-cs">static byte[] buffer = new byte[64];
+
+var serial = new SerialPort{
+    PortName = EPM815.SerialPort.Uart3,
+    BaudRate = 9600,
+    DataBits = 8,
+    Parity = Parity.None,
+    StopBits = StopBits.One,
+};
+
+serial.Open();
+</code></pre>
+<p>Once configured, the device is ready to write &amp; read the serial data.</p>
+<pre><code class="lang-cs">while(true){
+    //Check for data
+    if(serial.BytesToRead &gt; 0){
+        var data = serial.Read(buffer,0,serial.BytesToRead)
+        Console.Writeline(Encoding.UTF8.GetString(buffer,0,data));   
+    }
+    Thread.Sleep(20);
+}
+</code></pre>
 
 </article>
 

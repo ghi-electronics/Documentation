@@ -11,7 +11,6 @@ items:
   - GHIElectronics.Endpoint.Core.EPM815.SerialPort.Uart3
   - GHIElectronics.Endpoint.Core.EPM815.SerialPort.Uart4
   - GHIElectronics.Endpoint.Core.EPM815.SerialPort.Uart5
-  - GHIElectronics.Endpoint.Core.EPM815.SerialPort.Uart6
   - GHIElectronics.Endpoint.Core.EPM815.SerialPort.Uart7
   - GHIElectronics.Endpoint.Core.EPM815.SerialPort.Uart8
   - GHIElectronics.Endpoint.Core.EPM815.SerialPort.UnInitialize(System.String,System.Boolean)
@@ -183,33 +182,6 @@ items:
     return:
       type: System.String
     content.vb: Public Const Uart5 As String = "/dev/ttySTM4"
-- uid: GHIElectronics.Endpoint.Core.EPM815.SerialPort.Uart6
-  commentId: F:GHIElectronics.Endpoint.Core.EPM815.SerialPort.Uart6
-  id: Uart6
-  parent: GHIElectronics.Endpoint.Core.EPM815.SerialPort
-  langs:
-  - csharp
-  - vb
-  name: Uart6
-  nameWithType: EPM815.SerialPort.Uart6
-  fullName: GHIElectronics.Endpoint.Core.EPM815.SerialPort.Uart6
-  type: Field
-  source:
-    remote:
-      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/SerialPort.cs
-      branch: main
-      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
-    id: Uart6
-    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/SerialPort.cs
-    startLine: 19
-  assemblies:
-  - GHIElectronics.Endpoint.Core
-  namespace: GHIElectronics.Endpoint.Core
-  syntax:
-    content: public const string Uart6 = "/dev/ttySTM5"
-    return:
-      type: System.String
-    content.vb: Public Const Uart6 As String = "/dev/ttySTM5"
 - uid: GHIElectronics.Endpoint.Core.EPM815.SerialPort.Uart7
   commentId: F:GHIElectronics.Endpoint.Core.EPM815.SerialPort.Uart7
   id: Uart7

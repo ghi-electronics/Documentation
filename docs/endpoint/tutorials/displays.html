@@ -115,7 +115,7 @@ backlightController.Write(backlightPin, PinValue.High);
 var screenWidth = 480;
 var screenHeight = 272;
 
-var configuration = new FBDisplay.ParallelConfiguration(){
+var configuration = new FBDisplay.Configuration(){
     Clock = 10000,
     Width = 480,
     Hsync_start = 480 + 2,

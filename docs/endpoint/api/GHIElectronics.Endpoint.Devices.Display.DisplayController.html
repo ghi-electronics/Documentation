@@ -148,7 +148,7 @@ Class DisplayController  <a class="header-action link-secondary" title="View sou
   <h2 id="GHIElectronics_Endpoint_Devices_Display_DisplayController_examples">Examples</h2>
   <pre><code class="lang-csharp">using System.Device.Gpio;
 using System.Device.Gpio.Drivers;
-using GHIElectronics.Endpoint.Pins;
+using GHIElectronics.Endpoint.Core;
 using GHIElectronics.Endpoint.Devices.Display;
 using SkiaSharp;
 using EndpointDisplayTest.Properties;
@@ -166,7 +166,7 @@ var screenHeight = 272;
 SKBitmap bitmap = new SKBitmap(screenWidth, screenHeight, SKImageInfo.PlatformColorType, SKAlphaType.Premul);
 bitmap.Erase(SKColors.Transparent);
 
-var configuration = new FBDisplay.ParallelConfiguration(){
+var configuration = new FBDisplay.Configuration(){
     Clock = 10000,
     Width = 480,
     Hsync_start = 480 + 2,
