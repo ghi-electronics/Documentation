@@ -10,6 +10,7 @@
     - Added native Watchdog library
 	- Added Python (ADC, PWM, I2C, SPI, Serial, GPIO, Display, RTC)
 	- Added USB_RTL8152 Ethernet
+	- Added timezone info
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues
 	
