@@ -18,7 +18,7 @@
 **0.1.3 - Beta (2024-8-3)**
 
 - Changes
-	- Fixed deploy on other than Windows EN failed
+	- Fixed deployment error when using extensions in languages other than English.
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues
 
