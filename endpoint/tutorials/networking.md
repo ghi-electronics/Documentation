@@ -6,6 +6,7 @@ Thanks to .NET, Endpoint provides full networking support. It includes everythin
 
 ## Configuration
 
+### Wi-Fi
 The network needs to be configured properly before it can be used. For example, Wi-Fi needs SSID and password.
 
 Wi-Fi is supported through USB Wi-Fi dongles containing the RTL8188 chipset.
@@ -31,6 +32,42 @@ network.NetworkLinkConnectedChanged += (a, b) =>
     {
         Console.WriteLine("Connected");
 
+    }
+    else
+    {
+        Console.WriteLine("Disconnected");
+    }
+};
+
+network.NetworkAddressChanged += (a, b) =>
+{
+    Console.WriteLine(string.Format("Address: {0}\n gateway: {1}\n DNS: {2}\n MAC: {3} ", b.Address, b.Gateway, b.Dns[0], b.MACAddress));
+};
+
+network.Enable();
+```
+
+### USB Ethernet
+
+```
+var networkType = NetworkInterfaceType.UsbEthernet;
+var networkSetting = new NetworkInterfaceSettings
+{
+    Address = new IPAddress(new byte[] { 192, 168, 86, 107 }),
+    SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 }),
+    GatewayAddress = new IPAddress(new byte[] { 192, 168, 86, 1 }),
+    DnsAddresses = new IPAddress[] { new IPAddress(new byte[] { 75, 75, 75, 75 }) },
+    DhcpEnable = false,
+};
+
+var network = new NetworkController(networkType, networkSetting);
+
+network.NetworkLinkConnectedChanged += (a, b) =>
+{
+    if (b.Connected)
+    {
+        Console.WriteLine("Connected");
+       
     }
     else
     {
