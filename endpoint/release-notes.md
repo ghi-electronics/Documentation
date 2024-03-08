@@ -7,9 +7,9 @@
 **0.1.3 - Beta (2024-8-3)**
 
 - Changes
-    - Fix Watchdog
-	- Added python (ADC, PWM, I2C, SPI, Serial, GPIO, Display, RTC)
-	- Add USB_RTL8152 Ethernet
+    - Added native Watchdog library
+	- Added Python (ADC, PWM, I2C, SPI, Serial, GPIO, Display, RTC)
+	- Added USB_RTL8152 Ethernet
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues
 	
@@ -18,7 +18,7 @@
 **0.1.3 - Beta (2024-8-3)**
 
 - Changes
-	- Fix deploy on other than Windows EN failed
+	- Fixed deploy on other than Windows EN failed
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues
 
@@ -48,8 +48,8 @@
 **0.1.3 - Beta (2024-12-2)**
 
 - Changes
-    - Add VirtualKeyboard
-	- Add ST7735 SPI display
+    - Added VirtualKeyboard nuget
+	- Added ST7735 SPI display nuget
 - Known Issues
     https://github.com/ghi-electronics/endpoint-drivers/issues
 
@@ -58,7 +58,7 @@
 **0.1.3 - Beta (2024-8-3)**
 
 - Changes
-    - Fix 800x480 bootscreen setting
+    - Fixed 800x480 bootscreen setting
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues.
 	
