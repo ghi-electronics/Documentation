@@ -24,16 +24,23 @@
 
 ### VS Code Extension
 
+#### .NET VS Code Extension
 **0.1.3 - Beta (2024-8-3)**
 
 - Changes
     - None
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues
+	
+#### Python VS Code Extension
+- Changes
+    - Initial Release
+- Known Issues
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues
 
 ### Libraries
 
-**0.1.3 - Beta (2024-13-2)**
+**0.1.3 - Beta (2024-8-3)**
 
 - Changes
     - SPI: Added change buffer_size 
@@ -45,7 +52,7 @@
 
 ### Drivers
 
-**0.1.3 - Beta (2024-12-2)**
+**0.1.3 - Beta (2024-8-3)**
 
 - Changes
     - Added VirtualKeyboard nuget
