@@ -63,7 +63,7 @@ After install, VSC code IntelliSense will show the libraries available.
 Here is a couple code samples to get started. 
 
 Additional code samples can be found in the [Endpoint Samples Repo 
-](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Config/Endpoint_Config_Setup_v0.1.2.msi) 
+](https://github.com/ghi-electronics/endpoint-samples) 
 
 
 ### Python GPIO
