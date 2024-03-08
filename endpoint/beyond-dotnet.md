@@ -57,12 +57,14 @@ After install, VSC code IntelliSense will show the libraries available.
 
  ![Command Palette](images/python-intellisense.png)
 
-
-
 ---
 ## Python Code Samples
 
-Here is a couple code samples to get started. Additional code samples can be found in the Endpoint Python Sample Repo. 
+Here is a couple code samples to get started. 
+
+Additional code samples can be found in the [Endpoint Samples Repo 
+](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Config/Endpoint_Config_Setup_v0.1.2.msi) 
+
 
 ### Python GPIO
 
