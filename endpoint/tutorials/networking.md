@@ -53,9 +53,9 @@ network.Enable();
 var networkType = NetworkInterfaceType.UsbEthernet;
 var networkSetting = new NetworkInterfaceSettings
 {
-    Address = new IPAddress(new byte[] { 192, 168, 86, 107 }),
+    Address = new IPAddress(new byte[] { xx, xx, xx, xx }),
     SubnetMask = new IPAddress(new byte[] { 255, 255, 255, 0 }),
-    GatewayAddress = new IPAddress(new byte[] { 192, 168, 86, 1 }),
+    GatewayAddress = new IPAddress(new byte[] { xx, xx, xx, xx }),
     DnsAddresses = new IPAddress[] { new IPAddress(new byte[] { 75, 75, 75, 75 }) },
     DhcpEnable = false,
 };
