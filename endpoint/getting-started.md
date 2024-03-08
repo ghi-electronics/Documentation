@@ -68,7 +68,7 @@ Visit the extension section from within VS Code and search for and install `Endp
 
  Navigate to `View -> Command Palette`
 
- ![Select .NET](images/select-dotnet.png)
+ ![Command Palette](images/command-palette.png)
 
  Search for **Endpoint** and select `Endpoint:Create Net IoT project`
 
