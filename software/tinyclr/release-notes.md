@@ -4,7 +4,7 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
-## 2.2.1.1000 - RTW
+## 2.2.1.2000 - RTW
 
 ### Released 2024-19-03
 
@@ -22,11 +22,11 @@
 
 #### Changes
 
-- Remove seal class on GHIElectronics.TinyClr.Drawing assembliy.
-- FileSystem: Add Format command
+- FileSystem: Added Format command
 - UsbClient: Fix leak memory
-- UI: Add Close to Messagbox.
+- UI: Add Close method to Messagbox
 - Improved Number.ToString
+- Removed seal class on GHIElectronics.TinyClr.Drawing assembly
 
 #### Known Issues
 
@@ -38,8 +38,10 @@
 
 ##### SC20xxx:
 
-- Add FileSystem Format
-- Fix USBClient leak memory
+- Added FileSystem Format
+- Fixed USBClient leak memory
+- Fixed detect media size incorrect if larger than 4G
+- Fixed “USB Device Not Recognized” when stop usbclient in MSC mode
 
 ##### SC13xxx
 
