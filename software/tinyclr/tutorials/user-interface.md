@@ -690,29 +690,21 @@ buttonRight.ValueChangedEdge = GpioPinEdge.RisingEdge;
 buttonLeft.ValueChanged += (a, b) =>
 {
     Program.MainApp.InputProvider.RaiseButton(GHIElectronics.TinyCLR.UI.Input.HardwareButton.Left, true, DateTime.UtcNow);
-
 };
 
 buttonRight.ValueChanged += (a, b) =>
 {
     Program.MainApp.InputProvider.RaiseButton(GHIElectronics.TinyCLR.UI.Input.HardwareButton.Right, true, DateTime.UtcNow);
-
 };
 
 // Usage:
 
 void TestMessageBox(int counter)
-{
-
-	
+{	
     var messageBox = new MessageBox(this.font12); // assuming font12 load from resource. Example: font12 = Resources.GetFont(Resources.FontResources.droid_reg12);
-
     this.mainStackPanel.Children.Add(messageBox); //  messagebox to parent Element, here is this.mainStackPanel: example mainStackPanel = new StackPanel(Orientation.Vertical);
-
     messageBox.AddHandler(Buttons.ButtonUpEvent, new RoutedEventHandler(ProcessMessageboxButtons), true);
-
     messageBox.Show("Counter " + counter.ToString() + ". Are you sure?", "Confirm", MessageBox.MessageBoxButtons.YesNo);
-
     Buttons.Focus(messageBox); // focus event to messagebox
 
 	// Use touch if touch is available.
@@ -728,32 +720,24 @@ void TestMessageBox(int counter)
 	// Process gpio button events
     void ProcessMessageboxButtons(object sender, RoutedEventArgs e)
     {
-        var buttonSource = (GHIElectronics.TinyCLR.UI.Input.ButtonEventArgs)e;
-                       
+        var buttonSource = (GHIElectronics.TinyCLR.UI.Input.ButtonEventArgs)e;                       
         switch (buttonSource.Button)
         {
-            case GHIElectronics.TinyCLR.UI.Input.HardwareButton.Left:
-
-                
+            case GHIElectronics.TinyCLR.UI.Input.HardwareButton.Left:                
                 Debug.WriteLine("Button left - "Yes" pressed");
                 break;
 
             case GHIElectronics.TinyCLR.UI.Input.HardwareButton.Right:
-
                 Debug.WriteLine("Button Right - "No" pressed");
                 break;
 
             case GHIElectronics.TinyCLR.UI.Input.HardwareButton.Select:
-
                 Debug.WriteLine("Button Select pressed");
                 break;
 
         }
-
-        messageBox.Close(); // close messagebox
-       
+        messageBox.Close(); // close messagebox       
     }
-
     this.mainStackPanel.Invalidate(); // parent Invalidate
 }
 
