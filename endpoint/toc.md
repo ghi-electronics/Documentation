@@ -22,14 +22,13 @@
 ### [Displays](tutorials/displays.md)
 ### [Graphics](tutorials/graphics.md)
 ### [Touch Screen](tutorials/touch-screen.md)
+### [UI](tutorials/ui.md)
 ### [Camera](tutorials/camera.md)
 ### [MJPEG Video](tutorials/mjpeg-video.md)
-
 
 ## Cloud Support
 ### [Azure](tutorials/azure.md)
 ### [AWS](tutorials/aws.md)
-
 
 ## Additional Features
 ### [File System](tutorials/file-system.md)

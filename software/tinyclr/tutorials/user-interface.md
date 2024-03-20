@@ -658,9 +658,87 @@ private static void Counter(object sender, EventArgs e) {
 ### User Input
 A user can feed input to the graphical interface through touch or button input.
 
+#### Touch input
 ```cs
 app.InputProvider.RaiseTouch(x, y, touchState, DateTime.UtcNow);
 app.InputProvider.RaiseButton(btn, btnState, DateTime.UtcNow);
 ```
 
 The [touch](touch-screen.md) tutorial has further details.
+
+#### Button input
+
+User can map gpio pin to button left, right, back, home or select. Below is how to use left, right on MessageBox, assuming that Left is Yes, Right is No.
+
+```
+//Declare gpio pin cs
+
+var buttonLeft = gpioController.OpenPin(SC20100.GpioPin.PE3);
+
+var buttonRight = gpioController.OpenPin(SC20100.GpioPin.PB7);
+
+buttonLeft.SetDriveMode(GpioPinDriveMode.InputPullUp);
+buttonRight.SetDriveMode(GpioPinDriveMode.InputPullUp);
+
+buttonLeft.DebounceTimeout = TimeSpan.FromMilliseconds(50);
+buttonRight.DebounceTimeout = TimeSpan.FromMilliseconds(50);
+
+buttonLeft.ValueChangedEdge = GpioPinEdge.RisingEdge;
+buttonRight.ValueChangedEdge = GpioPinEdge.RisingEdge;
+
+// Map to Input event
+buttonLeft.ValueChanged += (a, b) =>
+{
+    Program.MainApp.InputProvider.RaiseButton(GHIElectronics.TinyCLR.UI.Input.HardwareButton.Left, true, DateTime.UtcNow);
+};
+
+buttonRight.ValueChanged += (a, b) =>
+{
+    Program.MainApp.InputProvider.RaiseButton(GHIElectronics.TinyCLR.UI.Input.HardwareButton.Right, true, DateTime.UtcNow);
+};
+
+// Usage:
+
+void TestMessageBox(int counter)
+{	
+    var messageBox = new MessageBox(this.font12); // assuming font12 load from resource. Example: font12 = Resources.GetFont(Resources.FontResources.droid_reg12);
+    this.mainStackPanel.Children.Add(messageBox); //  messagebox to parent Element, here is this.mainStackPanel: example mainStackPanel = new StackPanel(Orientation.Vertical);
+    messageBox.AddHandler(Buttons.ButtonUpEvent, new RoutedEventHandler(ProcessMessageboxButtons), true);
+    messageBox.Show("Counter " + counter.ToString() + ". Are you sure?", "Confirm", MessageBox.MessageBoxButtons.YesNo);
+    Buttons.Focus(messageBox); // focus event to messagebox
+
+	// Use touch if touch is available.
+    messageBox.ButtonClick += (a, b) =>
+    {
+        if (b.DialogResult == MessageBox.DialogResult.Yes)
+        {
+            Debug.WriteLine("Press yes");
+        }
+
+    };
+
+	// Process gpio button events
+    void ProcessMessageboxButtons(object sender, RoutedEventArgs e)
+    {
+        var buttonSource = (GHIElectronics.TinyCLR.UI.Input.ButtonEventArgs)e;                       
+        switch (buttonSource.Button)
+        {
+            case GHIElectronics.TinyCLR.UI.Input.HardwareButton.Left:                
+                Debug.WriteLine("Button left - "Yes" pressed");
+                break;
+
+            case GHIElectronics.TinyCLR.UI.Input.HardwareButton.Right:
+                Debug.WriteLine("Button Right - "No" pressed");
+                break;
+
+            case GHIElectronics.TinyCLR.UI.Input.HardwareButton.Select:
+                Debug.WriteLine("Button Select pressed");
+                break;
+
+        }
+        messageBox.Close(); // close messagebox       
+    }
+    this.mainStackPanel.Invalidate(); // parent Invalidate
+}
+
+```

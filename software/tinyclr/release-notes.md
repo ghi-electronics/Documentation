@@ -4,6 +4,75 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.2.1.2000 - RTW
+
+### Released 2024-19-03
+
+### Visual Studio Project System
+
+#### Changes
+
+- VS2022: None.
+
+#### Known Issues
+
+- None.
+
+### Libraries
+
+#### Changes
+
+- FileSystem: Added Format command
+- UsbClient: Fix leak memory
+- UI: Add Close method to Messagbox
+- Improved Number.ToString
+- Removed seal class on GHIElectronics.TinyClr.Drawing assembly
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+
+##### SC20xxx:
+
+- Added FileSystem Format
+- Fixed USBClient leak memory
+- Fixed detect media size incorrect if larger than 4G
+- Fixed “USB Device Not Recognized” when stop usbclient in MSC mode
+
+##### SC13xxx
+
+- Fix USBClient leak memory
+ 
+#### Known Issues
+
+- None.
+
+### Drivers
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+### TinyCLR Config
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until board is reset.
+
+
 ## 2.2.0.7000 - RTW
 
 ### Released 2024-26-02
