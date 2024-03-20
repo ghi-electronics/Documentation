@@ -45,7 +45,7 @@
 
 ##### SC13xxx
 
-- - Fix USBClient leak memory
+- Fix USBClient leak memory
  
 #### Known Issues
 
