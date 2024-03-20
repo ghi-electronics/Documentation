@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/HidInput.cs
-      branch: main
+      branch: add_ui
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: RaiseDisconnected
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.UsbHost/HidInput.cs
