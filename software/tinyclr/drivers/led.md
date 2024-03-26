@@ -9,7 +9,7 @@
 This example uses the WS2812 LED but applies to all matrices.
 
 > [!TIP]
-> Needed NuGets: GHIElectronics.TinyCLR.Drivers.Worldsemi.WS2812, GHIElectronics.TinyCLR.Drivers.BasicGraphis
+> Needed NuGets: GHIElectronics.TinyCLR.Drivers.Worldsemi.WS2812, GHIElectronics.TinyCLR.Drivers.BasicGraphics
 
 LedMatrix Class
 ```cs
