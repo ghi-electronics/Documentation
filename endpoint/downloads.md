@@ -57,6 +57,7 @@ Endpoint Libraries are designed to fill in any gaps the .NET API is missing for 
 
 File | Date | Status | MD5
 --- | --- | --- | 
+[v0.1.4.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Libraries/GHIElectronics.Endpoint.Libraries_v0.1.4.0.zip) | 2024-4-5 | Preview | F9145F97F1F6E6723830617F3E45D690
 [v0.1.3.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Libraries/endpoint_libraries_v0.1.3.0.zip) | 2024-8-3 | Preview | E59F145C850D748C61ACB4CEF2179961
 [v0.1.2.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Libraries/endpoint_libraries_v0.1.2.0.zip) | 2024-21-02 | Preview | 5B2077ABB3AC31B024179FD2B0654F0D
 [v0.1.0.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Libraries/endpoint_libraries_v0.1.0.0.zip) | 2024-02-02 | Preview | 708833FEFCE57C51F9CE01DA47EF0541
