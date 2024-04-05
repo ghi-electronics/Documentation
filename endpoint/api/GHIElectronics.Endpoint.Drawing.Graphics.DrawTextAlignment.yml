@@ -1,0 +1,433 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  commentId: T:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  id: Graphics.DrawTextAlignment
+  parent: GHIElectronics.Endpoint.Drawing
+  children:
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.AlignmentCenter
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.AlignmentLeft
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.AlignmentMask
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.AlignmentRight
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.Ellipsis
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.IgnoreHeight
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.None
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TrimmingCharacterEllipsis
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TrimmingMask
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TrimmingNone
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TrimmingWordEllipsis
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TruncateAtBottom
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.WordWrap
+  langs:
+  - csharp
+  - vb
+  name: Graphics.DrawTextAlignment
+  nameWithType: Graphics.DrawTextAlignment
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DrawTextAlignment
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 371
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: 'public enum Graphics.DrawTextAlignment : uint'
+    content.vb: Public Enum Graphics.DrawTextAlignment As UInteger
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.None
+  commentId: F:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.None
+  id: None
+  parent: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: Graphics.DrawTextAlignment.None
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.None
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: None
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 372
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: None = 0
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.WordWrap
+  commentId: F:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.WordWrap
+  id: WordWrap
+  parent: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  langs:
+  - csharp
+  - vb
+  name: WordWrap
+  nameWithType: Graphics.DrawTextAlignment.WordWrap
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.WordWrap
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: WordWrap
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 373
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: WordWrap = 1
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TruncateAtBottom
+  commentId: F:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TruncateAtBottom
+  id: TruncateAtBottom
+  parent: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  langs:
+  - csharp
+  - vb
+  name: TruncateAtBottom
+  nameWithType: Graphics.DrawTextAlignment.TruncateAtBottom
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TruncateAtBottom
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: TruncateAtBottom
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 374
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: TruncateAtBottom = 4
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.Ellipsis
+  commentId: F:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.Ellipsis
+  id: Ellipsis
+  parent: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  langs:
+  - csharp
+  - vb
+  name: Ellipsis
+  nameWithType: Graphics.DrawTextAlignment.Ellipsis
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.Ellipsis
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Ellipsis
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 375
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Ellipsis = 8
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.IgnoreHeight
+  commentId: F:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.IgnoreHeight
+  id: IgnoreHeight
+  parent: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  langs:
+  - csharp
+  - vb
+  name: IgnoreHeight
+  nameWithType: Graphics.DrawTextAlignment.IgnoreHeight
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.IgnoreHeight
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: IgnoreHeight
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 376
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: IgnoreHeight = 16
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.AlignmentLeft
+  commentId: F:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.AlignmentLeft
+  id: AlignmentLeft
+  parent: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  langs:
+  - csharp
+  - vb
+  name: AlignmentLeft
+  nameWithType: Graphics.DrawTextAlignment.AlignmentLeft
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.AlignmentLeft
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AlignmentLeft
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 377
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: AlignmentLeft = 0
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.AlignmentCenter
+  commentId: F:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.AlignmentCenter
+  id: AlignmentCenter
+  parent: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  langs:
+  - csharp
+  - vb
+  name: AlignmentCenter
+  nameWithType: Graphics.DrawTextAlignment.AlignmentCenter
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.AlignmentCenter
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AlignmentCenter
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 378
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: AlignmentCenter = 2
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.AlignmentRight
+  commentId: F:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.AlignmentRight
+  id: AlignmentRight
+  parent: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  langs:
+  - csharp
+  - vb
+  name: AlignmentRight
+  nameWithType: Graphics.DrawTextAlignment.AlignmentRight
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.AlignmentRight
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AlignmentRight
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 379
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: AlignmentRight = 32
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.AlignmentMask
+  commentId: F:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.AlignmentMask
+  id: AlignmentMask
+  parent: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  langs:
+  - csharp
+  - vb
+  name: AlignmentMask
+  nameWithType: Graphics.DrawTextAlignment.AlignmentMask
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.AlignmentMask
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: AlignmentMask
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 380
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: AlignmentMask = 34
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TrimmingNone
+  commentId: F:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TrimmingNone
+  id: TrimmingNone
+  parent: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  langs:
+  - csharp
+  - vb
+  name: TrimmingNone
+  nameWithType: Graphics.DrawTextAlignment.TrimmingNone
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TrimmingNone
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: TrimmingNone
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 381
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: TrimmingNone = 0
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TrimmingWordEllipsis
+  commentId: F:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TrimmingWordEllipsis
+  id: TrimmingWordEllipsis
+  parent: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  langs:
+  - csharp
+  - vb
+  name: TrimmingWordEllipsis
+  nameWithType: Graphics.DrawTextAlignment.TrimmingWordEllipsis
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TrimmingWordEllipsis
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: TrimmingWordEllipsis
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 382
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: TrimmingWordEllipsis = 8
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TrimmingCharacterEllipsis
+  commentId: F:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TrimmingCharacterEllipsis
+  id: TrimmingCharacterEllipsis
+  parent: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  langs:
+  - csharp
+  - vb
+  name: TrimmingCharacterEllipsis
+  nameWithType: Graphics.DrawTextAlignment.TrimmingCharacterEllipsis
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TrimmingCharacterEllipsis
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: TrimmingCharacterEllipsis
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 383
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: TrimmingCharacterEllipsis = 64
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TrimmingMask
+  commentId: F:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TrimmingMask
+  id: TrimmingMask
+  parent: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  langs:
+  - csharp
+  - vb
+  name: TrimmingMask
+  nameWithType: Graphics.DrawTextAlignment.TrimmingMask
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.TrimmingMask
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: TrimmingMask
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 384
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: TrimmingMask = 72
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+references:
+- uid: GHIElectronics.Endpoint.Drawing
+  commentId: N:GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing
+  nameWithType: GHIElectronics.Endpoint.Drawing
+  fullName: GHIElectronics.Endpoint.Drawing
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  commentId: T:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html
+  name: Graphics.DrawTextAlignment
+  nameWithType: Graphics.DrawTextAlignment
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics
+    name: Graphics
+    href: GHIElectronics.Endpoint.Drawing.Graphics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+    name: DrawTextAlignment
+    href: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics
+    name: Graphics
+    href: GHIElectronics.Endpoint.Drawing.Graphics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+    name: DrawTextAlignment
+    href: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.html

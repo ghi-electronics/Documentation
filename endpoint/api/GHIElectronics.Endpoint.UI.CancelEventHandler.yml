@@ -1,0 +1,89 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.CancelEventHandler
+  commentId: T:GHIElectronics.Endpoint.UI.CancelEventHandler
+  id: CancelEventHandler
+  parent: GHIElectronics.Endpoint.UI
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: CancelEventHandler
+  nameWithType: CancelEventHandler
+  fullName: GHIElectronics.Endpoint.UI.CancelEventHandler
+  type: Delegate
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/EventHandler.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: CancelEventHandler
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/EventHandler.cs
+    startLine: 6
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  syntax:
+    content: public delegate void CancelEventHandler(object sender, CancelEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: GHIElectronics.Endpoint.UI.CancelEventArgs
+    content.vb: Public Delegate Sub CancelEventHandler(sender As Object, e As CancelEventArgs)
+references:
+- uid: GHIElectronics.Endpoint.UI
+  commentId: N:GHIElectronics.Endpoint.UI
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI
+  nameWithType: GHIElectronics.Endpoint.UI
+  fullName: GHIElectronics.Endpoint.UI
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GHIElectronics.Endpoint.UI.CancelEventArgs
+  commentId: T:GHIElectronics.Endpoint.UI.CancelEventArgs
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.CancelEventArgs.html
+  name: CancelEventArgs
+  nameWithType: CancelEventArgs
+  fullName: GHIElectronics.Endpoint.UI.CancelEventArgs
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

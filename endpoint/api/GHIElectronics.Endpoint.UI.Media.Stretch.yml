@@ -1,0 +1,182 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Media.Stretch
+  commentId: T:GHIElectronics.Endpoint.UI.Media.Stretch
+  id: Stretch
+  parent: GHIElectronics.Endpoint.UI.Media
+  children:
+  - GHIElectronics.Endpoint.UI.Media.Stretch.Fill
+  - GHIElectronics.Endpoint.UI.Media.Stretch.None
+  - GHIElectronics.Endpoint.UI.Media.Stretch.Uniform
+  - GHIElectronics.Endpoint.UI.Media.Stretch.UniformToFill
+  langs:
+  - csharp
+  - vb
+  name: Stretch
+  nameWithType: Stretch
+  fullName: GHIElectronics.Endpoint.UI.Media.Stretch
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Stretch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Stretch
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Stretch.cs
+    startLine: 6
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public enum Stretch
+    content.vb: Public Enum Stretch
+- uid: GHIElectronics.Endpoint.UI.Media.Stretch.None
+  commentId: F:GHIElectronics.Endpoint.UI.Media.Stretch.None
+  id: None
+  parent: GHIElectronics.Endpoint.UI.Media.Stretch
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: Stretch.None
+  fullName: GHIElectronics.Endpoint.UI.Media.Stretch.None
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Stretch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: None
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Stretch.cs
+    startLine: 7
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: None = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.Stretch
+- uid: GHIElectronics.Endpoint.UI.Media.Stretch.Fill
+  commentId: F:GHIElectronics.Endpoint.UI.Media.Stretch.Fill
+  id: Fill
+  parent: GHIElectronics.Endpoint.UI.Media.Stretch
+  langs:
+  - csharp
+  - vb
+  name: Fill
+  nameWithType: Stretch.Fill
+  fullName: GHIElectronics.Endpoint.UI.Media.Stretch.Fill
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Stretch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Fill
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Stretch.cs
+    startLine: 8
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: Fill = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.Stretch
+- uid: GHIElectronics.Endpoint.UI.Media.Stretch.Uniform
+  commentId: F:GHIElectronics.Endpoint.UI.Media.Stretch.Uniform
+  id: Uniform
+  parent: GHIElectronics.Endpoint.UI.Media.Stretch
+  langs:
+  - csharp
+  - vb
+  name: Uniform
+  nameWithType: Stretch.Uniform
+  fullName: GHIElectronics.Endpoint.UI.Media.Stretch.Uniform
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Stretch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Uniform
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Stretch.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: Uniform = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.Stretch
+- uid: GHIElectronics.Endpoint.UI.Media.Stretch.UniformToFill
+  commentId: F:GHIElectronics.Endpoint.UI.Media.Stretch.UniformToFill
+  id: UniformToFill
+  parent: GHIElectronics.Endpoint.UI.Media.Stretch
+  langs:
+  - csharp
+  - vb
+  name: UniformToFill
+  nameWithType: Stretch.UniformToFill
+  fullName: GHIElectronics.Endpoint.UI.Media.Stretch.UniformToFill
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Stretch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: UniformToFill
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Stretch.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: UniformToFill = 3
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.Stretch
+references:
+- uid: GHIElectronics.Endpoint.UI.Media
+  commentId: N:GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Media
+  nameWithType: GHIElectronics.Endpoint.UI.Media
+  fullName: GHIElectronics.Endpoint.UI.Media
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Media
+    name: Media
+    href: GHIElectronics.Endpoint.UI.Media.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Media
+    name: Media
+    href: GHIElectronics.Endpoint.UI.Media.html
+- uid: GHIElectronics.Endpoint.UI.Media.Stretch
+  commentId: T:GHIElectronics.Endpoint.UI.Media.Stretch
+  parent: GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.Endpoint.UI.Media.Stretch.html
+  name: Stretch
+  nameWithType: Stretch
+  fullName: GHIElectronics.Endpoint.UI.Media.Stretch

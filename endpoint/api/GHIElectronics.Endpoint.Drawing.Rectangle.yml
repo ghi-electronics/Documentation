@@ -1,0 +1,486 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Drawing.Rectangle
+  commentId: T:GHIElectronics.Endpoint.Drawing.Rectangle
+  id: Rectangle
+  parent: GHIElectronics.Endpoint.Drawing
+  children:
+  - GHIElectronics.Endpoint.Drawing.Rectangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Rectangle.Height
+  - GHIElectronics.Endpoint.Drawing.Rectangle.Width
+  - GHIElectronics.Endpoint.Drawing.Rectangle.X
+  - GHIElectronics.Endpoint.Drawing.Rectangle.Y
+  langs:
+  - csharp
+  - vb
+  name: Rectangle
+  nameWithType: Rectangle
+  fullName: GHIElectronics.Endpoint.Drawing.Rectangle
+  type: Struct
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Rectangle.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Rectangle
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Rectangle.cs
+    startLine: 1
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public struct Rectangle
+    content.vb: Public Structure Rectangle
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: GHIElectronics.Endpoint.Drawing.Rectangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Rectangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32,System.Int32,System.Int32)'
+  parent: GHIElectronics.Endpoint.Drawing.Rectangle
+  langs:
+  - csharp
+  - vb
+  name: Rectangle(int, int, int, int)
+  nameWithType: Rectangle.Rectangle(int, int, int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Rectangle.Rectangle(int, int, int, int)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Rectangle.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Rectangle.cs
+    startLine: 2
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public Rectangle(int x, int y, int width, int height)
+    parameters:
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub New(x As Integer, y As Integer, width As Integer, height As Integer)
+  overload: GHIElectronics.Endpoint.Drawing.Rectangle.#ctor*
+  nameWithType.vb: Rectangle.New(Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Rectangle.New(Integer, Integer, Integer, Integer)
+  name.vb: New(Integer, Integer, Integer, Integer)
+- uid: GHIElectronics.Endpoint.Drawing.Rectangle.X
+  commentId: P:GHIElectronics.Endpoint.Drawing.Rectangle.X
+  id: X
+  parent: GHIElectronics.Endpoint.Drawing.Rectangle
+  langs:
+  - csharp
+  - vb
+  name: X
+  nameWithType: Rectangle.X
+  fullName: GHIElectronics.Endpoint.Drawing.Rectangle.X
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Rectangle.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: X
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Rectangle.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public int X { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property X As Integer
+  overload: GHIElectronics.Endpoint.Drawing.Rectangle.X*
+- uid: GHIElectronics.Endpoint.Drawing.Rectangle.Y
+  commentId: P:GHIElectronics.Endpoint.Drawing.Rectangle.Y
+  id: Y
+  parent: GHIElectronics.Endpoint.Drawing.Rectangle
+  langs:
+  - csharp
+  - vb
+  name: Y
+  nameWithType: Rectangle.Y
+  fullName: GHIElectronics.Endpoint.Drawing.Rectangle.Y
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Rectangle.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Y
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Rectangle.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public int Y { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Y As Integer
+  overload: GHIElectronics.Endpoint.Drawing.Rectangle.Y*
+- uid: GHIElectronics.Endpoint.Drawing.Rectangle.Width
+  commentId: P:GHIElectronics.Endpoint.Drawing.Rectangle.Width
+  id: Width
+  parent: GHIElectronics.Endpoint.Drawing.Rectangle
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: Rectangle.Width
+  fullName: GHIElectronics.Endpoint.Drawing.Rectangle.Width
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Rectangle.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Width
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Rectangle.cs
+    startLine: 11
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public int Width { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Width As Integer
+  overload: GHIElectronics.Endpoint.Drawing.Rectangle.Width*
+- uid: GHIElectronics.Endpoint.Drawing.Rectangle.Height
+  commentId: P:GHIElectronics.Endpoint.Drawing.Rectangle.Height
+  id: Height
+  parent: GHIElectronics.Endpoint.Drawing.Rectangle
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: Rectangle.Height
+  fullName: GHIElectronics.Endpoint.Drawing.Rectangle.Height
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Rectangle.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Height
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Rectangle.cs
+    startLine: 12
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public int Height { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Height As Integer
+  overload: GHIElectronics.Endpoint.Drawing.Rectangle.Height*
+references:
+- uid: GHIElectronics.Endpoint.Drawing
+  commentId: N:GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing
+  nameWithType: GHIElectronics.Endpoint.Drawing
+  fullName: GHIElectronics.Endpoint.Drawing
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.Drawing.Rectangle.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Rectangle.#ctor
+  href: GHIElectronics.Endpoint.Drawing.Rectangle.html#GHIElectronics_Endpoint_Drawing_Rectangle__ctor_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: Rectangle
+  nameWithType: Rectangle.Rectangle
+  fullName: GHIElectronics.Endpoint.Drawing.Rectangle.Rectangle
+  nameWithType.vb: Rectangle.New
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Rectangle.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GHIElectronics.Endpoint.Drawing.Rectangle.X*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Rectangle.X
+  href: GHIElectronics.Endpoint.Drawing.Rectangle.html#GHIElectronics_Endpoint_Drawing_Rectangle_X
+  name: X
+  nameWithType: Rectangle.X
+  fullName: GHIElectronics.Endpoint.Drawing.Rectangle.X
+- uid: GHIElectronics.Endpoint.Drawing.Rectangle.Y*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Rectangle.Y
+  href: GHIElectronics.Endpoint.Drawing.Rectangle.html#GHIElectronics_Endpoint_Drawing_Rectangle_Y
+  name: Y
+  nameWithType: Rectangle.Y
+  fullName: GHIElectronics.Endpoint.Drawing.Rectangle.Y
+- uid: GHIElectronics.Endpoint.Drawing.Rectangle.Width*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Rectangle.Width
+  href: GHIElectronics.Endpoint.Drawing.Rectangle.html#GHIElectronics_Endpoint_Drawing_Rectangle_Width
+  name: Width
+  nameWithType: Rectangle.Width
+  fullName: GHIElectronics.Endpoint.Drawing.Rectangle.Width
+- uid: GHIElectronics.Endpoint.Drawing.Rectangle.Height*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Rectangle.Height
+  href: GHIElectronics.Endpoint.Drawing.Rectangle.html#GHIElectronics_Endpoint_Drawing_Rectangle_Height
+  name: Height
+  nameWithType: Rectangle.Height
+  fullName: GHIElectronics.Endpoint.Drawing.Rectangle.Height

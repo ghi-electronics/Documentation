@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Media.TextTrimming
+  commentId: T:GHIElectronics.Endpoint.UI.Media.TextTrimming
+  id: TextTrimming
+  parent: GHIElectronics.Endpoint.UI.Media
+  children:
+  - GHIElectronics.Endpoint.UI.Media.TextTrimming.CharacterEllipsis
+  - GHIElectronics.Endpoint.UI.Media.TextTrimming.None
+  - GHIElectronics.Endpoint.UI.Media.TextTrimming.WordEllipsis
+  langs:
+  - csharp
+  - vb
+  name: TextTrimming
+  nameWithType: TextTrimming
+  fullName: GHIElectronics.Endpoint.UI.Media.TextTrimming
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/TextTrimming.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: TextTrimming
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/TextTrimming.cs
+    startLine: 6
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public enum TextTrimming
+    content.vb: Public Enum TextTrimming
+- uid: GHIElectronics.Endpoint.UI.Media.TextTrimming.CharacterEllipsis
+  commentId: F:GHIElectronics.Endpoint.UI.Media.TextTrimming.CharacterEllipsis
+  id: CharacterEllipsis
+  parent: GHIElectronics.Endpoint.UI.Media.TextTrimming
+  langs:
+  - csharp
+  - vb
+  name: CharacterEllipsis
+  nameWithType: TextTrimming.CharacterEllipsis
+  fullName: GHIElectronics.Endpoint.UI.Media.TextTrimming.CharacterEllipsis
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/TextTrimming.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: CharacterEllipsis
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/TextTrimming.cs
+    startLine: 7
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: CharacterEllipsis = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.TextTrimming
+- uid: GHIElectronics.Endpoint.UI.Media.TextTrimming.None
+  commentId: F:GHIElectronics.Endpoint.UI.Media.TextTrimming.None
+  id: None
+  parent: GHIElectronics.Endpoint.UI.Media.TextTrimming
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: TextTrimming.None
+  fullName: GHIElectronics.Endpoint.UI.Media.TextTrimming.None
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/TextTrimming.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: None
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/TextTrimming.cs
+    startLine: 8
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: None = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.TextTrimming
+- uid: GHIElectronics.Endpoint.UI.Media.TextTrimming.WordEllipsis
+  commentId: F:GHIElectronics.Endpoint.UI.Media.TextTrimming.WordEllipsis
+  id: WordEllipsis
+  parent: GHIElectronics.Endpoint.UI.Media.TextTrimming
+  langs:
+  - csharp
+  - vb
+  name: WordEllipsis
+  nameWithType: TextTrimming.WordEllipsis
+  fullName: GHIElectronics.Endpoint.UI.Media.TextTrimming.WordEllipsis
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/TextTrimming.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: WordEllipsis
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/TextTrimming.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: WordEllipsis = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.TextTrimming
+references:
+- uid: GHIElectronics.Endpoint.UI.Media
+  commentId: N:GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Media
+  nameWithType: GHIElectronics.Endpoint.UI.Media
+  fullName: GHIElectronics.Endpoint.UI.Media
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Media
+    name: Media
+    href: GHIElectronics.Endpoint.UI.Media.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Media
+    name: Media
+    href: GHIElectronics.Endpoint.UI.Media.html
+- uid: GHIElectronics.Endpoint.UI.Media.TextTrimming
+  commentId: T:GHIElectronics.Endpoint.UI.Media.TextTrimming
+  parent: GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.Endpoint.UI.Media.TextTrimming.html
+  name: TextTrimming
+  nameWithType: TextTrimming
+  fullName: GHIElectronics.Endpoint.UI.Media.TextTrimming

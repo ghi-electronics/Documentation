@@ -1,0 +1,695 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Controls
+  commentId: N:GHIElectronics.Endpoint.UI.Controls
+  id: GHIElectronics.Endpoint.UI.Controls
+  children:
+  - GHIElectronics.Endpoint.UI.Controls.Border
+  - GHIElectronics.Endpoint.UI.Controls.Button
+  - GHIElectronics.Endpoint.UI.Controls.Canvas
+  - GHIElectronics.Endpoint.UI.Controls.Chart
+  - GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode
+  - GHIElectronics.Endpoint.UI.Controls.Chart.DataItem
+  - GHIElectronics.Endpoint.UI.Controls.Chart.Point
+  - GHIElectronics.Endpoint.UI.Controls.Chart.PointF
+  - GHIElectronics.Endpoint.UI.Controls.Chart.PointModel
+  - GHIElectronics.Endpoint.UI.Controls.CheckBox
+  - GHIElectronics.Endpoint.UI.Controls.ContentControl
+  - GHIElectronics.Endpoint.UI.Controls.Control
+  - GHIElectronics.Endpoint.UI.Controls.DataGrid
+  - GHIElectronics.Endpoint.UI.Controls.DataGrid.OnTapCell
+  - GHIElectronics.Endpoint.UI.Controls.DataGrid.Order
+  - GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEventArgs
+  - GHIElectronics.Endpoint.UI.Controls.DataGridColumn
+  - GHIElectronics.Endpoint.UI.Controls.DataGridItem
+  - GHIElectronics.Endpoint.UI.Controls.DataGridItemComparer
+  - GHIElectronics.Endpoint.UI.Controls.Direction
+  - GHIElectronics.Endpoint.UI.Controls.Dropdown
+  - GHIElectronics.Endpoint.UI.Controls.Gauge
+  - GHIElectronics.Endpoint.UI.Controls.Image
+  - GHIElectronics.Endpoint.UI.Controls.ListBox
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItemHighlightable
+  - GHIElectronics.Endpoint.UI.Controls.MessageBox
+  - GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+  - GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+  - GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventArgs
+  - GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventHandler
+  - GHIElectronics.Endpoint.UI.Controls.Orientation
+  - GHIElectronics.Endpoint.UI.Controls.Panel
+  - GHIElectronics.Endpoint.UI.Controls.Point
+  - GHIElectronics.Endpoint.UI.Controls.ProgressBar
+  - GHIElectronics.Endpoint.UI.Controls.RadioButton
+  - GHIElectronics.Endpoint.UI.Controls.RadioButtonManager
+  - GHIElectronics.Endpoint.UI.Controls.ScrollChangedEventArgs
+  - GHIElectronics.Endpoint.UI.Controls.ScrollChangedEventHandler
+  - GHIElectronics.Endpoint.UI.Controls.ScrollViewer
+  - GHIElectronics.Endpoint.UI.Controls.ScrollingStyle
+  - GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventArgs
+  - GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventHandler
+  - GHIElectronics.Endpoint.UI.Controls.Slider
+  - GHIElectronics.Endpoint.UI.Controls.Slider.ValueChangedEventArgs
+  - GHIElectronics.Endpoint.UI.Controls.Slider.ValueChangedEventHandler
+  - GHIElectronics.Endpoint.UI.Controls.StackPanel
+  - GHIElectronics.Endpoint.UI.Controls.Text
+  - GHIElectronics.Endpoint.UI.Controls.TextBox
+  - GHIElectronics.Endpoint.UI.Controls.TextChangedEventArgs
+  - GHIElectronics.Endpoint.UI.Controls.TextChangedEventHandler
+  - GHIElectronics.Endpoint.UI.Controls.TextFlow
+  - GHIElectronics.Endpoint.UI.Controls.TextRun
+  - GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  langs:
+  - csharp
+  - vb
+  name: GHIElectronics.Endpoint.UI.Controls
+  nameWithType: GHIElectronics.Endpoint.UI.Controls
+  fullName: GHIElectronics.Endpoint.UI.Controls
+  type: Namespace
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+references:
+- uid: GHIElectronics.Endpoint.UI.Controls.Border
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Border
+  href: GHIElectronics.Endpoint.UI.Controls.Border.html
+  name: Border
+  nameWithType: Border
+  fullName: GHIElectronics.Endpoint.UI.Controls.Border
+- uid: GHIElectronics.Endpoint.UI.Controls.Button
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Button
+  href: GHIElectronics.Endpoint.UI.Controls.Button.html
+  name: Button
+  nameWithType: Button
+  fullName: GHIElectronics.Endpoint.UI.Controls.Button
+- uid: GHIElectronics.Endpoint.UI.Controls.Canvas
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Canvas
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.Canvas.html
+  name: Canvas
+  nameWithType: Canvas
+  fullName: GHIElectronics.Endpoint.UI.Controls.Canvas
+- uid: GHIElectronics.Endpoint.UI.Controls.Chart
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Chart
+  href: GHIElectronics.Endpoint.UI.Controls.Chart.html
+  name: Chart
+  nameWithType: Chart
+  fullName: GHIElectronics.Endpoint.UI.Controls.Chart
+- uid: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.Chart.html
+  name: Chart.ChartMode
+  nameWithType: Chart.ChartMode
+  fullName: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart
+    name: Chart
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode
+    name: ChartMode
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart
+    name: Chart
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode
+    name: ChartMode
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode.html
+- uid: GHIElectronics.Endpoint.UI.Controls.Chart.DataItem
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Chart.DataItem
+  href: GHIElectronics.Endpoint.UI.Controls.Chart.html
+  name: Chart.DataItem
+  nameWithType: Chart.DataItem
+  fullName: GHIElectronics.Endpoint.UI.Controls.Chart.DataItem
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart
+    name: Chart
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart.DataItem
+    name: DataItem
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.DataItem.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart
+    name: Chart
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart.DataItem
+    name: DataItem
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.DataItem.html
+- uid: GHIElectronics.Endpoint.UI.Controls.Chart.Point
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Chart.Point
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.Chart.html
+  name: Chart.Point
+  nameWithType: Chart.Point
+  fullName: GHIElectronics.Endpoint.UI.Controls.Chart.Point
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart
+    name: Chart
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart.Point
+    name: Point
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.Point.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart
+    name: Chart
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart.Point
+    name: Point
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.Point.html
+- uid: GHIElectronics.Endpoint.UI.Controls.Chart.PointF
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Chart.PointF
+  href: GHIElectronics.Endpoint.UI.Controls.Chart.html
+  name: Chart.PointF
+  nameWithType: Chart.PointF
+  fullName: GHIElectronics.Endpoint.UI.Controls.Chart.PointF
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart
+    name: Chart
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart.PointF
+    name: PointF
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.PointF.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart
+    name: Chart
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart.PointF
+    name: PointF
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.PointF.html
+- uid: GHIElectronics.Endpoint.UI.Controls.Chart.PointModel
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Chart.PointModel
+  href: GHIElectronics.Endpoint.UI.Controls.Chart.html
+  name: Chart.PointModel
+  nameWithType: Chart.PointModel
+  fullName: GHIElectronics.Endpoint.UI.Controls.Chart.PointModel
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart
+    name: Chart
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart.PointModel
+    name: PointModel
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.PointModel.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart
+    name: Chart
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart.PointModel
+    name: PointModel
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.PointModel.html
+- uid: GHIElectronics.Endpoint.UI.Controls.CheckBox
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.CheckBox
+  href: GHIElectronics.Endpoint.UI.Controls.CheckBox.html
+  name: CheckBox
+  nameWithType: CheckBox
+  fullName: GHIElectronics.Endpoint.UI.Controls.CheckBox
+- uid: GHIElectronics.Endpoint.UI.Controls.ContentControl
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.ContentControl
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.ContentControl.html
+  name: ContentControl
+  nameWithType: ContentControl
+  fullName: GHIElectronics.Endpoint.UI.Controls.ContentControl
+- uid: GHIElectronics.Endpoint.UI.Controls.Control
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Control
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.Control.html
+  name: Control
+  nameWithType: Control
+  fullName: GHIElectronics.Endpoint.UI.Controls.Control
+- uid: GHIElectronics.Endpoint.UI.Controls.DataGrid
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.DataGrid
+  href: GHIElectronics.Endpoint.UI.Controls.DataGrid.html
+  name: DataGrid
+  nameWithType: DataGrid
+  fullName: GHIElectronics.Endpoint.UI.Controls.DataGrid
+- uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEventArgs
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEventArgs
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.DataGrid.html
+  name: DataGrid.TapCellEventArgs
+  nameWithType: DataGrid.TapCellEventArgs
+  fullName: GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEventArgs
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid
+    name: DataGrid
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEventArgs
+    name: TapCellEventArgs
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEventArgs.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid
+    name: DataGrid
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEventArgs
+    name: TapCellEventArgs
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEventArgs.html
+- uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.OnTapCell
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.DataGrid.OnTapCell
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.DataGrid.html
+  name: DataGrid.OnTapCell
+  nameWithType: DataGrid.OnTapCell
+  fullName: GHIElectronics.Endpoint.UI.Controls.DataGrid.OnTapCell
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid
+    name: DataGrid
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.OnTapCell
+    name: OnTapCell
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.OnTapCell.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid
+    name: DataGrid
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.OnTapCell
+    name: OnTapCell
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.OnTapCell.html
+- uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.DataGrid.Order
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.DataGrid.html
+  name: DataGrid.Order
+  nameWithType: DataGrid.Order
+  fullName: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid
+    name: DataGrid
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order
+    name: Order
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid
+    name: DataGrid
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order
+    name: Order
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order.html
+- uid: GHIElectronics.Endpoint.UI.Controls.DataGridColumn
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.DataGridColumn
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.DataGridColumn.html
+  name: DataGridColumn
+  nameWithType: DataGridColumn
+  fullName: GHIElectronics.Endpoint.UI.Controls.DataGridColumn
+- uid: GHIElectronics.Endpoint.UI.Controls.DataGridItem
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.DataGridItem
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.DataGridItem.html
+  name: DataGridItem
+  nameWithType: DataGridItem
+  fullName: GHIElectronics.Endpoint.UI.Controls.DataGridItem
+- uid: GHIElectronics.Endpoint.UI.Controls.DataGridItemComparer
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.DataGridItemComparer
+  href: GHIElectronics.Endpoint.UI.Controls.DataGridItemComparer.html
+  name: DataGridItemComparer
+  nameWithType: DataGridItemComparer
+  fullName: GHIElectronics.Endpoint.UI.Controls.DataGridItemComparer
+- uid: GHIElectronics.Endpoint.UI.Controls.Dropdown
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Dropdown
+  href: GHIElectronics.Endpoint.UI.Controls.Dropdown.html
+  name: Dropdown
+  nameWithType: Dropdown
+  fullName: GHIElectronics.Endpoint.UI.Controls.Dropdown
+- uid: GHIElectronics.Endpoint.UI.Controls.Gauge
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Gauge
+  href: GHIElectronics.Endpoint.UI.Controls.Gauge.html
+  name: Gauge
+  nameWithType: Gauge
+  fullName: GHIElectronics.Endpoint.UI.Controls.Gauge
+- uid: GHIElectronics.Endpoint.UI.Controls.Image
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Image
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.Image.html
+  name: Image
+  nameWithType: Image
+  fullName: GHIElectronics.Endpoint.UI.Controls.Image
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBox
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.ListBox
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.ListBox.html
+  name: ListBox
+  nameWithType: ListBox
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBox
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.html
+  name: ListBoxItem
+  nameWithType: ListBoxItem
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.html
+  name: ListBoxItemCollection
+  nameWithType: ListBoxItemCollection
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemHighlightable
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.ListBoxItemHighlightable
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItemHighlightable.html
+  name: ListBoxItemHighlightable
+  nameWithType: ListBoxItemHighlightable
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemHighlightable
+- uid: GHIElectronics.Endpoint.UI.Controls.MessageBox
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.MessageBox
+  href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  name: MessageBox
+  nameWithType: MessageBox
+  fullName: GHIElectronics.Endpoint.UI.Controls.MessageBox
+- uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventHandler
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventHandler
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  name: MessageBox.MessageBoxRoutedEventHandler
+  nameWithType: MessageBox.MessageBoxRoutedEventHandler
+  fullName: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventHandler
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox
+    name: MessageBox
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventHandler
+    name: MessageBoxRoutedEventHandler
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventHandler.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox
+    name: MessageBox
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventHandler
+    name: MessageBoxRoutedEventHandler
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventHandler.html
+- uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventArgs
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventArgs
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  name: MessageBox.MessageBoxRoutedEventArgs
+  nameWithType: MessageBox.MessageBoxRoutedEventArgs
+  fullName: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventArgs
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox
+    name: MessageBox
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventArgs
+    name: MessageBoxRoutedEventArgs
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventArgs.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox
+    name: MessageBox
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventArgs
+    name: MessageBoxRoutedEventArgs
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventArgs.html
+- uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  name: MessageBox.MessageBoxButtons
+  nameWithType: MessageBox.MessageBoxButtons
+  fullName: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox
+    name: MessageBox
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+    name: MessageBoxButtons
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox
+    name: MessageBox
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+    name: MessageBoxButtons
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.html
+- uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  name: MessageBox.DialogResult
+  nameWithType: MessageBox.DialogResult
+  fullName: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox
+    name: MessageBox
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+    name: DialogResult
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox
+    name: MessageBox
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+    name: DialogResult
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.html
+- uid: GHIElectronics.Endpoint.UI.Controls.Orientation
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Orientation
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.Orientation.html
+  name: Orientation
+  nameWithType: Orientation
+  fullName: GHIElectronics.Endpoint.UI.Controls.Orientation
+- uid: GHIElectronics.Endpoint.UI.Controls.Panel
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Panel
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.Panel.html
+  name: Panel
+  nameWithType: Panel
+  fullName: GHIElectronics.Endpoint.UI.Controls.Panel
+- uid: GHIElectronics.Endpoint.UI.Controls.Direction
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Direction
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.Direction.html
+  name: Direction
+  nameWithType: Direction
+  fullName: GHIElectronics.Endpoint.UI.Controls.Direction
+- uid: GHIElectronics.Endpoint.UI.Controls.ProgressBar
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.ProgressBar
+  href: GHIElectronics.Endpoint.UI.Controls.ProgressBar.html
+  name: ProgressBar
+  nameWithType: ProgressBar
+  fullName: GHIElectronics.Endpoint.UI.Controls.ProgressBar
+- uid: GHIElectronics.Endpoint.UI.Controls.RadioButtonManager
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.RadioButtonManager
+  href: GHIElectronics.Endpoint.UI.Controls.RadioButtonManager.html
+  name: RadioButtonManager
+  nameWithType: RadioButtonManager
+  fullName: GHIElectronics.Endpoint.UI.Controls.RadioButtonManager
+- uid: GHIElectronics.Endpoint.UI.Controls.RadioButton
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.RadioButton
+  href: GHIElectronics.Endpoint.UI.Controls.RadioButton.html
+  name: RadioButton
+  nameWithType: RadioButton
+  fullName: GHIElectronics.Endpoint.UI.Controls.RadioButton
+- uid: GHIElectronics.Endpoint.UI.Controls.ScrollChangedEventArgs
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.ScrollChangedEventArgs
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.ScrollChangedEventArgs.html
+  name: ScrollChangedEventArgs
+  nameWithType: ScrollChangedEventArgs
+  fullName: GHIElectronics.Endpoint.UI.Controls.ScrollChangedEventArgs
+- uid: GHIElectronics.Endpoint.UI.Controls.ScrollChangedEventHandler
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.ScrollChangedEventHandler
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.ScrollChangedEventHandler.html
+  name: ScrollChangedEventHandler
+  nameWithType: ScrollChangedEventHandler
+  fullName: GHIElectronics.Endpoint.UI.Controls.ScrollChangedEventHandler
+- uid: GHIElectronics.Endpoint.UI.Controls.ScrollingStyle
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.ScrollingStyle
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.ScrollingStyle.html
+  name: ScrollingStyle
+  nameWithType: ScrollingStyle
+  fullName: GHIElectronics.Endpoint.UI.Controls.ScrollingStyle
+- uid: GHIElectronics.Endpoint.UI.Controls.ScrollViewer
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.ScrollViewer
+  href: GHIElectronics.Endpoint.UI.Controls.ScrollViewer.html
+  name: ScrollViewer
+  nameWithType: ScrollViewer
+  fullName: GHIElectronics.Endpoint.UI.Controls.ScrollViewer
+- uid: GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventArgs
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventArgs
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventArgs.html
+  name: SelectionChangedEventArgs
+  nameWithType: SelectionChangedEventArgs
+  fullName: GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventArgs
+- uid: GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventHandler
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventHandler
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventHandler.html
+  name: SelectionChangedEventHandler
+  nameWithType: SelectionChangedEventHandler
+  fullName: GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventHandler
+- uid: GHIElectronics.Endpoint.UI.Controls.Point
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Point
+  href: GHIElectronics.Endpoint.UI.Controls.Point.html
+  name: Point
+  nameWithType: Point
+  fullName: GHIElectronics.Endpoint.UI.Controls.Point
+- uid: GHIElectronics.Endpoint.UI.Controls.Slider
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Slider
+  href: GHIElectronics.Endpoint.UI.Controls.Slider.html
+  name: Slider
+  nameWithType: Slider
+  fullName: GHIElectronics.Endpoint.UI.Controls.Slider
+- uid: GHIElectronics.Endpoint.UI.Controls.Slider.ValueChangedEventArgs
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Slider.ValueChangedEventArgs
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.Slider.html
+  name: Slider.ValueChangedEventArgs
+  nameWithType: Slider.ValueChangedEventArgs
+  fullName: GHIElectronics.Endpoint.UI.Controls.Slider.ValueChangedEventArgs
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.Slider
+    name: Slider
+    href: GHIElectronics.Endpoint.UI.Controls.Slider.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.Slider.ValueChangedEventArgs
+    name: ValueChangedEventArgs
+    href: GHIElectronics.Endpoint.UI.Controls.Slider.ValueChangedEventArgs.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.Slider
+    name: Slider
+    href: GHIElectronics.Endpoint.UI.Controls.Slider.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.Slider.ValueChangedEventArgs
+    name: ValueChangedEventArgs
+    href: GHIElectronics.Endpoint.UI.Controls.Slider.ValueChangedEventArgs.html
+- uid: GHIElectronics.Endpoint.UI.Controls.Slider.ValueChangedEventHandler
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Slider.ValueChangedEventHandler
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.Slider.html
+  name: Slider.ValueChangedEventHandler
+  nameWithType: Slider.ValueChangedEventHandler
+  fullName: GHIElectronics.Endpoint.UI.Controls.Slider.ValueChangedEventHandler
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.Slider
+    name: Slider
+    href: GHIElectronics.Endpoint.UI.Controls.Slider.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.Slider.ValueChangedEventHandler
+    name: ValueChangedEventHandler
+    href: GHIElectronics.Endpoint.UI.Controls.Slider.ValueChangedEventHandler.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.Slider
+    name: Slider
+    href: GHIElectronics.Endpoint.UI.Controls.Slider.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.Slider.ValueChangedEventHandler
+    name: ValueChangedEventHandler
+    href: GHIElectronics.Endpoint.UI.Controls.Slider.ValueChangedEventHandler.html
+- uid: GHIElectronics.Endpoint.UI.Controls.StackPanel
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.StackPanel
+  href: GHIElectronics.Endpoint.UI.Controls.StackPanel.html
+  name: StackPanel
+  nameWithType: StackPanel
+  fullName: GHIElectronics.Endpoint.UI.Controls.StackPanel
+- uid: GHIElectronics.Endpoint.UI.Controls.Text
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Text
+  href: GHIElectronics.Endpoint.UI.Controls.Text.html
+  name: Text
+  nameWithType: Text
+  fullName: GHIElectronics.Endpoint.UI.Controls.Text
+- uid: GHIElectronics.Endpoint.UI.Controls.TextChangedEventHandler
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.TextChangedEventHandler
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.TextChangedEventHandler.html
+  name: TextChangedEventHandler
+  nameWithType: TextChangedEventHandler
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextChangedEventHandler
+- uid: GHIElectronics.Endpoint.UI.Controls.TextChangedEventArgs
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.TextChangedEventArgs
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.TextChangedEventArgs.html
+  name: TextChangedEventArgs
+  nameWithType: TextChangedEventArgs
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextChangedEventArgs
+- uid: GHIElectronics.Endpoint.UI.Controls.TextBox
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.TextBox
+  href: GHIElectronics.Endpoint.UI.Controls.TextBox.html
+  name: TextBox
+  nameWithType: TextBox
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextBox
+- uid: GHIElectronics.Endpoint.UI.Controls.TextFlow
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.TextFlow
+  href: GHIElectronics.Endpoint.UI.Controls.TextFlow.html
+  name: TextFlow
+  nameWithType: TextFlow
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextFlow
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRun
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.TextRun
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.TextRun.html
+  name: TextRun
+  nameWithType: TextRun
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRun
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.html
+  name: TextRunCollection
+  nameWithType: TextRunCollection
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+- uid: GHIElectronics.Endpoint.UI.Controls
+  commentId: N:GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Controls
+  nameWithType: GHIElectronics.Endpoint.UI.Controls
+  fullName: GHIElectronics.Endpoint.UI.Controls
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html

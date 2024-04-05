@@ -1,0 +1,174 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.HorizontalAlignment
+  commentId: T:GHIElectronics.Endpoint.UI.HorizontalAlignment
+  id: HorizontalAlignment
+  parent: GHIElectronics.Endpoint.UI
+  children:
+  - GHIElectronics.Endpoint.UI.HorizontalAlignment.Center
+  - GHIElectronics.Endpoint.UI.HorizontalAlignment.Left
+  - GHIElectronics.Endpoint.UI.HorizontalAlignment.Right
+  - GHIElectronics.Endpoint.UI.HorizontalAlignment.Stretch
+  langs:
+  - csharp
+  - vb
+  name: HorizontalAlignment
+  nameWithType: HorizontalAlignment
+  fullName: GHIElectronics.Endpoint.UI.HorizontalAlignment
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/HorizontalAlignment.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: HorizontalAlignment
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/HorizontalAlignment.cs
+    startLine: 6
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  syntax:
+    content: public enum HorizontalAlignment
+    content.vb: Public Enum HorizontalAlignment
+- uid: GHIElectronics.Endpoint.UI.HorizontalAlignment.Left
+  commentId: F:GHIElectronics.Endpoint.UI.HorizontalAlignment.Left
+  id: Left
+  parent: GHIElectronics.Endpoint.UI.HorizontalAlignment
+  langs:
+  - csharp
+  - vb
+  name: Left
+  nameWithType: HorizontalAlignment.Left
+  fullName: GHIElectronics.Endpoint.UI.HorizontalAlignment.Left
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/HorizontalAlignment.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Left
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/HorizontalAlignment.cs
+    startLine: 7
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  syntax:
+    content: Left = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.HorizontalAlignment
+- uid: GHIElectronics.Endpoint.UI.HorizontalAlignment.Center
+  commentId: F:GHIElectronics.Endpoint.UI.HorizontalAlignment.Center
+  id: Center
+  parent: GHIElectronics.Endpoint.UI.HorizontalAlignment
+  langs:
+  - csharp
+  - vb
+  name: Center
+  nameWithType: HorizontalAlignment.Center
+  fullName: GHIElectronics.Endpoint.UI.HorizontalAlignment.Center
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/HorizontalAlignment.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Center
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/HorizontalAlignment.cs
+    startLine: 8
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  syntax:
+    content: Center = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.HorizontalAlignment
+- uid: GHIElectronics.Endpoint.UI.HorizontalAlignment.Right
+  commentId: F:GHIElectronics.Endpoint.UI.HorizontalAlignment.Right
+  id: Right
+  parent: GHIElectronics.Endpoint.UI.HorizontalAlignment
+  langs:
+  - csharp
+  - vb
+  name: Right
+  nameWithType: HorizontalAlignment.Right
+  fullName: GHIElectronics.Endpoint.UI.HorizontalAlignment.Right
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/HorizontalAlignment.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Right
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/HorizontalAlignment.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  syntax:
+    content: Right = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.HorizontalAlignment
+- uid: GHIElectronics.Endpoint.UI.HorizontalAlignment.Stretch
+  commentId: F:GHIElectronics.Endpoint.UI.HorizontalAlignment.Stretch
+  id: Stretch
+  parent: GHIElectronics.Endpoint.UI.HorizontalAlignment
+  langs:
+  - csharp
+  - vb
+  name: Stretch
+  nameWithType: HorizontalAlignment.Stretch
+  fullName: GHIElectronics.Endpoint.UI.HorizontalAlignment.Stretch
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/HorizontalAlignment.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Stretch
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/HorizontalAlignment.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  syntax:
+    content: Stretch = 3
+    return:
+      type: GHIElectronics.Endpoint.UI.HorizontalAlignment
+references:
+- uid: GHIElectronics.Endpoint.UI
+  commentId: N:GHIElectronics.Endpoint.UI
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI
+  nameWithType: GHIElectronics.Endpoint.UI
+  fullName: GHIElectronics.Endpoint.UI
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+- uid: GHIElectronics.Endpoint.UI.HorizontalAlignment
+  commentId: T:GHIElectronics.Endpoint.UI.HorizontalAlignment
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.HorizontalAlignment.html
+  name: HorizontalAlignment
+  nameWithType: HorizontalAlignment
+  fullName: GHIElectronics.Endpoint.UI.HorizontalAlignment

@@ -9,7 +9,7 @@ items:
   - GHIElectronics.Endpoint.Devices.Display.DisplayController.Configuration
   - GHIElectronics.Endpoint.Devices.Display.DisplayController.Flush(System.Byte[])
   - GHIElectronics.Endpoint.Devices.Display.DisplayController.Flush(System.Byte[],System.Int32,System.Int32)
-  - GHIElectronics.Endpoint.Devices.Display.DisplayController.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Devices.Display.DisplayController.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
   langs:
   - csharp
   - vb
@@ -20,11 +20,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/DisplayController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: DisplayController
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/DisplayController.cs
-    startLine: 221
+    startLine: 220
   assemblies:
   - GHIElectronics.Endpoint.Devices.Display
   namespace: GHIElectronics.Endpoint.Devices.Display
@@ -287,11 +287,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/DisplayController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: .ctor
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/DisplayController.cs
-    startLine: 224
+    startLine: 222
   assemblies:
   - GHIElectronics.Endpoint.Devices.Display
   namespace: GHIElectronics.Endpoint.Devices.Display
@@ -319,11 +319,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/DisplayController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Configuration
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/DisplayController.cs
-    startLine: 226
+    startLine: 224
   assemblies:
   - GHIElectronics.Endpoint.Devices.Display
   namespace: GHIElectronics.Endpoint.Devices.Display
@@ -348,11 +348,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/DisplayController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Flush
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/DisplayController.cs
-    startLine: 228
+    startLine: 226
   assemblies:
   - GHIElectronics.Endpoint.Devices.Display
   namespace: GHIElectronics.Endpoint.Devices.Display
@@ -380,11 +380,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/DisplayController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Flush
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/DisplayController.cs
-    startLine: 229
+    startLine: 227
   assemblies:
   - GHIElectronics.Endpoint.Devices.Display
   namespace: GHIElectronics.Endpoint.Devices.Display
@@ -402,30 +402,30 @@ items:
   nameWithType.vb: DisplayController.Flush(Byte(), Integer, Integer)
   fullName.vb: GHIElectronics.Endpoint.Devices.Display.DisplayController.Flush(Byte(), Integer, Integer)
   name.vb: Flush(Byte(), Integer, Integer)
-- uid: GHIElectronics.Endpoint.Devices.Display.DisplayController.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
-  commentId: M:GHIElectronics.Endpoint.Devices.Display.DisplayController.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
-  id: Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+- uid: GHIElectronics.Endpoint.Devices.Display.DisplayController.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Devices.Display.DisplayController.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
   parent: GHIElectronics.Endpoint.Devices.Display.DisplayController
   langs:
   - csharp
   - vb
-  name: Flush(byte[], int, int, int, int)
-  nameWithType: DisplayController.Flush(byte[], int, int, int, int)
-  fullName: GHIElectronics.Endpoint.Devices.Display.DisplayController.Flush(byte[], int, int, int, int)
+  name: Flush(byte[], int, int, int, int, int, int, int)
+  nameWithType: DisplayController.Flush(byte[], int, int, int, int, int, int, int)
+  fullName: GHIElectronics.Endpoint.Devices.Display.DisplayController.Flush(byte[], int, int, int, int, int, int, int)
   type: Method
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/DisplayController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Flush
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/DisplayController.cs
-    startLine: 231
+    startLine: 229
   assemblies:
   - GHIElectronics.Endpoint.Devices.Display
   namespace: GHIElectronics.Endpoint.Devices.Display
   syntax:
-    content: public void Flush(byte[] data, int offset, int length, int width, int height)
+    content: public void Flush(byte[] data, int offset, int length, int x, int y, int width, int height, int originalWidth)
     parameters:
     - id: data
       type: System.Byte[]
@@ -433,15 +433,21 @@ items:
       type: System.Int32
     - id: length
       type: System.Int32
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
     - id: width
       type: System.Int32
     - id: height
       type: System.Int32
-    content.vb: Public Sub Flush(data As Byte(), offset As Integer, length As Integer, width As Integer, height As Integer)
+    - id: originalWidth
+      type: System.Int32
+    content.vb: Public Sub Flush(data As Byte(), offset As Integer, length As Integer, x As Integer, y As Integer, width As Integer, height As Integer, originalWidth As Integer)
   overload: GHIElectronics.Endpoint.Devices.Display.DisplayController.Flush*
-  nameWithType.vb: DisplayController.Flush(Byte(), Integer, Integer, Integer, Integer)
-  fullName.vb: GHIElectronics.Endpoint.Devices.Display.DisplayController.Flush(Byte(), Integer, Integer, Integer, Integer)
-  name.vb: Flush(Byte(), Integer, Integer, Integer, Integer)
+  nameWithType.vb: DisplayController.Flush(Byte(), Integer, Integer, Integer, Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Display.DisplayController.Flush(Byte(), Integer, Integer, Integer, Integer, Integer, Integer, Integer)
+  name.vb: Flush(Byte(), Integer, Integer, Integer, Integer, Integer, Integer, Integer)
 references:
 - uid: GHIElectronics.Endpoint.Devices.Display
   commentId: N:GHIElectronics.Endpoint.Devices.Display

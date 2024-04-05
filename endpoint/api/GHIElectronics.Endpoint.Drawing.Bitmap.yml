@@ -1,0 +1,965 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Drawing.Bitmap
+  commentId: T:GHIElectronics.Endpoint.Drawing.Bitmap
+  id: Bitmap
+  parent: GHIElectronics.Endpoint.Drawing
+  children:
+  - GHIElectronics.Endpoint.Drawing.Bitmap.#ctor(System.Byte[])
+  - GHIElectronics.Endpoint.Drawing.Bitmap.#ctor(System.Byte[],System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Bitmap.#ctor(System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Bitmap.GetPixel(System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Bitmap.SetPixel(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Color)
+  langs:
+  - csharp
+  - vb
+  name: Bitmap
+  nameWithType: Bitmap
+  fullName: GHIElectronics.Endpoint.Drawing.Bitmap
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Bitmap
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 121
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: 'public class Bitmap : Image, ICloneable, IDisposable'
+    content.vb: Public Class Bitmap Inherits Image Implements ICloneable, IDisposable
+  inheritance:
+  - System.Object
+  - System.MarshalByRefObject
+  - GHIElectronics.Endpoint.Drawing.Image
+  implements:
+  - System.ICloneable
+  - System.IDisposable
+  inheritedMembers:
+  - GHIElectronics.Endpoint.Drawing.Image.Width
+  - GHIElectronics.Endpoint.Drawing.Image.Height
+  - GHIElectronics.Endpoint.Drawing.Image.Clone
+  - GHIElectronics.Endpoint.Drawing.Image.Dispose(System.Boolean)
+  - GHIElectronics.Endpoint.Drawing.Image.Dispose
+  - GHIElectronics.Endpoint.Drawing.Image.GetBitmap
+  - GHIElectronics.Endpoint.Drawing.Image.GetBitmap(System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Image.MakeTransparent(GHIElectronics.Endpoint.Drawing.Color)
+  - System.MarshalByRefObject.GetLifetimeService
+  - System.MarshalByRefObject.InitializeLifetimeService
+  - System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.Drawing.Bitmap.#ctor(System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Bitmap.#ctor(System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32)'
+  parent: GHIElectronics.Endpoint.Drawing.Bitmap
+  langs:
+  - csharp
+  - vb
+  name: Bitmap(int, int)
+  nameWithType: Bitmap.Bitmap(int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Bitmap.Bitmap(int, int)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 124
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public Bitmap(int width, int height)
+    parameters:
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub New(width As Integer, height As Integer)
+  overload: GHIElectronics.Endpoint.Drawing.Bitmap.#ctor*
+  nameWithType.vb: Bitmap.New(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Bitmap.New(Integer, Integer)
+  name.vb: New(Integer, Integer)
+- uid: GHIElectronics.Endpoint.Drawing.Bitmap.#ctor(System.Byte[],System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Bitmap.#ctor(System.Byte[],System.Int32,System.Int32)
+  id: '#ctor(System.Byte[],System.Int32,System.Int32)'
+  parent: GHIElectronics.Endpoint.Drawing.Bitmap
+  langs:
+  - csharp
+  - vb
+  name: Bitmap(byte[], int, int)
+  nameWithType: Bitmap.Bitmap(byte[], int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Bitmap.Bitmap(byte[], int, int)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 125
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public Bitmap(byte[] data, int width, int height)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub New(data As Byte(), width As Integer, height As Integer)
+  overload: GHIElectronics.Endpoint.Drawing.Bitmap.#ctor*
+  nameWithType.vb: Bitmap.New(Byte(), Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Bitmap.New(Byte(), Integer, Integer)
+  name.vb: New(Byte(), Integer, Integer)
+- uid: GHIElectronics.Endpoint.Drawing.Bitmap.#ctor(System.Byte[])
+  commentId: M:GHIElectronics.Endpoint.Drawing.Bitmap.#ctor(System.Byte[])
+  id: '#ctor(System.Byte[])'
+  parent: GHIElectronics.Endpoint.Drawing.Bitmap
+  langs:
+  - csharp
+  - vb
+  name: Bitmap(byte[])
+  nameWithType: Bitmap.Bitmap(byte[])
+  fullName: GHIElectronics.Endpoint.Drawing.Bitmap.Bitmap(byte[])
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 145
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public Bitmap(byte[] buffer)
+    parameters:
+    - id: buffer
+      type: System.Byte[]
+    content.vb: Public Sub New(buffer As Byte())
+  overload: GHIElectronics.Endpoint.Drawing.Bitmap.#ctor*
+  nameWithType.vb: Bitmap.New(Byte())
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Bitmap.New(Byte())
+  name.vb: New(Byte())
+- uid: GHIElectronics.Endpoint.Drawing.Bitmap.SetPixel(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Color)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Bitmap.SetPixel(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Color)
+  id: SetPixel(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Color)
+  parent: GHIElectronics.Endpoint.Drawing.Bitmap
+  langs:
+  - csharp
+  - vb
+  name: SetPixel(int, int, Color)
+  nameWithType: Bitmap.SetPixel(int, int, Color)
+  fullName: GHIElectronics.Endpoint.Drawing.Bitmap.SetPixel(int, int, GHIElectronics.Endpoint.Drawing.Color)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SetPixel
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 158
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  example: []
+  syntax:
+    content: public override void SetPixel(int x, int y, Color color)
+    parameters:
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    - id: color
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Overrides Sub SetPixel(x As Integer, y As Integer, color As Color)
+  overridden: GHIElectronics.Endpoint.Drawing.Image.SetPixel(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Color)
+  overload: GHIElectronics.Endpoint.Drawing.Bitmap.SetPixel*
+  nameWithType.vb: Bitmap.SetPixel(Integer, Integer, Color)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Bitmap.SetPixel(Integer, Integer, GHIElectronics.Endpoint.Drawing.Color)
+  name.vb: SetPixel(Integer, Integer, Color)
+- uid: GHIElectronics.Endpoint.Drawing.Bitmap.GetPixel(System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Bitmap.GetPixel(System.Int32,System.Int32)
+  id: GetPixel(System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Drawing.Bitmap
+  langs:
+  - csharp
+  - vb
+  name: GetPixel(int, int)
+  nameWithType: Bitmap.GetPixel(int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Bitmap.GetPixel(int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: GetPixel
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 159
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  example: []
+  syntax:
+    content: public override Color GetPixel(int x, int y)
+    parameters:
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Overrides Function GetPixel(x As Integer, y As Integer) As Color
+  overridden: GHIElectronics.Endpoint.Drawing.Image.GetPixel(System.Int32,System.Int32)
+  overload: GHIElectronics.Endpoint.Drawing.Bitmap.GetPixel*
+  nameWithType.vb: Bitmap.GetPixel(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Bitmap.GetPixel(Integer, Integer)
+  name.vb: GetPixel(Integer, Integer)
+references:
+- uid: GHIElectronics.Endpoint.Drawing
+  commentId: N:GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing
+  nameWithType: GHIElectronics.Endpoint.Drawing
+  fullName: GHIElectronics.Endpoint.Drawing
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.MarshalByRefObject
+  commentId: T:System.MarshalByRefObject
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject
+  name: MarshalByRefObject
+  nameWithType: MarshalByRefObject
+  fullName: System.MarshalByRefObject
+- uid: GHIElectronics.Endpoint.Drawing.Image
+  commentId: T:GHIElectronics.Endpoint.Drawing.Image
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Image.html
+  name: Image
+  nameWithType: Image
+  fullName: GHIElectronics.Endpoint.Drawing.Image
+- uid: System.ICloneable
+  commentId: T:System.ICloneable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.icloneable
+  name: ICloneable
+  nameWithType: ICloneable
+  fullName: System.ICloneable
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: GHIElectronics.Endpoint.Drawing.Image.Width
+  commentId: P:GHIElectronics.Endpoint.Drawing.Image.Width
+  parent: GHIElectronics.Endpoint.Drawing.Image
+  href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_Width
+  name: Width
+  nameWithType: Image.Width
+  fullName: GHIElectronics.Endpoint.Drawing.Image.Width
+- uid: GHIElectronics.Endpoint.Drawing.Image.Height
+  commentId: P:GHIElectronics.Endpoint.Drawing.Image.Height
+  parent: GHIElectronics.Endpoint.Drawing.Image
+  href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_Height
+  name: Height
+  nameWithType: Image.Height
+  fullName: GHIElectronics.Endpoint.Drawing.Image.Height
+- uid: GHIElectronics.Endpoint.Drawing.Image.Clone
+  commentId: M:GHIElectronics.Endpoint.Drawing.Image.Clone
+  parent: GHIElectronics.Endpoint.Drawing.Image
+  href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_Clone
+  name: Clone()
+  nameWithType: Image.Clone()
+  fullName: GHIElectronics.Endpoint.Drawing.Image.Clone()
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Image.Clone
+    name: Clone
+    href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_Clone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Image.Clone
+    name: Clone
+    href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_Clone
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Drawing.Image.Dispose(System.Boolean)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Image.Dispose(System.Boolean)
+  parent: GHIElectronics.Endpoint.Drawing.Image
+  isExternal: true
+  href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_Dispose_System_Boolean_
+  name: Dispose(bool)
+  nameWithType: Image.Dispose(bool)
+  fullName: GHIElectronics.Endpoint.Drawing.Image.Dispose(bool)
+  nameWithType.vb: Image.Dispose(Boolean)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Image.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Image.Dispose(System.Boolean)
+    name: Dispose
+    href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_Dispose_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Image.Dispose(System.Boolean)
+    name: Dispose
+    href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_Dispose_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: GHIElectronics.Endpoint.Drawing.Image.Dispose
+  commentId: M:GHIElectronics.Endpoint.Drawing.Image.Dispose
+  parent: GHIElectronics.Endpoint.Drawing.Image
+  href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_Dispose
+  name: Dispose()
+  nameWithType: Image.Dispose()
+  fullName: GHIElectronics.Endpoint.Drawing.Image.Dispose()
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Image.Dispose
+    name: Dispose
+    href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Image.Dispose
+    name: Dispose
+    href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_Dispose
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Drawing.Image.GetBitmap
+  commentId: M:GHIElectronics.Endpoint.Drawing.Image.GetBitmap
+  parent: GHIElectronics.Endpoint.Drawing.Image
+  href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_GetBitmap
+  name: GetBitmap()
+  nameWithType: Image.GetBitmap()
+  fullName: GHIElectronics.Endpoint.Drawing.Image.GetBitmap()
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Image.GetBitmap
+    name: GetBitmap
+    href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_GetBitmap
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Image.GetBitmap
+    name: GetBitmap
+    href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_GetBitmap
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Drawing.Image.GetBitmap(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Image.GetBitmap(System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Drawing.Image
+  isExternal: true
+  href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_GetBitmap_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: GetBitmap(int, int, int, int)
+  nameWithType: Image.GetBitmap(int, int, int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Image.GetBitmap(int, int, int, int)
+  nameWithType.vb: Image.GetBitmap(Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Image.GetBitmap(Integer, Integer, Integer, Integer)
+  name.vb: GetBitmap(Integer, Integer, Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Image.GetBitmap(System.Int32,System.Int32,System.Int32,System.Int32)
+    name: GetBitmap
+    href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_GetBitmap_System_Int32_System_Int32_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Image.GetBitmap(System.Int32,System.Int32,System.Int32,System.Int32)
+    name: GetBitmap
+    href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_GetBitmap_System_Int32_System_Int32_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.Drawing.Image.MakeTransparent(GHIElectronics.Endpoint.Drawing.Color)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Image.MakeTransparent(GHIElectronics.Endpoint.Drawing.Color)
+  parent: GHIElectronics.Endpoint.Drawing.Image
+  href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_MakeTransparent_GHIElectronics_Endpoint_Drawing_Color_
+  name: MakeTransparent(Color)
+  nameWithType: Image.MakeTransparent(Color)
+  fullName: GHIElectronics.Endpoint.Drawing.Image.MakeTransparent(GHIElectronics.Endpoint.Drawing.Color)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Image.MakeTransparent(GHIElectronics.Endpoint.Drawing.Color)
+    name: MakeTransparent
+    href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_MakeTransparent_GHIElectronics_Endpoint_Drawing_Color_
+  - name: (
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Image.MakeTransparent(GHIElectronics.Endpoint.Drawing.Color)
+    name: MakeTransparent
+    href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_MakeTransparent_GHIElectronics_Endpoint_Drawing_Color_
+  - name: (
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: )
+- uid: System.MarshalByRefObject.GetLifetimeService
+  commentId: M:System.MarshalByRefObject.GetLifetimeService
+  parent: System.MarshalByRefObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice
+  name: GetLifetimeService()
+  nameWithType: MarshalByRefObject.GetLifetimeService()
+  fullName: System.MarshalByRefObject.GetLifetimeService()
+  spec.csharp:
+  - uid: System.MarshalByRefObject.GetLifetimeService
+    name: GetLifetimeService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.MarshalByRefObject.GetLifetimeService
+    name: GetLifetimeService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice
+  - name: (
+  - name: )
+- uid: System.MarshalByRefObject.InitializeLifetimeService
+  commentId: M:System.MarshalByRefObject.InitializeLifetimeService
+  parent: System.MarshalByRefObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice
+  name: InitializeLifetimeService()
+  nameWithType: MarshalByRefObject.InitializeLifetimeService()
+  fullName: System.MarshalByRefObject.InitializeLifetimeService()
+  spec.csharp:
+  - uid: System.MarshalByRefObject.InitializeLifetimeService
+    name: InitializeLifetimeService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.MarshalByRefObject.InitializeLifetimeService
+    name: InitializeLifetimeService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice
+  - name: (
+  - name: )
+- uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+  commentId: M:System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+  parent: System.MarshalByRefObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone
+  name: MemberwiseClone(bool)
+  nameWithType: MarshalByRefObject.MemberwiseClone(bool)
+  fullName: System.MarshalByRefObject.MemberwiseClone(bool)
+  nameWithType.vb: MarshalByRefObject.MemberwiseClone(Boolean)
+  fullName.vb: System.MarshalByRefObject.MemberwiseClone(Boolean)
+  name.vb: MemberwiseClone(Boolean)
+  spec.csharp:
+  - uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.Drawing.Bitmap.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Bitmap.#ctor
+  href: GHIElectronics.Endpoint.Drawing.Bitmap.html#GHIElectronics_Endpoint_Drawing_Bitmap__ctor_System_Int32_System_Int32_
+  name: Bitmap
+  nameWithType: Bitmap.Bitmap
+  fullName: GHIElectronics.Endpoint.Drawing.Bitmap.Bitmap
+  nameWithType.vb: Bitmap.New
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Bitmap.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Drawing.Image.SetPixel(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Color)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Image.SetPixel(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Color)
+  parent: GHIElectronics.Endpoint.Drawing.Image
+  isExternal: true
+  href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_SetPixel_System_Int32_System_Int32_GHIElectronics_Endpoint_Drawing_Color_
+  name: SetPixel(int, int, Color)
+  nameWithType: Image.SetPixel(int, int, Color)
+  fullName: GHIElectronics.Endpoint.Drawing.Image.SetPixel(int, int, GHIElectronics.Endpoint.Drawing.Color)
+  nameWithType.vb: Image.SetPixel(Integer, Integer, Color)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Image.SetPixel(Integer, Integer, GHIElectronics.Endpoint.Drawing.Color)
+  name.vb: SetPixel(Integer, Integer, Color)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Image.SetPixel(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Color)
+    name: SetPixel
+    href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_SetPixel_System_Int32_System_Int32_GHIElectronics_Endpoint_Drawing_Color_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Image.SetPixel(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Color)
+    name: SetPixel
+    href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_SetPixel_System_Int32_System_Int32_GHIElectronics_Endpoint_Drawing_Color_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: )
+- uid: GHIElectronics.Endpoint.Drawing.Bitmap.SetPixel*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Bitmap.SetPixel
+  href: GHIElectronics.Endpoint.Drawing.Bitmap.html#GHIElectronics_Endpoint_Drawing_Bitmap_SetPixel_System_Int32_System_Int32_GHIElectronics_Endpoint_Drawing_Color_
+  name: SetPixel
+  nameWithType: Bitmap.SetPixel
+  fullName: GHIElectronics.Endpoint.Drawing.Bitmap.SetPixel
+- uid: GHIElectronics.Endpoint.Drawing.Color
+  commentId: T:GHIElectronics.Endpoint.Drawing.Color
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: GHIElectronics.Endpoint.Drawing.Color
+- uid: GHIElectronics.Endpoint.Drawing.Image.GetPixel(System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Image.GetPixel(System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Drawing.Image
+  isExternal: true
+  href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_GetPixel_System_Int32_System_Int32_
+  name: GetPixel(int, int)
+  nameWithType: Image.GetPixel(int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Image.GetPixel(int, int)
+  nameWithType.vb: Image.GetPixel(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Image.GetPixel(Integer, Integer)
+  name.vb: GetPixel(Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Image.GetPixel(System.Int32,System.Int32)
+    name: GetPixel
+    href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_GetPixel_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Image.GetPixel(System.Int32,System.Int32)
+    name: GetPixel
+    href: GHIElectronics.Endpoint.Drawing.Image.html#GHIElectronics_Endpoint_Drawing_Image_GetPixel_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.Drawing.Bitmap.GetPixel*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Bitmap.GetPixel
+  href: GHIElectronics.Endpoint.Drawing.Bitmap.html#GHIElectronics_Endpoint_Drawing_Bitmap_GetPixel_System_Int32_System_Int32_
+  name: GetPixel
+  nameWithType: Bitmap.GetPixel
+  fullName: GHIElectronics.Endpoint.Drawing.Bitmap.GetPixel

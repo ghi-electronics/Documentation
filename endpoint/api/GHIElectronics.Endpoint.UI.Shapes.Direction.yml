@@ -1,0 +1,128 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Shapes.Direction
+  commentId: T:GHIElectronics.Endpoint.UI.Shapes.Direction
+  id: Direction
+  parent: GHIElectronics.Endpoint.UI.Shapes
+  children:
+  - GHIElectronics.Endpoint.UI.Shapes.Direction.BottomToTop
+  - GHIElectronics.Endpoint.UI.Shapes.Direction.TopToBottom
+  langs:
+  - csharp
+  - vb
+  name: Direction
+  nameWithType: Direction
+  fullName: GHIElectronics.Endpoint.UI.Shapes.Direction
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Shapes/Line.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Direction
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Shapes/Line.cs
+    startLine: 7
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Shapes
+  syntax:
+    content: public enum Direction
+    content.vb: Public Enum Direction
+- uid: GHIElectronics.Endpoint.UI.Shapes.Direction.TopToBottom
+  commentId: F:GHIElectronics.Endpoint.UI.Shapes.Direction.TopToBottom
+  id: TopToBottom
+  parent: GHIElectronics.Endpoint.UI.Shapes.Direction
+  langs:
+  - csharp
+  - vb
+  name: TopToBottom
+  nameWithType: Direction.TopToBottom
+  fullName: GHIElectronics.Endpoint.UI.Shapes.Direction.TopToBottom
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Shapes/Line.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: TopToBottom
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Shapes/Line.cs
+    startLine: 8
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Shapes
+  syntax:
+    content: TopToBottom = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.Shapes.Direction
+- uid: GHIElectronics.Endpoint.UI.Shapes.Direction.BottomToTop
+  commentId: F:GHIElectronics.Endpoint.UI.Shapes.Direction.BottomToTop
+  id: BottomToTop
+  parent: GHIElectronics.Endpoint.UI.Shapes.Direction
+  langs:
+  - csharp
+  - vb
+  name: BottomToTop
+  nameWithType: Direction.BottomToTop
+  fullName: GHIElectronics.Endpoint.UI.Shapes.Direction.BottomToTop
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Shapes/Line.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: BottomToTop
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Shapes/Line.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Shapes
+  syntax:
+    content: BottomToTop = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Shapes.Direction
+references:
+- uid: GHIElectronics.Endpoint.UI.Shapes
+  commentId: N:GHIElectronics.Endpoint.UI.Shapes
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Shapes
+  nameWithType: GHIElectronics.Endpoint.UI.Shapes
+  fullName: GHIElectronics.Endpoint.UI.Shapes
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Shapes
+    name: Shapes
+    href: GHIElectronics.Endpoint.UI.Shapes.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Shapes
+    name: Shapes
+    href: GHIElectronics.Endpoint.UI.Shapes.html
+- uid: GHIElectronics.Endpoint.UI.Shapes.Direction
+  commentId: T:GHIElectronics.Endpoint.UI.Shapes.Direction
+  parent: GHIElectronics.Endpoint.UI.Shapes
+  href: GHIElectronics.Endpoint.UI.Shapes.Direction.html
+  name: Direction
+  nameWithType: Direction
+  fullName: GHIElectronics.Endpoint.UI.Shapes.Direction

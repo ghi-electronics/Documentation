@@ -1,0 +1,90 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.EventHandler
+  commentId: T:GHIElectronics.Endpoint.UI.EventHandler
+  id: EventHandler
+  parent: GHIElectronics.Endpoint.UI
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: GHIElectronics.Endpoint.UI.EventHandler
+  type: Delegate
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/EventHandler.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: EventHandler
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/EventHandler.cs
+    startLine: 4
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  syntax:
+    content: public delegate void EventHandler(object sender, EventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: System.EventArgs
+    content.vb: Public Delegate Sub EventHandler(sender As Object, e As EventArgs)
+references:
+- uid: GHIElectronics.Endpoint.UI
+  commentId: N:GHIElectronics.Endpoint.UI
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI
+  nameWithType: GHIElectronics.Endpoint.UI
+  fullName: GHIElectronics.Endpoint.UI
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

@@ -1,0 +1,995 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  id: Dispatcher
+  parent: GHIElectronics.Endpoint.UI.Threading
+  children:
+  - GHIElectronics.Endpoint.UI.Threading.Dispatcher.BeginInvoke(GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback,System.Object)
+  - GHIElectronics.Endpoint.UI.Threading.Dispatcher.CheckAccess
+  - GHIElectronics.Endpoint.UI.Threading.Dispatcher.CurrentDispatcher
+  - GHIElectronics.Endpoint.UI.Threading.Dispatcher.FromThread(System.Threading.Thread)
+  - GHIElectronics.Endpoint.UI.Threading.Dispatcher.HasShutdownFinished
+  - GHIElectronics.Endpoint.UI.Threading.Dispatcher.HasShutdownStarted
+  - GHIElectronics.Endpoint.UI.Threading.Dispatcher.Invoke(System.TimeSpan,GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback,System.Object)
+  - GHIElectronics.Endpoint.UI.Threading.Dispatcher.InvokeShutdown
+  - GHIElectronics.Endpoint.UI.Threading.Dispatcher.PushFrame(GHIElectronics.Endpoint.UI.Threading.DispatcherFrame)
+  - GHIElectronics.Endpoint.UI.Threading.Dispatcher.Run
+  - GHIElectronics.Endpoint.UI.Threading.Dispatcher.ShutdownFinished
+  - GHIElectronics.Endpoint.UI.Threading.Dispatcher.ShutdownStarted
+  - GHIElectronics.Endpoint.UI.Threading.Dispatcher.Thread
+  - GHIElectronics.Endpoint.UI.Threading.Dispatcher.VerifyAccess
+  langs:
+  - csharp
+  - vb
+  name: Dispatcher
+  nameWithType: Dispatcher
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Dispatcher
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+    startLine: 17
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: Provides UI services for a thread.
+  example: []
+  syntax:
+    content: public sealed class Dispatcher
+    content.vb: Public NotInheritable Class Dispatcher
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.CurrentDispatcher
+  commentId: P:GHIElectronics.Endpoint.UI.Threading.Dispatcher.CurrentDispatcher
+  id: CurrentDispatcher
+  parent: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: CurrentDispatcher
+  nameWithType: Dispatcher.CurrentDispatcher
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.CurrentDispatcher
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: CurrentDispatcher
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+    startLine: 22
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: Returns the Dispatcher for the current thread.
+  example: []
+  syntax:
+    content: public static Dispatcher CurrentDispatcher { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+      description: Dispatcher
+    content.vb: Public Shared ReadOnly Property CurrentDispatcher As Dispatcher
+  overload: GHIElectronics.Endpoint.UI.Threading.Dispatcher.CurrentDispatcher*
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.FromThread(System.Threading.Thread)
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.Dispatcher.FromThread(System.Threading.Thread)
+  id: FromThread(System.Threading.Thread)
+  parent: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: FromThread(Thread)
+  nameWithType: Dispatcher.FromThread(Thread)
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.FromThread(System.Threading.Thread)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: FromThread
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+    startLine: 51
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: Returns the Dispatcher for the specified thread.
+  remarks: >-
+    If there is no dispatcher available for the specified thread,
+
+    this method will return null.
+  example: []
+  syntax:
+    content: public static Dispatcher FromThread(Thread thread)
+    parameters:
+    - id: thread
+      type: System.Threading.Thread
+    return:
+      type: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+    content.vb: Public Shared Function FromThread(thread As Thread) As Dispatcher
+  overload: GHIElectronics.Endpoint.UI.Threading.Dispatcher.FromThread*
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.CheckAccess
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.Dispatcher.CheckAccess
+  id: CheckAccess
+  parent: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: CheckAccess()
+  nameWithType: Dispatcher.CheckAccess()
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.CheckAccess()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: CheckAccess
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+    startLine: 112
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: Checks that the calling thread has access to this object.
+  remarks: >-
+    Only the dispatcher thread may access DispatcherObjects.
+
+    <p></p>
+
+    This method is public so that any thread can probe to
+
+    see if it has access to the DispatcherObject.
+  example: []
+  syntax:
+    content: public bool CheckAccess()
+    return:
+      type: System.Boolean
+      description: True if the calling thread has access to this object.
+    content.vb: Public Function CheckAccess() As Boolean
+  overload: GHIElectronics.Endpoint.UI.Threading.Dispatcher.CheckAccess*
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.VerifyAccess
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.Dispatcher.VerifyAccess
+  id: VerifyAccess
+  parent: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: VerifyAccess()
+  nameWithType: Dispatcher.VerifyAccess()
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.VerifyAccess()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: VerifyAccess
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+    startLine: 123
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: Verifies that the calling thread has access to this object.
+  remarks: >-
+    Only the dispatcher thread may access DispatcherObjects.
+
+    <p></p>
+
+    This method is public so that derived classes can probe to
+
+    see if the calling thread has access to itself.
+  example: []
+  syntax:
+    content: public void VerifyAccess()
+    content.vb: Public Sub VerifyAccess()
+  overload: GHIElectronics.Endpoint.UI.Threading.Dispatcher.VerifyAccess*
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.Thread
+  commentId: P:GHIElectronics.Endpoint.UI.Threading.Dispatcher.Thread
+  id: Thread
+  parent: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: Thread
+  nameWithType: Dispatcher.Thread
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.Thread
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Thread
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+    startLine: 133
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: Thread for the dispatcher.
+  example: []
+  syntax:
+    content: public Thread Thread { get; }
+    parameters: []
+    return:
+      type: System.Threading.Thread
+      description: ''
+    content.vb: Public ReadOnly Property Thread As Thread
+  overload: GHIElectronics.Endpoint.UI.Threading.Dispatcher.Thread*
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.InvokeShutdown
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.Dispatcher.InvokeShutdown
+  id: InvokeShutdown
+  parent: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: InvokeShutdown()
+  nameWithType: Dispatcher.InvokeShutdown()
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.InvokeShutdown()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: InvokeShutdown
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+    startLine: 154
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: >-
+    Begins the process of shutting down the dispatcher, synchronously.
+
+    The process may complete asynchronously, since we may be
+
+    nested in dispatcher frames.
+  example: []
+  syntax:
+    content: public void InvokeShutdown()
+    content.vb: Public Sub InvokeShutdown()
+  overload: GHIElectronics.Endpoint.UI.Threading.Dispatcher.InvokeShutdown*
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.HasShutdownStarted
+  commentId: P:GHIElectronics.Endpoint.UI.Threading.Dispatcher.HasShutdownStarted
+  id: HasShutdownStarted
+  parent: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: HasShutdownStarted
+  nameWithType: Dispatcher.HasShutdownStarted
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.HasShutdownStarted
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: HasShutdownStarted
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+    startLine: 222
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: Whether or not the dispatcher is shutting down.
+  example: []
+  syntax:
+    content: public bool HasShutdownStarted { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasShutdownStarted As Boolean
+  overload: GHIElectronics.Endpoint.UI.Threading.Dispatcher.HasShutdownStarted*
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.HasShutdownFinished
+  commentId: P:GHIElectronics.Endpoint.UI.Threading.Dispatcher.HasShutdownFinished
+  id: HasShutdownFinished
+  parent: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: HasShutdownFinished
+  nameWithType: Dispatcher.HasShutdownFinished
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.HasShutdownFinished
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: HasShutdownFinished
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+    startLine: 227
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: Whether or not the dispatcher has been shut down.
+  example: []
+  syntax:
+    content: public bool HasShutdownFinished { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasShutdownFinished As Boolean
+  overload: GHIElectronics.Endpoint.UI.Threading.Dispatcher.HasShutdownFinished*
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.ShutdownStarted
+  commentId: E:GHIElectronics.Endpoint.UI.Threading.Dispatcher.ShutdownStarted
+  id: ShutdownStarted
+  parent: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: ShutdownStarted
+  nameWithType: Dispatcher.ShutdownStarted
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.ShutdownStarted
+  type: Event
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ShutdownStarted
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+    startLine: 232
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: Raised when the dispatcher starts shutting down.
+  example: []
+  syntax:
+    content: public event EventHandler ShutdownStarted
+    return:
+      type: GHIElectronics.Endpoint.UI.EventHandler
+    content.vb: Public Event ShutdownStarted As EventHandler
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.ShutdownFinished
+  commentId: E:GHIElectronics.Endpoint.UI.Threading.Dispatcher.ShutdownFinished
+  id: ShutdownFinished
+  parent: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: ShutdownFinished
+  nameWithType: Dispatcher.ShutdownFinished
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.ShutdownFinished
+  type: Event
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ShutdownFinished
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+    startLine: 237
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: Raised when the dispatcher is shut down.
+  example: []
+  syntax:
+    content: public event EventHandler ShutdownFinished
+    return:
+      type: GHIElectronics.Endpoint.UI.EventHandler
+    content.vb: Public Event ShutdownFinished As EventHandler
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.Run
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.Dispatcher.Run
+  id: Run
+  parent: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: Run()
+  nameWithType: Dispatcher.Run()
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.Run()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Run
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+    startLine: 245
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: Push the main execution frame.
+  remarks: This frame will continue until the dispatcher is shut down.
+  example: []
+  syntax:
+    content: public static void Run()
+    content.vb: Public Shared Sub Run()
+  overload: GHIElectronics.Endpoint.UI.Threading.Dispatcher.Run*
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.PushFrame(GHIElectronics.Endpoint.UI.Threading.DispatcherFrame)
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.Dispatcher.PushFrame(GHIElectronics.Endpoint.UI.Threading.DispatcherFrame)
+  id: PushFrame(GHIElectronics.Endpoint.UI.Threading.DispatcherFrame)
+  parent: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: PushFrame(DispatcherFrame)
+  nameWithType: Dispatcher.PushFrame(DispatcherFrame)
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.PushFrame(GHIElectronics.Endpoint.UI.Threading.DispatcherFrame)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PushFrame
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+    startLine: 253
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: Push an execution frame.
+  example: []
+  syntax:
+    content: public static void PushFrame(DispatcherFrame frame)
+    parameters:
+    - id: frame
+      type: GHIElectronics.Endpoint.UI.Threading.DispatcherFrame
+      description: The frame for the dispatcher to process.
+    content.vb: Public Shared Sub PushFrame(frame As DispatcherFrame)
+  overload: GHIElectronics.Endpoint.UI.Threading.Dispatcher.PushFrame*
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.BeginInvoke(GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback,System.Object)
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.Dispatcher.BeginInvoke(GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback,System.Object)
+  id: BeginInvoke(GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback,System.Object)
+  parent: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: BeginInvoke(DispatcherOperationCallback, object)
+  nameWithType: Dispatcher.BeginInvoke(DispatcherOperationCallback, object)
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.BeginInvoke(GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback, object)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: BeginInvoke
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+    startLine: 354
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: >-
+    Executes the specified delegate asynchronously with the specified
+
+    arguments, on the thread that the Dispatcher was created on.
+  example: []
+  syntax:
+    content: public DispatcherOperation BeginInvoke(DispatcherOperationCallback method, object args)
+    parameters:
+    - id: method
+      type: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback
+      description: >-
+        A delegate to a method that takes parameters of the same number
+
+        and type that are contained in the args parameter.
+    - id: args
+      type: System.Object
+      description: >-
+        An object to pass as the argument to the given method.
+
+        This can be null if no arguments are needed.
+    return:
+      type: GHIElectronics.Endpoint.UI.Threading.DispatcherOperation
+      description: >-
+        A DispatcherOperation object that represents the result of the
+
+        BeginInvoke operation.  null if the operation could not be queued.
+    content.vb: Public Function BeginInvoke(method As DispatcherOperationCallback, args As Object) As DispatcherOperation
+  overload: GHIElectronics.Endpoint.UI.Threading.Dispatcher.BeginInvoke*
+  nameWithType.vb: Dispatcher.BeginInvoke(DispatcherOperationCallback, Object)
+  fullName.vb: GHIElectronics.Endpoint.UI.Threading.Dispatcher.BeginInvoke(GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback, Object)
+  name.vb: BeginInvoke(DispatcherOperationCallback, Object)
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.Invoke(System.TimeSpan,GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback,System.Object)
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.Dispatcher.Invoke(System.TimeSpan,GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback,System.Object)
+  id: Invoke(System.TimeSpan,GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback,System.Object)
+  parent: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  langs:
+  - csharp
+  - vb
+  name: Invoke(TimeSpan, DispatcherOperationCallback, object)
+  nameWithType: Dispatcher.Invoke(TimeSpan, DispatcherOperationCallback, object)
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.Invoke(System.TimeSpan, GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback, object)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Invoke
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/Dispatcher.cs
+    startLine: 394
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: >-
+    Executes the specified delegate synchronously with the specified
+
+    arguments, on the thread that the Dispatcher was created on.
+  example: []
+  syntax:
+    content: public object Invoke(TimeSpan timeout, DispatcherOperationCallback method, object args)
+    parameters:
+    - id: timeout
+      type: System.TimeSpan
+      description: The maximum amount of time to wait for the operation to complete.
+    - id: method
+      type: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback
+      description: >-
+        A delegate to a method that takes parameters of the same number
+
+        and type that are contained in the args parameter.
+    - id: args
+      type: System.Object
+      description: >-
+        An object to pass as the argument to the given method.
+
+        This can be null if no arguments are needed.
+    return:
+      type: System.Object
+      description: >-
+        The return value from the delegate being invoked, or null if
+
+        the delegate has no return value or if the operation was aborted.
+    content.vb: Public Function Invoke(timeout As TimeSpan, method As DispatcherOperationCallback, args As Object) As Object
+  overload: GHIElectronics.Endpoint.UI.Threading.Dispatcher.Invoke*
+  nameWithType.vb: Dispatcher.Invoke(TimeSpan, DispatcherOperationCallback, Object)
+  fullName.vb: GHIElectronics.Endpoint.UI.Threading.Dispatcher.Invoke(System.TimeSpan, GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback, Object)
+  name.vb: Invoke(TimeSpan, DispatcherOperationCallback, Object)
+references:
+- uid: GHIElectronics.Endpoint.UI.Threading
+  commentId: N:GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Threading
+  nameWithType: GHIElectronics.Endpoint.UI.Threading
+  fullName: GHIElectronics.Endpoint.UI.Threading
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Threading
+    name: Threading
+    href: GHIElectronics.Endpoint.UI.Threading.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Threading
+    name: Threading
+    href: GHIElectronics.Endpoint.UI.Threading.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.CurrentDispatcher*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.Dispatcher.CurrentDispatcher
+  href: GHIElectronics.Endpoint.UI.Threading.Dispatcher.html#GHIElectronics_Endpoint_UI_Threading_Dispatcher_CurrentDispatcher
+  name: CurrentDispatcher
+  nameWithType: Dispatcher.CurrentDispatcher
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.CurrentDispatcher
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  parent: GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.Endpoint.UI.Threading.Dispatcher.html
+  name: Dispatcher
+  nameWithType: Dispatcher
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.FromThread*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.Dispatcher.FromThread
+  href: GHIElectronics.Endpoint.UI.Threading.Dispatcher.html#GHIElectronics_Endpoint_UI_Threading_Dispatcher_FromThread_System_Threading_Thread_
+  name: FromThread
+  nameWithType: Dispatcher.FromThread
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.FromThread
+- uid: System.Threading.Thread
+  commentId: T:System.Threading.Thread
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.thread
+  name: Thread
+  nameWithType: Thread
+  fullName: System.Threading.Thread
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.CheckAccess*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.Dispatcher.CheckAccess
+  href: GHIElectronics.Endpoint.UI.Threading.Dispatcher.html#GHIElectronics_Endpoint_UI_Threading_Dispatcher_CheckAccess
+  name: CheckAccess
+  nameWithType: Dispatcher.CheckAccess
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.CheckAccess
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.VerifyAccess*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.Dispatcher.VerifyAccess
+  href: GHIElectronics.Endpoint.UI.Threading.Dispatcher.html#GHIElectronics_Endpoint_UI_Threading_Dispatcher_VerifyAccess
+  name: VerifyAccess
+  nameWithType: Dispatcher.VerifyAccess
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.VerifyAccess
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.Thread*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.Dispatcher.Thread
+  href: GHIElectronics.Endpoint.UI.Threading.Dispatcher.html#GHIElectronics_Endpoint_UI_Threading_Dispatcher_Thread
+  name: Thread
+  nameWithType: Dispatcher.Thread
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.Thread
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.InvokeShutdown*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.Dispatcher.InvokeShutdown
+  href: GHIElectronics.Endpoint.UI.Threading.Dispatcher.html#GHIElectronics_Endpoint_UI_Threading_Dispatcher_InvokeShutdown
+  name: InvokeShutdown
+  nameWithType: Dispatcher.InvokeShutdown
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.InvokeShutdown
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.HasShutdownStarted*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.Dispatcher.HasShutdownStarted
+  href: GHIElectronics.Endpoint.UI.Threading.Dispatcher.html#GHIElectronics_Endpoint_UI_Threading_Dispatcher_HasShutdownStarted
+  name: HasShutdownStarted
+  nameWithType: Dispatcher.HasShutdownStarted
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.HasShutdownStarted
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.HasShutdownFinished*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.Dispatcher.HasShutdownFinished
+  href: GHIElectronics.Endpoint.UI.Threading.Dispatcher.html#GHIElectronics_Endpoint_UI_Threading_Dispatcher_HasShutdownFinished
+  name: HasShutdownFinished
+  nameWithType: Dispatcher.HasShutdownFinished
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.HasShutdownFinished
+- uid: GHIElectronics.Endpoint.UI.EventHandler
+  commentId: T:GHIElectronics.Endpoint.UI.EventHandler
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.EventHandler.html
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: GHIElectronics.Endpoint.UI.EventHandler
+- uid: GHIElectronics.Endpoint.UI
+  commentId: N:GHIElectronics.Endpoint.UI
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI
+  nameWithType: GHIElectronics.Endpoint.UI
+  fullName: GHIElectronics.Endpoint.UI
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.Run*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.Dispatcher.Run
+  href: GHIElectronics.Endpoint.UI.Threading.Dispatcher.html#GHIElectronics_Endpoint_UI_Threading_Dispatcher_Run
+  name: Run
+  nameWithType: Dispatcher.Run
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.Run
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.PushFrame*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.Dispatcher.PushFrame
+  href: GHIElectronics.Endpoint.UI.Threading.Dispatcher.html#GHIElectronics_Endpoint_UI_Threading_Dispatcher_PushFrame_GHIElectronics_Endpoint_UI_Threading_DispatcherFrame_
+  name: PushFrame
+  nameWithType: Dispatcher.PushFrame
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.PushFrame
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherFrame
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.DispatcherFrame
+  parent: GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherFrame.html
+  name: DispatcherFrame
+  nameWithType: DispatcherFrame
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherFrame
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.BeginInvoke*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.Dispatcher.BeginInvoke
+  href: GHIElectronics.Endpoint.UI.Threading.Dispatcher.html#GHIElectronics_Endpoint_UI_Threading_Dispatcher_BeginInvoke_GHIElectronics_Endpoint_UI_Threading_DispatcherOperationCallback_System_Object_
+  name: BeginInvoke
+  nameWithType: Dispatcher.BeginInvoke
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.BeginInvoke
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback
+  parent: GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback.html
+  name: DispatcherOperationCallback
+  nameWithType: DispatcherOperationCallback
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherOperation
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.DispatcherOperation
+  parent: GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherOperation.html
+  name: DispatcherOperation
+  nameWithType: DispatcherOperation
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherOperation
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher.Invoke*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.Dispatcher.Invoke
+  href: GHIElectronics.Endpoint.UI.Threading.Dispatcher.html#GHIElectronics_Endpoint_UI_Threading_Dispatcher_Invoke_System_TimeSpan_GHIElectronics_Endpoint_UI_Threading_DispatcherOperationCallback_System_Object_
+  name: Invoke
+  nameWithType: Dispatcher.Invoke
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher.Invoke
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan

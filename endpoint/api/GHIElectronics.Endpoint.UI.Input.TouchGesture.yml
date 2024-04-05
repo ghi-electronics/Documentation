@@ -1,0 +1,587 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  commentId: T:GHIElectronics.Endpoint.UI.Input.TouchGesture
+  id: TouchGesture
+  parent: GHIElectronics.Endpoint.UI.Input
+  children:
+  - GHIElectronics.Endpoint.UI.Input.TouchGesture.Begin
+  - GHIElectronics.Endpoint.UI.Input.TouchGesture.DoubleTap
+  - GHIElectronics.Endpoint.UI.Input.TouchGesture.Down
+  - GHIElectronics.Endpoint.UI.Input.TouchGesture.DownLeft
+  - GHIElectronics.Endpoint.UI.Input.TouchGesture.DownRight
+  - GHIElectronics.Endpoint.UI.Input.TouchGesture.End
+  - GHIElectronics.Endpoint.UI.Input.TouchGesture.Left
+  - GHIElectronics.Endpoint.UI.Input.TouchGesture.NoGesture
+  - GHIElectronics.Endpoint.UI.Input.TouchGesture.Pan
+  - GHIElectronics.Endpoint.UI.Input.TouchGesture.Right
+  - GHIElectronics.Endpoint.UI.Input.TouchGesture.Rollover
+  - GHIElectronics.Endpoint.UI.Input.TouchGesture.Rotate
+  - GHIElectronics.Endpoint.UI.Input.TouchGesture.Tap
+  - GHIElectronics.Endpoint.UI.Input.TouchGesture.TwoFingerTap
+  - GHIElectronics.Endpoint.UI.Input.TouchGesture.Up
+  - GHIElectronics.Endpoint.UI.Input.TouchGesture.UpLeft
+  - GHIElectronics.Endpoint.UI.Input.TouchGesture.UpRight
+  - GHIElectronics.Endpoint.UI.Input.TouchGesture.UserDefined
+  - GHIElectronics.Endpoint.UI.Input.TouchGesture.Zoom
+  langs:
+  - csharp
+  - vb
+  name: TouchGesture
+  nameWithType: TouchGesture
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: TouchGesture
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 101
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: 'public enum TouchGesture : uint'
+    content.vb: Public Enum TouchGesture As UInteger
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture.NoGesture
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchGesture.NoGesture
+  id: NoGesture
+  parent: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  langs:
+  - csharp
+  - vb
+  name: NoGesture
+  nameWithType: TouchGesture.NoGesture
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture.NoGesture
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: NoGesture
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 102
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: NoGesture = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchGesture
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture.Begin
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchGesture.Begin
+  id: Begin
+  parent: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  langs:
+  - csharp
+  - vb
+  name: Begin
+  nameWithType: TouchGesture.Begin
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture.Begin
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Begin
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 105
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Begin = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchGesture
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture.End
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchGesture.End
+  id: End
+  parent: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  langs:
+  - csharp
+  - vb
+  name: End
+  nameWithType: TouchGesture.End
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture.End
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: End
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 106
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: End = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchGesture
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture.Right
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchGesture.Right
+  id: Right
+  parent: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  langs:
+  - csharp
+  - vb
+  name: Right
+  nameWithType: TouchGesture.Right
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture.Right
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Right
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 109
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Right = 3
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchGesture
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture.UpRight
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchGesture.UpRight
+  id: UpRight
+  parent: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  langs:
+  - csharp
+  - vb
+  name: UpRight
+  nameWithType: TouchGesture.UpRight
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture.UpRight
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: UpRight
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 110
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: UpRight = 4
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchGesture
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture.Up
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchGesture.Up
+  id: Up
+  parent: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  langs:
+  - csharp
+  - vb
+  name: Up
+  nameWithType: TouchGesture.Up
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture.Up
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Up
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 111
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Up = 5
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchGesture
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture.UpLeft
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchGesture.UpLeft
+  id: UpLeft
+  parent: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  langs:
+  - csharp
+  - vb
+  name: UpLeft
+  nameWithType: TouchGesture.UpLeft
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture.UpLeft
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: UpLeft
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 112
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: UpLeft = 6
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchGesture
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture.Left
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchGesture.Left
+  id: Left
+  parent: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  langs:
+  - csharp
+  - vb
+  name: Left
+  nameWithType: TouchGesture.Left
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture.Left
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Left
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 113
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Left = 7
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchGesture
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture.DownLeft
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchGesture.DownLeft
+  id: DownLeft
+  parent: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  langs:
+  - csharp
+  - vb
+  name: DownLeft
+  nameWithType: TouchGesture.DownLeft
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture.DownLeft
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DownLeft
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 114
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: DownLeft = 8
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchGesture
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture.Down
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchGesture.Down
+  id: Down
+  parent: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  langs:
+  - csharp
+  - vb
+  name: Down
+  nameWithType: TouchGesture.Down
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture.Down
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Down
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 115
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Down = 9
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchGesture
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture.DownRight
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchGesture.DownRight
+  id: DownRight
+  parent: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  langs:
+  - csharp
+  - vb
+  name: DownRight
+  nameWithType: TouchGesture.DownRight
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture.DownRight
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DownRight
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 116
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: DownRight = 10
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchGesture
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture.Tap
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchGesture.Tap
+  id: Tap
+  parent: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  langs:
+  - csharp
+  - vb
+  name: Tap
+  nameWithType: TouchGesture.Tap
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture.Tap
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Tap
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 117
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Tap = 11
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchGesture
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture.DoubleTap
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchGesture.DoubleTap
+  id: DoubleTap
+  parent: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  langs:
+  - csharp
+  - vb
+  name: DoubleTap
+  nameWithType: TouchGesture.DoubleTap
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture.DoubleTap
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DoubleTap
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 118
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: DoubleTap = 12
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchGesture
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture.Zoom
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchGesture.Zoom
+  id: Zoom
+  parent: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  langs:
+  - csharp
+  - vb
+  name: Zoom
+  nameWithType: TouchGesture.Zoom
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture.Zoom
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Zoom
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 121
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Zoom = 114
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchGesture
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture.Pan
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchGesture.Pan
+  id: Pan
+  parent: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  langs:
+  - csharp
+  - vb
+  name: Pan
+  nameWithType: TouchGesture.Pan
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture.Pan
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Pan
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 122
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Pan = 115
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchGesture
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture.Rotate
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchGesture.Rotate
+  id: Rotate
+  parent: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  langs:
+  - csharp
+  - vb
+  name: Rotate
+  nameWithType: TouchGesture.Rotate
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture.Rotate
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Rotate
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 123
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Rotate = 116
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchGesture
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture.TwoFingerTap
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchGesture.TwoFingerTap
+  id: TwoFingerTap
+  parent: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  langs:
+  - csharp
+  - vb
+  name: TwoFingerTap
+  nameWithType: TouchGesture.TwoFingerTap
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture.TwoFingerTap
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: TwoFingerTap
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 124
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: TwoFingerTap = 117
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchGesture
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture.Rollover
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchGesture.Rollover
+  id: Rollover
+  parent: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  langs:
+  - csharp
+  - vb
+  name: Rollover
+  nameWithType: TouchGesture.Rollover
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture.Rollover
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Rollover
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 125
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Rollover = 118
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchGesture
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture.UserDefined
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchGesture.UserDefined
+  id: UserDefined
+  parent: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  langs:
+  - csharp
+  - vb
+  name: UserDefined
+  nameWithType: TouchGesture.UserDefined
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture.UserDefined
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: UserDefined
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 128
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: UserDefined = 200
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchGesture
+references:
+- uid: GHIElectronics.Endpoint.UI.Input
+  commentId: N:GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Input
+  nameWithType: GHIElectronics.Endpoint.UI.Input
+  fullName: GHIElectronics.Endpoint.UI.Input
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+- uid: GHIElectronics.Endpoint.UI.Input.TouchGesture
+  commentId: T:GHIElectronics.Endpoint.UI.Input.TouchGesture
+  parent: GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.Endpoint.UI.Input.TouchGesture.html
+  name: TouchGesture
+  nameWithType: TouchGesture
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchGesture

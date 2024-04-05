@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Input.TouchMessages
+  commentId: T:GHIElectronics.Endpoint.UI.Input.TouchMessages
+  id: TouchMessages
+  parent: GHIElectronics.Endpoint.UI.Input
+  children:
+  - GHIElectronics.Endpoint.UI.Input.TouchMessages.Down
+  - GHIElectronics.Endpoint.UI.Input.TouchMessages.Move
+  - GHIElectronics.Endpoint.UI.Input.TouchMessages.Up
+  langs:
+  - csharp
+  - vb
+  name: TouchMessages
+  nameWithType: TouchMessages
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchMessages
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: TouchMessages
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 85
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: 'public enum TouchMessages : byte'
+    content.vb: Public Enum TouchMessages As Byte
+- uid: GHIElectronics.Endpoint.UI.Input.TouchMessages.Down
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchMessages.Down
+  id: Down
+  parent: GHIElectronics.Endpoint.UI.Input.TouchMessages
+  langs:
+  - csharp
+  - vb
+  name: Down
+  nameWithType: TouchMessages.Down
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchMessages.Down
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Down
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 86
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Down = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchMessages
+- uid: GHIElectronics.Endpoint.UI.Input.TouchMessages.Up
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchMessages.Up
+  id: Up
+  parent: GHIElectronics.Endpoint.UI.Input.TouchMessages
+  langs:
+  - csharp
+  - vb
+  name: Up
+  nameWithType: TouchMessages.Up
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchMessages.Up
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Up
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 87
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Up = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchMessages
+- uid: GHIElectronics.Endpoint.UI.Input.TouchMessages.Move
+  commentId: F:GHIElectronics.Endpoint.UI.Input.TouchMessages.Move
+  id: Move
+  parent: GHIElectronics.Endpoint.UI.Input.TouchMessages
+  langs:
+  - csharp
+  - vb
+  name: Move
+  nameWithType: TouchMessages.Move
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchMessages.Move
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Move
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 88
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Move = 3
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.TouchMessages
+references:
+- uid: GHIElectronics.Endpoint.UI.Input
+  commentId: N:GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Input
+  nameWithType: GHIElectronics.Endpoint.UI.Input
+  fullName: GHIElectronics.Endpoint.UI.Input
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+- uid: GHIElectronics.Endpoint.UI.Input.TouchMessages
+  commentId: T:GHIElectronics.Endpoint.UI.Input.TouchMessages
+  parent: GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.Endpoint.UI.Input.TouchMessages.html
+  name: TouchMessages
+  nameWithType: TouchMessages
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchMessages

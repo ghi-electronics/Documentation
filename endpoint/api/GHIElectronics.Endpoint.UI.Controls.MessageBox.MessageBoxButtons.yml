@@ -1,0 +1,198 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+  id: MessageBox.MessageBoxButtons
+  parent: GHIElectronics.Endpoint.UI.Controls
+  children:
+  - GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.Cancel
+  - GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.OK
+  - GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.OKCancel
+  - GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.YesNo
+  langs:
+  - csharp
+  - vb
+  name: MessageBox.MessageBoxButtons
+  nameWithType: MessageBox.MessageBoxButtons
+  fullName: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: MessageBoxButtons
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+    startLine: 35
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public enum MessageBox.MessageBoxButtons
+    content.vb: Public Enum MessageBox.MessageBoxButtons
+- uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.OK
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.OK
+  id: OK
+  parent: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+  langs:
+  - csharp
+  - vb
+  name: OK
+  nameWithType: MessageBox.MessageBoxButtons.OK
+  fullName: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.OK
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OK
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+    startLine: 36
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: OK = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+- uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.Cancel
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.Cancel
+  id: Cancel
+  parent: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+  langs:
+  - csharp
+  - vb
+  name: Cancel
+  nameWithType: MessageBox.MessageBoxButtons.Cancel
+  fullName: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.Cancel
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Cancel
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+    startLine: 37
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: Cancel = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+- uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.OKCancel
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.OKCancel
+  id: OKCancel
+  parent: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+  langs:
+  - csharp
+  - vb
+  name: OKCancel
+  nameWithType: MessageBox.MessageBoxButtons.OKCancel
+  fullName: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.OKCancel
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OKCancel
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+    startLine: 38
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: OKCancel = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+- uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.YesNo
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.YesNo
+  id: YesNo
+  parent: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+  langs:
+  - csharp
+  - vb
+  name: YesNo
+  nameWithType: MessageBox.MessageBoxButtons.YesNo
+  fullName: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.YesNo
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: YesNo
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+    startLine: 39
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: YesNo = 3
+    return:
+      type: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+references:
+- uid: GHIElectronics.Endpoint.UI.Controls
+  commentId: N:GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Controls
+  nameWithType: GHIElectronics.Endpoint.UI.Controls
+  fullName: GHIElectronics.Endpoint.UI.Controls
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+- uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  name: MessageBox.MessageBoxButtons
+  nameWithType: MessageBox.MessageBoxButtons
+  fullName: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox
+    name: MessageBox
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+    name: MessageBoxButtons
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox
+    name: MessageBox
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+    name: MessageBoxButtons
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons.html

@@ -1,0 +1,1833 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Drawing.Color
+  commentId: T:GHIElectronics.Endpoint.Drawing.Color
+  id: Color
+  parent: GHIElectronics.Endpoint.Drawing
+  children:
+  - GHIElectronics.Endpoint.Drawing.Color.A
+  - GHIElectronics.Endpoint.Drawing.Color.B
+  - GHIElectronics.Endpoint.Drawing.Color.Black
+  - GHIElectronics.Endpoint.Drawing.Color.Blue
+  - GHIElectronics.Endpoint.Drawing.Color.Convert(System.Byte[],System.Byte[],GHIElectronics.Endpoint.Drawing.Color.ColorFormat)
+  - GHIElectronics.Endpoint.Drawing.Color.Convert(System.Byte[],System.Byte[],GHIElectronics.Endpoint.Drawing.Color.ColorFormat,GHIElectronics.Endpoint.Drawing.Color.RgbFormat)
+  - GHIElectronics.Endpoint.Drawing.Color.Convert(System.Byte[],System.Byte[],GHIElectronics.Endpoint.Drawing.Color.ColorFormat,GHIElectronics.Endpoint.Drawing.Color.RgbFormat,System.Byte)
+  - GHIElectronics.Endpoint.Drawing.Color.Convert(System.Byte[],System.Byte[],GHIElectronics.Endpoint.Drawing.Color.ColorFormat,GHIElectronics.Endpoint.Drawing.Color.RgbFormat,System.Byte,System.Byte[])
+  - GHIElectronics.Endpoint.Drawing.Color.ConvertTo1Bpp(System.Byte[],System.Byte[],System.UInt32)
+  - GHIElectronics.Endpoint.Drawing.Color.ConvertTo1Bpp(System.Byte[],System.Byte[],System.UInt32,GHIElectronics.Endpoint.Drawing.Color.BitFormat)
+  - GHIElectronics.Endpoint.Drawing.Color.Empty
+  - GHIElectronics.Endpoint.Drawing.Color.Equals(System.Object)
+  - GHIElectronics.Endpoint.Drawing.Color.FromArgb(System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Color.FromArgb(System.Int32,GHIElectronics.Endpoint.Drawing.Color)
+  - GHIElectronics.Endpoint.Drawing.Color.FromArgb(System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Color.FromArgb(System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Color.G
+  - GHIElectronics.Endpoint.Drawing.Color.GetBrightness
+  - GHIElectronics.Endpoint.Drawing.Color.GetHashCode
+  - GHIElectronics.Endpoint.Drawing.Color.GetHue
+  - GHIElectronics.Endpoint.Drawing.Color.GetSaturation
+  - GHIElectronics.Endpoint.Drawing.Color.Gray
+  - GHIElectronics.Endpoint.Drawing.Color.Green
+  - GHIElectronics.Endpoint.Drawing.Color.IsEmpty
+  - GHIElectronics.Endpoint.Drawing.Color.Name
+  - GHIElectronics.Endpoint.Drawing.Color.Purple
+  - GHIElectronics.Endpoint.Drawing.Color.R
+  - GHIElectronics.Endpoint.Drawing.Color.Red
+  - GHIElectronics.Endpoint.Drawing.Color.Teal
+  - GHIElectronics.Endpoint.Drawing.Color.ToArgb
+  - GHIElectronics.Endpoint.Drawing.Color.ToString
+  - GHIElectronics.Endpoint.Drawing.Color.Transparent
+  - GHIElectronics.Endpoint.Drawing.Color.White
+  - GHIElectronics.Endpoint.Drawing.Color.Yellow
+  - GHIElectronics.Endpoint.Drawing.Color.op_Equality(GHIElectronics.Endpoint.Drawing.Color,GHIElectronics.Endpoint.Drawing.Color)
+  - GHIElectronics.Endpoint.Drawing.Color.op_Inequality(GHIElectronics.Endpoint.Drawing.Color,GHIElectronics.Endpoint.Drawing.Color)
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: Color
+  fullName: GHIElectronics.Endpoint.Drawing.Color
+  type: Struct
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Color
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 5
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: >-
+      [Serializable]
+
+      public struct Color
+    content.vb: >-
+      <Serializable>
+
+      Public Structure Color
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: GHIElectronics.Endpoint.Drawing.Color.Empty
+  commentId: F:GHIElectronics.Endpoint.Drawing.Color.Empty
+  id: Empty
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: Empty
+  nameWithType: Color.Empty
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Empty
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Empty
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 7
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static readonly Color Empty
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Shared ReadOnly Empty As Color
+- uid: GHIElectronics.Endpoint.Drawing.Color.Transparent
+  commentId: P:GHIElectronics.Endpoint.Drawing.Color.Transparent
+  id: Transparent
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: Transparent
+  nameWithType: Color.Transparent
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Transparent
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Transparent
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static Color Transparent { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Shared ReadOnly Property Transparent As Color
+  overload: GHIElectronics.Endpoint.Drawing.Color.Transparent*
+- uid: GHIElectronics.Endpoint.Drawing.Color.Black
+  commentId: P:GHIElectronics.Endpoint.Drawing.Color.Black
+  id: Black
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: Black
+  nameWithType: Color.Black
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Black
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Black
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static Color Black { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Shared ReadOnly Property Black As Color
+  overload: GHIElectronics.Endpoint.Drawing.Color.Black*
+- uid: GHIElectronics.Endpoint.Drawing.Color.White
+  commentId: P:GHIElectronics.Endpoint.Drawing.Color.White
+  id: White
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: White
+  nameWithType: Color.White
+  fullName: GHIElectronics.Endpoint.Drawing.Color.White
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: White
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 11
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static Color White { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Shared ReadOnly Property White As Color
+  overload: GHIElectronics.Endpoint.Drawing.Color.White*
+- uid: GHIElectronics.Endpoint.Drawing.Color.Gray
+  commentId: P:GHIElectronics.Endpoint.Drawing.Color.Gray
+  id: Gray
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: Gray
+  nameWithType: Color.Gray
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Gray
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Gray
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 12
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static Color Gray { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Shared ReadOnly Property Gray As Color
+  overload: GHIElectronics.Endpoint.Drawing.Color.Gray*
+- uid: GHIElectronics.Endpoint.Drawing.Color.Red
+  commentId: P:GHIElectronics.Endpoint.Drawing.Color.Red
+  id: Red
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: Red
+  nameWithType: Color.Red
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Red
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Red
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 13
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static Color Red { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Shared ReadOnly Property Red As Color
+  overload: GHIElectronics.Endpoint.Drawing.Color.Red*
+- uid: GHIElectronics.Endpoint.Drawing.Color.Green
+  commentId: P:GHIElectronics.Endpoint.Drawing.Color.Green
+  id: Green
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: Green
+  nameWithType: Color.Green
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Green
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Green
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 14
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static Color Green { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Shared ReadOnly Property Green As Color
+  overload: GHIElectronics.Endpoint.Drawing.Color.Green*
+- uid: GHIElectronics.Endpoint.Drawing.Color.Blue
+  commentId: P:GHIElectronics.Endpoint.Drawing.Color.Blue
+  id: Blue
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: Blue
+  nameWithType: Color.Blue
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Blue
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Blue
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 15
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static Color Blue { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Shared ReadOnly Property Blue As Color
+  overload: GHIElectronics.Endpoint.Drawing.Color.Blue*
+- uid: GHIElectronics.Endpoint.Drawing.Color.Yellow
+  commentId: P:GHIElectronics.Endpoint.Drawing.Color.Yellow
+  id: Yellow
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: Yellow
+  nameWithType: Color.Yellow
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Yellow
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Yellow
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 16
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static Color Yellow { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Shared ReadOnly Property Yellow As Color
+  overload: GHIElectronics.Endpoint.Drawing.Color.Yellow*
+- uid: GHIElectronics.Endpoint.Drawing.Color.Purple
+  commentId: P:GHIElectronics.Endpoint.Drawing.Color.Purple
+  id: Purple
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: Purple
+  nameWithType: Color.Purple
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Purple
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Purple
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 17
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static Color Purple { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Shared ReadOnly Property Purple As Color
+  overload: GHIElectronics.Endpoint.Drawing.Color.Purple*
+- uid: GHIElectronics.Endpoint.Drawing.Color.Teal
+  commentId: P:GHIElectronics.Endpoint.Drawing.Color.Teal
+  id: Teal
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: Teal
+  nameWithType: Color.Teal
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Teal
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Teal
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 18
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static Color Teal { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Shared ReadOnly Property Teal As Color
+  overload: GHIElectronics.Endpoint.Drawing.Color.Teal*
+- uid: GHIElectronics.Endpoint.Drawing.Color.R
+  commentId: P:GHIElectronics.Endpoint.Drawing.Color.R
+  id: R
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: R
+  nameWithType: Color.R
+  fullName: GHIElectronics.Endpoint.Drawing.Color.R
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: R
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 29
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public byte R { get; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public ReadOnly Property R As Byte
+  overload: GHIElectronics.Endpoint.Drawing.Color.R*
+- uid: GHIElectronics.Endpoint.Drawing.Color.G
+  commentId: P:GHIElectronics.Endpoint.Drawing.Color.G
+  id: G
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: G
+  nameWithType: Color.G
+  fullName: GHIElectronics.Endpoint.Drawing.Color.G
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: G
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 30
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public byte G { get; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public ReadOnly Property G As Byte
+  overload: GHIElectronics.Endpoint.Drawing.Color.G*
+- uid: GHIElectronics.Endpoint.Drawing.Color.B
+  commentId: P:GHIElectronics.Endpoint.Drawing.Color.B
+  id: B
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: B
+  nameWithType: Color.B
+  fullName: GHIElectronics.Endpoint.Drawing.Color.B
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: B
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 31
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public byte B { get; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public ReadOnly Property B As Byte
+  overload: GHIElectronics.Endpoint.Drawing.Color.B*
+- uid: GHIElectronics.Endpoint.Drawing.Color.A
+  commentId: P:GHIElectronics.Endpoint.Drawing.Color.A
+  id: A
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: A
+  nameWithType: Color.A
+  fullName: GHIElectronics.Endpoint.Drawing.Color.A
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: A
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 32
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public byte A { get; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public ReadOnly Property A As Byte
+  overload: GHIElectronics.Endpoint.Drawing.Color.A*
+- uid: GHIElectronics.Endpoint.Drawing.Color.IsEmpty
+  commentId: P:GHIElectronics.Endpoint.Drawing.Color.IsEmpty
+  id: IsEmpty
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: IsEmpty
+  nameWithType: Color.IsEmpty
+  fullName: GHIElectronics.Endpoint.Drawing.Color.IsEmpty
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: IsEmpty
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 34
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public bool IsEmpty { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmpty As Boolean
+  overload: GHIElectronics.Endpoint.Drawing.Color.IsEmpty*
+- uid: GHIElectronics.Endpoint.Drawing.Color.Name
+  commentId: P:GHIElectronics.Endpoint.Drawing.Color.Name
+  id: Name
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Color.Name
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Name
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Name
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 38
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: GHIElectronics.Endpoint.Drawing.Color.Name*
+- uid: GHIElectronics.Endpoint.Drawing.Color.FromArgb(System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Color.FromArgb(System.Int32)
+  id: FromArgb(System.Int32)
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: FromArgb(int)
+  nameWithType: Color.FromArgb(int)
+  fullName: GHIElectronics.Endpoint.Drawing.Color.FromArgb(int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: FromArgb
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 42
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static Color FromArgb(int argb)
+    parameters:
+    - id: argb
+      type: System.Int32
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Shared Function FromArgb(argb As Integer) As Color
+  overload: GHIElectronics.Endpoint.Drawing.Color.FromArgb*
+  nameWithType.vb: Color.FromArgb(Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Color.FromArgb(Integer)
+  name.vb: FromArgb(Integer)
+- uid: GHIElectronics.Endpoint.Drawing.Color.FromArgb(System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Color.FromArgb(System.Int32,System.Int32,System.Int32)
+  id: FromArgb(System.Int32,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: FromArgb(int, int, int)
+  nameWithType: Color.FromArgb(int, int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Color.FromArgb(int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: FromArgb
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 43
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static Color FromArgb(int red, int green, int blue)
+    parameters:
+    - id: red
+      type: System.Int32
+    - id: green
+      type: System.Int32
+    - id: blue
+      type: System.Int32
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Shared Function FromArgb(red As Integer, green As Integer, blue As Integer) As Color
+  overload: GHIElectronics.Endpoint.Drawing.Color.FromArgb*
+  nameWithType.vb: Color.FromArgb(Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Color.FromArgb(Integer, Integer, Integer)
+  name.vb: FromArgb(Integer, Integer, Integer)
+- uid: GHIElectronics.Endpoint.Drawing.Color.FromArgb(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Color.FromArgb(System.Int32,System.Int32,System.Int32,System.Int32)
+  id: FromArgb(System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: FromArgb(int, int, int, int)
+  nameWithType: Color.FromArgb(int, int, int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Color.FromArgb(int, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: FromArgb
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 45
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static Color FromArgb(int alpha, int red, int green, int blue)
+    parameters:
+    - id: alpha
+      type: System.Int32
+    - id: red
+      type: System.Int32
+    - id: green
+      type: System.Int32
+    - id: blue
+      type: System.Int32
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Shared Function FromArgb(alpha As Integer, red As Integer, green As Integer, blue As Integer) As Color
+  overload: GHIElectronics.Endpoint.Drawing.Color.FromArgb*
+  nameWithType.vb: Color.FromArgb(Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Color.FromArgb(Integer, Integer, Integer, Integer)
+  name.vb: FromArgb(Integer, Integer, Integer, Integer)
+- uid: GHIElectronics.Endpoint.Drawing.Color.FromArgb(System.Int32,GHIElectronics.Endpoint.Drawing.Color)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Color.FromArgb(System.Int32,GHIElectronics.Endpoint.Drawing.Color)
+  id: FromArgb(System.Int32,GHIElectronics.Endpoint.Drawing.Color)
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: FromArgb(int, Color)
+  nameWithType: Color.FromArgb(int, Color)
+  fullName: GHIElectronics.Endpoint.Drawing.Color.FromArgb(int, GHIElectronics.Endpoint.Drawing.Color)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: FromArgb
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 54
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static Color FromArgb(int alpha, Color baseColor)
+    parameters:
+    - id: alpha
+      type: System.Int32
+    - id: baseColor
+      type: GHIElectronics.Endpoint.Drawing.Color
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Shared Function FromArgb(alpha As Integer, baseColor As Color) As Color
+  overload: GHIElectronics.Endpoint.Drawing.Color.FromArgb*
+  nameWithType.vb: Color.FromArgb(Integer, Color)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Color.FromArgb(Integer, GHIElectronics.Endpoint.Drawing.Color)
+  name.vb: FromArgb(Integer, Color)
+- uid: GHIElectronics.Endpoint.Drawing.Color.GetBrightness
+  commentId: M:GHIElectronics.Endpoint.Drawing.Color.GetBrightness
+  id: GetBrightness
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: GetBrightness()
+  nameWithType: Color.GetBrightness()
+  fullName: GHIElectronics.Endpoint.Drawing.Color.GetBrightness()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: GetBrightness
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 60
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public float GetBrightness()
+    return:
+      type: System.Single
+    content.vb: Public Function GetBrightness() As Single
+  overload: GHIElectronics.Endpoint.Drawing.Color.GetBrightness*
+- uid: GHIElectronics.Endpoint.Drawing.Color.GetHue
+  commentId: M:GHIElectronics.Endpoint.Drawing.Color.GetHue
+  id: GetHue
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: GetHue()
+  nameWithType: Color.GetHue()
+  fullName: GHIElectronics.Endpoint.Drawing.Color.GetHue()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: GetHue
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 78
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public float GetHue()
+    return:
+      type: System.Single
+    content.vb: Public Function GetHue() As Single
+  overload: GHIElectronics.Endpoint.Drawing.Color.GetHue*
+- uid: GHIElectronics.Endpoint.Drawing.Color.GetSaturation
+  commentId: M:GHIElectronics.Endpoint.Drawing.Color.GetSaturation
+  id: GetSaturation
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: GetSaturation()
+  nameWithType: Color.GetSaturation()
+  fullName: GHIElectronics.Endpoint.Drawing.Color.GetSaturation()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: GetSaturation
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 117
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public float GetSaturation()
+    return:
+      type: System.Single
+    content.vb: Public Function GetSaturation() As Single
+  overload: GHIElectronics.Endpoint.Drawing.Color.GetSaturation*
+- uid: GHIElectronics.Endpoint.Drawing.Color.ToArgb
+  commentId: M:GHIElectronics.Endpoint.Drawing.Color.ToArgb
+  id: ToArgb
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: ToArgb()
+  nameWithType: Color.ToArgb()
+  fullName: GHIElectronics.Endpoint.Drawing.Color.ToArgb()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ToArgb
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 149
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public int ToArgb()
+    return:
+      type: System.Int32
+    content.vb: Public Function ToArgb() As Integer
+  overload: GHIElectronics.Endpoint.Drawing.Color.ToArgb*
+- uid: GHIElectronics.Endpoint.Drawing.Color.ToString
+  commentId: M:GHIElectronics.Endpoint.Drawing.Color.ToString
+  id: ToString
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Color.ToString()
+  fullName: GHIElectronics.Endpoint.Drawing.Color.ToString()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ToString
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 152
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  summary: Returns the fully qualified type name of this instance.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: The fully qualified type name.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: GHIElectronics.Endpoint.Drawing.Color.ToString*
+- uid: GHIElectronics.Endpoint.Drawing.Color.op_Equality(GHIElectronics.Endpoint.Drawing.Color,GHIElectronics.Endpoint.Drawing.Color)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Color.op_Equality(GHIElectronics.Endpoint.Drawing.Color,GHIElectronics.Endpoint.Drawing.Color)
+  id: op_Equality(GHIElectronics.Endpoint.Drawing.Color,GHIElectronics.Endpoint.Drawing.Color)
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: operator ==(Color, Color)
+  nameWithType: Color.operator ==(Color, Color)
+  fullName: GHIElectronics.Endpoint.Drawing.Color.operator ==(GHIElectronics.Endpoint.Drawing.Color, GHIElectronics.Endpoint.Drawing.Color)
+  type: Operator
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: op_Equality
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 171
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static bool operator ==(Color left, Color right)
+    parameters:
+    - id: left
+      type: GHIElectronics.Endpoint.Drawing.Color
+    - id: right
+      type: GHIElectronics.Endpoint.Drawing.Color
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As Color, right As Color) As Boolean
+  overload: GHIElectronics.Endpoint.Drawing.Color.op_Equality*
+  nameWithType.vb: Color.=(Color, Color)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Color.=(GHIElectronics.Endpoint.Drawing.Color, GHIElectronics.Endpoint.Drawing.Color)
+  name.vb: =(Color, Color)
+- uid: GHIElectronics.Endpoint.Drawing.Color.op_Inequality(GHIElectronics.Endpoint.Drawing.Color,GHIElectronics.Endpoint.Drawing.Color)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Color.op_Inequality(GHIElectronics.Endpoint.Drawing.Color,GHIElectronics.Endpoint.Drawing.Color)
+  id: op_Inequality(GHIElectronics.Endpoint.Drawing.Color,GHIElectronics.Endpoint.Drawing.Color)
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: operator !=(Color, Color)
+  nameWithType: Color.operator !=(Color, Color)
+  fullName: GHIElectronics.Endpoint.Drawing.Color.operator !=(GHIElectronics.Endpoint.Drawing.Color, GHIElectronics.Endpoint.Drawing.Color)
+  type: Operator
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: op_Inequality
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 172
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static bool operator !=(Color left, Color right)
+    parameters:
+    - id: left
+      type: GHIElectronics.Endpoint.Drawing.Color
+    - id: right
+      type: GHIElectronics.Endpoint.Drawing.Color
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As Color, right As Color) As Boolean
+  overload: GHIElectronics.Endpoint.Drawing.Color.op_Inequality*
+  nameWithType.vb: Color.<>(Color, Color)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Color.<>(GHIElectronics.Endpoint.Drawing.Color, GHIElectronics.Endpoint.Drawing.Color)
+  name.vb: <>(Color, Color)
+- uid: GHIElectronics.Endpoint.Drawing.Color.GetHashCode
+  commentId: M:GHIElectronics.Endpoint.Drawing.Color.GetHashCode
+  id: GetHashCode
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Color.GetHashCode()
+  fullName: GHIElectronics.Endpoint.Drawing.Color.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: GetHashCode
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 174
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  summary: Returns the hash code for this instance.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A 32-bit signed integer that is the hash code for this instance.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: GHIElectronics.Endpoint.Drawing.Color.GetHashCode*
+- uid: GHIElectronics.Endpoint.Drawing.Color.Equals(System.Object)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Color.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: Equals(object)
+  nameWithType: Color.Equals(object)
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Equals(object)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Equals
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 177
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  summary: Indicates whether this instance and a specified object are equal.
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: The object to compare with the current instance.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: GHIElectronics.Endpoint.Drawing.Color.Equals*
+  nameWithType.vb: Color.Equals(Object)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Color.Equals(Object)
+  name.vb: Equals(Object)
+- uid: GHIElectronics.Endpoint.Drawing.Color.Convert(System.Byte[],System.Byte[],GHIElectronics.Endpoint.Drawing.Color.ColorFormat)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Color.Convert(System.Byte[],System.Byte[],GHIElectronics.Endpoint.Drawing.Color.ColorFormat)
+  id: Convert(System.Byte[],System.Byte[],GHIElectronics.Endpoint.Drawing.Color.ColorFormat)
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: Convert(byte[], byte[], ColorFormat)
+  nameWithType: Color.Convert(byte[], byte[], Color.ColorFormat)
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Convert(byte[], byte[], GHIElectronics.Endpoint.Drawing.Color.ColorFormat)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Convert
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 204
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static void Convert(byte[] inArray, byte[] outArray, Color.ColorFormat colorFormat)
+    parameters:
+    - id: inArray
+      type: System.Byte[]
+    - id: outArray
+      type: System.Byte[]
+    - id: colorFormat
+      type: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+    content.vb: Public Shared Sub Convert(inArray As Byte(), outArray As Byte(), colorFormat As Color.ColorFormat)
+  overload: GHIElectronics.Endpoint.Drawing.Color.Convert*
+  nameWithType.vb: Color.Convert(Byte(), Byte(), Color.ColorFormat)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Color.Convert(Byte(), Byte(), GHIElectronics.Endpoint.Drawing.Color.ColorFormat)
+  name.vb: Convert(Byte(), Byte(), ColorFormat)
+- uid: GHIElectronics.Endpoint.Drawing.Color.Convert(System.Byte[],System.Byte[],GHIElectronics.Endpoint.Drawing.Color.ColorFormat,GHIElectronics.Endpoint.Drawing.Color.RgbFormat)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Color.Convert(System.Byte[],System.Byte[],GHIElectronics.Endpoint.Drawing.Color.ColorFormat,GHIElectronics.Endpoint.Drawing.Color.RgbFormat)
+  id: Convert(System.Byte[],System.Byte[],GHIElectronics.Endpoint.Drawing.Color.ColorFormat,GHIElectronics.Endpoint.Drawing.Color.RgbFormat)
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: Convert(byte[], byte[], ColorFormat, RgbFormat)
+  nameWithType: Color.Convert(byte[], byte[], Color.ColorFormat, Color.RgbFormat)
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Convert(byte[], byte[], GHIElectronics.Endpoint.Drawing.Color.ColorFormat, GHIElectronics.Endpoint.Drawing.Color.RgbFormat)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Convert
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 205
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static void Convert(byte[] inArray, byte[] outArray, Color.ColorFormat colorFormat, Color.RgbFormat rgbFormat)
+    parameters:
+    - id: inArray
+      type: System.Byte[]
+    - id: outArray
+      type: System.Byte[]
+    - id: colorFormat
+      type: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+    - id: rgbFormat
+      type: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+    content.vb: Public Shared Sub Convert(inArray As Byte(), outArray As Byte(), colorFormat As Color.ColorFormat, rgbFormat As Color.RgbFormat)
+  overload: GHIElectronics.Endpoint.Drawing.Color.Convert*
+  nameWithType.vb: Color.Convert(Byte(), Byte(), Color.ColorFormat, Color.RgbFormat)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Color.Convert(Byte(), Byte(), GHIElectronics.Endpoint.Drawing.Color.ColorFormat, GHIElectronics.Endpoint.Drawing.Color.RgbFormat)
+  name.vb: Convert(Byte(), Byte(), ColorFormat, RgbFormat)
+- uid: GHIElectronics.Endpoint.Drawing.Color.Convert(System.Byte[],System.Byte[],GHIElectronics.Endpoint.Drawing.Color.ColorFormat,GHIElectronics.Endpoint.Drawing.Color.RgbFormat,System.Byte)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Color.Convert(System.Byte[],System.Byte[],GHIElectronics.Endpoint.Drawing.Color.ColorFormat,GHIElectronics.Endpoint.Drawing.Color.RgbFormat,System.Byte)
+  id: Convert(System.Byte[],System.Byte[],GHIElectronics.Endpoint.Drawing.Color.ColorFormat,GHIElectronics.Endpoint.Drawing.Color.RgbFormat,System.Byte)
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: Convert(byte[], byte[], ColorFormat, RgbFormat, byte)
+  nameWithType: Color.Convert(byte[], byte[], Color.ColorFormat, Color.RgbFormat, byte)
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Convert(byte[], byte[], GHIElectronics.Endpoint.Drawing.Color.ColorFormat, GHIElectronics.Endpoint.Drawing.Color.RgbFormat, byte)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Convert
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 206
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static void Convert(byte[] inArray, byte[] outArray, Color.ColorFormat colorFormat, Color.RgbFormat rgbFormat, byte alpha)
+    parameters:
+    - id: inArray
+      type: System.Byte[]
+    - id: outArray
+      type: System.Byte[]
+    - id: colorFormat
+      type: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+    - id: rgbFormat
+      type: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+    - id: alpha
+      type: System.Byte
+    content.vb: Public Shared Sub Convert(inArray As Byte(), outArray As Byte(), colorFormat As Color.ColorFormat, rgbFormat As Color.RgbFormat, alpha As Byte)
+  overload: GHIElectronics.Endpoint.Drawing.Color.Convert*
+  nameWithType.vb: Color.Convert(Byte(), Byte(), Color.ColorFormat, Color.RgbFormat, Byte)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Color.Convert(Byte(), Byte(), GHIElectronics.Endpoint.Drawing.Color.ColorFormat, GHIElectronics.Endpoint.Drawing.Color.RgbFormat, Byte)
+  name.vb: Convert(Byte(), Byte(), ColorFormat, RgbFormat, Byte)
+- uid: GHIElectronics.Endpoint.Drawing.Color.Convert(System.Byte[],System.Byte[],GHIElectronics.Endpoint.Drawing.Color.ColorFormat,GHIElectronics.Endpoint.Drawing.Color.RgbFormat,System.Byte,System.Byte[])
+  commentId: M:GHIElectronics.Endpoint.Drawing.Color.Convert(System.Byte[],System.Byte[],GHIElectronics.Endpoint.Drawing.Color.ColorFormat,GHIElectronics.Endpoint.Drawing.Color.RgbFormat,System.Byte,System.Byte[])
+  id: Convert(System.Byte[],System.Byte[],GHIElectronics.Endpoint.Drawing.Color.ColorFormat,GHIElectronics.Endpoint.Drawing.Color.RgbFormat,System.Byte,System.Byte[])
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: Convert(byte[], byte[], ColorFormat, RgbFormat, byte, byte[])
+  nameWithType: Color.Convert(byte[], byte[], Color.ColorFormat, Color.RgbFormat, byte, byte[])
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Convert(byte[], byte[], GHIElectronics.Endpoint.Drawing.Color.ColorFormat, GHIElectronics.Endpoint.Drawing.Color.RgbFormat, byte, byte[])
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Convert
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 207
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static void Convert(byte[] inArray, byte[] outArray, Color.ColorFormat colorFormat, Color.RgbFormat rgbFormat, byte alpha, byte[] colorTable)
+    parameters:
+    - id: inArray
+      type: System.Byte[]
+    - id: outArray
+      type: System.Byte[]
+    - id: colorFormat
+      type: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+    - id: rgbFormat
+      type: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+    - id: alpha
+      type: System.Byte
+    - id: colorTable
+      type: System.Byte[]
+    content.vb: Public Shared Sub Convert(inArray As Byte(), outArray As Byte(), colorFormat As Color.ColorFormat, rgbFormat As Color.RgbFormat, alpha As Byte, colorTable As Byte())
+  overload: GHIElectronics.Endpoint.Drawing.Color.Convert*
+  nameWithType.vb: Color.Convert(Byte(), Byte(), Color.ColorFormat, Color.RgbFormat, Byte, Byte())
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Color.Convert(Byte(), Byte(), GHIElectronics.Endpoint.Drawing.Color.ColorFormat, GHIElectronics.Endpoint.Drawing.Color.RgbFormat, Byte, Byte())
+  name.vb: Convert(Byte(), Byte(), ColorFormat, RgbFormat, Byte, Byte())
+- uid: GHIElectronics.Endpoint.Drawing.Color.ConvertTo1Bpp(System.Byte[],System.Byte[],System.UInt32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Color.ConvertTo1Bpp(System.Byte[],System.Byte[],System.UInt32)
+  id: ConvertTo1Bpp(System.Byte[],System.Byte[],System.UInt32)
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: ConvertTo1Bpp(byte[], byte[], uint)
+  nameWithType: Color.ConvertTo1Bpp(byte[], byte[], uint)
+  fullName: GHIElectronics.Endpoint.Drawing.Color.ConvertTo1Bpp(byte[], byte[], uint)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ConvertTo1Bpp
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 214
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static void ConvertTo1Bpp(byte[] inArray, byte[] outArray, uint width)
+    parameters:
+    - id: inArray
+      type: System.Byte[]
+    - id: outArray
+      type: System.Byte[]
+    - id: width
+      type: System.UInt32
+    content.vb: Public Shared Sub ConvertTo1Bpp(inArray As Byte(), outArray As Byte(), width As UInteger)
+  overload: GHIElectronics.Endpoint.Drawing.Color.ConvertTo1Bpp*
+  nameWithType.vb: Color.ConvertTo1Bpp(Byte(), Byte(), UInteger)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Color.ConvertTo1Bpp(Byte(), Byte(), UInteger)
+  name.vb: ConvertTo1Bpp(Byte(), Byte(), UInteger)
+- uid: GHIElectronics.Endpoint.Drawing.Color.ConvertTo1Bpp(System.Byte[],System.Byte[],System.UInt32,GHIElectronics.Endpoint.Drawing.Color.BitFormat)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Color.ConvertTo1Bpp(System.Byte[],System.Byte[],System.UInt32,GHIElectronics.Endpoint.Drawing.Color.BitFormat)
+  id: ConvertTo1Bpp(System.Byte[],System.Byte[],System.UInt32,GHIElectronics.Endpoint.Drawing.Color.BitFormat)
+  parent: GHIElectronics.Endpoint.Drawing.Color
+  langs:
+  - csharp
+  - vb
+  name: ConvertTo1Bpp(byte[], byte[], uint, BitFormat)
+  nameWithType: Color.ConvertTo1Bpp(byte[], byte[], uint, Color.BitFormat)
+  fullName: GHIElectronics.Endpoint.Drawing.Color.ConvertTo1Bpp(byte[], byte[], uint, GHIElectronics.Endpoint.Drawing.Color.BitFormat)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ConvertTo1Bpp
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 215
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static void ConvertTo1Bpp(byte[] inArray, byte[] outArray, uint width, Color.BitFormat bitFormat)
+    parameters:
+    - id: inArray
+      type: System.Byte[]
+    - id: outArray
+      type: System.Byte[]
+    - id: width
+      type: System.UInt32
+    - id: bitFormat
+      type: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+    content.vb: Public Shared Sub ConvertTo1Bpp(inArray As Byte(), outArray As Byte(), width As UInteger, bitFormat As Color.BitFormat)
+  overload: GHIElectronics.Endpoint.Drawing.Color.ConvertTo1Bpp*
+  nameWithType.vb: Color.ConvertTo1Bpp(Byte(), Byte(), UInteger, Color.BitFormat)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Color.ConvertTo1Bpp(Byte(), Byte(), UInteger, GHIElectronics.Endpoint.Drawing.Color.BitFormat)
+  name.vb: ConvertTo1Bpp(Byte(), Byte(), UInteger, BitFormat)
+references:
+- uid: GHIElectronics.Endpoint.Drawing
+  commentId: N:GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing
+  nameWithType: GHIElectronics.Endpoint.Drawing
+  fullName: GHIElectronics.Endpoint.Drawing
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.Drawing.Color
+  commentId: T:GHIElectronics.Endpoint.Drawing.Color
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: GHIElectronics.Endpoint.Drawing.Color
+- uid: GHIElectronics.Endpoint.Drawing.Color.Transparent*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.Transparent
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_Transparent
+  name: Transparent
+  nameWithType: Color.Transparent
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Transparent
+- uid: GHIElectronics.Endpoint.Drawing.Color.Black*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.Black
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_Black
+  name: Black
+  nameWithType: Color.Black
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Black
+- uid: GHIElectronics.Endpoint.Drawing.Color.White*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.White
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_White
+  name: White
+  nameWithType: Color.White
+  fullName: GHIElectronics.Endpoint.Drawing.Color.White
+- uid: GHIElectronics.Endpoint.Drawing.Color.Gray*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.Gray
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_Gray
+  name: Gray
+  nameWithType: Color.Gray
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Gray
+- uid: GHIElectronics.Endpoint.Drawing.Color.Red*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.Red
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_Red
+  name: Red
+  nameWithType: Color.Red
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Red
+- uid: GHIElectronics.Endpoint.Drawing.Color.Green*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.Green
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_Green
+  name: Green
+  nameWithType: Color.Green
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Green
+- uid: GHIElectronics.Endpoint.Drawing.Color.Blue*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.Blue
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_Blue
+  name: Blue
+  nameWithType: Color.Blue
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Blue
+- uid: GHIElectronics.Endpoint.Drawing.Color.Yellow*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.Yellow
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_Yellow
+  name: Yellow
+  nameWithType: Color.Yellow
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Yellow
+- uid: GHIElectronics.Endpoint.Drawing.Color.Purple*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.Purple
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_Purple
+  name: Purple
+  nameWithType: Color.Purple
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Purple
+- uid: GHIElectronics.Endpoint.Drawing.Color.Teal*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.Teal
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_Teal
+  name: Teal
+  nameWithType: Color.Teal
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Teal
+- uid: GHIElectronics.Endpoint.Drawing.Color.R*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.R
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_R
+  name: R
+  nameWithType: Color.R
+  fullName: GHIElectronics.Endpoint.Drawing.Color.R
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: GHIElectronics.Endpoint.Drawing.Color.G*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.G
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_G
+  name: G
+  nameWithType: Color.G
+  fullName: GHIElectronics.Endpoint.Drawing.Color.G
+- uid: GHIElectronics.Endpoint.Drawing.Color.B*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.B
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_B
+  name: B
+  nameWithType: Color.B
+  fullName: GHIElectronics.Endpoint.Drawing.Color.B
+- uid: GHIElectronics.Endpoint.Drawing.Color.A*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.A
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_A
+  name: A
+  nameWithType: Color.A
+  fullName: GHIElectronics.Endpoint.Drawing.Color.A
+- uid: GHIElectronics.Endpoint.Drawing.Color.IsEmpty*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.IsEmpty
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_IsEmpty
+  name: IsEmpty
+  nameWithType: Color.IsEmpty
+  fullName: GHIElectronics.Endpoint.Drawing.Color.IsEmpty
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: GHIElectronics.Endpoint.Drawing.Color.Name*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.Name
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_Name
+  name: Name
+  nameWithType: Color.Name
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: GHIElectronics.Endpoint.Drawing.Color.FromArgb*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.FromArgb
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_FromArgb_System_Int32_
+  name: FromArgb
+  nameWithType: Color.FromArgb
+  fullName: GHIElectronics.Endpoint.Drawing.Color.FromArgb
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GHIElectronics.Endpoint.Drawing.Color.GetBrightness*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.GetBrightness
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_GetBrightness
+  name: GetBrightness
+  nameWithType: Color.GetBrightness
+  fullName: GHIElectronics.Endpoint.Drawing.Color.GetBrightness
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: GHIElectronics.Endpoint.Drawing.Color.GetHue*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.GetHue
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_GetHue
+  name: GetHue
+  nameWithType: Color.GetHue
+  fullName: GHIElectronics.Endpoint.Drawing.Color.GetHue
+- uid: GHIElectronics.Endpoint.Drawing.Color.GetSaturation*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.GetSaturation
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_GetSaturation
+  name: GetSaturation
+  nameWithType: Color.GetSaturation
+  fullName: GHIElectronics.Endpoint.Drawing.Color.GetSaturation
+- uid: GHIElectronics.Endpoint.Drawing.Color.ToArgb*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.ToArgb
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_ToArgb
+  name: ToArgb
+  nameWithType: Color.ToArgb
+  fullName: GHIElectronics.Endpoint.Drawing.Color.ToArgb
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Drawing.Color.ToString*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.ToString
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_ToString
+  name: ToString
+  nameWithType: Color.ToString
+  fullName: GHIElectronics.Endpoint.Drawing.Color.ToString
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: GHIElectronics.Endpoint.Drawing.Color.op_Equality*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.op_Equality
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_op_Equality_GHIElectronics_Endpoint_Drawing_Color_GHIElectronics_Endpoint_Drawing_Color_
+  name: operator ==
+  nameWithType: Color.operator ==
+  fullName: GHIElectronics.Endpoint.Drawing.Color.operator ==
+  nameWithType.vb: Color.=
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Color.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: GHIElectronics.Endpoint.Drawing.Color.op_Equality*
+    name: ==
+    href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_op_Equality_GHIElectronics_Endpoint_Drawing_Color_GHIElectronics_Endpoint_Drawing_Color_
+- uid: GHIElectronics.Endpoint.Drawing.Color.op_Inequality*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.op_Inequality
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_op_Inequality_GHIElectronics_Endpoint_Drawing_Color_GHIElectronics_Endpoint_Drawing_Color_
+  name: operator !=
+  nameWithType: Color.operator !=
+  fullName: GHIElectronics.Endpoint.Drawing.Color.operator !=
+  nameWithType.vb: Color.<>
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Color.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: GHIElectronics.Endpoint.Drawing.Color.op_Inequality*
+    name: '!='
+    href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_op_Inequality_GHIElectronics_Endpoint_Drawing_Color_GHIElectronics_Endpoint_Drawing_Color_
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Drawing.Color.GetHashCode*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.GetHashCode
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_GetHashCode
+  name: GetHashCode
+  nameWithType: Color.GetHashCode
+  fullName: GHIElectronics.Endpoint.Drawing.Color.GetHashCode
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: GHIElectronics.Endpoint.Drawing.Color.Equals*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.Equals
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_Equals_System_Object_
+  name: Equals
+  nameWithType: Color.Equals
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Equals
+- uid: GHIElectronics.Endpoint.Drawing.Color.Convert*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.Convert
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_Convert_System_Byte___System_Byte___GHIElectronics_Endpoint_Drawing_Color_ColorFormat_
+  name: Convert
+  nameWithType: Color.Convert
+  fullName: GHIElectronics.Endpoint.Drawing.Color.Convert
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+  commentId: T:GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Color.html
+  name: Color.ColorFormat
+  nameWithType: Color.ColorFormat
+  fullName: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+    name: ColorFormat
+    href: GHIElectronics.Endpoint.Drawing.Color.ColorFormat.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+    name: ColorFormat
+    href: GHIElectronics.Endpoint.Drawing.Color.ColorFormat.html
+- uid: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+  commentId: T:GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Color.html
+  name: Color.RgbFormat
+  nameWithType: Color.RgbFormat
+  fullName: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+    name: RgbFormat
+    href: GHIElectronics.Endpoint.Drawing.Color.RgbFormat.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+    name: RgbFormat
+    href: GHIElectronics.Endpoint.Drawing.Color.RgbFormat.html
+- uid: GHIElectronics.Endpoint.Drawing.Color.ConvertTo1Bpp*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Color.ConvertTo1Bpp
+  href: GHIElectronics.Endpoint.Drawing.Color.html#GHIElectronics_Endpoint_Drawing_Color_ConvertTo1Bpp_System_Byte___System_Byte___System_UInt32_
+  name: ConvertTo1Bpp
+  nameWithType: Color.ConvertTo1Bpp
+  fullName: GHIElectronics.Endpoint.Drawing.Color.ConvertTo1Bpp
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+  commentId: T:GHIElectronics.Endpoint.Drawing.Color.BitFormat
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Color.html
+  name: Color.BitFormat
+  nameWithType: Color.BitFormat
+  fullName: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+    name: BitFormat
+    href: GHIElectronics.Endpoint.Drawing.Color.BitFormat.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+    name: BitFormat
+    href: GHIElectronics.Endpoint.Drawing.Color.BitFormat.html

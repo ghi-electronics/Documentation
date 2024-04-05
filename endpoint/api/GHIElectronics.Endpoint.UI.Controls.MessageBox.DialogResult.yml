@@ -1,0 +1,198 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+  id: MessageBox.DialogResult
+  parent: GHIElectronics.Endpoint.UI.Controls
+  children:
+  - GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.Cancel
+  - GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.No
+  - GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.OK
+  - GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.Yes
+  langs:
+  - csharp
+  - vb
+  name: MessageBox.DialogResult
+  nameWithType: MessageBox.DialogResult
+  fullName: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DialogResult
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+    startLine: 42
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public enum MessageBox.DialogResult
+    content.vb: Public Enum MessageBox.DialogResult
+- uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.OK
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.OK
+  id: OK
+  parent: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+  langs:
+  - csharp
+  - vb
+  name: OK
+  nameWithType: MessageBox.DialogResult.OK
+  fullName: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.OK
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OK
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+    startLine: 43
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: OK = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+- uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.Cancel
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.Cancel
+  id: Cancel
+  parent: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+  langs:
+  - csharp
+  - vb
+  name: Cancel
+  nameWithType: MessageBox.DialogResult.Cancel
+  fullName: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.Cancel
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Cancel
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+    startLine: 44
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: Cancel = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+- uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.Yes
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.Yes
+  id: Yes
+  parent: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+  langs:
+  - csharp
+  - vb
+  name: Yes
+  nameWithType: MessageBox.DialogResult.Yes
+  fullName: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.Yes
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Yes
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+    startLine: 45
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: Yes = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+- uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.No
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.No
+  id: No
+  parent: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+  langs:
+  - csharp
+  - vb
+  name: No
+  nameWithType: MessageBox.DialogResult.No
+  fullName: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.No
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: No
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+    startLine: 46
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: No = 3
+    return:
+      type: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+references:
+- uid: GHIElectronics.Endpoint.UI.Controls
+  commentId: N:GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Controls
+  nameWithType: GHIElectronics.Endpoint.UI.Controls
+  fullName: GHIElectronics.Endpoint.UI.Controls
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+- uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  name: MessageBox.DialogResult
+  nameWithType: MessageBox.DialogResult
+  fullName: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox
+    name: MessageBox
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+    name: DialogResult
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox
+    name: MessageBox
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+    name: DialogResult
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult.html

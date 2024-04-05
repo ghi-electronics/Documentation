@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Input.ProcessInputEventHandler
+  commentId: T:GHIElectronics.Endpoint.UI.Input.ProcessInputEventHandler
+  id: ProcessInputEventHandler
+  parent: GHIElectronics.Endpoint.UI.Input
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ProcessInputEventHandler
+  nameWithType: ProcessInputEventHandler
+  fullName: GHIElectronics.Endpoint.UI.Input.ProcessInputEventHandler
+  type: Delegate
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/ProcessInputEventHandler.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ProcessInputEventHandler
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/ProcessInputEventHandler.cs
+    startLine: 5
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  summary: >-
+    Delegate type for handles of events that use
+
+    <xref href="GHIElectronics.Endpoint.UI.Input.ProcessInputEventArgs" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public delegate void ProcessInputEventHandler(object sender, ProcessInputEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: GHIElectronics.Endpoint.UI.Input.ProcessInputEventArgs
+    content.vb: Public Delegate Sub ProcessInputEventHandler(sender As Object, e As ProcessInputEventArgs)
+references:
+- uid: GHIElectronics.Endpoint.UI.Input.ProcessInputEventArgs
+  commentId: T:GHIElectronics.Endpoint.UI.Input.ProcessInputEventArgs
+  parent: GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.Endpoint.UI.Input.ProcessInputEventArgs.html
+  name: ProcessInputEventArgs
+  nameWithType: ProcessInputEventArgs
+  fullName: GHIElectronics.Endpoint.UI.Input.ProcessInputEventArgs
+- uid: GHIElectronics.Endpoint.UI.Input
+  commentId: N:GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Input
+  nameWithType: GHIElectronics.Endpoint.UI.Input
+  fullName: GHIElectronics.Endpoint.UI.Input
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

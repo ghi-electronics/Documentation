@@ -1,0 +1,182 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Controls.Direction
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Direction
+  id: Direction
+  parent: GHIElectronics.Endpoint.UI.Controls
+  children:
+  - GHIElectronics.Endpoint.UI.Controls.Direction.Down
+  - GHIElectronics.Endpoint.UI.Controls.Direction.Left
+  - GHIElectronics.Endpoint.UI.Controls.Direction.Right
+  - GHIElectronics.Endpoint.UI.Controls.Direction.Up
+  langs:
+  - csharp
+  - vb
+  name: Direction
+  nameWithType: Direction
+  fullName: GHIElectronics.Endpoint.UI.Controls.Direction
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ProgressBar.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Direction
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ProgressBar.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public enum Direction
+    content.vb: Public Enum Direction
+- uid: GHIElectronics.Endpoint.UI.Controls.Direction.Left
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.Direction.Left
+  id: Left
+  parent: GHIElectronics.Endpoint.UI.Controls.Direction
+  langs:
+  - csharp
+  - vb
+  name: Left
+  nameWithType: Direction.Left
+  fullName: GHIElectronics.Endpoint.UI.Controls.Direction.Left
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ProgressBar.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Left
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ProgressBar.cs
+    startLine: 11
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: Left = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.Controls.Direction
+- uid: GHIElectronics.Endpoint.UI.Controls.Direction.Right
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.Direction.Right
+  id: Right
+  parent: GHIElectronics.Endpoint.UI.Controls.Direction
+  langs:
+  - csharp
+  - vb
+  name: Right
+  nameWithType: Direction.Right
+  fullName: GHIElectronics.Endpoint.UI.Controls.Direction.Right
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ProgressBar.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Right
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ProgressBar.cs
+    startLine: 12
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: Right = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Controls.Direction
+- uid: GHIElectronics.Endpoint.UI.Controls.Direction.Up
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.Direction.Up
+  id: Up
+  parent: GHIElectronics.Endpoint.UI.Controls.Direction
+  langs:
+  - csharp
+  - vb
+  name: Up
+  nameWithType: Direction.Up
+  fullName: GHIElectronics.Endpoint.UI.Controls.Direction.Up
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ProgressBar.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Up
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ProgressBar.cs
+    startLine: 13
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: Up = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.Controls.Direction
+- uid: GHIElectronics.Endpoint.UI.Controls.Direction.Down
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.Direction.Down
+  id: Down
+  parent: GHIElectronics.Endpoint.UI.Controls.Direction
+  langs:
+  - csharp
+  - vb
+  name: Down
+  nameWithType: Direction.Down
+  fullName: GHIElectronics.Endpoint.UI.Controls.Direction.Down
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ProgressBar.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Down
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ProgressBar.cs
+    startLine: 14
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: Down = 3
+    return:
+      type: GHIElectronics.Endpoint.UI.Controls.Direction
+references:
+- uid: GHIElectronics.Endpoint.UI.Controls
+  commentId: N:GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Controls
+  nameWithType: GHIElectronics.Endpoint.UI.Controls
+  fullName: GHIElectronics.Endpoint.UI.Controls
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+- uid: GHIElectronics.Endpoint.UI.Controls.Direction
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Direction
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.Direction.html
+  name: Direction
+  nameWithType: Direction
+  fullName: GHIElectronics.Endpoint.UI.Controls.Direction

@@ -8,7 +8,7 @@ items:
   - GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Configuration
   - GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[])
   - GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32)
-  - GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
   langs:
   - csharp
   - vb
@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: IDisplayProvider
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
@@ -46,7 +46,7 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Configuration
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
@@ -75,7 +75,7 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Flush
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Flush
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
@@ -129,21 +129,21 @@ items:
   nameWithType.vb: IDisplayProvider.Flush(Byte(), Integer, Integer)
   fullName.vb: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(Byte(), Integer, Integer)
   name.vb: Flush(Byte(), Integer, Integer)
-- uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
-  commentId: M:GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
-  id: Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+- uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
   parent: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
   langs:
   - csharp
   - vb
-  name: Flush(byte[], int, int, int, int)
-  nameWithType: IDisplayProvider.Flush(byte[], int, int, int, int)
-  fullName: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(byte[], int, int, int, int)
+  name: Flush(byte[], int, int, int, int, int, int, int)
+  nameWithType: IDisplayProvider.Flush(byte[], int, int, int, int, int, int, int)
+  fullName: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(byte[], int, int, int, int, int, int, int)
   type: Method
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Flush
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/IDisplayTarget.cs
@@ -152,7 +152,7 @@ items:
   - GHIElectronics.Endpoint.Devices.Display
   namespace: GHIElectronics.Endpoint.Devices.Display
   syntax:
-    content: void Flush(byte[] data, int offset, int length, int width, int height)
+    content: void Flush(byte[] data, int offset, int length, int x, int y, int width, int height, int originalWidth)
     parameters:
     - id: data
       type: System.Byte[]
@@ -160,15 +160,21 @@ items:
       type: System.Int32
     - id: length
       type: System.Int32
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
     - id: width
       type: System.Int32
     - id: height
       type: System.Int32
-    content.vb: Sub Flush(data As Byte(), offset As Integer, length As Integer, width As Integer, height As Integer)
+    - id: originalWidth
+      type: System.Int32
+    content.vb: Sub Flush(data As Byte(), offset As Integer, length As Integer, x As Integer, y As Integer, width As Integer, height As Integer, originalWidth As Integer)
   overload: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush*
-  nameWithType.vb: IDisplayProvider.Flush(Byte(), Integer, Integer, Integer, Integer)
-  fullName.vb: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(Byte(), Integer, Integer, Integer, Integer)
-  name.vb: Flush(Byte(), Integer, Integer, Integer, Integer)
+  nameWithType.vb: IDisplayProvider.Flush(Byte(), Integer, Integer, Integer, Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(Byte(), Integer, Integer, Integer, Integer, Integer, Integer, Integer)
+  name.vb: Flush(Byte(), Integer, Integer, Integer, Integer, Integer, Integer, Integer)
 references:
 - uid: GHIElectronics.Endpoint.Devices.Display
   commentId: N:GHIElectronics.Endpoint.Devices.Display

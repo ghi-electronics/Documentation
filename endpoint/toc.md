@@ -9,6 +9,7 @@
 ### [GPIO](tutorials/gpio.md)
 ### [PWM](tutorials/pwm.md)
 ### [Analog In](tutorials/analog-in.md)
+### [Analog Out](tutorials/analog-out.md)
 ### [Signal Control](tutorials/signal-control.md)
 
 ## Data Buses

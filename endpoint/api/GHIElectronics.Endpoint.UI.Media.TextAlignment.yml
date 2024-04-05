@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Media.TextAlignment
+  commentId: T:GHIElectronics.Endpoint.UI.Media.TextAlignment
+  id: TextAlignment
+  parent: GHIElectronics.Endpoint.UI.Media
+  children:
+  - GHIElectronics.Endpoint.UI.Media.TextAlignment.Center
+  - GHIElectronics.Endpoint.UI.Media.TextAlignment.Left
+  - GHIElectronics.Endpoint.UI.Media.TextAlignment.Right
+  langs:
+  - csharp
+  - vb
+  name: TextAlignment
+  nameWithType: TextAlignment
+  fullName: GHIElectronics.Endpoint.UI.Media.TextAlignment
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/TextAlignment.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: TextAlignment
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/TextAlignment.cs
+    startLine: 6
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public enum TextAlignment
+    content.vb: Public Enum TextAlignment
+- uid: GHIElectronics.Endpoint.UI.Media.TextAlignment.Left
+  commentId: F:GHIElectronics.Endpoint.UI.Media.TextAlignment.Left
+  id: Left
+  parent: GHIElectronics.Endpoint.UI.Media.TextAlignment
+  langs:
+  - csharp
+  - vb
+  name: Left
+  nameWithType: TextAlignment.Left
+  fullName: GHIElectronics.Endpoint.UI.Media.TextAlignment.Left
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/TextAlignment.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Left
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/TextAlignment.cs
+    startLine: 7
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: Left = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.TextAlignment
+- uid: GHIElectronics.Endpoint.UI.Media.TextAlignment.Center
+  commentId: F:GHIElectronics.Endpoint.UI.Media.TextAlignment.Center
+  id: Center
+  parent: GHIElectronics.Endpoint.UI.Media.TextAlignment
+  langs:
+  - csharp
+  - vb
+  name: Center
+  nameWithType: TextAlignment.Center
+  fullName: GHIElectronics.Endpoint.UI.Media.TextAlignment.Center
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/TextAlignment.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Center
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/TextAlignment.cs
+    startLine: 8
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: Center = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.TextAlignment
+- uid: GHIElectronics.Endpoint.UI.Media.TextAlignment.Right
+  commentId: F:GHIElectronics.Endpoint.UI.Media.TextAlignment.Right
+  id: Right
+  parent: GHIElectronics.Endpoint.UI.Media.TextAlignment
+  langs:
+  - csharp
+  - vb
+  name: Right
+  nameWithType: TextAlignment.Right
+  fullName: GHIElectronics.Endpoint.UI.Media.TextAlignment.Right
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/TextAlignment.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Right
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/TextAlignment.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: Right = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.TextAlignment
+references:
+- uid: GHIElectronics.Endpoint.UI.Media
+  commentId: N:GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Media
+  nameWithType: GHIElectronics.Endpoint.UI.Media
+  fullName: GHIElectronics.Endpoint.UI.Media
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Media
+    name: Media
+    href: GHIElectronics.Endpoint.UI.Media.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Media
+    name: Media
+    href: GHIElectronics.Endpoint.UI.Media.html
+- uid: GHIElectronics.Endpoint.UI.Media.TextAlignment
+  commentId: T:GHIElectronics.Endpoint.UI.Media.TextAlignment
+  parent: GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.Endpoint.UI.Media.TextAlignment.html
+  name: TextAlignment
+  nameWithType: TextAlignment
+  fullName: GHIElectronics.Endpoint.UI.Media.TextAlignment

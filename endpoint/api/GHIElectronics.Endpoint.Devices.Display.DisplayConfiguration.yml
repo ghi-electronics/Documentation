@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/DisplayController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: DisplayConfiguration
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/DisplayController.cs
-    startLine: 2
+    startLine: 1
   assemblies:
   - GHIElectronics.Endpoint.Devices.Display
   namespace: GHIElectronics.Endpoint.Devices.Display
@@ -54,11 +54,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/DisplayController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Width
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/DisplayController.cs
-    startLine: 3
+    startLine: 2
   assemblies:
   - GHIElectronics.Endpoint.Devices.Display
   namespace: GHIElectronics.Endpoint.Devices.Display
@@ -83,11 +83,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/DisplayController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Height
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/DisplayController.cs
-    startLine: 4
+    startLine: 3
   assemblies:
   - GHIElectronics.Endpoint.Devices.Display
   namespace: GHIElectronics.Endpoint.Devices.Display

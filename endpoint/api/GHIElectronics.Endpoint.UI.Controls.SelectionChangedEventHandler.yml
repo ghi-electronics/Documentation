@@ -1,0 +1,97 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventHandler
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventHandler
+  id: SelectionChangedEventHandler
+  parent: GHIElectronics.Endpoint.UI.Controls
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: SelectionChangedEventHandler
+  nameWithType: SelectionChangedEventHandler
+  fullName: GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventHandler
+  type: Delegate
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/SelectionChangedEventHandler.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SelectionChangedEventHandler
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/SelectionChangedEventHandler.cs
+    startLine: 1
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public delegate void SelectionChangedEventHandler(object sender, SelectionChangedEventArgs args)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: args
+      type: GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventArgs
+    content.vb: Public Delegate Sub SelectionChangedEventHandler(sender As Object, args As SelectionChangedEventArgs)
+references:
+- uid: GHIElectronics.Endpoint.UI.Controls
+  commentId: N:GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Controls
+  nameWithType: GHIElectronics.Endpoint.UI.Controls
+  fullName: GHIElectronics.Endpoint.UI.Controls
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventArgs
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventArgs
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventArgs.html
+  name: SelectionChangedEventArgs
+  nameWithType: SelectionChangedEventArgs
+  fullName: GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventArgs
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

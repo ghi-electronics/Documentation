@@ -1,0 +1,228 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Drawing.StringTrimming
+  commentId: T:GHIElectronics.Endpoint.Drawing.StringTrimming
+  id: StringTrimming
+  parent: GHIElectronics.Endpoint.Drawing
+  children:
+  - GHIElectronics.Endpoint.Drawing.StringTrimming.Character
+  - GHIElectronics.Endpoint.Drawing.StringTrimming.EllipsisCharacter
+  - GHIElectronics.Endpoint.Drawing.StringTrimming.EllipsisPath
+  - GHIElectronics.Endpoint.Drawing.StringTrimming.EllipsisWord
+  - GHIElectronics.Endpoint.Drawing.StringTrimming.None
+  - GHIElectronics.Endpoint.Drawing.StringTrimming.Word
+  langs:
+  - csharp
+  - vb
+  name: StringTrimming
+  nameWithType: StringTrimming
+  fullName: GHIElectronics.Endpoint.Drawing.StringTrimming
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: StringTrimming
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 7
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public enum StringTrimming
+    content.vb: Public Enum StringTrimming
+- uid: GHIElectronics.Endpoint.Drawing.StringTrimming.None
+  commentId: F:GHIElectronics.Endpoint.Drawing.StringTrimming.None
+  id: None
+  parent: GHIElectronics.Endpoint.Drawing.StringTrimming
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: StringTrimming.None
+  fullName: GHIElectronics.Endpoint.Drawing.StringTrimming.None
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: None
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 8
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: None = 0
+    return:
+      type: GHIElectronics.Endpoint.Drawing.StringTrimming
+- uid: GHIElectronics.Endpoint.Drawing.StringTrimming.Character
+  commentId: F:GHIElectronics.Endpoint.Drawing.StringTrimming.Character
+  id: Character
+  parent: GHIElectronics.Endpoint.Drawing.StringTrimming
+  langs:
+  - csharp
+  - vb
+  name: Character
+  nameWithType: StringTrimming.Character
+  fullName: GHIElectronics.Endpoint.Drawing.StringTrimming.Character
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Character
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Character = 1
+    return:
+      type: GHIElectronics.Endpoint.Drawing.StringTrimming
+- uid: GHIElectronics.Endpoint.Drawing.StringTrimming.Word
+  commentId: F:GHIElectronics.Endpoint.Drawing.StringTrimming.Word
+  id: Word
+  parent: GHIElectronics.Endpoint.Drawing.StringTrimming
+  langs:
+  - csharp
+  - vb
+  name: Word
+  nameWithType: StringTrimming.Word
+  fullName: GHIElectronics.Endpoint.Drawing.StringTrimming.Word
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Word
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Word = 2
+    return:
+      type: GHIElectronics.Endpoint.Drawing.StringTrimming
+- uid: GHIElectronics.Endpoint.Drawing.StringTrimming.EllipsisCharacter
+  commentId: F:GHIElectronics.Endpoint.Drawing.StringTrimming.EllipsisCharacter
+  id: EllipsisCharacter
+  parent: GHIElectronics.Endpoint.Drawing.StringTrimming
+  langs:
+  - csharp
+  - vb
+  name: EllipsisCharacter
+  nameWithType: StringTrimming.EllipsisCharacter
+  fullName: GHIElectronics.Endpoint.Drawing.StringTrimming.EllipsisCharacter
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: EllipsisCharacter
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 11
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: EllipsisCharacter = 3
+    return:
+      type: GHIElectronics.Endpoint.Drawing.StringTrimming
+- uid: GHIElectronics.Endpoint.Drawing.StringTrimming.EllipsisWord
+  commentId: F:GHIElectronics.Endpoint.Drawing.StringTrimming.EllipsisWord
+  id: EllipsisWord
+  parent: GHIElectronics.Endpoint.Drawing.StringTrimming
+  langs:
+  - csharp
+  - vb
+  name: EllipsisWord
+  nameWithType: StringTrimming.EllipsisWord
+  fullName: GHIElectronics.Endpoint.Drawing.StringTrimming.EllipsisWord
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: EllipsisWord
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 12
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: EllipsisWord = 4
+    return:
+      type: GHIElectronics.Endpoint.Drawing.StringTrimming
+- uid: GHIElectronics.Endpoint.Drawing.StringTrimming.EllipsisPath
+  commentId: F:GHIElectronics.Endpoint.Drawing.StringTrimming.EllipsisPath
+  id: EllipsisPath
+  parent: GHIElectronics.Endpoint.Drawing.StringTrimming
+  langs:
+  - csharp
+  - vb
+  name: EllipsisPath
+  nameWithType: StringTrimming.EllipsisPath
+  fullName: GHIElectronics.Endpoint.Drawing.StringTrimming.EllipsisPath
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: EllipsisPath
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 13
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: EllipsisPath = 5
+    return:
+      type: GHIElectronics.Endpoint.Drawing.StringTrimming
+references:
+- uid: GHIElectronics.Endpoint.Drawing
+  commentId: N:GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing
+  nameWithType: GHIElectronics.Endpoint.Drawing
+  fullName: GHIElectronics.Endpoint.Drawing
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+- uid: GHIElectronics.Endpoint.Drawing.StringTrimming
+  commentId: T:GHIElectronics.Endpoint.Drawing.StringTrimming
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.StringTrimming.html
+  name: StringTrimming
+  nameWithType: StringTrimming
+  fullName: GHIElectronics.Endpoint.Drawing.StringTrimming

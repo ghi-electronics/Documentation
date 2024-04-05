@@ -1,0 +1,192 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus
+  id: DispatcherOperationStatus
+  parent: GHIElectronics.Endpoint.UI.Threading
+  children:
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus.Aborted
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus.Completed
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus.Executing
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus.Pending
+  langs:
+  - csharp
+  - vb
+  name: DispatcherOperationStatus
+  nameWithType: DispatcherOperationStatus
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherOperationStatus.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DispatcherOperationStatus
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherOperationStatus.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: An enumeration describing the status of a DispatcherOperation.
+  example: []
+  syntax:
+    content: public enum DispatcherOperationStatus
+    content.vb: Public Enum DispatcherOperationStatus
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus.Pending
+  commentId: F:GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus.Pending
+  id: Pending
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus
+  langs:
+  - csharp
+  - vb
+  name: Pending
+  nameWithType: DispatcherOperationStatus.Pending
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus.Pending
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherOperationStatus.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Pending
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherOperationStatus.cs
+    startLine: 14
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: The operation is still pending.
+  example: []
+  syntax:
+    content: Pending = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus.Aborted
+  commentId: F:GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus.Aborted
+  id: Aborted
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus
+  langs:
+  - csharp
+  - vb
+  name: Aborted
+  nameWithType: DispatcherOperationStatus.Aborted
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus.Aborted
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherOperationStatus.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Aborted
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherOperationStatus.cs
+    startLine: 19
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: The operation has been aborted.
+  example: []
+  syntax:
+    content: Aborted = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus.Completed
+  commentId: F:GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus.Completed
+  id: Completed
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus
+  langs:
+  - csharp
+  - vb
+  name: Completed
+  nameWithType: DispatcherOperationStatus.Completed
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus.Completed
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherOperationStatus.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Completed
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherOperationStatus.cs
+    startLine: 24
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: The operation has been completed.
+  example: []
+  syntax:
+    content: Completed = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus.Executing
+  commentId: F:GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus.Executing
+  id: Executing
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus
+  langs:
+  - csharp
+  - vb
+  name: Executing
+  nameWithType: DispatcherOperationStatus.Executing
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus.Executing
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherOperationStatus.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Executing
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherOperationStatus.cs
+    startLine: 29
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: The operation has started executing, but has not completed yet.
+  example: []
+  syntax:
+    content: Executing = 3
+    return:
+      type: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus
+references:
+- uid: GHIElectronics.Endpoint.UI.Threading
+  commentId: N:GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Threading
+  nameWithType: GHIElectronics.Endpoint.UI.Threading
+  fullName: GHIElectronics.Endpoint.UI.Threading
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Threading
+    name: Threading
+    href: GHIElectronics.Endpoint.UI.Threading.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Threading
+    name: Threading
+    href: GHIElectronics.Endpoint.UI.Threading.html
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus
+  parent: GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus.html
+  name: DispatcherOperationStatus
+  nameWithType: DispatcherOperationStatus
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus

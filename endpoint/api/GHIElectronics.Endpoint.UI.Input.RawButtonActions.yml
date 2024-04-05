@@ -1,0 +1,182 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Input.RawButtonActions
+  commentId: T:GHIElectronics.Endpoint.UI.Input.RawButtonActions
+  id: RawButtonActions
+  parent: GHIElectronics.Endpoint.UI.Input
+  children:
+  - GHIElectronics.Endpoint.UI.Input.RawButtonActions.Activate
+  - GHIElectronics.Endpoint.UI.Input.RawButtonActions.ButtonDown
+  - GHIElectronics.Endpoint.UI.Input.RawButtonActions.ButtonUp
+  - GHIElectronics.Endpoint.UI.Input.RawButtonActions.Deactivate
+  langs:
+  - csharp
+  - vb
+  name: RawButtonActions
+  nameWithType: RawButtonActions
+  fullName: GHIElectronics.Endpoint.UI.Input.RawButtonActions
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawButtonInputReport.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: RawButtonActions
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawButtonInputReport.cs
+    startLine: 44
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: public enum RawButtonActions
+    content.vb: Public Enum RawButtonActions
+- uid: GHIElectronics.Endpoint.UI.Input.RawButtonActions.ButtonDown
+  commentId: F:GHIElectronics.Endpoint.UI.Input.RawButtonActions.ButtonDown
+  id: ButtonDown
+  parent: GHIElectronics.Endpoint.UI.Input.RawButtonActions
+  langs:
+  - csharp
+  - vb
+  name: ButtonDown
+  nameWithType: RawButtonActions.ButtonDown
+  fullName: GHIElectronics.Endpoint.UI.Input.RawButtonActions.ButtonDown
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawButtonInputReport.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ButtonDown
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawButtonInputReport.cs
+    startLine: 45
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: ButtonDown = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.RawButtonActions
+- uid: GHIElectronics.Endpoint.UI.Input.RawButtonActions.ButtonUp
+  commentId: F:GHIElectronics.Endpoint.UI.Input.RawButtonActions.ButtonUp
+  id: ButtonUp
+  parent: GHIElectronics.Endpoint.UI.Input.RawButtonActions
+  langs:
+  - csharp
+  - vb
+  name: ButtonUp
+  nameWithType: RawButtonActions.ButtonUp
+  fullName: GHIElectronics.Endpoint.UI.Input.RawButtonActions.ButtonUp
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawButtonInputReport.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ButtonUp
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawButtonInputReport.cs
+    startLine: 46
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: ButtonUp = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.RawButtonActions
+- uid: GHIElectronics.Endpoint.UI.Input.RawButtonActions.Activate
+  commentId: F:GHIElectronics.Endpoint.UI.Input.RawButtonActions.Activate
+  id: Activate
+  parent: GHIElectronics.Endpoint.UI.Input.RawButtonActions
+  langs:
+  - csharp
+  - vb
+  name: Activate
+  nameWithType: RawButtonActions.Activate
+  fullName: GHIElectronics.Endpoint.UI.Input.RawButtonActions.Activate
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawButtonInputReport.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Activate
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawButtonInputReport.cs
+    startLine: 47
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Activate = 4
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.RawButtonActions
+- uid: GHIElectronics.Endpoint.UI.Input.RawButtonActions.Deactivate
+  commentId: F:GHIElectronics.Endpoint.UI.Input.RawButtonActions.Deactivate
+  id: Deactivate
+  parent: GHIElectronics.Endpoint.UI.Input.RawButtonActions
+  langs:
+  - csharp
+  - vb
+  name: Deactivate
+  nameWithType: RawButtonActions.Deactivate
+  fullName: GHIElectronics.Endpoint.UI.Input.RawButtonActions.Deactivate
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawButtonInputReport.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Deactivate
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawButtonInputReport.cs
+    startLine: 48
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Deactivate = 8
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.RawButtonActions
+references:
+- uid: GHIElectronics.Endpoint.UI.Input
+  commentId: N:GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Input
+  nameWithType: GHIElectronics.Endpoint.UI.Input
+  fullName: GHIElectronics.Endpoint.UI.Input
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+- uid: GHIElectronics.Endpoint.UI.Input.RawButtonActions
+  commentId: T:GHIElectronics.Endpoint.UI.Input.RawButtonActions
+  parent: GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.Endpoint.UI.Input.RawButtonActions.html
+  name: RawButtonActions
+  nameWithType: RawButtonActions
+  fullName: GHIElectronics.Endpoint.UI.Input.RawButtonActions

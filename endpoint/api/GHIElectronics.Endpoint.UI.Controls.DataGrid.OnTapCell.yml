@@ -1,0 +1,117 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.OnTapCell
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.DataGrid.OnTapCell
+  id: DataGrid.OnTapCell
+  parent: GHIElectronics.Endpoint.UI.Controls
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: DataGrid.OnTapCell
+  nameWithType: DataGrid.OnTapCell
+  fullName: GHIElectronics.Endpoint.UI.Controls.DataGrid.OnTapCell
+  type: Delegate
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OnTapCell
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs
+    startLine: 60
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  summary: Tap cell event handler.
+  example: []
+  syntax:
+    content: public delegate void DataGrid.OnTapCell(object sender, DataGrid.TapCellEventArgs args)
+    parameters:
+    - id: sender
+      type: System.Object
+      description: Object associated with this event.
+    - id: args
+      type: GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEventArgs
+      description: Tap cell event arguments.
+    content.vb: Public Delegate Sub DataGrid.OnTapCell(sender As Object, args As DataGrid.TapCellEventArgs)
+references:
+- uid: GHIElectronics.Endpoint.UI.Controls
+  commentId: N:GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Controls
+  nameWithType: GHIElectronics.Endpoint.UI.Controls
+  fullName: GHIElectronics.Endpoint.UI.Controls
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEventArgs
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEventArgs
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.DataGrid.html
+  name: DataGrid.TapCellEventArgs
+  nameWithType: DataGrid.TapCellEventArgs
+  fullName: GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEventArgs
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid
+    name: DataGrid
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEventArgs
+    name: TapCellEventArgs
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEventArgs.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid
+    name: DataGrid
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEventArgs
+    name: TapCellEventArgs
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEventArgs.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

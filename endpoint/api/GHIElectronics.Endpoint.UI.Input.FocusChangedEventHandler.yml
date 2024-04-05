@@ -1,0 +1,99 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Input.FocusChangedEventHandler
+  commentId: T:GHIElectronics.Endpoint.UI.Input.FocusChangedEventHandler
+  id: FocusChangedEventHandler
+  parent: GHIElectronics.Endpoint.UI.Input
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: FocusChangedEventHandler
+  nameWithType: FocusChangedEventHandler
+  fullName: GHIElectronics.Endpoint.UI.Input.FocusChangedEventHandler
+  type: Delegate
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/FocusChangedEventHandler.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: FocusChangedEventHandler
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/FocusChangedEventHandler.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  summary: The delegate to use for handlers that receive FocusChangedEventArgs.
+  example: []
+  syntax:
+    content: public delegate void FocusChangedEventHandler(object sender, FocusChangedEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs
+    content.vb: Public Delegate Sub FocusChangedEventHandler(sender As Object, e As FocusChangedEventArgs)
+references:
+- uid: GHIElectronics.Endpoint.UI.Input
+  commentId: N:GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Input
+  nameWithType: GHIElectronics.Endpoint.UI.Input
+  fullName: GHIElectronics.Endpoint.UI.Input
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs
+  commentId: T:GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs
+  parent: GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs.html
+  name: FocusChangedEventArgs
+  nameWithType: FocusChangedEventArgs
+  fullName: GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

@@ -1,0 +1,835 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Drawing.Pen
+  commentId: T:GHIElectronics.Endpoint.Drawing.Pen
+  id: Pen
+  parent: GHIElectronics.Endpoint.Drawing
+  children:
+  - GHIElectronics.Endpoint.Drawing.Pen.#ctor(GHIElectronics.Endpoint.Drawing.Brush)
+  - GHIElectronics.Endpoint.Drawing.Pen.#ctor(GHIElectronics.Endpoint.Drawing.Brush,System.Single)
+  - GHIElectronics.Endpoint.Drawing.Pen.#ctor(GHIElectronics.Endpoint.Drawing.Color)
+  - GHIElectronics.Endpoint.Drawing.Pen.#ctor(GHIElectronics.Endpoint.Drawing.Color,System.Single)
+  - GHIElectronics.Endpoint.Drawing.Pen.Brush
+  - GHIElectronics.Endpoint.Drawing.Pen.Clone
+  - GHIElectronics.Endpoint.Drawing.Pen.Color
+  - GHIElectronics.Endpoint.Drawing.Pen.Dispose
+  - GHIElectronics.Endpoint.Drawing.Pen.PenType
+  - GHIElectronics.Endpoint.Drawing.Pen.Width
+  langs:
+  - csharp
+  - vb
+  name: Pen
+  nameWithType: Pen
+  fullName: GHIElectronics.Endpoint.Drawing.Pen
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Pen
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+    startLine: 3
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: 'public sealed class Pen : MarshalByRefObject, ICloneable, IDisposable'
+    content.vb: Public NotInheritable Class Pen Inherits MarshalByRefObject Implements ICloneable, IDisposable
+  inheritance:
+  - System.Object
+  - System.MarshalByRefObject
+  implements:
+  - System.ICloneable
+  - System.IDisposable
+  inheritedMembers:
+  - System.MarshalByRefObject.GetLifetimeService
+  - System.MarshalByRefObject.InitializeLifetimeService
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.Drawing.Pen.Width
+  commentId: P:GHIElectronics.Endpoint.Drawing.Pen.Width
+  id: Width
+  parent: GHIElectronics.Endpoint.Drawing.Pen
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: Pen.Width
+  fullName: GHIElectronics.Endpoint.Drawing.Pen.Width
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Width
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+    startLine: 4
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public float Width { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Width As Single
+  overload: GHIElectronics.Endpoint.Drawing.Pen.Width*
+- uid: GHIElectronics.Endpoint.Drawing.Pen.Color
+  commentId: P:GHIElectronics.Endpoint.Drawing.Pen.Color
+  id: Color
+  parent: GHIElectronics.Endpoint.Drawing.Pen
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: Pen.Color
+  fullName: GHIElectronics.Endpoint.Drawing.Pen.Color
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Color
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+    startLine: 5
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public Color Color { get; set; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Property Color As Color
+  overload: GHIElectronics.Endpoint.Drawing.Pen.Color*
+- uid: GHIElectronics.Endpoint.Drawing.Pen.PenType
+  commentId: P:GHIElectronics.Endpoint.Drawing.Pen.PenType
+  id: PenType
+  parent: GHIElectronics.Endpoint.Drawing.Pen
+  langs:
+  - csharp
+  - vb
+  name: PenType
+  nameWithType: Pen.PenType
+  fullName: GHIElectronics.Endpoint.Drawing.Pen.PenType
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PenType
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+    startLine: 6
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public PenType PenType { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Drawing2D.PenType
+    content.vb: Public ReadOnly Property PenType As PenType
+  overload: GHIElectronics.Endpoint.Drawing.Pen.PenType*
+- uid: GHIElectronics.Endpoint.Drawing.Pen.Brush
+  commentId: P:GHIElectronics.Endpoint.Drawing.Pen.Brush
+  id: Brush
+  parent: GHIElectronics.Endpoint.Drawing.Pen
+  langs:
+  - csharp
+  - vb
+  name: Brush
+  nameWithType: Pen.Brush
+  fullName: GHIElectronics.Endpoint.Drawing.Pen.Brush
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Brush
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+    startLine: 8
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public Brush Brush { get; set; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Brush
+    content.vb: Public Property Brush As Brush
+  overload: GHIElectronics.Endpoint.Drawing.Pen.Brush*
+- uid: GHIElectronics.Endpoint.Drawing.Pen.#ctor(GHIElectronics.Endpoint.Drawing.Color)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Pen.#ctor(GHIElectronics.Endpoint.Drawing.Color)
+  id: '#ctor(GHIElectronics.Endpoint.Drawing.Color)'
+  parent: GHIElectronics.Endpoint.Drawing.Pen
+  langs:
+  - csharp
+  - vb
+  name: Pen(Color)
+  nameWithType: Pen.Pen(Color)
+  fullName: GHIElectronics.Endpoint.Drawing.Pen.Pen(GHIElectronics.Endpoint.Drawing.Color)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+    startLine: 20
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public Pen(Color color)
+    parameters:
+    - id: color
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Sub New(color As Color)
+  overload: GHIElectronics.Endpoint.Drawing.Pen.#ctor*
+  nameWithType.vb: Pen.New(Color)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Pen.New(GHIElectronics.Endpoint.Drawing.Color)
+  name.vb: New(Color)
+- uid: GHIElectronics.Endpoint.Drawing.Pen.#ctor(GHIElectronics.Endpoint.Drawing.Brush)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Pen.#ctor(GHIElectronics.Endpoint.Drawing.Brush)
+  id: '#ctor(GHIElectronics.Endpoint.Drawing.Brush)'
+  parent: GHIElectronics.Endpoint.Drawing.Pen
+  langs:
+  - csharp
+  - vb
+  name: Pen(Brush)
+  nameWithType: Pen.Pen(Brush)
+  fullName: GHIElectronics.Endpoint.Drawing.Pen.Pen(GHIElectronics.Endpoint.Drawing.Brush)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+    startLine: 21
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public Pen(Brush brush)
+    parameters:
+    - id: brush
+      type: GHIElectronics.Endpoint.Drawing.Brush
+    content.vb: Public Sub New(brush As Brush)
+  overload: GHIElectronics.Endpoint.Drawing.Pen.#ctor*
+  nameWithType.vb: Pen.New(Brush)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Pen.New(GHIElectronics.Endpoint.Drawing.Brush)
+  name.vb: New(Brush)
+- uid: GHIElectronics.Endpoint.Drawing.Pen.#ctor(GHIElectronics.Endpoint.Drawing.Color,System.Single)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Pen.#ctor(GHIElectronics.Endpoint.Drawing.Color,System.Single)
+  id: '#ctor(GHIElectronics.Endpoint.Drawing.Color,System.Single)'
+  parent: GHIElectronics.Endpoint.Drawing.Pen
+  langs:
+  - csharp
+  - vb
+  name: Pen(Color, float)
+  nameWithType: Pen.Pen(Color, float)
+  fullName: GHIElectronics.Endpoint.Drawing.Pen.Pen(GHIElectronics.Endpoint.Drawing.Color, float)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+    startLine: 23
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public Pen(Color color, float width)
+    parameters:
+    - id: color
+      type: GHIElectronics.Endpoint.Drawing.Color
+    - id: width
+      type: System.Single
+    content.vb: Public Sub New(color As Color, width As Single)
+  overload: GHIElectronics.Endpoint.Drawing.Pen.#ctor*
+  nameWithType.vb: Pen.New(Color, Single)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Pen.New(GHIElectronics.Endpoint.Drawing.Color, Single)
+  name.vb: New(Color, Single)
+- uid: GHIElectronics.Endpoint.Drawing.Pen.#ctor(GHIElectronics.Endpoint.Drawing.Brush,System.Single)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Pen.#ctor(GHIElectronics.Endpoint.Drawing.Brush,System.Single)
+  id: '#ctor(GHIElectronics.Endpoint.Drawing.Brush,System.Single)'
+  parent: GHIElectronics.Endpoint.Drawing.Pen
+  langs:
+  - csharp
+  - vb
+  name: Pen(Brush, float)
+  nameWithType: Pen.Pen(Brush, float)
+  fullName: GHIElectronics.Endpoint.Drawing.Pen.Pen(GHIElectronics.Endpoint.Drawing.Brush, float)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+    startLine: 29
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public Pen(Brush brush, float width)
+    parameters:
+    - id: brush
+      type: GHIElectronics.Endpoint.Drawing.Brush
+    - id: width
+      type: System.Single
+    content.vb: Public Sub New(brush As Brush, width As Single)
+  overload: GHIElectronics.Endpoint.Drawing.Pen.#ctor*
+  nameWithType.vb: Pen.New(Brush, Single)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Pen.New(GHIElectronics.Endpoint.Drawing.Brush, Single)
+  name.vb: New(Brush, Single)
+- uid: GHIElectronics.Endpoint.Drawing.Pen.Dispose
+  commentId: M:GHIElectronics.Endpoint.Drawing.Pen.Dispose
+  id: Dispose
+  parent: GHIElectronics.Endpoint.Drawing.Pen
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: Pen.Dispose()
+  fullName: GHIElectronics.Endpoint.Drawing.Pen.Dispose()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Dispose
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+    startLine: 35
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: GHIElectronics.Endpoint.Drawing.Pen.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: GHIElectronics.Endpoint.Drawing.Pen.Clone
+  commentId: M:GHIElectronics.Endpoint.Drawing.Pen.Clone
+  id: Clone
+  parent: GHIElectronics.Endpoint.Drawing.Pen
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: Pen.Clone()
+  fullName: GHIElectronics.Endpoint.Drawing.Pen.Clone()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Clone
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+    startLine: 37
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  summary: Creates a new object that is a copy of the current instance.
+  example: []
+  syntax:
+    content: public object Clone()
+    return:
+      type: System.Object
+      description: A new object that is a copy of this instance.
+    content.vb: Public Function Clone() As Object
+  overload: GHIElectronics.Endpoint.Drawing.Pen.Clone*
+  implements:
+  - System.ICloneable.Clone
+references:
+- uid: GHIElectronics.Endpoint.Drawing
+  commentId: N:GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing
+  nameWithType: GHIElectronics.Endpoint.Drawing
+  fullName: GHIElectronics.Endpoint.Drawing
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.MarshalByRefObject
+  commentId: T:System.MarshalByRefObject
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject
+  name: MarshalByRefObject
+  nameWithType: MarshalByRefObject
+  fullName: System.MarshalByRefObject
+- uid: System.ICloneable
+  commentId: T:System.ICloneable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.icloneable
+  name: ICloneable
+  nameWithType: ICloneable
+  fullName: System.ICloneable
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.MarshalByRefObject.GetLifetimeService
+  commentId: M:System.MarshalByRefObject.GetLifetimeService
+  parent: System.MarshalByRefObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice
+  name: GetLifetimeService()
+  nameWithType: MarshalByRefObject.GetLifetimeService()
+  fullName: System.MarshalByRefObject.GetLifetimeService()
+  spec.csharp:
+  - uid: System.MarshalByRefObject.GetLifetimeService
+    name: GetLifetimeService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.MarshalByRefObject.GetLifetimeService
+    name: GetLifetimeService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice
+  - name: (
+  - name: )
+- uid: System.MarshalByRefObject.InitializeLifetimeService
+  commentId: M:System.MarshalByRefObject.InitializeLifetimeService
+  parent: System.MarshalByRefObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice
+  name: InitializeLifetimeService()
+  nameWithType: MarshalByRefObject.InitializeLifetimeService()
+  fullName: System.MarshalByRefObject.InitializeLifetimeService()
+  spec.csharp:
+  - uid: System.MarshalByRefObject.InitializeLifetimeService
+    name: InitializeLifetimeService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.MarshalByRefObject.InitializeLifetimeService
+    name: InitializeLifetimeService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.Drawing.Pen.Width*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Pen.Width
+  href: GHIElectronics.Endpoint.Drawing.Pen.html#GHIElectronics_Endpoint_Drawing_Pen_Width
+  name: Width
+  nameWithType: Pen.Width
+  fullName: GHIElectronics.Endpoint.Drawing.Pen.Width
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: GHIElectronics.Endpoint.Drawing.Pen.Color*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Pen.Color
+  href: GHIElectronics.Endpoint.Drawing.Pen.html#GHIElectronics_Endpoint_Drawing_Pen_Color
+  name: Color
+  nameWithType: Pen.Color
+  fullName: GHIElectronics.Endpoint.Drawing.Pen.Color
+- uid: GHIElectronics.Endpoint.Drawing.Color
+  commentId: T:GHIElectronics.Endpoint.Drawing.Color
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: GHIElectronics.Endpoint.Drawing.Color
+- uid: GHIElectronics.Endpoint.Drawing.Pen.PenType*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Pen.PenType
+  href: GHIElectronics.Endpoint.Drawing.Pen.html#GHIElectronics_Endpoint_Drawing_Pen_PenType
+  name: PenType
+  nameWithType: Pen.PenType
+  fullName: GHIElectronics.Endpoint.Drawing.Pen.PenType
+- uid: GHIElectronics.Endpoint.Drawing.Drawing2D.PenType
+  commentId: T:GHIElectronics.Endpoint.Drawing.Drawing2D.PenType
+  parent: GHIElectronics.Endpoint.Drawing.Drawing2D
+  href: GHIElectronics.Endpoint.Drawing.Drawing2D.PenType.html
+  name: PenType
+  nameWithType: PenType
+  fullName: GHIElectronics.Endpoint.Drawing.Drawing2D.PenType
+- uid: GHIElectronics.Endpoint.Drawing.Drawing2D
+  commentId: N:GHIElectronics.Endpoint.Drawing.Drawing2D
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing.Drawing2D
+  nameWithType: GHIElectronics.Endpoint.Drawing.Drawing2D
+  fullName: GHIElectronics.Endpoint.Drawing.Drawing2D
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Drawing2D
+    name: Drawing2D
+    href: GHIElectronics.Endpoint.Drawing.Drawing2D.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Drawing2D
+    name: Drawing2D
+    href: GHIElectronics.Endpoint.Drawing.Drawing2D.html
+- uid: GHIElectronics.Endpoint.Drawing.Pen.Brush*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Pen.Brush
+  href: GHIElectronics.Endpoint.Drawing.Pen.html#GHIElectronics_Endpoint_Drawing_Pen_Brush
+  name: Brush
+  nameWithType: Pen.Brush
+  fullName: GHIElectronics.Endpoint.Drawing.Pen.Brush
+- uid: GHIElectronics.Endpoint.Drawing.Brush
+  commentId: T:GHIElectronics.Endpoint.Drawing.Brush
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Brush.html
+  name: Brush
+  nameWithType: Brush
+  fullName: GHIElectronics.Endpoint.Drawing.Brush
+- uid: GHIElectronics.Endpoint.Drawing.Pen.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Pen.#ctor
+  href: GHIElectronics.Endpoint.Drawing.Pen.html#GHIElectronics_Endpoint_Drawing_Pen__ctor_GHIElectronics_Endpoint_Drawing_Color_
+  name: Pen
+  nameWithType: Pen.Pen
+  fullName: GHIElectronics.Endpoint.Drawing.Pen.Pen
+  nameWithType.vb: Pen.New
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Pen.New
+  name.vb: New
+- uid: GHIElectronics.Endpoint.Drawing.Pen.Dispose*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Pen.Dispose
+  href: GHIElectronics.Endpoint.Drawing.Pen.html#GHIElectronics_Endpoint_Drawing_Pen_Dispose
+  name: Dispose
+  nameWithType: Pen.Dispose
+  fullName: GHIElectronics.Endpoint.Drawing.Pen.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Drawing.Pen.Clone*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Pen.Clone
+  href: GHIElectronics.Endpoint.Drawing.Pen.html#GHIElectronics_Endpoint_Drawing_Pen_Clone
+  name: Clone
+  nameWithType: Pen.Clone
+  fullName: GHIElectronics.Endpoint.Drawing.Pen.Clone
+- uid: System.ICloneable.Clone
+  commentId: M:System.ICloneable.Clone
+  parent: System.ICloneable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.icloneable.clone
+  name: Clone()
+  nameWithType: ICloneable.Clone()
+  fullName: System.ICloneable.Clone()
+  spec.csharp:
+  - uid: System.ICloneable.Clone
+    name: Clone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icloneable.clone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ICloneable.Clone
+    name: Clone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icloneable.clone
+  - name: (
+  - name: )

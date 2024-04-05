@@ -1,0 +1,2270 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Drawing.Graphics
+  commentId: T:GHIElectronics.Endpoint.Drawing.Graphics
+  id: Graphics
+  parent: GHIElectronics.Endpoint.Drawing
+  children:
+  - GHIElectronics.Endpoint.Drawing.Graphics.Clear
+  - GHIElectronics.Endpoint.Drawing.Graphics.Dispose
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawEllipse(GHIElectronics.Endpoint.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(GHIElectronics.Endpoint.Drawing.Image,GHIElectronics.Endpoint.Drawing.Rectangle,GHIElectronics.Endpoint.Drawing.Rectangle,GHIElectronics.Endpoint.Drawing.GraphicsUnit)
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Rectangle,GHIElectronics.Endpoint.Drawing.GraphicsUnit)
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawLine(GHIElectronics.Endpoint.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawRectangle(GHIElectronics.Endpoint.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawString(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.Drawing.Brush,GHIElectronics.Endpoint.Drawing.RectangleF)
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawString(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.Drawing.Brush,GHIElectronics.Endpoint.Drawing.RectangleF,GHIElectronics.Endpoint.Drawing.StringFormat)
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawString(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.Drawing.Brush,System.Single,System.Single)
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawTextInRect(System.String,System.Int32,System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment,GHIElectronics.Endpoint.Drawing.Color,GHIElectronics.Endpoint.Drawing.Font)
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawTextInRect(System.String@,System.Int32@,System.Int32@,System.Int32,System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment,GHIElectronics.Endpoint.Drawing.Color,GHIElectronics.Endpoint.Drawing.Font)
+  - GHIElectronics.Endpoint.Drawing.Graphics.FillEllipse(GHIElectronics.Endpoint.Drawing.Brush,System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Graphics.FillRectangle(GHIElectronics.Endpoint.Drawing.Brush,System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Graphics.Finalize
+  - GHIElectronics.Endpoint.Drawing.Graphics.Flush(System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Graphics.FromData(System.Byte[])
+  - GHIElectronics.Endpoint.Drawing.Graphics.FromData(System.Byte[],System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Graphics.FromImage(GHIElectronics.Endpoint.Drawing.Image)
+  - GHIElectronics.Endpoint.Drawing.Graphics.GetBitmap
+  - GHIElectronics.Endpoint.Drawing.Graphics.GetBitmap(System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Graphics.GetPixel(System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Graphics.Height
+  - GHIElectronics.Endpoint.Drawing.Graphics.MakeTransparent(GHIElectronics.Endpoint.Drawing.Color)
+  - GHIElectronics.Endpoint.Drawing.Graphics.MeasureString(System.String,GHIElectronics.Endpoint.Drawing.Font)
+  - GHIElectronics.Endpoint.Drawing.Graphics.MeasureString(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.Drawing.SizeF,GHIElectronics.Endpoint.Drawing.StringFormat)
+  - GHIElectronics.Endpoint.Drawing.Graphics.OnFlushEvent
+  - GHIElectronics.Endpoint.Drawing.Graphics.PageUnit
+  - GHIElectronics.Endpoint.Drawing.Graphics.RotateImage(System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)
+  - GHIElectronics.Endpoint.Drawing.Graphics.Scale9Image(System.Int32,System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)
+  - GHIElectronics.Endpoint.Drawing.Graphics.SetClippingRectangle(System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Drawing.Graphics.SetPixel(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Color)
+  - GHIElectronics.Endpoint.Drawing.Graphics.StretchImage(System.Int32,System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)
+  - GHIElectronics.Endpoint.Drawing.Graphics.TileImage(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.UInt16)
+  - GHIElectronics.Endpoint.Drawing.Graphics.Width
+  langs:
+  - csharp
+  - vb
+  name: Graphics
+  nameWithType: Graphics
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Graphics
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 56
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: 'public class Graphics : MarshalByRefObject, IDisposable'
+    content.vb: Public Class Graphics Inherits MarshalByRefObject Implements IDisposable
+  inheritance:
+  - System.Object
+  - System.MarshalByRefObject
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.MarshalByRefObject.GetLifetimeService
+  - System.MarshalByRefObject.InitializeLifetimeService
+  - System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.Width
+  commentId: P:GHIElectronics.Endpoint.Drawing.Graphics.Width
+  id: Width
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: Graphics.Width
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.Width
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Width
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 57
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public int Width { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Width As Integer
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.Width*
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.Height
+  commentId: P:GHIElectronics.Endpoint.Drawing.Graphics.Height
+  id: Height
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: Graphics.Height
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.Height
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Height
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 58
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public int Height { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Height As Integer
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.Height*
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.PageUnit
+  commentId: P:GHIElectronics.Endpoint.Drawing.Graphics.PageUnit
+  id: PageUnit
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: PageUnit
+  nameWithType: Graphics.PageUnit
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.PageUnit
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PageUnit
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 65
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public GraphicsUnit PageUnit { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+    content.vb: Public ReadOnly Property PageUnit As GraphicsUnit
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.PageUnit*
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.GetPixel(System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.GetPixel(System.Int32,System.Int32)
+  id: GetPixel(System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: GetPixel(int, int)
+  nameWithType: Graphics.GetPixel(int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.GetPixel(int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: GetPixel
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 67
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public uint GetPixel(int x, int y)
+    parameters:
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    return:
+      type: System.UInt32
+    content.vb: Public Function GetPixel(x As Integer, y As Integer) As UInteger
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.GetPixel*
+  nameWithType.vb: Graphics.GetPixel(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.GetPixel(Integer, Integer)
+  name.vb: GetPixel(Integer, Integer)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.SetPixel(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Color)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.SetPixel(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Color)
+  id: SetPixel(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Color)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: SetPixel(int, int, Color)
+  nameWithType: Graphics.SetPixel(int, int, Color)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.SetPixel(int, int, GHIElectronics.Endpoint.Drawing.Color)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SetPixel
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 68
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void SetPixel(int x, int y, Color color)
+    parameters:
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    - id: color
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Sub SetPixel(x As Integer, y As Integer, color As Color)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.SetPixel*
+  nameWithType.vb: Graphics.SetPixel(Integer, Integer, Color)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.SetPixel(Integer, Integer, GHIElectronics.Endpoint.Drawing.Color)
+  name.vb: SetPixel(Integer, Integer, Color)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.GetBitmap
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.GetBitmap
+  id: GetBitmap
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: GetBitmap()
+  nameWithType: Graphics.GetBitmap()
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.GetBitmap()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: GetBitmap
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 69
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public byte[] GetBitmap()
+    return:
+      type: System.Byte[]
+    content.vb: Public Function GetBitmap() As Byte()
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.GetBitmap*
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.GetBitmap(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.GetBitmap(System.Int32,System.Int32,System.Int32,System.Int32)
+  id: GetBitmap(System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: GetBitmap(int, int, int, int)
+  nameWithType: Graphics.GetBitmap(int, int, int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.GetBitmap(int, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: GetBitmap
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 70
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public byte[] GetBitmap(int x, int y, int width, int height)
+    parameters:
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    return:
+      type: System.Byte[]
+    content.vb: Public Function GetBitmap(x As Integer, y As Integer, width As Integer, height As Integer) As Byte()
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.GetBitmap*
+  nameWithType.vb: Graphics.GetBitmap(Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.GetBitmap(Integer, Integer, Integer, Integer)
+  name.vb: GetBitmap(Integer, Integer, Integer, Integer)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.Dispose
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.Dispose
+  id: Dispose
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: Graphics.Dispose()
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.Dispose()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Dispose
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 120
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.Finalize
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.Finalize
+  id: Finalize
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: ~Graphics()
+  nameWithType: Graphics.~Graphics()
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.~Graphics()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Finalize
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 167
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: protected ~Graphics()
+    content.vb: 'Protected '
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.Finalize*
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.MeasureString(System.String,GHIElectronics.Endpoint.Drawing.Font)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.MeasureString(System.String,GHIElectronics.Endpoint.Drawing.Font)
+  id: MeasureString(System.String,GHIElectronics.Endpoint.Drawing.Font)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: MeasureString(string, Font)
+  nameWithType: Graphics.MeasureString(string, Font)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.MeasureString(string, GHIElectronics.Endpoint.Drawing.Font)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: MeasureString
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 169
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public SizeF MeasureString(string text, Font font)
+    parameters:
+    - id: text
+      type: System.String
+    - id: font
+      type: GHIElectronics.Endpoint.Drawing.Font
+    return:
+      type: GHIElectronics.Endpoint.Drawing.SizeF
+    content.vb: Public Function MeasureString(text As String, font As Font) As SizeF
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.MeasureString*
+  nameWithType.vb: Graphics.MeasureString(String, Font)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.MeasureString(String, GHIElectronics.Endpoint.Drawing.Font)
+  name.vb: MeasureString(String, Font)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.MeasureString(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.Drawing.SizeF,GHIElectronics.Endpoint.Drawing.StringFormat)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.MeasureString(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.Drawing.SizeF,GHIElectronics.Endpoint.Drawing.StringFormat)
+  id: MeasureString(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.Drawing.SizeF,GHIElectronics.Endpoint.Drawing.StringFormat)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: MeasureString(string, Font, SizeF, StringFormat)
+  nameWithType: Graphics.MeasureString(string, Font, SizeF, StringFormat)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.MeasureString(string, GHIElectronics.Endpoint.Drawing.Font, GHIElectronics.Endpoint.Drawing.SizeF, GHIElectronics.Endpoint.Drawing.StringFormat)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: MeasureString
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 175
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public SizeF MeasureString(string text, Font font, SizeF layoutArea, StringFormat stringFormat)
+    parameters:
+    - id: text
+      type: System.String
+    - id: font
+      type: GHIElectronics.Endpoint.Drawing.Font
+    - id: layoutArea
+      type: GHIElectronics.Endpoint.Drawing.SizeF
+    - id: stringFormat
+      type: GHIElectronics.Endpoint.Drawing.StringFormat
+    return:
+      type: GHIElectronics.Endpoint.Drawing.SizeF
+    content.vb: Public Function MeasureString(text As String, font As Font, layoutArea As SizeF, stringFormat As StringFormat) As SizeF
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.MeasureString*
+  nameWithType.vb: Graphics.MeasureString(String, Font, SizeF, StringFormat)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.MeasureString(String, GHIElectronics.Endpoint.Drawing.Font, GHIElectronics.Endpoint.Drawing.SizeF, GHIElectronics.Endpoint.Drawing.StringFormat)
+  name.vb: MeasureString(String, Font, SizeF, StringFormat)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.Clear
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.Clear
+  id: Clear
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: Graphics.Clear()
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.Clear()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Clear
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 181
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.Clear*
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.FromImage(GHIElectronics.Endpoint.Drawing.Image)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.FromImage(GHIElectronics.Endpoint.Drawing.Image)
+  id: FromImage(GHIElectronics.Endpoint.Drawing.Image)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: FromImage(Image)
+  nameWithType: Graphics.FromImage(Image)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.FromImage(GHIElectronics.Endpoint.Drawing.Image)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: FromImage
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 194
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static Graphics FromImage(Image image)
+    parameters:
+    - id: image
+      type: GHIElectronics.Endpoint.Drawing.Image
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Graphics
+    content.vb: Public Shared Function FromImage(image As Image) As Graphics
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.FromImage*
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.FromData(System.Byte[])
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.FromData(System.Byte[])
+  id: FromData(System.Byte[])
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: FromData(byte[])
+  nameWithType: Graphics.FromData(byte[])
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.FromData(byte[])
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: FromData
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 200
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static Graphics FromData(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Graphics
+    content.vb: Public Shared Function FromData(data As Byte()) As Graphics
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.FromData*
+  nameWithType.vb: Graphics.FromData(Byte())
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.FromData(Byte())
+  name.vb: FromData(Byte())
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.FromData(System.Byte[],System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.FromData(System.Byte[],System.Int32,System.Int32)
+  id: FromData(System.Byte[],System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: FromData(byte[], int, int)
+  nameWithType: Graphics.FromData(byte[], int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.FromData(byte[], int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: FromData
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 206
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static Graphics FromData(byte[] data, int width, int height)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Graphics
+    content.vb: Public Shared Function FromData(data As Byte(), width As Integer, height As Integer) As Graphics
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.FromData*
+  nameWithType.vb: Graphics.FromData(Byte(), Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.FromData(Byte(), Integer, Integer)
+  name.vb: FromData(Byte(), Integer, Integer)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.OnFlushEvent
+  commentId: E:GHIElectronics.Endpoint.Drawing.Graphics.OnFlushEvent
+  id: OnFlushEvent
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: OnFlushEvent
+  nameWithType: Graphics.OnFlushEvent
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.OnFlushEvent
+  type: Event
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OnFlushEvent
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 232
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static event Graphics.OnFlushHandler OnFlushEvent
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Graphics.OnFlushHandler
+    content.vb: Public Shared Event OnFlushEvent As Graphics.OnFlushHandler
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Rectangle,GHIElectronics.Endpoint.Drawing.GraphicsUnit)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Rectangle,GHIElectronics.Endpoint.Drawing.GraphicsUnit)
+  id: DrawImage(GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Rectangle,GHIElectronics.Endpoint.Drawing.GraphicsUnit)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: DrawImage(Image, int, int, Rectangle, GraphicsUnit)
+  nameWithType: Graphics.DrawImage(Image, int, int, Rectangle, GraphicsUnit)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(GHIElectronics.Endpoint.Drawing.Image, int, int, GHIElectronics.Endpoint.Drawing.Rectangle, GHIElectronics.Endpoint.Drawing.GraphicsUnit)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DrawImage
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 244
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void DrawImage(Image image, int x, int y, Rectangle srcRect, GraphicsUnit srcUnit)
+    parameters:
+    - id: image
+      type: GHIElectronics.Endpoint.Drawing.Image
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    - id: srcRect
+      type: GHIElectronics.Endpoint.Drawing.Rectangle
+    - id: srcUnit
+      type: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+    content.vb: Public Sub DrawImage(image As Image, x As Integer, y As Integer, srcRect As Rectangle, srcUnit As GraphicsUnit)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage*
+  nameWithType.vb: Graphics.DrawImage(Image, Integer, Integer, Rectangle, GraphicsUnit)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(GHIElectronics.Endpoint.Drawing.Image, Integer, Integer, GHIElectronics.Endpoint.Drawing.Rectangle, GHIElectronics.Endpoint.Drawing.GraphicsUnit)
+  name.vb: DrawImage(Image, Integer, Integer, Rectangle, GraphicsUnit)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: DrawImage(GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: DrawImage(Image, int, int, int, int)
+  nameWithType: Graphics.DrawImage(Image, int, int, int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(GHIElectronics.Endpoint.Drawing.Image, int, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DrawImage
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 247
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void DrawImage(Image image, int x, int y, int width, int height)
+    parameters:
+    - id: image
+      type: GHIElectronics.Endpoint.Drawing.Image
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub DrawImage(image As Image, x As Integer, y As Integer, width As Integer, height As Integer)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage*
+  nameWithType.vb: Graphics.DrawImage(Image, Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(GHIElectronics.Endpoint.Drawing.Image, Integer, Integer, Integer, Integer)
+  name.vb: DrawImage(Image, Integer, Integer, Integer, Integer)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32)
+  id: DrawImage(GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: DrawImage(Image, int, int)
+  nameWithType: Graphics.DrawImage(Image, int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(GHIElectronics.Endpoint.Drawing.Image, int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DrawImage
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 250
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void DrawImage(Image image, int x, int y)
+    parameters:
+    - id: image
+      type: GHIElectronics.Endpoint.Drawing.Image
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    content.vb: Public Sub DrawImage(image As Image, x As Integer, y As Integer)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage*
+  nameWithType.vb: Graphics.DrawImage(Image, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(GHIElectronics.Endpoint.Drawing.Image, Integer, Integer)
+  name.vb: DrawImage(Image, Integer, Integer)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(GHIElectronics.Endpoint.Drawing.Image,GHIElectronics.Endpoint.Drawing.Rectangle,GHIElectronics.Endpoint.Drawing.Rectangle,GHIElectronics.Endpoint.Drawing.GraphicsUnit)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(GHIElectronics.Endpoint.Drawing.Image,GHIElectronics.Endpoint.Drawing.Rectangle,GHIElectronics.Endpoint.Drawing.Rectangle,GHIElectronics.Endpoint.Drawing.GraphicsUnit)
+  id: DrawImage(GHIElectronics.Endpoint.Drawing.Image,GHIElectronics.Endpoint.Drawing.Rectangle,GHIElectronics.Endpoint.Drawing.Rectangle,GHIElectronics.Endpoint.Drawing.GraphicsUnit)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: DrawImage(Image, Rectangle, Rectangle, GraphicsUnit)
+  nameWithType: Graphics.DrawImage(Image, Rectangle, Rectangle, GraphicsUnit)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(GHIElectronics.Endpoint.Drawing.Image, GHIElectronics.Endpoint.Drawing.Rectangle, GHIElectronics.Endpoint.Drawing.Rectangle, GHIElectronics.Endpoint.Drawing.GraphicsUnit)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DrawImage
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 253
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void DrawImage(Image image, Rectangle destRect, Rectangle srcRect, GraphicsUnit srcUnit)
+    parameters:
+    - id: image
+      type: GHIElectronics.Endpoint.Drawing.Image
+    - id: destRect
+      type: GHIElectronics.Endpoint.Drawing.Rectangle
+    - id: srcRect
+      type: GHIElectronics.Endpoint.Drawing.Rectangle
+    - id: srcUnit
+      type: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+    content.vb: Public Sub DrawImage(image As Image, destRect As Rectangle, srcRect As Rectangle, srcUnit As GraphicsUnit)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage*
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawLine(GHIElectronics.Endpoint.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.DrawLine(GHIElectronics.Endpoint.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: DrawLine(GHIElectronics.Endpoint.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: DrawLine(Pen, int, int, int, int)
+  nameWithType: Graphics.DrawLine(Pen, int, int, int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawLine(GHIElectronics.Endpoint.Drawing.Pen, int, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DrawLine
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 255
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void DrawLine(Pen pen, int x1, int y1, int x2, int y2)
+    parameters:
+    - id: pen
+      type: GHIElectronics.Endpoint.Drawing.Pen
+    - id: x1
+      type: System.Int32
+    - id: y1
+      type: System.Int32
+    - id: x2
+      type: System.Int32
+    - id: y2
+      type: System.Int32
+    content.vb: Public Sub DrawLine(pen As Pen, x1 As Integer, y1 As Integer, x2 As Integer, y2 As Integer)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.DrawLine*
+  nameWithType.vb: Graphics.DrawLine(Pen, Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.DrawLine(GHIElectronics.Endpoint.Drawing.Pen, Integer, Integer, Integer, Integer)
+  name.vb: DrawLine(Pen, Integer, Integer, Integer, Integer)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawString(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.Drawing.Brush,System.Single,System.Single)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.DrawString(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.Drawing.Brush,System.Single,System.Single)
+  id: DrawString(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.Drawing.Brush,System.Single,System.Single)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: DrawString(string, Font, Brush, float, float)
+  nameWithType: Graphics.DrawString(string, Font, Brush, float, float)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawString(string, GHIElectronics.Endpoint.Drawing.Font, GHIElectronics.Endpoint.Drawing.Brush, float, float)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DrawString
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 261
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void DrawString(string s, Font font, Brush brush, float x, float y)
+    parameters:
+    - id: s
+      type: System.String
+    - id: font
+      type: GHIElectronics.Endpoint.Drawing.Font
+    - id: brush
+      type: GHIElectronics.Endpoint.Drawing.Brush
+    - id: x
+      type: System.Single
+    - id: y
+      type: System.Single
+    content.vb: Public Sub DrawString(s As String, font As Font, brush As Brush, x As Single, y As Single)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.DrawString*
+  nameWithType.vb: Graphics.DrawString(String, Font, Brush, Single, Single)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.DrawString(String, GHIElectronics.Endpoint.Drawing.Font, GHIElectronics.Endpoint.Drawing.Brush, Single, Single)
+  name.vb: DrawString(String, Font, Brush, Single, Single)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawString(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.Drawing.Brush,GHIElectronics.Endpoint.Drawing.RectangleF)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.DrawString(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.Drawing.Brush,GHIElectronics.Endpoint.Drawing.RectangleF)
+  id: DrawString(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.Drawing.Brush,GHIElectronics.Endpoint.Drawing.RectangleF)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: DrawString(string, Font, Brush, RectangleF)
+  nameWithType: Graphics.DrawString(string, Font, Brush, RectangleF)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawString(string, GHIElectronics.Endpoint.Drawing.Font, GHIElectronics.Endpoint.Drawing.Brush, GHIElectronics.Endpoint.Drawing.RectangleF)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DrawString
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 272
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void DrawString(string s, Font font, Brush brush, RectangleF layoutRectangle)
+    parameters:
+    - id: s
+      type: System.String
+    - id: font
+      type: GHIElectronics.Endpoint.Drawing.Font
+    - id: brush
+      type: GHIElectronics.Endpoint.Drawing.Brush
+    - id: layoutRectangle
+      type: GHIElectronics.Endpoint.Drawing.RectangleF
+    content.vb: Public Sub DrawString(s As String, font As Font, brush As Brush, layoutRectangle As RectangleF)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.DrawString*
+  nameWithType.vb: Graphics.DrawString(String, Font, Brush, RectangleF)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.DrawString(String, GHIElectronics.Endpoint.Drawing.Font, GHIElectronics.Endpoint.Drawing.Brush, GHIElectronics.Endpoint.Drawing.RectangleF)
+  name.vb: DrawString(String, Font, Brush, RectangleF)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawString(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.Drawing.Brush,GHIElectronics.Endpoint.Drawing.RectangleF,GHIElectronics.Endpoint.Drawing.StringFormat)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.DrawString(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.Drawing.Brush,GHIElectronics.Endpoint.Drawing.RectangleF,GHIElectronics.Endpoint.Drawing.StringFormat)
+  id: DrawString(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.Drawing.Brush,GHIElectronics.Endpoint.Drawing.RectangleF,GHIElectronics.Endpoint.Drawing.StringFormat)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: DrawString(string, Font, Brush, RectangleF, StringFormat)
+  nameWithType: Graphics.DrawString(string, Font, Brush, RectangleF, StringFormat)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawString(string, GHIElectronics.Endpoint.Drawing.Font, GHIElectronics.Endpoint.Drawing.Brush, GHIElectronics.Endpoint.Drawing.RectangleF, GHIElectronics.Endpoint.Drawing.StringFormat)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DrawString
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 277
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void DrawString(string s, Font font, Brush brush, RectangleF layoutRectangle, StringFormat format)
+    parameters:
+    - id: s
+      type: System.String
+    - id: font
+      type: GHIElectronics.Endpoint.Drawing.Font
+    - id: brush
+      type: GHIElectronics.Endpoint.Drawing.Brush
+    - id: layoutRectangle
+      type: GHIElectronics.Endpoint.Drawing.RectangleF
+    - id: format
+      type: GHIElectronics.Endpoint.Drawing.StringFormat
+    content.vb: Public Sub DrawString(s As String, font As Font, brush As Brush, layoutRectangle As RectangleF, format As StringFormat)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.DrawString*
+  nameWithType.vb: Graphics.DrawString(String, Font, Brush, RectangleF, StringFormat)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.DrawString(String, GHIElectronics.Endpoint.Drawing.Font, GHIElectronics.Endpoint.Drawing.Brush, GHIElectronics.Endpoint.Drawing.RectangleF, GHIElectronics.Endpoint.Drawing.StringFormat)
+  name.vb: DrawString(String, Font, Brush, RectangleF, StringFormat)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawEllipse(GHIElectronics.Endpoint.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.DrawEllipse(GHIElectronics.Endpoint.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: DrawEllipse(GHIElectronics.Endpoint.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: DrawEllipse(Pen, int, int, int, int)
+  nameWithType: Graphics.DrawEllipse(Pen, int, int, int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawEllipse(GHIElectronics.Endpoint.Drawing.Pen, int, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DrawEllipse
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 288
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void DrawEllipse(Pen pen, int x, int y, int width, int height)
+    parameters:
+    - id: pen
+      type: GHIElectronics.Endpoint.Drawing.Pen
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub DrawEllipse(pen As Pen, x As Integer, y As Integer, width As Integer, height As Integer)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.DrawEllipse*
+  nameWithType.vb: Graphics.DrawEllipse(Pen, Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.DrawEllipse(GHIElectronics.Endpoint.Drawing.Pen, Integer, Integer, Integer, Integer)
+  name.vb: DrawEllipse(Pen, Integer, Integer, Integer, Integer)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawRectangle(GHIElectronics.Endpoint.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.DrawRectangle(GHIElectronics.Endpoint.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: DrawRectangle(GHIElectronics.Endpoint.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: DrawRectangle(Pen, int, int, int, int)
+  nameWithType: Graphics.DrawRectangle(Pen, int, int, int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawRectangle(GHIElectronics.Endpoint.Drawing.Pen, int, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DrawRectangle
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 302
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void DrawRectangle(Pen pen, int x, int y, int width, int height)
+    parameters:
+    - id: pen
+      type: GHIElectronics.Endpoint.Drawing.Pen
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub DrawRectangle(pen As Pen, x As Integer, y As Integer, width As Integer, height As Integer)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.DrawRectangle*
+  nameWithType.vb: Graphics.DrawRectangle(Pen, Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.DrawRectangle(GHIElectronics.Endpoint.Drawing.Pen, Integer, Integer, Integer, Integer)
+  name.vb: DrawRectangle(Pen, Integer, Integer, Integer, Integer)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.FillEllipse(GHIElectronics.Endpoint.Drawing.Brush,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.FillEllipse(GHIElectronics.Endpoint.Drawing.Brush,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: FillEllipse(GHIElectronics.Endpoint.Drawing.Brush,System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: FillEllipse(Brush, int, int, int, int)
+  nameWithType: Graphics.FillEllipse(Brush, int, int, int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.FillEllipse(GHIElectronics.Endpoint.Drawing.Brush, int, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: FillEllipse
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 310
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void FillEllipse(Brush brush, int x, int y, int width, int height)
+    parameters:
+    - id: brush
+      type: GHIElectronics.Endpoint.Drawing.Brush
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub FillEllipse(brush As Brush, x As Integer, y As Integer, width As Integer, height As Integer)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.FillEllipse*
+  nameWithType.vb: Graphics.FillEllipse(Brush, Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.FillEllipse(GHIElectronics.Endpoint.Drawing.Brush, Integer, Integer, Integer, Integer)
+  name.vb: FillEllipse(Brush, Integer, Integer, Integer, Integer)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.FillRectangle(GHIElectronics.Endpoint.Drawing.Brush,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.FillRectangle(GHIElectronics.Endpoint.Drawing.Brush,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: FillRectangle(GHIElectronics.Endpoint.Drawing.Brush,System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: FillRectangle(Brush, int, int, int, int)
+  nameWithType: Graphics.FillRectangle(Brush, int, int, int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.FillRectangle(GHIElectronics.Endpoint.Drawing.Brush, int, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: FillRectangle
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 327
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void FillRectangle(Brush brush, int x, int y, int width, int height)
+    parameters:
+    - id: brush
+      type: GHIElectronics.Endpoint.Drawing.Brush
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub FillRectangle(brush As Brush, x As Integer, y As Integer, width As Integer, height As Integer)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.FillRectangle*
+  nameWithType.vb: Graphics.FillRectangle(Brush, Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.FillRectangle(GHIElectronics.Endpoint.Drawing.Brush, Integer, Integer, Integer, Integer)
+  name.vb: FillRectangle(Brush, Integer, Integer, Integer, Integer)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)
+  id: DrawImage(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: DrawImage(int, int, Image, int, int, int, int, ushort)
+  nameWithType: Graphics.DrawImage(int, int, Image, int, int, int, int, ushort)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(int, int, GHIElectronics.Endpoint.Drawing.Image, int, int, int, int, ushort)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DrawImage
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 338
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void DrawImage(int xDst, int yDst, Image image, int xSrc, int ySrc, int width, int height, ushort opacity)
+    parameters:
+    - id: xDst
+      type: System.Int32
+    - id: yDst
+      type: System.Int32
+    - id: image
+      type: GHIElectronics.Endpoint.Drawing.Image
+    - id: xSrc
+      type: System.Int32
+    - id: ySrc
+      type: System.Int32
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    - id: opacity
+      type: System.UInt16
+    content.vb: Public Sub DrawImage(xDst As Integer, yDst As Integer, image As Image, xSrc As Integer, ySrc As Integer, width As Integer, height As Integer, opacity As UShort)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage*
+  nameWithType.vb: Graphics.DrawImage(Integer, Integer, Image, Integer, Integer, Integer, Integer, UShort)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage(Integer, Integer, GHIElectronics.Endpoint.Drawing.Image, Integer, Integer, Integer, Integer, UShort)
+  name.vb: DrawImage(Integer, Integer, Image, Integer, Integer, Integer, Integer, UShort)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.Flush(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.Flush(System.Int32,System.Int32,System.Int32,System.Int32)
+  id: Flush(System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: Flush(int, int, int, int)
+  nameWithType: Graphics.Flush(int, int, int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.Flush(int, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Flush
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 340
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void Flush(int x, int y, int width, int height)
+    parameters:
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub Flush(x As Integer, y As Integer, width As Integer, height As Integer)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.Flush*
+  nameWithType.vb: Graphics.Flush(Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.Flush(Integer, Integer, Integer, Integer)
+  name.vb: Flush(Integer, Integer, Integer, Integer)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.SetClippingRectangle(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.SetClippingRectangle(System.Int32,System.Int32,System.Int32,System.Int32)
+  id: SetClippingRectangle(System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: SetClippingRectangle(int, int, int, int)
+  nameWithType: Graphics.SetClippingRectangle(int, int, int, int)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.SetClippingRectangle(int, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SetClippingRectangle
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 352
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void SetClippingRectangle(int x, int y, int width, int height)
+    parameters:
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub SetClippingRectangle(x As Integer, y As Integer, width As Integer, height As Integer)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.SetClippingRectangle*
+  nameWithType.vb: Graphics.SetClippingRectangle(Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.SetClippingRectangle(Integer, Integer, Integer, Integer)
+  name.vb: SetClippingRectangle(Integer, Integer, Integer, Integer)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextInRect(System.String,System.Int32,System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment,GHIElectronics.Endpoint.Drawing.Color,GHIElectronics.Endpoint.Drawing.Font)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextInRect(System.String,System.Int32,System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment,GHIElectronics.Endpoint.Drawing.Color,GHIElectronics.Endpoint.Drawing.Font)
+  id: DrawTextInRect(System.String,System.Int32,System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment,GHIElectronics.Endpoint.Drawing.Color,GHIElectronics.Endpoint.Drawing.Font)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: DrawTextInRect(string, int, int, int, int, DrawTextAlignment, Color, Font)
+  nameWithType: Graphics.DrawTextInRect(string, int, int, int, int, Graphics.DrawTextAlignment, Color, Font)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextInRect(string, int, int, int, int, GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment, GHIElectronics.Endpoint.Drawing.Color, GHIElectronics.Endpoint.Drawing.Font)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DrawTextInRect
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 353
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void DrawTextInRect(string text, int x, int y, int width, int height, Graphics.DrawTextAlignment dtFlags, Color color, Font font)
+    parameters:
+    - id: text
+      type: System.String
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    - id: dtFlags
+      type: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+    - id: color
+      type: GHIElectronics.Endpoint.Drawing.Color
+    - id: font
+      type: GHIElectronics.Endpoint.Drawing.Font
+    content.vb: Public Sub DrawTextInRect(text As String, x As Integer, y As Integer, width As Integer, height As Integer, dtFlags As Graphics.DrawTextAlignment, color As Color, font As Font)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextInRect*
+  nameWithType.vb: Graphics.DrawTextInRect(String, Integer, Integer, Integer, Integer, Graphics.DrawTextAlignment, Color, Font)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextInRect(String, Integer, Integer, Integer, Integer, GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment, GHIElectronics.Endpoint.Drawing.Color, GHIElectronics.Endpoint.Drawing.Font)
+  name.vb: DrawTextInRect(String, Integer, Integer, Integer, Integer, DrawTextAlignment, Color, Font)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextInRect(System.String@,System.Int32@,System.Int32@,System.Int32,System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment,GHIElectronics.Endpoint.Drawing.Color,GHIElectronics.Endpoint.Drawing.Font)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextInRect(System.String@,System.Int32@,System.Int32@,System.Int32,System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment,GHIElectronics.Endpoint.Drawing.Color,GHIElectronics.Endpoint.Drawing.Font)
+  id: DrawTextInRect(System.String@,System.Int32@,System.Int32@,System.Int32,System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment,GHIElectronics.Endpoint.Drawing.Color,GHIElectronics.Endpoint.Drawing.Font)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: DrawTextInRect(ref string, ref int, ref int, int, int, int, int, DrawTextAlignment, Color, Font)
+  nameWithType: Graphics.DrawTextInRect(ref string, ref int, ref int, int, int, int, int, Graphics.DrawTextAlignment, Color, Font)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextInRect(ref string, ref int, ref int, int, int, int, int, GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment, GHIElectronics.Endpoint.Drawing.Color, GHIElectronics.Endpoint.Drawing.Font)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DrawTextInRect
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 354
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public bool DrawTextInRect(ref string text, ref int xRelStart, ref int yRelStart, int x, int y, int width, int height, Graphics.DrawTextAlignment dtFlags, Color color, Font font)
+    parameters:
+    - id: text
+      type: System.String
+    - id: xRelStart
+      type: System.Int32
+    - id: yRelStart
+      type: System.Int32
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    - id: dtFlags
+      type: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+    - id: color
+      type: GHIElectronics.Endpoint.Drawing.Color
+    - id: font
+      type: GHIElectronics.Endpoint.Drawing.Font
+    return:
+      type: System.Boolean
+    content.vb: Public Function DrawTextInRect(text As String, xRelStart As Integer, yRelStart As Integer, x As Integer, y As Integer, width As Integer, height As Integer, dtFlags As Graphics.DrawTextAlignment, color As Color, font As Font) As Boolean
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextInRect*
+  nameWithType.vb: Graphics.DrawTextInRect(String, Integer, Integer, Integer, Integer, Integer, Integer, Graphics.DrawTextAlignment, Color, Font)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextInRect(String, Integer, Integer, Integer, Integer, Integer, Integer, GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment, GHIElectronics.Endpoint.Drawing.Color, GHIElectronics.Endpoint.Drawing.Font)
+  name.vb: DrawTextInRect(String, Integer, Integer, Integer, Integer, Integer, Integer, DrawTextAlignment, Color, Font)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.RotateImage(System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.RotateImage(System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)
+  id: RotateImage(System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: RotateImage(int, int, int, Image, int, int, int, int, ushort)
+  nameWithType: Graphics.RotateImage(int, int, int, Image, int, int, int, int, ushort)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.RotateImage(int, int, int, GHIElectronics.Endpoint.Drawing.Image, int, int, int, int, ushort)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: RotateImage
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 355
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void RotateImage(int angle, int xDst, int yDst, Image image, int xSrc, int ySrc, int width, int height, ushort opacity)
+    parameters:
+    - id: angle
+      type: System.Int32
+    - id: xDst
+      type: System.Int32
+    - id: yDst
+      type: System.Int32
+    - id: image
+      type: GHIElectronics.Endpoint.Drawing.Image
+    - id: xSrc
+      type: System.Int32
+    - id: ySrc
+      type: System.Int32
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    - id: opacity
+      type: System.UInt16
+    content.vb: Public Sub RotateImage(angle As Integer, xDst As Integer, yDst As Integer, image As Image, xSrc As Integer, ySrc As Integer, width As Integer, height As Integer, opacity As UShort)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.RotateImage*
+  nameWithType.vb: Graphics.RotateImage(Integer, Integer, Integer, Image, Integer, Integer, Integer, Integer, UShort)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.RotateImage(Integer, Integer, Integer, GHIElectronics.Endpoint.Drawing.Image, Integer, Integer, Integer, Integer, UShort)
+  name.vb: RotateImage(Integer, Integer, Integer, Image, Integer, Integer, Integer, Integer, UShort)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.MakeTransparent(GHIElectronics.Endpoint.Drawing.Color)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.MakeTransparent(GHIElectronics.Endpoint.Drawing.Color)
+  id: MakeTransparent(GHIElectronics.Endpoint.Drawing.Color)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: MakeTransparent(Color)
+  nameWithType: Graphics.MakeTransparent(Color)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.MakeTransparent(GHIElectronics.Endpoint.Drawing.Color)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: MakeTransparent
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 363
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void MakeTransparent(Color color)
+    parameters:
+    - id: color
+      type: GHIElectronics.Endpoint.Drawing.Color
+    content.vb: Public Sub MakeTransparent(color As Color)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.MakeTransparent*
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.StretchImage(System.Int32,System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.StretchImage(System.Int32,System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)
+  id: StretchImage(System.Int32,System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: StretchImage(int, int, int, int, Image, int, int, int, int, ushort)
+  nameWithType: Graphics.StretchImage(int, int, int, int, Image, int, int, int, int, ushort)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.StretchImage(int, int, int, int, GHIElectronics.Endpoint.Drawing.Image, int, int, int, int, ushort)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: StretchImage
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 364
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void StretchImage(int xDst, int yDst, int widthDst, int heightDst, Image image, int xSrc, int ySrc, int widthSrc, int heightSrc, ushort opacity)
+    parameters:
+    - id: xDst
+      type: System.Int32
+    - id: yDst
+      type: System.Int32
+    - id: widthDst
+      type: System.Int32
+    - id: heightDst
+      type: System.Int32
+    - id: image
+      type: GHIElectronics.Endpoint.Drawing.Image
+    - id: xSrc
+      type: System.Int32
+    - id: ySrc
+      type: System.Int32
+    - id: widthSrc
+      type: System.Int32
+    - id: heightSrc
+      type: System.Int32
+    - id: opacity
+      type: System.UInt16
+    content.vb: Public Sub StretchImage(xDst As Integer, yDst As Integer, widthDst As Integer, heightDst As Integer, image As Image, xSrc As Integer, ySrc As Integer, widthSrc As Integer, heightSrc As Integer, opacity As UShort)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.StretchImage*
+  nameWithType.vb: Graphics.StretchImage(Integer, Integer, Integer, Integer, Image, Integer, Integer, Integer, Integer, UShort)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.StretchImage(Integer, Integer, Integer, Integer, GHIElectronics.Endpoint.Drawing.Image, Integer, Integer, Integer, Integer, UShort)
+  name.vb: StretchImage(Integer, Integer, Integer, Integer, Image, Integer, Integer, Integer, Integer, UShort)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.TileImage(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.UInt16)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.TileImage(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.UInt16)
+  id: TileImage(System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.UInt16)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: TileImage(int, int, Image, int, int, ushort)
+  nameWithType: Graphics.TileImage(int, int, Image, int, int, ushort)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.TileImage(int, int, GHIElectronics.Endpoint.Drawing.Image, int, int, ushort)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: TileImage
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 365
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void TileImage(int xDst, int yDst, Image image, int width, int height, ushort opacity)
+    parameters:
+    - id: xDst
+      type: System.Int32
+    - id: yDst
+      type: System.Int32
+    - id: image
+      type: GHIElectronics.Endpoint.Drawing.Image
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    - id: opacity
+      type: System.UInt16
+    content.vb: Public Sub TileImage(xDst As Integer, yDst As Integer, image As Image, width As Integer, height As Integer, opacity As UShort)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.TileImage*
+  nameWithType.vb: Graphics.TileImage(Integer, Integer, Image, Integer, Integer, UShort)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.TileImage(Integer, Integer, GHIElectronics.Endpoint.Drawing.Image, Integer, Integer, UShort)
+  name.vb: TileImage(Integer, Integer, Image, Integer, Integer, UShort)
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.Scale9Image(System.Int32,System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Graphics.Scale9Image(System.Int32,System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)
+  id: Scale9Image(System.Int32,System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)
+  parent: GHIElectronics.Endpoint.Drawing.Graphics
+  langs:
+  - csharp
+  - vb
+  name: Scale9Image(int, int, int, int, Image, int, int, int, int, ushort)
+  nameWithType: Graphics.Scale9Image(int, int, int, int, Image, int, int, int, int, ushort)
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.Scale9Image(int, int, int, int, GHIElectronics.Endpoint.Drawing.Image, int, int, int, int, ushort)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Scale9Image
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Graphics.cs
+    startLine: 366
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public void Scale9Image(int xDst, int yDst, int widthDst, int heightDst, Image image, int leftBorder, int topBorder, int rightBorder, int bottomBorder, ushort opacity)
+    parameters:
+    - id: xDst
+      type: System.Int32
+    - id: yDst
+      type: System.Int32
+    - id: widthDst
+      type: System.Int32
+    - id: heightDst
+      type: System.Int32
+    - id: image
+      type: GHIElectronics.Endpoint.Drawing.Image
+    - id: leftBorder
+      type: System.Int32
+    - id: topBorder
+      type: System.Int32
+    - id: rightBorder
+      type: System.Int32
+    - id: bottomBorder
+      type: System.Int32
+    - id: opacity
+      type: System.UInt16
+    content.vb: Public Sub Scale9Image(xDst As Integer, yDst As Integer, widthDst As Integer, heightDst As Integer, image As Image, leftBorder As Integer, topBorder As Integer, rightBorder As Integer, bottomBorder As Integer, opacity As UShort)
+  overload: GHIElectronics.Endpoint.Drawing.Graphics.Scale9Image*
+  nameWithType.vb: Graphics.Scale9Image(Integer, Integer, Integer, Integer, Image, Integer, Integer, Integer, Integer, UShort)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Graphics.Scale9Image(Integer, Integer, Integer, Integer, GHIElectronics.Endpoint.Drawing.Image, Integer, Integer, Integer, Integer, UShort)
+  name.vb: Scale9Image(Integer, Integer, Integer, Integer, Image, Integer, Integer, Integer, Integer, UShort)
+references:
+- uid: GHIElectronics.Endpoint.Drawing
+  commentId: N:GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing
+  nameWithType: GHIElectronics.Endpoint.Drawing
+  fullName: GHIElectronics.Endpoint.Drawing
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.MarshalByRefObject
+  commentId: T:System.MarshalByRefObject
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject
+  name: MarshalByRefObject
+  nameWithType: MarshalByRefObject
+  fullName: System.MarshalByRefObject
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.MarshalByRefObject.GetLifetimeService
+  commentId: M:System.MarshalByRefObject.GetLifetimeService
+  parent: System.MarshalByRefObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice
+  name: GetLifetimeService()
+  nameWithType: MarshalByRefObject.GetLifetimeService()
+  fullName: System.MarshalByRefObject.GetLifetimeService()
+  spec.csharp:
+  - uid: System.MarshalByRefObject.GetLifetimeService
+    name: GetLifetimeService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.MarshalByRefObject.GetLifetimeService
+    name: GetLifetimeService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice
+  - name: (
+  - name: )
+- uid: System.MarshalByRefObject.InitializeLifetimeService
+  commentId: M:System.MarshalByRefObject.InitializeLifetimeService
+  parent: System.MarshalByRefObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice
+  name: InitializeLifetimeService()
+  nameWithType: MarshalByRefObject.InitializeLifetimeService()
+  fullName: System.MarshalByRefObject.InitializeLifetimeService()
+  spec.csharp:
+  - uid: System.MarshalByRefObject.InitializeLifetimeService
+    name: InitializeLifetimeService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.MarshalByRefObject.InitializeLifetimeService
+    name: InitializeLifetimeService
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice
+  - name: (
+  - name: )
+- uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+  commentId: M:System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+  parent: System.MarshalByRefObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone
+  name: MemberwiseClone(bool)
+  nameWithType: MarshalByRefObject.MemberwiseClone(bool)
+  fullName: System.MarshalByRefObject.MemberwiseClone(bool)
+  nameWithType.vb: MarshalByRefObject.MemberwiseClone(Boolean)
+  fullName.vb: System.MarshalByRefObject.MemberwiseClone(Boolean)
+  name.vb: MemberwiseClone(Boolean)
+  spec.csharp:
+  - uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.Width*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.Width
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_Width
+  name: Width
+  nameWithType: Graphics.Width
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.Width
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.Height*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.Height
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_Height
+  name: Height
+  nameWithType: Graphics.Height
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.Height
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.PageUnit*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.PageUnit
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_PageUnit
+  name: PageUnit
+  nameWithType: Graphics.PageUnit
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.PageUnit
+- uid: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+  commentId: T:GHIElectronics.Endpoint.Drawing.GraphicsUnit
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.GraphicsUnit.html
+  name: GraphicsUnit
+  nameWithType: GraphicsUnit
+  fullName: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.GetPixel*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.GetPixel
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_GetPixel_System_Int32_System_Int32_
+  name: GetPixel
+  nameWithType: Graphics.GetPixel
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.GetPixel
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.SetPixel*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.SetPixel
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_SetPixel_System_Int32_System_Int32_GHIElectronics_Endpoint_Drawing_Color_
+  name: SetPixel
+  nameWithType: Graphics.SetPixel
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.SetPixel
+- uid: GHIElectronics.Endpoint.Drawing.Color
+  commentId: T:GHIElectronics.Endpoint.Drawing.Color
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: GHIElectronics.Endpoint.Drawing.Color
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.GetBitmap*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.GetBitmap
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_GetBitmap
+  name: GetBitmap
+  nameWithType: Graphics.GetBitmap
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.GetBitmap
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.Dispose*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.Dispose
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_Dispose
+  name: Dispose
+  nameWithType: Graphics.Dispose
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.Finalize*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.Finalize
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_Finalize
+  name: ~Graphics
+  nameWithType: Graphics.~Graphics
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.~Graphics
+  spec.csharp:
+  - name: "~"
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics.Finalize*
+    name: Graphics
+    href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_Finalize
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.MeasureString*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.MeasureString
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_MeasureString_System_String_GHIElectronics_Endpoint_Drawing_Font_
+  name: MeasureString
+  nameWithType: Graphics.MeasureString
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.MeasureString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: GHIElectronics.Endpoint.Drawing.Font
+  commentId: T:GHIElectronics.Endpoint.Drawing.Font
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Font.html
+  name: Font
+  nameWithType: Font
+  fullName: GHIElectronics.Endpoint.Drawing.Font
+- uid: GHIElectronics.Endpoint.Drawing.SizeF
+  commentId: T:GHIElectronics.Endpoint.Drawing.SizeF
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.SizeF.html
+  name: SizeF
+  nameWithType: SizeF
+  fullName: GHIElectronics.Endpoint.Drawing.SizeF
+- uid: GHIElectronics.Endpoint.Drawing.StringFormat
+  commentId: T:GHIElectronics.Endpoint.Drawing.StringFormat
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.StringFormat.html
+  name: StringFormat
+  nameWithType: StringFormat
+  fullName: GHIElectronics.Endpoint.Drawing.StringFormat
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.Clear*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.Clear
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_Clear
+  name: Clear
+  nameWithType: Graphics.Clear
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.Clear
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.FromImage*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.FromImage
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_FromImage_GHIElectronics_Endpoint_Drawing_Image_
+  name: FromImage
+  nameWithType: Graphics.FromImage
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.FromImage
+- uid: GHIElectronics.Endpoint.Drawing.Image
+  commentId: T:GHIElectronics.Endpoint.Drawing.Image
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Image.html
+  name: Image
+  nameWithType: Image
+  fullName: GHIElectronics.Endpoint.Drawing.Image
+- uid: GHIElectronics.Endpoint.Drawing.Graphics
+  commentId: T:GHIElectronics.Endpoint.Drawing.Graphics
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html
+  name: Graphics
+  nameWithType: Graphics
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.FromData*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.FromData
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_FromData_System_Byte___
+  name: FromData
+  nameWithType: Graphics.FromData
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.FromData
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.OnFlushHandler
+  commentId: T:GHIElectronics.Endpoint.Drawing.Graphics.OnFlushHandler
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html
+  name: Graphics.OnFlushHandler
+  nameWithType: Graphics.OnFlushHandler
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.OnFlushHandler
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics
+    name: Graphics
+    href: GHIElectronics.Endpoint.Drawing.Graphics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics.OnFlushHandler
+    name: OnFlushHandler
+    href: GHIElectronics.Endpoint.Drawing.Graphics.OnFlushHandler.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics
+    name: Graphics
+    href: GHIElectronics.Endpoint.Drawing.Graphics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics.OnFlushHandler
+    name: OnFlushHandler
+    href: GHIElectronics.Endpoint.Drawing.Graphics.OnFlushHandler.html
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.DrawImage
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_DrawImage_GHIElectronics_Endpoint_Drawing_Image_System_Int32_System_Int32_GHIElectronics_Endpoint_Drawing_Rectangle_GHIElectronics_Endpoint_Drawing_GraphicsUnit_
+  name: DrawImage
+  nameWithType: Graphics.DrawImage
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawImage
+- uid: GHIElectronics.Endpoint.Drawing.Rectangle
+  commentId: T:GHIElectronics.Endpoint.Drawing.Rectangle
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Rectangle.html
+  name: Rectangle
+  nameWithType: Rectangle
+  fullName: GHIElectronics.Endpoint.Drawing.Rectangle
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawLine*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.DrawLine
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_DrawLine_GHIElectronics_Endpoint_Drawing_Pen_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: DrawLine
+  nameWithType: Graphics.DrawLine
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawLine
+- uid: GHIElectronics.Endpoint.Drawing.Pen
+  commentId: T:GHIElectronics.Endpoint.Drawing.Pen
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Pen.html
+  name: Pen
+  nameWithType: Pen
+  fullName: GHIElectronics.Endpoint.Drawing.Pen
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawString*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.DrawString
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_DrawString_System_String_GHIElectronics_Endpoint_Drawing_Font_GHIElectronics_Endpoint_Drawing_Brush_System_Single_System_Single_
+  name: DrawString
+  nameWithType: Graphics.DrawString
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawString
+- uid: GHIElectronics.Endpoint.Drawing.Brush
+  commentId: T:GHIElectronics.Endpoint.Drawing.Brush
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Brush.html
+  name: Brush
+  nameWithType: Brush
+  fullName: GHIElectronics.Endpoint.Drawing.Brush
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: GHIElectronics.Endpoint.Drawing.RectangleF
+  commentId: T:GHIElectronics.Endpoint.Drawing.RectangleF
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.RectangleF.html
+  name: RectangleF
+  nameWithType: RectangleF
+  fullName: GHIElectronics.Endpoint.Drawing.RectangleF
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawEllipse*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.DrawEllipse
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_DrawEllipse_GHIElectronics_Endpoint_Drawing_Pen_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: DrawEllipse
+  nameWithType: Graphics.DrawEllipse
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawEllipse
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawRectangle*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.DrawRectangle
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_DrawRectangle_GHIElectronics_Endpoint_Drawing_Pen_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: DrawRectangle
+  nameWithType: Graphics.DrawRectangle
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawRectangle
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.FillEllipse*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.FillEllipse
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_FillEllipse_GHIElectronics_Endpoint_Drawing_Brush_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: FillEllipse
+  nameWithType: Graphics.FillEllipse
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.FillEllipse
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.FillRectangle*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.FillRectangle
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_FillRectangle_GHIElectronics_Endpoint_Drawing_Brush_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: FillRectangle
+  nameWithType: Graphics.FillRectangle
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.FillRectangle
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.Flush*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.Flush
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_Flush_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: Flush
+  nameWithType: Graphics.Flush
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.Flush
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.SetClippingRectangle*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.SetClippingRectangle
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_SetClippingRectangle_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: SetClippingRectangle
+  nameWithType: Graphics.SetClippingRectangle
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.SetClippingRectangle
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextInRect*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextInRect
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_DrawTextInRect_System_String_System_Int32_System_Int32_System_Int32_System_Int32_GHIElectronics_Endpoint_Drawing_Graphics_DrawTextAlignment_GHIElectronics_Endpoint_Drawing_Color_GHIElectronics_Endpoint_Drawing_Font_
+  name: DrawTextInRect
+  nameWithType: Graphics.DrawTextInRect
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextInRect
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  commentId: T:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html
+  name: Graphics.DrawTextAlignment
+  nameWithType: Graphics.DrawTextAlignment
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics
+    name: Graphics
+    href: GHIElectronics.Endpoint.Drawing.Graphics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+    name: DrawTextAlignment
+    href: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics
+    name: Graphics
+    href: GHIElectronics.Endpoint.Drawing.Graphics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+    name: DrawTextAlignment
+    href: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.html
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.RotateImage*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.RotateImage
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_RotateImage_System_Int32_System_Int32_System_Int32_GHIElectronics_Endpoint_Drawing_Image_System_Int32_System_Int32_System_Int32_System_Int32_System_UInt16_
+  name: RotateImage
+  nameWithType: Graphics.RotateImage
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.RotateImage
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.MakeTransparent*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.MakeTransparent
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_MakeTransparent_GHIElectronics_Endpoint_Drawing_Color_
+  name: MakeTransparent
+  nameWithType: Graphics.MakeTransparent
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.MakeTransparent
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.StretchImage*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.StretchImage
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_StretchImage_System_Int32_System_Int32_System_Int32_System_Int32_GHIElectronics_Endpoint_Drawing_Image_System_Int32_System_Int32_System_Int32_System_Int32_System_UInt16_
+  name: StretchImage
+  nameWithType: Graphics.StretchImage
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.StretchImage
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.TileImage*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.TileImage
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_TileImage_System_Int32_System_Int32_GHIElectronics_Endpoint_Drawing_Image_System_Int32_System_Int32_System_UInt16_
+  name: TileImage
+  nameWithType: Graphics.TileImage
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.TileImage
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.Scale9Image*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Graphics.Scale9Image
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html#GHIElectronics_Endpoint_Drawing_Graphics_Scale9Image_System_Int32_System_Int32_System_Int32_System_Int32_GHIElectronics_Endpoint_Drawing_Image_System_Int32_System_Int32_System_Int32_System_Int32_System_UInt16_
+  name: Scale9Image
+  nameWithType: Graphics.Scale9Image
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.Scale9Image

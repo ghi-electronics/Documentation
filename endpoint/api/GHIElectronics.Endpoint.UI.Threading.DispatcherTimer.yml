@@ -1,0 +1,855 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+  id: DispatcherTimer
+  parent: GHIElectronics.Endpoint.UI.Threading
+  children:
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.#ctor
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.#ctor(GHIElectronics.Endpoint.UI.Threading.Dispatcher)
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Close
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispatcher
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispose
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispose(System.Boolean)
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Interval
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.IsEnabled
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Start
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Stop
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Tag
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Tick
+  langs:
+  - csharp
+  - vb
+  name: DispatcherTimer
+  nameWithType: DispatcherTimer
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DispatcherTimer
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+    startLine: 12
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: >-
+    A timer that is integrated into the Dispatcher queues, and will
+
+    be processed after a given amount of time
+  example: []
+  syntax:
+    content: 'public class DispatcherTimer : IDisposable'
+    content.vb: Public Class DispatcherTimer Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.#ctor
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.#ctor
+  id: '#ctor'
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+  langs:
+  - csharp
+  - vb
+  name: DispatcherTimer()
+  nameWithType: DispatcherTimer.DispatcherTimer()
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.DispatcherTimer()
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+    startLine: 17
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: >-
+    Creates a timer that uses the current thread's Dispatcher to
+
+    process the timer event
+  example: []
+  syntax:
+    content: public DispatcherTimer()
+    content.vb: Public Sub New()
+  overload: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.#ctor*
+  nameWithType.vb: DispatcherTimer.New()
+  fullName.vb: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.New()
+  name.vb: New()
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.#ctor(GHIElectronics.Endpoint.UI.Threading.Dispatcher)
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.#ctor(GHIElectronics.Endpoint.UI.Threading.Dispatcher)
+  id: '#ctor(GHIElectronics.Endpoint.UI.Threading.Dispatcher)'
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+  langs:
+  - csharp
+  - vb
+  name: DispatcherTimer(Dispatcher)
+  nameWithType: DispatcherTimer.DispatcherTimer(Dispatcher)
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.DispatcherTimer(GHIElectronics.Endpoint.UI.Threading.Dispatcher)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+    startLine: 28
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: >-
+    Creates a timer that uses the specified Dispatcher to
+
+    process the timer event.
+  example: []
+  syntax:
+    content: public DispatcherTimer(Dispatcher dispatcher)
+    parameters:
+    - id: dispatcher
+      type: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+      description: The dispatcher to use to process the timer.
+    content.vb: Public Sub New(dispatcher As Dispatcher)
+  overload: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.#ctor*
+  nameWithType.vb: DispatcherTimer.New(Dispatcher)
+  fullName.vb: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.New(GHIElectronics.Endpoint.UI.Threading.Dispatcher)
+  name.vb: New(Dispatcher)
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispatcher
+  commentId: P:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispatcher
+  id: Dispatcher
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+  langs:
+  - csharp
+  - vb
+  name: Dispatcher
+  nameWithType: DispatcherTimer.Dispatcher
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispatcher
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Dispatcher
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+    startLine: 38
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: Gets the dispatcher this timer is associated with.
+  example: []
+  syntax:
+    content: public Dispatcher Dispatcher { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+    content.vb: Public ReadOnly Property Dispatcher As Dispatcher
+  overload: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispatcher*
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.IsEnabled
+  commentId: P:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.IsEnabled
+  id: IsEnabled
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled
+  nameWithType: DispatcherTimer.IsEnabled
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.IsEnabled
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: IsEnabled
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+    startLine: 43
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: Gets or sets whether the timer is running.
+  example: []
+  syntax:
+    content: public bool IsEnabled { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsEnabled As Boolean
+  overload: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.IsEnabled*
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Interval
+  commentId: P:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Interval
+  id: Interval
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+  langs:
+  - csharp
+  - vb
+  name: Interval
+  nameWithType: DispatcherTimer.Interval
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Interval
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Interval
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+    startLine: 61
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: Gets or sets the time between timer ticks.
+  example: []
+  syntax:
+    content: public TimeSpan Interval { get; set; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Public Property Interval As TimeSpan
+  overload: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Interval*
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Start
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Start
+  id: Start
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: DispatcherTimer.Start()
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Start()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Start
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+    startLine: 92
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: Starts the timer.
+  example: []
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start()
+  overload: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Start*
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Stop
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Stop
+  id: Stop
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: DispatcherTimer.Stop()
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Stop()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Stop
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+    startLine: 105
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: Stops the timer.
+  example: []
+  syntax:
+    content: public void Stop()
+    content.vb: Public Sub [Stop]()
+  overload: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Stop*
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Tick
+  commentId: E:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Tick
+  id: Tick
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+  langs:
+  - csharp
+  - vb
+  name: Tick
+  nameWithType: DispatcherTimer.Tick
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Tick
+  type: Event
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Tick
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+    startLine: 119
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: >-
+    Occurs when the specified timer interval has elapsed and the
+
+    timer is enabled.
+  example: []
+  syntax:
+    content: public event EventHandler Tick
+    return:
+      type: GHIElectronics.Endpoint.UI.EventHandler
+    content.vb: Public Event Tick As EventHandler
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Tag
+  commentId: P:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Tag
+  id: Tag
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+  langs:
+  - csharp
+  - vb
+  name: Tag
+  nameWithType: DispatcherTimer.Tag
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Tag
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Tag
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+    startLine: 124
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: Any data that the caller wants to pass along with the timer.
+  example: []
+  syntax:
+    content: public object Tag { get; set; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public Property Tag As Object
+  overload: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Tag*
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Close
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Close
+  id: Close
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+  langs:
+  - csharp
+  - vb
+  name: Close()
+  nameWithType: DispatcherTimer.Close()
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Close()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Close
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+    startLine: 149
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  syntax:
+    content: public virtual void Close()
+    content.vb: Public Overridable Sub Close()
+  overload: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Close*
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispose
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispose
+  id: Dispose
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: DispatcherTimer.Dispose()
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispose()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Dispose
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+    startLine: 151
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispose(System.Boolean)
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+  langs:
+  - csharp
+  - vb
+  name: Dispose(bool)
+  nameWithType: DispatcherTimer.Dispose(bool)
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispose(bool)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Dispose
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Threading/DispatcherTimer.cs
+    startLine: 156
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Threading
+  syntax:
+    content: protected virtual void Dispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+    content.vb: Protected Overridable Sub Dispose(disposing As Boolean)
+  overload: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispose*
+  nameWithType.vb: DispatcherTimer.Dispose(Boolean)
+  fullName.vb: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+references:
+- uid: GHIElectronics.Endpoint.UI.Threading
+  commentId: N:GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Threading
+  nameWithType: GHIElectronics.Endpoint.UI.Threading
+  fullName: GHIElectronics.Endpoint.UI.Threading
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Threading
+    name: Threading
+    href: GHIElectronics.Endpoint.UI.Threading.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Threading
+    name: Threading
+    href: GHIElectronics.Endpoint.UI.Threading.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.#ctor
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.html#GHIElectronics_Endpoint_UI_Threading_DispatcherTimer__ctor
+  name: DispatcherTimer
+  nameWithType: DispatcherTimer.DispatcherTimer
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.DispatcherTimer
+  nameWithType.vb: DispatcherTimer.New
+  fullName.vb: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.New
+  name.vb: New
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  parent: GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.Endpoint.UI.Threading.Dispatcher.html
+  name: Dispatcher
+  nameWithType: Dispatcher
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispatcher*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispatcher
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.html#GHIElectronics_Endpoint_UI_Threading_DispatcherTimer_Dispatcher
+  name: Dispatcher
+  nameWithType: DispatcherTimer.Dispatcher
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispatcher
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.IsEnabled*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.IsEnabled
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.html#GHIElectronics_Endpoint_UI_Threading_DispatcherTimer_IsEnabled
+  name: IsEnabled
+  nameWithType: DispatcherTimer.IsEnabled
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.IsEnabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Interval*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Interval
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.html#GHIElectronics_Endpoint_UI_Threading_DispatcherTimer_Interval
+  name: Interval
+  nameWithType: DispatcherTimer.Interval
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Interval
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Start*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Start
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.html#GHIElectronics_Endpoint_UI_Threading_DispatcherTimer_Start
+  name: Start
+  nameWithType: DispatcherTimer.Start
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Start
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Stop*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Stop
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.html#GHIElectronics_Endpoint_UI_Threading_DispatcherTimer_Stop
+  name: Stop
+  nameWithType: DispatcherTimer.Stop
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Stop
+- uid: GHIElectronics.Endpoint.UI.EventHandler
+  commentId: T:GHIElectronics.Endpoint.UI.EventHandler
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.EventHandler.html
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: GHIElectronics.Endpoint.UI.EventHandler
+- uid: GHIElectronics.Endpoint.UI
+  commentId: N:GHIElectronics.Endpoint.UI
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI
+  nameWithType: GHIElectronics.Endpoint.UI
+  fullName: GHIElectronics.Endpoint.UI
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Tag*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Tag
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.html#GHIElectronics_Endpoint_UI_Threading_DispatcherTimer_Tag
+  name: Tag
+  nameWithType: DispatcherTimer.Tag
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Tag
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Close*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Close
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.html#GHIElectronics_Endpoint_UI_Threading_DispatcherTimer_Close
+  name: Close
+  nameWithType: DispatcherTimer.Close
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Close
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispose*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispose
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.html#GHIElectronics_Endpoint_UI_Threading_DispatcherTimer_Dispose
+  name: Dispose
+  nameWithType: DispatcherTimer.Dispose
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

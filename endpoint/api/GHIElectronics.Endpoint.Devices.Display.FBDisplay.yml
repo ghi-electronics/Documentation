@@ -8,7 +8,7 @@ items:
   - GHIElectronics.Endpoint.Devices.Display.FBDisplay.#ctor(GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration)
   - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Dispose
   - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(System.Byte[],System.Int32,System.Int32)
-  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
   - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Height
   - GHIElectronics.Endpoint.Devices.Display.FBDisplay.Width
   langs:
@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: FBDisplay
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Width
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
@@ -88,7 +88,7 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Height
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
@@ -117,7 +117,7 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: .ctor
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
@@ -135,21 +135,21 @@ items:
   nameWithType.vb: FBDisplay.New(DisplayConfiguration)
   fullName.vb: GHIElectronics.Endpoint.Devices.Display.FBDisplay.New(GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration)
   name.vb: New(DisplayConfiguration)
-- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
-  commentId: M:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
-  id: Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+- uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
   parent: GHIElectronics.Endpoint.Devices.Display.FBDisplay
   langs:
   - csharp
   - vb
-  name: Flush(byte[], int, int, int, int)
-  nameWithType: FBDisplay.Flush(byte[], int, int, int, int)
-  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(byte[], int, int, int, int)
+  name: Flush(byte[], int, int, int, int, int, int, int)
+  nameWithType: FBDisplay.Flush(byte[], int, int, int, int, int, int, int)
+  fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(byte[], int, int, int, int, int, int, int)
   type: Method
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Flush
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
@@ -159,7 +159,7 @@ items:
   namespace: GHIElectronics.Endpoint.Devices.Display
   example: []
   syntax:
-    content: public void Flush(byte[] data, int offset, int length, int width, int height)
+    content: public void Flush(byte[] data, int offset, int length, int x, int y, int width, int height, int orginalWidth)
     parameters:
     - id: data
       type: System.Byte[]
@@ -167,17 +167,23 @@ items:
       type: System.Int32
     - id: length
       type: System.Int32
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
     - id: width
       type: System.Int32
     - id: height
       type: System.Int32
-    content.vb: Public Sub Flush(data As Byte(), offset As Integer, length As Integer, width As Integer, height As Integer)
+    - id: orginalWidth
+      type: System.Int32
+    content.vb: Public Sub Flush(data As Byte(), offset As Integer, length As Integer, x As Integer, y As Integer, width As Integer, height As Integer, orginalWidth As Integer)
   overload: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush*
   implements:
-  - GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
-  nameWithType.vb: FBDisplay.Flush(Byte(), Integer, Integer, Integer, Integer)
-  fullName.vb: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(Byte(), Integer, Integer, Integer, Integer)
-  name.vb: Flush(Byte(), Integer, Integer, Integer, Integer)
+  - GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  nameWithType.vb: FBDisplay.Flush(Byte(), Integer, Integer, Integer, Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(Byte(), Integer, Integer, Integer, Integer, Integer, Integer, Integer)
+  name.vb: Flush(Byte(), Integer, Integer, Integer, Integer, Integer, Integer, Integer)
 - uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(System.Byte[],System.Int32,System.Int32)
   commentId: M:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush(System.Byte[],System.Int32,System.Int32)
   id: Flush(System.Byte[],System.Int32,System.Int32)
@@ -192,11 +198,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Flush
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
-    startLine: 79
+    startLine: 80
   assemblies:
   - GHIElectronics.Endpoint.Devices.Display
   namespace: GHIElectronics.Endpoint.Devices.Display
@@ -231,11 +237,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Dispose
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.Display/FBDisplay.cs
-    startLine: 194
+    startLine: 195
   assemblies:
   - GHIElectronics.Endpoint.Devices.Display
   namespace: GHIElectronics.Endpoint.Devices.Display
@@ -579,25 +585,25 @@ references:
   fullName: GHIElectronics.Endpoint.Devices.Display.DisplayConfiguration
 - uid: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush*
   commentId: Overload:GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush
-  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Flush_System_Byte___System_Int32_System_Int32_System_Int32_System_Int32_
+  href: GHIElectronics.Endpoint.Devices.Display.FBDisplay.html#GHIElectronics_Endpoint_Devices_Display_FBDisplay_Flush_System_Byte___System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
   name: Flush
   nameWithType: FBDisplay.Flush
   fullName: GHIElectronics.Endpoint.Devices.Display.FBDisplay.Flush
-- uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
-  commentId: M:GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+- uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
   parent: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider
   isExternal: true
-  href: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.html#GHIElectronics_Endpoint_Devices_Display_IDisplayProvider_Flush_System_Byte___System_Int32_System_Int32_System_Int32_System_Int32_
-  name: Flush(byte[], int, int, int, int)
-  nameWithType: IDisplayProvider.Flush(byte[], int, int, int, int)
-  fullName: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(byte[], int, int, int, int)
-  nameWithType.vb: IDisplayProvider.Flush(Byte(), Integer, Integer, Integer, Integer)
-  fullName.vb: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(Byte(), Integer, Integer, Integer, Integer)
-  name.vb: Flush(Byte(), Integer, Integer, Integer, Integer)
+  href: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.html#GHIElectronics_Endpoint_Devices_Display_IDisplayProvider_Flush_System_Byte___System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: Flush(byte[], int, int, int, int, int, int, int)
+  nameWithType: IDisplayProvider.Flush(byte[], int, int, int, int, int, int, int)
+  fullName: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(byte[], int, int, int, int, int, int, int)
+  nameWithType.vb: IDisplayProvider.Flush(Byte(), Integer, Integer, Integer, Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(Byte(), Integer, Integer, Integer, Integer, Integer, Integer, Integer)
+  name.vb: Flush(Byte(), Integer, Integer, Integer, Integer, Integer, Integer, Integer)
   spec.csharp:
-  - uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+  - uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
     name: Flush
-    href: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.html#GHIElectronics_Endpoint_Devices_Display_IDisplayProvider_Flush_System_Byte___System_Int32_System_Int32_System_Int32_System_Int32_
+    href: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.html#GHIElectronics_Endpoint_Devices_Display_IDisplayProvider_Flush_System_Byte___System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
   - name: (
   - uid: System.Byte
     name: byte
@@ -629,11 +635,29 @@ references:
     name: int
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
   spec.vb:
-  - uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)
+  - uid: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.Flush(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
     name: Flush
-    href: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.html#GHIElectronics_Endpoint_Devices_Display_IDisplayProvider_Flush_System_Byte___System_Int32_System_Int32_System_Int32_System_Int32_
+    href: GHIElectronics.Endpoint.Devices.Display.IDisplayProvider.html#GHIElectronics_Endpoint_Devices_Display_IDisplayProvider_Flush_System_Byte___System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
   - name: (
   - uid: System.Byte
     name: Byte
@@ -641,6 +665,24 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.byte
   - name: (
   - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: ','
   - name: " "
   - uid: System.Int32

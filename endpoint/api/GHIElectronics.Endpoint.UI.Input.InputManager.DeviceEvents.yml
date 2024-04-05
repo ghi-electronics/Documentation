@@ -1,0 +1,549 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents
+  commentId: T:GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents
+  id: InputManager.DeviceEvents
+  parent: GHIElectronics.Endpoint.UI.Input
+  children:
+  - GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents.PostNotifyInput
+  - GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents.PostProcessInput
+  - GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents.PreNotifyInput
+  - GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents.PreProcessInput
+  langs:
+  - csharp
+  - vb
+  name: InputManager.DeviceEvents
+  nameWithType: InputManager.DeviceEvents
+  fullName: GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DeviceEvents
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+    startLine: 276
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: 'public class InputManager.DeviceEvents : DispatcherObject'
+    content.vb: Public Class InputManager.DeviceEvents Inherits DispatcherObject
+  inheritance:
+  - System.Object
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  inheritedMembers:
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherObject.Dispatcher
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents.PreProcessInput
+  commentId: E:GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents.PreProcessInput
+  id: PreProcessInput
+  parent: GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents
+  langs:
+  - csharp
+  - vb
+  name: PreProcessInput
+  nameWithType: InputManager.DeviceEvents.PreProcessInput
+  fullName: GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents.PreProcessInput
+  type: Event
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PreProcessInput
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+    startLine: 278
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  summary: Subscribe for all input before it is processed
+  example: []
+  syntax:
+    content: public event PreProcessInputEventHandler PreProcessInput
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.PreProcessInputEventHandler
+    content.vb: Public Event PreProcessInput As PreProcessInputEventHandler
+- uid: GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents.PreNotifyInput
+  commentId: E:GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents.PreNotifyInput
+  id: PreNotifyInput
+  parent: GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents
+  langs:
+  - csharp
+  - vb
+  name: PreNotifyInput
+  nameWithType: InputManager.DeviceEvents.PreNotifyInput
+  fullName: GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents.PreNotifyInput
+  type: Event
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PreNotifyInput
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+    startLine: 296
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  summary: Subscribe for all input before it is notified
+  example: []
+  syntax:
+    content: public event NotifyInputEventHandler PreNotifyInput
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.NotifyInputEventHandler
+    content.vb: Public Event PreNotifyInput As NotifyInputEventHandler
+- uid: GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents.PostNotifyInput
+  commentId: E:GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents.PostNotifyInput
+  id: PostNotifyInput
+  parent: GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents
+  langs:
+  - csharp
+  - vb
+  name: PostNotifyInput
+  nameWithType: InputManager.DeviceEvents.PostNotifyInput
+  fullName: GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents.PostNotifyInput
+  type: Event
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PostNotifyInput
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+    startLine: 314
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  summary: Subscribe to all input after it is notified
+  example: []
+  syntax:
+    content: public event NotifyInputEventHandler PostNotifyInput
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.NotifyInputEventHandler
+    content.vb: Public Event PostNotifyInput As NotifyInputEventHandler
+- uid: GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents.PostProcessInput
+  commentId: E:GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents.PostProcessInput
+  id: PostProcessInput
+  parent: GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents
+  langs:
+  - csharp
+  - vb
+  name: PostProcessInput
+  nameWithType: InputManager.DeviceEvents.PostProcessInput
+  fullName: GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents.PostProcessInput
+  type: Event
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PostProcessInput
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+    startLine: 332
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  summary: subscribe to all input after it is processed
+  example: []
+  syntax:
+    content: public event ProcessInputEventHandler PostProcessInput
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.ProcessInputEventHandler
+    content.vb: Public Event PostProcessInput As ProcessInputEventHandler
+references:
+- uid: GHIElectronics.Endpoint.UI.Input
+  commentId: N:GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Input
+  nameWithType: GHIElectronics.Endpoint.UI.Input
+  fullName: GHIElectronics.Endpoint.UI.Input
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  parent: GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html
+  name: DispatcherObject
+  nameWithType: DispatcherObject
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_CheckAccess
+  name: CheckAccess()
+  nameWithType: DispatcherObject.CheckAccess()
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess()
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+    name: CheckAccess
+    href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_CheckAccess
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+    name: CheckAccess
+    href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_CheckAccess
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_VerifyAccess
+  name: VerifyAccess()
+  nameWithType: DispatcherObject.VerifyAccess()
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess()
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+    name: VerifyAccess
+    href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_VerifyAccess
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+    name: VerifyAccess
+    href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_VerifyAccess
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.Dispatcher
+  commentId: F:GHIElectronics.Endpoint.UI.Threading.DispatcherObject.Dispatcher
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_Dispatcher
+  name: Dispatcher
+  nameWithType: DispatcherObject.Dispatcher
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.Dispatcher
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.UI.Threading
+  commentId: N:GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Threading
+  nameWithType: GHIElectronics.Endpoint.UI.Threading
+  fullName: GHIElectronics.Endpoint.UI.Threading
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Threading
+    name: Threading
+    href: GHIElectronics.Endpoint.UI.Threading.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Threading
+    name: Threading
+    href: GHIElectronics.Endpoint.UI.Threading.html
+- uid: GHIElectronics.Endpoint.UI.Input.PreProcessInputEventHandler
+  commentId: T:GHIElectronics.Endpoint.UI.Input.PreProcessInputEventHandler
+  parent: GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.Endpoint.UI.Input.PreProcessInputEventHandler.html
+  name: PreProcessInputEventHandler
+  nameWithType: PreProcessInputEventHandler
+  fullName: GHIElectronics.Endpoint.UI.Input.PreProcessInputEventHandler
+- uid: GHIElectronics.Endpoint.UI.Input.NotifyInputEventHandler
+  commentId: T:GHIElectronics.Endpoint.UI.Input.NotifyInputEventHandler
+  parent: GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.Endpoint.UI.Input.NotifyInputEventHandler.html
+  name: NotifyInputEventHandler
+  nameWithType: NotifyInputEventHandler
+  fullName: GHIElectronics.Endpoint.UI.Input.NotifyInputEventHandler
+- uid: GHIElectronics.Endpoint.UI.Input.ProcessInputEventHandler
+  commentId: T:GHIElectronics.Endpoint.UI.Input.ProcessInputEventHandler
+  parent: GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.Endpoint.UI.Input.ProcessInputEventHandler.html
+  name: ProcessInputEventHandler
+  nameWithType: ProcessInputEventHandler
+  fullName: GHIElectronics.Endpoint.UI.Input.ProcessInputEventHandler

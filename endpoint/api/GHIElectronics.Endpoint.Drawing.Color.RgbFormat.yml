@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+  commentId: T:GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+  id: Color.RgbFormat
+  parent: GHIElectronics.Endpoint.Drawing
+  children:
+  - GHIElectronics.Endpoint.Drawing.Color.RgbFormat.Bgr
+  - GHIElectronics.Endpoint.Drawing.Color.RgbFormat.Grg
+  - GHIElectronics.Endpoint.Drawing.Color.RgbFormat.Rbg
+  - GHIElectronics.Endpoint.Drawing.Color.RgbFormat.Rgb
+  langs:
+  - csharp
+  - vb
+  name: Color.RgbFormat
+  nameWithType: Color.RgbFormat
+  fullName: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: RgbFormat
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 192
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public enum Color.RgbFormat
+    content.vb: Public Enum Color.RgbFormat
+- uid: GHIElectronics.Endpoint.Drawing.Color.RgbFormat.Rgb
+  commentId: F:GHIElectronics.Endpoint.Drawing.Color.RgbFormat.Rgb
+  id: Rgb
+  parent: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+  langs:
+  - csharp
+  - vb
+  name: Rgb
+  nameWithType: Color.RgbFormat.Rgb
+  fullName: GHIElectronics.Endpoint.Drawing.Color.RgbFormat.Rgb
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Rgb
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 193
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Rgb = 0
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+- uid: GHIElectronics.Endpoint.Drawing.Color.RgbFormat.Bgr
+  commentId: F:GHIElectronics.Endpoint.Drawing.Color.RgbFormat.Bgr
+  id: Bgr
+  parent: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+  langs:
+  - csharp
+  - vb
+  name: Bgr
+  nameWithType: Color.RgbFormat.Bgr
+  fullName: GHIElectronics.Endpoint.Drawing.Color.RgbFormat.Bgr
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Bgr
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 194
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Bgr = 1
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+- uid: GHIElectronics.Endpoint.Drawing.Color.RgbFormat.Grg
+  commentId: F:GHIElectronics.Endpoint.Drawing.Color.RgbFormat.Grg
+  id: Grg
+  parent: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+  langs:
+  - csharp
+  - vb
+  name: Grg
+  nameWithType: Color.RgbFormat.Grg
+  fullName: GHIElectronics.Endpoint.Drawing.Color.RgbFormat.Grg
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Grg
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 195
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Grg = 2
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+- uid: GHIElectronics.Endpoint.Drawing.Color.RgbFormat.Rbg
+  commentId: F:GHIElectronics.Endpoint.Drawing.Color.RgbFormat.Rbg
+  id: Rbg
+  parent: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+  langs:
+  - csharp
+  - vb
+  name: Rbg
+  nameWithType: Color.RgbFormat.Rbg
+  fullName: GHIElectronics.Endpoint.Drawing.Color.RgbFormat.Rbg
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Rbg
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 196
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Rbg = 3
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+references:
+- uid: GHIElectronics.Endpoint.Drawing
+  commentId: N:GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing
+  nameWithType: GHIElectronics.Endpoint.Drawing
+  fullName: GHIElectronics.Endpoint.Drawing
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+- uid: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+  commentId: T:GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Color.html
+  name: Color.RgbFormat
+  nameWithType: Color.RgbFormat
+  fullName: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+    name: RgbFormat
+    href: GHIElectronics.Endpoint.Drawing.Color.RgbFormat.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+    name: RgbFormat
+    href: GHIElectronics.Endpoint.Drawing.Color.RgbFormat.html

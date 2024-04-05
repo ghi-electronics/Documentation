@@ -1,0 +1,128 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Media.BrushMappingMode
+  commentId: T:GHIElectronics.Endpoint.UI.Media.BrushMappingMode
+  id: BrushMappingMode
+  parent: GHIElectronics.Endpoint.UI.Media
+  children:
+  - GHIElectronics.Endpoint.UI.Media.BrushMappingMode.Absolute
+  - GHIElectronics.Endpoint.UI.Media.BrushMappingMode.RelativeToBoundingBox
+  langs:
+  - csharp
+  - vb
+  name: BrushMappingMode
+  nameWithType: BrushMappingMode
+  fullName: GHIElectronics.Endpoint.UI.Media.BrushMappingMode
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Brush.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: BrushMappingMode
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Brush.cs
+    startLine: 26
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public enum BrushMappingMode
+    content.vb: Public Enum BrushMappingMode
+- uid: GHIElectronics.Endpoint.UI.Media.BrushMappingMode.Absolute
+  commentId: F:GHIElectronics.Endpoint.UI.Media.BrushMappingMode.Absolute
+  id: Absolute
+  parent: GHIElectronics.Endpoint.UI.Media.BrushMappingMode
+  langs:
+  - csharp
+  - vb
+  name: Absolute
+  nameWithType: BrushMappingMode.Absolute
+  fullName: GHIElectronics.Endpoint.UI.Media.BrushMappingMode.Absolute
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Brush.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Absolute
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Brush.cs
+    startLine: 27
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: Absolute = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.BrushMappingMode
+- uid: GHIElectronics.Endpoint.UI.Media.BrushMappingMode.RelativeToBoundingBox
+  commentId: F:GHIElectronics.Endpoint.UI.Media.BrushMappingMode.RelativeToBoundingBox
+  id: RelativeToBoundingBox
+  parent: GHIElectronics.Endpoint.UI.Media.BrushMappingMode
+  langs:
+  - csharp
+  - vb
+  name: RelativeToBoundingBox
+  nameWithType: BrushMappingMode.RelativeToBoundingBox
+  fullName: GHIElectronics.Endpoint.UI.Media.BrushMappingMode.RelativeToBoundingBox
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Brush.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: RelativeToBoundingBox
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Brush.cs
+    startLine: 28
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: RelativeToBoundingBox = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.BrushMappingMode
+references:
+- uid: GHIElectronics.Endpoint.UI.Media
+  commentId: N:GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Media
+  nameWithType: GHIElectronics.Endpoint.UI.Media
+  fullName: GHIElectronics.Endpoint.UI.Media
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Media
+    name: Media
+    href: GHIElectronics.Endpoint.UI.Media.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Media
+    name: Media
+    href: GHIElectronics.Endpoint.UI.Media.html
+- uid: GHIElectronics.Endpoint.UI.Media.BrushMappingMode
+  commentId: T:GHIElectronics.Endpoint.UI.Media.BrushMappingMode
+  parent: GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.Endpoint.UI.Media.BrushMappingMode.html
+  name: BrushMappingMode
+  nameWithType: BrushMappingMode
+  fullName: GHIElectronics.Endpoint.UI.Media.BrushMappingMode

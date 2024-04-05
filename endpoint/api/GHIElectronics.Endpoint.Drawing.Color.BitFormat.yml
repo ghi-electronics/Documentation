@@ -1,0 +1,136 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+  commentId: T:GHIElectronics.Endpoint.Drawing.Color.BitFormat
+  id: Color.BitFormat
+  parent: GHIElectronics.Endpoint.Drawing
+  children:
+  - GHIElectronics.Endpoint.Drawing.Color.BitFormat.Horizontal
+  - GHIElectronics.Endpoint.Drawing.Color.BitFormat.Vertical
+  langs:
+  - csharp
+  - vb
+  name: Color.BitFormat
+  nameWithType: Color.BitFormat
+  fullName: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: BitFormat
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 199
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public enum Color.BitFormat
+    content.vb: Public Enum Color.BitFormat
+- uid: GHIElectronics.Endpoint.Drawing.Color.BitFormat.Vertical
+  commentId: F:GHIElectronics.Endpoint.Drawing.Color.BitFormat.Vertical
+  id: Vertical
+  parent: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+  langs:
+  - csharp
+  - vb
+  name: Vertical
+  nameWithType: Color.BitFormat.Vertical
+  fullName: GHIElectronics.Endpoint.Drawing.Color.BitFormat.Vertical
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Vertical
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 200
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Vertical = 0
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+- uid: GHIElectronics.Endpoint.Drawing.Color.BitFormat.Horizontal
+  commentId: F:GHIElectronics.Endpoint.Drawing.Color.BitFormat.Horizontal
+  id: Horizontal
+  parent: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+  langs:
+  - csharp
+  - vb
+  name: Horizontal
+  nameWithType: Color.BitFormat.Horizontal
+  fullName: GHIElectronics.Endpoint.Drawing.Color.BitFormat.Horizontal
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Horizontal
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 201
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Horizontal = 1
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+references:
+- uid: GHIElectronics.Endpoint.Drawing
+  commentId: N:GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing
+  nameWithType: GHIElectronics.Endpoint.Drawing
+  fullName: GHIElectronics.Endpoint.Drawing
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+- uid: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+  commentId: T:GHIElectronics.Endpoint.Drawing.Color.BitFormat
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Color.html
+  name: Color.BitFormat
+  nameWithType: Color.BitFormat
+  fullName: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+    name: BitFormat
+    href: GHIElectronics.Endpoint.Drawing.Color.BitFormat.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+    name: BitFormat
+    href: GHIElectronics.Endpoint.Drawing.Color.BitFormat.html

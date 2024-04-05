@@ -13,6 +13,7 @@ items:
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean)
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Capture(System.UInt32,GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge,System.Boolean,System.TimeSpan)
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.CaptureFinished
+  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Dispose
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ErrorReceived
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[])
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[],System.UInt32,System.Int32)
@@ -30,11 +31,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: DigitalSignalController
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 8
+    startLine: 21
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -65,11 +66,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: ReadPulseFinished
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 48
+    startLine: 51
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -92,11 +93,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: GenerateFinished
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 56
+    startLine: 59
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -119,11 +120,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: CaptureFinished
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 64
+    startLine: 67
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -146,11 +147,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: ErrorReceived
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 72
+    startLine: 75
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -173,11 +174,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: CanGeneratePulse
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 80
+    startLine: 83
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -202,11 +203,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: CanReadPulse
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 81
+    startLine: 84
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -231,11 +232,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: CanCapture
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 83
+    startLine: 86
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -260,11 +261,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: .ctor
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 90
+    startLine: 93
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -278,6 +279,32 @@ items:
   nameWithType.vb: DigitalSignalController.New(Integer)
   fullName.vb: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.New(Integer)
   name.vb: New(Integer)
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Dispose
+  commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Dispose
+  id: Dispose
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: DigitalSignalController.Dispose()
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Dispose()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Dispose
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+    startLine: 261
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.DigitalSignal
+  namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Dispose*
 - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[])
   commentId: M:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate(System.UInt32[])
   id: Generate(System.UInt32[])
@@ -292,11 +319,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Generate
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 254
+    startLine: 278
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -324,11 +351,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Generate
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 257
+    startLine: 281
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -360,11 +387,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Generate
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 260
+    startLine: 284
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -400,11 +427,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: ReadPulse
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 310
+    startLine: 334
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -436,11 +463,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Capture
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 340
+    startLine: 364
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -472,11 +499,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Capture
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 341
+    startLine: 365
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -510,11 +537,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Abort
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 379
+    startLine: 403
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -939,6 +966,12 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Dispose*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Dispose
+  href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_Dispose
+  name: Dispose
+  nameWithType: DigitalSignalController.Dispose
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Dispose
 - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate*
   commentId: Overload:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Generate
   href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html#GHIElectronics_Endpoint_Devices_DigitalSignal_DigitalSignalController_Generate_System_UInt32___
