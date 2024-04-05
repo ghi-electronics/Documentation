@@ -1,0 +1,167 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.RoutingStrategy
+  commentId: T:GHIElectronics.Endpoint.UI.RoutingStrategy
+  id: RoutingStrategy
+  parent: GHIElectronics.Endpoint.UI
+  children:
+  - GHIElectronics.Endpoint.UI.RoutingStrategy.Bubble
+  - GHIElectronics.Endpoint.UI.RoutingStrategy.Direct
+  - GHIElectronics.Endpoint.UI.RoutingStrategy.Tunnel
+  langs:
+  - csharp
+  - vb
+  name: RoutingStrategy
+  nameWithType: RoutingStrategy
+  fullName: GHIElectronics.Endpoint.UI.RoutingStrategy
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutingStrategy.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: RoutingStrategy
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutingStrategy.cs
+    startLine: 6
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: >-
+    Routing Strategy can be either of
+
+    Tunnel or Bubble
+  example: []
+  syntax:
+    content: public enum RoutingStrategy
+    content.vb: Public Enum RoutingStrategy
+- uid: GHIElectronics.Endpoint.UI.RoutingStrategy.Tunnel
+  commentId: F:GHIElectronics.Endpoint.UI.RoutingStrategy.Tunnel
+  id: Tunnel
+  parent: GHIElectronics.Endpoint.UI.RoutingStrategy
+  langs:
+  - csharp
+  - vb
+  name: Tunnel
+  nameWithType: RoutingStrategy.Tunnel
+  fullName: GHIElectronics.Endpoint.UI.RoutingStrategy.Tunnel
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutingStrategy.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Tunnel
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutingStrategy.cs
+    startLine: 14
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Tunnel
+  remarks: >-
+    Route the event starting at the root of
+
+    the visual tree and ending with the source
+  example: []
+  syntax:
+    content: Tunnel = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.RoutingStrategy
+- uid: GHIElectronics.Endpoint.UI.RoutingStrategy.Bubble
+  commentId: F:GHIElectronics.Endpoint.UI.RoutingStrategy.Bubble
+  id: Bubble
+  parent: GHIElectronics.Endpoint.UI.RoutingStrategy
+  langs:
+  - csharp
+  - vb
+  name: Bubble
+  nameWithType: RoutingStrategy.Bubble
+  fullName: GHIElectronics.Endpoint.UI.RoutingStrategy.Bubble
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutingStrategy.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Bubble
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutingStrategy.cs
+    startLine: 23
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Bubble
+  remarks: >-
+    Route the event starting at the source
+
+    and ending with the root of the visual tree
+  example: []
+  syntax:
+    content: Bubble = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.RoutingStrategy
+- uid: GHIElectronics.Endpoint.UI.RoutingStrategy.Direct
+  commentId: F:GHIElectronics.Endpoint.UI.RoutingStrategy.Direct
+  id: Direct
+  parent: GHIElectronics.Endpoint.UI.RoutingStrategy
+  langs:
+  - csharp
+  - vb
+  name: Direct
+  nameWithType: RoutingStrategy.Direct
+  fullName: GHIElectronics.Endpoint.UI.RoutingStrategy.Direct
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutingStrategy.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Direct
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutingStrategy.cs
+    startLine: 31
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Direct
+  remarks: Raise the event at the source only.
+  example: []
+  syntax:
+    content: Direct = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.RoutingStrategy
+references:
+- uid: GHIElectronics.Endpoint.UI
+  commentId: N:GHIElectronics.Endpoint.UI
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI
+  nameWithType: GHIElectronics.Endpoint.UI
+  fullName: GHIElectronics.Endpoint.UI
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+- uid: GHIElectronics.Endpoint.UI.RoutingStrategy
+  commentId: T:GHIElectronics.Endpoint.UI.RoutingStrategy
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.RoutingStrategy.html
+  name: RoutingStrategy
+  nameWithType: RoutingStrategy
+  fullName: GHIElectronics.Endpoint.UI.RoutingStrategy

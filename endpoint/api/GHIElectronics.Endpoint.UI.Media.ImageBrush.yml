@@ -1,0 +1,417 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Media.ImageBrush
+  commentId: T:GHIElectronics.Endpoint.UI.Media.ImageBrush
+  id: ImageBrush
+  parent: GHIElectronics.Endpoint.UI.Media
+  children:
+  - GHIElectronics.Endpoint.UI.Media.ImageBrush.#ctor(GHIElectronics.Endpoint.UI.Media.ImageSource)
+  - GHIElectronics.Endpoint.UI.Media.ImageBrush.ImageSource
+  - GHIElectronics.Endpoint.UI.Media.ImageBrush.Stretch
+  langs:
+  - csharp
+  - vb
+  name: ImageBrush
+  nameWithType: ImageBrush
+  fullName: GHIElectronics.Endpoint.UI.Media.ImageBrush
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/ImageBrush.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ImageBrush
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/ImageBrush.cs
+    startLine: 5
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: 'public sealed class ImageBrush : Brush'
+    content.vb: Public NotInheritable Class ImageBrush Inherits Brush
+  inheritance:
+  - System.Object
+  - GHIElectronics.Endpoint.UI.Media.Brush
+  inheritedMembers:
+  - GHIElectronics.Endpoint.UI.Media.Brush.Opacity
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.UI.Media.ImageBrush.ImageSource
+  commentId: F:GHIElectronics.Endpoint.UI.Media.ImageBrush.ImageSource
+  id: ImageSource
+  parent: GHIElectronics.Endpoint.UI.Media.ImageBrush
+  langs:
+  - csharp
+  - vb
+  name: ImageSource
+  nameWithType: ImageBrush.ImageSource
+  fullName: GHIElectronics.Endpoint.UI.Media.ImageBrush.ImageSource
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/ImageBrush.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ImageSource
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/ImageBrush.cs
+    startLine: 6
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public ImageSource ImageSource
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.ImageSource
+    content.vb: Public ImageSource As ImageSource
+- uid: GHIElectronics.Endpoint.UI.Media.ImageBrush.Stretch
+  commentId: F:GHIElectronics.Endpoint.UI.Media.ImageBrush.Stretch
+  id: Stretch
+  parent: GHIElectronics.Endpoint.UI.Media.ImageBrush
+  langs:
+  - csharp
+  - vb
+  name: Stretch
+  nameWithType: ImageBrush.Stretch
+  fullName: GHIElectronics.Endpoint.UI.Media.ImageBrush.Stretch
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/ImageBrush.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Stretch
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/ImageBrush.cs
+    startLine: 7
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public Stretch Stretch
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.Stretch
+    content.vb: Public Stretch As Stretch
+- uid: GHIElectronics.Endpoint.UI.Media.ImageBrush.#ctor(GHIElectronics.Endpoint.UI.Media.ImageSource)
+  commentId: M:GHIElectronics.Endpoint.UI.Media.ImageBrush.#ctor(GHIElectronics.Endpoint.UI.Media.ImageSource)
+  id: '#ctor(GHIElectronics.Endpoint.UI.Media.ImageSource)'
+  parent: GHIElectronics.Endpoint.UI.Media.ImageBrush
+  langs:
+  - csharp
+  - vb
+  name: ImageBrush(ImageSource)
+  nameWithType: ImageBrush.ImageBrush(ImageSource)
+  fullName: GHIElectronics.Endpoint.UI.Media.ImageBrush.ImageBrush(GHIElectronics.Endpoint.UI.Media.ImageSource)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/ImageBrush.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/ImageBrush.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public ImageBrush(ImageSource imagesource)
+    parameters:
+    - id: imagesource
+      type: GHIElectronics.Endpoint.UI.Media.ImageSource
+    content.vb: Public Sub New(imagesource As ImageSource)
+  overload: GHIElectronics.Endpoint.UI.Media.ImageBrush.#ctor*
+  nameWithType.vb: ImageBrush.New(ImageSource)
+  fullName.vb: GHIElectronics.Endpoint.UI.Media.ImageBrush.New(GHIElectronics.Endpoint.UI.Media.ImageSource)
+  name.vb: New(ImageSource)
+references:
+- uid: GHIElectronics.Endpoint.UI.Media
+  commentId: N:GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Media
+  nameWithType: GHIElectronics.Endpoint.UI.Media
+  fullName: GHIElectronics.Endpoint.UI.Media
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Media
+    name: Media
+    href: GHIElectronics.Endpoint.UI.Media.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Media
+    name: Media
+    href: GHIElectronics.Endpoint.UI.Media.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GHIElectronics.Endpoint.UI.Media.Brush
+  commentId: T:GHIElectronics.Endpoint.UI.Media.Brush
+  parent: GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.Endpoint.UI.Media.Brush.html
+  name: Brush
+  nameWithType: Brush
+  fullName: GHIElectronics.Endpoint.UI.Media.Brush
+- uid: GHIElectronics.Endpoint.UI.Media.Brush.Opacity
+  commentId: P:GHIElectronics.Endpoint.UI.Media.Brush.Opacity
+  parent: GHIElectronics.Endpoint.UI.Media.Brush
+  href: GHIElectronics.Endpoint.UI.Media.Brush.html#GHIElectronics_Endpoint_UI_Media_Brush_Opacity
+  name: Opacity
+  nameWithType: Brush.Opacity
+  fullName: GHIElectronics.Endpoint.UI.Media.Brush.Opacity
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.UI.Media.ImageSource
+  commentId: T:GHIElectronics.Endpoint.UI.Media.ImageSource
+  parent: GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.Endpoint.UI.Media.ImageSource.html
+  name: ImageSource
+  nameWithType: ImageSource
+  fullName: GHIElectronics.Endpoint.UI.Media.ImageSource
+- uid: GHIElectronics.Endpoint.UI.Media.Stretch
+  commentId: T:GHIElectronics.Endpoint.UI.Media.Stretch
+  parent: GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.Endpoint.UI.Media.Stretch.html
+  name: Stretch
+  nameWithType: Stretch
+  fullName: GHIElectronics.Endpoint.UI.Media.Stretch
+- uid: GHIElectronics.Endpoint.UI.Media.ImageBrush.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Media.ImageBrush.#ctor
+  href: GHIElectronics.Endpoint.UI.Media.ImageBrush.html#GHIElectronics_Endpoint_UI_Media_ImageBrush__ctor_GHIElectronics_Endpoint_UI_Media_ImageSource_
+  name: ImageBrush
+  nameWithType: ImageBrush.ImageBrush
+  fullName: GHIElectronics.Endpoint.UI.Media.ImageBrush.ImageBrush
+  nameWithType.vb: ImageBrush.New
+  fullName.vb: GHIElectronics.Endpoint.UI.Media.ImageBrush.New
+  name.vb: New

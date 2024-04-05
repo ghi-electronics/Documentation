@@ -1,0 +1,292 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Drawing
+  commentId: N:GHIElectronics.Endpoint.Drawing
+  id: GHIElectronics.Endpoint.Drawing
+  children:
+  - GHIElectronics.Endpoint.Drawing.Bitmap
+  - GHIElectronics.Endpoint.Drawing.Brush
+  - GHIElectronics.Endpoint.Drawing.Color
+  - GHIElectronics.Endpoint.Drawing.Color.BitFormat
+  - GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+  - GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+  - GHIElectronics.Endpoint.Drawing.Font
+  - GHIElectronics.Endpoint.Drawing.Graphics
+  - GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  - GHIElectronics.Endpoint.Drawing.Graphics.OnFlushHandler
+  - GHIElectronics.Endpoint.Drawing.GraphicsUnit
+  - GHIElectronics.Endpoint.Drawing.Image
+  - GHIElectronics.Endpoint.Drawing.Pen
+  - GHIElectronics.Endpoint.Drawing.Rectangle
+  - GHIElectronics.Endpoint.Drawing.RectangleF
+  - GHIElectronics.Endpoint.Drawing.SizeF
+  - GHIElectronics.Endpoint.Drawing.SolidBrush
+  - GHIElectronics.Endpoint.Drawing.StringAlignment
+  - GHIElectronics.Endpoint.Drawing.StringFormat
+  - GHIElectronics.Endpoint.Drawing.StringFormatFlags
+  - GHIElectronics.Endpoint.Drawing.StringTrimming
+  langs:
+  - csharp
+  - vb
+  name: GHIElectronics.Endpoint.Drawing
+  nameWithType: GHIElectronics.Endpoint.Drawing
+  fullName: GHIElectronics.Endpoint.Drawing
+  type: Namespace
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+references:
+- uid: GHIElectronics.Endpoint.Drawing.Brush
+  commentId: T:GHIElectronics.Endpoint.Drawing.Brush
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Brush.html
+  name: Brush
+  nameWithType: Brush
+  fullName: GHIElectronics.Endpoint.Drawing.Brush
+- uid: GHIElectronics.Endpoint.Drawing.SolidBrush
+  commentId: T:GHIElectronics.Endpoint.Drawing.SolidBrush
+  href: GHIElectronics.Endpoint.Drawing.SolidBrush.html
+  name: SolidBrush
+  nameWithType: SolidBrush
+  fullName: GHIElectronics.Endpoint.Drawing.SolidBrush
+- uid: GHIElectronics.Endpoint.Drawing.Color
+  commentId: T:GHIElectronics.Endpoint.Drawing.Color
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: GHIElectronics.Endpoint.Drawing.Color
+- uid: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+  commentId: T:GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Color.html
+  name: Color.ColorFormat
+  nameWithType: Color.ColorFormat
+  fullName: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+    name: ColorFormat
+    href: GHIElectronics.Endpoint.Drawing.Color.ColorFormat.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+    name: ColorFormat
+    href: GHIElectronics.Endpoint.Drawing.Color.ColorFormat.html
+- uid: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+  commentId: T:GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Color.html
+  name: Color.RgbFormat
+  nameWithType: Color.RgbFormat
+  fullName: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+    name: RgbFormat
+    href: GHIElectronics.Endpoint.Drawing.Color.RgbFormat.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+    name: RgbFormat
+    href: GHIElectronics.Endpoint.Drawing.Color.RgbFormat.html
+- uid: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+  commentId: T:GHIElectronics.Endpoint.Drawing.Color.BitFormat
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Color.html
+  name: Color.BitFormat
+  nameWithType: Color.BitFormat
+  fullName: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+    name: BitFormat
+    href: GHIElectronics.Endpoint.Drawing.Color.BitFormat.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+    name: BitFormat
+    href: GHIElectronics.Endpoint.Drawing.Color.BitFormat.html
+- uid: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+  commentId: T:GHIElectronics.Endpoint.Drawing.GraphicsUnit
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.GraphicsUnit.html
+  name: GraphicsUnit
+  nameWithType: GraphicsUnit
+  fullName: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+- uid: GHIElectronics.Endpoint.Drawing.Font
+  commentId: T:GHIElectronics.Endpoint.Drawing.Font
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Font.html
+  name: Font
+  nameWithType: Font
+  fullName: GHIElectronics.Endpoint.Drawing.Font
+- uid: GHIElectronics.Endpoint.Drawing.Graphics
+  commentId: T:GHIElectronics.Endpoint.Drawing.Graphics
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html
+  name: Graphics
+  nameWithType: Graphics
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.OnFlushHandler
+  commentId: T:GHIElectronics.Endpoint.Drawing.Graphics.OnFlushHandler
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html
+  name: Graphics.OnFlushHandler
+  nameWithType: Graphics.OnFlushHandler
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.OnFlushHandler
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics
+    name: Graphics
+    href: GHIElectronics.Endpoint.Drawing.Graphics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics.OnFlushHandler
+    name: OnFlushHandler
+    href: GHIElectronics.Endpoint.Drawing.Graphics.OnFlushHandler.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics
+    name: Graphics
+    href: GHIElectronics.Endpoint.Drawing.Graphics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics.OnFlushHandler
+    name: OnFlushHandler
+    href: GHIElectronics.Endpoint.Drawing.Graphics.OnFlushHandler.html
+- uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  commentId: T:GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Graphics.html
+  name: Graphics.DrawTextAlignment
+  nameWithType: Graphics.DrawTextAlignment
+  fullName: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics
+    name: Graphics
+    href: GHIElectronics.Endpoint.Drawing.Graphics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+    name: DrawTextAlignment
+    href: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics
+    name: Graphics
+    href: GHIElectronics.Endpoint.Drawing.Graphics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+    name: DrawTextAlignment
+    href: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment.html
+- uid: GHIElectronics.Endpoint.Drawing.Image
+  commentId: T:GHIElectronics.Endpoint.Drawing.Image
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Image.html
+  name: Image
+  nameWithType: Image
+  fullName: GHIElectronics.Endpoint.Drawing.Image
+- uid: GHIElectronics.Endpoint.Drawing.Bitmap
+  commentId: T:GHIElectronics.Endpoint.Drawing.Bitmap
+  href: GHIElectronics.Endpoint.Drawing.Bitmap.html
+  name: Bitmap
+  nameWithType: Bitmap
+  fullName: GHIElectronics.Endpoint.Drawing.Bitmap
+- uid: GHIElectronics.Endpoint.Drawing.Pen
+  commentId: T:GHIElectronics.Endpoint.Drawing.Pen
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Pen.html
+  name: Pen
+  nameWithType: Pen
+  fullName: GHIElectronics.Endpoint.Drawing.Pen
+- uid: GHIElectronics.Endpoint.Drawing.Rectangle
+  commentId: T:GHIElectronics.Endpoint.Drawing.Rectangle
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Rectangle.html
+  name: Rectangle
+  nameWithType: Rectangle
+  fullName: GHIElectronics.Endpoint.Drawing.Rectangle
+- uid: GHIElectronics.Endpoint.Drawing.RectangleF
+  commentId: T:GHIElectronics.Endpoint.Drawing.RectangleF
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.RectangleF.html
+  name: RectangleF
+  nameWithType: RectangleF
+  fullName: GHIElectronics.Endpoint.Drawing.RectangleF
+- uid: GHIElectronics.Endpoint.Drawing.SizeF
+  commentId: T:GHIElectronics.Endpoint.Drawing.SizeF
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.SizeF.html
+  name: SizeF
+  nameWithType: SizeF
+  fullName: GHIElectronics.Endpoint.Drawing.SizeF
+- uid: GHIElectronics.Endpoint.Drawing.StringAlignment
+  commentId: T:GHIElectronics.Endpoint.Drawing.StringAlignment
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.StringAlignment.html
+  name: StringAlignment
+  nameWithType: StringAlignment
+  fullName: GHIElectronics.Endpoint.Drawing.StringAlignment
+- uid: GHIElectronics.Endpoint.Drawing.StringTrimming
+  commentId: T:GHIElectronics.Endpoint.Drawing.StringTrimming
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.StringTrimming.html
+  name: StringTrimming
+  nameWithType: StringTrimming
+  fullName: GHIElectronics.Endpoint.Drawing.StringTrimming
+- uid: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+  commentId: T:GHIElectronics.Endpoint.Drawing.StringFormatFlags
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.StringFormatFlags.html
+  name: StringFormatFlags
+  nameWithType: StringFormatFlags
+  fullName: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+- uid: GHIElectronics.Endpoint.Drawing.StringFormat
+  commentId: T:GHIElectronics.Endpoint.Drawing.StringFormat
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.StringFormat.html
+  name: StringFormat
+  nameWithType: StringFormat
+  fullName: GHIElectronics.Endpoint.Drawing.StringFormat
+- uid: GHIElectronics.Endpoint.Drawing
+  commentId: N:GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing
+  nameWithType: GHIElectronics.Endpoint.Drawing
+  fullName: GHIElectronics.Endpoint.Drawing
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html

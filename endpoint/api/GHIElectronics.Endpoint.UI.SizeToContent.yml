@@ -1,0 +1,184 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.SizeToContent
+  commentId: T:GHIElectronics.Endpoint.UI.SizeToContent
+  id: SizeToContent
+  parent: GHIElectronics.Endpoint.UI
+  children:
+  - GHIElectronics.Endpoint.UI.SizeToContent.Height
+  - GHIElectronics.Endpoint.UI.SizeToContent.Manual
+  - GHIElectronics.Endpoint.UI.SizeToContent.Width
+  - GHIElectronics.Endpoint.UI.SizeToContent.WidthAndHeight
+  langs:
+  - csharp
+  - vb
+  name: SizeToContent
+  nameWithType: SizeToContent
+  fullName: GHIElectronics.Endpoint.UI.SizeToContent
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/SizeToContent.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SizeToContent
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/SizeToContent.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: SizeToContent
+  example: []
+  syntax:
+    content: public enum SizeToContent
+    content.vb: Public Enum SizeToContent
+- uid: GHIElectronics.Endpoint.UI.SizeToContent.Manual
+  commentId: F:GHIElectronics.Endpoint.UI.SizeToContent.Manual
+  id: Manual
+  parent: GHIElectronics.Endpoint.UI.SizeToContent
+  langs:
+  - csharp
+  - vb
+  name: Manual
+  nameWithType: SizeToContent.Manual
+  fullName: GHIElectronics.Endpoint.UI.SizeToContent.Manual
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/SizeToContent.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Manual
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/SizeToContent.cs
+    startLine: 13
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Does not size to content
+  example: []
+  syntax:
+    content: Manual = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.SizeToContent
+- uid: GHIElectronics.Endpoint.UI.SizeToContent.Width
+  commentId: F:GHIElectronics.Endpoint.UI.SizeToContent.Width
+  id: Width
+  parent: GHIElectronics.Endpoint.UI.SizeToContent
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: SizeToContent.Width
+  fullName: GHIElectronics.Endpoint.UI.SizeToContent.Width
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/SizeToContent.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Width
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/SizeToContent.cs
+    startLine: 17
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Sizes Width to content's Width
+  example: []
+  syntax:
+    content: Width = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.SizeToContent
+- uid: GHIElectronics.Endpoint.UI.SizeToContent.Height
+  commentId: F:GHIElectronics.Endpoint.UI.SizeToContent.Height
+  id: Height
+  parent: GHIElectronics.Endpoint.UI.SizeToContent
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: SizeToContent.Height
+  fullName: GHIElectronics.Endpoint.UI.SizeToContent.Height
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/SizeToContent.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Height
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/SizeToContent.cs
+    startLine: 21
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Sizes Height to content's Height
+  example: []
+  syntax:
+    content: Height = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.SizeToContent
+- uid: GHIElectronics.Endpoint.UI.SizeToContent.WidthAndHeight
+  commentId: F:GHIElectronics.Endpoint.UI.SizeToContent.WidthAndHeight
+  id: WidthAndHeight
+  parent: GHIElectronics.Endpoint.UI.SizeToContent
+  langs:
+  - csharp
+  - vb
+  name: WidthAndHeight
+  nameWithType: SizeToContent.WidthAndHeight
+  fullName: GHIElectronics.Endpoint.UI.SizeToContent.WidthAndHeight
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/SizeToContent.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: WidthAndHeight
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/SizeToContent.cs
+    startLine: 25
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Sizes both Width and Height to content's size
+  example: []
+  syntax:
+    content: WidthAndHeight = 3
+    return:
+      type: GHIElectronics.Endpoint.UI.SizeToContent
+references:
+- uid: GHIElectronics.Endpoint.UI
+  commentId: N:GHIElectronics.Endpoint.UI
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI
+  nameWithType: GHIElectronics.Endpoint.UI
+  fullName: GHIElectronics.Endpoint.UI
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+- uid: GHIElectronics.Endpoint.UI.SizeToContent
+  commentId: T:GHIElectronics.Endpoint.UI.SizeToContent
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.SizeToContent.html
+  name: SizeToContent
+  nameWithType: SizeToContent
+  fullName: GHIElectronics.Endpoint.UI.SizeToContent

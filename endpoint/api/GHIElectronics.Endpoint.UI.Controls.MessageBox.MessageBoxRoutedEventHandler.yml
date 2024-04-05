@@ -1,0 +1,113 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventHandler
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventHandler
+  id: MessageBox.MessageBoxRoutedEventHandler
+  parent: GHIElectronics.Endpoint.UI.Controls
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: MessageBox.MessageBoxRoutedEventHandler
+  nameWithType: MessageBox.MessageBoxRoutedEventHandler
+  fullName: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventHandler
+  type: Delegate
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: MessageBoxRoutedEventHandler
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/MessageBox.cs
+    startLine: 15
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public delegate void MessageBox.MessageBoxRoutedEventHandler(object sender, MessageBox.MessageBoxRoutedEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventArgs
+    content.vb: Public Delegate Sub MessageBox.MessageBoxRoutedEventHandler(sender As Object, e As MessageBox.MessageBoxRoutedEventArgs)
+references:
+- uid: GHIElectronics.Endpoint.UI.Controls
+  commentId: N:GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Controls
+  nameWithType: GHIElectronics.Endpoint.UI.Controls
+  fullName: GHIElectronics.Endpoint.UI.Controls
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventArgs
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventArgs
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  name: MessageBox.MessageBoxRoutedEventArgs
+  nameWithType: MessageBox.MessageBoxRoutedEventArgs
+  fullName: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventArgs
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox
+    name: MessageBox
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventArgs
+    name: MessageBoxRoutedEventArgs
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventArgs.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox
+    name: MessageBox
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventArgs
+    name: MessageBoxRoutedEventArgs
+    href: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventArgs.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

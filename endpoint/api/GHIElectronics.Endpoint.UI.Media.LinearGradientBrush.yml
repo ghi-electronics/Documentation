@@ -1,0 +1,641 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush
+  commentId: T:GHIElectronics.Endpoint.UI.Media.LinearGradientBrush
+  id: LinearGradientBrush
+  parent: GHIElectronics.Endpoint.UI.Media
+  children:
+  - GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.#ctor(GHIElectronics.Endpoint.UI.Media.Color,GHIElectronics.Endpoint.UI.Media.Color)
+  - GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.#ctor(GHIElectronics.Endpoint.UI.Media.Color,GHIElectronics.Endpoint.UI.Media.Color,System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.EndColor
+  - GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.EndX
+  - GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.EndY
+  - GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.MappingMode
+  - GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.RelativeBoundingBoxSize
+  - GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.StartColor
+  - GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.StartX
+  - GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.StartY
+  langs:
+  - csharp
+  - vb
+  name: LinearGradientBrush
+  nameWithType: LinearGradientBrush
+  fullName: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: LinearGradientBrush
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+    startLine: 6
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: 'public sealed class LinearGradientBrush : Brush'
+    content.vb: Public NotInheritable Class LinearGradientBrush Inherits Brush
+  inheritance:
+  - System.Object
+  - GHIElectronics.Endpoint.UI.Media.Brush
+  inheritedMembers:
+  - GHIElectronics.Endpoint.UI.Media.Brush.Opacity
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.StartColor
+  commentId: F:GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.StartColor
+  id: StartColor
+  parent: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush
+  langs:
+  - csharp
+  - vb
+  name: StartColor
+  nameWithType: LinearGradientBrush.StartColor
+  fullName: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.StartColor
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: StartColor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+    startLine: 7
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public Color StartColor
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.Color
+    content.vb: Public StartColor As Color
+- uid: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.EndColor
+  commentId: F:GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.EndColor
+  id: EndColor
+  parent: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush
+  langs:
+  - csharp
+  - vb
+  name: EndColor
+  nameWithType: LinearGradientBrush.EndColor
+  fullName: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.EndColor
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: EndColor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+    startLine: 8
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public Color EndColor
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.Color
+    content.vb: Public EndColor As Color
+- uid: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.MappingMode
+  commentId: F:GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.MappingMode
+  id: MappingMode
+  parent: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush
+  langs:
+  - csharp
+  - vb
+  name: MappingMode
+  nameWithType: LinearGradientBrush.MappingMode
+  fullName: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.MappingMode
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: MappingMode
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public BrushMappingMode MappingMode
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.BrushMappingMode
+    content.vb: Public MappingMode As BrushMappingMode
+- uid: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.StartX
+  commentId: F:GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.StartX
+  id: StartX
+  parent: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush
+  langs:
+  - csharp
+  - vb
+  name: StartX
+  nameWithType: LinearGradientBrush.StartX
+  fullName: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.StartX
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: StartX
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+    startLine: 12
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public int StartX
+    return:
+      type: System.Int32
+    content.vb: Public StartX As Integer
+- uid: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.StartY
+  commentId: F:GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.StartY
+  id: StartY
+  parent: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush
+  langs:
+  - csharp
+  - vb
+  name: StartY
+  nameWithType: LinearGradientBrush.StartY
+  fullName: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.StartY
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: StartY
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+    startLine: 12
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public int StartY
+    return:
+      type: System.Int32
+    content.vb: Public StartY As Integer
+- uid: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.EndX
+  commentId: F:GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.EndX
+  id: EndX
+  parent: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush
+  langs:
+  - csharp
+  - vb
+  name: EndX
+  nameWithType: LinearGradientBrush.EndX
+  fullName: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.EndX
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: EndX
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+    startLine: 13
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public int EndX
+    return:
+      type: System.Int32
+    content.vb: Public EndX As Integer
+- uid: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.EndY
+  commentId: F:GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.EndY
+  id: EndY
+  parent: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush
+  langs:
+  - csharp
+  - vb
+  name: EndY
+  nameWithType: LinearGradientBrush.EndY
+  fullName: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.EndY
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: EndY
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+    startLine: 13
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public int EndY
+    return:
+      type: System.Int32
+    content.vb: Public EndY As Integer
+- uid: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.RelativeBoundingBoxSize
+  commentId: F:GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.RelativeBoundingBoxSize
+  id: RelativeBoundingBoxSize
+  parent: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush
+  langs:
+  - csharp
+  - vb
+  name: RelativeBoundingBoxSize
+  nameWithType: LinearGradientBrush.RelativeBoundingBoxSize
+  fullName: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.RelativeBoundingBoxSize
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: RelativeBoundingBoxSize
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+    startLine: 15
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public const int RelativeBoundingBoxSize = 1000
+    return:
+      type: System.Int32
+    content.vb: Public Const RelativeBoundingBoxSize As Integer = 1000
+- uid: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.#ctor(GHIElectronics.Endpoint.UI.Media.Color,GHIElectronics.Endpoint.UI.Media.Color)
+  commentId: M:GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.#ctor(GHIElectronics.Endpoint.UI.Media.Color,GHIElectronics.Endpoint.UI.Media.Color)
+  id: '#ctor(GHIElectronics.Endpoint.UI.Media.Color,GHIElectronics.Endpoint.UI.Media.Color)'
+  parent: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush
+  langs:
+  - csharp
+  - vb
+  name: LinearGradientBrush(Color, Color)
+  nameWithType: LinearGradientBrush.LinearGradientBrush(Color, Color)
+  fullName: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.LinearGradientBrush(GHIElectronics.Endpoint.UI.Media.Color, GHIElectronics.Endpoint.UI.Media.Color)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+    startLine: 17
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public LinearGradientBrush(Color startColor, Color endColor)
+    parameters:
+    - id: startColor
+      type: GHIElectronics.Endpoint.UI.Media.Color
+    - id: endColor
+      type: GHIElectronics.Endpoint.UI.Media.Color
+    content.vb: Public Sub New(startColor As Color, endColor As Color)
+  overload: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.#ctor*
+  nameWithType.vb: LinearGradientBrush.New(Color, Color)
+  fullName.vb: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.New(GHIElectronics.Endpoint.UI.Media.Color, GHIElectronics.Endpoint.UI.Media.Color)
+  name.vb: New(Color, Color)
+- uid: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.#ctor(GHIElectronics.Endpoint.UI.Media.Color,GHIElectronics.Endpoint.UI.Media.Color,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.#ctor(GHIElectronics.Endpoint.UI.Media.Color,GHIElectronics.Endpoint.UI.Media.Color,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: '#ctor(GHIElectronics.Endpoint.UI.Media.Color,GHIElectronics.Endpoint.UI.Media.Color,System.Int32,System.Int32,System.Int32,System.Int32)'
+  parent: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush
+  langs:
+  - csharp
+  - vb
+  name: LinearGradientBrush(Color, Color, int, int, int, int)
+  nameWithType: LinearGradientBrush.LinearGradientBrush(Color, Color, int, int, int, int)
+  fullName: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.LinearGradientBrush(GHIElectronics.Endpoint.UI.Media.Color, GHIElectronics.Endpoint.UI.Media.Color, int, int, int, int)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/LinearGradientBrush.cs
+    startLine: 20
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public LinearGradientBrush(Color startColor, Color endColor, int startX, int startY, int endX, int endY)
+    parameters:
+    - id: startColor
+      type: GHIElectronics.Endpoint.UI.Media.Color
+    - id: endColor
+      type: GHIElectronics.Endpoint.UI.Media.Color
+    - id: startX
+      type: System.Int32
+    - id: startY
+      type: System.Int32
+    - id: endX
+      type: System.Int32
+    - id: endY
+      type: System.Int32
+    content.vb: Public Sub New(startColor As Color, endColor As Color, startX As Integer, startY As Integer, endX As Integer, endY As Integer)
+  overload: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.#ctor*
+  nameWithType.vb: LinearGradientBrush.New(Color, Color, Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.New(GHIElectronics.Endpoint.UI.Media.Color, GHIElectronics.Endpoint.UI.Media.Color, Integer, Integer, Integer, Integer)
+  name.vb: New(Color, Color, Integer, Integer, Integer, Integer)
+references:
+- uid: GHIElectronics.Endpoint.UI.Media
+  commentId: N:GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Media
+  nameWithType: GHIElectronics.Endpoint.UI.Media
+  fullName: GHIElectronics.Endpoint.UI.Media
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Media
+    name: Media
+    href: GHIElectronics.Endpoint.UI.Media.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Media
+    name: Media
+    href: GHIElectronics.Endpoint.UI.Media.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GHIElectronics.Endpoint.UI.Media.Brush
+  commentId: T:GHIElectronics.Endpoint.UI.Media.Brush
+  parent: GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.Endpoint.UI.Media.Brush.html
+  name: Brush
+  nameWithType: Brush
+  fullName: GHIElectronics.Endpoint.UI.Media.Brush
+- uid: GHIElectronics.Endpoint.UI.Media.Brush.Opacity
+  commentId: P:GHIElectronics.Endpoint.UI.Media.Brush.Opacity
+  parent: GHIElectronics.Endpoint.UI.Media.Brush
+  href: GHIElectronics.Endpoint.UI.Media.Brush.html#GHIElectronics_Endpoint_UI_Media_Brush_Opacity
+  name: Opacity
+  nameWithType: Brush.Opacity
+  fullName: GHIElectronics.Endpoint.UI.Media.Brush.Opacity
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.UI.Media.Color
+  commentId: T:GHIElectronics.Endpoint.UI.Media.Color
+  parent: GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.Endpoint.UI.Media.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: GHIElectronics.Endpoint.UI.Media.Color
+- uid: GHIElectronics.Endpoint.UI.Media.BrushMappingMode
+  commentId: T:GHIElectronics.Endpoint.UI.Media.BrushMappingMode
+  parent: GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.Endpoint.UI.Media.BrushMappingMode.html
+  name: BrushMappingMode
+  nameWithType: BrushMappingMode
+  fullName: GHIElectronics.Endpoint.UI.Media.BrushMappingMode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.#ctor
+  href: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.html#GHIElectronics_Endpoint_UI_Media_LinearGradientBrush__ctor_GHIElectronics_Endpoint_UI_Media_Color_GHIElectronics_Endpoint_UI_Media_Color_
+  name: LinearGradientBrush
+  nameWithType: LinearGradientBrush.LinearGradientBrush
+  fullName: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.LinearGradientBrush
+  nameWithType.vb: LinearGradientBrush.New
+  fullName.vb: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush.New
+  name.vb: New

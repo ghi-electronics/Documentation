@@ -1,0 +1,319 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+  commentId: T:GHIElectronics.Endpoint.Drawing.StringFormatFlags
+  id: StringFormatFlags
+  parent: GHIElectronics.Endpoint.Drawing
+  children:
+  - GHIElectronics.Endpoint.Drawing.StringFormatFlags.DirectionRightToLeft
+  - GHIElectronics.Endpoint.Drawing.StringFormatFlags.DirectionVertical
+  - GHIElectronics.Endpoint.Drawing.StringFormatFlags.DisplayFormatControl
+  - GHIElectronics.Endpoint.Drawing.StringFormatFlags.FitBlackBox
+  - GHIElectronics.Endpoint.Drawing.StringFormatFlags.LineLimit
+  - GHIElectronics.Endpoint.Drawing.StringFormatFlags.MeasureTrailingSpaces
+  - GHIElectronics.Endpoint.Drawing.StringFormatFlags.NoClip
+  - GHIElectronics.Endpoint.Drawing.StringFormatFlags.NoFontFallback
+  - GHIElectronics.Endpoint.Drawing.StringFormatFlags.NoWrap
+  langs:
+  - csharp
+  - vb
+  name: StringFormatFlags
+  nameWithType: StringFormatFlags
+  fullName: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: StringFormatFlags
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 16
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum StringFormatFlags
+    content.vb: >-
+      <Flags>
+
+      Public Enum StringFormatFlags
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: GHIElectronics.Endpoint.Drawing.StringFormatFlags.DirectionRightToLeft
+  commentId: F:GHIElectronics.Endpoint.Drawing.StringFormatFlags.DirectionRightToLeft
+  id: DirectionRightToLeft
+  parent: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+  langs:
+  - csharp
+  - vb
+  name: DirectionRightToLeft
+  nameWithType: StringFormatFlags.DirectionRightToLeft
+  fullName: GHIElectronics.Endpoint.Drawing.StringFormatFlags.DirectionRightToLeft
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DirectionRightToLeft
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 18
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: DirectionRightToLeft = 1
+    return:
+      type: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+- uid: GHIElectronics.Endpoint.Drawing.StringFormatFlags.DirectionVertical
+  commentId: F:GHIElectronics.Endpoint.Drawing.StringFormatFlags.DirectionVertical
+  id: DirectionVertical
+  parent: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+  langs:
+  - csharp
+  - vb
+  name: DirectionVertical
+  nameWithType: StringFormatFlags.DirectionVertical
+  fullName: GHIElectronics.Endpoint.Drawing.StringFormatFlags.DirectionVertical
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DirectionVertical
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 19
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: DirectionVertical = 2
+    return:
+      type: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+- uid: GHIElectronics.Endpoint.Drawing.StringFormatFlags.FitBlackBox
+  commentId: F:GHIElectronics.Endpoint.Drawing.StringFormatFlags.FitBlackBox
+  id: FitBlackBox
+  parent: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+  langs:
+  - csharp
+  - vb
+  name: FitBlackBox
+  nameWithType: StringFormatFlags.FitBlackBox
+  fullName: GHIElectronics.Endpoint.Drawing.StringFormatFlags.FitBlackBox
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: FitBlackBox
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 20
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: FitBlackBox = 4
+    return:
+      type: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+- uid: GHIElectronics.Endpoint.Drawing.StringFormatFlags.DisplayFormatControl
+  commentId: F:GHIElectronics.Endpoint.Drawing.StringFormatFlags.DisplayFormatControl
+  id: DisplayFormatControl
+  parent: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+  langs:
+  - csharp
+  - vb
+  name: DisplayFormatControl
+  nameWithType: StringFormatFlags.DisplayFormatControl
+  fullName: GHIElectronics.Endpoint.Drawing.StringFormatFlags.DisplayFormatControl
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DisplayFormatControl
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 21
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: DisplayFormatControl = 32
+    return:
+      type: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+- uid: GHIElectronics.Endpoint.Drawing.StringFormatFlags.NoFontFallback
+  commentId: F:GHIElectronics.Endpoint.Drawing.StringFormatFlags.NoFontFallback
+  id: NoFontFallback
+  parent: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+  langs:
+  - csharp
+  - vb
+  name: NoFontFallback
+  nameWithType: StringFormatFlags.NoFontFallback
+  fullName: GHIElectronics.Endpoint.Drawing.StringFormatFlags.NoFontFallback
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: NoFontFallback
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 22
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: NoFontFallback = 1024
+    return:
+      type: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+- uid: GHIElectronics.Endpoint.Drawing.StringFormatFlags.MeasureTrailingSpaces
+  commentId: F:GHIElectronics.Endpoint.Drawing.StringFormatFlags.MeasureTrailingSpaces
+  id: MeasureTrailingSpaces
+  parent: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+  langs:
+  - csharp
+  - vb
+  name: MeasureTrailingSpaces
+  nameWithType: StringFormatFlags.MeasureTrailingSpaces
+  fullName: GHIElectronics.Endpoint.Drawing.StringFormatFlags.MeasureTrailingSpaces
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: MeasureTrailingSpaces
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 23
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: MeasureTrailingSpaces = 2048
+    return:
+      type: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+- uid: GHIElectronics.Endpoint.Drawing.StringFormatFlags.NoWrap
+  commentId: F:GHIElectronics.Endpoint.Drawing.StringFormatFlags.NoWrap
+  id: NoWrap
+  parent: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+  langs:
+  - csharp
+  - vb
+  name: NoWrap
+  nameWithType: StringFormatFlags.NoWrap
+  fullName: GHIElectronics.Endpoint.Drawing.StringFormatFlags.NoWrap
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: NoWrap
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 24
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: NoWrap = 4096
+    return:
+      type: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+- uid: GHIElectronics.Endpoint.Drawing.StringFormatFlags.LineLimit
+  commentId: F:GHIElectronics.Endpoint.Drawing.StringFormatFlags.LineLimit
+  id: LineLimit
+  parent: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+  langs:
+  - csharp
+  - vb
+  name: LineLimit
+  nameWithType: StringFormatFlags.LineLimit
+  fullName: GHIElectronics.Endpoint.Drawing.StringFormatFlags.LineLimit
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: LineLimit
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 25
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: LineLimit = 8192
+    return:
+      type: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+- uid: GHIElectronics.Endpoint.Drawing.StringFormatFlags.NoClip
+  commentId: F:GHIElectronics.Endpoint.Drawing.StringFormatFlags.NoClip
+  id: NoClip
+  parent: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+  langs:
+  - csharp
+  - vb
+  name: NoClip
+  nameWithType: StringFormatFlags.NoClip
+  fullName: GHIElectronics.Endpoint.Drawing.StringFormatFlags.NoClip
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: NoClip
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 26
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: NoClip = 16384
+    return:
+      type: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+references:
+- uid: GHIElectronics.Endpoint.Drawing
+  commentId: N:GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing
+  nameWithType: GHIElectronics.Endpoint.Drawing
+  fullName: GHIElectronics.Endpoint.Drawing
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+- uid: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+  commentId: T:GHIElectronics.Endpoint.Drawing.StringFormatFlags
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.StringFormatFlags.html
+  name: StringFormatFlags
+  nameWithType: StringFormatFlags
+  fullName: GHIElectronics.Endpoint.Drawing.StringFormatFlags

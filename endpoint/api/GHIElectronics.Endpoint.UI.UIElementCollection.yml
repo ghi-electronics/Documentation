@@ -1,0 +1,1281 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection
+  commentId: T:GHIElectronics.Endpoint.UI.UIElementCollection
+  id: UIElementCollection
+  parent: GHIElectronics.Endpoint.UI
+  children:
+  - GHIElectronics.Endpoint.UI.UIElementCollection.#ctor(GHIElectronics.Endpoint.UI.UIElement)
+  - GHIElectronics.Endpoint.UI.UIElementCollection.Add(GHIElectronics.Endpoint.UI.UIElement)
+  - GHIElectronics.Endpoint.UI.UIElementCollection.Capacity
+  - GHIElectronics.Endpoint.UI.UIElementCollection.Clear
+  - GHIElectronics.Endpoint.UI.UIElementCollection.Contains(GHIElectronics.Endpoint.UI.UIElement)
+  - GHIElectronics.Endpoint.UI.UIElementCollection.CopyTo(GHIElectronics.Endpoint.UI.UIElement[],System.Int32)
+  - GHIElectronics.Endpoint.UI.UIElementCollection.CopyTo(System.Array,System.Int32)
+  - GHIElectronics.Endpoint.UI.UIElementCollection.Count
+  - GHIElectronics.Endpoint.UI.UIElementCollection.IndexOf(GHIElectronics.Endpoint.UI.UIElement)
+  - GHIElectronics.Endpoint.UI.UIElementCollection.Insert(System.Int32,GHIElectronics.Endpoint.UI.UIElement)
+  - GHIElectronics.Endpoint.UI.UIElementCollection.IsSynchronized
+  - GHIElectronics.Endpoint.UI.UIElementCollection.Item(System.Int32)
+  - GHIElectronics.Endpoint.UI.UIElementCollection.Remove(GHIElectronics.Endpoint.UI.UIElement)
+  - GHIElectronics.Endpoint.UI.UIElementCollection.RemoveAt(System.Int32)
+  - GHIElectronics.Endpoint.UI.UIElementCollection.RemoveRange(System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.UI.UIElementCollection.SyncRoot
+  langs:
+  - csharp
+  - vb
+  name: UIElementCollection
+  nameWithType: UIElementCollection
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: UIElementCollection
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+    startLine: 15
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: A UIElementCollection is a ordered collection of UIElements.
+  remarks: >-
+    A UIElementCollection has implied context affinity. It is a violation to access
+
+    the collection from a different context than that of the owning Element
+
+
+    This collection is an amalgam of UIElementCollection and UIElementCollection from Avalon
+  example: []
+  syntax:
+    content: 'public class UIElementCollection : ICollection, IEnumerable'
+    content.vb: Public Class UIElementCollection Implements ICollection, IEnumerable
+  inheritance:
+  - System.Object
+  implements:
+  - System.Collections.ICollection
+  - System.Collections.IEnumerable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.#ctor(GHIElectronics.Endpoint.UI.UIElement)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElementCollection.#ctor(GHIElectronics.Endpoint.UI.UIElement)
+  id: '#ctor(GHIElectronics.Endpoint.UI.UIElement)'
+  parent: GHIElectronics.Endpoint.UI.UIElementCollection
+  langs:
+  - csharp
+  - vb
+  name: UIElementCollection(UIElement)
+  nameWithType: UIElementCollection.UIElementCollection(UIElement)
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.UIElementCollection(GHIElectronics.Endpoint.UI.UIElement)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+    startLine: 17
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  syntax:
+    content: public UIElementCollection(UIElement owner)
+    parameters:
+    - id: owner
+      type: GHIElectronics.Endpoint.UI.UIElement
+    content.vb: Public Sub New(owner As UIElement)
+  overload: GHIElectronics.Endpoint.UI.UIElementCollection.#ctor*
+  nameWithType.vb: UIElementCollection.New(UIElement)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElementCollection.New(GHIElectronics.Endpoint.UI.UIElement)
+  name.vb: New(UIElement)
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.Count
+  commentId: P:GHIElectronics.Endpoint.UI.UIElementCollection.Count
+  id: Count
+  parent: GHIElectronics.Endpoint.UI.UIElementCollection
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: UIElementCollection.Count
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.Count
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Count
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+    startLine: 22
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Gets the number of elements contained in the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public virtual int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: The number of elements contained in the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Overridable ReadOnly Property Count As Integer
+  overload: GHIElectronics.Endpoint.UI.UIElementCollection.Count*
+  implements:
+  - System.Collections.ICollection.Count
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.IsSynchronized
+  commentId: P:GHIElectronics.Endpoint.UI.UIElementCollection.IsSynchronized
+  id: IsSynchronized
+  parent: GHIElectronics.Endpoint.UI.UIElementCollection
+  langs:
+  - csharp
+  - vb
+  name: IsSynchronized
+  nameWithType: UIElementCollection.IsSynchronized
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.IsSynchronized
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: IsSynchronized
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+    startLine: 24
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Gets a value indicating whether access to the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref> is synchronized (thread safe).
+  example: []
+  syntax:
+    content: public virtual bool IsSynchronized { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if access to the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref> is synchronized (thread safe); otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Overridable ReadOnly Property IsSynchronized As Boolean
+  overload: GHIElectronics.Endpoint.UI.UIElementCollection.IsSynchronized*
+  implements:
+  - System.Collections.ICollection.IsSynchronized
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.SyncRoot
+  commentId: P:GHIElectronics.Endpoint.UI.UIElementCollection.SyncRoot
+  id: SyncRoot
+  parent: GHIElectronics.Endpoint.UI.UIElementCollection
+  langs:
+  - csharp
+  - vb
+  name: SyncRoot
+  nameWithType: UIElementCollection.SyncRoot
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.SyncRoot
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SyncRoot
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+    startLine: 26
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Gets an object that can be used to synchronize access to the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public virtual object SyncRoot { get; }
+    parameters: []
+    return:
+      type: System.Object
+      description: An object that can be used to synchronize access to the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Overridable ReadOnly Property SyncRoot As Object
+  overload: GHIElectronics.Endpoint.UI.UIElementCollection.SyncRoot*
+  implements:
+  - System.Collections.ICollection.SyncRoot
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.CopyTo(System.Array,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElementCollection.CopyTo(System.Array,System.Int32)
+  id: CopyTo(System.Array,System.Int32)
+  parent: GHIElectronics.Endpoint.UI.UIElementCollection
+  langs:
+  - csharp
+  - vb
+  name: CopyTo(Array, int)
+  nameWithType: UIElementCollection.CopyTo(Array, int)
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.CopyTo(System.Array, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: CopyTo
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+    startLine: 31
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Copies the UIElement collection to the specified array starting at the specified index.
+  example: []
+  syntax:
+    content: public void CopyTo(Array array, int index)
+    parameters:
+    - id: array
+      type: System.Array
+    - id: index
+      type: System.Int32
+    content.vb: Public Sub CopyTo(array As Array, index As Integer)
+  overload: GHIElectronics.Endpoint.UI.UIElementCollection.CopyTo*
+  implements:
+  - System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+  nameWithType.vb: UIElementCollection.CopyTo(Array, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElementCollection.CopyTo(System.Array, Integer)
+  name.vb: CopyTo(Array, Integer)
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.CopyTo(GHIElectronics.Endpoint.UI.UIElement[],System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElementCollection.CopyTo(GHIElectronics.Endpoint.UI.UIElement[],System.Int32)
+  id: CopyTo(GHIElectronics.Endpoint.UI.UIElement[],System.Int32)
+  parent: GHIElectronics.Endpoint.UI.UIElementCollection
+  langs:
+  - csharp
+  - vb
+  name: CopyTo(UIElement[], int)
+  nameWithType: UIElementCollection.CopyTo(UIElement[], int)
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.CopyTo(GHIElectronics.Endpoint.UI.UIElement[], int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: CopyTo
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+    startLine: 48
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: >-
+    Strongly typed version of CopyTo
+
+    Copies the collection into the Array.
+  example: []
+  syntax:
+    content: public virtual void CopyTo(UIElement[] array, int index)
+    parameters:
+    - id: array
+      type: GHIElectronics.Endpoint.UI.UIElement[]
+    - id: index
+      type: System.Int32
+    content.vb: Public Overridable Sub CopyTo(array As UIElement(), index As Integer)
+  overload: GHIElectronics.Endpoint.UI.UIElementCollection.CopyTo*
+  nameWithType.vb: UIElementCollection.CopyTo(UIElement(), Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElementCollection.CopyTo(GHIElectronics.Endpoint.UI.UIElement(), Integer)
+  name.vb: CopyTo(UIElement(), Integer)
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.Capacity
+  commentId: P:GHIElectronics.Endpoint.UI.UIElementCollection.Capacity
+  id: Capacity
+  parent: GHIElectronics.Endpoint.UI.UIElementCollection
+  langs:
+  - csharp
+  - vb
+  name: Capacity
+  nameWithType: UIElementCollection.Capacity
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.Capacity
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Capacity
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+    startLine: 81
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Gets or sets the number of elements that the UIElementCollection can contain.
+  remarks: >-
+    Capacity is the number of elements that the UIElementCollection is capable of storing.
+
+    Count is the number of UIElements that are actually in the UIElementCollection.
+
+
+    Capacity is always greater than or equal to Count. If Count exceeds
+
+    Capacity while adding elements, the capacity of the UIElementCollection is increased.
+
+
+    By default the capacity is 0.
+  example: []
+  syntax:
+    content: public virtual int Capacity { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: The number of elements that the UIElementCollection can contain.
+    content.vb: Public Overridable Property Capacity As Integer
+  overload: GHIElectronics.Endpoint.UI.UIElementCollection.Capacity*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: Capacity is set to a value that is less than Count.
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.Item(System.Int32)
+  commentId: P:GHIElectronics.Endpoint.UI.UIElementCollection.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: GHIElectronics.Endpoint.UI.UIElementCollection
+  langs:
+  - csharp
+  - vb
+  name: this[int]
+  nameWithType: UIElementCollection.this[int]
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.this[int]
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: this[]
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+    startLine: 122
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: >-
+    Indexer for the UIElementCollection. Gets or sets the UIElement stored at the
+
+    zero-based index of the UIElementCollection.
+  remarks: >-
+    This property provides the ability to access a specific UIElement in the
+        UIElementCollection by using the following systax: <code>myUIElementCollection[index]</code>.
+  example: []
+  syntax:
+    content: public UIElement this[int index] { get; set; }
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: GHIElectronics.Endpoint.UI.UIElement
+    content.vb: Public Default Property this[](index As Integer) As UIElement
+  overload: GHIElectronics.Endpoint.UI.UIElementCollection.Item*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: <code>index</code> is less than zero -or- <code>index</code> is equal to or greater than Count.
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: If the new child has already a parent or if the slot a the specified index is not null.
+  nameWithType.vb: UIElementCollection.this[](Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElementCollection.this[](Integer)
+  name.vb: this[](Integer)
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.Add(GHIElectronics.Endpoint.UI.UIElement)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElementCollection.Add(GHIElectronics.Endpoint.UI.UIElement)
+  id: Add(GHIElectronics.Endpoint.UI.UIElement)
+  parent: GHIElectronics.Endpoint.UI.UIElementCollection
+  langs:
+  - csharp
+  - vb
+  name: Add(UIElement)
+  nameWithType: UIElementCollection.Add(UIElement)
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.Add(GHIElectronics.Endpoint.UI.UIElement)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Add
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+    startLine: 223
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Appends a UIElement to the end of the UIElementCollection.
+  remarks: Adding a null is allowed.
+  example: []
+  syntax:
+    content: public int Add(UIElement element)
+    parameters:
+    - id: element
+      type: GHIElectronics.Endpoint.UI.UIElement
+    return:
+      type: System.Int32
+      description: The UIElementCollection index at which the UIElement has been added.
+    content.vb: Public Function Add(element As UIElement) As Integer
+  overload: GHIElectronics.Endpoint.UI.UIElementCollection.Add*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: If the new child has already a parent.
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.IndexOf(GHIElectronics.Endpoint.UI.UIElement)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElementCollection.IndexOf(GHIElectronics.Endpoint.UI.UIElement)
+  id: IndexOf(GHIElectronics.Endpoint.UI.UIElement)
+  parent: GHIElectronics.Endpoint.UI.UIElementCollection
+  langs:
+  - csharp
+  - vb
+  name: IndexOf(UIElement)
+  nameWithType: UIElementCollection.IndexOf(UIElement)
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.IndexOf(GHIElectronics.Endpoint.UI.UIElement)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: IndexOf
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+    startLine: 258
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: >-
+    Returns the zero-based index of the UIElement. If the UIElement is not
+
+    in the UIElementCollection -1 is returned. If null is passed to the method, the index
+
+    of the first entry with null is returned. If there is no null entry -1 is returned.
+  example: []
+  syntax:
+    content: public int IndexOf(UIElement element)
+    parameters:
+    - id: element
+      type: GHIElectronics.Endpoint.UI.UIElement
+    return:
+      type: System.Int32
+    content.vb: Public Function IndexOf(element As UIElement) As Integer
+  overload: GHIElectronics.Endpoint.UI.UIElementCollection.IndexOf*
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.Remove(GHIElectronics.Endpoint.UI.UIElement)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElementCollection.Remove(GHIElectronics.Endpoint.UI.UIElement)
+  id: Remove(GHIElectronics.Endpoint.UI.UIElement)
+  parent: GHIElectronics.Endpoint.UI.UIElementCollection
+  langs:
+  - csharp
+  - vb
+  name: Remove(UIElement)
+  nameWithType: UIElementCollection.Remove(UIElement)
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.Remove(GHIElectronics.Endpoint.UI.UIElement)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Remove
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+    startLine: 286
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Removes the specified element from the UIElementCollection.
+  remarks: >-
+    The UIElements that follow the removed UIElements move up to occupy
+
+    the vacated spot. The indexes of the UIElements that are moved are
+
+    also updated.
+
+
+    If element is null then the first null entry is removed. Note that removing
+
+    a null entry is linear in the size of the collection.
+  example: []
+  syntax:
+    content: public void Remove(UIElement element)
+    parameters:
+    - id: element
+      type: GHIElectronics.Endpoint.UI.UIElement
+      description: The UIElement to remove from the UIElementCollection.
+    content.vb: Public Sub Remove(element As UIElement)
+  overload: GHIElectronics.Endpoint.UI.UIElementCollection.Remove*
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.Contains(GHIElectronics.Endpoint.UI.UIElement)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElementCollection.Contains(GHIElectronics.Endpoint.UI.UIElement)
+  id: Contains(GHIElectronics.Endpoint.UI.UIElement)
+  parent: GHIElectronics.Endpoint.UI.UIElementCollection
+  langs:
+  - csharp
+  - vb
+  name: Contains(UIElement)
+  nameWithType: UIElementCollection.Contains(UIElement)
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.Contains(GHIElectronics.Endpoint.UI.UIElement)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Contains
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+    startLine: 330
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Determines whether a element is in the UIElementCollection.
+  example: []
+  syntax:
+    content: public bool Contains(UIElement element)
+    parameters:
+    - id: element
+      type: GHIElectronics.Endpoint.UI.UIElement
+    return:
+      type: System.Boolean
+    content.vb: Public Function Contains(element As UIElement) As Boolean
+  overload: GHIElectronics.Endpoint.UI.UIElementCollection.Contains*
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.Clear
+  commentId: M:GHIElectronics.Endpoint.UI.UIElementCollection.Clear
+  id: Clear
+  parent: GHIElectronics.Endpoint.UI.UIElementCollection
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: UIElementCollection.Clear()
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.Clear()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Clear
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+    startLine: 353
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Removes all elements from the UIElementCollection.
+  remarks: >-
+    Count is set to zero. Capacity remains unchanged.
+
+    To reset the capacity of the UIElementCollection, call TrimToSize
+
+    or set the Capacity property directly.
+  example: []
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: GHIElectronics.Endpoint.UI.UIElementCollection.Clear*
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.Insert(System.Int32,GHIElectronics.Endpoint.UI.UIElement)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElementCollection.Insert(System.Int32,GHIElectronics.Endpoint.UI.UIElement)
+  id: Insert(System.Int32,GHIElectronics.Endpoint.UI.UIElement)
+  parent: GHIElectronics.Endpoint.UI.UIElementCollection
+  langs:
+  - csharp
+  - vb
+  name: Insert(int, UIElement)
+  nameWithType: UIElementCollection.Insert(int, UIElement)
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.Insert(int, GHIElectronics.Endpoint.UI.UIElement)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Insert
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+    startLine: 395
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Inserts an element into the UIElementCollection at the specified index.
+  remarks: >-
+    If Count already equals Capacity, the capacity of the
+
+    UIElementCollection is increased before the new UIElement
+
+    is inserted.
+
+
+    If index is equal to Count, value is added to the
+
+    end of UIElementCollection.
+
+
+    The UIElements that follow the insertion point move down to
+
+    accommodate the new UIElement. The indexes of the UIElements that are
+
+    moved are also updated.
+  example: []
+  syntax:
+    content: public void Insert(int index, UIElement element)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index at which value should be inserted.
+    - id: element
+      type: GHIElectronics.Endpoint.UI.UIElement
+      description: The UIElement to insert.
+    content.vb: Public Sub Insert(index As Integer, element As UIElement)
+  overload: GHIElectronics.Endpoint.UI.UIElementCollection.Insert*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      index is less than zero.
+
+
+      -or-
+
+
+      index is greater than Count.
+  nameWithType.vb: UIElementCollection.Insert(Integer, UIElement)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElementCollection.Insert(Integer, GHIElectronics.Endpoint.UI.UIElement)
+  name.vb: Insert(Integer, UIElement)
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.RemoveAt(System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElementCollection.RemoveAt(System.Int32)
+  id: RemoveAt(System.Int32)
+  parent: GHIElectronics.Endpoint.UI.UIElementCollection
+  langs:
+  - csharp
+  - vb
+  name: RemoveAt(int)
+  nameWithType: UIElementCollection.RemoveAt(int)
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.RemoveAt(int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: RemoveAt
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+    startLine: 441
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Removes the UIElement at the specified index.
+  remarks: >-
+    The UIElements that follow the removed UIElements move up to occupy
+
+    the vacated spot. The indexes of the UIElements that are moved are
+
+    also updated.
+  example: []
+  syntax:
+    content: public void RemoveAt(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index of the element to remove.
+    content.vb: Public Sub RemoveAt(index As Integer)
+  overload: GHIElectronics.Endpoint.UI.UIElementCollection.RemoveAt*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      index is less than zero
+          - or - index is equal or greater than count.
+  nameWithType.vb: UIElementCollection.RemoveAt(Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElementCollection.RemoveAt(Integer)
+  name.vb: RemoveAt(Integer)
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.RemoveRange(System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElementCollection.RemoveRange(System.Int32,System.Int32)
+  id: RemoveRange(System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.UI.UIElementCollection
+  langs:
+  - csharp
+  - vb
+  name: RemoveRange(int, int)
+  nameWithType: UIElementCollection.RemoveRange(int, int)
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.RemoveRange(int, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: RemoveRange
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs
+    startLine: 468
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Removes a range of UIElements from the UIElementCollection.
+  remarks: >-
+    The UIElements that follow the removed UIElements move up to occupy
+
+    the vacated spot. The indexes of the UIElements that are moved are
+
+    also updated.
+  example: []
+  syntax:
+    content: public void RemoveRange(int index, int count)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: >-
+        The zero-based index of the range
+            of elements to remove
+    - id: count
+      type: System.Int32
+      description: The number of elements to remove.
+    content.vb: Public Sub RemoveRange(index As Integer, count As Integer)
+  overload: GHIElectronics.Endpoint.UI.UIElementCollection.RemoveRange*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      index is less than zero.
+
+      -or-
+
+      count is less than zero.
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: index and count do not denote a valid range of elements in the UIElementCollection.
+  nameWithType.vb: UIElementCollection.RemoveRange(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElementCollection.RemoveRange(Integer, Integer)
+  name.vb: RemoveRange(Integer, Integer)
+references:
+- uid: GHIElectronics.Endpoint.UI
+  commentId: N:GHIElectronics.Endpoint.UI
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI
+  nameWithType: GHIElectronics.Endpoint.UI
+  fullName: GHIElectronics.Endpoint.UI
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Collections.ICollection
+  commentId: T:System.Collections.ICollection
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection
+  name: ICollection
+  nameWithType: ICollection
+  fullName: System.Collections.ICollection
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.UI.UIElementCollection.#ctor
+  href: GHIElectronics.Endpoint.UI.UIElementCollection.html#GHIElectronics_Endpoint_UI_UIElementCollection__ctor_GHIElectronics_Endpoint_UI_UIElement_
+  name: UIElementCollection
+  nameWithType: UIElementCollection.UIElementCollection
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.UIElementCollection
+  nameWithType.vb: UIElementCollection.New
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElementCollection.New
+  name.vb: New
+- uid: GHIElectronics.Endpoint.UI.UIElement
+  commentId: T:GHIElectronics.Endpoint.UI.UIElement
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.UIElement.html
+  name: UIElement
+  nameWithType: UIElement
+  fullName: GHIElectronics.Endpoint.UI.UIElement
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.Count*
+  commentId: Overload:GHIElectronics.Endpoint.UI.UIElementCollection.Count
+  href: GHIElectronics.Endpoint.UI.UIElementCollection.html#GHIElectronics_Endpoint_UI_UIElementCollection_Count
+  name: Count
+  nameWithType: UIElementCollection.Count
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.Count
+- uid: System.Collections.ICollection.Count
+  commentId: P:System.Collections.ICollection.Count
+  parent: System.Collections.ICollection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection.count
+  name: Count
+  nameWithType: ICollection.Count
+  fullName: System.Collections.ICollection.Count
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.IsSynchronized*
+  commentId: Overload:GHIElectronics.Endpoint.UI.UIElementCollection.IsSynchronized
+  href: GHIElectronics.Endpoint.UI.UIElementCollection.html#GHIElectronics_Endpoint_UI_UIElementCollection_IsSynchronized
+  name: IsSynchronized
+  nameWithType: UIElementCollection.IsSynchronized
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.IsSynchronized
+- uid: System.Collections.ICollection.IsSynchronized
+  commentId: P:System.Collections.ICollection.IsSynchronized
+  parent: System.Collections.ICollection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection.issynchronized
+  name: IsSynchronized
+  nameWithType: ICollection.IsSynchronized
+  fullName: System.Collections.ICollection.IsSynchronized
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.SyncRoot*
+  commentId: Overload:GHIElectronics.Endpoint.UI.UIElementCollection.SyncRoot
+  href: GHIElectronics.Endpoint.UI.UIElementCollection.html#GHIElectronics_Endpoint_UI_UIElementCollection_SyncRoot
+  name: SyncRoot
+  nameWithType: UIElementCollection.SyncRoot
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.SyncRoot
+- uid: System.Collections.ICollection.SyncRoot
+  commentId: P:System.Collections.ICollection.SyncRoot
+  parent: System.Collections.ICollection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection.syncroot
+  name: SyncRoot
+  nameWithType: ICollection.SyncRoot
+  fullName: System.Collections.ICollection.SyncRoot
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.CopyTo*
+  commentId: Overload:GHIElectronics.Endpoint.UI.UIElementCollection.CopyTo
+  href: GHIElectronics.Endpoint.UI.UIElementCollection.html#GHIElectronics_Endpoint_UI_UIElementCollection_CopyTo_System_Array_System_Int32_
+  name: CopyTo
+  nameWithType: UIElementCollection.CopyTo
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.CopyTo
+- uid: System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+  commentId: M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+  parent: System.Collections.ICollection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection.copyto
+  name: CopyTo(Array, int)
+  nameWithType: ICollection.CopyTo(Array, int)
+  fullName: System.Collections.ICollection.CopyTo(System.Array, int)
+  nameWithType.vb: ICollection.CopyTo(Array, Integer)
+  fullName.vb: System.Collections.ICollection.CopyTo(System.Array, Integer)
+  name.vb: CopyTo(Array, Integer)
+  spec.csharp:
+  - uid: System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.icollection.copyto
+  - name: (
+  - uid: System.Array
+    name: Array
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.array
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.icollection.copyto
+  - name: (
+  - uid: System.Array
+    name: Array
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.array
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Array
+  commentId: T:System.Array
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.array
+  name: Array
+  nameWithType: Array
+  fullName: System.Array
+- uid: GHIElectronics.Endpoint.UI.UIElement[]
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.UIElement.html
+  name: UIElement[]
+  nameWithType: UIElement[]
+  fullName: GHIElectronics.Endpoint.UI.UIElement[]
+  nameWithType.vb: UIElement()
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElement()
+  name.vb: UIElement()
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement
+    name: UIElement
+    href: GHIElectronics.Endpoint.UI.UIElement.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement
+    name: UIElement
+    href: GHIElectronics.Endpoint.UI.UIElement.html
+  - name: (
+  - name: )
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception
+  name: ArgumentOutOfRangeException
+  nameWithType: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.Capacity*
+  commentId: Overload:GHIElectronics.Endpoint.UI.UIElementCollection.Capacity
+  href: GHIElectronics.Endpoint.UI.UIElementCollection.html#GHIElectronics_Endpoint_UI_UIElementCollection_Capacity
+  name: Capacity
+  nameWithType: UIElementCollection.Capacity
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.Capacity
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.Item*
+  commentId: Overload:GHIElectronics.Endpoint.UI.UIElementCollection.Item
+  href: GHIElectronics.Endpoint.UI.UIElementCollection.html#GHIElectronics_Endpoint_UI_UIElementCollection_Item_System_Int32_
+  name: this
+  nameWithType: UIElementCollection.this
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.this
+  nameWithType.vb: UIElementCollection.this[]
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElementCollection.this[]
+  name.vb: this[]
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.Add*
+  commentId: Overload:GHIElectronics.Endpoint.UI.UIElementCollection.Add
+  href: GHIElectronics.Endpoint.UI.UIElementCollection.html#GHIElectronics_Endpoint_UI_UIElementCollection_Add_GHIElectronics_Endpoint_UI_UIElement_
+  name: Add
+  nameWithType: UIElementCollection.Add
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.Add
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.IndexOf*
+  commentId: Overload:GHIElectronics.Endpoint.UI.UIElementCollection.IndexOf
+  href: GHIElectronics.Endpoint.UI.UIElementCollection.html#GHIElectronics_Endpoint_UI_UIElementCollection_IndexOf_GHIElectronics_Endpoint_UI_UIElement_
+  name: IndexOf
+  nameWithType: UIElementCollection.IndexOf
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.IndexOf
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.Remove*
+  commentId: Overload:GHIElectronics.Endpoint.UI.UIElementCollection.Remove
+  href: GHIElectronics.Endpoint.UI.UIElementCollection.html#GHIElectronics_Endpoint_UI_UIElementCollection_Remove_GHIElectronics_Endpoint_UI_UIElement_
+  name: Remove
+  nameWithType: UIElementCollection.Remove
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.Remove
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.Contains*
+  commentId: Overload:GHIElectronics.Endpoint.UI.UIElementCollection.Contains
+  href: GHIElectronics.Endpoint.UI.UIElementCollection.html#GHIElectronics_Endpoint_UI_UIElementCollection_Contains_GHIElectronics_Endpoint_UI_UIElement_
+  name: Contains
+  nameWithType: UIElementCollection.Contains
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.Contains
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.Clear*
+  commentId: Overload:GHIElectronics.Endpoint.UI.UIElementCollection.Clear
+  href: GHIElectronics.Endpoint.UI.UIElementCollection.html#GHIElectronics_Endpoint_UI_UIElementCollection_Clear
+  name: Clear
+  nameWithType: UIElementCollection.Clear
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.Clear
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.Insert*
+  commentId: Overload:GHIElectronics.Endpoint.UI.UIElementCollection.Insert
+  href: GHIElectronics.Endpoint.UI.UIElementCollection.html#GHIElectronics_Endpoint_UI_UIElementCollection_Insert_System_Int32_GHIElectronics_Endpoint_UI_UIElement_
+  name: Insert
+  nameWithType: UIElementCollection.Insert
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.Insert
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.RemoveAt*
+  commentId: Overload:GHIElectronics.Endpoint.UI.UIElementCollection.RemoveAt
+  href: GHIElectronics.Endpoint.UI.UIElementCollection.html#GHIElectronics_Endpoint_UI_UIElementCollection_RemoveAt_System_Int32_
+  name: RemoveAt
+  nameWithType: UIElementCollection.RemoveAt
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.RemoveAt
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection.RemoveRange*
+  commentId: Overload:GHIElectronics.Endpoint.UI.UIElementCollection.RemoveRange
+  href: GHIElectronics.Endpoint.UI.UIElementCollection.html#GHIElectronics_Endpoint_UI_UIElementCollection_RemoveRange_System_Int32_System_Int32_
+  name: RemoveRange
+  nameWithType: UIElementCollection.RemoveRange
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection.RemoveRange

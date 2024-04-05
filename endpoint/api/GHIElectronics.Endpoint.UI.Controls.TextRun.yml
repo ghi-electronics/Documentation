@@ -1,0 +1,688 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRun
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.TextRun
+  id: TextRun
+  parent: GHIElectronics.Endpoint.UI.Controls
+  children:
+  - GHIElectronics.Endpoint.UI.Controls.TextRun.#ctor(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.UI.Media.Color)
+  - GHIElectronics.Endpoint.UI.Controls.TextRun.EndOfLine
+  - GHIElectronics.Endpoint.UI.Controls.TextRun.Font
+  - GHIElectronics.Endpoint.UI.Controls.TextRun.ForeColor
+  - GHIElectronics.Endpoint.UI.Controls.TextRun.GetSize(System.Int32@,System.Int32@)
+  - GHIElectronics.Endpoint.UI.Controls.TextRun.Text
+  - GHIElectronics.Endpoint.UI.Controls.TextRun._height
+  - GHIElectronics.Endpoint.UI.Controls.TextRun._width
+  langs:
+  - csharp
+  - vb
+  name: TextRun
+  nameWithType: TextRun
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRun
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRun.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: TextRun
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRun.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public class TextRun
+    content.vb: Public Class TextRun
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRun.Text
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.TextRun.Text
+  id: Text
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRun
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: TextRun.Text
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRun.Text
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRun.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Text
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRun.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public readonly string Text
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Text As String
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRun.Font
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.TextRun.Font
+  id: Font
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRun
+  langs:
+  - csharp
+  - vb
+  name: Font
+  nameWithType: TextRun.Font
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRun.Font
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRun.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Font
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRun.cs
+    startLine: 11
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public readonly Font Font
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Font
+    content.vb: Public ReadOnly Font As Font
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRun.ForeColor
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.TextRun.ForeColor
+  id: ForeColor
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRun
+  langs:
+  - csharp
+  - vb
+  name: ForeColor
+  nameWithType: TextRun.ForeColor
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRun.ForeColor
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRun.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ForeColor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRun.cs
+    startLine: 12
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public readonly Color ForeColor
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.Color
+    content.vb: Public ReadOnly ForeColor As Color
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRun._width
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.TextRun._width
+  id: _width
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRun
+  langs:
+  - csharp
+  - vb
+  name: _width
+  nameWithType: TextRun._width
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRun._width
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRun.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: _width
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRun.cs
+    startLine: 16
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: protected int _width
+    return:
+      type: System.Int32
+    content.vb: Protected _width As Integer
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRun._height
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.TextRun._height
+  id: _height
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRun
+  langs:
+  - csharp
+  - vb
+  name: _height
+  nameWithType: TextRun._height
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRun._height
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRun.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: _height
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRun.cs
+    startLine: 17
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: protected int _height
+    return:
+      type: System.Int32
+    content.vb: Protected _height As Integer
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRun.#ctor(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.UI.Media.Color)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.TextRun.#ctor(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.UI.Media.Color)
+  id: '#ctor(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.UI.Media.Color)'
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRun
+  langs:
+  - csharp
+  - vb
+  name: TextRun(string, Font, Color)
+  nameWithType: TextRun.TextRun(string, Font, Color)
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRun.TextRun(string, GHIElectronics.Endpoint.Drawing.Font, GHIElectronics.Endpoint.UI.Media.Color)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRun.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRun.cs
+    startLine: 22
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public TextRun(string text, Font font, Color foreColor)
+    parameters:
+    - id: text
+      type: System.String
+    - id: font
+      type: GHIElectronics.Endpoint.Drawing.Font
+    - id: foreColor
+      type: GHIElectronics.Endpoint.UI.Media.Color
+    content.vb: Public Sub New(text As String, font As Font, foreColor As Color)
+  overload: GHIElectronics.Endpoint.UI.Controls.TextRun.#ctor*
+  nameWithType.vb: TextRun.New(String, Font, Color)
+  fullName.vb: GHIElectronics.Endpoint.UI.Controls.TextRun.New(String, GHIElectronics.Endpoint.Drawing.Font, GHIElectronics.Endpoint.UI.Media.Color)
+  name.vb: New(String, Font, Color)
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRun.EndOfLine
+  commentId: P:GHIElectronics.Endpoint.UI.Controls.TextRun.EndOfLine
+  id: EndOfLine
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRun
+  langs:
+  - csharp
+  - vb
+  name: EndOfLine
+  nameWithType: TextRun.EndOfLine
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRun.EndOfLine
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRun.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: EndOfLine
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRun.cs
+    startLine: 32
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public static TextRun EndOfLine { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.Controls.TextRun
+    content.vb: Public Shared ReadOnly Property EndOfLine As TextRun
+  overload: GHIElectronics.Endpoint.UI.Controls.TextRun.EndOfLine*
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRun.GetSize(System.Int32@,System.Int32@)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.TextRun.GetSize(System.Int32@,System.Int32@)
+  id: GetSize(System.Int32@,System.Int32@)
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRun
+  langs:
+  - csharp
+  - vb
+  name: GetSize(out int, out int)
+  nameWithType: TextRun.GetSize(out int, out int)
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRun.GetSize(out int, out int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRun.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: GetSize
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRun.cs
+    startLine: 119
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public void GetSize(out int width, out int height)
+    parameters:
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub GetSize(width As Integer, height As Integer)
+  overload: GHIElectronics.Endpoint.UI.Controls.TextRun.GetSize*
+  nameWithType.vb: TextRun.GetSize(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.Controls.TextRun.GetSize(Integer, Integer)
+  name.vb: GetSize(Integer, Integer)
+references:
+- uid: GHIElectronics.Endpoint.UI.Controls
+  commentId: N:GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Controls
+  nameWithType: GHIElectronics.Endpoint.UI.Controls
+  fullName: GHIElectronics.Endpoint.UI.Controls
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: GHIElectronics.Endpoint.Drawing.Font
+  commentId: T:GHIElectronics.Endpoint.Drawing.Font
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Font.html
+  name: Font
+  nameWithType: Font
+  fullName: GHIElectronics.Endpoint.Drawing.Font
+- uid: GHIElectronics.Endpoint.Drawing
+  commentId: N:GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing
+  nameWithType: GHIElectronics.Endpoint.Drawing
+  fullName: GHIElectronics.Endpoint.Drawing
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+- uid: GHIElectronics.Endpoint.UI.Media.Color
+  commentId: T:GHIElectronics.Endpoint.UI.Media.Color
+  parent: GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.Endpoint.UI.Media.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: GHIElectronics.Endpoint.UI.Media.Color
+- uid: GHIElectronics.Endpoint.UI.Media
+  commentId: N:GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Media
+  nameWithType: GHIElectronics.Endpoint.UI.Media
+  fullName: GHIElectronics.Endpoint.UI.Media
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Media
+    name: Media
+    href: GHIElectronics.Endpoint.UI.Media.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Media
+    name: Media
+    href: GHIElectronics.Endpoint.UI.Media.html
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRun.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.TextRun.#ctor
+  href: GHIElectronics.Endpoint.UI.Controls.TextRun.html#GHIElectronics_Endpoint_UI_Controls_TextRun__ctor_System_String_GHIElectronics_Endpoint_Drawing_Font_GHIElectronics_Endpoint_UI_Media_Color_
+  name: TextRun
+  nameWithType: TextRun.TextRun
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRun.TextRun
+  nameWithType.vb: TextRun.New
+  fullName.vb: GHIElectronics.Endpoint.UI.Controls.TextRun.New
+  name.vb: New
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRun.EndOfLine*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.TextRun.EndOfLine
+  href: GHIElectronics.Endpoint.UI.Controls.TextRun.html#GHIElectronics_Endpoint_UI_Controls_TextRun_EndOfLine
+  name: EndOfLine
+  nameWithType: TextRun.EndOfLine
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRun.EndOfLine
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRun
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.TextRun
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.TextRun.html
+  name: TextRun
+  nameWithType: TextRun
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRun
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRun.GetSize*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.TextRun.GetSize
+  href: GHIElectronics.Endpoint.UI.Controls.TextRun.html#GHIElectronics_Endpoint_UI_Controls_TextRun_GetSize_System_Int32__System_Int32__
+  name: GetSize
+  nameWithType: TextRun.GetSize
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRun.GetSize

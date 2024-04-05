@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Drawing.StringAlignment
+  commentId: T:GHIElectronics.Endpoint.Drawing.StringAlignment
+  id: StringAlignment
+  parent: GHIElectronics.Endpoint.Drawing
+  children:
+  - GHIElectronics.Endpoint.Drawing.StringAlignment.Center
+  - GHIElectronics.Endpoint.Drawing.StringAlignment.Far
+  - GHIElectronics.Endpoint.Drawing.StringAlignment.Near
+  langs:
+  - csharp
+  - vb
+  name: StringAlignment
+  nameWithType: StringAlignment
+  fullName: GHIElectronics.Endpoint.Drawing.StringAlignment
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: StringAlignment
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 1
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public enum StringAlignment
+    content.vb: Public Enum StringAlignment
+- uid: GHIElectronics.Endpoint.Drawing.StringAlignment.Near
+  commentId: F:GHIElectronics.Endpoint.Drawing.StringAlignment.Near
+  id: Near
+  parent: GHIElectronics.Endpoint.Drawing.StringAlignment
+  langs:
+  - csharp
+  - vb
+  name: Near
+  nameWithType: StringAlignment.Near
+  fullName: GHIElectronics.Endpoint.Drawing.StringAlignment.Near
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Near
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 2
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Near = 0
+    return:
+      type: GHIElectronics.Endpoint.Drawing.StringAlignment
+- uid: GHIElectronics.Endpoint.Drawing.StringAlignment.Center
+  commentId: F:GHIElectronics.Endpoint.Drawing.StringAlignment.Center
+  id: Center
+  parent: GHIElectronics.Endpoint.Drawing.StringAlignment
+  langs:
+  - csharp
+  - vb
+  name: Center
+  nameWithType: StringAlignment.Center
+  fullName: GHIElectronics.Endpoint.Drawing.StringAlignment.Center
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Center
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 3
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Center = 1
+    return:
+      type: GHIElectronics.Endpoint.Drawing.StringAlignment
+- uid: GHIElectronics.Endpoint.Drawing.StringAlignment.Far
+  commentId: F:GHIElectronics.Endpoint.Drawing.StringAlignment.Far
+  id: Far
+  parent: GHIElectronics.Endpoint.Drawing.StringAlignment
+  langs:
+  - csharp
+  - vb
+  name: Far
+  nameWithType: StringAlignment.Far
+  fullName: GHIElectronics.Endpoint.Drawing.StringAlignment.Far
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Far
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/StringFormat.cs
+    startLine: 4
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Far = 2
+    return:
+      type: GHIElectronics.Endpoint.Drawing.StringAlignment
+references:
+- uid: GHIElectronics.Endpoint.Drawing
+  commentId: N:GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing
+  nameWithType: GHIElectronics.Endpoint.Drawing
+  fullName: GHIElectronics.Endpoint.Drawing
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+- uid: GHIElectronics.Endpoint.Drawing.StringAlignment
+  commentId: T:GHIElectronics.Endpoint.Drawing.StringAlignment
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.StringAlignment.html
+  name: StringAlignment
+  nameWithType: StringAlignment
+  fullName: GHIElectronics.Endpoint.Drawing.StringAlignment

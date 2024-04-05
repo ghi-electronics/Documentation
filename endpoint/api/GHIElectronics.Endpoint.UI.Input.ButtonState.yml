@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Input.ButtonState
+  commentId: T:GHIElectronics.Endpoint.UI.Input.ButtonState
+  id: ButtonState
+  parent: GHIElectronics.Endpoint.UI.Input
+  children:
+  - GHIElectronics.Endpoint.UI.Input.ButtonState.Down
+  - GHIElectronics.Endpoint.UI.Input.ButtonState.Held
+  - GHIElectronics.Endpoint.UI.Input.ButtonState.None
+  langs:
+  - csharp
+  - vb
+  name: ButtonState
+  nameWithType: ButtonState
+  fullName: GHIElectronics.Endpoint.UI.Input.ButtonState
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/ButtonState.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ButtonState
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/ButtonState.cs
+    startLine: 12
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  summary: >-
+    The ButtonState enumeration describes the state that buttons
+
+    can be in.
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum ButtonState : byte
+    content.vb: >-
+      <Flags>
+
+      Public Enum ButtonState As Byte
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: GHIElectronics.Endpoint.UI.Input.ButtonState.None
+  commentId: F:GHIElectronics.Endpoint.UI.Input.ButtonState.None
+  id: None
+  parent: GHIElectronics.Endpoint.UI.Input.ButtonState
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: ButtonState.None
+  fullName: GHIElectronics.Endpoint.UI.Input.ButtonState.None
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/ButtonState.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: None
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/ButtonState.cs
+    startLine: 17
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  summary: No state (same as up).
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.ButtonState
+- uid: GHIElectronics.Endpoint.UI.Input.ButtonState.Down
+  commentId: F:GHIElectronics.Endpoint.UI.Input.ButtonState.Down
+  id: Down
+  parent: GHIElectronics.Endpoint.UI.Input.ButtonState
+  langs:
+  - csharp
+  - vb
+  name: Down
+  nameWithType: ButtonState.Down
+  fullName: GHIElectronics.Endpoint.UI.Input.ButtonState.Down
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/ButtonState.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Down
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/ButtonState.cs
+    startLine: 22
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  summary: The button is down.
+  example: []
+  syntax:
+    content: Down = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.ButtonState
+- uid: GHIElectronics.Endpoint.UI.Input.ButtonState.Held
+  commentId: F:GHIElectronics.Endpoint.UI.Input.ButtonState.Held
+  id: Held
+  parent: GHIElectronics.Endpoint.UI.Input.ButtonState
+  langs:
+  - csharp
+  - vb
+  name: Held
+  nameWithType: ButtonState.Held
+  fullName: GHIElectronics.Endpoint.UI.Input.ButtonState.Held
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/ButtonState.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Held
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/ButtonState.cs
+    startLine: 27
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  summary: The button is held
+  example: []
+  syntax:
+    content: Held = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.ButtonState
+references:
+- uid: GHIElectronics.Endpoint.UI.Input
+  commentId: N:GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Input
+  nameWithType: GHIElectronics.Endpoint.UI.Input
+  fullName: GHIElectronics.Endpoint.UI.Input
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+- uid: GHIElectronics.Endpoint.UI.Input.ButtonState
+  commentId: T:GHIElectronics.Endpoint.UI.Input.ButtonState
+  parent: GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.Endpoint.UI.Input.ButtonState.html
+  name: ButtonState
+  nameWithType: ButtonState
+  fullName: GHIElectronics.Endpoint.UI.Input.ButtonState

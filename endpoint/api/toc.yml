@@ -16,6 +16,10 @@ items:
     name: EPM815.Adc.Pin
   - uid: GHIElectronics.Endpoint.Core.EPM815.Can
     name: EPM815.Can
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Dac
+    name: EPM815.Dac
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Dac.Pin
+    name: EPM815.Dac.Pin
   - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
     name: EPM815.Gpio
   - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
@@ -97,6 +101,11 @@ items:
     name: ErrorReceivedEventHandler
   - uid: GHIElectronics.Endpoint.Devices.Can.MessageReceivedEventHandler
     name: MessageReceivedEventHandler
+- uid: GHIElectronics.Endpoint.Devices.Dac
+  name: GHIElectronics.Endpoint.Devices.Dac
+  items:
+  - uid: GHIElectronics.Endpoint.Devices.Dac.DacController
+    name: DacController
 - uid: GHIElectronics.Endpoint.Devices.Dcmi
   name: GHIElectronics.Endpoint.Devices.Dcmi
   items:
@@ -109,18 +118,22 @@ items:
   items:
   - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
     name: DigitalSignalController
-  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Error
-    name: DigitalSignalController.Error
   - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ErrorEventHandler
     name: DigitalSignalController.ErrorEventHandler
-  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
-    name: DigitalSignalController.Mode
   - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.PulseCaptureEventHandler
     name: DigitalSignalController.PulseCaptureEventHandler
   - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.PulseGenerateEventHandler
     name: DigitalSignalController.PulseGenerateEventHandler
   - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.PulseReadEventHandler
     name: DigitalSignalController.PulseReadEventHandler
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError
+    name: DigitalSignalError
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalMode
+    name: DigitalSignalMode
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.PulseFeedbackController
+    name: PulseFeedbackController
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.PulseFeedbackMode
+    name: PulseFeedbackMode
 - uid: GHIElectronics.Endpoint.Devices.Display
   name: GHIElectronics.Endpoint.Devices.Display
   items:
@@ -228,6 +241,61 @@ items:
   items:
   - uid: GHIElectronics.Endpoint.Devices.Watchdog.WatchdogController
     name: WatchdogController
+- uid: GHIElectronics.Endpoint.Drawing
+  name: GHIElectronics.Endpoint.Drawing
+  items:
+  - uid: GHIElectronics.Endpoint.Drawing.Bitmap
+    name: Bitmap
+  - uid: GHIElectronics.Endpoint.Drawing.Brush
+    name: Brush
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+  - uid: GHIElectronics.Endpoint.Drawing.Color.BitFormat
+    name: Color.BitFormat
+  - uid: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+    name: Color.ColorFormat
+  - uid: GHIElectronics.Endpoint.Drawing.Color.RgbFormat
+    name: Color.RgbFormat
+  - uid: GHIElectronics.Endpoint.Drawing.Font
+    name: Font
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics
+    name: Graphics
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics.DrawTextAlignment
+    name: Graphics.DrawTextAlignment
+  - uid: GHIElectronics.Endpoint.Drawing.Graphics.OnFlushHandler
+    name: Graphics.OnFlushHandler
+  - uid: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+    name: GraphicsUnit
+  - uid: GHIElectronics.Endpoint.Drawing.Image
+    name: Image
+  - uid: GHIElectronics.Endpoint.Drawing.Pen
+    name: Pen
+  - uid: GHIElectronics.Endpoint.Drawing.Rectangle
+    name: Rectangle
+  - uid: GHIElectronics.Endpoint.Drawing.RectangleF
+    name: RectangleF
+  - uid: GHIElectronics.Endpoint.Drawing.SizeF
+    name: SizeF
+  - uid: GHIElectronics.Endpoint.Drawing.SolidBrush
+    name: SolidBrush
+  - uid: GHIElectronics.Endpoint.Drawing.StringAlignment
+    name: StringAlignment
+  - uid: GHIElectronics.Endpoint.Drawing.StringFormat
+    name: StringFormat
+  - uid: GHIElectronics.Endpoint.Drawing.StringFormatFlags
+    name: StringFormatFlags
+  - uid: GHIElectronics.Endpoint.Drawing.StringTrimming
+    name: StringTrimming
+- uid: GHIElectronics.Endpoint.Drawing.Drawing2D
+  name: GHIElectronics.Endpoint.Drawing.Drawing2D
+  items:
+  - uid: GHIElectronics.Endpoint.Drawing.Drawing2D.PenType
+    name: PenType
+- uid: GHIElectronics.Endpoint.Drawing.Imaging
+  name: GHIElectronics.Endpoint.Drawing.Imaging
+  items:
+  - uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+    name: ImageFormat
 - uid: GHIElectronics.Endpoint.Native
   name: GHIElectronics.Endpoint.Native
   items:
@@ -237,6 +305,349 @@ items:
     name: Power
   - uid: GHIElectronics.Endpoint.Native.Power.WakeupPin
     name: Power.WakeupPin
+- uid: GHIElectronics.Endpoint.UI
+  name: GHIElectronics.Endpoint.UI
+  items:
+  - uid: GHIElectronics.Endpoint.UI.Application
+    name: Application
+  - uid: GHIElectronics.Endpoint.UI.CancelEventArgs
+    name: CancelEventArgs
+  - uid: GHIElectronics.Endpoint.UI.CancelEventHandler
+    name: CancelEventHandler
+  - uid: GHIElectronics.Endpoint.UI.EventHandler
+    name: EventHandler
+  - uid: GHIElectronics.Endpoint.UI.EventRoute
+    name: EventRoute
+  - uid: GHIElectronics.Endpoint.UI.HorizontalAlignment
+    name: HorizontalAlignment
+  - uid: GHIElectronics.Endpoint.UI.OnScreenKeyboard
+    name: OnScreenKeyboard
+  - uid: GHIElectronics.Endpoint.UI.PostRenderEventHandler
+    name: PostRenderEventHandler
+  - uid: GHIElectronics.Endpoint.UI.PresentationSource
+    name: PresentationSource
+  - uid: GHIElectronics.Endpoint.UI.PropertyChangedEventArgs
+    name: PropertyChangedEventArgs
+  - uid: GHIElectronics.Endpoint.UI.PropertyChangedEventHandler
+    name: PropertyChangedEventHandler
+  - uid: GHIElectronics.Endpoint.UI.ReasonSessionEnding
+    name: ReasonSessionEnding
+  - uid: GHIElectronics.Endpoint.UI.RoutedEvent
+    name: RoutedEvent
+  - uid: GHIElectronics.Endpoint.UI.RoutedEventArgs
+    name: RoutedEventArgs
+  - uid: GHIElectronics.Endpoint.UI.RoutedEventHandler
+    name: RoutedEventHandler
+  - uid: GHIElectronics.Endpoint.UI.RoutedEventHandlerInfo
+    name: RoutedEventHandlerInfo
+  - uid: GHIElectronics.Endpoint.UI.RoutingStrategy
+    name: RoutingStrategy
+  - uid: GHIElectronics.Endpoint.UI.ShutdownMode
+    name: ShutdownMode
+  - uid: GHIElectronics.Endpoint.UI.SizeToContent
+    name: SizeToContent
+  - uid: GHIElectronics.Endpoint.UI.UIElement
+    name: UIElement
+  - uid: GHIElectronics.Endpoint.UI.UIElementCollection
+    name: UIElementCollection
+  - uid: GHIElectronics.Endpoint.UI.UIElementCollection.Enumerator
+    name: UIElementCollection.Enumerator
+  - uid: GHIElectronics.Endpoint.UI.VerticalAlignment
+    name: VerticalAlignment
+  - uid: GHIElectronics.Endpoint.UI.Visibility
+    name: Visibility
+  - uid: GHIElectronics.Endpoint.UI.Window
+    name: Window
+  - uid: GHIElectronics.Endpoint.UI.WindowCollection
+    name: WindowCollection
+  - uid: GHIElectronics.Endpoint.UI.WindowManager
+    name: WindowManager
+- uid: GHIElectronics.Endpoint.UI.Controls
+  name: GHIElectronics.Endpoint.UI.Controls
+  items:
+  - uid: GHIElectronics.Endpoint.UI.Controls.Border
+    name: Border
+  - uid: GHIElectronics.Endpoint.UI.Controls.Button
+    name: Button
+  - uid: GHIElectronics.Endpoint.UI.Controls.Canvas
+    name: Canvas
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart
+    name: Chart
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode
+    name: Chart.ChartMode
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart.DataItem
+    name: Chart.DataItem
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart.Point
+    name: Chart.Point
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart.PointF
+    name: Chart.PointF
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart.PointModel
+    name: Chart.PointModel
+  - uid: GHIElectronics.Endpoint.UI.Controls.CheckBox
+    name: CheckBox
+  - uid: GHIElectronics.Endpoint.UI.Controls.ContentControl
+    name: ContentControl
+  - uid: GHIElectronics.Endpoint.UI.Controls.Control
+    name: Control
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid
+    name: DataGrid
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.OnTapCell
+    name: DataGrid.OnTapCell
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order
+    name: DataGrid.Order
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEventArgs
+    name: DataGrid.TapCellEventArgs
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGridColumn
+    name: DataGridColumn
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGridItem
+    name: DataGridItem
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGridItemComparer
+    name: DataGridItemComparer
+  - uid: GHIElectronics.Endpoint.UI.Controls.Direction
+    name: Direction
+  - uid: GHIElectronics.Endpoint.UI.Controls.Dropdown
+    name: Dropdown
+  - uid: GHIElectronics.Endpoint.UI.Controls.Gauge
+    name: Gauge
+  - uid: GHIElectronics.Endpoint.UI.Controls.Image
+    name: Image
+  - uid: GHIElectronics.Endpoint.UI.Controls.ListBox
+    name: ListBox
+  - uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+    name: ListBoxItem
+  - uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+    name: ListBoxItemCollection
+  - uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemHighlightable
+    name: ListBoxItemHighlightable
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox
+    name: MessageBox
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.DialogResult
+    name: MessageBox.DialogResult
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxButtons
+    name: MessageBox.MessageBoxButtons
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventArgs
+    name: MessageBox.MessageBoxRoutedEventArgs
+  - uid: GHIElectronics.Endpoint.UI.Controls.MessageBox.MessageBoxRoutedEventHandler
+    name: MessageBox.MessageBoxRoutedEventHandler
+  - uid: GHIElectronics.Endpoint.UI.Controls.Orientation
+    name: Orientation
+  - uid: GHIElectronics.Endpoint.UI.Controls.Panel
+    name: Panel
+  - uid: GHIElectronics.Endpoint.UI.Controls.Point
+    name: Point
+  - uid: GHIElectronics.Endpoint.UI.Controls.ProgressBar
+    name: ProgressBar
+  - uid: GHIElectronics.Endpoint.UI.Controls.RadioButton
+    name: RadioButton
+  - uid: GHIElectronics.Endpoint.UI.Controls.RadioButtonManager
+    name: RadioButtonManager
+  - uid: GHIElectronics.Endpoint.UI.Controls.ScrollChangedEventArgs
+    name: ScrollChangedEventArgs
+  - uid: GHIElectronics.Endpoint.UI.Controls.ScrollChangedEventHandler
+    name: ScrollChangedEventHandler
+  - uid: GHIElectronics.Endpoint.UI.Controls.ScrollViewer
+    name: ScrollViewer
+  - uid: GHIElectronics.Endpoint.UI.Controls.ScrollingStyle
+    name: ScrollingStyle
+  - uid: GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventArgs
+    name: SelectionChangedEventArgs
+  - uid: GHIElectronics.Endpoint.UI.Controls.SelectionChangedEventHandler
+    name: SelectionChangedEventHandler
+  - uid: GHIElectronics.Endpoint.UI.Controls.Slider
+    name: Slider
+  - uid: GHIElectronics.Endpoint.UI.Controls.Slider.ValueChangedEventArgs
+    name: Slider.ValueChangedEventArgs
+  - uid: GHIElectronics.Endpoint.UI.Controls.Slider.ValueChangedEventHandler
+    name: Slider.ValueChangedEventHandler
+  - uid: GHIElectronics.Endpoint.UI.Controls.StackPanel
+    name: StackPanel
+  - uid: GHIElectronics.Endpoint.UI.Controls.Text
+    name: Text
+  - uid: GHIElectronics.Endpoint.UI.Controls.TextBox
+    name: TextBox
+  - uid: GHIElectronics.Endpoint.UI.Controls.TextChangedEventArgs
+    name: TextChangedEventArgs
+  - uid: GHIElectronics.Endpoint.UI.Controls.TextChangedEventHandler
+    name: TextChangedEventHandler
+  - uid: GHIElectronics.Endpoint.UI.Controls.TextFlow
+    name: TextFlow
+  - uid: GHIElectronics.Endpoint.UI.Controls.TextRun
+    name: TextRun
+  - uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+    name: TextRunCollection
+- uid: GHIElectronics.Endpoint.UI.Input
+  name: GHIElectronics.Endpoint.UI.Input
+  items:
+  - uid: GHIElectronics.Endpoint.UI.Input.BaseEvent
+    name: BaseEvent
+  - uid: GHIElectronics.Endpoint.UI.Input.ButtonDevice
+    name: ButtonDevice
+  - uid: GHIElectronics.Endpoint.UI.Input.ButtonEventArgs
+    name: ButtonEventArgs
+  - uid: GHIElectronics.Endpoint.UI.Input.ButtonEventHandler
+    name: ButtonEventHandler
+  - uid: GHIElectronics.Endpoint.UI.Input.ButtonState
+    name: ButtonState
+  - uid: GHIElectronics.Endpoint.UI.Input.Buttons
+    name: Buttons
+  - uid: GHIElectronics.Endpoint.UI.Input.CaptureMode
+    name: CaptureMode
+  - uid: GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs
+    name: FocusChangedEventArgs
+  - uid: GHIElectronics.Endpoint.UI.Input.FocusChangedEventHandler
+    name: FocusChangedEventHandler
+  - uid: GHIElectronics.Endpoint.UI.Input.GenericDevice
+    name: GenericDevice
+  - uid: GHIElectronics.Endpoint.UI.Input.GenericEvent
+    name: GenericEvent
+  - uid: GHIElectronics.Endpoint.UI.Input.GenericEventArgs
+    name: GenericEventArgs
+  - uid: GHIElectronics.Endpoint.UI.Input.GenericEventHandler
+    name: GenericEventHandler
+  - uid: GHIElectronics.Endpoint.UI.Input.GenericEvents
+    name: GenericEvents
+  - uid: GHIElectronics.Endpoint.UI.Input.HardwareButton
+    name: HardwareButton
+  - uid: GHIElectronics.Endpoint.UI.Input.InputDevice
+    name: InputDevice
+  - uid: GHIElectronics.Endpoint.UI.Input.InputEventArgs
+    name: InputEventArgs
+  - uid: GHIElectronics.Endpoint.UI.Input.InputEventHandler
+    name: InputEventHandler
+  - uid: GHIElectronics.Endpoint.UI.Input.InputManager
+    name: InputManager
+  - uid: GHIElectronics.Endpoint.UI.Input.InputManager.DeviceEvents
+    name: InputManager.DeviceEvents
+  - uid: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+    name: InputManager.InputDeviceType
+  - uid: GHIElectronics.Endpoint.UI.Input.InputProvider
+    name: InputProvider
+  - uid: GHIElectronics.Endpoint.UI.Input.InputProviderSite
+    name: InputProviderSite
+  - uid: GHIElectronics.Endpoint.UI.Input.InputReport
+    name: InputReport
+  - uid: GHIElectronics.Endpoint.UI.Input.InputReportArgs
+    name: InputReportArgs
+  - uid: GHIElectronics.Endpoint.UI.Input.InputReportEventArgs
+    name: InputReportEventArgs
+  - uid: GHIElectronics.Endpoint.UI.Input.InputReportEventHandler
+    name: InputReportEventHandler
+  - uid: GHIElectronics.Endpoint.UI.Input.NotifyInputEventArgs
+    name: NotifyInputEventArgs
+  - uid: GHIElectronics.Endpoint.UI.Input.NotifyInputEventHandler
+    name: NotifyInputEventHandler
+  - uid: GHIElectronics.Endpoint.UI.Input.PreProcessInputEventArgs
+    name: PreProcessInputEventArgs
+  - uid: GHIElectronics.Endpoint.UI.Input.PreProcessInputEventHandler
+    name: PreProcessInputEventHandler
+  - uid: GHIElectronics.Endpoint.UI.Input.ProcessInputEventArgs
+    name: ProcessInputEventArgs
+  - uid: GHIElectronics.Endpoint.UI.Input.ProcessInputEventHandler
+    name: ProcessInputEventHandler
+  - uid: GHIElectronics.Endpoint.UI.Input.RawButtonActions
+    name: RawButtonActions
+  - uid: GHIElectronics.Endpoint.UI.Input.RawButtonInputReport
+    name: RawButtonInputReport
+  - uid: GHIElectronics.Endpoint.UI.Input.RawGenericInputReport
+    name: RawGenericInputReport
+  - uid: GHIElectronics.Endpoint.UI.Input.RawTouchActions
+    name: RawTouchActions
+  - uid: GHIElectronics.Endpoint.UI.Input.RawTouchInputReport
+    name: RawTouchInputReport
+  - uid: GHIElectronics.Endpoint.UI.Input.StagingAreaInputItem
+    name: StagingAreaInputItem
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchCapture
+    name: TouchCapture
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchDevice
+    name: TouchDevice
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchEvent
+    name: TouchEvent
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchEventArgs
+    name: TouchEventArgs
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchEventHandler
+    name: TouchEventHandler
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchEvents
+    name: TouchEvents
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchGesture
+    name: TouchGesture
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs
+    name: TouchGestureEventArgs
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchGestureEventHandler
+    name: TouchGestureEventHandler
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchInput
+    name: TouchInput
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchMessages
+    name: TouchMessages
+- uid: GHIElectronics.Endpoint.UI.Media
+  name: GHIElectronics.Endpoint.UI.Media
+  items:
+  - uid: GHIElectronics.Endpoint.UI.Media.Brush
+    name: Brush
+  - uid: GHIElectronics.Endpoint.UI.Media.BrushMappingMode
+    name: BrushMappingMode
+  - uid: GHIElectronics.Endpoint.UI.Media.Color
+    name: Color
+  - uid: GHIElectronics.Endpoint.UI.Media.Colors
+    name: Colors
+  - uid: GHIElectronics.Endpoint.UI.Media.Constants
+    name: Constants
+  - uid: GHIElectronics.Endpoint.UI.Media.DrawingContext
+    name: DrawingContext
+  - uid: GHIElectronics.Endpoint.UI.Media.ImageBrush
+    name: ImageBrush
+  - uid: GHIElectronics.Endpoint.UI.Media.ImageSource
+    name: ImageSource
+  - uid: GHIElectronics.Endpoint.UI.Media.LinearGradientBrush
+    name: LinearGradientBrush
+  - uid: GHIElectronics.Endpoint.UI.Media.Pen
+    name: Pen
+  - uid: GHIElectronics.Endpoint.UI.Media.SolidColorBrush
+    name: SolidColorBrush
+  - uid: GHIElectronics.Endpoint.UI.Media.Stretch
+    name: Stretch
+  - uid: GHIElectronics.Endpoint.UI.Media.TextAlignment
+    name: TextAlignment
+  - uid: GHIElectronics.Endpoint.UI.Media.TextTrimming
+    name: TextTrimming
+- uid: GHIElectronics.Endpoint.UI.Media.UIImaging
+  name: GHIElectronics.Endpoint.UI.Media.UIImaging
+  items:
+  - uid: GHIElectronics.Endpoint.UI.Media.UIImaging.BitmapSource
+    name: BitmapSource
+  - uid: GHIElectronics.Endpoint.UI.Media.UIImaging.UIBitmap
+    name: UIBitmap
+- uid: GHIElectronics.Endpoint.UI.Shapes
+  name: GHIElectronics.Endpoint.UI.Shapes
+  items:
+  - uid: GHIElectronics.Endpoint.UI.Shapes.Direction
+    name: Direction
+  - uid: GHIElectronics.Endpoint.UI.Shapes.Ellipse
+    name: Ellipse
+  - uid: GHIElectronics.Endpoint.UI.Shapes.Line
+    name: Line
+  - uid: GHIElectronics.Endpoint.UI.Shapes.Polygon
+    name: Polygon
+  - uid: GHIElectronics.Endpoint.UI.Shapes.Rectangle
+    name: Rectangle
+  - uid: GHIElectronics.Endpoint.UI.Shapes.Shape
+    name: Shape
+- uid: GHIElectronics.Endpoint.UI.Threading
+  name: GHIElectronics.Endpoint.UI.Threading
+  items:
+  - uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+    name: Dispatcher
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherFrame
+    name: DispatcherFrame
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+    name: DispatcherObject
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherOperation
+    name: DispatcherOperation
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback
+    name: DispatcherOperationCallback
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus
+    name: DispatcherOperationStatus
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+    name: DispatcherTimer
 - uid: GHIElectronics.Endpoint.Update
   name: GHIElectronics.Endpoint.Update
   items:

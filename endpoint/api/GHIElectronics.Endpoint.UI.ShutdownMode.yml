@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.ShutdownMode
+  commentId: T:GHIElectronics.Endpoint.UI.ShutdownMode
+  id: ShutdownMode
+  parent: GHIElectronics.Endpoint.UI
+  children:
+  - GHIElectronics.Endpoint.UI.ShutdownMode.OnExplicitShutdown
+  - GHIElectronics.Endpoint.UI.ShutdownMode.OnLastWindowClose
+  - GHIElectronics.Endpoint.UI.ShutdownMode.OnMainWindowClose
+  langs:
+  - csharp
+  - vb
+  name: ShutdownMode
+  nameWithType: ShutdownMode
+  fullName: GHIElectronics.Endpoint.UI.ShutdownMode
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ShutdownMode
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 953
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Enum for ShutdownMode
+  example: []
+  syntax:
+    content: 'public enum ShutdownMode : byte'
+    content.vb: Public Enum ShutdownMode As Byte
+- uid: GHIElectronics.Endpoint.UI.ShutdownMode.OnLastWindowClose
+  commentId: F:GHIElectronics.Endpoint.UI.ShutdownMode.OnLastWindowClose
+  id: OnLastWindowClose
+  parent: GHIElectronics.Endpoint.UI.ShutdownMode
+  langs:
+  - csharp
+  - vb
+  name: OnLastWindowClose
+  nameWithType: ShutdownMode.OnLastWindowClose
+  fullName: GHIElectronics.Endpoint.UI.ShutdownMode.OnLastWindowClose
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OnLastWindowClose
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 957
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: ''
+  example: []
+  syntax:
+    content: OnLastWindowClose = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.ShutdownMode
+- uid: GHIElectronics.Endpoint.UI.ShutdownMode.OnMainWindowClose
+  commentId: F:GHIElectronics.Endpoint.UI.ShutdownMode.OnMainWindowClose
+  id: OnMainWindowClose
+  parent: GHIElectronics.Endpoint.UI.ShutdownMode
+  langs:
+  - csharp
+  - vb
+  name: OnMainWindowClose
+  nameWithType: ShutdownMode.OnMainWindowClose
+  fullName: GHIElectronics.Endpoint.UI.ShutdownMode.OnMainWindowClose
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OnMainWindowClose
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 962
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: ''
+  example: []
+  syntax:
+    content: OnMainWindowClose = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.ShutdownMode
+- uid: GHIElectronics.Endpoint.UI.ShutdownMode.OnExplicitShutdown
+  commentId: F:GHIElectronics.Endpoint.UI.ShutdownMode.OnExplicitShutdown
+  id: OnExplicitShutdown
+  parent: GHIElectronics.Endpoint.UI.ShutdownMode
+  langs:
+  - csharp
+  - vb
+  name: OnExplicitShutdown
+  nameWithType: ShutdownMode.OnExplicitShutdown
+  fullName: GHIElectronics.Endpoint.UI.ShutdownMode.OnExplicitShutdown
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OnExplicitShutdown
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 967
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: ''
+  example: []
+  syntax:
+    content: OnExplicitShutdown = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.ShutdownMode
+references:
+- uid: GHIElectronics.Endpoint.UI
+  commentId: N:GHIElectronics.Endpoint.UI
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI
+  nameWithType: GHIElectronics.Endpoint.UI
+  fullName: GHIElectronics.Endpoint.UI
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+- uid: GHIElectronics.Endpoint.UI.ShutdownMode
+  commentId: T:GHIElectronics.Endpoint.UI.ShutdownMode
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.ShutdownMode.html
+  name: ShutdownMode
+  nameWithType: ShutdownMode
+  fullName: GHIElectronics.Endpoint.UI.ShutdownMode

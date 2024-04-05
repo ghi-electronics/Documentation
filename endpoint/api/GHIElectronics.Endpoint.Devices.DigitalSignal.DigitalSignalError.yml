@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError
+  commentId: T:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError
+  id: DigitalSignalError
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal
+  children:
+  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError.None
+  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError.OutOfMemory
+  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError.Timeout
+  langs:
+  - csharp
+  - vb
+  name: DigitalSignalError
+  nameWithType: DigitalSignalError
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DigitalSignalError
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+    startLine: 15
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.DigitalSignal
+  namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
+  syntax:
+    content: public enum DigitalSignalError
+    content.vb: Public Enum DigitalSignalError
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError.None
+  commentId: F:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError.None
+  id: None
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: DigitalSignalError.None
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError.None
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: None
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+    startLine: 16
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.DigitalSignal
+  namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
+  syntax:
+    content: None = 0
+    return:
+      type: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError.OutOfMemory
+  commentId: F:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError.OutOfMemory
+  id: OutOfMemory
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError
+  langs:
+  - csharp
+  - vb
+  name: OutOfMemory
+  nameWithType: DigitalSignalError.OutOfMemory
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError.OutOfMemory
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OutOfMemory
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+    startLine: 17
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.DigitalSignal
+  namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
+  syntax:
+    content: OutOfMemory = 1
+    return:
+      type: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError.Timeout
+  commentId: F:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError.Timeout
+  id: Timeout
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError
+  langs:
+  - csharp
+  - vb
+  name: Timeout
+  nameWithType: DigitalSignalError.Timeout
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError.Timeout
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Timeout
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
+    startLine: 18
+  assemblies:
+  - GHIElectronics.Endpoint.Devices.DigitalSignal
+  namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
+  syntax:
+    content: Timeout = 2
+    return:
+      type: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError
+references:
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal
+  commentId: N:GHIElectronics.Endpoint.Devices.DigitalSignal
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Devices.DigitalSignal
+  nameWithType: GHIElectronics.Endpoint.Devices.DigitalSignal
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal
+    name: DigitalSignal
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices
+    name: Devices
+    href: GHIElectronics.Endpoint.Devices.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal
+    name: DigitalSignal
+    href: GHIElectronics.Endpoint.Devices.DigitalSignal.html
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError
+  commentId: T:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal
+  href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError.html
+  name: DigitalSignalError
+  nameWithType: DigitalSignalError
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError

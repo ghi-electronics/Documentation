@@ -21,6 +21,7 @@ The Endpoint OS image can be downloaded and run from a microSD card or flashed t
 
 File | Date | Status | MD5
 --- | --- | --- |
+[v0.1.4.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/endpoint_image_B0140.4.5.24.img) | 2024-4-5 | Preview | A7C2FEEFA13EF509D75B2640D1C1BD5A
 [v0.1.3.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/endpoint_image_B0130.3.6.24.img) | 2024-8-3 | Preview | C4178A4BA8328B9B6B2D4BE18159EEB9
 
 Endpoint OS image is large and that take time to update. For quick update/re-install firmware or dotnet, user can select update firmware or dotnet from Endpoint Config tool, and using the files below:
@@ -29,7 +30,7 @@ Endpoint OS image is large and that take time to update. For quick update/re-ins
 
 File | Date | Status | MD5
 --- | --- | --- |
-[v0.1.3.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/rootfs.ghi) | 2024-8-3 | Preview | 0721C910391AFD36013D4647718463A3
+[v0.1.4.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/rootfs.ghi) | 2024-4-5 | Preview | 5C0D07B588103AF858E409800797193C
 
 #### Dotnet
 
@@ -56,6 +57,7 @@ Endpoint Libraries are designed to fill in any gaps the .NET API is missing for 
 
 File | Date | Status | MD5
 --- | --- | --- | 
+[v0.1.4.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Libraries/GHIElectronics.Endpoint.Libraries_v0.1.4.0.zip) | 2024-4-5 | Preview | F9145F97F1F6E6723830617F3E45D690
 [v0.1.3.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Libraries/endpoint_libraries_v0.1.3.0.zip) | 2024-8-3 | Preview | E59F145C850D748C61ACB4CEF2179961
 [v0.1.2.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Libraries/endpoint_libraries_v0.1.2.0.zip) | 2024-21-02 | Preview | 5B2077ABB3AC31B024179FD2B0654F0D
 [v0.1.0.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Libraries/endpoint_libraries_v0.1.0.0.zip) | 2024-02-02 | Preview | 708833FEFCE57C51F9CE01DA47EF0541

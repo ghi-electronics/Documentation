@@ -8,6 +8,8 @@ items:
   - GHIElectronics.Endpoint.Core.EPM815.Adc
   - GHIElectronics.Endpoint.Core.EPM815.Adc.Pin
   - GHIElectronics.Endpoint.Core.EPM815.Can
+  - GHIElectronics.Endpoint.Core.EPM815.Dac
+  - GHIElectronics.Endpoint.Core.EPM815.Dac.Pin
   - GHIElectronics.Endpoint.Core.EPM815.Gpio
   - GHIElectronics.Endpoint.Core.EPM815.Gpio.Alternate
   - GHIElectronics.Endpoint.Core.EPM815.Gpio.Edge
@@ -124,6 +126,58 @@ references:
   - uid: GHIElectronics.Endpoint.Core.EPM815.Can
     name: Can
     href: GHIElectronics.Endpoint.Core.EPM815.Can.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Dac
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Dac
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Dac
+  nameWithType: EPM815.Dac
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Dac
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Dac
+    name: Dac
+    href: GHIElectronics.Endpoint.Core.EPM815.Dac.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Dac
+    name: Dac
+    href: GHIElectronics.Endpoint.Core.EPM815.Dac.html
+- uid: GHIElectronics.Endpoint.Core.EPM815.Dac.Pin
+  commentId: T:GHIElectronics.Endpoint.Core.EPM815.Dac.Pin
+  href: GHIElectronics.Endpoint.Core.EPM815.html
+  name: EPM815.Dac.Pin
+  nameWithType: EPM815.Dac.Pin
+  fullName: GHIElectronics.Endpoint.Core.EPM815.Dac.Pin
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Dac
+    name: Dac
+    href: GHIElectronics.Endpoint.Core.EPM815.Dac.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Dac.Pin
+    name: Pin
+    href: GHIElectronics.Endpoint.Core.EPM815.Dac.Pin.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.EPM815
+    name: EPM815
+    href: GHIElectronics.Endpoint.Core.EPM815.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Dac
+    name: Dac
+    href: GHIElectronics.Endpoint.Core.EPM815.Dac.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.EPM815.Dac.Pin
+    name: Pin
+    href: GHIElectronics.Endpoint.Core.EPM815.Dac.Pin.html
 - uid: GHIElectronics.Endpoint.Core.EPM815.Gpio
   commentId: T:GHIElectronics.Endpoint.Core.EPM815.Gpio
   href: GHIElectronics.Endpoint.Core.EPM815.html

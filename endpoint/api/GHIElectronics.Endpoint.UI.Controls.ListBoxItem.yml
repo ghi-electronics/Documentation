@@ -1,0 +1,2486 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+  id: ListBoxItem
+  parent: GHIElectronics.Endpoint.UI.Controls
+  children:
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItem.IsSelectable
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItem.IsSelected
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItem.OnIsSelectedChanged(System.Boolean)
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItem.OnTouchUp(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+  langs:
+  - csharp
+  - vb
+  name: ListBoxItem
+  nameWithType: ListBoxItem
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItem.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ListBoxItem
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItem.cs
+    startLine: 3
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: 'public class ListBoxItem : ContentControl'
+    content.vb: Public Class ListBoxItem Inherits ContentControl
+  inheritance:
+  - System.Object
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  - GHIElectronics.Endpoint.UI.UIElement
+  - GHIElectronics.Endpoint.UI.Controls.Control
+  - GHIElectronics.Endpoint.UI.Controls.ContentControl
+  derivedClasses:
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItemHighlightable
+  inheritedMembers:
+  - GHIElectronics.Endpoint.UI.Controls.ContentControl.Child
+  - GHIElectronics.Endpoint.UI.Controls.ContentControl.MeasureOverride(System.Int32,System.Int32,System.Int32@,System.Int32@)
+  - GHIElectronics.Endpoint.UI.Controls.Control.Background
+  - GHIElectronics.Endpoint.UI.Controls.Control.Font
+  - GHIElectronics.Endpoint.UI.Controls.Control.Foreground
+  - GHIElectronics.Endpoint.UI.Controls.Control.OnRender(GHIElectronics.Endpoint.UI.Media.DrawingContext)
+  - GHIElectronics.Endpoint.UI.Controls.Control._background
+  - GHIElectronics.Endpoint.UI.Controls.Control._foreground
+  - GHIElectronics.Endpoint.UI.Controls.Control._font
+  - GHIElectronics.Endpoint.UI.UIElement.OnGenericEvent(GHIElectronics.Endpoint.UI.Input.GenericEventArgs)
+  - GHIElectronics.Endpoint.UI.UIElement.OnTouchDown(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+  - GHIElectronics.Endpoint.UI.UIElement.OnTouchMove(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+  - GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureStarted(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)
+  - GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureChanged(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)
+  - GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureEnded(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)
+  - GHIElectronics.Endpoint.UI.UIElement.OnPreviewButtonDown(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+  - GHIElectronics.Endpoint.UI.UIElement.OnButtonDown(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+  - GHIElectronics.Endpoint.UI.UIElement.OnPreviewButtonUp(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+  - GHIElectronics.Endpoint.UI.UIElement.OnButtonUp(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+  - GHIElectronics.Endpoint.UI.UIElement.OnGotFocus(GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs)
+  - GHIElectronics.Endpoint.UI.UIElement.OnLostFocus(GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs)
+  - GHIElectronics.Endpoint.UI.UIElement.TouchDown
+  - GHIElectronics.Endpoint.UI.UIElement.TouchUp
+  - GHIElectronics.Endpoint.UI.UIElement.TouchMove
+  - GHIElectronics.Endpoint.UI.UIElement.TouchGestureStart
+  - GHIElectronics.Endpoint.UI.UIElement.TouchGestureChanged
+  - GHIElectronics.Endpoint.UI.UIElement.TouchGestureEnd
+  - GHIElectronics.Endpoint.UI.UIElement.GetDesiredSize(System.Int32@,System.Int32@)
+  - GHIElectronics.Endpoint.UI.UIElement.GetMargin(System.Int32@,System.Int32@,System.Int32@,System.Int32@)
+  - GHIElectronics.Endpoint.UI.UIElement.SetMargin(System.Int32)
+  - GHIElectronics.Endpoint.UI.UIElement.SetMargin(System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.UI.UIElement.ActualWidth
+  - GHIElectronics.Endpoint.UI.UIElement.ActualHeight
+  - GHIElectronics.Endpoint.UI.UIElement.Height
+  - GHIElectronics.Endpoint.UI.UIElement.Width
+  - GHIElectronics.Endpoint.UI.UIElement.GetLayoutOffset(System.Int32@,System.Int32@)
+  - GHIElectronics.Endpoint.UI.UIElement.GetRenderSize(System.Int32@,System.Int32@)
+  - GHIElectronics.Endpoint.UI.UIElement.LogicalChildren
+  - GHIElectronics.Endpoint.UI.UIElement.OnChildrenChanged(GHIElectronics.Endpoint.UI.UIElement,GHIElectronics.Endpoint.UI.UIElement,System.Int32)
+  - GHIElectronics.Endpoint.UI.UIElement.IsFocused
+  - GHIElectronics.Endpoint.UI.UIElement.Measure(System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.UI.UIElement.Arrange(System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.UI.UIElement.ArrangeOverride(System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.UI.UIElement.UpdateLayout
+  - GHIElectronics.Endpoint.UI.UIElement.IsMeasureValid
+  - GHIElectronics.Endpoint.UI.UIElement.IsArrangeValid
+  - GHIElectronics.Endpoint.UI.UIElement.ChildElementFromPoint(System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.UI.UIElement.GetUnclippedSize(System.Int32@,System.Int32@)
+  - GHIElectronics.Endpoint.UI.UIElement.ContainsPoint(System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.UI.UIElement.GetPointerTarget(System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.UI.UIElement.PointToScreen(System.Int32@,System.Int32@)
+  - GHIElectronics.Endpoint.UI.UIElement.PointToClient(System.Int32@,System.Int32@)
+  - GHIElectronics.Endpoint.UI.UIElement.InvalidateMeasure
+  - GHIElectronics.Endpoint.UI.UIElement.InvalidateArrange
+  - GHIElectronics.Endpoint.UI.UIElement.Parent
+  - GHIElectronics.Endpoint.UI.UIElement.RootUIElement
+  - GHIElectronics.Endpoint.UI.UIElement.HorizontalAlignment
+  - GHIElectronics.Endpoint.UI.UIElement.VerticalAlignment
+  - GHIElectronics.Endpoint.UI.UIElement.OnChildDesiredSizeChanged(GHIElectronics.Endpoint.UI.UIElement)
+  - GHIElectronics.Endpoint.UI.UIElement.Visibility
+  - GHIElectronics.Endpoint.UI.UIElement.IsVisible
+  - GHIElectronics.Endpoint.UI.UIElement.IsVisibleChanged
+  - GHIElectronics.Endpoint.UI.UIElement.IsEnabled
+  - GHIElectronics.Endpoint.UI.UIElement.IsEnabledChanged
+  - GHIElectronics.Endpoint.UI.UIElement.RenderRecursive(GHIElectronics.Endpoint.UI.Media.DrawingContext)
+  - GHIElectronics.Endpoint.UI.UIElement.InvalidateRect(System.Int32,System.Int32,System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.UI.UIElement.Invalidate
+  - GHIElectronics.Endpoint.UI.UIElement.RaiseEvent(GHIElectronics.Endpoint.UI.RoutedEventArgs)
+  - GHIElectronics.Endpoint.UI.UIElement.AddToEventRoute(GHIElectronics.Endpoint.UI.EventRoute,GHIElectronics.Endpoint.UI.RoutedEventArgs)
+  - GHIElectronics.Endpoint.UI.UIElement.InstanceEventHandlersStore
+  - GHIElectronics.Endpoint.UI.UIElement.AddHandler(GHIElectronics.Endpoint.UI.RoutedEvent,GHIElectronics.Endpoint.UI.RoutedEventHandler,System.Boolean)
+  - GHIElectronics.Endpoint.UI.UIElement._horizontalAlignment
+  - GHIElectronics.Endpoint.UI.UIElement._verticalAlignment
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherObject.Dispatcher
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.IsSelected
+  commentId: P:GHIElectronics.Endpoint.UI.Controls.ListBoxItem.IsSelected
+  id: IsSelected
+  parent: GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+  langs:
+  - csharp
+  - vb
+  name: IsSelected
+  nameWithType: ListBoxItem.IsSelected
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.IsSelected
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItem.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: IsSelected
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItem.cs
+    startLine: 4
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public bool IsSelected { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSelected As Boolean
+  overload: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.IsSelected*
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.IsSelectable
+  commentId: P:GHIElectronics.Endpoint.UI.Controls.ListBoxItem.IsSelectable
+  id: IsSelectable
+  parent: GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+  langs:
+  - csharp
+  - vb
+  name: IsSelectable
+  nameWithType: ListBoxItem.IsSelectable
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.IsSelectable
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItem.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: IsSelectable
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItem.cs
+    startLine: 6
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public bool IsSelectable { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsSelectable As Boolean
+  overload: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.IsSelectable*
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.OnIsSelectedChanged(System.Boolean)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.ListBoxItem.OnIsSelectedChanged(System.Boolean)
+  id: OnIsSelectedChanged(System.Boolean)
+  parent: GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+  langs:
+  - csharp
+  - vb
+  name: OnIsSelectedChanged(bool)
+  nameWithType: ListBoxItem.OnIsSelectedChanged(bool)
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.OnIsSelectedChanged(bool)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItem.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OnIsSelectedChanged
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItem.cs
+    startLine: 21
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: protected virtual void OnIsSelectedChanged(bool isSelected)
+    parameters:
+    - id: isSelected
+      type: System.Boolean
+    content.vb: Protected Overridable Sub OnIsSelectedChanged(isSelected As Boolean)
+  overload: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.OnIsSelectedChanged*
+  nameWithType.vb: ListBoxItem.OnIsSelectedChanged(Boolean)
+  fullName.vb: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.OnIsSelectedChanged(Boolean)
+  name.vb: OnIsSelectedChanged(Boolean)
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.OnTouchUp(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.ListBoxItem.OnTouchUp(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+  id: OnTouchUp(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+  parent: GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+  langs:
+  - csharp
+  - vb
+  name: OnTouchUp(TouchEventArgs)
+  nameWithType: ListBoxItem.OnTouchUp(TouchEventArgs)
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.OnTouchUp(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItem.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OnTouchUp
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItem.cs
+    startLine: 24
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  example: []
+  syntax:
+    content: protected override void OnTouchUp(TouchEventArgs e)
+    parameters:
+    - id: e
+      type: GHIElectronics.Endpoint.UI.Input.TouchEventArgs
+    content.vb: Protected Overrides Sub OnTouchUp(e As TouchEventArgs)
+  overridden: GHIElectronics.Endpoint.UI.UIElement.OnTouchUp(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+  overload: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.OnTouchUp*
+references:
+- uid: GHIElectronics.Endpoint.UI.Controls
+  commentId: N:GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Controls
+  nameWithType: GHIElectronics.Endpoint.UI.Controls
+  fullName: GHIElectronics.Endpoint.UI.Controls
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  parent: GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html
+  name: DispatcherObject
+  nameWithType: DispatcherObject
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+- uid: GHIElectronics.Endpoint.UI.UIElement
+  commentId: T:GHIElectronics.Endpoint.UI.UIElement
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.UIElement.html
+  name: UIElement
+  nameWithType: UIElement
+  fullName: GHIElectronics.Endpoint.UI.UIElement
+- uid: GHIElectronics.Endpoint.UI.Controls.Control
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Control
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.Control.html
+  name: Control
+  nameWithType: Control
+  fullName: GHIElectronics.Endpoint.UI.Controls.Control
+- uid: GHIElectronics.Endpoint.UI.Controls.ContentControl
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.ContentControl
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.ContentControl.html
+  name: ContentControl
+  nameWithType: ContentControl
+  fullName: GHIElectronics.Endpoint.UI.Controls.ContentControl
+- uid: GHIElectronics.Endpoint.UI.Controls.ContentControl.Child
+  commentId: P:GHIElectronics.Endpoint.UI.Controls.ContentControl.Child
+  parent: GHIElectronics.Endpoint.UI.Controls.ContentControl
+  href: GHIElectronics.Endpoint.UI.Controls.ContentControl.html#GHIElectronics_Endpoint_UI_Controls_ContentControl_Child
+  name: Child
+  nameWithType: ContentControl.Child
+  fullName: GHIElectronics.Endpoint.UI.Controls.ContentControl.Child
+- uid: GHIElectronics.Endpoint.UI.Controls.ContentControl.MeasureOverride(System.Int32,System.Int32,System.Int32@,System.Int32@)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.ContentControl.MeasureOverride(System.Int32,System.Int32,System.Int32@,System.Int32@)
+  parent: GHIElectronics.Endpoint.UI.Controls.ContentControl
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.Controls.ContentControl.html#GHIElectronics_Endpoint_UI_Controls_ContentControl_MeasureOverride_System_Int32_System_Int32_System_Int32__System_Int32__
+  name: MeasureOverride(int, int, out int, out int)
+  nameWithType: ContentControl.MeasureOverride(int, int, out int, out int)
+  fullName: GHIElectronics.Endpoint.UI.Controls.ContentControl.MeasureOverride(int, int, out int, out int)
+  nameWithType.vb: ContentControl.MeasureOverride(Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.Controls.ContentControl.MeasureOverride(Integer, Integer, Integer, Integer)
+  name.vb: MeasureOverride(Integer, Integer, Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.ContentControl.MeasureOverride(System.Int32,System.Int32,System.Int32@,System.Int32@)
+    name: MeasureOverride
+    href: GHIElectronics.Endpoint.UI.Controls.ContentControl.html#GHIElectronics_Endpoint_UI_Controls_ContentControl_MeasureOverride_System_Int32_System_Int32_System_Int32__System_Int32__
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.ContentControl.MeasureOverride(System.Int32,System.Int32,System.Int32@,System.Int32@)
+    name: MeasureOverride
+    href: GHIElectronics.Endpoint.UI.Controls.ContentControl.html#GHIElectronics_Endpoint_UI_Controls_ContentControl_MeasureOverride_System_Int32_System_Int32_System_Int32__System_Int32__
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.Controls.Control.Background
+  commentId: P:GHIElectronics.Endpoint.UI.Controls.Control.Background
+  parent: GHIElectronics.Endpoint.UI.Controls.Control
+  href: GHIElectronics.Endpoint.UI.Controls.Control.html#GHIElectronics_Endpoint_UI_Controls_Control_Background
+  name: Background
+  nameWithType: Control.Background
+  fullName: GHIElectronics.Endpoint.UI.Controls.Control.Background
+- uid: GHIElectronics.Endpoint.UI.Controls.Control.Font
+  commentId: P:GHIElectronics.Endpoint.UI.Controls.Control.Font
+  parent: GHIElectronics.Endpoint.UI.Controls.Control
+  href: GHIElectronics.Endpoint.UI.Controls.Control.html#GHIElectronics_Endpoint_UI_Controls_Control_Font
+  name: Font
+  nameWithType: Control.Font
+  fullName: GHIElectronics.Endpoint.UI.Controls.Control.Font
+- uid: GHIElectronics.Endpoint.UI.Controls.Control.Foreground
+  commentId: P:GHIElectronics.Endpoint.UI.Controls.Control.Foreground
+  parent: GHIElectronics.Endpoint.UI.Controls.Control
+  href: GHIElectronics.Endpoint.UI.Controls.Control.html#GHIElectronics_Endpoint_UI_Controls_Control_Foreground
+  name: Foreground
+  nameWithType: Control.Foreground
+  fullName: GHIElectronics.Endpoint.UI.Controls.Control.Foreground
+- uid: GHIElectronics.Endpoint.UI.Controls.Control.OnRender(GHIElectronics.Endpoint.UI.Media.DrawingContext)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.Control.OnRender(GHIElectronics.Endpoint.UI.Media.DrawingContext)
+  parent: GHIElectronics.Endpoint.UI.Controls.Control
+  href: GHIElectronics.Endpoint.UI.Controls.Control.html#GHIElectronics_Endpoint_UI_Controls_Control_OnRender_GHIElectronics_Endpoint_UI_Media_DrawingContext_
+  name: OnRender(DrawingContext)
+  nameWithType: Control.OnRender(DrawingContext)
+  fullName: GHIElectronics.Endpoint.UI.Controls.Control.OnRender(GHIElectronics.Endpoint.UI.Media.DrawingContext)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.Control.OnRender(GHIElectronics.Endpoint.UI.Media.DrawingContext)
+    name: OnRender
+    href: GHIElectronics.Endpoint.UI.Controls.Control.html#GHIElectronics_Endpoint_UI_Controls_Control_OnRender_GHIElectronics_Endpoint_UI_Media_DrawingContext_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Media.DrawingContext
+    name: DrawingContext
+    href: GHIElectronics.Endpoint.UI.Media.DrawingContext.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.Control.OnRender(GHIElectronics.Endpoint.UI.Media.DrawingContext)
+    name: OnRender
+    href: GHIElectronics.Endpoint.UI.Controls.Control.html#GHIElectronics_Endpoint_UI_Controls_Control_OnRender_GHIElectronics_Endpoint_UI_Media_DrawingContext_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Media.DrawingContext
+    name: DrawingContext
+    href: GHIElectronics.Endpoint.UI.Media.DrawingContext.html
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.Controls.Control._background
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.Control._background
+  parent: GHIElectronics.Endpoint.UI.Controls.Control
+  href: GHIElectronics.Endpoint.UI.Controls.Control.html#GHIElectronics_Endpoint_UI_Controls_Control__background
+  name: _background
+  nameWithType: Control._background
+  fullName: GHIElectronics.Endpoint.UI.Controls.Control._background
+- uid: GHIElectronics.Endpoint.UI.Controls.Control._foreground
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.Control._foreground
+  parent: GHIElectronics.Endpoint.UI.Controls.Control
+  href: GHIElectronics.Endpoint.UI.Controls.Control.html#GHIElectronics_Endpoint_UI_Controls_Control__foreground
+  name: _foreground
+  nameWithType: Control._foreground
+  fullName: GHIElectronics.Endpoint.UI.Controls.Control._foreground
+- uid: GHIElectronics.Endpoint.UI.Controls.Control._font
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.Control._font
+  parent: GHIElectronics.Endpoint.UI.Controls.Control
+  href: GHIElectronics.Endpoint.UI.Controls.Control.html#GHIElectronics_Endpoint_UI_Controls_Control__font
+  name: _font
+  nameWithType: Control._font
+  fullName: GHIElectronics.Endpoint.UI.Controls.Control._font
+- uid: GHIElectronics.Endpoint.UI.UIElement.OnGenericEvent(GHIElectronics.Endpoint.UI.Input.GenericEventArgs)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.OnGenericEvent(GHIElectronics.Endpoint.UI.Input.GenericEventArgs)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnGenericEvent_GHIElectronics_Endpoint_UI_Input_GenericEventArgs_
+  name: OnGenericEvent(GenericEventArgs)
+  nameWithType: UIElement.OnGenericEvent(GenericEventArgs)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.OnGenericEvent(GHIElectronics.Endpoint.UI.Input.GenericEventArgs)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnGenericEvent(GHIElectronics.Endpoint.UI.Input.GenericEventArgs)
+    name: OnGenericEvent
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnGenericEvent_GHIElectronics_Endpoint_UI_Input_GenericEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.GenericEventArgs
+    name: GenericEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.GenericEventArgs.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnGenericEvent(GHIElectronics.Endpoint.UI.Input.GenericEventArgs)
+    name: OnGenericEvent
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnGenericEvent_GHIElectronics_Endpoint_UI_Input_GenericEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.GenericEventArgs
+    name: GenericEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.GenericEventArgs.html
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.OnTouchDown(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.OnTouchDown(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchDown_GHIElectronics_Endpoint_UI_Input_TouchEventArgs_
+  name: OnTouchDown(TouchEventArgs)
+  nameWithType: UIElement.OnTouchDown(TouchEventArgs)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.OnTouchDown(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnTouchDown(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+    name: OnTouchDown
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchDown_GHIElectronics_Endpoint_UI_Input_TouchEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchEventArgs
+    name: TouchEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.TouchEventArgs.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnTouchDown(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+    name: OnTouchDown
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchDown_GHIElectronics_Endpoint_UI_Input_TouchEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchEventArgs
+    name: TouchEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.TouchEventArgs.html
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.OnTouchMove(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.OnTouchMove(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchMove_GHIElectronics_Endpoint_UI_Input_TouchEventArgs_
+  name: OnTouchMove(TouchEventArgs)
+  nameWithType: UIElement.OnTouchMove(TouchEventArgs)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.OnTouchMove(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnTouchMove(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+    name: OnTouchMove
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchMove_GHIElectronics_Endpoint_UI_Input_TouchEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchEventArgs
+    name: TouchEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.TouchEventArgs.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnTouchMove(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+    name: OnTouchMove
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchMove_GHIElectronics_Endpoint_UI_Input_TouchEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchEventArgs
+    name: TouchEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.TouchEventArgs.html
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureStarted(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureStarted(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchGestureStarted_GHIElectronics_Endpoint_UI_Input_TouchGestureEventArgs_
+  name: OnTouchGestureStarted(TouchGestureEventArgs)
+  nameWithType: UIElement.OnTouchGestureStarted(TouchGestureEventArgs)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureStarted(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureStarted(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)
+    name: OnTouchGestureStarted
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchGestureStarted_GHIElectronics_Endpoint_UI_Input_TouchGestureEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs
+    name: TouchGestureEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureStarted(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)
+    name: OnTouchGestureStarted
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchGestureStarted_GHIElectronics_Endpoint_UI_Input_TouchGestureEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs
+    name: TouchGestureEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs.html
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureChanged(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureChanged(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchGestureChanged_GHIElectronics_Endpoint_UI_Input_TouchGestureEventArgs_
+  name: OnTouchGestureChanged(TouchGestureEventArgs)
+  nameWithType: UIElement.OnTouchGestureChanged(TouchGestureEventArgs)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureChanged(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureChanged(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)
+    name: OnTouchGestureChanged
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchGestureChanged_GHIElectronics_Endpoint_UI_Input_TouchGestureEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs
+    name: TouchGestureEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureChanged(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)
+    name: OnTouchGestureChanged
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchGestureChanged_GHIElectronics_Endpoint_UI_Input_TouchGestureEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs
+    name: TouchGestureEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs.html
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureEnded(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureEnded(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchGestureEnded_GHIElectronics_Endpoint_UI_Input_TouchGestureEventArgs_
+  name: OnTouchGestureEnded(TouchGestureEventArgs)
+  nameWithType: UIElement.OnTouchGestureEnded(TouchGestureEventArgs)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureEnded(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureEnded(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)
+    name: OnTouchGestureEnded
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchGestureEnded_GHIElectronics_Endpoint_UI_Input_TouchGestureEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs
+    name: TouchGestureEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureEnded(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)
+    name: OnTouchGestureEnded
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchGestureEnded_GHIElectronics_Endpoint_UI_Input_TouchGestureEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs
+    name: TouchGestureEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs.html
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.OnPreviewButtonDown(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.OnPreviewButtonDown(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnPreviewButtonDown_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_
+  name: OnPreviewButtonDown(ButtonEventArgs)
+  nameWithType: UIElement.OnPreviewButtonDown(ButtonEventArgs)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.OnPreviewButtonDown(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnPreviewButtonDown(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+    name: OnPreviewButtonDown
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnPreviewButtonDown_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.ButtonEventArgs
+    name: ButtonEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.ButtonEventArgs.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnPreviewButtonDown(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+    name: OnPreviewButtonDown
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnPreviewButtonDown_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.ButtonEventArgs
+    name: ButtonEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.ButtonEventArgs.html
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.OnButtonDown(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.OnButtonDown(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnButtonDown_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_
+  name: OnButtonDown(ButtonEventArgs)
+  nameWithType: UIElement.OnButtonDown(ButtonEventArgs)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.OnButtonDown(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnButtonDown(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+    name: OnButtonDown
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnButtonDown_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.ButtonEventArgs
+    name: ButtonEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.ButtonEventArgs.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnButtonDown(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+    name: OnButtonDown
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnButtonDown_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.ButtonEventArgs
+    name: ButtonEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.ButtonEventArgs.html
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.OnPreviewButtonUp(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.OnPreviewButtonUp(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnPreviewButtonUp_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_
+  name: OnPreviewButtonUp(ButtonEventArgs)
+  nameWithType: UIElement.OnPreviewButtonUp(ButtonEventArgs)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.OnPreviewButtonUp(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnPreviewButtonUp(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+    name: OnPreviewButtonUp
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnPreviewButtonUp_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.ButtonEventArgs
+    name: ButtonEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.ButtonEventArgs.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnPreviewButtonUp(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+    name: OnPreviewButtonUp
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnPreviewButtonUp_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.ButtonEventArgs
+    name: ButtonEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.ButtonEventArgs.html
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.OnButtonUp(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.OnButtonUp(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnButtonUp_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_
+  name: OnButtonUp(ButtonEventArgs)
+  nameWithType: UIElement.OnButtonUp(ButtonEventArgs)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.OnButtonUp(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnButtonUp(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+    name: OnButtonUp
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnButtonUp_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.ButtonEventArgs
+    name: ButtonEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.ButtonEventArgs.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnButtonUp(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)
+    name: OnButtonUp
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnButtonUp_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.ButtonEventArgs
+    name: ButtonEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.ButtonEventArgs.html
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.OnGotFocus(GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.OnGotFocus(GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnGotFocus_GHIElectronics_Endpoint_UI_Input_FocusChangedEventArgs_
+  name: OnGotFocus(FocusChangedEventArgs)
+  nameWithType: UIElement.OnGotFocus(FocusChangedEventArgs)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.OnGotFocus(GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnGotFocus(GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs)
+    name: OnGotFocus
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnGotFocus_GHIElectronics_Endpoint_UI_Input_FocusChangedEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs
+    name: FocusChangedEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnGotFocus(GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs)
+    name: OnGotFocus
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnGotFocus_GHIElectronics_Endpoint_UI_Input_FocusChangedEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs
+    name: FocusChangedEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs.html
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.OnLostFocus(GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.OnLostFocus(GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnLostFocus_GHIElectronics_Endpoint_UI_Input_FocusChangedEventArgs_
+  name: OnLostFocus(FocusChangedEventArgs)
+  nameWithType: UIElement.OnLostFocus(FocusChangedEventArgs)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.OnLostFocus(GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnLostFocus(GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs)
+    name: OnLostFocus
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnLostFocus_GHIElectronics_Endpoint_UI_Input_FocusChangedEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs
+    name: FocusChangedEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnLostFocus(GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs)
+    name: OnLostFocus
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnLostFocus_GHIElectronics_Endpoint_UI_Input_FocusChangedEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs
+    name: FocusChangedEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs.html
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.TouchDown
+  commentId: E:GHIElectronics.Endpoint.UI.UIElement.TouchDown
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_TouchDown
+  name: TouchDown
+  nameWithType: UIElement.TouchDown
+  fullName: GHIElectronics.Endpoint.UI.UIElement.TouchDown
+- uid: GHIElectronics.Endpoint.UI.UIElement.TouchUp
+  commentId: E:GHIElectronics.Endpoint.UI.UIElement.TouchUp
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_TouchUp
+  name: TouchUp
+  nameWithType: UIElement.TouchUp
+  fullName: GHIElectronics.Endpoint.UI.UIElement.TouchUp
+- uid: GHIElectronics.Endpoint.UI.UIElement.TouchMove
+  commentId: E:GHIElectronics.Endpoint.UI.UIElement.TouchMove
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_TouchMove
+  name: TouchMove
+  nameWithType: UIElement.TouchMove
+  fullName: GHIElectronics.Endpoint.UI.UIElement.TouchMove
+- uid: GHIElectronics.Endpoint.UI.UIElement.TouchGestureStart
+  commentId: E:GHIElectronics.Endpoint.UI.UIElement.TouchGestureStart
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_TouchGestureStart
+  name: TouchGestureStart
+  nameWithType: UIElement.TouchGestureStart
+  fullName: GHIElectronics.Endpoint.UI.UIElement.TouchGestureStart
+- uid: GHIElectronics.Endpoint.UI.UIElement.TouchGestureChanged
+  commentId: E:GHIElectronics.Endpoint.UI.UIElement.TouchGestureChanged
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_TouchGestureChanged
+  name: TouchGestureChanged
+  nameWithType: UIElement.TouchGestureChanged
+  fullName: GHIElectronics.Endpoint.UI.UIElement.TouchGestureChanged
+- uid: GHIElectronics.Endpoint.UI.UIElement.TouchGestureEnd
+  commentId: E:GHIElectronics.Endpoint.UI.UIElement.TouchGestureEnd
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_TouchGestureEnd
+  name: TouchGestureEnd
+  nameWithType: UIElement.TouchGestureEnd
+  fullName: GHIElectronics.Endpoint.UI.UIElement.TouchGestureEnd
+- uid: GHIElectronics.Endpoint.UI.UIElement.GetDesiredSize(System.Int32@,System.Int32@)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.GetDesiredSize(System.Int32@,System.Int32@)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetDesiredSize_System_Int32__System_Int32__
+  name: GetDesiredSize(out int, out int)
+  nameWithType: UIElement.GetDesiredSize(out int, out int)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.GetDesiredSize(out int, out int)
+  nameWithType.vb: UIElement.GetDesiredSize(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElement.GetDesiredSize(Integer, Integer)
+  name.vb: GetDesiredSize(Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.GetDesiredSize(System.Int32@,System.Int32@)
+    name: GetDesiredSize
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetDesiredSize_System_Int32__System_Int32__
+  - name: (
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.GetDesiredSize(System.Int32@,System.Int32@)
+    name: GetDesiredSize
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetDesiredSize_System_Int32__System_Int32__
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.GetMargin(System.Int32@,System.Int32@,System.Int32@,System.Int32@)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.GetMargin(System.Int32@,System.Int32@,System.Int32@,System.Int32@)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetMargin_System_Int32__System_Int32__System_Int32__System_Int32__
+  name: GetMargin(out int, out int, out int, out int)
+  nameWithType: UIElement.GetMargin(out int, out int, out int, out int)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.GetMargin(out int, out int, out int, out int)
+  nameWithType.vb: UIElement.GetMargin(Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElement.GetMargin(Integer, Integer, Integer, Integer)
+  name.vb: GetMargin(Integer, Integer, Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.GetMargin(System.Int32@,System.Int32@,System.Int32@,System.Int32@)
+    name: GetMargin
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetMargin_System_Int32__System_Int32__System_Int32__System_Int32__
+  - name: (
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.GetMargin(System.Int32@,System.Int32@,System.Int32@,System.Int32@)
+    name: GetMargin
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetMargin_System_Int32__System_Int32__System_Int32__System_Int32__
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.SetMargin(System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.SetMargin(System.Int32)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_SetMargin_System_Int32_
+  name: SetMargin(int)
+  nameWithType: UIElement.SetMargin(int)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.SetMargin(int)
+  nameWithType.vb: UIElement.SetMargin(Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElement.SetMargin(Integer)
+  name.vb: SetMargin(Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.SetMargin(System.Int32)
+    name: SetMargin
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_SetMargin_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.SetMargin(System.Int32)
+    name: SetMargin
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_SetMargin_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.SetMargin(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.SetMargin(System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_SetMargin_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: SetMargin(int, int, int, int)
+  nameWithType: UIElement.SetMargin(int, int, int, int)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.SetMargin(int, int, int, int)
+  nameWithType.vb: UIElement.SetMargin(Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElement.SetMargin(Integer, Integer, Integer, Integer)
+  name.vb: SetMargin(Integer, Integer, Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.SetMargin(System.Int32,System.Int32,System.Int32,System.Int32)
+    name: SetMargin
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_SetMargin_System_Int32_System_Int32_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.SetMargin(System.Int32,System.Int32,System.Int32,System.Int32)
+    name: SetMargin
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_SetMargin_System_Int32_System_Int32_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.ActualWidth
+  commentId: P:GHIElectronics.Endpoint.UI.UIElement.ActualWidth
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_ActualWidth
+  name: ActualWidth
+  nameWithType: UIElement.ActualWidth
+  fullName: GHIElectronics.Endpoint.UI.UIElement.ActualWidth
+- uid: GHIElectronics.Endpoint.UI.UIElement.ActualHeight
+  commentId: P:GHIElectronics.Endpoint.UI.UIElement.ActualHeight
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_ActualHeight
+  name: ActualHeight
+  nameWithType: UIElement.ActualHeight
+  fullName: GHIElectronics.Endpoint.UI.UIElement.ActualHeight
+- uid: GHIElectronics.Endpoint.UI.UIElement.Height
+  commentId: P:GHIElectronics.Endpoint.UI.UIElement.Height
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Height
+  name: Height
+  nameWithType: UIElement.Height
+  fullName: GHIElectronics.Endpoint.UI.UIElement.Height
+- uid: GHIElectronics.Endpoint.UI.UIElement.Width
+  commentId: P:GHIElectronics.Endpoint.UI.UIElement.Width
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Width
+  name: Width
+  nameWithType: UIElement.Width
+  fullName: GHIElectronics.Endpoint.UI.UIElement.Width
+- uid: GHIElectronics.Endpoint.UI.UIElement.GetLayoutOffset(System.Int32@,System.Int32@)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.GetLayoutOffset(System.Int32@,System.Int32@)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetLayoutOffset_System_Int32__System_Int32__
+  name: GetLayoutOffset(out int, out int)
+  nameWithType: UIElement.GetLayoutOffset(out int, out int)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.GetLayoutOffset(out int, out int)
+  nameWithType.vb: UIElement.GetLayoutOffset(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElement.GetLayoutOffset(Integer, Integer)
+  name.vb: GetLayoutOffset(Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.GetLayoutOffset(System.Int32@,System.Int32@)
+    name: GetLayoutOffset
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetLayoutOffset_System_Int32__System_Int32__
+  - name: (
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.GetLayoutOffset(System.Int32@,System.Int32@)
+    name: GetLayoutOffset
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetLayoutOffset_System_Int32__System_Int32__
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.GetRenderSize(System.Int32@,System.Int32@)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.GetRenderSize(System.Int32@,System.Int32@)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetRenderSize_System_Int32__System_Int32__
+  name: GetRenderSize(out int, out int)
+  nameWithType: UIElement.GetRenderSize(out int, out int)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.GetRenderSize(out int, out int)
+  nameWithType.vb: UIElement.GetRenderSize(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElement.GetRenderSize(Integer, Integer)
+  name.vb: GetRenderSize(Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.GetRenderSize(System.Int32@,System.Int32@)
+    name: GetRenderSize
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetRenderSize_System_Int32__System_Int32__
+  - name: (
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.GetRenderSize(System.Int32@,System.Int32@)
+    name: GetRenderSize
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetRenderSize_System_Int32__System_Int32__
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.LogicalChildren
+  commentId: P:GHIElectronics.Endpoint.UI.UIElement.LogicalChildren
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_LogicalChildren
+  name: LogicalChildren
+  nameWithType: UIElement.LogicalChildren
+  fullName: GHIElectronics.Endpoint.UI.UIElement.LogicalChildren
+- uid: GHIElectronics.Endpoint.UI.UIElement.OnChildrenChanged(GHIElectronics.Endpoint.UI.UIElement,GHIElectronics.Endpoint.UI.UIElement,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.OnChildrenChanged(GHIElectronics.Endpoint.UI.UIElement,GHIElectronics.Endpoint.UI.UIElement,System.Int32)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnChildrenChanged_GHIElectronics_Endpoint_UI_UIElement_GHIElectronics_Endpoint_UI_UIElement_System_Int32_
+  name: OnChildrenChanged(UIElement, UIElement, int)
+  nameWithType: UIElement.OnChildrenChanged(UIElement, UIElement, int)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.OnChildrenChanged(GHIElectronics.Endpoint.UI.UIElement, GHIElectronics.Endpoint.UI.UIElement, int)
+  nameWithType.vb: UIElement.OnChildrenChanged(UIElement, UIElement, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElement.OnChildrenChanged(GHIElectronics.Endpoint.UI.UIElement, GHIElectronics.Endpoint.UI.UIElement, Integer)
+  name.vb: OnChildrenChanged(UIElement, UIElement, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnChildrenChanged(GHIElectronics.Endpoint.UI.UIElement,GHIElectronics.Endpoint.UI.UIElement,System.Int32)
+    name: OnChildrenChanged
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnChildrenChanged_GHIElectronics_Endpoint_UI_UIElement_GHIElectronics_Endpoint_UI_UIElement_System_Int32_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.UIElement
+    name: UIElement
+    href: GHIElectronics.Endpoint.UI.UIElement.html
+  - name: ','
+  - name: " "
+  - uid: GHIElectronics.Endpoint.UI.UIElement
+    name: UIElement
+    href: GHIElectronics.Endpoint.UI.UIElement.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnChildrenChanged(GHIElectronics.Endpoint.UI.UIElement,GHIElectronics.Endpoint.UI.UIElement,System.Int32)
+    name: OnChildrenChanged
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnChildrenChanged_GHIElectronics_Endpoint_UI_UIElement_GHIElectronics_Endpoint_UI_UIElement_System_Int32_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.UIElement
+    name: UIElement
+    href: GHIElectronics.Endpoint.UI.UIElement.html
+  - name: ','
+  - name: " "
+  - uid: GHIElectronics.Endpoint.UI.UIElement
+    name: UIElement
+    href: GHIElectronics.Endpoint.UI.UIElement.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.IsFocused
+  commentId: P:GHIElectronics.Endpoint.UI.UIElement.IsFocused
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_IsFocused
+  name: IsFocused
+  nameWithType: UIElement.IsFocused
+  fullName: GHIElectronics.Endpoint.UI.UIElement.IsFocused
+- uid: GHIElectronics.Endpoint.UI.UIElement.Measure(System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.Measure(System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Measure_System_Int32_System_Int32_
+  name: Measure(int, int)
+  nameWithType: UIElement.Measure(int, int)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.Measure(int, int)
+  nameWithType.vb: UIElement.Measure(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElement.Measure(Integer, Integer)
+  name.vb: Measure(Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.Measure(System.Int32,System.Int32)
+    name: Measure
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Measure_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.Measure(System.Int32,System.Int32)
+    name: Measure
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Measure_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.Arrange(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.Arrange(System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Arrange_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: Arrange(int, int, int, int)
+  nameWithType: UIElement.Arrange(int, int, int, int)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.Arrange(int, int, int, int)
+  nameWithType.vb: UIElement.Arrange(Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElement.Arrange(Integer, Integer, Integer, Integer)
+  name.vb: Arrange(Integer, Integer, Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.Arrange(System.Int32,System.Int32,System.Int32,System.Int32)
+    name: Arrange
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Arrange_System_Int32_System_Int32_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.Arrange(System.Int32,System.Int32,System.Int32,System.Int32)
+    name: Arrange
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Arrange_System_Int32_System_Int32_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.ArrangeOverride(System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.ArrangeOverride(System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_ArrangeOverride_System_Int32_System_Int32_
+  name: ArrangeOverride(int, int)
+  nameWithType: UIElement.ArrangeOverride(int, int)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.ArrangeOverride(int, int)
+  nameWithType.vb: UIElement.ArrangeOverride(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElement.ArrangeOverride(Integer, Integer)
+  name.vb: ArrangeOverride(Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.ArrangeOverride(System.Int32,System.Int32)
+    name: ArrangeOverride
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_ArrangeOverride_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.ArrangeOverride(System.Int32,System.Int32)
+    name: ArrangeOverride
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_ArrangeOverride_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.UpdateLayout
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.UpdateLayout
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_UpdateLayout
+  name: UpdateLayout()
+  nameWithType: UIElement.UpdateLayout()
+  fullName: GHIElectronics.Endpoint.UI.UIElement.UpdateLayout()
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.UpdateLayout
+    name: UpdateLayout
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_UpdateLayout
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.UpdateLayout
+    name: UpdateLayout
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_UpdateLayout
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.IsMeasureValid
+  commentId: P:GHIElectronics.Endpoint.UI.UIElement.IsMeasureValid
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_IsMeasureValid
+  name: IsMeasureValid
+  nameWithType: UIElement.IsMeasureValid
+  fullName: GHIElectronics.Endpoint.UI.UIElement.IsMeasureValid
+- uid: GHIElectronics.Endpoint.UI.UIElement.IsArrangeValid
+  commentId: P:GHIElectronics.Endpoint.UI.UIElement.IsArrangeValid
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_IsArrangeValid
+  name: IsArrangeValid
+  nameWithType: UIElement.IsArrangeValid
+  fullName: GHIElectronics.Endpoint.UI.UIElement.IsArrangeValid
+- uid: GHIElectronics.Endpoint.UI.UIElement.ChildElementFromPoint(System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.ChildElementFromPoint(System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_ChildElementFromPoint_System_Int32_System_Int32_
+  name: ChildElementFromPoint(int, int)
+  nameWithType: UIElement.ChildElementFromPoint(int, int)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.ChildElementFromPoint(int, int)
+  nameWithType.vb: UIElement.ChildElementFromPoint(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElement.ChildElementFromPoint(Integer, Integer)
+  name.vb: ChildElementFromPoint(Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.ChildElementFromPoint(System.Int32,System.Int32)
+    name: ChildElementFromPoint
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_ChildElementFromPoint_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.ChildElementFromPoint(System.Int32,System.Int32)
+    name: ChildElementFromPoint
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_ChildElementFromPoint_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.GetUnclippedSize(System.Int32@,System.Int32@)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.GetUnclippedSize(System.Int32@,System.Int32@)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetUnclippedSize_System_Int32__System_Int32__
+  name: GetUnclippedSize(out int, out int)
+  nameWithType: UIElement.GetUnclippedSize(out int, out int)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.GetUnclippedSize(out int, out int)
+  nameWithType.vb: UIElement.GetUnclippedSize(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElement.GetUnclippedSize(Integer, Integer)
+  name.vb: GetUnclippedSize(Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.GetUnclippedSize(System.Int32@,System.Int32@)
+    name: GetUnclippedSize
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetUnclippedSize_System_Int32__System_Int32__
+  - name: (
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.GetUnclippedSize(System.Int32@,System.Int32@)
+    name: GetUnclippedSize
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetUnclippedSize_System_Int32__System_Int32__
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.ContainsPoint(System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.ContainsPoint(System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_ContainsPoint_System_Int32_System_Int32_
+  name: ContainsPoint(int, int)
+  nameWithType: UIElement.ContainsPoint(int, int)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.ContainsPoint(int, int)
+  nameWithType.vb: UIElement.ContainsPoint(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElement.ContainsPoint(Integer, Integer)
+  name.vb: ContainsPoint(Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.ContainsPoint(System.Int32,System.Int32)
+    name: ContainsPoint
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_ContainsPoint_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.ContainsPoint(System.Int32,System.Int32)
+    name: ContainsPoint
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_ContainsPoint_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.GetPointerTarget(System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.GetPointerTarget(System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetPointerTarget_System_Int32_System_Int32_
+  name: GetPointerTarget(int, int)
+  nameWithType: UIElement.GetPointerTarget(int, int)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.GetPointerTarget(int, int)
+  nameWithType.vb: UIElement.GetPointerTarget(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElement.GetPointerTarget(Integer, Integer)
+  name.vb: GetPointerTarget(Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.GetPointerTarget(System.Int32,System.Int32)
+    name: GetPointerTarget
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetPointerTarget_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.GetPointerTarget(System.Int32,System.Int32)
+    name: GetPointerTarget
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetPointerTarget_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.PointToScreen(System.Int32@,System.Int32@)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.PointToScreen(System.Int32@,System.Int32@)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_PointToScreen_System_Int32__System_Int32__
+  name: PointToScreen(ref int, ref int)
+  nameWithType: UIElement.PointToScreen(ref int, ref int)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.PointToScreen(ref int, ref int)
+  nameWithType.vb: UIElement.PointToScreen(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElement.PointToScreen(Integer, Integer)
+  name.vb: PointToScreen(Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.PointToScreen(System.Int32@,System.Int32@)
+    name: PointToScreen
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_PointToScreen_System_Int32__System_Int32__
+  - name: (
+  - name: ref
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.PointToScreen(System.Int32@,System.Int32@)
+    name: PointToScreen
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_PointToScreen_System_Int32__System_Int32__
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.PointToClient(System.Int32@,System.Int32@)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.PointToClient(System.Int32@,System.Int32@)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_PointToClient_System_Int32__System_Int32__
+  name: PointToClient(ref int, ref int)
+  nameWithType: UIElement.PointToClient(ref int, ref int)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.PointToClient(ref int, ref int)
+  nameWithType.vb: UIElement.PointToClient(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElement.PointToClient(Integer, Integer)
+  name.vb: PointToClient(Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.PointToClient(System.Int32@,System.Int32@)
+    name: PointToClient
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_PointToClient_System_Int32__System_Int32__
+  - name: (
+  - name: ref
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.PointToClient(System.Int32@,System.Int32@)
+    name: PointToClient
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_PointToClient_System_Int32__System_Int32__
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.InvalidateMeasure
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.InvalidateMeasure
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_InvalidateMeasure
+  name: InvalidateMeasure()
+  nameWithType: UIElement.InvalidateMeasure()
+  fullName: GHIElectronics.Endpoint.UI.UIElement.InvalidateMeasure()
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.InvalidateMeasure
+    name: InvalidateMeasure
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_InvalidateMeasure
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.InvalidateMeasure
+    name: InvalidateMeasure
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_InvalidateMeasure
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.InvalidateArrange
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.InvalidateArrange
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_InvalidateArrange
+  name: InvalidateArrange()
+  nameWithType: UIElement.InvalidateArrange()
+  fullName: GHIElectronics.Endpoint.UI.UIElement.InvalidateArrange()
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.InvalidateArrange
+    name: InvalidateArrange
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_InvalidateArrange
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.InvalidateArrange
+    name: InvalidateArrange
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_InvalidateArrange
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.Parent
+  commentId: P:GHIElectronics.Endpoint.UI.UIElement.Parent
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Parent
+  name: Parent
+  nameWithType: UIElement.Parent
+  fullName: GHIElectronics.Endpoint.UI.UIElement.Parent
+- uid: GHIElectronics.Endpoint.UI.UIElement.RootUIElement
+  commentId: P:GHIElectronics.Endpoint.UI.UIElement.RootUIElement
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_RootUIElement
+  name: RootUIElement
+  nameWithType: UIElement.RootUIElement
+  fullName: GHIElectronics.Endpoint.UI.UIElement.RootUIElement
+- uid: GHIElectronics.Endpoint.UI.UIElement.HorizontalAlignment
+  commentId: P:GHIElectronics.Endpoint.UI.UIElement.HorizontalAlignment
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_HorizontalAlignment
+  name: HorizontalAlignment
+  nameWithType: UIElement.HorizontalAlignment
+  fullName: GHIElectronics.Endpoint.UI.UIElement.HorizontalAlignment
+- uid: GHIElectronics.Endpoint.UI.UIElement.VerticalAlignment
+  commentId: P:GHIElectronics.Endpoint.UI.UIElement.VerticalAlignment
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_VerticalAlignment
+  name: VerticalAlignment
+  nameWithType: UIElement.VerticalAlignment
+  fullName: GHIElectronics.Endpoint.UI.UIElement.VerticalAlignment
+- uid: GHIElectronics.Endpoint.UI.UIElement.OnChildDesiredSizeChanged(GHIElectronics.Endpoint.UI.UIElement)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.OnChildDesiredSizeChanged(GHIElectronics.Endpoint.UI.UIElement)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnChildDesiredSizeChanged_GHIElectronics_Endpoint_UI_UIElement_
+  name: OnChildDesiredSizeChanged(UIElement)
+  nameWithType: UIElement.OnChildDesiredSizeChanged(UIElement)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.OnChildDesiredSizeChanged(GHIElectronics.Endpoint.UI.UIElement)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnChildDesiredSizeChanged(GHIElectronics.Endpoint.UI.UIElement)
+    name: OnChildDesiredSizeChanged
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnChildDesiredSizeChanged_GHIElectronics_Endpoint_UI_UIElement_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.UIElement
+    name: UIElement
+    href: GHIElectronics.Endpoint.UI.UIElement.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnChildDesiredSizeChanged(GHIElectronics.Endpoint.UI.UIElement)
+    name: OnChildDesiredSizeChanged
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnChildDesiredSizeChanged_GHIElectronics_Endpoint_UI_UIElement_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.UIElement
+    name: UIElement
+    href: GHIElectronics.Endpoint.UI.UIElement.html
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.Visibility
+  commentId: P:GHIElectronics.Endpoint.UI.UIElement.Visibility
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Visibility
+  name: Visibility
+  nameWithType: UIElement.Visibility
+  fullName: GHIElectronics.Endpoint.UI.UIElement.Visibility
+- uid: GHIElectronics.Endpoint.UI.UIElement.IsVisible
+  commentId: P:GHIElectronics.Endpoint.UI.UIElement.IsVisible
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_IsVisible
+  name: IsVisible
+  nameWithType: UIElement.IsVisible
+  fullName: GHIElectronics.Endpoint.UI.UIElement.IsVisible
+- uid: GHIElectronics.Endpoint.UI.UIElement.IsVisibleChanged
+  commentId: E:GHIElectronics.Endpoint.UI.UIElement.IsVisibleChanged
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_IsVisibleChanged
+  name: IsVisibleChanged
+  nameWithType: UIElement.IsVisibleChanged
+  fullName: GHIElectronics.Endpoint.UI.UIElement.IsVisibleChanged
+- uid: GHIElectronics.Endpoint.UI.UIElement.IsEnabled
+  commentId: P:GHIElectronics.Endpoint.UI.UIElement.IsEnabled
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_IsEnabled
+  name: IsEnabled
+  nameWithType: UIElement.IsEnabled
+  fullName: GHIElectronics.Endpoint.UI.UIElement.IsEnabled
+- uid: GHIElectronics.Endpoint.UI.UIElement.IsEnabledChanged
+  commentId: E:GHIElectronics.Endpoint.UI.UIElement.IsEnabledChanged
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_IsEnabledChanged
+  name: IsEnabledChanged
+  nameWithType: UIElement.IsEnabledChanged
+  fullName: GHIElectronics.Endpoint.UI.UIElement.IsEnabledChanged
+- uid: GHIElectronics.Endpoint.UI.UIElement.RenderRecursive(GHIElectronics.Endpoint.UI.Media.DrawingContext)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.RenderRecursive(GHIElectronics.Endpoint.UI.Media.DrawingContext)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_RenderRecursive_GHIElectronics_Endpoint_UI_Media_DrawingContext_
+  name: RenderRecursive(DrawingContext)
+  nameWithType: UIElement.RenderRecursive(DrawingContext)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.RenderRecursive(GHIElectronics.Endpoint.UI.Media.DrawingContext)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.RenderRecursive(GHIElectronics.Endpoint.UI.Media.DrawingContext)
+    name: RenderRecursive
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_RenderRecursive_GHIElectronics_Endpoint_UI_Media_DrawingContext_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Media.DrawingContext
+    name: DrawingContext
+    href: GHIElectronics.Endpoint.UI.Media.DrawingContext.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.RenderRecursive(GHIElectronics.Endpoint.UI.Media.DrawingContext)
+    name: RenderRecursive
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_RenderRecursive_GHIElectronics_Endpoint_UI_Media_DrawingContext_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Media.DrawingContext
+    name: DrawingContext
+    href: GHIElectronics.Endpoint.UI.Media.DrawingContext.html
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.InvalidateRect(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.InvalidateRect(System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_InvalidateRect_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: InvalidateRect(int, int, int, int)
+  nameWithType: UIElement.InvalidateRect(int, int, int, int)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.InvalidateRect(int, int, int, int)
+  nameWithType.vb: UIElement.InvalidateRect(Integer, Integer, Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElement.InvalidateRect(Integer, Integer, Integer, Integer)
+  name.vb: InvalidateRect(Integer, Integer, Integer, Integer)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.InvalidateRect(System.Int32,System.Int32,System.Int32,System.Int32)
+    name: InvalidateRect
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_InvalidateRect_System_Int32_System_Int32_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.InvalidateRect(System.Int32,System.Int32,System.Int32,System.Int32)
+    name: InvalidateRect
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_InvalidateRect_System_Int32_System_Int32_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.Invalidate
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.Invalidate
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Invalidate
+  name: Invalidate()
+  nameWithType: UIElement.Invalidate()
+  fullName: GHIElectronics.Endpoint.UI.UIElement.Invalidate()
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.Invalidate
+    name: Invalidate
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Invalidate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.Invalidate
+    name: Invalidate
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Invalidate
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.RaiseEvent(GHIElectronics.Endpoint.UI.RoutedEventArgs)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.RaiseEvent(GHIElectronics.Endpoint.UI.RoutedEventArgs)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_RaiseEvent_GHIElectronics_Endpoint_UI_RoutedEventArgs_
+  name: RaiseEvent(RoutedEventArgs)
+  nameWithType: UIElement.RaiseEvent(RoutedEventArgs)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.RaiseEvent(GHIElectronics.Endpoint.UI.RoutedEventArgs)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.RaiseEvent(GHIElectronics.Endpoint.UI.RoutedEventArgs)
+    name: RaiseEvent
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_RaiseEvent_GHIElectronics_Endpoint_UI_RoutedEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.RoutedEventArgs
+    name: RoutedEventArgs
+    href: GHIElectronics.Endpoint.UI.RoutedEventArgs.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.RaiseEvent(GHIElectronics.Endpoint.UI.RoutedEventArgs)
+    name: RaiseEvent
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_RaiseEvent_GHIElectronics_Endpoint_UI_RoutedEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.RoutedEventArgs
+    name: RoutedEventArgs
+    href: GHIElectronics.Endpoint.UI.RoutedEventArgs.html
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.AddToEventRoute(GHIElectronics.Endpoint.UI.EventRoute,GHIElectronics.Endpoint.UI.RoutedEventArgs)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.AddToEventRoute(GHIElectronics.Endpoint.UI.EventRoute,GHIElectronics.Endpoint.UI.RoutedEventArgs)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_AddToEventRoute_GHIElectronics_Endpoint_UI_EventRoute_GHIElectronics_Endpoint_UI_RoutedEventArgs_
+  name: AddToEventRoute(EventRoute, RoutedEventArgs)
+  nameWithType: UIElement.AddToEventRoute(EventRoute, RoutedEventArgs)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.AddToEventRoute(GHIElectronics.Endpoint.UI.EventRoute, GHIElectronics.Endpoint.UI.RoutedEventArgs)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.AddToEventRoute(GHIElectronics.Endpoint.UI.EventRoute,GHIElectronics.Endpoint.UI.RoutedEventArgs)
+    name: AddToEventRoute
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_AddToEventRoute_GHIElectronics_Endpoint_UI_EventRoute_GHIElectronics_Endpoint_UI_RoutedEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.EventRoute
+    name: EventRoute
+    href: GHIElectronics.Endpoint.UI.EventRoute.html
+  - name: ','
+  - name: " "
+  - uid: GHIElectronics.Endpoint.UI.RoutedEventArgs
+    name: RoutedEventArgs
+    href: GHIElectronics.Endpoint.UI.RoutedEventArgs.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.AddToEventRoute(GHIElectronics.Endpoint.UI.EventRoute,GHIElectronics.Endpoint.UI.RoutedEventArgs)
+    name: AddToEventRoute
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_AddToEventRoute_GHIElectronics_Endpoint_UI_EventRoute_GHIElectronics_Endpoint_UI_RoutedEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.EventRoute
+    name: EventRoute
+    href: GHIElectronics.Endpoint.UI.EventRoute.html
+  - name: ','
+  - name: " "
+  - uid: GHIElectronics.Endpoint.UI.RoutedEventArgs
+    name: RoutedEventArgs
+    href: GHIElectronics.Endpoint.UI.RoutedEventArgs.html
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement.InstanceEventHandlersStore
+  commentId: P:GHIElectronics.Endpoint.UI.UIElement.InstanceEventHandlersStore
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_InstanceEventHandlersStore
+  name: InstanceEventHandlersStore
+  nameWithType: UIElement.InstanceEventHandlersStore
+  fullName: GHIElectronics.Endpoint.UI.UIElement.InstanceEventHandlersStore
+- uid: GHIElectronics.Endpoint.UI.UIElement.AddHandler(GHIElectronics.Endpoint.UI.RoutedEvent,GHIElectronics.Endpoint.UI.RoutedEventHandler,System.Boolean)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.AddHandler(GHIElectronics.Endpoint.UI.RoutedEvent,GHIElectronics.Endpoint.UI.RoutedEventHandler,System.Boolean)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  isExternal: true
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_AddHandler_GHIElectronics_Endpoint_UI_RoutedEvent_GHIElectronics_Endpoint_UI_RoutedEventHandler_System_Boolean_
+  name: AddHandler(RoutedEvent, RoutedEventHandler, bool)
+  nameWithType: UIElement.AddHandler(RoutedEvent, RoutedEventHandler, bool)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.AddHandler(GHIElectronics.Endpoint.UI.RoutedEvent, GHIElectronics.Endpoint.UI.RoutedEventHandler, bool)
+  nameWithType.vb: UIElement.AddHandler(RoutedEvent, RoutedEventHandler, Boolean)
+  fullName.vb: GHIElectronics.Endpoint.UI.UIElement.AddHandler(GHIElectronics.Endpoint.UI.RoutedEvent, GHIElectronics.Endpoint.UI.RoutedEventHandler, Boolean)
+  name.vb: AddHandler(RoutedEvent, RoutedEventHandler, Boolean)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.AddHandler(GHIElectronics.Endpoint.UI.RoutedEvent,GHIElectronics.Endpoint.UI.RoutedEventHandler,System.Boolean)
+    name: AddHandler
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_AddHandler_GHIElectronics_Endpoint_UI_RoutedEvent_GHIElectronics_Endpoint_UI_RoutedEventHandler_System_Boolean_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.RoutedEvent
+    name: RoutedEvent
+    href: GHIElectronics.Endpoint.UI.RoutedEvent.html
+  - name: ','
+  - name: " "
+  - uid: GHIElectronics.Endpoint.UI.RoutedEventHandler
+    name: RoutedEventHandler
+    href: GHIElectronics.Endpoint.UI.RoutedEventHandler.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.AddHandler(GHIElectronics.Endpoint.UI.RoutedEvent,GHIElectronics.Endpoint.UI.RoutedEventHandler,System.Boolean)
+    name: AddHandler
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_AddHandler_GHIElectronics_Endpoint_UI_RoutedEvent_GHIElectronics_Endpoint_UI_RoutedEventHandler_System_Boolean_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.RoutedEvent
+    name: RoutedEvent
+    href: GHIElectronics.Endpoint.UI.RoutedEvent.html
+  - name: ','
+  - name: " "
+  - uid: GHIElectronics.Endpoint.UI.RoutedEventHandler
+    name: RoutedEventHandler
+    href: GHIElectronics.Endpoint.UI.RoutedEventHandler.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.UIElement._horizontalAlignment
+  commentId: F:GHIElectronics.Endpoint.UI.UIElement._horizontalAlignment
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement__horizontalAlignment
+  name: _horizontalAlignment
+  nameWithType: UIElement._horizontalAlignment
+  fullName: GHIElectronics.Endpoint.UI.UIElement._horizontalAlignment
+- uid: GHIElectronics.Endpoint.UI.UIElement._verticalAlignment
+  commentId: F:GHIElectronics.Endpoint.UI.UIElement._verticalAlignment
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement__verticalAlignment
+  name: _verticalAlignment
+  nameWithType: UIElement._verticalAlignment
+  fullName: GHIElectronics.Endpoint.UI.UIElement._verticalAlignment
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_CheckAccess
+  name: CheckAccess()
+  nameWithType: DispatcherObject.CheckAccess()
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess()
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+    name: CheckAccess
+    href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_CheckAccess
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+    name: CheckAccess
+    href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_CheckAccess
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_VerifyAccess
+  name: VerifyAccess()
+  nameWithType: DispatcherObject.VerifyAccess()
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess()
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+    name: VerifyAccess
+    href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_VerifyAccess
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+    name: VerifyAccess
+    href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_VerifyAccess
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.Dispatcher
+  commentId: F:GHIElectronics.Endpoint.UI.Threading.DispatcherObject.Dispatcher
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_Dispatcher
+  name: Dispatcher
+  nameWithType: DispatcherObject.Dispatcher
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.Dispatcher
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.UI.Threading
+  commentId: N:GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Threading
+  nameWithType: GHIElectronics.Endpoint.UI.Threading
+  fullName: GHIElectronics.Endpoint.UI.Threading
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Threading
+    name: Threading
+    href: GHIElectronics.Endpoint.UI.Threading.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Threading
+    name: Threading
+    href: GHIElectronics.Endpoint.UI.Threading.html
+- uid: GHIElectronics.Endpoint.UI
+  commentId: N:GHIElectronics.Endpoint.UI
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI
+  nameWithType: GHIElectronics.Endpoint.UI
+  fullName: GHIElectronics.Endpoint.UI
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.IsSelected*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.ListBoxItem.IsSelected
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.html#GHIElectronics_Endpoint_UI_Controls_ListBoxItem_IsSelected
+  name: IsSelected
+  nameWithType: ListBoxItem.IsSelected
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.IsSelected
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.IsSelectable*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.ListBoxItem.IsSelectable
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.html#GHIElectronics_Endpoint_UI_Controls_ListBoxItem_IsSelectable
+  name: IsSelectable
+  nameWithType: ListBoxItem.IsSelectable
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.IsSelectable
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.OnIsSelectedChanged*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.ListBoxItem.OnIsSelectedChanged
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.html#GHIElectronics_Endpoint_UI_Controls_ListBoxItem_OnIsSelectedChanged_System_Boolean_
+  name: OnIsSelectedChanged
+  nameWithType: ListBoxItem.OnIsSelectedChanged
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.OnIsSelectedChanged
+- uid: GHIElectronics.Endpoint.UI.UIElement.OnTouchUp(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+  commentId: M:GHIElectronics.Endpoint.UI.UIElement.OnTouchUp(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+  parent: GHIElectronics.Endpoint.UI.UIElement
+  href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchUp_GHIElectronics_Endpoint_UI_Input_TouchEventArgs_
+  name: OnTouchUp(TouchEventArgs)
+  nameWithType: UIElement.OnTouchUp(TouchEventArgs)
+  fullName: GHIElectronics.Endpoint.UI.UIElement.OnTouchUp(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnTouchUp(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+    name: OnTouchUp
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchUp_GHIElectronics_Endpoint_UI_Input_TouchEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchEventArgs
+    name: TouchEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.TouchEventArgs.html
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.UIElement.OnTouchUp(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)
+    name: OnTouchUp
+    href: GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchUp_GHIElectronics_Endpoint_UI_Input_TouchEventArgs_
+  - name: (
+  - uid: GHIElectronics.Endpoint.UI.Input.TouchEventArgs
+    name: TouchEventArgs
+    href: GHIElectronics.Endpoint.UI.Input.TouchEventArgs.html
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.OnTouchUp*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.ListBoxItem.OnTouchUp
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.html#GHIElectronics_Endpoint_UI_Controls_ListBoxItem_OnTouchUp_GHIElectronics_Endpoint_UI_Input_TouchEventArgs_
+  name: OnTouchUp
+  nameWithType: ListBoxItem.OnTouchUp
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.OnTouchUp
+- uid: GHIElectronics.Endpoint.UI.Input.TouchEventArgs
+  commentId: T:GHIElectronics.Endpoint.UI.Input.TouchEventArgs
+  parent: GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.Endpoint.UI.Input.TouchEventArgs.html
+  name: TouchEventArgs
+  nameWithType: TouchEventArgs
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchEventArgs
+- uid: GHIElectronics.Endpoint.UI.Input
+  commentId: N:GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Input
+  nameWithType: GHIElectronics.Endpoint.UI.Input
+  fullName: GHIElectronics.Endpoint.UI.Input
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html

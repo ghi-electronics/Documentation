@@ -1,0 +1,198 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+  commentId: T:GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+  id: InputManager.InputDeviceType
+  parent: GHIElectronics.Endpoint.UI.Input
+  children:
+  - GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.Button
+  - GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.Generic
+  - GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.Last
+  - GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.Touch
+  langs:
+  - csharp
+  - vb
+  name: InputManager.InputDeviceType
+  nameWithType: InputManager.InputDeviceType
+  fullName: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: InputDeviceType
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+    startLine: 269
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: public enum InputManager.InputDeviceType
+    content.vb: Public Enum InputManager.InputDeviceType
+- uid: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.Button
+  commentId: F:GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.Button
+  id: Button
+  parent: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+  langs:
+  - csharp
+  - vb
+  name: Button
+  nameWithType: InputManager.InputDeviceType.Button
+  fullName: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.Button
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Button
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+    startLine: 270
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Button = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+- uid: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.Touch
+  commentId: F:GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.Touch
+  id: Touch
+  parent: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+  langs:
+  - csharp
+  - vb
+  name: Touch
+  nameWithType: InputManager.InputDeviceType.Touch
+  fullName: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.Touch
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Touch
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+    startLine: 271
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Touch = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+- uid: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.Generic
+  commentId: F:GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.Generic
+  id: Generic
+  parent: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+  langs:
+  - csharp
+  - vb
+  name: Generic
+  nameWithType: InputManager.InputDeviceType.Generic
+  fullName: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.Generic
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Generic
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+    startLine: 272
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Generic = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+- uid: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.Last
+  commentId: F:GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.Last
+  id: Last
+  parent: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+  langs:
+  - csharp
+  - vb
+  name: Last
+  nameWithType: InputManager.InputDeviceType.Last
+  fullName: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.Last
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Last
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/InputManager.cs
+    startLine: 273
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Last = 3
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+references:
+- uid: GHIElectronics.Endpoint.UI.Input
+  commentId: N:GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Input
+  nameWithType: GHIElectronics.Endpoint.UI.Input
+  fullName: GHIElectronics.Endpoint.UI.Input
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+- uid: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+  commentId: T:GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+  parent: GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.Endpoint.UI.Input.InputManager.html
+  name: InputManager.InputDeviceType
+  nameWithType: InputManager.InputDeviceType
+  fullName: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Input.InputManager
+    name: InputManager
+    href: GHIElectronics.Endpoint.UI.Input.InputManager.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+    name: InputDeviceType
+    href: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Input.InputManager
+    name: InputManager
+    href: GHIElectronics.Endpoint.UI.Input.InputManager.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+    name: InputDeviceType
+    href: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.html

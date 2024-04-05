@@ -1,0 +1,255 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+  commentId: T:GHIElectronics.Endpoint.Drawing.GraphicsUnit
+  id: GraphicsUnit
+  parent: GHIElectronics.Endpoint.Drawing
+  children:
+  - GHIElectronics.Endpoint.Drawing.GraphicsUnit.Display
+  - GHIElectronics.Endpoint.Drawing.GraphicsUnit.Document
+  - GHIElectronics.Endpoint.Drawing.GraphicsUnit.Inch
+  - GHIElectronics.Endpoint.Drawing.GraphicsUnit.Millimeter
+  - GHIElectronics.Endpoint.Drawing.GraphicsUnit.Pixel
+  - GHIElectronics.Endpoint.Drawing.GraphicsUnit.Point
+  - GHIElectronics.Endpoint.Drawing.GraphicsUnit.World
+  langs:
+  - csharp
+  - vb
+  name: GraphicsUnit
+  nameWithType: GraphicsUnit
+  fullName: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Font.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: GraphicsUnit
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Font.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public enum GraphicsUnit
+    content.vb: Public Enum GraphicsUnit
+- uid: GHIElectronics.Endpoint.Drawing.GraphicsUnit.World
+  commentId: F:GHIElectronics.Endpoint.Drawing.GraphicsUnit.World
+  id: World
+  parent: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+  langs:
+  - csharp
+  - vb
+  name: World
+  nameWithType: GraphicsUnit.World
+  fullName: GHIElectronics.Endpoint.Drawing.GraphicsUnit.World
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Font.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: World
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Font.cs
+    startLine: 11
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: World = 0
+    return:
+      type: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+- uid: GHIElectronics.Endpoint.Drawing.GraphicsUnit.Display
+  commentId: F:GHIElectronics.Endpoint.Drawing.GraphicsUnit.Display
+  id: Display
+  parent: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+  langs:
+  - csharp
+  - vb
+  name: Display
+  nameWithType: GraphicsUnit.Display
+  fullName: GHIElectronics.Endpoint.Drawing.GraphicsUnit.Display
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Font.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Display
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Font.cs
+    startLine: 12
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Display = 1
+    return:
+      type: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+- uid: GHIElectronics.Endpoint.Drawing.GraphicsUnit.Pixel
+  commentId: F:GHIElectronics.Endpoint.Drawing.GraphicsUnit.Pixel
+  id: Pixel
+  parent: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+  langs:
+  - csharp
+  - vb
+  name: Pixel
+  nameWithType: GraphicsUnit.Pixel
+  fullName: GHIElectronics.Endpoint.Drawing.GraphicsUnit.Pixel
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Font.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Pixel
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Font.cs
+    startLine: 13
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Pixel = 2
+    return:
+      type: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+- uid: GHIElectronics.Endpoint.Drawing.GraphicsUnit.Point
+  commentId: F:GHIElectronics.Endpoint.Drawing.GraphicsUnit.Point
+  id: Point
+  parent: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+  langs:
+  - csharp
+  - vb
+  name: Point
+  nameWithType: GraphicsUnit.Point
+  fullName: GHIElectronics.Endpoint.Drawing.GraphicsUnit.Point
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Font.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Point
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Font.cs
+    startLine: 14
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Point = 3
+    return:
+      type: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+- uid: GHIElectronics.Endpoint.Drawing.GraphicsUnit.Inch
+  commentId: F:GHIElectronics.Endpoint.Drawing.GraphicsUnit.Inch
+  id: Inch
+  parent: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+  langs:
+  - csharp
+  - vb
+  name: Inch
+  nameWithType: GraphicsUnit.Inch
+  fullName: GHIElectronics.Endpoint.Drawing.GraphicsUnit.Inch
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Font.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Inch
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Font.cs
+    startLine: 15
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Inch = 4
+    return:
+      type: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+- uid: GHIElectronics.Endpoint.Drawing.GraphicsUnit.Document
+  commentId: F:GHIElectronics.Endpoint.Drawing.GraphicsUnit.Document
+  id: Document
+  parent: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+  langs:
+  - csharp
+  - vb
+  name: Document
+  nameWithType: GraphicsUnit.Document
+  fullName: GHIElectronics.Endpoint.Drawing.GraphicsUnit.Document
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Font.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Document
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Font.cs
+    startLine: 16
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Document = 5
+    return:
+      type: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+- uid: GHIElectronics.Endpoint.Drawing.GraphicsUnit.Millimeter
+  commentId: F:GHIElectronics.Endpoint.Drawing.GraphicsUnit.Millimeter
+  id: Millimeter
+  parent: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+  langs:
+  - csharp
+  - vb
+  name: Millimeter
+  nameWithType: GraphicsUnit.Millimeter
+  fullName: GHIElectronics.Endpoint.Drawing.GraphicsUnit.Millimeter
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Font.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Millimeter
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Font.cs
+    startLine: 17
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Millimeter = 6
+    return:
+      type: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+references:
+- uid: GHIElectronics.Endpoint.Drawing
+  commentId: N:GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing
+  nameWithType: GHIElectronics.Endpoint.Drawing
+  fullName: GHIElectronics.Endpoint.Drawing
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+- uid: GHIElectronics.Endpoint.Drawing.GraphicsUnit
+  commentId: T:GHIElectronics.Endpoint.Drawing.GraphicsUnit
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.GraphicsUnit.html
+  name: GraphicsUnit
+  nameWithType: GraphicsUnit
+  fullName: GHIElectronics.Endpoint.Drawing.GraphicsUnit

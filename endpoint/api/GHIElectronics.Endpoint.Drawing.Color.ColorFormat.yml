@@ -1,0 +1,217 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+  commentId: T:GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+  id: Color.ColorFormat
+  parent: GHIElectronics.Endpoint.Drawing
+  children:
+  - GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb332
+  - GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb444
+  - GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb565
+  - GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb888
+  - GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb8888
+  langs:
+  - csharp
+  - vb
+  name: Color.ColorFormat
+  nameWithType: Color.ColorFormat
+  fullName: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ColorFormat
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 184
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public enum Color.ColorFormat
+    content.vb: Public Enum Color.ColorFormat
+- uid: GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb8888
+  commentId: F:GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb8888
+  id: Rgb8888
+  parent: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+  langs:
+  - csharp
+  - vb
+  name: Rgb8888
+  nameWithType: Color.ColorFormat.Rgb8888
+  fullName: GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb8888
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Rgb8888
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 185
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Rgb8888 = 0
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+- uid: GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb888
+  commentId: F:GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb888
+  id: Rgb888
+  parent: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+  langs:
+  - csharp
+  - vb
+  name: Rgb888
+  nameWithType: Color.ColorFormat.Rgb888
+  fullName: GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb888
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Rgb888
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 186
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Rgb888 = 1
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+- uid: GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb565
+  commentId: F:GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb565
+  id: Rgb565
+  parent: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+  langs:
+  - csharp
+  - vb
+  name: Rgb565
+  nameWithType: Color.ColorFormat.Rgb565
+  fullName: GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb565
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Rgb565
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 187
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Rgb565 = 2
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+- uid: GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb444
+  commentId: F:GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb444
+  id: Rgb444
+  parent: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+  langs:
+  - csharp
+  - vb
+  name: Rgb444
+  nameWithType: Color.ColorFormat.Rgb444
+  fullName: GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb444
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Rgb444
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 188
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Rgb444 = 3
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+- uid: GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb332
+  commentId: F:GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb332
+  id: Rgb332
+  parent: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+  langs:
+  - csharp
+  - vb
+  name: Rgb332
+  nameWithType: Color.ColorFormat.Rgb332
+  fullName: GHIElectronics.Endpoint.Drawing.Color.ColorFormat.Rgb332
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Rgb332
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Color.cs
+    startLine: 189
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: Rgb332 = 4
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+references:
+- uid: GHIElectronics.Endpoint.Drawing
+  commentId: N:GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing
+  nameWithType: GHIElectronics.Endpoint.Drawing
+  fullName: GHIElectronics.Endpoint.Drawing
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+- uid: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+  commentId: T:GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Color.html
+  name: Color.ColorFormat
+  nameWithType: Color.ColorFormat
+  fullName: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+    name: ColorFormat
+    href: GHIElectronics.Endpoint.Drawing.Color.ColorFormat.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Drawing.Color
+    name: Color
+    href: GHIElectronics.Endpoint.Drawing.Color.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Color.ColorFormat
+    name: ColorFormat
+    href: GHIElectronics.Endpoint.Drawing.Color.ColorFormat.html

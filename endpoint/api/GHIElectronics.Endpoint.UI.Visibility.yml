@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Visibility
+  commentId: T:GHIElectronics.Endpoint.UI.Visibility
+  id: Visibility
+  parent: GHIElectronics.Endpoint.UI
+  children:
+  - GHIElectronics.Endpoint.UI.Visibility.Collapsed
+  - GHIElectronics.Endpoint.UI.Visibility.Hidden
+  - GHIElectronics.Endpoint.UI.Visibility.Visible
+  langs:
+  - csharp
+  - vb
+  name: Visibility
+  nameWithType: Visibility
+  fullName: GHIElectronics.Endpoint.UI.Visibility
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Visibility.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Visibility
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Visibility.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Visibility - Enum which describes 3 possible visibility options.
+  example: []
+  syntax:
+    content: public enum Visibility
+    content.vb: Public Enum Visibility
+- uid: GHIElectronics.Endpoint.UI.Visibility.Visible
+  commentId: F:GHIElectronics.Endpoint.UI.Visibility.Visible
+  id: Visible
+  parent: GHIElectronics.Endpoint.UI.Visibility
+  langs:
+  - csharp
+  - vb
+  name: Visible
+  nameWithType: Visibility.Visible
+  fullName: GHIElectronics.Endpoint.UI.Visibility.Visible
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Visibility.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Visible
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Visibility.cs
+    startLine: 13
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Normally visible.
+  example: []
+  syntax:
+    content: Visible = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.Visibility
+- uid: GHIElectronics.Endpoint.UI.Visibility.Hidden
+  commentId: F:GHIElectronics.Endpoint.UI.Visibility.Hidden
+  id: Hidden
+  parent: GHIElectronics.Endpoint.UI.Visibility
+  langs:
+  - csharp
+  - vb
+  name: Hidden
+  nameWithType: Visibility.Hidden
+  fullName: GHIElectronics.Endpoint.UI.Visibility.Hidden
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Visibility.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Hidden
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Visibility.cs
+    startLine: 18
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Occupies space in the layout, but is not visible (completely transparent).
+  example: []
+  syntax:
+    content: Hidden = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Visibility
+- uid: GHIElectronics.Endpoint.UI.Visibility.Collapsed
+  commentId: F:GHIElectronics.Endpoint.UI.Visibility.Collapsed
+  id: Collapsed
+  parent: GHIElectronics.Endpoint.UI.Visibility
+  langs:
+  - csharp
+  - vb
+  name: Collapsed
+  nameWithType: Visibility.Collapsed
+  fullName: GHIElectronics.Endpoint.UI.Visibility.Collapsed
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Visibility.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Collapsed
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Visibility.cs
+    startLine: 23
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Not visible and does not occupy any space in layout, as if it doesn't exist.
+  example: []
+  syntax:
+    content: Collapsed = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.Visibility
+references:
+- uid: GHIElectronics.Endpoint.UI
+  commentId: N:GHIElectronics.Endpoint.UI
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI
+  nameWithType: GHIElectronics.Endpoint.UI
+  fullName: GHIElectronics.Endpoint.UI
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+- uid: GHIElectronics.Endpoint.UI.Visibility
+  commentId: T:GHIElectronics.Endpoint.UI.Visibility
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.Visibility.html
+  name: Visibility
+  nameWithType: Visibility
+  fullName: GHIElectronics.Endpoint.UI.Visibility

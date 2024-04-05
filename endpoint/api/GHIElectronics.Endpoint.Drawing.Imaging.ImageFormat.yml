@@ -1,0 +1,895 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  commentId: T:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  id: ImageFormat
+  parent: GHIElectronics.Endpoint.Drawing.Imaging
+  children:
+  - GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.#ctor(System.Guid)
+  - GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Bmp
+  - GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Emf
+  - GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Equals(System.Object)
+  - GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Exif
+  - GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.GetHashCode
+  - GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Gif
+  - GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Guid
+  - GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Icon
+  - GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Jpeg
+  - GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Png
+  - GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.RawBitmap
+  - GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Tiff
+  - GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.ToString
+  - GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Wmf
+  langs:
+  - csharp
+  - vb
+  name: ImageFormat
+  nameWithType: ImageFormat
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ImageFormat
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 164
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing.Imaging
+  syntax:
+    content: public sealed class ImageFormat
+    content.vb: Public NotInheritable Class ImageFormat
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.#ctor(System.Guid)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.#ctor(System.Guid)
+  id: '#ctor(System.Guid)'
+  parent: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  langs:
+  - csharp
+  - vb
+  name: ImageFormat(Guid)
+  nameWithType: ImageFormat.ImageFormat(Guid)
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.ImageFormat(System.Guid)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 179
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing.Imaging
+  syntax:
+    content: public ImageFormat(Guid guid)
+    parameters:
+    - id: guid
+      type: System.Guid
+    content.vb: Public Sub New(guid As Guid)
+  overload: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.#ctor*
+  nameWithType.vb: ImageFormat.New(Guid)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.New(System.Guid)
+  name.vb: New(Guid)
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Guid
+  commentId: P:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Guid
+  id: Guid
+  parent: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  langs:
+  - csharp
+  - vb
+  name: Guid
+  nameWithType: ImageFormat.Guid
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Guid
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Guid
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 181
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing.Imaging
+  syntax:
+    content: public Guid Guid { get; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public ReadOnly Property Guid As Guid
+  overload: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Guid*
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.RawBitmap
+  commentId: P:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.RawBitmap
+  id: RawBitmap
+  parent: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  langs:
+  - csharp
+  - vb
+  name: RawBitmap
+  nameWithType: ImageFormat.RawBitmap
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.RawBitmap
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: RawBitmap
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 183
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing.Imaging
+  syntax:
+    content: public static ImageFormat RawBitmap { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+    content.vb: Public Shared ReadOnly Property RawBitmap As ImageFormat
+  overload: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.RawBitmap*
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Bmp
+  commentId: P:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Bmp
+  id: Bmp
+  parent: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  langs:
+  - csharp
+  - vb
+  name: Bmp
+  nameWithType: ImageFormat.Bmp
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Bmp
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Bmp
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 184
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing.Imaging
+  syntax:
+    content: public static ImageFormat Bmp { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+    content.vb: Public Shared ReadOnly Property Bmp As ImageFormat
+  overload: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Bmp*
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Emf
+  commentId: P:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Emf
+  id: Emf
+  parent: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  langs:
+  - csharp
+  - vb
+  name: Emf
+  nameWithType: ImageFormat.Emf
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Emf
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Emf
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 185
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing.Imaging
+  syntax:
+    content: public static ImageFormat Emf { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+    content.vb: Public Shared ReadOnly Property Emf As ImageFormat
+  overload: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Emf*
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Wmf
+  commentId: P:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Wmf
+  id: Wmf
+  parent: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  langs:
+  - csharp
+  - vb
+  name: Wmf
+  nameWithType: ImageFormat.Wmf
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Wmf
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Wmf
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 186
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing.Imaging
+  syntax:
+    content: public static ImageFormat Wmf { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+    content.vb: Public Shared ReadOnly Property Wmf As ImageFormat
+  overload: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Wmf*
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Gif
+  commentId: P:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Gif
+  id: Gif
+  parent: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  langs:
+  - csharp
+  - vb
+  name: Gif
+  nameWithType: ImageFormat.Gif
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Gif
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Gif
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 187
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing.Imaging
+  syntax:
+    content: public static ImageFormat Gif { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+    content.vb: Public Shared ReadOnly Property Gif As ImageFormat
+  overload: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Gif*
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Jpeg
+  commentId: P:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Jpeg
+  id: Jpeg
+  parent: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  langs:
+  - csharp
+  - vb
+  name: Jpeg
+  nameWithType: ImageFormat.Jpeg
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Jpeg
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Jpeg
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 188
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing.Imaging
+  syntax:
+    content: public static ImageFormat Jpeg { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+    content.vb: Public Shared ReadOnly Property Jpeg As ImageFormat
+  overload: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Jpeg*
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Png
+  commentId: P:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Png
+  id: Png
+  parent: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  langs:
+  - csharp
+  - vb
+  name: Png
+  nameWithType: ImageFormat.Png
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Png
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Png
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 189
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing.Imaging
+  syntax:
+    content: public static ImageFormat Png { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+    content.vb: Public Shared ReadOnly Property Png As ImageFormat
+  overload: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Png*
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Tiff
+  commentId: P:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Tiff
+  id: Tiff
+  parent: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  langs:
+  - csharp
+  - vb
+  name: Tiff
+  nameWithType: ImageFormat.Tiff
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Tiff
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Tiff
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 190
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing.Imaging
+  syntax:
+    content: public static ImageFormat Tiff { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+    content.vb: Public Shared ReadOnly Property Tiff As ImageFormat
+  overload: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Tiff*
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Exif
+  commentId: P:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Exif
+  id: Exif
+  parent: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  langs:
+  - csharp
+  - vb
+  name: Exif
+  nameWithType: ImageFormat.Exif
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Exif
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Exif
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 191
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing.Imaging
+  syntax:
+    content: public static ImageFormat Exif { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+    content.vb: Public Shared ReadOnly Property Exif As ImageFormat
+  overload: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Exif*
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Icon
+  commentId: P:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Icon
+  id: Icon
+  parent: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  langs:
+  - csharp
+  - vb
+  name: Icon
+  nameWithType: ImageFormat.Icon
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Icon
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Icon
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 192
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing.Imaging
+  syntax:
+    content: public static ImageFormat Icon { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+    content.vb: Public Shared ReadOnly Property Icon As ImageFormat
+  overload: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Icon*
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Equals(System.Object)
+  commentId: M:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  langs:
+  - csharp
+  - vb
+  name: Equals(object)
+  nameWithType: ImageFormat.Equals(object)
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Equals(object)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Equals
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 194
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing.Imaging
+  summary: Determines whether the specified object is equal to the current object.
+  example: []
+  syntax:
+    content: public override bool Equals(object o)
+    parameters:
+    - id: o
+      type: System.Object
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified object  is equal to the current object; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Overrides Function Equals(o As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Equals*
+  nameWithType.vb: ImageFormat.Equals(Object)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Equals(Object)
+  name.vb: Equals(Object)
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.GetHashCode
+  commentId: M:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.GetHashCode
+  id: GetHashCode
+  parent: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: ImageFormat.GetHashCode()
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: GetHashCode
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 196
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing.Imaging
+  summary: Serves as the default hash function.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A hash code for the current object.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.Object.GetHashCode
+  overload: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.GetHashCode*
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.ToString
+  commentId: M:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.ToString
+  id: ToString
+  parent: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: ImageFormat.ToString()
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.ToString()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ToString
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Image.cs
+    startLine: 198
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing.Imaging
+  summary: Returns a string that represents the current object.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.ToString*
+references:
+- uid: GHIElectronics.Endpoint.Drawing.Imaging
+  commentId: N:GHIElectronics.Endpoint.Drawing.Imaging
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing.Imaging
+  nameWithType: GHIElectronics.Endpoint.Drawing.Imaging
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Imaging
+    name: Imaging
+    href: GHIElectronics.Endpoint.Drawing.Imaging.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Imaging
+    name: Imaging
+    href: GHIElectronics.Endpoint.Drawing.Imaging.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.#ctor
+  href: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.html#GHIElectronics_Endpoint_Drawing_Imaging_ImageFormat__ctor_System_Guid_
+  name: ImageFormat
+  nameWithType: ImageFormat.ImageFormat
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.ImageFormat
+  nameWithType.vb: ImageFormat.New
+  fullName.vb: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.New
+  name.vb: New
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Guid*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Guid
+  href: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.html#GHIElectronics_Endpoint_Drawing_Imaging_ImageFormat_Guid
+  name: Guid
+  nameWithType: ImageFormat.Guid
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Guid
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.RawBitmap*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.RawBitmap
+  href: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.html#GHIElectronics_Endpoint_Drawing_Imaging_ImageFormat_RawBitmap
+  name: RawBitmap
+  nameWithType: ImageFormat.RawBitmap
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.RawBitmap
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  commentId: T:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+  parent: GHIElectronics.Endpoint.Drawing.Imaging
+  href: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.html
+  name: ImageFormat
+  nameWithType: ImageFormat
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Bmp*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Bmp
+  href: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.html#GHIElectronics_Endpoint_Drawing_Imaging_ImageFormat_Bmp
+  name: Bmp
+  nameWithType: ImageFormat.Bmp
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Bmp
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Emf*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Emf
+  href: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.html#GHIElectronics_Endpoint_Drawing_Imaging_ImageFormat_Emf
+  name: Emf
+  nameWithType: ImageFormat.Emf
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Emf
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Wmf*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Wmf
+  href: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.html#GHIElectronics_Endpoint_Drawing_Imaging_ImageFormat_Wmf
+  name: Wmf
+  nameWithType: ImageFormat.Wmf
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Wmf
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Gif*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Gif
+  href: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.html#GHIElectronics_Endpoint_Drawing_Imaging_ImageFormat_Gif
+  name: Gif
+  nameWithType: ImageFormat.Gif
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Gif
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Jpeg*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Jpeg
+  href: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.html#GHIElectronics_Endpoint_Drawing_Imaging_ImageFormat_Jpeg
+  name: Jpeg
+  nameWithType: ImageFormat.Jpeg
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Jpeg
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Png*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Png
+  href: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.html#GHIElectronics_Endpoint_Drawing_Imaging_ImageFormat_Png
+  name: Png
+  nameWithType: ImageFormat.Png
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Png
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Tiff*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Tiff
+  href: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.html#GHIElectronics_Endpoint_Drawing_Imaging_ImageFormat_Tiff
+  name: Tiff
+  nameWithType: ImageFormat.Tiff
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Tiff
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Exif*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Exif
+  href: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.html#GHIElectronics_Endpoint_Drawing_Imaging_ImageFormat_Exif
+  name: Exif
+  nameWithType: ImageFormat.Exif
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Exif
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Icon*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Icon
+  href: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.html#GHIElectronics_Endpoint_Drawing_Imaging_ImageFormat_Icon
+  name: Icon
+  nameWithType: ImageFormat.Icon
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Icon
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Equals*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Equals
+  href: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.html#GHIElectronics_Endpoint_Drawing_Imaging_ImageFormat_Equals_System_Object_
+  name: Equals
+  nameWithType: ImageFormat.Equals
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.GetHashCode*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.GetHashCode
+  href: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.html#GHIElectronics_Endpoint_Drawing_Imaging_ImageFormat_GetHashCode
+  name: GetHashCode
+  nameWithType: ImageFormat.GetHashCode
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.ToString*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.ToString
+  href: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.html#GHIElectronics_Endpoint_Drawing_Imaging_ImageFormat_ToString
+  name: ToString
+  nameWithType: ImageFormat.ToString
+  fullName: GHIElectronics.Endpoint.Drawing.Imaging.ImageFormat.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

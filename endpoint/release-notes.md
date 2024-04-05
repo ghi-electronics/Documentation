@@ -2,9 +2,26 @@
 
 ---
 
-## Endpoint OS
+## **0.1.4 - Beta (2024-5-4)**
 
-**0.1.3 - Beta (2024-8-3)**
+### Endpoint OS
+- Changes
+	- Added Adc
+	- Added PulseFeedback
+
+### Libraries
+- Changes
+	- Added UI
+	- Added Adc
+	- Added PulseFeedback (DrainDuration, EchoDuration, DurationUntilEcho)
+	- Display: Flush(..) supports flushing any size, anywhere within data buffer.
+	
+- Known Issues
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues		
+
+## **0.1.3 - Beta (2024-8-3)**
+
+### Endpoint OS
 
 - Changes
     - Added native Watchdog library
@@ -14,9 +31,8 @@
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues
 	
-## Visual Studio Extension
+### Visual Studio Extension
 
-**0.1.3 - Beta (2024-8-3)**
 
 - Changes
 	- Fixed deployment error when using extensions in languages other than English.
@@ -26,7 +42,6 @@
 ### VS Code Extension
 
 #### .NET VS Code Extension
-**0.1.3 - Beta (2024-8-3)**
 
 - Changes
     - None
@@ -41,8 +56,6 @@
 
 ### Libraries
 
-**0.1.3 - Beta (2024-8-3)**
-
 - Changes
     - SPI: Added change buffer_size 
 	- ADC: Rename Read() to ReadRaw(). Add Read (scaled to 3.3V)
@@ -53,8 +66,6 @@
 
 ### Drivers
 
-**0.1.3 - Beta (2024-8-3)**
-
 - Changes
     - Added VirtualKeyboard nuget
 	- Added ST7735 SPI display nuget
@@ -63,8 +74,6 @@
 
 ### Endpoint Config
 
-**0.1.3 - Beta (2024-8-3)**
-
 - Changes
     - Fixed 800x480 bootscreen setting
 - Known Issues
@@ -72,10 +81,9 @@
 	
 ---
 
+## **0.1.2 - Beta (2024-21-2)**
 
-## Endpoint OS
-
-**0.1.2 - Beta (2024-21-2)**
+### Endpoint OS
 
 - Changes
     - Added OpenCV
@@ -83,9 +91,7 @@
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues
 	
-## Visual Studio Extension
-
-**0.1.2 - Beta (2024-21-2)**
+### Visual Studio Extension
 
 - Changes
     - Improved deploying speed
@@ -94,16 +100,12 @@
 
 ### VS Code Extension
 
-**0.1.2 - Beta (2024-21-2)**
-
 - Changes
     - Fixed Ctrl+Shift+B doesn't work on non-Windows system
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues
 
 ### Libraries
-
-**0.1.2 - Beta (2024-13-2)**
 
 - Changes
     - Fixed can't initialize multiple ports: https://github.com/ghi-electronics/Endpoint-Libraries/issues/48
@@ -112,16 +114,12 @@
 
 ### Drivers
 
-**0.1.2 - Beta (2024-12-2)**
-
 - Changes
     - Add Avalonia Touch input driver
 - Known Issues
     https://github.com/ghi-electronics/endpoint-drivers/issues
 
 ### Endpoint Config
-
-**0.1.2 - Beta (2024-21-2)**
 
 - Changes
     - Add Enable Bootscreen setting
@@ -130,17 +128,15 @@
 	
 ---
 
-## Endpoint OS
+## **0.1.0 - Beta (2024-2-2)**
 
-**0.1.0 - Beta (2024-2-2)**
+### Endpoint OS
 
 - Initial Release
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues
 
-## Visual Studio Extension
-
-**0.1.0 - Beta ((2024-2-2)**
+### Visual Studio Extension
 
 - Initial Release
 - Known Issues
@@ -148,31 +144,23 @@
 
 ### VS Code Extension
 
-**0.1.0 - Beta (2024-2-2)**
-
 - Initial Release
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues
 
 ### Libraries
 
-**0.1.0 - Beta (2024-2-2)**
-
 - Initial Release
 - Known Issues
     - None.
 
 ### Drivers
-	
-**0.1.0 - Beta (2024-2-2)**
 
 - Initial Release
 - Known Issues
     https://github.com/ghi-electronics/endpoint-drivers/issues
 
 ### Endpoint Config
-
-**0.1.0 - Beta (2024-2-2)**
 
 - Initial Release
 

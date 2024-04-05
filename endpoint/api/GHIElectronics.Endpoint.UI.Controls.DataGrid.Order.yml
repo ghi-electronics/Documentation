@@ -1,0 +1,151 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.DataGrid.Order
+  id: DataGrid.Order
+  parent: GHIElectronics.Endpoint.UI.Controls
+  children:
+  - GHIElectronics.Endpoint.UI.Controls.DataGrid.Order.ASC
+  - GHIElectronics.Endpoint.UI.Controls.DataGrid.Order.DESC
+  langs:
+  - csharp
+  - vb
+  name: DataGrid.Order
+  nameWithType: DataGrid.Order
+  fullName: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Order
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs
+    startLine: 892
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  summary: The order in which rows are sorted.
+  remarks: 'ASC stands for ascending ex: 1 to 10 or A to Z. DESC stands for descending ex: 10 to 1 or Z to A.'
+  example: []
+  syntax:
+    content: public enum DataGrid.Order
+    content.vb: Public Enum DataGrid.Order
+- uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order.ASC
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.DataGrid.Order.ASC
+  id: ASC
+  parent: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order
+  langs:
+  - csharp
+  - vb
+  name: ASC
+  nameWithType: DataGrid.Order.ASC
+  fullName: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order.ASC
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ASC
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs
+    startLine: 896
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  summary: Ascending
+  example: []
+  syntax:
+    content: ASC = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order
+- uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order.DESC
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.DataGrid.Order.DESC
+  id: DESC
+  parent: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order
+  langs:
+  - csharp
+  - vb
+  name: DESC
+  nameWithType: DataGrid.Order.DESC
+  fullName: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order.DESC
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DESC
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs
+    startLine: 901
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  summary: Descending
+  example: []
+  syntax:
+    content: DESC = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order
+references:
+- uid: GHIElectronics.Endpoint.UI.Controls
+  commentId: N:GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Controls
+  nameWithType: GHIElectronics.Endpoint.UI.Controls
+  fullName: GHIElectronics.Endpoint.UI.Controls
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+- uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.DataGrid.Order
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.DataGrid.html
+  name: DataGrid.Order
+  nameWithType: DataGrid.Order
+  fullName: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid
+    name: DataGrid
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order
+    name: Order
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid
+    name: DataGrid
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order
+    name: Order
+    href: GHIElectronics.Endpoint.UI.Controls.DataGrid.Order.html

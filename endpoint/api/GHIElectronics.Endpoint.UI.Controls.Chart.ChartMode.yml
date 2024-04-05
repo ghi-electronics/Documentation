@@ -1,0 +1,144 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode
+  id: Chart.ChartMode
+  parent: GHIElectronics.Endpoint.UI.Controls
+  children:
+  - GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode.LineMode
+  - GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode.RectangleMode
+  langs:
+  - csharp
+  - vb
+  name: Chart.ChartMode
+  nameWithType: Chart.ChartMode
+  fullName: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/Chart.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ChartMode
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/Chart.cs
+    startLine: 11
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public enum Chart.ChartMode
+    content.vb: Public Enum Chart.ChartMode
+- uid: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode.LineMode
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode.LineMode
+  id: LineMode
+  parent: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode
+  langs:
+  - csharp
+  - vb
+  name: LineMode
+  nameWithType: Chart.ChartMode.LineMode
+  fullName: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode.LineMode
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/Chart.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: LineMode
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/Chart.cs
+    startLine: 12
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: LineMode = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode
+- uid: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode.RectangleMode
+  commentId: F:GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode.RectangleMode
+  id: RectangleMode
+  parent: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode
+  langs:
+  - csharp
+  - vb
+  name: RectangleMode
+  nameWithType: Chart.ChartMode.RectangleMode
+  fullName: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode.RectangleMode
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/Chart.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: RectangleMode
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/Chart.cs
+    startLine: 13
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: RectangleMode = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode
+references:
+- uid: GHIElectronics.Endpoint.UI.Controls
+  commentId: N:GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Controls
+  nameWithType: GHIElectronics.Endpoint.UI.Controls
+  fullName: GHIElectronics.Endpoint.UI.Controls
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+- uid: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.Chart.html
+  name: Chart.ChartMode
+  nameWithType: Chart.ChartMode
+  fullName: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart
+    name: Chart
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode
+    name: ChartMode
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart
+    name: Chart
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode
+    name: ChartMode
+    href: GHIElectronics.Endpoint.UI.Controls.Chart.ChartMode.html

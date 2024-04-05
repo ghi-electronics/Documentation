@@ -1,0 +1,1185 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  id: TextRunCollection
+  parent: GHIElectronics.Endpoint.UI.Controls
+  children:
+  - GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Add(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  - GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Add(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.UI.Media.Color)
+  - GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Clear
+  - GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Contains(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  - GHIElectronics.Endpoint.UI.Controls.TextRunCollection.CopyTo(System.Array,System.Int32)
+  - GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Count
+  - GHIElectronics.Endpoint.UI.Controls.TextRunCollection.GetEnumerator
+  - GHIElectronics.Endpoint.UI.Controls.TextRunCollection.IndexOf(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  - GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Insert(System.Int32,GHIElectronics.Endpoint.UI.Controls.TextRun)
+  - GHIElectronics.Endpoint.UI.Controls.TextRunCollection.IsSynchronized
+  - GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Item(System.Int32)
+  - GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Remove(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  - GHIElectronics.Endpoint.UI.Controls.TextRunCollection.RemoveAt(System.Int32)
+  - GHIElectronics.Endpoint.UI.Controls.TextRunCollection.SyncRoot
+  langs:
+  - csharp
+  - vb
+  name: TextRunCollection
+  nameWithType: TextRunCollection
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: TextRunCollection
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: 'public class TextRunCollection : ICollection, IEnumerable'
+    content.vb: Public Class TextRunCollection Implements ICollection, IEnumerable
+  inheritance:
+  - System.Object
+  implements:
+  - System.Collections.ICollection
+  - System.Collections.IEnumerable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Count
+  commentId: P:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Count
+  id: Count
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: TextRunCollection.Count
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Count
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Count
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+    startLine: 18
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  summary: Gets the number of elements contained in the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: The number of elements contained in the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public ReadOnly Property Count As Integer
+  overload: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Count*
+  implements:
+  - System.Collections.ICollection.Count
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Add(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.UI.Media.Color)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Add(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.UI.Media.Color)
+  id: Add(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.UI.Media.Color)
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  langs:
+  - csharp
+  - vb
+  name: Add(string, Font, Color)
+  nameWithType: TextRunCollection.Add(string, Font, Color)
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Add(string, GHIElectronics.Endpoint.Drawing.Font, GHIElectronics.Endpoint.UI.Media.Color)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Add
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+    startLine: 20
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public int Add(string text, Font font, Color foreColor)
+    parameters:
+    - id: text
+      type: System.String
+    - id: font
+      type: GHIElectronics.Endpoint.Drawing.Font
+    - id: foreColor
+      type: GHIElectronics.Endpoint.UI.Media.Color
+    return:
+      type: System.Int32
+    content.vb: Public Function Add(text As String, font As Font, foreColor As Color) As Integer
+  overload: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Add*
+  nameWithType.vb: TextRunCollection.Add(String, Font, Color)
+  fullName.vb: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Add(String, GHIElectronics.Endpoint.Drawing.Font, GHIElectronics.Endpoint.UI.Media.Color)
+  name.vb: Add(String, Font, Color)
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Add(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Add(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  id: Add(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  langs:
+  - csharp
+  - vb
+  name: Add(TextRun)
+  nameWithType: TextRunCollection.Add(TextRun)
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Add(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Add
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+    startLine: 22
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public int Add(TextRun textRun)
+    parameters:
+    - id: textRun
+      type: GHIElectronics.Endpoint.UI.Controls.TextRun
+    return:
+      type: System.Int32
+    content.vb: Public Function Add(textRun As TextRun) As Integer
+  overload: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Add*
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Clear
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Clear
+  id: Clear
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: TextRunCollection.Clear()
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Clear()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Clear
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+    startLine: 32
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Clear*
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Contains(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Contains(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  id: Contains(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  langs:
+  - csharp
+  - vb
+  name: Contains(TextRun)
+  nameWithType: TextRunCollection.Contains(TextRun)
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Contains(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Contains
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+    startLine: 37
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public bool Contains(TextRun run)
+    parameters:
+    - id: run
+      type: GHIElectronics.Endpoint.UI.Controls.TextRun
+    return:
+      type: System.Boolean
+    content.vb: Public Function Contains(run As TextRun) As Boolean
+  overload: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Contains*
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.IndexOf(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.IndexOf(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  id: IndexOf(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  langs:
+  - csharp
+  - vb
+  name: IndexOf(TextRun)
+  nameWithType: TextRunCollection.IndexOf(TextRun)
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.IndexOf(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: IndexOf
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+    startLine: 39
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public int IndexOf(TextRun run)
+    parameters:
+    - id: run
+      type: GHIElectronics.Endpoint.UI.Controls.TextRun
+    return:
+      type: System.Int32
+    content.vb: Public Function IndexOf(run As TextRun) As Integer
+  overload: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.IndexOf*
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Insert(System.Int32,GHIElectronics.Endpoint.UI.Controls.TextRun)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Insert(System.Int32,GHIElectronics.Endpoint.UI.Controls.TextRun)
+  id: Insert(System.Int32,GHIElectronics.Endpoint.UI.Controls.TextRun)
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  langs:
+  - csharp
+  - vb
+  name: Insert(int, TextRun)
+  nameWithType: TextRunCollection.Insert(int, TextRun)
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Insert(int, GHIElectronics.Endpoint.UI.Controls.TextRun)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Insert
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+    startLine: 41
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public void Insert(int index, TextRun run)
+    parameters:
+    - id: index
+      type: System.Int32
+    - id: run
+      type: GHIElectronics.Endpoint.UI.Controls.TextRun
+    content.vb: Public Sub Insert(index As Integer, run As TextRun)
+  overload: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Insert*
+  nameWithType.vb: TextRunCollection.Insert(Integer, TextRun)
+  fullName.vb: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Insert(Integer, GHIElectronics.Endpoint.UI.Controls.TextRun)
+  name.vb: Insert(Integer, TextRun)
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Remove(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Remove(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  id: Remove(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  langs:
+  - csharp
+  - vb
+  name: Remove(TextRun)
+  nameWithType: TextRunCollection.Remove(TextRun)
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Remove(GHIElectronics.Endpoint.UI.Controls.TextRun)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Remove
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+    startLine: 46
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public void Remove(TextRun run)
+    parameters:
+    - id: run
+      type: GHIElectronics.Endpoint.UI.Controls.TextRun
+    content.vb: Public Sub Remove(run As TextRun)
+  overload: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Remove*
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.RemoveAt(System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.RemoveAt(System.Int32)
+  id: RemoveAt(System.Int32)
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  langs:
+  - csharp
+  - vb
+  name: RemoveAt(int)
+  nameWithType: TextRunCollection.RemoveAt(int)
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.RemoveAt(int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: RemoveAt
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+    startLine: 51
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public void RemoveAt(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+    content.vb: Public Sub RemoveAt(index As Integer)
+  overload: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.RemoveAt*
+  nameWithType.vb: TextRunCollection.RemoveAt(Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.RemoveAt(Integer)
+  name.vb: RemoveAt(Integer)
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Item(System.Int32)
+  commentId: P:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  langs:
+  - csharp
+  - vb
+  name: this[int]
+  nameWithType: TextRunCollection.this[int]
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.this[int]
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: this[]
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+    startLine: 61
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public TextRun this[int index] { get; set; }
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: GHIElectronics.Endpoint.UI.Controls.TextRun
+    content.vb: Public Default Property this[](index As Integer) As TextRun
+  overload: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Item*
+  nameWithType.vb: TextRunCollection.this[](Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.this[](Integer)
+  name.vb: this[](Integer)
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.IsSynchronized
+  commentId: P:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.IsSynchronized
+  id: IsSynchronized
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  langs:
+  - csharp
+  - vb
+  name: IsSynchronized
+  nameWithType: TextRunCollection.IsSynchronized
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.IsSynchronized
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: IsSynchronized
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+    startLine: 72
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  summary: Gets a value indicating whether access to the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref> is synchronized (thread safe).
+  example: []
+  syntax:
+    content: public bool IsSynchronized { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if access to the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref> is synchronized (thread safe); otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public ReadOnly Property IsSynchronized As Boolean
+  overload: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.IsSynchronized*
+  implements:
+  - System.Collections.ICollection.IsSynchronized
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.CopyTo(System.Array,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.CopyTo(System.Array,System.Int32)
+  id: CopyTo(System.Array,System.Int32)
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  langs:
+  - csharp
+  - vb
+  name: CopyTo(Array, int)
+  nameWithType: TextRunCollection.CopyTo(Array, int)
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.CopyTo(System.Array, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: CopyTo
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+    startLine: 74
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  summary: Copies the elements of the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref> to an <xref href="System.Array" data-throw-if-not-resolved="false"></xref>, starting at a particular <xref href="System.Array" data-throw-if-not-resolved="false"></xref> index.
+  example: []
+  syntax:
+    content: public void CopyTo(Array array, int index)
+    parameters:
+    - id: array
+      type: System.Array
+      description: The one-dimensional <xref href="System.Array" data-throw-if-not-resolved="false"></xref> that is the destination of the elements copied from <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref>. The <xref href="System.Array" data-throw-if-not-resolved="false"></xref> must have zero-based indexing.
+    - id: index
+      type: System.Int32
+      description: The zero-based index in <code class="paramref">array</code> at which copying begins.
+    content.vb: Public Sub CopyTo(array As Array, index As Integer)
+  overload: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.CopyTo*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: <code class="paramref">array</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: <code class="paramref">index</code> is less than zero.
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      <code class="paramref">array</code> is multidimensional.  
+
+       -or-  
+
+       The number of elements in the source <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref> is greater than the available space from <code class="paramref">index</code> to the end of the destination <code class="paramref">array</code>.  
+
+       -or-  
+
+       The type of the source <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref> cannot be cast automatically to the type of the destination <code class="paramref">array</code>.
+  implements:
+  - System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+  nameWithType.vb: TextRunCollection.CopyTo(Array, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.CopyTo(System.Array, Integer)
+  name.vb: CopyTo(Array, Integer)
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.SyncRoot
+  commentId: P:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.SyncRoot
+  id: SyncRoot
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  langs:
+  - csharp
+  - vb
+  name: SyncRoot
+  nameWithType: TextRunCollection.SyncRoot
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.SyncRoot
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SyncRoot
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+    startLine: 76
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  summary: Gets an object that can be used to synchronize access to the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public object SyncRoot { get; }
+    parameters: []
+    return:
+      type: System.Object
+      description: An object that can be used to synchronize access to the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public ReadOnly Property SyncRoot As Object
+  overload: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.SyncRoot*
+  implements:
+  - System.Collections.ICollection.SyncRoot
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.GetEnumerator
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.GetEnumerator
+  id: GetEnumerator
+  parent: GHIElectronics.Endpoint.UI.Controls.TextRunCollection
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: TextRunCollection.GetEnumerator()
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.GetEnumerator()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: GetEnumerator
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/TextRunCollection.cs
+    startLine: 82
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  summary: Returns an enumerator that iterates through a collection.
+  example: []
+  syntax:
+    content: public IEnumerator GetEnumerator()
+    return:
+      type: System.Collections.IEnumerator
+      description: An <xref href="System.Collections.IEnumerator" data-throw-if-not-resolved="false"></xref> object that can be used to iterate through the collection.
+    content.vb: Public Function GetEnumerator() As IEnumerator
+  overload: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.GetEnumerator*
+  implements:
+  - System.Collections.IEnumerable.GetEnumerator
+references:
+- uid: GHIElectronics.Endpoint.UI.Controls
+  commentId: N:GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Controls
+  nameWithType: GHIElectronics.Endpoint.UI.Controls
+  fullName: GHIElectronics.Endpoint.UI.Controls
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Collections.ICollection
+  commentId: T:System.Collections.ICollection
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection
+  name: ICollection
+  nameWithType: ICollection
+  fullName: System.Collections.ICollection
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Count*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Count
+  href: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.html#GHIElectronics_Endpoint_UI_Controls_TextRunCollection_Count
+  name: Count
+  nameWithType: TextRunCollection.Count
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Count
+- uid: System.Collections.ICollection.Count
+  commentId: P:System.Collections.ICollection.Count
+  parent: System.Collections.ICollection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection.count
+  name: Count
+  nameWithType: ICollection.Count
+  fullName: System.Collections.ICollection.Count
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Add*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Add
+  href: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.html#GHIElectronics_Endpoint_UI_Controls_TextRunCollection_Add_System_String_GHIElectronics_Endpoint_Drawing_Font_GHIElectronics_Endpoint_UI_Media_Color_
+  name: Add
+  nameWithType: TextRunCollection.Add
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Add
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: GHIElectronics.Endpoint.Drawing.Font
+  commentId: T:GHIElectronics.Endpoint.Drawing.Font
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.Font.html
+  name: Font
+  nameWithType: Font
+  fullName: GHIElectronics.Endpoint.Drawing.Font
+- uid: GHIElectronics.Endpoint.UI.Media.Color
+  commentId: T:GHIElectronics.Endpoint.UI.Media.Color
+  parent: GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.Endpoint.UI.Media.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: GHIElectronics.Endpoint.UI.Media.Color
+- uid: GHIElectronics.Endpoint.Drawing
+  commentId: N:GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing
+  nameWithType: GHIElectronics.Endpoint.Drawing
+  fullName: GHIElectronics.Endpoint.Drawing
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+- uid: GHIElectronics.Endpoint.UI.Media
+  commentId: N:GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Media
+  nameWithType: GHIElectronics.Endpoint.UI.Media
+  fullName: GHIElectronics.Endpoint.UI.Media
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Media
+    name: Media
+    href: GHIElectronics.Endpoint.UI.Media.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Media
+    name: Media
+    href: GHIElectronics.Endpoint.UI.Media.html
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRun
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.TextRun
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.TextRun.html
+  name: TextRun
+  nameWithType: TextRun
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRun
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Clear*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Clear
+  href: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.html#GHIElectronics_Endpoint_UI_Controls_TextRunCollection_Clear
+  name: Clear
+  nameWithType: TextRunCollection.Clear
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Clear
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Contains*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Contains
+  href: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.html#GHIElectronics_Endpoint_UI_Controls_TextRunCollection_Contains_GHIElectronics_Endpoint_UI_Controls_TextRun_
+  name: Contains
+  nameWithType: TextRunCollection.Contains
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Contains
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.IndexOf*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.IndexOf
+  href: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.html#GHIElectronics_Endpoint_UI_Controls_TextRunCollection_IndexOf_GHIElectronics_Endpoint_UI_Controls_TextRun_
+  name: IndexOf
+  nameWithType: TextRunCollection.IndexOf
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.IndexOf
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Insert*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Insert
+  href: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.html#GHIElectronics_Endpoint_UI_Controls_TextRunCollection_Insert_System_Int32_GHIElectronics_Endpoint_UI_Controls_TextRun_
+  name: Insert
+  nameWithType: TextRunCollection.Insert
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Insert
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Remove*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Remove
+  href: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.html#GHIElectronics_Endpoint_UI_Controls_TextRunCollection_Remove_GHIElectronics_Endpoint_UI_Controls_TextRun_
+  name: Remove
+  nameWithType: TextRunCollection.Remove
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Remove
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.RemoveAt*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.RemoveAt
+  href: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.html#GHIElectronics_Endpoint_UI_Controls_TextRunCollection_RemoveAt_System_Int32_
+  name: RemoveAt
+  nameWithType: TextRunCollection.RemoveAt
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.RemoveAt
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Item*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.Item
+  href: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.html#GHIElectronics_Endpoint_UI_Controls_TextRunCollection_Item_System_Int32_
+  name: this
+  nameWithType: TextRunCollection.this
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.this
+  nameWithType.vb: TextRunCollection.this[]
+  fullName.vb: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.this[]
+  name.vb: this[]
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.IsSynchronized*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.IsSynchronized
+  href: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.html#GHIElectronics_Endpoint_UI_Controls_TextRunCollection_IsSynchronized
+  name: IsSynchronized
+  nameWithType: TextRunCollection.IsSynchronized
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.IsSynchronized
+- uid: System.Collections.ICollection.IsSynchronized
+  commentId: P:System.Collections.ICollection.IsSynchronized
+  parent: System.Collections.ICollection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection.issynchronized
+  name: IsSynchronized
+  nameWithType: ICollection.IsSynchronized
+  fullName: System.Collections.ICollection.IsSynchronized
+- uid: System.Array
+  commentId: T:System.Array
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.array
+  name: Array
+  nameWithType: Array
+  fullName: System.Array
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception
+  name: ArgumentOutOfRangeException
+  nameWithType: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.CopyTo*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.CopyTo
+  href: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.html#GHIElectronics_Endpoint_UI_Controls_TextRunCollection_CopyTo_System_Array_System_Int32_
+  name: CopyTo
+  nameWithType: TextRunCollection.CopyTo
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.CopyTo
+- uid: System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+  commentId: M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+  parent: System.Collections.ICollection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection.copyto
+  name: CopyTo(Array, int)
+  nameWithType: ICollection.CopyTo(Array, int)
+  fullName: System.Collections.ICollection.CopyTo(System.Array, int)
+  nameWithType.vb: ICollection.CopyTo(Array, Integer)
+  fullName.vb: System.Collections.ICollection.CopyTo(System.Array, Integer)
+  name.vb: CopyTo(Array, Integer)
+  spec.csharp:
+  - uid: System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.icollection.copyto
+  - name: (
+  - uid: System.Array
+    name: Array
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.array
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.icollection.copyto
+  - name: (
+  - uid: System.Array
+    name: Array
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.array
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.SyncRoot*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.SyncRoot
+  href: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.html#GHIElectronics_Endpoint_UI_Controls_TextRunCollection_SyncRoot
+  name: SyncRoot
+  nameWithType: TextRunCollection.SyncRoot
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.SyncRoot
+- uid: System.Collections.ICollection.SyncRoot
+  commentId: P:System.Collections.ICollection.SyncRoot
+  parent: System.Collections.ICollection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection.syncroot
+  name: SyncRoot
+  nameWithType: ICollection.SyncRoot
+  fullName: System.Collections.ICollection.SyncRoot
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.GetEnumerator*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.TextRunCollection.GetEnumerator
+  href: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.html#GHIElectronics_Endpoint_UI_Controls_TextRunCollection_GetEnumerator
+  name: GetEnumerator
+  nameWithType: TextRunCollection.GetEnumerator
+  fullName: GHIElectronics.Endpoint.UI.Controls.TextRunCollection.GetEnumerator
+- uid: System.Collections.IEnumerable.GetEnumerator
+  commentId: M:System.Collections.IEnumerable.GetEnumerator
+  parent: System.Collections.IEnumerable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable.GetEnumerator()
+  fullName: System.Collections.IEnumerable.GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.IEnumerable.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.IEnumerable.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable.getenumerator
+  - name: (
+  - name: )

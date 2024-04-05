@@ -1,0 +1,126 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.ReasonSessionEnding
+  commentId: T:GHIElectronics.Endpoint.UI.ReasonSessionEnding
+  id: ReasonSessionEnding
+  parent: GHIElectronics.Endpoint.UI
+  children:
+  - GHIElectronics.Endpoint.UI.ReasonSessionEnding.Logoff
+  - GHIElectronics.Endpoint.UI.ReasonSessionEnding.Shutdown
+  langs:
+  - csharp
+  - vb
+  name: ReasonSessionEnding
+  nameWithType: ReasonSessionEnding
+  fullName: GHIElectronics.Endpoint.UI.ReasonSessionEnding
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ReasonSessionEnding
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 979
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Enum for ReasonSessionEnding
+  example: []
+  syntax:
+    content: 'public enum ReasonSessionEnding : byte'
+    content.vb: Public Enum ReasonSessionEnding As Byte
+- uid: GHIElectronics.Endpoint.UI.ReasonSessionEnding.Logoff
+  commentId: F:GHIElectronics.Endpoint.UI.ReasonSessionEnding.Logoff
+  id: Logoff
+  parent: GHIElectronics.Endpoint.UI.ReasonSessionEnding
+  langs:
+  - csharp
+  - vb
+  name: Logoff
+  nameWithType: ReasonSessionEnding.Logoff
+  fullName: GHIElectronics.Endpoint.UI.ReasonSessionEnding.Logoff
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Logoff
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 983
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: ''
+  example: []
+  syntax:
+    content: Logoff = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.ReasonSessionEnding
+- uid: GHIElectronics.Endpoint.UI.ReasonSessionEnding.Shutdown
+  commentId: F:GHIElectronics.Endpoint.UI.ReasonSessionEnding.Shutdown
+  id: Shutdown
+  parent: GHIElectronics.Endpoint.UI.ReasonSessionEnding
+  langs:
+  - csharp
+  - vb
+  name: Shutdown
+  nameWithType: ReasonSessionEnding.Shutdown
+  fullName: GHIElectronics.Endpoint.UI.ReasonSessionEnding.Shutdown
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Shutdown
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 987
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: ''
+  example: []
+  syntax:
+    content: Shutdown = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.ReasonSessionEnding
+references:
+- uid: GHIElectronics.Endpoint.UI
+  commentId: N:GHIElectronics.Endpoint.UI
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI
+  nameWithType: GHIElectronics.Endpoint.UI
+  fullName: GHIElectronics.Endpoint.UI
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+- uid: GHIElectronics.Endpoint.UI.ReasonSessionEnding
+  commentId: T:GHIElectronics.Endpoint.UI.ReasonSessionEnding
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.ReasonSessionEnding.html
+  name: ReasonSessionEnding
+  nameWithType: ReasonSessionEnding
+  fullName: GHIElectronics.Endpoint.UI.ReasonSessionEnding

@@ -1,0 +1,174 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.VerticalAlignment
+  commentId: T:GHIElectronics.Endpoint.UI.VerticalAlignment
+  id: VerticalAlignment
+  parent: GHIElectronics.Endpoint.UI
+  children:
+  - GHIElectronics.Endpoint.UI.VerticalAlignment.Bottom
+  - GHIElectronics.Endpoint.UI.VerticalAlignment.Center
+  - GHIElectronics.Endpoint.UI.VerticalAlignment.Stretch
+  - GHIElectronics.Endpoint.UI.VerticalAlignment.Top
+  langs:
+  - csharp
+  - vb
+  name: VerticalAlignment
+  nameWithType: VerticalAlignment
+  fullName: GHIElectronics.Endpoint.UI.VerticalAlignment
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/VerticalAlignment.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: VerticalAlignment
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/VerticalAlignment.cs
+    startLine: 1
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  syntax:
+    content: public enum VerticalAlignment
+    content.vb: Public Enum VerticalAlignment
+- uid: GHIElectronics.Endpoint.UI.VerticalAlignment.Top
+  commentId: F:GHIElectronics.Endpoint.UI.VerticalAlignment.Top
+  id: Top
+  parent: GHIElectronics.Endpoint.UI.VerticalAlignment
+  langs:
+  - csharp
+  - vb
+  name: Top
+  nameWithType: VerticalAlignment.Top
+  fullName: GHIElectronics.Endpoint.UI.VerticalAlignment.Top
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/VerticalAlignment.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Top
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/VerticalAlignment.cs
+    startLine: 2
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  syntax:
+    content: Top = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.VerticalAlignment
+- uid: GHIElectronics.Endpoint.UI.VerticalAlignment.Center
+  commentId: F:GHIElectronics.Endpoint.UI.VerticalAlignment.Center
+  id: Center
+  parent: GHIElectronics.Endpoint.UI.VerticalAlignment
+  langs:
+  - csharp
+  - vb
+  name: Center
+  nameWithType: VerticalAlignment.Center
+  fullName: GHIElectronics.Endpoint.UI.VerticalAlignment.Center
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/VerticalAlignment.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Center
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/VerticalAlignment.cs
+    startLine: 3
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  syntax:
+    content: Center = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.VerticalAlignment
+- uid: GHIElectronics.Endpoint.UI.VerticalAlignment.Bottom
+  commentId: F:GHIElectronics.Endpoint.UI.VerticalAlignment.Bottom
+  id: Bottom
+  parent: GHIElectronics.Endpoint.UI.VerticalAlignment
+  langs:
+  - csharp
+  - vb
+  name: Bottom
+  nameWithType: VerticalAlignment.Bottom
+  fullName: GHIElectronics.Endpoint.UI.VerticalAlignment.Bottom
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/VerticalAlignment.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Bottom
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/VerticalAlignment.cs
+    startLine: 4
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  syntax:
+    content: Bottom = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.VerticalAlignment
+- uid: GHIElectronics.Endpoint.UI.VerticalAlignment.Stretch
+  commentId: F:GHIElectronics.Endpoint.UI.VerticalAlignment.Stretch
+  id: Stretch
+  parent: GHIElectronics.Endpoint.UI.VerticalAlignment
+  langs:
+  - csharp
+  - vb
+  name: Stretch
+  nameWithType: VerticalAlignment.Stretch
+  fullName: GHIElectronics.Endpoint.UI.VerticalAlignment.Stretch
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/VerticalAlignment.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Stretch
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/VerticalAlignment.cs
+    startLine: 5
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  syntax:
+    content: Stretch = 3
+    return:
+      type: GHIElectronics.Endpoint.UI.VerticalAlignment
+references:
+- uid: GHIElectronics.Endpoint.UI
+  commentId: N:GHIElectronics.Endpoint.UI
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI
+  nameWithType: GHIElectronics.Endpoint.UI
+  fullName: GHIElectronics.Endpoint.UI
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+- uid: GHIElectronics.Endpoint.UI.VerticalAlignment
+  commentId: T:GHIElectronics.Endpoint.UI.VerticalAlignment
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.VerticalAlignment.html
+  name: VerticalAlignment
+  nameWithType: VerticalAlignment
+  fullName: GHIElectronics.Endpoint.UI.VerticalAlignment

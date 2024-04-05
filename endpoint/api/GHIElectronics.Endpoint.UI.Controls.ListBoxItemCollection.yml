@@ -1,0 +1,1180 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  id: ListBoxItemCollection
+  parent: GHIElectronics.Endpoint.UI.Controls
+  children:
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.#ctor(GHIElectronics.Endpoint.UI.Controls.ListBox,GHIElectronics.Endpoint.UI.UIElementCollection)
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Add(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Add(GHIElectronics.Endpoint.UI.UIElement)
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Clear
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Contains(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.CopyTo(System.Array,System.Int32)
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Count
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.GetEnumerator
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.IndexOf(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Insert(System.Int32,GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.IsSynchronized
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Item(System.Int32)
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Remove(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.RemoveAt(System.Int32)
+  - GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.SyncRoot
+  langs:
+  - csharp
+  - vb
+  name: ListBoxItemCollection
+  nameWithType: ListBoxItemCollection
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ListBoxItemCollection
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+    startLine: 4
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: 'public class ListBoxItemCollection : ICollection, IEnumerable'
+    content.vb: Public Class ListBoxItemCollection Implements ICollection, IEnumerable
+  inheritance:
+  - System.Object
+  implements:
+  - System.Collections.ICollection
+  - System.Collections.IEnumerable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.#ctor(GHIElectronics.Endpoint.UI.Controls.ListBox,GHIElectronics.Endpoint.UI.UIElementCollection)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.#ctor(GHIElectronics.Endpoint.UI.Controls.ListBox,GHIElectronics.Endpoint.UI.UIElementCollection)
+  id: '#ctor(GHIElectronics.Endpoint.UI.Controls.ListBox,GHIElectronics.Endpoint.UI.UIElementCollection)'
+  parent: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  langs:
+  - csharp
+  - vb
+  name: ListBoxItemCollection(ListBox, UIElementCollection)
+  nameWithType: ListBoxItemCollection.ListBoxItemCollection(ListBox, UIElementCollection)
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.ListBoxItemCollection(GHIElectronics.Endpoint.UI.Controls.ListBox, GHIElectronics.Endpoint.UI.UIElementCollection)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+    startLine: 7
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public ListBoxItemCollection(ListBox listBox, UIElementCollection items)
+    parameters:
+    - id: listBox
+      type: GHIElectronics.Endpoint.UI.Controls.ListBox
+    - id: items
+      type: GHIElectronics.Endpoint.UI.UIElementCollection
+    content.vb: Public Sub New(listBox As ListBox, items As UIElementCollection)
+  overload: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.#ctor*
+  nameWithType.vb: ListBoxItemCollection.New(ListBox, UIElementCollection)
+  fullName.vb: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.New(GHIElectronics.Endpoint.UI.Controls.ListBox, GHIElectronics.Endpoint.UI.UIElementCollection)
+  name.vb: New(ListBox, UIElementCollection)
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Add(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Add(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  id: Add(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  parent: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  langs:
+  - csharp
+  - vb
+  name: Add(ListBoxItem)
+  nameWithType: ListBoxItemCollection.Add(ListBoxItem)
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Add(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Add
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+    startLine: 12
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public int Add(ListBoxItem item)
+    parameters:
+    - id: item
+      type: GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+    return:
+      type: System.Int32
+    content.vb: Public Function Add(item As ListBoxItem) As Integer
+  overload: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Add*
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Add(GHIElectronics.Endpoint.UI.UIElement)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Add(GHIElectronics.Endpoint.UI.UIElement)
+  id: Add(GHIElectronics.Endpoint.UI.UIElement)
+  parent: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  langs:
+  - csharp
+  - vb
+  name: Add(UIElement)
+  nameWithType: ListBoxItemCollection.Add(UIElement)
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Add(GHIElectronics.Endpoint.UI.UIElement)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Add
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+    startLine: 18
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public int Add(UIElement element)
+    parameters:
+    - id: element
+      type: GHIElectronics.Endpoint.UI.UIElement
+    return:
+      type: System.Int32
+    content.vb: Public Function Add(element As UIElement) As Integer
+  overload: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Add*
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Clear
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Clear
+  id: Clear
+  parent: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: ListBoxItemCollection.Clear()
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Clear()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Clear
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+    startLine: 25
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Clear*
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Contains(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Contains(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  id: Contains(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  parent: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  langs:
+  - csharp
+  - vb
+  name: Contains(ListBoxItem)
+  nameWithType: ListBoxItemCollection.Contains(ListBoxItem)
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Contains(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Contains
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+    startLine: 27
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public bool Contains(ListBoxItem item)
+    parameters:
+    - id: item
+      type: GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+    return:
+      type: System.Boolean
+    content.vb: Public Function Contains(item As ListBoxItem) As Boolean
+  overload: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Contains*
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Item(System.Int32)
+  commentId: P:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  langs:
+  - csharp
+  - vb
+  name: this[int]
+  nameWithType: ListBoxItemCollection.this[int]
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.this[int]
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: this[]
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+    startLine: 29
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public ListBoxItem this[int index] { get; set; }
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+    content.vb: Public Default Property this[](index As Integer) As ListBoxItem
+  overload: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Item*
+  nameWithType.vb: ListBoxItemCollection.this[](Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.this[](Integer)
+  name.vb: this[](Integer)
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.IndexOf(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.IndexOf(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  id: IndexOf(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  parent: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  langs:
+  - csharp
+  - vb
+  name: IndexOf(ListBoxItem)
+  nameWithType: ListBoxItemCollection.IndexOf(ListBoxItem)
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.IndexOf(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: IndexOf
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+    startLine: 34
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public int IndexOf(ListBoxItem item)
+    parameters:
+    - id: item
+      type: GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+    return:
+      type: System.Int32
+    content.vb: Public Function IndexOf(item As ListBoxItem) As Integer
+  overload: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.IndexOf*
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Insert(System.Int32,GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Insert(System.Int32,GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  id: Insert(System.Int32,GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  parent: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  langs:
+  - csharp
+  - vb
+  name: Insert(int, ListBoxItem)
+  nameWithType: ListBoxItemCollection.Insert(int, ListBoxItem)
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Insert(int, GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Insert
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+    startLine: 36
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public void Insert(int index, ListBoxItem item)
+    parameters:
+    - id: index
+      type: System.Int32
+    - id: item
+      type: GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+    content.vb: Public Sub Insert(index As Integer, item As ListBoxItem)
+  overload: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Insert*
+  nameWithType.vb: ListBoxItemCollection.Insert(Integer, ListBoxItem)
+  fullName.vb: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Insert(Integer, GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  name.vb: Insert(Integer, ListBoxItem)
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Remove(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Remove(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  id: Remove(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  parent: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  langs:
+  - csharp
+  - vb
+  name: Remove(ListBoxItem)
+  nameWithType: ListBoxItemCollection.Remove(ListBoxItem)
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Remove(GHIElectronics.Endpoint.UI.Controls.ListBoxItem)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Remove
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+    startLine: 41
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public void Remove(ListBoxItem item)
+    parameters:
+    - id: item
+      type: GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+    content.vb: Public Sub Remove(item As ListBoxItem)
+  overload: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Remove*
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.RemoveAt(System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.RemoveAt(System.Int32)
+  id: RemoveAt(System.Int32)
+  parent: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  langs:
+  - csharp
+  - vb
+  name: RemoveAt(int)
+  nameWithType: ListBoxItemCollection.RemoveAt(int)
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.RemoveAt(int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: RemoveAt
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+    startLine: 46
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  syntax:
+    content: public void RemoveAt(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+    content.vb: Public Sub RemoveAt(index As Integer)
+  overload: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.RemoveAt*
+  nameWithType.vb: ListBoxItemCollection.RemoveAt(Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.RemoveAt(Integer)
+  name.vb: RemoveAt(Integer)
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.CopyTo(System.Array,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.CopyTo(System.Array,System.Int32)
+  id: CopyTo(System.Array,System.Int32)
+  parent: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  langs:
+  - csharp
+  - vb
+  name: CopyTo(Array, int)
+  nameWithType: ListBoxItemCollection.CopyTo(Array, int)
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.CopyTo(System.Array, int)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: CopyTo
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+    startLine: 56
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  summary: Copies the elements of the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref> to an <xref href="System.Array" data-throw-if-not-resolved="false"></xref>, starting at a particular <xref href="System.Array" data-throw-if-not-resolved="false"></xref> index.
+  example: []
+  syntax:
+    content: public void CopyTo(Array array, int index)
+    parameters:
+    - id: array
+      type: System.Array
+      description: The one-dimensional <xref href="System.Array" data-throw-if-not-resolved="false"></xref> that is the destination of the elements copied from <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref>. The <xref href="System.Array" data-throw-if-not-resolved="false"></xref> must have zero-based indexing.
+    - id: index
+      type: System.Int32
+      description: The zero-based index in <code class="paramref">array</code> at which copying begins.
+    content.vb: Public Sub CopyTo(array As Array, index As Integer)
+  overload: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.CopyTo*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: <code class="paramref">array</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: <code class="paramref">index</code> is less than zero.
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      <code class="paramref">array</code> is multidimensional.  
+
+       -or-  
+
+       The number of elements in the source <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref> is greater than the available space from <code class="paramref">index</code> to the end of the destination <code class="paramref">array</code>.  
+
+       -or-  
+
+       The type of the source <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref> cannot be cast automatically to the type of the destination <code class="paramref">array</code>.
+  implements:
+  - System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+  nameWithType.vb: ListBoxItemCollection.CopyTo(Array, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.CopyTo(System.Array, Integer)
+  name.vb: CopyTo(Array, Integer)
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Count
+  commentId: P:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Count
+  id: Count
+  parent: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: ListBoxItemCollection.Count
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Count
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Count
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+    startLine: 58
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  summary: Gets the number of elements contained in the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: The number of elements contained in the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public ReadOnly Property Count As Integer
+  overload: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Count*
+  implements:
+  - System.Collections.ICollection.Count
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.IsSynchronized
+  commentId: P:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.IsSynchronized
+  id: IsSynchronized
+  parent: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  langs:
+  - csharp
+  - vb
+  name: IsSynchronized
+  nameWithType: ListBoxItemCollection.IsSynchronized
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.IsSynchronized
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: IsSynchronized
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+    startLine: 60
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  summary: Gets a value indicating whether access to the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref> is synchronized (thread safe).
+  example: []
+  syntax:
+    content: public bool IsSynchronized { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if access to the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref> is synchronized (thread safe); otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public ReadOnly Property IsSynchronized As Boolean
+  overload: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.IsSynchronized*
+  implements:
+  - System.Collections.ICollection.IsSynchronized
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.SyncRoot
+  commentId: P:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.SyncRoot
+  id: SyncRoot
+  parent: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  langs:
+  - csharp
+  - vb
+  name: SyncRoot
+  nameWithType: ListBoxItemCollection.SyncRoot
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.SyncRoot
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SyncRoot
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+    startLine: 62
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  summary: Gets an object that can be used to synchronize access to the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public object SyncRoot { get; }
+    parameters: []
+    return:
+      type: System.Object
+      description: An object that can be used to synchronize access to the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public ReadOnly Property SyncRoot As Object
+  overload: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.SyncRoot*
+  implements:
+  - System.Collections.ICollection.SyncRoot
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.GetEnumerator
+  commentId: M:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.GetEnumerator
+  id: GetEnumerator
+  parent: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: ListBoxItemCollection.GetEnumerator()
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.GetEnumerator()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: GetEnumerator
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/ListBoxItemCollection.cs
+    startLine: 68
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Controls
+  summary: Returns an enumerator that iterates through a collection.
+  example: []
+  syntax:
+    content: public IEnumerator GetEnumerator()
+    return:
+      type: System.Collections.IEnumerator
+      description: An <xref href="System.Collections.IEnumerator" data-throw-if-not-resolved="false"></xref> object that can be used to iterate through the collection.
+    content.vb: Public Function GetEnumerator() As IEnumerator
+  overload: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.GetEnumerator*
+  implements:
+  - System.Collections.IEnumerable.GetEnumerator
+references:
+- uid: GHIElectronics.Endpoint.UI.Controls
+  commentId: N:GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Controls
+  nameWithType: GHIElectronics.Endpoint.UI.Controls
+  fullName: GHIElectronics.Endpoint.UI.Controls
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Controls
+    name: Controls
+    href: GHIElectronics.Endpoint.UI.Controls.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Collections.ICollection
+  commentId: T:System.Collections.ICollection
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection
+  name: ICollection
+  nameWithType: ICollection
+  fullName: System.Collections.ICollection
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.#ctor
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.html#GHIElectronics_Endpoint_UI_Controls_ListBoxItemCollection__ctor_GHIElectronics_Endpoint_UI_Controls_ListBox_GHIElectronics_Endpoint_UI_UIElementCollection_
+  name: ListBoxItemCollection
+  nameWithType: ListBoxItemCollection.ListBoxItemCollection
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.ListBoxItemCollection
+  nameWithType.vb: ListBoxItemCollection.New
+  fullName.vb: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.New
+  name.vb: New
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBox
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.ListBox
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.ListBox.html
+  name: ListBox
+  nameWithType: ListBox
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBox
+- uid: GHIElectronics.Endpoint.UI.UIElementCollection
+  commentId: T:GHIElectronics.Endpoint.UI.UIElementCollection
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.UIElementCollection.html
+  name: UIElementCollection
+  nameWithType: UIElementCollection
+  fullName: GHIElectronics.Endpoint.UI.UIElementCollection
+- uid: GHIElectronics.Endpoint.UI
+  commentId: N:GHIElectronics.Endpoint.UI
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI
+  nameWithType: GHIElectronics.Endpoint.UI
+  fullName: GHIElectronics.Endpoint.UI
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Add*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Add
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.html#GHIElectronics_Endpoint_UI_Controls_ListBoxItemCollection_Add_GHIElectronics_Endpoint_UI_Controls_ListBoxItem_
+  name: Add
+  nameWithType: ListBoxItemCollection.Add
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Add
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+  commentId: T:GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+  parent: GHIElectronics.Endpoint.UI.Controls
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItem.html
+  name: ListBoxItem
+  nameWithType: ListBoxItem
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItem
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GHIElectronics.Endpoint.UI.UIElement
+  commentId: T:GHIElectronics.Endpoint.UI.UIElement
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.UIElement.html
+  name: UIElement
+  nameWithType: UIElement
+  fullName: GHIElectronics.Endpoint.UI.UIElement
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Clear*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Clear
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.html#GHIElectronics_Endpoint_UI_Controls_ListBoxItemCollection_Clear
+  name: Clear
+  nameWithType: ListBoxItemCollection.Clear
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Clear
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Contains*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Contains
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.html#GHIElectronics_Endpoint_UI_Controls_ListBoxItemCollection_Contains_GHIElectronics_Endpoint_UI_Controls_ListBoxItem_
+  name: Contains
+  nameWithType: ListBoxItemCollection.Contains
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Contains
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Item*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Item
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.html#GHIElectronics_Endpoint_UI_Controls_ListBoxItemCollection_Item_System_Int32_
+  name: this
+  nameWithType: ListBoxItemCollection.this
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.this
+  nameWithType.vb: ListBoxItemCollection.this[]
+  fullName.vb: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.this[]
+  name.vb: this[]
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.IndexOf*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.IndexOf
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.html#GHIElectronics_Endpoint_UI_Controls_ListBoxItemCollection_IndexOf_GHIElectronics_Endpoint_UI_Controls_ListBoxItem_
+  name: IndexOf
+  nameWithType: ListBoxItemCollection.IndexOf
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.IndexOf
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Insert*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Insert
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.html#GHIElectronics_Endpoint_UI_Controls_ListBoxItemCollection_Insert_System_Int32_GHIElectronics_Endpoint_UI_Controls_ListBoxItem_
+  name: Insert
+  nameWithType: ListBoxItemCollection.Insert
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Insert
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Remove*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Remove
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.html#GHIElectronics_Endpoint_UI_Controls_ListBoxItemCollection_Remove_GHIElectronics_Endpoint_UI_Controls_ListBoxItem_
+  name: Remove
+  nameWithType: ListBoxItemCollection.Remove
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Remove
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.RemoveAt*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.RemoveAt
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.html#GHIElectronics_Endpoint_UI_Controls_ListBoxItemCollection_RemoveAt_System_Int32_
+  name: RemoveAt
+  nameWithType: ListBoxItemCollection.RemoveAt
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.RemoveAt
+- uid: System.Array
+  commentId: T:System.Array
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.array
+  name: Array
+  nameWithType: Array
+  fullName: System.Array
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception
+  name: ArgumentOutOfRangeException
+  nameWithType: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.CopyTo*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.CopyTo
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.html#GHIElectronics_Endpoint_UI_Controls_ListBoxItemCollection_CopyTo_System_Array_System_Int32_
+  name: CopyTo
+  nameWithType: ListBoxItemCollection.CopyTo
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.CopyTo
+- uid: System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+  commentId: M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+  parent: System.Collections.ICollection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection.copyto
+  name: CopyTo(Array, int)
+  nameWithType: ICollection.CopyTo(Array, int)
+  fullName: System.Collections.ICollection.CopyTo(System.Array, int)
+  nameWithType.vb: ICollection.CopyTo(Array, Integer)
+  fullName.vb: System.Collections.ICollection.CopyTo(System.Array, Integer)
+  name.vb: CopyTo(Array, Integer)
+  spec.csharp:
+  - uid: System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.icollection.copyto
+  - name: (
+  - uid: System.Array
+    name: Array
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.array
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.icollection.copyto
+  - name: (
+  - uid: System.Array
+    name: Array
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.array
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Count*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Count
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.html#GHIElectronics_Endpoint_UI_Controls_ListBoxItemCollection_Count
+  name: Count
+  nameWithType: ListBoxItemCollection.Count
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.Count
+- uid: System.Collections.ICollection.Count
+  commentId: P:System.Collections.ICollection.Count
+  parent: System.Collections.ICollection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection.count
+  name: Count
+  nameWithType: ICollection.Count
+  fullName: System.Collections.ICollection.Count
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.IsSynchronized*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.IsSynchronized
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.html#GHIElectronics_Endpoint_UI_Controls_ListBoxItemCollection_IsSynchronized
+  name: IsSynchronized
+  nameWithType: ListBoxItemCollection.IsSynchronized
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.IsSynchronized
+- uid: System.Collections.ICollection.IsSynchronized
+  commentId: P:System.Collections.ICollection.IsSynchronized
+  parent: System.Collections.ICollection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection.issynchronized
+  name: IsSynchronized
+  nameWithType: ICollection.IsSynchronized
+  fullName: System.Collections.ICollection.IsSynchronized
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.SyncRoot*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.SyncRoot
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.html#GHIElectronics_Endpoint_UI_Controls_ListBoxItemCollection_SyncRoot
+  name: SyncRoot
+  nameWithType: ListBoxItemCollection.SyncRoot
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.SyncRoot
+- uid: System.Collections.ICollection.SyncRoot
+  commentId: P:System.Collections.ICollection.SyncRoot
+  parent: System.Collections.ICollection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection.syncroot
+  name: SyncRoot
+  nameWithType: ICollection.SyncRoot
+  fullName: System.Collections.ICollection.SyncRoot
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.GetEnumerator*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.GetEnumerator
+  href: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.html#GHIElectronics_Endpoint_UI_Controls_ListBoxItemCollection_GetEnumerator
+  name: GetEnumerator
+  nameWithType: ListBoxItemCollection.GetEnumerator
+  fullName: GHIElectronics.Endpoint.UI.Controls.ListBoxItemCollection.GetEnumerator
+- uid: System.Collections.IEnumerable.GetEnumerator
+  commentId: M:System.Collections.IEnumerable.GetEnumerator
+  parent: System.Collections.IEnumerable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable.GetEnumerator()
+  fullName: System.Collections.IEnumerable.GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.IEnumerable.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.IEnumerable.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable.getenumerator
+  - name: (
+  - name: )

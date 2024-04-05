@@ -5,12 +5,14 @@ items:
   id: GHIElectronics.Endpoint.Devices.DigitalSignal
   children:
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
-  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Error
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ErrorEventHandler
-  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.PulseCaptureEventHandler
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.PulseGenerateEventHandler
   - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.PulseReadEventHandler
+  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError
+  - GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalMode
+  - GHIElectronics.Endpoint.Devices.DigitalSignal.PulseFeedbackController
+  - GHIElectronics.Endpoint.Devices.DigitalSignal.PulseFeedbackMode
   langs:
   - csharp
   - vb
@@ -21,6 +23,20 @@ items:
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
 references:
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalMode
+  commentId: T:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalMode
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal
+  href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalMode.html
+  name: DigitalSignalMode
+  nameWithType: DigitalSignalMode
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalMode
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError
+  commentId: T:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal
+  href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError.html
+  name: DigitalSignalError
+  nameWithType: DigitalSignalError
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalError
 - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
   commentId: T:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
   parent: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -28,52 +44,6 @@ references:
   name: DigitalSignalController
   nameWithType: DigitalSignalController
   fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
-- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
-  commentId: T:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
-  parent: GHIElectronics.Endpoint.Devices.DigitalSignal
-  href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html
-  name: DigitalSignalController.Mode
-  nameWithType: DigitalSignalController.Mode
-  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
-  spec.csharp:
-  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
-    name: DigitalSignalController
-    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html
-  - name: .
-  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
-    name: Mode
-    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode.html
-  spec.vb:
-  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
-    name: DigitalSignalController
-    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html
-  - name: .
-  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode
-    name: Mode
-    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Mode.html
-- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Error
-  commentId: T:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Error
-  parent: GHIElectronics.Endpoint.Devices.DigitalSignal
-  href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html
-  name: DigitalSignalController.Error
-  nameWithType: DigitalSignalController.Error
-  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Error
-  spec.csharp:
-  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
-    name: DigitalSignalController
-    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html
-  - name: .
-  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Error
-    name: Error
-    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Error.html
-  spec.vb:
-  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController
-    name: DigitalSignalController
-    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.html
-  - name: .
-  - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Error
-    name: Error
-    href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.Error.html
 - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.PulseGenerateEventHandler
   commentId: T:GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.PulseGenerateEventHandler
   parent: GHIElectronics.Endpoint.Devices.DigitalSignal
@@ -166,6 +136,19 @@ references:
   - uid: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ErrorEventHandler
     name: ErrorEventHandler
     href: GHIElectronics.Endpoint.Devices.DigitalSignal.DigitalSignalController.ErrorEventHandler.html
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.PulseFeedbackMode
+  commentId: T:GHIElectronics.Endpoint.Devices.DigitalSignal.PulseFeedbackMode
+  parent: GHIElectronics.Endpoint.Devices.DigitalSignal
+  href: GHIElectronics.Endpoint.Devices.DigitalSignal.PulseFeedbackMode.html
+  name: PulseFeedbackMode
+  nameWithType: PulseFeedbackMode
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.PulseFeedbackMode
+- uid: GHIElectronics.Endpoint.Devices.DigitalSignal.PulseFeedbackController
+  commentId: T:GHIElectronics.Endpoint.Devices.DigitalSignal.PulseFeedbackController
+  href: GHIElectronics.Endpoint.Devices.DigitalSignal.PulseFeedbackController.html
+  name: PulseFeedbackController
+  nameWithType: PulseFeedbackController
+  fullName: GHIElectronics.Endpoint.Devices.DigitalSignal.PulseFeedbackController
 - uid: GHIElectronics.Endpoint.Devices.DigitalSignal
   commentId: N:GHIElectronics.Endpoint.Devices.DigitalSignal
   href: GHIElectronics.html

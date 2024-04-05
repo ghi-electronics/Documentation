@@ -1,0 +1,209 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Input.RawTouchActions
+  commentId: T:GHIElectronics.Endpoint.UI.Input.RawTouchActions
+  id: RawTouchActions
+  parent: GHIElectronics.Endpoint.UI.Input
+  children:
+  - GHIElectronics.Endpoint.UI.Input.RawTouchActions.Activate
+  - GHIElectronics.Endpoint.UI.Input.RawTouchActions.Deactivate
+  - GHIElectronics.Endpoint.UI.Input.RawTouchActions.TouchDown
+  - GHIElectronics.Endpoint.UI.Input.RawTouchActions.TouchMove
+  - GHIElectronics.Endpoint.UI.Input.RawTouchActions.TouchUp
+  langs:
+  - csharp
+  - vb
+  name: RawTouchActions
+  nameWithType: RawTouchActions
+  fullName: GHIElectronics.Endpoint.UI.Input.RawTouchActions
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawTouchInputReport.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: RawTouchActions
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawTouchInputReport.cs
+    startLine: 45
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: public enum RawTouchActions
+    content.vb: Public Enum RawTouchActions
+- uid: GHIElectronics.Endpoint.UI.Input.RawTouchActions.TouchDown
+  commentId: F:GHIElectronics.Endpoint.UI.Input.RawTouchActions.TouchDown
+  id: TouchDown
+  parent: GHIElectronics.Endpoint.UI.Input.RawTouchActions
+  langs:
+  - csharp
+  - vb
+  name: TouchDown
+  nameWithType: RawTouchActions.TouchDown
+  fullName: GHIElectronics.Endpoint.UI.Input.RawTouchActions.TouchDown
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawTouchInputReport.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: TouchDown
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawTouchInputReport.cs
+    startLine: 46
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: TouchDown = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.RawTouchActions
+- uid: GHIElectronics.Endpoint.UI.Input.RawTouchActions.TouchUp
+  commentId: F:GHIElectronics.Endpoint.UI.Input.RawTouchActions.TouchUp
+  id: TouchUp
+  parent: GHIElectronics.Endpoint.UI.Input.RawTouchActions
+  langs:
+  - csharp
+  - vb
+  name: TouchUp
+  nameWithType: RawTouchActions.TouchUp
+  fullName: GHIElectronics.Endpoint.UI.Input.RawTouchActions.TouchUp
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawTouchInputReport.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: TouchUp
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawTouchInputReport.cs
+    startLine: 47
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: TouchUp = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.RawTouchActions
+- uid: GHIElectronics.Endpoint.UI.Input.RawTouchActions.Activate
+  commentId: F:GHIElectronics.Endpoint.UI.Input.RawTouchActions.Activate
+  id: Activate
+  parent: GHIElectronics.Endpoint.UI.Input.RawTouchActions
+  langs:
+  - csharp
+  - vb
+  name: Activate
+  nameWithType: RawTouchActions.Activate
+  fullName: GHIElectronics.Endpoint.UI.Input.RawTouchActions.Activate
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawTouchInputReport.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Activate
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawTouchInputReport.cs
+    startLine: 48
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Activate = 4
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.RawTouchActions
+- uid: GHIElectronics.Endpoint.UI.Input.RawTouchActions.Deactivate
+  commentId: F:GHIElectronics.Endpoint.UI.Input.RawTouchActions.Deactivate
+  id: Deactivate
+  parent: GHIElectronics.Endpoint.UI.Input.RawTouchActions
+  langs:
+  - csharp
+  - vb
+  name: Deactivate
+  nameWithType: RawTouchActions.Deactivate
+  fullName: GHIElectronics.Endpoint.UI.Input.RawTouchActions.Deactivate
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawTouchInputReport.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Deactivate
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawTouchInputReport.cs
+    startLine: 49
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Deactivate = 8
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.RawTouchActions
+- uid: GHIElectronics.Endpoint.UI.Input.RawTouchActions.TouchMove
+  commentId: F:GHIElectronics.Endpoint.UI.Input.RawTouchActions.TouchMove
+  id: TouchMove
+  parent: GHIElectronics.Endpoint.UI.Input.RawTouchActions
+  langs:
+  - csharp
+  - vb
+  name: TouchMove
+  nameWithType: RawTouchActions.TouchMove
+  fullName: GHIElectronics.Endpoint.UI.Input.RawTouchActions.TouchMove
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawTouchInputReport.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: TouchMove
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/RawTouchInputReport.cs
+    startLine: 50
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: TouchMove = 16
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.RawTouchActions
+references:
+- uid: GHIElectronics.Endpoint.UI.Input
+  commentId: N:GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Input
+  nameWithType: GHIElectronics.Endpoint.UI.Input
+  fullName: GHIElectronics.Endpoint.UI.Input
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+- uid: GHIElectronics.Endpoint.UI.Input.RawTouchActions
+  commentId: T:GHIElectronics.Endpoint.UI.Input.RawTouchActions
+  parent: GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.Endpoint.UI.Input.RawTouchActions.html
+  name: RawTouchActions
+  nameWithType: RawTouchActions
+  fullName: GHIElectronics.Endpoint.UI.Input.RawTouchActions

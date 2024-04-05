@@ -1,0 +1,109 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Threading
+  commentId: N:GHIElectronics.Endpoint.UI.Threading
+  id: GHIElectronics.Endpoint.UI.Threading
+  children:
+  - GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherFrame
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherOperation
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+  langs:
+  - csharp
+  - vb
+  name: GHIElectronics.Endpoint.UI.Threading
+  nameWithType: GHIElectronics.Endpoint.UI.Threading
+  fullName: GHIElectronics.Endpoint.UI.Threading
+  type: Namespace
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+references:
+- uid: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.Dispatcher
+  parent: GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.Endpoint.UI.Threading.Dispatcher.html
+  name: Dispatcher
+  nameWithType: Dispatcher
+  fullName: GHIElectronics.Endpoint.UI.Threading.Dispatcher
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback
+  parent: GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback.html
+  name: DispatcherOperationCallback
+  nameWithType: DispatcherOperationCallback
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationCallback
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherFrame
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.DispatcherFrame
+  parent: GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherFrame.html
+  name: DispatcherFrame
+  nameWithType: DispatcherFrame
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherFrame
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  parent: GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html
+  name: DispatcherObject
+  nameWithType: DispatcherObject
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherOperation
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.DispatcherOperation
+  parent: GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherOperation.html
+  name: DispatcherOperation
+  nameWithType: DispatcherOperation
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherOperation
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus
+  parent: GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus.html
+  name: DispatcherOperationStatus
+  nameWithType: DispatcherOperationStatus
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherOperationStatus
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer.html
+  name: DispatcherTimer
+  nameWithType: DispatcherTimer
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherTimer
+- uid: GHIElectronics.Endpoint.UI.Threading
+  commentId: N:GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Threading
+  nameWithType: GHIElectronics.Endpoint.UI.Threading
+  fullName: GHIElectronics.Endpoint.UI.Threading
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Threading
+    name: Threading
+    href: GHIElectronics.Endpoint.UI.Threading.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Threading
+    name: Threading
+    href: GHIElectronics.Endpoint.UI.Threading.html

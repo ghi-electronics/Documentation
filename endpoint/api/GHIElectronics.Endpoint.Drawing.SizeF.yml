@@ -1,0 +1,525 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Drawing.SizeF
+  commentId: T:GHIElectronics.Endpoint.Drawing.SizeF
+  id: SizeF
+  parent: GHIElectronics.Endpoint.Drawing
+  children:
+  - GHIElectronics.Endpoint.Drawing.SizeF.#ctor(GHIElectronics.Endpoint.Drawing.SizeF)
+  - GHIElectronics.Endpoint.Drawing.SizeF.#ctor(System.Single,System.Single)
+  - GHIElectronics.Endpoint.Drawing.SizeF.Empty
+  - GHIElectronics.Endpoint.Drawing.SizeF.Height
+  - GHIElectronics.Endpoint.Drawing.SizeF.IsEmpty
+  - GHIElectronics.Endpoint.Drawing.SizeF.Width
+  langs:
+  - csharp
+  - vb
+  name: SizeF
+  nameWithType: SizeF
+  fullName: GHIElectronics.Endpoint.Drawing.SizeF
+  type: Struct
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/SizeF.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SizeF
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/SizeF.cs
+    startLine: 3
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public struct SizeF
+    content.vb: Public Structure SizeF
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: GHIElectronics.Endpoint.Drawing.SizeF.Empty
+  commentId: F:GHIElectronics.Endpoint.Drawing.SizeF.Empty
+  id: Empty
+  parent: GHIElectronics.Endpoint.Drawing.SizeF
+  langs:
+  - csharp
+  - vb
+  name: Empty
+  nameWithType: SizeF.Empty
+  fullName: GHIElectronics.Endpoint.Drawing.SizeF.Empty
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/SizeF.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Empty
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/SizeF.cs
+    startLine: 4
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public static readonly SizeF Empty
+    return:
+      type: GHIElectronics.Endpoint.Drawing.SizeF
+    content.vb: Public Shared ReadOnly Empty As SizeF
+- uid: GHIElectronics.Endpoint.Drawing.SizeF.#ctor(GHIElectronics.Endpoint.Drawing.SizeF)
+  commentId: M:GHIElectronics.Endpoint.Drawing.SizeF.#ctor(GHIElectronics.Endpoint.Drawing.SizeF)
+  id: '#ctor(GHIElectronics.Endpoint.Drawing.SizeF)'
+  parent: GHIElectronics.Endpoint.Drawing.SizeF
+  langs:
+  - csharp
+  - vb
+  name: SizeF(SizeF)
+  nameWithType: SizeF.SizeF(SizeF)
+  fullName: GHIElectronics.Endpoint.Drawing.SizeF.SizeF(GHIElectronics.Endpoint.Drawing.SizeF)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/SizeF.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/SizeF.cs
+    startLine: 6
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public SizeF(SizeF size)
+    parameters:
+    - id: size
+      type: GHIElectronics.Endpoint.Drawing.SizeF
+    content.vb: Public Sub New(size As SizeF)
+  overload: GHIElectronics.Endpoint.Drawing.SizeF.#ctor*
+  nameWithType.vb: SizeF.New(SizeF)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.SizeF.New(GHIElectronics.Endpoint.Drawing.SizeF)
+  name.vb: New(SizeF)
+- uid: GHIElectronics.Endpoint.Drawing.SizeF.#ctor(System.Single,System.Single)
+  commentId: M:GHIElectronics.Endpoint.Drawing.SizeF.#ctor(System.Single,System.Single)
+  id: '#ctor(System.Single,System.Single)'
+  parent: GHIElectronics.Endpoint.Drawing.SizeF
+  langs:
+  - csharp
+  - vb
+  name: SizeF(float, float)
+  nameWithType: SizeF.SizeF(float, float)
+  fullName: GHIElectronics.Endpoint.Drawing.SizeF.SizeF(float, float)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/SizeF.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/SizeF.cs
+    startLine: 11
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public SizeF(float width, float height)
+    parameters:
+    - id: width
+      type: System.Single
+    - id: height
+      type: System.Single
+    content.vb: Public Sub New(width As Single, height As Single)
+  overload: GHIElectronics.Endpoint.Drawing.SizeF.#ctor*
+  nameWithType.vb: SizeF.New(Single, Single)
+  fullName.vb: GHIElectronics.Endpoint.Drawing.SizeF.New(Single, Single)
+  name.vb: New(Single, Single)
+- uid: GHIElectronics.Endpoint.Drawing.SizeF.IsEmpty
+  commentId: P:GHIElectronics.Endpoint.Drawing.SizeF.IsEmpty
+  id: IsEmpty
+  parent: GHIElectronics.Endpoint.Drawing.SizeF
+  langs:
+  - csharp
+  - vb
+  name: IsEmpty
+  nameWithType: SizeF.IsEmpty
+  fullName: GHIElectronics.Endpoint.Drawing.SizeF.IsEmpty
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/SizeF.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: IsEmpty
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/SizeF.cs
+    startLine: 16
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public bool IsEmpty { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmpty As Boolean
+  overload: GHIElectronics.Endpoint.Drawing.SizeF.IsEmpty*
+- uid: GHIElectronics.Endpoint.Drawing.SizeF.Width
+  commentId: P:GHIElectronics.Endpoint.Drawing.SizeF.Width
+  id: Width
+  parent: GHIElectronics.Endpoint.Drawing.SizeF
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: SizeF.Width
+  fullName: GHIElectronics.Endpoint.Drawing.SizeF.Width
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/SizeF.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Width
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/SizeF.cs
+    startLine: 18
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public float Width { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Width As Single
+  overload: GHIElectronics.Endpoint.Drawing.SizeF.Width*
+- uid: GHIElectronics.Endpoint.Drawing.SizeF.Height
+  commentId: P:GHIElectronics.Endpoint.Drawing.SizeF.Height
+  id: Height
+  parent: GHIElectronics.Endpoint.Drawing.SizeF
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: SizeF.Height
+  fullName: GHIElectronics.Endpoint.Drawing.SizeF.Height
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/SizeF.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Height
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/SizeF.cs
+    startLine: 19
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing
+  syntax:
+    content: public float Height { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Height As Single
+  overload: GHIElectronics.Endpoint.Drawing.SizeF.Height*
+references:
+- uid: GHIElectronics.Endpoint.Drawing
+  commentId: N:GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing
+  nameWithType: GHIElectronics.Endpoint.Drawing
+  fullName: GHIElectronics.Endpoint.Drawing
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.Drawing.SizeF
+  commentId: T:GHIElectronics.Endpoint.Drawing.SizeF
+  parent: GHIElectronics.Endpoint.Drawing
+  href: GHIElectronics.Endpoint.Drawing.SizeF.html
+  name: SizeF
+  nameWithType: SizeF
+  fullName: GHIElectronics.Endpoint.Drawing.SizeF
+- uid: GHIElectronics.Endpoint.Drawing.SizeF.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.SizeF.#ctor
+  href: GHIElectronics.Endpoint.Drawing.SizeF.html#GHIElectronics_Endpoint_Drawing_SizeF__ctor_GHIElectronics_Endpoint_Drawing_SizeF_
+  name: SizeF
+  nameWithType: SizeF.SizeF
+  fullName: GHIElectronics.Endpoint.Drawing.SizeF.SizeF
+  nameWithType.vb: SizeF.New
+  fullName.vb: GHIElectronics.Endpoint.Drawing.SizeF.New
+  name.vb: New
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: GHIElectronics.Endpoint.Drawing.SizeF.IsEmpty*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.SizeF.IsEmpty
+  href: GHIElectronics.Endpoint.Drawing.SizeF.html#GHIElectronics_Endpoint_Drawing_SizeF_IsEmpty
+  name: IsEmpty
+  nameWithType: SizeF.IsEmpty
+  fullName: GHIElectronics.Endpoint.Drawing.SizeF.IsEmpty
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: GHIElectronics.Endpoint.Drawing.SizeF.Width*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.SizeF.Width
+  href: GHIElectronics.Endpoint.Drawing.SizeF.html#GHIElectronics_Endpoint_Drawing_SizeF_Width
+  name: Width
+  nameWithType: SizeF.Width
+  fullName: GHIElectronics.Endpoint.Drawing.SizeF.Width
+- uid: GHIElectronics.Endpoint.Drawing.SizeF.Height*
+  commentId: Overload:GHIElectronics.Endpoint.Drawing.SizeF.Height
+  href: GHIElectronics.Endpoint.Drawing.SizeF.html#GHIElectronics_Endpoint_Drawing_SizeF_Height
+  name: Height
+  nameWithType: SizeF.Height
+  fullName: GHIElectronics.Endpoint.Drawing.SizeF.Height

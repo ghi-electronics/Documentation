@@ -1,0 +1,656 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Media.Colors
+  commentId: T:GHIElectronics.Endpoint.UI.Media.Colors
+  id: Colors
+  parent: GHIElectronics.Endpoint.UI.Media
+  children:
+  - GHIElectronics.Endpoint.UI.Media.Colors.Black
+  - GHIElectronics.Endpoint.UI.Media.Colors.Blue
+  - GHIElectronics.Endpoint.UI.Media.Colors.Gray
+  - GHIElectronics.Endpoint.UI.Media.Colors.Green
+  - GHIElectronics.Endpoint.UI.Media.Colors.Purple
+  - GHIElectronics.Endpoint.UI.Media.Colors.Red
+  - GHIElectronics.Endpoint.UI.Media.Colors.Teal
+  - GHIElectronics.Endpoint.UI.Media.Colors.Transparent
+  - GHIElectronics.Endpoint.UI.Media.Colors.White
+  - GHIElectronics.Endpoint.UI.Media.Colors.Yellow
+  langs:
+  - csharp
+  - vb
+  name: Colors
+  nameWithType: Colors
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Colors
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+    startLine: 21
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public sealed class Colors
+    content.vb: Public NotInheritable Class Colors
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.Transparent
+  commentId: P:GHIElectronics.Endpoint.UI.Media.Colors.Transparent
+  id: Transparent
+  parent: GHIElectronics.Endpoint.UI.Media.Colors
+  langs:
+  - csharp
+  - vb
+  name: Transparent
+  nameWithType: Colors.Transparent
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.Transparent
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Transparent
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+    startLine: 22
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public static Color Transparent { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.Color
+    content.vb: Public Shared ReadOnly Property Transparent As Color
+  overload: GHIElectronics.Endpoint.UI.Media.Colors.Transparent*
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.Black
+  commentId: P:GHIElectronics.Endpoint.UI.Media.Colors.Black
+  id: Black
+  parent: GHIElectronics.Endpoint.UI.Media.Colors
+  langs:
+  - csharp
+  - vb
+  name: Black
+  nameWithType: Colors.Black
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.Black
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Black
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+    startLine: 23
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public static Color Black { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.Color
+    content.vb: Public Shared ReadOnly Property Black As Color
+  overload: GHIElectronics.Endpoint.UI.Media.Colors.Black*
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.White
+  commentId: P:GHIElectronics.Endpoint.UI.Media.Colors.White
+  id: White
+  parent: GHIElectronics.Endpoint.UI.Media.Colors
+  langs:
+  - csharp
+  - vb
+  name: White
+  nameWithType: Colors.White
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.White
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: White
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+    startLine: 24
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public static Color White { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.Color
+    content.vb: Public Shared ReadOnly Property White As Color
+  overload: GHIElectronics.Endpoint.UI.Media.Colors.White*
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.Gray
+  commentId: P:GHIElectronics.Endpoint.UI.Media.Colors.Gray
+  id: Gray
+  parent: GHIElectronics.Endpoint.UI.Media.Colors
+  langs:
+  - csharp
+  - vb
+  name: Gray
+  nameWithType: Colors.Gray
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.Gray
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Gray
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+    startLine: 25
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public static Color Gray { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.Color
+    content.vb: Public Shared ReadOnly Property Gray As Color
+  overload: GHIElectronics.Endpoint.UI.Media.Colors.Gray*
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.Red
+  commentId: P:GHIElectronics.Endpoint.UI.Media.Colors.Red
+  id: Red
+  parent: GHIElectronics.Endpoint.UI.Media.Colors
+  langs:
+  - csharp
+  - vb
+  name: Red
+  nameWithType: Colors.Red
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.Red
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Red
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+    startLine: 26
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public static Color Red { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.Color
+    content.vb: Public Shared ReadOnly Property Red As Color
+  overload: GHIElectronics.Endpoint.UI.Media.Colors.Red*
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.Green
+  commentId: P:GHIElectronics.Endpoint.UI.Media.Colors.Green
+  id: Green
+  parent: GHIElectronics.Endpoint.UI.Media.Colors
+  langs:
+  - csharp
+  - vb
+  name: Green
+  nameWithType: Colors.Green
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.Green
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Green
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+    startLine: 27
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public static Color Green { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.Color
+    content.vb: Public Shared ReadOnly Property Green As Color
+  overload: GHIElectronics.Endpoint.UI.Media.Colors.Green*
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.Blue
+  commentId: P:GHIElectronics.Endpoint.UI.Media.Colors.Blue
+  id: Blue
+  parent: GHIElectronics.Endpoint.UI.Media.Colors
+  langs:
+  - csharp
+  - vb
+  name: Blue
+  nameWithType: Colors.Blue
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.Blue
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Blue
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+    startLine: 28
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public static Color Blue { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.Color
+    content.vb: Public Shared ReadOnly Property Blue As Color
+  overload: GHIElectronics.Endpoint.UI.Media.Colors.Blue*
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.Yellow
+  commentId: P:GHIElectronics.Endpoint.UI.Media.Colors.Yellow
+  id: Yellow
+  parent: GHIElectronics.Endpoint.UI.Media.Colors
+  langs:
+  - csharp
+  - vb
+  name: Yellow
+  nameWithType: Colors.Yellow
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.Yellow
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Yellow
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+    startLine: 29
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public static Color Yellow { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.Color
+    content.vb: Public Shared ReadOnly Property Yellow As Color
+  overload: GHIElectronics.Endpoint.UI.Media.Colors.Yellow*
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.Purple
+  commentId: P:GHIElectronics.Endpoint.UI.Media.Colors.Purple
+  id: Purple
+  parent: GHIElectronics.Endpoint.UI.Media.Colors
+  langs:
+  - csharp
+  - vb
+  name: Purple
+  nameWithType: Colors.Purple
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.Purple
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Purple
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+    startLine: 30
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public static Color Purple { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.Color
+    content.vb: Public Shared ReadOnly Property Purple As Color
+  overload: GHIElectronics.Endpoint.UI.Media.Colors.Purple*
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.Teal
+  commentId: P:GHIElectronics.Endpoint.UI.Media.Colors.Teal
+  id: Teal
+  parent: GHIElectronics.Endpoint.UI.Media.Colors
+  langs:
+  - csharp
+  - vb
+  name: Teal
+  nameWithType: Colors.Teal
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.Teal
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Teal
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/Color.cs
+    startLine: 31
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Media
+  syntax:
+    content: public static Color Teal { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.Media.Color
+    content.vb: Public Shared ReadOnly Property Teal As Color
+  overload: GHIElectronics.Endpoint.UI.Media.Colors.Teal*
+references:
+- uid: GHIElectronics.Endpoint.UI.Media
+  commentId: N:GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Media
+  nameWithType: GHIElectronics.Endpoint.UI.Media
+  fullName: GHIElectronics.Endpoint.UI.Media
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Media
+    name: Media
+    href: GHIElectronics.Endpoint.UI.Media.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Media
+    name: Media
+    href: GHIElectronics.Endpoint.UI.Media.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.Transparent*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Media.Colors.Transparent
+  href: GHIElectronics.Endpoint.UI.Media.Colors.html#GHIElectronics_Endpoint_UI_Media_Colors_Transparent
+  name: Transparent
+  nameWithType: Colors.Transparent
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.Transparent
+- uid: GHIElectronics.Endpoint.UI.Media.Color
+  commentId: T:GHIElectronics.Endpoint.UI.Media.Color
+  parent: GHIElectronics.Endpoint.UI.Media
+  href: GHIElectronics.Endpoint.UI.Media.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: GHIElectronics.Endpoint.UI.Media.Color
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.Black*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Media.Colors.Black
+  href: GHIElectronics.Endpoint.UI.Media.Colors.html#GHIElectronics_Endpoint_UI_Media_Colors_Black
+  name: Black
+  nameWithType: Colors.Black
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.Black
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.White*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Media.Colors.White
+  href: GHIElectronics.Endpoint.UI.Media.Colors.html#GHIElectronics_Endpoint_UI_Media_Colors_White
+  name: White
+  nameWithType: Colors.White
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.White
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.Gray*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Media.Colors.Gray
+  href: GHIElectronics.Endpoint.UI.Media.Colors.html#GHIElectronics_Endpoint_UI_Media_Colors_Gray
+  name: Gray
+  nameWithType: Colors.Gray
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.Gray
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.Red*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Media.Colors.Red
+  href: GHIElectronics.Endpoint.UI.Media.Colors.html#GHIElectronics_Endpoint_UI_Media_Colors_Red
+  name: Red
+  nameWithType: Colors.Red
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.Red
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.Green*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Media.Colors.Green
+  href: GHIElectronics.Endpoint.UI.Media.Colors.html#GHIElectronics_Endpoint_UI_Media_Colors_Green
+  name: Green
+  nameWithType: Colors.Green
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.Green
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.Blue*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Media.Colors.Blue
+  href: GHIElectronics.Endpoint.UI.Media.Colors.html#GHIElectronics_Endpoint_UI_Media_Colors_Blue
+  name: Blue
+  nameWithType: Colors.Blue
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.Blue
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.Yellow*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Media.Colors.Yellow
+  href: GHIElectronics.Endpoint.UI.Media.Colors.html#GHIElectronics_Endpoint_UI_Media_Colors_Yellow
+  name: Yellow
+  nameWithType: Colors.Yellow
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.Yellow
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.Purple*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Media.Colors.Purple
+  href: GHIElectronics.Endpoint.UI.Media.Colors.html#GHIElectronics_Endpoint_UI_Media_Colors_Purple
+  name: Purple
+  nameWithType: Colors.Purple
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.Purple
+- uid: GHIElectronics.Endpoint.UI.Media.Colors.Teal*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Media.Colors.Teal
+  href: GHIElectronics.Endpoint.UI.Media.Colors.html#GHIElectronics_Endpoint_UI_Media_Colors_Teal
+  name: Teal
+  nameWithType: Colors.Teal
+  fullName: GHIElectronics.Endpoint.UI.Media.Colors.Teal

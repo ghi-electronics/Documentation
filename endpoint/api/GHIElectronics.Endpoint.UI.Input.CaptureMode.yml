@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Input.CaptureMode
+  commentId: T:GHIElectronics.Endpoint.UI.Input.CaptureMode
+  id: CaptureMode
+  parent: GHIElectronics.Endpoint.UI.Input
+  children:
+  - GHIElectronics.Endpoint.UI.Input.CaptureMode.Element
+  - GHIElectronics.Endpoint.UI.Input.CaptureMode.None
+  - GHIElectronics.Endpoint.UI.Input.CaptureMode.SubTree
+  langs:
+  - csharp
+  - vb
+  name: CaptureMode
+  nameWithType: CaptureMode
+  fullName: GHIElectronics.Endpoint.UI.Input.CaptureMode
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: CaptureMode
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: public enum CaptureMode
+    content.vb: Public Enum CaptureMode
+- uid: GHIElectronics.Endpoint.UI.Input.CaptureMode.None
+  commentId: F:GHIElectronics.Endpoint.UI.Input.CaptureMode.None
+  id: None
+  parent: GHIElectronics.Endpoint.UI.Input.CaptureMode
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: CaptureMode.None
+  fullName: GHIElectronics.Endpoint.UI.Input.CaptureMode.None
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: None
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 10
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: None = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.CaptureMode
+- uid: GHIElectronics.Endpoint.UI.Input.CaptureMode.Element
+  commentId: F:GHIElectronics.Endpoint.UI.Input.CaptureMode.Element
+  id: Element
+  parent: GHIElectronics.Endpoint.UI.Input.CaptureMode
+  langs:
+  - csharp
+  - vb
+  name: Element
+  nameWithType: CaptureMode.Element
+  fullName: GHIElectronics.Endpoint.UI.Input.CaptureMode.Element
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Element
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 11
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Element = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.CaptureMode
+- uid: GHIElectronics.Endpoint.UI.Input.CaptureMode.SubTree
+  commentId: F:GHIElectronics.Endpoint.UI.Input.CaptureMode.SubTree
+  id: SubTree
+  parent: GHIElectronics.Endpoint.UI.Input.CaptureMode
+  langs:
+  - csharp
+  - vb
+  name: SubTree
+  nameWithType: CaptureMode.SubTree
+  fullName: GHIElectronics.Endpoint.UI.Input.CaptureMode.SubTree
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SubTree
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/Touch.cs
+    startLine: 12
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: SubTree = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.CaptureMode
+references:
+- uid: GHIElectronics.Endpoint.UI.Input
+  commentId: N:GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Input
+  nameWithType: GHIElectronics.Endpoint.UI.Input
+  fullName: GHIElectronics.Endpoint.UI.Input
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+- uid: GHIElectronics.Endpoint.UI.Input.CaptureMode
+  commentId: T:GHIElectronics.Endpoint.UI.Input.CaptureMode
+  parent: GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.Endpoint.UI.Input.CaptureMode.html
+  name: CaptureMode
+  nameWithType: CaptureMode
+  fullName: GHIElectronics.Endpoint.UI.Input.CaptureMode

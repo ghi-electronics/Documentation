@@ -1,0 +1,101 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Drawing.Drawing2D.PenType
+  commentId: T:GHIElectronics.Endpoint.Drawing.Drawing2D.PenType
+  id: PenType
+  parent: GHIElectronics.Endpoint.Drawing.Drawing2D
+  children:
+  - GHIElectronics.Endpoint.Drawing.Drawing2D.PenType.SolidColor
+  langs:
+  - csharp
+  - vb
+  name: PenType
+  nameWithType: PenType
+  fullName: GHIElectronics.Endpoint.Drawing.Drawing2D.PenType
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: PenType
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+    startLine: 41
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing.Drawing2D
+  syntax:
+    content: public enum PenType
+    content.vb: Public Enum PenType
+- uid: GHIElectronics.Endpoint.Drawing.Drawing2D.PenType.SolidColor
+  commentId: F:GHIElectronics.Endpoint.Drawing.Drawing2D.PenType.SolidColor
+  id: SolidColor
+  parent: GHIElectronics.Endpoint.Drawing.Drawing2D.PenType
+  langs:
+  - csharp
+  - vb
+  name: SolidColor
+  nameWithType: PenType.SolidColor
+  fullName: GHIElectronics.Endpoint.Drawing.Drawing2D.PenType.SolidColor
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SolidColor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Drawing/Pen.cs
+    startLine: 42
+  assemblies:
+  - GHIElectronics.Endpoint.Drawing
+  namespace: GHIElectronics.Endpoint.Drawing.Drawing2D
+  syntax:
+    content: SolidColor = 0
+    return:
+      type: GHIElectronics.Endpoint.Drawing.Drawing2D.PenType
+references:
+- uid: GHIElectronics.Endpoint.Drawing.Drawing2D
+  commentId: N:GHIElectronics.Endpoint.Drawing.Drawing2D
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Drawing.Drawing2D
+  nameWithType: GHIElectronics.Endpoint.Drawing.Drawing2D
+  fullName: GHIElectronics.Endpoint.Drawing.Drawing2D
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Drawing2D
+    name: Drawing2D
+    href: GHIElectronics.Endpoint.Drawing.Drawing2D.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing
+    name: Drawing
+    href: GHIElectronics.Endpoint.Drawing.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Drawing.Drawing2D
+    name: Drawing2D
+    href: GHIElectronics.Endpoint.Drawing.Drawing2D.html
+- uid: GHIElectronics.Endpoint.Drawing.Drawing2D.PenType
+  commentId: T:GHIElectronics.Endpoint.Drawing.Drawing2D.PenType
+  parent: GHIElectronics.Endpoint.Drawing.Drawing2D
+  href: GHIElectronics.Endpoint.Drawing.Drawing2D.PenType.html
+  name: PenType
+  nameWithType: PenType
+  fullName: GHIElectronics.Endpoint.Drawing.Drawing2D.PenType

@@ -1,0 +1,1233 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Application
+  commentId: T:GHIElectronics.Endpoint.UI.Application
+  id: Application
+  parent: GHIElectronics.Endpoint.UI
+  children:
+  - GHIElectronics.Endpoint.UI.Application.#ctor(System.Int32,System.Int32)
+  - GHIElectronics.Endpoint.UI.Application.Current
+  - GHIElectronics.Endpoint.UI.Application.Exit
+  - GHIElectronics.Endpoint.UI.Application.Height
+  - GHIElectronics.Endpoint.UI.Application.InitializeForEventSource
+  - GHIElectronics.Endpoint.UI.Application.InputProvider
+  - GHIElectronics.Endpoint.UI.Application.MainWindow
+  - GHIElectronics.Endpoint.UI.Application.OnEvent(GHIElectronics.Endpoint.UI.Input.BaseEvent)
+  - GHIElectronics.Endpoint.UI.Application.OnExit(System.EventArgs)
+  - GHIElectronics.Endpoint.UI.Application.OnStartup(System.EventArgs)
+  - GHIElectronics.Endpoint.UI.Application.Run
+  - GHIElectronics.Endpoint.UI.Application.Run(GHIElectronics.Endpoint.UI.Window)
+  - GHIElectronics.Endpoint.UI.Application.Shutdown
+  - GHIElectronics.Endpoint.UI.Application.ShutdownMode
+  - GHIElectronics.Endpoint.UI.Application.Startup
+  - GHIElectronics.Endpoint.UI.Application.Width
+  - GHIElectronics.Endpoint.UI.Application.Windows
+  langs:
+  - csharp
+  - vb
+  name: Application
+  nameWithType: Application
+  fullName: GHIElectronics.Endpoint.UI.Application
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Application
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 32
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Application base class
+  example: []
+  syntax:
+    content: 'public class Application : DispatcherObject'
+    content.vb: Public Class Application Inherits DispatcherObject
+  inheritance:
+  - System.Object
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  inheritedMembers:
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherObject.Dispatcher
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.UI.Application.InputProvider
+  commentId: P:GHIElectronics.Endpoint.UI.Application.InputProvider
+  id: InputProvider
+  parent: GHIElectronics.Endpoint.UI.Application
+  langs:
+  - csharp
+  - vb
+  name: InputProvider
+  nameWithType: Application.InputProvider
+  fullName: GHIElectronics.Endpoint.UI.Application.InputProvider
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: InputProvider
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 34
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  syntax:
+    content: public InputProvider InputProvider { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.InputProvider
+    content.vb: Public Property InputProvider As InputProvider
+  overload: GHIElectronics.Endpoint.UI.Application.InputProvider*
+- uid: GHIElectronics.Endpoint.UI.Application.Width
+  commentId: P:GHIElectronics.Endpoint.UI.Application.Width
+  id: Width
+  parent: GHIElectronics.Endpoint.UI.Application
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: Application.Width
+  fullName: GHIElectronics.Endpoint.UI.Application.Width
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Width
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 36
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  syntax:
+    content: public int Width { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Width As Integer
+  overload: GHIElectronics.Endpoint.UI.Application.Width*
+- uid: GHIElectronics.Endpoint.UI.Application.Height
+  commentId: P:GHIElectronics.Endpoint.UI.Application.Height
+  id: Height
+  parent: GHIElectronics.Endpoint.UI.Application
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: Application.Height
+  fullName: GHIElectronics.Endpoint.UI.Application.Height
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Height
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 37
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  syntax:
+    content: public int Height { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Height As Integer
+  overload: GHIElectronics.Endpoint.UI.Application.Height*
+- uid: GHIElectronics.Endpoint.UI.Application.#ctor(System.Int32,System.Int32)
+  commentId: M:GHIElectronics.Endpoint.UI.Application.#ctor(System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32)'
+  parent: GHIElectronics.Endpoint.UI.Application
+  langs:
+  - csharp
+  - vb
+  name: Application(int, int)
+  nameWithType: Application.Application(int, int)
+  fullName: GHIElectronics.Endpoint.UI.Application.Application(int, int)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 54
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Application constructor
+  example: []
+  syntax:
+    content: public Application(int width, int height)
+    parameters:
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub New(width As Integer, height As Integer)
+  overload: GHIElectronics.Endpoint.UI.Application.#ctor*
+  nameWithType.vb: Application.New(Integer, Integer)
+  fullName.vb: GHIElectronics.Endpoint.UI.Application.New(Integer, Integer)
+  name.vb: New(Integer, Integer)
+- uid: GHIElectronics.Endpoint.UI.Application.Run
+  commentId: M:GHIElectronics.Endpoint.UI.Application.Run
+  id: Run
+  parent: GHIElectronics.Endpoint.UI.Application
+  langs:
+  - csharp
+  - vb
+  name: Run()
+  nameWithType: Application.Run()
+  fullName: GHIElectronics.Endpoint.UI.Application.Run()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Run
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 155
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: >-
+    Run is called to start an application.
+
+
+    Typically a developer will do some setting of properties/attaching to events after instantiating an application object,
+
+    and then call Run() to start the application.
+  remarks: >-
+    Once run has been called - an application's OnStartup override and Startup event is called
+
+    immediately afterwards.
+  example: []
+  syntax:
+    content: public void Run()
+    content.vb: Public Sub Run()
+  overload: GHIElectronics.Endpoint.UI.Application.Run*
+- uid: GHIElectronics.Endpoint.UI.Application.Run(GHIElectronics.Endpoint.UI.Window)
+  commentId: M:GHIElectronics.Endpoint.UI.Application.Run(GHIElectronics.Endpoint.UI.Window)
+  id: Run(GHIElectronics.Endpoint.UI.Window)
+  parent: GHIElectronics.Endpoint.UI.Application
+  langs:
+  - csharp
+  - vb
+  name: Run(Window)
+  nameWithType: Application.Run(Window)
+  fullName: GHIElectronics.Endpoint.UI.Application.Run(GHIElectronics.Endpoint.UI.Window)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Run
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 179
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: >-
+    Run is called to start an application.
+
+
+    Typically a developer will do some setting of properties/attaching to events after instantiating an application object,
+
+    and then call Run() to start the application.
+  remarks: >-
+    Once run has been called - an application's OnStartup override and Startup event is called
+
+    immediately afterwards.
+  example: []
+  syntax:
+    content: public void Run(Window window)
+    parameters:
+    - id: window
+      type: GHIElectronics.Endpoint.UI.Window
+      description: >-
+        Window that will be added to the Windows property and made the MainWindow of the Applcation.
+             The passed Window must be created on the same thread as the Application object.  Furthermore, this Window is
+             shown once the Application is run.
+    content.vb: Public Sub Run(window As Window)
+  overload: GHIElectronics.Endpoint.UI.Application.Run*
+- uid: GHIElectronics.Endpoint.UI.Application.Shutdown
+  commentId: M:GHIElectronics.Endpoint.UI.Application.Shutdown
+  id: Shutdown
+  parent: GHIElectronics.Endpoint.UI.Application
+  langs:
+  - csharp
+  - vb
+  name: Shutdown()
+  nameWithType: Application.Shutdown()
+  fullName: GHIElectronics.Endpoint.UI.Application.Shutdown()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Shutdown
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 237
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: >-
+    Shutdown is called to programmatically shutdown an application.
+
+
+    Once shutdown() is called, the application gets called with the
+
+    OnShutdown method to raise the Shutdown event.
+  example: []
+  syntax:
+    content: public void Shutdown()
+    content.vb: Public Sub Shutdown()
+  overload: GHIElectronics.Endpoint.UI.Application.Shutdown*
+- uid: GHIElectronics.Endpoint.UI.Application.InitializeForEventSource
+  commentId: M:GHIElectronics.Endpoint.UI.Application.InitializeForEventSource
+  id: InitializeForEventSource
+  parent: GHIElectronics.Endpoint.UI.Application
+  langs:
+  - csharp
+  - vb
+  name: InitializeForEventSource()
+  nameWithType: Application.InitializeForEventSource()
+  fullName: GHIElectronics.Endpoint.UI.Application.InitializeForEventSource()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: InitializeForEventSource
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 250
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  syntax:
+    content: public void InitializeForEventSource()
+    content.vb: Public Sub InitializeForEventSource()
+  overload: GHIElectronics.Endpoint.UI.Application.InitializeForEventSource*
+- uid: GHIElectronics.Endpoint.UI.Application.OnEvent(GHIElectronics.Endpoint.UI.Input.BaseEvent)
+  commentId: M:GHIElectronics.Endpoint.UI.Application.OnEvent(GHIElectronics.Endpoint.UI.Input.BaseEvent)
+  id: OnEvent(GHIElectronics.Endpoint.UI.Input.BaseEvent)
+  parent: GHIElectronics.Endpoint.UI.Application
+  langs:
+  - csharp
+  - vb
+  name: OnEvent(BaseEvent)
+  nameWithType: Application.OnEvent(BaseEvent)
+  fullName: GHIElectronics.Endpoint.UI.Application.OnEvent(GHIElectronics.Endpoint.UI.Input.BaseEvent)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OnEvent
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 266
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  syntax:
+    content: public bool OnEvent(BaseEvent ev)
+    parameters:
+    - id: ev
+      type: GHIElectronics.Endpoint.UI.Input.BaseEvent
+    return:
+      type: System.Boolean
+    content.vb: Public Function OnEvent(ev As BaseEvent) As Boolean
+  overload: GHIElectronics.Endpoint.UI.Application.OnEvent*
+- uid: GHIElectronics.Endpoint.UI.Application.Current
+  commentId: P:GHIElectronics.Endpoint.UI.Application.Current
+  id: Current
+  parent: GHIElectronics.Endpoint.UI.Application
+  langs:
+  - csharp
+  - vb
+  name: Current
+  nameWithType: Application.Current
+  fullName: GHIElectronics.Endpoint.UI.Application.Current
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Current
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 365
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: >-
+    The Current property enables the developer to always get to the application in
+
+    AppDomain in which they are running.
+  example: []
+  syntax:
+    content: public static Application Current { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.Application
+    content.vb: Public Shared ReadOnly Property Current As Application
+  overload: GHIElectronics.Endpoint.UI.Application.Current*
+- uid: GHIElectronics.Endpoint.UI.Application.Windows
+  commentId: P:GHIElectronics.Endpoint.UI.Application.Windows
+  id: Windows
+  parent: GHIElectronics.Endpoint.UI.Application
+  langs:
+  - csharp
+  - vb
+  name: Windows
+  nameWithType: Application.Windows
+  fullName: GHIElectronics.Endpoint.UI.Application.Windows
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Windows
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 379
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: >-
+    The Windows property exposes a WindowCollection object, from which a developer
+
+    can iterate over all the windows that have been opened in the current application.
+  example: []
+  syntax:
+    content: public WindowCollection Windows { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.WindowCollection
+    content.vb: Public ReadOnly Property Windows As WindowCollection
+  overload: GHIElectronics.Endpoint.UI.Application.Windows*
+- uid: GHIElectronics.Endpoint.UI.Application.MainWindow
+  commentId: P:GHIElectronics.Endpoint.UI.Application.MainWindow
+  id: MainWindow
+  parent: GHIElectronics.Endpoint.UI.Application
+  langs:
+  - csharp
+  - vb
+  name: MainWindow
+  nameWithType: Application.MainWindow
+  fullName: GHIElectronics.Endpoint.UI.Application.MainWindow
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: MainWindow
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 390
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: The MainWindow property indicates the primary window of the application.
+  remarks: >-
+    By default - MainWindow will be set to the first window opened in the application.
+
+    However the MainWindow may be set programmatically to indicate "this is my main window".
+
+    It is a recommended programming style to refer to MainWindow in code instead of Windows[0].
+  example: []
+  syntax:
+    content: public Window MainWindow { get; set; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.Window
+    content.vb: Public Property MainWindow As Window
+  overload: GHIElectronics.Endpoint.UI.Application.MainWindow*
+- uid: GHIElectronics.Endpoint.UI.Application.ShutdownMode
+  commentId: P:GHIElectronics.Endpoint.UI.Application.ShutdownMode
+  id: ShutdownMode
+  parent: GHIElectronics.Endpoint.UI.Application
+  langs:
+  - csharp
+  - vb
+  name: ShutdownMode
+  nameWithType: Application.ShutdownMode
+  fullName: GHIElectronics.Endpoint.UI.Application.ShutdownMode
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ShutdownMode
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 423
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: >-
+    The ShutdownMode property is called to set the shutdown specific mode of
+
+    the application. Setting this property controls the way in which an application
+
+    will shutdown.
+        The three values for the ShutdownMode enum are :
+                OnLastWindowClose
+                OnMainWindowClose
+                OnExplicitShutdown
+
+        OnLastWindowClose - this mode will shutdown the application when  the
+                            last window is closed, or an explicit call is made
+                            to Application.Shutdown(). This is the default mode.
+
+        OnMainWindowClose - this mode will shutdown the application when the main
+                            window has been closed, or Application.Shutdown() is
+                            called. Note that if the MainWindow property has not
+                            been set - this mode is equivalent to OnExplicitOnly.
+
+        OnExplicitShutdown- this mode will shutdown the application only when an
+                            explicit call to OnShutdown() has been made.
+  example: []
+  syntax:
+    content: public ShutdownMode ShutdownMode { get; set; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.ShutdownMode
+    content.vb: Public Property ShutdownMode As ShutdownMode
+  overload: GHIElectronics.Endpoint.UI.Application.ShutdownMode*
+- uid: GHIElectronics.Endpoint.UI.Application.Startup
+  commentId: E:GHIElectronics.Endpoint.UI.Application.Startup
+  id: Startup
+  parent: GHIElectronics.Endpoint.UI.Application
+  langs:
+  - csharp
+  - vb
+  name: Startup
+  nameWithType: Application.Startup
+  fullName: GHIElectronics.Endpoint.UI.Application.Startup
+  type: Event
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Startup
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 454
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: >-
+    The Startup event is fired when an application is starting.
+
+    This event is raised by the OnStartup method.
+  example: []
+  syntax:
+    content: public event EventHandler Startup
+    return:
+      type: GHIElectronics.Endpoint.UI.EventHandler
+    content.vb: Public Event Startup As EventHandler
+- uid: GHIElectronics.Endpoint.UI.Application.Exit
+  commentId: E:GHIElectronics.Endpoint.UI.Application.Exit
+  id: Exit
+  parent: GHIElectronics.Endpoint.UI.Application
+  langs:
+  - csharp
+  - vb
+  name: Exit
+  nameWithType: Application.Exit
+  fullName: GHIElectronics.Endpoint.UI.Application.Exit
+  type: Event
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Exit
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 463
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: >-
+    The Exit event is fired when an application is shutting down.
+
+    This event is raised by the OnExit method.
+  example: []
+  syntax:
+    content: public event EventHandler Exit
+    return:
+      type: GHIElectronics.Endpoint.UI.EventHandler
+    content.vb: Public Event [Exit] As EventHandler
+- uid: GHIElectronics.Endpoint.UI.Application.OnStartup(System.EventArgs)
+  commentId: M:GHIElectronics.Endpoint.UI.Application.OnStartup(System.EventArgs)
+  id: OnStartup(System.EventArgs)
+  parent: GHIElectronics.Endpoint.UI.Application
+  langs:
+  - csharp
+  - vb
+  name: OnStartup(EventArgs)
+  nameWithType: Application.OnStartup(EventArgs)
+  fullName: GHIElectronics.Endpoint.UI.Application.OnStartup(System.EventArgs)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OnStartup
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 534
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: >-
+    OnStartup is called to raise the Startup event. The developer will typically override this method
+
+    if they want to take action at startup time ( or they may choose to attach an event).
+
+    This method will be called once when the application begins, once that application's Run() method
+
+    has been called.
+  remarks: >-
+    This method follows the .Net programming guideline of having a protected virtual method
+
+    that raises an event, to provide a convenience for developers that subclass the event.
+
+    If you override this method - you need to call Base.OnStartup(...) for the corresponding event
+
+    to be raised.
+  example: []
+  syntax:
+    content: protected virtual void OnStartup(EventArgs e)
+    parameters:
+    - id: e
+      type: System.EventArgs
+      description: The event args that will be passed to the Startup event
+    content.vb: Protected Overridable Sub OnStartup(e As EventArgs)
+  overload: GHIElectronics.Endpoint.UI.Application.OnStartup*
+- uid: GHIElectronics.Endpoint.UI.Application.OnExit(System.EventArgs)
+  commentId: M:GHIElectronics.Endpoint.UI.Application.OnExit(System.EventArgs)
+  id: OnExit(System.EventArgs)
+  parent: GHIElectronics.Endpoint.UI.Application
+  langs:
+  - csharp
+  - vb
+  name: OnExit(EventArgs)
+  nameWithType: Application.OnExit(EventArgs)
+  fullName: GHIElectronics.Endpoint.UI.Application.OnExit(System.EventArgs)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OnExit
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs
+    startLine: 551
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: >-
+    OnExit is called to raise the Exit event.
+
+    The developer will typically override this method if they want to take
+
+    action when the application exits  ( or they may choose to attach an event).
+  remarks: >-
+    This method follows the .Net programming guideline of having a protected virtual method
+
+    that raises an event, to provide a convenience for developers that subclass the event.
+
+    If you override this method - you need to call Base.OnExit(...) for the
+
+    corresponding event to be raised.
+  example: []
+  syntax:
+    content: protected virtual void OnExit(EventArgs e)
+    parameters:
+    - id: e
+      type: System.EventArgs
+      description: The event args that will be passed to the Exit event
+    content.vb: Protected Overridable Sub OnExit(e As EventArgs)
+  overload: GHIElectronics.Endpoint.UI.Application.OnExit*
+references:
+- uid: GHIElectronics.Endpoint.UI
+  commentId: N:GHIElectronics.Endpoint.UI
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI
+  nameWithType: GHIElectronics.Endpoint.UI
+  fullName: GHIElectronics.Endpoint.UI
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  parent: GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html
+  name: DispatcherObject
+  nameWithType: DispatcherObject
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_CheckAccess
+  name: CheckAccess()
+  nameWithType: DispatcherObject.CheckAccess()
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess()
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+    name: CheckAccess
+    href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_CheckAccess
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+    name: CheckAccess
+    href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_CheckAccess
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_VerifyAccess
+  name: VerifyAccess()
+  nameWithType: DispatcherObject.VerifyAccess()
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess()
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+    name: VerifyAccess
+    href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_VerifyAccess
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+    name: VerifyAccess
+    href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_VerifyAccess
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.Dispatcher
+  commentId: F:GHIElectronics.Endpoint.UI.Threading.DispatcherObject.Dispatcher
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_Dispatcher
+  name: Dispatcher
+  nameWithType: DispatcherObject.Dispatcher
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.Dispatcher
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.UI.Threading
+  commentId: N:GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Threading
+  nameWithType: GHIElectronics.Endpoint.UI.Threading
+  fullName: GHIElectronics.Endpoint.UI.Threading
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Threading
+    name: Threading
+    href: GHIElectronics.Endpoint.UI.Threading.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Threading
+    name: Threading
+    href: GHIElectronics.Endpoint.UI.Threading.html
+- uid: GHIElectronics.Endpoint.UI.Application.InputProvider*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Application.InputProvider
+  href: GHIElectronics.Endpoint.UI.Application.html#GHIElectronics_Endpoint_UI_Application_InputProvider
+  name: InputProvider
+  nameWithType: Application.InputProvider
+  fullName: GHIElectronics.Endpoint.UI.Application.InputProvider
+- uid: GHIElectronics.Endpoint.UI.Input.InputProvider
+  commentId: T:GHIElectronics.Endpoint.UI.Input.InputProvider
+  parent: GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.Endpoint.UI.Input.InputProvider.html
+  name: InputProvider
+  nameWithType: InputProvider
+  fullName: GHIElectronics.Endpoint.UI.Input.InputProvider
+- uid: GHIElectronics.Endpoint.UI.Input
+  commentId: N:GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Input
+  nameWithType: GHIElectronics.Endpoint.UI.Input
+  fullName: GHIElectronics.Endpoint.UI.Input
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+- uid: GHIElectronics.Endpoint.UI.Application.Width*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Application.Width
+  href: GHIElectronics.Endpoint.UI.Application.html#GHIElectronics_Endpoint_UI_Application_Width
+  name: Width
+  nameWithType: Application.Width
+  fullName: GHIElectronics.Endpoint.UI.Application.Width
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: GHIElectronics.Endpoint.UI.Application.Height*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Application.Height
+  href: GHIElectronics.Endpoint.UI.Application.html#GHIElectronics_Endpoint_UI_Application_Height
+  name: Height
+  nameWithType: Application.Height
+  fullName: GHIElectronics.Endpoint.UI.Application.Height
+- uid: GHIElectronics.Endpoint.UI.Application.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Application.#ctor
+  href: GHIElectronics.Endpoint.UI.Application.html#GHIElectronics_Endpoint_UI_Application__ctor_System_Int32_System_Int32_
+  name: Application
+  nameWithType: Application.Application
+  fullName: GHIElectronics.Endpoint.UI.Application.Application
+  nameWithType.vb: Application.New
+  fullName.vb: GHIElectronics.Endpoint.UI.Application.New
+  name.vb: New
+- uid: GHIElectronics.Endpoint.UI.Application.Run*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Application.Run
+  href: GHIElectronics.Endpoint.UI.Application.html#GHIElectronics_Endpoint_UI_Application_Run
+  name: Run
+  nameWithType: Application.Run
+  fullName: GHIElectronics.Endpoint.UI.Application.Run
+- uid: GHIElectronics.Endpoint.UI.Window
+  commentId: T:GHIElectronics.Endpoint.UI.Window
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.Window.html
+  name: Window
+  nameWithType: Window
+  fullName: GHIElectronics.Endpoint.UI.Window
+- uid: GHIElectronics.Endpoint.UI.Application.Shutdown*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Application.Shutdown
+  href: GHIElectronics.Endpoint.UI.Application.html#GHIElectronics_Endpoint_UI_Application_Shutdown
+  name: Shutdown
+  nameWithType: Application.Shutdown
+  fullName: GHIElectronics.Endpoint.UI.Application.Shutdown
+- uid: GHIElectronics.Endpoint.UI.Application.InitializeForEventSource*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Application.InitializeForEventSource
+  href: GHIElectronics.Endpoint.UI.Application.html#GHIElectronics_Endpoint_UI_Application_InitializeForEventSource
+  name: InitializeForEventSource
+  nameWithType: Application.InitializeForEventSource
+  fullName: GHIElectronics.Endpoint.UI.Application.InitializeForEventSource
+- uid: GHIElectronics.Endpoint.UI.Application.OnEvent*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Application.OnEvent
+  href: GHIElectronics.Endpoint.UI.Application.html#GHIElectronics_Endpoint_UI_Application_OnEvent_GHIElectronics_Endpoint_UI_Input_BaseEvent_
+  name: OnEvent
+  nameWithType: Application.OnEvent
+  fullName: GHIElectronics.Endpoint.UI.Application.OnEvent
+- uid: GHIElectronics.Endpoint.UI.Input.BaseEvent
+  commentId: T:GHIElectronics.Endpoint.UI.Input.BaseEvent
+  parent: GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.Endpoint.UI.Input.BaseEvent.html
+  name: BaseEvent
+  nameWithType: BaseEvent
+  fullName: GHIElectronics.Endpoint.UI.Input.BaseEvent
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: GHIElectronics.Endpoint.UI.Application.Current*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Application.Current
+  href: GHIElectronics.Endpoint.UI.Application.html#GHIElectronics_Endpoint_UI_Application_Current
+  name: Current
+  nameWithType: Application.Current
+  fullName: GHIElectronics.Endpoint.UI.Application.Current
+- uid: GHIElectronics.Endpoint.UI.Application
+  commentId: T:GHIElectronics.Endpoint.UI.Application
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.Application.html
+  name: Application
+  nameWithType: Application
+  fullName: GHIElectronics.Endpoint.UI.Application
+- uid: GHIElectronics.Endpoint.UI.Application.Windows*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Application.Windows
+  href: GHIElectronics.Endpoint.UI.Application.html#GHIElectronics_Endpoint_UI_Application_Windows
+  name: Windows
+  nameWithType: Application.Windows
+  fullName: GHIElectronics.Endpoint.UI.Application.Windows
+- uid: GHIElectronics.Endpoint.UI.WindowCollection
+  commentId: T:GHIElectronics.Endpoint.UI.WindowCollection
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.WindowCollection.html
+  name: WindowCollection
+  nameWithType: WindowCollection
+  fullName: GHIElectronics.Endpoint.UI.WindowCollection
+- uid: GHIElectronics.Endpoint.UI.Application.MainWindow*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Application.MainWindow
+  href: GHIElectronics.Endpoint.UI.Application.html#GHIElectronics_Endpoint_UI_Application_MainWindow
+  name: MainWindow
+  nameWithType: Application.MainWindow
+  fullName: GHIElectronics.Endpoint.UI.Application.MainWindow
+- uid: GHIElectronics.Endpoint.UI.Application.ShutdownMode*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Application.ShutdownMode
+  href: GHIElectronics.Endpoint.UI.Application.html#GHIElectronics_Endpoint_UI_Application_ShutdownMode
+  name: ShutdownMode
+  nameWithType: Application.ShutdownMode
+  fullName: GHIElectronics.Endpoint.UI.Application.ShutdownMode
+- uid: GHIElectronics.Endpoint.UI.ShutdownMode
+  commentId: T:GHIElectronics.Endpoint.UI.ShutdownMode
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.ShutdownMode.html
+  name: ShutdownMode
+  nameWithType: ShutdownMode
+  fullName: GHIElectronics.Endpoint.UI.ShutdownMode
+- uid: GHIElectronics.Endpoint.UI.EventHandler
+  commentId: T:GHIElectronics.Endpoint.UI.EventHandler
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.EventHandler.html
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: GHIElectronics.Endpoint.UI.EventHandler
+- uid: GHIElectronics.Endpoint.UI.Application.OnStartup*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Application.OnStartup
+  href: GHIElectronics.Endpoint.UI.Application.html#GHIElectronics_Endpoint_UI_Application_OnStartup_System_EventArgs_
+  name: OnStartup
+  nameWithType: Application.OnStartup
+  fullName: GHIElectronics.Endpoint.UI.Application.OnStartup
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: GHIElectronics.Endpoint.UI.Application.OnExit*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Application.OnExit
+  href: GHIElectronics.Endpoint.UI.Application.html#GHIElectronics_Endpoint_UI_Application_OnExit_System_EventArgs_
+  name: OnExit
+  nameWithType: Application.OnExit
+  fullName: GHIElectronics.Endpoint.UI.Application.OnExit

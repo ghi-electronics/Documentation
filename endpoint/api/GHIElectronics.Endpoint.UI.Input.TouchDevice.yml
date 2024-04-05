@@ -1,0 +1,583 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Input.TouchDevice
+  commentId: T:GHIElectronics.Endpoint.UI.Input.TouchDevice
+  id: TouchDevice
+  parent: GHIElectronics.Endpoint.UI.Input
+  children:
+  - GHIElectronics.Endpoint.UI.Input.TouchDevice.DeviceType
+  - GHIElectronics.Endpoint.UI.Input.TouchDevice.SetTarget(GHIElectronics.Endpoint.UI.UIElement)
+  - GHIElectronics.Endpoint.UI.Input.TouchDevice.Target
+  langs:
+  - csharp
+  - vb
+  name: TouchDevice
+  nameWithType: TouchDevice
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchDevice
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/TouchDevice.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: TouchDevice
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/TouchDevice.cs
+    startLine: 11
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  summary: >-
+    The TouchDevice class represents the stylus/touch device to the
+
+    members of a context.
+  example: []
+  syntax:
+    content: 'public sealed class TouchDevice : InputDevice'
+    content.vb: Public NotInheritable Class TouchDevice Inherits InputDevice
+  inheritance:
+  - System.Object
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  - GHIElectronics.Endpoint.UI.Input.InputDevice
+  inheritedMembers:
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+  - GHIElectronics.Endpoint.UI.Threading.DispatcherObject.Dispatcher
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: GHIElectronics.Endpoint.UI.Input.TouchDevice.Target
+  commentId: P:GHIElectronics.Endpoint.UI.Input.TouchDevice.Target
+  id: Target
+  parent: GHIElectronics.Endpoint.UI.Input.TouchDevice
+  langs:
+  - csharp
+  - vb
+  name: Target
+  nameWithType: TouchDevice.Target
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchDevice.Target
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/TouchDevice.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Target
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/TouchDevice.cs
+    startLine: 18
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  summary: Returns the element that input from this device is sent to.
+  example: []
+  syntax:
+    content: public override UIElement Target { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.UIElement
+    content.vb: Public Overrides ReadOnly Property Target As UIElement
+  overridden: GHIElectronics.Endpoint.UI.Input.InputDevice.Target
+  overload: GHIElectronics.Endpoint.UI.Input.TouchDevice.Target*
+- uid: GHIElectronics.Endpoint.UI.Input.TouchDevice.DeviceType
+  commentId: P:GHIElectronics.Endpoint.UI.Input.TouchDevice.DeviceType
+  id: DeviceType
+  parent: GHIElectronics.Endpoint.UI.Input.TouchDevice
+  langs:
+  - csharp
+  - vb
+  name: DeviceType
+  nameWithType: TouchDevice.DeviceType
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchDevice.DeviceType
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/TouchDevice.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: DeviceType
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/TouchDevice.cs
+    startLine: 20
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  example: []
+  syntax:
+    content: public override InputManager.InputDeviceType DeviceType { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+    content.vb: Public Overrides ReadOnly Property DeviceType As InputManager.InputDeviceType
+  overridden: GHIElectronics.Endpoint.UI.Input.InputDevice.DeviceType
+  overload: GHIElectronics.Endpoint.UI.Input.TouchDevice.DeviceType*
+- uid: GHIElectronics.Endpoint.UI.Input.TouchDevice.SetTarget(GHIElectronics.Endpoint.UI.UIElement)
+  commentId: M:GHIElectronics.Endpoint.UI.Input.TouchDevice.SetTarget(GHIElectronics.Endpoint.UI.UIElement)
+  id: SetTarget(GHIElectronics.Endpoint.UI.UIElement)
+  parent: GHIElectronics.Endpoint.UI.Input.TouchDevice
+  langs:
+  - csharp
+  - vb
+  name: SetTarget(UIElement)
+  nameWithType: TouchDevice.SetTarget(UIElement)
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchDevice.SetTarget(GHIElectronics.Endpoint.UI.UIElement)
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/TouchDevice.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: SetTarget
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/TouchDevice.cs
+    startLine: 22
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: public void SetTarget(UIElement target)
+    parameters:
+    - id: target
+      type: GHIElectronics.Endpoint.UI.UIElement
+    content.vb: Public Sub SetTarget(target As UIElement)
+  overload: GHIElectronics.Endpoint.UI.Input.TouchDevice.SetTarget*
+references:
+- uid: GHIElectronics.Endpoint.UI.Input
+  commentId: N:GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Input
+  nameWithType: GHIElectronics.Endpoint.UI.Input
+  fullName: GHIElectronics.Endpoint.UI.Input
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  commentId: T:GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  parent: GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html
+  name: DispatcherObject
+  nameWithType: DispatcherObject
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+- uid: GHIElectronics.Endpoint.UI.Input.InputDevice
+  commentId: T:GHIElectronics.Endpoint.UI.Input.InputDevice
+  parent: GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.Endpoint.UI.Input.InputDevice.html
+  name: InputDevice
+  nameWithType: InputDevice
+  fullName: GHIElectronics.Endpoint.UI.Input.InputDevice
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_CheckAccess
+  name: CheckAccess()
+  nameWithType: DispatcherObject.CheckAccess()
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess()
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+    name: CheckAccess
+    href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_CheckAccess
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.CheckAccess
+    name: CheckAccess
+    href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_CheckAccess
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+  commentId: M:GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_VerifyAccess
+  name: VerifyAccess()
+  nameWithType: DispatcherObject.VerifyAccess()
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess()
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+    name: VerifyAccess
+    href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_VerifyAccess
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.VerifyAccess
+    name: VerifyAccess
+    href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_VerifyAccess
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.Dispatcher
+  commentId: F:GHIElectronics.Endpoint.UI.Threading.DispatcherObject.Dispatcher
+  parent: GHIElectronics.Endpoint.UI.Threading.DispatcherObject
+  href: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_Dispatcher
+  name: Dispatcher
+  nameWithType: DispatcherObject.Dispatcher
+  fullName: GHIElectronics.Endpoint.UI.Threading.DispatcherObject.Dispatcher
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.UI.Threading
+  commentId: N:GHIElectronics.Endpoint.UI.Threading
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Threading
+  nameWithType: GHIElectronics.Endpoint.UI.Threading
+  fullName: GHIElectronics.Endpoint.UI.Threading
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Threading
+    name: Threading
+    href: GHIElectronics.Endpoint.UI.Threading.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Threading
+    name: Threading
+    href: GHIElectronics.Endpoint.UI.Threading.html
+- uid: GHIElectronics.Endpoint.UI.Input.InputDevice.Target
+  commentId: P:GHIElectronics.Endpoint.UI.Input.InputDevice.Target
+  parent: GHIElectronics.Endpoint.UI.Input.InputDevice
+  href: GHIElectronics.Endpoint.UI.Input.InputDevice.html#GHIElectronics_Endpoint_UI_Input_InputDevice_Target
+  name: Target
+  nameWithType: InputDevice.Target
+  fullName: GHIElectronics.Endpoint.UI.Input.InputDevice.Target
+- uid: GHIElectronics.Endpoint.UI.Input.TouchDevice.Target*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Input.TouchDevice.Target
+  href: GHIElectronics.Endpoint.UI.Input.TouchDevice.html#GHIElectronics_Endpoint_UI_Input_TouchDevice_Target
+  name: Target
+  nameWithType: TouchDevice.Target
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchDevice.Target
+- uid: GHIElectronics.Endpoint.UI.UIElement
+  commentId: T:GHIElectronics.Endpoint.UI.UIElement
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.UIElement.html
+  name: UIElement
+  nameWithType: UIElement
+  fullName: GHIElectronics.Endpoint.UI.UIElement
+- uid: GHIElectronics.Endpoint.UI
+  commentId: N:GHIElectronics.Endpoint.UI
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI
+  nameWithType: GHIElectronics.Endpoint.UI
+  fullName: GHIElectronics.Endpoint.UI
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+- uid: GHIElectronics.Endpoint.UI.Input.InputDevice.DeviceType
+  commentId: P:GHIElectronics.Endpoint.UI.Input.InputDevice.DeviceType
+  parent: GHIElectronics.Endpoint.UI.Input.InputDevice
+  href: GHIElectronics.Endpoint.UI.Input.InputDevice.html#GHIElectronics_Endpoint_UI_Input_InputDevice_DeviceType
+  name: DeviceType
+  nameWithType: InputDevice.DeviceType
+  fullName: GHIElectronics.Endpoint.UI.Input.InputDevice.DeviceType
+- uid: GHIElectronics.Endpoint.UI.Input.TouchDevice.DeviceType*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Input.TouchDevice.DeviceType
+  href: GHIElectronics.Endpoint.UI.Input.TouchDevice.html#GHIElectronics_Endpoint_UI_Input_TouchDevice_DeviceType
+  name: DeviceType
+  nameWithType: TouchDevice.DeviceType
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchDevice.DeviceType
+- uid: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+  commentId: T:GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+  parent: GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.Endpoint.UI.Input.InputManager.html
+  name: InputManager.InputDeviceType
+  nameWithType: InputManager.InputDeviceType
+  fullName: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.UI.Input.InputManager
+    name: InputManager
+    href: GHIElectronics.Endpoint.UI.Input.InputManager.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+    name: InputDeviceType
+    href: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.UI.Input.InputManager
+    name: InputManager
+    href: GHIElectronics.Endpoint.UI.Input.InputManager.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType
+    name: InputDeviceType
+    href: GHIElectronics.Endpoint.UI.Input.InputManager.InputDeviceType.html
+- uid: GHIElectronics.Endpoint.UI.Input.TouchDevice.SetTarget*
+  commentId: Overload:GHIElectronics.Endpoint.UI.Input.TouchDevice.SetTarget
+  href: GHIElectronics.Endpoint.UI.Input.TouchDevice.html#GHIElectronics_Endpoint_UI_Input_TouchDevice_SetTarget_GHIElectronics_Endpoint_UI_UIElement_
+  name: SetTarget
+  nameWithType: TouchDevice.SetTarget
+  fullName: GHIElectronics.Endpoint.UI.Input.TouchDevice.SetTarget

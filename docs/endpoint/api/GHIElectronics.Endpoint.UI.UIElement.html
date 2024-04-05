@@ -1,0 +1,2525 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class UIElement </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class UIElement ">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Endpoint-Libraries/new/main/apiSpec/new?filename=GHIElectronics_Endpoint_UI_UIElement.md&amp;value=---%0Auid%3A%20GHIElectronics.Endpoint.UI.UIElement%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="GHIElectronics.Endpoint.UI.UIElement">
+
+
+
+  <h1 id="GHIElectronics_Endpoint_UI_UIElement" data-uid="GHIElectronics.Endpoint.UI.UIElement" class="text-break">
+Class UIElement  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="GHIElectronics.html">GHIElectronics</a>.<a class="xref" href="GHIElectronics.Endpoint.html">Endpoint</a>.<a class="xref" href="GHIElectronics.Endpoint.UI.html">UI</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>GHIElectronics.Endpoint.UI.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class UIElement : DispatcherObject</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html">DispatcherObject</a></div>
+      <div><span class="xref">UIElement</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="GHIElectronics.Endpoint.UI.Controls.Control.html">Control</a></div>
+      <div><a class="xref" href="GHIElectronics.Endpoint.UI.Controls.Image.html">Image</a></div>
+      <div><a class="xref" href="GHIElectronics.Endpoint.UI.Controls.Panel.html">Panel</a></div>
+      <div><a class="xref" href="GHIElectronics.Endpoint.UI.Controls.Text.html">Text</a></div>
+      <div><a class="xref" href="GHIElectronics.Endpoint.UI.Controls.TextFlow.html">TextFlow</a></div>
+      <div><a class="xref" href="GHIElectronics.Endpoint.UI.Shapes.Shape.html">Shape</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_CheckAccess">DispatcherObject.CheckAccess()</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_VerifyAccess">DispatcherObject.VerifyAccess()</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_Dispatcher">DispatcherObject.Dispatcher</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement__ctor_" data-uid="GHIElectronics.Endpoint.UI.UIElement.#ctor*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement__ctor" data-uid="GHIElectronics.Endpoint.UI.UIElement.#ctor">
+  UIElement()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UIElement()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement__horizontalAlignment" data-uid="GHIElectronics.Endpoint.UI.UIElement._horizontalAlignment">
+  _horizontalAlignment
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1560"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected HorizontalAlignment _horizontalAlignment</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.HorizontalAlignment.html">HorizontalAlignment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement__verticalAlignment" data-uid="GHIElectronics.Endpoint.UI.UIElement._verticalAlignment">
+  _verticalAlignment
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1561"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected VerticalAlignment _verticalAlignment</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.VerticalAlignment.html">VerticalAlignment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_ActualHeight_" data-uid="GHIElectronics.Endpoint.UI.UIElement.ActualHeight*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_ActualHeight" data-uid="GHIElectronics.Endpoint.UI.UIElement.ActualHeight">
+  ActualHeight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ActualHeight { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_ActualWidth_" data-uid="GHIElectronics.Endpoint.UI.UIElement.ActualWidth*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_ActualWidth" data-uid="GHIElectronics.Endpoint.UI.UIElement.ActualWidth">
+  ActualWidth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ActualWidth { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_Height_" data-uid="GHIElectronics.Endpoint.UI.UIElement.Height*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_Height" data-uid="GHIElectronics.Endpoint.UI.UIElement.Height">
+  Height
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Height { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_HorizontalAlignment_" data-uid="GHIElectronics.Endpoint.UI.UIElement.HorizontalAlignment*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_HorizontalAlignment" data-uid="GHIElectronics.Endpoint.UI.UIElement.HorizontalAlignment">
+  HorizontalAlignment
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1074"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HorizontalAlignment HorizontalAlignment { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.HorizontalAlignment.html">HorizontalAlignment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_InstanceEventHandlersStore_" data-uid="GHIElectronics.Endpoint.UI.UIElement.InstanceEventHandlersStore*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_InstanceEventHandlersStore" data-uid="GHIElectronics.Endpoint.UI.UIElement.InstanceEventHandlersStore">
+  InstanceEventHandlersStore
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1427"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ensure the store has been created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Hashtable InstanceEventHandlersStore { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.hashtable">Hashtable</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_IsArrangeValid_" data-uid="GHIElectronics.Endpoint.UI.UIElement.IsArrangeValid*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_IsArrangeValid" data-uid="GHIElectronics.Endpoint.UI.UIElement.IsArrangeValid">
+  IsArrangeValid
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L899"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines if the RenderSize and position of child elements is valid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsArrangeValid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_UIElement_IsArrangeValid_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A developer can force arrangement to be invalidated by calling InvalidateArrange.
+IsArrangeValid and IsMeasureValid are related, in that arrangement cannot be valid without measurement first
+being valid.</p>
+</div>
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_IsEnabled_" data-uid="GHIElectronics.Endpoint.UI.UIElement.IsEnabled*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_IsEnabled" data-uid="GHIElectronics.Endpoint.UI.UIElement.IsEnabled">
+  IsEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1204"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fetches the value of the IsEnabled property</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEnabled { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_IsFocused_" data-uid="GHIElectronics.Endpoint.UI.UIElement.IsFocused*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_IsFocused" data-uid="GHIElectronics.Endpoint.UI.UIElement.IsFocused">
+  IsFocused
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L338"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A property indicating if the button is focused on this
+element or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFocused { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_IsMeasureValid_" data-uid="GHIElectronics.Endpoint.UI.UIElement.IsMeasureValid*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_IsMeasureValid" data-uid="GHIElectronics.Endpoint.UI.UIElement.IsMeasureValid">
+  IsMeasureValid
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L889"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines if the DesiredSize is valid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsMeasureValid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_UIElement_IsMeasureValid_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A developer can force arrangement to be invalidated by calling InvalidateMeasure.
+IsArrangeValid and IsMeasureValid are related,
+in that arrangement cannot be valid without measurement first being valid.</p>
+</div>
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_IsVisible_" data-uid="GHIElectronics.Endpoint.UI.UIElement.IsVisible*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_IsVisible" data-uid="GHIElectronics.Endpoint.UI.UIElement.IsVisible">
+  IsVisible
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1185"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A property indicating if this element is Visible or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsVisible { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_LogicalChildren_" data-uid="GHIElectronics.Endpoint.UI.UIElement.LogicalChildren*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_LogicalChildren" data-uid="GHIElectronics.Endpoint.UI.UIElement.LogicalChildren">
+  LogicalChildren
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L303"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UIElementCollection LogicalChildren { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.UIElementCollection.html">UIElementCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_Parent_" data-uid="GHIElectronics.Endpoint.UI.UIElement.Parent*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_Parent" data-uid="GHIElectronics.Endpoint.UI.UIElement.Parent">
+  Parent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1050"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UIElement Parent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html">UIElement</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_RootUIElement_" data-uid="GHIElectronics.Endpoint.UI.UIElement.RootUIElement*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_RootUIElement" data-uid="GHIElectronics.Endpoint.UI.UIElement.RootUIElement">
+  RootUIElement
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1052"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UIElement RootUIElement { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html">UIElement</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_VerticalAlignment_" data-uid="GHIElectronics.Endpoint.UI.UIElement.VerticalAlignment*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_VerticalAlignment" data-uid="GHIElectronics.Endpoint.UI.UIElement.VerticalAlignment">
+  VerticalAlignment
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1085"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VerticalAlignment VerticalAlignment { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.VerticalAlignment.html">VerticalAlignment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_Visibility_" data-uid="GHIElectronics.Endpoint.UI.UIElement.Visibility*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_Visibility" data-uid="GHIElectronics.Endpoint.UI.UIElement.Visibility">
+  Visibility
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Visibility accessor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Visibility Visibility { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Visibility.html">Visibility</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_Width_" data-uid="GHIElectronics.Endpoint.UI.UIElement.Width*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_Width" data-uid="GHIElectronics.Endpoint.UI.UIElement.Width">
+  Width
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L248"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Width { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_AddHandler_" data-uid="GHIElectronics.Endpoint.UI.UIElement.AddHandler*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_AddHandler_GHIElectronics_Endpoint_UI_RoutedEvent_GHIElectronics_Endpoint_UI_RoutedEventHandler_System_Boolean_" data-uid="GHIElectronics.Endpoint.UI.UIElement.AddHandler(GHIElectronics.Endpoint.UI.RoutedEvent,GHIElectronics.Endpoint.UI.RoutedEventHandler,System.Boolean)">
+  AddHandler(RoutedEvent, RoutedEventHandler, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1473"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a routed event handler for the particular
+<a class="xref" href="GHIElectronics.Endpoint.UI.RoutedEvent.html">RoutedEvent</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddHandler(RoutedEvent routedEvent, RoutedEventHandler handler, bool handledEventsToo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>routedEvent</code> <a class="xref" href="GHIElectronics.Endpoint.UI.RoutedEvent.html">RoutedEvent</a></dt>
+    <dd><p><a class="xref" href="GHIElectronics.Endpoint.UI.RoutedEvent.html">RoutedEvent</a> for which the handler
+is attached</p>
+</dd>
+    <dt><code>handler</code> <a class="xref" href="GHIElectronics.Endpoint.UI.RoutedEventHandler.html">RoutedEventHandler</a></dt>
+    <dd><p>The handler that will be invoked on this object
+when the RoutedEvent is raised</p>
+</dd>
+    <dt><code>handledEventsToo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Flag indicating whether or not the listener wants to
+hear about events that have already been handled</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_UIElement_AddHandler_GHIElectronics_Endpoint_UI_RoutedEvent_GHIElectronics_Endpoint_UI_RoutedEventHandler_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The handler added thus is also known as
+an instance handler <p></p>
+<p></p>
+<p>NOTE: It is not an error to add a handler twice
+(handler will simply be called twice) <p></p>
+<p></p>
+<p>Input parameters <a class="xref" href="GHIElectronics.Endpoint.UI.RoutedEvent.html">RoutedEvent</a>
+and handler cannot be null <p></p>
+handledEventsToo input parameter when false means
+that listener does not care about already handled events.
+Hence the handler will not be invoked on the target if
+the RoutedEvent has already been
+<a class="xref" href="GHIElectronics.Endpoint.UI.RoutedEventArgs.html#GHIElectronics_Endpoint_UI_RoutedEventArgs_Handled">Handled</a> <p></p>
+handledEventsToo input parameter when true means
+that the listener wants to hear about all events even if
+they have already been handled. Hence the handler will
+be invoked irrespective of the event being
+<a class="xref" href="GHIElectronics.Endpoint.UI.RoutedEventArgs.html#GHIElectronics_Endpoint_UI_RoutedEventArgs_Handled">Handled</a>
+</div>
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_AddToEventRoute_" data-uid="GHIElectronics.Endpoint.UI.UIElement.AddToEventRoute*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_AddToEventRoute_GHIElectronics_Endpoint_UI_EventRoute_GHIElectronics_Endpoint_UI_RoutedEventArgs_" data-uid="GHIElectronics.Endpoint.UI.UIElement.AddToEventRoute(GHIElectronics.Endpoint.UI.EventRoute,GHIElectronics.Endpoint.UI.RoutedEventArgs)">
+  AddToEventRoute(EventRoute, RoutedEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1387"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add the event handlers for this element to the route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddToEventRoute(EventRoute route, RoutedEventArgs args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>route</code> <a class="xref" href="GHIElectronics.Endpoint.UI.EventRoute.html">EventRoute</a></dt>
+    <dd></dd>
+    <dt><code>args</code> <a class="xref" href="GHIElectronics.Endpoint.UI.RoutedEventArgs.html">RoutedEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_Arrange_" data-uid="GHIElectronics.Endpoint.UI.UIElement.Arrange*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_Arrange_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.UIElement.Arrange(System.Int32,System.Int32,System.Int32,System.Int32)">
+  Arrange(int, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L642"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parents or system call this method to arrange the internals of children on a second pass of layout update.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Arrange(int finalRectX, int finalRectY, int finalRectWidth, int finalRectHeight)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>finalRectX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>This is the final X location that parent or system wants this UIElement to assume.</p>
+</dd>
+    <dt><code>finalRectY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>This is the final Y location that parent or system wants this UIElement to assume.</p>
+</dd>
+    <dt><code>finalRectWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>This is the Width that parent or system wants this UIElement to assume.</p>
+</dd>
+    <dt><code>finalRectHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>This is the height that parent or system wants this UIElement to assume.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_UIElement_Arrange_System_Int32_System_Int32_System_Int32_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method internally calls ArrangeOverride override, giving the derived class opportunity
+to arrange its children and/or content using final computed size.
+In their ArrangeOverride overrides, derived class is supposed to create its visual structure and
+prepare itself for rendering. Arrange is called by parents
+from their implementation of ArrangeOverride or by system when needed.
+This method sets Bounds=finalSize before calling ArrangeOverride.</p>
+</div>
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_ArrangeOverride_" data-uid="GHIElectronics.Endpoint.UI.UIElement.ArrangeOverride*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_ArrangeOverride_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.UIElement.ArrangeOverride(System.Int32,System.Int32)">
+  ArrangeOverride(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L853"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>ArrangeOverride allows for the customization of the final sizing and positioning of children.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ArrangeOverride(int arrangeWidth, int arrangeHeight)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arrangeWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Final width</p>
+</dd>
+    <dt><code>arrangeHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Final height</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_UIElement_ArrangeOverride_System_Int32_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>UIElement authors should override this method, call Arrange on each visible child UIElement,
+to size and position each child UIElement by passing a rectangle reserved for the child within parent space.
+Note: It is required that a parent UIElement calls Arrange on each child or they won't be rendered.
+Typical override follows a pattern roughly like this (pseudo-code):
+<example>
+<pre><code class="lang-csharp">protected override void ArrangeOverride(int arrangeWidth, int arrangeHeight)
+{</code></pre></example></p>
+<pre><code>    foreach (UIElement child in VisualChildren)
+    {
+        child.Arrange(new Rect(childX, childY, childWidth, childHeight);
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+
+</div>
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_ChildElementFromPoint_" data-uid="GHIElectronics.Endpoint.UI.UIElement.ChildElementFromPoint*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_ChildElementFromPoint_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.UIElement.ChildElementFromPoint(System.Int32,System.Int32)">
+  ChildElementFromPoint(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L900"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UIElement ChildElementFromPoint(int x, int y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html">UIElement</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_ContainsPoint_" data-uid="GHIElectronics.Endpoint.UI.UIElement.ContainsPoint*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_ContainsPoint_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.UIElement.ContainsPoint(System.Int32,System.Int32)">
+  ContainsPoint(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L935"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ContainsPoint(int x, int y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_GetDesiredSize_" data-uid="GHIElectronics.Endpoint.UI.UIElement.GetDesiredSize*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_GetDesiredSize_System_Int32__System_Int32__" data-uid="GHIElectronics.Endpoint.UI.UIElement.GetDesiredSize(System.Int32@,System.Int32@)">
+  GetDesiredSize(out int, out int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetDesiredSize(out int width, out int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_GetLayoutOffset_" data-uid="GHIElectronics.Endpoint.UI.UIElement.GetLayoutOffset*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_GetLayoutOffset_System_Int32__System_Int32__" data-uid="GHIElectronics.Endpoint.UI.UIElement.GetLayoutOffset(System.Int32@,System.Int32@)">
+  GetLayoutOffset(out int, out int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetLayoutOffset(out int x, out int y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_GetMargin_" data-uid="GHIElectronics.Endpoint.UI.UIElement.GetMargin*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_GetMargin_System_Int32__System_Int32__System_Int32__System_Int32__" data-uid="GHIElectronics.Endpoint.UI.UIElement.GetMargin(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+  GetMargin(out int, out int, out int, out int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetMargin(out int left, out int top, out int right, out int bottom)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>top</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>bottom</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_GetPointerTarget_" data-uid="GHIElectronics.Endpoint.UI.UIElement.GetPointerTarget*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_GetPointerTarget_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.UIElement.GetPointerTarget(System.Int32,System.Int32)">
+  GetPointerTarget(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L937"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UIElement GetPointerTarget(int x, int y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html">UIElement</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_GetRenderSize_" data-uid="GHIElectronics.Endpoint.UI.UIElement.GetRenderSize*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_GetRenderSize_System_Int32__System_Int32__" data-uid="GHIElectronics.Endpoint.UI.UIElement.GetRenderSize(System.Int32@,System.Int32@)">
+  GetRenderSize(out int, out int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L298"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetRenderSize(out int width, out int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_GetUnclippedSize_" data-uid="GHIElectronics.Endpoint.UI.UIElement.GetUnclippedSize*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_GetUnclippedSize_System_Int32__System_Int32__" data-uid="GHIElectronics.Endpoint.UI.UIElement.GetUnclippedSize(System.Int32@,System.Int32@)">
+  GetUnclippedSize(out int, out int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L930"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetUnclippedSize(out int width, out int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_Invalidate_" data-uid="GHIElectronics.Endpoint.UI.UIElement.Invalidate*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_Invalidate" data-uid="GHIElectronics.Endpoint.UI.UIElement.Invalidate">
+  Invalidate()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1315"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Invalidate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_InvalidateArrange_" data-uid="GHIElectronics.Endpoint.UI.UIElement.InvalidateArrange*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_InvalidateArrange" data-uid="GHIElectronics.Endpoint.UI.UIElement.InvalidateArrange">
+  InvalidateArrange()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1036"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invalidates the arrange state for the UIElement.
+The UIElement will be queued for an update layout that will occur asynchronously.
+MeasureOverride will not be called unless InvalidateMeasure is also called - or that something
+else caused the measure state to be invalidated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InvalidateArrange()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_InvalidateMeasure_" data-uid="GHIElectronics.Endpoint.UI.UIElement.InvalidateMeasure*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_InvalidateMeasure" data-uid="GHIElectronics.Endpoint.UI.UIElement.InvalidateMeasure">
+  InvalidateMeasure()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1016"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invalidates the measurement state for the UIElement.
+This has the effect of also invalidating the arrange state for the UIElement.
+The UIElement will be queued for an update layout that will occur asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InvalidateMeasure()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_InvalidateRect_" data-uid="GHIElectronics.Endpoint.UI.UIElement.InvalidateRect*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_InvalidateRect_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.UIElement.InvalidateRect(System.Int32,System.Int32,System.Int32,System.Int32)">
+  InvalidateRect(int, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1309"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InvalidateRect(int x, int y, int w, int h)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>w</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>h</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_Measure_" data-uid="GHIElectronics.Endpoint.UI.UIElement.Measure*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_Measure_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.UIElement.Measure(System.Int32,System.Int32)">
+  Measure(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L459"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates DesiredSize of the UIElement. Must be called by parents from their MeasureOverride, to form recursive update.
+This is first pass of layout update.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Measure(int availableWidth, int availableHeight)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>availableWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Available width that parent can give to the child. May be MaxValue (when parent wants to
+measure to content). This is soft constraint. Child can return bigger size to indicate that it wants bigger space and hope
+that parent can throw in scrolling...</p>
+</dd>
+    <dt><code>availableHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Available height that parent can give to the child. May be MaxValue (when parent wants to
+measure to content). This is soft constraint. Child can return bigger size to indicate that it wants bigger space and hope
+that parent can throw in scrolling...</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_UIElement_Measure_System_Int32_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Measure is called by parents on their children. Internally, Measure calls MeasureOverride override on the same object,
+giving it opportunity to compute its DesiredSize.<p></p>
+This method will return immediately if child is not Dirty, previously measured
+and availableSize is the same as cached. <p></p>
+This method also resets the IsMeasureinvalid bit on the child.<p></p>
+In case when &quot;unbounded measure to content&quot; is needed, parent can use availableSize
+as double.PositiveInfinity. Any returned size is OK in this case.
+</div>
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_MeasureOverride_" data-uid="GHIElectronics.Endpoint.UI.UIElement.MeasureOverride*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_MeasureOverride_System_Int32_System_Int32_System_Int32__System_Int32__" data-uid="GHIElectronics.Endpoint.UI.UIElement.MeasureOverride(System.Int32,System.Int32,System.Int32@,System.Int32@)">
+  MeasureOverride(int, int, out int, out int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L825"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Measurement override. Implement your size-to-content logic here.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void MeasureOverride(int availableWidth, int availableHeight, out int desiredWidth, out int desiredHeight)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>availableWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Available size that parent can give to the child. May be MaxValue(when parent wants to
+measure to content). This is soft constraint. Child can return bigger size to indicate that it wants bigger space and hope
+that parent can throw in scrolling...</p>
+</dd>
+    <dt><code>availableHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>desiredWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>desiredHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_UIElement_MeasureOverride_System_Int32_System_Int32_System_Int32__System_Int32___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>MeasureOverride is designed to be the main customizability point for size control of layout.
+UIElement authors should override this method, call Measure on each child UIElement,
+and compute their desired size based upon the measurement of the children.
+The return value should be the desired size.<p></p>
+Note: It is required that a parent UIElement calls Measure on each child or they won't be sized/arranged.
+Typical override follows a pattern roughly like this (pseudo-code):
+<example>
+<pre><code class="lang-csharp">protected override void MeasureOverride(int avialableWidth, int availableHeight, out int desiredWidth, out int desiredHeight)
+{
+foreach (UIElement child in VisualChildren)
+{
+child.Measure(availableSize);
+availableSize.Deflate(child.DesiredSize);
+_cache.StoreInfoAboutChild(child);
+}
+<pre><code>    Size desired = CalculateBasedOnCache(_cache);
+    return desired;
+}&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+</code></pre></example>
+The key aspects of this snippet are:
+    <ul><li>You must call Measure on each child UIElement</li><li>It is common to cache measurement information between the MeasureOverride and ArrangeOverride method calls</li><li>Calling base.MeasureOverride is not required.</li><li>Calls to Measure on children are passing either the same availableSize as the parent, or a subset of the area depending
+on the type of layout the parent will perform (for example, it would be valid to remove the area
+for some border or padding).</li></ul>
+</div>
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_OnButtonDown_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnButtonDown*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_OnButtonDown_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnButtonDown(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)">
+  OnButtonDown(ButtonEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An event reporting a button was pressed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnButtonDown(ButtonEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Input.ButtonEventArgs.html">ButtonEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_OnButtonUp_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnButtonUp*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_OnButtonUp_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnButtonUp(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)">
+  OnButtonUp(ButtonEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An event reporting a button was released.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnButtonUp(ButtonEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Input.ButtonEventArgs.html">ButtonEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_OnChildDesiredSizeChanged_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnChildDesiredSizeChanged*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_OnChildDesiredSizeChanged_GHIElectronics_Endpoint_UI_UIElement_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnChildDesiredSizeChanged(GHIElectronics.Endpoint.UI.UIElement)">
+  OnChildDesiredSizeChanged(UIElement)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Notification that is called by Measure of a child when
+it ends up with different desired size for the child.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnChildDesiredSizeChanged(UIElement child)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>child</code> <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html">UIElement</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_UIElement_OnChildDesiredSizeChanged_GHIElectronics_Endpoint_UI_UIElement__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Default implementation simply calls invalidateMeasure(), assuming that layout of a
+parent should be updated after child changed its size.<p></p>
+Finer point: this method can only be called in the scenario when the system calls Measure on a child,
+not when parent calls it since if parent calls it, it means parent has dirty layout and is recalculating already.
+</div>
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_OnChildrenChanged_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnChildrenChanged*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_OnChildrenChanged_GHIElectronics_Endpoint_UI_UIElement_GHIElectronics_Endpoint_UI_UIElement_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnChildrenChanged(GHIElectronics.Endpoint.UI.UIElement,GHIElectronics.Endpoint.UI.UIElement,System.Int32)">
+  OnChildrenChanged(UIElement, UIElement, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L316"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>OnChildrenChanged is called when the UIElementCollection of the UIElement is edited.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnChildrenChanged(UIElement added, UIElement removed, int indexAffected)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>added</code> <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html">UIElement</a></dt>
+    <dd></dd>
+    <dt><code>removed</code> <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html">UIElement</a></dt>
+    <dd></dd>
+    <dt><code>indexAffected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_OnGenericEvent_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnGenericEvent*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_OnGenericEvent_GHIElectronics_Endpoint_UI_Input_GenericEventArgs_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnGenericEvent(GHIElectronics.Endpoint.UI.Input.GenericEventArgs)">
+  OnGenericEvent(GenericEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnGenericEvent(GenericEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Input.GenericEventArgs.html">GenericEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_OnGotFocus_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnGotFocus*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_OnGotFocus_GHIElectronics_Endpoint_UI_Input_FocusChangedEventArgs_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnGotFocus(GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs)">
+  OnGotFocus(FocusChangedEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An event announcing that the buttons are focused on this element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnGotFocus(FocusChangedEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs.html">FocusChangedEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_OnLostFocus_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnLostFocus*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_OnLostFocus_GHIElectronics_Endpoint_UI_Input_FocusChangedEventArgs_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnLostFocus(GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs)">
+  OnLostFocus(FocusChangedEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An event announcing that the buttons is no longer focused on this element</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnLostFocus(FocusChangedEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Input.FocusChangedEventArgs.html">FocusChangedEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_OnPreviewButtonDown_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnPreviewButtonDown*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_OnPreviewButtonDown_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnPreviewButtonDown(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)">
+  OnPreviewButtonDown(ButtonEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An event reporting a button was pressed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnPreviewButtonDown(ButtonEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Input.ButtonEventArgs.html">ButtonEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_OnPreviewButtonUp_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnPreviewButtonUp*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_OnPreviewButtonUp_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnPreviewButtonUp(GHIElectronics.Endpoint.UI.Input.ButtonEventArgs)">
+  OnPreviewButtonUp(ButtonEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An event reporting a button was released.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnPreviewButtonUp(ButtonEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Input.ButtonEventArgs.html">ButtonEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_OnRender_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnRender*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_OnRender_GHIElectronics_Endpoint_UI_Media_DrawingContext_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnRender(GHIElectronics.Endpoint.UI.Media.DrawingContext)">
+  OnRender(DrawingContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnRender(DrawingContext dc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dc</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.DrawingContext.html">DrawingContext</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_OnTouchDown_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnTouchDown*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_OnTouchDown_GHIElectronics_Endpoint_UI_Input_TouchEventArgs_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnTouchDown(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)">
+  OnTouchDown(TouchEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnTouchDown(TouchEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Input.TouchEventArgs.html">TouchEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_OnTouchGestureChanged_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureChanged*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_OnTouchGestureChanged_GHIElectronics_Endpoint_UI_Input_TouchGestureEventArgs_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureChanged(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)">
+  OnTouchGestureChanged(TouchGestureEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnTouchGestureChanged(TouchGestureEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs.html">TouchGestureEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_OnTouchGestureEnded_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureEnded*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_OnTouchGestureEnded_GHIElectronics_Endpoint_UI_Input_TouchGestureEventArgs_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureEnded(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)">
+  OnTouchGestureEnded(TouchGestureEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnTouchGestureEnded(TouchGestureEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs.html">TouchGestureEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_OnTouchGestureStarted_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureStarted*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_OnTouchGestureStarted_GHIElectronics_Endpoint_UI_Input_TouchGestureEventArgs_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnTouchGestureStarted(GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs)">
+  OnTouchGestureStarted(TouchGestureEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnTouchGestureStarted(TouchGestureEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Input.TouchGestureEventArgs.html">TouchGestureEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_OnTouchMove_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnTouchMove*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_OnTouchMove_GHIElectronics_Endpoint_UI_Input_TouchEventArgs_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnTouchMove(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)">
+  OnTouchMove(TouchEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnTouchMove(TouchEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Input.TouchEventArgs.html">TouchEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_OnTouchUp_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnTouchUp*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_OnTouchUp_GHIElectronics_Endpoint_UI_Input_TouchEventArgs_" data-uid="GHIElectronics.Endpoint.UI.UIElement.OnTouchUp(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)">
+  OnTouchUp(TouchEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnTouchUp(TouchEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Input.TouchEventArgs.html">TouchEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_PointToClient_" data-uid="GHIElectronics.Endpoint.UI.UIElement.PointToClient*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_PointToClient_System_Int32__System_Int32__" data-uid="GHIElectronics.Endpoint.UI.UIElement.PointToClient(System.Int32@,System.Int32@)">
+  PointToClient(ref int, ref int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L979"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PointToClient(ref int x, ref int y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_PointToScreen_" data-uid="GHIElectronics.Endpoint.UI.UIElement.PointToScreen*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_PointToScreen_System_Int32__System_Int32__" data-uid="GHIElectronics.Endpoint.UI.UIElement.PointToScreen(System.Int32@,System.Int32@)">
+  PointToScreen(ref int, ref int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L969"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>We are deviating little from their desktop counter parts, mostly for simplicity and perf.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PointToScreen(ref int x, ref int y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_RaiseEvent_" data-uid="GHIElectronics.Endpoint.UI.UIElement.RaiseEvent*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_RaiseEvent_GHIElectronics_Endpoint_UI_RoutedEventArgs_" data-uid="GHIElectronics.Endpoint.UI.UIElement.RaiseEvent(GHIElectronics.Endpoint.UI.RoutedEventArgs)">
+  RaiseEvent(RoutedEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1322"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RaiseEvent(RoutedEventArgs args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="GHIElectronics.Endpoint.UI.RoutedEventArgs.html">RoutedEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_RenderRecursive_" data-uid="GHIElectronics.Endpoint.UI.UIElement.RenderRecursive*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_RenderRecursive_GHIElectronics_Endpoint_UI_Media_DrawingContext_" data-uid="GHIElectronics.Endpoint.UI.UIElement.RenderRecursive(GHIElectronics.Endpoint.UI.Media.DrawingContext)">
+  RenderRecursive(DrawingContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RenderRecursive(DrawingContext dc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dc</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.DrawingContext.html">DrawingContext</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_SetMargin_" data-uid="GHIElectronics.Endpoint.UI.UIElement.SetMargin*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_SetMargin_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.UIElement.SetMargin(System.Int32)">
+  SetMargin(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMargin(int length)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>length</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_SetMargin_" data-uid="GHIElectronics.Endpoint.UI.UIElement.SetMargin*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_SetMargin_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.UIElement.SetMargin(System.Int32,System.Int32,System.Int32,System.Int32)">
+  SetMargin(int, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMargin(int left, int top, int right, int bottom)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>top</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>bottom</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElement_UpdateLayout_" data-uid="GHIElectronics.Endpoint.UI.UIElement.UpdateLayout*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_UpdateLayout" data-uid="GHIElectronics.Endpoint.UI.UIElement.UpdateLayout">
+  UpdateLayout()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L875"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Call this method to ensure that the whoel subtree of elements that includes this UIElement
+is properly updated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateLayout()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_UIElement_UpdateLayout_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This ensures that UIElements with IsMeasureInvalid or IsArrangeInvalid will
+get call to their MeasureOverride and ArrangeOverride, and all computed sizes will be validated.
+This method does nothing if layout is clean but it does work if layout is not clean so avoid calling
+it after each change in the UIElement tree. It makes sense to either never call it (system will do this
+in a deferred manner) or only call it if you absolutely need updated sizes and positions after you do all changes.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_IsEnabledChanged" data-uid="GHIElectronics.Endpoint.UI.UIElement.IsEnabledChanged">
+  IsEnabledChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1241"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event PropertyChangedEventHandler IsEnabledChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.PropertyChangedEventHandler.html">PropertyChangedEventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_IsVisibleChanged" data-uid="GHIElectronics.Endpoint.UI.UIElement.IsVisibleChanged">
+  IsVisibleChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L1187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event PropertyChangedEventHandler IsVisibleChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.PropertyChangedEventHandler.html">PropertyChangedEventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_TouchDown" data-uid="GHIElectronics.Endpoint.UI.UIElement.TouchDown">
+  TouchDown
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event TouchEventHandler TouchDown</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Input.TouchEventHandler.html">TouchEventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_TouchGestureChanged" data-uid="GHIElectronics.Endpoint.UI.UIElement.TouchGestureChanged">
+  TouchGestureChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event TouchGestureEventHandler TouchGestureChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Input.TouchGestureEventHandler.html">TouchGestureEventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_TouchGestureEnd" data-uid="GHIElectronics.Endpoint.UI.UIElement.TouchGestureEnd">
+  TouchGestureEnd
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event TouchGestureEventHandler TouchGestureEnd</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Input.TouchGestureEventHandler.html">TouchGestureEventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_TouchGestureStart" data-uid="GHIElectronics.Endpoint.UI.UIElement.TouchGestureStart">
+  TouchGestureStart
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event TouchGestureEventHandler TouchGestureStart</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Input.TouchGestureEventHandler.html">TouchGestureEventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_TouchMove" data-uid="GHIElectronics.Endpoint.UI.UIElement.TouchMove">
+  TouchMove
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event TouchEventHandler TouchMove</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Input.TouchEventHandler.html">TouchEventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElement_TouchUp" data-uid="GHIElectronics.Endpoint.UI.UIElement.TouchUp">
+  TouchUp
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event TouchEventHandler TouchUp</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Input.TouchEventHandler.html">TouchEventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElement.cs/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

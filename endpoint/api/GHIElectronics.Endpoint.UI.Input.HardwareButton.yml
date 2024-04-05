@@ -1,0 +1,290 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.Input.HardwareButton
+  commentId: T:GHIElectronics.Endpoint.UI.Input.HardwareButton
+  id: HardwareButton
+  parent: GHIElectronics.Endpoint.UI.Input
+  children:
+  - GHIElectronics.Endpoint.UI.Input.HardwareButton.Back
+  - GHIElectronics.Endpoint.UI.Input.HardwareButton.Down
+  - GHIElectronics.Endpoint.UI.Input.HardwareButton.Home
+  - GHIElectronics.Endpoint.UI.Input.HardwareButton.Left
+  - GHIElectronics.Endpoint.UI.Input.HardwareButton.None
+  - GHIElectronics.Endpoint.UI.Input.HardwareButton.Right
+  - GHIElectronics.Endpoint.UI.Input.HardwareButton.Select
+  - GHIElectronics.Endpoint.UI.Input.HardwareButton.Up
+  langs:
+  - csharp
+  - vb
+  name: HardwareButton
+  nameWithType: HardwareButton
+  fullName: GHIElectronics.Endpoint.UI.Input.HardwareButton
+  type: Enum
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/HardwareButton.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: HardwareButton
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/HardwareButton.cs
+    startLine: 1
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: public enum HardwareButton
+    content.vb: Public Enum HardwareButton
+- uid: GHIElectronics.Endpoint.UI.Input.HardwareButton.None
+  commentId: F:GHIElectronics.Endpoint.UI.Input.HardwareButton.None
+  id: None
+  parent: GHIElectronics.Endpoint.UI.Input.HardwareButton
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: HardwareButton.None
+  fullName: GHIElectronics.Endpoint.UI.Input.HardwareButton.None
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/HardwareButton.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: None
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/HardwareButton.cs
+    startLine: 2
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: None = 0
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.HardwareButton
+- uid: GHIElectronics.Endpoint.UI.Input.HardwareButton.Down
+  commentId: F:GHIElectronics.Endpoint.UI.Input.HardwareButton.Down
+  id: Down
+  parent: GHIElectronics.Endpoint.UI.Input.HardwareButton
+  langs:
+  - csharp
+  - vb
+  name: Down
+  nameWithType: HardwareButton.Down
+  fullName: GHIElectronics.Endpoint.UI.Input.HardwareButton.Down
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/HardwareButton.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Down
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/HardwareButton.cs
+    startLine: 3
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Down = 1
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.HardwareButton
+- uid: GHIElectronics.Endpoint.UI.Input.HardwareButton.Up
+  commentId: F:GHIElectronics.Endpoint.UI.Input.HardwareButton.Up
+  id: Up
+  parent: GHIElectronics.Endpoint.UI.Input.HardwareButton
+  langs:
+  - csharp
+  - vb
+  name: Up
+  nameWithType: HardwareButton.Up
+  fullName: GHIElectronics.Endpoint.UI.Input.HardwareButton.Up
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/HardwareButton.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Up
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/HardwareButton.cs
+    startLine: 4
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Up = 2
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.HardwareButton
+- uid: GHIElectronics.Endpoint.UI.Input.HardwareButton.Left
+  commentId: F:GHIElectronics.Endpoint.UI.Input.HardwareButton.Left
+  id: Left
+  parent: GHIElectronics.Endpoint.UI.Input.HardwareButton
+  langs:
+  - csharp
+  - vb
+  name: Left
+  nameWithType: HardwareButton.Left
+  fullName: GHIElectronics.Endpoint.UI.Input.HardwareButton.Left
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/HardwareButton.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Left
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/HardwareButton.cs
+    startLine: 5
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Left = 3
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.HardwareButton
+- uid: GHIElectronics.Endpoint.UI.Input.HardwareButton.Right
+  commentId: F:GHIElectronics.Endpoint.UI.Input.HardwareButton.Right
+  id: Right
+  parent: GHIElectronics.Endpoint.UI.Input.HardwareButton
+  langs:
+  - csharp
+  - vb
+  name: Right
+  nameWithType: HardwareButton.Right
+  fullName: GHIElectronics.Endpoint.UI.Input.HardwareButton.Right
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/HardwareButton.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Right
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/HardwareButton.cs
+    startLine: 6
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Right = 4
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.HardwareButton
+- uid: GHIElectronics.Endpoint.UI.Input.HardwareButton.Select
+  commentId: F:GHIElectronics.Endpoint.UI.Input.HardwareButton.Select
+  id: Select
+  parent: GHIElectronics.Endpoint.UI.Input.HardwareButton
+  langs:
+  - csharp
+  - vb
+  name: Select
+  nameWithType: HardwareButton.Select
+  fullName: GHIElectronics.Endpoint.UI.Input.HardwareButton.Select
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/HardwareButton.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Select
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/HardwareButton.cs
+    startLine: 7
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Select = 5
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.HardwareButton
+- uid: GHIElectronics.Endpoint.UI.Input.HardwareButton.Back
+  commentId: F:GHIElectronics.Endpoint.UI.Input.HardwareButton.Back
+  id: Back
+  parent: GHIElectronics.Endpoint.UI.Input.HardwareButton
+  langs:
+  - csharp
+  - vb
+  name: Back
+  nameWithType: HardwareButton.Back
+  fullName: GHIElectronics.Endpoint.UI.Input.HardwareButton.Back
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/HardwareButton.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Back
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/HardwareButton.cs
+    startLine: 8
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Back = 6
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.HardwareButton
+- uid: GHIElectronics.Endpoint.UI.Input.HardwareButton.Home
+  commentId: F:GHIElectronics.Endpoint.UI.Input.HardwareButton.Home
+  id: Home
+  parent: GHIElectronics.Endpoint.UI.Input.HardwareButton
+  langs:
+  - csharp
+  - vb
+  name: Home
+  nameWithType: HardwareButton.Home
+  fullName: GHIElectronics.Endpoint.UI.Input.HardwareButton.Home
+  type: Field
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/HardwareButton.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Home
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Input/HardwareButton.cs
+    startLine: 9
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI.Input
+  syntax:
+    content: Home = 7
+    return:
+      type: GHIElectronics.Endpoint.UI.Input.HardwareButton
+references:
+- uid: GHIElectronics.Endpoint.UI.Input
+  commentId: N:GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI.Input
+  nameWithType: GHIElectronics.Endpoint.UI.Input
+  fullName: GHIElectronics.Endpoint.UI.Input
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI.Input
+    name: Input
+    href: GHIElectronics.Endpoint.UI.Input.html
+- uid: GHIElectronics.Endpoint.UI.Input.HardwareButton
+  commentId: T:GHIElectronics.Endpoint.UI.Input.HardwareButton
+  parent: GHIElectronics.Endpoint.UI.Input
+  href: GHIElectronics.Endpoint.UI.Input.HardwareButton.html
+  name: HardwareButton
+  nameWithType: HardwareButton
+  fullName: GHIElectronics.Endpoint.UI.Input.HardwareButton

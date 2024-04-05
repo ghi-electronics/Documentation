@@ -1,0 +1,531 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.UI.RoutedEvent
+  commentId: T:GHIElectronics.Endpoint.UI.RoutedEvent
+  id: RoutedEvent
+  parent: GHIElectronics.Endpoint.UI
+  children:
+  - GHIElectronics.Endpoint.UI.RoutedEvent.#ctor(System.String,GHIElectronics.Endpoint.UI.RoutingStrategy,System.Type)
+  - GHIElectronics.Endpoint.UI.RoutedEvent.HandlerType
+  - GHIElectronics.Endpoint.UI.RoutedEvent.Name
+  - GHIElectronics.Endpoint.UI.RoutedEvent.RoutingStrategy
+  - GHIElectronics.Endpoint.UI.RoutedEvent.ToString
+  langs:
+  - csharp
+  - vb
+  name: RoutedEvent
+  nameWithType: RoutedEvent
+  fullName: GHIElectronics.Endpoint.UI.RoutedEvent
+  type: Class
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutedEvent.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: RoutedEvent
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutedEvent.cs
+    startLine: 4
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  syntax:
+    content: public sealed class RoutedEvent
+    content.vb: Public NotInheritable Class RoutedEvent
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: GHIElectronics.Endpoint.UI.RoutedEvent.Name
+  commentId: P:GHIElectronics.Endpoint.UI.RoutedEvent.Name
+  id: Name
+  parent: GHIElectronics.Endpoint.UI.RoutedEvent
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: RoutedEvent.Name
+  fullName: GHIElectronics.Endpoint.UI.RoutedEvent.Name
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutedEvent.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Name
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutedEvent.cs
+    startLine: 16
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Returns the Name of the RoutedEvent
+  remarks: >-
+    RoutedEvent Name is unique within the
+
+    OwnerType (super class types not considered
+
+    when talking about uniqueness)
+  example: []
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: GHIElectronics.Endpoint.UI.RoutedEvent.Name*
+- uid: GHIElectronics.Endpoint.UI.RoutedEvent.RoutingStrategy
+  commentId: P:GHIElectronics.Endpoint.UI.RoutedEvent.RoutingStrategy
+  id: RoutingStrategy
+  parent: GHIElectronics.Endpoint.UI.RoutedEvent
+  langs:
+  - csharp
+  - vb
+  name: RoutingStrategy
+  nameWithType: RoutedEvent.RoutingStrategy
+  fullName: GHIElectronics.Endpoint.UI.RoutedEvent.RoutingStrategy
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutedEvent.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: RoutingStrategy
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutedEvent.cs
+    startLine: 23
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: >-
+    Returns the <xref href="GHIElectronics.Endpoint.UI.RoutedEvent.RoutingStrategy" data-throw-if-not-resolved="false"></xref>
+
+    of the RoutedEvent
+  example: []
+  syntax:
+    content: public RoutingStrategy RoutingStrategy { get; }
+    parameters: []
+    return:
+      type: GHIElectronics.Endpoint.UI.RoutingStrategy
+    content.vb: Public ReadOnly Property RoutingStrategy As RoutingStrategy
+  overload: GHIElectronics.Endpoint.UI.RoutedEvent.RoutingStrategy*
+- uid: GHIElectronics.Endpoint.UI.RoutedEvent.HandlerType
+  commentId: P:GHIElectronics.Endpoint.UI.RoutedEvent.HandlerType
+  id: HandlerType
+  parent: GHIElectronics.Endpoint.UI.RoutedEvent
+  langs:
+  - csharp
+  - vb
+  name: HandlerType
+  nameWithType: RoutedEvent.HandlerType
+  fullName: GHIElectronics.Endpoint.UI.RoutedEvent.HandlerType
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutedEvent.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: HandlerType
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutedEvent.cs
+    startLine: 32
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: Returns Type of Handler for the RoutedEvent
+  remarks: HandlerType is a type of delegate
+  example: []
+  syntax:
+    content: public Type HandlerType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Public ReadOnly Property HandlerType As Type
+  overload: GHIElectronics.Endpoint.UI.RoutedEvent.HandlerType*
+- uid: GHIElectronics.Endpoint.UI.RoutedEvent.ToString
+  commentId: M:GHIElectronics.Endpoint.UI.RoutedEvent.ToString
+  id: ToString
+  parent: GHIElectronics.Endpoint.UI.RoutedEvent
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: RoutedEvent.ToString()
+  fullName: GHIElectronics.Endpoint.UI.RoutedEvent.ToString()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutedEvent.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: ToString
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutedEvent.cs
+    startLine: 37
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: String representation
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: GHIElectronics.Endpoint.UI.RoutedEvent.ToString*
+- uid: GHIElectronics.Endpoint.UI.RoutedEvent.#ctor(System.String,GHIElectronics.Endpoint.UI.RoutingStrategy,System.Type)
+  commentId: M:GHIElectronics.Endpoint.UI.RoutedEvent.#ctor(System.String,GHIElectronics.Endpoint.UI.RoutingStrategy,System.Type)
+  id: '#ctor(System.String,GHIElectronics.Endpoint.UI.RoutingStrategy,System.Type)'
+  parent: GHIElectronics.Endpoint.UI.RoutedEvent
+  langs:
+  - csharp
+  - vb
+  name: RoutedEvent(string, RoutingStrategy, Type)
+  nameWithType: RoutedEvent.RoutedEvent(string, RoutingStrategy, Type)
+  fullName: GHIElectronics.Endpoint.UI.RoutedEvent.RoutedEvent(string, GHIElectronics.Endpoint.UI.RoutingStrategy, System.Type)
+  type: Constructor
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutedEvent.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: .ctor
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/RoutedEvent.cs
+    startLine: 52
+  assemblies:
+  - GHIElectronics.Endpoint.UI
+  namespace: GHIElectronics.Endpoint.UI
+  summary: >-
+    Create a new routed event.
+
+
+    You have to promise not to duplicate another event name in the system,
+
+    or you will be sorry.
+  example: []
+  syntax:
+    content: public RoutedEvent(string name, RoutingStrategy routingStrategy, Type handlerType)
+    parameters:
+    - id: name
+      type: System.String
+      description: ''
+    - id: routingStrategy
+      type: GHIElectronics.Endpoint.UI.RoutingStrategy
+      description: ''
+    - id: handlerType
+      type: System.Type
+      description: ''
+    content.vb: Public Sub New(name As String, routingStrategy As RoutingStrategy, handlerType As Type)
+  overload: GHIElectronics.Endpoint.UI.RoutedEvent.#ctor*
+  nameWithType.vb: RoutedEvent.New(String, RoutingStrategy, Type)
+  fullName.vb: GHIElectronics.Endpoint.UI.RoutedEvent.New(String, GHIElectronics.Endpoint.UI.RoutingStrategy, System.Type)
+  name.vb: New(String, RoutingStrategy, Type)
+references:
+- uid: GHIElectronics.Endpoint.UI
+  commentId: N:GHIElectronics.Endpoint.UI
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.UI
+  nameWithType: GHIElectronics.Endpoint.UI
+  fullName: GHIElectronics.Endpoint.UI
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.UI
+    name: UI
+    href: GHIElectronics.Endpoint.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GHIElectronics.Endpoint.UI.RoutedEvent.Name*
+  commentId: Overload:GHIElectronics.Endpoint.UI.RoutedEvent.Name
+  href: GHIElectronics.Endpoint.UI.RoutedEvent.html#GHIElectronics_Endpoint_UI_RoutedEvent_Name
+  name: Name
+  nameWithType: RoutedEvent.Name
+  fullName: GHIElectronics.Endpoint.UI.RoutedEvent.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: GHIElectronics.Endpoint.UI.RoutedEvent.RoutingStrategy
+  commentId: P:GHIElectronics.Endpoint.UI.RoutedEvent.RoutingStrategy
+  href: GHIElectronics.Endpoint.UI.RoutedEvent.html#GHIElectronics_Endpoint_UI_RoutedEvent_RoutingStrategy
+  name: RoutingStrategy
+  nameWithType: RoutedEvent.RoutingStrategy
+  fullName: GHIElectronics.Endpoint.UI.RoutedEvent.RoutingStrategy
+- uid: GHIElectronics.Endpoint.UI.RoutedEvent.RoutingStrategy*
+  commentId: Overload:GHIElectronics.Endpoint.UI.RoutedEvent.RoutingStrategy
+  href: GHIElectronics.Endpoint.UI.RoutedEvent.html#GHIElectronics_Endpoint_UI_RoutedEvent_RoutingStrategy
+  name: RoutingStrategy
+  nameWithType: RoutedEvent.RoutingStrategy
+  fullName: GHIElectronics.Endpoint.UI.RoutedEvent.RoutingStrategy
+- uid: GHIElectronics.Endpoint.UI.RoutingStrategy
+  commentId: T:GHIElectronics.Endpoint.UI.RoutingStrategy
+  parent: GHIElectronics.Endpoint.UI
+  href: GHIElectronics.Endpoint.UI.RoutingStrategy.html
+  name: RoutingStrategy
+  nameWithType: RoutingStrategy
+  fullName: GHIElectronics.Endpoint.UI.RoutingStrategy
+- uid: GHIElectronics.Endpoint.UI.RoutedEvent.HandlerType*
+  commentId: Overload:GHIElectronics.Endpoint.UI.RoutedEvent.HandlerType
+  href: GHIElectronics.Endpoint.UI.RoutedEvent.html#GHIElectronics_Endpoint_UI_RoutedEvent_HandlerType
+  name: HandlerType
+  nameWithType: RoutedEvent.HandlerType
+  fullName: GHIElectronics.Endpoint.UI.RoutedEvent.HandlerType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: GHIElectronics.Endpoint.UI.RoutedEvent.ToString*
+  commentId: Overload:GHIElectronics.Endpoint.UI.RoutedEvent.ToString
+  href: GHIElectronics.Endpoint.UI.RoutedEvent.html#GHIElectronics_Endpoint_UI_RoutedEvent_ToString
+  name: ToString
+  nameWithType: RoutedEvent.ToString
+  fullName: GHIElectronics.Endpoint.UI.RoutedEvent.ToString
+- uid: GHIElectronics.Endpoint.UI.RoutedEvent.#ctor*
+  commentId: Overload:GHIElectronics.Endpoint.UI.RoutedEvent.#ctor
+  href: GHIElectronics.Endpoint.UI.RoutedEvent.html#GHIElectronics_Endpoint_UI_RoutedEvent__ctor_System_String_GHIElectronics_Endpoint_UI_RoutingStrategy_System_Type_
+  name: RoutedEvent
+  nameWithType: RoutedEvent.RoutedEvent
+  fullName: GHIElectronics.Endpoint.UI.RoutedEvent.RoutedEvent
+  nameWithType.vb: RoutedEvent.New
+  fullName.vb: GHIElectronics.Endpoint.UI.RoutedEvent.New
+  name.vb: New

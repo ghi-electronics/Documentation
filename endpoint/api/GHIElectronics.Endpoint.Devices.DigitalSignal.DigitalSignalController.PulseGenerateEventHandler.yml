@@ -15,11 +15,11 @@ items:
   source:
     remote:
       path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-      branch: add_ui
+      branch: main
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: PulseGenerateEventHandler
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Devices.DigitalSignal/DigitalSignalController.cs
-    startLine: 37
+    startLine: 40
   assemblies:
   - GHIElectronics.Endpoint.Devices.DigitalSignal
   namespace: GHIElectronics.Endpoint.Devices.DigitalSignal
