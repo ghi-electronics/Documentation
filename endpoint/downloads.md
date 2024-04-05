@@ -21,6 +21,7 @@ The Endpoint OS image can be downloaded and run from a microSD card or flashed t
 
 File | Date | Status | MD5
 --- | --- | --- |
+[v0.1.4.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/endpoint_image_B0140.4.5.24.img) | 2024-4-5 | Preview | A7C2FEEFA13EF509D75B2640D1C1BD5A
 [v0.1.3.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/endpoint_image_B0130.3.6.24.img) | 2024-8-3 | Preview | C4178A4BA8328B9B6B2D4BE18159EEB9
 
 Endpoint OS image is large and that take time to update. For quick update/re-install firmware or dotnet, user can select update firmware or dotnet from Endpoint Config tool, and using the files below:
@@ -29,7 +30,7 @@ Endpoint OS image is large and that take time to update. For quick update/re-ins
 
 File | Date | Status | MD5
 --- | --- | --- |
-[v0.1.3.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/rootfs.ghi) | 2024-8-3 | Preview | 0721C910391AFD36013D4647718463A3
+[v0.1.4.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/rootfs.ghi) | 2024-4-5 | Preview | 5C0D07B588103AF858E409800797193C
 
 #### Dotnet
 
