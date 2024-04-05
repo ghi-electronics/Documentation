@@ -1,0 +1,1104 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DrawingContext </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DrawingContext ">
+      
+      <meta name="description" content="Drawing Context.">
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Endpoint-Libraries/new/main/apiSpec/new?filename=GHIElectronics_Endpoint_UI_Media_DrawingContext.md&amp;value=---%0Auid%3A%20GHIElectronics.Endpoint.UI.Media.DrawingContext%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext">
+
+
+
+  <h1 id="GHIElectronics_Endpoint_UI_Media_DrawingContext" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext" class="text-break">
+Class DrawingContext  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="GHIElectronics.html">GHIElectronics</a>.<a class="xref" href="GHIElectronics.Endpoint.html">Endpoint</a>.<a class="xref" href="GHIElectronics.Endpoint.UI.html">UI</a>.<a class="xref" href="GHIElectronics.Endpoint.UI.Media.html">Media</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>GHIElectronics.Endpoint.UI.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Drawing Context.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DrawingContext : DispatcherObject, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html">DispatcherObject</a></div>
+      <div><span class="xref">DrawingContext</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_CheckAccess">DispatcherObject.CheckAccess()</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_VerifyAccess">DispatcherObject.VerifyAccess()</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_Dispatcher">DispatcherObject.Dispatcher</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_Height_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.Height*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_Height" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.Height">
+  Height
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Height { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_Width_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.Width*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_Width" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.Width">
+  Width
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Width { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_BlendImage_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.BlendImage*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_BlendImage_GHIElectronics_Endpoint_UI_Media_ImageSource_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_UInt16_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.BlendImage(GHIElectronics.Endpoint.UI.Media.ImageSource,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)">
+  BlendImage(ImageSource, int, int, int, int, int, int, ushort)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BlendImage(ImageSource source, int destinationX, int destinationY, int sourceX, int sourceY, int sourceWidth, int sourceHeight, ushort opacity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.ImageSource.html">ImageSource</a></dt>
+    <dd></dd>
+    <dt><code>destinationX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>destinationY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>sourceX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>sourceY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>sourceWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>sourceHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>opacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_Clear_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.Clear*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_Clear" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.Clear">
+  Clear()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_Dispose_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.Dispose*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_Dispose" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_Dispose_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.Dispose*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_Dispose_System_Boolean_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_DrawEllipse_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.DrawEllipse*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_DrawEllipse_GHIElectronics_Endpoint_UI_Media_Brush_GHIElectronics_Endpoint_UI_Media_Pen_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.DrawEllipse(GHIElectronics.Endpoint.UI.Media.Brush,GHIElectronics.Endpoint.UI.Media.Pen,System.Int32,System.Int32,System.Int32,System.Int32)">
+  DrawEllipse(Brush, Pen, int, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawEllipse(Brush brush, Pen pen, int x, int y, int xRadius, int yRadius)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>brush</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.Brush.html">Brush</a></dt>
+    <dd></dd>
+    <dt><code>pen</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.Pen.html">Pen</a></dt>
+    <dd></dd>
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>xRadius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>yRadius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_DrawImage_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.DrawImage*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_DrawImage_GHIElectronics_Endpoint_UI_Media_ImageSource_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.DrawImage(GHIElectronics.Endpoint.UI.Media.ImageSource,System.Int32,System.Int32)">
+  DrawImage(ImageSource, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawImage(ImageSource source, int x, int y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.ImageSource.html">ImageSource</a></dt>
+    <dd></dd>
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_DrawImage_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.DrawImage*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_DrawImage_GHIElectronics_Endpoint_UI_Media_ImageSource_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.DrawImage(GHIElectronics.Endpoint.UI.Media.ImageSource,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+  DrawImage(ImageSource, int, int, int, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawImage(ImageSource source, int destinationX, int destinationY, int sourceX, int sourceY, int sourceWidth, int sourceHeight)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.ImageSource.html">ImageSource</a></dt>
+    <dd></dd>
+    <dt><code>destinationX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>destinationY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>sourceX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>sourceY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>sourceWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>sourceHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_DrawLine_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.DrawLine*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_DrawLine_GHIElectronics_Endpoint_UI_Media_Pen_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.DrawLine(GHIElectronics.Endpoint.UI.Media.Pen,System.Int32,System.Int32,System.Int32,System.Int32)">
+  DrawLine(Pen, int, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawLine(Pen pen, int x0, int y0, int x1, int y1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pen</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.Pen.html">Pen</a></dt>
+    <dd></dd>
+    <dt><code>x0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>x1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_DrawPolygon_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.DrawPolygon*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_DrawPolygon_GHIElectronics_Endpoint_UI_Media_Brush_GHIElectronics_Endpoint_UI_Media_Pen_System_Int32___" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.DrawPolygon(GHIElectronics.Endpoint.UI.Media.Brush,GHIElectronics.Endpoint.UI.Media.Pen,System.Int32[])">
+  DrawPolygon(Brush, Pen, int[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawPolygon(Brush brush, Pen pen, int[] pts)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>brush</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.Brush.html">Brush</a></dt>
+    <dd></dd>
+    <dt><code>pen</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.Pen.html">Pen</a></dt>
+    <dd></dd>
+    <dt><code>pts</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_DrawRectangle_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.DrawRectangle*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_DrawRectangle_GHIElectronics_Endpoint_UI_Media_Brush_GHIElectronics_Endpoint_UI_Media_Pen_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.DrawRectangle(GHIElectronics.Endpoint.UI.Media.Brush,GHIElectronics.Endpoint.UI.Media.Pen,System.Int32,System.Int32,System.Int32,System.Int32)">
+  DrawRectangle(Brush, Pen, int, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawRectangle(Brush brush, Pen pen, int x, int y, int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>brush</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.Brush.html">Brush</a></dt>
+    <dd></dd>
+    <dt><code>pen</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.Pen.html">Pen</a></dt>
+    <dd></dd>
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_DrawText_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.DrawText*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_DrawText_System_String_GHIElectronics_Endpoint_Drawing_Font_GHIElectronics_Endpoint_UI_Media_Color_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.DrawText(System.String,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.UI.Media.Color,System.Int32,System.Int32)">
+  DrawText(string, Font, Color, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawText(string text, Font font, Color color, int x, int y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>font</code> <a class="xref" href="GHIElectronics.Endpoint.Drawing.Font.html">Font</a></dt>
+    <dd></dd>
+    <dt><code>color</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.Color.html">Color</a></dt>
+    <dd></dd>
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_DrawText_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.DrawText*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_DrawText_System_String__GHIElectronics_Endpoint_Drawing_Font_GHIElectronics_Endpoint_UI_Media_Color_System_Int32_System_Int32_System_Int32_System_Int32_GHIElectronics_Endpoint_UI_Media_TextAlignment_GHIElectronics_Endpoint_UI_Media_TextTrimming_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.DrawText(System.String@,GHIElectronics.Endpoint.Drawing.Font,GHIElectronics.Endpoint.UI.Media.Color,System.Int32,System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.UI.Media.TextAlignment,GHIElectronics.Endpoint.UI.Media.TextTrimming)">
+  DrawText(ref string, Font, Color, int, int, int, int, TextAlignment, TextTrimming)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DrawText(ref string text, Font font, Color color, int x, int y, int width, int height, TextAlignment alignment, TextTrimming trimming)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>font</code> <a class="xref" href="GHIElectronics.Endpoint.Drawing.Font.html">Font</a></dt>
+    <dd></dd>
+    <dt><code>color</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.Color.html">Color</a></dt>
+    <dd></dd>
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>alignment</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.TextAlignment.html">TextAlignment</a></dt>
+    <dd></dd>
+    <dt><code>trimming</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.TextTrimming.html">TextTrimming</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_GetClippingRectangle_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.GetClippingRectangle*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_GetClippingRectangle_System_Int32__System_Int32__System_Int32__System_Int32__" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.GetClippingRectangle(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+  GetClippingRectangle(out int, out int, out int, out int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetClippingRectangle(out int x, out int y, out int width, out int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_GetTranslation_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.GetTranslation*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_GetTranslation_System_Int32__System_Int32__" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.GetTranslation(System.Int32@,System.Int32@)">
+  GetTranslation(out int, out int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetTranslation(out int x, out int y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_PopClippingRectangle_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.PopClippingRectangle*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_PopClippingRectangle" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.PopClippingRectangle">
+  PopClippingRectangle()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PopClippingRectangle()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_PushClippingRectangle_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.PushClippingRectangle*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_PushClippingRectangle_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.PushClippingRectangle(System.Int32,System.Int32,System.Int32,System.Int32)">
+  PushClippingRectangle(int, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PushClippingRectangle(int x, int y, int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_RotateImage_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.RotateImage*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_RotateImage_System_Int32_System_Int32_System_Int32_GHIElectronics_Endpoint_UI_Media_ImageSource_System_Int32_System_Int32_System_Int32_System_Int32_System_UInt16_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.RotateImage(System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.UI.Media.ImageSource,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)">
+  RotateImage(int, int, int, ImageSource, int, int, int, int, ushort)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RotateImage(int angle, int destinationX, int destinationY, ImageSource bitmap, int sourceX, int sourceY, int sourceWidth, int sourceHeight, ushort opacity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>angle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>destinationX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>destinationY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>bitmap</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.ImageSource.html">ImageSource</a></dt>
+    <dd></dd>
+    <dt><code>sourceX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>sourceY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>sourceWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>sourceHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>opacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_Scale9Image_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.Scale9Image*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_Scale9Image_System_Int32_System_Int32_System_Int32_System_Int32_GHIElectronics_Endpoint_UI_Media_ImageSource_System_Int32_System_Int32_System_Int32_System_Int32_System_UInt16_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.Scale9Image(System.Int32,System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.UI.Media.ImageSource,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)">
+  Scale9Image(int, int, int, int, ImageSource, int, int, int, int, ushort)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Scale9Image(int xDst, int yDst, int widthDst, int heightDst, ImageSource bitmap, int leftBorder, int topBorder, int rightBorder, int bottomBorder, ushort opacity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xDst</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>yDst</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>widthDst</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>heightDst</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>bitmap</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.ImageSource.html">ImageSource</a></dt>
+    <dd></dd>
+    <dt><code>leftBorder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>topBorder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>rightBorder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>bottomBorder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>opacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_SetPixel_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.SetPixel*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_SetPixel_GHIElectronics_Endpoint_UI_Media_Color_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.SetPixel(GHIElectronics.Endpoint.UI.Media.Color,System.Int32,System.Int32)">
+  SetPixel(Color, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPixel(Color color, int x, int y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.Color.html">Color</a></dt>
+    <dd></dd>
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_StretchImage_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.StretchImage*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_StretchImage_System_Int32_System_Int32_System_Int32_System_Int32_GHIElectronics_Endpoint_UI_Media_ImageSource_System_Int32_System_Int32_System_Int32_System_Int32_System_UInt16_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.StretchImage(System.Int32,System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.UI.Media.ImageSource,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt16)">
+  StretchImage(int, int, int, int, ImageSource, int, int, int, int, ushort)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StretchImage(int xDst, int yDst, int widthDst, int heightDst, ImageSource bitmap, int xSrc, int ySrc, int widthSrc, int heightSrc, ushort opacity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xDst</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>yDst</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>widthDst</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>heightDst</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>bitmap</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.ImageSource.html">ImageSource</a></dt>
+    <dd></dd>
+    <dt><code>xSrc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>ySrc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>widthSrc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>heightSrc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>opacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_TileImage_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.TileImage*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_TileImage_System_Int32_System_Int32_GHIElectronics_Endpoint_UI_Media_ImageSource_System_Int32_System_Int32_System_UInt16_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.TileImage(System.Int32,System.Int32,GHIElectronics.Endpoint.UI.Media.ImageSource,System.Int32,System.Int32,System.UInt16)">
+  TileImage(int, int, ImageSource, int, int, ushort)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TileImage(int xDst, int yDst, ImageSource bitmap, int width, int height, ushort opacity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xDst</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>yDst</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>bitmap</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.ImageSource.html">ImageSource</a></dt>
+    <dd></dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>opacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Media_DrawingContext_Translate_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.Translate*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Media_DrawingContext_Translate_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.Media.DrawingContext.Translate(System.Int32,System.Int32)">
+  Translate(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Translate(int dx, int dy)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>dy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Media/DrawingContext.cs/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1994 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DataGrid </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DataGrid ">
+      
+      <meta name="description" content="The DataGrid component is a list-based component that provides a grid of rows and columns.">
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Endpoint-Libraries/new/main/apiSpec/new?filename=GHIElectronics_Endpoint_UI_Controls_DataGrid.md&amp;value=---%0Auid%3A%20GHIElectronics.Endpoint.UI.Controls.DataGrid%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid">
+
+
+
+  <h1 id="GHIElectronics_Endpoint_UI_Controls_DataGrid" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid" class="text-break">
+Class DataGrid  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="GHIElectronics.html">GHIElectronics</a>.<a class="xref" href="GHIElectronics.Endpoint.html">Endpoint</a>.<a class="xref" href="GHIElectronics.Endpoint.UI.html">UI</a>.<a class="xref" href="GHIElectronics.Endpoint.UI.Controls.html">Controls</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>GHIElectronics.Endpoint.UI.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The DataGrid component is a list-based component that provides a grid of rows and columns.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DataGrid : ContentControl</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html">DispatcherObject</a></div>
+      <div><a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html">UIElement</a></div>
+      <div><a class="xref" href="GHIElectronics.Endpoint.UI.Controls.Control.html">Control</a></div>
+      <div><a class="xref" href="GHIElectronics.Endpoint.UI.Controls.ContentControl.html">ContentControl</a></div>
+      <div><span class="xref">DataGrid</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Controls.ContentControl.html#GHIElectronics_Endpoint_UI_Controls_ContentControl_Child">ContentControl.Child</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Controls.ContentControl.html#GHIElectronics_Endpoint_UI_Controls_ContentControl_MeasureOverride_System_Int32_System_Int32_System_Int32__System_Int32__">ContentControl.MeasureOverride(int, int, out int, out int)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Controls.Control.html#GHIElectronics_Endpoint_UI_Controls_Control_Background">Control.Background</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Controls.Control.html#GHIElectronics_Endpoint_UI_Controls_Control_Font">Control.Font</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Controls.Control.html#GHIElectronics_Endpoint_UI_Controls_Control_Foreground">Control.Foreground</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Controls.Control.html#GHIElectronics_Endpoint_UI_Controls_Control__background">Control._background</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Controls.Control.html#GHIElectronics_Endpoint_UI_Controls_Control__foreground">Control._foreground</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Controls.Control.html#GHIElectronics_Endpoint_UI_Controls_Control__font">Control._font</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnGenericEvent_GHIElectronics_Endpoint_UI_Input_GenericEventArgs_">UIElement.OnGenericEvent(GenericEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchGestureStarted_GHIElectronics_Endpoint_UI_Input_TouchGestureEventArgs_">UIElement.OnTouchGestureStarted(TouchGestureEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchGestureChanged_GHIElectronics_Endpoint_UI_Input_TouchGestureEventArgs_">UIElement.OnTouchGestureChanged(TouchGestureEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnTouchGestureEnded_GHIElectronics_Endpoint_UI_Input_TouchGestureEventArgs_">UIElement.OnTouchGestureEnded(TouchGestureEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnPreviewButtonDown_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_">UIElement.OnPreviewButtonDown(ButtonEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnButtonDown_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_">UIElement.OnButtonDown(ButtonEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnPreviewButtonUp_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_">UIElement.OnPreviewButtonUp(ButtonEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnButtonUp_GHIElectronics_Endpoint_UI_Input_ButtonEventArgs_">UIElement.OnButtonUp(ButtonEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnGotFocus_GHIElectronics_Endpoint_UI_Input_FocusChangedEventArgs_">UIElement.OnGotFocus(FocusChangedEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnLostFocus_GHIElectronics_Endpoint_UI_Input_FocusChangedEventArgs_">UIElement.OnLostFocus(FocusChangedEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_TouchDown">UIElement.TouchDown</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_TouchUp">UIElement.TouchUp</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_TouchMove">UIElement.TouchMove</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_TouchGestureStart">UIElement.TouchGestureStart</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_TouchGestureChanged">UIElement.TouchGestureChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_TouchGestureEnd">UIElement.TouchGestureEnd</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetDesiredSize_System_Int32__System_Int32__">UIElement.GetDesiredSize(out int, out int)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetMargin_System_Int32__System_Int32__System_Int32__System_Int32__">UIElement.GetMargin(out int, out int, out int, out int)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_SetMargin_System_Int32_">UIElement.SetMargin(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_SetMargin_System_Int32_System_Int32_System_Int32_System_Int32_">UIElement.SetMargin(int, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_ActualWidth">UIElement.ActualWidth</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_ActualHeight">UIElement.ActualHeight</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Height">UIElement.Height</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Width">UIElement.Width</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetLayoutOffset_System_Int32__System_Int32__">UIElement.GetLayoutOffset(out int, out int)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetRenderSize_System_Int32__System_Int32__">UIElement.GetRenderSize(out int, out int)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_LogicalChildren">UIElement.LogicalChildren</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnChildrenChanged_GHIElectronics_Endpoint_UI_UIElement_GHIElectronics_Endpoint_UI_UIElement_System_Int32_">UIElement.OnChildrenChanged(UIElement, UIElement, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_IsFocused">UIElement.IsFocused</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Measure_System_Int32_System_Int32_">UIElement.Measure(int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Arrange_System_Int32_System_Int32_System_Int32_System_Int32_">UIElement.Arrange(int, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_ArrangeOverride_System_Int32_System_Int32_">UIElement.ArrangeOverride(int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_UpdateLayout">UIElement.UpdateLayout()</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_IsMeasureValid">UIElement.IsMeasureValid</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_IsArrangeValid">UIElement.IsArrangeValid</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_ChildElementFromPoint_System_Int32_System_Int32_">UIElement.ChildElementFromPoint(int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetUnclippedSize_System_Int32__System_Int32__">UIElement.GetUnclippedSize(out int, out int)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_ContainsPoint_System_Int32_System_Int32_">UIElement.ContainsPoint(int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_GetPointerTarget_System_Int32_System_Int32_">UIElement.GetPointerTarget(int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_PointToScreen_System_Int32__System_Int32__">UIElement.PointToScreen(ref int, ref int)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_PointToClient_System_Int32__System_Int32__">UIElement.PointToClient(ref int, ref int)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_InvalidateMeasure">UIElement.InvalidateMeasure()</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_InvalidateArrange">UIElement.InvalidateArrange()</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Parent">UIElement.Parent</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_RootUIElement">UIElement.RootUIElement</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_HorizontalAlignment">UIElement.HorizontalAlignment</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_VerticalAlignment">UIElement.VerticalAlignment</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_OnChildDesiredSizeChanged_GHIElectronics_Endpoint_UI_UIElement_">UIElement.OnChildDesiredSizeChanged(UIElement)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Visibility">UIElement.Visibility</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_IsVisible">UIElement.IsVisible</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_IsVisibleChanged">UIElement.IsVisibleChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_IsEnabled">UIElement.IsEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_IsEnabledChanged">UIElement.IsEnabledChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_RenderRecursive_GHIElectronics_Endpoint_UI_Media_DrawingContext_">UIElement.RenderRecursive(DrawingContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_InvalidateRect_System_Int32_System_Int32_System_Int32_System_Int32_">UIElement.InvalidateRect(int, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_Invalidate">UIElement.Invalidate()</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_RaiseEvent_GHIElectronics_Endpoint_UI_RoutedEventArgs_">UIElement.RaiseEvent(RoutedEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_AddToEventRoute_GHIElectronics_Endpoint_UI_EventRoute_GHIElectronics_Endpoint_UI_RoutedEventArgs_">UIElement.AddToEventRoute(EventRoute, RoutedEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_InstanceEventHandlersStore">UIElement.InstanceEventHandlersStore</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement_AddHandler_GHIElectronics_Endpoint_UI_RoutedEvent_GHIElectronics_Endpoint_UI_RoutedEventHandler_System_Boolean_">UIElement.AddHandler(RoutedEvent, RoutedEventHandler, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement__horizontalAlignment">UIElement._horizontalAlignment</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html#GHIElectronics_Endpoint_UI_UIElement__verticalAlignment">UIElement._verticalAlignment</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_CheckAccess">DispatcherObject.CheckAccess()</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_VerifyAccess">DispatcherObject.VerifyAccess()</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_Dispatcher">DispatcherObject.Dispatcher</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid__ctor_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.#ctor*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid__ctor_System_Int32_System_Int32_System_Int32_GHIElectronics_Endpoint_Drawing_Font_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.#ctor(System.Int32,System.Int32,System.Int32,GHIElectronics.Endpoint.Drawing.Font)">
+  DataGrid(int, int, int, Font)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new DataGrid component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataGrid(int width, int rowHeight, int rowCount, Font font)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>width</p>
+</dd>
+    <dt><code>rowHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>rowHeight</p>
+</dd>
+    <dt><code>rowCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>rowCount</p>
+</dd>
+    <dt><code>font</code> <a class="xref" href="GHIElectronics.Endpoint.Drawing.Font.html">Font</a></dt>
+    <dd><p>font</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_Draggable_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.Draggable*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_Draggable" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.Draggable">
+  Draggable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L798"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether or not the item list can be dragged up and down.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Draggable { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_GridColor_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.GridColor*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_GridColor" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.GridColor">
+  GridColor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L862"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Grid color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color GridColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Media.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_HeadersBackColor_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.HeadersBackColor*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_HeadersBackColor" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.HeadersBackColor">
+  HeadersBackColor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L827"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Headers background color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color HeadersBackColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Media.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_HeadersFontColor_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.HeadersFontColor*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_HeadersFontColor" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.HeadersFontColor">
+  HeadersFontColor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L832"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Headers font color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color HeadersFontColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Media.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ItemsAltBackColor_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ItemsAltBackColor*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ItemsAltBackColor" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ItemsAltBackColor">
+  ItemsAltBackColor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L842"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Items alternate background color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color ItemsAltBackColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Media.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ItemsBackColor_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ItemsBackColor*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ItemsBackColor" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ItemsBackColor">
+  ItemsBackColor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L837"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Items background color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color ItemsBackColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Media.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ItemsFontColor_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ItemsFontColor*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ItemsFontColor" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ItemsFontColor">
+  ItemsFontColor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L847"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Items font color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color ItemsFontColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Media.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_MaxIgnoredTouchMoves_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.MaxIgnoredTouchMoves*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_MaxIgnoredTouchMoves" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.MaxIgnoredTouchMoves">
+  MaxIgnoredTouchMoves
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L887"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Touch senstitive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxIgnoredTouchMoves { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_NumItems_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.NumItems*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_NumItems" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.NumItems">
+  NumItems
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L788"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of items in the DataGrid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NumItems { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_RowCount_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.RowCount*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_RowCount" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.RowCount">
+  RowCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L730"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of rows displayed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RowCount { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_RowHeight_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.RowHeight*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_RowHeight" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.RowHeight">
+  RowHeight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L748"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Row height.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RowHeight { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ScrollbarBackColor_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ScrollbarBackColor*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ScrollbarBackColor" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ScrollbarBackColor">
+  ScrollbarBackColor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L877"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scrollbar background color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color ScrollbarBackColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Media.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ScrollbarScrubberColor_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ScrollbarScrubberColor*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ScrollbarScrubberColor" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ScrollbarScrubberColor">
+  ScrollbarScrubberColor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L882"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scrollbar scrubber color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color ScrollbarScrubberColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Media.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ScrollbarWidth_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ScrollbarWidth*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ScrollbarWidth" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ScrollbarWidth">
+  ScrollbarWidth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L872"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scrollbar width.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ScrollbarWidth { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_SelectedIndex_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.SelectedIndex*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_SelectedIndex" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.SelectedIndex">
+  SelectedIndex
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L753"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The currently selected index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SelectedIndex { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_SelectedItemBackColor_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.SelectedItemBackColor*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_SelectedItemBackColor" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.SelectedItemBackColor">
+  SelectedItemBackColor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L852"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Selected item background color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color SelectedItemBackColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Media.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_SelectedItemFontColor_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.SelectedItemFontColor*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_SelectedItemFontColor" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.SelectedItemFontColor">
+  SelectedItemFontColor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L857"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Selected item font color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color SelectedItemFontColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Media.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ShowHeaders_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ShowHeaders*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ShowHeaders" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ShowHeaders">
+  ShowHeaders
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L803"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether the headers are shown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowHeaders { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ShowScrollbar_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ShowScrollbar*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ShowScrollbar" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ShowScrollbar">
+  ShowScrollbar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L867"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether the scrollbar is shown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowScrollbar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_SortableHeaders_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.SortableHeaders*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_SortableHeaders" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.SortableHeaders">
+  SortableHeaders
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L822"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether the headers are sortable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SortableHeaders { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_TappableCells_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.TappableCells*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_TappableCells" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.TappableCells">
+  TappableCells
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L793"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether items trigger cell tap events or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TappableCells { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_AddColumn_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.AddColumn*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_AddColumn_GHIElectronics_Endpoint_UI_Controls_DataGridColumn_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.AddColumn(GHIElectronics.Endpoint.UI.Controls.DataGridColumn)">
+  AddColumn(DataGridColumn)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L466"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddColumn(DataGridColumn dataGridColumn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dataGridColumn</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Controls.DataGridColumn.html">DataGridColumn</a></dt>
+    <dd><p>dataGridColumn</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_AddColumnAt_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.AddColumnAt*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_AddColumnAt_System_Int32_GHIElectronics_Endpoint_UI_Controls_DataGridColumn_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.AddColumnAt(System.Int32,GHIElectronics.Endpoint.UI.Controls.DataGridColumn)">
+  AddColumnAt(int, DataGridColumn)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L473"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a column at a specified index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddColumnAt(int index, DataGridColumn dataGridColumn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>index</p>
+</dd>
+    <dt><code>dataGridColumn</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Controls.DataGridColumn.html">DataGridColumn</a></dt>
+    <dd><p>dataGridColumn</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_AddItem_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.AddItem*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_AddItem_GHIElectronics_Endpoint_UI_Controls_DataGridItem_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.AddItem(GHIElectronics.Endpoint.UI.Controls.DataGridItem)">
+  AddItem(DataGridItem)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L508"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds an item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddItem(DataGridItem dataGridItem)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dataGridItem</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Controls.DataGridItem.html">DataGridItem</a></dt>
+    <dd><p>dataGridItem</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_AddItemAt_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.AddItemAt*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_AddItemAt_System_Int32_GHIElectronics_Endpoint_UI_Controls_DataGridItem_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.AddItemAt(System.Int32,GHIElectronics.Endpoint.UI.Controls.DataGridItem)">
+  AddItemAt(int, DataGridItem)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L515"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds an item at a specified index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddItemAt(int index, DataGridItem dataGridItem)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>index</p>
+</dd>
+    <dt><code>dataGridItem</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Controls.DataGridItem.html">DataGridItem</a></dt>
+    <dd><p>dataGridItem</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_Clear_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.Clear*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_Clear" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.Clear">
+  Clear()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L708"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears all items including their data and resets the data grid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_Dispose_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.Dispose*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_Dispose" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_Dispose_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.Dispose*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_Dispose_System_Boolean_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_Finalize_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.Finalize*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_Finalize" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.Finalize">
+  ~DataGrid()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ~DataGrid()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_GetCellData_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.GetCellData*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_GetCellData_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.GetCellData(System.Int32,System.Int32)">
+  GetCellData(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L654"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a cell's data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object GetCellData(int columnIndex, int rowIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>columnIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>columnIndex</p>
+</dd>
+    <dt><code>rowIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>rowIndex</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_GetRowData_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.GetRowData*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_GetRowData_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.GetRowData(System.Int32)">
+  GetRowData(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L629"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets row data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object[] GetRowData(int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>index</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>Data object array.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_OnRender_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.OnRender*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_OnRender_GHIElectronics_Endpoint_UI_Media_DrawingContext_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.OnRender(GHIElectronics.Endpoint.UI.Media.DrawingContext)">
+  OnRender(DrawingContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L254"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the DataGrid onto it's parent container's graphics.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnRender(DrawingContext dc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dc</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Media.DrawingContext.html">DrawingContext</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_OnTouchDown_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.OnTouchDown*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_OnTouchDown_GHIElectronics_Endpoint_UI_Input_TouchEventArgs_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.OnTouchDown(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)">
+  OnTouchDown(TouchEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L354"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles the touch down event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnTouchDown(TouchEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Input.TouchEventArgs.html">TouchEventArgs</a></dt>
+    <dd><p>Touch event arguments.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_OnTouchMove_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.OnTouchMove*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_OnTouchMove_GHIElectronics_Endpoint_UI_Input_TouchEventArgs_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.OnTouchMove(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)">
+  OnTouchMove(TouchEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L433"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles the touch move event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnTouchMove(TouchEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Input.TouchEventArgs.html">TouchEventArgs</a></dt>
+    <dd><p>Touch event arguments.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_OnTouchUp_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.OnTouchUp*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_OnTouchUp_GHIElectronics_Endpoint_UI_Input_TouchEventArgs_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.OnTouchUp(GHIElectronics.Endpoint.UI.Input.TouchEventArgs)">
+  OnTouchUp(TouchEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L378"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles the touch up event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnTouchUp(TouchEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Input.TouchEventArgs.html">TouchEventArgs</a></dt>
+    <dd><p>Touch event arguments.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_RemoveColumn_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.RemoveColumn*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_RemoveColumn_GHIElectronics_Endpoint_UI_Controls_DataGridColumn_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.RemoveColumn(GHIElectronics.Endpoint.UI.Controls.DataGridColumn)">
+  RemoveColumn(DataGridColumn)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L487"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveColumn(DataGridColumn dataGridColumn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dataGridColumn</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Controls.DataGridColumn.html">DataGridColumn</a></dt>
+    <dd><p>dataGridColumn</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_RemoveColumnAt_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.RemoveColumnAt*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_RemoveColumnAt_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.RemoveColumnAt(System.Int32)">
+  RemoveColumnAt(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L497"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a column at a specified index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveColumnAt(int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>index</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_RemoveItem_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.RemoveItem*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_RemoveItem_GHIElectronics_Endpoint_UI_Controls_DataGridItem_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.RemoveItem(GHIElectronics.Endpoint.UI.Controls.DataGridItem)">
+  RemoveItem(DataGridItem)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L537"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes an item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveItem(DataGridItem dataGridItem)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dataGridItem</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Controls.DataGridItem.html">DataGridItem</a></dt>
+    <dd><p>dataGridItem</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_RemoveItemAt_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.RemoveItemAt*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_RemoveItemAt_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.RemoveItemAt(System.Int32)">
+  RemoveItemAt(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L547"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes an item a specified index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveItemAt(int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>index</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ScrollDown_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ScrollDown*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ScrollDown_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ScrollDown(System.Int32)">
+  ScrollDown(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L586"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scroll the rows down by a specified amount.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ScrollDown(int amount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>amount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>amount</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ScrollTo_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ScrollTo*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ScrollTo_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ScrollTo(System.Int32)">
+  ScrollTo(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L602"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scroll the rows to a specified index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ScrollTo(int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>index</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ScrollUp_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ScrollUp*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_ScrollUp_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.ScrollUp(System.Int32)">
+  ScrollUp(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L570"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scroll the rows up by a specified amount.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ScrollUp(int amount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>amount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>amount</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_SetCellData_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.SetCellData*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_SetCellData_System_Int32_System_Int32_System_Object_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.SetCellData(System.Int32,System.Int32,System.Object)">
+  SetCellData(int, int, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L642"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a cell's data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCellData(int columnIndex, int rowIndex, object data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>columnIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>columnIndex</p>
+</dd>
+    <dt><code>rowIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>rowIndex</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>data</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_SetRowData_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.SetRowData*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_SetRowData_System_Int32_System_Object___" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.SetRowData(System.Int32,System.Object[])">
+  SetRowData(int, object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L614"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets new row data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRowData(int index, object[] data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>index</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>Data object array.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_Sort_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.Sort*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_Sort_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.Sort(System.Int32)">
+  Sort(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L686"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sorts the items on a specified column index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Sort(int columnIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>columnIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Controls_DataGrid_TriggerTapCellEvent_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.TriggerTapCellEvent*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_TriggerTapCellEvent_System_Object_GHIElectronics_Endpoint_UI_Controls_DataGrid_TapCellEventArgs_" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.TriggerTapCellEvent(System.Object,GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEventArgs)">
+  TriggerTapCellEvent(object, TapCellEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Triggers a tap cell event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TriggerTapCellEvent(object sender, DataGrid.TapCellEventArgs args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Object associated with this event.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Controls.DataGrid.html">DataGrid</a>.<a class="xref" href="GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEventArgs.html">TapCellEventArgs</a></dt>
+    <dd><p>Tap cell event arguments.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="GHIElectronics_Endpoint_UI_Controls_DataGrid_TapCellEvent" data-uid="GHIElectronics.Endpoint.UI.Controls.DataGrid.TapCellEvent">
+  TapCellEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tap grid event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event DataGrid.OnTapCell TapCellEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Controls.DataGrid.html">DataGrid</a>.<a class="xref" href="GHIElectronics.Endpoint.UI.Controls.DataGrid.OnTapCell.html">OnTapCell</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/Controls/DataGrid.cs/#L23" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

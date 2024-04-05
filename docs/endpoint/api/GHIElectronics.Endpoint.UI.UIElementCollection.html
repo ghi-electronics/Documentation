@@ -1,0 +1,844 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class UIElementCollection </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class UIElementCollection ">
+      
+      <meta name="description" content="A UIElementCollection is a ordered collection of UIElements.">
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Endpoint-Libraries/new/main/apiSpec/new?filename=GHIElectronics_Endpoint_UI_UIElementCollection.md&amp;value=---%0Auid%3A%20GHIElectronics.Endpoint.UI.UIElementCollection%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="GHIElectronics.Endpoint.UI.UIElementCollection">
+
+
+
+  <h1 id="GHIElectronics_Endpoint_UI_UIElementCollection" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection" class="text-break">
+Class UIElementCollection  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="GHIElectronics.html">GHIElectronics</a>.<a class="xref" href="GHIElectronics.Endpoint.html">Endpoint</a>.<a class="xref" href="GHIElectronics.Endpoint.UI.html">UI</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>GHIElectronics.Endpoint.UI.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A UIElementCollection is a ordered collection of UIElements.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class UIElementCollection : ICollection, IEnumerable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">UIElementCollection</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection">ICollection</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="GHIElectronics_Endpoint_UI_UIElementCollection_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>A UIElementCollection has implied context affinity. It is a violation to access
+the collection from a different context than that of the owning Element</p>
+<p>This collection is an amalgam of UIElementCollection and UIElementCollection from Avalon</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElementCollection__ctor_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.#ctor*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElementCollection__ctor_GHIElectronics_Endpoint_UI_UIElement_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.#ctor(GHIElectronics.Endpoint.UI.UIElement)">
+  UIElementCollection(UIElement)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UIElementCollection(UIElement owner)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>owner</code> <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html">UIElement</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElementCollection_Capacity_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.Capacity*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElementCollection_Capacity" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.Capacity">
+  Capacity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the number of elements that the UIElementCollection can contain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int Capacity { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of elements that the UIElementCollection can contain.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_UIElementCollection_Capacity_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Capacity is the number of elements that the UIElementCollection is capable of storing.
+Count is the number of UIElements that are actually in the UIElementCollection.</p>
+<p>Capacity is always greater than or equal to Count. If Count exceeds
+Capacity while adding elements, the capacity of the UIElementCollection is increased.</p>
+<p>By default the capacity is 0.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Capacity is set to a value that is less than Count.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElementCollection_Count_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.Count*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElementCollection_Count" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.Count">
+  Count
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the number of elements contained in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection">ICollection</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int Count { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of elements contained in the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection">ICollection</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElementCollection_IsSynchronized_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.IsSynchronized*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElementCollection_IsSynchronized" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.IsSynchronized">
+  IsSynchronized
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether access to the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection">ICollection</a> is synchronized (thread safe).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsSynchronized { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if access to the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection">ICollection</a> is synchronized (thread safe); otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElementCollection_Item_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.Item*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElementCollection_Item_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.Item(System.Int32)">
+  this[int]
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indexer for the UIElementCollection. Gets or sets the UIElement stored at the
+zero-based index of the UIElementCollection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UIElement this[int index] { get; set; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html">UIElement</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_UIElementCollection_Item_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This property provides the ability to access a specific UIElement in the
+UIElementCollection by using the following systax: <code>myUIElementCollection[index]</code>.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code>index</code> is less than zero -or- <code>index</code> is equal to or greater than Count.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>If the new child has already a parent or if the slot a the specified index is not null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElementCollection_SyncRoot_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.SyncRoot*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElementCollection_SyncRoot" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.SyncRoot">
+  SyncRoot
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an object that can be used to synchronize access to the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection">ICollection</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual object SyncRoot { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An object that can be used to synchronize access to the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection">ICollection</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElementCollection_Add_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.Add*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElementCollection_Add_GHIElectronics_Endpoint_UI_UIElement_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.Add(GHIElectronics.Endpoint.UI.UIElement)">
+  Add(UIElement)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a UIElement to the end of the UIElementCollection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Add(UIElement element)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html">UIElement</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The UIElementCollection index at which the UIElement has been added.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_UIElementCollection_Add_GHIElectronics_Endpoint_UI_UIElement__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Adding a null is allowed.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>If the new child has already a parent.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElementCollection_Clear_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.Clear*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElementCollection_Clear" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.Clear">
+  Clear()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs/#L354"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes all elements from the UIElementCollection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_UIElementCollection_Clear_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Count is set to zero. Capacity remains unchanged.
+To reset the capacity of the UIElementCollection, call TrimToSize
+or set the Capacity property directly.</p>
+</div>
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElementCollection_Contains_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.Contains*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElementCollection_Contains_GHIElectronics_Endpoint_UI_UIElement_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.Contains(GHIElectronics.Endpoint.UI.UIElement)">
+  Contains(UIElement)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs/#L331"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether a element is in the UIElementCollection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(UIElement element)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html">UIElement</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElementCollection_CopyTo_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.CopyTo*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElementCollection_CopyTo_GHIElectronics_Endpoint_UI_UIElement___System_Int32_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.CopyTo(GHIElectronics.Endpoint.UI.UIElement[],System.Int32)">
+  CopyTo(UIElement[], int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Strongly typed version of CopyTo
+Copies the collection into the Array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void CopyTo(UIElement[] array, int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>array</code> <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html">UIElement</a>[]</dt>
+    <dd></dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElementCollection_CopyTo_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.CopyTo*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElementCollection_CopyTo_System_Array_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.CopyTo(System.Array,System.Int32)">
+  CopyTo(Array, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies the UIElement collection to the specified array starting at the specified index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTo(Array array, int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>array</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.array">Array</a></dt>
+    <dd></dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElementCollection_IndexOf_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.IndexOf*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElementCollection_IndexOf_GHIElectronics_Endpoint_UI_UIElement_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.IndexOf(GHIElectronics.Endpoint.UI.UIElement)">
+  IndexOf(UIElement)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the zero-based index of the UIElement. If the UIElement is not
+in the UIElementCollection -1 is returned. If null is passed to the method, the index
+of the first entry with null is returned. If there is no null entry -1 is returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int IndexOf(UIElement element)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html">UIElement</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElementCollection_Insert_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.Insert*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElementCollection_Insert_System_Int32_GHIElectronics_Endpoint_UI_UIElement_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.Insert(System.Int32,GHIElectronics.Endpoint.UI.UIElement)">
+  Insert(int, UIElement)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs/#L396"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inserts an element into the UIElementCollection at the specified index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Insert(int index, UIElement element)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The zero-based index at which value should be inserted.</p>
+</dd>
+    <dt><code>element</code> <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html">UIElement</a></dt>
+    <dd><p>The UIElement to insert.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_UIElementCollection_Insert_System_Int32_GHIElectronics_Endpoint_UI_UIElement__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If Count already equals Capacity, the capacity of the
+UIElementCollection is increased before the new UIElement
+is inserted.</p>
+<p>If index is equal to Count, value is added to the
+end of UIElementCollection.</p>
+<p>The UIElements that follow the insertion point move down to
+accommodate the new UIElement. The indexes of the UIElements that are
+moved are also updated.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>index is less than zero.</p>
+<p>-or-</p>
+<p>index is greater than Count.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElementCollection_Remove_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.Remove*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElementCollection_Remove_GHIElectronics_Endpoint_UI_UIElement_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.Remove(GHIElectronics.Endpoint.UI.UIElement)">
+  Remove(UIElement)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs/#L287"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes the specified element from the UIElementCollection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Remove(UIElement element)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <a class="xref" href="GHIElectronics.Endpoint.UI.UIElement.html">UIElement</a></dt>
+    <dd><p>The UIElement to remove from the UIElementCollection.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_UIElementCollection_Remove_GHIElectronics_Endpoint_UI_UIElement__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The UIElements that follow the removed UIElements move up to occupy
+the vacated spot. The indexes of the UIElements that are moved are
+also updated.</p>
+<p>If element is null then the first null entry is removed. Note that removing
+a null entry is linear in the size of the collection.</p>
+</div>
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElementCollection_RemoveAt_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.RemoveAt*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElementCollection_RemoveAt_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.RemoveAt(System.Int32)">
+  RemoveAt(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs/#L442"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes the UIElement at the specified index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveAt(int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The zero-based index of the element to remove.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_UIElementCollection_RemoveAt_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The UIElements that follow the removed UIElements move up to occupy
+the vacated spot. The indexes of the UIElements that are moved are
+also updated.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>index is less than zero
+- or - index is equal or greater than count.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_UIElementCollection_RemoveRange_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.RemoveRange*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_UIElementCollection_RemoveRange_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.UIElementCollection.RemoveRange(System.Int32,System.Int32)">
+  RemoveRange(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs/#L469"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a range of UIElements from the UIElementCollection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveRange(int index, int count)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The zero-based index of the range
+of elements to remove</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of elements to remove.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_UIElementCollection_RemoveRange_System_Int32_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The UIElements that follow the removed UIElements move up to occupy
+the vacated spot. The indexes of the UIElements that are moved are
+also updated.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>index is less than zero.
+-or-
+count is less than zero.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>index and count do not denote a valid range of elements in the UIElementCollection.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/UIElementCollection.cs/#L16" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

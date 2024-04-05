@@ -1,0 +1,795 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Application </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Application ">
+      
+      <meta name="description" content="Application base class">
+      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Endpoint-Libraries/new/main/apiSpec/new?filename=GHIElectronics_Endpoint_UI_Application.md&amp;value=---%0Auid%3A%20GHIElectronics.Endpoint.UI.Application%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="GHIElectronics.Endpoint.UI.Application">
+
+
+
+  <h1 id="GHIElectronics_Endpoint_UI_Application" data-uid="GHIElectronics.Endpoint.UI.Application" class="text-break">
+Class Application  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="GHIElectronics.html">GHIElectronics</a>.<a class="xref" href="GHIElectronics.Endpoint.html">Endpoint</a>.<a class="xref" href="GHIElectronics.Endpoint.UI.html">UI</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>GHIElectronics.Endpoint.UI.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Application base class</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Application : DispatcherObject</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html">DispatcherObject</a></div>
+      <div><span class="xref">Application</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_CheckAccess">DispatcherObject.CheckAccess()</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_VerifyAccess">DispatcherObject.VerifyAccess()</a>
+    </div>
+    <div>
+      <a class="xref" href="GHIElectronics.Endpoint.UI.Threading.DispatcherObject.html#GHIElectronics_Endpoint_UI_Threading_DispatcherObject_Dispatcher">DispatcherObject.Dispatcher</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="GHIElectronics_Endpoint_UI_Application__ctor_" data-uid="GHIElectronics.Endpoint.UI.Application.#ctor*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Application__ctor_System_Int32_System_Int32_" data-uid="GHIElectronics.Endpoint.UI.Application.#ctor(System.Int32,System.Int32)">
+  Application(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Application constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Application(int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="GHIElectronics_Endpoint_UI_Application_Current_" data-uid="GHIElectronics.Endpoint.UI.Application.Current*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Application_Current" data-uid="GHIElectronics.Endpoint.UI.Application.Current">
+  Current
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs/#L366"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Current property enables the developer to always get to the application in
+AppDomain in which they are running.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Application Current { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Application.html">Application</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Application_Height_" data-uid="GHIElectronics.Endpoint.UI.Application.Height*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Application_Height" data-uid="GHIElectronics.Endpoint.UI.Application.Height">
+  Height
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Height { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Application_InputProvider_" data-uid="GHIElectronics.Endpoint.UI.Application.InputProvider*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Application_InputProvider" data-uid="GHIElectronics.Endpoint.UI.Application.InputProvider">
+  InputProvider
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputProvider InputProvider { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Input.InputProvider.html">InputProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Application_MainWindow_" data-uid="GHIElectronics.Endpoint.UI.Application.MainWindow*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Application_MainWindow" data-uid="GHIElectronics.Endpoint.UI.Application.MainWindow">
+  MainWindow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs/#L391"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The MainWindow property indicates the primary window of the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Window MainWindow { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.Window.html">Window</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_Application_MainWindow_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>By default - MainWindow will be set to the first window opened in the application.
+However the MainWindow may be set programmatically to indicate &quot;this is my main window&quot;.
+It is a recommended programming style to refer to MainWindow in code instead of Windows[0].</p>
+</div>
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Application_ShutdownMode_" data-uid="GHIElectronics.Endpoint.UI.Application.ShutdownMode*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Application_ShutdownMode" data-uid="GHIElectronics.Endpoint.UI.Application.ShutdownMode">
+  ShutdownMode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs/#L424"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The ShutdownMode property is called to set the shutdown specific mode of
+the application. Setting this property controls the way in which an application
+will shutdown.
+The three values for the ShutdownMode enum are :
+OnLastWindowClose
+OnMainWindowClose
+OnExplicitShutdown</p>
+<pre><code>OnLastWindowClose - this mode will shutdown the application when  the
+                    last window is closed, or an explicit call is made
+                    to Application.Shutdown(). This is the default mode.
+
+OnMainWindowClose - this mode will shutdown the application when the main
+                    window has been closed, or Application.Shutdown() is
+                    called. Note that if the MainWindow property has not
+                    been set - this mode is equivalent to OnExplicitOnly.
+
+OnExplicitShutdown- this mode will shutdown the application only when an
+                    explicit call to OnShutdown() has been made.
+</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ShutdownMode ShutdownMode { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.ShutdownMode.html">ShutdownMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Application_Width_" data-uid="GHIElectronics.Endpoint.UI.Application.Width*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Application_Width" data-uid="GHIElectronics.Endpoint.UI.Application.Width">
+  Width
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Width { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Application_Windows_" data-uid="GHIElectronics.Endpoint.UI.Application.Windows*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Application_Windows" data-uid="GHIElectronics.Endpoint.UI.Application.Windows">
+  Windows
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs/#L380"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Windows property exposes a WindowCollection object, from which a developer
+can iterate over all the windows that have been opened in the current application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WindowCollection Windows { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.WindowCollection.html">WindowCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="GHIElectronics_Endpoint_UI_Application_InitializeForEventSource_" data-uid="GHIElectronics.Endpoint.UI.Application.InitializeForEventSource*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Application_InitializeForEventSource" data-uid="GHIElectronics.Endpoint.UI.Application.InitializeForEventSource">
+  InitializeForEventSource()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitializeForEventSource()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Application_OnEvent_" data-uid="GHIElectronics.Endpoint.UI.Application.OnEvent*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Application_OnEvent_GHIElectronics_Endpoint_UI_Input_BaseEvent_" data-uid="GHIElectronics.Endpoint.UI.Application.OnEvent(GHIElectronics.Endpoint.UI.Input.BaseEvent)">
+  OnEvent(BaseEvent)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs/#L267"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OnEvent(BaseEvent ev)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ev</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Input.BaseEvent.html">BaseEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Application_OnExit_" data-uid="GHIElectronics.Endpoint.UI.Application.OnExit*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Application_OnExit_System_EventArgs_" data-uid="GHIElectronics.Endpoint.UI.Application.OnExit(System.EventArgs)">
+  OnExit(EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs/#L552"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>OnExit is called to raise the Exit event.
+The developer will typically override this method if they want to take
+action when the application exits  ( or they may choose to attach an event).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnExit(EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd><p>The event args that will be passed to the Exit event</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_Application_OnExit_System_EventArgs__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method follows the .Net programming guideline of having a protected virtual method
+that raises an event, to provide a convenience for developers that subclass the event.
+If you override this method - you need to call Base.OnExit(...) for the
+corresponding event to be raised.</p>
+</div>
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Application_OnStartup_" data-uid="GHIElectronics.Endpoint.UI.Application.OnStartup*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Application_OnStartup_System_EventArgs_" data-uid="GHIElectronics.Endpoint.UI.Application.OnStartup(System.EventArgs)">
+  OnStartup(EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs/#L535"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>OnStartup is called to raise the Startup event. The developer will typically override this method
+if they want to take action at startup time ( or they may choose to attach an event).
+This method will be called once when the application begins, once that application's Run() method
+has been called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnStartup(EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd><p>The event args that will be passed to the Startup event</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_Application_OnStartup_System_EventArgs__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method follows the .Net programming guideline of having a protected virtual method
+that raises an event, to provide a convenience for developers that subclass the event.
+If you override this method - you need to call Base.OnStartup(...) for the corresponding event
+to be raised.</p>
+</div>
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Application_Run_" data-uid="GHIElectronics.Endpoint.UI.Application.Run*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Application_Run" data-uid="GHIElectronics.Endpoint.UI.Application.Run">
+  Run()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Run is called to start an application.</p>
+<p>Typically a developer will do some setting of properties/attaching to events after instantiating an application object,
+and then call Run() to start the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Run()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_Application_Run_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Once run has been called - an application's OnStartup override and Startup event is called
+immediately afterwards.</p>
+</div>
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Application_Run_" data-uid="GHIElectronics.Endpoint.UI.Application.Run*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Application_Run_GHIElectronics_Endpoint_UI_Window_" data-uid="GHIElectronics.Endpoint.UI.Application.Run(GHIElectronics.Endpoint.UI.Window)">
+  Run(Window)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Run is called to start an application.</p>
+<p>Typically a developer will do some setting of properties/attaching to events after instantiating an application object,
+and then call Run() to start the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Run(Window window)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>window</code> <a class="xref" href="GHIElectronics.Endpoint.UI.Window.html">Window</a></dt>
+    <dd><p>Window that will be added to the Windows property and made the MainWindow of the Applcation.
+The passed Window must be created on the same thread as the Application object.  Furthermore, this Window is
+shown once the Application is run.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="GHIElectronics_Endpoint_UI_Application_Run_GHIElectronics_Endpoint_UI_Window__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Once run has been called - an application's OnStartup override and Startup event is called
+immediately afterwards.</p>
+</div>
+
+
+
+
+  <a id="GHIElectronics_Endpoint_UI_Application_Shutdown_" data-uid="GHIElectronics.Endpoint.UI.Application.Shutdown*"></a>
+
+  <h3 id="GHIElectronics_Endpoint_UI_Application_Shutdown" data-uid="GHIElectronics.Endpoint.UI.Application.Shutdown">
+  Shutdown()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shutdown is called to programmatically shutdown an application.</p>
+<p>Once shutdown() is called, the application gets called with the
+OnShutdown method to raise the Shutdown event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Shutdown()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="GHIElectronics_Endpoint_UI_Application_Exit" data-uid="GHIElectronics.Endpoint.UI.Application.Exit">
+  Exit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs/#L464"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Exit event is fired when an application is shutting down.
+This event is raised by the OnExit method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler Exit</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.EventHandler.html">EventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="GHIElectronics_Endpoint_UI_Application_Startup" data-uid="GHIElectronics.Endpoint.UI.Application.Startup">
+  Startup
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs/#L455"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Startup event is fired when an application is starting.
+This event is raised by the OnStartup method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler Startup</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GHIElectronics.Endpoint.UI.EventHandler.html">EventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ghi-electronics/Endpoint-Libraries/blob/main/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.UI/UI/Application.cs/#L33" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2024 GHI Electronics, LLC<br>Generated by DocFX</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
