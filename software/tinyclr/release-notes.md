@@ -15,11 +15,11 @@
 ##### SC20xxx:
 
 - Fixed Display rotate 90, 180 and 270.
-- Fixed UART, CAN: Fixed receive event has wrong data / message count sometime
+- Fixed UART, CAN: Fixed receiving event send wrong data/message count sometime
 
 ##### SC13xxx
 
-- Fixed UART, CAN: Fixed receive event has wrong data / message count sometime
+- Fixed UART, CAN: Fixed receiving event send wrong data/message count sometime
  
 #### Known Issues
 
