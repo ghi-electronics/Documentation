@@ -22,6 +22,7 @@ The Firmware is the TinyCLR OS that lives on your hardware. The firmware version
 
 File | Date | Status | MD5
 --- | --- | --- | ---
+[v2.2.1.2100 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.2.1.2100.ghi) | 2024-04-09 | Update | A4F5FBB0C40AC96551365633300F0932
 [v2.2.1.2000 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.2.1.2000.ghi) | 2024-03-19 | Update | F4A70BC8017B06A4B7A993F6DEA5A1F4
 [v2.2.0.7000 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.2.0.7000.ghi) | 2024-02-26 | Update | A7C14E993D8FDA20DF00944F36829F4D
 [v2.2.0.6200 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.2.0.6200.ghi) | 2023-12-11 | Production | 54E2FE0A0D609D1FD21A9BE88298D678
@@ -47,6 +48,7 @@ File | Date | Status | MD5
 
 File | Date | Status | MD5
 --- | --- | --- | ---
+[v2.2.1.2100 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.2.1.2100.ghi) | 2024-04-09 | Update | 2BD5B3B73491B27D64522483469CD360
 [v2.2.1.2000 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.2.1.2000.ghi) | 2024-03-19 | Update | 6FF9A5C53FC7451924A57C0E27056DCF
 [v2.2.0.7000 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.2.0.7000.ghi) | 2024-02-26 | Update | A7C14E993D8FDA20DF00944F36829F4D
 [v2.2.0.6200 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.2.0.6200.ghi) | 2023-12-11 | Production | 6E0DD1A8FFEB41D3A5951A963A03196C

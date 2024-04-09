@@ -4,6 +4,28 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.2.1.2100 - RTW
+
+### Released 2024-09-04
+
+### Firmware
+
+#### Changes
+
+##### SC20xxx:
+
+- Fixed Display rotate 90, 180 and 270.
+- Fixed UART, CAN: Fixed receive event has wrong data / message count sometime
+
+##### SC13xxx
+
+- Fixed UART, CAN: Fixed receive event has wrong data / message count sometime
+ 
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+
 ## 2.2.1.2000 - RTW
 
 ### Released 2024-19-03
