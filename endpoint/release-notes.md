@@ -1,6 +1,47 @@
 # Release Notes
 
 ---
+## **0.1.6 - Beta (2024-22-4)**
+
+### Endpoint OS
+
+- Changes
+    - Add DMA for SPI
+	- Support Network configuration from Endpoint tool 	
+	- Suport MacOS (192.168.83.2)
+	- Fix WiFi don't work with static IP
+	
+- Known Issues
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues
+	
+### Visual Studio Extension
+
+- Changes
+	- Support debug over WiFi, Ethernet other than USB	
+- Known Issues
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues
+
+### Libraries
+
+- Changes 
+	- Network: WiFi and Ethernet, USB Ethernet can work at the same time
+
+- Known Issues
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues
+
+### Drivers
+
+- Changes
+    - Improved VirtualKeyboard driver	
+- Known Issues
+    https://github.com/ghi-electronics/endpoint-drivers/issues
+
+### Endpoint Config
+
+- Changes
+    - Added Network configuration
+- Known Issues
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues.
 
 ## **0.1.4 - Beta (2024-5-4)**
 
