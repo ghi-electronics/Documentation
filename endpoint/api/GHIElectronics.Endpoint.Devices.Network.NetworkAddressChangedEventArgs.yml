@@ -124,11 +124,11 @@ items:
   - GHIElectronics.Endpoint.Devices.Network
   namespace: GHIElectronics.Endpoint.Devices.Network
   syntax:
-    content: public IPAddress Gateway { get; }
+    content: public IPAddress[] Gateway { get; }
     parameters: []
     return:
-      type: System.Net.IPAddress
-    content.vb: Public ReadOnly Property Gateway As IPAddress
+      type: System.Net.IPAddress[]
+    content.vb: Public ReadOnly Property Gateway As IPAddress()
   overload: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs.Gateway*
 - uid: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs.Dns
   commentId: P:GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs.Dns
@@ -544,12 +544,6 @@ references:
   name: Gateway
   nameWithType: NetworkAddressChangedEventArgs.Gateway
   fullName: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs.Gateway
-- uid: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs.Dns*
-  commentId: Overload:GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs.Dns
-  href: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs.html#GHIElectronics_Endpoint_Devices_Network_NetworkAddressChangedEventArgs_Dns
-  name: Dns
-  nameWithType: NetworkAddressChangedEventArgs.Dns
-  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs.Dns
 - uid: System.Net.IPAddress[]
   isExternal: true
   href: https://learn.microsoft.com/dotnet/api/system.net.ipaddress
@@ -573,6 +567,12 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.net.ipaddress
   - name: (
   - name: )
+- uid: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs.Dns*
+  commentId: Overload:GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs.Dns
+  href: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs.html#GHIElectronics_Endpoint_Devices_Network_NetworkAddressChangedEventArgs_Dns
+  name: Dns
+  nameWithType: NetworkAddressChangedEventArgs.Dns
+  fullName: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs.Dns
 - uid: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs.MACAddress*
   commentId: Overload:GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs.MACAddress
   href: GHIElectronics.Endpoint.Devices.Network.NetworkAddressChangedEventArgs.html#GHIElectronics_Endpoint_Devices_Network_NetworkAddressChangedEventArgs_MACAddress
