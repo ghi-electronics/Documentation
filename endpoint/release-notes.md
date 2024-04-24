@@ -1,6 +1,18 @@
 # Release Notes
 
 ---
+
+## **0.1.6.1 - Beta (2024-24-4)**
+
+### Endpoint OS
+
+- Changes
+    - Fixed python library 
+- Known Issues
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues
+	
+---
+
 ## **0.1.6 - Beta (2024-22-4)**
 
 ### Endpoint OS
@@ -9,8 +21,7 @@
     - Add DMA for SPI
 	- Support Network configuration from Endpoint tool 	
 	- Suport MacOS (192.168.83.2)
-	- Fix WiFi don't work with static IP
-	
+	- Fix WiFi don't work with static IP	
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues
 	
@@ -25,7 +36,6 @@
 
 - Changes 
 	- Network: WiFi and Ethernet, USB Ethernet can work at the same time
-
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues
 
@@ -43,6 +53,8 @@
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues.
 
+---
+
 ## **0.1.4 - Beta (2024-5-4)**
 
 ### Endpoint OS
@@ -56,9 +68,10 @@
 	- Added Adc
 	- Added PulseFeedback (DrainDuration, EchoDuration, DurationUntilEcho)
 	- Display: Flush(..) supports flushing any size, anywhere within data buffer.
-	
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues		
+
+---
 
 ## **0.1.3 - Beta (2024-8-3)**
 
