@@ -4,9 +4,76 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.2.2.1000 - RTW
+
+### Released 2024-05-02
+
+### Visual Studio Project System
+
+#### Changes
+
+- VS2022: None
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Libraries
+
+#### Changes
+
+- Fixed context.Request.InputStream returns unwanted bytes
+- Fixed DigitalSignal event is not called when call Abort()
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Drivers
+
+#### Changes
+
+- Basic graphic: DrawTinyString: Supports new line
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+
+### Firmware
+
+#### Changes
+
+##### SC20xxx:
+
+- Fixed system crashed if create a new object when memory is too low
+- Improved memory ram backup
+- Improved QSPI (SC20xxx)
+
+##### SC13xxx
+
+- Fixed wakeup pin PA2 don't work
+ 
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### TinyCLR Config
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until reset the board.
+
+---
+
 ## 2.2.1.2100 - RTW
 
-### Released 2024-09-04
+### Released 2024-04-09
 
 ### Firmware
 
@@ -25,10 +92,11 @@
 
 - https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
 
+---
 
 ## 2.2.1.2000 - RTW
 
-### Released 2024-19-03
+### Released 2024-03-19
 
 ### Visual Studio Project System
 
@@ -97,7 +165,7 @@
 
 ## 2.2.0.7000 - RTW
 
-### Released 2024-26-02
+### Released 2024-02-26
 
 ### Visual Studio Project System
 
@@ -158,6 +226,8 @@
 
 - Erase all does not erase external flash.
 - Sometimes fails to connect until board is reset.
+
+---
 
 ## 2.2.0.6200 - RTW
 
@@ -233,6 +303,7 @@
 
 - None.
 
+---
 
 ## 2.2.0.6100 - RTW
 
@@ -306,6 +377,7 @@
 
 - None.
 
+---
 
 ## 2.2.0.6000 - RTW
 
@@ -396,6 +468,7 @@
 
 - None.
 
+---
 
 ## 2.2.0.5100 - RTW
 
@@ -469,6 +542,7 @@
 
 - None.
 
+---
 
 ## 2.2.0.5000 - RTW
 
@@ -546,6 +620,7 @@
 
 - None.
 
+---
 
 ## 2.2.0.4200 - RTW
 
@@ -619,6 +694,7 @@
 
 - None.
 
+---
 
 ## 2.2.0.4000 - RTW
 
@@ -696,6 +772,8 @@
 #### Known Issues
 
 - None.
+
+---
 
 ## 2.2.0.3000 - RC1
 
@@ -778,6 +856,7 @@
 
 - None.
 
+---
 
 ## 2.2.0.2000 - Preview2
 
