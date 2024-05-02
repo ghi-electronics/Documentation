@@ -22,6 +22,7 @@ The Firmware is the TinyCLR OS that lives on your hardware. The firmware version
 
 File | Date | Status | MD5
 --- | --- | --- | ---
+[v2.2.2.1000 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.2.2.1000.ghi) | 2024-05-02 | Update | 22FD189E6E4F304CD1211E66EF0E997C
 [v2.2.1.2100 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.2.1.2100.ghi) | 2024-04-09 | Update | A4F5FBB0C40AC96551365633300F0932
 [v2.2.1.2000 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.2.1.2000.ghi) | 2024-03-19 | Update | F4A70BC8017B06A4B7A993F6DEA5A1F4
 [v2.2.0.7000 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC20-Firmware-v2.2.0.7000.ghi) | 2024-02-26 | Update | A7C14E993D8FDA20DF00944F36829F4D
@@ -48,6 +49,7 @@ File | Date | Status | MD5
 
 File | Date | Status | MD5
 --- | --- | --- | ---
+[v2.2.2.1000 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.2.2.1000.ghi) | 2024-05-02 | Update | 0BF3FF4726C6927B33EF4487A9124B25
 [v2.2.1.2100 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.2.1.2100.ghi) | 2024-04-09 | Update | 2BD5B3B73491B27D64522483469CD360
 [v2.2.1.2000 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.2.1.2000.ghi) | 2024-03-19 | Update | 6FF9A5C53FC7451924A57C0E27056DCF
 [v2.2.0.7000 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.2.0.7000.ghi) | 2024-02-26 | Update | A7C14E993D8FDA20DF00944F36829F4D
@@ -73,6 +75,7 @@ TinyCLR Config is a tool used to update and configure your TinyCLR device.
 
 File | Date | Status | MD5
 --- | --- | --- | ---
+[v2.2.2.1000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Config/TinyCLR-Config-Setup-v2.2.2.1000.msi) | 2024-05-02 | Update | 3F5C7FBC39A3B3257E81515CD20D63F1
 [v2.2.1.2000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Config/TinyCLR-Config-Setup-v2.2.1.2000.msi) | 2024-03-19 | Update | 654012076B0EB611AF2C847C4A9BE1BE
 [v2.2.0.7000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Config/TinyCLR-Config-Setup-v2.2.0.7000.msi) | 2024-02-26 | Update | DEB57E7784F6CC63A48E3FBB77971307
 [v2.2.0.6000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Config/TinyCLR-Config-Setup-v2.2.0.6000.msi) | 2023-09-14 | Production | F3B62D4163D14FE543CE7CE617609E17
@@ -97,6 +100,7 @@ The extension is what gets loaded on Visual Studio to allow it to communicate wi
 
 File | Date | Status | MD5
 --- | --- | --- | ---
+[v2.2.2.1000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.2.2.1000.vsix) | 2024-05-02 | Update | C268112B07D18F54CB83B8E80BA496F1
 [v2.2.1.2000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.2.1.2000.vsix) | 2024-03-19 | Update | 21D4E9BF38156075EE9DEB6EFE812365
 [v2.2.0.7000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.2.0.7000.vsix) | 2024-02-26 | Update | 2787BC5CED9800C19A4B272B0103ECF6
 [v2.2.0.6000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.2.0.6000.vsix) | 2023-09-14 | Update | 6199684EEE3CD9F07D6861657D12F5CF
@@ -133,6 +137,7 @@ The libraries are provided here in case you're having trouble with the online so
 
 File | Date | Status | MD5
 --- | --- | --- | ---
+[v2.2.2.1000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.2.2.1000.zip) | 2024-05-02 | Update | 9E2435CE675462199AAC10F3A2826C09
 [v2.2.1.2000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.2.1.2000.zip) | 2024-03-19 | Update | A205B8A682CCF785DCE7C39FB3C0DE1C
 [v2.2.0.7000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.2.0.7000.zip) | 2024-02-26 | Update | DEB57E7784F6CC63A48E3FBB77971307
 [v2.2.0.6000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Libraries/TinyCLR-OS-Libraries-v2.2.0.6000.zip) | 2023-09-14 | Update | BD1BE7C6FF1A53DE5C2BE020593D4CBA

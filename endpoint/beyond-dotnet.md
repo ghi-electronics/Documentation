@@ -93,7 +93,7 @@ The code sample demonstrates PWM using an on-board buzzer.
 
 ```python
 import time
-import GHIElectronics.Endpoint.Core.EPM815.G as Pwm
+import GHIElectronics.Endpoint.Core.EPM815.Pwm as Pwm
 
 pwm = Pwm.PwmController(Pwm.Pin.PF9)
 

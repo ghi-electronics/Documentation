@@ -24,6 +24,7 @@ var setting = new SpiConnectionSettings(EPM815.Spi.Spi4)
 {
     ClockFrequency = 4_000_000,
     Mode = SpiMode.Mode0,
+    ChipSelectLine = 0
 };
 // Create the SPI device
 var spiDev = SpiDevice.Create(setting);
