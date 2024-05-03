@@ -4,6 +4,23 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.2.2.1100 - RTW
+
+### Released 2024-05-03
+
+### Visual Studio Project System
+
+#### Changes
+
+- VS2022: Fixed deploying application failed sometime when enable external flash
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+
+---
+
 ## 2.2.2.1000 - RTW
 
 ### Released 2024-05-02
