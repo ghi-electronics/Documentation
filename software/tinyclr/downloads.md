@@ -100,6 +100,7 @@ The extension is what gets loaded on Visual Studio to allow it to communicate wi
 
 File | Date | Status | MD5
 --- | --- | --- | ---
+[v2.2.2.1100-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.2.2.1100.vsix) | 2024-05-03 | Update | D7981B94F6B60342BA598EFD949DB983
 [v2.2.2.1000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.2.2.1000.vsix) | 2024-05-02 | Update | C268112B07D18F54CB83B8E80BA496F1
 [v2.2.1.2000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.2.1.2000.vsix) | 2024-03-19 | Update | 21D4E9BF38156075EE9DEB6EFE812365
 [v2.2.0.7000-RTW](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Extensions/TinyCLR-OS-Project-System-v2.2.0.7000.vsix) | 2024-02-26 | Update | 2787BC5CED9800C19A4B272B0103ECF6
