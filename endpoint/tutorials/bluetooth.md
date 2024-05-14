@@ -1,7 +1,7 @@
 # Bluetooth
 ---
 
-Endpoint supports two kinds of bluetooth devices through USB. They are:Your location
+Endpoint supports two kinds of bluetooth devices through USB, they are:
 
 - Broadcom: BCM4335,BCM4350, BCM4356, BCM4371, BCM20702, BCM20703, BCM43142 
 - Realtek: RTL87xx
