@@ -1,12 +1,12 @@
 # Bluetooth
 ---
 
-Endpoint supports two kinds of bluetooth devices through USB, they are:
+Endpoint supports two kinds of Bluetooth devices through USB, they are:
 
 - Broadcom: BCM4335,BCM4350, BCM4356, BCM4371, BCM20702, BCM20703, BCM43142 
 - Realtek: RTL87xx
 
-Endpoint uses BlueZ stack to control bluetooth. There is an example for using BlueZ in .NET, can be found here: https://github.com/SuessLabs/Linux.Bluetooth
+Endpoint uses BlueZ stack to control Bluetooth. There is an example for using BlueZ in .NET, can be found here: https://github.com/SuessLabs/Linux.Bluetooth
 
 > [!Note]
 > Hardware driver needs to be loaded, initialized, and paired before using BlueZ library.<BR>
@@ -18,7 +18,7 @@ Below is an example how to initialize and pair between Endpoint and another devi
 
 ```cs
 
-const string MAC_ADDRESS = "80:07:94:46:57:B6"; // The mac address needed for ep to connect to.
+const string MAC_ADDRESS = "80:07:94:46:57:B6"; // The mac address needed for ep connect to.
 
 private static void Main()
 {

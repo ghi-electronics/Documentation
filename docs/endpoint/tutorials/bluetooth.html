@@ -88,12 +88,12 @@
 <h1 id="bluetooth">Bluetooth</h1>
 
 <hr>
-<p>Endpoint supports two kinds of bluetooth devices through USB, they are:</p>
+<p>Endpoint supports two kinds of Bluetooth devices through USB, they are:</p>
 <ul>
 <li>Broadcom: BCM4335,BCM4350, BCM4356, BCM4371, BCM20702, BCM20703, BCM43142</li>
 <li>Realtek: RTL87xx</li>
 </ul>
-<p>Endpoint uses BlueZ stack to control bluetooth. There is an example for using BlueZ in .NET, can be found here: <a href="https://github.com/SuessLabs/Linux.Bluetooth">https://github.com/SuessLabs/Linux.Bluetooth</a></p>
+<p>Endpoint uses BlueZ stack to control Bluetooth. There is an example for using BlueZ in .NET, can be found here: <a href="https://github.com/SuessLabs/Linux.Bluetooth">https://github.com/SuessLabs/Linux.Bluetooth</a></p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Hardware driver needs to be loaded, initialized, and paired before using BlueZ library.<br>
@@ -102,7 +102,7 @@ Pair is requested from Endpoint only.</p>
 <h2 id="example">Example</h2>
 <p>Below is an example how to initialize and pair between Endpoint and another device with provided MAC_ADDRESS</p>
 <pre><code class="lang-cs">
-const string MAC_ADDRESS = &quot;80:07:94:46:57:B6&quot;; // The mac address needed for ep to connect to.
+const string MAC_ADDRESS = &quot;80:07:94:46:57:B6&quot;; // The mac address needed for ep connect to.
 
 private static void Main()
 {
