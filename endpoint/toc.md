@@ -39,6 +39,7 @@
 ### [Watchdog Timer](tutorials/watchdog-timer.md)
 ### [Real Time Clock](tutorials/real-time-clock.md)
 ### [SQLite Database](tutorials/databases.md)
+### [Bluetooth](tutorials/bluetooth.md)
 
 # [Libraries](api/intro.md)
 # [Downloads](downloads.md)

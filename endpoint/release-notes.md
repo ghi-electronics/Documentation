@@ -2,7 +2,42 @@
 
 ---
 
-## **0.1.6.1 - Beta (2024-24-4)**
+## **0.1.7 - Beta (2024-5-14)**
+
+### Endpoint OS
+
+- Changes
+    - Added BlueZ stack for bluetooth
+	- Added Bluetooth drivers: Broadcom: BCM4335,BCM4350, BCM4356, BCM4371, BCM20702, BCM20703, BCM43142 
+	- Added Bluetooth drivers: Realtek: RTL87xx 	
+- Known Issues
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues
+			
+### Libraries
+
+- Changes 
+	- Core: Class Script supports event
+- Known Issues
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues
+
+### Drivers
+
+- Changes
+    - Added Bluetooth driver nuget
+- Known Issues
+    https://github.com/ghi-electronics/endpoint-drivers/issues
+
+### Endpoint Config
+
+- Changes
+    - Added Set/Remove evironment variables
+- Known Issues
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues.
+
+---
+
+
+## **0.1.6.1 - Beta (2024-4-24)**
 
 ### Endpoint OS
 
@@ -13,7 +48,7 @@
 	
 ---
 
-## **0.1.6 - Beta (2024-22-4)**
+## **0.1.6 - Beta (2024-4-22)**
 
 ### Endpoint OS
 
@@ -55,7 +90,7 @@
 
 ---
 
-## **0.1.4 - Beta (2024-5-4)**
+## **0.1.4 - Beta (2024-4-5)**
 
 ### Endpoint OS
 - Changes
@@ -73,7 +108,7 @@
 
 ---
 
-## **0.1.3 - Beta (2024-8-3)**
+## **0.1.3 - Beta (2024-3-8)**
 
 ### Endpoint OS
 
@@ -135,7 +170,7 @@
 	
 ---
 
-## **0.1.2 - Beta (2024-21-2)**
+## **0.1.2 - Beta (2024-2-21)**
 
 ### Endpoint OS
 

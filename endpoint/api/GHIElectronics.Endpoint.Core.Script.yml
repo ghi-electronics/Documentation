@@ -6,10 +6,13 @@ items:
   parent: GHIElectronics.Endpoint.Core
   children:
   - GHIElectronics.Endpoint.Core.Script.#ctor(System.String,System.String,System.String)
+  - GHIElectronics.Endpoint.Core.Script.Busy
   - GHIElectronics.Endpoint.Core.Script.Error
   - GHIElectronics.Endpoint.Core.Script.ExitCode
   - GHIElectronics.Endpoint.Core.Script.Output
+  - GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEvent
   - GHIElectronics.Endpoint.Core.Script.Start(System.Boolean)
+  - GHIElectronics.Endpoint.Core.Script.Stop
   langs:
   - csharp
   - vb
@@ -41,6 +44,62 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEvent
+  commentId: E:GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEvent
+  id: OutputDataRecivedEvent
+  parent: GHIElectronics.Endpoint.Core.Script
+  langs:
+  - csharp
+  - vb
+  name: OutputDataRecivedEvent
+  nameWithType: Script.OutputDataRecivedEvent
+  fullName: GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEvent
+  type: Event
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Script.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OutputDataRecivedEvent
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Script.cs
+    startLine: 15
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public event Script.OutputDataRecivedEventHandler OutputDataRecivedEvent
+    return:
+      type: GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEventHandler
+    content.vb: Public Event OutputDataRecivedEvent As Script.OutputDataRecivedEventHandler
+- uid: GHIElectronics.Endpoint.Core.Script.Busy
+  commentId: P:GHIElectronics.Endpoint.Core.Script.Busy
+  id: Busy
+  parent: GHIElectronics.Endpoint.Core.Script
+  langs:
+  - csharp
+  - vb
+  name: Busy
+  nameWithType: Script.Busy
+  fullName: GHIElectronics.Endpoint.Core.Script.Busy
+  type: Property
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Script.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Busy
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Script.cs
+    startLine: 18
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public bool Busy { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Busy As Boolean
+  overload: GHIElectronics.Endpoint.Core.Script.Busy*
 - uid: GHIElectronics.Endpoint.Core.Script.#ctor(System.String,System.String,System.String)
   commentId: M:GHIElectronics.Endpoint.Core.Script.#ctor(System.String,System.String,System.String)
   id: '#ctor(System.String,System.String,System.String)'
@@ -59,7 +118,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: .ctor
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Script.cs
-    startLine: 13
+    startLine: 19
   assemblies:
   - GHIElectronics.Endpoint.Core
   namespace: GHIElectronics.Endpoint.Core
@@ -95,7 +154,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Start
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Script.cs
-    startLine: 28
+    startLine: 44
   assemblies:
   - GHIElectronics.Endpoint.Core
   namespace: GHIElectronics.Endpoint.Core
@@ -109,6 +168,32 @@ items:
   nameWithType.vb: Script.Start(Boolean)
   fullName.vb: GHIElectronics.Endpoint.Core.Script.Start(Boolean)
   name.vb: Start(Boolean)
+- uid: GHIElectronics.Endpoint.Core.Script.Stop
+  commentId: M:GHIElectronics.Endpoint.Core.Script.Stop
+  id: Stop
+  parent: GHIElectronics.Endpoint.Core.Script
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: Script.Stop()
+  fullName: GHIElectronics.Endpoint.Core.Script.Stop()
+  type: Method
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Script.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: Stop
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Script.cs
+    startLine: 70
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public void Stop()
+    content.vb: Public Sub [Stop]()
+  overload: GHIElectronics.Endpoint.Core.Script.Stop*
 - uid: GHIElectronics.Endpoint.Core.Script.Error
   commentId: P:GHIElectronics.Endpoint.Core.Script.Error
   id: Error
@@ -127,7 +212,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Error
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Script.cs
-    startLine: 45
+    startLine: 77
   assemblies:
   - GHIElectronics.Endpoint.Core
   namespace: GHIElectronics.Endpoint.Core
@@ -156,7 +241,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: Output
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Script.cs
-    startLine: 46
+    startLine: 78
   assemblies:
   - GHIElectronics.Endpoint.Core
   namespace: GHIElectronics.Endpoint.Core
@@ -185,7 +270,7 @@ items:
       repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
     id: ExitCode
     path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Script.cs
-    startLine: 47
+    startLine: 79
   assemblies:
   - GHIElectronics.Endpoint.Core
   namespace: GHIElectronics.Endpoint.Core
@@ -464,6 +549,46 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEventHandler
+  commentId: T:GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEventHandler
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.Script.html
+  name: Script.OutputDataRecivedEventHandler
+  nameWithType: Script.OutputDataRecivedEventHandler
+  fullName: GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEventHandler
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.Script
+    name: Script
+    href: GHIElectronics.Endpoint.Core.Script.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEventHandler
+    name: OutputDataRecivedEventHandler
+    href: GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEventHandler.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.Script
+    name: Script
+    href: GHIElectronics.Endpoint.Core.Script.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEventHandler
+    name: OutputDataRecivedEventHandler
+    href: GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEventHandler.html
+- uid: GHIElectronics.Endpoint.Core.Script.Busy*
+  commentId: Overload:GHIElectronics.Endpoint.Core.Script.Busy
+  href: GHIElectronics.Endpoint.Core.Script.html#GHIElectronics_Endpoint_Core_Script_Busy
+  name: Busy
+  nameWithType: Script.Busy
+  fullName: GHIElectronics.Endpoint.Core.Script.Busy
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: GHIElectronics.Endpoint.Core.Script.#ctor*
   commentId: Overload:GHIElectronics.Endpoint.Core.Script.#ctor
   href: GHIElectronics.Endpoint.Core.Script.html#GHIElectronics_Endpoint_Core_Script__ctor_System_String_System_String_System_String_
@@ -490,17 +615,12 @@ references:
   name: Start
   nameWithType: Script.Start
   fullName: GHIElectronics.Endpoint.Core.Script.Start
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+- uid: GHIElectronics.Endpoint.Core.Script.Stop*
+  commentId: Overload:GHIElectronics.Endpoint.Core.Script.Stop
+  href: GHIElectronics.Endpoint.Core.Script.html#GHIElectronics_Endpoint_Core_Script_Stop
+  name: Stop
+  nameWithType: Script.Stop
+  fullName: GHIElectronics.Endpoint.Core.Script.Stop
 - uid: GHIElectronics.Endpoint.Core.Script.Error*
   commentId: Overload:GHIElectronics.Endpoint.Core.Script.Error
   href: GHIElectronics.Endpoint.Core.Script.html#GHIElectronics_Endpoint_Core_Script_Error
