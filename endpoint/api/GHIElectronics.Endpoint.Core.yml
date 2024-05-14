@@ -36,6 +36,7 @@ items:
   - GHIElectronics.Endpoint.Core.Processor
   - GHIElectronics.Endpoint.Core.Register
   - GHIElectronics.Endpoint.Core.Script
+  - GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEventHandler
   langs:
   - csharp
   - vb
@@ -728,10 +729,34 @@ references:
   fullName: GHIElectronics.Endpoint.Core.Register
 - uid: GHIElectronics.Endpoint.Core.Script
   commentId: T:GHIElectronics.Endpoint.Core.Script
+  parent: GHIElectronics.Endpoint.Core
   href: GHIElectronics.Endpoint.Core.Script.html
   name: Script
   nameWithType: Script
   fullName: GHIElectronics.Endpoint.Core.Script
+- uid: GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEventHandler
+  commentId: T:GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEventHandler
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.Script.html
+  name: Script.OutputDataRecivedEventHandler
+  nameWithType: Script.OutputDataRecivedEventHandler
+  fullName: GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEventHandler
+  spec.csharp:
+  - uid: GHIElectronics.Endpoint.Core.Script
+    name: Script
+    href: GHIElectronics.Endpoint.Core.Script.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEventHandler
+    name: OutputDataRecivedEventHandler
+    href: GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEventHandler.html
+  spec.vb:
+  - uid: GHIElectronics.Endpoint.Core.Script
+    name: Script
+    href: GHIElectronics.Endpoint.Core.Script.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEventHandler
+    name: OutputDataRecivedEventHandler
+    href: GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEventHandler.html
 - uid: GHIElectronics.Endpoint.Core.NativeUtils
   commentId: T:GHIElectronics.Endpoint.Core.NativeUtils
   href: GHIElectronics.Endpoint.Core.NativeUtils.html

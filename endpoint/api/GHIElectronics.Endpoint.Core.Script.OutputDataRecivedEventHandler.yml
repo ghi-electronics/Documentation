@@ -1,0 +1,89 @@
+### YamlMime:ManagedReference
+items:
+- uid: GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEventHandler
+  commentId: T:GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEventHandler
+  id: Script.OutputDataRecivedEventHandler
+  parent: GHIElectronics.Endpoint.Core
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: Script.OutputDataRecivedEventHandler
+  nameWithType: Script.OutputDataRecivedEventHandler
+  fullName: GHIElectronics.Endpoint.Core.Script.OutputDataRecivedEventHandler
+  type: Delegate
+  source:
+    remote:
+      path: Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Script.cs
+      branch: main
+      repo: https://github.com/ghi-electronics/Endpoint-Libraries.git
+    id: OutputDataRecivedEventHandler
+    path: ../Endpoint-Libraries/Dotnet/GHIElectronics.Endpoint.Libraries/GHIElectronics.Endpoint.Core/Script.cs
+    startLine: 14
+  assemblies:
+  - GHIElectronics.Endpoint.Core
+  namespace: GHIElectronics.Endpoint.Core
+  syntax:
+    content: public delegate void Script.OutputDataRecivedEventHandler(Script sender, string received)
+    parameters:
+    - id: sender
+      type: GHIElectronics.Endpoint.Core.Script
+    - id: received
+      type: System.String
+    content.vb: Public Delegate Sub Script.OutputDataRecivedEventHandler(sender As Script, received As String)
+references:
+- uid: GHIElectronics.Endpoint.Core
+  commentId: N:GHIElectronics.Endpoint.Core
+  href: GHIElectronics.html
+  name: GHIElectronics.Endpoint.Core
+  nameWithType: GHIElectronics.Endpoint.Core
+  fullName: GHIElectronics.Endpoint.Core
+  spec.csharp:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+  spec.vb:
+  - uid: GHIElectronics
+    name: GHIElectronics
+    href: GHIElectronics.html
+  - name: .
+  - uid: GHIElectronics.Endpoint
+    name: Endpoint
+    href: GHIElectronics.Endpoint.html
+  - name: .
+  - uid: GHIElectronics.Endpoint.Core
+    name: Core
+    href: GHIElectronics.Endpoint.Core.html
+- uid: GHIElectronics.Endpoint.Core.Script
+  commentId: T:GHIElectronics.Endpoint.Core.Script
+  parent: GHIElectronics.Endpoint.Core
+  href: GHIElectronics.Endpoint.Core.Script.html
+  name: Script
+  nameWithType: Script
+  fullName: GHIElectronics.Endpoint.Core.Script
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

@@ -22,7 +22,6 @@ var settings = new SpiConnectionSettings() {
     ChipSelectLine = cs,
     Mode = SpiMode.Mode1,
     ClockFrequency = 4_000_000,
-    ChipSelectLine = 0
 };
 
 var controller = SpiController.FromName(SC20100.SpiBus.Spi4);
@@ -33,8 +32,6 @@ device.TransferSequential(...);    //This is good for reading registers.
 device.TransferFullDuplex(...);    //This is the only one that truly represents how SPI works.
 ```
 
-> [!Tip]
-It's important to set **ChipSelectLine=0** in the **SpiConnectonSettings()**. It will cause an error if this is not set.
 ---
 
 ## SPI Clock Speed

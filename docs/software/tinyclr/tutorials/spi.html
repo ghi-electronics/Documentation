@@ -107,7 +107,6 @@ var settings = new SpiConnectionSettings() {
     ChipSelectLine = cs,
     Mode = SpiMode.Mode1,
     ClockFrequency = 4_000_000,
-    ChipSelectLine = 0
 };
 
 var controller = SpiController.FromName(SC20100.SpiBus.Spi4);
@@ -117,10 +116,7 @@ device.Write(new byte[] { 1, 2 }); //Write something.
 device.TransferSequential(...);    //This is good for reading registers.
 device.TransferFullDuplex(...);    //This is the only one that truly represents how SPI works.
 </code></pre>
-<div class="TIP">
-<h5>Tip</h5>
-</div>
-<h2 id="its-important-to-set-chipselectline0-in-the-spiconnectonsettings-it-will-cause-an-error-if-this-is-not-set">It's important to set <strong>ChipSelectLine=0</strong> in the <strong>SpiConnectonSettings()</strong>. It will cause an error if this is not set.</h2>
+<hr>
 <h2 id="spi-clock-speed">SPI Clock Speed</h2>
 <p>SITCore SPI controllers support different clock ranges.</p>
 <table>
