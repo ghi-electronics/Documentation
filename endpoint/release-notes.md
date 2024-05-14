@@ -7,7 +7,7 @@
 ### Endpoint OS
 
 - Changes
-    - Added BlueZ stack for bluetooth
+    - Added BlueZ stack for Bluetooth
 	- Added Bluetooth drivers: Broadcom: BCM4335,BCM4350, BCM4356, BCM4371, BCM20702, BCM20703, BCM43142 
 	- Added Bluetooth drivers: Realtek: RTL87xx 	
 - Known Issues
@@ -30,7 +30,7 @@
 ### Endpoint Config
 
 - Changes
-    - Added Set/Remove evironment variables
+    - Added Set/Remove environment variables
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues.
 
