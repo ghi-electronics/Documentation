@@ -1,4 +1,4 @@
-# BrainGamer - Pong
+# BrainGamer - Sketch
 
 ![BrainGamer Sketch](images/braingamer-sketch.gif)
 
