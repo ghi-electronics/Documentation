@@ -198,7 +198,7 @@ var distanceTriggerPin = gpio.OpenPin(SC20260.GpioPin.PA15);
 
 var distanceEchoPin = gpio.OpenPin(SC20260.GpioPin.PJ14);
 
-pulseFeedback = new PulseFeedback(distanceTriggerPin,
+var pulseFeedback = new PulseFeedback(distanceTriggerPin,
     distanceEchoPin,
     PulseFeedbackMode.EchoDuration) {
     DisableInterrupts = false,
