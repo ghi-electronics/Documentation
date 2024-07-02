@@ -214,7 +214,7 @@ while (true) {
     var distance = microseconds * 0.036 / 2.0;
 
     Debug.WriteLine(distance.ToString());
-    Thread.Sleep(Timeout.Infinite);
+    Thread.Sleep(200);
 }
 ```
 
