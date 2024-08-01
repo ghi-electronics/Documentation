@@ -87,5 +87,5 @@ Visit the extension section from within VS Code and search for and install `Endp
  The Endpoint libraries are provided [**here**](downloads.md) in case you're having trouble with the online source or need an older or pre-release library that's not hosted on NuGet.
 
  Learn more about the Endpoint API [**here**](api/intro.md). 
-
+ 
  

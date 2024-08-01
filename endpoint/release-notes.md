@@ -2,6 +2,34 @@
 
 ---
 
+## **0.1.8 - Beta (2024-7-31)**
+
+### Endpoint OS
+- Changes:
+	- Change .NET and Application path location.
+	
+- Known Issues
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues
+
+### Visual Studio Extension
+
+- Changes
+    - Support Raspberry Pi, Beaglebone board.	 	
+	
+- Known Issues
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues
+
+### Endpoint Config
+
+- Changes
+    - Support Raspberry Pi, Beaglebone board.
+	- Install .NET from menu
+
+- Known Issues
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues.
+
+---
+
 ## **0.1.7 - Beta (2024-5-14)**
 
 ### Endpoint OS
