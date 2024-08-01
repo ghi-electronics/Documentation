@@ -44,7 +44,7 @@ The [Getting Started](~/endpoint/getting-started.md) page applies to other board
 Raspberry Pi may have SSH disable by default, make sure SSH is enabled for connection. Visit the Raspberry Pi website for details on enableing SSH. 
  
 > [!Tip] 
-> If not know the IP address, [config tool](~/endpoint/configuration.md) accepts default username(pi@raspberrypi) and password(raspberry)
+> If the IP address is not known, [config tool](~/endpoint/configuration.md) accepts default username(pi@raspberrypi) and password(raspberry)
  
 ## BeagleBone
 
@@ -63,6 +63,6 @@ sudo bash -c 'echo "debian ALL=NOPASSWD: ALL" >> /etc/sudoers'
 Please note that after running this command, the device may no longer ask password for sudo mode that reduces your BeagleBone security. 
 
 > [!Tip] 
-> If not know the IP address, [config tool](~/endpoint/configuration.md) accepts default username(debian@beaglebone) and password(temppwd)
+> If the IP address is not known, [config tool](~/endpoint/configuration.md) accepts default username(debian@beaglebone) and password(temppwd)
 
 
