@@ -6,7 +6,7 @@
 
 ### Endpoint OS
 - Changes:
-	- Change .NET and Application path location.
+	- Change .NET and Application PATH.
 	
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues
