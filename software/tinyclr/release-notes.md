@@ -4,6 +4,79 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.3.0.1000 - RTW
+
+### Released 2024-08-09
+
+### Visual Studio Project System
+
+#### Changes
+
+- Improved application deployment
+- Generate tca file with user-key
+
+#### Known Issues
+
+- None.
+
+### Libraries
+
+#### Changes
+
+- Added WiFi AP mode
+- Correct FEZBit pin name
+- Fixed HTTP Web Server and Garbage Collector cause Uncaught .dll Exception
+
+#### Known Issues
+
+- https://github.com/ghi-electronics/TinyCLR-Libraries/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+
+### Firmware
+
+#### Changes
+
+##### SC20xxx:
+
+- Improved application deployment 
+- SDCard default speed is 12MHz
+- No GC.Collect when IFU enter FlashAndReset()
+- Fixed Watchdog enable may cause IFU failed
+
+##### SC13xxx
+
+- Improved application deployment
+- No GC.Collect when IFU enter FlashAndReset()
+- Fixed Watchdog enable may cause IFU failed
+ 
+#### Known Issues
+
+- None.
+
+### Drivers
+
+#### Changes
+
+- None.
+
+#### Known Issues
+
+- None.
+
+### TinyCLR Config
+
+#### Changes
+
+- Fixed serial port issue
+- Improve upload/download tca file
+
+#### Known Issues
+
+- Erase all does not erase external flash.
+- Sometimes fails to connect until board is reset.
+
+
+---
+
 ## 2.2.2.1100 - RTW
 
 ### Released 2024-05-03
