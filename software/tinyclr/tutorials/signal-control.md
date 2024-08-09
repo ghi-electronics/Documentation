@@ -198,7 +198,7 @@ var distanceTriggerPin = gpio.OpenPin(SC20260.GpioPin.PA15);
 
 var distanceEchoPin = gpio.OpenPin(SC20260.GpioPin.PJ14);
 
-pulseFeedback = new PulseFeedback(distanceTriggerPin,
+var pulseFeedback = new PulseFeedback(distanceTriggerPin,
     distanceEchoPin,
     PulseFeedbackMode.EchoDuration) {
     DisableInterrupts = false,
@@ -214,7 +214,7 @@ while (true) {
     var distance = microseconds * 0.036 / 2.0;
 
     Debug.WriteLine(distance.ToString());
-    Thread.Sleep(Timeout.Infinite);
+    Thread.Sleep(200);
 }
 ```
 
