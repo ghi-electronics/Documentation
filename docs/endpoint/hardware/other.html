@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/add_rasp_bbb/endpoint/hardware/other.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ghi-electronics/Documentation/blob/dev/endpoint/hardware/other.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -87,9 +87,33 @@
         <article data-uid="">
 <h1 id="other-platforms">Other Platforms</h1>
 
-<p>Endpoint's Visual Studio extension and <a href="../configuration.html">config tool</a> support other linux SBCs from companies such as Raspberry Pi BeagleBoard. This gives developers an easy way to test out the power of .NEt on hardware they may already own.</p>
-<p>Full remote network deploying and debugging are supported. Note that the official .NET libraries may support some of the IoT features on these boards. Consider using Endpoint for access to all libraries.</p>
-<p>This table lists the features available on tested boards:</p>
+<p>Endpoint's Visual Studio extension and <a href="../configuration.html">config tool</a> support other Linux SBCs from companies such as Raspberry Pi and BeagleBoard. This gives developers an easy way to test out the power of .NET on hardware they may already own.</p>
+<p>Full remote network deploying and debugging are supported.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>The main <a href="../getting-started.html">Getting Started</a> page applies the official Endpoint devices.</p>
+<p>Other Linux boards require some additional steps for the <a href="../configuration.html">Endpoint Config</a> tool to work, as shown later on this page. Once enabled, use the tool to install .NET onto the device.</p>
+<p><img src="images/endpoint-config-install-dotnet.png" alt="Endpoint Config Install .NET"></p>
+<p>From this point, the Endpoint Extension can be used, just remember to set the SSH log-in info appropriately. More info are found on the main <a href="../getting-started.html">Getting Started</a> page.</p>
+<h2 id="raspberry-pi">Raspberry Pi</h2>
+<p>Raspberry Pi may have SSH disable by default, make sure SSH is enabled for connection. Visit the Raspberry Pi website for details on enabling SSH.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If the IP address is not known, <a href="../configuration.html">config tool</a> accepts default username(pi@raspberrypi) and password(raspberry)</p>
+</div>
+<h2 id="beaglebone">BeagleBone</h2>
+<p>On BeagleBone, NOPASSWD needs to be enabled for sudo command. To enable NOPASSWD, run the command below from PC's command line:</p>
+<pre><code>ssh debian@beaglebone
+</code></pre>
+<p>Enter password if needed. Once SSH is connected, run the second command below:</p>
+<pre><code>sudo bash -c 'echo &quot;debian ALL=NOPASSWD: ALL&quot; &gt;&gt; /etc/sudoers'
+</code></pre>
+<p>Please note that after running this command, the device may no longer ask password for sudo mode that reduces your BeagleBone security.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If the IP address is not known, <a href="../configuration.html">config tool</a> accepts default username(debian@beaglebone) and password(temppwd)</p>
+</div>
+<h2 id="supported-features">Supported Features</h2>
+<p>Devices running .NET may support only some of the IoT features. This table compares features on some popular boards compared to Endpoint Domino.</p>
 <table>
 <thead>
 <tr>
@@ -198,7 +222,8 @@
 </tr>
 </tbody>
 </table>
-<p>Also note that our official Endpoint is designed with a tighter image for faster boot. Consider boot time when folowing instrucitons. This is a typical boot time, from power up to a cimplete boot with a blink LED in .NET.</p>
+<h2 id="boot-time">Boot time</h2>
+<p>Endpoint devices are designed with a tighter image for faster boot. This is a typical boot time, from power up to a complete boot with a blink LED in .NET.</p>
 <table>
 <thead>
 <tr>
@@ -213,30 +238,23 @@
 </tr>
 <tr>
 <td>Raspberry Pi 4</td>
-<td>45 seconds</td>
+<td>30 seconds</td>
 </tr>
 <tr>
 <td>BeagleBone Black</td>
-<td>200 seconds</td>
+<td>50 seconds</td>
 </tr>
 </tbody>
 </table>
-<hr>
-<p>The <a href="../getting-started.html">Getting Started</a> page applies to other boards; however, some steps may be necessary as shown below.</p>
-<h2 id="raspberry-pi">Raspberry Pi</h2>
-<p>Raspberry Pi may have SSH disable by default, make sure SSH is enabled for connection. Visit the Raspberry Pi website for details on enableing SSH.</p>
-<h2 id="beaglebone">BeagleBone</h2>
-<p>On BeagleBone, NOPASSWD needs to be enabled for sudo command. To enable NOPASSWD, run the command below from PC's command line:</p>
-<pre><code>ssh debian@beaglebone
-</code></pre>
-<p>Enter password if needed. Once SSH is connected, run the second command below:</p>
-<pre><code>sudo bash -c 'echo &quot;debian ALL=NOPASSWD: ALL&quot; &gt;&gt; /etc/sudoers'
-</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Consider boot-time when following the getting started instructions.</p>
+</div>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ghi-electronics/Documentation/blob/add_rasp_bbb/endpoint/hardware/other.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/ghi-electronics/Documentation/blob/dev/endpoint/hardware/other.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
