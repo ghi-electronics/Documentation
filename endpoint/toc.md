@@ -2,6 +2,9 @@
 # [Getting Started](getting-started.md)
 # [Beyond .NET](beyond-dotnet.md)
 # [Hardware](hardware/intro.md)
+## [SBC](hardware/sbc.md)
+## [Other](hardware/other.md)
+
 # [Configuration](configuration.md)
 # [Tutorials](tutorials/intro.md)
 

@@ -89,6 +89,10 @@
 
 <hr>
 <p>An Endpoint development environment consists of a device running Endpoint OS and a development machine with the required software and extension.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Visit the <a href="hardware/other.html">Other Platform</a> page to learn about steps needed for using other Linux devices, such as Raspberry Pi.</p>
+</div>
 <hr>
 <h2 id="endpoint-device-setup">Endpoint Device Setup</h2>
 <p>The first step is to boot the Endpoint OS, which can be hosted on a microSD card or loaded inside the hardware's eMMC flash (when available).</p>
@@ -117,7 +121,7 @@
 <p>After installing the .vsix file, create a new .NET 8 application. By default the .NET application will run on the PC. We need to switch to run the program on the Endpoint device.</p>
 <p>At the top of the Visual Studio menu navigate to <code>Debug -&gt; Options</code></p>
 <p><img src="images/debug-options.png" alt="Navigate to Debug Options"></p>
-<p>From there navigate to the <code>Endpoint Debugger</code> option and make sure the box is checked for <code>root@192.168.82.2</code>. If a password was created using the Endpoint <a href="configuration.html">Config</a> Tool also enter it here. If unchecked the application will only run on the PC.</p>
+<p>From there, navigate to the <code>Endpoint Debugger</code> option and make sure the box is checked for <code>root@192.168.82.2</code>. If using another device like Raspberry Pi, or if a password was created using the Endpoint <a href="configuration.html">Config</a> tool then enter the appropriate SSH log in info here. If unchecked the application will only run on the PC.</p>
 <p><img src="images/debug-host.png" alt="Debug Host"></p>
 <h3 id="endpoint-for-vs-code">Endpoint for VS Code</h3>
 <p>Endpoint also works using the VS Code IDE. If you don't already have the latest version, download it here:
@@ -129,6 +133,7 @@
 <p>Search for <strong>Endpoint</strong> and select <code>Endpoint:Create Net IoT project</code></p>
 <p><img src="images/search-endpoint.png" alt="Search Endpoint"></p>
 <p>Give the project a name and location.</p>
+<p>The SSH log in details are found in the <code>settings.json</code>. You may need to match your board password or log in info, especially when using other devices such as Raspberry Pi.</p>
 <hr>
 <h2 id="nuget-libraries">NuGet Libraries</h2>
 <p>Endpoint uses the standard .NET libraries when available. When a library doesn't existing inside the .NET API relating to embedded hardware we use an Endpoint library to fill in the missing gaps.</p>

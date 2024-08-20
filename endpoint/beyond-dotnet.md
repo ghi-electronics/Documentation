@@ -38,7 +38,7 @@ Endpoint uses the standard Python libraries when available. When a library doesn
 | **GPIO**        | GHIElectronics.Endpoint.Core.EPM815.Gpio       |
 | **PWM**         | GHIElectronics.Endpoint.Core.EPM815.PWM        | 
 | **SPI**         | GHIElectronics.Endpoint.Core.EPM815.Spi        | 
-| **I2C**         | GHIElectronics.Endpoint.Core.EPM815.Adc        | 
+| **I2C**         | GHIElectronics.Endpoint.Core.EPM815.I2c        | 
 | **ADC**         | GHIElectronics.Endpoint.Core.EPM815.Adc        | 
 | **DISPLAY**     | GHIElectronics.Endpoint.Core.EPM815.Display    | 
 | **RTC**         | GHIElectronics.Endpoint.Core.EPM815.RTC        |
