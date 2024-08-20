@@ -1,8 +1,8 @@
 # Other Platforms
 
-Endpoint's Visual Studio extension and [config tool](~/endpoint/configuration.md) support other linux SBCs from companies such as Raspberry Pi BeagleBoard. This gives developers an easy way to test out the power of .NEt on hardware they may already own.
+Endpoint's Visual Studio extension and [config tool](~/endpoint/configuration.md) support other Linux SBCs from companies such as Raspberry Pi BeagleBoard. This gives developers an easy way to test out the power of .NET on hardware they may already own.
 
-Full remote network deploying and debugging are supported. Note that the official .NET libraries may support some of the IoT features on these boards. Consider using Endpoint for access to all libraries.  
+Full remote network deploying and debugging are supported. Note that the official .NET libraries may support only some of the IoT features on these boards. Consider using Endpoint for access to all libraries.  
 
 This table lists the features available on tested boards:
  
@@ -27,7 +27,7 @@ Watchdog				|	✓		| ✗				|✗
 Camera					|	✓		| ✗				|✗
 
  
-Also note that our official Endpoint is designed with a tighter image for faster boot. Consider boot time when folowing instrucitons. This is a typical boot time, from power up to a complete boot with a blink LED in .NET, and use board's default user and password.
+Also note that our official Endpoint hardware is designed with a tighter image for faster boot. Consider boot time when following instructions. This is a typical boot time, from power up to a complete boot with a blink LED in .NET, and using board's default user and password.
 
  Device 			| Typical boot time 
  --- 				| ---
@@ -41,7 +41,7 @@ The [Getting Started](~/endpoint/getting-started.md) page applies to other board
 
 ## Raspberry Pi
  
-Raspberry Pi may have SSH disable by default, make sure SSH is enabled for connection. Visit the Raspberry Pi website for details on enableing SSH. 
+Raspberry Pi may have SSH disable by default, make sure SSH is enabled for connection. Visit the Raspberry Pi website for details on enabling SSH. 
  
 > [!Tip] 
 > If the IP address is not known, [config tool](~/endpoint/configuration.md) accepts default username(pi@raspberrypi) and password(raspberry)

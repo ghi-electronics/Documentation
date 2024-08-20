@@ -21,7 +21,7 @@ The Endpoint OS image can be downloaded and run from a microSD card or flashed t
 
 File | Date | Status | MD5
 --- | --- | --- |
-[v0.1.8.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/endpoint_image_B0180.7.31.24.img) | 2024-8-14 | Preview | E3DA15BCAF8C51BD67C0B2B15DBB8F01
+[v0.1.8.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/endpoint_image_B0180.7.31.24.img) | 2024-8-21 | Preview | E3DA15BCAF8C51BD67C0B2B15DBB8F01
 [v0.1.7.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/endpoint_image_B0170.5.14.24.img) | 2024-5-14 | Preview | 8D5BF770027FA1C9FA5E7AFFBF603732
 
 Endpoint OS image is large and that take time to update. For quick update/re-install firmware or dotnet, user can select update firmware or dotnet from Endpoint Config tool, and using the files below:
@@ -30,7 +30,7 @@ Endpoint OS image is large and that take time to update. For quick update/re-ins
 
 File | Date | Status | MD5
 --- | --- | --- |
-[v0.1.8.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/rootfs.ghi) | 2024-8-14 | Preview | 5C8ED398E4D9EF9A781AEBA4D0859868
+[v0.1.8.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Firmware/rootfs.ghi) | 2024-8-21 | Preview | 5C8ED398E4D9EF9A781AEBA4D0859868
 
 #### Dotnet
 
@@ -44,7 +44,7 @@ Endpoint Config is a tool used to update and configure your Endpoint device.
 
 File | Date | Status | MD5
 --- | --- | --- | 
-[v0.1.8.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Config/Endpoint_Config_Setup_v0.1.8.msi) | 2024-8-14 | Preview | D65F23D7570F6A39E6494B879824FCF1
+[v0.1.8.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Config/Endpoint_Config_Setup_v0.1.8.msi) | 2024-8-21 | Preview | D65F23D7570F6A39E6494B879824FCF1
 [v0.1.7.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Config/Endpoint_Config_Setup_v0.1.7.msi) | 2024-5-14 | Preview | 5C8728F4B669851854E16C09F4F1BA92
 [v0.1.6.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Config/Endpoint_Config_Setup_v0.1.6.msi) | 2024-4-22 | Preview | D0DDC758C3411378B9C7C29ACE13DFA8
 [v0.1.3.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Config/Endpoint_Config_Setup_v0.1.3.msi) | 2024-8-3 | Preview | 779763643D55D5F91C064C9DA9052D41

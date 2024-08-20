@@ -1,6 +1,6 @@
 # Endpoint
 ---
-The Endpoint line of products provides an easy way to use FULL .NET 8 on a embedded device using Visual Studio or VS Code.
+The Endpoint line of products provides an easy way to use FULL .NET 8 on an embedded device using Visual Studio or VS Code.
 
 ---
 ## Single Board Computer
