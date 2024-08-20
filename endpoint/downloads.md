@@ -55,6 +55,9 @@ File | Date | Status | MD5
 
 Endpoint Libraries are designed to fill in any gaps the .NET API is missing for hardware. It is preferred to access these libraries through NuGet.org by using the IDE's default package source.
 
+> [!Tip] 
+> These Endpoint Libraries only work on offical Endpoint devices and not on [other devices](./hardware/other.md)
+
 > [!Note]
 > Make sure to check the `Include prerelease` box in Visual Studio's NuGet package manager if you're not using the production release.
 

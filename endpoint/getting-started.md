@@ -4,6 +4,9 @@
 
 An Endpoint development environment consists of a device running Endpoint OS and a development machine with the required software and extension. 
 
+> [!Tip]
+> Visit the [Other Platform](hardware/other.md) page to learn about steps needed for using other Linux devices, such as Raspberry Pi.
+
 ---
 
  ## Endpoint Device Setup
@@ -52,7 +55,7 @@ At the top of the Visual Studio menu navigate to `Debug -> Options`
 
 ![Navigate to Debug Options](images/debug-options.png)
 
-From there navigate to the `Endpoint Debugger` option and make sure the box is checked for `root@192.168.82.2`. If a password was created using the Endpoint [Config](configuration.md) Tool also enter it here. If unchecked the application will only run on the PC. 
+From there, navigate to the `Endpoint Debugger` option and make sure the box is checked for `root@192.168.82.2`. If using another device like Raspberry Pi, or if a password was created using the Endpoint [Config](configuration.md) tool then enter the appropriate SSH log in info here. If unchecked the application will only run on the PC. 
 
 ![Debug Host](images/debug-host.png)
 
@@ -75,6 +78,8 @@ Visit the extension section from within VS Code and search for and install `Endp
  ![Search Endpoint](images/search-endpoint.png)
 
  Give the project a name and location.
+
+ The SSH log in details are found in the `settings.json`. You may need to match your board password or log in info, especially when using other devices such as Raspberry Pi.
 
   ---
 

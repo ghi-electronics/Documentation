@@ -1,10 +1,47 @@
 # Other Platforms
 
-Endpoint's Visual Studio extension and [config tool](~/endpoint/configuration.md) support other Linux SBCs from companies such as Raspberry Pi BeagleBoard. This gives developers an easy way to test out the power of .NET on hardware they may already own.
+Endpoint's Visual Studio extension and [config tool](~/endpoint/configuration.md) support other Linux SBCs from companies such as Raspberry Pi and BeagleBoard. This gives developers an easy way to test out the power of .NET on hardware they may already own.
 
-Full remote network deploying and debugging are supported. Note that the official .NET libraries may support only some of the IoT features on these boards. Consider using Endpoint for access to all libraries.  
+Full remote network deploying and debugging are supported. 
 
-This table lists the features available on tested boards:
+## Getting Started
+
+The main [Getting Started](../getting-started.md) page applies the official Endpoint devices. 
+
+Other Linux boards require some additional steps for the [Endpoint Config](../configuration.md) tool to work, as shown later on this page. Once enabled, use the tool to install .NET onto the device.
+
+![Endpoint Config Install .NET](images/endpoint-config-install-dotnet.png)
+
+From this point, the Endpoint Extension can be used, just remember to set the SSH log-in info appropriately. More info are found on the main [Getting Started](../getting-started.md) page.
+
+## Raspberry Pi
+ 
+Raspberry Pi may have SSH disable by default, make sure SSH is enabled for connection. Visit the Raspberry Pi website for details on enabling SSH. 
+ 
+> [!Tip] 
+> If the IP address is not known, [config tool](../configuration.md) accepts default username(pi@raspberrypi) and password(raspberry)
+ 
+## BeagleBone
+
+On BeagleBone, NOPASSWD needs to be enabled for sudo command. To enable NOPASSWD, run the command below from PC's command line:
+ 
+```
+ssh debian@beaglebone
+```
+ 
+Enter password if needed. Once SSH is connected, run the second command below:
+ 
+```
+sudo bash -c 'echo "debian ALL=NOPASSWD: ALL" >> /etc/sudoers'
+```
+
+Please note that after running this command, the device may no longer ask password for sudo mode that reduces your BeagleBone security. 
+
+> [!Tip] 
+> If the IP address is not known, [config tool](../configuration.md) accepts default username(debian@beaglebone) and password(temppwd)
+
+## Supported Features
+Devices running .NET may support only some of the IoT features. This table compares features on some popular boards compared to Endpoint Domino.
  
  
 Features				| Endpoint	|  Raspberry	| BeagleBone
@@ -26,8 +63,9 @@ IFU						|	✓		| ✗				|✗
 Watchdog				|	✓		| ✗				|✗
 Camera					|	✓		| ✗				|✗
 
- 
-Also note that our official Endpoint hardware is designed with a tighter image for faster boot. Consider boot time when following instructions. This is a typical boot time, from power up to a complete boot with a blink LED in .NET, and using board's default user and password.
+## Boot time
+
+Endpoint devices are designed with a tighter image for faster boot. This is a typical boot time, from power up to a complete boot with a blink LED in .NET.
 
  Device 			| Typical boot time 
  --- 				| ---
@@ -35,34 +73,7 @@ Also note that our official Endpoint hardware is designed with a tighter image f
  Raspberry Pi 4 	| 30 seconds
  BeagleBone Black 	| 50 seconds
 
+> [!Tip] 
+> Consider boot-time when following the getting started instructions.
 
 ---
-The [Getting Started](~/endpoint/getting-started.md) page applies to other boards; however, some steps may be necessary as shown below.
-
-## Raspberry Pi
- 
-Raspberry Pi may have SSH disable by default, make sure SSH is enabled for connection. Visit the Raspberry Pi website for details on enabling SSH. 
- 
-> [!Tip] 
-> If the IP address is not known, [config tool](~/endpoint/configuration.md) accepts default username(pi@raspberrypi) and password(raspberry)
- 
-## BeagleBone
-
-On BeagleBone, NOPASSWD needs to be enabled for sudo command. To enable NOPASSWD, run the command below from PC's command line:
- 
-```
-ssh debian@beaglebone
-```
- 
-Enter password if needed. Once SSH is connected, run the second command below:
- 
-```
-sudo bash -c 'echo "debian ALL=NOPASSWD: ALL" >> /etc/sudoers'
-```
-
-Please note that after running this command, the device may no longer ask password for sudo mode that reduces your BeagleBone security. 
-
-> [!Tip] 
-> If the IP address is not known, [config tool](~/endpoint/configuration.md) accepts default username(debian@beaglebone) and password(temppwd)
-
-

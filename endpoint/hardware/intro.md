@@ -11,7 +11,7 @@ The Endpoint Domino provides the lowest barrier of entry to the world of Endpoin
 ## Other Hardware
 [![Single Board Computer](images/rpi_bbb.png)](other.md)
 
-Try .NET 8 today on other devices easily with Endpoint extensions and tools. </br> [**Learn More...**](sbc.md)
+Try .NET 8 today on other devices easily with Endpoint extensions and tools. </br> [**Learn More...**](other.md)
 
 ---
 
