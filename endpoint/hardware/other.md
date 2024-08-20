@@ -76,4 +76,3 @@ Endpoint devices are designed with a tighter image for faster boot. This is a ty
 > [!Tip] 
 > Consider boot-time when following the getting started instructions.
 
----
