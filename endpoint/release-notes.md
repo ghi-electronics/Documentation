@@ -2,6 +2,34 @@
 
 ---
 
+## **0.1.8 - Beta (2024-8-21)**
+
+### Endpoint OS
+- Changes:
+	- Change .NET and Application PATH.
+	
+- Known Issues
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues
+
+### Visual Studio Extension
+
+- Changes
+    - Support Raspberry Pi, BeagleBone board.	 	
+	
+- Known Issues
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues
+
+### Endpoint Config
+
+- Changes
+    - Support Raspberry Pi, BeagleBone board.
+	- Install .NET from menu
+
+- Known Issues
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues.
+
+---
+
 ## **0.1.7 - Beta (2024-5-14)**
 
 ### Endpoint OS
@@ -23,7 +51,7 @@
 ### Drivers
 
 - Changes
-    - Added Bluetooth driver nuget
+    - Added Bluetooth driver NuGet
 - Known Issues
     https://github.com/ghi-electronics/endpoint-drivers/issues
 
@@ -42,7 +70,7 @@
 ### Endpoint OS
 
 - Changes
-    - Fixed python library 
+    - Fixed Python library 
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues
 	
@@ -55,7 +83,7 @@
 - Changes
     - Add DMA for SPI
 	- Support Network configuration from Endpoint tool 	
-	- Suport MacOS (192.168.83.2)
+	- Support MacOS (192.168.83.2)
 	- Fix WiFi don't work with static IP	
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues
@@ -94,13 +122,13 @@
 
 ### Endpoint OS
 - Changes
-	- Added Adc
+	- Added ADC
 	- Added PulseFeedback
 
 ### Libraries
 - Changes
 	- Added UI
-	- Added Adc
+	- Added ADC
 	- Added PulseFeedback (DrainDuration, EchoDuration, DurationUntilEcho)
 	- Display: Flush(..) supports flushing any size, anywhere within data buffer.
 - Known Issues
@@ -156,15 +184,15 @@
 ### Drivers
 
 - Changes
-    - Added VirtualKeyboard nuget
-	- Added ST7735 SPI display nuget
+    - Added VirtualKeyboard NuGet
+	- Added ST7735 SPI display NuGet
 - Known Issues
     https://github.com/ghi-electronics/endpoint-drivers/issues
 
 ### Endpoint Config
 
 - Changes
-    - Fixed 800x480 bootscreen setting
+    - Fixed 800x480 Bootscreen setting
 - Known Issues
     https://github.com/ghi-electronics/Endpoint-Libraries/issues.
 	
