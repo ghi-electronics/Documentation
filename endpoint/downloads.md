@@ -44,6 +44,7 @@ Endpoint Config is a tool used to update and configure your Endpoint device.
 
 File | Date | Status | MD5
 --- | --- | --- | 
+[v0.1.8.1 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Config/Endpoint_Config_Setup_v0.1.8.1.msi) | 2024-8-22 | Preview | F252906579022100A5364F115EFB701F
 [v0.1.8.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Config/Endpoint_Config_Setup_v0.1.8.msi) | 2024-8-21 | Preview | D65F23D7570F6A39E6494B879824FCF1
 [v0.1.7.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Config/Endpoint_Config_Setup_v0.1.7.msi) | 2024-5-14 | Preview | 5C8728F4B669851854E16C09F4F1BA92
 [v0.1.6.0 (Beta)](https://ghistorage.blob.core.windows.net/downloads/Endpoint/Config/Endpoint_Config_Setup_v0.1.6.msi) | 2024-4-22 | Preview | D0DDC758C3411378B9C7C29ACE13DFA8

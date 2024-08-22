@@ -2,6 +2,18 @@
 
 ---
 
+## **0.1.8.1 - Beta (2024-8-22)**
+
+### Endpoint Config
+
+- Changes
+    - Fixed cannot set logo	
+
+- Known Issues
+    https://github.com/ghi-electronics/Endpoint-Libraries/issues.
+
+---
+
 ## **0.1.8 - Beta (2024-8-21)**
 
 ### Endpoint OS
