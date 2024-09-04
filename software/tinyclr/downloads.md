@@ -50,6 +50,7 @@ File | Date | Status | MD5
 
 File | Date | Status | MD5
 --- | --- | --- | ---
+[v2.3.0.2000 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.3.0.2000.ghi) | 2024-09-04 | Update | 659E39F01E123FEF933354714D87DB8F
 [v2.3.0.1000 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.3.0.1000.ghi) | 2024-08-09 | Update | B86FC39FFF62C7E6226E27F51ED5DD7B
 [v2.2.2.1000 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.2.2.1000.ghi) | 2024-05-02 | Update | 0BF3FF4726C6927B33EF4487A9124B25
 [v2.2.1.2100 (RTW)](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Firmwares/SITCore/SITCore-SC13-Firmware-v2.2.1.2100.ghi) | 2024-04-09 | Update | 2BD5B3B73491B27D64522483469CD360
