@@ -4,6 +4,19 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.3.0.2000 - RTW
+
+### Released 2024-08-09
+
+### Firmware
+
+##### SC13xxx
+
+- Fixed internal RTC wrong
+- Reduce internal RTC timeout from 4 seconds to 1 second.
+
+---
+
 ## 2.3.0.1000 - RTW
 
 ### Released 2024-08-09
