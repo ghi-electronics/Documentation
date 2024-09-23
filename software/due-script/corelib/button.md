@@ -20,6 +20,22 @@ Buttons as a function are only available using pin 0,1,2,A,or B. Alternatively, 
 > [!TIP] 
 > The timeout for **BtnDown()** or **BtnUp()** is fixed to two seconds. Calling after two seconds from last press or release returns 0. If the button is not enabled also returns 0
 
+### [Python](#tab/python)
+```basic
+example
+```
+
+### [.NET](#tab/net)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascript)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueengine)
 ```basic
 BtnEnable('a',1)
 @Loop

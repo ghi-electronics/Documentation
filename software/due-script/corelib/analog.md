@@ -11,6 +11,22 @@ These functions provide access to analog pins.
 > [!NOTE] 
 > Frequency is fixed to 50hz.
 
+### [Python](#tab/pythonw)
+```basic
+example
+```
+
+### [.NET](#tab/netw)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascriptw)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueenginew)
 ```basic
 @Loop
 For i=0 to 100 Step 10
@@ -24,6 +40,8 @@ Next
 Goto Loop
 ```
 
+---
+
 ## Analog Read
 
 - **ARead(pin)**  - Read an analog output <br>
@@ -32,6 +50,22 @@ Goto Loop
 
 Not all pins support `ARead()`. The hardware docs will show what pins support analog, typically labeled ADC. Pins that do not support `ARead()` will return 0.
 
+### [Python](#tab/pythonr)
+```basic
+example
+```
+
+### [.NET](#tab/netr)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascriptr)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueenginer)
 ```basic
 @Loop
 For i=0 to 100

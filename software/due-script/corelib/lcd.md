@@ -15,6 +15,9 @@ LCD Graphics supports SSD1306 128x64 B&W I2C, which work on all BrainPad boards.
 > [!Caution]
 > Displays with knock-off controller SSH1106 that is supposed to be compatible with SSD1306 did not work as expected.
 
+---
+
+
 ## Color Displays
 
 ![ColorDisplays](images/color-displays.png)
@@ -22,6 +25,7 @@ LCD Graphics supports SSD1306 128x64 B&W I2C, which work on all BrainPad boards.
 Support for color displays includes ILI9342, ILI9341, and ST7735. These color displays only work on boards with SC13 chipset.
  The `LcdConfig()` function (documented below) can be used to configure the system to work with an externally connected display.
 
+---
 
 ## Display Configuration
 
@@ -67,6 +71,22 @@ The display on adapter needs to be flipped horizontally (config value 2) and als
 
 ![ST7735](images/st7735.png)
 
+### [Python](#tab/python)
+```basic
+example
+```
+
+### [.NET](#tab/net)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascript)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueengine)
 ```basic
 DWrite(1,1)#turn on the back-light
 DWrite(8,1)# release reset 
@@ -86,10 +106,28 @@ LCDShow()
 
 To set the display to portrait mode, change the config line to `LcdConfig (0x82, 1+0x2100, 16, 12)`. Flip is not needed in this case.
 
+---
+
 ![ST7735](images/st7735-portrait.png)
 
 This example below will direct graphics to an external 2.42" display with address 0x3C, wired to the 2.42" SSD1309 display showing in the image above. Tip: A resistor on the back of the display needs to be moved to change its bus from SPI to I2C.
 
+### [Python](#tab/python2)
+```basic
+example
+```
+
+### [.NET](#tab/net2)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascript2)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueengine2)
 ```basic
 LcdConfig(0x3C,0,0,0)
 LcdClear(0)
@@ -108,14 +146,34 @@ All LCD functions process the graphics commands in an internal memory. It starts
 - **LcdClear(color)**  Clears the entire screen to black or white<br>
 **color:** Color value
 
+### [Python](#tab/python3)
+```basic
+example
+```
+
+### [.NET](#tab/net3)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascript3)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueengine3)
 ```basic
 LcdClear(0)
 LcdShow()
 ```
 
+---
+
 ## Color Value
 
 The system supports Color and B&W displays. To keep uniformity, 0 is always black and 1 is always white. Any other value is considered a standard RGB color formatted 0xRRGGBB. For example, GHI Electronics blue is 0x0977aa.
+
+---
 
 ## Draw Line
 
@@ -126,11 +184,29 @@ The system supports Color and B&W displays. To keep uniformity, 0 is always blac
 **x2:** Ending x point <br>
 **y2:** Ending y point 
 
+### [Python](#tab/python4)
+```basic
+example
+```
+
+### [.NET](#tab/net4)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascript4)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueengine4)
 ```basic
 LcdClear(0)
 LcdLine(1,0,0,128,64)
 LcdShow()
 ```
+
+---
 
 ## Set Pixel
 
@@ -139,11 +215,29 @@ LcdShow()
 **x:** x pixel value<br>
 **y:** y pixel value
 
+### [Python](#tab/python5)
+```basic
+example
+```
+
+### [.NET](#tab/net5)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascript5)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueengine5)
 ```basic
 LcdClear(0)
 LcdPixel(1,64,32)
 LcdShow()
 ```
+
+---
 
 ## Draw Circle
 
@@ -153,11 +247,29 @@ LcdShow()
 **y:** y position of circle's center <br>
 **radius:** radius of the circle
 
+### [Python](#tab/python6)
+```basic
+example
+```
+
+### [.NET](#tab/net6)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascript6)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueengine6)
 ```basic
 LcdClear(0)
 LcdCircle(1,64,32,31)
 LcdShow()
 ```
+
+---
 
 ## Draw Rectangle
 
@@ -168,11 +280,29 @@ LcdShow()
 **width:** Rectangle width <br>
 **height:** Rectangle height 
 
+### [Python](#tab/python7)
+```basic
+example
+```
+
+### [.NET](#tab/net7)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascript7)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueengine7)
 ```basic
 LcdClear(0)
 LcdRect(1,10,10,118,54)
 LcdShow()
 ```
+
+---
 
 ## Draw Filled Rectangle
 
@@ -183,11 +313,29 @@ LcdShow()
 **width:** Rectangle width <br>
 **height:** Rectangle height 
 
+### [Python](#tab/python8)
+```basic
+example
+```
+
+### [.NET](#tab/net8)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascript8)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueengine8)
 ```basic
 LcdClear(0)
 LcdFill(1,10,10,118,54)
 LcdShow()
 ```
+
+---
 
 ## Draw Text
 
@@ -198,6 +346,22 @@ LcdShow()
 **x:** x position <br>
 **y:** x position <br>
 
+### [Python](#tab/python9)
+```basic
+example
+```
+
+### [.NET](#tab/net9)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascript9)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueengine9)
 ```basic
 LcdClear(0)
 LcdText("Hello World",1,10,10)
@@ -207,6 +371,8 @@ LcdClear(0)
 LcdText(Str(x),1,0,0)
 LcdShow
 ```
+
+---
 
 ## Draw Tiny Text
 
@@ -218,6 +384,8 @@ Displays tiny 5px text.
 **color:** Color value <br>
 **x:** x position <br>
 **y:** x position <br>
+
+---
 
 ## Draw Scaled Text
 
@@ -232,6 +400,22 @@ Works exactly the same as **LcdText()** but adds scaling.
 **scaleWidth:** Width scale multiplier <br>
 **scaleHeight:** Height scale multiplier 
 
+### [Python](#tab/pythona)
+```basic
+example
+```
+
+### [.NET](#tab/neta)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascripta)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueenginea)
 ```basic
 LcdClear(0)
 LcdTextS("Hello",1,0,0,2,2)
@@ -247,6 +431,8 @@ LcdShow()
 > Scale is multiplier for the pixel in width and height to make the font larger
 ()
 
+---
+
 ## Draw Image
 
 - **LcdImg(array, x, y, transform)**<br>
@@ -261,6 +447,22 @@ The image is an array of pixels. This arrays must start with 2 elements that con
 
 Image Array formatting:
 
+### [Python](#tab/pythonb)
+```basic
+example
+```
+
+### [.NET](#tab/netb)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascriptb)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueengineb)
 ```basic
 Dim a[2+(8*8)] = [8,8,
 0, 0, 0, 1, 1, 0, 0, 0,
@@ -273,8 +475,26 @@ Dim a[2+(8*8)] = [8,8,
 1, 0, 1, 0, 0, 1, 0, 1]
 ```
 
+---
+
 The following example displays the image array on the screen. 
 
+### [Python](#tab/pythonc)
+```basic
+example
+```
+
+### [.NET](#tab/netc)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascriptc)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueenginec)
 ```basic
 Dim a[2+(8*8)] = [8,8,
 0, 0, 0, 1, 1, 0, 0, 0,
@@ -303,6 +523,8 @@ Transformation modifiers:
 | 5      |Rotate the image 270 degrees(same as -90 degrees)	
 
 
+---
+
 ## Draw Scaled Image
 
 Works the same as `LcdImg()` but adds scaling. 
@@ -314,6 +536,8 @@ Works the same as `LcdImg()` but adds scaling.
 **scaleWidth:** Width scale multiplier <br>
 **scaleHeight:** Height scale multiplier <br>
 **transform:** transform modifier. (see above)
+
+---
 
 ## LCD Stream
 
@@ -329,6 +553,8 @@ The command is followed by the data [stream](../streams.md). The stream size is 
 
 > [!TIP] 
 > On 1bpp display, the data is organized as 8bit columns going left to right and then wrapping around to the next row.
+
+---
 
 ## Palette
 
@@ -362,6 +588,22 @@ Default colors:
 
 Example code to set a pixel at 10x10
 
+### [Python](#tab/pythond)
+```basic
+example
+```
+
+### [.NET](#tab/netd)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascriptd)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueengined)
 ```cs
 int x=10;
 int y=10;

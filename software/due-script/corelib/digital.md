@@ -12,6 +12,22 @@ These functions provide access to digital pins.
 > [!NOTE]
 > Pin numbers can also be **'a'** or **'b'** when reading the on-board buttons. Using **'a'**, **'A'**, or **97** yields the same results.
 
+### [Python](#tab/pythonr)
+```basic
+example
+```
+
+### [.NET](#tab/netr)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascriptr)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueenginer)
 ```basic
 x = DRead(2,1)
 If x = 0
@@ -28,6 +44,22 @@ End
 > [!NOTE]
 > Pin numbers can also be **'l'** when writing the on-board LED. Using **'l'**, **'L'**, or **108** yields the same results.
 
+### [Python](#tab/pythonw)
+```basic
+example
+```
+
+### [.NET](#tab/netw)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascriptw)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueenginew)
 ```basic
 for x = 1 to 10
     DWrite('L',1)

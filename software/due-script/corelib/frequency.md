@@ -10,6 +10,22 @@ See the specific hardware's page pin-out for details on supported pin(s).
 **duration:** 0 to forever <br>
 **dutyCycle:** 0 to 100
 
+### [Python](#tab/python)
+```basic
+example
+```
+
+### [.NET](#tab/net)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascript)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueengine)
 ```basic
 @Loop
 For x=1 to 1000
@@ -27,6 +43,22 @@ Since `Freq()` is a non-blocking function, it will return immediately even if du
 
 In this example, 1Khz will be generated for only 2 seconds and not 5 seconds.
 
+### [Python](#tab/python2)
+```basic
+example
+```
+
+### [.NET](#tab/net2)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascript2)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueengine2)
 ```basic
 Freq('p',1000,5000,50)
 Wait(2000)

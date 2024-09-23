@@ -10,6 +10,22 @@
 > [!TIP] 
 > `Beep()` supports the on-board buzzer on BrainPad Pulse, using 'p' in place of the pin number. 
 
+### [Python](#tab/python)
+```basic
+example
+```
+
+### [.NET](#tab/net)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascript)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueengine)
 ```basic
 Beep(0,256,1000)
 

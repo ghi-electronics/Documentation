@@ -9,6 +9,22 @@ IR decoder is fixed to pin 2 and 8
 - **IrRead()** - reads the value from the IR enabled pin <br>
 **Return:** Tracks the past 16 key presses and returns them. -1 if none.
 
+### [Python](#tab/python)
+```basic
+example
+```
+
+### [.NET](#tab/net)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascript)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueengine)
 ```basic
 IrEnable(2,1)
 @Loop

@@ -8,6 +8,22 @@
 **mode:** - 0 to 3 <br>
 **frequency:** - 200 to 20000 (200KHz to 20MHz)
 
+### [Python](#tab/python)
+```basic
+example
+```
+
+### [.NET](#tab/net)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascript)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueengine)
 ```basic
 # Send 0x55 and read the returned byte into x
 x = SpiByte(0x55)

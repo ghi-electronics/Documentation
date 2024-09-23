@@ -7,6 +7,22 @@
 **arrayRead:** Array to read<br>
 **readCount:** The number of bytes to read
 
+### [Python](#tab/python)
+```basic
+example
+```
+
+### [.NET](#tab/net)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascript)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueengine)
 ```basic
 # Write 1 byte, read 6 bytes
 dim a[1]

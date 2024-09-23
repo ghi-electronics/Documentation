@@ -7,6 +7,22 @@
 > [!TIP] 
 > Many servo motors need 5V to work.
 
+### [Python](#tab/python)
+```basic
+example
+```
+
+### [.NET](#tab/net)
+```basic
+example
+```
+
+### [JavaScript](#tab/javascript)
+```basic
+example
+```
+
+### [DUE Engine](#tab/dueengine)
 ```basic
 @Loop
 ServoSet(0,0)
