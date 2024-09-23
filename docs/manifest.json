@@ -1,5 +1,5 @@
 {
-  "source_base_path": "D:/Repos/duelink-website",
+  "source_base_path": "F:/Brainpad/duelink-website",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -26,6 +26,16 @@
       "output": {
         ".html": {
           "relative_path": "hardware/brainpad.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "hardware/click.md",
+      "output": {
+        ".html": {
+          "relative_path": "hardware/click.html"
         }
       },
       "version": ""
@@ -291,6 +301,46 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "hardware/modules.md",
+      "output": {
+        ".html": {
+          "relative_path": "hardware/modules.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "hardware/qwiic.md",
+      "output": {
+        ".html": {
+          "relative_path": "hardware/qwiic.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "hardware/spider.md",
+      "output": {
+        ".html": {
+          "relative_path": "hardware/spider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "hardware/threepins.md",
+      "output": {
+        ".html": {
+          "relative_path": "hardware/threepins.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "hardware/toc.md",
       "output": {
@@ -549,6 +599,16 @@
       "output": {
         ".html": {
           "relative_path": "software/downloads.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "software/due-engine.md",
+      "output": {
+        ".html": {
+          "relative_path": "software/due-engine.html"
         }
       },
       "version": ""
