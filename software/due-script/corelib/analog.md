@@ -12,18 +12,43 @@ These functions provide access to analog pins.
 > Frequency is fixed to 50hz.
 
 ### [Python](#tab/pythonw)
+
 ```basic
-example
+for i in range(0, 100, 10):
+	due.Analog.Write('L', i)
+	time.sleep(0.1)
+
+for i in range(90, -1, -10):
+	due.Analog.Write('L', i)
+	time.sleep(0.1)
 ```
 
 ### [.NET](#tab/netw)
+
 ```basic
-example
+for (var i = 0; i < 10; i+=10) {
+	due.Analog.Write('L', i);
+	Thread.sleep(100);
+}
+
+for (var i = 90; i > -1; i-=10) {
+	due.Analog.Write('L', i);
+	Thread.sleep(100);
+}
+
 ```
 
 ### [JavaScript](#tab/javascriptw)
 ```basic
-example
+for (let i = 0; i < 10; i+=10) {
+	await due.Analog.Write('L', i);
+	await Util.sleep(100)
+}
+
+for (let i = 90; i > -1; i-=10) {
+	await due.Analog.Write('L', i);
+	await Util.sleep(100)
+}
 ```
 
 ### [DUE Engine](#tab/dueenginew)
