@@ -26,7 +26,7 @@ for i in range(90, -1, -10):
 ### [.NET](#tab/netw)
 
 ```basic
-for (var i = 0; i < 10; i+=10) {
+for (var i = 0; i < 100; i+=10) {
 	due.Analog.Write('L', i);
 	Thread.sleep(100);
 }
@@ -40,7 +40,7 @@ for (var i = 90; i > -1; i-=10) {
 
 ### [JavaScript](#tab/javascriptw)
 ```basic
-for (let i = 0; i < 10; i+=10) {
+for (let i = 0; i < 100; i+=10) {
 	await due.Analog.Write('L', i);
 	await Util.sleep(100)
 }
