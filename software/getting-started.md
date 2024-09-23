@@ -58,10 +58,10 @@ while (true) {
 
 ```
 import {SerialUSB} from './serialusb.js';
-import * as due from './duelink.js';
+import * as DUELink from './duelink.js';
 import { Util } from "./util.js";
 
-let due = new due.DUELinkController(new SerialUSB());
+let due = new DUELink.DUELinkController(new SerialUSB());
 await due.Connect();
 
 while (true) {
