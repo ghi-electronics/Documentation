@@ -34,8 +34,8 @@ Our first program will blink the on-board LED 20 times, where it comes on for 20
 using GHIElectronics.DUELink;
 Console.WriteLine("Hello DUE!");
 var availablePort = DUELinkController.GetConnectionPort();
-var dev = new DUELinkController(availablePort);
-dev.Led.Set(200, 800, 20);
+var due = new DUELinkController(availablePort);
+due.Led.Set(200, 800, 20);
 Console.WriteLine("Bye DUE!");
 ```
 
@@ -108,7 +108,7 @@ The provided API mirrors DUE Script's [Core library](../due-script/corelib/corel
 | Version()					   |[Version()](../due-script/corelib/systemfunctions.md)	| Returns the current DUE firmware version
 
 > [!NOTE]
-> For convenience, the Pin Enum includes, ButtonA, ButtonB and Led. For example: `dev.Digital.Write(dev.Pin.Led, True)`
+> For convenience, the Pin Enum includes, ButtonA, ButtonB and Led. For example: `due.Digital.Write(due.Pin.Led, True)`
 
 
 ## DUE Script Control
@@ -128,21 +128,21 @@ These methods allow developers to control DUE Scripts right from within .NET
 This example will load a simple program line by line and then record it.
 
 ```csharp
-dev.Script.Load("c = 10");
-dev.Script.Load("@Blink");
-dev.Script.Load("Led(100,100,c)");
-dev.Script.Record();
+due.Script.Load("c = 10");
+due.Script.Load("@Blink");
+due.Script.Load("Led(100,100,c)");
+due.Script.Record();
 ```
 
 This is an example to execute a single line(immediate mode). This does not modify the application stored in flash. 
 
 ```csharp
-dev.Script.Execute("LED(200,200,10)");
+due.Script.Execute("LED(200,200,10)");
 ```
 
 You can also access a previously recorder program using goto (to label) or by calling a function that has a return. This example calls the recorded program above.
 
 ```csharp
-dev.Script.Execute("c=5:goto Blink");
+due.Script.Execute("c=5:goto Blink");
 ```
 

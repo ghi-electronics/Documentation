@@ -36,13 +36,13 @@ Our first program will blink the on-board LED 20 times, where it comes on for 20
 
 ```js
 import {SerialUSB} from './serialusb.js';
-import * as due from './duelink.js';
+import * as DUELink from './duelink.js';
 
-let BrainPad = new due.DUELinkController(new SerialUSB());
-await BrainPad.Connect();
+let due = new DUELink.DUELinkController(new SerialUSB());
+await due.Connect();
 
 // Flash the LED 20 times (on for 200ms and off for 800ms)
-await BrainPad.Led.Set(200,800,10);
+await due.Led.Set(200,800,10);
 ```
 
 ## JavaScript API
@@ -114,7 +114,7 @@ The provided API mirrors DUE Script's [**Core library**](../due-script/corelib/c
 | Version()					   |[Version()](../due-script/corelib/systemfunctions.md)	| Returns the current DUE firmware version
 
 > [!NOTE]
-> For convenience, the Pin Enum includes, ButtonA, ButtonB and Led. For example: `dev.Digital.Write(dev.Pin.Led, True);`
+> For convenience, the Pin Enum includes, ButtonA, ButtonB and Led. For example: `due.Digital.Write(due.Pin.Led, True);`
 
 
 ## DUE Script Control
@@ -134,21 +134,21 @@ These methods allow developers to control DUE Scripts right from within JavaScri
 This example will load a simple program line by line and then record it.
 
 ```js
-dev.Script.Load("c = 10");
-dev.Script.Load("@Blink");
-dev.Script.Load("Led(100,100,c)");
-dev.Script.Record();
+due.Script.Load("c = 10");
+due.Script.Load("@Blink");
+due.Script.Load("Led(100,100,c)");
+due.Script.Record();
 ```
 
 This is an example to execute a single line(immediate mode). This does not modify the application stored in flash. 
 
 ```js
-dev.Script.Execute("LED(200,200,10)");
+due.Script.Execute("LED(200,200,10)");
 ```
 
 You can also access a previously recorder program using goto (to label) or by calling a function that has a return. This example calls the recorded program above.
 
 ```js
-dev.Script.Execute("c=5:goto Blink");
+due.Script.Execute("c=5:goto Blink");
 ```
 
