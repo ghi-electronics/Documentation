@@ -1,51 +1,135 @@
 # Buttons
 
-Buttons as a function are only available using pin 0,1,2,A,or B. Alternatively, `DRead()` can be used with any pin.
-
-- **BtnEnable(pin, enable)** - sets up a button to be used <br>
-**pin:** pin number, 'a', or 'b' <br>
-**enable:** 1 = enable, 0 = disabled  <br>
-
-- **BtnUp(pin)**  <br>
-**pin:** pin number, 'a', or 'b' <br>
-**Returns:** 1 after release first time called. If called again returns 0<br>
-
- - **BtnDown(pin)** Returns a value when button is pressed<br>
-**pin:** pin number, 'a', or 'b' <br>
-**Returns:** 1 if button was pressed and continues to return 1 until the button is released
-
-> [!NOTE] 
-> **'a'** is ASCII a or 97, **'b'** is ASCII b or 98. Using 'a', 'A', or 97 yields the same results.
+The button feature makes it easier to work with buttons, when compared to reading a digital pin for example.
 
 > [!TIP] 
-> The timeout for **BtnDown()** or **BtnUp()** is fixed to two seconds. Calling after two seconds from last press or release returns 0. If the button is not enabled also returns 0
+> The timeout for `Button Down` and `Button Up` are fixed to two seconds. Calling after two seconds from last press or release returns 0.
 
-### [Python](#tab/python)
-```basic
-example
+This example checks button 'a'.
+
+### [Python](#tab/py)
+- **Button.Enable(pin, enable)** - Activates a pin to be used as a button<br>
+**pin:** pin number<br>
+**enable:** true = enable, false = disabled  <br>
+
+- **bool Button.JustReleased(pin)** <br>
+**pin:** pin number<br>
+**Returns:** true after release first time called. If called again returns 0<br>
+
+- **bool Button.JustPressed(pin)** Checks if a button was pressed<br>
+**pin:** pin number<br>
+**Returns:** true if button was pressed recently and continues to return 1 until the button is released
+```py
+duelink.Button.Enable('a', True);
+
+while True:
+    d = duelink.Button.JustPressed('a')
+    u = duelink.Button.JustReleased('a')
+
+    if (d):    
+        print("Button A down")
+    
+    if (u):    
+        print("Button A up")
+    
+    time.sleep(0.2);
+```
+
+
+
+### [JavaScript](#tab/js)
+- **Button.Enable(pin, enable)** - Activates a pin to be used as a button<br>
+**pin:** pin number<br>
+**enable:** true = enable, false = disabled  <br>
+
+- **bool Button.JustReleased(pin)** <br>
+**pin:** pin number<br>
+**Returns:** true after release first time called. If called again returns 0<br>
+
+- **bool Button.JustPressed(pin)** Checks if a button was pressed<br>
+**pin:** pin number<br>
+**Returns:** true if button was pressed recently and continues to return 1 until the button is released
+
+```js
+await duelink.Button.Enable('a', true);
+
+while (true) {
+    let d = await duelink.Button.JustPressed('a')
+    let u = await duelink.Button.JustReleased('a')
+
+    if (d)
+    {
+        console.log("Button A down")
+    }
+
+    if (u)
+    {
+        console.log("Button A up")
+    }
+    await Util.sleep(200)
+}
 ```
 
 ### [.NET](#tab/net)
-```basic
-example
+- **Button.Enable(int pin, bool enable)** - Activates a pin to be used as a button<br>
+**pin:** pin number<br>
+**enable:** true = enable, false = disabled  <br>
+
+- **bool Button.JustReleased(int pin)** <br>
+**pin:** pin number<br>
+**Returns:** true after release first time called. If called again returns 0<br>
+
+- **bool Button.JustPressed(int pin)** Checks if a button was pressed<br>
+**pin:** pin number<br>
+**Returns:** true if button was pressed recently and continues to return 1 until the button is released
+
+```cs
+duelink.Button.Enable('a', true);
+
+while (true) {
+    var d = duelink.Button.JustPressed('a');
+    var u = duelink.Button.JustReleased('a');
+
+    if (d)
+    {
+        Console.Write("Button A down");
+    }
+
+    if (u)
+    {
+        Console.Write("Button A up");
+    }
+    Thread.Sleep(200);
+}
 ```
 
-### [JavaScript](#tab/javascript)
-```basic
-example
-```
+### [DUE Script](#tab/due)
+- **Button.Enable(pin, enable)** - Activates a pin to be used as a button<br>
+**pin:** pin number<br>
+**enable:** 1 = enable, 0 = disabled  <br>
 
-### [DUE Engine](#tab/dueengine)
-```basic
+- **Button.Up(pin)** <br>
+**pin:** pin number<br>
+**Returns:** 1 after release first time called. If called again returns 0<br>
+
+- **Button.Down(pin)** Checks if a button was pressed<br>
+**pin:** pin number<br>
+**Returns:** 1 if button was pressed recently and continues to return 1 until the button is released
+```
 BtnEnable('a',1)
+
 @Loop
-x=BtnDown('a')
-If x=1
-    PrintLn("Button A")
+d=BtnDown('a')
+u=BtnUp('a')
+If d=1
+    PrintLn("Button A down")
+If u=1
+    PrintLn("Button A up")
 End
 Wait(200)
 Goto Loop
 ```
 ---
 
+This feature is not available on all pins; however, [Digital Read](digital.md) can be used instead, which is available on all pins.
 
