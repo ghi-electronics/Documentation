@@ -129,7 +129,7 @@ while (true) {
 ```cs
 while (true) {
 	var x = duelink.Analog.Read(0);
-	Console.Write(x);
+	Console.WriteLine(x);
 	Thread.Sleep(100);
 }
 ```

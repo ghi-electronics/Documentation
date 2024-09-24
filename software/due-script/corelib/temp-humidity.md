@@ -14,7 +14,7 @@ Works with the DHT line of low-cost temperature & humidity sensors.
 
 This example reads temperature and humidity, and converts Celsius to Fahrenheit and displays 
 
-### [Python](#tab/python)
+### [Python](#tab/py)
 ```basic
 example
 ```
@@ -24,12 +24,12 @@ example
 example
 ```
 
-### [JavaScript](#tab/javascript)
+### [JavaScript](#tab/js)
 ```basic
 example
 ```
 
-### [DUE Engine](#tab/dueengine)
+### [DUE Script](#tab/due)
 ```basic
 @Loop
 c = Temp(0,11)

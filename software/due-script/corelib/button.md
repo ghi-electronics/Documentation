@@ -92,12 +92,12 @@ while (true) {
 
     if (d)
     {
-        Console.Write("Button A down");
+        Console.WriteLine("Button A down");
     }
 
     if (u)
     {
-        Console.Write("Button A up");
+        Console.WriteLine("Button A up");
     }
     Thread.Sleep(200);
 }

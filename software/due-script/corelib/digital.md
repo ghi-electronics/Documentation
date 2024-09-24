@@ -4,31 +4,50 @@ These functions provide access to digital pins.
 
 ## Digital Read
 
-- **DRead(pin, pull)** - Read a digital pin output <br>
+Read the current value of a digital pin.
+
+This example will read current value on pin 2.
+
+### [Python](#tab/py)
+- **Digital.Read(pin, pull)** <br>
+**pin:** pin number <br> 
+**pull:** Sets the internal pull resistors: 'None', 'PullUp', 'PullDown' <br>
+**Returns:** True = high or  False = low 
+
+```py
+x = duelink.Digital.Read(2, 'PullUp')
+print(x)
+```
+
+### [JavaScript](#tab/js)
+- **Digital.Read(pin, pull)** <br>
+**pin:** pin number <br> 
+**pull:** Sets the internal pull resistors: 'None', 'PullUp', 'PullDown' <br>
+**Returns:** True = high or  False = low 
+
+```js
+let x = await duelink.Digital.Read(2, 'PullUp')
+console.log(x)
+```
+
+### [.NET](#tab/net)
+- **Digital.Read(pin, pull)** <br>
+**pin:** pin number <br> 
+**pull:** Sets the internal pull resistors: 'None', 'PullUp', 'PullDown' <br>
+**Returns:** True = high or  False = low 
+
+```cs
+var x = duelink.Digital.Read(2, InputType.PullUp);
+Console.WriteLine(x);
+```
+
+### [DUE Engine](#tab/due)
+- **DRead(pin, pull)** <br>
 **pin:** pin number <br> 
 **pull:** Sets the internal pull resistors to -> 0=none, 1=up, 2=down <br>
 **Returns:** 1 = high or  0 = low 
 
-> [!NOTE]
-> Pin numbers can also be **'a'** or **'b'** when reading the on-board buttons. Using **'a'**, **'A'**, or **97** yields the same results.
-
-### [Python](#tab/pythonr)
-```basic
-example
 ```
-
-### [.NET](#tab/netr)
-```basic
-example
-```
-
-### [JavaScript](#tab/javascriptr)
-```basic
-example
-```
-
-### [DUE Engine](#tab/dueenginer)
-```basic
 x = DRead(2,1)
 If x = 0
     Print("low")
@@ -37,35 +56,48 @@ Else
 End
 ```
 
+---
+
+---
+
 ## Digital Write
-- **DWrite(pin, state)**  - Sets a pins digital output <br>
-**pin:** pin number <br> **state:** 1 = high or 0 = low
+Sets a pin digital output.
 
-> [!NOTE]
-> Pin numbers can also be **'l'** when writing the on-board LED. Using **'l'**, **'L'**, or **108** yields the same results.
+This example will set pin 2 to be High.
 
-### [Python](#tab/pythonw)
-```basic
-example
+### [Python](#tab/py)
+- **Digital.Write(pin, state)** <br>
+**pin:** pin number <br> 
+**state:** True = high or  False = low <br>
+
+```py
+duelink.Digital.Write(2, True)
 ```
 
-### [.NET](#tab/netw)
-```basic
-example
+### [JavaScript](#tab/js)
+- **Digital.Write(pin, state)** <br>
+**pin:** pin number <br> 
+**state:** true = high or  false = low <br>
+
+```js
+duelink.Digital.Write(2, true)
 ```
 
-### [JavaScript](#tab/javascriptw)
-```basic
-example
+### [.NET](#tab/net)
+- **Digital.Write(int pin, bool state)** <br>
+**pin:** pin number <br> 
+**state:** true = high or  false = low <br>
+
+```cs
+duelink.Digital.Write(2, true);
 ```
 
-### [DUE Engine](#tab/dueenginew)
-```basic
-for x = 1 to 10
-    DWrite('L',1)
-    Wait(200)
-    DWrite('L',0)
-    Wait(200)
-next
+### [DUE Script](#tab/due)
+- **DWrite(pin, state)**  <br>
+**pin:** pin number <br> 
+**state:** 1 = high or 0 = low
+
+```
+DWrite(2,1)
 ```
 ---

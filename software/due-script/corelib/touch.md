@@ -9,7 +9,7 @@ When using a touch screen like found on the BrainPad Rave use 'x' or 'y' to retu
 **pin Returns:** 0 = pin not touched, 1 = pin touched <br>
 **x or y Returns:**  -1 = screen not touched, x position , y position
 
-### [Python](#tab/python)
+### [Python](#tab/py)
 ```basic
 example
 ```
@@ -19,12 +19,12 @@ example
 example
 ```
 
-### [JavaScript](#tab/javascript)
+### [JavaScript](#tab/js)
 ```basic
 example
 ```
 
-### [DUE Engine](#tab/dueengine)
+### [DUE Script](#tab/due)
 ```basic
 @Loop
 # Pin touch

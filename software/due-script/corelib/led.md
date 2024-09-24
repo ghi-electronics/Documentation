@@ -11,7 +11,7 @@ This function is used to take control of the on-board LED. `LED()` is non-blocki
 > [!TIP] 
 > Setting count to **-1** will blink the LED forever, and **0** will turn off the LED.
 
-### [Python](#tab/python)
+### [Python](#tab/py)
 ```basic
 example
 ```
@@ -21,12 +21,12 @@ example
 example
 ```
 
-### [JavaScript](#tab/javascript)
+### [JavaScript](#tab/js)
 ```basic
 example
 ```
 
-### [DUE Engine](#tab/dueengine)
+### [DUE Script](#tab/due)
 ```basic
 LED(1000,1000,10)
 ```

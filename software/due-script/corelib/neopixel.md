@@ -12,7 +12,7 @@
 
 This example assumes we have 8 LEDs and will set 8 LEDs to red one at a time.  Then it waits one second before it sets the first LED to a bluish hue!
 
-### [Python](#tab/python)
+### [Python](#tab/py)
 ```basic
 example
 ```
@@ -22,12 +22,12 @@ example
 example
 ```
 
-### [JavaScript](#tab/javascript)
+### [JavaScript](#tab/js)
 ```basic
 example
 ```
 
-### [DUE Engine](#tab/dueengine)
+### [DUE Script](#tab/due)
 ```basic
 NeoClear()
 For x = 0 to 8

@@ -71,7 +71,7 @@ The display on adapter needs to be flipped horizontally (config value 2) and als
 
 ![ST7735](images/st7735.png)
 
-### [Python](#tab/python)
+### [Python](#tab/py)
 ```basic
 example
 ```
@@ -81,12 +81,12 @@ example
 example
 ```
 
-### [JavaScript](#tab/javascript)
+### [JavaScript](#tab/js)
 ```basic
 example
 ```
 
-### [DUE Engine](#tab/dueengine)
+### [DUE Script](#tab/due)
 ```basic
 DWrite(1,1)#turn on the back-light
 DWrite(8,1)# release reset 
@@ -141,10 +141,16 @@ LcdShow()
 
 All LCD functions process the graphics commands in an internal memory. It starts with LcdClear(), which clears up the entire graphics memory to a specific color. When the user is ready, the graphical memory is transferred to the display using LcdShow().
 
-- **LcdShow()** Sends the display buffer to the LCD. 
-
 - **LcdClear(color)**  Clears the entire screen to black or white<br>
 **color:** Color value
+
+- **LcdPixel(color, x, y)** <br>
+**color:** Color value <br>
+**x:** x pixel value<br>
+**y:** y pixel value
+
+- **LcdShow()** Sends the display buffer to the LCD. 
+
 
 ### [Python](#tab/python3)
 ```basic
@@ -175,8 +181,10 @@ The system supports Color and B&W displays. To keep uniformity, 0 is always blac
 
 ---
 
-## Draw Line
+## Shapes
 
+
+### [Python](#tab/python4)
 - **LcdLine(color, x1,y1,x2,y2)** <br>
 **color:** Color value <br>
 **x1:** Starting x point <br>
@@ -184,94 +192,11 @@ The system supports Color and B&W displays. To keep uniformity, 0 is always blac
 **x2:** Ending x point <br>
 **y2:** Ending y point 
 
-### [Python](#tab/python4)
-```basic
-example
-```
-
-### [.NET](#tab/net4)
-```basic
-example
-```
-
-### [JavaScript](#tab/javascript4)
-```basic
-example
-```
-
-### [DUE Engine](#tab/dueengine4)
-```basic
-LcdClear(0)
-LcdLine(1,0,0,128,64)
-LcdShow()
-```
-
----
-
-## Set Pixel
-
-- **LcdPixel(color, x, y)** <br>
-**color:** Color value <br>
-**x:** x pixel value<br>
-**y:** y pixel value
-
-### [Python](#tab/python5)
-```basic
-example
-```
-
-### [.NET](#tab/net5)
-```basic
-example
-```
-
-### [JavaScript](#tab/javascript5)
-```basic
-example
-```
-
-### [DUE Engine](#tab/dueengine5)
-```basic
-LcdClear(0)
-LcdPixel(1,64,32)
-LcdShow()
-```
-
----
-
-## Draw Circle
-
 - **LcdCircle(color, x,y,radius)** <br>
 **color:** Color value <br>
 **x:** x position of circle's center <br>
 **y:** y position of circle's center <br>
 **radius:** radius of the circle
-
-### [Python](#tab/python6)
-```basic
-example
-```
-
-### [.NET](#tab/net6)
-```basic
-example
-```
-
-### [JavaScript](#tab/javascript6)
-```basic
-example
-```
-
-### [DUE Engine](#tab/dueengine6)
-```basic
-LcdClear(0)
-LcdCircle(1,64,32,31)
-LcdShow()
-```
-
----
-
-## Draw Rectangle
 
 - **LcdRect(color, x, y, width, height)** <br>
 **color:** Color value <br>
@@ -280,31 +205,118 @@ LcdShow()
 **width:** Rectangle width <br>
 **height:** Rectangle height 
 
-### [Python](#tab/python7)
-```basic
-example
-```
-
-### [.NET](#tab/net7)
-```basic
-example
-```
-
-### [JavaScript](#tab/javascript7)
-```basic
-example
-```
-
-### [DUE Engine](#tab/dueengine7)
-```basic
+- **LcdFill(color, x, y, width, height)** <br>
+**color:** Color value <br>
+**x:** Starting x point <br>
+**y:** Starting y point <br>
+**width:** Rectangle width <br>
+**height:** Rectangle height 
+```py
 LcdClear(0)
+LcdLine(1,0,0,128,64)
+LcdCircle(1,64,32,31)
 LcdRect(1,10,10,118,54)
+LcdFill(1,10,10,118,54)
+LcdPixel(1,64,32)
 LcdShow()
 ```
 
----
+### [.NET](#tab/net4)
+- **LcdLine(color, x1,y1,x2,y2)** <br>
+**color:** Color value <br>
+**x1:** Starting x point <br>
+**y1:** Starting y point <br>
+**x2:** Ending x point <br>
+**y2:** Ending y point 
 
-## Draw Filled Rectangle
+- **LcdCircle(color, x,y,radius)** <br>
+**color:** Color value <br>
+**x:** x position of circle's center <br>
+**y:** y position of circle's center <br>
+**radius:** radius of the circle
+
+- **LcdRect(color, x, y, width, height)** <br>
+**color:** Color value <br>
+**x:** Starting x point <br>
+**y:** Starting y point <br>
+**width:** Rectangle width <br>
+**height:** Rectangle height 
+
+- **LcdFill(color, x, y, width, height)** <br>
+**color:** Color value <br>
+**x:** Starting x point <br>
+**y:** Starting y point <br>
+**width:** Rectangle width <br>
+**height:** Rectangle height 
+```cs
+LcdClear(0)
+LcdLine(1,0,0,128,64)
+LcdCircle(1,64,32,31)
+LcdRect(1,10,10,118,54)
+LcdFill(1,10,10,118,54)
+LcdPixel(1,64,32)
+LcdShow()
+```
+
+### [JavaScript](#tab/javascript4)
+- **LcdLine(color, x1,y1,x2,y2)** <br>
+**color:** Color value <br>
+**x1:** Starting x point <br>
+**y1:** Starting y point <br>
+**x2:** Ending x point <br>
+**y2:** Ending y point 
+
+- **LcdCircle(color, x,y,radius)** <br>
+**color:** Color value <br>
+**x:** x position of circle's center <br>
+**y:** y position of circle's center <br>
+**radius:** radius of the circle
+
+- **LcdRect(color, x, y, width, height)** <br>
+**color:** Color value <br>
+**x:** Starting x point <br>
+**y:** Starting y point <br>
+**width:** Rectangle width <br>
+**height:** Rectangle height 
+
+- **LcdFill(color, x, y, width, height)** <br>
+**color:** Color value <br>
+**x:** Starting x point <br>
+**y:** Starting y point <br>
+**width:** Rectangle width <br>
+**height:** Rectangle height 
+```js
+LcdClear(0)
+LcdLine(1,0,0,128,64)
+LcdCircle(1,64,32,31)
+LcdRect(1,10,10,118,54)
+LcdFill(1,10,10,118,54)
+LcdPixel(1,64,32)
+LcdShow()
+```
+
+### [DUE Engine](#tab/dueengine4)
+
+
+- **LcdLine(color, x1,y1,x2,y2)** <br>
+**color:** Color value <br>
+**x1:** Starting x point <br>
+**y1:** Starting y point <br>
+**x2:** Ending x point <br>
+**y2:** Ending y point 
+
+- **LcdCircle(color, x,y,radius)** <br>
+**color:** Color value <br>
+**x:** x position of circle's center <br>
+**y:** y position of circle's center <br>
+**radius:** radius of the circle
+
+- **LcdRect(color, x, y, width, height)** <br>
+**color:** Color value <br>
+**x:** Starting x point <br>
+**y:** Starting y point <br>
+**width:** Rectangle width <br>
+**height:** Rectangle height 
 
 - **LcdFill(color, x, y, width, height)** <br>
 **color:** Color value <br>
@@ -313,31 +325,21 @@ LcdShow()
 **width:** Rectangle width <br>
 **height:** Rectangle height 
 
-### [Python](#tab/python8)
-```basic
-example
 ```
-
-### [.NET](#tab/net8)
-```basic
-example
-```
-
-### [JavaScript](#tab/javascript8)
-```basic
-example
-```
-
-### [DUE Engine](#tab/dueengine8)
-```basic
 LcdClear(0)
+LcdLine(1,0,0,128,64)
+LcdCircle(1,64,32,31)
+LcdRect(1,10,10,118,54)
 LcdFill(1,10,10,118,54)
+LcdPixel(1,64,32)
 LcdShow()
 ```
 
 ---
 
-## Draw Text
+---
+
+## Text
 
 - **LcdText("text", color, x, y)** <br>
 **text:** String message in double quotes. <br>
@@ -433,7 +435,7 @@ LcdShow()
 
 ---
 
-## Draw Image
+## Images
 
 - **LcdImg(array, x, y, transform)**<br>
 **array:** Image array (see below). <br>
