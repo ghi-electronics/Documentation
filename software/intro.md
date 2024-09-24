@@ -12,7 +12,7 @@ A DUE Link enabled device can give a computer, tablet or phone access to the phy
 
 ## Host Mode
 
- Though a standard USB connection, a DUE-enabled device can be connected to modern devices, such as phones, laptops, tablets, desktops and even smaller devices such as Raspberry Pi. The device will simply load, with no need to load any USB drivers. This is true on Windows, Mac, Linux, Android and even Chrome OS.
+ Through a standard USB connection, a DUE-enabled device can be connected to modern devices, such as phones, laptops, tablets, desktops and even smaller devices such as Raspberry Pi. The device will simply load, with no need to load any USB drivers. This is true on Windows, Mac, Linux, Android and even Chrome OS.
 
 Once effortlessly connected, developers can use the [coding environment](coding-options/coding-options.md) of choice to access a long list of available inputs and outputs. This includes, but not limited to, Analog, Digital, PWM, I2C, and SPI.
 
