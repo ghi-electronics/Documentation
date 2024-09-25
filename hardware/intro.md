@@ -1,2 +1,0 @@
-Say something about hardware
-

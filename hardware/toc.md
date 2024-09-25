@@ -1,13 +1,16 @@
 
-# [Mainboards](intro.md)
+# Mainboards
 ## [DUELink Spider](spider.md)
-## [Brainpad](brainpad.md)
-## [FEZ](fez.md)
+## Other
+### [Brainpad](brainpad.md)
+### [FEZ](fez.md)
 
-# [Modules](modules.md)
-## [3 Pin](threepins.md)
+# Accessories
+## [3 Pin](threepin.md)
 ## [Click](click.md)
-## [QWIIC/STEMMA](qwiic.md)
+## [Qwiic/STEMMA](qwiic.md)
+## [display](display.md)
+## [Smart LED](led.md)
 
 
 
