@@ -43,8 +43,8 @@ This example will set the system to use the color display adapter from Waveshare
 **SpiFlipScreenHorizontal:** Flip horizontal, SPI display only <br>
 **SpiSwapRedBlueColor:** Swap Red and Blue, SPI display only <br>
 **SpiSwapByteEndianness:** Swap byte endianness <br>
-**WindowStartX:** Default is 0. But some screen needs adjust this value to work correctly <br>
-**WindowStartY:** Default is 0. But some screen needs adjust this value to work correctly <br>
+**WindowStartX:** Default is 0. Some screens need adjust this value to work correctly <br>
+**WindowStartY:** Default is 0. Some screens need adjust this value to work correctly <br>
 
 - **Display.Configuration.Update()** Apply configuration <br>
 
@@ -104,8 +104,8 @@ duelink.Display.Show()
 **SpiFlipScreenHorizontal:** Flip horizontal, SPI display only <br>
 **SpiSwapRedBlueColor:** Swap Red and Blue, SPI display only <br>
 **SpiSwapByteEndianness:** Swap byte endianness <br>
-**WindowStartX:** Default is 0. But some screen needs adjust this value to work correctly <br>
-**WindowStartY:** Default is 0. But some screen needs adjust this value to work correctly <br>
+**WindowStartX:** Default is 0. Some screens need adjust this value to work correctly <br>
+**WindowStartY:** Default is 0. Some screens need adjust this value to work correctly <br>
 
 - **Display.Configuration.Update()** Apply configuration <br>
 
@@ -169,8 +169,8 @@ await duelink.Display.Show()
 **SpiFlipScreenHorizontal:** Flip horizontal, SPI display only <br>
 **SpiSwapRedBlueColor:** Swap Red and Blue, SPI display only <br>
 **SpiSwapByteEndianness:** Swap byte endianness <br>
-**WindowStartX:** Default is 0. But some screen needs adjust this value to work correctly <br>
-**WindowStartY:** Default is 0. But some screen needs adjust this value to work correctly <br>
+**WindowStartX:** Default is 0. Some screens need adjust this value to work correctly <br>
+**WindowStartY:** Default is 0. Some screens need adjust this value to work correctly <br>
 
 - **Display.Configuration.Update()** Apply configuration <br>
 
