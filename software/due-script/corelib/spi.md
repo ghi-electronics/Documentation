@@ -1,5 +1,45 @@
 # SPI
 
+
+
+
+### [Python](#tab/py)
+```py
+Spi.Write([0xAA, 0x55])
+```
+
+### [JavaScript](#tab/js)
+```js
+example
+```
+
+### [.NET](#tab/net)
+- **Spi.Write(byte[] arrayWrite, int indexWrite, int writeCount, int chipselect)** Write data array to device <br>
+**arrayWrite:** Array to send<br>
+**indexWrite:** Index of data in the array (optional) <br>
+**writeCount:** The number of bytes to write (optional) <br>
+**chipselect:** The number of bytes to write (optional) <br>
+
+- **Spi.Read(byte[] arrayRead, int indexRead, int readCount, int chipselect)** Write data array to device <br>
+**arrayRead:** Array to read<br>
+**indexRead:** Index of data in the array (optional)<br>
+**readCount:** The number of bytes to read (optional) <br>
+**chipselect:** The number of bytes to write (optional) <br>
+
+- **Spi.WriteRead(byte[] arrayWrite, int indexWrite, int writeCount, byte[] arrayRead, int indexRead, int readCount, int chipselect)** Write data array to device <br>
+**arrayWrite:** Array to send<br>
+**indexWrite:** Index of data in the array<br>
+**writeCount:** The number of bytes to write <br>
+**arrayRead:** Array to read<br>
+**indexRead:** Index of data in the array <br>
+**readCount:** The number of bytes to read <br>
+**chipselect:** The number of bytes to write (optional) <br>
+
+```cs
+example
+```
+
+### [DUE Script](#tab/due)
 - **SpiByte(byte)** - sends a byte <br>
 **byte:** - value 0 to 255 <br>
 **Return:**  Read byte value
@@ -8,23 +48,7 @@
 **mode:** - 0 to 3 <br>
 **frequency:** - 200 to 20000 (200KHz to 20MHz)
 
-### [Python](#tab/py)
-```basic
-example
 ```
-
-### [.NET](#tab/net)
-```basic
-example
-```
-
-### [JavaScript](#tab/js)
-```basic
-example
-```
-
-### [DUE Script](#tab/due)
-```basic
 # Send 0x55 and read the returned byte into x
 x = SpiByte(0x55)
 ```

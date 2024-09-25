@@ -947,7 +947,7 @@ duelink.Display.ShowBuffer(imageRaw, colorDepth);
 
 ### [DUE Script](#tab/due)
 
-ShowBuffer is not supported on DUE script
+ShowBuffer is not available on DUE script.
 
 ---
 
@@ -956,7 +956,7 @@ ShowBuffer is not supported on DUE script
 
 
 > [!NOTE]
-> LCD Stream automatically calls `LcdShow()` internally.
+> ShowBuffer() automatically calls `Show()` internally.
 
 ---
 
