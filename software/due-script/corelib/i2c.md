@@ -123,10 +123,10 @@ DUE Scrip uses a different fuction to access I2C.
 **readCount:** The number of bytes to read
 
 ```basic
-# Write 1 byte, read 6 bytes
+# Write 1 byte, read 6 bytes from slave at address 0x2C
 dim a[1]
 a[0] = 1
 dim b[6]
-i2cbytes(0x1c, a, 1, b, 6) 
+i2cbytes(0x2c, a, 1, b, 6) 
 ```
 
