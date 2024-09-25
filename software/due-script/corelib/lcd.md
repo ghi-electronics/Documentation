@@ -7,11 +7,6 @@ LCD Graphics supports SSD1306 128x64 B&W I2C, which work on all BrainPad boards.
 
 ![SSD1306](images/ssd1306.png)
 
-> [!Tip]
-> We have tested 2.42" displays that use SSD1309 and seemed to work perfectly.
-
-![SSD1309](images/ssd1309.png)
-
 > [!Caution]
 > Displays with knock-off controller SSH1106 that is supposed to be compatible with SSD1306 did not work as expected.
 
@@ -23,11 +18,209 @@ LCD Graphics supports SSD1306 128x64 B&W I2C, which work on all BrainPad boards.
 ![ColorDisplays](images/color-displays.png)
 
 Support for color displays includes ILI9342, ILI9341, and ST7735. These color displays only work on boards with SC13 chipset.
- The `LcdConfig()` function (documented below) can be used to configure the system to work with an externally connected display.
+ The Configuration property (documented below) can be used to configure the system to work with an externally connected display.
 
 ---
 
 ## Display Configuration
+
+This example will set the system to use the color display adapter from Waveshare, which uses ST7735 1.8" display. The display's chip select is on pin 2 and data control is on pin 0. There is also a backlight on pin 6 and reset on pin 1 that need to be controlled manually.
+
+<!--
+<p align="center">
+<img src = "http://duelink.com/software/due-script/corelib/images/st7735.png"
+</p>-->
+
+![ST7735](images/st7735.png)
+
+### [Python](#tab/py)
+- **Display.Configuration** Property, change display configuration<br>
+**Type:** Screen supported: BuiltIn = 0, ILI9342 = 0x80, ILI9341 = 0x81, ST7735 = 0x82, SSD1306 = 0x3C. If an SSD1306 screen has different i2c slave address 0x3C, set Type to that address directly <br>
+**SpiChipSelect:** Chip select pin, SPI display only<br>
+**SpiDataControl:** Data control pin, SPI display only<br>
+**SpiPortrait:** True: Portrait, False: Landscape, SPI display only <br>
+**SpiFlipScreenVertical:** Flip vertical, SPI display only <br>
+**SpiFlipScreenHorizontal:** Flip horizontal, SPI display only <br>
+**SpiSwapRedBlueColor:** Swap Red and Blue, SPI display only <br>
+**SpiSwapByteEndianness:** Swap byte endianness <br>
+**WindowStartX:** Default is 0. But some screen needs adjust this value to work correctly <br>
+**WindowStartY:** Default is 0. But some screen needs adjust this value to work correctly <br>
+
+- **Display.Configuration.Update()** Apply configuration <br>
+
+```py
+# turn on the back-light (if needed)
+duelink.Digital.Write(6, True)
+
+# release reset (if needed)
+duelink.Digital.Write(1, True)
+
+# Set config for ST7735 SPI display
+duelink.Display.Configuration.Type = duelink.DisplayType.ST7735
+duelink.Display.Configuration.SpiChipSelect = 2
+duelink.Display.Configuration.SpiDataControl = 0
+duelink.Display.Configuration.SpiPortrait = False
+duelink.Display.Configuration.SpiFlipScreenVertical = True
+duelink.Display.Configuration.SpiFlipScreenHorizontal = False
+duelink.Display.Configuration.SpiSwapRedBlueColor = False
+duelink.Display.Configuration.SpiSwapByteEndianness = False
+duelink.Display.Configuration.WindowStartX = 0
+duelink.Display.Configuration.WindowStartY = 0
+
+# Apply configuration
+duelink.Display.Configuration.Update()
+
+# Clear the screen
+duelink.Display.Clear(0)
+
+color = 0x00FF00
+x = 0
+y = 0
+scaleWidth = 2
+scaleHeight = 3
+
+# Draw text
+duelink.Display.DrawTextScale("DUE has color", color, x, y, scaleWidth, scaleHeight)
+
+# Draw some lines
+for c in range(2,200):
+
+    duelink.Display.DrawLine(c, c, 40, c, 60)
+    duelink.Display.DrawLine((c << 8), 200 - c, 60, 200-c, 80)
+    duelink.Display.DrawLine((c << 16), c, 80, c, 100)
+
+
+# Show on screen
+duelink.Display.Show()
+```
+
+### [JavaScript](#tab/js)
+- **Display.Configuration** Property, change display configuration<br>
+**Type:** Screen supported: BuiltIn = 0, ILI9342 = 0x80, ILI9341 = 0x81, ST7735 = 0x82, SSD1306 = 0x3C. If an SSD1306 screen has different i2c slave address 0x3C, set Type to that address directly <br>
+**SpiChipSelect:** Chip select pin, SPI display only<br>
+**SpiDataControl:** Data control pin, SPI display only<br>
+**SpiPortrait:** True: Portrait, False: Landscape, SPI display only <br>
+**SpiFlipScreenVertical:** Flip vertical, SPI display only <br>
+**SpiFlipScreenHorizontal:** Flip horizontal, SPI display only <br>
+**SpiSwapRedBlueColor:** Swap Red and Blue, SPI display only <br>
+**SpiSwapByteEndianness:** Swap byte endianness <br>
+**WindowStartX:** Default is 0. But some screen needs adjust this value to work correctly <br>
+**WindowStartY:** Default is 0. But some screen needs adjust this value to work correctly <br>
+
+- **Display.Configuration.Update()** Apply configuration <br>
+
+```js
+// Need for DisplayType.ST7735
+import { DisplayType } from './duelink.js'
+
+
+// turn on the back-light (if needed)
+await duelink.Digital.Write(6, true)
+
+// release reset (if needed)
+await duelink.Digital.Write(1, true)
+
+// Set config for ST7735 SPI display
+duelink.Display.Configuration.Type = DisplayType.ST7735
+duelink.Display.Configuration.SpiChipSelect = 2
+duelink.Display.Configuration.SpiDataControl = 0
+duelink.Display.Configuration.SpiPortrait = false
+duelink.Display.Configuration.SpiFlipScreenVertical = true
+duelink.Display.Configuration.SpiFlipScreenHorizontal = false
+duelink.Display.Configuration.SpiSwapRedBlueColor = false
+duelink.Display.Configuration.SpiSwapByteEndianness = false
+duelink.Display.Configuration.WindowStartX = 0
+duelink.Display.Configuration.WindowStartY = 0
+
+// Apply configuration
+await duelink.Display.Configuration.Update()
+
+// Clear the screen
+await duelink.Display.Clear(0)
+
+const color = 0x00FF00
+const x = 0
+const y = 0
+const scaleWidth = 2
+const scaleHeight = 3
+
+// Draw text
+await duelink.Display.DrawTextScale("DUE has color", color, x, y, scaleWidth, scaleHeight)
+
+// Draw some lines
+for ( let c = 2;c < 200; c++)
+{
+    await duelink.Display.DrawLine(c, c, 40, c, 60)
+    await duelink.Display.DrawLine((c << 8), 200 - c, 60, 200-c, 80)
+    await duelink.Display.DrawLine((c << 16), c, 80, c, 100)
+}
+
+// Show on screen
+await duelink.Display.Show()
+```
+
+### [.NET](#tab/net)
+- **Display.Configuration** Property, change display configuration<br>
+**Type:** Screen supported: BuiltIn = 0, ILI9342 = 0x80, ILI9341 = 0x81, ST7735 = 0x82, SSD1306 = 0x3C. If an SSD1306 screen has different i2c slave address 0x3C, set Type to that address directly <br>
+**SpiChipSelect:** Chip select pin, SPI display only<br>
+**SpiDataControl:** Data control pin, SPI display only<br>
+**SpiPortrait:** True: Portrait, False: Landscape, SPI display only <br>
+**SpiFlipScreenVertical:** Flip vertical, SPI display only <br>
+**SpiFlipScreenHorizontal:** Flip horizontal, SPI display only <br>
+**SpiSwapRedBlueColor:** Swap Red and Blue, SPI display only <br>
+**SpiSwapByteEndianness:** Swap byte endianness <br>
+**WindowStartX:** Default is 0. But some screen needs adjust this value to work correctly <br>
+**WindowStartY:** Default is 0. But some screen needs adjust this value to work correctly <br>
+
+- **Display.Configuration.Update()** Apply configuration <br>
+
+```cs
+// turn on the back-light (if needed)
+duelink.Digital.Write(6, true);
+
+// release reset (if needed)
+duelink.Digital.Write(1, true);
+
+// Set config for ST7735 SPI display
+duelink.Display.Configuration.Type = DisplayType.ST7735;
+duelink.Display.Configuration.SpiChipSelect = 2;
+duelink.Display.Configuration.SpiDataControl = 0;
+duelink.Display.Configuration.SpiPortrait = false;
+duelink.Display.Configuration.SpiFlipScreenVertical = true;
+duelink.Display.Configuration.SpiFlipScreenHorizontal = false;
+duelink.Display.Configuration.SpiSwapRedBlueColor = false;
+duelink.Display.Configuration.SpiSwapByteEndianness = false;
+duelink.Display.Configuration.WindowStartX = 0;
+duelink.Display.Configuration.WindowStartY = 0;
+
+// Apply configuration
+duelink.Display.Configuration.Update();
+
+// Clear the screen
+duelink.Display.Clear(0);
+
+uint color = 0x00FF00;
+var x = 0;
+var y = 0;
+var scaleWidth = 2;
+var scaleHeight = 3;
+
+// Draw text
+duelink.Display.DrawTextScale("DUE has color", color, x, y, scaleWidth, scaleHeight);
+
+// Draw some lines
+for ( var c = 2;c < 200; c++)
+{
+    duelink.Display.DrawLine((uint)c, c, 40, c, 60);
+    duelink.Display.DrawLine((uint)(c << 8), 200 - c, 60, 200-c, 80);
+    duelink.Display.DrawLine((uint)(c << 16), c, 80, c, 100);
+}
+
+// Show on screen
+duelink.Display.Show(); 
+```
+
+### [DUE Script](#tab/due)
 
 - **LcdConfig(address, config, cs, dc)** Configures a connected display. <br>
 **address:** Display's address or type. 0 = on-board display.<br>
@@ -59,39 +252,13 @@ Support for color displays includes ILI9342, ILI9341, and ST7735. These color di
 
 **dc:** The pin connected to the display's Data Control signal.
 
+The display on adapter needs to be flipped horizontally (config value 2) and also requires this value added, 0x2100. This sets the drawing window. <br>
 
-This example will set the system to use the color display adapter from Waveshare, which uses ST7735 1.8" display. The display's chip select is on pin 16 and data control is on pin 12. There is also a backlight on pin 1 and reset on pin 8 that need to be controlled manually.
-
-The display on adapter needs to be flipped horizontally (config value 2) and also requires this value added, 0x2100. This sets the drawing window.
-
-<!--
-<p align="center">
-<img src = "http://duelink.com/software/due-script/corelib/images/st7735.png"
-</p>-->
-
-![ST7735](images/st7735.png)
-
-### [Python](#tab/py)
-```basic
-example
 ```
+DWrite(6,1)#turn on the back-light
+DWrite(1,1)# release reset 
 
-### [.NET](#tab/net)
-```basic
-example
-```
-
-### [JavaScript](#tab/js)
-```basic
-example
-```
-
-### [DUE Script](#tab/due)
-```basic
-DWrite(1,1)#turn on the back-light
-DWrite(8,1)# release reset 
-
-LcdConfig (0x82,2+0x2100,16,12)
+LcdConfig (0x82,2+0x2100,2,0)
 LcdClear(0)
 LcdTextS("DUE has Color",0x00FF00,0,0,2,3)
 
@@ -104,43 +271,127 @@ next
 LCDShow() 
 ```
 
-To set the display to portrait mode, change the config line to `LcdConfig (0x82, 1+0x2100, 16, 12)`. Flip is not needed in this case.
 
 ---
 
-![ST7735](images/st7735-portrait.png)
+
 
 This example below will direct graphics to an external 2.42" display with address 0x3C, wired to the 2.42" SSD1309 display showing in the image above. Tip: A resistor on the back of the display needs to be moved to change its bus from SPI to I2C.
 
-### [Python](#tab/python2)
-```basic
-example
+![SSD1309](images/ssd1309.png)
+
+### [Python](#tab/py)
+```py
+i2caddress = 0x3C
+duelink.Display.Configuration.Type = i2caddress # apply i2c address directly
+duelink.Display.Configuration.Update()
+duelink.Display.Clear(0)
+duelink.Display.DrawText("DUE is Awesome", 1, 0, 0)
+duelink.Display.Show()
 ```
 
-### [.NET](#tab/net2)
-```basic
-example
+### [JavaScript](#tab/js)
+```js
+let i2caddress = 0x3C
+duelink.Display.Configuration.Type = i2caddress # apply i2c address directly
+await duelink.Display.Configuration.Update();
+await duelink.Display.Clear(0);
+await duelink.Display.DrawText("DUE is Awesome", 1, 0, 0);
+await duelink.Display.Show();
 ```
 
-### [JavaScript](#tab/javascript2)
-```basic
-example
+### [.NET](#tab/net)
+```cs
+var i2caddress = 0x3C;
+duelink.Display.Configuration.Type = (DisplayType)i2caddress; // apply i2c address directly
+duelink.Display.Configuration.Update();
+duelink.Display.Clear(0);
+duelink.Display.DrawText("DUE is Awesome", 1, 0, 0);
+duelink.Display.Show();
 ```
 
-### [DUE Engine](#tab/dueengine2)
-```basic
+### [DUE Script](#tab/due)
+```
 LcdConfig(0x3C,0,0,0)
 LcdClear(0)
-LcdText("Hello World",1,10,10)
+LcdText("DUE is Awesome", 1, 0, 0)
 LcdShow()
 ```
 
 ---
 
+---
+
 ## Graphical Memory
 
-All LCD functions process the graphics commands in an internal memory. It starts with LcdClear(), which clears up the entire graphics memory to a specific color. When the user is ready, the graphical memory is transferred to the display using LcdShow().
+All LCD functions process the graphics commands in an internal memory. It starts with Clear(), which clears up the entire graphics memory to a specific color. When the user is ready, the graphical memory is transferred to the display using Show().
 
+### [Python](#tab/py)
+- **Display.Clear(color)**  Clears the entire screen to black or white <br>
+**color:** Color value
+
+- **Display.SetPixel(color, x, y)** <br>
+**color:** Color value <br>
+**x:** x pixel value<br>
+**y:** y pixel value
+
+- **Display.Show()** Sends the display buffer to the LCD. 
+
+```py
+
+# Clear the screen
+duelink.Display.Clear(0)
+
+# Set pixel color 0xFFFFFF, at x = 64, y = 32
+duelink.Display.SetPixel(0xFFFFFF,64,32)
+
+# Show on screen (flush the cache) 
+duelink.Display.Show()
+```
+
+### [JavaScript](#tab/js)
+- **Display.Clear(color)**  Clears the entire screen to black or white <br>
+**color:** Color value
+
+- **Display.SetPixel(color, x, y)** <br>
+**color:** Color value <br>
+**x:** x pixel value<br>
+**y:** y pixel value
+
+- **Display.Show()** Sends the display buffer to the LCD. 
+```js
+// Clear the screen
+duelink.Display.Clear(0)
+
+// Set pixel color 0xFFFFFF, at x = 64, y = 32
+duelink.Display.SetPixel(0xFFFFFF,64,32)
+
+// Show on screen (flush the cache) 
+duelink.Display.Show()
+```
+
+### [.NET](#tab/net)
+- **Display.Clear(uint color)**  Clears the entire screen to black or white <br>
+**color:** Color value
+
+- **Display.SetPixel(uint color, int x, int y)** <br>
+**color:** Color value <br>
+**x:** x pixel value<br>
+**y:** y pixel value
+
+- **Display.Show()** Sends the display buffer to the LCD. 
+```cs
+// Clear the screen
+duelink.Display.Clear(0)
+
+// Set pixel color 0xFFFFFF, at x = 64, y = 32
+duelink.Display.SetPixel(0xFFFFFF,64,32)
+
+// Show on screen (flush the cache) 
+duelink.Display.Show()
+```
+
+### [DUE Script](#tab/due)
 - **LcdClear(color)**  Clears the entire screen to black or white<br>
 **color:** Color value
 
@@ -151,152 +402,144 @@ All LCD functions process the graphics commands in an internal memory. It starts
 
 - **LcdShow()** Sends the display buffer to the LCD. 
 
-
-### [Python](#tab/python3)
-```basic
-example
 ```
-
-### [.NET](#tab/net3)
-```basic
-example
-```
-
-### [JavaScript](#tab/javascript3)
-```basic
-example
-```
-
-### [DUE Engine](#tab/dueengine3)
-```basic
+# Clear the screen
 LcdClear(0)
+
+# Set pixel color 0xFFFFFF, at x = 64, y = 32
+LcdPixel(0xFFFFFF,64,32)
+
+# Show on screen (flush the cache) 
 LcdShow()
+
 ```
 
 ---
 
+---
 ## Color Value
 
 The system supports Color and B&W displays. To keep uniformity, 0 is always black and 1 is always white. Any other value is considered a standard RGB color formatted 0xRRGGBB. For example, GHI Electronics blue is 0x0977aa.
 
 ---
 
+
 ## Shapes
 
 
-### [Python](#tab/python4)
-- **LcdLine(color, x1,y1,x2,y2)** <br>
+### [Python](#tab/py)
+- **Display.DrawLine(color, x1,y1,x2,y2)** <br>
 **color:** Color value <br>
 **x1:** Starting x point <br>
 **y1:** Starting y point <br>
 **x2:** Ending x point <br>
 **y2:** Ending y point 
 
-- **LcdCircle(color, x,y,radius)** <br>
+- **Display.DrawCircle(color, x,y,radius)** <br>
 **color:** Color value <br>
 **x:** x position of circle's center <br>
 **y:** y position of circle's center <br>
 **radius:** radius of the circle
 
-- **LcdRect(color, x, y, width, height)** <br>
+- **Display.DrawRectangle(color, x, y, width, height)** <br>
 **color:** Color value <br>
 **x:** Starting x point <br>
 **y:** Starting y point <br>
 **width:** Rectangle width <br>
 **height:** Rectangle height 
 
-- **LcdFill(color, x, y, width, height)** <br>
+- **Display.DrawFillRect(color, x, y, width, height)** <br>
 **color:** Color value <br>
 **x:** Starting x point <br>
 **y:** Starting y point <br>
 **width:** Rectangle width <br>
 **height:** Rectangle height 
 ```py
-LcdClear(0)
-LcdLine(1,0,0,128,64)
-LcdCircle(1,64,32,31)
-LcdRect(1,10,10,118,54)
-LcdFill(1,10,10,118,54)
-LcdPixel(1,64,32)
-LcdShow()
+duelink.Display.Clear(0)
+duelink.Display.DrawLine(1, 0, 0, 128, 64)
+duelink.Display.DrawCircle(1, 64, 32, 31)
+duelink.Display.DrawRectangle(1, 10, 10, 118, 54)
+duelink.Display.DrawFillRect(1, 10, 10, 118, 54)
+duelink.Display.SetPixel(1, 64, 32)
+duelink.Display.Show()
 ```
 
-### [.NET](#tab/net4)
-- **LcdLine(color, x1,y1,x2,y2)** <br>
+
+### [JavaScript](#tab/js)
+- **Display.DrawLine(color, x1,y1,x2,y2)** <br>
 **color:** Color value <br>
 **x1:** Starting x point <br>
 **y1:** Starting y point <br>
 **x2:** Ending x point <br>
 **y2:** Ending y point 
 
-- **LcdCircle(color, x,y,radius)** <br>
+- **Display.DrawCircle(color, x,y,radius)** <br>
 **color:** Color value <br>
 **x:** x position of circle's center <br>
 **y:** y position of circle's center <br>
 **radius:** radius of the circle
 
-- **LcdRect(color, x, y, width, height)** <br>
+- **Display.DrawRectangle(color, x, y, width, height)** <br>
 **color:** Color value <br>
 **x:** Starting x point <br>
 **y:** Starting y point <br>
 **width:** Rectangle width <br>
 **height:** Rectangle height 
 
-- **LcdFill(color, x, y, width, height)** <br>
-**color:** Color value <br>
-**x:** Starting x point <br>
-**y:** Starting y point <br>
-**width:** Rectangle width <br>
-**height:** Rectangle height 
-```cs
-LcdClear(0)
-LcdLine(1,0,0,128,64)
-LcdCircle(1,64,32,31)
-LcdRect(1,10,10,118,54)
-LcdFill(1,10,10,118,54)
-LcdPixel(1,64,32)
-LcdShow()
-```
-
-### [JavaScript](#tab/javascript4)
-- **LcdLine(color, x1,y1,x2,y2)** <br>
-**color:** Color value <br>
-**x1:** Starting x point <br>
-**y1:** Starting y point <br>
-**x2:** Ending x point <br>
-**y2:** Ending y point 
-
-- **LcdCircle(color, x,y,radius)** <br>
-**color:** Color value <br>
-**x:** x position of circle's center <br>
-**y:** y position of circle's center <br>
-**radius:** radius of the circle
-
-- **LcdRect(color, x, y, width, height)** <br>
-**color:** Color value <br>
-**x:** Starting x point <br>
-**y:** Starting y point <br>
-**width:** Rectangle width <br>
-**height:** Rectangle height 
-
-- **LcdFill(color, x, y, width, height)** <br>
+- **Display.DrawFillRect(color, x, y, width, height)** <br>
 **color:** Color value <br>
 **x:** Starting x point <br>
 **y:** Starting y point <br>
 **width:** Rectangle width <br>
 **height:** Rectangle height 
 ```js
-LcdClear(0)
-LcdLine(1,0,0,128,64)
-LcdCircle(1,64,32,31)
-LcdRect(1,10,10,118,54)
-LcdFill(1,10,10,118,54)
-LcdPixel(1,64,32)
-LcdShow()
+await duelink.Display.Clear(0)
+await duelink.Display.DrawLine(1, 0, 0, 128, 64)
+await duelink.Display.DrawCircle(1, 64, 32, 31)
+await duelink.Display.DrawRectangle(1, 10, 10, 118, 54)
+await duelink.Display.DrawFillRect(1, 10, 10, 118, 54)
+await duelink.Display.SetPixel(1, 64, 32)
+await duelink.Display.Show()
 ```
 
-### [DUE Engine](#tab/dueengine4)
+### [.NET](#tab/net)
+- **Display.DrawLine(color, x1,y1,x2,y2)** <br>
+**color:** Color value <br>
+**x1:** Starting x point <br>
+**y1:** Starting y point <br>
+**x2:** Ending x point <br>
+**y2:** Ending y point 
 
+- **Display.DrawCircle(color, x,y,radius)** <br>
+**color:** Color value <br>
+**x:** x position of circle's center <br>
+**y:** y position of circle's center <br>
+**radius:** radius of the circle
+
+- **Display.DrawRectangle(color, x, y, width, height)** <br>
+**color:** Color value <br>
+**x:** Starting x point <br>
+**y:** Starting y point <br>
+**width:** Rectangle width <br>
+**height:** Rectangle height 
+
+- **Display.DrawFillRect(color, x, y, width, height)** <br>
+**color:** Color value <br>
+**x:** Starting x point <br>
+**y:** Starting y point <br>
+**width:** Rectangle width <br>
+**height:** Rectangle height 
+```cs
+duelink.Display.Clear(0);
+duelink.Display.DrawLine(1, 0, 0, 128, 64);
+duelink.Display.DrawCircle(1, 64, 32, 31);
+duelink.Display.DrawRectangle(1, 10, 10, 118, 54);
+duelink.Display.DrawFillRect(1, 10, 10, 118, 54);
+duelink.Display.SetPixel(1, 64, 32);
+duelink.Display.Show();
+```
+
+### [DUE Script](#tab/due)
 
 - **LcdLine(color, x1,y1,x2,y2)** <br>
 **color:** Color value <br>
@@ -338,62 +581,113 @@ LcdShow()
 ---
 
 ---
-
 ## Text
 
-- **LcdText("text", color, x, y)** <br>
+### [Python](#tab/py)
+- **Display.DrawText(text, color, x, y)** <br>
+**text:** String message in double quotes. <br>
+**color:** Color value <br>
+**x:** x position <br>
+**y:** x position <br>
+
+- **Display.DrawTextTiny(text, color, x, y)** Draw tiny text - Displays tiny 5px text.<br>
+**text:** String message in double quotes. <br>
+**color:** Color value <br>
+**x:** x position <br>
+**y:** x position <br>
+
+- **Display.DrawTextScale(text, color, x, y, scaleWidth, scaleHeight)** Works exactly the same as LcdText() but adds scaling.<br>
+**text:** String message in double quotes. <br>
+**color:** Color value <br>
+**x:** x position <br>
+**y:** x position <br>
+**scaleWidth:** Width scale multiplier <br>
+**scaleHeight:** Height scale multiplier 
+
+```py
+x = 100
+duelink.Display.Clear(0)
+duelink.Display.DrawText(x, 1, 0, 0)
+duelink.Display.DrawTextTiny(x, 1, 0, 10)
+duelink.Display.DrawTextScale(x, 1, 0, 20,2,2)
+duelink.Display.Show()
+```
+
+### [JavaScript](#tab/js)
+- **Display.DrawText(text, color, x, y)** <br>
+**text:** String message in double quotes. <br>
+**color:** Color value <br>
+**x:** x position <br>
+**y:** x position <br>
+
+- **Display.DrawTextTiny(text, color, x, y)** Draw tiny text - Displays tiny 5px text.<br>
+**text:** String message in double quotes. <br>
+**color:** Color value <br>
+**x:** x position <br>
+**y:** x position <br>
+
+- **Display.DrawTextScale(text, color, x, y, scaleWidth, scaleHeight)** Works exactly the same as LcdText() but adds scaling.<br>
+**text:** String message in double quotes. <br>
+**color:** Color value <br>
+**x:** x position <br>
+**y:** x position <br>
+**scaleWidth:** Width scale multiplier <br>
+**scaleHeight:** Height scale multiplier 
+```js
+let x = 100
+await duelink.Display.Clear(0)
+await duelink.Display.DrawText(x, 1, 0, 0)
+await duelink.Display.DrawTextTiny(x, 1, 0, 10)
+await duelink.Display.DrawTextScale(x, 1, 0, 20,2,2)
+await duelink.Display.Show()
+```
+
+### [.NET](#tab/net)
+- **Display.DrawText(string text, uint color, int x, int y)** <br>
+**text:** String message in double quotes. <br>
+**color:** Color value <br>
+**x:** x position <br>
+**y:** x position <br>
+
+- **Display.DrawTextTiny(string text, uint color, int x, int y)** Draw tiny text - Displays tiny 5px text.<br>
+**text:** String message in double quotes. <br>
+**color:** Color value <br>
+**x:** x position <br>
+**y:** x position <br>
+
+- **Display.DrawTextScale(string text, uint color, int x, int y, uint scaleWidth, uint scaleHeight)** Works exactly the same as LcdText() but adds scaling.<br>
+**text:** String message in double quotes. <br>
+**color:** Color value <br>
+**x:** x position <br>
+**y:** x position <br>
+**scaleWidth:** Width scale multiplier <br>
+**scaleHeight:** Height scale multiplier 
+
+```cs
+var x = 100;
+duelink.Display.DrawText(x.ToString(), 1, 0, 0);
+duelink.Display.DrawTextTiny(x.ToString(), 1, 0, 10);
+duelink.Display.DrawTextScale(x.ToString(), 1, 0, 20,2,2);
+duelink.Display.Show();
+
+```
+
+### [DUE Script](#tab/due)
+- **LcdText("text", color, x, y)** Draw standard text<br>
 **text:** String message in double quotes. <br>
 **Str():** is used to convert variables to strings <br>
 **color:** Color value <br>
 **x:** x position <br>
 **y:** x position <br>
 
-### [Python](#tab/python9)
-```basic
-example
-```
-
-### [.NET](#tab/net9)
-```basic
-example
-```
-
-### [JavaScript](#tab/javascript9)
-```basic
-example
-```
-
-### [DUE Engine](#tab/dueengine9)
-```basic
-LcdClear(0)
-LcdText("Hello World",1,10,10)
-LcdShow()
-x=100
-LcdClear(0)
-LcdText(Str(x),1,0,0)
-LcdShow
-```
-
----
-
-## Draw Tiny Text
-
-Displays tiny 5px text.
-
-- **LcdTextT("text", color, x, y)** <br>
+- **LcdTextT("text", color, x, y)** Draw tiny text - Displays tiny 5px text.<br>
 **text:** String message in double quotes. <br>
 **Str():** is used to convert variables to strings <br>
 **color:** Color value <br>
 **x:** x position <br>
 **y:** x position <br>
 
----
-
-## Draw Scaled Text
-
-Works exactly the same as **LcdText()** but adds scaling.
-
-- **LcdTextS("text", color, x, y, scaleWidth, scaleHeight)** <br>
+- **LcdTextS("text", color, x, y, scaleWidth, scaleHeight)** Works exactly the same as LcdText() but adds scaling.<br>
 **text:** String message in double quotes. <br>
 **Str():** is used to convert variables to strings <br>
 **color:** Color value <br>
@@ -402,102 +696,146 @@ Works exactly the same as **LcdText()** but adds scaling.
 **scaleWidth:** Width scale multiplier <br>
 **scaleHeight:** Height scale multiplier 
 
-### [Python](#tab/pythona)
-```basic
-example
 ```
-
-### [.NET](#tab/neta)
-```basic
-example
-```
-
-### [JavaScript](#tab/javascripta)
-```basic
-example
-```
-
-### [DUE Engine](#tab/dueenginea)
-```basic
-LcdClear(0)
-LcdTextS("Hello",1,0,0,2,2)
-LcdShow()
-Wait(1000)
 x=100
 LcdClear(0)
-LcdTextS(Str(x),1,0,0,2,2)
-LcdShow()
+LcdText(Str(x),1,0,0)
+LcdTextT(Str(x),1,0,10)
+LcdTextS(Str(x),1,0,20, 2, 2)
+LcdShow
 ```
 
-> [!TIP]
-> Scale is multiplier for the pixel in width and height to make the font larger
-()
 
 ---
 
+---
 ## Images
 
-- **LcdImg(array, x, y, transform)**<br>
+There are cases where images need to be added to the screen. Of course, we are taking about basic simple images, more like a tiny sprite in a game.
+
+
+### [Python](#tab/py)
+- **Display.DrawImage(array, x, y, transform)** Array of pixel, must start with 2 elements that contain the image's width and height <br>
 **array:** Image array (see below). <br>
 **x:** x position on screen. <br>
 **y:** y position on screen. <br>
 **transform:** transform modifier. <br>
 
-There are cases where images need to be added to the screen. Of course, we are taking about basic simple images, more like a tiny sprite in a game. 
+- **Display.DrawImageScale(array, x, y, scaleWidth, scaleHeight, transform)** Works the same as `DrawImage()` but adds scaling.  <br>
+**array:** Image array (see below). <br>
+**x:** x position on screen. <br>
+**y:** y position on screen. <br>
+**scaleWidth:** Width scale multiplier <br>
+**scaleHeight:** Height scale multiplier <br>
+**transform:** transform modifier. (see above)
 
-The image is an array of pixels. This arrays must start with 2 elements that contain the image's width and height. We will place the array on multi line to help us visualize what the image might look like, but placing everything on a single line has the same effect
+The following example displays the image array on the screen. We will place the array on multi line to help us visualize what the image might look like, but placing everything on a single line has the same effect
 
-Image Array formatting:
-
-### [Python](#tab/pythonb)
-```basic
-example
+```py
+img =  [8, 8,
+        0, 0, 0, 1, 1, 0, 0, 0,
+        0, 0, 1, 1, 1, 1, 0, 0,
+        0, 1, 1, 1, 1, 1, 1, 0,
+        1, 1, 0, 1, 1, 0, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 
+        0, 0, 1, 0, 0, 1, 0, 0,
+        0, 1, 0, 1, 1, 0, 1, 0,
+        1, 0, 1, 0, 0, 1, 0, 1
+]
+duelink.Display.Clear(0)
+duelink.Display.DrawImage(img, 0, 0, duelink.Display.TransformNone)
+duelink.Display.DrawImageScale(img, 64, 0, 4, 4, duelink.Display.TransformRotate90)
+duelink.Display.Show()
 ```
 
-### [.NET](#tab/netb)
-```basic
-example
+### [JavaScript](#tab/js)
+- **Display.DrawImage(array, x, y, transform)** Array of pixel, must start with 2 elements that contain the image's width and height <br>
+**array:** Image array (see below). <br>
+**x:** x position on screen. <br>
+**y:** y position on screen. <br>
+**transform:** transform modifier. <br>
+
+- **Display.DrawImageScale(array, x, y, scaleWidth, scaleHeight, transform)** Works the same as `DrawImage()` but adds scaling.  <br>
+**array:** Image array (see below). <br>
+**x:** x position on screen. <br>
+**y:** y position on screen. <br>
+**scaleWidth:** Width scale multiplier <br>
+**scaleHeight:** Height scale multiplier <br>
+**transform:** transform modifier. (see above)
+
+The following example displays the image array on the screen. We will place the array on multi line to help us visualize what the image might look like, but placing everything on a single line has the same effect
+
+```js
+let img =  [8, 8,
+    0, 0, 0, 1, 1, 0, 0, 0,
+    0, 0, 1, 1, 1, 1, 0, 0,
+    0, 1, 1, 1, 1, 1, 1, 0,
+    1, 1, 0, 1, 1, 0, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 
+    0, 0, 1, 0, 0, 1, 0, 0,
+    0, 1, 0, 1, 1, 0, 1, 0,
+    1, 0, 1, 0, 0, 1, 0, 1
+]
+await duelink.Display.Clear(0)
+await duelink.Display.DrawImage(img, 0, 0, duelink.Display.TransformNone)
+await duelink.Display.DrawImageScale(img, 64, 0, 4, 4, duelink.Display.TransformRotate90)
+await duelink.Display.Show()
 ```
 
-### [JavaScript](#tab/javascriptb)
-```basic
-example
+### [.NET](#tab/net)
+- **Display.DrawImage(uint[] array, int x, int y, int transform)** Array of pixel, must start with 2 elements that contain the image's width and height <br>
+**array:** Image array (see below). <br>
+**x:** x position on screen. <br>
+**y:** y position on screen. <br>
+**transform:** transform modifier. <br>
+
+- **Display.DrawImageScale(uint[] array, int x, int y, int scaleWidth, int scaleHeight, int transform)** Works the same as `DrawImage()` but adds scaling.  <br>
+**array:** Image array (see below). <br>
+**x:** x position on screen. <br>
+**y:** y position on screen. <br>
+**scaleWidth:** Width scale multiplier <br>
+**scaleHeight:** Height scale multiplier <br>
+**transform:** transform modifier. (see above)
+
+The following example displays the image array on the screen. We will place the array on multi line to help us visualize what the image might look like, but placing everything on a single line has the same effect
+
+```cs
+var img = new uint[] {8, 8,
+    0, 0, 0, 1, 1, 0, 0, 0,
+    0, 0, 1, 1, 1, 1, 0, 0,
+    0, 1, 1, 1, 1, 1, 1, 0,
+    1, 1, 0, 1, 1, 0, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1,
+    0, 0, 1, 0, 0, 1, 0, 0,
+    0, 1, 0, 1, 1, 0, 1, 0,
+    1, 0, 1, 0, 0, 1, 0, 1
+};
+
+
+duelink.Display.Clear(0);
+duelink.Display.DrawImage(img, 0, 0, duelink.Display.TransformNone);
+duelink.Display.DrawImageScale(img, 64, 0, 4, 4, duelink.Display.TransformRotate90);
+duelink.Display.Show();
 ```
 
-### [DUE Engine](#tab/dueengineb)
-```basic
-Dim a[2+(8*8)] = [8,8,
-0, 0, 0, 1, 1, 0, 0, 0,
-0, 0, 1, 1, 1, 1, 0, 0,
-0, 1, 1, 1, 1, 1, 1, 0,
-1, 1, 0, 1, 1, 0, 1, 1,
-1, 1, 1, 1, 1, 1, 1, 1,
-0, 0, 1, 0, 0, 1, 0, 0,
-0, 1, 0, 1, 1, 0, 1, 0,
-1, 0, 1, 0, 0, 1, 0, 1]
+### [DUE Script](#tab/due)
+- **LcdImg(array, x, y, transform)** Array of pixel, must start with 2 elements that contain the image's width and height <br>
+**array:** Image array (see below). <br>
+**x:** x position on screen. <br>
+**y:** y position on screen. <br>
+**transform:** transform modifier. <br>
+
+- **LcdImgS(array, x, y, scaleWidth, scaleHeight, transform)** Works the same as `LcdImg()` but adds scaling.  <br>
+**array:** Image array (see below). <br>
+**x:** x position on screen. <br>
+**y:** y position on screen. <br>
+**scaleWidth:** Width scale multiplier <br>
+**scaleHeight:** Height scale multiplier <br>
+**transform:** transform modifier. (see above)
+
+The following example displays the image array on the screen. We will place the array on multi line to help us visualize what the image might look like, but placing everything on a single line has the same effect
+
 ```
-
----
-
-The following example displays the image array on the screen. 
-
-### [Python](#tab/pythonc)
-```basic
-example
-```
-
-### [.NET](#tab/netc)
-```basic
-example
-```
-
-### [JavaScript](#tab/javascriptc)
-```basic
-example
-```
-
-### [DUE Engine](#tab/dueenginec)
-```basic
 Dim a[2+(8*8)] = [8,8,
 0, 0, 0, 1, 1, 0, 0, 0,
 0, 0, 1, 1, 1, 1, 0, 0,
@@ -511,6 +849,8 @@ LcdClear(0)
 LcdImg(a,60,30,0)
 LcdShow()
 ```
+
+---
 
 Transformation modifiers:
 
@@ -527,44 +867,102 @@ Transformation modifiers:
 
 ---
 
-## Draw Scaled Image
+---
+## ShowBuffer
 
-Works the same as `LcdImg()` but adds scaling. 
+This function takes raw bitmap image (32 bit), convert to new array with `ColorDepth` format internally, and send the new array data to device.
 
-- **LcdImgS(array, x, y, scaleWidth, scaleHeight, transform)**<br>
-**array:** Image array (see below). <br>
-**x:** x position on screen. <br>
-**y:** y position on screen. <br>
-**scaleWidth:** Width scale multiplier <br>
-**scaleHeight:** Height scale multiplier <br>
-**transform:** transform modifier. (see above)
+### [Python](#tab/py)
+
+- **Display.ShowBuffer(byte[] rawData, int colorDepth)** Show 32 bit raw image data on lcd<br>
+**ColorDepth:** This lets the stream know what is the format of the incoming data stream. B&W displays only support 1. Color displays support 4 (palette), 8, and 16 bits.
+
+```py
+imageRaw = [0] * (128 * 64 * 4); # Create an image with width = 128, height = 64, 32 bit
+colorDepth = 1 # 1bpp
+
+for i in range(len(imageRaw)):
+    # set all pixels to 0
+    imageRaw[i] = 0
+
+
+duelink.Display.ShowBuffer(imageRaw, colorDepth)
+
+for i in range(len(imageRaw)):
+    # set all pixels to1
+    imageRaw[i] = 1
+
+duelink.Display.ShowBuffer(imageRaw, colorDepth)
+```
+
+### [JavaScript](#tab/js)
+- **Display.ShowBuffer(byte[] rawData, int colorDepth)** Show 32 bit raw image data on lcd<br>
+**ColorDepth:** This lets the stream know what is the format of the incoming data stream. B&W displays only support 1. Color displays support 4 (palette), 8, and 16 bits.
+
+```js
+let imageRaw = new Uint8Array(128*64*4) // Create an image with width = 128, height = 64, 32 bit
+let colorDepth = 1 // 1bpp
+
+for (let i = 0; i < imageRaw.length; i++)
+{
+    imageRaw[i] = 0 // set all pixel to zero
+}
+
+await duelink.Display.ShowBuffer(imageRaw, colorDepth)
+
+for (let i = 0; i < imageRaw.length; i++)
+{
+    // set all pixel to 1
+    imageRaw[i] = 1;
+}
+
+await duelink.Display.ShowBuffer(imageRaw, colorDepth)
+```
+
+### [.NET](#tab/net)
+- **Display.ShowBuffer(byte[] rawData, int colorDepth)** Show 32 bit raw image data on lcd<br>
+**ColorDepth:** This lets the stream know what is the format of the incoming data stream. B&W displays only support 1. Color displays support 4 (palette), 8, and 16 bits.
+
+```cs
+var imageRaw = new byte[128 * 64 * 4]; // Create an image with width = 128, height = 64, 32 bit
+var colorDepth = 1; // 1bpp
+
+for (var i = 0; i < imageRaw.Length; i++)
+{
+    // set all pixels to 0
+    imageRaw[i] = 0; 
+}
+
+duelink.Display.ShowBuffer(imageRaw, colorDepth);
+
+for (var i = 0; i < imageRaw.Length; i++)
+{
+    // set all pixels to 1
+    imageRaw[i] = 1;
+}
+
+duelink.Display.ShowBuffer(imageRaw, colorDepth);
+
+```
+
+### [DUE Script](#tab/due)
+
+ShowBuffer is not supported on DUE script
 
 ---
 
-## LCD Stream
-
-Stream is used to send the entire LCD update. 
-
-> [!NOTE] 
-> Streams are not coded directly using DUE Script, see [Streams](../streams.md)
-
-- **LcdStream(colorDepth)**<br>
-**ColorDepth:** This lets the stream know what is the format of the incoming data stream. B&W displays only support 1. Color displays support 4 (palette), 8, and 16 bits.
-
-The command is followed by the data [stream](../streams.md). The stream size is determined by the used screen size and the color depth. For example, Pulse uses a 128x64 display with 1bpp. This results in 128x64/8 = 1KBytes.
-
 > [!TIP] 
 > On 1bpp display, the data is organized as 8bit columns going left to right and then wrapping around to the next row.
+
+
+> [!NOTE]
+> LCD Stream automatically calls `LcdShow()` internally.
 
 ---
 
 ## Palette
 
-- **Palette(index, colorValue)** - Sets the desired color for a palette.<br>
-**index:** Index number of color<br>
-**colorValue:** A standard HEX value of the RGB color. 
-
-The palette is used when 4bpp color depth is used with streams. The palette table is used as a lookup table to set the color for each one of the 16 possibilities. The default colors are below; however, the user can change it to whatever they desire. For example, they can be set to 16 shades of green to show a forest scene that needs different shades of green. 
+The palette is used when 4bpp color depth is used. The palette table is used as a lookup table to set the color for each one of the 16 possibilities. The default colors are below; however, the user can change it to whatever they desire. For example, they can be set to 16 shades of green to show a forest scene that needs different shades of green. 
 
 Default colors:
 
@@ -588,32 +986,54 @@ Default colors:
 |15   |0x000080|Navy       | 
 
 
-Example code to set a pixel at 10x10
 
-### [Python](#tab/pythond)
-```basic
-example
+### [Python](#tab/py)
+- **Palette(index, colorValue)** - Sets the desired color for a palette.<br>
+**index:** Index number of color<br>
+**colorValue:** A standard HEX value of the RGB color. 
+
+Example code to swap Black (index 0) and Red color (index 2)
+```py
+duelink.Display.Palette(0, 0xFF0000)
+duelink.Display.Palette(2, 0x000000)
 ```
 
-### [.NET](#tab/netd)
-```basic
-example
+### [JavaScript](#tab/js)
+- **Palette(index, colorValue)** - Sets the desired color for a palette.<br>
+**index:** Index number of color<br>
+**colorValue:** A standard HEX value of the RGB color. 
+
+Example code to swap Black (index 0) and Red color (index 2)
+
+```js
+await duelink.Display.Palette(0, 0xFF0000)
+await duelink.Display.Palette(2, 0x000000)
 ```
 
-### [JavaScript](#tab/javascriptd)
-```basic
-example
-```
+### [.NET](#tab/net)
+- **Palette(index, colorValue)** - Sets the desired color for a palette.<br>
+**index:** Index number of color<br>
+**colorValue:** A standard HEX value of the RGB color. 
 
-### [DUE Engine](#tab/dueengined)
+Example code to swap Black (index 0) and Red color (index 2)
+
 ```cs
-int x=10;
-int y=10;
-
-buffer[(y >> 3) * 128 + x] |= (byte)(1 << (y & 7));
+duelink.Display.Palette(0, 0xFF0000);
+duelink.Display.Palette(2, 0x000000);
 ```
-> [!NOTE]
-> LCD Stream automatically calls `LcdShow()` internally.
+
+### [DUE Script](#tab/due)
+- **Palette(index, colorValue)** - Sets the desired color for a palette.<br>
+**index:** Index number of color<br>
+**colorValue:** A standard HEX value of the RGB color. 
+
+Example code to swap Black (index 0) and Red color (index 2)
+
+```
+palette(0,0xFF0000)
+palette(0,0x000000)
+```
+
 
 
 

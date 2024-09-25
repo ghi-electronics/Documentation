@@ -103,7 +103,7 @@ Thread.Sleep(2000);
 duelink.Frequency.Write('p', 0, 0, 0);
 ```
 
-### [DUE Engine](#tab/due)
+### [DUE Script](#tab/due)
 ```
 Freq('p',1000,5000,50)
 Wait(2000)

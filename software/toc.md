@@ -31,7 +31,7 @@
 ## [UART](due-script/corelib/uart.md)
 
 
-# [DUE Engine](due-engine.md)
+# [DUE Script](due-engine.md)
 ## [DUE Script](due-script/due-script.md)
 ## [DUE Console](console.md)
 ## [Samples](due-script/samples/samples.md)

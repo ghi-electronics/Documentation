@@ -41,7 +41,7 @@ var x = duelink.Digital.Read(2, InputType.PullUp);
 Console.WriteLine(x);
 ```
 
-### [DUE Engine](#tab/due)
+### [DUE Script](#tab/due)
 - **DRead(pin, pull)** <br>
 **pin:** pin number <br> 
 **pull:** Sets the internal pull resistors to -> 0=none, 1=up, 2=down <br>
