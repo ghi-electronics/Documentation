@@ -8,7 +8,6 @@ The DUELink core library provided for multiple languages (such as Python) gives 
 | API       | Description          |
 | --- |---|
 | [Analog](analog.md)	| Read or Write analog pins |
-| [Beep](beep.md)		| Beep using any pin |
 | [Button](button.md)	| Read a button. Similar to Digital read but handles debounce |
 | [Digital](digital.md) | Read or write digital pins |
 | [Distance](distance.md) | Read ultrasonic distance sensor |
@@ -20,6 +19,7 @@ The DUELink core library provided for multiple languages (such as Python) gives 
 | [NeoPixel](neopixel.md) | Control smart color LEDs |
 | [Script](script.md) | Allows for expanding the system with custom scripts for advanced users |
 | [Servo](servo.md)		| Control servo motors |
+| [Sound](sound.md)		| Generate sound |
 | [SPI](spi.md)			| Access the SPI data bus |
 | [System Functions](systemfunctions.md) | Built-in functions |
 | [Temp-Humidity](temp-humidity.md) | Works with DHT sensors |

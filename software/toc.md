@@ -13,7 +13,6 @@
 
 # [API](api/intro.md)
 ## [Analog](api/analog.md)
-## [Beep](api/beep.md)
 ## [Button](api/button.md)
 ## [Digital](api/digital.md)
 ## [Distance](api/distance.md)
@@ -25,6 +24,7 @@
 ## [NeoPixel](api/neopixel.md)
 ## [Script](api/script.md)
 ## [Servo](api/servo.md)
+## [Sound](api/sound.md)
 ## [SPI](api/spi.md)
 ## [System](api/systemfunctions.md)
 ## [Temp-Humidity](api/temp-humidity.md)

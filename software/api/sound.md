@@ -1,4 +1,6 @@
-# Beep
+# Sound
+
+---
 
 `Beep()` uses any pin to generate a tone.  
 
