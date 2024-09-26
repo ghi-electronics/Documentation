@@ -2,7 +2,7 @@
 # [Introduction](intro.md)
 # [Getting Started](getting-started.md)
 
-# [Coding Options](coding-options/coding-options.md)
+# [Coding Options](coding-options/intro.md)
 ## [Python](coding-options/python.md)
 ## [JavaScript](coding-options/javascript.md)
 ## [.NET](coding-options/dotnet.md)
@@ -23,6 +23,7 @@
 ## [LCD](api/lcd.md)
 ## [LED](api/led.md)
 ## [NeoPixel](api/neopixel.md)
+## [Script](api/script.md)
 ## [Servo](api/servo.md)
 ## [SPI](api/spi.md)
 ## [System](api/systemfunctions.md)
