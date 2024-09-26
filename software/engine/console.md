@@ -2,11 +2,11 @@
 
 ---
 
-The DUE Console provides many functionalities. It is a great start to verify the device is functioning properly. It is also a great place to learn about and use [DUE Scripts](due-script/due-script.md) and take advantage of the versatile [DUE core libraries](due-script/corelib/corelib.md)
+The DUE Console provides many functionalities. It is a great start to verify the device is functioning properly. It is also a great place to learn about and use [DUELink Scripts](script.md).
 
 [**console.duelink.com**](https://console.duelink.com/)
 
-![DUE Console](./images/due-console.png) 
+![DUE Console](/images/due-console.png) 
 
 ---
 
@@ -14,7 +14,7 @@ The DUE Console provides many functionalities. It is a great start to verify the
 
 The immediate text box sends and runs the code immediately on the DUE hardware as soon as the `Enter` key or `arrow` button is pressed. 
 
-![DUE immediate window](./images/immediate-window.png) 
+![DUE immediate window](/images/immediate-window.png) 
 
 Try `DWrite('L',1)` to run the LED on and then `DWrite('L',0)` to turn it off.
 
@@ -29,7 +29,7 @@ The DUE Log window is where DUE hardware will talk back to the console. `Log()` 
 Log("This is where log outputs appear")
 ```
 
-![DUE console output](./images/console-output.png) 
+![DUE console output](/images/console-output.png) 
 
 ---
 
@@ -37,7 +37,7 @@ Log("This is where log outputs appear")
 
 Select the connect button to connect to the DUE hardware.
 
-![Connect Button](./images/due-connect.png) 
+![Connect Button](/images/due-connect.png) 
 
 ---
 
@@ -45,7 +45,7 @@ Select the connect button to connect to the DUE hardware.
 
 Sends the script in the editor window to the DUE hardware's flash. 
 
-![Record Button](./images/due-record.png) 
+![Record Button](/images/due-record.png) 
 
 ---
 
@@ -53,7 +53,7 @@ Sends the script in the editor window to the DUE hardware's flash.
 
 Runs the code that is stored in flash. 
 
-![Play Button](./images/due-play.png) 
+![Play Button](/images/due-play.png) 
 
 ---
 
@@ -61,7 +61,7 @@ Runs the code that is stored in flash.
 
 Stops the program running on the DUE hardware.
 
-![Stop Button](./images/due-stop.png) 
+![Stop Button](/images/due-stop.png) 
 
 ---
 
@@ -69,7 +69,7 @@ Stops the program running on the DUE hardware.
 
 The List button loads the program currently stored in flash into the editor window. 
 
-![List Button](./images/due-list.png) 
+![List Button](/images/due-list.png) 
 
 ---
 
@@ -77,7 +77,7 @@ The List button loads the program currently stored in flash into the editor wind
 
 Saves the code in the consoles editor window to a text file. 
 
-![Download Button](./images/due-save.png) 
+![Download Button](/images/due-save.png) 
 
 ---
 
@@ -85,7 +85,7 @@ Saves the code in the consoles editor window to a text file.
 
 Loads a saved program into the editor. 
 
-![Download Button](./images/due-load.png) 
+![Download Button](/images/due-load.png) 
 
 ---
 
@@ -93,7 +93,7 @@ Loads a saved program into the editor.
 
 Zooms the edit window in and out. 
 
-![Download Button](./images/due-zoom.png) 
+![Download Button](/images/due-zoom.png) 
 
 ---
 
@@ -101,7 +101,7 @@ Zooms the edit window in and out.
 
 Links to the DUE Script Documentation.
 
-![Theme Button](./images/due-docs.png) 
+![Theme Button](/images/due-docs.png) 
 
 ---
 
@@ -109,7 +109,7 @@ Links to the DUE Script Documentation.
 
 Select from pre-built DUE Script Demos that load into the edit window.
 
-![Theme Button](./images/due-demos.png) 
+![Theme Button](/images/due-demos.png) 
 
 ---
 
@@ -117,7 +117,7 @@ Select from pre-built DUE Script Demos that load into the edit window.
 
 Select and load the appropriate firmware to your device.
 
-![Theme Button](./images/due-firmware.png) 
+![Theme Button](/images/due-firmware.png) 
 
 ---
 
@@ -126,6 +126,6 @@ Select and load the appropriate firmware to your device.
 
 Changes the consoles theme to Light or Dark. 
 
-![Theme Button](./images/due-theme.png) 
+![Theme Button](/images/due-theme.png) 
 
 ---
