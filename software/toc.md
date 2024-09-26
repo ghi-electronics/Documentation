@@ -31,10 +31,17 @@
 ## [UART](due-script/corelib/uart.md)
 
 
+<<<<<<< HEAD
 # [DUELink Engine](due-engine.md)
 ## [DUELink Script](due-script/due-script.md)
 ## [DUELink Console](console.md)
 ## Samples
+=======
+# [DUE Script](due-engine.md)
+## [DUE Script](due-script/due-script.md)
+## [DUE Console](console.md)
+## [Samples](due-script/samples/samples.md)
+>>>>>>> b9e6a95649af531abe525c06707b4f341d0f4657
 ### [Basic Examples](due-script/samples/basic.md)
 ### [NeoPixel Matrix](due-script/samples/neopixel-matrix.md)
 ### [NeoPixel Rotary](due-script/samples/rotary-neopixel.md)

@@ -72,7 +72,7 @@ while (true) {
 ```
 
 
-# [DUE Engine](#tab/due)
+# [DUE Script](#tab/due)
 
 ```
 @Loop
@@ -148,7 +148,7 @@ while (true) {
 ```
 
 
-# [DUE Engine](#tab/due)
+# [DUE Script](#tab/due)
 
 ```
 @Loop
