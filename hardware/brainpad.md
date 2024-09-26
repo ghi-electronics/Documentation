@@ -39,17 +39,6 @@ Visit the BrainPad website to learn about the product and see purchasing options
 
 ---
 
-## Beginner to Expert
-
-We recommend beginners start out with the BrainPad, it is made for beginners and scales up to advanced learning. The [FEZ boards](fez.md) can then be used to start designing prototypes and proof of concepts. Low-volume products can be manufactured with ease, thanks to the small form factor and SMT solderability of the FEZ boards. 
-
-![FEZ Flea SoM](images/beginner-expert.jpg)
-
-> [!TIP]
-> The heart to the FEZ boards is [SITCore SC13](https://www.ghielectronics.com/sitcore/) chipset.
-
----
-
 # Loading the Firmware
 The first step to load the DUE firmware on your hardware is to navigate to the [console.duelink.com](https://console.duelink.com/) and click on the **Firmware** tab and follow the instructions
 
@@ -93,7 +82,7 @@ NeoPixel Matrix panels pair well with the DUE platform, because NeoPixel support
 
 [Falling Bird Sample Repo](https://github.com/ghi-electronics/due-samples/tree/main/NeoMatrix/16x16/FallingBird)
 
-[More NeoPixel Matrix Projects](../software/due-script/samples/neopixel-matrix.md)
+[More NeoPixel Matrix Projects](../software/engine/samples/neopixel-matrix.md)
 
 ![NeoPixel Falling Bird](images/falling-bird.gif) 
 
@@ -101,9 +90,9 @@ NeoPixel Matrix panels pair well with the DUE platform, because NeoPixel support
 ## BrainGamer Sketch
 Creating art is easy when you pair the BrainPad Pulse with the BrainGamer
 
-[BrainGamer Sketch Demo](../software/due-script/samples/pulse-gamer-sketch.md)
+[BrainGamer Sketch Demo](../software/engine/samples/pulse-gamer-sketch.md)
 
-![BrainGamer Sketch](../software/due-script/samples/images/braingamer-sketch.gif)
+![BrainGamer Sketch](../software/engine/samples/images/braingamer-sketch.gif)
 
 ---
 

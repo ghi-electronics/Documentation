@@ -12,7 +12,7 @@ Here is a website demo to demonstrate how JavaScript can control actuators and r
 This page assumes the user is already familiar with JavaScript and there is a development machine that is already setup to build and run JavaScript programs. We'll be running our program on a local machine using NodeJS.
 
 > [!TIP]
-> Make sure your hardware is updated with the latest firmware listed on the [downloads](..\downloads.md) page.
+> Make sure your hardware is updated with the latest firmware listed on the [downloads](../downloads.md) page.
 
 Start a new project with a simple line of code to test out the project is running.
 

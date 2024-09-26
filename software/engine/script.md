@@ -1,7 +1,7 @@
-# DUE Script
+# DUELink Script
 ---
 
-The DUE Link platform includes a scripting language called DUE Script it runs internally on any [DUE-enabled hardware](../../hardware/intro.md). This allows the device to run standalone, independent from any host. This very easy-to-learn scripting language is inspired by BASIC and Python, giving the user the simplicity and flexibility they need.
+The DUELink engine includes a scripting language called DUELink Script that runs internally on any DUELink Hardware. The scripts are used to tunnel in the commands from a high level language such as Python. It can also be used to run standalone, independent from any host. This very easy-to-learn scripting language is inspired by BASIC and Python.
 
 The on-line [DUE Console](../../software/console.md) lets developers start experimenting with DUE Script and the physical world in minutes...no installation is necessary!
 
