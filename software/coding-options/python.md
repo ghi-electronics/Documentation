@@ -39,3 +39,5 @@ print("Bye DUE!")
 ## Python API
 
 The [API](../api/intro.md) page includes all details and examples to use all the available "physical world" services.
+
+Use the above example program to initiate the hardware instantiate the `duelink` object and then use any of the available APIs, such as `duelink.Sound.Beep('p', 500, 1000)' to generate a one second 500Hz beep using the on-board peizo buzzer.

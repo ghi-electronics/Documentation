@@ -4,8 +4,9 @@
 
 ![Excel](../images/excel-logo.png)
 
-DUE Link allows supports many systems, and Microsoft Excel is one the supported options! Yes, you can access devices right from spreadsheets! Combine that with VB macros and you have unlimited options.
+DUELink allows supports many systems, and Microsoft Excel is one the supported options! Yes, you can access devices right from spreadsheets! Combine that with VB macros and you have unlimited options.
 
+This is an experimenter support and only shows a very basic use for advanced users that understand DUELink Scripts.
 
 ## Setup
 
@@ -31,5 +32,3 @@ Go to `Settings` and change the `Data Channels` to 1
 Go to the `Data Out` tab and enter the following text right under `CH1` column `Led(200, 800, 20)`
 
 The LED should be blinking now.
-
-The support for Excel is still in progress. Check back this page for more excitement!

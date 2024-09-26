@@ -6,7 +6,7 @@
 
 Swift can be used to give you physical access on MacOS devices.
 
-More examples can be found on the DUE samples repo:
 
-[GitHub Samples Repo](https://github.com/ghi-electronics/due-samples/tree/main/Demo/MacOS)
+The support for SWIFT is incomplete and only provided as a reference for those interested in exploring the possibilities.
 
+An example can be found on the GitHub [DUELink Samples](https://github.com/ghi-electronics/due-samples/tree/main/Demo/MacOS) Repo.
