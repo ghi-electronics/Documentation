@@ -12,9 +12,9 @@ This example checks button 'a'.
 **pin:** pin number<br>
 **enable:** true = enable, false = disabled  <br>
 
-- **bool Button.JustReleased(pin)** <br>
+- **Button.JustReleased(pin)** <br>
 **pin:** pin number<br>
-**Returns:** true after release first time called. If called again returns 0<br>
+**Returns:** bool - true after release first time called. If called again returns false<br>
 
 - **bool Button.JustPressed(pin)** Checks if a button was pressed<br>
 **pin:** pin number<br>
@@ -71,7 +71,7 @@ while (true) {
 ```
 
 ### [.NET](#tab/net)
-- **Button.Enable(int pin, bool enable)** - Activates a pin to be used as a button<br>
+- **void Button.Enable(int pin, bool enable)** - Activates a pin to be used as a button<br>
 **pin:** pin number<br>
 **enable:** true = enable, false = disabled  <br>
 
@@ -103,7 +103,7 @@ while (true) {
 }
 ```
 
-### [DUE Script](#tab/due)
+### [DUELink Script](#tab/due)
 - **Button.Enable(pin, enable)** - Activates a pin to be used as a button<br>
 **pin:** pin number<br>
 **enable:** 1 = enable, 0 = disabled  <br>

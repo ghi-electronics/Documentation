@@ -11,7 +11,7 @@
 ## [Excel](coding-options/excel.md)
 ## [Other](coding-options/other.md)
 
-# [Core Library](due-script/corelib/corelib.md)
+# [API](due-script/corelib/corelib.md)
 ## [Analog](due-script/corelib/analog.md)
 ## [Beep](due-script/corelib/beep.md)
 ## [Button](due-script/corelib/button.md)
@@ -31,10 +31,10 @@
 ## [UART](due-script/corelib/uart.md)
 
 
-# [DUE Engine](due-engine.md)
-## [DUE Script](due-script/due-script.md)
-## [DUE Console](console.md)
-## [Samples](due-script/samples/samples.md)
+# [DUELink Engine](due-engine.md)
+## [DUELink Script](due-script/due-script.md)
+## [DUELink Console](console.md)
+## Samples
 ### [Basic Examples](due-script/samples/basic.md)
 ### [NeoPixel Matrix](due-script/samples/neopixel-matrix.md)
 ### [NeoPixel Rotary](due-script/samples/rotary-neopixel.md)

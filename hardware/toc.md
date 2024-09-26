@@ -6,10 +6,10 @@
 ### [FEZ](fez.md)
 
 # Accessories
-## [3 Pin](threepin.md)
+## [3-Pin](threepin.md)
 ## [Click](click.md)
 ## [Qwiic/STEMMA](qwiic.md)
-## [display](display.md)
+## [Display](display.md)
 ## [Smart LED](led.md)
 
 
