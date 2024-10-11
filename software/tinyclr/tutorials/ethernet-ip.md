@@ -14,7 +14,7 @@ EtherNet/IP is an industerial communication protocol. It has two modes, an Adapt
 
 ### List Identity
 
-The examples assume [NetworkController](networking-core.md) is already enabled.
+The examples assume [NetworkController](ethernet.md) is already enabled.
 
 ```cs
 var eipClient = new ScannerController();
