@@ -4,6 +4,14 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.3.0.2000 - RTW (Update)
+
+### Libraries
+- Add experimental GHIElectronics.TinyCLR.EthernetIP.Scanner
+- Add experimental GHIElectronics.TinyCLR.EthernetIP.Adapter
+
+---
+
 ## 2.3.0.2000 - RTW
 
 ### Released 2024-08-09

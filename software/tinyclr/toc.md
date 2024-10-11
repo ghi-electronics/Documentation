@@ -45,7 +45,7 @@
 ### [HTTP/HTTPS](tutorials/http-https.md)
 ### [MQTT](tutorials/mqtt.md)
 ### [PPP](tutorials/ppp.md)
-### [Ethernet-IP](tutorials/ethernet-ip.md)
+### [EtherNet/IP](tutorials/ethernet-ip.md)
 
 ## Networking Interfaces
 ### [WiFi](tutorials/wifi.md)

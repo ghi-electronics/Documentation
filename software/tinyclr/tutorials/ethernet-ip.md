@@ -1,5 +1,8 @@
-# Ethernet-IP
+# EtherNet/IP
 ---
+
+EtherNet/IP is an industerial communication protocol. It has two modes, an Adaptor, which is typically the PLC. The other mode is Scanner, usually used on the modules controlled by the PLC.
+
 
 >[!NOTE]
 >This is an experimental feature and it is subject to major changes or removal.
