@@ -1,0 +1,83 @@
+# Regions
+
+---
+
+The memory area that holds scripts can be split into regions. This allows users to erase and modify specific regions. For example, a region can carry the module drivers, where a second region can be the user code.
+
+The interpreter treats all regions as one. Having regions is helpful for managing what parts of code can be erased and modified.
+
+This feature is used by default on all modules, where region 0 loaded by us at production, containing that module's specific drivers. This way, you can now record (load) your own code without erasing/modifying the drivers.
+
+:::tip
+All modules ship with drivers that are preloaded into region 0. For example, displays drivers include `GetW` function to return the display width. This function is found in the first region.
+:::
+
+## Default Region
+
+On a device that was freshly loaded with firmware, there is a single region. Use `Mem()` to get statistics on available memory.
+
+image
+
+The usual `new` and `list` are now accessing region 0. You can now load the region with a driver, a function, or whatever you like to keep it separate from region 1.
+
+## Starting a New Region
+
+Use the console to load this example function.
+
+```py
+fn FirstRgn()
+ Print("This is in first region")
+fend
+```
+
+Record the function and then enter `FirstRgn()` in immediate window. This will run the function and show the string.
+
+image
+
+Try `Mem()` to see some memory statistics.
+
+image
+
+Now switch to second region using `Region(1)`. This will lock the size of the first region to the next allowed block and start second region access.
+
+Try `Mem()` again to see the difference. Note how there is "*" mark on the currently selected region.
+
+image
+
+Click the list button on the console to reload the script. This will now show the content of region 1, which is still blank. Go ahead and enter this code then record it.
+
+```py
+while 1
+FirstRgn()
+wait(1000)
+wend
+```
+
+Run the program and you will see the string getting printed once a second.
+
+Try `Mem()` yet again to see the regions with memory being used.
+
+image
+
+To see all regions together, just like how the system sees them, use `list all` command in the immediate window.
+
+image showing the entire listing of both regions.
+
+While the size of the first region is locked after the first call to `Region(1)`, its content are not locked.
+
+In the immediate window, enter `Region(0)`, then `Mem()` to see the "*" mark on region 0, then use the console buttons to list the code again. This time the console will show the contents of region 0.
+
+Modify the code:
+
+```py
+fn FirstRgn()
+ Print("This is in first region MODIFIED")
+fend
+```
+ Run the program and the new modified string will now show once a second. Note how the program loop in region 1 was not modified.
+
+ ## Removing Regions
+
+ The command `new all` is used to erase all regions contents and reset to having a single region that spans the entire user memory.
+
+ `new all` is useful when region 0 code has grown beyond what was allocated with first `Region(1)` call. Using `new all` will unlock regions 0. You can now enter the larger code into region 0 then start region 1 afterwards. The system will reallocate the size of region 0 to what is necessary (to the nearest allowed block) and then leave the remaining memory to regions 1.
