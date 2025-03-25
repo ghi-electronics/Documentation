@@ -1,8 +1,24 @@
+
+
 # Release Notes
 
 ---
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
+
+## 2.3.0.3000 - RTW
+
+### Released 2025-03-25
+
+### Firmware
+
+##### SC20xxx
+
+- Fix ReadPulse failed on slow frequency
+- Add RTC output 512Hz and 1Hz on PC13
+- Fix interrupt happened during acccesing SD then read/write to SD failed.
+
+---
 
 ## 2.3.0.2000 - RTW (Update)
 
