@@ -6,6 +6,23 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.4.0.1000 - RTW
+
+### Released 2026-03-16
+
+### Firmware
+
+##### SC20xxx
+
+- Add SDRAM overclock support
+- Fix CPU usage statistics
+- Add WPA/WPA2 support for WiFi in both AP and Client modes
+
+### Libraries
+- HTTPS server now supports TLS 1.2
+
+---
+
 ## 2.3.0.3000 - RTW
 
 ### Released 2025-03-25
