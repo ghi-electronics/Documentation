@@ -6,6 +6,23 @@
 
 ![TinyCLR Logo](images/tinyclr-logo.png)
 
+## 2.4.1.1000 - RTW
+
+### Released 2026-03-25
+
+### Firmware
+
+##### SC20xxx
+
+- Fixed multiple issues in floating-point string formatting (rounding, exponent, precision) 
+
+#### SC13xxx
+
+- Fixed multiple issues in floating-point string formatting (rounding, exponent, precision)
+
+---
+
+
 ## 2.4.0.1000 - RTW
 
 ### Released 2026-03-16
