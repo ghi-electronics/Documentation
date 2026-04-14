@@ -145,6 +145,12 @@ File | Date | Status | MD5
 [v2.0.0-rc2](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Extensions/TinyCLR%20OS%20Project%20System%20v2.0.0-rc2.vsix) | 2020-08-05 | Release Candidate | 84488ED257F5C4A604490D31793CAC68
 [v2.0.0-rc1](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Extensions/TinyCLR%20OS%20Project%20System%20v2.0.0-rc1.vsix) | 2020-07-04 | Release Candidate | B06F587FD2F5C49F08D9BE62808C288A
 
+### Visual Studio Code
+
+File | Date | Status | MD5
+--- | --- | --- | ---
+[v0.1.0-beta](https://ghistorage.blob.core.windows.net/downloads/TinyCLR/Extensions/tinyclr-os-vscode-0.1.1.vsix) | 2026-04-14 | Preview | 07d8bc8b0a055786bf85f84f3e7ec9f62d240023
+
 ## Libraries
 
 Libraries provide prebuilt software routines for performing many common tasks. It is preferred to access these libraries through NuGet.org by using Visual Studio's default package source.
